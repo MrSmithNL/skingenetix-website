@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for broken markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          config-file: '.github/mlc_config.json'
+        continue-on-error: true
+
+      - name: Verify standard files exist
+        run: |
+          files=(
+            "CLAUDE.md"
+            "README.md"
+            "docs/architecture.md"
+            "docs/todo.md"
+            "docs/accounts-and-access.md"
+            "docs/decisions-log.md"
+            "docs/security-risk-log.md"
+            "docs/setup-steps.md"
+            "docs/processes-and-flows.md"
+            "docs/content-strategy.md"
+            "docs/seo-strategy.md"
+            "docs/metrics.md"
+          )
+          missing=0
+          for f in "${files[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "❌ Missing: $f"
+              missing=1
+            else
+              echo "✅ Found: $f"
+            fi
+          done
+          if [ $missing -eq 1 ]; then
+            echo "::warning::Some standard files are missing"
+          fi

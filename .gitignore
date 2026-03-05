@@ -1,0 +1,33 @@
+# Credentials and secrets
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/settings.json
+*.swp
+*.swo
+*~
+
+# Node (if scripts use it)
+node_modules/
+package-lock.json
+
+# Python (if scripts use it)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Backups
+backups/
+
+# Temporary files
+tmp/
+*.tmp
