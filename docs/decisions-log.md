@@ -4,19 +4,21 @@ Technical decisions recorded in ADR (Architecture Decision Record) format.
 
 ---
 
-## ADR-001: Use Free Shopify Theme (Sense or Refresh)
+## ADR-001: Theme Selection — Impact or Prestige (REVISED)
 
 **Date:** 2026-03-05
-**Status:** Proposed
-**Context:** Hairgenetix uses a premium theme (Release - Satyam). Skingenetix needs its own visual identity while remaining manageable by Claude Code.
-**Decision:** Use a free Shopify 2.0 theme (Sense or Refresh) rather than purchasing a premium theme.
+**Status:** REVISED — was "free theme (Sense/Refresh)", now recommending premium
+**Context:** Hairgenetix uses a premium theme (Release - Satyam). Skingenetix needs its own visual identity while remaining manageable by Claude Code. After competitor analysis of QU:RE Skincare (qureskincare.com), a free theme would look noticeably less premium than the primary competitor.
+**Decision:** Use **Impact** ($380) or **Prestige** ($400) premium Shopify theme.
 **Rationale:**
-- Gives Skingenetix distinct brand identity from Hairgenetix
-- Free themes follow standard Shopify 2.0 architecture (most Claude-friendly)
-- No license cost — budget goes to apps instead
-- Sense is designed specifically for beauty/wellness brands
-- Refresh is strong for storytelling and ingredient-focused content
-**Consequences:** May have fewer out-of-box features than premium themes. Mitigated by Claude's ability to configure sections/blocks and add custom CSS.
+- QU:RE Skincare uses a custom dark premium theme — we need to match that visual standard
+- **Impact** (by Maestrooo): dark mode, bold imagery, DTC-focused, conversion tools (sticky cart, quick buy, cross-sell, promo banners), editorial sections
+- **Prestige** (by Maestrooo): luxury feel, before/after slider, shop-the-look, premium positioning
+- Both are standard Shopify 2.0 architecture (Claude-friendly, no custom Liquid needed)
+- $380-400 one-time cost is small vs looking like a premium brand from day one
+- Impact's "Sound" style specifically designed for wellness/skincare/luxury
+**Consequences:** One-time $380-400 cost. Both themes are well-documented and widely used, so Claude can manage them via JSON settings + custom CSS. Malcolm needs to purchase and install from Shopify Theme Store.
+**Competitor reference:** See `research/competitor-analysis-qure.md`
 
 ---
 

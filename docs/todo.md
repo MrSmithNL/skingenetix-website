@@ -13,11 +13,9 @@
 ### SETUP-001 — Create Shopify Store
 **Priority:** 🔴 High
 **Owner:** Malcolm (human)
-**Status:** Not started
-**What needs doing:**
-- Create new Shopify store account
-- Choose subscription plan (same as Hairgenetix)
-- Note: Same Shopify account as Hairgenetix, new store
+**Status:** ✅ DONE
+**Store URL:** skingenetix.myshopify.com
+**Domain:** skingenetix.com (registered at OpenDomainRegistry.net)
 
 ### SETUP-002 — Domain Configuration
 **Priority:** 🔴 High
@@ -58,12 +56,11 @@
 ### SETUP-006 — Create Custom App for API Access
 **Priority:** 🔴 High
 **Owner:** Malcolm (human)
-**Status:** Not started
-**What needs doing:**
-- Create custom app in Shopify Dev Dashboard
-- Grant required API scopes
-- Generate access token
-- Store token in Bitwarden
+**Status:** ✅ DONE — credentials received, pending Bitwarden save
+**What was done:**
+- Custom app created in Shopify
+- Client ID and secret generated
+- Pending: Save to Bitwarden (vault needs unlocking)
 
 ### SETUP-007 — Install Core Apps
 **Priority:** 🔴 High

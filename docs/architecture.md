@@ -31,8 +31,8 @@ graph TB
     end
 
     subgraph "External Services"
-        DOM[OpenDomainRegistry<br/>Domain: TBD]
-        EMAIL[Email Hosting<br/>GoDaddy - TBD]
+        DOM[OpenDomainRegistry<br/>skingenetix.com]
+        EMAIL[Email Hosting<br/>GoDaddy]
         GA[Google Analytics<br/>+ Ads + FB Pixel]
     end
 
@@ -60,11 +60,11 @@ graph TB
 
 | Component | What It Is | Where It Lives | Status |
 |-----------|-----------|---------------|--------|
-| Shopify Store | E-commerce platform + hosting | Shopify servers | 🔜 To create |
+| Shopify Store | E-commerce platform + hosting | skingenetix.myshopify.com | ✅ Created |
 | Theme | Shopify 2.0 free theme (Sense or Refresh) | Shopify | 🔜 To install |
 | Domain | Store domain name | OpenDomainRegistry.net | ✅ Registered |
 | Email | Email hosting for store domain | GoDaddy (TBD) | 🔜 To configure |
-| GraphQL Admin API | Programmatic store management | Shopify | 🔜 Custom app needed |
+| GraphQL Admin API | Programmatic store management | Shopify | ✅ Custom app created (credentials pending Bitwarden save) |
 | Langify | Translation (9 languages) | Shopify App Store | 🔜 To install |
 | Klaviyo | Email marketing + reviews | Shopify App Store | 🔜 To install |
 | Kaching Bundles | Product bundles | Shopify App Store | 🔜 To install |
@@ -90,7 +90,7 @@ graph TB
 
 | Service | Auth Method | Status | Storage |
 |---------|------------|--------|---------|
-| Shopify Admin API | Access token (custom app) | 🔜 Pending | Bitwarden |
+| Shopify Admin API | Client ID + Secret (custom app) | ✅ Received — pending Bitwarden save | Bitwarden |
 | OpenDomainRegistry | Username/password | ✅ Active | Bitwarden |
 | GoDaddy | Username/password | ✅ Active | Bitwarden |
 | Google Analytics | OAuth | 🔜 Pending | Google account |
@@ -100,7 +100,7 @@ graph TB
 
 | Service | URL | Account Holder | Purpose |
 |---------|-----|---------------|---------|
-| Shopify | TBD | Malcolm Smith | Store platform |
+| Shopify | skingenetix.myshopify.com | Malcolm Smith | Store platform |
 | OpenDomainRegistry | opendomainregistry.net | Malcolm Smith | Domain registrar |
 | GoDaddy | godaddy.com | Malcolm Smith | Email hosting |
 | Google Analytics | analytics.google.com | Malcolm Smith | Traffic analytics |
@@ -111,3 +111,4 @@ graph TB
 | Date | What Changed | Who |
 |------|-------------|-----|
 | 2026-03-05 | Project created, initial architecture documented | Claude Code |
+| 2026-03-05 | Store created (skingenetix.myshopify.com), custom app API credentials received | Malcolm + Claude |
