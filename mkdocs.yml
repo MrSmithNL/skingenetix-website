@@ -1,0 +1,57 @@
+site_name: "Skingenetix (CLIENT-003)"
+site_url: https://mrsmithnl.github.io/skingenetix-website/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - encryptcontent:
+      global_password: !ENV [DOCS_PASSWORD, 'SmithAI2026!']
+      search_index: 'encrypted'
+      remember_password: true
+      session_storage: true
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - attr_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Setup Steps: setup-steps.md
+  - Architecture: architecture.md
+  - Content Strategy: content-strategy.md
+  - SEO Strategy: seo-strategy.md
+  - Strategic OS: strategic-os.md
+  - Metrics: metrics.md
+  - Processes & Flows: processes-and-flows.md
+  - Decisions Log: decisions-log.md
+  - Accounts & Access: accounts-and-access.md
+  - Security Risk Log: security-risk-log.md
+  - Todo: todo.md
