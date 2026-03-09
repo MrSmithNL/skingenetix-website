@@ -14,7 +14,13 @@ The store is **built and managed primarily by Claude Code** via Shopify's GraphQ
 
 ## Skills Check — Always First
 
-Before taking any action, check `~/.claude/skills/` for a relevant skill. 864 are installed.
+Before taking any action, check `~/.claude/skills/` for a relevant skill. 40 core skills installed (plus ~832 Composio tool connectors).
+
+---
+
+## Capability Hierarchy — Mandatory
+
+This project follows the agency's 5-layer capability hierarchy: **Products → Capabilities → Agents → Skills → Tools**. See the [Capability Hierarchy](~/Claude Code/Projects/smith-ai-agency/docs/capability-hierarchy.md) reference. Use terms precisely: Tools are external connections (Composio, MCP, APIs). Skills are procedural knowledge (`~/.claude/skills/`). Agents are autonomous workers (`~/.claude/agents/`). Capabilities are business-level abilities. Products are sellable platforms.
 
 ---
 
