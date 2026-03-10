@@ -8,19 +8,23 @@
 
 ## 1. Engagement Model Canvas
 
-| Block | Skingenetix (CLIENT-003) |
-|-------|------------------------|
-| **Client Profile** | Malcolm Smith, internal client. New Shopify e-commerce store for skincare products — sister brand to Hairgenetix (CLIENT-002). Same owner, same operational model, different product line (peptide-based skincare). |
-| **Value Delivered** | Store setup and configuration via Shopify GraphQL API, SEO foundation from day one, multilingual store (9 languages via Langify), brand positioning leveraging Hairgenetix credibility. |
-| **Delivery Channels** | Managed service — Claude Code builds and manages the store via Shopify GraphQL Admin API. Malcolm approves visual/strategic decisions. |
-| **Relationship Model** | Internal client. Setup phase transitioning to continuous engagement. No contract end date. |
-| **Revenue from Engagement** | Internal — no direct agency revenue. Strategic value = second Shopify proof of concept (validates reusability of Hairgenetix playbook), demonstrates agency can launch new brands efficiently. |
-| **Resources Required** | Shopify GraphQL Admin API, Claude Code execution time. SEO Toolkit (planned, after setup complete). Same app stack as Hairgenetix (Langify, Klaviyo, Kaching Bundles). |
-| **Key Activities** | Store setup (theme, products, pages, translations), product migration/creation, SEO foundation (meta, schema, sitemap), brand differentiation from Hairgenetix. |
-| **Agency Products Used** | PROD-001 SEO Toolkit (planned — after store setup). PROD-003 Marketing Engine (planned). |
-| **Cost to Serve** | ~EUR 0 incremental — shared infrastructure. Shopify subscription + app costs paid separately by business. |
+| Block                       | Skingenetix (CLIENT-003)                                                                                                                                                                                            |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Client Profile**          | Malcolm Smith, internal client. New Shopify e-commerce store for skincare products — sister brand to Hairgenetix (CLIENT-002). Same owner, same operational model, different product line (peptide-based skincare). |
+| **Value Delivered**         | Store setup and configuration via Shopify GraphQL API, SEO foundation from day one, multilingual store (9 languages via Langify), brand positioning leveraging Hairgenetix credibility.                             |
+| **Delivery Channels**       | Managed service — Claude Code builds and manages the store via Shopify GraphQL Admin API. Malcolm approves visual/strategic decisions.                                                                              |
+| **Relationship Model**      | Internal client. Setup phase transitioning to continuous engagement. No contract end date.                                                                                                                          |
+| **Revenue from Engagement** | Internal — no direct agency revenue. Strategic value = second Shopify proof of concept (validates reusability of Hairgenetix playbook), demonstrates agency can launch new brands efficiently.                      |
+| **Resources Required**      | Shopify GraphQL Admin API, Claude Code execution time. SEO Toolkit (planned, after setup complete). Same app stack as Hairgenetix (Langify, Klaviyo, Kaching Bundles).                                              |
+| **Key Activities**          | Store setup (theme, products, pages, translations), product migration/creation, SEO foundation (meta, schema, sitemap), brand differentiation from Hairgenetix.                                                     |
+| **Agency Products Used**    | PROD-001 SEO Toolkit (planned — after store setup). PROD-003 Marketing Engine (planned).                                                                                                                            |
+| **Cost to Serve**           | ~EUR 0 incremental — shared infrastructure. Shopify subscription + app costs paid separately by business.                                                                                                           |
 
-**Company BMC connection:** Skingenetix is the third internal proof-of-concept client. It validates the agency's ability to rapidly stand up new e-commerce brands by reusing the Hairgenetix playbook and SEO Toolkit. Speed-to-launch here becomes a selling point for external clients. Feeds the "AI Operations" primary activity in the company BMC.
+**Company BMC connection:** Skingenetix is the third internal proof-of-concept client.
+It validates the agency's ability to rapidly stand up new e-commerce brands
+by reusing the Hairgenetix playbook and SEO Toolkit.
+Speed-to-launch here becomes a selling point for external clients.
+Feeds the "AI Operations" primary activity in the company BMC.
 
 ---
 
@@ -31,20 +35,22 @@
 
 **Objective: Complete Skingenetix store setup and establish SEO foundation**
 
-| # | Key Result | Target | Current | Score |
-|---|-----------|--------|---------|-------|
-| KR1 | Store fully configured (theme, products, pages, legal) | Complete | Store created, API connected, rest pending | -- |
-| KR2 | All products live with optimised meta and translations (9 languages) | 100% products live | 0 products migrated | -- |
-| KR3 | Technical SEO baseline score | 75+ on first audit | Not audited yet | -- |
-| KR4 | Domain (skingenetix.com) connected with DNS and email | Complete | Domain registered, DNS pending | -- |
+| #   | Key Result                                                           | Target             | Current                                    | Score |
+| --- | -------------------------------------------------------------------- | ------------------ | ------------------------------------------ | ----- |
+| KR1 | Store fully configured (theme, products, pages, legal)               | Complete           | Store created, API connected, rest pending | --    |
+| KR2 | All products live with optimised meta and translations (9 languages) | 100% products live | 0 products migrated                        | --    |
+| KR3 | Technical SEO baseline score                                         | 75+ on first audit | Not audited yet                            | --    |
+| KR4 | Domain (skingenetix.com) connected with DNS and email                | Complete           | Domain registered, DNS pending             | --    |
 
 **Alignment:**
+
 - KR1 --> Company O2 (credibility — demonstrates rapid brand launch capability)
 - KR2 --> Content & Creative Dept KR2 (optimised content across client sites)
 - KR3 --> Company O2 KR2 (All client SEO scores at 80+)
 - KR4 --> Infrastructure — standard setup process
 
 **Blockers to resolve:**
+
 - Shopify API access token needs saving to Bitwarden
 - Theme selection (Sense or Refresh) — design decision needed
 - Product range definition — which products to migrate from Hairgenetix / create new
@@ -54,19 +60,19 @@
 
 ## 3. Client Balanced Scorecard
 
-| Perspective | KPI | Current | Target | Source |
-|------------|-----|---------|--------|--------|
-| **Financial** | Cost to serve (setup phase) | ~EUR 0 incremental | <EUR 50 total setup | Infrastructure costs |
-| **Financial** | Time to launch | Not started | Store live within Q2 | Project timeline |
-| **Financial** | Reuse savings vs building from scratch | Not measured | 50%+ time saved (vs Hairgenetix setup) | Session tracking |
-| **Customer** | Technical SEO score (first audit) | Not audited | 75+ | Audit Agent |
-| **Customer** | Products live with full SEO meta | 0 | 100% of products | Shopify API |
-| **Customer** | Languages configured | 0 | 9 (matching Hairgenetix) | Langify |
-| **Internal Process** | Setup steps completed (of total) | 2 (store + API) | All steps per [setup-steps.md](setup-steps.md) | Setup checklist |
-| **Internal Process** | Playbook reuse from Hairgenetix | Identified | Documented and applied | [processes-and-flows.md](processes-and-flows.md) |
-| **Internal Process** | Cross-brand SEO separation verified | Not checked | No keyword cannibalisation | GSC |
-| **Learning & Growth** | Shopify store launch playbook | Partial (from Hairgenetix) | Complete reusable playbook | Agency docs |
-| **Learning & Growth** | GraphQL API automation patterns | Established | Documented and reusable | [architecture.md](architecture.md) |
+| Perspective           | KPI                                    | Current                    | Target                                         | Source                                           |
+| --------------------- | -------------------------------------- | -------------------------- | ---------------------------------------------- | ------------------------------------------------ |
+| **Financial**         | Cost to serve (setup phase)            | ~EUR 0 incremental         | <EUR 50 total setup                            | Infrastructure costs                             |
+| **Financial**         | Time to launch                         | Not started                | Store live within Q2                           | Project timeline                                 |
+| **Financial**         | Reuse savings vs building from scratch | Not measured               | 50%+ time saved (vs Hairgenetix setup)         | Session tracking                                 |
+| **Customer**          | Technical SEO score (first audit)      | Not audited                | 75+                                            | Audit Agent                                      |
+| **Customer**          | Products live with full SEO meta       | 0                          | 100% of products                               | Shopify API                                      |
+| **Customer**          | Languages configured                   | 0                          | 9 (matching Hairgenetix)                       | Langify                                          |
+| **Internal Process**  | Setup steps completed (of total)       | 2 (store + API)            | All steps per [setup-steps.md](setup-steps.md) | Setup checklist                                  |
+| **Internal Process**  | Playbook reuse from Hairgenetix        | Identified                 | Documented and applied                         | [processes-and-flows.md](processes-and-flows.md) |
+| **Internal Process**  | Cross-brand SEO separation verified    | Not checked                | No keyword cannibalisation                     | GSC                                              |
+| **Learning & Growth** | Shopify store launch playbook          | Partial (from Hairgenetix) | Complete reusable playbook                     | Agency docs                                      |
+| **Learning & Growth** | GraphQL API automation patterns        | Established                | Documented and reusable                        | [architecture.md](architecture.md)               |
 
 **Company BSC connection:** Setup speed feeds Internal Process (factory process efficiency). Playbook reuse feeds Learning & Growth (compounding advantage from each project). SEO foundation feeds Customer perspective once audited. See smith-ai-agency/docs/strategic-frameworks.md.
 
@@ -112,4 +118,9 @@
 - **Google YMYL scrutiny** — skincare claims face the same YMYL (Your Money Your Life) algorithm scrutiny as health products. E-E-A-T requirements are high.
 - **Platform dependency** — fully dependent on Shopify. Platform fee increases or policy changes could impact margins.
 
-**Company SWOT connection:** Skingenetix's "sister brand leverage" strength is a specific instance of the company's compounding advantage — each project builds on the last. The "new brand, no traffic" weakness is expected for a setup-phase project and mirrors the company's pre-revenue state. The skincare market size opportunity is larger than Hairgenetix's hair care segment, expanding the company's addressable market. See smith-ai-agency/docs/swot-analysis.md.
+**Company SWOT connection:** Skingenetix's "sister brand leverage" strength is a specific instance
+of the company's compounding advantage — each project builds on the last.
+The "new brand, no traffic" weakness is expected for a setup-phase project
+and mirrors the company's pre-revenue state.
+The skincare market size opportunity is larger than Hairgenetix's hair care segment,
+expanding the company's addressable market. See smith-ai-agency/docs/swot-analysis.md.

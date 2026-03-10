@@ -1,0 +1,28 @@
+{
+  "name": "skingenetix-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Skingenetix (CLIENT-003) — documentation and quality tooling",
+  "scripts": {
+    "lint": "markdownlint '**/*.md' --ignore node_modules --ignore site",
+    "lint:fix": "markdownlint '**/*.md' --ignore node_modules --ignore site --fix",
+    "format": "prettier --write '**/*.md' '**/*.json' '**/*.yml' --ignore-path .prettierignore",
+    "format:check": "prettier --check '**/*.md' '**/*.json' '**/*.yml' --ignore-path .prettierignore",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.43.0",
+    "prettier": "^3.4.0",
+    "husky": "^9.1.0",
+    "lint-staged": "^15.3.0"
+  },
+  "lint-staged": {
+    "*.md": [
+      "markdownlint --fix",
+      "prettier --write"
+    ],
+    "*.{json,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}

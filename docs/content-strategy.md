@@ -9,6 +9,7 @@
 Skingenetix is a sister brand to Hairgenetix, applying the same scientific/peptide-based approach to skincare.
 
 **Key differentiators to develop:**
+
 - Peptide-based skincare (same scientific credibility as Hairgenetix)
 - Clinical research backing
 - Transparent ingredient lists
@@ -16,16 +17,17 @@ Skingenetix is a sister brand to Hairgenetix, applying the same scientific/pepti
 
 ## Content Pillars
 
-| Pillar | Purpose | Content Types |
-|--------|---------|--------------|
+| Pillar                  | Purpose                     | Content Types                                                   |
+| ----------------------- | --------------------------- | --------------------------------------------------------------- |
 | **Scientific Research** | Build trust and credibility | Clinical studies, ingredient breakdowns, mechanism explanations |
-| **Product Education** | Help customers choose | How-to guides, comparison pages, routine builders |
-| **Results & Reviews** | Social proof | Customer testimonials, before/after, review highlights |
-| **Skincare Knowledge** | SEO + authority | Blog posts on skincare topics, ingredient spotlights |
+| **Product Education**   | Help customers choose       | How-to guides, comparison pages, routine builders               |
+| **Results & Reviews**   | Social proof                | Customer testimonials, before/after, review highlights          |
+| **Skincare Knowledge**  | SEO + authority             | Blog posts on skincare topics, ingredient spotlights            |
 
 ## Languages
 
 All content published in 9 languages (same as Hairgenetix):
+
 1. English (primary)
 2. Dutch
 3. German

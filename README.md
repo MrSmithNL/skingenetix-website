@@ -5,6 +5,7 @@ Shopify e-commerce store for Skingenetix skincare products — a sister brand to
 ## What This Repo Contains
 
 This is **not** the Shopify store itself (that lives on Shopify's servers). This repo contains:
+
 - Project documentation and architecture
 - Product content drafts and translations
 - Scripts for Shopify API automation

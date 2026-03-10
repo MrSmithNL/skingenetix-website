@@ -20,48 +20,55 @@ Before taking any action, check `~/.claude/skills/` for a relevant skill. 40 cor
 
 ## Capability Hierarchy — Mandatory
 
-This project follows the agency's 5-layer capability hierarchy: **Products → Capabilities → Agents → Skills → Tools**. See the [Capability Hierarchy](~/Claude Code/Projects/smith-ai-agency/docs/capability-hierarchy.md) reference. Use terms precisely: Tools are external connections (Composio, MCP, APIs). Skills are procedural knowledge (`~/.claude/skills/`). Agents are autonomous workers (`~/.claude/agents/`). Capabilities are business-level abilities. Products are sellable platforms.
+This project follows the agency's 5-layer capability hierarchy:
+**Products -> Capabilities -> Agents -> Skills -> Tools**.
+See the [Capability Hierarchy](~/Claude Code/Projects/smith-ai-agency/docs/capability-hierarchy.md) reference.
+Use terms precisely: Tools are external connections (Composio, MCP, APIs).
+Skills are procedural knowledge (`~/.claude/skills/`).
+Agents are autonomous workers (`~/.claude/agents/`).
+Capabilities are business-level abilities. Products are sellable platforms.
 
 ---
 
 ## Tech Stack
 
-| Layer | Choice | Notes |
-|-------|--------|-------|
-| **E-commerce Platform** | Shopify | Hosted by Shopify — no separate hosting needed |
-| **Theme** | TBD (Sense or Refresh recommended) | Free Shopify 2.0 theme |
-| **API Access** | GraphQL Admin API | Via custom app access token |
-| **Translation** | Langify | Same as Hairgenetix — 9 languages |
-| **Email Marketing** | Klaviyo | Same as Hairgenetix |
-| **Bundles** | Kaching Bundles | Same as Hairgenetix |
-| **Analytics** | GA4 + Google Ads + FB Pixel | Standard tracking |
-| **Domain Registrar** | OpenDomainRegistry.net | DNS pointing to Shopify |
-| **Email Hosting** | TBD | Separate from Shopify |
-| **Credentials** | Bitwarden | All tokens/keys stored here |
+| Layer                   | Choice                             | Notes                                          |
+| ----------------------- | ---------------------------------- | ---------------------------------------------- |
+| **E-commerce Platform** | Shopify                            | Hosted by Shopify — no separate hosting needed |
+| **Theme**               | TBD (Sense or Refresh recommended) | Free Shopify 2.0 theme                         |
+| **API Access**          | GraphQL Admin API                  | Via custom app access token                    |
+| **Translation**         | Langify                            | Same as Hairgenetix — 9 languages              |
+| **Email Marketing**     | Klaviyo                            | Same as Hairgenetix                            |
+| **Bundles**             | Kaching Bundles                    | Same as Hairgenetix                            |
+| **Analytics**           | GA4 + Google Ads + FB Pixel        | Standard tracking                              |
+| **Domain Registrar**    | OpenDomainRegistry.net             | DNS pointing to Shopify                        |
+| **Email Hosting**       | TBD                                | Separate from Shopify                          |
+| **Credentials**         | Bitwarden                          | All tokens/keys stored here                    |
 
 ---
 
 ## Key Docs
 
-| File | What's In It |
-|------|-------------|
-| `docs/architecture.md` | System diagram, components, connections, accounts |
-| `docs/todo.md` | Tasks with IDs and priorities |
-| `docs/accounts-and-access.md` | Platforms and credentials (Bitwarden refs only) |
-| `docs/decisions-log.md` | Technical decisions with reasoning (ADR format) |
-| `docs/security-risk-log.md` | Risks and mitigations |
-| `docs/setup-steps.md` | Every setup step with reversal instructions |
-| `docs/processes-and-flows.md` | Workflows and procedures |
-| `docs/content-strategy.md` | Content plan and product positioning |
-| `docs/seo-strategy.md` | Keywords and optimisation |
-| `docs/metrics.md` | Analytics setup and KPIs |
-| `research/skingenetix-shopify-research.md` | Full technical research report |
+| File                                       | What's In It                                      |
+| ------------------------------------------ | ------------------------------------------------- |
+| `docs/architecture.md`                     | System diagram, components, connections, accounts |
+| `docs/todo.md`                             | Tasks with IDs and priorities                     |
+| `docs/accounts-and-access.md`              | Platforms and credentials (Bitwarden refs only)   |
+| `docs/decisions-log.md`                    | Technical decisions with reasoning (ADR format)   |
+| `docs/security-risk-log.md`                | Risks and mitigations                             |
+| `docs/setup-steps.md`                      | Every setup step with reversal instructions       |
+| `docs/processes-and-flows.md`              | Workflows and procedures                          |
+| `docs/content-strategy.md`                 | Content plan and product positioning              |
+| `docs/seo-strategy.md`                     | Keywords and optimisation                         |
+| `docs/metrics.md`                          | Analytics setup and KPIs                          |
+| `research/skingenetix-shopify-research.md` | Full technical research report                    |
 
 ---
 
 ## Autonomous Permissions
 
 Claude has full autonomous permission to:
+
 - Update any `.md` documentation file in this repo
 - Create new `.md` files in `docs/` or `research/`
 - Create and edit scripts in `scripts/`
@@ -71,6 +78,7 @@ Claude has full autonomous permission to:
 - Register translations via GraphQL API
 
 Always confirm before:
+
 - Modifying core Liquid theme files
 - Publishing/going live
 - Changing pricing or payment settings
@@ -82,6 +90,7 @@ Always confirm before:
 ## Architecture Maintenance — Always Automatic
 
 After any change to infrastructure, services, tools, accounts, or connections:
+
 1. Update `docs/architecture.md`
 2. Update `docs/todo.md`
 3. Commit and push
