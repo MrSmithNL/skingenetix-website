@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block tabs %}
+  {{ super() }}
+  <nav class="entity-nav-bar">
+    <div class="md-grid entity-nav-grid">
+      <a href="https://mrsmithnl.github.io/smith-ai-agency/" class="entity-nav-home" title="Agency Home">Smith AI Agency</a>
+      <div class="entity-nav-dropdowns">
+
+        <div class="entity-dropdown" data-dropdown="verticals">
+          <button class="entity-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Verticals
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+          </button>
+          <ul class="entity-dropdown-menu" role="menu">
+            <li class="entity-menu-section">Customer-Facing SaaS (L5)</li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/verticals/aisogen/README/" target="_blank" rel="noopener">AISOGEN <small>aisogen.ai</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/verticals/sell-funnel/README/" target="_blank" rel="noopener">Sell Funnel <small>sellfunnel.com</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/verticals/book-rocket/README/" target="_blank" rel="noopener">Book Rocket <small>bookrocket.ai</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/verticals/course-rocket/README/" target="_blank" rel="noopener">Course Rocket <small>courserocket.ai</small></a></li>
+          </ul>
+        </div>
+
+        <div class="entity-dropdown" data-dropdown="engines">
+          <button class="entity-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Engines
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+          </button>
+          <ul class="entity-dropdown-menu" role="menu">
+            <li class="entity-menu-section">Capability Engines (L4)</li>
+            <li><a href="https://mrsmithnl.github.io/seo-toolkit/" target="_blank" rel="noopener">SEO Toolkit <small>PROD-001</small></a></li>
+            <li class="entity-menu-divider"></li>
+            <li class="entity-menu-section">Platform (L3)</li>
+            <li><a href="https://mrsmithnl.github.io/saas-platform/" target="_blank" rel="noopener">SaaS Platform <small>PROD-004</small></a></li>
+          </ul>
+        </div>
+
+        <div class="entity-dropdown" data-dropdown="infra">
+          <button class="entity-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Infra
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+          </button>
+          <ul class="entity-dropdown-menu" role="menu">
+            <li class="entity-menu-section">Infrastructure (L1)</li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/infrastructure/infra-001-cli-runner/README/" target="_blank" rel="noopener">CLI Runner <small>INFRA-001</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/infrastructure/infra-002-project-template/README/" target="_blank" rel="noopener">Project Template <small>INFRA-002</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/infrastructure/infra-003-monitoring/README/" target="_blank" rel="noopener">Monitoring <small>INFRA-003</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/infrastructure/infra-004-taskmanagement/README/" target="_blank" rel="noopener">Task Management <small>INFRA-004</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/infrastructure/infra-005-continuous-improvement/README/" target="_blank" rel="noopener">Continuous Improvement <small>INFRA-005</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/smith-ai-agency/infrastructure/infra-006-ebook-engine/README/" target="_blank" rel="noopener">Ebook Engine <small>INFRA-006</small></a></li>
+          </ul>
+        </div>
+
+        <div class="entity-dropdown" data-dropdown="clients">
+          <button class="entity-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Clients
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+          </button>
+          <ul class="entity-dropdown-menu" role="menu">
+            <li class="entity-menu-section">Client Projects</li>
+            <li><a href="https://mrsmithnl.github.io/hairgenetix/" target="_blank" rel="noopener">Hairgenetix <small>CLIENT-002</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/skingenetix-website/" target="_blank" rel="noopener">Skingenetix <small>CLIENT-003</small></a></li>
+            <li><a href="https://mrsmithnl.github.io/loveoverexile-website/" target="_blank" rel="noopener">Love Over Exile <small>CLIENT-001</small></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+{% endblock %}

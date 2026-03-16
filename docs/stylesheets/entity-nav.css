@@ -1,0 +1,156 @@
+/* Entity Navigation Bar — shared across all 6 documentation sites (ADR-024) */
+
+.entity-nav-bar {
+  background: var(--md-primary-fg-color--dark, #1a1a2e);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 3;
+}
+
+.entity-nav-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.8rem;
+  min-height: 36px;
+}
+
+.entity-nav-home {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+
+.entity-nav-home:hover {
+  color: var(--md-accent-fg-color, #ffc107);
+}
+
+.entity-nav-dropdowns {
+  display: flex;
+  gap: 0.2rem;
+}
+
+/* Dropdown container */
+.entity-dropdown {
+  position: relative;
+}
+
+.entity-dropdown-toggle {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.45rem 0.7rem;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+
+.entity-dropdown-toggle:hover,
+.entity-dropdown-toggle:focus {
+  color: var(--md-accent-fg-color, #ffc107);
+  outline: none;
+}
+
+.entity-dropdown-toggle svg {
+  transition: transform 0.2s;
+}
+
+.entity-dropdown[data-open] .entity-dropdown-toggle svg {
+  transform: rotate(180deg);
+}
+
+.entity-dropdown[data-open] .entity-dropdown-toggle {
+  color: var(--md-accent-fg-color, #ffc107);
+}
+
+/* Dropdown menu */
+.entity-dropdown-menu {
+  background: var(--md-default-bg-color, #1e1e1e);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  display: none;
+  list-style: none;
+  margin: 0;
+  min-width: 210px;
+  padding: 0.3rem 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+}
+
+.entity-dropdown[data-open] .entity-dropdown-menu {
+  display: block;
+  animation: entityFadeIn 0.15s ease-out;
+}
+
+@keyframes entityFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.entity-dropdown-menu a {
+  color: var(--md-default-fg-color, #fff);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  padding: 0.4rem 0.9rem;
+  text-decoration: none;
+  transition: background 0.12s;
+}
+
+.entity-dropdown-menu a:hover {
+  background: var(--md-accent-fg-color--transparent, rgba(255, 193, 7, 0.1));
+  color: var(--md-accent-fg-color, #ffc107);
+}
+
+.entity-dropdown-menu a small {
+  color: var(--md-default-fg-color--light, rgba(255, 255, 255, 0.4));
+  font-size: 0.65rem;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+.entity-menu-section {
+  color: var(--md-default-fg-color--light, rgba(255, 255, 255, 0.4));
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 0.9rem 0.15rem;
+  text-transform: uppercase;
+}
+
+.entity-menu-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 0.25rem 0;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 600px) {
+  .entity-nav-grid {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .entity-nav-home {
+    display: none;
+  }
+  .entity-nav-dropdowns {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
