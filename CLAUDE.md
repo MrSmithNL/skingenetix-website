@@ -11,6 +11,12 @@ These instructions apply to this project in every session.
 
 ---
 
+## Standing Permission — .md File Operations
+
+Claude has Malcolm's standing approval (granted 2026-04-22) to Edit, Write, Create, Delete, Move, Rename, and commit any `.md` file in this repo without per-action confirmation. Source: `~/.claude/CLAUDE.md` (Autonomous Permissions).
+
+---
+
 ## What This Project Is
 
 **Skingenetix** is a Shopify e-commerce store for skincare products — a sister brand to Hairgenetix (CLIENT-002). Same owner, same contact details, different product line. Built and managed primarily by Claude Code via Shopify's GraphQL Admin API.
