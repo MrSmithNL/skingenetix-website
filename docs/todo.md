@@ -1,5 +1,19 @@
 # Todo — Skingenetix (CLIENT-003)
 
+## 🟢 Phase 6 follow-up — staging triage (P6-FU-4 / skingenetix)
+
+**Source:** Phase 6 cluster 10 contamination cleanup (this repo
+intentionally NOT modified by C10 — its single dirty entry looked
+like genuine work, not contamination).
+
+**Status:** 1 untracked entry: `?? assets/`
+
+**Action:** check `ls assets/` — if these are real product assets to
+ship, `git add assets/ && git commit`. If they're test/staging files
+that shouldn't be tracked, add `assets/<pattern>/` to `.gitignore`.
+
+This is the lowest-priority Phase 6 follow-up — single dir, isolated.
+
 ## How This Works
 
 - Check at start of every session
