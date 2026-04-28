@@ -27,7 +27,7 @@ jobs:
       - name: Install tools
         run: pip install radon vulture jscpd
 
-      - name: Collect complexity metrics
+      - name: 'FF-005: Collect complexity metrics (radon)'
         id: complexity
         run: |
           if [ -d scripts/ ]; then
@@ -46,7 +46,7 @@ jobs:
           DUP=$(cat .jscpd-report/jscpd-report.json 2>/dev/null | python3 -c "import json,sys; d=json.load(sys.stdin); print(f'{d.get(\"statistics\",{}).get(\"total\",{}).get(\"percentage\",0):.1f}')" 2>/dev/null || echo "0.0")
           echo "duplication=${DUP}" >> "$GITHUB_OUTPUT"
 
-      - name: Collect dead code count
+      - name: 'FF-041: Collect dead code count (vulture)'
         id: deadcode
         run: |
           if [ -d scripts/ ]; then
