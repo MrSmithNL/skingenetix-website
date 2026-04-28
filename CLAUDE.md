@@ -46,7 +46,7 @@ Claude has Malcolm's standing approval (granted 2026-04-22) to Edit, Write, Crea
 
 ## Agency Context
 
-Company context, architecture, terminology, and frameworks index at `~/.claude/context/`. Skills at `~/.claude/skills/` — check before any action.
+Company context, architecture, terminology, and frameworks index at `~/.claude/context/`. Never start an action without first checking `~/.claude/skills/` for a relevant skill.
 
 ---
 
@@ -58,9 +58,9 @@ Always confirm before: modifying core Liquid files, publishing/going live, chang
 
 ---
 
-## Architecture Maintenance — Always Automatic
+## Architecture Maintenance — Mandatory After Any Change
 
-After any change to infrastructure, services, tools, or accounts: update `docs/architecture.md` + `docs/todo.md`, commit and push.
+Never declare an infrastructure / services / tools / accounts change complete without updating `docs/architecture.md` + `docs/todo.md`, then committing and pushing.
 
 ---
 
