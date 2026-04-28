@@ -1,5 +1,7 @@
 # Skingenetix Website (CLIENT-003)
 
+[C4 architecture →](docs/architecture/generated/c4/README.md)
+
 Shopify e-commerce store for Skingenetix skincare products — a sister brand to [Hairgenetix.com](https://hairgenetix.com).
 
 ## What This Repo Contains

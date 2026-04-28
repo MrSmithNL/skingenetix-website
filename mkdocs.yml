@@ -56,6 +56,11 @@ nav:
   - Home: index.md
   - Setup Steps: setup-steps.md
   - Architecture: architecture.md
+  - Living Architecture (auto-generated):
+      - C4 Architecture:
+          - Index: architecture/generated/c4/README.md
+          - System Context: architecture/generated/c4/system-context.md
+          - Containers: architecture/generated/c4/containers.md
   - Content Strategy: content-strategy.md
   - SEO Strategy: seo-strategy.md
   - Strategic OS: strategic-os.md
