@@ -1,8 +1,9 @@
 name: Validate Backstage Catalog
 
 # Per-repo Backstage catalog validation. Fetches shared lint config + drift
-# detector from smith-os via sparse checkout. Pair this file with a
-# `catalog-info.yaml` at the repo root.
+# detector from smith-os via curl (raw.githubusercontent.com works for public
+# repos without auth). Pair this file with a `catalog-info.yaml` at the repo
+# root.
 #
 # Three checks (defence in depth):
 #   1. yamllint --strict           (formatting, indentation, line-length)
@@ -34,14 +35,17 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Fetch shared smith-os config + drift script
-        uses: actions/checkout@v4
-        with:
-          repository: MrSmithNL/smith-os
-          path: .smith-os-shared
-          sparse-checkout: |
-            .yamllint.yaml
-            tools/architecture-artefacts/generate_catalog.py
-          sparse-checkout-cone-mode: false
+        # Direct curl from raw.githubusercontent.com — no API discovery call,
+        # no token needed (smith-os is public). actions/checkout cross-repo
+        # mode requires PAT or settings-level grant, neither of which we
+        # need for public read-only file fetches.
+        run: |
+          mkdir -p .smith-os-shared/tools/architecture-artefacts
+          BASE=https://raw.githubusercontent.com/MrSmithNL/smith-os/main
+          curl -fsSL "$BASE/.yamllint.yaml" -o .smith-os-shared/.yamllint.yaml
+          curl -fsSL "$BASE/tools/architecture-artefacts/generate_catalog.py" \
+            -o .smith-os-shared/tools/architecture-artefacts/generate_catalog.py
+          chmod +x .smith-os-shared/tools/architecture-artefacts/generate_catalog.py
 
       - uses: actions/setup-node@v4
         with:
