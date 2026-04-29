@@ -1,0 +1,70 @@
+# Backstage Catalog — skingenetix-website (CLIENT-003)
+#
+# Shape-only entity metadata (Backstage v1alpha1 schema). NOT actively ingested
+# by a Backstage server — this file documents the Skingenetix client repo in a
+# portable, future-Backstage-importable form. Generated/maintained as part of
+# the agency IDP rollout (Phase 7 Cluster E, 2026-04-29).
+#
+# Reference: https://backstage.io/docs/features/software-catalog/descriptor-format/
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: skingenetix
+  description: CLIENT-003 — Skingenetix Shopify storefront. Sister brand to Hairgenetix; same agency content/audit pipeline applies.
+  tags:
+    - client
+    - shopify
+    - ecommerce
+  links:
+    - url: https://github.com/MrSmithNL/skingenetix-website
+      title: GitHub repo
+      icon: github
+spec:
+  owner: malcolmsmith
+  domain: smith-ai-agency
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: skingenetix-theme
+  description: Shopify Liquid theme assets — sections, snippets, templates, locale strings. Production-safe protocol applies (Rule 24).
+  tags:
+    - shopify
+    - liquid
+    - theme
+spec:
+  type: website
+  lifecycle: production
+  owner: malcolmsmith
+  system: skingenetix
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: skingenetix-content
+  description: Long-form content + audits — articles, ingredient pages, comparison pages. Produced by content-engine + optimisation-engine.
+  tags:
+    - content
+    - audits
+    - seo
+spec:
+  type: documentation
+  lifecycle: production
+  owner: malcolmsmith
+  system: skingenetix
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: skingenetix-research
+  description: Research + automation scripts — competitor scrapes, ingredient research, agency tooling that supports content production.
+  tags:
+    - research
+    - automation
+    - python
+spec:
+  type: library
+  lifecycle: production
+  owner: malcolmsmith
+  system: skingenetix

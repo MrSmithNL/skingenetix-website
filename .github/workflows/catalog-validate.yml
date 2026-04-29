@@ -1,0 +1,71 @@
+name: Validate Backstage Catalog
+
+# Per-repo Backstage catalog validation. Fetches shared lint config + drift
+# detector from smith-os via sparse checkout. Pair this file with a
+# `catalog-info.yaml` at the repo root.
+#
+# Three checks (defence in depth):
+#   1. yamllint --strict           (formatting, indentation, line-length)
+#   2. RoadieHQ entity-validator   (Backstage v1alpha1 schema conformance)
+#   3. Staleness drift check       (workspace packages → catalog Components)
+#
+# Reference: Phase 7 Cluster E4 (2026-04-29)
+# Source template: smith-os/blueprints/ci-templates/catalog-validate.yml
+
+on:
+  pull_request:
+    paths:
+      - 'catalog-info.yaml'
+      - '.github/workflows/catalog-validate.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'catalog-info.yaml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch shared smith-os config + drift script
+        uses: actions/checkout@v4
+        with:
+          repository: MrSmithNL/smith-os
+          path: .smith-os-shared
+          sparse-checkout: |
+            .yamllint.yaml
+            tools/architecture-artefacts/generate_catalog.py
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python deps
+        run: pip install --quiet pyyaml yamllint
+
+      - name: yamllint --strict (formatting)
+        run: |
+          yamllint --strict -c .smith-os-shared/.yamllint.yaml catalog-info.yaml
+
+      - name: RoadieHQ entity-validator (schema)
+        # https://github.com/RoadieHQ/backstage-entity-validator
+        run: |
+          npx -y @roadiehq/backstage-entity-validator@latest catalog-info.yaml
+
+      - name: Catalog staleness drift check
+        # Fails if a workspace package or top-level Python module has been
+        # added without a matching Component in catalog-info.yaml. Fuzzy-matches
+        # on name/tags/description to allow group Components.
+        run: |
+          python3 .smith-os-shared/tools/architecture-artefacts/generate_catalog.py . --check
