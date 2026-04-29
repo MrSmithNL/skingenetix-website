@@ -1,14 +1,16 @@
 name: Validate Backstage Catalog
 
-# Per-repo Backstage catalog validation. Fetches shared lint config + drift
-# detector from smith-os via curl (raw.githubusercontent.com works for public
-# repos without auth). Pair this file with a `catalog-info.yaml` at the repo
-# root.
+# Per-repo Backstage catalog validation. Self-contained — yamllint config is
+# inlined so no cross-repo fetch is needed (smith-os is private; cross-repo
+# actions/checkout requires a PAT and curl from raw.githubusercontent.com 404s).
 #
-# Three checks (defence in depth):
+# Two checks (defence in depth):
 #   1. yamllint --strict           (formatting, indentation, line-length)
 #   2. RoadieHQ entity-validator   (Backstage v1alpha1 schema conformance)
-#   3. Staleness drift check       (workspace packages → catalog Components)
+#
+# Drift detection (workspace packages → catalog Components) runs centrally in
+# smith-os via a scheduled workflow that clones each sibling repo and runs
+# tools/architecture-artefacts/generate_catalog.py --check against it.
 #
 # Reference: Phase 7 Cluster E4 (2026-04-29)
 # Source template: smith-os/blueprints/ci-templates/catalog-validate.yml
@@ -23,6 +25,7 @@ on:
       - main
     paths:
       - 'catalog-info.yaml'
+      - '.github/workflows/catalog-validate.yml'
   workflow_dispatch:
 
 permissions:
@@ -34,19 +37,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch shared smith-os config + drift script
-        # Direct curl from raw.githubusercontent.com — no API discovery call,
-        # no token needed (smith-os is public). actions/checkout cross-repo
-        # mode requires PAT or settings-level grant, neither of which we
-        # need for public read-only file fetches.
-        run: |
-          mkdir -p .smith-os-shared/tools/architecture-artefacts
-          BASE=https://raw.githubusercontent.com/MrSmithNL/smith-os/main
-          curl -fsSL "$BASE/.yamllint.yaml" -o .smith-os-shared/.yamllint.yaml
-          curl -fsSL "$BASE/tools/architecture-artefacts/generate_catalog.py" \
-            -o .smith-os-shared/tools/architecture-artefacts/generate_catalog.py
-          chmod +x .smith-os-shared/tools/architecture-artefacts/generate_catalog.py
-
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -55,21 +45,37 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install Python deps
-        run: pip install --quiet pyyaml yamllint
+      - name: Install yamllint
+        run: pip install --quiet yamllint
+
+      - name: Write inlined yamllint config
+        # Mirror of smith-os/.yamllint.yaml — inlined so this workflow has no
+        # external dependency on smith-os (which is private).
+        run: |
+          cat > /tmp/yamllint.yaml <<'EOF'
+          extends: default
+          rules:
+            line-length:
+              max: 200
+              level: warning
+            document-start:
+              present: true
+            document-end:
+              present: false
+            truthy:
+              allowed-values: ["true", "false"]
+              check-keys: true
+            indentation:
+              spaces: 2
+              indent-sequences: true
+              check-multi-line-strings: false
+          EOF
 
       - name: yamllint --strict (formatting)
         run: |
-          yamllint --strict -c .smith-os-shared/.yamllint.yaml catalog-info.yaml
+          yamllint --strict -c /tmp/yamllint.yaml catalog-info.yaml
 
       - name: RoadieHQ entity-validator (schema)
         # https://github.com/RoadieHQ/backstage-entity-validator
         run: |
           npx -y @roadiehq/backstage-entity-validator@latest catalog-info.yaml
-
-      - name: Catalog staleness drift check
-        # Fails if a workspace package or top-level Python module has been
-        # added without a matching Component in catalog-info.yaml. Fuzzy-matches
-        # on name/tags/description to allow group Components.
-        run: |
-          python3 .smith-os-shared/tools/architecture-artefacts/generate_catalog.py . --check
