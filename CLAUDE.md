@@ -46,7 +46,7 @@ Claude has Malcolm's standing approval (granted 2026-04-22) to Edit, Write, Crea
 
 ## Agency Context
 
-Company context, architecture, terminology, and frameworks index at `~/.claude/context/`. Never start an action without first checking `~/.claude/skills/` for a relevant skill.
+Company context, architecture, terminology, and frameworks index at `~/.claude/memory/` (general/, domain/, tools/). Never start an action without first checking `~/.claude/skills/` for a relevant skill.
 
 ---
 
