@@ -2,7 +2,7 @@
 
 # skingenetix-website — Container (auto-generated C4)
 
-> **Auto-generated** by `smith-os/tools/architecture-artefacts/render_c4.py`.
+> **Auto-generated** by `smith-os/packages/forge/tools/architecture-artefacts/render_c4.py`.
 > **Do not hand-edit.** Re-run the generator to refresh.
 >
 > - Generated: `2026-04-28 15:24 UTC`
@@ -74,6 +74,6 @@ graph LR
 ## How to regenerate
 
 ```bash
-python3 ~/Claude\ Code/Projects/smith-os/tools/architecture-artefacts/render_c4.py \
+python3 ~/Claude\ Code/Projects/smith-os/packages/forge/tools/architecture-artefacts/render_c4.py \
   ~/Claude\ Code/Projects/skingenetix-website
 ```

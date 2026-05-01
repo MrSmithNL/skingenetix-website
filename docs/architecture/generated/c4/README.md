@@ -2,7 +2,7 @@
 
 # skingenetix-website — C4 Architecture (auto-generated)
 
-> **Auto-generated** by `smith-os/tools/architecture-artefacts/render_c4.py`.
+> **Auto-generated** by `smith-os/packages/forge/tools/architecture-artefacts/render_c4.py`.
 > **Do not hand-edit.** Re-run the generator to refresh.
 >
 > - Generated: `2026-04-28 15:24 UTC`
@@ -34,6 +34,6 @@ together close Layer 3 of the research-03 three-layer model.
 ## How to regenerate
 
 ```bash
-python3 ~/Claude\ Code/Projects/smith-os/tools/architecture-artefacts/render_c4.py \
+python3 ~/Claude\ Code/Projects/smith-os/packages/forge/tools/architecture-artefacts/render_c4.py \
   ~/Claude\ Code/Projects/skingenetix-website
 ```

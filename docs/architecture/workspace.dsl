@@ -10,7 +10,7 @@
  * uses Langify (not Translate & Adapt), email uses Klaviyo (planned).
  *
  * Source of truth. Hand-authored. Re-export via:
- *   python3 ~/Claude\ Code/Projects/smith-os/tools/architecture-artefacts/render_c4.py \
+ *   python3 ~/Claude\ Code/Projects/smith-os/packages/forge/tools/architecture-artefacts/render_c4.py \
  *     ~/Claude\ Code/Projects/skingenetix-website
  */
 
