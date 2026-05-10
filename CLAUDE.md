@@ -72,3 +72,9 @@ Never declare an infrastructure / services / tools / accounts change complete wi
 | `docs/architecture.md`     | System diagram, connections, accounts |
 | `docs/setup-steps.md`      | Every setup step with undo procedure  |
 | `docs/content-strategy.md` | Content plan and product positioning  |
+
+---
+
+## Capability Hierarchy
+
+CLIENT-003 in the agency 5-layer Capability Hierarchy (Products → Capabilities → Agents → Skills → Tools). Consumes shared agency capabilities (content, SEO, Shopify integration). See `~/Claude Code/Projects/smith-ai-agency/docs/capability-hierarchy.md`.
