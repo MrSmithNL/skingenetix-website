@@ -5,6 +5,12 @@
     },
     {
       "pattern": "^https://.*\\.myshopify\\.com"
+    },
+    {
+      "pattern": "^https://github\\.com/MrSmithNL/smith-ai-agency/"
+    },
+    {
+      "pattern": "^\\.\\./dependency-graph\\.md$"
     }
   ],
   "timeout": "10s",
