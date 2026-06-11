@@ -24,8 +24,14 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Set up Node.js (for jscpd via npx)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Install tools
-        run: pip install radon vulture jscpd
+        # 2026-06-11 quality-manager: jscpd is npm-only — moved to npx; was failing with "No matching distribution found for jscpd"
+        run: pip install radon vulture
 
       - name: 'FF-005: Collect complexity metrics (radon)'
         id: complexity

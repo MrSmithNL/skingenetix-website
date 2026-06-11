@@ -1,12 +1,10 @@
 name: Deploy Documentation
 
+# DISABLED 2026-06-11 by quality-manager — Netlify migration (ADR-029, Issue #26).
+# GitHub Pages is no longer the deployment target; docs deploy via Netlify.
+# Kept as workflow_dispatch so it can be triggered manually if Pages is re-enabled.
+
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'docs/**'
-      - 'mkdocs.yml'
   workflow_dispatch:
 
 permissions:
