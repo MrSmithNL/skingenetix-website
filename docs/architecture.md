@@ -58,35 +58,35 @@ graph TB
 
 ## Components
 
-| Component | What It Is | Where It Lives | Status |
-|-----------|-----------|---------------|--------|
-| Shopify Store | E-commerce platform + hosting | pnb00c-aq.myshopify.com (www.skingenetix.com) | ✅ Live |
-| Theme | Shopify 2.0 theme: Impact | Shopify | ✅ Installed (MAIN) |
-| Domain | Store domain name | OpenDomainRegistry.net | ✅ Live on www.skingenetix.com |
-| Email | Email hosting for store domain | GoDaddy (TBD) | 🔜 To configure |
-| GraphQL Admin API | Programmatic store management | Shopify | ✅ Active (Client Credentials, auto-refresh) |
-| Products | 9 active skincare products (serums + creams), all EUR 49,95 | Shopify | ✅ Live (0 inventory - not selling yet) |
-| Langify | Translation (9 languages) | Shopify App Store | 🔜 To install (only EN locale published) |
-| Klaviyo | Email marketing + reviews | Shopify App Store | 🔜 To install |
-| Kaching Bundles | Product bundles | Shopify App Store | 🔜 To install |
-| hCaptcha | Form security | Shopify App Store | 🔜 To install |
-| Google Analytics | Traffic analytics | Google | 🔜 To connect |
-| Google Ads | Ad conversion tracking | Google | 🔜 To connect |
-| Facebook Pixel | Social ad tracking | Meta | 🔜 To connect |
-| Bitwarden | Credential storage | Local + cloud | ✅ Active |
-| Claude Code | Store builder + manager | Local | ✅ Active |
+| Component         | What It Is                                                  | Where It Lives                                | Status                                       |
+| ----------------- | ----------------------------------------------------------- | --------------------------------------------- | -------------------------------------------- |
+| Shopify Store     | E-commerce platform + hosting                               | pnb00c-aq.myshopify.com (www.skingenetix.com) | ✅ Live                                      |
+| Theme             | Shopify 2.0 theme: Impact                                   | Shopify                                       | ✅ Installed (MAIN)                          |
+| Domain            | Store domain name                                           | OpenDomainRegistry.net                        | ✅ Live on www.skingenetix.com               |
+| Email             | Email hosting for store domain                              | GoDaddy (TBD)                                 | 🔜 To configure                              |
+| GraphQL Admin API | Programmatic store management                               | Shopify                                       | ✅ Active (Client Credentials, auto-refresh) |
+| Products          | 9 active skincare products (serums + creams), all EUR 49,95 | Shopify                                       | ✅ Live (0 inventory - not selling yet)      |
+| Langify           | Translation (9 languages)                                   | Shopify App Store                             | 🔜 To install (only EN locale published)     |
+| Klaviyo           | Email marketing + reviews                                   | Shopify App Store                             | 🔜 To install                                |
+| Kaching Bundles   | Product bundles                                             | Shopify App Store                             | 🔜 To install                                |
+| hCaptcha          | Form security                                               | Shopify App Store                             | 🔜 To install                                |
+| Google Analytics  | Traffic analytics                                           | Google                                        | 🔜 To connect                                |
+| Google Ads        | Ad conversion tracking                                      | Google                                        | 🔜 To connect                                |
+| Facebook Pixel    | Social ad tracking                                          | Meta                                          | 🔜 To connect                                |
+| Bitwarden         | Credential storage                                          | Local + cloud                                 | ✅ Active                                    |
+| Claude Code       | Store builder + manager                                     | Local                                         | ✅ Active                                    |
 
 ## Connections
 
-| From | To | How | Status | Purpose |
-|------|----|-----|--------|---------|
-| Claude Code | Shopify | GraphQL Admin API (Client Credentials, auto-refresh) | ✅ Active | Store management |
-| Business Dashboard | Shopify | REST Admin API (Client Credentials) | ✅ Active | Sales/forecast reporting (Fly.io) |
-| Domain | Shopify | DNS A/CNAME records | ✅ Active | Domain routing |
-| Domain | Email Host | MX records | 🔜 Pending | Email delivery |
-| Shopify | Langify | Shopify App OAuth | 🔜 Pending | Translations |
-| Shopify | Klaviyo | Shopify App OAuth | 🔜 Pending | Email marketing |
-| Shopify | GA4 | Measurement ID | 🔜 Pending | Analytics |
+| From               | To         | How                                                  | Status     | Purpose                           |
+| ------------------ | ---------- | ---------------------------------------------------- | ---------- | --------------------------------- |
+| Claude Code        | Shopify    | GraphQL Admin API (Client Credentials, auto-refresh) | ✅ Active  | Store management                  |
+| Business Dashboard | Shopify    | REST Admin API (Client Credentials)                  | ✅ Active  | Sales/forecast reporting (Fly.io) |
+| Domain             | Shopify    | DNS A/CNAME records                                  | ✅ Active  | Domain routing                    |
+| Domain             | Email Host | MX records                                           | 🔜 Pending | Email delivery                    |
+| Shopify            | Langify    | Shopify App OAuth                                    | 🔜 Pending | Translations                      |
+| Shopify            | Klaviyo    | Shopify App OAuth                                    | 🔜 Pending | Email marketing                   |
+| Shopify            | GA4        | Measurement ID                                       | 🔜 Pending | Analytics                         |
 
 ## Authentication
 
@@ -110,10 +110,10 @@ graph TB
 
 ## Change Log
 
-| Date       | What Changed                                                                   | Who              |
-| ---------- | ------------------------------------------------------------------------------ | ---------------- |
-| 2026-03-05 | Project created, initial architecture documented                               | Claude Code      |
-| 2026-03-05 | Store created (skingenetix.myshopify.com), custom app API credentials received | Malcolm + Claude |
-| 2026-05-06 | State discovery: store far ahead of docs (Impact theme live, 5+ products, domain live). See handover-2026-05-06.md | Claude Code |
-| 2026-08-03 | All 9 products: HS-code 3304.99.5000 + country of origin CN set (US import). Shopify taxonomy categories set (5x Face Serums, 4x Face Moisturizers) | Claude Code |
-| 2026-08-03 | Business dashboard: fixed expired Skingenetix Shopify client secret (was stale in dashboard .env) | Claude Code |
+| Date       | What Changed                                                                                                                                        | Who              |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| 2026-03-05 | Project created, initial architecture documented                                                                                                    | Claude Code      |
+| 2026-03-05 | Store created (skingenetix.myshopify.com), custom app API credentials received                                                                      | Malcolm + Claude |
+| 2026-05-06 | State discovery: store far ahead of docs (Impact theme live, 5+ products, domain live). See handover-2026-05-06.md                                  | Claude Code      |
+| 2026-08-03 | All 9 products: HS-code 3304.99.5000 + country of origin CN set (US import). Shopify taxonomy categories set (5x Face Serums, 4x Face Moisturizers) | Claude Code      |
+| 2026-08-03 | Business dashboard: fixed expired Skingenetix Shopify client secret (was stale in dashboard .env)                                                   | Claude Code      |

@@ -235,8 +235,8 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Session Log
 
-| Date       | What Was Worked On                                                                   |
-| ---------- | ------------------------------------------------------------------------------------ |
-| 2026-03-05 | Project created. Research completed. Initial architecture and standard files set up. |
-| 2026-05-06 | State-discovery: found store far ahead of docs. Handover written (handover-2026-05-06.md). No store changes. |
+| Date       | What Was Worked On                                                                                                                                                                                                                 |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-03-05 | Project created. Research completed. Initial architecture and standard files set up.                                                                                                                                               |
+| 2026-05-06 | State-discovery: found store far ahead of docs. Handover written (handover-2026-05-06.md). No store changes.                                                                                                                       |
 | 2026-08-03 | Set HS-code 3304.99.5000 + origin CN on all 9 products (US import). Set Shopify taxonomy categories (5x Face Serums, 4x Face Moisturizers). Fixed expired Skingenetix client secret in business dashboard. Doc-sync (this update). |
