@@ -22,6 +22,21 @@ This is the lowest-priority Phase 6 follow-up — single dir, isolated.
 
 ---
 
+## Actual State (verified 2026-08-03 via Shopify API)
+
+The store is **much further along** than the item statuses below suggest (those were written at project setup). Live reality:
+
+- **Live** on www.skingenetix.com (EUR), theme **Impact** installed (MAIN)
+- **9 active products** (serums + creams), all EUR 49,95, but **0 inventory** (not selling yet)
+- **18 content pages** + **13 collections** live
+- Blog "News" exists but **0 articles**
+- **Only English** locale published (no multilingual yet)
+- All 9 products have **HS-code 3304.99.5000 + origin CN** (US import) and **Shopify taxonomy categories** (Face Serums / Face Moisturizers) as of 2026-08-03
+
+Biggest open gaps for "further building": multilingual (9 languages), blog content, SEO audit, and inventory/launch readiness. See `handover-2026-05-06.md` for the full state-discovery notes.
+
+---
+
 ## Open Items
 
 ### SETUP-001 — Create Shopify Store
@@ -36,7 +51,7 @@ This is the lowest-priority Phase 6 follow-up — single dir, isolated.
 
 **Priority:** 🔴 High
 **Owner:** Malcolm (human)
-**Status:** Not started
+**Status:** ✅ DONE — live on www.skingenetix.com
 **What needs doing:**
 
 - Point DNS at OpenDomainRegistry to Shopify
@@ -70,7 +85,7 @@ This is the lowest-priority Phase 6 follow-up — single dir, isolated.
 
 **Priority:** 🔴 High
 **Owner:** Malcolm (install) + Claude (configure)
-**Status:** Not started
+**Status:** ✅ DONE (install) — Impact theme installed as MAIN. Finetuning tracked under BUILD-001.
 **What needs doing:**
 
 - Choose and install free theme (Sense or Refresh)
@@ -223,3 +238,5 @@ This is the lowest-priority Phase 6 follow-up — single dir, isolated.
 | Date       | What Was Worked On                                                                   |
 | ---------- | ------------------------------------------------------------------------------------ |
 | 2026-03-05 | Project created. Research completed. Initial architecture and standard files set up. |
+| 2026-05-06 | State-discovery: found store far ahead of docs. Handover written (handover-2026-05-06.md). No store changes. |
+| 2026-08-03 | Set HS-code 3304.99.5000 + origin CN on all 9 products (US import). Set Shopify taxonomy categories (5x Face Serums, 4x Face Moisturizers). Fixed expired Skingenetix client secret in business dashboard. Doc-sync (this update). |
