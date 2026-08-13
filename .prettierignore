@@ -1,5 +1,9 @@
 node_modules/
 site/
+# Gitignored generated imagery — machine-written manifests, not ours to format
+assets/
+# Gitignored local session state
+.claude/state/
 .git/
 backups/
 tmp/

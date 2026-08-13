@@ -25,6 +25,17 @@ __pycache__/
 .venv/
 venv/
 
+# Generated product imagery — 9.7 GB / 4,374 files, far past GitHub's limits.
+# Deliberately NOT tracked (P6-FU-4, resolved 2026-08-13). These are the AI
+# photo fan-out outputs plus their source/reference crops. They live locally
+# and on Drive only, so they are NOT backed up by this repo — see docs/todo.md
+# PHOTO-* items for what each run contains.
+assets/
+
+# Local Claude Code session state (machine-specific, not shared)
+.claude/settings.local.json
+.claude/state/
+
 # Backups
 backups/
 

@@ -17,7 +17,7 @@ graph TB
 
     subgraph "Shopify Store"
         SHOP[Shopify Platform<br/>Hosting + Commerce]
-        THEME[Theme: TBD<br/>Sense or Refresh]
+        THEME[Theme: Impact<br/>installed as MAIN]
         PRODS[Products<br/>Skincare Range]
         PAGES[Pages<br/>Content + Legal]
         BLOG[Blog<br/>Skincare Education]
@@ -110,10 +110,12 @@ graph TB
 
 ## Change Log
 
-| Date       | What Changed                                                                                                                                        | Who              |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| 2026-03-05 | Project created, initial architecture documented                                                                                                    | Claude Code      |
-| 2026-03-05 | Store created (skingenetix.myshopify.com), custom app API credentials received                                                                      | Malcolm + Claude |
-| 2026-05-06 | State discovery: store far ahead of docs (Impact theme live, 5+ products, domain live). See handover-2026-05-06.md                                  | Claude Code      |
-| 2026-08-03 | All 9 products: HS-code 3304.99.5000 + country of origin CN set (US import). Shopify taxonomy categories set (5x Face Serums, 4x Face Moisturizers) | Claude Code      |
-| 2026-08-03 | Business dashboard: fixed expired Skingenetix Shopify client secret (was stale in dashboard .env)                                                   | Claude Code      |
+| Date       | What Changed                                                                                                                                                                                                                                                                                     | Who              |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| 2026-03-05 | Project created, initial architecture documented                                                                                                                                                                                                                                                 | Claude Code      |
+| 2026-03-05 | Store created (skingenetix.myshopify.com), custom app API credentials received                                                                                                                                                                                                                   | Malcolm + Claude |
+| 2026-05-06 | State discovery: store far ahead of docs (Impact theme live, 5+ products, domain live). See handover-2026-05-06.md                                                                                                                                                                               | Claude Code      |
+| 2026-05-18 | Product photography fan-outs: Glutathione (146/190, $5.69), Copper Peptide Advanced Repair (128/190, $6.18), Matrixyl 3000 Pro Collagen (157, $9.80). All 22-shot Max-tier, 5 backends. Awaiting human winner selection — see todo.md PHOTO-\* items                                             | Claude Code      |
+| 2026-08-03 | All 9 products: HS-code 3304.99.5000 + country of origin CN set (US import). Shopify taxonomy categories set (5x Face Serums, 4x Face Moisturizers)                                                                                                                                              | Claude Code      |
+| 2026-08-13 | Repo sync + asset-path repair: fast-forwarded 10 commits behind origin; repaired 47 asset dirs whose content sat in cloud-sync `" (1)"` twins while the documented bare-named dir was empty; removed 2 byte-identical duplicates; `assets/` gitignored and `scripts/` committed (P6-FU-4 closed) | Claude Code      |
+| 2026-08-03 | Business dashboard: fixed expired Skingenetix Shopify client secret (was stale in dashboard .env)                                                                                                                                                                                                | Claude Code      |

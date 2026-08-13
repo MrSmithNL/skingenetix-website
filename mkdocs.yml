@@ -30,7 +30,12 @@ extra:
 plugins:
   - search
   - encryptcontent:
-      global_password: !ENV [DOCS_PASSWORD, 'SmithAI2026!']
+      # The real password comes from the DOCS_PASSWORD env var. The fallback is a
+      # deliberately non-secret placeholder: it keeps local `mkdocs build` working
+      # and is long enough not to trip the plugin's low-entropy warning (which
+      # aborts CI under --strict). Never publish a site built with the fallback.
+      global_password:
+        !ENV [DOCS_PASSWORD, 'placeholder-not-a-real-password-set-the-DOCS_PASSWORD-env-var-before-publishing']
       search_index: 'encrypted'
       remember_password: true
       session_storage: true
@@ -65,6 +70,7 @@ nav:
   - SEO Strategy: seo-strategy.md
   - Strategic OS: strategic-os.md
   - Metrics: metrics.md
+  - Debt Metrics: debt-metrics.md
   - Processes & Flows: processes-and-flows.md
   - Decisions Log: decisions-log.md
   - Accounts & Access: accounts-and-access.md
