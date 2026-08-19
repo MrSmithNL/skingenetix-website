@@ -48,6 +48,72 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### PHOTO-000 — Product photography: real status (audited 2026-08-19)
+
+**Priority:** 🔴 High
+**Owner:** Malcolm (winner selection) + Claude (regeneration)
+**Status:** Open
+
+Full visual audit of every run to date. The headline number is the last row.
+
+|                                  |             |
+| -------------------------------- | ----------- |
+| Runs generated (Apr 14 – May 18) | **25**      |
+| Images generated                 | **4,077**   |
+| SEO-renamed                      | 3,078       |
+| Recorded spend                   | **$122.37** |
+| **Published to the live store**  | **8**       |
+
+Eleven products live (9 active + 2 draft stamp sets), 47 product images total,
+of which 8 match the AI naming pattern — so **~0.2% of what was generated has
+reached the store**. Three products carry no AI imagery at all and Copper Peptide
+Day Gel-Cream has a single image.
+
+**Six of the nine 2026-05-18 runs were recorded nowhere** — Argireline, PDRN Skin
+Repair, Matrixyl 3000 Serum, Copper Peptide Day Repair, Copper Peptide Advanced
+Night Repair, PDRN Collagen Repair. Roughly 1,400 images and ~$34 of spend. They
+are listed in the table below so they stop being invisible.
+
+**The orchestrator that produced all of this does not exist.** No script on this
+machine contains `fanout_tier` or `shots_total`; only the small ref-builder
+helpers in `scripts/` survive. None of the 25 runs is reproducible — the pipeline
+would have to be rebuilt from the skill's prose.
+
+| Run (2026-05-18)                     | Candidates | Cost   | In docs before today |
+| ------------------------------------ | ---------- | ------ | -------------------- |
+| glutathione-radiant-glow-serum       | 146        | $5.69  | yes                  |
+| copper-peptide-advanced-repair-serum | 128        | $6.18  | yes                  |
+| matrixyl-3000-pro-collagen           | 157        | $9.80  | yes                  |
+| matrixyl-3000-pro-collagen-serum     | 182        | $10.68 | **no**               |
+| argireline-serum                     | 165        | $9.39  | **no**               |
+| pdrn-skin-repair                     | 142        | $6.10  | **no**               |
+| copper-peptide-day-repair            | 136        | $7.46  | **no**               |
+| copper-peptide-advanced-night-repair | 178        | —      | **no**               |
+| pdrn-collagen-repair                 | 130        | —      | **no**               |
+
+**Action:** pick winners and publish. That is the only step between $122 of
+finished work and the store.
+
+### PHOTO-SKILL-001 — product-photography skill rebuilt to v3.0
+
+**Priority:** 🟡 Medium
+**Owner:** Claude
+**Status:** ✅ DONE 2026-08-19 (smith-os `66bdb17`)
+
+Templates rebuilt from the audit plus 94 client-curated luxury-brand references:
+**serum_bottle 22 → 43 shots**, **cream_jar 22 → 37**. Luma `uni-1` added as a
+sixth backend. Two mechanical defects that ran through all 25 runs are now
+documented with enforcement rules: output resolution varies 9× (FLUX.2 and
+gpt-image-2 return 1024px against Shopify's 2048 minimum), and aspect ratio was
+never asserted on returned images.
+
+The skill was also **never symlinked into `~/.claude/skills`**, so it has never
+been invocable — every run was done by reading the markdown by hand. Fixed.
+
+**Next run should use the new templates.** Cap at **three products per day**: the
+Gemini daily quota is shared across NBP Pro and Flash, and on 2026-05-18 the
+fourth product of the day lost all 44 NBP attempts to 429s.
+
 ### CI-001 — C4 README fix will be clobbered on regeneration
 
 **Priority:** 🟢 Low
