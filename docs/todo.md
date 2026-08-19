@@ -106,9 +106,14 @@ whatever the prompt says. These are therefore blockers, not things to prompt aro
 
 1. **Three serum cartons state 50ML** — Glutathione, Acetyl Hexapeptide-8, Matrixyl
    serum. Serums are 30ml. PDRN and Copper Peptide serum cartons are already correct.
-2. ~~**Glutathione bottle read PROFESSIONAL TREATMENT**~~ — ✅ **RESOLVED 2026-08-19.**
-   The corrected render was in `Images/Products/Glutahione Brightening Serum/` all along.
-   The reference now reads PREMIUM FORMULA and 30ML.
+2. **Glutathione bottle read PROFESSIONAL TREATMENT** — ✅ resolved in the _dedicated
+   render_, ❌ **still present in the pack shots.** The corrected render was in
+   `Images/Products/Glutahione Brightening Serum/` all along, so `product_tight.png` reads
+   PREMIUM FORMULA and 30ML. But `pack_full.png` is cropped from a pack shot that predates
+   the fix: its bottle still reads **PROFESSIONAL TREATMENT** and its carton reads **50ML**,
+   so it contradicts `product_tight` on two lines at once. Found 2026-08-19 while writing
+   the first config; `pack_full.png` is excluded from that config's reference set for this
+   reason. The same check has **not** been run on the other eight products' pack shots.
 
 **Status (2026-08-19 18:30): ✅ RESOLVED in the references.** The updated serum `.ai` files
 are genuine PDFs — magic bytes `%PDF-1.6` — so they render once copied to a `.pdf`
