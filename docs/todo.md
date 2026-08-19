@@ -72,6 +72,12 @@ per-product dielines under `Skingenetix/Packaging/`.
 product: `product_tight`, `box_coloured_face`, `box_silver_face`, `pack_full`. Verified
 mechanically: nothing clipped, carton pairs scale-matched at 0.84 fill.
 
+**`product_tight` comes from the dedicated single-product renders** in each product's own
+folder under `Images/Products/<Product>/` — 2048px, already isolated, current artwork.
+Those beat cropping the product out of a pack shot on every count. The one exception is
+Acetyl Hexapeptide-8, whose render is the superseded ARGIRELINE design (see PHOTO-003);
+it falls back to its pack-shot crop.
+
 One reference is **generated, not photographed**: Matrixyl 3000 Pro Collagen Serum has no
 silver pack shot, so its silver carton was generated from its own green face and stored in
 Drive as `GENERATED-matrixyl-serum-silver-carton.png`. Replace it if a real shot appears.
@@ -90,11 +96,25 @@ whatever the prompt says. These are therefore blockers, not things to prompt aro
 
 1. **Three serum cartons state 50ML** — Glutathione, Acetyl Hexapeptide-8, Matrixyl
    serum. Serums are 30ml. PDRN and Copper Peptide serum cartons are already correct.
-2. **Glutathione bottle read PROFESSIONAL TREATMENT** — the Meta-non-compliant phrase,
-   and the only one of nine. Malcolm confirmed 2026-08-19 it should be **PREMIUM FORMULA**
-   and has corrected artwork. **The corrected file is not yet in Drive**, so the reference
-   set still carries the old wording. Drop it into
-   `Images/Products/New designs/` and re-run the ref builder.
+2. ~~**Glutathione bottle read PROFESSIONAL TREATMENT**~~ — ✅ **RESOLVED 2026-08-19.**
+   The corrected render was in `Images/Products/Glutahione Brightening Serum/` all along.
+   The reference now reads PREMIUM FORMULA and 30ML.
+
+**Status of the volume fix (2026-08-19 18:00):** Malcolm updated the serum `.ai` files to
+30ML. But the `.pdf` exports are still the June versions, and the photographic pack shots
+in `New designs/` are July renders taken before the fix — so **all three carton references
+still show 50ML**, verified by reading them. `.ai` cannot be rendered here (not
+PDF-compatible), so there is no way to build a corrected carton reference from source.
+
+**What is needed:** re-rendered pack shots of the three corrected cartons, or at minimum
+re-exported PDFs. Until then the carton references teach the model 50ML, and reference-lock
+beats the prompt override.
+
+**Third correction — the Acetyl Hexapeptide-8 dedicated render is the SUPERSEDED design.**
+`Images/Products/Argireline Age Control Serum /Argireline Age Control Serum.png` reads
+"ARGIRELINE / ADVANCED AGE CONTROL"; its own carton says ACETYL HEXAPEPTIDE-8 /
+ANTI-WRINKLE SERUM. That product falls back to its pack-shot crop. A current render would
+be better.
 
 ### PHOTO-000 — Product photography: real status (audited 2026-08-19)
 

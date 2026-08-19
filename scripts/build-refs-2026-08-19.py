@@ -32,6 +32,7 @@ import prep_refs  # noqa: E402
 
 DRIVE = "/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix"
 SRC = f"{DRIVE}/Images/Products/New designs"
+PRODUCTS_DIR = f"{DRIVE}/Images/Products"
 PACK = f"{DRIVE}/Packaging"
 OUT = ("/Users/malcolmsmith/Claude Code/Projects/skingenetix-website/"
        "assets/images/_refs-2026-08-19")
@@ -98,6 +99,39 @@ BOUNDARY = {
     P + "10-43-24.jpg": 0.48,   # matrixyl cream, silver
 }
 
+#: Dedicated single-product renders, one per product, 2048px on a clean sweep.
+#:
+#: These beat cropping the product out of a pack shot on every count: the product
+#: is already isolated, there is no carton to split away from, and they carry the
+#: CURRENT artwork - the Glutathione render here reads PREMIUM FORMULA and 30ML
+#: where the pack shot still shows PROFESSIONAL TREATMENT and its carton shows
+#: 50ML. Use them for `product_tight`; the pack shots still supply the carton
+#: faces and the size relationship.
+#:
+#: Note the trailing spaces in two folder names - they are real, do not "tidy" them.
+PRODUCT_RENDER = {
+    # NOT acetyl-hexapeptide-8: the render in "Argireline Age Control Serum " is the
+    # SUPERSEDED design, reading "ARGIRELINE / ADVANCED AGE CONTROL". Its own carton
+    # says ACETYL HEXAPEPTIDE-8 / ANTI-WRINKLE SERUM. That product falls back to the
+    # pack-shot crop until a current render exists.
+    "copper-peptide-repair-serum":
+        "Copper Peptide Repair Serum/Copper Peptide Repair Serum.png",
+    "glutathione-brightening-serum":
+        "Glutahione Brightening Serum/Glutathione Radient Glow Serum.png",
+    "matrixyl-3000-pro-collagen-serum":
+        "Matrixyl 3000 Pro Collagen Serum/Matrixyl Pro Collagen Serum.png",
+    "pdrn-skin-repair-serum":
+        "PDRN Skin Repair Serum/PDRN Skin Repair Serum.png",
+    "copper-peptide-day-repair-cream":
+        "Copper Peptide Day Repair Cream/Copper Peptide Day Cream.png",
+    "copper-peptide-night-repair-cream":
+        "Copper Peptide Night Repair Cream/Copper Peptide Night Cream.png",
+    "matrixyl-3000-pro-collagen-cream":
+        "Matrixyl 3000 Pro Collagen Cream /Matrixyl Pro Collagen Cream.png",
+    "pdrn-collagen-repair-cream":
+        "PDRN Collagen Repair Cream/PDRN Collagen Repair Cream.png",
+}
+
 #: Silver faces that come from a GENERATED carton rather than a pack shot.
 #:
 #: Matrixyl 3000 Pro Collagen Serum has no silver pack shot. Its silver carton was
@@ -124,6 +158,10 @@ TIGHT_TOLERANCE = 34 # stricter cut that ignores soft cast shadow
 SOFT_TOLERANCE = 8   # low cut that still sees the white pipette bulb on white
 MAX_TOP_LIFT = 0.16  # cap on how far the low cut may extend the box upward
 SUBJECT_FILL = 0.84  # subject's longest edge as a share of the square canvas
+RENDER_TOLERANCE = 90 # strict cut for the dedicated renders, which sit on a MIRROR
+                      # reflection. At 34 the reflection reads as subject and the
+                      # bottle ends up half-size in the crop; at 90 only the bottle
+                      # survives. The bulb is still recovered by the soft pass.
 
 
 def subject_bbox(im: Image.Image) -> tuple[int, int, int, int]:
@@ -134,7 +172,7 @@ def subject_bbox(im: Image.Image) -> tuple[int, int, int, int]:
     return diff.getbbox() or (0, 0, *rgb.size)
 
 
-def tight_bbox(im: Image.Image):
+def tight_bbox(im: Image.Image, strict_tol: int = TIGHT_TOLERANCE):
     """Subject box that keeps white parts but drops the cast shadow.
 
     Two competing failures, both white-on-white:
@@ -153,7 +191,7 @@ def tight_bbox(im: Image.Image):
     rgb = im.convert("RGB")
     bg = Image.new("RGB", rgb.size, rgb.getpixel((4, 4)))
     strict = ImageChops.difference(rgb, bg).convert("L").point(
-        lambda p: 255 if p > TIGHT_TOLERANCE else 0).getbbox()
+        lambda p: 255 if p > strict_tol else 0).getbbox()
     if strict is None:
         return None
     loose = ImageChops.difference(rgb, bg).convert("L").point(
@@ -203,14 +241,14 @@ def isolate(im: Image.Image, comp_mask, box: tuple[int, int, int, int], size: in
     return dest
 
 
-def whole_crop(path: str, size: int, dest: str) -> str:
+def whole_crop(path: str, size: int, dest: str, strict_tol: int = TIGHT_TOLERANCE) -> str:
     """Trim a single-subject image to its subject and normalise it to SUBJECT_FILL.
 
     Used for the generated carton, which has no neighbour to split away from but
     must still arrive at the same scale as every other reference.
     """
     im = Image.open(path).convert("RGB")
-    bb = tight_bbox(im) or subject_bbox(im)
+    bb = tight_bbox(im, strict_tol) or subject_bbox(im)
     sub = im.crop(bb)
     bg = im.getpixel((4, 4))
     w, h = sub.size
@@ -392,7 +430,13 @@ def main() -> int:
             print(f"  !! missing pack shot {coloured}")
             continue
 
-        side_crop(src, "left", 1024, os.path.join(d, "product_tight.png"))
+        render = PRODUCT_RENDER.get(slug)
+        rpath = os.path.join(PRODUCTS_DIR, render) if render else None
+        if rpath and os.path.exists(rpath):
+            whole_crop(rpath, 1024, os.path.join(d, "product_tight.png"), RENDER_TOLERANCE)
+        else:
+            print(f"  {slug}: no dedicated render, falling back to the pack shot")
+            side_crop(src, "left", 1024, os.path.join(d, "product_tight.png"))
         side_crop(src, "right", 1024, os.path.join(d, "box_coloured_face.png"))
         prep_refs.square_crop(src, os.path.join(d, "pack_full.png"), 1024)
         made = 3
