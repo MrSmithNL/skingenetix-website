@@ -82,9 +82,8 @@ One reference is **generated, not photographed**: Matrixyl 3000 Pro Collagen Ser
 silver pack shot, so its silver carton was generated from its own green face and stored in
 Drive as `GENERATED-matrixyl-serum-silver-carton.png`. Replace it if a real shot appears.
 
-**Next session:** the first real production run — ONE product, Glutathione Brightening
-Serum. Write its config, preflight until clean, run the 45-shot batch (~$14), review the
-output honestly. Handover: `.claude/handovers/2026-08-19-1900-main.md`.
+**First production run happened 2026-08-19** — Glutathione Brightening Serum,
+`configs/glutathione-brightening-serum.json`, 45 shots. See PHOTO-004 for what it found.
 
 Glutathione first because its product render is the corrected artwork (PREMIUM FORMULA,
 30ML), its carton correction is in place with the extra `box_artwork_flat.png` reference,
@@ -94,6 +93,59 @@ and its gold/silver carton is the most demanding finish in the range.
 colour; write `packaging_desc` face by face. Preflight rejects unfilled `<placeholders>` and
 a `product_desc` that quotes no label text, because an invented label is clean and legible
 and therefore survives review.
+
+### PHOTO-004 — First production run: what it found
+
+**Priority:** 🔴 High
+**Owner:** Malcolm (winner selection) + Claude (regeneration)
+**Status:** Run complete, QA complete, winners not yet picked
+
+The first full run through the rebuilt pipeline. Config:
+`configs/glutathione-brightening-serum.json`. Output:
+`assets/ai-generated/2026-08-19-glutathione-radiant-glow-serum/run-01/`.
+
+**Three pieces of the documented pipeline did not exist and were built during this run:**
+
+1. `upload_refs.py` — nothing could produce the CDN urls Seedream and FLUX.2 need. Without
+   them those two engines silently fall back to text-to-image, which is why the health
+   check returned two blank unbranded bottles beside four correct ones. A missing url does
+   not error; it removes the reference.
+2. `contact_sheet.py` — no way to look at 293 candidates. This was the actual bottleneck
+   behind 4,077 generated / 8 published.
+3. `qa.py` — SKILL.md had listed a vision QA gate as pipeline step 11 since v1 with no
+   implementation, the same gap the orchestrator had.
+
+**The quoted-wording rule mostly beat reference-lock, which was not expected.** The
+handover predicted the stale 50ML pack shots would show through. On most candidates the
+face-by-face `packaging_desc` won and the carton reads 30ML. It did NOT win universally —
+`06_product_and_box_hero_seedream_0` carries `STABLE VITAMIN C | 50ML` and `ALL SKIN
+TIIRS`. Quoting the wording moves the odds; it does not remove the need for correct
+references.
+
+**Defects found, and where each was fixed.** Every one came from a real candidate:
+
+| Defect | Cause | Fixed in |
+| --- | --- | --- |
+| Short, squat pipette bulb | nothing described the bulb's size | config + template + QA check |
+| Purple / navy "brand gradient" | shot 02 brief named no colour | template brief + config |
+| Amber-tinted frosted glass | weak instruction | config + template negatives |
+| Carton lines printed on the bottle | bottle lines never stated exhaustive | config |
+| Mirror-polished carton | references shot glossy; dieline says matte satin | config |
+| Invented carton wording | nothing forbade additions | config + template |
+| Literal "BODY COPY" on a panel | **our own prompt said "carry small body copy"** | config |
+| Lowercase "skingenetix", stray ® | capitalisation never stated | config |
+
+**Still open, not fixable from the prompt side:**
+
+- The photographed carton references are glossy and still read 50ML. Re-rendered pack
+  shots would retire the whole class (PHOTO-003).
+- Luma regenerated the retired `PROFESSIONAL TREATMENT` sub-line even though that
+  reference was excluded — the model reaching for a plausible alternative, not copying a
+  reference. This is why the QA gate matters more than reference hygiene alone.
+- QA spend is **not recorded in the cost ledger**. `qa.py` makes one vision call per
+  candidate and records nothing, because Gemini 3.7 Flash's price has not been verified
+  against a bill and inventing one would repeat the `nbp_flash $0.02` mistake. Unrecorded
+  spend is how $122.37 went untracked in the first place.
 
 ### ⚠️ PHOTO-003 — Artwork corrections needed before print
 
