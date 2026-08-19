@@ -60,15 +60,35 @@ PRODUCTS = {
         (P + "10-43-23.jpg", P + "10-43-24.jpg", "Matrixyl 3000 Pro Collagen Cream"),
 }
 
-#: Explicit product/carton divide as a fraction of the subject bbox width, for the
-#: shots where automatic detection is unreliable. Serums only - the bottle is
-#: narrow and its carton is tall, so they nearly touch.
-SPLIT_HINT = {
-    "pdrn-skin-repair-serum": 0.42,
-    "copper-peptide-repair-serum": 0.42,
-    "acetyl-hexapeptide-8-serum": 0.42,
-    "matrixyl-3000-pro-collagen-serum": 0.42,
-    "glutathione-brightening-serum": 0.42,
+#: Product/carton divide as a fraction of FRAME width, per pack shot.
+#:
+#: Explicit, not detected. Six detection attempts failed for a reason worth
+#: recording: in most of these shots the product and its carton TOUCH, so there
+#: is no gap to find, and the silver/white cartons sit at nearly the same value
+#: as the white sweep so thresholding eats them. Automatic segmentation cannot
+#: solve white-on-white with no separation. Seventeen numbers, checked by eye,
+#: can - and they never regress.
+#:
+#: Keys are the pack-shot filenames. `_DEFAULT` covers anything unlisted.
+BOUNDARY_DEFAULT = 0.47
+BOUNDARY = {
+    P + "10-46-00.jpg": 0.44,   # pdrn serum, coloured
+    P + "10-45-59.jpg": 0.46,   # pdrn serum, silver
+    P + "10-46-40.jpg": 0.45,   # copper peptide serum, coloured
+    P + "10-46-41.jpg": 0.45,   # copper peptide serum, silver
+    P + "10-50-08.jpg": 0.45,   # acetyl, coloured
+    P + "10-50-09.jpg": 0.45,   # acetyl, silver
+    "PHOTO-2026-07-14-09-18-49.jpg": 0.47,  # matrixyl serum, coloured
+    P + "10-44-15.jpg": 0.41,   # glutathione, coloured
+    P + "10-44-01.jpg": 0.45,   # glutathione, silver
+    P + "10-49-20.jpg": 0.47,   # pdrn cream, coloured
+    P + "10-49-21.jpg": 0.47,   # pdrn cream, silver
+    P + "10-41-58.jpg": 0.47,   # copper day, coloured
+    P + "10-42-17.jpg": 0.47,   # copper day, silver
+    P + "10-42-35.jpg": 0.47,   # copper night, coloured
+    P + "10-41-31.jpg": 0.47,   # copper night, silver
+    P + "10-43-23.jpg": 0.48,   # matrixyl cream, coloured
+    P + "10-43-24.jpg": 0.48,   # matrixyl cream, silver
 }
 
 #: Where a silver face has to come from the dieline instead of a pack shot.
@@ -85,6 +105,119 @@ def subject_bbox(im: Image.Image) -> tuple[int, int, int, int]:
     bg = Image.new("RGB", rgb.size, rgb.getpixel((4, 4)))
     diff = ImageChops.difference(rgb, bg).convert("L").point(lambda p: 255 if p > BG_TOLERANCE else 0)
     return diff.getbbox() or (0, 0, *rgb.size)
+
+
+def isolate(im: Image.Image, comp_mask, box: tuple[int, int, int, int], size: int, dest: str) -> str:
+    """Crop `box` and erase everything not belonging to this component.
+
+    Cropping to a bounding box alone still leaves a sliver of the neighbour
+    wherever the two objects' boxes overlap - the carton edge showing beside a
+    jar, a slice of pink bottle beside a silver carton. The component mask says
+    which pixels are actually THIS object, so the rest is painted out to the
+    background sweep and the reference contains one product and nothing else.
+    """
+    l, t, r, b = box
+    pad_x, pad_y = int((r - l) * MARGIN), int((b - t) * MARGIN)
+    L, T = max(0, l - pad_x), max(0, t - pad_y)
+    R, B = min(im.width, r + pad_x), min(im.height, b + pad_y)
+
+    crop = im.crop((L, T, R, B)).convert("RGB")
+    sub = comp_mask[T:B, L:R]
+
+    bg = im.getpixel((4, 4))
+    px = crop.load()
+    h, w = sub.shape
+    for y in range(h):
+        row = sub[y]
+        for x in range(w):
+            if not row[x]:
+                px[x, y] = bg
+
+    cw, ch = crop.size
+    edge = max(cw, ch)
+    canvas = Image.new("RGB", (edge, edge), bg)
+    canvas.paste(crop, ((edge - cw) // 2, (edge - ch) // 2))
+    canvas.resize((size, size), Image.LANCZOS).save(dest)
+    return dest
+
+
+def side_crop(path: str, side: str, size: int, dest: str) -> str:
+    """Crop one side of a pack shot at its explicit boundary, trim to the subject,
+    then pad to square on the background sweep.
+
+    No masking. Erasing "non-subject" pixels bit chunks out of every silver and
+    white carton, because those sit at nearly the same value as the white
+    background - the mask could not tell carton from sweep.
+    """
+    im = Image.open(path).convert("RGB")
+    frac = BOUNDARY.get(os.path.basename(path), BOUNDARY_DEFAULT)
+    cut = int(im.width * frac)
+    part = im.crop((0, 0, cut, im.height)) if side == "left" else im.crop((cut, 0, im.width, im.height))
+
+    bb = subject_bbox(part)
+    l, t, r, b = bb
+    pad_x, pad_y = int((r - l) * MARGIN), int((b - t) * MARGIN)
+    l, t = max(0, l - pad_x), max(0, t - pad_y)
+    r, b = min(part.width, r + pad_x), min(part.height, b + pad_y)
+    sub = part.crop((l, t, r, b))
+
+    bg = im.getpixel((4, 4))
+    w, h = sub.size
+    edge = max(w, h)
+    canvas = Image.new("RGB", (edge, edge), bg)
+    canvas.paste(sub, ((edge - w) // 2, (edge - h) // 2))
+    canvas.resize((size, size), Image.LANCZOS).save(dest)
+    return dest
+
+
+def components(path: str):
+    """Return (image, comp_masks, boxes) for the two largest objects, left to right.
+
+    Connected-component labelling on the foreground mask. This replaces every
+    variant of "split the frame at column X", none of which can avoid leaving a
+    sliver of the neighbour when the two bounding boxes overlap.
+    """
+    import numpy as np
+    from scipy import ndimage
+
+    im = Image.open(path).convert("RGB")
+    m = np.array(_mask(im)) > 0
+    # close small gaps so a soft shadow does not fragment one object into several
+    m = ndimage.binary_closing(m, structure=np.ones((9, 9)))
+    lab, n = ndimage.label(m)
+    if n == 0:
+        return im, [], []
+
+    sizes = ndimage.sum(m, lab, range(1, n + 1))
+    order = sorted(range(n), key=lambda i: -sizes[i])
+    keep = [i + 1 for i in order[:2]]
+
+    # Where the two objects' shadows touch they label as ONE component. Cut the
+    # merged blob at its narrowest column rather than returning a single object -
+    # this happens on the PDRN cream, whose jar and carton nearly abut.
+    big = lab == keep[0]
+    if len(keep) < 2 or sizes[order[1]] < sizes[order[0]] * 0.15:
+        cols = big.sum(axis=0)
+        xs = np.where(cols > 0)[0]
+        lo, hi = xs.min(), xs.max()
+        span = hi - lo
+        window = slice(lo + int(span * 0.30), lo + int(span * 0.70))
+        cut = lo + int(span * 0.30) + int(np.argmin(cols[window]))
+        left, right = big.copy(), big.copy()
+        left[:, cut:] = False
+        right[:, :cut] = False
+        parts = [left, right]
+    else:
+        parts = [lab == keep[0], lab == keep[1]]
+
+    out = []
+    for comp in parts:
+        ys, xs = np.where(comp)
+        if len(xs) == 0:
+            continue
+        out.append((comp, (int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max()))))
+    out.sort(key=lambda c: c[1][0])  # left to right: product, then carton
+    return im, [c[0] for c in out], [c[1] for c in out]
 
 
 def square_around(im: Image.Image, box: tuple[int, int, int, int], size: int, dest: str) -> str:
@@ -171,18 +304,15 @@ def main() -> int:
             print(f"  !! missing pack shot {coloured}")
             continue
 
-        hint = SPLIT_HINT.get(slug)
-        im, pbox, cbox = split_subjects(src, hint)
-        square_around(im, pbox, 1024, os.path.join(d, "product_tight.png"))
-        square_around(im, cbox, 1024, os.path.join(d, "box_coloured_face.png"))
+        side_crop(src, "left", 1024, os.path.join(d, "product_tight.png"))
+        side_crop(src, "right", 1024, os.path.join(d, "box_coloured_face.png"))
         prep_refs.square_crop(src, os.path.join(d, "pack_full.png"), 1024)
         made = 3
 
         if silver:
             s = os.path.join(SRC, silver)
             if os.path.exists(s):
-                im2, _, cbox2 = split_subjects(s, hint)
-                square_around(im2, cbox2, 1024, os.path.join(d, "box_silver_face.png"))
+                side_crop(s, "right", 1024, os.path.join(d, "box_silver_face.png"))
                 made += 1
         elif slug in DIELINE_SILVER:
             pdfs = [f for f in os.listdir(os.path.join(PACK, packdir)) if f.endswith(".pdf")]
