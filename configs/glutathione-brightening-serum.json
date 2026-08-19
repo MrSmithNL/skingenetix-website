@@ -14,13 +14,9 @@
 
   "_refs_local_help": "product_tight.png ONLY, and deliberately so. Luma reads refs[0] and nothing else. pack_full.png was excluded on 2026-08-19: its bottle still reads 'PROFESSIONAL TREATMENT' where the corrected render reads 'PREMIUM FORMULA', and its carton reads 50ML, so it contradicts product_tight on two lines at once. A reference that disagrees with the brief wins, because reference-lock is faithful.",
 
-  "refs_local": [
-    "assets/images/_refs-2026-08-19/glutathione-brightening-serum/product_tight.png"
-  ],
+  "refs_local": ["assets/images/_refs-2026-08-19/glutathione-brightening-serum/product_tight.png"],
 
-  "refs_urls": [
-    "https://v3b.fal.media/files/b/0aa6fc77/Wxj5PQmRcWkdibKQtjGo0_product_tight.png"
-  ],
+  "refs_urls": ["https://v3b.fal.media/files/b/0aa6fc77/Wxj5PQmRcWkdibKQtjGo0_product_tight.png"],
 
   "_refs_packaging_help": "box_artwork_flat.png leads. It is flat artwork rather than a photograph, but it is the only carton reference with the corrected 30ML wording, and it is the one Luma will see. The two photographed faces follow for perspective, edge geometry and finish. KNOWN AND ACCEPTED: both photographed cartons predate the 30ML fix and still read 50ML, and both are rendered glossier than the real satin-metallic stock, so expect some packaging candidates to show the wrong volume and a mirror sheen.",
 
