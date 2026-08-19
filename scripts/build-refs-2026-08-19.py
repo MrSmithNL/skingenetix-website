@@ -291,6 +291,63 @@ def whole_crop(path: str, size: int, dest: str, strict_tol: int = TIGHT_TOLERANC
     return dest
 
 
+#: The brand mark, identical on every product. Held in Drive as artwork rather
+#: than cropped off a bottle: on a product shot the helix is ~70px tall and soft,
+#: which is not enough for a model to reproduce it. Engines were substituting a
+#: stylised ribbon or an "X" for the DNA helix, and rendering the wordmark with a
+#: bold/light split, because nothing in the reference set showed the mark on its
+#: own at a size worth copying.
+LOGO_SRC = os.path.join(
+    os.path.expanduser("~/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive"),
+    "Skingenetix", "Images", "Logo", "Skingenetix-logo-black.png")
+
+
+#: Where the helix mark ends and the wordmark begins in the logo file, MEASURED
+#: from the column ink profile: ink runs 1-445 (helix), a 64px clear gap, then the
+#: wordmark from 509. Cropping at the gap keeps the mark whole.
+#:
+#: The mark gets its own reference because it is the element engines actually
+#: mangle - substituting a ribbon or an "X" - and in the full lockup, an 8:1 strip
+#: padded to square, the helix lands at about 90px. Cropped alone it lands at
+#: about 415px, which is the difference between a mark a model can copy and one
+#: it has to guess at.
+LOGO_HELIX_X = 445
+
+
+def _square_on_white(im: Image.Image, size: int, dest: str) -> str:
+    w, h = im.size
+    edge = int(max(w, h) / SUBJECT_FILL)
+    canvas = Image.new("RGB", (edge, edge), (255, 255, 255))
+    canvas.paste(im, ((edge - w) // 2, (edge - h) // 2))
+    canvas.resize((size, size), Image.LANCZOS).save(dest)
+    return dest
+
+
+def build_logo_ref(dest: str, size: int = 1024) -> str | None:
+    """Pad the brand mark to square on white. Never crop it, never stretch it.
+
+    The logo is 1724x215 - an 8:1 strip. Centre-cropping it to square, which is
+    what every other reference goes through, would throw away the wordmark and
+    keep a fragment of the helix. Padding is the only faithful option here, and
+    it is the same rule the crop helpers follow for a subject that will not fit.
+    """
+    if not os.path.exists(LOGO_SRC):
+        return None
+    im = Image.open(LOGO_SRC)
+    if im.mode in ("RGBA", "LA", "P"):
+        im = im.convert("RGBA")
+        flat = Image.new("RGBA", im.size, (255, 255, 255, 255))
+        flat.alpha_composite(im)
+        im = flat.convert("RGB")
+    else:
+        im = im.convert("RGB")
+    _square_on_white(im, size, dest)
+    # The mark alone, at a size worth copying.
+    helix = os.path.join(os.path.dirname(dest), "logo_helix.png")
+    _square_on_white(im.crop((0, 0, LOGO_HELIX_X, im.height)), size, helix)
+    return dest
+
+
 def flatten_render(path: str) -> Image.Image:
     """Open a rendered dieline and put it on WHITE, not on black.
 
