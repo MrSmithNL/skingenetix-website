@@ -302,34 +302,22 @@ LOGO_SRC = os.path.join(
     "Skingenetix", "Images", "Logo", "Skingenetix-logo-black.png")
 
 
-#: Where the helix mark ends and the wordmark begins in the logo file, MEASURED
-#: from the column ink profile: ink runs 1-445 (helix), a 64px clear gap, then the
-#: wordmark from 509. Cropping at the gap keeps the mark whole.
-#:
-#: The mark gets its own reference because it is the element engines actually
-#: mangle - substituting a ribbon or an "X" - and in the full lockup, an 8:1 strip
-#: padded to square, the helix lands at about 90px. Cropped alone it lands at
-#: about 415px, which is the difference between a mark a model can copy and one
-#: it has to guess at.
-LOGO_HELIX_X = 445
-
-
-def _square_on_white(im: Image.Image, size: int, dest: str) -> str:
-    w, h = im.size
-    edge = int(max(w, h) / SUBJECT_FILL)
-    canvas = Image.new("RGB", (edge, edge), (255, 255, 255))
-    canvas.paste(im, ((edge - w) // 2, (edge - h) // 2))
-    canvas.resize((size, size), Image.LANCZOS).save(dest)
-    return dest
-
-
 def build_logo_ref(dest: str, size: int = 1024) -> str | None:
-    """Pad the brand mark to square on white. Never crop it, never stretch it.
+    """Write the brand logo EXACTLY as the artwork holds it. Nothing else.
 
-    The logo is 1724x215 - an 8:1 strip. Centre-cropping it to square, which is
-    what every other reference goes through, would throw away the wordmark and
-    keep a fragment of the helix. Padding is the only faithful option here, and
-    it is the same rule the crop helpers follow for a subject that will not fit.
+    Malcolm's rule, 2026-08-19: the only brand input is the Skingenetix logo, and
+    it must be identical to the real one. An earlier version of this function also
+    emitted a helix-only crop, on the reasoning that the helix is the element
+    engines mangle. That was wrong. The helix alone is not a mark the brand uses,
+    so supplying it teaches that a bare helix is valid brand usage - inventing a
+    logo variant to fix invented logos.
+
+    Kept at NATIVE resolution and native 1724x215 proportions, transparency
+    flattened onto white and nothing more. The square-padding every other
+    reference goes through would resample the artwork down to about 860px wide
+    inside a 1024 canvas; native is both more faithful and, at 0.37MP against
+    1.05MP, cheaper against FLUX.2's 9MP reference budget. The square convention
+    exists to prevent stretching, and an unmodified file cannot stretch.
     """
     if not os.path.exists(LOGO_SRC):
         return None
@@ -341,10 +329,7 @@ def build_logo_ref(dest: str, size: int = 1024) -> str | None:
         im = flat.convert("RGB")
     else:
         im = im.convert("RGB")
-    _square_on_white(im, size, dest)
-    # The mark alone, at a size worth copying.
-    helix = os.path.join(os.path.dirname(dest), "logo_helix.png")
-    _square_on_white(im.crop((0, 0, LOGO_HELIX_X, im.height)), size, helix)
+    im.save(dest)
     return dest
 
 
