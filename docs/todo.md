@@ -48,6 +48,54 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### PHOTO-002 — 2026 redesign: reference sets built, configs outstanding
+
+**Priority:** 🔴 High
+**Owner:** Claude (configs) + Malcolm (artwork corrections)
+**Status:** Reference sets DONE — 9 products, 36 crops. Configs not started.
+
+The whole range was redesigned. New artwork lives in Drive at
+`Skingenetix/Images/Products/New designs` (25 pack shots + 3 product videos) with
+per-product dielines under `Skingenetix/Packaging/`.
+
+**Confirmed with Malcolm 2026-08-19:**
+
+- **Serums are 30ml, creams are 50ml** — matching every bottle and jar label.
+- The carton is **one box with two differently-coloured large faces**, not two variants.
+  Coloured front, **matte-silk SILVER** back carrying the same layout. Only Acetyl
+  Hexapeptide-8 pairs its colour with white. Serum carton 41×41×99mm.
+- Lids are **brushed aluminium**, not chrome — the renders read glossier than the
+  physical product does in the videos.
+
+**Reference sets built** — `scripts/build-refs-2026-08-19.py`, output to
+`assets/images/_refs-2026-08-19/` (gitignored, reproducible from Drive). Four crops per
+product: `product_tight`, `box_coloured_face`, `box_silver_face`, `pack_full`. Verified
+mechanically: nothing clipped, carton pairs scale-matched at 0.84 fill.
+
+One reference is **generated, not photographed**: Matrixyl 3000 Pro Collagen Serum has no
+silver pack shot, so its silver carton was generated from its own green face and stored in
+Drive as `GENERATED-matrixyl-serum-silver-carton.png`. Replace it if a real shot appears.
+
+**Next:** write the nine product configs — exact label wording, per-face `packaging_desc`,
+correct volumes. That is the last thing between here and a run.
+
+### ⚠️ PHOTO-003 — Artwork corrections needed before print
+
+**Priority:** 🔴 High
+**Owner:** Malcolm
+**Status:** Open
+
+Reference-lock is faithful: generated images reproduce whatever the reference shows,
+whatever the prompt says. These are therefore blockers, not things to prompt around.
+
+1. **Three serum cartons state 50ML** — Glutathione, Acetyl Hexapeptide-8, Matrixyl
+   serum. Serums are 30ml. PDRN and Copper Peptide serum cartons are already correct.
+2. **Glutathione bottle read PROFESSIONAL TREATMENT** — the Meta-non-compliant phrase,
+   and the only one of nine. Malcolm confirmed 2026-08-19 it should be **PREMIUM FORMULA**
+   and has corrected artwork. **The corrected file is not yet in Drive**, so the reference
+   set still carries the old wording. Drop it into
+   `Images/Products/New designs/` and re-run the ref builder.
+
 ### PHOTO-000 — Product photography: real status (audited 2026-08-19)
 
 **Priority:** 🔴 High
