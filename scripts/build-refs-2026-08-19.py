@@ -69,13 +69,18 @@ PRODUCTS = {
 #: solve white-on-white with no separation. Seventeen numbers, checked by eye,
 #: can - and they never regress.
 #:
+#: Values are either a single cut, or (product_cut, carton_cut) where the two
+#: objects OVERLAP horizontally and one cut cannot serve both - move it right to
+#: clear the bottle out of the carton crop and it slices the carton into the
+#: bottle crop. Copper Peptide Serum is the case: bottle at 0.44, carton at 0.50.
+#:
 #: Keys are the pack-shot filenames. `_DEFAULT` covers anything unlisted.
 BOUNDARY_DEFAULT = 0.47
 BOUNDARY = {
     P + "10-46-00.jpg": 0.44,   # pdrn serum, coloured
     P + "10-45-59.jpg": 0.46,   # pdrn serum, silver
-    P + "10-46-40.jpg": 0.45,   # copper peptide serum, coloured
-    P + "10-46-41.jpg": 0.45,   # copper peptide serum, silver
+    P + "10-46-40.jpg": (0.44, 0.50),  # copper peptide serum, coloured - objects overlap
+    P + "10-46-41.jpg": (0.44, 0.50),  # copper peptide serum, silver - objects overlap
     P + "10-50-08.jpg": 0.45,   # acetyl, coloured
     P + "10-50-09.jpg": 0.45,   # acetyl, silver
     "PHOTO-2026-07-14-09-18-49.jpg": 0.47,  # matrixyl serum, coloured
@@ -114,6 +119,8 @@ DIELINE_SILVER = {"matrixyl-3000-pro-collagen-serum": (0.51, 0.28, 0.71, 0.62)}
 BG_TOLERANCE = 18    # how far from the corner colour still counts as background
 MARGIN = 0.06        # breathing room around the subject bbox
 TIGHT_TOLERANCE = 34 # stricter cut that ignores soft cast shadow
+SOFT_TOLERANCE = 8   # low cut that still sees the white pipette bulb on white
+MAX_TOP_LIFT = 0.16  # cap on how far the low cut may extend the box upward
 SUBJECT_FILL = 0.84  # subject's longest edge as a share of the square canvas
 
 
@@ -126,17 +133,38 @@ def subject_bbox(im: Image.Image) -> tuple[int, int, int, int]:
 
 
 def tight_bbox(im: Image.Image):
-    """Bounding box using a strict threshold, so soft shadow is not counted.
+    """Subject box that keeps white parts but drops the cast shadow.
 
-    `subject_bbox` is deliberately permissive and includes the shadow, which
-    inflates the box and shrinks the subject once the crop is squared. For a
-    reference set the shadow is not the subject.
+    Two competing failures, both white-on-white:
+
+      * a STRICT threshold drops the serum pipette's white rubber bulb, because
+        it sits at nearly the same value as the sweep - the crop then decapitates
+        every serum bottle.
+      * a PERMISSIVE threshold keeps the bulb but also counts the soft cast
+        shadow, which inflates the box and shrinks the subject once squared -
+        that was the Copper Peptide carton size mismatch.
+
+    So: take the horizontal extent and the BOTTOM from the strict pass (shadow
+    falls below and beside the object), and the TOP from the permissive pass
+    (that is where the white bulb is). Shadow excluded, bulb kept.
     """
     rgb = im.convert("RGB")
     bg = Image.new("RGB", rgb.size, rgb.getpixel((4, 4)))
-    diff = ImageChops.difference(rgb, bg).convert("L").point(
-        lambda p: 255 if p > TIGHT_TOLERANCE else 0)
-    return diff.getbbox()
+    strict = ImageChops.difference(rgb, bg).convert("L").point(
+        lambda p: 255 if p > TIGHT_TOLERANCE else 0).getbbox()
+    if strict is None:
+        return None
+    loose = ImageChops.difference(rgb, bg).convert("L").point(
+        lambda p: 255 if p > SOFT_TOLERANCE else 0).getbbox()
+    if loose is None:
+        return strict
+    l, t, r, b = strict
+    # Extend upward only far enough to recover a white cap, and no further. An
+    # unbounded extension let the low threshold latch onto the faint background
+    # gradient at the top of frame, which stretched the box to the canvas edge and
+    # shrank the subject to 40% of the crop.
+    max_lift = int((b - t) * MAX_TOP_LIFT)
+    return (l, max(t - max_lift, min(t, loose[1])), r, b)
 
 
 def isolate(im: Image.Image, comp_mask, box: tuple[int, int, int, int], size: int, dest: str) -> str:
@@ -201,6 +229,8 @@ def side_crop(path: str, side: str, size: int, dest: str) -> str:
     """
     im = Image.open(path).convert("RGB")
     frac = BOUNDARY.get(os.path.basename(path), BOUNDARY_DEFAULT)
+    if isinstance(frac, tuple):
+        frac = frac[0] if side == "left" else frac[1]
     cut = int(im.width * frac)
     part = im.crop((0, 0, cut, im.height)) if side == "left" else im.crop((cut, 0, im.width, im.height))
 
