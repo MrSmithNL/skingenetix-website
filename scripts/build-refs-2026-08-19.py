@@ -21,6 +21,7 @@ thresholding away the background and taking the bounding box of what remains.
 from __future__ import annotations
 
 import os
+import shutil
 import sys
 
 from PIL import Image, ImageChops
@@ -147,6 +148,23 @@ PRODUCT_RENDER = {
 #: Replace it the day a real silver pack shot of that carton exists.
 GENERATED_SILVER = {
     "matrixyl-3000-pro-collagen-serum": "GENERATED-matrixyl-serum-silver-carton.png",
+}
+
+#: Front panel of the UPDATED carton artwork, as (x0, y0, x1, y1) fractions of the
+#: rendered dieline. Added for the three serums whose photographed cartons predate
+#: the 30ML correction.
+#:
+#: The .ai files ARE PDFs - magic bytes %PDF-1.6 - so they render once copied to a
+#: .pdf extension. `sips` refuses them on the extension alone, which is why the
+#: updated artwork looked unreadable at first.
+#:
+#: This is an ADDITIONAL reference, not a replacement: the flat artwork carries the
+#: correct wording, the pack shot carries the perspective, edges and satin sheen.
+#: Reference-lock takes several images, so the model gets both.
+ARTWORK_PANEL = {
+    "glutathione-brightening-serum": (0.06, 0.28, 0.30, 0.60),
+    "acetyl-hexapeptide-8-serum": (0.06, 0.28, 0.30, 0.60),
+    "matrixyl-3000-pro-collagen-serum": (0.06, 0.28, 0.30, 0.60),
 }
 
 #: Retained for reference: the dieline panel this replaced.
@@ -471,6 +489,30 @@ def main() -> int:
                     os.remove(pt)
                     made += 1
                     print(f"  {slug}: silver face taken from the DIELINE (no pack shot exists)")
+
+        panel = ARTWORK_PANEL.get(slug)
+        if panel:
+            pdfs = [f for f in os.listdir(os.path.join(PACK, packdir)) if f.endswith(".ai")
+                    and "outlines" not in f]
+            if pdfs:
+                src_ai = os.path.join(PACK, packdir, pdfs[0])
+                tmp_pdf = os.path.join(d, "_artwork.pdf")
+                tmp_png = os.path.join(d, "_artwork.png")
+                shutil.copyfile(src_ai, tmp_pdf)
+                os.system(f'sips -s format png --resampleWidth 4000 "{tmp_pdf}" '
+                          f'--out "{tmp_png}" >/dev/null 2>&1')
+                if os.path.exists(tmp_png):
+                    art = Image.open(tmp_png).convert("RGB")
+                    W, H = art.size
+                    x0, y0, x1, y1 = panel
+                    cut = art.crop((int(W * x0), int(H * y0), int(W * x1), int(H * y1)))
+                    pth = os.path.join(d, "_panel_tmp.png")
+                    cut.save(pth)
+                    whole_crop(pth, 1024, os.path.join(d, "box_artwork_flat.png"))
+                    for t in (tmp_pdf, tmp_png, pth):
+                        os.remove(t)
+                    made += 1
+                    print(f"  {slug}: + flat artwork panel from the UPDATED .ai (30ML)")
 
         total += made
         print(f"{slug:<36}{made} crops")

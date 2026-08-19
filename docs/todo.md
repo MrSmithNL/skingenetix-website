@@ -100,15 +100,18 @@ whatever the prompt says. These are therefore blockers, not things to prompt aro
    The corrected render was in `Images/Products/Glutahione Brightening Serum/` all along.
    The reference now reads PREMIUM FORMULA and 30ML.
 
-**Status of the volume fix (2026-08-19 18:00):** Malcolm updated the serum `.ai` files to
-30ML. But the `.pdf` exports are still the June versions, and the photographic pack shots
-in `New designs/` are July renders taken before the fix — so **all three carton references
-still show 50ML**, verified by reading them. `.ai` cannot be rendered here (not
-PDF-compatible), so there is no way to build a corrected carton reference from source.
+**Status (2026-08-19 18:30): ✅ RESOLVED in the references.** The updated serum `.ai` files
+are genuine PDFs — magic bytes `%PDF-1.6` — so they render once copied to a `.pdf`
+extension. `sips` had been refusing them on the extension alone. All three confirmed
+corrected to **30ML**.
 
-**What is needed:** re-rendered pack shots of the three corrected cartons, or at minimum
-re-exported PDFs. Until then the carton references teach the model 50ML, and reference-lock
-beats the prompt override.
+Each of the three now gets a fifth reference, `box_artwork_flat.png`, cropped from the
+updated artwork. It is an **addition, not a replacement**: the flat artwork carries the
+correct wording, the pack shot carries the perspective, edges and satin sheen, and
+reference-lock takes both.
+
+**Still worth doing:** re-rendered pack shots of the three cartons, so the photographic
+reference agrees with the artwork rather than being corrected alongside it.
 
 **Third correction — the Acetyl Hexapeptide-8 dedicated render is the SUPERSEDED design.**
 `Images/Products/Argireline Age Control Serum /Argireline Age Control Serum.png` reads
