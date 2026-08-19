@@ -82,8 +82,18 @@ One reference is **generated, not photographed**: Matrixyl 3000 Pro Collagen Ser
 silver pack shot, so its silver carton was generated from its own green face and stored in
 Drive as `GENERATED-matrixyl-serum-silver-carton.png`. Replace it if a real shot appears.
 
-**Next:** write the nine product configs — exact label wording, per-face `packaging_desc`,
-correct volumes. That is the last thing between here and a run.
+**Next session:** the first real production run — ONE product, Glutathione Brightening
+Serum. Write its config, preflight until clean, run the 45-shot batch (~$14), review the
+output honestly. Handover: `.claude/handovers/2026-08-19-1900-main.md`.
+
+Glutathione first because its product render is the corrected artwork (PREMIUM FORMULA,
+30ML), its carton correction is in place with the extra `box_artwork_flat.png` reference,
+and its gold/silver carton is the most demanding finish in the range.
+
+**Label wording is the highest-risk part of a config.** Quote every line verbatim with its
+colour; write `packaging_desc` face by face. Preflight rejects unfilled `<placeholders>` and
+a `product_desc` that quotes no label text, because an invented label is clean and legible
+and therefore survives review.
 
 ### ⚠️ PHOTO-003 — Artwork corrections needed before print
 
