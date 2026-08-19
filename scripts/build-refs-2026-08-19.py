@@ -91,12 +91,30 @@ BOUNDARY = {
     P + "10-43-24.jpg": 0.48,   # matrixyl cream, silver
 }
 
-#: Where a silver face has to come from the dieline instead of a pack shot.
-#: The flat artwork carries the silver panel exactly - better than approximating it.
+#: Silver faces that come from a GENERATED carton rather than a pack shot.
+#:
+#: Matrixyl 3000 Pro Collagen Serum has no silver pack shot. Its silver carton was
+#: generated from its own green face - a finish change, not an invention, since the
+#: green face already carries the correct geometry and every word of the text. The
+#: flat dieline was the alternative and was rejected: correct content, but no
+#: perspective, edges or sheen, so it briefs the material poorly.
+#:
+#: The generated file is stored in Drive beside the real pack shots because it
+#: CANNOT be reproduced by re-running this script - generation is not
+#: deterministic. Treat it as source material, not as output.
+#:
+#: Replace it the day a real silver pack shot of that carton exists.
+GENERATED_SILVER = {
+    "matrixyl-3000-pro-collagen-serum": "GENERATED-matrixyl-serum-silver-carton.png",
+}
+
+#: Retained for reference: the dieline panel this replaced.
 DIELINE_SILVER = {"matrixyl-3000-pro-collagen-serum": (0.51, 0.28, 0.71, 0.62)}
 
-BG_TOLERANCE = 18   # how far from the corner colour still counts as background
-MARGIN = 0.06       # breathing room around the subject bbox
+BG_TOLERANCE = 18    # how far from the corner colour still counts as background
+MARGIN = 0.06        # breathing room around the subject bbox
+TIGHT_TOLERANCE = 34 # stricter cut that ignores soft cast shadow
+SUBJECT_FILL = 0.84  # subject's longest edge as a share of the square canvas
 
 
 def subject_bbox(im: Image.Image) -> tuple[int, int, int, int]:
@@ -105,6 +123,20 @@ def subject_bbox(im: Image.Image) -> tuple[int, int, int, int]:
     bg = Image.new("RGB", rgb.size, rgb.getpixel((4, 4)))
     diff = ImageChops.difference(rgb, bg).convert("L").point(lambda p: 255 if p > BG_TOLERANCE else 0)
     return diff.getbbox() or (0, 0, *rgb.size)
+
+
+def tight_bbox(im: Image.Image):
+    """Bounding box using a strict threshold, so soft shadow is not counted.
+
+    `subject_bbox` is deliberately permissive and includes the shadow, which
+    inflates the box and shrinks the subject once the crop is squared. For a
+    reference set the shadow is not the subject.
+    """
+    rgb = im.convert("RGB")
+    bg = Image.new("RGB", rgb.size, rgb.getpixel((4, 4)))
+    diff = ImageChops.difference(rgb, bg).convert("L").point(
+        lambda p: 255 if p > TIGHT_TOLERANCE else 0)
+    return diff.getbbox()
 
 
 def isolate(im: Image.Image, comp_mask, box: tuple[int, int, int, int], size: int, dest: str) -> str:
@@ -141,6 +173,24 @@ def isolate(im: Image.Image, comp_mask, box: tuple[int, int, int, int], size: in
     return dest
 
 
+def whole_crop(path: str, size: int, dest: str) -> str:
+    """Trim a single-subject image to its subject and normalise it to SUBJECT_FILL.
+
+    Used for the generated carton, which has no neighbour to split away from but
+    must still arrive at the same scale as every other reference.
+    """
+    im = Image.open(path).convert("RGB")
+    bb = tight_bbox(im) or subject_bbox(im)
+    sub = im.crop(bb)
+    bg = im.getpixel((4, 4))
+    w, h = sub.size
+    edge = int(max(w, h) / SUBJECT_FILL)
+    canvas = Image.new("RGB", (edge, edge), bg)
+    canvas.paste(sub, ((edge - w) // 2, (edge - h) // 2))
+    canvas.resize((size, size), Image.LANCZOS).save(dest)
+    return dest
+
+
 def side_crop(path: str, side: str, size: int, dest: str) -> str:
     """Crop one side of a pack shot at its explicit boundary, trim to the subject,
     then pad to square on the background sweep.
@@ -154,16 +204,22 @@ def side_crop(path: str, side: str, size: int, dest: str) -> str:
     cut = int(im.width * frac)
     part = im.crop((0, 0, cut, im.height)) if side == "left" else im.crop((cut, 0, im.width, im.height))
 
-    bb = subject_bbox(part)
+    # Tight bbox: a stricter threshold than subject_bbox so a soft cast shadow
+    # does not inflate the box. An inflated bbox makes a larger square, which
+    # makes the object SMALLER in the finished crop - that is why the two Copper
+    # Peptide cartons came out at different scales from each other.
+    bb = tight_bbox(part)
+    if bb is None:
+        bb = subject_bbox(part)
     l, t, r, b = bb
-    pad_x, pad_y = int((r - l) * MARGIN), int((b - t) * MARGIN)
-    l, t = max(0, l - pad_x), max(0, t - pad_y)
-    r, b = min(part.width, r + pad_x), min(part.height, b + pad_y)
     sub = part.crop((l, t, r, b))
 
+    # Normalise fill: the subject's longest edge always occupies the same share of
+    # the square, so a product and its two carton faces arrive at a consistent
+    # scale regardless of how each source shot was framed.
     bg = im.getpixel((4, 4))
     w, h = sub.size
-    edge = max(w, h)
+    edge = int(max(w, h) / SUBJECT_FILL)
     canvas = Image.new("RGB", (edge, edge), bg)
     canvas.paste(sub, ((edge - w) // 2, (edge - h) // 2))
     canvas.resize((size, size), Image.LANCZOS).save(dest)
@@ -314,6 +370,13 @@ def main() -> int:
             if os.path.exists(s):
                 side_crop(s, "right", 1024, os.path.join(d, "box_silver_face.png"))
                 made += 1
+        elif slug in GENERATED_SILVER:
+            g = os.path.join(SRC, GENERATED_SILVER[slug])
+            if os.path.exists(g):
+                whole_crop(g, 1024, os.path.join(d, "box_silver_face.png"))
+                made += 1
+                print(f"  {slug}: silver face from the GENERATED carton "
+                      f"(no pack shot exists)")
         elif slug in DIELINE_SILVER:
             pdfs = [f for f in os.listdir(os.path.join(PACK, packdir)) if f.endswith(".pdf")]
             if pdfs:
