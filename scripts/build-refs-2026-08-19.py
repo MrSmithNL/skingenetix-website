@@ -69,18 +69,20 @@ PRODUCTS = {
 #: solve white-on-white with no separation. Seventeen numbers, checked by eye,
 #: can - and they never regress.
 #:
-#: Values are either a single cut, or (product_cut, carton_cut) where the two
-#: objects OVERLAP horizontally and one cut cannot serve both - move it right to
-#: clear the bottle out of the carton crop and it slices the carton into the
-#: bottle crop. Copper Peptide Serum is the case: bottle at 0.44, carton at 0.50.
+#: Values are usually a single cut. A (product_cut, carton_cut) pair is supported
+#: for shots where the two objects genuinely overlap horizontally, though none
+#: currently need it - the Copper Peptide Serum looked like it did until the
+#: divide was measured properly at 48.8% (coloured) and 47.6% (silver). Guessing
+#: it at 0.45 left a bottle sliver in the carton; guessing 0.50 sliced 4% off the
+#: carton's left edge. Measure, do not estimate.
 #:
 #: Keys are the pack-shot filenames. `_DEFAULT` covers anything unlisted.
 BOUNDARY_DEFAULT = 0.47
 BOUNDARY = {
     P + "10-46-00.jpg": 0.44,   # pdrn serum, coloured
     P + "10-45-59.jpg": 0.46,   # pdrn serum, silver
-    P + "10-46-40.jpg": (0.44, 0.50),  # copper peptide serum, coloured - objects overlap
-    P + "10-46-41.jpg": (0.44, 0.50),  # copper peptide serum, silver - objects overlap
+    P + "10-46-40.jpg": 0.487,  # copper peptide serum, coloured - measured divide
+    P + "10-46-41.jpg": 0.476,  # copper peptide serum, silver - measured divide
     P + "10-50-08.jpg": 0.45,   # acetyl, coloured
     P + "10-50-09.jpg": 0.45,   # acetyl, silver
     "PHOTO-2026-07-14-09-18-49.jpg": 0.47,  # matrixyl serum, coloured
