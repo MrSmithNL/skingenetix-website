@@ -161,10 +161,24 @@ GENERATED_SILVER = {
 #: This is an ADDITIONAL reference, not a replacement: the flat artwork carries the
 #: correct wording, the pack shot carries the perspective, edges and satin sheen.
 #: Reference-lock takes several images, so the model gets both.
+#:
+#: MEASURED 2026-08-19, not estimated. The first version of this constant was one
+#: hand-guessed box, (0.06, 0.28, 0.30, 0.60), copied to all three serums. Its right
+#: edge fell 0.0215 short of the panel and sliced 'BRIGHTENING PEPTIDES' off the
+#: ingredient line - a reference that teaches the model to print a truncated word.
+#: Its left edge ran 0.066 too wide and dragged in the glue flap.
+#:
+#: The numbers below are the dieline's own fold rules, found by scanning for the
+#: columns and rows that are dark across the panel: x 0.1268/0.3215, y 0.2795/0.6120.
+#: All three serum dielines share them to within a pixel. The check that they are
+#: right and not merely tighter: the panel comes out 779x1882px, and a 41x99mm face
+#: predicts 779 * 99/41 = 1881. Same trap as the Copper Peptide divide - 0.45 left a
+#: sliver and 0.50 sliced the carton, and only measuring settled it.
+SERUM_FRONT_PANEL = (0.1268, 0.2795, 0.3215, 0.6120)
 ARTWORK_PANEL = {
-    "glutathione-brightening-serum": (0.06, 0.28, 0.30, 0.60),
-    "acetyl-hexapeptide-8-serum": (0.06, 0.28, 0.30, 0.60),
-    "matrixyl-3000-pro-collagen-serum": (0.06, 0.28, 0.30, 0.60),
+    "glutathione-brightening-serum": SERUM_FRONT_PANEL,
+    "acetyl-hexapeptide-8-serum": SERUM_FRONT_PANEL,
+    "matrixyl-3000-pro-collagen-serum": SERUM_FRONT_PANEL,
 }
 
 #: Retained for reference: the dieline panel this replaced.
@@ -272,6 +286,43 @@ def whole_crop(path: str, size: int, dest: str, strict_tol: int = TIGHT_TOLERANC
     w, h = sub.size
     edge = int(max(w, h) / SUBJECT_FILL)
     canvas = Image.new("RGB", (edge, edge), bg)
+    canvas.paste(sub, ((edge - w) // 2, (edge - h) // 2))
+    canvas.resize((size, size), Image.LANCZOS).save(dest)
+    return dest
+
+
+def flatten_render(path: str) -> Image.Image:
+    """Open a rendered dieline and put it on WHITE, not on black.
+
+    `sips` renders a PDF onto a transparent ground. `.convert("RGB")` resolves
+    that transparency to BLACK, which is how the first flat-artwork reference
+    came to sit in a black field while every other reference in the set sits on
+    a pale sweep. Reference-lock is faithful to the background too: a black-field
+    reference argues for a black-field photograph.
+    """
+    im = Image.open(path)
+    if im.mode in ("RGBA", "LA", "P"):
+        im = im.convert("RGBA")
+        flat = Image.new("RGBA", im.size, (255, 255, 255, 255))
+        flat.alpha_composite(im)
+        return flat.convert("RGB")
+    return im.convert("RGB")
+
+
+def panel_square(im: Image.Image, panel: tuple[float, float, float, float],
+                 size: int, dest: str) -> str:
+    """Cut an explicit measured panel and pad it to square on white.
+
+    Deliberately does NOT re-detect the subject. The panel box is already
+    measured off the dieline's fold rules, and running a detector over it again
+    is how a correct boundary gets quietly re-estimated into a wrong one.
+    """
+    W, H = im.size
+    x0, y0, x1, y1 = panel
+    sub = im.crop((int(W * x0), int(H * y0), int(W * x1), int(H * y1)))
+    w, h = sub.size
+    edge = int(max(w, h) / SUBJECT_FILL)
+    canvas = Image.new("RGB", (edge, edge), (255, 255, 255))
     canvas.paste(sub, ((edge - w) // 2, (edge - h) // 2))
     canvas.resize((size, size), Image.LANCZOS).save(dest)
     return dest
@@ -502,14 +553,9 @@ def main() -> int:
                 os.system(f'sips -s format png --resampleWidth 4000 "{tmp_pdf}" '
                           f'--out "{tmp_png}" >/dev/null 2>&1')
                 if os.path.exists(tmp_png):
-                    art = Image.open(tmp_png).convert("RGB")
-                    W, H = art.size
-                    x0, y0, x1, y1 = panel
-                    cut = art.crop((int(W * x0), int(H * y0), int(W * x1), int(H * y1)))
-                    pth = os.path.join(d, "_panel_tmp.png")
-                    cut.save(pth)
-                    whole_crop(pth, 1024, os.path.join(d, "box_artwork_flat.png"))
-                    for t in (tmp_pdf, tmp_png, pth):
+                    art = flatten_render(tmp_png)
+                    panel_square(art, panel, 1024, os.path.join(d, "box_artwork_flat.png"))
+                    for t in (tmp_pdf, tmp_png):
                         os.remove(t)
                     made += 1
                     print(f"  {slug}: + flat artwork panel from the UPDATED .ai (30ML)")

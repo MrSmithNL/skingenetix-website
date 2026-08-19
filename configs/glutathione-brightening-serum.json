@@ -1,0 +1,43 @@
+{
+  "_comment": "First production config of the rebuilt pipeline, 2026-08-19. Every line of printed text below is quoted verbatim from the artwork with its own colour, per the label-text-must-be-quoted rule: an invented label is clean, legible and plausible, so it survives a fast review in a way a garbled one does not. Bottle wording read off refs/product_tight.png; carton wording read off the corrected .ai dieline (Glutathione-Brightening-Serum-Skingenetix-box.ai), not from memory.",
+
+  "sku": "skingenetix-glutathione-brightening-radiant-glow-serum-30ml",
+  "brand": "skingenetix",
+  "template": "serum_bottle",
+  "product_seo": "glutathione_brightening_radiant_glow_skin_serum",
+
+  "product_desc": "Skingenetix Glutathione Brightening Radiant Glow Serum: a 30ml frosted white glass dropper bottle, straight-sided with square shoulders, fitted with a brushed silver-aluminium collar and a white rubber-bulb pipette. Reproduce the front label exactly as in the reference, every character verbatim and in these colours: the Skingenetix DNA-helix mark and the 'Skingenetix' wordmark in BLACK; a narrow vertical GOLD rule down the left of the text block; 'GLUTATHIONE BRIGHTENING' in BLACK bold capitals on two lines; 'RADIANT GLOW SERUM' in GOLD bold capitals on two lines; 'PREMIUM FORMULA' in BLACK light capitals; and '2% GLUTATHIONE  |  30ML' in small BLACK capitals at the base. The volume is 30ML - never 50ML. The sub-line is 'PREMIUM FORMULA' - never 'PROFESSIONAL TREATMENT'. Keep the frosted glass WHITE and neutral: do not tint it amber, gold, cream or yellow. The collar is brushed satin aluminium with a fine vertical grain, not a chrome mirror. Preserve the exact bottle and pipette proportions from the reference.",
+
+  "_packaging_desc_help": "Written face by face because a model renders a box in one colour unless told otherwise, and because the carton carries far more text than the bottle. Source: the corrected dieline. The carton is ONE box with two differently-coloured large faces - it is not two product variants.",
+
+  "packaging_desc": "The product carton is a tall slim rectangular box, 41 x 41 x 99mm, noticeably taller than it is wide. It has TWO large faces in DIFFERENT colours and they meet at crisp edges, each colour holding right up to the edge. The GOLD FACE is matte metallic gold and carries, from top to bottom: the Skingenetix DNA-helix mark and 'Skingenetix' wordmark in WHITE; a narrow vertical WHITE rule down the left of the text block; 'GLUTATHIONE BRIGHTENING' in BLACK bold capitals on two lines; 'RADIANT GLOW SERUM' in WHITE bold capitals on two lines; 'ANTIOXIDANT DEFENSE' / 'DARK SPOT CARE' / 'FRESH COMPLEXION' on three lines in BLACK light capitals; then 'PREMIUM FORMULA' in BLACK light capitals, 'ALL SKIN TYPES' small in WHITE, and two small BLACK lines reading 'GLUTATHIONE 2%  |  BRIGHTENING PEPTIDES' and 'STABLE VITAMIN C  |  30ML'. The SILVER FACE is matte metallic silver - a brushed pale silver, NOT white cardboard and NOT a mirror - and carries the identical layout and identical wording, but with the DNA-helix mark, the wordmark, the vertical rule, 'RADIANT GLOW SERUM' and 'ALL SKIN TYPES' in GOLD instead of white, while 'GLUTATHIONE BRIGHTENING', the three benefit lines, 'PREMIUM FORMULA' and the two small ingredient lines stay BLACK. The narrow side panels are printed in the same gold and silver and carry small body copy. The volume on every panel reads '30ML' - never 50ML.",
+
+  "_refs_local_help": "product_tight.png ONLY, and deliberately so. Luma reads refs[0] and nothing else. pack_full.png was excluded on 2026-08-19: its bottle still reads 'PROFESSIONAL TREATMENT' where the corrected render reads 'PREMIUM FORMULA', and its carton reads 50ML, so it contradicts product_tight on two lines at once. A reference that disagrees with the brief wins, because reference-lock is faithful.",
+
+  "refs_local": [
+    "assets/images/_refs-2026-08-19/glutathione-brightening-serum/product_tight.png"
+  ],
+
+  "refs_urls": [
+    "https://v3b.fal.media/files/b/0aa6fc77/Wxj5PQmRcWkdibKQtjGo0_product_tight.png"
+  ],
+
+  "_refs_packaging_help": "box_artwork_flat.png leads. It is flat artwork rather than a photograph, but it is the only carton reference with the corrected 30ML wording, and it is the one Luma will see. The two photographed faces follow for perspective, edge geometry and finish. KNOWN AND ACCEPTED: both photographed cartons predate the 30ML fix and still read 50ML, and both are rendered glossier than the real satin-metallic stock, so expect some packaging candidates to show the wrong volume and a mirror sheen.",
+
+  "refs_packaging": [
+    "assets/images/_refs-2026-08-19/glutathione-brightening-serum/box_artwork_flat.png",
+    "assets/images/_refs-2026-08-19/glutathione-brightening-serum/box_coloured_face.png",
+    "assets/images/_refs-2026-08-19/glutathione-brightening-serum/box_silver_face.png"
+  ],
+
+  "refs_packaging_urls": [
+    "https://v3b.fal.media/files/b/0aa6fc77/E8aP53hh6-hrvE17hIAsP_box_artwork_flat.png",
+    "https://v3b.fal.media/files/b/0aa6fc77/413A6Xe061DJuczIEwUYc_box_coloured_face.png",
+    "https://v3b.fal.media/files/b/0aa6fc77/keeUHaok8UXYddyHPUnkj_box_silver_face.png"
+  ],
+
+  "out_dir": "assets/ai-generated/2026-08-19-glutathione-radiant-glow-serum/run-01",
+
+  "_gemini_used_today": "Gemini calls already spent today across ALL products; the cap is 250 and nbp_pro and nbp_flash share it. The health check spent 2 (one each). Preflight also reads the ledger and takes whichever number is higher.",
+  "gemini_used_today": 2
+}
