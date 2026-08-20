@@ -94,6 +94,39 @@ colour; write `packaging_desc` face by face. Preflight rejects unfilled `<placeh
 a `product_desc` that quotes no label text, because an invented label is clean and legible
 and therefore survives review.
 
+### PHOTO-005 — 140 images publish-ready; uploads and product renaming pending
+
+**Priority:** 🔴 High
+**Owner:** Claude (upload) + Malcolm (SEO study, then titles)
+**Status:** Images prepared. Nothing uploaded. Two more products generating.
+
+**Where the numbers landed.** Four runs, 680 candidates, $51.15 all-in. Malcolm selected
+**140** by prefixing filenames with `_` in the `ALL-<product>` folders. That is a **21%
+selection rate against the audit's 0.2%** — and it made cost-per-winner computable for the
+first time. See `memory/cost-per-winner-2026-08-20.md`.
+
+**Ready to upload** — `assets/publish-ready/<product>/`, SEO-named, 2048px short edge,
+EXIF stripped, ~89% smaller, each with an `_upload-manifest.json` carrying alt text and the
+engine that produced it:
+
+| Images               | Destination product           | handle                          |
+| -------------------- | ----------------------------- | ------------------------------- |
+| 76 Glutathione serum | Glutathione Brightening Serum | `glutathione-brightening-serum` |
+| 64 PDRN cream        | PDRN + Collagen Night Cream   | `pdrn-collagen-night-cream`     |
+
+**Malcolm's decision 2026-08-20: REPLACE the existing images, do not append.** Every live
+product image still shows the retired label — DEEP REGENERATION FORMULA / PROFESSIONAL
+TREATMENT where the current artwork reads DEEP RENEWAL TREATMENT / PREMIUM FORMULA. The new
+images are the first showing the current product.
+
+**Blocked deliberately:** product _titles_ are on the old naming ("PDRN + Collagen Night
+Cream" is neither a night cream nor the current name). Malcolm's sequencing: **an
+SEO/GEO/AISO keyword study per product comes first**, optimised for the key ingredient
+against the most-used and most-relevant search terms. Titles change only after that.
+
+⚠️ Match images to products by **checking the image, not the title** — store titles predate
+the 2026 redesign. See `memory/shopify-store-map-2026-08.md`.
+
 ### PHOTO-004 — First production run: what it found
 
 **Priority:** 🔴 High
@@ -124,16 +157,16 @@ references.
 
 **Defects found, and where each was fixed.** Every one came from a real candidate:
 
-| Defect | Cause | Fixed in |
-| --- | --- | --- |
-| Short, squat pipette bulb | nothing described the bulb's size | config + template + QA check |
-| Purple / navy "brand gradient" | shot 02 brief named no colour | template brief + config |
-| Amber-tinted frosted glass | weak instruction | config + template negatives |
-| Carton lines printed on the bottle | bottle lines never stated exhaustive | config |
-| Mirror-polished carton | references shot glossy; dieline says matte satin | config |
-| Invented carton wording | nothing forbade additions | config + template |
-| Literal "BODY COPY" on a panel | **our own prompt said "carry small body copy"** | config |
-| Lowercase "skingenetix", stray ® | capitalisation never stated | config |
+| Defect                             | Cause                                            | Fixed in                     |
+| ---------------------------------- | ------------------------------------------------ | ---------------------------- |
+| Short, squat pipette bulb          | nothing described the bulb's size                | config + template + QA check |
+| Purple / navy "brand gradient"     | shot 02 brief named no colour                    | template brief + config      |
+| Amber-tinted frosted glass         | weak instruction                                 | config + template negatives  |
+| Carton lines printed on the bottle | bottle lines never stated exhaustive             | config                       |
+| Mirror-polished carton             | references shot glossy; dieline says matte satin | config                       |
+| Invented carton wording            | nothing forbade additions                        | config + template            |
+| Literal "BODY COPY" on a panel     | **our own prompt said "carry small body copy"**  | config                       |
+| Lowercase "skingenetix", stray ®   | capitalisation never stated                      | config                       |
 
 **Still open, not fixable from the prompt side:**
 
