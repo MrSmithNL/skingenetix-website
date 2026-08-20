@@ -142,6 +142,20 @@ serum and Copper Peptide Night cream — all three ran on the four non-Gemini en
 which leaves carton shots thin. The 2026-08-20 allowance was already at **244/250** by
 15:50, so none of the three could start that day; each is
 `--backends nbp_pro,nbp_flash` into the existing `run-01`, which merges on filename.
+⚠️ Generation reads `GEMINI_API_KEY` **only** and this project's `.env` has no Gemini key —
+see the Authentication note in `docs/architecture.md` before starting them.
+
+**QA run 2026-08-20 (verdicts are information, not a filter — Malcolm still picks):**
+
+| Product              | Judged | PASS          | Shots with no passing candidate |
+| -------------------- | ------ | ------------- | ------------------------------- |
+| Copper Peptide serum | 177    | **135 (76%)** | 3 — 06, 07 and 27               |
+| Copper Peptide Day   | 154    | **134 (87%)** | 0                               |
+
+The serum's three empty shots are `product_and_box_hero`, `product_and_box_angled` and
+`range_stacked_angled` — all carton work, failing on `label_wording` and `carton_faces`.
+That is the concrete case for the Gemini top-up rather than a general preference for it.
+Dominant failure reason overall is `label_wording` (36 of 62 failures across both).
 
 **Upload plans are per-product data, not code.** Gallery order and alt text are Malcolm's
 decisions and now live in `scripts/finals/upload-plans/<handle>.json`; the uploader reads
