@@ -5,31 +5,68 @@ Order of operations is deliberate: ADD the new media and wait for Shopify to
 finish processing it, THEN delete the old, THEN set the exact order. Deleting
 first would leave the live product with no images if an upload failed halfway.
 
-Alt text is written per shot rather than derived from the filename - alt text is
+Gallery order and alt text are Malcolm's decisions, not derivable from a
+filename, so both live in a per-product plan under `upload-plans/`. Alt text is
 read by search engines and screen readers, and "Pdrn collagen copper peptide
 deep renewal repair skin cream hero whitebg" serves neither.
+
+Usage:
+    python3 scripts/finals/shopify-replace-media.py <finals-dir> <plan.json> [--dry-run]
+
+`--dry-run` resolves and prints the exact order and alt text without
+authenticating or touching the store. Run it before every live upload.
+
+Author: Claude Code, 2026-08-20.
 """
 import json
 import mimetypes
 import os
 import sys
 import time
-import urllib.error
 import urllib.request
+from collections import namedtuple
 
 API = "2025-01"
 
-PRODUCT = "Skingenetix PDRN Collagen Repair Deep Renewal Treatment cream, 50ml"
-ALT = {
-    "hero_whitebg": f"{PRODUCT} — jar on a white background",
-    "open_jar_swatch": f"{PRODUCT} — open jar with a swatch of the pink cream",
-    "product_and_box_angled": f"{PRODUCT} — jar beside its pink and silver carton",
-    "silk_wrap": f"{PRODUCT} — jar resting on cream silk",
-    "colourblock_pedestal_bold": f"{PRODUCT} — jar on a colour-block pedestal",
-    "range_stacked_jars": f"{PRODUCT} — stacked jars from the Skingenetix range",
-    "applying_to_cheek_closeup": f"{PRODUCT} — close-up of the cream applied to a cheek",
-    "model_face": f"{PRODUCT} — model with the cream applied",
-}
+Pick = namedtuple("Pick", "filename upload_name shot alt")
+
+
+def resolve_picks(filenames, plan):
+    """Map Malcolm's `__`-marked files onto the plan's ordered shot list.
+
+    Every mismatch raises rather than falling back to a default, because the
+    fallback would publish a wrongly-ordered or generically-described image to a
+    live product page and nothing downstream would notice.
+    """
+    picks_by_shot = {}
+    for f in filenames:
+        matched = [s["shot"] for s in plan["order"] if f"_{s['shot']}_" in f]
+        if not matched:
+            raise ValueError(
+                f"{f} matches no shot in the plan - add the shot to the plan, "
+                f"or the image was renamed after the plan was written")
+        if len(matched) > 1:
+            raise ValueError(f"{f} matches {len(matched)} shots ({', '.join(matched)}) "
+                             f"- shot keys must be unambiguous")
+        shot = matched[0]
+        if shot in picks_by_shot:
+            raise ValueError(f"two files claim shot '{shot}': "
+                             f"{picks_by_shot[shot]} and {f}")
+        picks_by_shot[shot] = f
+
+    if not picks_by_shot:
+        raise ValueError("no images selected - nothing marked '__' in the finals folder")
+
+    out = []
+    for entry in plan["order"]:
+        f = picks_by_shot.get(entry["shot"])
+        if f is None:
+            continue  # planned shot Malcolm did not pick; not an error
+        out.append(Pick(filename=f,
+                        upload_name=f.lstrip("_"),
+                        shot=entry["shot"],
+                        alt=f"{plan['product_label']} — {entry['alt']}"))
+    return out
 
 
 def token(store, cid, sec):
@@ -53,12 +90,12 @@ def gql(store, tok, query, variables=None):
     return d["data"]
 
 
-def staged_upload(store, tok, path):
+def staged_upload(store, tok, path, upload_name):
     q = """mutation($input:[StagedUploadInput!]!){ stagedUploadsCreate(input:$input){
       stagedTargets{ url resourceUrl parameters{ name value } }
       userErrors{ field message } } }"""
-    name = os.path.basename(path)
-    d = gql(store, tok, q, {"input": [{"filename": name, "mimeType": mimetypes.guess_type(name)[0],
+    d = gql(store, tok, q, {"input": [{"filename": upload_name,
+                                       "mimeType": mimetypes.guess_type(upload_name)[0],
                                        "resource": "IMAGE", "httpMethod": "POST"}]})
     errs = d["stagedUploadsCreate"]["userErrors"]
     if errs:
@@ -68,10 +105,11 @@ def staged_upload(store, tok, path):
     boundary = "----skingenetix" + str(int(time.time() * 1000))
     parts = []
     for p in t["parameters"]:
-        parts.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"{p['name']}\"\r\n\r\n{p['value']}\r\n")
+        parts.append(f"--{boundary}\r\nContent-Disposition: form-data; "
+                     f"name=\"{p['name']}\"\r\n\r\n{p['value']}\r\n")
     head = "".join(parts).encode()
-    head += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"file\"; filename=\"{name}\"\r\n"
-             f"Content-Type: image/jpeg\r\n\r\n").encode()
+    head += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"file\"; "
+             f"filename=\"{upload_name}\"\r\nContent-Type: image/jpeg\r\n\r\n").encode()
     with open(path, "rb") as fh:
         payload = head + fh.read() + f"\r\n--{boundary}--\r\n".encode()
     req = urllib.request.Request(t["url"], data=payload,
@@ -82,57 +120,61 @@ def staged_upload(store, tok, path):
 
 
 def main():
-    cfg_dir, product_gid = sys.argv[1], sys.argv[2]
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    dry_run = "--dry-run" in sys.argv
+    if len(args) != 2:
+        print(__doc__)
+        return 2
+    finals_dir, plan_path = args
+
+    with open(plan_path) as fh:
+        plan = json.load(fh)
+
+    selected = sorted(f for f in os.listdir(finals_dir) if f.startswith("__"))
+    picks = resolve_picks(selected, plan)
+
+    print(f"product : {plan['product_label']}")
+    print(f"gid     : {plan['product_gid']}")
+    print(f"selected: {len(selected)} marked '__' -> {len(picks)} resolved\n")
+    for i, p in enumerate(picks, 1):
+        print(f"  {i}. {p.upload_name}")
+        print(f"     alt: {p.alt}")
+
+    if dry_run:
+        print("\nDRY RUN - store not contacted, nothing changed.")
+        return 0
+
     store = os.environ["SHOPIFY_SKINGENETIX_STORE"].replace("https://", "").rstrip("/")
     tok = token(store, os.environ["SHOPIFY_SKINGENETIX_CLIENT_ID"],
                 os.environ["SHOPIFY_SKINGENETIX_CLIENT_SECRET"])
-    print("auth OK")
-
-    picks = sorted(f for f in os.listdir(cfg_dir) if f.startswith("__"))
-    order = ["hero_whitebg", "open_jar_swatch", "product_and_box_angled", "silk_wrap",
-             "colourblock_pedestal_bold", "range_stacked_jars",
-             "applying_to_cheek_closeup", "model_face"]
-
-    def rank(f):
-        for i, k in enumerate(order):
-            if f"_{k}_" in f:
-                return i
-        return len(order)
-    picks.sort(key=rank)
-
-    print(f"\nuploading {len(picks)} images in this order:")
-    for i, f in enumerate(picks, 1):
-        print(f"  {i}. {f.lstrip('_')}")
+    print("\nauth OK")
 
     existing = gql(store, tok, """query($id:ID!){ product(id:$id){ title
         media(first:100){ edges{ node{ ... on MediaImage { id } } } } } }""",
-                   {"id": product_gid})["product"]
+                   {"id": plan["product_gid"]})["product"]
     old_ids = [e["node"]["id"] for e in existing["media"]["edges"] if e["node"].get("id")]
-    print(f"\nproduct: {existing['title']}  ({len(old_ids)} existing media)")
+    print(f"product: {existing['title']}  ({len(old_ids)} existing media)")
 
     new_media = []
-    for f in picks:
-        path = os.path.join(cfg_dir, f)
-        clean = f.lstrip("_")
-        shot = next((k for k in order if f"_{k}_" in f), None)
-        resource = staged_upload(store, tok, path)
+    for p in picks:
+        resource = staged_upload(store, tok, os.path.join(finals_dir, p.filename),
+                                 p.upload_name)
         d = gql(store, tok, """mutation($id:ID!,$media:[CreateMediaInput!]!){
               productCreateMedia(productId:$id, media:$media){
                 media{ ... on MediaImage { id } } mediaUserErrors{ field message } } }""",
-                {"id": product_gid,
-                 "media": [{"originalSource": resource, "alt": ALT.get(shot, PRODUCT),
+                {"id": plan["product_gid"],
+                 "media": [{"originalSource": resource, "alt": p.alt,
                             "mediaContentType": "IMAGE"}]})
         errs = d["productCreateMedia"]["mediaUserErrors"]
         if errs:
-            raise RuntimeError(f"{clean}: {errs}")
-        mid = d["productCreateMedia"]["media"][0]["id"]
-        new_media.append(mid)
-        print(f"  + {clean}")
+            raise RuntimeError(f"{p.upload_name}: {errs}")
+        new_media.append(d["productCreateMedia"]["media"][0]["id"])
+        print(f"  + {p.upload_name}")
 
     print("\nwaiting for Shopify to finish processing...")
     for _ in range(60):
         st = gql(store, tok, """query($id:ID!){ product(id:$id){ media(first:100){ edges{ node{
-              ... on MediaImage { id status } } } } } }""", {"id": product_gid})
+              ... on MediaImage { id status } } } } } }""", {"id": plan["product_gid"]})
         by = {e["node"]["id"]: e["node"].get("status") for e in st["product"]["media"]["edges"]}
         if all(by.get(m) == "READY" for m in new_media):
             print("  all new media READY")
@@ -146,13 +188,13 @@ def main():
         gql(store, tok, """mutation($id:ID!,$ids:[ID!]!){
               productDeleteMedia(productId:$id, mediaIds:$ids){
                 deletedMediaIds mediaUserErrors{ field message } } }""",
-            {"id": product_gid, "ids": old_ids})
+            {"id": plan["product_gid"], "ids": old_ids})
         print(f"  removed {len(old_ids)} old media")
 
     moves = [{"id": m, "newPosition": str(i)} for i, m in enumerate(new_media)]
-    d = gql(store, tok, """mutation($id:ID!,$moves:[MoveInput!]!){
+    gql(store, tok, """mutation($id:ID!,$moves:[MoveInput!]!){
           productReorderMedia(id:$id, moves:$moves){ userErrors{ field message } } }""",
-            {"id": product_gid, "moves": moves})
+        {"id": plan["product_gid"], "moves": moves})
     print("  order set")
     return 0
 

@@ -98,19 +98,30 @@ and therefore survives review.
 
 **Priority:** 🔴 High
 **Owner:** Claude (upload + generation) + Malcolm (selection, SEO study)
-**Status:** PDRN cream **published**. Glutathione serum prepared, not uploaded.
+**Status:** PDRN cream **published**. Glutathione serum **published**.
 
 **The 0.2% is broken.** 8 images went live on the PDRN cream on 2026-08-20 —
 the first published from the rebuilt pipeline, replacing 5 that carried the retired
 label. Live at <https://www.skingenetix.com/products/pdrn-collagen-night-cream>.
 
-| Product                            | Candidates | Prepared | Live  |
-| ---------------------------------- | ---------- | -------- | ----- |
-| Glutathione serum                  | 557        | **82**   | 0     |
-| PDRN cream                         | 274        | 72       | **8** |
-| PDRN skin repair serum             | 293        | 0        | 0     |
-| Copper Peptide Day cream           | 154        | 0        | 0     |
-| Copper Peptide serum + Night cream | running    | 0        | 0     |
+**Second product published the same day.** 8 images live on the Glutathione serum,
+replacing all 6 that carried the retired label. Malcolm's gallery order: packaging hero
+first, hands-dropper second. Live at
+<https://www.skingenetix.com/products/glutathione-brightening-serum>.
+
+| Product                  | Candidates | Prepared | Live  |
+| ------------------------ | ---------- | -------- | ----- |
+| Glutathione serum        | 557        | 82       | **8** |
+| PDRN cream               | 274        | 72       | **8** |
+| PDRN skin repair serum   | 293        | 0        | 0     |
+| Copper Peptide serum     | 177        | 0        | 0     |
+| Copper Peptide Day cream | 154        | 0        | 0     |
+| Copper Peptide Night     | running    | 0        | 0     |
+
+**Awaiting Malcolm's marks:** the two finished Copper Peptide runs are consolidated for
+browsing at `assets/ai-generated/ALL-copper-peptide-{repair-serum,day-repair-cream}/`
+(331 candidates). They are pre-top-up — the Gemini carton shots land after the next reset,
+and the collector merges them in without disturbing marks already made.
 
 **Selection is Malcolm's, by leading underscore** — `_` keeps, `__` publishes. He wants
 every candidate available and no shortlisting. See
@@ -128,7 +139,14 @@ against the most-used and most-relevant search terms.
 
 **Queued for the next Gemini reset:** top-ups for Copper Peptide Day cream, Copper Peptide
 serum and Copper Peptide Night cream — all three ran on the four non-Gemini engines only,
-which leaves carton shots thin.
+which leaves carton shots thin. The 2026-08-20 allowance was already at **244/250** by
+15:50, so none of the three could start that day; each is
+`--backends nbp_pro,nbp_flash` into the existing `run-01`, which merges on filename.
+
+**Upload plans are per-product data, not code.** Gallery order and alt text are Malcolm's
+decisions and now live in `scripts/finals/upload-plans/<handle>.json`; the uploader reads
+one and refuses any selected file it cannot map to a planned shot, rather than appending it
+with generic alt text.
 
 ### PHOTO-004 — First production run: what it found
 

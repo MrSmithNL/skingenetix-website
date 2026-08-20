@@ -15,8 +15,24 @@ import os
 import sys
 
 
+def present_as(existing, name):
+    """Return the name this candidate already has in the folder, or None.
+
+    Malcolm marks a choice by prefixing the filename with '_' or '__' in place,
+    so on a re-run - which happens every time a later run tops a product up -
+    the collected file no longer has the name it was linked under. Matching only
+    the bare name would link the original back and leave a duplicate of every
+    image he has chosen. See memory/malcolm-picks-winners-by-underscore.md.
+    """
+    for variant in (name, "_" + name, "__" + name):
+        if variant in existing:
+            return variant
+    return None
+
+
 def collect(runs, dest, label):
     os.makedirs(dest, exist_ok=True)
+    existing = set(os.listdir(dest))
     verdicts, linked, skipped = {}, 0, 0
     for run in runs:
         tag = os.path.basename(run.rstrip("/"))
@@ -32,18 +48,23 @@ def collect(runs, dest, label):
             if not f.lower().endswith(".png"):
                 continue
             src = os.path.join(raw, f)
-            out = os.path.join(dest, f"{tag}__{f}")
-            if not os.path.exists(out):
+            name = f"{tag}__{f}"
+            already = present_as(existing, name)
+            if already is None:
                 try:
-                    os.link(src, out)
+                    os.link(src, os.path.join(dest, name))
                 except OSError:
                     import shutil
-                    shutil.copy2(src, out)
+                    shutil.copy2(src, os.path.join(dest, name))
+                existing.add(name)
+                already = name
                 linked += 1
             else:
                 skipped += 1
             r = qa.get(src) or qa.get(os.path.relpath(src))
-            verdicts[f"{tag}__{f}"] = (
+            # Keyed by the name on disk, marks included, so the sidecar can be
+            # matched against the folder after Malcolm has been through it.
+            verdicts[already] = (
                 f"{r['verdict']}: {','.join(r['failed'])}" if r else "not judged")
 
     with open(os.path.join(dest, "_qa-verdicts.txt"), "w") as fh:
