@@ -24,7 +24,11 @@ import optimise  # noqa: E402
 
 BACKENDS = ("seedream", "luma", "nbp_pro", "nbp_flash", "flux2", "gpt_image")
 # run-01__06_product_and_box_hero_nbp_pro_1.png
-PAT = re.compile(r"^_?(?P<run>run-\d+)__(?P<n>\d{2})_(?P<shot>.+?)_(?P<be>" +
+# `^_*` - ANY number of leading underscores. It was `^_?`, which accepts one and
+# so rejected every `__` file: exactly the images Malcolm had marked to publish.
+# The keeps parsed, the picks did not, and the only symptom was a "could not
+# parse" line among normal output while the totals still looked reasonable.
+PAT = re.compile(r"^_*(?P<run>run-\d+)__(?P<n>\d{2})_(?P<shot>.+?)_(?P<be>" +
                  "|".join(BACKENDS) + r")_(?P<i>\d+)\.(?:png|jpe?g|webp)$")
 
 

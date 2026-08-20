@@ -37,6 +37,24 @@ def marks(name):
     return m.group(1)
 
 
+#: What the two places Malcolm drops files from append to a colliding name.
+#: A browser adds "-2" before the extension; Finder adds " copy", then
+#: " copy 2". Missing either loses the shot name and files the image under a
+#: shot called "supplied", which reaches the manifest, the alt text and the
+#: store URL.
+_STRAY_SUFFIX = re.compile(r"(?:-\d+)?(?: copy(?: \d+)?)?$", re.I)
+
+
+def shot_from(stem, product_seo):
+    """The shot name inside a stray file's stem, or 'supplied' if there is none.
+
+    `stem` has no extension and no leading marks.
+    """
+    cleaned = _STRAY_SUFFIX.sub("", stem).strip()
+    m = re.match(rf"^{re.escape(product_seo)}_(?P<shot>.+?)_(\d+)_skingenetix$", cleaned)
+    return m.group("shot") if m else "supplied"
+
+
 def next_n(files, product_seo, shot):
     pat = re.compile(rf"^_*{re.escape(product_seo)}_{re.escape(shot)}_(\d+)_skingenetix\.")
     used = [int(m.group(1)) for f in files if (m := pat.match(f))]
@@ -65,10 +83,10 @@ def sweep(out_dir, product_seo, all_dir, apply=True):
             target_stem = os.path.splitext(bare)[0]
             shot, n = rec.get("shot"), None
         else:
-            # Adopt: strip a browser "-2" suffix and give it the next free number.
+            # Adopt: recover the shot name through whatever suffix the browser
+            # or Finder added, then give it the next free number.
             stem = os.path.splitext(bare)[0]
-            m = re.match(rf"^{re.escape(product_seo)}_(?P<shot>.+?)_(\d+)_skingenetix(-\d+)?$", stem)
-            shot = m.group("shot") if m else "supplied"
+            shot = shot_from(stem, product_seo)
             n = next_n(disk, product_seo, shot)
             target_stem = f"{product_seo}_{shot}_{n}_skingenetix"
             adopted.append((f, target_stem))
