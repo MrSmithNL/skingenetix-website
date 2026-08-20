@@ -1,0 +1,45 @@
+{
+  "product_gid": "gid://shopify/Product/15349205238145",
+  "product_handle": "copper-peptide-ghk-cu-day-gel-cream",
+  "product_label": "Skingenetix Copper Peptide Advanced Day Repair Cream, 2% GHK-Cu, 50ml",
+  "order_decided_by": "Malcolm, 2026-08-20: 'start with the white background hero shot as first image - then this one as second: bathroom_shelf_lifestyle_5'. Positions 3-9 are Claude's: model, packaging, label macro, ingredient, application, second lifestyle, range last.",
+  "_note_two_of_one_shot": "bathroom_shelf_lifestyle appears twice, so those two entries name the candidate number as well as the shot. The resolver matches on '_<shot>_', so '_bathroom_shelf_lifestyle_5_' picks exactly one file and stays unambiguous against '_2'.",
+  "order": [
+    {
+      "shot": "silver_jar_dramatic_shadow",
+      "alt": "jar on a white background with a soft directional shadow"
+    },
+    {
+      "shot": "bathroom_shelf_lifestyle_6",
+      "alt": "open jar on a bathroom counter with a swatch of the blue cream beside it, and someone applying it reflected behind"
+    },
+    {
+      "shot": "model_face",
+      "alt": "a model holding the jar beside their face"
+    },
+    {
+      "shot": "product_and_box_open_jar",
+      "alt": "open jar beside its blue and silver cartons"
+    },
+    {
+      "shot": "dramatic_closeup",
+      "alt": "close-up of the jar with the label in sharp focus"
+    },
+    {
+      "shot": "ingredient_hero",
+      "alt": "jar on dark stone with raw copper ore, the source of its GHK-Cu peptides"
+    },
+    {
+      "shot": "applying_to_cheek_closeup",
+      "alt": "a model holding the jar, with the blue cream smoothed onto one cheek"
+    },
+    {
+      "shot": "bathroom_shelf_lifestyle_2",
+      "alt": "jar on a bathroom shelf beside a reed diffuser"
+    },
+    {
+      "shot": "range_stacked_jars",
+      "alt": "several jars of the day cream arranged in a group"
+    }
+  ]
+}
