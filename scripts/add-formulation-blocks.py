@@ -40,13 +40,20 @@ BLOCKS = {
             "never": "terracotta, amber, gold, peach, warm brown, blush pink, teal, green",
         },
     },
+    # DAY is the DARK one and NIGHT is the LIGHT one - Malcolm, 2026-08-20,
+    # correcting these after they were written the wrong way round. It reads
+    # backwards against the usual day/night convention, which is exactly why it
+    # needs saying here: the jars themselves show it, Day deep navy and Night
+    # pale blue.
     "copper-peptide-day-repair-cream": {
         "formulation": {
             "substance": "cream",
-            "appearance": ("an opaque cream of a soft pale blue, smooth and satin rather "
-                           "than glossy - tinted by the GHK-Cu copper peptides it carries"),
-            "hex": "#8FB4E3",
-            "never": "white, off-white, ivory, cream-coloured, golden, amber, yellow, pink",
+            "appearance": ("an opaque cream of a deep, saturated dark blue, smooth and "
+                           "satin rather than glossy - richly tinted by the GHK-Cu "
+                           "copper peptides it carries"),
+            "hex": "#2F4C9B",
+            "never": ("white, off-white, ivory, cream-coloured, pale blue, powder blue, "
+                      "golden, amber, yellow, pink"),
         },
         "palette": {
             "name": "clinical blue",
@@ -58,11 +65,12 @@ BLOCKS = {
     "copper-peptide-night-repair-cream": {
         "formulation": {
             "substance": "cream",
-            "appearance": ("an opaque cream of a soft blue, a shade deeper than the day "
-                           "cream, smooth and satin rather than glossy - tinted by the "
-                           "GHK-Cu copper peptides it carries"),
-            "hex": "#6F9BD1",
-            "never": "white, off-white, ivory, cream-coloured, golden, amber, yellow, pink",
+            "appearance": ("an opaque cream of a soft light blue, clearly paler than the "
+                           "day cream, smooth and satin rather than glossy - lightly "
+                           "tinted by the GHK-Cu copper peptides it carries"),
+            "hex": "#A6C4E0",
+            "never": ("white, off-white, ivory, cream-coloured, navy, dark blue, "
+                      "golden, amber, yellow, pink"),
         },
         "palette": {
             "name": "clinical blue",
