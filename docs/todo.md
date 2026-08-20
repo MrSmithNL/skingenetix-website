@@ -94,38 +94,41 @@ colour; write `packaging_desc` face by face. Preflight rejects unfilled `<placeh
 a `product_desc` that quotes no label text, because an invented label is clean and legible
 and therefore survives review.
 
-### PHOTO-005 — 140 images publish-ready; uploads and product renaming pending
+### PHOTO-005 — First images LIVE; uploads continuing
 
 **Priority:** 🔴 High
-**Owner:** Claude (upload) + Malcolm (SEO study, then titles)
-**Status:** Images prepared. Nothing uploaded. Two more products generating.
+**Owner:** Claude (upload + generation) + Malcolm (selection, SEO study)
+**Status:** PDRN cream **published**. Glutathione serum prepared, not uploaded.
 
-**Where the numbers landed.** Four runs, 680 candidates, $51.15 all-in. Malcolm selected
-**140** by prefixing filenames with `_` in the `ALL-<product>` folders. That is a **21%
-selection rate against the audit's 0.2%** — and it made cost-per-winner computable for the
-first time. See `memory/cost-per-winner-2026-08-20.md`.
+**The 0.2% is broken.** 8 images went live on the PDRN cream on 2026-08-20 —
+the first published from the rebuilt pipeline, replacing 5 that carried the retired
+label. Live at <https://www.skingenetix.com/products/pdrn-collagen-night-cream>.
 
-**Ready to upload** — `assets/publish-ready/<product>/`, SEO-named, 2048px short edge,
-EXIF stripped, ~89% smaller, each with an `_upload-manifest.json` carrying alt text and the
-engine that produced it:
+| Product                            | Candidates | Prepared | Live  |
+| ---------------------------------- | ---------- | -------- | ----- |
+| Glutathione serum                  | 557        | **82**   | 0     |
+| PDRN cream                         | 274        | 72       | **8** |
+| PDRN skin repair serum             | 293        | 0        | 0     |
+| Copper Peptide Day cream           | 154        | 0        | 0     |
+| Copper Peptide serum + Night cream | running    | 0        | 0     |
 
-| Images               | Destination product           | handle                          |
-| -------------------- | ----------------------------- | ------------------------------- |
-| 76 Glutathione serum | Glutathione Brightening Serum | `glutathione-brightening-serum` |
-| 64 PDRN cream        | PDRN + Collagen Night Cream   | `pdrn-collagen-night-cream`     |
+**Selection is Malcolm's, by leading underscore** — `_` keeps, `__` publishes. He wants
+every candidate available and no shortlisting. See
+`memory/malcolm-picks-winners-by-underscore.md`.
 
-**Malcolm's decision 2026-08-20: REPLACE the existing images, do not append.** Every live
-product image still shows the retired label — DEEP REGENERATION FORMULA / PROFESSIONAL
-TREATMENT where the current artwork reads DEEP RENEWAL TREATMENT / PREMIUM FORMULA. The new
-images are the first showing the current product.
+**Replace, never append** — every remaining live product image still shows the retired
+DEEP REGENERATION FORMULA / PROFESSIONAL TREATMENT label.
 
-**Blocked deliberately:** product _titles_ are on the old naming ("PDRN + Collagen Night
-Cream" is neither a night cream nor the current name). Malcolm's sequencing: **an
-SEO/GEO/AISO keyword study per product comes first**, optimised for the key ingredient
-against the most-used and most-relevant search terms. Titles change only after that.
+**Blocked deliberately:** product _titles_ stay on the old naming until an SEO/GEO/AISO
+keyword study per product is done — Malcolm's sequencing, optimised for the key ingredient
+against the most-used and most-relevant search terms.
 
-⚠️ Match images to products by **checking the image, not the title** — store titles predate
-the 2026 redesign. See `memory/shopify-store-map-2026-08.md`.
+⚠️ Match images to products by **checking the image, not the title**. See
+`memory/shopify-store-map-2026-08.md`.
+
+**Queued for the next Gemini reset:** top-ups for Copper Peptide Day cream, Copper Peptide
+serum and Copper Peptide Night cream — all three ran on the four non-Gemini engines only,
+which leaves carton shots thin.
 
 ### PHOTO-004 — First production run: what it found
 
