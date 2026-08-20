@@ -145,6 +145,21 @@ which leaves carton shots thin. The 2026-08-20 allowance was already at **244/25
 ⚠️ Generation reads `GEMINI_API_KEY` **only** and this project's `.env` has no Gemini key —
 see the Authentication note in `docs/architecture.md` before starting them.
 
+**Colour is now per product, not per template (2026-08-20).** The substance inside the
+container was described nowhere, so every drop, swatch and open-jar shot invented a colour —
+white cream, water-clear serum. Each config now carries `formulation` (what the substance
+looks like, and what it never looks like) and `palette` (scene colours built from the
+product's own brand colour), and `fanout.py` refuses to run a product that declares
+neither. Confirmed colours are in `memory/product-colours-2026-08.md`.
+⚠️ **Copper Peptide DAY is the DARK cream and NIGHT is the LIGHT one** — it reads backwards
+against the usual convention and was written inverted once already.
+
+**No re-run for PDRN cream or Glutathione serum** — Malcolm, 2026-08-20: "i have enough
+images for the PDRN cream and the Glutathione serum." Both have live images and full finals
+folders. Their `formulation`/`palette` blocks are filled in and correct, so if either is
+ever run again it inherits the fix; but the known-wrong substance shots (white Glutathione
+drops) are simply not worth $2 to redo. Do not propose it again.
+
 **QA run 2026-08-20 (verdicts are information, not a filter — Malcolm still picks):**
 
 | Product              | Judged | PASS          | Shots with no passing candidate |
