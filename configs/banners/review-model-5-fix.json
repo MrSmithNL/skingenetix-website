@@ -1,0 +1,23 @@
+{
+  "wave": "review-models",
+  "created": "2026-08-21",
+  "note": "Single-slot re-run of the night cream review image. v4 put a blob of cream on the tops of the model's fingers as well as her cheek; product should read as applied TO the face, not carried on the hand.",
+  "defaults": {
+    "candidates": 3,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, citrus, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper bottle, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "REV-5-copper-peptide-night-cream",
+      "title": "Review image 5 \u2014 Copper Peptide Night Cream",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:reviews block 5",
+      "prompt": "High end beauty campaign photograph, square format, an extremely tight close up of the face of a Latina woman around forty, a professional beauty campaign model with elegant bone structure, a silver streak at her temple and full lips. The crop is very close: her face fills the entire frame edge to edge, the top of her head is cut off by the upper edge and her chin sits near the lower edge. Turned three quarters, her eyes looking off to the side past the camera, expression composed and warm. She is actively applying pale blue cream, colour #A6C4E0 to her face. Two fingertips work the cream in small circles into her cheek, caught mid motion, a soft swirl of un-blended cream on the skin of her cheek around where the fingertips touch. The cream is on her CHEEK ONLY. Her hand is completely clean: no cream on the backs of her fingers, none on the tops of her fingers, none on her knuckles or nails. Product appears only on her face. A genuine application gesture, mid action, not a hand resting decoratively. Luxury beauty campaign finish: luminous dewy glowing complexion, healthy and even, with skin still reading as real rather than airbrushed to plastic. Subtle natural makeup \u2014 a softly tinted glossy lip, groomed defined brows, a hint of liner \u2014 never heavy or matte. A single delicate fine ring or thin chain may be visible. Behind her a seamless pale neutral grey backdrop, colour #D8D6D4, almost entirely hidden by the closeness of the crop. Soft broad key light from the front with a gentle fill and a clean catchlight. 100mm lens at f4, natural skin tones, clean neutral grade, editorial beauty advertising quality.",
+      "negative_extra": "cream on the fingers, cream on top of the fingers, cream on the back of the hand, cream on the knuckles, cream on the nails, product on the hand, blob of cream on the hand, hand resting idly, cupping the face, hand not touching the product, plain unremarkable features, tired, unwell, teenager, child, heavy makeup, matte lipstick, red lipstick, false lashes, smoky eye, large earrings, plastic skin, waxy skin, over airbrushed, beauty filter, dark background, black background, wide shot, full head visible, space around the head, torso, whole body"
+    }
+  ]
+}
