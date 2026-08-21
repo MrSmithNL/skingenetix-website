@@ -1,0 +1,62 @@
+{
+  "wave": "faq-product-pile",
+  "created": "2026-08-21",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Malcolm's direction for the FAQ right column: multiple products in one frame, stacked as a pile, be creative with it.\n\nTwo things this knowingly departs from, both his call and recorded so nobody 'fixes' them later: the art direction's rule 1 is ONE subject per frame, and every other banner on this site holds to it. And these are CLASS A — the real packaging is in shot — so every brief carries the approved packshots as references. A pile shot with no references is the exact scenario that produced thirty invented labels on 2026-08-19.\n\nLabel headline lines are quoted verbatim per the label-text-must-be-quoted rule, but only the two or three lines that will actually be legible at pile scale. Quoting the full carton spec for four products would run past 6000 characters and invite the model to letter surfaces that are 30px tall on screen, which is how text gets garbled rather than merely small.\n\nRatio 0.95:1 measured from the live DOM — the column renders 461px wide against a ~530px accordion stack.\n\nHonest risk: four different cartons with four different label sets is the hardest ask in this whole project. Expect label drift on the products furthest from camera; judge on the front two.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "PILE1-leaning-tower",
+      "title": "FAQ — cartons stacked into a leaning tower, graphite ground",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_product_and_box_angled_2_skingenetix.jpg",
+        "assets/publish-ready/glutathione-brightening-serum/__glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg",
+        "assets/publish-ready/pdrn-skin-repair-serum/__pdrn_skin_repair_deep_renewal_face_serum_product_and_box_angled_6_skingenetix.jpg",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/_matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_product_and_box_hero_8_skingenetix.jpg"
+      ],
+      "prompt": "Studio photograph of four Skingenetix product cartons from the reference images stacked into a deliberately imperfect leaning tower, built up the centre of a tall portrait frame. The squat wide emerald-teal Matrixyl cream carton sits flat at the base as the widest block. On top of it, turned about fifteen degrees, lies the tall slim steel-blue Copper Peptide carton on its side. Above that, crossing the other way, lies the champagne Glutathione carton, and the blush-pink PDRN carton is balanced at the top, tipped slightly so the stack looks alive rather than machined. One glass serum bottle from the references leans upright against the base of the tower on the right, its dropper cap in shot. Every carton keeps its own printed face turned toward camera: 'COPPER PEPTIDE' and 'ADVANCED REPAIR SERUM' on the steel-blue box, 'MATRIXYL 3000' and 'PRO COLLAGEN' on the teal box, the Skingenetix DNA-helix mark and wordmark on each. A single hard key light from the upper left carves the stack and throws one long defined shadow down and to the right across a smooth seamless graphite surface, colour #1A1A1A, that fills the background evenly. Premium skincare campaign still life, crisp focus through the front two cartons, shallow depth of field behind, physically based matte cardboard and glass.",
+      "negative_extra": "extra products beyond those shown, duplicated cartons, invented brand names, mangled lettering, gibberish text, floating objects, cardboard creases, torn packaging, spilled product, price stickers, barcodes, hands, reflections of a studio"
+    },
+    {
+      "id": "PILE2-loose-heap",
+      "title": "FAQ — loose heap of boxes and bottles, bone ground",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_product_and_box_angled_2_skingenetix.jpg",
+        "assets/publish-ready/glutathione-brightening-serum/__glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg",
+        "assets/publish-ready/pdrn-skin-repair-serum/__pdrn_skin_repair_deep_renewal_face_serum_product_and_box_angled_6_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-night-repair-cream/__copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix.jpg"
+      ],
+      "prompt": "Overhead three quarter studio photograph of Skingenetix products from the reference images collected into a loose relaxed heap in the middle of a tall portrait frame, as though set down together rather than arranged. The tall steel-blue Copper Peptide carton lies flat and forms the spine of the pile with its printed face fully readable to camera. The champagne Glutathione carton rests across one end of it at an angle, the blush-pink PDRN carton is half tucked under the other end, and the silver cream jar sits upright on top of the heap with its lid on. Two glass serum bottles lie beside the pile, one on its side with its dropper cap toward camera. The pieces touch and overlap naturally with real contact shadows between them. The readable lines are 'COPPER PEPTIDE' and 'ADVANCED REPAIR SERUM', and the Skingenetix DNA-helix mark and wordmark. A single hard key light from the upper left with one soft fill, casting defined shadows across a smooth seamless bone coloured surface, colour #F0F0F0, that fills the background. Premium skincare campaign still life, crisp focus on the front pieces, natural falloff behind, physically based matte cardboard and glass.",
+      "negative_extra": "extra products beyond those shown, duplicated cartons, invented brand names, mangled lettering, gibberish text, tidy grid arrangement, flat-lay from directly above, spilled product, price stickers, barcodes, hands, dark background"
+    },
+    {
+      "id": "PILE3-stepped-plinth",
+      "title": "FAQ — stepped plinth arrangement, colour-blocked",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_product_and_box_angled_2_skingenetix.jpg",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/_matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_product_and_box_hero_8_skingenetix.jpg",
+        "assets/publish-ready/glutathione-brightening-serum/__glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg",
+        "assets/publish-ready/pdrn-skin-repair-serum/__pdrn_skin_repair_deep_renewal_face_serum_product_and_box_angled_6_skingenetix.jpg"
+      ],
+      "prompt": "Architectural studio photograph of Skingenetix products from the reference images arranged across three shallow rectangular plinths of different heights, stepping up from the lower left to the upper right of a tall portrait frame. On the lowest plinth, two cartons stand shoulder to shoulder with a glass serum bottle in front of them. On the middle plinth, one carton stands upright with a second laid flat across its foot. On the highest and smallest plinth, a single carton stands alone with its printed face square to camera. The plinths are the same matte material and colour as the floor and read as one sculpted surface rather than props. Every carton keeps its own printed face toward camera and its own colour: steel blue, emerald teal, champagne, blush pink. Readable lines are 'COPPER PEPTIDE' and 'ADVANCED REPAIR SERUM', and the Skingenetix DNA-helix mark and wordmark. A single hard key light from the upper left throws three separate defined shadows to the right across a smooth seamless bone coloured surface, colour #F0F0F0. Premium skincare campaign still life, crisp focus, physically based matte cardboard and glass, calm and clinical.",
+      "negative_extra": "extra products beyond those shown, duplicated cartons, invented brand names, mangled lettering, gibberish text, marble, stone texture, ornate pedestals, columns, spilled product, price stickers, barcodes, hands"
+    }
+  ]
+}
