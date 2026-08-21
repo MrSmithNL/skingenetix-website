@@ -1,0 +1,61 @@
+{
+  "wave": "faq-pot-stack",
+  "created": "2026-08-21",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Malcolm: the heap is worse — stack three or four of the cream pots instead, on the graphite background.\n\nWHY THIS SHOULD SOLVE THE LETTERING. The approved range_stacked_jars shots already in publish-ready render every jar label correctly — 'COPPER PEPTIDE / ADVANCED DAY REPAIR / PREMIUM FORMULA / DAY CREAM | 2% GHK-CU | 50ML' is crisp and right on all four products. The jar carries five short lines; the carton carries the same five plus benefit strings and side panels. Less copy per surface, and one surface per object instead of three, is exactly the condition under which the earlier arrangements held together. The fine-print instruction from the cream-carton brief is kept anyway.\n\nGEOMETRY, MEASURED NOT DESCRIBED. Each jar is 1.15 times wider than its full height, and the lid band is a third of that height. A stack is jar-on-lid, so those two ratios set the whole column. Stating them beats 'squat jar', which drifts.\n\nFour distinct glass colours, so no two jars in the stack read alike: deep navy, pale ice-blue, neutral white, soft pink. All four lids are the same neutral brushed silver — the specs are emphatic that they never go rose-gold, copper or champagne.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "POT1-four-column",
+      "title": "Four cream pots stacked into a column, graphite",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-night-repair-cream/__copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix.jpg",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/__matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_silver_jar_dramatic_shadow_3_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-day-repair-cream/__copper_peptide_ghk_cu_advanced_day_repair_face_cream_silver_jar_dramatic_shadow_5_skingenetix.jpg"
+      ],
+      "prompt": "Studio photograph of exactly four Skingenetix cream jars from the reference images, stacked squarely one on top of another into a single neat upright column in the centre of a tall portrait frame. Every jar is the same size and shape: a frosted glass cosmetic jar 1.15 times wider than its full height, with a brushed satin neutral silver-grey screw lid forming a tall band a third of that height. Each jar sits flat and centred on the lid of the one below, front labels aligned and square to camera, the column standing straight and level, nothing tilted or leaning. From top to bottom the glass colours are: pale ice-blue, then neutral frosted white, then soft rose-pink, then deep navy blue at the base. All four lids are the same neutral brushed silver-grey, never rose-gold, copper, champagne or chrome. Legible type, and nothing else, reads on the front labels: on the pale ice-blue jar the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED NIGHT REPAIR'. On the white jar the same mark and wordmark, then 'MATRIXYL 3000 PRO COLLAGEN', then 'FULL & FIRMING TREATMENT'. On the pink jar the same mark and wordmark, then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT'. On the navy jar the same mark and wordmark, then 'COPPER PEPTIDE', then 'ADVANCED DAY REPAIR'. Every remaining line on every label is fine print far too small to read - render it as fine unreadable print, never as placeholder words, never as invented wording, and print nothing that is not quoted here. A single hard key light from the upper left with one soft fill, throwing one clean defined shadow of the whole column down and to the right across a smooth seamless graphite surface, colour #1A1A1A, that fills the background evenly. Premium skincare campaign still life, crisp focus across the front labels, physically based frosted glass and brushed aluminium.",
+      "negative_extra": "leaning jars, tilted jars, toppling stack, jars of different sizes, tall jars, thin flat lids, gold lids, rose gold lids, copper lids, chrome mirror lids, cartons, boxes, bottles, droppers, extra products, more than four jars, duplicated jars of the same colour, invented brand names, mangled lettering, misspelled words, gibberish text, mirrored text, placeholder copy, hands"
+    },
+    {
+      "id": "POT2-three-column",
+      "title": "Three cream pots stacked, larger in frame, graphite",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-night-repair-cream/__copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-day-repair-cream/__copper_peptide_ghk_cu_advanced_day_repair_face_cream_silver_jar_dramatic_shadow_5_skingenetix.jpg"
+      ],
+      "prompt": "Studio photograph of exactly three Skingenetix cream jars from the reference images, stacked squarely one on top of another into a single neat upright column filling most of the height of a tall portrait frame, so the jars are large and their labels read clearly. Every jar is the same size and shape: a frosted glass cosmetic jar 1.15 times wider than its full height, with a brushed satin neutral silver-grey screw lid forming a tall band a third of that height. Each jar sits flat and centred on the lid of the one below, front labels aligned and square to camera, the column straight and level, nothing tilted or leaning. From top to bottom the glass colours are: pale ice-blue, then soft rose-pink, then deep navy blue at the base. All three lids are the same neutral brushed silver-grey, never rose-gold, copper, champagne or chrome. Legible type, and nothing else, reads on the front labels: on the pale ice-blue jar the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED NIGHT REPAIR'. On the pink jar the same mark and wordmark, then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT'. On the navy jar the same mark and wordmark, then 'COPPER PEPTIDE', then 'ADVANCED DAY REPAIR'. Every remaining line on every label is fine print far too small to read - render it as fine unreadable print, never as placeholder words, never as invented wording, and print nothing that is not quoted here. A single hard key light from the upper left with one soft fill, throwing one clean defined shadow of the column down and to the right across a smooth seamless graphite surface, colour #1A1A1A, that fills the background evenly. Premium skincare campaign still life, crisp focus across the front labels, physically based frosted glass and brushed aluminium.",
+      "negative_extra": "leaning jars, tilted jars, toppling stack, jars of different sizes, tall jars, thin flat lids, gold lids, rose gold lids, copper lids, chrome mirror lids, cartons, boxes, bottles, droppers, extra products, more than three jars, duplicated jars of the same colour, invented brand names, mangled lettering, misspelled words, gibberish text, mirrored text, placeholder copy, hands"
+    },
+    {
+      "id": "POT3-four-rotated",
+      "title": "Four cream pots stacked with an even quarter-turn each, graphite",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-night-repair-cream/__copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix.jpg",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/__matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_silver_jar_dramatic_shadow_3_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-day-repair-cream/__copper_peptide_ghk_cu_advanced_day_repair_face_cream_silver_jar_dramatic_shadow_5_skingenetix.jpg"
+      ],
+      "prompt": "Studio photograph of exactly four Skingenetix cream jars from the reference images, stacked squarely one on top of another into a single neat upright column in the centre of a tall portrait frame, each jar rotated by the same small angle relative to the one below so the labels fan gently around the column like a spiral staircase. Every jar sits flat and level and perfectly centred on the lid beneath it - the column is straight and stable, only the rotation varies, nothing tilted or leaning. Every jar is the same size and shape: a frosted glass cosmetic jar 1.15 times wider than its full height, with a brushed satin neutral silver-grey screw lid forming a tall band a third of that height. From top to bottom the glass colours are: deep navy blue, then soft rose-pink, then neutral frosted white, then pale ice-blue at the base. All four lids are the same neutral brushed silver-grey, never rose-gold, copper, champagne or chrome. The two jars nearest camera have their labels turned toward the lens and read: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED DAY REPAIR' on the navy jar; and the same mark and wordmark, then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT' on the pink jar. The labels turned away from camera are seen at a steep angle and are not readable. Every remaining line on every label is fine print far too small to read - render it as fine unreadable print, never as placeholder words, never as invented wording, and print nothing that is not quoted here. A single hard key light from the upper left with one soft fill, throwing one clean defined shadow of the column down and to the right across a smooth seamless graphite surface, colour #1A1A1A. Premium skincare campaign still life, physically based frosted glass and brushed aluminium.",
+      "negative_extra": "leaning jars, tilted jars, toppling stack, jars offset sideways, jars of different sizes, tall jars, thin flat lids, gold lids, rose gold lids, copper lids, chrome mirror lids, cartons, boxes, bottles, droppers, extra products, more than four jars, invented brand names, mangled lettering, misspelled words, gibberish text, mirrored text, placeholder copy, hands"
+    }
+  ]
+}

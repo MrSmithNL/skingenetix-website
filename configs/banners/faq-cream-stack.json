@@ -1,0 +1,63 @@
+{
+  "wave": "faq-cream-stack",
+  "created": "2026-08-21",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Malcolm's revision of the pile: he likes the stack of box packaging, but wants them stacked properly rather than leaning, each carton the correct size, and the labelling correct. Just the four cream cartons.\n\nTHE FIX FOR THE GARBLED TEXT. PILE1 produced 'CLUTATHIONE', 'PRO COLAGEN', 'SLUTTHIONE RIGHITTERING' and a mirrored wordmark, because the brief asked for label text without saying what to do with the lines it did not name — so the model set every remaining line as type and invented the words. The per-product packaging specs already solve this: they instruct that side-panel copy be rendered as 'fine unreadable print, never as placeholder words'. That instruction is applied here to EVERY line below the named headlines, on every face. The failure mode becomes illegible fine print, which is what small print actually looks like, instead of misspelled brand copy.\n\nCORRECT SIZE. All four are the same 50ml squat format — wide and short, broader than tall — so they are the same size as each other. Stating that explicitly is checkable; 'correct size' is not.\n\nCOLOUR. Two of the four are steel blue, so the night cream is turned to its silver alternate face to keep four distinct colours in the stack: pink, steel blue, silver, teal.\n\nCLASS A throughout, reference-locked to approved packshots. The night cream reference comes from the 2026-08-20 run rather than publish-ready, because no carton shot of it was ever published — only jar shots.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "_shared_label_rule": "Only the lines quoted per carton are set as legible type. Every other line on every face is fine print too small to read — render it as fine unreadable print, never as placeholder words, never as invented wording. Print nothing that is not quoted.",
+  "slots": [
+    {
+      "id": "NEAT1-column-graphite",
+      "title": "Four cream cartons squarely stacked, graphite ground",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_product_and_box_angled_5_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-day-repair-cream/__copper_peptide_ghk_cu_advanced_day_repair_face_cream_product_and_box_open_jar_1_skingenetix.jpg",
+        "assets/ai-generated/2026-08-20-copper-peptide-night-repair-cream/run-01/copper_peptide_ghk_cu_advanced_night_repair_skin_cream_product_and_box_angled_1_skingenetix.png",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/_matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_product_and_box_hero_8_skingenetix.jpg"
+      ],
+      "prompt": "Studio photograph of exactly four Skingenetix cream cartons from the reference images, stacked squarely one on top of another into a single neat upright column in the centre of a tall portrait frame. All four cartons are identical in size and shape - the same wide, short rectangular 50ml format, broader than it is tall, with crisp square edges and a luxury matte-metallic satin finish. They sit flat and level on each other, front faces flush and aligned, edges parallel, no carton tilted or leaning, the column standing straight and stable. From top to bottom: the soft dusty pink PDRN carton, then the medium steel blue Copper Peptide day carton, then the brushed pale silver face of the Copper Peptide night carton, then the deep emerald-teal Matrixyl carton at the base. The stack is photographed slightly from the front and just above eye level of the top box so the front faces are square to camera and a sliver of each lid surface shows. Legible type, and nothing else, reads on the front faces: on the pink carton the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT'. On the steel blue carton the same mark and wordmark, then 'COPPER PEPTIDE', then 'ADVANCED DAY REPAIR'. On the silver carton the same mark and wordmark, then 'COPPER PEPTIDE', then 'ADVANCED NIGHT REPAIR'. On the teal carton the same mark and wordmark, then 'MATRIXYL 3000', then 'PRO COLLAGEN'. Every remaining line on every face is fine print far too small to read - render it as fine unreadable print, never as placeholder words, never as invented wording, and print nothing that is not quoted here. A single hard key light from the upper left with one soft fill, throwing one clean defined shadow of the whole column down and to the right across a smooth seamless graphite surface, colour #1A1A1A, that fills the background evenly. Premium skincare campaign still life, crisp focus across the front faces, physically based matte cardboard.",
+      "negative_extra": "leaning boxes, tilted boxes, tumbling stack, boxes of different sizes, tall slim serum cartons, jars, bottles, droppers, extra products, more than four boxes, duplicated cartons, invented brand names, mangled lettering, misspelled words, gibberish text, mirrored text, placeholder copy, price stickers, barcodes, hands, cardboard creases"
+    },
+    {
+      "id": "NEAT2-column-bone",
+      "title": "Four cream cartons squarely stacked, bone ground",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_product_and_box_angled_5_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-day-repair-cream/__copper_peptide_ghk_cu_advanced_day_repair_face_cream_product_and_box_open_jar_1_skingenetix.jpg",
+        "assets/ai-generated/2026-08-20-copper-peptide-night-repair-cream/run-01/copper_peptide_ghk_cu_advanced_night_repair_skin_cream_product_and_box_angled_1_skingenetix.png",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/_matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_product_and_box_hero_8_skingenetix.jpg"
+      ],
+      "prompt": "Studio photograph of exactly four Skingenetix cream cartons from the reference images, stacked squarely one on top of another into a single neat upright column in the centre of a tall portrait frame. All four cartons are identical in size and shape - the same wide, short rectangular 50ml format, broader than it is tall, with crisp square edges and a luxury matte-metallic satin finish. They sit flat and level on each other, front faces flush and aligned, edges parallel, no carton tilted or leaning, the column standing straight and stable. From top to bottom: the deep emerald-teal Matrixyl carton, then the soft dusty pink PDRN carton, then the medium steel blue Copper Peptide day carton, then the brushed pale silver face of the Copper Peptide night carton at the base. The stack is photographed square on from slightly above the top box so the front faces face camera directly. Legible type, and nothing else, reads on the front faces: on the teal carton the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'MATRIXYL 3000', then 'PRO COLLAGEN'. On the pink carton the same mark and wordmark, then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT'. On the steel blue carton the same mark and wordmark, then 'COPPER PEPTIDE', then 'ADVANCED DAY REPAIR'. On the silver carton the same mark and wordmark, then 'COPPER PEPTIDE', then 'ADVANCED NIGHT REPAIR'. Every remaining line on every face is fine print far too small to read - render it as fine unreadable print, never as placeholder words, never as invented wording, and print nothing that is not quoted here. A single hard key light from the upper left with one soft fill, throwing one clean defined shadow of the whole column down and to the right across a smooth seamless bone coloured surface, colour #F0F0F0, that fills the background evenly and falls very slightly darker toward the top. Premium skincare campaign still life, crisp focus across the front faces, physically based matte cardboard, bright and clean.",
+      "negative_extra": "leaning boxes, tilted boxes, tumbling stack, boxes of different sizes, tall slim serum cartons, jars, bottles, droppers, extra products, more than four boxes, duplicated cartons, invented brand names, mangled lettering, misspelled words, gibberish text, mirrored text, placeholder copy, price stickers, barcodes, hands, dark background"
+    },
+    {
+      "id": "NEAT3-stepped-offset",
+      "title": "Four cream cartons stacked with an even step offset",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_product_and_box_angled_5_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-day-repair-cream/__copper_peptide_ghk_cu_advanced_day_repair_face_cream_product_and_box_open_jar_1_skingenetix.jpg",
+        "assets/ai-generated/2026-08-20-copper-peptide-night-repair-cream/run-01/copper_peptide_ghk_cu_advanced_night_repair_skin_cream_product_and_box_angled_1_skingenetix.png",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/_matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_product_and_box_hero_8_skingenetix.jpg"
+      ],
+      "prompt": "Studio photograph of exactly four Skingenetix cream cartons from the reference images, stacked one on top of another into a single upright column in the centre of a tall portrait frame, each carton set back by the same small even step so the column reads as a deliberate staircase rather than a careless pile. All four cartons are identical in size and shape - the same wide, short rectangular 50ml format, broader than it is tall, with crisp square edges and a luxury matte-metallic satin finish. Every carton sits flat and level, edges parallel to the one below, none tilted or leaning, the offset identical at every layer. From top to bottom: the brushed pale silver face of the Copper Peptide night carton, then the soft dusty pink PDRN carton, then the deep emerald-teal Matrixyl carton, then the medium steel blue Copper Peptide day carton at the base. Photographed from a three quarter angle so the front face and one narrow side of each carton are visible. Legible type, and nothing else, reads on the front faces: on the silver carton the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED NIGHT REPAIR'. On the pink carton the same mark and wordmark, then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT'. On the teal carton the same mark and wordmark, then 'MATRIXYL 3000', then 'PRO COLLAGEN'. On the steel blue carton the same mark and wordmark, then 'COPPER PEPTIDE', then 'ADVANCED DAY REPAIR'. Every remaining line on every face, and all of the narrow side panels, is fine print far too small to read - render it as fine unreadable print, never as placeholder words, never as invented wording, and print nothing that is not quoted here. A single hard key light from the upper left with one soft fill, throwing four stepped shadows to the right across a smooth seamless bone coloured surface, colour #F0F0F0. Premium skincare campaign still life, crisp focus across the front faces, physically based matte cardboard.",
+      "negative_extra": "leaning boxes, tilted boxes, tumbling stack, random angles, boxes of different sizes, tall slim serum cartons, jars, bottles, droppers, extra products, more than four boxes, duplicated cartons, invented brand names, mangled lettering, misspelled words, gibberish text, mirrored text, placeholder copy, price stickers, barcodes, hands"
+    }
+  ]
+}
