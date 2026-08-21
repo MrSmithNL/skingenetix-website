@@ -15,7 +15,7 @@
     "assets/images/_refs-2026-08-19/pdrn-skin-repair-serum/box_coloured_face.png",
     "assets/images/_refs-2026-08-19/pdrn-skin-repair-serum/box_silver_face.png"
   ],
-  "out_dir": "assets/ai-generated/2026-08-20-pdrn-skin-repair-serum/run-01",
+  "out_dir": "assets/ai-generated/2026-08-20-pdrn-skin-repair-serum/run-02",
   "gemini_used_today": 0,
   "refs_urls": [
     "https://v3b.fal.media/files/b/0aa713b1/uhHeUhQBQ90LHqEMHe-bd_product_tight.png",
@@ -24,5 +24,17 @@
   "refs_packaging_urls": [
     "https://v3b.fal.media/files/b/0aa713b2/TjXk9_tHvEsbfeunzUKoI_box_coloured_face.png",
     "https://v3b.fal.media/files/b/0aa713b2/YeltvVHOrtElu-naABAG2_box_silver_face.png"
-  ]
+  ],
+  "formulation": {
+    "substance": "serum",
+    "appearance": "a translucent liquid with a soft rose-pink tint - clearer and thinner than a cream, but visibly pink rather than colourless",
+    "hex": "#EFC3C8",
+    "never": "white, milky, opaque, cream-coloured, golden, amber, yellow, blue, red"
+  },
+  "palette": {
+    "name": "blush pink",
+    "hex": "#F3BFC2",
+    "scene": "blush pinks, warm rose neutrals, soft ivories and clean whites",
+    "never": "blue, teal, green, purple, terracotta, amber, gold"
+  }
 }

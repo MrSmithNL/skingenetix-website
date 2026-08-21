@@ -1,0 +1,40 @@
+{
+  "_comment": "Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 2026-08-21. Bottle wording read off refs/product_tight.png; carton read off refs/box_coloured_face.png and box_silver_face.png. TWO things to know: (1) this product's carton has NO coloured face - both faces are matte-silk silver, sampled #E1E1E1 and #E8E8E7, unlike every other product in the range; (2) the BOTTLE reads 30ML and the CARTON fine print reads 50ML, the same inconsistency the Matrixyl serum has. The bottle is treated as authoritative - see docs/todo.md PHOTO-003.",
+  "sku": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-30ml",
+  "brand": "skingenetix",
+  "template": "serum_bottle",
+  "product_seo": "acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum",
+  "product_desc": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum: a 30ml frosted NEUTRAL WHITE glass dropper bottle, straight-sided with square shoulders, fitted with a brushed satin aluminium collar and a white rubber-bulb pipette. The glass is a clean cool white with no colour cast at all - never tinted blue, grey, teal or cream. The collar metal is NEUTRAL SILVER-GREY with a fine vertical brushed grain, never rose-gold, copper, champagne or a chrome mirror. PIPETTE PROPORTIONS: the white rubber bulb is an ELONGATED CAPSULE about 1.6 times taller than wide. Reproduce the front label exactly as in the reference, every character verbatim. The colour words below describe the INK each line is printed in and must never themselves appear as text on the product: the Skingenetix DNA-helix mark and the 'Skingenetix' wordmark in BLACK, spelled with a CAPITAL 'S' and the rest lower case, with no registered-trademark, copyright or any other symbol anywhere near it; a narrow vertical SILVER-GREY rule down the left of the text block; 'ACETYL' on one line and 'HEXAPEPTIDE-8' on the next, both in BLACK bold capitals with a hyphen before the 8; 'ANTI-WRINKLE' on one line and 'SERUM' on the next, both in PALE SILVER-GREY capitals, noticeably lighter than the black lines above them; 'PREMIUM FORMULA' in MID-GREY capitals; and the fine print line '10% ACETYL HEXAPEPTIDE-8 | 30ML' in MID-GREY capitals. THE BOTTLE CARRIES ONLY THE LINES LISTED ABOVE - not the benefit words, not 'ALL SKIN TYPES', not any ingredient list. Those are carton-only. This product has NO brand accent colour: it is a monochrome silver, grey, white and black identity. Any gradient or accent glow builds from cool silver-greys and clean whites - never gold, rose, blue, teal, purple, green or orange.",
+  "_packaging_desc_help": "Unlike every other product in the range this carton has no coloured face - BOTH faces are matte-silk silver, sampled #E1E1E1 and #E8E8E7. Do not invent a coloured panel for it.",
+  "packaging_desc": "The product carton is a tall slim rectangular box, noticeably taller than it is wide, with crisp square edges and a MATTE-SILK SILVER finish on every face - never mirror chrome, never foil-shiny, and with NO coloured panel anywhere on it. Printed on the silver: the Skingenetix DNA-helix mark and the 'Skingenetix' wordmark in DARK GREY, then 'ACETYL' and 'HEXAPEPTIDE-8' in BLACK bold capitals, then 'ANTI-WRINKLE' and 'SERUM' in PALE SILVER-GREY capitals, then the stacked benefit lines 'LINE SMOOTHING', 'AGE CONTROL' and 'ELASTICITY BOOST' in MID-GREY, then 'PREMIUM FORMULA', then 'ALL SKIN TYPES' in a lighter grey, and the fine print 'ACETYL HEXAPEPTIDE-8 | PEPTIDE COMPLEX' above 'NIACINAMIDE | PANTHENOL | 50ML'. No colour name appears as text anywhere on the box.",
+  "formulation": {
+    "substance": "serum",
+    "appearance": "a completely transparent, colourless liquid - water-clear and lightly viscous, reading only as refraction and highlight",
+    "hex": null,
+    "never": "white, milky, opaque, cream-coloured, golden, amber, yellow, blue, or any visible tint at all"
+  },
+  "palette": {
+    "name": "pearl silver and cool grey",
+    "hex": "#D8D6D4",
+    "scene": "pearl silvers, cool greys, clean whites and soft graphite",
+    "never": "gold, amber, terracotta, peach, warm brown, blush pink, blue, teal, green, purple"
+  },
+  "refs_local": [
+    "assets/images/_refs-2026-08-19/acetyl-hexapeptide-8-serum/product_tight.png",
+    "assets/images/_refs-2026-08-19/acetyl-hexapeptide-8-serum/pack_full.png"
+  ],
+  "refs_packaging": [
+    "assets/images/_refs-2026-08-19/acetyl-hexapeptide-8-serum/box_coloured_face.png",
+    "assets/images/_refs-2026-08-19/acetyl-hexapeptide-8-serum/box_silver_face.png"
+  ],
+  "out_dir": "assets/ai-generated/2026-08-21-acetyl-hexapeptide-8-serum/run-01",
+  "gemini_used_today": 0,
+  "refs_urls": [
+    "https://v3b.fal.media/files/b/0aa73484/-UO_nFLGwejzDVR-Ps88h_product_tight.png",
+    "https://v3b.fal.media/files/b/0aa73484/25fNXZo4tMzsKOZFgPT10_pack_full.png"
+  ],
+  "refs_packaging_urls": [
+    "https://v3b.fal.media/files/b/0aa73483/chDKSdMU6fwCoJrbZsT_T_box_coloured_face.png",
+    "https://v3b.fal.media/files/b/0aa73484/KpLJIRA6u-J_0yKJF5sV3_box_silver_face.png"
+  ]
+}

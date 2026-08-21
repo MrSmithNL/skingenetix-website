@@ -95,6 +95,25 @@ BLOCKS = {
             "never": "blue, teal, green, purple, terracotta, hot pink",
         },
     },
+    # Added 2026-08-21. This config was the only one still missing colour, and
+    # its 293 candidates were generated at 12:36 on 2026-08-20 - five hours
+    # BEFORE the colour fix landed at 17:43 - so every substance shot in that
+    # run has a colour the model chose for itself.
+    "pdrn-skin-repair-serum": {
+        "formulation": {
+            "substance": "serum",
+            "appearance": ("a translucent liquid with a soft rose-pink tint - clearer and "
+                           "thinner than a cream, but visibly pink rather than colourless"),
+            "hex": "#EFC3C8",
+            "never": "white, milky, opaque, cream-coloured, golden, amber, yellow, blue, red",
+        },
+        "palette": {
+            "name": "blush pink",
+            "hex": "#F3BFC2",
+            "scene": "blush pinks, warm rose neutrals, soft ivories and clean whites",
+            "never": "blue, teal, green, purple, terracotta, amber, gold",
+        },
+    },
     "pdrn-collagen-repair-cream": {
         "formulation": {
             "substance": "cream",
