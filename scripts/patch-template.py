@@ -123,13 +123,37 @@ def main():
             sec["settings"]["image"] = handle
             print(f"  {a['section']:<26} -> {by_slot[a['slot']]['filename']}")
 
+    if plan.get("setting_updates"):
+        print("\nSetting updates:")
+    for u in plan.get("setting_updates", []):
+        sec = doc["sections"].get(u["section"])
+        if not sec:
+            sys.exit(f"section not found: {u['section']}")
+        sec.setdefault("settings", {}).update(u["settings"])
+        for k, v in u["settings"].items():
+            shown = v if not isinstance(v, list) else f"[{len(v)} rule(s)]"
+            print(f"  {u['section']}.{k} = {str(shown)[:90]}")
+
     order = doc.get("order") or list(doc["sections"].keys())
+
+    for sid in plan.get("remove_sections", []):
+        if sid in doc["sections"]:
+            del doc["sections"][sid]
+            if sid in order:
+                order.remove(sid)
+            print(f"\nRemoved section: {sid}")
+        else:
+            print(f"\n  section {sid} not present — nothing to remove")
+
     for ns in plan.get("new_sections", []):
         sid = ns["id"]
         if sid in doc["sections"]:
             print(f"\n  section {sid} already exists — updating in place")
         section = json.loads(json.dumps(ns["section"]))
-        section["settings"]["image"] = by_slot[ns["image_slot"]]["uploaded_handle"]
+        # Not every inserted section carries an image — a custom-html style block
+        # does not — so image_slot is optional.
+        if ns.get("image_slot"):
+            section["settings"]["image"] = by_slot[ns["image_slot"]]["uploaded_handle"]
         doc["sections"][sid] = section
         if sid in order:
             order.remove(sid)
@@ -138,7 +162,8 @@ def main():
         order.insert(idx, sid)
         print(f"\nNew section:")
         print(f"  {sid}  ({section['type']}) inserted after {anchor}")
-        print(f"    image   : {by_slot[ns['image_slot']]['filename']}")
+        if ns.get("image_slot"):
+            print(f"    image   : {by_slot[ns['image_slot']]['filename']}")
         for bid in section.get("block_order", []):
             bs = section["blocks"][bid]["settings"]
             txt = bs.get("text") or bs.get("content") or ""

@@ -1,0 +1,22 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme — Impact, sections/footer-group.json (site-wide)",
+  "decided_by": "Malcolm, 2026-08-21",
+  "note": "Site-wide home for the layout overrides. footer-group renders on every page, so one style block serves every template — the homepage copy is removed in the same pass. Server-rendered CSS applies before first paint regardless of document position, so being in the footer causes no flash.\n\nThe fault: the theme sizes image-link-blocks by ITEMS PER ROW, not by fractions. At >=1400px `large` asks for 5 and `medium` for 6; at 1000-1399px `medium` asks for 5. A row holding fewer blocks than that leaves whole columns empty — 274px dead on the homepage's four-tile rows, worse on page.ingredients nav_creams (4 blocks at `medium` = 2 empty columns).\n\nThe rules count children and set items-per-row to match, so a 4-item row fills as 4 and a 5-item row as 5. Counting children rather than naming section ids means it keeps working when sections are renamed, and covers page.ingredients and page.skin-concerns without further edits. Floor is 1000px because that is where the theme switches to the items-per-row grid; below it the section is a horizontal scroll-area that must not be touched.",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "brand_layout_css",
+      "insert_after": "footer",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>\n/* Skingenetix brand layout overrides — Claude Code, 2026-08-21.\n   Additive only: sets custom properties the theme already exposes. No theme\n   Liquid or CSS file is modified (.claude/rules/shopify.md rules 2 and 3).\n\n   Link-block rows fill the full row width.\n   The theme sizes these by items-per-row, so a row holding fewer blocks than\n   the configured count leaves whole columns empty. Match the count to the\n   blocks actually present. Children are counted rather than section ids named,\n   so this survives renames and covers every template.\n   Floor 1000px: below that the section is a horizontal scroll-area. */\n@media screen and (min-width: 1000px) {\n  .image-link-blocks:has(> .image-link-blocks__item:nth-child(4)):not(:has(> .image-link-blocks__item:nth-child(5))) {\n    --image-link-blocks-items-per-row: 4 !important;\n  }\n  .image-link-blocks:has(> .image-link-blocks__item:nth-child(5)):not(:has(> .image-link-blocks__item:nth-child(6))) {\n    --image-link-blocks-items-per-row: 5 !important;\n  }\n}\n</style>"
+        }
+      }
+    }
+  ]
+}
