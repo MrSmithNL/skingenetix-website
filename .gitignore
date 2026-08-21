@@ -46,3 +46,7 @@ tmp/
 # MkDocs
 site/
 encryptcontent.cache
+
+# Playwright MCP scratch — includes third-party competitor screenshots taken
+# for research. Never commit these.
+.playwright-mcp/

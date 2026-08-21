@@ -1,0 +1,93 @@
+{
+  "wave": "wave1",
+  "created": "2026-08-21",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, sprigs, flowers, citrus, fruit, herbs, wood, rough stone, linen, textile props, pebbles, water splashes, bokeh sparkle, lens flare, text, watermark, signature, border, collage, multi-panel, flat-lay, clutter, multiple subjects",
+    "negative_class_b": "bottle, jar, dropper bottle, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "A2-hero-peptide-chain",
+      "title": "Homepage hero slide 2 — Peptide Chain",
+      "class": "B",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero (slideshow block 2)",
+      "prompt": "Extreme macro photograph of a single continuous thread of clear viscous serum lifting from a shallow pool, caught mid-draw so it forms one unbroken strand arcing across the right two thirds of the frame. The strand refracts a thin clinical blue core, colour #014EB1, with a narrow warm copper rim highlight, colour #B87333, along its upper edge. It rests above a seamless graphite surface, colour #1A1A1A, polished to a wet mirror finish that returns one soft reflection directly beneath the strand. Single hard key light raking in from the right at a shallow angle, one dim fill from the left at twenty percent. The left forty percent of the frame is empty graphite falling into near black, completely even, no detail, no shadow crossing into it, no part of the strand entering it. Editorial product photography, shot on a 100mm macro lens at f8, deep clean blacks, high microcontrast, colour graded cool.",
+      "negative_extra": ""
+    },
+    {
+      "id": "A3-hero-skin-close",
+      "title": "Homepage hero slide 3 — Skin, Close",
+      "class": "B",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero (slideshow block 3)",
+      "prompt": "Extreme macro photograph of one passage of real adult human skin across a cheekbone, filling the right two thirds of the frame. Authentic texture, visible pores, fine vellus hair, natural tonal variation, unretouched, matte finish, no cosmetic product on the surface. The frame is cropped tightly so it stops well below the eye and no facial feature is identifiable. Single hard low key light from the right at a very shallow grazing angle so the skin texture reads as relief with real micro shadows, one dim cool fill from the left. Toward the left of the frame the skin falls away into deep graphite shadow, colour #1A1A1A, and the left forty percent is a smooth even near black field with no detail. Editorial beauty macro, 100mm macro lens at f11, natural skin tones, high microcontrast, restrained cool grade.",
+      "negative_extra": "full face, eyes, eyebrow, lips, nostril, makeup, glitter, shimmer, foundation, plastic skin, beauty retouching"
+    },
+    {
+      "id": "E1-band-peptide-standard",
+      "title": "Page-break band — The Peptide Standard",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index — new full-bleed band after trust_option_a",
+      "prompt": "Studio photograph of a single upright machined cylinder of solid copper standing alone on a seamless graphite ground, colour #1A1A1A. The copper is lightly brushed with fine concentric turning marks, warm and unlacquered, colour #B87333, reading as a precision laboratory reference standard rather than as any consumer object. It stands in the right half of the frame, positioned so its base sits on the lower third line. One hard key light from the upper left throws a long specular stripe down the cylinder and casts one clean hard shadow to the lower right. The left forty five percent of the frame is unbroken graphite falling to near black, completely even, no detail, no shadow entering it. Still life product photography, 85mm lens at f11, deep blacks, metallic specular detail held, cool grade with warm metal.",
+      "negative_extra": "coins, jewellery, pipes, plumbing, machinery, gears, multiple cylinders, engraving, numerals"
+    },
+    {
+      "id": "E2-band-evidence",
+      "title": "Page-break band — Evidence",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index — new full-bleed band before reviews",
+      "prompt": "Documentary photograph of one pair of blue nitrile gloved hands at a laboratory bench, mid task, holding a single precision pipette above a clear microplate. Forearms enter from the left and the frame stops at the elbow, so no person, face or body is visible. The bench is brushed stainless steel, and behind it matte black instrument housings are thrown far out of focus into a soft dark field. Cool practical lighting from above and slightly behind, hard enough to edge light the glove and the pipette barrel. The right forty percent of the frame is the defocused dark background, smooth and even. Honest reportage style, 50mm lens at f2, shallow depth of field, cool neutral grade, no styling, no perfection.",
+      "negative_extra": "faces, people, portraits, badges, readable screens, brand names on equipment, warm cosy light, staged smiling"
+    },
+    {
+      "id": "D1-tile-fine-lines",
+      "title": "Concern tile — Fine Lines & Wrinkles",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:skin_concerns block c1",
+      "prompt": "Macro still life of one smooth ribbon of completely clear water like gel folding over itself once in the centre of the frame, glossy and self supported, occupying the central sixty percent. It sits on a seamless pearl grey ground, colour #D8D6D4, evenly lit and clean. One hard key light from the left creates a crisp specular along the top of the fold and one soft defined shadow to the right. Studio macro photography, 100mm lens at f11, neutral cool grade, high clarity, single subject alone in frame.",
+      "negative_extra": "tinted gel, coloured liquid, bubbles, foam, glitter"
+    },
+    {
+      "id": "D2-tile-firming",
+      "title": "Concern tile — Firming & Skin Density",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:skin_concerns block c2",
+      "prompt": "Macro still life of one dense opaque white cream drawn up into a single stiff vertical peak in the centre of the frame, holding its shape sharply, matte and rich, occupying the central sixty percent. The cream is a clean neutral white, colour #F4F2EF. It sits on a seamless deep emerald teal ground, colour #016569, evenly lit and clean. One hard key light from the right defines the peak edge and casts one clean shadow to the left. Studio macro photography, 100mm lens at f11, saturated ground against neutral white cream, high clarity, single subject alone in frame.",
+      "negative_extra": "swirls, multiple peaks, melted cream, yellow cream, whipped topping, food"
+    },
+    {
+      "id": "D3-tile-skin-repair",
+      "title": "Concern tile — Skin Repair & Renewal",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:skin_concerns block c3",
+      "prompt": "Macro still life of one single perfect droplet of translucent blue serum, colour #2F6FD0, resting on a polished reflective surface in the centre of the frame, holding a high domed shape, occupying the central sixty percent with its own mirror reflection directly beneath it. The ground is a seamless clinical blue, colour #014EB1, evenly lit and clean. One hard key light from the upper left puts a single bright specular point on the dome and casts one soft shadow to the right. Studio macro photography, 100mm lens at f11, deep saturated blue, high clarity, single droplet alone in frame.",
+      "negative_extra": "multiple droplets, splash, ripples, ice, water spray, bubbles"
+    },
+    {
+      "id": "D4-tile-brightening",
+      "title": "Concern tile — Brightening & Glow",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:skin_concerns block c4",
+      "prompt": "Macro still life of one shallow still pool of completely clear liquid lying in the centre of the frame, its surface perfectly calm, occupying the central sixty percent, catching one single hard highlight that refracts warm gold light through the liquid onto the ground beneath. The ground is a seamless champagne gold, colour #DFC08F, evenly lit and clean. One hard key light from the upper right creates the highlight and a soft caustic glow below the pool. Studio macro photography, 100mm lens at f11, warm luminous grade, high clarity, single subject alone in frame.",
+      "negative_extra": "honey, oil, syrup, food, glitter, sparkles, sun flare, multiple pools"
+    }
+  ]
+}

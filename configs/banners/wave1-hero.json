@@ -1,0 +1,27 @@
+{
+  "wave": "wave1",
+  "created": "2026-08-21",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Class A — the only Wave 1 slot with the real product in frame. Label text below is quoted verbatim from the reference frame Malcolm double-marked, per the label-text-must-be-quoted rule. Do not paraphrase it and do not add a strapline.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, sprigs, flowers, citrus, fruit, herbs, wood, rough stone, linen, textile props, pebbles, water splashes, bokeh sparkle, lens flare, watermark, signature, border, collage, multi-panel, flat-lay, clutter, multiple subjects",
+    "negative_class_b": ""
+  },
+  "slots": [
+    {
+      "id": "A1-hero-the-molecule",
+      "title": "Homepage hero slide 1 — The Molecule",
+      "class": "A",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero (slideshow block 1) — replaces skingenetix-home-hero-peptide-serums.jpg",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg"
+      ],
+      "prompt": "Relight and restage the exact bottle from the reference image on a new background. Keep the bottle itself completely unchanged: the same frosted glass cylinder graduating from deep blue at the shoulder to pale frosted blue at the base, the same brushed silver collar, the same matte white rubber dropper bulb, the same proportions. Reproduce the front label exactly as shown, every character verbatim and in the same order, colours and weights: a white dotted DNA double helix mark at the top, then the wordmark Skingenetix in bold white, then COPPER PEPTIDE in bold white capitals beside a thin vertical blue rule, then ADVANCED REPAIR SERUM in light blue bold capitals on two lines, then PREMIUM FORMULA in plain white capitals below a thin rule, then 2% GHK-CU | 30ML in small white capitals. Do not add, remove, translate or restyle any word. Place the bottle upright standing in the right third of the frame, its base on the lower third line, seen straight on at eye level. The ground is a seamless graphite sweep, colour #1A1A1A, matte, falling away to pure near black at the left edge. One hard key light from the upper right at about forty degrees throws a long defined shadow down and to the left across the ground, and one dim soft fill from the left at twenty percent keeps the blue glass readable. A narrow warm copper specular, colour #B87333, runs down the right edge of the bottle only. The left forty percent of the frame is empty even graphite with no detail and no shadow crossing into it. Editorial product photography, 85mm lens at f11, deep clean blacks, high microcontrast.",
+      "negative_extra": "invented brand name, different brand, altered label, extra text, strapline, tagline, second bottle, box, carton, reflection of a room, coloured gel background, white background"
+    }
+  ]
+}
