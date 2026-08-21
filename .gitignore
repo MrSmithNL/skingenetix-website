@@ -50,3 +50,7 @@ encryptcontent.cache
 # Playwright MCP scratch — includes third-party competitor screenshots taken
 # for research. Never commit these.
 .playwright-mcp/
+
+# Live-theme backups written by scripts/patch-homepage.py before each push.
+# Kept locally as the undo path; not useful in git.
+backups/

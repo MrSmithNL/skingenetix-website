@@ -1,0 +1,86 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-21",
+  "note": "Hero becomes a two-slide slideshow: slide 1 the Copper Peptide bottle (HERO-B candidate 1), slide 2 the portrait (HERO-A candidate 4). Hero direction C dropped. The four Targeted Solutions tiles take the approved human-register images. New filenames only \u2014 nothing existing is renamed or overwritten, per shopify.md rule 7.",
+  "images": [
+    {
+      "slot": "hero_slide_1",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/HERO-B-product-as-art/HERO-B-product-as-art_01.jpg",
+      "filename": "skingenetix-hero-copper-peptide-serum-graphite-2026.jpg",
+      "alt": "Skingenetix Copper Peptide Advanced Repair Serum, 2% GHK-Cu, 30ml - frosted blue glass dropper bottle lit against a graphite background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-hero-copper-peptide-serum-graphite-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-hero-copper-peptide-serum-graphite-2026.jpg?v=1787324955"
+    },
+    {
+      "slot": "hero_slide_2",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/HERO-A-portrait/HERO-A-portrait_04.jpg",
+      "filename": "skingenetix-hero-radiant-skin-portrait-2026.jpg",
+      "alt": "A woman with clear, naturally textured skin photographed against a dark graphite background for Skingenetix peptide skincare",
+      "uploaded_handle": "shopify://shop_images/skingenetix-hero-radiant-skin-portrait-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-hero-radiant-skin-portrait-2026.jpg?v=1787324955"
+    },
+    {
+      "slot": "concern_c1",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/CONCERN-1-fine-lines/CONCERN-1-fine-lines_01.jpg",
+      "filename": "skingenetix-concern-fine-lines-wrinkles-2026.jpg",
+      "alt": "Close view of the eye area showing fine expression lines - Skingenetix fine lines and wrinkles peptide range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-concern-fine-lines-wrinkles-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-concern-fine-lines-wrinkles-2026.jpg?v=1787324955"
+    },
+    {
+      "slot": "concern_c2",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/CONCERN-2-firming/CONCERN-2-firming_01.jpg",
+      "filename": "skingenetix-concern-firming-skin-density-2026.jpg",
+      "alt": "Profile view of a defined jawline against a deep teal background - Skingenetix firming and skin density peptide range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-concern-firming-skin-density-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-concern-firming-skin-density-2026.jpg?v=1787324957"
+    },
+    {
+      "slot": "concern_c3",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/CONCERN-3-repair/CONCERN-3-repair_01.jpg",
+      "filename": "skingenetix-concern-skin-repair-renewal-2026.jpg",
+      "alt": "A hand resting against the cheek against a clinical blue background - Skingenetix skin repair and renewal peptide range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-concern-skin-repair-renewal-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-concern-skin-repair-renewal-2026.jpg?v=1787324956"
+    },
+    {
+      "slot": "concern_c4",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/CONCERN-4-brightening/CONCERN-4-brightening_01.jpg",
+      "filename": "skingenetix-concern-brightening-glow-2026.jpg",
+      "alt": "Luminous cheekbone lit against a warm champagne background - Skingenetix brightening and glow peptide range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-concern-brightening-glow-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-concern-brightening-glow-2026.jpg?v=1787324956"
+    }
+  ],
+  "hero_copy": {
+    "slide_1": {
+      "title": "Premium Peptides. Visible Results.",
+      "subheading": "High-purity peptides at clinically effective concentrations - never trace amounts.",
+      "button_text": "Shop the Range",
+      "button_link": "/collections/all"
+    },
+    "slide_2": {
+      "title": "Radiant In Your Own Skin.",
+      "subheading": "Targeted peptide formulations for real skin, backed by published research.",
+      "button_text": "Find Your Serum",
+      "button_link": "/pages/skin-concerns"
+    },
+    "shared": {
+      "desktop_text_position": "sm:place-self-center-start sm:text-start",
+      "mobile_text_position": "place-self-center text-center",
+      "text_color": "#ffffff",
+      "button_background": "#ffffff",
+      "button_text_color": "#1a1a1a",
+      "overlay_color": "#000000",
+      "overlay_opacity": 10,
+      "heading_tag": "h1"
+    },
+    "section": {
+      "autoplay": true,
+      "cycle_speed": 7,
+      "controls_type": "dots",
+      "transition_type": "fade_with_text"
+    }
+  }
+}

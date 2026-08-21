@@ -1,0 +1,157 @@
+{
+  "wave": "homepage",
+  "created": "2026-08-21",
+  "doc": "docs/visual-identity/04-homepage-visual-plan.md",
+  "note": "Homepage only. Two registers deliberately: skin_concerns tiles are HUMAN (portrait crops), find_serum tiles are MATERIAL (substance on ground). The same four concerns appear in both sections, so they must not read as the same grid twice. Hero is offered as three competing directions, not four candidates of one idea.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, sprigs, flowers, citrus, fruit, herbs, wood, rough stone, linen, textile props, pebbles, water splashes, bokeh sparkle, lens flare, text, watermark, signature, border, collage, multi-panel, flat-lay, clutter",
+    "negative_class_b": "bottle, jar, dropper bottle, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "HERO-A-portrait",
+      "title": "Hero direction A \u2014 Portrait (the Tatcha/Sturm register)",
+      "class": "B",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero",
+      "prompt": "Editorial beauty photograph of one Caucasian woman around thirty five years old, a head and shoulders portrait, wearing a simple high necked charcoal knit top, positioned in the right half of the frame, turned three quarters toward the light and looking calmly just past the camera. Real skin kept real: visible pores, natural fine lines at the eye, slight natural unevenness, no airbrushing and no plastic smoothing. Almost no makeup, hair pulled back simply and away from the face. One hard key light from the upper right sculpts the cheekbone and jaw and leaves a soft controlled shadow down the left side of the face, with one dim cool fill. Behind her a seamless graphite studio backdrop, colour #1A1A1A, falling to near black toward the left edge. The left forty percent of the frame is empty graphite, even and unbroken, with no part of her entering it. Quiet, serious, expensive. 85mm lens at f4, medium format look, restrained cool grade, deep blacks.",
+      "negative_extra": "teenager, child, twenties, heavy makeup, glossy lips, false lashes, jewellery, smiling broadly, glamour retouching, plastic skin, airbrushed, beauty filter, oversaturated, white background"
+    },
+    {
+      "id": "HERO-B-product-as-art",
+      "title": "Hero direction B \u2014 Product as art (refined A1)",
+      "class": "A",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg"
+      ],
+      "prompt": "Relight and restage the exact bottle from the reference image. Keep the bottle unchanged: the same frosted glass cylinder graduating from deep blue at the shoulder to pale frosted blue at the base, the same brushed silver collar, the same matte white dropper bulb. Reproduce the front label exactly, every character verbatim, in the same order, colours and weights: a white dotted DNA double helix mark, the wordmark Skingenetix in bold white, COPPER PEPTIDE in bold white capitals beside a thin vertical blue rule, ADVANCED REPAIR SERUM in light blue bold capitals on two lines, PREMIUM FORMULA in plain white capitals below a thin rule, and 2% GHK-CU | 30ML in small white capitals. Do not add, remove or restyle any word. Compose the bottle standing upright in the RIGHT THIRD of the frame, well right of centre, its base on the lower third line, seen straight on at eye level, occupying about half the frame height. The ground is a seamless graphite sweep, colour #1A1A1A, lifting to a soft pool of light behind the bottle so the frosted glass separates cleanly from the background. One hard key from the upper right throws a long shadow down and to the left; a warm copper specular, colour #B87333, runs down the right edge of the glass. The left half of the frame is even graphite with no detail. Brighter and more open than a pure black studio shot, so the label stays legible at small size. Editorial product photography, 85mm at f11, deep clean blacks, high microcontrast.",
+      "negative_extra": "invented brand name, different brand, altered label, extra text, strapline, second bottle, carton, box, bottle centred in frame, bottle on the left, pure black featureless background, white background"
+    },
+    {
+      "id": "HERO-C-material",
+      "title": "Hero direction C \u2014 Material (refined A2 serum arc)",
+      "class": "B",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero",
+      "prompt": "Extreme macro photograph of a single thick thread of clear viscous serum being drawn upward from a shallow pool, caught mid lift so it forms one continuous tapering strand that rises from the lower right and arcs across the right two thirds of the frame. The strand refracts a narrow clinical blue core, colour #014EB1, and carries a fine warm copper rim highlight, colour #B87333, along its upper edge. Beneath it a seamless graphite surface, colour #1A1A1A, polished to a wet sheen, returns one soft reflection. One hard raking key from the right at a shallow angle, one dim fill from the left. The left forty percent of the frame is empty even graphite with no detail and nothing entering it. The strand must read as liquid, soft and tapering and organic, not as a rigid glass rod or a solid handle. Editorial macro, 100mm at f8, deep clean blacks, high microcontrast, cool grade.",
+      "negative_extra": "glass rod, solid glass handle, glass sculpture, rigid arch, bridge, symmetrical loop, ice, plastic"
+    },
+    {
+      "id": "SCI-A-hands",
+      "title": "Science section \u2014 gloved hands, portrait crop",
+      "class": "B",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:peptide_science (media 0.95:1)",
+      "prompt": "Documentary photograph in an upright portrait format of one pair of blue nitrile gloved hands holding a single clear glass vial up against a dark laboratory background, turning it slightly to inspect the contents. Forearms enter from the bottom of the frame and the crop stops well below the shoulder so no face, head or body is visible. Behind, matte black instrument housings and a brushed steel bench are thrown far out of focus. One cool hard key from the upper left edge lights the glove and puts a bright specular on the glass; the background falls into deep shadow. Honest reportage, 85mm at f2, shallow depth of field, cool neutral grade, no styling.",
+      "negative_extra": "faces, heads, people, portraits, badges, readable screens, brand names on equipment, warm cosy light, staged"
+    },
+    {
+      "id": "SCI-B-molecular",
+      "title": "Science section \u2014 molecular macro",
+      "class": "B",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:peptide_science (media 0.95:1)",
+      "prompt": "Upright macro photograph of a cluster of perfectly clear spherical droplets suspended in a shallow layer of clear fluid, arranged so they form one irregular chain running diagonally up the frame, each sphere refracting the one behind it. The chain reads as a molecular structure without being a diagram. Beneath is a seamless graphite surface, colour #1A1A1A, with a faint clinical blue glow, colour #014EB1, rising from below and a fine warm copper edge light, colour #B87333, catching the top of each sphere. One hard key from the upper right. Deep blacks around the edges of the frame. Scientific still life, 100mm macro at f11, high microcontrast, cool grade.",
+      "negative_extra": "diagram, illustration, 3d render look, wireframe, chemical formula, atoms with sticks, cartoon, infographic"
+    },
+    {
+      "id": "CONCERN-1-fine-lines",
+      "title": "Concern tile 1 \u2014 Fine Lines & Wrinkles (human register)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:skin_concerns block c1",
+      "prompt": "Editorial beauty photograph, square format, of the upper face of one Caucasian woman around thirty five years old, cropped from just above the brow to just below the cheekbone so the eye area fills the frame. Real skin: faint early expression lines at the outer corner of the eye, natural texture, bare skin, no makeup beyond a trace of groomed brow. Her eye is open and calm, looking slightly off camera. One hard key from the left rakes across the skin so the fine lines read as real relief. The background is a soft pearl grey, colour #D8D6D4, seamless. The lower left quarter of the frame falls into a quiet even shadow so a caption can sit there. Restrained, dignified, not a problem photograph. 100mm at f5.6, natural skin tones, cool neutral grade.",
+      "negative_extra": "teenager, child, heavy makeup, mascara, eyeliner, false lashes, retouched skin, plastic skin, beauty filter, clinical before-after look, arrows, circles, annotations, distressed expression"
+    },
+    {
+      "id": "CONCERN-2-firming",
+      "title": "Concern tile 2 \u2014 Firming & Skin Density (human register)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:skin_concerns block c2",
+      "prompt": "Editorial beauty photograph, square format, of the jaw and upper neck of one Caucasian woman around thirty five years old, seen in profile from the side, wearing a high necked charcoal knit top, cropped from the ear down to the top of the collar so the jaw contour runs diagonally across the frame. Skin free of makeup with real natural texture, hair swept back and away. One hard key from behind and above rims the jaw with a bright edge and leaves the neck in soft shadow, so the contour reads as sculpture. The background is a deep emerald teal, colour #016569, a dark blue leaning teal rather than a bright green, seamless and saturated. The lower left quarter falls into even shadow for a caption. 85mm at f4, natural skin tones, rich saturated ground.",
+      "negative_extra": "teenager, child, jewellery, necklace, earrings, makeup, retouched skin, plastic skin, beauty filter, full face, mouth, nose, green background, kelly green, grass green"
+    },
+    {
+      "id": "CONCERN-3-repair",
+      "title": "Concern tile 3 \u2014 Skin Repair & Renewal (human register)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:skin_concerns block c3",
+      "prompt": "Editorial beauty photograph, square format, of one Caucasian woman's own hand resting flat against her cheek, cropped so the hand and the cheek fill the frame and the crop stops below the eye, showing no eyes and no full face. Real skin on both hand and face, visible texture and natural tone, bare and unretouched, short unpainted nails. One hard key from the upper right lights the back of the hand and the cheekbone, leaving the lower left in soft shadow. The background is a deep clinical blue, colour #014EB1, seamless and saturated. Quiet and reassuring rather than sensual. 85mm at f4, natural skin tones, saturated ground.",
+      "negative_extra": "eyes, full face, rings, jewellery, painted nails, long nails, makeup, retouched skin, plastic skin, beauty filter, sensual pose, lips"
+    },
+    {
+      "id": "CONCERN-4-brightening",
+      "title": "Concern tile 4 \u2014 Brightening & Glow (human register)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:skin_concerns block c4",
+      "prompt": "Editorial beauty photograph, square format, of the cheekbone and temple of one Caucasian woman around thirty five years old, cropped tightly so the plane of the cheek fills the frame, seen at a shallow angle and stopping below the eye so no eye is visible. Bare skin with real texture and an even natural luminosity, no shimmer product, no highlighter, no glitter. One hard key from the upper right skims across the cheekbone and creates a single broad soft highlight along the bone, the rest falling gently away. The background is a warm champagne gold, colour #DFC08F, seamless. The lower left quarter falls into even shadow for a caption. 100mm at f5.6, warm luminous grade, natural skin tones.",
+      "negative_extra": "eyes, full face, glitter, shimmer, highlighter makeup, metallic makeup, sparkles, retouched skin, plastic skin, beauty filter, sweat, oil sheen"
+    },
+    {
+      "id": "FIND-1-anti-wrinkle",
+      "title": "Find-a-serum tile 1 \u2014 Anti-Wrinkle (material register)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:find_serum block fs1",
+      "prompt": "Macro still life, square format, of one smooth ribbon of completely clear water like gel folding over itself once in the centre of the frame, glossy, self supported, soft edged and unmistakably liquid, occupying the central sixty percent. It rests on a seamless pearl grey ground, colour #D8D6D4, clean and evenly lit. One hard key from the left puts a crisp specular along the top of the fold and casts one soft defined shadow to the right. The lower left quarter of the frame stays quiet and even for a caption. Studio macro, 100mm at f11, neutral cool grade, single subject alone in frame.",
+      "negative_extra": "broken glass, glass shards, ice, plastic sheet, crumpled film, tinted gel, coloured liquid, bubbles, foam"
+    },
+    {
+      "id": "FIND-2-firming-collagen",
+      "title": "Find-a-serum tile 2 \u2014 Firming & Collagen (material register)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:find_serum block fs2",
+      "prompt": "Macro still life, square format, of one dense opaque cream in a clean neutral white, colour #F4F2EF, drawn up into a single stiff vertical peak in the centre of the frame, holding its shape sharply, matte and rich, occupying the central sixty percent. It sits on a seamless deep emerald teal ground, colour #016569, a dark blue leaning teal, not a bright grass green and not a kelly green, clean and evenly lit. One hard key from the right defines the peak and casts one clean shadow to the left. The lower left quarter stays quiet for a caption. Studio macro, 100mm at f11, saturated dark teal ground against neutral white cream, single subject alone in frame.",
+      "negative_extra": "green background, kelly green, grass green, emerald gemstone green, swirls, multiple peaks, melted cream, yellow cream, whipped topping, food, icing"
+    },
+    {
+      "id": "FIND-3-repair-renewal",
+      "title": "Find-a-serum tile 3 \u2014 Repair & Renewal (material register)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:find_serum block fs3",
+      "prompt": "Macro still life, square format, of one single perfect droplet of translucent blue serum, colour #2F6FD0, resting on a polished reflective surface in the centre of the frame, holding a high domed shape, occupying the central sixty percent with its own mirror reflection directly beneath. The ground is a seamless clinical blue, colour #014EB1, clean and evenly lit. One hard key from the upper left puts a single bright specular on the dome and casts one soft shadow to the right. The lower left quarter stays quiet for a caption. Studio macro, 100mm at f11, deep saturated blue, single droplet alone in frame.",
+      "negative_extra": "multiple droplets, splash, ripples, ice, water spray, bubbles, marble"
+    },
+    {
+      "id": "FIND-4-brightening",
+      "title": "Find-a-serum tile 4 \u2014 Brightening & Glow (material register)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:find_serum block fs4",
+      "prompt": "Macro still life, square format, of a single thick drop of clear golden oil resting proud on a polished surface in the centre of the frame, domed and glossy, occupying the central sixty percent, refracting warm light through itself and throwing one bright caustic pool of gold onto the ground beneath it. The ground is a seamless champagne gold, colour #DFC08F, clean and evenly lit. One hard key from the upper right creates a single crisp specular on the dome and the caustic below. The lower left quarter stays quiet for a caption. Studio macro, 100mm at f11, warm luminous grade, single subject alone in frame.",
+      "negative_extra": "honey dipper, syrup, food, cooking oil, glitter, sparkles, sun flare, multiple drops, flat lens shape, contact lens"
+    },
+    {
+      "id": "BAND-standard",
+      "title": "Page-break band \u2014 The Skingenetix Standard",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index \u2014 new full-bleed band",
+      "prompt": "Studio photograph of a single upright machined cylinder of solid copper standing alone on a seamless graphite ground, colour #1A1A1A. The copper is lightly brushed with fine concentric turning marks, warm and unlacquered, colour #B87333, reading as a precision laboratory reference standard. It stands well right of centre, tall rather than squat, roughly twice as tall as it is wide, its base on the lower third line, and it is a solid closed cylinder, not an open cup or vessel. One hard key from the upper left throws a long specular down the body and casts one clean hard shadow to the lower right. The left forty five percent of the frame is unbroken graphite falling to near black, with no detail and no shadow entering it. Still life, 85mm at f11, deep blacks, metallic specular held, cool grade with warm metal.",
+      "negative_extra": "open cup, vessel, container, tin, candle, coins, jewellery, pipes, machinery, gears, multiple cylinders, engraving, numerals, squat proportions"
+    }
+  ]
+}
