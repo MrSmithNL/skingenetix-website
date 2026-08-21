@@ -1,0 +1,34 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-21 \u2014 image 3",
+  "note": "Adds hero slide 3: a model holding the Copper Peptide serum, after the Tatcha hero. Left-aligned like slides 1 and 2 \u2014 measured rather than eyeballed: the left 40% of this frame has mean brightness 4.5 and stdev 16.6, i.e. effectively pure black, so the shared left text position works unchanged. Copy is product-specific because this slide shows a named product, where slides 1 and 2 speak for the brand.",
+  "images": [
+    {
+      "slot": "hero3",
+      "source": "assets/ai-generated/2026-08-21-banners-hero-slide-3/HERO-D-model-holding/HERO-D-model-holding_03.jpg",
+      "filename": "skingenetix-hero-model-copper-peptide-2026.jpg",
+      "alt": "A model holding the Skingenetix Copper Peptide Advanced Repair Serum, 2% GHK-Cu, beside her face against a dark background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-hero-model-copper-peptide-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-hero-model-copper-peptide-2026.jpg?v=1787330592"
+    }
+  ],
+  "new_blocks": [
+    {
+      "section": "hero",
+      "id": "hero_slide_3",
+      "insert_after": "hero_slide_2",
+      "inherit_from": "hero_slide_1",
+      "image_slot": "hero3",
+      "block": {
+        "type": "image",
+        "settings": {
+          "title": "Copper Peptides, Clinically Dosed.",
+          "subheading": "2% GHK-Cu \u2014 the concentration used in published research, not a trace inclusion.",
+          "button_text": "Shop Copper Peptide Serum",
+          "button_link": "/products/copper-peptide-ghk-cu-renewal-serum"
+        }
+      }
+    }
+  ]
+}

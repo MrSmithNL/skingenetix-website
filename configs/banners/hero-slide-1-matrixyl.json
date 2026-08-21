@@ -1,0 +1,26 @@
+{
+  "wave": "hero-slide-1-matrixyl",
+  "created": "2026-08-21",
+  "note": "Replaces hero slide 1. Malcolm chose the Copper Peptide model shot for slide 3, so slide 1 moves to a different product rather than showing the same bottle twice.\n\nMatrixyl 3000 Pro-Collagen chosen over PDRN or Glutathione because Matrixyl 3000 IS a peptide complex, and the brand is positioning as the leading PEPTIDE skincare brand — glutathione is an antioxidant and PDRN a polynucleotide, so neither carries the peptide message in a hero.\n\nIt also contrasts well with slide 3: frosted clear glass with black and teal type against graphite, where slide 3 is a deep blue bottle. Label quoted verbatim from the reference — note this label is BLACK and TEAL on frosted white, the opposite of the Copper Peptide's white-on-blue, so the wording must not be carried over from that brief.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, citrus, wood, linen, pebbles, bokeh sparkle, lens flare, watermark, signature, border, collage, multi-panel, flat-lay, clutter",
+    "negative_class_b": ""
+  },
+  "slots": [
+    {
+      "id": "HERO-E-matrixyl-bottle",
+      "title": "Hero slide 1 — Matrixyl 3000 Pro-Collagen on graphite",
+      "class": "A",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero (slideshow block 1)",
+      "ref_files": [
+        "assets/publish-ready/matrixyl-3000-pro-collagen-serum/_matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_pedestal_edge_hero_1_skingenetix.jpg"
+      ],
+      "prompt": "Relight and restage the exact bottle from the reference image on a new background. Keep the bottle unchanged: the same frosted clear glass cylinder with water-clear contents, the same brushed silver collar, the same matte white rubber dropper bulb, the same proportions. Reproduce the front label exactly as shown, every character verbatim and in the same order, colours and weights: a black dotted DNA double helix mark at the top, then the wordmark Skingenetix in bold black, then MATRIXYL 3000 PRO COLLAGEN in bold black capitals on two lines beside a thin vertical teal rule, then FIRMING REPAIR TREATMENT in teal bold capitals on two lines, then PREMIUM FORMULA in plain black capitals, then 10% MATRIXYL | 30ML in small black capitals. Do not add, remove, translate or restyle any word, and do not change the label to white lettering. Place the bottle upright standing in the RIGHT THIRD of the frame, well right of centre, its base on the lower third line, seen straight on at eye level, occupying about half the frame height. The ground is a seamless graphite sweep, colour #1A1A1A, matte, lifting to a soft pool of cool light directly behind the bottle so the frosted glass separates cleanly from the dark background and the black lettering stays legible. One hard key light from the upper right throws a long defined shadow down and to the left across the ground, and one dim fill from the left. A narrow deep teal specular, colour #016569, runs down the right edge of the glass. The left forty percent of the frame is empty even graphite with no detail and no shadow crossing into it. Editorial product photography, 85mm at f11, deep clean blacks, high microcontrast.",
+      "negative_extra": "invented brand name, different brand, altered label, white lettering, blue label, copper peptide, extra text, strapline, second bottle, carton, box, bottle centred in frame, bottle on the left, pure black featureless background, white background, green background"
+    }
+  ]
+}

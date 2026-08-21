@@ -153,6 +153,35 @@ def main():
             txt = bs.get("text") or bs.get("content") or ""
             print(f"    {bid:<14}: {str(txt)[:80]}")
 
+    for nb in plan.get("new_blocks", []):
+        sec = doc["sections"].get(nb["section"])
+        if not sec:
+            sys.exit(f"section not found: {nb['section']}")
+        bid = nb["id"]
+        block = json.loads(json.dumps(nb["block"]))
+        # Inherit any key the sibling block sets that this one does not, so a new
+        # slide cannot silently miss a default the existing slides depend on.
+        if nb.get("inherit_from"):
+            src = sec["blocks"].get(nb["inherit_from"], {}).get("settings", {})
+            for k, v in src.items():
+                block.setdefault("settings", {}).setdefault(k, v)
+        if nb.get("image_slot"):
+            block["settings"]["image"] = by_slot[nb["image_slot"]]["uploaded_handle"]
+        sec.setdefault("blocks", {})[bid] = block
+        order_key = "block_order"
+        border = sec.get(order_key) or list(sec["blocks"].keys())
+        if bid in border:
+            border.remove(bid)
+        after = nb.get("insert_after")
+        idx = border.index(after) + 1 if after in border else len(border)
+        border.insert(idx, bid)
+        sec[order_key] = border
+        print(f"\nNew block: {nb['section']}.{bid} ({block.get('type')}) after {after}")
+        for k in ("title", "subheading", "button_text"):
+            if block["settings"].get(k):
+                print(f"    {k:<12}: {str(block['settings'][k])[:70]}")
+        print(f"    block_order : {' -> '.join(border)}")
+
     print("Image assignments:")
     for a in plan.get("image_assignments", []):
         sec = doc["sections"].get(a["section"])

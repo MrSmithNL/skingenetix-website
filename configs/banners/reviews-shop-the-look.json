@@ -1,0 +1,47 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-21",
+  "note": "Second attempt at the review section. The first used multi-column \u2014 a three-across grid of image + quote + text link \u2014 which was NOT what Malcolm meant. Tatcha's construction, captured and examined properly: ONE review at a time, one large square model image on the left, a white product card floating ON TOP of that image carrying a thumbnail, the product name and its price, and the star rating, reviewer name and quote set large to the right.\n\nThe theme has an exact native equivalent: `shop-the-look`. It takes the large image, positions real product blocks over it by horizontal/vertical percentage, and styles the floating card via product_card_background / product_card_text_color. Because the block references a real Shopify product, the card pulls the live name and price automatically \u2014 the same behaviour as Tatcha's 'The Dewy Skin Cream / From $25'. No hand-built markup, which is what Malcolm asked for.\n\nOne review is built first so the layout can be confirmed before repeating it. shop-the-look renders one image per section, so a Tatcha-style rotation would mean either stacked sections or a custom carousel \u2014 a decision to take after seeing this.\n\nProduct is referenced by GID; if the card fails to render, the fallback is the bare handle.\n\nFirst push exposed two faults: the product setting takes the HANDLE, not a GID (the GID rendered Shopify's placeholder backpack, 'Product' and a default price), and `title` did not render at all, so the rating and reviewer name are folded into the rich text instead.",
+  "images": [],
+  "remove_sections": [
+    "reviews"
+  ],
+  "new_sections": [
+    {
+      "id": "reviews",
+      "insert_after": "impact_numbers",
+      "section": {
+        "type": "shop-the-look",
+        "blocks": {
+          "stl_product": {
+            "type": "product",
+            "settings": {
+              "product": "copper-peptide-ghk-cu-renewal-serum",
+              "horizontal_position": 68,
+              "vertical_position": 18
+            }
+          }
+        },
+        "block_order": [
+          "stl_product"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_mobile": true,
+          "image": "shopify://shop_images/skingenetix-review-copper-peptide-serum-model-2026.jpg",
+          "title": "",
+          "content": "<p>\u2605\u2605\u2605\u2605\u2605&nbsp;&nbsp;Julia K., Berlin</p><p>\"The Copper Peptide serum is incredible. My skin feels firmer and more radiant after just 3 weeks.\"</p>",
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text_color": "#1a1a1a",
+          "heading_color": "#1a1a1a",
+          "product_card_background": "#ffffff",
+          "product_card_text_color": "#1a1a1a",
+          "product_card_mobile_background": "#ffffff",
+          "product_card_mobile_text_color": "#1a1a1a"
+        }
+      }
+    }
+  ]
+}
