@@ -1,0 +1,23 @@
+{
+  "wave": "menu-scientific-research",
+  "created": "2026-08-21",
+  "note": "For the 'Scientific Research' tile in the Discover mega-menu (header:mega_menu_discover image_1), currently skingenetix-menu-skincare-science.jpg. Rendered at 220x220 so square.\n\nMalcolm supplied a reference: nationwidepeptides.com, a Black male scientist at a binocular microscope, cool clinical light, shallow depth of field, blurred lab behind. The brief matches its composition, lighting, palette and crop. It does NOT attempt to reproduce that specific individual \u2014 a generated likeness of a real identifiable person would be the wrong thing to put on a commercial store. Same style, same staging, different person.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper, tube, packaging, label, logo, brand mark"
+  },
+  "slots": [
+    {
+      "id": "MENU-scientific-research-dark",
+      "title": "Discover menu tile \u2014 Scientific Research (low-key, v2)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "header:mega_menu_discover image_1",
+      "prompt": "Low-key documentary photograph, square format, of a Black male research scientist in his fifties looking into the eyepieces of a binocular laboratory microscope. Close cropped greying hair and a neatly trimmed greying beard, calm and absorbed in the work, wearing a white lab coat over a dark collared shirt. He is seen from the front and slightly to the side, his head and shoulders filling the right half of the frame and angled down toward the eyepieces. The microscope stands in the left foreground, its dark body catching one cool rim highlight. The laboratory behind him is dark and falls away into deep graphite shadow, colour #1A1A1A, almost black at the edges of the frame, with only a few faint cool highlights suggesting glassware. A single hard cool key light from the left picks out his brow, cheekbone and the eyepieces and falls off steeply, leaving the right side of his face and the whole background in shadow. Deep blacks, restrained highlights, moody and serious rather than bright and clinical. Shallow depth of field so only his eye and the eyepieces are critically sharp. 85mm lens at f2, natural skin tones, cool desaturated grade, high contrast, editorial reportage.",
+      "negative_extra": "bright lab, white background, pale blue background, flat even lighting, high key, overexposed, washed out, daylight studio, smiling at camera, looking at camera, posed portrait, stock photo cheesiness, young model, cluttered bench, readable screens, brand names on equipment, text, warm orange light, green light, cartoon, illustration"
+    }
+  ]
+}

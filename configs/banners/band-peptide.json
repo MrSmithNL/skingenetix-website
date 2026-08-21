@@ -1,0 +1,44 @@
+{
+  "wave": "band-peptide",
+  "created": "2026-08-21",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Replacement for the copper-cylinder band image, which Malcolm rejected. He supplied four references: blue stained microscopy (utahstories), pink cellular membrane macro (jazskin), a 3D peptide ribbon render on dark navy (quality-assistance), and a lab photograph (usp). The first three share one idea — extreme close-up scientific imagery filling the frame. Three takes on that below, all recoloured into the Skingenetix palette (graphite, clinical blue, copper) rather than the references' green and pink. Every one keeps the left 40-45% quiet, because the band sets its headline there.\n\nAll class B: no product, and therefore explicit branding negatives. Molecular renders attract atom labels and axis text, so lettering is negated hard.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper, tube, packaging, label, logo, brand mark"
+  },
+  "slots": [
+    {
+      "id": "BANDP1-ribbon",
+      "title": "Band — peptide ribbon render (closest to the quality-assistance reference)",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:peptide_standard_band",
+      "prompt": "Modern scientific 3D visualisation of a peptide molecule in extreme close up, filling the right two thirds of the frame. Smooth coiled alpha helix ribbons wind through the frame in soft focus depth, one helix sharp in the foreground and others receding out of focus behind it, with fine connecting strands between them. The ribbons are rendered in polished translucent material, clinical blue, colour #014EB1, graduating to warm copper, colour #B87333, where the light catches their upper edges, with a soft internal glow. They float in a deep graphite void, colour #1A1A1A, that darkens toward the left edge of the frame. The left forty five percent is empty near black with nothing entering it. Cinematic scientific render, shallow depth of field, volumetric light, high detail, physically based materials, premium pharmaceutical visualisation.",
+      "negative_extra": "atom labels, chemical formula, letters, numbers, axis, diagram callouts, wireframe, ball and stick model, cartoon, flat illustration, DNA double helix, green, pink"
+    },
+    {
+      "id": "BANDP2-copper-bond",
+      "title": "Band — copper-bound tripeptide, molecular macro",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:peptide_standard_band",
+      "prompt": "Modern scientific 3D visualisation in extreme close up of a short chain of three linked molecular units, occupying the right two thirds of the frame. Polished translucent spheres are joined by slender bonds into one continuous chain that curves gently through the frame, and at the centre of the chain sits a single distinctly warm copper sphere, colour #B87333, glowing brighter than the rest. The remaining spheres are cool clinical blue glass, colour #014EB1, with soft internal light. Behind the chain the same structure repeats far out of focus, suggesting many molecules receding into a deep graphite void, colour #1A1A1A, that falls to near black at the left edge. The left forty five percent of the frame is empty and unbroken. Cinematic scientific render, shallow depth of field, volumetric glow, physically based glass and metal, premium pharmaceutical visualisation.",
+      "negative_extra": "atom labels, chemical formula, letters, numbers, element symbols, diagram callouts, wireframe, cartoon, flat illustration, necklace, beads, jewellery, green, pink"
+    },
+    {
+      "id": "BANDP3-microscopy",
+      "title": "Band — stained microscopy field (the utahstories / jazskin register)",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:peptide_standard_band",
+      "prompt": "Extreme close up scientific microscopy image of a dense field of translucent cellular structures packed edge to edge, filling the right two thirds of the frame. Rounded polygonal cells with thin luminous walls, varying in size, some sharply resolved in the centre and the rest falling softly out of focus, the way a high magnification microscope image looks. The cells are lit from behind so their walls glow, rendered in cool clinical blue, colour #014EB1, with warm copper highlights, colour #B87333, catching the wall junctions. Toward the left of the frame the field darkens into a deep graphite void, colour #1A1A1A, and the left forty percent is smooth near black with no structure in it. Scientific photomicrograph, very shallow depth of field, high magnification, luminous, premium laboratory imaging.",
+      "negative_extra": "scale bar, measurement markings, letters, numbers, crosshairs, grid overlay, diagram, illustration, cartoon, honeycomb pattern, bubbles in water, soap foam, green, pink"
+    }
+  ]
+}
