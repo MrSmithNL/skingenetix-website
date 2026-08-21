@@ -1,0 +1,23 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-21 \u2014 image 4",
+  "note": "Swaps hero slide 1 from the Copper Peptide bottle to Matrixyl 3000 Pro-Collagen, so the slideshow does not show the same product twice now that slide 3 carries the Copper Peptide. Existing slide 1 copy is kept: it is brand-level ('Premium Peptides. Visible Results.') and remains true of Matrixyl, while slide 3 carries the product-specific line. Only the image and its alt text change.",
+  "images": [
+    {
+      "slot": "hero1",
+      "source": "assets/ai-generated/2026-08-21-banners-hero-slide-1-matrixyl/HERO-E-matrixyl-bottle/HERO-E-matrixyl-bottle_04.jpg",
+      "filename": "skingenetix-hero-matrixyl-3000-graphite-2026.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro Collagen Firming Repair Treatment, 10% Matrixyl, 30ml - frosted glass dropper bottle lit against a graphite background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-hero-matrixyl-3000-graphite-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-hero-matrixyl-3000-graphite-2026.jpg?v=1787331172"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "block": "hero_slide_1",
+      "slot": "hero1"
+    }
+  ]
+}

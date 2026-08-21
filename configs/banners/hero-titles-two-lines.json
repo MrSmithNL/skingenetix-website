@@ -1,0 +1,11 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme — Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-21 — headlines on two lines",
+  "note": "Malcolm suggested a <br> in the title. That will NOT work here: snippets/styled-text.liquid runs `content | strip | escape` in both its branches, so a <br> in a slideshow title renders as the literal text '<br>' on the page. Checked before trying it.\n\nThe width is the reliable lever. Text measured at the real rendered font (Fraunces 300, 60px/66px) with a canvas metric rather than estimated:\n  'Premium Peptides.'          481px\n  'Premium Peptides. Visible'  663px\n  'Visible Results.'           378px\n  'Copper Peptides,'           433px\n  'Clinically Dosed.'          427px\n\nSlide 1 at 700px broke after 'Visible', orphaning 'Results.'. Any width between 481 and 662 breaks it cleanly after the first sentence; 560 sits mid-range and stays well inside slide 1's 855px clear zone.\n\nSlide 3 was set to 440, but 'Copper Peptides,' measures 433 — a 7px margin, which any font-rendering difference would break. Raised to 460, still inside its 540px clear zone once the 48px gutter is added (460+48=508).\n\nSlide 2 is untouched: one line at 661px inside a 979px clear zone.\n\nNote for future edits: content_max_width is a range with min 400, max 1200 and STEP 20. Off-step values are rejected with a 422 'must be a step in the range'.",
+  "images": [],
+  "setting_updates": [
+    { "section": "hero", "block": "hero_slide_1", "settings": { "content_max_width": 560 } },
+    { "section": "hero", "block": "hero_slide_3", "settings": { "content_max_width": 460 } }
+  ]
+}

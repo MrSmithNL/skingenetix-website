@@ -113,10 +113,18 @@ def main():
         sec = doc["sections"].get(u["section"])
         if not sec:
             sys.exit(f"section not found: {u['section']}")
-        sec.setdefault("settings", {}).update(u["settings"])
+        # A slide's own settings live on its block, not the section.
+        target = sec
+        label = u["section"]
+        if u.get("block"):
+            target = sec.get("blocks", {}).get(u["block"])
+            if not target:
+                sys.exit(f"block not found: {u['section']}.{u['block']}")
+            label = f"{u['section']}.{u['block']}"
+        target.setdefault("settings", {}).update(u["settings"])
         for k, v in u["settings"].items():
             shown = v if not isinstance(v, list) else f"[{len(v)} rule(s)]"
-            print(f"  {u['section']}.{k} = {str(shown)[:90]}")
+            print(f"  {label}.{k} = {str(shown)[:90]}")
 
     order = doc.get("order") or list(doc["sections"].keys())
 
