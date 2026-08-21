@@ -160,6 +160,68 @@ hair-growth advert**. See `memory/fabricated-social-proof-on-the-store.md`.
 `banner-contact-sheet.py`. Every theme push backs up the template first and prints its own
 `--restore` command.
 
+### 🔄 BRAND-002 — Homepage FAQ and brand band restructured on stock sections
+
+**Priority:** 🟡 Layout live (2026-08-21); two images outstanding
+**Owner:** Claude (audit, layout, briefs, publishing) + Malcolm (both image choices)
+
+**What prompted it.** Malcolm: the FAQ takes up a lot of space — is there a setup with the
+questions on the left and an image on the right? And make the bottom brand band work the way
+tatcha.com's does. He then set the constraint explicitly: **use standard Shopify theme
+sections and content modules wherever possible before writing our own.**
+
+**What the theme already had.** The stock **FAQ** section has a `text_position` setting
+(Left / Centre / Right). It was on **Centre**, the one value that stacks everything full width
+down the middle — which is why the section ran ~1000px tall with empty margins either side.
+Left or Right switches the same section to the theme's own `section-stack--horizontal`
+two-column layout at ≥1150px. No new section, no custom code.
+
+The heading, though, always renders **inside** one of those two columns. Malcolm wanted it
+centred above both. Two routes were built and compared:
+
+| Route | Result | Cost |
+| ----- | ------ | ---- |
+| Stock **Rich text** section above the FAQ | Works, but leaves a visible seam — `section-spacing-collapsing` **deliberately disables** collapsing for boxed sections above 700px, so two adjacent white cards cannot merge | zero code |
+| Re-flow the FAQ's own `section-stack` as a 2-col grid, heading spanning row 1 | One card, title centred above, questions left, image right | 8 lines CSS |
+
+Malcolm chose the second. Section height ~1000px → ~530px.
+
+**Tatcha's band, established from their live markup** — not inferred. It is the same theme
+family: a full-bleed image with the text in a **translucent white card, `max-width: 520px`,
+`padding: 1rem`, `background: rgb(255 255 255 / 0.8)`**, holding one short serif sentence and
+a solid filled button. No eyebrow, no body paragraph.
+
+Our `image-with-text-overlay` reproduces all of that from **native settings** — content
+position, heading size, button style, overlay opacity — **except the white card**. Our Impact
+build exposes no content-background setting; the `slideshow` block's `background` setting is
+the loading backdrop behind the image, not a panel behind the text (its own help text says so).
+Tatcha runs a newer theme version that exposes it. Malcolm chose the **all-stock** version:
+centred, X-Small heading, filled button, no panel — and made the band taller via the native
+Image size setting (`md` 560px → `lg` 720px).
+
+**Live on the homepage:**
+
+| Section | State |
+| ------- | ----- |
+| FAQ | Title centred above, 9 questions left, image right, one card |
+| Brand band | 720px tall, centred, X-Small heading, filled white button, eyebrow and body copy blanked |
+
+**Outstanding**
+
+1. 🟡 **New FAQ image** — the slot currently holds `skingenetix-peptide-chain-science-2026.jpg`
+   as an explicit placeholder; it is already in use in "The Science of Peptides" higher up the
+   same page. Four registers generated for Malcolm to choose from.
+2. 🟡 **New brand band image** — the current one puts the model on the right with its clear
+   space on the left, which is now the wrong side: the text is centred. Three briefs generated,
+   all holding the **central 45%** of the frame quiet.
+3. 🟢 Band copy is a first draft (`"Skingenetix began with a simple refusal: no proprietary
+   blends."`) — Malcolm to improve.
+
+**Notes for the next session.** The FAQ CSS is scoped by `:has(.faq-availability img)` rather
+than by section id — ids are template-scoped and change, and the FAQ *page* has no avatar image
+so it is untouched. The `!important` on the image width is required: the section's own
+`team_avatar_width` range writes an inline `max-width` capped at 350px.
+
 ### ✅ PHOTO-005 — 2026 imagery live on every product that has artwork
 
 **Priority:** 🟢 Done (2026-08-21) — follow-ups below

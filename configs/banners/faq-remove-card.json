@@ -1,0 +1,18 @@
+{
+  "_comment": [
+    "Drop the white boxed card around the homepage FAQ — Claude Code, 2026-08-21.",
+    "Native setting only: section-spacing-collapsing treats a section as 'boxed' when it",
+    "has a background AND full_width is off, so clearing the background removes the card",
+    "and the section sits straight on the page ground (#e7e7e7).",
+    "Undo: patch-template.py --restore backups/index-<stamp>.json --template templates/index.json"
+  ],
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "faq_section",
+      "settings": {
+        "background": ""
+      }
+    }
+  ]
+}

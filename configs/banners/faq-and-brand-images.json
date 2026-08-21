@@ -1,0 +1,84 @@
+{
+  "wave": "faq-and-brand",
+  "created": "2026-08-21",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Two slots opened by tonight's homepage restructure.\n\nFAQ (index:faq_section, right column): measured from the live DOM at 1440px — the column renders 461px wide and the accordion stack beside it is ~530px tall, so 0.95:1 is the ratio that lands the image and the accordions level. Four registers offered rather than four takes on one idea, because the FAQ card is white and the placeholder currently in the slot is near-black and heavy in it: two light-ground options and two dark, so the choice is a real one.\n\nBrand band (index:brand_story_band): the text is now CENTRED, which inverts every previous band brief. Those reserved a quiet left third; this one needs the quiet in the MIDDLE. Every brief below states the reserved zone as a measured fraction of frame width and puts any subject beyond 70%, per the measure-geometry-dont-describe-it rule. Height is now the theme's 'lg' (720px at 1440), so 2.4:1 still crops correctly.\n\nAll class B: no product in frame, therefore explicit branding negatives on every one.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "FAQ1-hand-sheen",
+      "title": "FAQ — one hand, serum sheen on skin, light ground",
+      "class": "B",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "prompt": "Close up photograph of a single adult hand held palm up and slightly tilted, filling the middle of the frame, the fingers relaxed and softly curled. A clear viscous fluid rests in a small pool on the fingertips and catches the light in one bright specular highlight, drawing a thin gleaming edge along the skin. The skin is real and finely textured, warm neutral in tone, with fine lines visible at the knuckles. A single hard key light comes from the upper left and casts a defined shadow of the hand down and to the right across a smooth seamless bone coloured surface, colour #F0F0F0, that fills the background evenly and falls very slightly darker toward the top edge. Editorial beauty photography, crisp focus on the fingertips, shallow depth of field behind, high end skincare campaign, calm and clinical.",
+      "negative_extra": "second hand, face, nails painted, jewellery, rings, cream blobs, foam, bubbles, dark background, moody, orange skin, plastic skin, airbrushed"
+    },
+    {
+      "id": "FAQ2-chain-light",
+      "title": "FAQ — single peptide chain on a light ground",
+      "class": "B",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "prompt": "Modern scientific 3D visualisation of one short chain of linked molecular units, a single continuous strand curving diagonally through the centre of the frame from the lower left toward the upper right. Polished translucent spheres joined by slender bonds, the spheres rendered as clear pale glass with cool clinical blue refraction inside them, colour #014EB1, and one sphere near the centre of the chain rendered in warm copper metal, colour #B87333, so it reads as the active site. The chain floats above a smooth seamless bone coloured surface, colour #F0F0F0, and casts a soft true shadow onto it. A single hard key light from the upper left produces crisp specular highlights on the glass. The background is empty and evenly lit with nothing else in frame. Cinematic scientific render, shallow depth of field, physically based glass and metal, premium pharmaceutical visualisation, bright and clean.",
+      "negative_extra": "atom labels, chemical formula, letters, numbers, element symbols, diagram callouts, wireframe, ball and stick diagram, cartoon, flat illustration, DNA double helix, necklace, beads, jewellery, dark background, green, pink"
+    },
+    {
+      "id": "FAQ3-portrait",
+      "title": "FAQ — calm portrait, graphite ground",
+      "class": "B",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "prompt": "Editorial beauty portrait of one woman around thirty five years old, head and shoulders, turned three quarters to the camera and looking directly into the lens with a calm level expression, her chin slightly lifted. Radiant healthy skin with real fine texture and a natural luminous sheen across the cheekbone, refined campaign makeup with a soft neutral lip and defined groomed brows. Dark hair drawn back cleanly off the face. She wears a plain high necked top in deep charcoal. A single hard key light from the upper left sculpts the cheekbone and jaw and leaves a defined shadow along the far side of the face, with one soft fill lifting the shadow just enough to hold detail. The background is a smooth seamless graphite surface, colour #1A1A1A, unbroken and slightly darker at the edges. Premium skincare campaign photography, medium format look, crisp focus on the eyes.",
+      "negative_extra": "multiple people, hands in frame, product in frame, heavy makeup, glitter, plastic retouched skin, waxy skin, harsh contrast, tilted horizon, hair covering the face, jewellery, teeth showing"
+    },
+    {
+      "id": "FAQ4-glassware",
+      "title": "FAQ — laboratory glass, clinical blue",
+      "class": "B",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "prompt": "Close up photograph of a single tall laboratory glass cylinder standing upright in the centre of the frame, partly filled with a clear faintly blue fluid, colour #014EB1, that reads almost colourless at the surface and deepens toward the base. One slow droplet is caught mid fall just above the surface and a single ring ripple spreads out below it. The glass is thick and optically clean with crisp specular highlights down its left edge. A single hard key light from the upper left throws a sharp caustic pattern of refracted light onto a smooth seamless bone coloured surface, colour #F0F0F0, beneath it. The background is even and empty and falls very slightly darker toward the top. Scientific still life photography, macro clarity, shallow depth of field, premium laboratory imaging.",
+      "negative_extra": "many bottles, rack of tubes, pipette bulb, measurement markings, scale bar, letters, numbers, hands, spillage, foam, coloured liquid, green, pink, dark background"
+    },
+    {
+      "id": "BB1-raking-light",
+      "title": "Band — graphite field, single raking copper light, centre held quiet",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Wide abstract photograph of a vast smooth graphite surface, colour #1A1A1A, receding into darkness, lit by one hard raking light entering from the far right edge at a shallow angle so that a long warm copper coloured gleam, colour #B87333, runs along the surface from the right edge and fades out before it reaches the middle of the frame. A second faint cool blue reflection, colour #014EB1, grazes the far left edge and fades in the same way. The central forty five percent of the frame is smooth, even in tone and almost featureless, a soft graphite gradient with no structure, no edge and no highlight entering it. Fine natural grain in the surface, deep shadow, cinematic wide format, minimal, architectural, premium and quiet.",
+      "negative_extra": "objects, product, figure, person, text, pattern, geometric shapes, stars, bokeh, glitter, sparkle, smoke, fog machine, green, pink"
+    },
+    {
+      "id": "BB2-figure-right",
+      "title": "Band — one figure at the far right, centre and left held quiet",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Wide cinematic photograph of one woman around thirty five years old positioned entirely within the right hand quarter of the frame, seen from the shoulders up in profile facing left into the empty space, her expression calm and composed. Radiant healthy skin with real texture, refined campaign makeup, dark hair drawn back cleanly, wearing a plain high necked top in deep charcoal. A single hard key light from the upper right rims her cheekbone and jaw with a warm copper toned edge, colour #B87333, and everything beyond her falls rapidly into deep shadow. The left seventy percent of the frame is an empty smooth graphite void, colour #1A1A1A, with no structure in it at all, growing very slightly lighter toward the far left edge. Nothing enters the middle of the frame. Premium skincare campaign photography, wide format, deep shadow, quiet and restrained.",
+      "negative_extra": "figure in the centre, figure on the left, two people, hands in frame, product in frame, text, plastic retouched skin, waxy skin, jewellery, teeth showing, busy background"
+    },
+    {
+      "id": "BB3-defocus-field",
+      "title": "Band — defocused peptide field falling to even tone across the middle",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Wide abstract scientific photograph of a dense field of translucent rounded structures receding into deep space, sharply resolved only at the extreme left and extreme right edges of the frame and dissolving progressively into complete soft focus as they approach the middle, so that the central forty five percent of the frame is a smooth even wash of tone with no discernible edge or shape in it. The structures glow faintly from within, cool clinical blue at the left edge, colour #014EB1, and warm copper at the right edge, colour #B87333, and everything between them settles into deep graphite, colour #1A1A1A. Extremely shallow depth of field, luminous, cinematic wide format, high magnification laboratory imaging, quiet and premium.",
+      "negative_extra": "sharp detail in the centre, scale bar, measurement markings, letters, numbers, crosshairs, grid, diagram, honeycomb pattern, soap bubbles, water droplets, cartoon, green, pink"
+    }
+  ]
+}

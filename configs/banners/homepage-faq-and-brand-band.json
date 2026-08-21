@@ -1,0 +1,60 @@
+{
+  "_comment": [
+    "Homepage FAQ + brand band restructure — Claude Code, 2026-08-21.",
+    "Malcolm's picks: FAQ = title centred above, questions left, image right, one card.",
+    "Brand band = Tatcha's discipline on stock settings (centred, X-Small heading,",
+    "filled button, no eyebrow, no body copy), made taller via the native Image size.",
+    "Both images are placeholders pending new generations he will choose.",
+    "Undo: patch-template.py --restore backups/index-<stamp>.json --template templates/index.json"
+  ],
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "faq_section",
+      "settings": {
+        "text_position": "end",
+        "team_avatar": "shopify://shop_images/skingenetix-peptide-chain-science-2026.jpg",
+        "team_avatar_width": 350
+      }
+    },
+    {
+      "section": "brand_story_band",
+      "settings": {
+        "image_size": "lg",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "mobile_text_position": "place-self-center text-center",
+        "overlay_opacity": 35
+      }
+    },
+    {
+      "section": "brand_story_band",
+      "block": "bs_sub",
+      "settings": { "text": "" }
+    },
+    {
+      "section": "brand_story_band",
+      "block": "bs_heading",
+      "settings": {
+        "text": "Skingenetix began with a simple refusal: no proprietary blends.",
+        "heading_tag": "h5"
+      }
+    },
+    {
+      "section": "brand_story_band",
+      "block": "bs_text",
+      "settings": { "content": "" }
+    },
+    {
+      "section": "brand_story_band",
+      "block": "bs_button",
+      "settings": {
+        "style": "fill",
+        "size": "base",
+        "text": "Read Our Philosophy",
+        "url": "/pages/our-philosophy",
+        "background": "#ffffff",
+        "text_color": "#111111"
+      }
+    }
+  ]
+}
