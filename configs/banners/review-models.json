@@ -1,0 +1,73 @@
+{
+  "wave": "review-models",
+  "created": "2026-08-21",
+  "note": "Six model-application images for the homepage review slider, one per product. Tatcha's own review images were downloaded and examined rather than described from memory: square, tight crop on the face, a VISIBLE SWATCH OF PRODUCT ON THE CHEEK, a hand at the face, a pale neutral grey-beige seamless backdrop, soft even light, minimal makeup. The swatch is the detail that makes them read as 'in use' rather than as portraits, so every brief below names it.\n\nDeliberately light, not graphite. The review section sits on #f7f7f7 and the hero carries the dark register; a dark review strip would fight both. This matches Tatcha and matches the review image already live.\n\nCasting follows the standard Malcolm set \u2014 Caucasian, around thirty-five \u2014 but age, hair and colouring are varied across the six so they read as six different customers rather than one model six times. Flagged for him: Tatcha's set is deliberately diverse across ethnicity, and six reviews from one demographic reads narrower than a real customer base.\n\nClass B throughout: no bottle in frame, only the substance on skin, so there is no branding for a generator to invent. Substance colours follow the agreed product-colour table, not invention.\n\nv2 after Malcolm's review: casting varied across ethnicities to match Tatcha's set (he confirmed different people types are wanted), and the crop tightened hard \u2014 v1 framed whole heads with air around them where Tatcha's cut the top of the head off and fill the frame with cheek and eye. The Glutathione swatch is also re-specified as a transparent wet film, since v1 rendered it as an opaque flaky white.",
+  "defaults": {
+    "candidates": 3,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, citrus, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper bottle, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "REV-1-copper-peptide-serum",
+      "title": "Review image 1 \u2014 Copper Peptide Renewal Serum",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:reviews block 1",
+      "prompt": "Editorial beauty photograph, square format, an extremely tight close up of the face of a Black woman around thirty five years old, close cropped dark hair. The crop is very close: her face fills the entire frame edge to edge, the top of her head is cut off by the upper edge of the frame and her chin sits near the lower edge, so only cheek, eye, nose and mouth are in frame. She is turned three quarters toward the camera. A clean smear of translucent blue serum, colour #2F6FD0, sits on her cheekbone, glossy and freshly applied. Her own hand rests lightly against her face beside it, fingers relaxed, short unpainted nails. Real skin: visible pores, natural texture and tone, minimal makeup, bare lips. Behind her a seamless pale neutral grey backdrop, colour #D8D6D4, evenly lit and almost entirely hidden by how close the crop is. Soft broad key light from the front with a gentle fill, no hard shadows. Calm, natural, unposed. 100mm lens at f4, natural skin tones, clean neutral grade.",
+      "negative_extra": "teenager, child, heavy makeup, glossy lipstick, false lashes, jewellery, earrings, rings, painted nails, smiling broadly, glamour retouching, plastic skin, beauty filter, dark background, black background, wide shot, full head visible, space around the head, shoulders, torso, whole body"
+    },
+    {
+      "id": "REV-2-pdrn-serum",
+      "title": "Review image 2 \u2014 PDRN Renewal Serum",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:reviews block 2",
+      "prompt": "Editorial beauty photograph, square format, an extremely tight close up of the face of an East Asian woman around forty years old, dark hair pulled back. The crop is very close: her face fills the entire frame edge to edge, the top of her head is cut off by the upper edge of the frame and her chin sits near the lower edge, so only cheek, eye, nose and mouth are in frame. She is turned three quarters toward the camera. A clean smear of translucent rose pink serum, colour #EFC3C8, sits high on her cheek, glossy and freshly applied. Her own hand rests lightly against her face beside it, fingers relaxed, short unpainted nails. Real skin: visible pores, natural texture and tone, minimal makeup, bare lips. Behind her a seamless pale neutral grey backdrop, colour #D8D6D4, evenly lit and almost entirely hidden by how close the crop is. Soft broad key light from the front with a gentle fill, no hard shadows. Calm, natural, unposed. 100mm lens at f4, natural skin tones, clean neutral grade.",
+      "negative_extra": "teenager, child, heavy makeup, glossy lipstick, false lashes, jewellery, earrings, rings, painted nails, smiling broadly, glamour retouching, plastic skin, beauty filter, dark background, black background, wide shot, full head visible, space around the head, shoulders, torso, whole body"
+    },
+    {
+      "id": "REV-3-matrixyl-cream",
+      "title": "Review image 3 \u2014 Matrixyl 3000 Pro-Collagen Firming Cream",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:reviews block 3",
+      "prompt": "Editorial beauty photograph, square format, an extremely tight close up of the face of a white woman around thirty five years old, light brown hair tucked behind one ear. The crop is very close: her face fills the entire frame edge to edge, the top of her head is cut off by the upper edge of the frame and her chin sits near the lower edge, so only cheek, eye, nose and mouth are in frame. She is turned three quarters toward the camera. A thick swatch of clean neutral white cream, colour #F4F2EF, sits on her cheekbone, matte and rich, freshly placed. Her own hand rests lightly against her face beside it, fingers relaxed, short unpainted nails. Real skin: visible pores, natural texture and tone, minimal makeup, bare lips. Behind her a seamless pale neutral grey backdrop, colour #D8D6D4, evenly lit and almost entirely hidden by how close the crop is. Soft broad key light from the front with a gentle fill, no hard shadows. Calm, natural, unposed. 100mm lens at f4, natural skin tones, clean neutral grade.",
+      "negative_extra": "teenager, child, heavy makeup, glossy lipstick, false lashes, jewellery, earrings, rings, painted nails, smiling broadly, glamour retouching, plastic skin, beauty filter, dark background, black background, wide shot, full head visible, space around the head, shoulders, torso, whole body"
+    },
+    {
+      "id": "REV-4-glutathione-serum",
+      "title": "Review image 4 \u2014 Glutathione Brightening Serum",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:reviews block 4",
+      "prompt": "Editorial beauty photograph, square format, an extremely tight close up of the face of a South Asian woman around thirty years old, dark hair pulled back. The crop is very close: her face fills the entire frame edge to edge, the top of her head is cut off by the upper edge of the frame and her chin sits near the lower edge, so only cheek, eye, nose and mouth are in frame. She is turned three quarters toward the camera. A thin wet sheen of completely clear serum lies across her cheekbone, freshly smoothed in and catching one broad soft highlight. It is a transparent liquid film, not a white or opaque cream. Her own hand rests lightly against her face beside it, fingers relaxed, short unpainted nails. Real skin: visible pores, natural texture and tone, minimal makeup, bare lips. Behind her a seamless pale neutral grey backdrop, colour #D8D6D4, evenly lit and almost entirely hidden by how close the crop is. Soft broad key light from the front with a gentle fill, no hard shadows. Calm, natural, unposed. 100mm lens at f4, natural skin tones, clean neutral grade.",
+      "negative_extra": "teenager, child, heavy makeup, glossy lipstick, false lashes, jewellery, earrings, rings, painted nails, smiling broadly, glamour retouching, plastic skin, beauty filter, dark background, black background, wide shot, full head visible, space around the head, shoulders, torso, whole body"
+    },
+    {
+      "id": "REV-5-copper-peptide-night-cream",
+      "title": "Review image 5 \u2014 Copper Peptide Night Cream",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:reviews block 5",
+      "prompt": "Editorial beauty photograph, square format, an extremely tight close up of the face of a Latina woman around forty five years old, dark hair with silver at the temple. The crop is very close: her face fills the entire frame edge to edge, the top of her head is cut off by the upper edge of the frame and her chin sits near the lower edge, so only cheek, eye, nose and mouth are in frame. She is turned three quarters toward the camera. A soft swatch of pale blue cream, colour #A6C4E0, sits on her cheek, freshly placed and partly smoothed in. Her own hand rests lightly against her face beside it, fingers relaxed, short unpainted nails. Real skin: visible pores, natural texture and tone, minimal makeup, bare lips. Behind her a seamless pale neutral grey backdrop, colour #D8D6D4, evenly lit and almost entirely hidden by how close the crop is. Soft broad key light from the front with a gentle fill, no hard shadows. Calm, natural, unposed. 100mm lens at f4, natural skin tones, clean neutral grade.",
+      "negative_extra": "teenager, child, heavy makeup, glossy lipstick, false lashes, jewellery, earrings, rings, painted nails, smiling broadly, glamour retouching, plastic skin, beauty filter, dark background, black background, wide shot, full head visible, space around the head, shoulders, torso, whole body"
+    },
+    {
+      "id": "REV-6-acetyl-hexapeptide-serum",
+      "title": "Review image 6 \u2014 Acetyl Hexapeptide-8 Anti-Wrinkle Serum",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:reviews block 6",
+      "prompt": "Editorial beauty photograph, square format, an extremely tight close up of the face of a Middle Eastern woman around thirty eight years old, dark hair in a low knot. The crop is very close: her face fills the entire frame edge to edge, the top of her head is cut off by the upper edge of the frame and her chin sits near the lower edge, so only cheek, eye, nose and mouth are in frame. She is turned three quarters toward the camera. One clear droplet of completely transparent serum sits on her fingertip, held just beside the outer corner of her eye, caught the moment before application. Her own hand rests lightly against her face beside it, fingers relaxed, short unpainted nails. Real skin: visible pores, natural texture and tone, minimal makeup, bare lips. Behind her a seamless pale neutral grey backdrop, colour #D8D6D4, evenly lit and almost entirely hidden by how close the crop is. Soft broad key light from the front with a gentle fill, no hard shadows. Calm, natural, unposed. 100mm lens at f4, natural skin tones, clean neutral grade.",
+      "negative_extra": "teenager, child, heavy makeup, glossy lipstick, false lashes, jewellery, earrings, rings, painted nails, smiling broadly, glamour retouching, plastic skin, beauty filter, dark background, black background, wide shot, full head visible, space around the head, shoulders, torso, whole body"
+    }
+  ]
+}

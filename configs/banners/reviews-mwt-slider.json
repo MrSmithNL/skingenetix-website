@@ -1,0 +1,241 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-21",
+  "note": "CORRECTION. The approved review layout was media-with-text \u2014 one big image left, one big quote right, Tatcha's arrangement. Asked for a six-review slider, I replaced that layout with a six-across multi-column row of small tiles. That was wrong: the layout was already right and only needed sliding added. This restores media-with-text and gives it six blocks, one per product.\n\nThe slide behaviour is CSS in the site-wide block: .media-with-text is `display:grid; overflow:hidden` with one __item per block, so overriding it to `auto-flow 100%` with overflow-x auto and scroll snap makes the six items advance one at a time \u2014 Tatcha's behaviour, no theme file touched.\n\nImages are v2, regenerated after Malcolm's note: casting varied across ethnicities to match Tatcha's set, and crops tightened so the face fills the frame with the top of the head cut off, where v1 framed whole heads with air around them.\n\nCOPY IS STILL PLACEHOLDER \u2014 six invented names and quotes on a store with no orders.\n\nCaught before it shipped: the plan had inherited uploaded_handle values from the v1 upload, so the live page would have kept showing the v1 images even though the local files were regenerated. Handles cleared and the v2 files uploaded under -v2 filenames, since v1 already occupies the originals in Files and Shopify would have suffixed a same-name upload.",
+  "images": [
+    {
+      "slot": "rev1",
+      "source": "assets/ai-generated/2026-08-21-banners-review-models/REV-1-copper-peptide-serum/REV-1-copper-peptide-serum_01.jpg",
+      "filename": "skingenetix-review-model-copper-peptide-serum-2026-v2.jpg",
+      "alt": "A model with a swatch of blue Copper Peptide serum on her cheek - Skingenetix customer review",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-model-copper-peptide-serum-2026-v2.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-model-copper-peptide-serum-2026-v2.jpg?v=1787335999"
+    },
+    {
+      "slot": "rev2",
+      "source": "assets/ai-generated/2026-08-21-banners-review-models/REV-2-pdrn-serum/REV-2-pdrn-serum_01.jpg",
+      "filename": "skingenetix-review-model-pdrn-serum-2026-v2.jpg",
+      "alt": "A model applying rose-pink PDRN Renewal Serum to her cheek - Skingenetix customer review",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-model-pdrn-serum-2026-v2.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-model-pdrn-serum-2026-v2.jpg?v=1787335999"
+    },
+    {
+      "slot": "rev3",
+      "source": "assets/ai-generated/2026-08-21-banners-review-models/REV-3-matrixyl-cream/REV-3-matrixyl-cream_01.jpg",
+      "filename": "skingenetix-review-model-matrixyl-cream-2026-v2.jpg",
+      "alt": "A model with a swatch of white Matrixyl 3000 Pro-Collagen cream on her cheek - Skingenetix customer review",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-model-matrixyl-cream-2026-v2.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-model-matrixyl-cream-2026-v2.jpg?v=1787335998"
+    },
+    {
+      "slot": "rev4",
+      "source": "assets/ai-generated/2026-08-21-banners-review-models/REV-4-glutathione-serum/REV-4-glutathione-serum_01.jpg",
+      "filename": "skingenetix-review-model-glutathione-serum-2026-v2.jpg",
+      "alt": "A model applying clear Glutathione Brightening Serum across her cheekbone - Skingenetix customer review",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-model-glutathione-serum-2026-v2.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-model-glutathione-serum-2026-v2.jpg?v=1787335998"
+    },
+    {
+      "slot": "rev5",
+      "source": "assets/ai-generated/2026-08-21-banners-review-models/REV-5-copper-peptide-night-cream/REV-5-copper-peptide-night-cream_01.jpg",
+      "filename": "skingenetix-review-model-copper-peptide-night-cream-2026-v2.jpg",
+      "alt": "A model applying pale blue Copper Peptide Night Cream to her cheek - Skingenetix customer review",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-model-copper-peptide-night-cream-2026-v2.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-model-copper-peptide-night-cream-2026-v2.jpg?v=1787335998"
+    },
+    {
+      "slot": "rev6",
+      "source": "assets/ai-generated/2026-08-21-banners-review-models/REV-6-acetyl-hexapeptide-serum/REV-6-acetyl-hexapeptide-serum_01.jpg",
+      "filename": "skingenetix-review-model-acetyl-hexapeptide-8-2026-v2.jpg",
+      "alt": "A model holding a droplet of clear Acetyl Hexapeptide-8 serum beside her eye area - Skingenetix customer review",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-model-acetyl-hexapeptide-8-2026-v2.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-model-acetyl-hexapeptide-8-2026-v2.jpg?v=1787335998"
+    }
+  ],
+  "remove_sections": [
+    "reviews"
+  ],
+  "new_sections": [
+    {
+      "id": "reviews",
+      "insert_after": "impact_numbers",
+      "section": {
+        "type": "media-with-text",
+        "blocks": {
+          "review_1": {
+            "type": "image",
+            "settings": {
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "\u2605\u2605\u2605\u2605\u2605   Julia K., Berlin",
+              "title": "\"The Copper Peptide serum is incredible. My skin feels firmer and more radiant after just 3 weeks.\"",
+              "content": "",
+              "link_text": "Shop Copper Peptide Renewal Serum",
+              "link_url": "/products/copper-peptide-ghk-cu-renewal-serum",
+              "background": "#f7f7f7",
+              "background_gradient": "",
+              "text_color": "#1a1a1a",
+              "text_gradient": "",
+              "button_background": "#1a1a1a",
+              "button_text_color": "#ffffff"
+            }
+          },
+          "review_2": {
+            "type": "image",
+            "settings": {
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "\u2605\u2605\u2605\u2605\u2605   Sofia M., Milan",
+              "title": "\"I have reactive skin and expected to react to this too. Three weeks in and it is the calmest it has been in years.\"",
+              "content": "",
+              "link_text": "Shop PDRN Renewal Serum",
+              "link_url": "/products/pdrn-renewal-serum",
+              "background": "#f7f7f7",
+              "background_gradient": "",
+              "text_color": "#1a1a1a",
+              "text_gradient": "",
+              "button_background": "#1a1a1a",
+              "button_text_color": "#ffffff"
+            }
+          },
+          "review_3": {
+            "type": "image",
+            "settings": {
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "\u2605\u2605\u2605\u2605\u2605   Hanna L., Stockholm",
+              "title": "\"I bought it for the concentration, not the packaging. Two months on and the difference along my jaw is the first thing anyone noticed.\"",
+              "content": "",
+              "link_text": "Shop Matrixyl 3000 Firming Cream",
+              "link_url": "/products/matrixyl-3000-pro-collagen-firming-cream",
+              "background": "#f7f7f7",
+              "background_gradient": "",
+              "text_color": "#1a1a1a",
+              "text_gradient": "",
+              "button_background": "#1a1a1a",
+              "button_text_color": "#ffffff"
+            }
+          },
+          "review_4": {
+            "type": "image",
+            "settings": {
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "\u2605\u2605\u2605\u2605\u2605   Emma V., Amsterdam",
+              "title": "\"The uneven patches on my cheeks have faded more than with anything else I have tried, and it has not irritated my skin once.\"",
+              "content": "",
+              "link_text": "Shop Glutathione Brightening Serum",
+              "link_url": "/products/glutathione-brightening-serum",
+              "background": "#f7f7f7",
+              "background_gradient": "",
+              "text_color": "#1a1a1a",
+              "text_gradient": "",
+              "button_background": "#1a1a1a",
+              "button_text_color": "#ffffff"
+            }
+          },
+          "review_5": {
+            "type": "image",
+            "settings": {
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "\u2605\u2605\u2605\u2605\u2605   Claire D., Lyon",
+              "title": "\"I am fifty and sceptical of night creams. This one I have repurchased twice. My skin looks rested even when I am not.\"",
+              "content": "",
+              "link_text": "Shop Copper Peptide Night Cream",
+              "link_url": "/products/copper-peptide-ghk-cu-night-cream",
+              "background": "#f7f7f7",
+              "background_gradient": "",
+              "text_color": "#1a1a1a",
+              "text_gradient": "",
+              "button_background": "#1a1a1a",
+              "button_text_color": "#ffffff"
+            }
+          },
+          "review_6": {
+            "type": "image",
+            "settings": {
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "\u2605\u2605\u2605\u2605\u2605   Nadia R., Vienna",
+              "title": "\"The lines at the outer corner of my eyes are visibly softer. It is subtle, it is real, and that is exactly what I wanted.\"",
+              "content": "",
+              "link_text": "Shop Acetyl Hexapeptide-8 Serum",
+              "link_url": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+              "background": "#f7f7f7",
+              "background_gradient": "",
+              "text_color": "#1a1a1a",
+              "text_gradient": "",
+              "button_background": "#1a1a1a",
+              "button_text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "review_1",
+          "review_2",
+          "review_3",
+          "review_4",
+          "review_5",
+          "review_6"
+        ],
+        "settings": {
+          "full_width": true,
+          "alternate_media_position": false,
+          "spacing": "medium"
+        }
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "reviews",
+      "block": "review_1",
+      "slot": "rev1"
+    },
+    {
+      "section": "reviews",
+      "block": "review_2",
+      "slot": "rev2"
+    },
+    {
+      "section": "reviews",
+      "block": "review_3",
+      "slot": "rev3"
+    },
+    {
+      "section": "reviews",
+      "block": "review_4",
+      "slot": "rev4"
+    },
+    {
+      "section": "reviews",
+      "block": "review_5",
+      "slot": "rev5"
+    },
+    {
+      "section": "reviews",
+      "block": "review_6",
+      "slot": "rev6"
+    }
+  ]
+}
