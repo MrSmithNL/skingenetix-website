@@ -1,0 +1,33 @@
+{
+  "wave": "hero-mid-science",
+  "created": "2026-08-21",
+  "note": "Middle hero slide. Malcolm pointed at Tatcha's Hadasei-3 hero, which was captured and examined: stacked laboratory glass dishes holding liquids with the three named actives suspended in them, subject to one side, a large clean type zone to the other.\n\nTwo differences taken deliberately. Tatcha's is bright white; this is graphite, because slides 1 and 3 are dark and the hero must read as one set. And Tatcha suspends botanicals — green tea, rice, algae — where Skingenetix's actives are synthesised molecules, so the same idea is carried by laboratory glass, tinted solution and copper rather than by plants. Botanicals stay on the global negative list for the reason established at the start of this work: leaves argue against a peptide brand.\n\nSubject sits RIGHT and the left 40% is held clear, matching the other two slides so the shared left-aligned headline position works unchanged.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, sprigs, flowers, citrus, fruit, herbs, algae, seaweed, rice, wood, linen, pebbles, bokeh sparkle, lens flare, text, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper bottle, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "MID-A-lab-glass",
+      "title": "Middle slide A — laboratory glass (the Tatcha construction, dark)",
+      "class": "B",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero (middle slide)",
+      "prompt": "Studio still life of two shallow circular laboratory glass dishes stacked slightly offset from one another, standing in the right half of the frame on a seamless graphite surface, colour #1A1A1A. The lower dish holds a shallow pool of clear viscous serum; the upper dish holds a thin layer of translucent clinical blue solution, colour #014EB1, catching the light through its rim. A single slender polished copper rod, colour #B87333, rests across the upper dish, half in the liquid and half out, refracting where it enters. One hard key light from the upper right rakes across the glass so the rims and the liquid surfaces glow, throwing one long clean shadow to the left; a dim cool fill keeps the glass readable. The left forty percent of the frame is empty even graphite falling to near black, with no detail and nothing entering it. Precise, clinical, expensive. Editorial still life, 100mm lens at f11, deep clean blacks, high microcontrast, cool grade with warm metal.",
+      "negative_extra": "beakers with measurement markings, scale bar, numerals, test tubes, laboratory clutter, many vessels, cocktail glass, dinner plate, food, steam, smoke"
+    },
+    {
+      "id": "MID-B-active-macro",
+      "title": "Middle slide B — active macro (the ingredient itself, close)",
+      "class": "B",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero (middle slide)",
+      "prompt": "Extreme macro photograph of a cluster of translucent crystalline structures growing into one another, occupying the right two thirds of the frame, lit so their internal facets refract a deep clinical blue, colour #014EB1, with warm copper glints, colour #B87333, catching their upper edges. They rest on a wet graphite surface, colour #1A1A1A, that returns a soft broken reflection beneath them and darkens toward the left edge of the frame. Reads as a pure active substance seen under a macro lens, mineral and precise, not as jewellery and not as ice. One hard raking key light from the right at a shallow angle, one dim cool fill. The left forty percent of the frame is smooth near black with no structure in it. Scientific macro, 100mm at f11, very high detail, deep blacks, cool grade.",
+      "negative_extra": "jewellery, gemstone, diamond, ring, ice cubes, frost, snow, sugar, salt, geode, amethyst, purple, green, glitter"
+    }
+  ]
+}

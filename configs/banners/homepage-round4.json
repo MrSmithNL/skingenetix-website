@@ -1,0 +1,159 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-21",
+  "note": "Three changes.\n\n1. HERO REORDER + NEW MIDDLE SLIDE. Malcolm asked to open on the woman-model image rather than the product, and to make the middle an ingredient/science close-up after Tatcha. Tatcha's slideshow was captured and runs exactly that order: Brand-Main (model), Brand-Hadasei3 (ingredient), Brand-SkinMind (science). New order here is model -> science -> product, so the pure portrait leaves the hero and the laboratory-glass still life takes the middle. Tatcha's ingredient slide is stacked lab dishes holding the named actives, bright white, botanicals in the liquid; this is the same construction rendered dark to match slides 1 and 3, with copper and tinted solution instead of plants \u2014 botanicals stay barred because leaves argue against a peptide brand.\n   content_max_width is measured per slide, never inherited. Clear zones: slide 1 to 38% (460px box), slide 2 to 56% (720), slide 3 to 59% (560, chosen to break after the first sentence \u2014 'Premium Peptides.' measures 481px, adding 'Visible' takes it to 663px).\n\n2. REVIEW SECTION. Malcolm asked to drop the product card and put the review text there at a larger size, as Tatcha does. shop-the-look cannot \u2014 the product card is its entire purpose \u2014 so this moves to media-with-text: image one side, text the other. The quote goes in `title` so it renders at heading size, with the rating and reviewer name in `subheading` above it, matching Tatcha's hierarchy. The product link survives as the section's text link instead of a card.\n\n3. BOTTOM BRAND BANNER. Tatcha closes its homepage with a full-width brand-story band above the footer. Added as image-with-text-overlay using the portrait displaced from the hero, so an approved image is redeployed rather than discarded and the homepage gains a closing brand moment. Link verified: the philosophy page handle is /pages/our-philosophy, not /pages/philosophy.",
+  "images": [
+    {
+      "slot": "mid_science",
+      "source": "assets/ai-generated/2026-08-21-banners-hero-mid-science/MID-A-lab-glass/MID-A-lab-glass_02.jpg",
+      "filename": "skingenetix-hero-laboratory-glass-peptide-2026.jpg",
+      "alt": "Two stacked laboratory glass dishes holding clear serum and a blue peptide solution with a copper rod resting across them, lit against a graphite background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-hero-laboratory-glass-peptide-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-hero-laboratory-glass-peptide-2026.jpg?v=1787332567"
+    }
+  ],
+  "remove_sections": [
+    "reviews"
+  ],
+  "new_sections": [
+    {
+      "id": "reviews",
+      "insert_after": "impact_numbers",
+      "section": {
+        "type": "media-with-text",
+        "blocks": {
+          "review_1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-review-copper-peptide-serum-model-2026.jpg",
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "\u2605\u2605\u2605\u2605\u2605   Julia K., Berlin",
+              "title": "\"The Copper Peptide serum is incredible. My skin feels firmer and more radiant after just 3 weeks.\"",
+              "content": "",
+              "link_text": "Shop Copper Peptide Renewal Serum",
+              "link_url": "/products/copper-peptide-ghk-cu-renewal-serum",
+              "background": "#f7f7f7",
+              "background_gradient": "",
+              "text_color": "#1a1a1a",
+              "text_gradient": "",
+              "button_background": "#1a1a1a",
+              "button_text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "review_1"
+        ],
+        "settings": {
+          "full_width": true,
+          "alternate_media_position": false,
+          "spacing": "medium"
+        }
+      }
+    },
+    {
+      "id": "brand_story_band",
+      "insert_after": "newsletter_section",
+      "section": {
+        "type": "image-with-text-overlay",
+        "blocks": {
+          "bs_sub": {
+            "type": "subheading",
+            "settings": {
+              "text": "OUR APPROACH"
+            }
+          },
+          "bs_heading": {
+            "type": "heading",
+            "settings": {
+              "text": "Skincare that names its actives.",
+              "heading_tag": "h2"
+            }
+          },
+          "bs_text": {
+            "type": "richtext",
+            "settings": {
+              "content": "<p>Every Skingenetix formula states the peptide, the concentration and the research behind it. No proprietary blends, no borrowed prestige \u2014 only actives you can look up.</p>"
+            }
+          },
+          "bs_button": {
+            "type": "button",
+            "settings": {
+              "style": "outline",
+              "size": "base",
+              "text": "Read Our Philosophy",
+              "url": "/pages/our-philosophy",
+              "text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "bs_sub",
+          "bs_heading",
+          "bs_text",
+          "bs_button"
+        ],
+        "settings": {
+          "full_width": true,
+          "enable_parallax": false,
+          "image_size": "md",
+          "image": "shopify://shop_images/skingenetix-hero-radiant-skin-portrait-2026.jpg",
+          "desktop_text_position": "sm:place-self-center-start sm:text-start",
+          "mobile_text_position": "place-self-center text-center",
+          "text_color": "#ffffff",
+          "overlay_color": "#000000",
+          "overlay_opacity": 20
+        }
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "block": "hero_slide_2",
+      "slot": "mid_science"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "block": "hero_slide_1",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-hero-model-copper-peptide-2026.jpg",
+        "title": "Copper Peptides, Clinically Dosed.",
+        "subheading": "2% GHK-Cu \u2014 the concentration used in published research, not a trace inclusion.",
+        "button_text": "Shop Copper Peptide Serum",
+        "button_link": "/products/copper-peptide-ghk-cu-renewal-serum",
+        "content_max_width": 460
+      }
+    },
+    {
+      "section": "hero",
+      "block": "hero_slide_2",
+      "settings": {
+        "title": "Peptide Science, Made Visible.",
+        "subheading": "Named actives at published concentrations. Nothing hidden behind a proprietary blend.",
+        "button_text": "Explore the Research",
+        "button_link": "/pages/the-science",
+        "content_max_width": 720
+      }
+    },
+    {
+      "section": "hero",
+      "block": "hero_slide_3",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-hero-matrixyl-3000-graphite-2026.jpg",
+        "title": "Premium Peptides. Visible Results.",
+        "subheading": "High-purity peptides at clinically effective concentrations \u2014 never trace amounts.",
+        "button_text": "Shop the Range",
+        "button_link": "/collections/all",
+        "content_max_width": 560
+      }
+    }
+  ]
+}
