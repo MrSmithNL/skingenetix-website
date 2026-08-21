@@ -80,6 +80,30 @@ class MatchMarkedFile(unittest.TestCase):
         self.assertEqual(rec["backend"], "luma")
 
 
+class StraySuffixes(unittest.TestCase):
+    """Finder and browsers append their own suffixes when a name collides."""
+
+    def test_finder_copy_suffix_still_finds_the_shot(self):
+        rec, name = match_record(
+            f"_{STEM}_water_ripple_scene_2_skingenetix copy.png", INDEX)
+        self.assertEqual(rec["shot_name"], "water_ripple_scene")
+
+    def test_browser_dash_suffix_still_finds_the_shot(self):
+        rec, _ = match_record(f"_{STEM}_hero_white_bg_1_skingenetix-2.png", INDEX)
+        self.assertEqual(rec["shot_name"], "hero_white_bg")
+
+    def test_numbered_finder_copy(self):
+        rec, _ = match_record(f"__{STEM}_hero_white_bg_1_skingenetix copy 3.png", INDEX)
+        self.assertEqual(rec["shot_name"], "hero_white_bg")
+
+    def test_a_hand_edited_variant_is_flagged_as_such(self):
+        # A " copy" that Malcolm edited is no longer purely the engine's output,
+        # so it must not be credited to that engine in cost-per-winner.
+        self.assertTrue(prep_marked.is_variant(f"_{STEM}_hero_white_bg_1_skingenetix copy.png"))
+        self.assertTrue(prep_marked.is_variant(f"_{STEM}_hero_white_bg_1_skingenetix-2.png"))
+        self.assertFalse(prep_marked.is_variant(f"_{STEM}_hero_white_bg_1_skingenetix.png"))
+
+
 class MarkPrefix(unittest.TestCase):
     def test_marks_are_reported_for_restoration(self):
         self.assertEqual(prep_marked.marks("__a.png"), "__")

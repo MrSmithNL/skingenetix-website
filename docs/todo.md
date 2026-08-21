@@ -74,9 +74,14 @@ mechanically: nothing clipped, carton pairs scale-matched at 0.84 fill.
 
 **`product_tight` comes from the dedicated single-product renders** in each product's own
 folder under `Images/Products/<Product>/` — 2048px, already isolated, current artwork.
-Those beat cropping the product out of a pack shot on every count. The one exception is
-Acetyl Hexapeptide-8, whose render is the superseded ARGIRELINE design (see PHOTO-003);
-it falls back to its pack-shot crop.
+Those beat cropping the product out of a pack shot on every count.
+
+⚠️ **Corrected 2026-08-21:** this section previously claimed Acetyl Hexapeptide-8's render
+was the superseded ARGIRELINE design, and that claim kept the product out of the rollout
+for two days. It is wrong. Its built reference reads
+`ACETYL HEXAPEPTIDE-8 / ANTI-WRINKLE SERUM / 10% ACETYL HEXAPEPTIDE-8 | 30ML` — current
+2026 artwork. It ran cleanly on 2026-08-21 (177/177, $4.90) and is published. **Open the
+reference before believing a note about it.**
 
 One reference is **generated, not photographed**: Matrixyl 3000 Pro Collagen Serum has no
 silver pack shot, so its silver carton was generated from its own green face and stored in
@@ -94,88 +99,60 @@ colour; write `packaging_desc` face by face. Preflight rejects unfilled `<placeh
 a `product_desc` that quotes no label text, because an invented label is clean and legible
 and therefore survives review.
 
-### PHOTO-005 — First images LIVE; uploads continuing
+### ✅ PHOTO-005 — 2026 imagery live on every product that has artwork
 
-**Priority:** 🔴 High
-**Owner:** Claude (upload + generation) + Malcolm (selection, SEO study)
-**Status:** PDRN cream **published**. Glutathione serum **published**.
+**Priority:** 🟢 Done (2026-08-21) — follow-ups below
+**Owner:** Claude (generation + upload) + Malcolm (selection, SEO study)
+**Status:** **9 of 11 store products carry 2026 imagery — 86 images live.** Two days
+earlier it was 8. Roughly $95 of generation across 2026-08-20/21.
 
-**The 0.2% is broken.** 8 images went live on the PDRN cream on 2026-08-20 —
-the first published from the rebuilt pipeline, replacing 5 that carried the retired
-label. Live at <https://www.skingenetix.com/products/pdrn-collagen-night-cream>.
+| Product                       | Live   | Store page                                     |
+| ----------------------------- | ------ | ---------------------------------------------- |
+| PDRN + Collagen Night Cream   | **8**  | `pdrn-collagen-night-cream`                    |
+| Glutathione Brightening Serum | **8**  | `glutathione-brightening-serum`                |
+| Copper Peptide Night Cream    | **8**  | `copper-peptide-ghk-cu-night-cream`            |
+| Copper Peptide Day Gel-Cream  | **9**  | `copper-peptide-ghk-cu-day-gel-cream`          |
+| Copper Peptide Renewal Serum  | **13** | `copper-peptide-ghk-cu-renewal-serum`          |
+| Matrixyl 3000 Serum           | **10** | `matrixyl-3000-hyaluronic-acid-collagen-serum` |
+| Matrixyl 3000 Firming Cream   | **9**  | `matrixyl-3000-pro-collagen-firming-cream`     |
+| Acetyl Hexapeptide-8 Serum    | **12** | `acetyl-hexapeptide-8-anti-wrinkle-serum`      |
+| PDRN Renewal Serum            | **10** | `pdrn-renewal-serum`                           |
 
-**Second product published the same day.** 8 images live on the Glutathione serum,
-replacing all 6 that carried the retired label. Malcolm's gallery order: packaging hero
-first, hands-dropper second. Live at
-<https://www.skingenetix.com/products/glutathione-brightening-serum>.
+**Not done — the two microneedling stamp sets.** No 2026 photography artwork exists for
+them, and both currently show **Hairgenetix** packaging with a registered ® mark on a
+Skingenetix page. That needs artwork, not generation. It is the last wrong imagery on the
+store.
 
-| Product                  | Candidates | Prepared | Live  |
-| ------------------------ | ---------- | -------- | ----- |
-| Glutathione serum        | 557        | 82       | **8** |
-| PDRN cream               | 274        | 72       | **8** |
-| PDRN skin repair serum   | 293        | 0        | 0     |
-| Copper Peptide serum     | 177        | 0        | 0     |
-| Copper Peptide Day cream | 154        | 0        | 0     |
-| Copper Peptide Night     | running    | 0        | 0     |
+**Selection is Malcolm's, by leading underscore** — `_` keeps, `__` publishes. He now marks
+in two places: the `ALL-<product>` browse folders and the fan-out's own run output folder.
+Both are handled; `prepare-marked-run-output.py` reads the second and recovers each image's
+engine from the run manifest.
 
-**Awaiting Malcolm's marks:** the two finished Copper Peptide runs are consolidated for
-browsing at `assets/ai-generated/ALL-copper-peptide-{repair-serum,day-repair-cream}/`
-(331 candidates). They are pre-top-up — the Gemini carton shots land after the next reset,
-and the collector merges them in without disturbing marks already made.
+**Colour is per-product data now.** Each config carries `formulation` (what the substance
+looks like, and what it never looks like) and `palette` (scene colours from the product's
+own brand colour). `fanout.py` **refuses to run** a product that declares neither. Values in
+`memory/product-colours-2026-08.md`.
+⚠️ **Copper Peptide DAY is the DARK cream, NIGHT is the LIGHT one** — reads backwards
+against the usual convention and was written inverted once.
 
-**Selection is Malcolm's, by leading underscore** — `_` keeps, `__` publishes. He wants
-every candidate available and no shortlisting. See
-`memory/malcolm-picks-winners-by-underscore.md`.
+**Follow-ups, none blocking:**
 
-**Replace, never append** — every remaining live product image still shows the retired
-DEEP REGENERATION FORMULA / PROFESSIONAL TREATMENT label.
+1. **Four Gemini top-ups** waiting on a daily-cap reset — Acetyl (ran on four engines only)
+   plus the three Copper Peptide products. Each is `--backends nbp_pro,nbp_flash` into the
+   existing `run-01`; filenames carry the engine so they merge cleanly.
+   ⚠️ Generation reads `GEMINI_API_KEY` only and this project's `.env` has no Gemini key —
+   see the Authentication note in `docs/architecture.md`.
+2. **Two theme-level SEO items**, both needing approval because they touch Liquid:
+   `decoding="async"` is absent on all 40 images, and JSON-LD `Product.image` carries only
+   the featured image rather than the gallery.
+3. **Two dieline faults before print** — the Matrixyl and Acetyl serum cartons both read
+   `50ML` where their bottles read `30ML`. See `memory/artwork-faults-found-2026-08.md`.
+4. **Product renaming** stays blocked until the SEO/GEO/AISO keyword study.
 
-**Blocked deliberately:** product _titles_ stay on the old naming until an SEO/GEO/AISO
-keyword study per product is done — Malcolm's sequencing, optimised for the key ingredient
-against the most-used and most-relevant search terms.
-
-⚠️ Match images to products by **checking the image, not the title**. See
-`memory/shopify-store-map-2026-08.md`.
-
-**Queued for the next Gemini reset:** top-ups for Copper Peptide Day cream, Copper Peptide
-serum and Copper Peptide Night cream — all three ran on the four non-Gemini engines only,
-which leaves carton shots thin. The 2026-08-20 allowance was already at **244/250** by
-15:50, so none of the three could start that day; each is
-`--backends nbp_pro,nbp_flash` into the existing `run-01`, which merges on filename.
-⚠️ Generation reads `GEMINI_API_KEY` **only** and this project's `.env` has no Gemini key —
-see the Authentication note in `docs/architecture.md` before starting them.
-
-**Colour is now per product, not per template (2026-08-20).** The substance inside the
-container was described nowhere, so every drop, swatch and open-jar shot invented a colour —
-white cream, water-clear serum. Each config now carries `formulation` (what the substance
-looks like, and what it never looks like) and `palette` (scene colours built from the
-product's own brand colour), and `fanout.py` refuses to run a product that declares
-neither. Confirmed colours are in `memory/product-colours-2026-08.md`.
-⚠️ **Copper Peptide DAY is the DARK cream and NIGHT is the LIGHT one** — it reads backwards
-against the usual convention and was written inverted once already.
-
-**No re-run for PDRN cream or Glutathione serum** — Malcolm, 2026-08-20: "i have enough
-images for the PDRN cream and the Glutathione serum." Both have live images and full finals
-folders. Their `formulation`/`palette` blocks are filled in and correct, so if either is
-ever run again it inherits the fix; but the known-wrong substance shots (white Glutathione
-drops) are simply not worth $2 to redo. Do not propose it again.
-
-**QA run 2026-08-20 (verdicts are information, not a filter — Malcolm still picks):**
-
-| Product              | Judged | PASS          | Shots with no passing candidate |
-| -------------------- | ------ | ------------- | ------------------------------- |
-| Copper Peptide serum | 177    | **135 (76%)** | 3 — 06, 07 and 27               |
-| Copper Peptide Day   | 154    | **134 (87%)** | 0                               |
-
-The serum's three empty shots are `product_and_box_hero`, `product_and_box_angled` and
-`range_stacked_angled` — all carton work, failing on `label_wording` and `carton_faces`.
-That is the concrete case for the Gemini top-up rather than a general preference for it.
-Dominant failure reason overall is `label_wording` (36 of 62 failures across both).
-
-**Upload plans are per-product data, not code.** Gallery order and alt text are Malcolm's
-decisions and now live in `scripts/finals/upload-plans/<handle>.json`; the uploader reads
-one and refuses any selected file it cannot map to a planned shot, rather than appending it
-with generic alt text.
+**Alt text: done for all 66 live images** (at the time of the pass), house format
+`Skingenetix <Product>, <active>, <size> - <what is in frame>`, capped at 125 chars and
+written from looking at each image. Re-runnable and idempotent via
+`scripts/finals/set-product-alt-text.py`, which reports any undescribed image.
 
 ### PHOTO-004 — First production run: what it found
 

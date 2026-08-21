@@ -35,16 +35,43 @@ def marks(name):
     return re.match(r"^(_*)", name).group(1)
 
 
+#: What Finder and browsers append when a filename collides, before the
+#: extension. Same shapes the sweep strips - see sweep-finals-folder.py.
+_STRAY_SUFFIX = re.compile(r"(?:-\d+)?(?: copy(?: \d+)?)?$", re.I)
+
+
+def is_variant(marked_name):
+    """Whether this file is a hand-made variant rather than raw run output.
+
+    A " copy" or "-2" means Malcolm duplicated the file and edited it. The
+    result is no longer purely the engine's output, so crediting it to that
+    engine would overstate the engine in cost-per-winner - the one number the
+    pipeline rebuild exists to answer. It keeps the shot, loses the engine.
+    """
+    stem, _ = os.path.splitext(marked_name.lstrip("_"))
+    return _STRAY_SUFFIX.sub("", stem) != stem
+
+
 def match_record(marked_name, index):
     """Find the manifest record for a marked file.
 
-    Renaming in Finder to prepend an underscore can EAT leading characters -
-    the 2026-08-21 Matrixyl run has `_atrixyl_...`, which is `matrixyl` with the
-    m consumed. So an exact match is tried first, then a unique suffix match.
-    An ambiguous suffix raises rather than guessing: attributing a winner to the
-    wrong engine is worse than refusing to place it.
+    Three things stand between the name on disk and the record:
+
+      * the marks themselves, which are not part of the recorded name;
+      * a stray " copy" or "-2" that Finder or a browser appended;
+      * renaming in Finder to prepend an underscore can EAT leading characters -
+        the 2026-08-21 Matrixyl run has `_atrixyl_...`, which is `matrixyl`
+        with the m consumed.
+
+    Exact match is tried first, then a unique suffix match. An ambiguous suffix
+    raises rather than guessing: attributing a winner to the wrong engine is
+    worse than refusing to place it.
     """
     bare = marked_name.lstrip("_")
+    if bare in index:
+        return index[bare], bare
+    stem, ext = os.path.splitext(bare)
+    bare = _STRAY_SUFFIX.sub("", stem) + ext
     if bare in index:
         return index[bare], bare
     hits = [k for k in index if k.endswith(bare)]
@@ -126,7 +153,8 @@ def main():
             os.rename(out["path"], marked_path)
             out["path"] = marked_path
         out.update({"source": f, "run": os.path.basename(os.path.dirname(run_dir + "/")),
-                    "backend": rec["backend"], "shot": rec.get("shot_name"),
+                    "backend": "external" if is_variant(f) else rec["backend"],
+                    "shot": rec.get("shot_name"),
                     "shot_n": int(rec.get("shot_n") or 0)})
         by_name[out["filename"]] = out
         print(f"  {mk or '  '}{out['filename']}   [{rec['backend']}]  "

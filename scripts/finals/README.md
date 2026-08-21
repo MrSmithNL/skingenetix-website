@@ -53,3 +53,25 @@ explicitly rejected. Never let a rename lose his marks.
   re-run — which is exactly what a Gemini top-up triggers — would have linked the original
   back and left an unmarked duplicate of every image he had chosen. Caught by test before
   it ran; the browse folders were still clean.
+
+## Two more scripts (2026-08-21)
+
+| Script                         | What it does                                                                                                                                                                                                                                                           |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prepare-marked-run-output.py` | Prepares images Malcolm marked directly in a fan-out's own output folder, where files already carry their SEO name. Takes the engine from the run's `manifest.json`, because that filename form drops it — and engine attribution is what cost-per-winner is built on. |
+| `shopify-merge-media.py`       | Uploads a chosen set while retiring only the live images it supersedes. `shopify-replace-media.py` swaps the whole gallery; use this when some live images have no replacement and should stay. Refuses to run if a plan names a media id that is not on that product. |
+| `set-product-alt-text.py`      | Authors and applies SEO alt text to every product image on the store. Idempotent — diffs against live alt text and reports anything undescribed, so a new image shows up as a gap.                                                                                     |
+
+## Marks are fragile — four bugs in two days
+
+Every tool here has had a silent mark-handling bug. The marks are added by renaming in
+Finder _after_ the file is written, so each tool must map a mangled name back to a record,
+and the mangling has four shapes: the marks themselves, Finder's `" copy"`, a browser's
+`-2`, and Finder **eating the first character** when the underscore is typed over it
+(`_atrixyl_…`).
+
+When writing anything new that reads these folders: strip any number of underscores, strip
+`-\d+` and `" copy( N)"`, fall back to a unique _suffix_ match, **raise on ambiguity**, put
+the marks back after a rename, and check what you processed against what was marked.
+
+47 tests cover this — `python3 scripts/finals/test_*.py`.
