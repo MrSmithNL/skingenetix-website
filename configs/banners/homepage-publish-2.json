@@ -1,0 +1,140 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, templates/index.json (second pass)",
+  "decided_by": "Malcolm, 2026-08-21",
+  "note": "Science slot takes the sphere-chain device \u2014 chosen as the brand's peptide signature. Find-a-serum tiles take the material register. A new full-bleed band is inserted after peptide_science, the first full-width moment the homepage has ever had.",
+  "images": [
+    {
+      "slot": "science",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/SCI-B-molecular/SCI-B-molecular_01.jpg",
+      "filename": "skingenetix-peptide-chain-science-2026.jpg",
+      "alt": "A chain of linked clear spheres lit against graphite, representing a peptide chain - the science behind Skingenetix formulations",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-chain-science-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-chain-science-2026.jpg?v=1787326208"
+    },
+    {
+      "slot": "find_fs1",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/FIND-1-anti-wrinkle/FIND-1-anti-wrinkle_01.jpg",
+      "filename": "skingenetix-find-anti-wrinkle-2026.jpg",
+      "alt": "A ribbon of clear peptide gel on a pearl grey background - Skingenetix anti-wrinkle range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-find-anti-wrinkle-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-find-anti-wrinkle-2026.jpg?v=1787326207"
+    },
+    {
+      "slot": "find_fs2",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/FIND-2-firming-collagen/FIND-2-firming-collagen_01.jpg",
+      "filename": "skingenetix-find-firming-collagen-2026.jpg",
+      "alt": "A peak of white firming cream on a deep teal background - Skingenetix firming and collagen range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-find-firming-collagen-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-find-firming-collagen-2026.jpg?v=1787326207"
+    },
+    {
+      "slot": "find_fs3",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/FIND-3-repair-renewal/FIND-3-repair-renewal_01.jpg",
+      "filename": "skingenetix-find-repair-renewal-2026.jpg",
+      "alt": "A single blue serum droplet on a clinical blue background - Skingenetix repair and renewal range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-find-repair-renewal-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-find-repair-renewal-2026.jpg?v=1787326207"
+    },
+    {
+      "slot": "find_fs4",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/FIND-4-brightening/FIND-4-brightening_01.jpg",
+      "filename": "skingenetix-find-brightening-glow-2026.jpg",
+      "alt": "A golden drop of brightening oil on a champagne background - Skingenetix brightening and glow range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-find-brightening-glow-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-find-brightening-glow-2026.jpg?v=1787326207"
+    },
+    {
+      "slot": "band",
+      "source": "assets/ai-generated/2026-08-21-banners-homepage/BAND-standard/BAND-standard_02.jpg",
+      "filename": "skingenetix-band-peptide-standard-2026.jpg",
+      "alt": "A machined copper cylinder lit against a graphite background, referencing GHK-Cu copper peptides - the Skingenetix peptide standard",
+      "uploaded_handle": "shopify://shop_images/skingenetix-band-peptide-standard-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-band-peptide-standard-2026.jpg?v=1787326208"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "peptide_science",
+      "block": "peptide_block",
+      "slot": "science"
+    },
+    {
+      "section": "find_serum",
+      "block": "fs1",
+      "slot": "find_fs1"
+    },
+    {
+      "section": "find_serum",
+      "block": "fs2",
+      "slot": "find_fs2"
+    },
+    {
+      "section": "find_serum",
+      "block": "fs3",
+      "slot": "find_fs3"
+    },
+    {
+      "section": "find_serum",
+      "block": "fs4",
+      "slot": "find_fs4"
+    }
+  ],
+  "new_sections": [
+    {
+      "id": "peptide_standard_band",
+      "insert_after": "peptide_science",
+      "image_slot": "band",
+      "section": {
+        "type": "image-with-text-overlay",
+        "blocks": {
+          "band_sub": {
+            "type": "subheading",
+            "settings": {
+              "text": "THE PEPTIDE STANDARD"
+            }
+          },
+          "band_heading": {
+            "type": "heading",
+            "settings": {
+              "text": "Clinically studied actives. Never trace amounts.",
+              "heading_tag": "h2"
+            }
+          },
+          "band_text": {
+            "type": "richtext",
+            "settings": {
+              "content": "<p>Every Skingenetix formula is built on high-purity peptides at the concentrations shown to work in published research \u2014 not a token inclusion added for the ingredient list.</p>"
+            }
+          },
+          "band_button": {
+            "type": "button",
+            "settings": {
+              "style": "outline",
+              "size": "base",
+              "text": "Explore the Research",
+              "url": "/pages/the-science",
+              "text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "band_sub",
+          "band_heading",
+          "band_text",
+          "band_button"
+        ],
+        "settings": {
+          "full_width": true,
+          "enable_parallax": false,
+          "image_size": "md",
+          "desktop_text_position": "sm:place-self-center-start sm:text-start",
+          "mobile_text_position": "place-self-center text-center",
+          "text_color": "#ffffff",
+          "overlay_color": "#000000",
+          "overlay_opacity": 15
+        }
+      }
+    }
+  ]
+}

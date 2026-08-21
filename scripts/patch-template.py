@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""Apply a plan of image assignments and new sections to a live theme template.
+
+    python3 scripts/patch-template.py configs/banners/homepage-publish-2.json --dry-run
+    python3 scripts/patch-template.py configs/banners/homepage-publish-2.json
+    python3 scripts/patch-template.py --restore backups/index-<stamp>.json
+
+The generic successor to patch-homepage.py, which hard-coded the hero. A plan here
+declares `image_assignments` (section, block, slot) and optional `new_sections` with
+an `insert_after`, so the same script serves the remaining pages.
+
+Backs up the template before every push and prints its own restore command. Only
+section JSON is touched, never Liquid — .claude/rules/shopify.md rule 2.
+
+Author: Claude Code, 2026-08-21.
+"""
+import argparse
+import json
+import sys
+import time
+import urllib.request
+from datetime import datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+API = "2025-01"
+BACKUPS = ROOT / "backups"
+
+
+def env():
+    out = {}
+    for line in (ROOT / ".env").read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            out[k.strip()] = v.strip()
+    return out
+
+
+def token(e):
+    body = json.dumps({"client_id": e["SHOPIFY_SKINGENETIX_CLIENT_ID"],
+                       "client_secret": e["SHOPIFY_SKINGENETIX_CLIENT_SECRET"],
+                       "grant_type": "client_credentials"}).encode()
+    req = urllib.request.Request(f"https://{e['SHOPIFY_SKINGENETIX_STORE']}/admin/oauth/access_token",
+                                 data=body, headers={"Content-Type": "application/json"})
+    return json.loads(urllib.request.urlopen(req, timeout=60).read())["access_token"]
+
+
+def call(store, tok, path, method="GET", payload=None):
+    data = json.dumps(payload).encode() if payload else None
+    r = urllib.request.Request(f"https://{store}/admin/api/{API}/{path}", data=data, method=method,
+                               headers={"X-Shopify-Access-Token": tok,
+                                        "Content-Type": "application/json"})
+    for attempt in range(6):
+        try:
+            with urllib.request.urlopen(r, timeout=90) as res:
+                out = json.loads(res.read())
+            time.sleep(0.6)
+            return out
+        except urllib.error.HTTPError as ex:
+            if ex.code != 429:
+                raise
+            time.sleep(2 ** attempt)
+    raise RuntimeError(path)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("plan", nargs="?")
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--restore")
+    ap.add_argument("--template", default="templates/index.json")
+    args = ap.parse_args()
+
+    e = env()
+    store = e["SHOPIFY_SKINGENETIX_STORE"]
+    tok = token(e)
+    theme = next(t for t in call(store, tok, "themes.json")["themes"] if t["role"] == "main")
+    print(f"Store      : {store}")
+    print(f"Live theme : {theme['name']} (id {theme['id']})\n")
+
+    tid = theme["id"]
+
+    if args.restore:
+        body = (ROOT / args.restore).read_text()
+        key = json.loads(body) and args.template
+        call(store, tok, f"themes/{tid}/assets.json", "PUT",
+             {"asset": {"key": key, "value": body}})
+        print(f"RESTORED {key} from {args.restore}")
+        return
+
+    plan = json.loads((ROOT / args.plan).read_text())
+    by_slot = {i["slot"]: i for i in plan["images"]}
+    missing = [s for s, i in by_slot.items() if not i.get("uploaded_handle")]
+    if missing:
+        sys.exit(f"no uploaded handle yet for: {missing} — run upload-theme-images.py first")
+
+    tpl = args.template
+    current = call(store, tok, f"themes/{tid}/assets.json?asset[key]={tpl}")["asset"]["value"]
+    doc = json.loads(current)
+
+    BACKUPS.mkdir(exist_ok=True)
+    stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+    backup = BACKUPS / f"{Path(tpl).stem}-{stamp}.json"
+    backup.write_text(current)
+    print(f"Backup     : {backup.relative_to(ROOT)}")
+    print(f"Undo with  : python3 scripts/patch-template.py --restore {backup.relative_to(ROOT)} "
+          f"--template {tpl}\n")
+
+    print("Image assignments:")
+    for a in plan.get("image_assignments", []):
+        sec = doc["sections"].get(a["section"])
+        if not sec:
+            sys.exit(f"section not found: {a['section']}")
+        handle = by_slot[a["slot"]]["uploaded_handle"]
+        if a.get("block"):
+            blk = sec.get("blocks", {}).get(a["block"])
+            if not blk:
+                sys.exit(f"block not found: {a['section']}.{a['block']}")
+            blk["settings"]["image"] = handle
+            print(f"  {a['section']}.{a['block']:<14} -> {by_slot[a['slot']]['filename']}")
+        else:
+            sec["settings"]["image"] = handle
+            print(f"  {a['section']:<26} -> {by_slot[a['slot']]['filename']}")
+
+    order = doc.get("order") or list(doc["sections"].keys())
+    for ns in plan.get("new_sections", []):
+        sid = ns["id"]
+        if sid in doc["sections"]:
+            print(f"\n  section {sid} already exists — updating in place")
+        section = json.loads(json.dumps(ns["section"]))
+        section["settings"]["image"] = by_slot[ns["image_slot"]]["uploaded_handle"]
+        doc["sections"][sid] = section
+        if sid in order:
+            order.remove(sid)
+        anchor = ns.get("insert_after")
+        idx = order.index(anchor) + 1 if anchor in order else len(order)
+        order.insert(idx, sid)
+        print(f"\nNew section:")
+        print(f"  {sid}  ({section['type']}) inserted after {anchor}")
+        print(f"    image   : {by_slot[ns['image_slot']]['filename']}")
+        for bid in section.get("block_order", []):
+            bs = section["blocks"][bid]["settings"]
+            txt = bs.get("text") or bs.get("content") or ""
+            print(f"    {bid:<14}: {str(txt)[:80]}")
+
+    doc["order"] = order
+    new = json.dumps(doc, indent=2)
+
+    print(f"\nSection order now: {' -> '.join(order)}")
+
+    if args.dry_run:
+        out = BACKUPS / f"{Path(tpl).stem}-PROPOSED-{stamp}.json"
+        out.write_text(new)
+        print(f"\nDRY RUN — proposed template at {out.relative_to(ROOT)}, nothing pushed")
+        return
+
+    call(store, tok, f"themes/{tid}/assets.json", "PUT",
+         {"asset": {"key": tpl, "value": new}})
+    print("\nPUSHED to the live theme.")
+
+
+if __name__ == "__main__":
+    main()
