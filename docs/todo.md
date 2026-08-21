@@ -99,6 +99,67 @@ colour; write `packaging_desc` face by face. Preflight rejects unfilled `<placeh
 a `product_desc` that quotes no label text, because an invented label is clean and legible
 and therefore survives review.
 
+### ✅ BRAND-001 — Homepage rebuilt against a five-brand premium benchmark
+
+**Priority:** 🟢 Done (2026-08-21) — follow-ups below
+**Owner:** Claude (research, generation, publishing) + Malcolm (all image selection)
+**Docs:** `docs/visual-identity/01-benchmark-research.md`, `02-inventory-and-gaps.md`,
+`03-art-direction-and-briefs.md`
+
+**What prompted it.** Malcolm: every image on the site is a placeholder. A live capture of
+Augustinus Bader, Dr. Barbara Sturm, La Mer, La Prairie and Tatcha, compared against a full
+audit of the theme's 239 image slots, found the store was *not* missing images — 236 of 239
+slots were filled and every file returned HTTP 200. The faults were art direction and
+architecture:
+
+1. The hero and all four concern tiles were botanical flat-lays — leaves, flowers, citrus —
+   on a brand selling synthesised peptides. The pictures argued against the proposition.
+2. **Zero full-width bands.** The page ran white → grey → white to the footer. Bader runs
+   five as chapter breaks. This was the largest single gap.
+3. 76 files covered 236 slots; three `philosophy-*` images carried 18 slots between them.
+
+**Direction adopted — "clinical luminism":** one subject, hard light, a ground the brand
+owns, 40% of frame reserved for type, no botanicals. Palette and per-concern colours reuse
+the agreed product-photography scene colours so banners and packshots are one system. The
+**peptide chain** is now the brand's signature device, after Malcolm set the positioning as
+"the leading peptide skincare brand".
+
+**Live on the homepage:**
+
+| Section | State |
+| ------- | ----- |
+| Hero | 3-slide slideshow — model → laboratory glass → Matrixyl bottle, left-aligned type |
+| Targeted Solutions ×4 | Human register, each on its ingredient's colour |
+| The Science of Peptides | Peptide-chain macro (replaced a cyan stock lab shot) |
+| **The Peptide Standard** | **NEW** full-bleed band, peptide helix render |
+| Customer reviews | **NEW** 6-slide slider, Tatcha layout, prev/next arrows, per-slide product link |
+| Find Your Product ×4 | Material register, matched colours |
+| **Brand band** | **NEW** full-width closer above the footer |
+
+Also fixed site-wide: four- and five-item link-block rows now fill the full row (the theme
+sizes by items-per-row, so a 4-block row at `large` left a 274px dead column). Applied via a
+`custom-html` section in `footer-group`, so it also corrected `page.ingredients` untouched.
+
+**Follow-ups**
+
+1. 🔴 **Review copy is invented.** Six names/quotes, five stars, on a store with no orders —
+   now the most prominent section on the page. Malcolm to supply real reviews before launch.
+2. 🟡 **P3 microscopy image** chosen by Malcolm and not yet placed — intended for the five
+   research-page banners, two of which still borrow another page's image.
+3. 🟡 **Before/after images** — two files carry the results claim across ~30 slots,
+   provenance unconfirmed.
+4. 🟡 **Press logos** — Vogue/Forbes/Elle/Bazaar/Cosmopolitan under "featured in".
+5. 🟢 Remaining pages unstyled: collections, products, concern pages, research pages.
+
+**Removed this session:** a section headed "Hear From Our Customers" on the fallback product
+template, holding three invented video testimonials that all pointed at a **Hairgenetix
+hair-growth advert**. See `memory/fabricated-social-proof-on-the-store.md`.
+
+**Tooling added:** `scripts/audit-theme-images.py`, `image-slot-inventory.py`,
+`generate-banners.py`, `upload-theme-images.py`, `patch-template.py`,
+`banner-contact-sheet.py`. Every theme push backs up the template first and prints its own
+`--restore` command.
+
 ### ✅ PHOTO-005 — 2026 imagery live on every product that has artwork
 
 **Priority:** 🟢 Done (2026-08-21) — follow-ups below
