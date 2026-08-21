@@ -1,0 +1,116 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-21",
+  "note": "Rebuilds the homepage review section in the Tatcha register \u2014 large model-application image per review, quote, and a link through to the product \u2014 but built from the theme's OWN multi-column module rather than a custom section, per Malcolm's instruction to use native elements first.\n\nWhy not the theme's testimonials section: its block does take an image, but the Liquid renders it at `sizes: (max-width: 699px) 40px, 56px`. It is an avatar by design and can never carry a large image. multi-column's item block natively supports image + title + richtext + link_url + link_text, which is the Tatcha structure minus the mini product thumbnail and price \u2014 the only two parts that would require hand-built markup.\n\nImages are Malcolm's own double-underscore picks from the 2026 product run, already live on the product pages, re-uploaded to Files under new names because theme sections resolve shopify://shop_images against Files and cannot address product media. The originals are untouched (shopify.md rule 7).\n\nThe quotes are the EXISTING placeholder copy, kept per Malcolm's decision to supply real reviews before launch. Two things for him to fix at that point: the star rating is carried as text since multi-column has no rating control, and review 3 is attributed to 'Marco R.' while the image shows a woman.",
+  "images": [
+    {
+      "slot": "rev1",
+      "source": "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_model_holding_near_face_1_skingenetix.jpg",
+      "filename": "skingenetix-review-copper-peptide-serum-model-2026.jpg",
+      "alt": "A model holding the Skingenetix Copper Peptide Advanced Repair Serum beside her face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-copper-peptide-serum-model-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-copper-peptide-serum-model-2026.jpg?v=1787330088"
+    },
+    {
+      "slot": "rev2",
+      "source": "assets/publish-ready/glutathione-brightening-serum/__glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_model_holding_near_face_4_skingenetix.jpg",
+      "filename": "skingenetix-review-glutathione-serum-model-2026.jpg",
+      "alt": "A model holding the Skingenetix Glutathione Brightening Serum beside her face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-glutathione-serum-model-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-glutathione-serum-model-2026.jpg?v=1787330087"
+    },
+    {
+      "slot": "rev3",
+      "source": "assets/publish-ready/acetyl-hexapeptide-8-serum/__acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_model_face_dropper_closeup_2_skingenetix.jpg",
+      "filename": "skingenetix-review-acetyl-hexapeptide-8-model-2026.jpg",
+      "alt": "A model applying the Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum with the glass dropper",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-acetyl-hexapeptide-8-model-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-acetyl-hexapeptide-8-model-2026.jpg?v=1787330088"
+    }
+  ],
+  "remove_sections": [
+    "reviews"
+  ],
+  "new_sections": [
+    {
+      "id": "reviews",
+      "insert_after": "impact_numbers",
+      "section": {
+        "type": "multi-column",
+        "blocks": {
+          "rev_1": {
+            "type": "item",
+            "settings": {
+              "column_size": "3",
+              "title": "Incredible results",
+              "heading_tag": "h3",
+              "content": "<p>\u2605\u2605\u2605\u2605\u2605</p><p>\"The Copper Peptide serum is incredible. My skin feels firmer and more radiant after just 3 weeks.\"</p><p><strong>Julia K., Berlin</strong></p>",
+              "link_url": "/products/copper-peptide-ghk-cu-renewal-serum",
+              "link_text": "Shop Copper Peptide Renewal Serum",
+              "link_style": "link"
+            }
+          },
+          "rev_2": {
+            "type": "item",
+            "settings": {
+              "column_size": "3",
+              "title": "Finally found my holy grail",
+              "heading_tag": "h3",
+              "content": "<p>\u2605\u2605\u2605\u2605\u2605</p><p>\"I've tried so many serums over the years, but Skingenetix gives me the best results at a fair price. My skin has never looked better.\"</p><p><strong>Sarah M., Amsterdam</strong></p>",
+              "link_url": "/products/glutathione-brightening-serum",
+              "link_text": "Shop Glutathione Brightening Serum",
+              "link_style": "link"
+            }
+          },
+          "rev_3": {
+            "type": "item",
+            "settings": {
+              "column_size": "3",
+              "title": "Transparent and effective",
+              "heading_tag": "h3",
+              "content": "<p>\u2605\u2605\u2605\u2605\u2605</p><p>\"Finally, a brand that's transparent about concentrations AND delivers real results.\"</p><p><strong>Marco R., Milan</strong></p>",
+              "link_url": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+              "link_text": "Shop Acetyl Hexapeptide-8 Serum",
+              "link_style": "link"
+            }
+          }
+        },
+        "block_order": [
+          "rev_1",
+          "rev_2",
+          "rev_3"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": false,
+          "gap": "medium",
+          "text_alignment": "start",
+          "subheading": "REAL RESULTS",
+          "title": "What Our Customers Say",
+          "content": "",
+          "background": "#f7f7f7",
+          "background_gradient": "",
+          "text_color": "#1a1a1a"
+        }
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "reviews",
+      "block": "rev_1",
+      "slot": "rev1"
+    },
+    {
+      "section": "reviews",
+      "block": "rev_2",
+      "slot": "rev2"
+    },
+    {
+      "section": "reviews",
+      "block": "rev_3",
+      "slot": "rev3"
+    }
+  ]
+}

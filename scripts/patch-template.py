@@ -107,22 +107,6 @@ def main():
     print(f"Undo with  : python3 scripts/patch-template.py --restore {backup.relative_to(ROOT)} "
           f"--template {tpl}\n")
 
-    print("Image assignments:")
-    for a in plan.get("image_assignments", []):
-        sec = doc["sections"].get(a["section"])
-        if not sec:
-            sys.exit(f"section not found: {a['section']}")
-        handle = by_slot[a["slot"]]["uploaded_handle"]
-        if a.get("block"):
-            blk = sec.get("blocks", {}).get(a["block"])
-            if not blk:
-                sys.exit(f"block not found: {a['section']}.{a['block']}")
-            blk["settings"]["image"] = handle
-            print(f"  {a['section']}.{a['block']:<14} -> {by_slot[a['slot']]['filename']}")
-        else:
-            sec["settings"]["image"] = handle
-            print(f"  {a['section']:<26} -> {by_slot[a['slot']]['filename']}")
-
     if plan.get("setting_updates"):
         print("\nSetting updates:")
     for u in plan.get("setting_updates", []):
@@ -168,6 +152,25 @@ def main():
             bs = section["blocks"][bid]["settings"]
             txt = bs.get("text") or bs.get("content") or ""
             print(f"    {bid:<14}: {str(txt)[:80]}")
+
+    print("Image assignments:")
+    for a in plan.get("image_assignments", []):
+        sec = doc["sections"].get(a["section"])
+        if not sec:
+            sys.exit(f"section not found: {a['section']}")
+        handle = by_slot[a["slot"]]["uploaded_handle"]
+        # Mega-menu blocks hold several images per block under image_1, image_2 ...
+        # so the target key is not always "image".
+        key = a.get("setting", "image")
+        if a.get("block"):
+            blk = sec.get("blocks", {}).get(a["block"])
+            if not blk:
+                sys.exit(f"block not found: {a['section']}.{a['block']}")
+            blk["settings"][key] = handle
+            print(f"  {a['section']}.{a['block']}.{key} -> {by_slot[a['slot']]['filename']}")
+        else:
+            sec["settings"][key] = handle
+            print(f"  {a['section']}.{key:<20} -> {by_slot[a['slot']]['filename']}")
 
     doc["order"] = order
     new = json.dumps(doc, indent=2)

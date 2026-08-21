@@ -1,0 +1,8 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme — Impact, templates/product.json",
+  "decided_by": "Malcolm, 2026-08-21",
+  "note": "Removes the `video_reviews` section from the FALLBACK product template. Surfaced during the imagery audit and confirmed before deletion: the section is headed 'Hear From Our Customers' and holds three blocks attributed to 'Sarah M. - Verified Customer', 'Emma R.' and 'Anna D.', each with an invented skincare quote, and all three point at the same file — Hairgenetix-Copper-Peptide-Hair-Growth-Serum-Ad-Horizontal (3).mp4, a hair-growth advert from the sister brand. So a skincare product page was presenting a hair advert as three separate verified customer video testimonials. That is fabricated testimony and a cross-brand asset leak in one section. Only templates/product.json carries it; the nine bespoke product templates do not.",
+  "images": [],
+  "remove_sections": ["video_reviews"]
+}

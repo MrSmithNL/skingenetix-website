@@ -10,14 +10,14 @@
   },
   "slots": [
     {
-      "id": "MENU-scientific-research-dark",
-      "title": "Discover menu tile \u2014 Scientific Research (low-key, v2)",
+      "id": "MENU-scientific-research-mid",
+      "title": "Discover menu tile \u2014 Scientific Research (balanced, v3)",
       "class": "B",
       "width": 2048,
       "height": 2048,
       "target_slot": "header:mega_menu_discover image_1",
-      "prompt": "Low-key documentary photograph, square format, of a Black male research scientist in his fifties looking into the eyepieces of a binocular laboratory microscope. Close cropped greying hair and a neatly trimmed greying beard, calm and absorbed in the work, wearing a white lab coat over a dark collared shirt. He is seen from the front and slightly to the side, his head and shoulders filling the right half of the frame and angled down toward the eyepieces. The microscope stands in the left foreground, its dark body catching one cool rim highlight. The laboratory behind him is dark and falls away into deep graphite shadow, colour #1A1A1A, almost black at the edges of the frame, with only a few faint cool highlights suggesting glassware. A single hard cool key light from the left picks out his brow, cheekbone and the eyepieces and falls off steeply, leaving the right side of his face and the whole background in shadow. Deep blacks, restrained highlights, moody and serious rather than bright and clinical. Shallow depth of field so only his eye and the eyepieces are critically sharp. 85mm lens at f2, natural skin tones, cool desaturated grade, high contrast, editorial reportage.",
-      "negative_extra": "bright lab, white background, pale blue background, flat even lighting, high key, overexposed, washed out, daylight studio, smiling at camera, looking at camera, posed portrait, stock photo cheesiness, young model, cluttered bench, readable screens, brand names on equipment, text, warm orange light, green light, cartoon, illustration"
+      "prompt": "Editorial documentary photograph, square format, of a Black male research scientist in his fifties looking into the eyepieces of a binocular laboratory microscope. Close cropped greying hair and a neatly trimmed greying beard, calm and absorbed in the work, wearing a white lab coat over a dark collared shirt. He is seen from the front and slightly to the side, his head and shoulders filling the right half of the frame and angled down toward the eyepieces. The microscope stands in the left foreground, its body catching a cool highlight. Behind him a real laboratory is clearly present but quiet and thrown well out of focus \u2014 muted cool grey and slate blue shelving and glassware, dim rather than bright, never white. A soft key light from the left models his brow, cheekbone and beard and a gentle fill keeps the shadow side of his face open and readable. Balanced editorial exposure: mid-toned and moody, not a brightly lit white laboratory and not a near-black low-key scene. His face is the brightest thing in the frame and is clearly legible. Shallow depth of field so his eye and the eyepieces are sharp. 85mm lens at f2, natural skin tones, cool neutral grade, medium contrast.",
+      "negative_extra": "white background, bright white laboratory, flat even lighting, high key, overexposed, washed out, near black, silhouette, face lost in shadow, underexposed, crushed blacks, smiling at camera, looking at camera, posed portrait, stock photo cheesiness, young model, cluttered bench, readable screens, brand names on equipment, text, warm orange light, green light, cartoon, illustration"
     }
   ]
 }

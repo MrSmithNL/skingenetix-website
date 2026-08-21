@@ -1,0 +1,26 @@
+{
+  "wave": "hero-slide-3",
+  "created": "2026-08-21",
+  "note": "Third homepage hero slide, requested by Malcolm after the Tatcha hero — a model holding the product in close up. Class A: the real bottle is in frame, so it ships with the reference Malcolm double-marked and the label is quoted verbatim. FLUX.2 is barred from briefs like this; Seedream edit only.\n\nGraded dark to sit with slides 1 and 2 rather than copying Tatcha's pale lilac, and the left 40% is held clear because all three slides share the same left-aligned headline position. Casting follows the standard set this session: Caucasian woman, around 35.",
+  "defaults": {
+    "candidates": 4,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, citrus, wood, linen, pebbles, bokeh sparkle, lens flare, watermark, signature, border, collage, multi-panel, flat-lay, clutter",
+    "negative_class_b": ""
+  },
+  "slots": [
+    {
+      "id": "HERO-D-model-holding",
+      "title": "Hero slide 3 — model holding the product (Tatcha register)",
+      "class": "A",
+      "width": 3072,
+      "height": 1365,
+      "target_slot": "index:hero (slideshow block 3)",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg"
+      ],
+      "prompt": "Editorial beauty photograph of a Caucasian woman around thirty five years old holding the bottle from the reference image up beside her face. Her head and shoulders fill the right half of the frame, turned three quarters toward the light, her expression calm and looking just past the camera. She wears a simple high necked charcoal knit top, almost no makeup, hair pulled back. Real skin kept real: visible pores and natural fine lines, no airbrushing. She holds the bottle upright in one hand at cheek height, close to her face and slightly in front of it, her fingers relaxed around the lower half of the glass so the front label is fully visible and unobstructed. The bottle is the sharpest thing in the frame. Keep the bottle exactly as in the reference: the same frosted glass cylinder graduating from deep blue at the shoulder to pale frosted blue at the base, the same brushed silver collar, the same matte white dropper bulb. Reproduce the front label exactly, every character verbatim, in the same order, colours and weights: a white dotted DNA double helix mark, the wordmark Skingenetix in bold white, COPPER PEPTIDE in bold white capitals beside a thin vertical blue rule, ADVANCED REPAIR SERUM in light blue bold capitals on two lines, PREMIUM FORMULA in plain white capitals below a thin rule, and 2% GHK-CU | 30ML in small white capitals. Do not add, remove or restyle any word. Behind her a seamless graphite backdrop, colour #1A1A1A, falling to near black toward the left edge. One hard key light from the upper right sculpts her cheekbone and puts a clean highlight down the glass, with one dim cool fill. The left forty percent of the frame is empty even graphite with no detail and no part of her or the bottle entering it. 85mm lens at f4, deep blacks, restrained cool grade, quiet and expensive.",
+      "negative_extra": "invented brand name, different brand, altered label, extra text, strapline, hand covering the label, fingers over the lettering, two bottles, carton, box, teenager, child, heavy makeup, glossy lips, false lashes, jewellery, rings, painted nails, smiling broadly, glamour retouching, plastic skin, beauty filter, white background, pale lilac background, bright airy background"
+    }
+  ]
+}

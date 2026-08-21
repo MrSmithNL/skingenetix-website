@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-21",
+  "target": "live theme \u2014 Impact, sections/header-group.json",
+  "decided_by": "Malcolm, 2026-08-21 \u2014 v3 (balanced exposure), image 1",
+  "note": "Discover mega-menu 'Scientific Research' tile. Replaces skingenetix-menu-skincare-science.jpg, one of the placeholder menu images. Mega-menu blocks hold several images per block, so the target setting is image_1 rather than image.\n\nThree exposures were tried: v1 bright clinical (rejected, too light), v2 near-black low-key (rejected, too dark), v3 balanced. v3 image 1 chosen.",
+  "images": [
+    {
+      "slot": "menu_science",
+      "source": "assets/ai-generated/2026-08-21-banners-menu-scientific-research/MENU-scientific-research-mid/MENU-scientific-research-mid_01.jpg",
+      "filename": "skingenetix-menu-scientific-research-2026-v3.jpg",
+      "alt": "A research scientist examining a sample through a laboratory microscope - Skingenetix scientific research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-menu-scientific-research-2026-v3.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-menu-scientific-research-2026-v3.jpg?v=1787329560"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "header",
+      "block": "mega_menu_discover",
+      "setting": "image_1",
+      "slot": "menu_science"
+    }
+  ]
+}
