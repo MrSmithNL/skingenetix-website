@@ -1,0 +1,22 @@
+{
+  "created": "2026-08-22",
+  "target": "live theme \u2014 Impact, templates/index.json, brand_story_band",
+  "decided_by": "Malcolm, 2026-08-22 \u2014 chosen, not interim",
+  "note": "The philosophy band image, replacing the peptide-field render. Malcolm chose the SKIN8 reclining-sweep brief 'because it shows the face', picked nbp_flash_02 of the six candidates \u2014 the fullest profile, eye clearly visible \u2014 and confirmed it live: 'this image looks good, lets go with this one'.\n\nIts background is a warm bone grey rather than graphite. He asked for graphite before seeing it in place and confirmed the frame afterwards, so the colour request is superseded for this image.\n\nCropped from the source 16:9 to the band's 2.4:1, biased slightly above centre so the jaw and lips stay in frame and the throat sweep is not cut.\n\nProduced by nbp_flash (gemini-3.1-flash-image) at $0.02 an image. Over three rounds Seedream refused this subject every time, gpt-image refused most of it, and FLUX.2 refused about half; Luma, NBP Pro and NBP Flash produced every frame Malcolm shortlisted. The six-supplier fan-out is effectively a three-supplier one for bare-skin subjects.",
+  "images": [
+    {
+      "slot": "brand_band",
+      "source": "assets/publish-ready/_band/skingenetix-band-skin-art-2026-v2.jpg",
+      "filename": "skingenetix-band-skin-art-2026-v2.jpg",
+      "alt": "Fine-art beauty photograph of a woman lying with her head tipped back in profile, soft light tracing the line of her throat, jaw and cheek - Skingenetix peptide skincare",
+      "uploaded_handle": "shopify://shop_images/skingenetix-band-skin-art-2026-v2.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-band-skin-art-2026-v2.jpg?v=1787395145"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "brand_story_band",
+      "slot": "brand_band"
+    }
+  ]
+}

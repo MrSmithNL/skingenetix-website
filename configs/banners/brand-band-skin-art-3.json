@@ -1,0 +1,52 @@
+{
+  "wave": "brand-band-skin-art-3",
+  "created": "2026-08-22",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Third round for the philosophy banner, written from Malcolm's three chosen frames rather than from a description of them: SKIN3 luma_01, luma_02 and nbp_pro_02.\n\nWHAT THOSE FRAMES ACTUALLY ARE, and what round two got wrong. A woman lying down horizontally, seen from the side and slightly above, head tipped back. Skin FILLS THE CANVAS — the shoulder and décolleté run across the lower left, the long sweep of the throat rises to the right, and the chin, jaw and mouth sit at the top right. The dark quiet area is the UPPER portion of the frame, not a side.\n\nRound two failed because the brief said 'the left two thirds is an empty graphite void' and 'the central forty percent is featureless'. That is a rule for a subject at one edge, and it produced exactly that — one-sided crops with the skin shoved into a corner. It also dressed the model in a charcoal knit top, which removed the bare flowing form that made the winners work. Both were my additions, neither was asked for.\n\nTHE TYPE ZONE, RESTATED CORRECTLY. The band's headline is centred. The reserved zone is therefore not empty space at a side — it is a horizontal band through the middle of the frame that must stay EVEN IN TONE, whether that tone is dark ground or a smooth expanse of skin. No hard edge, specular highlight or feature may cross it. That is what the winning frames do naturally: the hollow between shoulder and throat runs through the middle as a smooth gradient.\n\nHANDS ARE SECONDARY. Malcolm: 'the hand was just an extra to add — the main image was the skin of the neck and face line.' Only SKIN10 has one, and it is subordinate to the form.\n\nNO GARMENT is described. The winners show none, and naming one changes the picture. Seedream, gpt-image and FLUX.2 refuse this subject on content policy; Luma and the two Gemini models do not, and they are the suppliers that produced every frame Malcolm has chosen. All six still run, per rule 1.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "product, bottle, jar, packaging, text, lettering, watermark, signature, border, collage, multi-panel, botanicals, jewellery, necklace, heavy makeup, glitter, plastic retouched skin, waxy skin, airbrushed, second person, tattoo, eyes open, full face portrait, vertical composition"
+  },
+  "slots": [
+    {
+      "id": "SKIN8-reclining-sweep",
+      "title": "Reclining, skin filling the canvas, throat sweeping to the chin",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying down horizontally, photographed from the side and slightly above with her head tipped gently back. Skin fills the entire frame from edge to edge: the curve of her shoulder and the smooth plane of her décolleté occupy the lower left, the long sweep of her throat rises diagonally across the middle of the frame toward the right, and the underside of her chin and jaw and the very edge of her closed mouth sit at the top right. Her eyes are outside the frame. The whole picture is skin and shadow, no empty studio space at any side. One soft directional light from the upper right glances along the throat and jaw so the lit ridge glows and the hollows fall gently into shadow. Skin real and finely textured with visible pores and fine down catching the light, unretouched, warm neutral in tone. A horizontal band through the middle of the frame stays smooth and even in tone, a soft gradient of skin and shadow with no hard edge, specular highlight or feature crossing it. Above the body line the frame falls to a deep soft graphite, colour #1A1A1A. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "subject at one side, empty background filling half the frame, upright pose, seated, standing, clothing, garment, knit top, collar, strap, hands, open eyes, full face"
+    },
+    {
+      "id": "SKIN9-decollete-to-mouth",
+      "title": "Reclining, the full run from décolleté to mouth",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying down horizontally with her head tipped back and turned slightly away, photographed from close above so the body reads as a continuous landscape of skin filling the whole frame. The composition runs from the smooth plane of her décolleté at the lower left, up through the hollow at the base of the throat, along the full length of the neck, to the jaw, the chin and her closed lips at the upper right. Her eyes are outside the frame. Skin reaches every edge of the picture; there is no empty studio background at either side. A single soft window light from the right models the whole form with one long graduated highlight running the length of the throat. Skin real and finely textured, visible pores, fine down catching the light, unretouched, luminous where lit. A horizontal band through the middle of the frame is held smooth and even in tone with no hard edge, bright highlight or feature crossing it. The upper left of the frame falls softly to deep graphite, colour #1A1A1A. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, calm, premium.",
+      "negative_extra": "subject at one side, empty background filling half the frame, upright pose, seated, clothing, garment, collar, strap, hands, open eyes, full face, harsh contrast"
+    },
+    {
+      "id": "SKIN10-reclining-with-hand",
+      "title": "Reclining, skin filling the canvas, one hand resting as a secondary note",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying down horizontally, head tipped back, photographed from the side and slightly above so skin fills the entire frame edge to edge. The shoulder and décolleté occupy the lower left, the long sweep of the throat rises across the middle toward the right, and the chin and jaw with closed lips sit at the upper right; her eyes are outside the frame. One hand with exactly five slender relaxed fingers rests lightly on the décolleté at the lower left, the fingers softly apart and slightly out of focus so the hand is a quiet secondary note and never the subject — the skin of the neck and jaw is what the picture is about. Short natural unpainted nails. One soft directional light from the upper right runs the length of the throat and just catches the ridge of the fingers. Skin real and finely textured, visible pores, fine down, unretouched. A horizontal band through the middle of the frame stays smooth and even in tone with no hard edge or bright highlight crossing it. Above the body line the frame falls to deep graphite, colour #1A1A1A. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "hand as the main subject, hand in the centre of the frame, six fingers, extra fingers, missing fingers, fused fingers, malformed hand, both hands, painted nails, long nails, rings, subject at one side, upright pose, clothing, garment, open eyes, full face"
+    },
+    {
+      "id": "SKIN11-overhead-landscape",
+      "title": "Reclining seen from directly above, skin as pure landscape",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying down, photographed from directly above so that her throat, jaw and décolleté read as an abstract landscape rather than as anatomy, the forms running horizontally across a very wide frame and filling it completely from edge to edge. The chin and closed lips enter at the top right corner, the length of the neck runs across the frame, and the décolleté fills the lower edge. Her eyes are outside the frame. There is no empty studio space anywhere — every part of the picture is skin, shadow or the soft dark surface she lies on. One low soft light from the right rakes across the forms so each curve is drawn by a gentle gradient rather than a hard edge. Skin real and finely textured, visible pores, fine down, unretouched. A horizontal band through the middle of the frame is smooth and even in tone with nothing crossing it. The surface beneath her at the upper left is deep soft graphite, colour #1A1A1A. Very shallow depth of field, fine film grain, cinematic wide format, abstract, sculptural, quiet and premium.",
+      "negative_extra": "subject at one side, empty background filling half the frame, upright pose, seated, clothing, garment, hands, open eyes, full face, hard shadows, high contrast"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "wave": "brand-band-skin-art-4",
+  "created": "2026-08-22",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Fourth round for the philosophy banner. Malcolm chose SKIN8-reclining-sweep nbp_flash_02 and asked for two things the earlier briefs left to chance: the FACE IN VIEW, and a GRAPHITE background.\n\nBOTH WERE ACCIDENTS BEFORE, NOT DESIGN. Round three said 'her eyes are outside the frame' and negated 'full face' — so of six SKIN8 candidates only two showed a face at all, and the one Malcolm picked did so despite the brief rather than because of it. Round three also never named a background colour, which is why two of the three suppliers that pass this subject returned warm bone grounds. Both are now stated positively and negated in the opposite direction.\n\nWHAT THE FACE MEANS HERE. Not a portrait — the head stays tipped back and seen in profile or near-profile from the side, as in the chosen frame. The eye, the cheekbone, the lips and the jaw are in view and in focus. Skin still fills the canvas edge to edge; the face is the upper-right terminus of the sweep, not a separate subject.\n\nTYPE ZONE. The headline is centred, so a horizontal band through the middle of the frame stays even in tone — dark ground or smooth skin, no hard edge or specular highlight crossing it. The eye and lips must sit clear of it, at the right.\n\nSUPPLIER REALITY, MEASURED OVER THREE ROUNDS. Seedream refuses this subject every time; gpt-image refuses most of it; FLUX.2 refuses about half and returns one candidate when it does. Luma, NBP Pro and NBP Flash pass consistently and have produced every frame Malcolm has chosen. All six still run per rule 1, but the working set is three and the run should be read that way.",
+  "defaults": {
+    "candidates": 3,
+    "negative_global": "product, bottle, jar, packaging, text, lettering, watermark, signature, border, collage, multi-panel, botanicals, jewellery, necklace, heavy makeup, glitter, plastic retouched skin, waxy skin, airbrushed, second person, tattoo, upright pose, seated, standing, vertical composition, white background, bone background, warm beige background, bright background"
+  },
+  "slots": [
+    {
+      "id": "FACE1-profile-graphite",
+      "title": "Reclining profile, face in view, graphite ground",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying down horizontally with her head tipped back, seen in profile from the side and slightly above. Skin fills the entire frame edge to edge: the curve of her shoulder and the smooth plane of her décolleté occupy the lower left, the long sweep of her throat rises diagonally across the middle toward the right, and her face is in view at the upper right — the jaw, the cheekbone, the closed lips and one eye with lashes lowered, all sharp and clearly visible in profile. She is calm and composed, not asleep. Behind her and above the body line the background is a deep graphite grey, colour #1A1A1A, dark and even, filling every part of the frame that is not skin. One soft directional light from the upper right glances along the throat, jaw and cheekbone so the lit ridge glows and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched, warm neutral against the cool dark ground. A horizontal band through the middle of the frame stays smooth and even in tone with no hard edge or bright highlight crossing it, and her eye and lips sit clear of it to the right. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "face cropped out of frame, eyes outside the frame, back of the head, subject at one side, empty background filling half the frame, light grey background, cream background, open staring eyes, direct eye contact with camera, hands"
+    },
+    {
+      "id": "FACE2-three-quarter-graphite",
+      "title": "Reclining three-quarter, cheekbone and eye lit, graphite ground",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying down horizontally, head tipped back and turned three quarters toward the camera so that her cheekbone, the bridge of her nose, her closed lips and one eye with lowered lashes are all clearly in view at the right of a very wide frame. Skin fills the whole picture edge to edge, running from the décolleté at the lower left, up the length of the throat, to the face at the upper right; there is no empty studio space at any side. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. A single soft light from the upper right models the cheekbone and jaw with one long graduated highlight and lets the far side of the face fall into shadow. Skin real and finely textured with visible pores and fine down catching the light, unretouched, luminous where lit. A horizontal band through the middle of the frame is held smooth and even in tone with nothing crossing it. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, calm, premium.",
+      "negative_extra": "face cropped out of frame, eyes outside the frame, subject at one side, light grey background, cream background, bright studio background, open staring eyes, direct eye contact with camera, harsh contrast, hands"
+    },
+    {
+      "id": "FACE3-face-and-hand-graphite",
+      "title": "Reclining profile with face in view, one hand as a quiet secondary note",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying down horizontally with her head tipped back, seen in profile from the side and slightly above, skin filling the entire frame edge to edge. Her décolleté and shoulder occupy the lower left, the long sweep of her throat rises across the middle toward the right, and her face is in view at the upper right — jaw, cheekbone, closed lips and one eye with lowered lashes, sharp and clearly visible. One hand with exactly five slender relaxed fingers rests lightly on the décolleté at the lower left, softly out of focus so it reads as a quiet secondary note; the skin of the throat and face is what the picture is about. Short natural unpainted nails. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One soft light from the upper right runs the length of the throat and catches the cheekbone. Skin real and finely textured, visible pores, fine down, unretouched. A horizontal band through the middle of the frame stays smooth and even in tone with nothing crossing it. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "hand as the main subject, hand in the centre of the frame, hand sharp and in focus, six fingers, extra fingers, missing fingers, fused fingers, malformed hand, both hands, painted nails, rings, face cropped out of frame, eyes outside the frame, light grey background, cream background, open staring eyes"
+    }
+  ]
+}
