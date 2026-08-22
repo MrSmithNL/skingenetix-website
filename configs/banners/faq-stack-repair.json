@@ -1,0 +1,28 @@
+{
+  "wave": "faq-stack-repair",
+  "created": "2026-08-22",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Malcolm chose NEAT1-column-graphite_03: it is the only candidate across 30 in which all four\ncartons are genuinely the same size. Every v2 candidate drifted the proportions despite the\nbrief stating they are identical - in v2_05 the pink carton is visibly smaller than the teal.\nGeometry turned out to be the thing that could not be instructed reliably; text could.\n\nIts one fault is the teal carton: 'MATIXYYL 3000' for MATRIXYL 3000, and 'FULL & FIRMING TREAR'\nfor FULL & FIRMING TREATMENT. Rather than re-roll the whole composition and lose the equal\nsizing again, this is a targeted repair: the chosen frame itself is the reference, and the\nprompt asks for the same photograph with only that carton's wording corrected.\n\nEvery other element is described as unchanged, because an edit prompt that only mentions the\nfix invites the model to re-stage the shot.",
+  "defaults": {
+    "candidates": 5,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "FIX1-teal-carton-text",
+      "title": "NEAT1_03 with the teal carton's wording corrected",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/ai-generated/2026-08-21-banners-faq-cream-stack/NEAT1-column-graphite/NEAT1-column-graphite_03.jpg",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/_matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_product_and_box_hero_8_skingenetix.jpg"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is, changing only the wording printed on the deep emerald-teal carton at the base of the stack. Keep the identical composition, the identical column of four cartons squarely stacked, the identical camera angle and framing, the identical lighting and shadow, the identical smooth graphite background, and the identical size, proportions and position of every carton - all four cartons remain exactly the same size as each other, as they are in the reference. Keep the pink, navy blue and silver cartons and their text completely unchanged. On the teal carton at the base, keep the Skingenetix DNA-helix mark and the 'Skingenetix' wordmark exactly as they are, and set the two product-name lines beneath them, in the same position, size, weight and white ink as the reference, to read exactly: 'MATRIXYL 3000' on the first line and 'PRO COLLAGEN' on the second line. Spell MATRIXYL with the letters M A T R I X Y L. Below those two lines, every remaining line on the teal carton falls outside the depth of field - visibly soft and out of focus, blurred beyond any possibility of being read, resolving only as the texture of fine print. Print no other word anywhere on the teal carton.",
+      "negative_extra": "MATIXYYL, MATIXYL, MATRXYL, MATPIXYL, MATIXXVL, TREAR, TREATMEN, changed composition, restaged shot, different camera angle, different background, boxes of different sizes, resized cartons, extra cartons, fewer cartons, jars, bottles, legible small print, sharp fine print, readable ingredient list"
+    }
+  ]
+}

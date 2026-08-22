@@ -1,0 +1,29 @@
+{
+  "wave": "faq-pot-repair",
+  "created": "2026-08-22",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Targeted repair of POT1-four-column_01, which Malcolm chose for the FAQ column on composition.\n\nThe fault: the second jar from the top is PINK but carries the Matrixyl label. Matrixyl's jar is neutral frosted white, so that is a wrong product colour, and it leaves two pink jars in a four-jar stack. Its wording reads MATIXYI 3000 PRO COLLAGEN / FULL & FIRNING TREATMENT / PREMIUM FORMLLA. The third jar reads PDRN COLLAGEEN REPAR. The top jar's fine line reads NIGHT CHERM.\n\nWhy repair rather than re-roll: across 42 candidates this session, composition proved the thing that could not be instructed reliably and text proved the thing that could. Re-rolling for correct text loses the arrangement Malcolm picked. So the chosen frame is its own reference and everything except the wording and that one jar's glass colour is described as unchanged - an edit prompt that mentions only the fix invites the model to re-stage the shot.\n\nThe white Matrixyl jar packshot is supplied as a second reference so the corrected jar has a real source for its colour and label rather than being described into existence.",
+  "defaults": {
+    "candidates": 5,
+    "backend": "seedream",
+    "negative_global": "botanicals, leaves, flowers, wood, linen, lens flare, watermark, signature, border, collage, multi-panel, clutter",
+    "negative_class_b": "bottle, jar, dropper, tube, packaging, label, logo, brand mark, lettering"
+  },
+  "slots": [
+    {
+      "id": "FIX2-jar-stack",
+      "title": "POT1_01 with the second jar corrected to white Matrixyl",
+      "class": "A",
+      "width": 2048,
+      "height": 2160,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/ai-generated/2026-08-21-banners-faq-pot-stack/POT1-four-column/POT1-four-column_01.jpg",
+        "assets/publish-ready/matrixyl-3000-pro-collagen-cream/__matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_silver_jar_dramatic_shadow_3_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is, keeping the identical composition, the identical staggered column of four stacked cream jars, the identical camera angle and framing, the identical hard key light from the upper left, the identical shadows and the identical dark background. Keep the size, proportions, rotation and position of all four jars exactly as they are. Change only the following. The SECOND jar from the top must be a frosted NEUTRAL WHITE glass jar with no colour cast at all, matching the white jar in the second reference image - it is currently pink, which is wrong, and no two jars in the stack may share a glass colour. Its brushed satin silver-grey lid stays exactly as it is. On that white jar, keep the Skingenetix DNA-helix mark and the 'Skingenetix' wordmark, and set the lines beneath them, in the same positions and sizes, to read exactly: 'MATRIXYL 3000 PRO COLLAGEN' on one line, then 'FULL & FIRMING TREATMENT', then 'PREMIUM FORMULA'. Spell MATRIXYL with the letters M A T R I X Y L and FIRMING with the letters F I R M I N G. On the THIRD jar, which stays pink, correct its second line to read exactly 'PDRN COLLAGEN REPAIR' and keep 'DEEP RENEWAL TREATMENT' beneath it. On the TOP jar correct its smallest line to read 'NIGHT CREAM  |  2% GHK-CU  |  50ML'. The bottom navy jar is already correct and stays exactly as it is. Print no word anywhere that is not stated here.",
+      "negative_extra": "pink second jar, two pink jars, coloured Matrixyl jar, MATIXYI, MATIXYL, MATRXYL, FIRNING, FORMLLA, COLLAGEEN, REPAR, CHERM, changed composition, restaged shot, different camera angle, different background, jars resized, jars reordered, extra jars, fewer jars, cartons, boxes, bottles, droppers, hands"
+    }
+  ]
+}

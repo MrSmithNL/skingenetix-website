@@ -1,0 +1,23 @@
+{
+  "created": "2026-08-22",
+  "target": "live theme \u2014 Impact, templates/index.json, faq_section right column",
+  "decided_by": "Malcolm, 2026-08-22",
+  "note": "Interim image for the homepage FAQ, replacing the peptide-chain placeholder that was already in use higher up the same page.\n\nWhy this frame out of 30: it is the only candidate in which all four cartons are genuinely the same size. Malcolm spotted it. Every brief stated the cartons are identical in size and shape, and only this one obeyed \u2014 the v2 re-runs fixed the lettering and lost the proportions. Across the whole exercise text proved instructable and geometry did not, which is why a correct-but-misproportioned frame was not preferred.\n\nKNOWN FAULT, ACCEPTED AS INTERIM. The teal Matrixyl carton reads 'MATIXYYL 3000' for MATRIXYL 3000, and 'FULL & FIRMING TREAR' for FULL & FIRMING TREATMENT. Both are illegible at the 461px the column renders, but both are wrong at full size. Malcolm's words: 'for now until we have better ones'. A targeted repair \u2014 this same frame as reference, only that carton's wording corrected \u2014 is queued as configs/banners/faq-stack-repair.json. Replace this image when it lands.\n\nThe other three cartons, all four Skingenetix wordmarks, and the sub-lines are correct or properly out of focus. No PDRN/PORN substitution, which every sharp-sub-line candidate produced.",
+  "images": [
+    {
+      "slot": "faq_image",
+      "source": "assets/ai-generated/2026-08-21-banners-faq-cream-stack/NEAT1-column-graphite/NEAT1-column-graphite_03.jpg",
+      "filename": "skingenetix-faq-cream-carton-stack-2026.jpg",
+      "alt": "Four Skingenetix cream cartons stacked in a column on a graphite background - PDRN Collagen Repair, Copper Peptide Advanced Day Repair, Copper Peptide Advanced Night Repair and Matrixyl 3000 Pro Collagen",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-cream-carton-stack-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-cream-carton-stack-2026.jpg?v=1787350217"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "faq_section",
+      "slot": "faq_image",
+      "setting": "team_avatar"
+    }
+  ]
+}

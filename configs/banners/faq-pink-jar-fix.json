@@ -1,0 +1,26 @@
+{
+  "wave": "faq-pink-jar-fix",
+  "created": "2026-08-22",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Final pass on the FAQ jar stack. gpt-image already solved MATRIXYL - correct on both candidates, first attempt, including the fine ingredient line that no Seedream candidate got all evening. It then broke the pink jar, which Seedream had right: 'PDRN COLLAGEIN REPAIR' on _0 and 'PDRN COLLAGEEN REPAR' on _1.\n\nSo this takes the gpt-image frame as its own reference and corrects only the pink jar, and it runs across every supplier per rule 1 rather than assuming gpt-image is the right engine twice in a row. Seedream is included precisely because PDRN is the word it renders reliably - the whole lesson of tonight is that the failure modes do not overlap, so the engine that fixes this is probably not the engine that fixed the last one.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "COLLAGEIN, COLLAGEEN, REPAR, REAIR, PORN, MATIXYEL, MATIXYL, changed composition, restaged shot, different background, jars resized, jars reordered, extra jars, fewer jars, cartons, boxes, bottles, droppers, hands, text on the background"
+  },
+  "slots": [
+    {
+      "id": "PINKFIX-jar-stack",
+      "title": "gpt-image jar stack with the pink jar's wording corrected",
+      "class": "A",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "index:faq_section",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-faq-multibackend/FIX3-gpt_image_gpt_image_0.png",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is, keeping the identical composition, the identical staggered column of four stacked cream jars, the identical camera angle and framing, the identical lighting, the identical shadows and the identical dark background. Keep the size, proportions, rotation, glass colour and position of every jar exactly as they are. The white jar's wording is already correct and must be preserved character for character: 'MATRIXYL 3000 PRO COLLAGEN', 'FULL & FIRMING TREATMENT', 'PREMIUM FORMULA', and the fine line 'MATRIXYL 3000 | TRIPLE COLLAGEN | ELASTIN | 50ML'. The navy jar and the pale blue jar are already correct and stay exactly as they are. Change only the PINK jar: keep its Skingenetix DNA-helix mark and 'Skingenetix' wordmark as they are, and set the line beneath them, in the same position, size, weight and colour, to read exactly 'PDRN COLLAGEN REPAIR'. Spell it with the letters P D R N, then COLLAGEN with the letters C O L L A G E N, then REPAIR with the letters R E P A I R. Beneath it keep 'DEEP RENEWAL TREATMENT' and 'PREMIUM FORMULA', and the fine line 'PDRN | COLLAGEN | COPPER PEPTIDE | 50ML'. Print no word anywhere that is not stated here.",
+      "negative_extra": "pink Matrixyl jar, two pink jars, changed jar colours, changed stack order"
+    }
+  ]
+}

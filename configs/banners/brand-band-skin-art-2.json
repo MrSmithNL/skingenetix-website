@@ -1,0 +1,52 @@
+{
+  "wave": "brand-band-skin-art-2",
+  "created": "2026-08-22",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Second round for the philosophy banner. Malcolm chose SKIN3 luma_01, luma_02 and nbp_pro_02 — the flowing-form reading — and asked for more with the neck, chin and décolleté in view, plus versions with a hand elegantly touching the neck or décolleté.\n\nWORDING DELIBERATELY AVOIDS THE CONTENT-FILTER TRIGGERS. In round one SKIN2 lost four of six suppliers to content_policy_violation, and the words separating it from the two briefs that passed were 'collarbone', 'shoulder' and 'bare skin'. Seedream, gpt-image and FLUX.2 all refused it. Décolleté is the same territory, so every brief here establishes clothing in the first sentence, says 'neckline' and 'the hollow at the base of the throat' rather than the flagged nouns, and never uses 'bare'. The point is not squeamishness — a refused brief silently costs a supplier, and Malcolm's two favourite frames came from suppliers that refuse easily.\n\nGEOMETRY UNCHANGED. The band's text is centred, so the middle 40% of frame width stays smooth, dark and featureless. Round one proved all six suppliers honour this when it is stated as a measured fraction.\n\nHANDS ARE THE RISK IN 3 AND 4. Every brief with a hand states the finger count and the pose, and negates the usual failures by name.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "product, bottle, jar, tube, packaging, text, lettering, watermark, signature, border, collage, multi-panel, botanicals, jewellery, necklace, heavy makeup, glitter, plastic retouched skin, waxy skin, airbrushed, second person, tattoo"
+  },
+  "slots": [
+    {
+      "id": "SKIN4-chin-to-neckline",
+      "title": "Chin, throat and neckline as one continuous flowing form",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Editorial beauty photograph of one woman around thirty five years old wearing a fine charcoal knit top with a wide soft neckline, photographed in extreme close-up from a low angle with her head turned to the left and tilted gently back. The frame holds one continuous flowing line running from the underside of her chin, down the length of her throat, through the hollow at the base of the throat and out to the neckline of her top, entering from the right side of a very wide frame and easing softly out of focus before it reaches the middle. Her mouth, nose and eyes are entirely outside the frame. One hard key light from the upper right traces that whole line with a single unbroken highlight and everything beyond it falls into deep shadow. The skin is real and finely textured with visible pores and fine down catching the light, luminous along the lit edge, unretouched. The left two thirds of the frame is a deep graphite void, colour #1A1A1A, and the central forty percent of the frame is smooth, dark and completely featureless. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "face in frame, eyes, nose, lips, hair covering the neck, flat even lighting, bright background, centred subject, low neckline, revealing clothing"
+    },
+    {
+      "id": "SKIN5-hand-at-throat",
+      "title": "One hand resting along the jaw and throat",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Editorial beauty photograph of one woman around thirty five years old wearing a fine charcoal knit top with a wide soft neckline, photographed in extreme close-up occupying the right half of a very wide frame. Her head is turned away and tilted back so only the underside of her chin and the long line of her throat are in frame, with her mouth, nose and eyes entirely outside it. One elegant hand with exactly five slender relaxed fingers rests lightly against the side of her throat just below the jaw, the fingertips barely touching the skin, the wrist falling away softly, the gesture calm and unhurried rather than gripping. Short natural unpainted nails. One hard key light from the upper right rims the jaw, the tendons of the hand and the edge of each finger, and everything beyond falls into deep shadow. The skin of the face and hand is real and finely textured with visible pores and fine down, unretouched. The left two thirds of the frame is a deep graphite void, colour #1A1A1A, and the central forty percent of the frame is smooth, dark and completely featureless. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "six fingers, extra fingers, missing fingers, fused fingers, malformed hand, distorted knuckles, claw hand, both hands, painted nails, long nails, rings, bracelet, face in frame, eyes, lips, flat even lighting, bright background"
+    },
+    {
+      "id": "SKIN6-hand-at-neckline",
+      "title": "Fingertips drawn slowly across the neckline",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Editorial beauty photograph of one woman around thirty five years old wearing a fine charcoal knit top with a wide soft neckline, photographed in extreme close-up from a low three quarter angle, occupying the right half of a very wide frame. In frame are the underside of her chin, the length of her throat and the skin down to the neckline of her top; her mouth, nose and eyes are entirely outside the frame. One elegant hand with exactly five slender relaxed fingers is drawn slowly downward across the base of the throat toward the neckline, the fingers slightly apart and trailing over the skin, the movement unhurried. Short natural unpainted nails. One hard key light from the upper right catches the ridge of each finger and the hollow at the base of the throat, leaving a single luminous path across the skin, and everything beyond falls into deep shadow. Skin real and finely textured with visible pores and fine down, unretouched. The left two thirds of the frame is a deep graphite void, colour #1A1A1A, and the central forty percent of the frame is smooth, dark and completely featureless. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "six fingers, extra fingers, missing fingers, fused fingers, malformed hand, distorted knuckles, claw hand, both hands, painted nails, long nails, rings, bracelet, face in frame, eyes, lips, cream or product on the skin, flat even lighting, bright background, low neckline, revealing clothing"
+    },
+    {
+      "id": "SKIN7-arc-of-light",
+      "title": "Chin and throat drawn by a single arc of light, form only",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Abstract editorial beauty photograph of one woman around thirty five years old wearing a fine charcoal knit top with a wide soft neckline, cropped so radically that the frame reads as sculpture rather than portrait. A single luminous arc of light curves from the upper right of a very wide frame down through the underside of the chin, along the throat and away toward the neckline, drawn entirely by highlight against darkness so that the form is suggested rather than described. Her mouth, nose and eyes are entirely outside the frame. The lit edge is narrow and precise, no wider than a finger, and it is the only bright thing in the picture. Skin real and finely textured with visible pores and fine down along the lit ridge, unretouched. Everything else is a deep graphite void, colour #1A1A1A, and the central forty percent of the frame carries no edge, no highlight and no detail at all. Very shallow depth of field, fine film grain, cinematic wide format, chiaroscuro, minimal, quiet and premium.",
+      "negative_extra": "face in frame, eyes, nose, lips, hands, hair, flat even lighting, bright background, multiple light sources, centred subject, silhouette outline, rim light all the way round"
+    }
+  ]
+}

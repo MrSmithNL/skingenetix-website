@@ -1,0 +1,23 @@
+{
+  "created": "2026-08-22",
+  "target": "live theme \u2014 Impact, templates/index.json, faq_section right column",
+  "decided_by": "Malcolm, 2026-08-22 \u2014 explicitly as an interim while the text problem is worked",
+  "note": "Repaired version of POT1-four-column_01. The repair fixed the wrong product colour: the second jar is now neutral frosted white as the real Matrixyl jar is, so no two jars in the stack share a glass colour. Composition, camera angle, lighting, stagger and jar sizes all held, which was the point of editing from the frame itself rather than re-rolling.\n\nREMAINING FAULTS, INTERIM ONLY. The white jar reads 'MATIXYEL 3000' for MATRIXYL 3000. Its fine line reads 'PDRN | COLLAGEN | COPPER PEPTIDE | 50ML', which is the PDRN product's ingredient line on a Matrixyl jar; the real one is 'MATRIXYL 3000 | TRIPLE COLLAGEN | ELASTIN | 50ML'.\n\nCorrect on this frame: all four Skingenetix wordmarks, COPPER PEPTIDE / ADVANCED NIGHT REPAIR, COPPER PEPTIDE / ADVANCED DAY REPAIR, and the pink jar in full - PDRN COLLAGEN REPAIR, DEEP RENEWAL TREATMENT, PREMIUM FORMULA and its fine line. PDRN is right and legible, which no four-object candidate managed before the repair.\n\nMATRIXYL has now failed in roughly thirty of the fifty candidates generated tonight and succeeded twice, across three prompt strategies, with the word spelled letter by letter and every observed misspelling negated by name. It is not a prompt problem. Next steps are a different image engine and/or turning that jar's label away from camera.",
+  "images": [
+    {
+      "slot": "faq_image",
+      "source": "assets/ai-generated/2026-08-21-banners-faq-pot-repair/FIX2-jar-stack/FIX2-jar-stack_02.jpg",
+      "filename": "skingenetix-faq-cream-jar-stack-2026-v2.jpg",
+      "alt": "Four Skingenetix cream jars stacked in a column on a dark ground - Copper Peptide Advanced Night Repair, Matrixyl 3000 Pro Collagen, PDRN Collagen Repair and Copper Peptide Advanced Day Repair",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-cream-jar-stack-2026-v2.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-cream-jar-stack-2026-v2.jpg?v=1787389549"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "faq_section",
+      "slot": "faq_image",
+      "setting": "team_avatar"
+    }
+  ]
+}

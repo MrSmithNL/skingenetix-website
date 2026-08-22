@@ -1,0 +1,42 @@
+{
+  "wave": "brand-band-skin-art",
+  "created": "2026-08-22",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Replacement options for skingenetix-brand-band-peptide-field-2026, the philosophy banner above the footer. Malcolm's direction: a professional photo-shoot image that is 'skin art' — beautiful flowing form, close-up face skin, a beautiful 35-year-old woman model, art made out of lighting and skin contour.\n\nTHE GEOMETRY CONSTRAINT THAT DECIDES THIS SHOT. The band's text is CENTRED and sits on a translucent-free white type block roughly between 33% and 67% of frame width. So the centre must be quiet. That inverts the usual beauty crop, which puts the eye on a third. Every brief below states the reserved zone as a measured fraction and bars features from entering it — an eye, a nostril, a lip corner landing under the headline is the failure mode.\n\nCLASS B: no product in frame, so no branding to invent, and FLUX.2 is therefore allowed here where it is barred from packaging shots.\n\nThree readings of 'skin art' rather than three takes on one: the light itself as the subject, the contour as landscape, and the flowing form of a turning shoulder and jaw. All three hold the graphite ground so the band still reads as one of the site's dark chapter breaks.\n\nRun with scripts/generate-multi.py — every supplier, per .claude/rules/website-imagery.md.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "product, bottle, jar, tube, packaging, text, lettering, watermark, signature, border, collage, multi-panel, botanicals, leaves, flowers, jewellery, heavy makeup, glitter, plastic retouched skin, waxy skin, airbrushed, blemish-free doll skin, second person"
+  },
+  "slots": [
+    {
+      "id": "SKIN1-light-as-subject",
+      "title": "Skin art — a single band of light across the cheek and jaw",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up editorial beauty photograph of one woman around thirty five years old, cropped so that only the curve of her cheekbone, jaw and neck fills the right third of a very wide frame, her face turned away so no eye, nostril or lip is visible anywhere. A single hard shaft of light rakes across the skin from the upper right at a shallow angle, so the lit edge of the cheekbone glows and everything beyond it falls away into deep shadow. The skin is real and finely textured — visible pores, fine down, a natural sheen along the lit ridge, no retouching. The light is the subject: one bright contour drawn across skin, the rest darkness. The central forty percent of the frame is smooth unbroken shadow with no feature and no edge entering it, graduating into a deep graphite void, colour #1A1A1A, that fills the left half of the frame entirely. Fine film grain. Cinematic wide format, chiaroscuro, sculptural, quiet and premium.",
+      "negative_extra": "full face, eye in frame, lips in frame, nostril in frame, centred face, hair across the face, flat even lighting, studio softbox look, bright background, white background"
+    },
+    {
+      "id": "SKIN2-contour-landscape",
+      "title": "Skin art — skin read as landscape, collarbone and shoulder",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up abstract beauty photograph of the collarbone and shoulder of one woman around thirty five years old, framed so the body reads as landscape rather than anatomy — a long slow curve of skin running low across a very wide frame, the hollow above the collarbone catching light like a valley and the shoulder rising out of shadow at the far left. Photographed from a low raking angle with one hard key light from the left, so the contour is drawn entirely by highlight and shadow. The skin is real and finely textured with visible pores and fine down, warm neutral in tone, unretouched. The upper two thirds of the frame above the shoulder line is empty deep graphite, colour #1A1A1A, smooth and featureless, and the central forty percent of the frame carries no edge, no highlight and no detail. Fine film grain. Cinematic wide format, sculptural, minimal, quiet and premium.",
+      "negative_extra": "face, eyes, lips, chin, hands, clothing, straps, fabric, necklace, tattoo, bright background, flat even lighting, centred subject"
+    },
+    {
+      "id": "SKIN3-flowing-form",
+      "title": "Skin art — the flowing form of a turning neck and jaw",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "prompt": "Extreme close-up editorial beauty photograph of the neck and underside of the jaw of one woman around thirty five years old, her head turned and tilted back so the throat forms one long unbroken flowing curve sweeping in from the right edge of a very wide frame and easing out of focus before it reaches the middle. Only the jawline, the throat and the beginning of the shoulder are in frame — no eye, no lip, no nostril anywhere. One hard key light from the upper right traces the entire length of that curve with a single continuous highlight, and a faint cool fill grazes the far left edge of the frame. The skin is real and finely textured, luminous along the lit edge, unretouched, with fine down catching the light. Behind and beneath her the frame falls to a deep graphite void, colour #1A1A1A, and the central forty percent is smooth, dark and completely featureless. Very shallow depth of field. Fine film grain. Cinematic wide format, flowing, sculptural, quiet and premium.",
+      "negative_extra": "full face, eye in frame, lips in frame, nostril in frame, hands, clothing, collar, necklace, hair covering the neck, flat even lighting, bright background, centred subject"
+    }
+  ]
+}
