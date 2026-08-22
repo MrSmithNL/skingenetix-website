@@ -1,0 +1,124 @@
+{
+  "wave": "banner-library-pdrn-collagen-repair-cream",
+  "created": "2026-08-22",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Skin-art banner library for pdrn-collagen-repair-cream. Eight poses, the product placed left, centre or right so the set covers banners whose text sits on any side, plus face and eye close-ups. Class A throughout: references attached, label lines quoted verbatim from configs/pdrn-collagen-repair-cream.json, everything below them thrown out of the depth of field. FLUX.2 barred (invents brands); Luma invented an 'XXX' mark on the smoke test and should be read with that in mind. Product position is stated as a measured fraction of frame width because the smoke test proved a body-part anchor does not hold - 'against the jaw' put the bottle over the headline in four of five suppliers.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "invented brand name, different brand, altered label, extra text on the product, mangled lettering, gibberish text, two products, packaging box, watermark, signature, border, collage, multi-panel, botanicals, jewellery, glitter, plastic retouched skin, waxy skin, airbrushed, second person, tattoo, six fingers, extra fingers, fused fingers, malformed hand, upright seated pose, standing, vertical composition, bright background, white background"
+  },
+  "slots": [
+    {
+      "id": "pdrn-collagen-repair-cream--A-recline-prod-left",
+      "title": "pdrn-collagen-repair-cream \u2014 A-recline-prod-left",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_applying_to_cheek_closeup_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying with her head tipped back, seen in profile from the side and slightly above, eyes closed, skin filling the frame edge to edge from the d\u00e9collet\u00e9 at the lower right up the long sweep of the throat to the jaw and lips at the upper left. One hand with five slender relaxed fingers holds the product, which sits in the left third of the frame, between 0 and 33 percent of frame width, sharp and with its label turned square to camera. The product is Skingenetix PDRN Collagen Repair Deep Renewal Treatment: a 50ml frosted SOFT PINK glass cosmetic jar, wide and squat - noticeably WIDER THAN IT IS TALL, about 1.15 times wider than its full height - with a deep brushed satin ALUMINIUM screw lid, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT', then 'PREMIUM FORMULA'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional light from above models the form so the lit ridges glow and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched. The right half of the frame, which stays smooth and even in tone, carrying no hard edge, bright highlight or feature, so a headline can sit there. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "eyes open, product in the clear zone, product over the headline area"
+    },
+    {
+      "id": "pdrn-collagen-repair-cream--B-recline-prod-right",
+      "title": "pdrn-collagen-repair-cream \u2014 B-recline-prod-right",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_applying_to_cheek_closeup_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying with her head tipped back, seen in profile from the side and slightly above, eyes closed, skin filling the frame edge to edge from the d\u00e9collet\u00e9 at the lower left up the long sweep of the throat to the jaw and lips at the upper right. One hand with five slender relaxed fingers holds the product, which sits in the right third of the frame, between 67 and 100 percent of frame width, sharp and with its label turned square to camera. The product is Skingenetix PDRN Collagen Repair Deep Renewal Treatment: a 50ml frosted SOFT PINK glass cosmetic jar, wide and squat - noticeably WIDER THAN IT IS TALL, about 1.15 times wider than its full height - with a deep brushed satin ALUMINIUM screw lid, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT', then 'PREMIUM FORMULA'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional light from above models the form so the lit ridges glow and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched. The left half of the frame, which stays smooth and even in tone, carrying no hard edge, bright highlight or feature, so a headline can sit there. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "eyes open, product in the clear zone, product over the headline area"
+    },
+    {
+      "id": "pdrn-collagen-repair-cream--C-recline-prod-centre",
+      "title": "pdrn-collagen-repair-cream \u2014 C-recline-prod-centre",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_applying_to_cheek_closeup_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying with her head tipped fully back and turned away, eyes closed, photographed from almost directly above so the throat and d\u00e9collet\u00e9 read as an abstract landscape filling the whole frame, the chin at the upper right. One hand with five slender relaxed fingers holds the product, which sits in the centre of the frame but low, in the bottom third of the frame height, sharp and with its label turned square to camera. The product is Skingenetix PDRN Collagen Repair Deep Renewal Treatment: a 50ml frosted SOFT PINK glass cosmetic jar, wide and squat - noticeably WIDER THAN IT IS TALL, about 1.15 times wider than its full height - with a deep brushed satin ALUMINIUM screw lid, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT', then 'PREMIUM FORMULA'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional light from above models the form so the lit ridges glow and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched. The upper third of the frame, which stays smooth and even in tone, carrying no hard edge, bright highlight or feature, so a headline can sit there. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "eyes open, product high in the frame, product in the clear zone, product over the headline area"
+    },
+    {
+      "id": "pdrn-collagen-repair-cream--D-face-eyes-to-camera",
+      "title": "pdrn-collagen-repair-cream \u2014 D-face-eyes-to-camera",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_applying_to_cheek_closeup_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old in close-up with her head resting on one side, looking directly into the lens with a level composed gaze, her face filling the right half of the frame - brow, eyes, cheekbone and lips all sharp - and the line of her neck running away to the left. One hand with five slender relaxed fingers holds the product, which sits in the right third of the frame, between 67 and 100 percent of frame width, sharp and with its label turned square to camera. The product is Skingenetix PDRN Collagen Repair Deep Renewal Treatment: a 50ml frosted SOFT PINK glass cosmetic jar, wide and squat - noticeably WIDER THAN IT IS TALL, about 1.15 times wider than its full height - with a deep brushed satin ALUMINIUM screw lid, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT', then 'PREMIUM FORMULA'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional light from above models the form so the lit ridges glow and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched. The left half of the frame, which stays smooth and even in tone, carrying no hard edge, bright highlight or feature, so a headline can sit there. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "eyes closed, looking away, product in the clear zone, product over the headline area"
+    },
+    {
+      "id": "pdrn-collagen-repair-cream--E-face-eyes-closed",
+      "title": "pdrn-collagen-repair-cream \u2014 E-face-eyes-closed",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_applying_to_cheek_closeup_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old in close-up with her head resting on one side and her eyes closed, lashes catching the light, her face filling the left half of the frame and the line of her neck running away to the right. One hand with five slender relaxed fingers holds the product, which sits in the left third of the frame, between 0 and 33 percent of frame width, sharp and with its label turned square to camera. The product is Skingenetix PDRN Collagen Repair Deep Renewal Treatment: a 50ml frosted SOFT PINK glass cosmetic jar, wide and squat - noticeably WIDER THAN IT IS TALL, about 1.15 times wider than its full height - with a deep brushed satin ALUMINIUM screw lid, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT', then 'PREMIUM FORMULA'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional light from above models the form so the lit ridges glow and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched. The right half of the frame, which stays smooth and even in tone, carrying no hard edge, bright highlight or feature, so a headline can sit there. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "eyes open, product in the clear zone, product over the headline area"
+    },
+    {
+      "id": "pdrn-collagen-repair-cream--F-eye-macro",
+      "title": "pdrn-collagen-repair-cream \u2014 F-eye-macro",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_applying_to_cheek_closeup_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old in extreme macro on one eye and brow, the lashes, the fine skin of the lid and the texture of the brow filling the right two thirds of the frame, the eye open and looking slightly away from the lens, everything beyond falling into soft shadow. One hand with five slender relaxed fingers holds the product, which sits in the far left edge of the frame, within the first 20 percent of frame width, small and softly out of focus, sharp and with its label turned square to camera. The product is Skingenetix PDRN Collagen Repair Deep Renewal Treatment: a 50ml frosted SOFT PINK glass cosmetic jar, wide and squat - noticeably WIDER THAN IT IS TALL, about 1.15 times wider than its full height - with a deep brushed satin ALUMINIUM screw lid, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT', then 'PREMIUM FORMULA'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional light from above models the form so the lit ridges glow and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched. The centre and right of the frame beyond the eye, which stays smooth and even in tone, carrying no hard edge, bright highlight or feature, so a headline can sit there. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "both eyes, full face, eye closed, product in the clear zone, product over the headline area"
+    },
+    {
+      "id": "pdrn-collagen-repair-cream--G-decollete-above",
+      "title": "pdrn-collagen-repair-cream \u2014 G-decollete-above",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_applying_to_cheek_closeup_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying down photographed from directly above so her d\u00e9collet\u00e9 and the base of her throat read as an abstract landscape running horizontally across the whole frame, her chin entering at the top right, eyes outside the frame. One hand with five slender relaxed fingers holds the product, which sits in the left third of the frame, between 0 and 33 percent of frame width, sharp and with its label turned square to camera. The product is Skingenetix PDRN Collagen Repair Deep Renewal Treatment: a 50ml frosted SOFT PINK glass cosmetic jar, wide and squat - noticeably WIDER THAN IT IS TALL, about 1.15 times wider than its full height - with a deep brushed satin ALUMINIUM screw lid, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT', then 'PREMIUM FORMULA'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional light from above models the form so the lit ridges glow and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched. The centre and right of the frame, which stays smooth and even in tone, carrying no hard edge, bright highlight or feature, so a headline can sit there. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "face in frame, eyes in frame, product in the clear zone, product over the headline area"
+    },
+    {
+      "id": "pdrn-collagen-repair-cream--H-over-shoulder",
+      "title": "pdrn-collagen-repair-cream \u2014 H-over-shoulder",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+        "assets/publish-ready/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_applying_to_cheek_closeup_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying on her front with her head turned back over her shoulder toward the camera, eyes meeting the lens, the line of her shoulder running across the lower frame and her face at the upper left. One hand with five slender relaxed fingers holds the product, which sits in the right third of the frame, between 67 and 100 percent of frame width, standing large and close to camera and slightly soft, sharp and with its label turned square to camera. The product is Skingenetix PDRN Collagen Repair Deep Renewal Treatment: a 50ml frosted SOFT PINK glass cosmetic jar, wide and squat - noticeably WIDER THAN IT IS TALL, about 1.15 times wider than its full height - with a deep brushed satin ALUMINIUM screw lid, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'PDRN COLLAGEN REPAIR', then 'DEEP RENEWAL TREATMENT', then 'PREMIUM FORMULA'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. The background beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional light from above models the form so the lit ridges glow and the hollows fall into shadow. Skin real and finely textured with visible pores and fine down, unretouched. The centre and left of the frame, which stays smooth and even in tone, carrying no hard edge, bright highlight or feature, so a headline can sit there. Very shallow depth of field, fine film grain, cinematic wide format, sculptural, quiet and premium.",
+      "negative_extra": "eyes closed, looking away, product in the clear zone, product over the headline area"
+    }
+  ]
+}

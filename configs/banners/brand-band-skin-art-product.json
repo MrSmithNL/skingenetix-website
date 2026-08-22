@@ -1,0 +1,101 @@
+{
+  "wave": "brand-band-skin-art-product",
+  "created": "2026-08-22",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Malcolm likes the skin-art band style and wants six variations combining it with the model holding a product, with the eye gaze varied across the set.\n\nCLASS A, WHICH CHANGES EVERYTHING. Every earlier skin brief was class B — no product, so nothing to invent. The moment a bottle enters frame the reference-lock protocol applies: these ship with the approved packshots attached, and FLUX.2 is barred outright because it substitutes fictional brands that look clean and survive a fast review. Label lines are quoted verbatim per the label-text-must-be-quoted rule, and everything below the two headline lines is thrown OUT OF THE DEPTH OF FIELD rather than asked to be small — the fix proven on the carton stacks tonight, after 'too small to read' produced near-legible garbling instead.\n\nPRODUCT: the Copper Peptide Advanced Repair Serum, the flagship. One product across all six so the set reads as a series rather than a catalogue. Say the word and any slot can carry a cream jar instead.\n\nA TENSION WORTH NAMING. Seedream has the best label fidelity of any supplier and refuses bare-skin subjects every time; Luma and the Gemini pair pass the skin and are weaker on lettering. So the supplier that would render the bottle best is the one least likely to accept the brief. These are written as beauty-campaign shots with a product rather than as nudes — head and shoulders, the product held — which should widen the field. If Seedream still refuses across the set, that is the answer to a question worth having asked.\n\nEYE GAZE varies deliberately: closed, to camera, away and up, lowered to the product, back over the shoulder, closed with the head tipped. Malcolm's standing note on this project is that varied gaze is what stopped the review models looking like one shoot.\n\nTYPE ZONE unchanged: the headline is centred, so a horizontal band through the middle of the frame stays even in tone, and the bottle and the eyes sit clear of it.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "invented brand name, different brand, altered label, extra text on the bottle, mangled lettering, gibberish text, two bottles, jar, tube, packaging box, watermark, signature, border, collage, multi-panel, botanicals, jewellery, glitter, plastic retouched skin, waxy skin, airbrushed, second person, tattoo, six fingers, extra fingers, fused fingers, malformed hand"
+  },
+  "_product_ref": [
+    "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+    "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+  ],
+  "_shared_product": "The bottle is a 30ml frosted DEEP BLUE glass dropper bottle with square shoulders, a brushed satin neutral silver-grey collar and a white rubber-bulb pipette, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here.",
+  "slots": [
+    {
+      "id": "PROD1-eyes-closed-profile",
+      "title": "Profile, eyes closed, bottle held at the jaw",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying with her head tipped back, seen in profile from the side and slightly above, her eyes closed and her expression calm. Skin fills the frame edge to edge: décolleté across the lower left, the long sweep of the throat rising to the right, the jaw, cheekbone and closed lips at the upper right. One hand with five slender relaxed fingers holds the serum bottle upright against the side of her jaw, the bottle in sharp focus and label turned to camera. The bottle is a 30ml frosted DEEP BLUE glass dropper bottle with square shoulders, a brushed satin neutral silver-grey collar and a white rubber-bulb pipette, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. Background beyond her a deep graphite grey, colour #1A1A1A, dark and even. One hard key light from the upper right rims the jaw and the shoulder of the bottle. Skin real and finely textured, visible pores, fine down, unretouched. A horizontal band through the middle of the frame stays even in tone with nothing crossing it. Fine film grain, cinematic wide format, sculptural, premium.",
+      "negative_extra": "eyes open, bottle in the centre of the frame, bottle obscuring the face, light background, upright seated pose"
+    },
+    {
+      "id": "PROD2-eyes-to-camera",
+      "title": "Three-quarter, eyes to camera, bottle at the cheekbone",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old reclining with her head turned three quarters toward the camera, looking directly into the lens with a level, composed gaze. Skin fills the frame edge to edge, running from the décolleté at the lower left up the throat to the cheekbone and eyes at the right. One hand with five slender relaxed fingers holds the serum bottle upright just below her cheekbone, the bottle sharp and its label square to camera. The bottle is a 30ml frosted DEEP BLUE glass dropper bottle with square shoulders, a brushed satin neutral silver-grey collar and a white rubber-bulb pipette, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM'. Every remaining line falls outside the depth of field, visibly soft and blurred beyond reading. Print no word that is not quoted here. Background a deep graphite grey, colour #1A1A1A, dark and even. A single soft key light from the upper right sculpts the cheekbone and catches the glass. Skin real and finely textured, visible pores, unretouched. A horizontal band through the middle of the frame stays even in tone with nothing crossing it. Fine film grain, cinematic wide format, premium.",
+      "negative_extra": "eyes closed, looking away, bottle in the centre of the frame, bottle obscuring the eyes, light background"
+    },
+    {
+      "id": "PROD3-gaze-up-away",
+      "title": "Head tipped back, gaze up and away, bottle resting on the décolleté",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying with her head tipped back and turned away, her eyes open and looking up and away out of the top of the frame, expression serene. Skin fills the frame edge to edge from the décolleté at the lower left, up the long throat, to the jaw and lips at the upper right. One hand with five slender relaxed fingers rests the serum bottle on its side across her décolleté at the lower left, the bottle sharp with its label turned up to camera. The bottle is a 30ml frosted DEEP BLUE glass dropper bottle with square shoulders, a brushed satin neutral silver-grey collar and a white rubber-bulb pipette, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM'. Every remaining line falls outside the depth of field, blurred beyond reading. Print no word that is not quoted here. Background a deep graphite grey, colour #1A1A1A. One soft light from the upper right runs the length of the throat. Skin real and finely textured, unretouched. A horizontal band through the middle of the frame stays even in tone with nothing crossing it. Fine film grain, cinematic wide format, sculptural, premium.",
+      "negative_extra": "eyes closed, looking at camera, bottle upright, bottle in the centre of the frame, light background"
+    },
+    {
+      "id": "PROD4-gaze-lowered",
+      "title": "Gaze lowered to the product, pipette drawn along the collar line",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old reclining, her chin dipped and her eyes open but lowered toward her own hand, lashes catching the light. Skin fills the frame edge to edge from the décolleté at the lower left up to the jaw and cheek at the upper right. One hand with five slender relaxed fingers holds the serum bottle at the base of her throat, the glass pipette withdrawn a little way from the collar so a single clear droplet hangs at its tip. The bottle is sharp and its label turned to camera: a 30ml frosted DEEP BLUE glass dropper bottle with square shoulders, a brushed satin neutral silver-grey collar and a white rubber-bulb pipette, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM'. Every remaining line falls outside the depth of field, blurred beyond reading. Print no word that is not quoted here. Background a deep graphite grey, colour #1A1A1A. One hard key light from the upper right catches the droplet and the lit edge of the jaw. Skin real and finely textured, unretouched. A horizontal band through the middle of the frame stays even in tone with nothing crossing it. Fine film grain, cinematic wide format, premium.",
+      "negative_extra": "eyes closed, looking at camera, spilled serum, cream on the skin, bottle in the centre of the frame, light background"
+    },
+    {
+      "id": "PROD5-over-the-shoulder",
+      "title": "Turned back over the shoulder, eyes to camera, bottle soft in the foreground",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying on her front with her head turned back over her shoulder toward the camera, her eyes meeting the lens directly. Skin fills the frame edge to edge: the line of her shoulder and upper back running across the lower half, the neck rising to the right, the face at the upper right. One hand with five slender relaxed fingers holds the serum bottle upright close to the camera at the left, so the bottle stands large and slightly soft in the foreground while her face is sharp behind it. The bottle is a 30ml frosted DEEP BLUE glass dropper bottle with square shoulders, a brushed satin neutral silver-grey collar and a white rubber-bulb pipette, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM'. Every remaining line falls outside the depth of field, blurred beyond reading. Print no word that is not quoted here. Background a deep graphite grey, colour #1A1A1A. One soft key light from the upper right rims the shoulder and cheek. Skin real and finely textured, unretouched. A horizontal band through the middle of the frame stays even in tone with nothing crossing it. Fine film grain, cinematic wide format, premium.",
+      "negative_extra": "eyes closed, looking away, bottle in the centre of the frame, bottle obscuring the face, light background"
+    },
+    {
+      "id": "PROD6-eyes-closed-tipped",
+      "title": "Head tipped fully back, eyes closed, bottle standing on the sternum",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "index:brand_story_band",
+      "ref_files": [
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Extreme close-up fine-art beauty photograph of one woman around thirty five years old lying with her head tipped fully back and her eyes closed, photographed from almost directly above so the throat, jaw and décolleté read as an abstract landscape filling the whole frame edge to edge. Her closed lips and the underside of her chin sit at the upper right; the décolleté runs across the lower edge. One hand with five slender relaxed fingers steadies the serum bottle standing upright on her sternum at the lower left, the bottle sharp and its label turned up to camera. The bottle is a 30ml frosted DEEP BLUE glass dropper bottle with square shoulders, a brushed satin neutral silver-grey collar and a white rubber-bulb pipette, exactly as in the reference images. Legible type on it reads only: the Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM'. Every remaining line falls outside the depth of field, blurred beyond reading. Print no word that is not quoted here. Background a deep graphite grey, colour #1A1A1A. One low soft light from the right rakes across the forms. Skin real and finely textured, unretouched. A horizontal band through the middle of the frame stays even in tone with nothing crossing it. Fine film grain, cinematic wide format, abstract, sculptural, premium.",
+      "negative_extra": "eyes open, bottle lying on its side, bottle in the centre of the frame, light background, harsh contrast"
+    }
+  ]
+}
