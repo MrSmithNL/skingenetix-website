@@ -76,6 +76,38 @@ BANNERS = {
             "skin_box": (662, None, 0, 460),
         },
     },
+    # /pages/skin-repair-renewal -- the SAME PHOTOGRAPH as the "pdrn" entry above,
+    # which Malcolm asked for again for this concern page. Every measurement below is
+    # therefore that entry's, unchanged; only three things differ.
+    #
+    #   target_width  3000 -> 3750. The collection banner was built to 3.54:1 before
+    #                 the 1920 case was measured, and at that ratio it keeps its full
+    #                 height at 1440 and 1512 but only 81% at 1920. 4.42:1 clears it.
+    #                 (/collections/pdrn is still on the narrow master - worth raising.)
+    #   filenames     distinct, and keyed to THIS page's search terms rather than the
+    #                 collection's, per .claude/rules/website-imagery.md rule 5.
+    #   mobile_crop   wider, because this page's hero has no product grid under it to
+    #                 carry the jar a second time.
+    #
+    # Extending further costs nothing here: the shoulder is retired by ARM_FADE within
+    # 190px of the join, so the extra 750px is plain backdrop either way.
+    "skin-repair-renewal": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-pdrn-collagen-repair-cream"
+                     / "pdrn-collagen-repair-cream--B-face-full-prod-right"
+                     / "pdrn-collagen-repair-cream--B-face-full-prod-right-gpt_image_01.png"),
+        "out": ROOT / "assets/publish-ready/page-skin-repair-renewal-banner",
+        "desktop": "skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg",
+        "mobile": "skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+        "mobile_crop": (110, 820),
+        "target_width": 3750,
+        "bg_fit": (380, 560),
+        "texture_box": (0, 555, 0, 820),
+        "texture_mode": "tile",
+        "shoulder": {
+            "y": 632,
+            "skin_box": (662, None, 0, 460),
+        },
+    },
     # /collections/copper-peptide -- the DAY CREAM frame Malcolm chose. Unlike the
     # serum frame tried first, her ARM touches this left edge: the leftmost columns
     # read backdrop (mean 16) down to row 739 and then jump to mean 87-141. So this

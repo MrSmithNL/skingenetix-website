@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-24",
+  "target": "live store \u2014 /pages/skin-repair-renewal, templates/page.skin-repair-renewal.json",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 asked for B-face-full-prod-right gpt_image_01 from the PDRN Collagen Repair CREAM library, with the canvas widened so the full image height shows in the header.",
+  "note": "Hero banner for the Skin Repair & Renewal concern page.\n\nSOURCE: banner library, pdrn-collagen-repair-cream--B-face-full-prod-right gpt_image_01 (2048x848, 2.42:1), extended left to 3750x848 (4.42:1).\n\nTHE LABEL WAS THE FIRST THING CHECKED, because this is the PDRN CREAM \u2014 the one product in the library where the jar sets the label large enough to be drawn as a word, and where two regenerations failed to stop it reading PORN. This frame is clean at 100%: Skingenetix with the dotted double-helix mark / PDRN COLLAGEN REPAIR, the D unmistakably a D / DEEP RENEWAL TREATMENT in brand red / PREMIUM FORMULA. That is why this same frame was chosen for /collections/pdrn.\n\nSAME PHOTOGRAPH AS THE PDRN COLLECTION BANNER. Malcolm asked for it by name for this page too. It is built as a separate master rather than reusing that file, for two reasons: the collection master is 3000x848 (3.54:1), which keeps its full height at 1440 and 1512 but only 81% at 1920, and the filename here is keyed to this page's search terms rather than the collection's, per website-imagery rule 5. Worth raising that /collections/pdrn is still on the narrow master.\n\nOBJECT-POSITION IS 93%, NOT 78% LIKE THE FIRMING PAGE. Measured, and the difference matters: this jar sits hard right, x 1664-3634 of 3750. At a 1280 viewport an anchor of 86% clips it by 63px and 78% by 166px. 93% keeps it whole at every viewport tested (26px of margin at the tightest, 1280) while still leaving 297px of clear dark ground for the heading, rising to 446px at 1440 and 890px at 1920. The anchor is a property of where the product sits in the frame, not a house constant.\n\nBACKDROP BANDING, MEASURED AND ACCEPTED. Carrying this shot's cloth weave across 1702px of new canvas leaves horizontal row banding of 4.15 luminance levels peak-to-peak against a background of 33.6 \u2014 about 1.6% modulation, and within noise of the already-live collection banner built from the same frame (4.33). Visible only under a deliberate exposure lift. Not worth trading the weave for a flat plate.",
+  "images": [
+    {
+      "slot": "repair_hero_desktop",
+      "source": "assets/publish-ready/page-skin-repair-renewal-banner/skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg",
+      "filename": "skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg",
+      "alt": "Woman resting her head to one side with her eyes closed, holding a jar of Skingenetix PDRN Collagen Repair Deep Renewal Treatment against her cheek",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg?v=1787586343"
+    },
+    {
+      "slot": "repair_hero_mobile",
+      "source": "assets/publish-ready/page-skin-repair-renewal-banner/skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+      "filename": "skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+      "alt": "Close crop of the Skingenetix PDRN Collagen Repair Deep Renewal Treatment jar held beside a woman's face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg?v=1787586342"
+    }
+  ],
+  "image_assignments": []
+}

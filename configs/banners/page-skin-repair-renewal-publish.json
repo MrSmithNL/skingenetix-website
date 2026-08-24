@@ -1,0 +1,49 @@
+{
+  "created": "2026-08-24",
+  "target": "templates/page.skin-repair-renewal.json — hero section",
+  "decided_by": "Malcolm, 2026-08-24",
+  "note": "Publishes the widened PDRN cream banner to the Skin Repair & Renewal hero. Same four section changes the firming page needed, because the two templates are structurally identical (main / hero / content / routine / faq / related, hero = image-with-text-overlay at image_size sm):\n\n  enable_parallax  set false EXPLICITLY — absent from this section, so it was taking the schema default, and the theme's own help text says parallax crops images.\n  overlay_opacity  70 -> 25.\n  desktop_text     centre -> middle left; centre would put the heading across her face.\n  mobile_image     added, an 820x848 crop holding face and jar together.\n\nONE VALUE DIFFERS FROM THE FIRMING PAGE, and it is the important one: object-position is 93%, not 78%. This jar sits hard right at x 1664-3634 of 3750, so 78% would crop 166px off it at a 1280 viewport. 93% keeps it whole everywhere with 26px to spare at the tightest width. Text max-width is clamped to 23vw accordingly — 294px at 1280 against 297px of measured clear ground.\n\nCSS is additive in a custom-html section, scoped by .shopify-section--image-with-text-overlay (the section-TYPE class) rather than by section id: ids render as shopify-section-template--<theme id>__<key>, so a hand-built id selector matches nothing. Braces are kept apart because Shopify 422s an html setting containing '{{' or '}}'.",
+  "images": [
+    {
+      "slot": "repair_hero_desktop",
+      "filename": "skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg"
+    },
+    {
+      "slot": "repair_hero_mobile",
+      "filename": "skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "enable_parallax": false,
+        "image_size": "sm",
+        "overlay_opacity": 25,
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-end-center text-center"
+      }
+    }
+  ],
+  "image_assignments": [
+    { "section": "hero", "slot": "repair_hero_desktop", "setting": "image" },
+    { "section": "hero", "slot": "repair_hero_mobile", "setting": "mobile_image" }
+  ],
+  "new_sections": [
+    {
+      "id": "banner_text_width",
+      "insert_after": "related",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>@media screen and (min-width: 700px) {\n  .shopify-section--image-with-text-overlay .content-over-media > picture > img { object-position: 93% center; }\n  .shopify-section--image-with-text-overlay .content-over-media > div { max-width: clamp(260px, 23vw, 460px); }\n}\n@media screen and (max-width: 699px) {\n  .shopify-section--image-with-text-overlay .content-over-media::before {\n    background-image: linear-gradient(to top,\n      rgba(10, 14, 22, 0.85) 0%,\n      rgba(10, 14, 22, 0.62) 22%,\n      rgba(10, 14, 22, 0.00) 58%);\n  }\n}</style>"
+        }
+      }
+    }
+  ]
+}
