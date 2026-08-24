@@ -76,30 +76,38 @@ BANNERS = {
             "skin_box": (662, None, 0, 460),
         },
     },
+    # /collections/copper-peptide -- the DAY CREAM frame Malcolm chose. Unlike the
+    # serum frame tried first, her ARM touches this left edge: the leftmost columns
+    # read backdrop (mean 16) down to row 739 and then jump to mean 87-141. So this
+    # takes the pdrn treatment, with its own measured numbers rather than pdrn's.
     "copper-peptide": {
-        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-repair-serum"
-                     / "copper-peptide-repair-serum--D-face-full-eyes-open-right"
-                     / "copper-peptide-repair-serum--D-face-full-eyes-open-right-gpt_image_01.png"),
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-day-repair-cream"
+                     / "copper-peptide-day-repair-cream--D-face-full-eyes-open-right"
+                     / "copper-peptide-day-repair-cream--D-face-full-eyes-open-right-gpt_image_01.png"),
         "out": ROOT / "assets/publish-ready/collection-copper-peptide-banner",
-        "desktop": "skingenetix-copper-peptide-ghk-cu-anti-ageing-repair-serum.jpg",
-        "mobile": "skingenetix-copper-peptide-repair-serum-face-mobile.jpg",
-        #: right-anchored, so it keeps the bottle (x 1199-1854 of 2048) together with
-        #: most of the face however far the canvas grows leftward.
-        "mobile_crop": (30, 900),
-        #: 4.42:1 - just past the 4.36:1 the box reaches at a 1920 viewport, which is
-        #: the widest common desktop. At 3000x848 (3.54:1) the live page still cropped
-        #: 19% of the height there.
+        "desktop": "skingenetix-copper-peptide-advanced-day-repair-cream.jpg",
+        "mobile": "skingenetix-copper-peptide-day-repair-cream-face-mobile.jpg",
+        #: right-anchored; keeps the jar (x 1132-1818 of 2048) with most of the face
+        "mobile_crop": (150, 950),
+        #: 4.42:1, past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport.
+        #: Measured on the live page at 3.54:1: full height at 1440 and 1512, 81% at 1920.
         "target_width": 3750,
-        "bg_fit": (100, 700),
-        "texture_box": (0, 400, 0, 600),   # measured mean 22.4, stdev 1.2 - clean backdrop
-        #: tile, as for pdrn: this is the same woven studio backdrop, and mirror-tiling
-        #: its weave keeps that texture. scatter is for the /collections/all sweep,
-        #: which has no weave to preserve.
+        "bg_fit": (300, 650),              # clean backdrop rows, well above the arm
+        #: MEASURED, not eyeballed. (0,650,0,600) looked like backdrop and is not -
+        #: it clips her shoulder (max luminance 174 against a backdrop of ~16), and
+        #: mirror-tiling that across 1702px printed two dark lens-shaped ghosts in
+        #: the extension. The subject first intrudes into cols 0-700 at row ~550,
+        #: so the box stops at 400. Verified max 23.
+        "texture_box": (0, 400, 0, 700),
         "texture_mode": "tile",
-        #: Nothing touches this edge. The leftmost column runs mean 15.8-22.1 with a
-        #: max of 25 from top to bottom, i.e. flat backdrop all the way down, so no
-        #: shoulder has to be carried the way the pdrn banner's did.
-        "shoulder": None,
+        #: measured off this photograph: the arm's top edge runs y=742 at x=0 to
+        #: y=601 at x=290, i.e. 0.48 px down per px travelled left. pdrn's 0.62 would
+        #: be the wrong angle for it.
+        "shear": 0.48,
+        "shoulder": {
+            "y": 739,
+            "skin_box": (760, None, 0, 460),
+        },
     },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
@@ -124,6 +132,10 @@ BANNERS = {
 #: construction no variation along its length. Instead it leaves frame the way it
 #: physically would: steeply, on a curve, falling out of the key light into the dark
 #: backdrop. ARM_FADE is the distance over which it is gone.
+#: Defaults measured off the pdrn shot. Each is a property of the PHOTOGRAPH, not of
+#: the method, so a banner whose arm leaves at a different angle overrides them per
+#: entry -- the copper-peptide day cream measures 0.48, and shearing it at 0.62 would
+#: walk its arm out of frame at an angle the real one never had.
 SHEAR = 0.62            # px down per px left at the join, measured off the real line
 SHEAR_CURVE = 0.0035    # the line steepens as it recedes; drops it out by d~175
 ARM_FADE = 190          # px over which the arm dissolves into backdrop shadow
@@ -194,6 +206,9 @@ def texture(im, box, sigma, h, w):
 
 def extend_left(im, extra, cfg):
     h = im.shape[0]
+    shear = cfg.get("shear", SHEAR)
+    shear_curve = cfg.get("shear_curve", SHEAR_CURVE)
+    arm_fade = cfg.get("arm_fade", ARM_FADE)
     shoulder = cfg["shoulder"]
     prof, backdrop = edge_profile(im, cfg["bg_fit"], shoulder)
     out = np.zeros((h, extra, 3), dtype=np.float64)
@@ -204,7 +219,7 @@ def extend_left(im, extra, cfg):
         d = extra - x                      # distance left of the original edge
         col = backdrop.copy()
         if shoulder is not None:
-            shift = SHEAR * d + SHEAR_CURVE * d * d
+            shift = shear * d + shear_curve * d * d
             src = np.clip(rows - shift, 0, h - 1)
             lo = np.floor(src).astype(int)
             f = (src - lo)[:, None]
@@ -213,7 +228,7 @@ def extend_left(im, extra, cfg):
             # Two things retire the arm together: the shoulder line dives out of the
             # bottom of the frame, and what is still in frame loses the key light.
             # Without the second, the surviving wedge is a flat ramp with no form.
-            lit = max(0.0, 1.0 - d / ARM_FADE) ** 1.4
+            lit = max(0.0, 1.0 - d / arm_fade) ** 1.4
             a = np.clip((rows - (shoulder["y"] + shift)) / 8.0 + 0.5, 0, 1)[:, None] * lit
             col = backdrop * (1 - a) + sheared * a
             alpha[:, x] = a

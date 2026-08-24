@@ -160,6 +160,74 @@ hair-growth advert**. See `memory/fabricated-social-proof-on-the-store.md`.
 `banner-contact-sheet.py`. Every theme push backs up the template first and prints its own
 `--restore` command.
 
+### 🔄 BRAND-004 — Skin-art banner library + collection banners
+
+**Priority:** 🟡 Library generated (2026-08-24); selection and placement ongoing
+**Owner:** Claude (briefs, generation, placement) + Malcolm (every image choice)
+**Tooling:** `scripts/build-banner-library-config.py`, `scripts/generate-multi.py`
+
+**What it is.** A reusable library of skin-art banner frames — one wave per product, eleven
+poses, four suppliers — so a banner's text can sit wherever a given frame leaves room.
+**402 images across nine products, ~$25.**
+
+Poses vary body position, gaze direction and product placement (left / centre / right
+thirds), and include body-and-face, face-macro and eye-macro registers. Product position is
+stated as a **measured fraction of frame width**, after a body-part anchor ("against her
+jaw") put the bottle over the headline in four of five suppliers.
+
+**Per-product state**
+
+| Product | Images | State |
+| ------- | ------ | ----- |
+| Copper Peptide Serum | 57 | ⚠️ pre-fix — milky liquid behind blue glass |
+| PDRN Serum | 44 | ⚠️ pre-fix — milky behind pink glass |
+| Glutathione Serum | 44 | ✅ regenerated, clear liquid |
+| Matrixyl Serum | 44 | ✅ regenerated, clear liquid |
+| Acetyl Serum | 38 | ✅ (Seedream refused 6) |
+| Day Cream | 44 | ✅ |
+| Night Cream | 44 | ✅ + helix fix |
+| Matrixyl Cream | 44 | ✅ + helix + spell-out |
+| PDRN Cream | 43 | ❌ **`PORN` on most frames** — two regenerations failed |
+
+Superseded batches kept in `assets/ai-generated/_superseded/`, not deleted.
+
+**Four brief faults found and fixed, all one root cause** — the brief *named* a thing
+without *describing* it, so each supplier filled the gap:
+
+| Fault | Brief said | Fix |
+| ----- | ---------- | --- |
+| Garbled small print | "too small to read" | outside the depth of field |
+| Milky serum | glass colour only | the colour is the glass, not the contents |
+| Ribbon helix | "DNA-helix mark" | dots and dashes, never a solid ribbon |
+| `PORN` label | "PDRN" | spelled P, D, R, N |
+
+The last one **still fails on the PDRN cream**, whose jar sets the label large enough to be
+drawn as a word rather than blurred. It was tolerated earlier on the cartons because it was
+sub-legible there — a tolerance that did not survive a change of product format.
+
+**Collection banners live**
+
+| Page | Image |
+| ---- | ----- |
+| `/collections/matrixyl-3000` | Matrixyl cream `C` pose, widened to 3.27:1 |
+| `/collections/glutathione` | Glutathione serum `C` pose, extended left by Seedream |
+
+**The banner section was the real blocker, not the images.** `templates/collection.json`
+had `enable_parallax: true` — the theme's schema says *"Parallax crops images"* — so no
+aspect ratio survived, and `overlay_opacity: 50` flattened every picture. Both changed
+(parallax off, overlay 25); this improved **all five collection pages** at once. Three
+attempts and ~$0.50 were spent reworking the image before the settings were read.
+
+**Open**
+
+1. 🔴 **Glutathione banner: the heading sits across the bottle.** Extending leftward pushed
+   the subject into the centred text. Fix by extending right instead, or moving the text.
+2. 🟡 **PDRN cream** — retire, use only small-label poses, or repair chosen frames individually.
+3. 🟡 **Copper Peptide + PDRN serums** — re-run with the clear-liquid brief (~$5) so all five match.
+4. 🟡 **`image_size: sm` → `md`** would make the band 2.57:1 against the library's native
+   2.36:1, removing most of the need to extend images at all. Raised, undecided.
+5. 🟢 Only two frames marked so far (PDRN serum `B`, plus the repaired G-pose pair awaiting a pick).
+
 ### 🔄 BRAND-003 — Every website image now goes to every supplier
 
 **Priority:** 🟡 Rule and tooling live (2026-08-22); banner library generating

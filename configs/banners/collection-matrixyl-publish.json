@@ -1,0 +1,17 @@
+{
+  "created": "2026-08-24",
+  "target": "live store \u2014 collection matrixyl-3000 (gid://shopify/Collection/684939673985)",
+  "decided_by": "Malcolm, 2026-08-24",
+  "note": "Banner image for the Matrixyl 3000 collection page, from the skin-art banner library: matrixyl-3000-pro-collagen-cream C-face-full-eyes-open-left.\n\nWIDENED TO MATCH THE BAND. The banner renders 1440x440 - 3.27:1 - and the library frame is 2.42:1, so object-fit cover cropped ~155px off the height and took the jar with it. Malcolm asked for a wider image with at least half the jar visible.\n\nThree suppliers were tried and none could do it alone: gpt-image refuses any aspect beyond 3:1 (hard API cap); seedream hit 3.30:1 exactly but rendered MATRIXXYL 3000 PRO COLLAGIN; nbp_flash got the label right but ignores explicit pixel dimensions and snaps to its nearest named ratio, returning 2.36:1. Asking seedream to widen the nbp_flash frame was refused on content policy - bare shoulders.\n\nSo the final step is deterministic, not generative: the nbp_flash frame's right-edge column is stretched and softened to fill the extra width. The right side is flat dark background, so the join is invisible, and no label or face pixel is touched. 3300x1008 = 3.27:1.\n\nUNDO: previous collection image was\nhttps://cdn.shopify.com/s/files/1/0932/8679/3601/collections/skingenetix-collection-banner-matrixyl.jpg?v=1774473379\n(1408x768, alt 'Matrixyl collection').",
+  "images": [
+    {
+      "slot": "collection_matrixyl",
+      "source": "assets/publish-ready/_collection/skingenetix-collection-banner-matrixyl-2026-wide.jpg",
+      "filename": "skingenetix-collection-banner-matrixyl-2026-wide.jpg",
+      "alt": "A woman resting on her side looking to camera, holding the Skingenetix Matrixyl 3000 Pro Collagen Full & Firming Treatment cream jar",
+      "uploaded_handle": "shopify://shop_images/skingenetix-collection-banner-matrixyl-2026-wide.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-collection-banner-matrixyl-2026-wide.jpg?v=1787579183"
+    }
+  ],
+  "image_assignments": []
+}

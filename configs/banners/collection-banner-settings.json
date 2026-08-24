@@ -1,0 +1,20 @@
+{
+  "_comment": [
+    "Collection banner: parallax off, overlay 50 -> 25. Claude Code, 2026-08-24.",
+    "enable_parallax scales the image up and pans it - the theme's own schema says 'Parallax crops images'",
+    "- so it was eating the bottom of the frame regardless of the aspect ratio supplied. The 50% overlay",
+    "at #1A1A1A was muting the picture to near-flat, which is why a new image read as no change.",
+    "Applies to every collection page, since they share templates/collection.json.",
+    "Undo: patch-template.py --restore backups/collection-<stamp>.json --template templates/collection.json"
+  ],
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "banner",
+      "settings": {
+        "enable_parallax": false,
+        "overlay_opacity": 25
+      }
+    }
+  ]
+}

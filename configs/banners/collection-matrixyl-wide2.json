@@ -1,0 +1,25 @@
+{
+  "wave": "collection-matrixyl-wide2",
+  "created": "2026-08-24",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Two-step, because the failure modes did not overlap: seedream hit the 3.30:1 aspect exactly but rendered MATRIXXYL 3000 PRO COLLAGIN; nbp_flash got the label right but ignored the explicit dimensions and snapped to its nearest named ratio (21:9), which still crops in a 3.27:1 band. gpt-image refused outright - its API caps at a 3:1 aspect ratio.\n\nSo the frame with the correct label is widened by seedream, which respects explicit pixel dimensions. The label sits in the centre and is explicitly not to be touched.",
+  "defaults": {
+    "candidates": 1,
+    "negative_global": "changed face, changed pose, changed jar, altered label, different model, seam, visible join, mirrored copy, duplicated hand, duplicated face, second person, border, frame, letterbox bars"
+  },
+  "slots": [
+    {
+      "id": "WIDE2-matrixyl-collection",
+      "title": "Widen the nbp_flash frame to 3.3:1, label untouched",
+      "class": "A",
+      "width": 2800,
+      "height": 848,
+      "target_slot": "collection matrixyl-3000",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-collection-matrixyl-wide/WIDE-matrixyl-collection/WIDE-matrixyl-collection-nbp_flash_01.png"
+      ],
+      "prompt": "Extend this photograph outward onto a wider canvas. Reproduce the existing image EXACTLY as it is, unchanged, occupying the centre of the new frame - the same woman, the same face and expression, the same hand, the same cream jar with its label untouched, the same lighting and the same colours. Do not crop, zoom, shift or restage any part of it. Add only new picture area to the LEFT and to the RIGHT of the existing frame, continuing what is already there: on the left the soft dark studio background and the natural continuation of her shoulder and upper arm, on the right the same smooth dark background falling gently darker toward the edge, empty and even so a headline can sit on it. The join between the original picture and the new area must be completely invisible - matching grain, lighting falloff and colour. Nothing new is introduced: no extra person, no second hand, no objects, no text.",
+      "negative_extra": "cropped jar, jar cut off, repeated pattern, tiled background, vignette, dark bars"
+    }
+  ]
+}

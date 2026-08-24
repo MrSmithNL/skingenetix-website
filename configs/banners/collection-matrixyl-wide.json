@@ -1,0 +1,25 @@
+{
+  "wave": "collection-matrixyl-wide",
+  "created": "2026-08-24",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "The Matrixyl collection banner renders 1440x440 - a 3.27:1 band - and the source frame is 2.42:1, so object-fit cover scales it to width and crops about 155px off the height. The jar sits low in the frame and was the part lost.\n\nRather than re-crop and lose more, the canvas is extended sideways to 2800x848 (3.3:1) so the whole original frame survives inside the band. The existing image must be reproduced unchanged in the centre; only new background is invented at the edges.",
+  "defaults": {
+    "candidates": 1,
+    "negative_global": "changed face, changed pose, changed jar, altered label, different model, seam, visible join, mirrored copy, duplicated hand, duplicated face, second person, border, frame, letterbox bars"
+  },
+  "slots": [
+    {
+      "id": "WIDE-matrixyl-collection",
+      "title": "Extend the Matrixyl collection banner to 3.3:1",
+      "class": "A",
+      "width": 2800,
+      "height": 848,
+      "target_slot": "collection matrixyl-3000",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-matrixyl-3000-pro-collagen-cream/matrixyl-3000-pro-collagen-cream--C-face-full-eyes-open-left/matrixyl-3000-pro-collagen-cream--C-face-full-eyes-open-left-gpt_image_01.png"
+      ],
+      "prompt": "Extend this photograph outward onto a wider canvas. Reproduce the existing image EXACTLY as it is, unchanged, occupying the centre of the new frame - the same woman, the same face and expression, the same hand, the same cream jar with its label untouched, the same lighting and the same colours. Do not crop, zoom, shift or restage any part of it. Add only new picture area to the LEFT and to the RIGHT of the existing frame, continuing what is already there: on the left the soft dark studio background and the natural continuation of her shoulder and upper arm, on the right the same smooth dark background falling gently darker toward the edge, empty and even so a headline can sit on it. The join between the original picture and the new area must be completely invisible - matching grain, lighting falloff and colour. Nothing new is introduced: no extra person, no second hand, no objects, no text.",
+      "negative_extra": "cropped jar, jar cut off, repeated pattern, tiled background, vignette, dark bars"
+    }
+  ]
+}

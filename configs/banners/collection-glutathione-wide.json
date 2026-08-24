@@ -1,0 +1,25 @@
+{
+  "wave": "collection-glutathione-wide",
+  "created": "2026-08-24",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Glutathione collection banner. The band is 1440x440 (3.27:1) and the frame is 2.36:1, so the bottle's base is cropped. Malcolm asked for the extension on the LEFT.\n\nIt has to be generative: her forearm runs to the left edge (skin tone sampled at x=20, y=1900), so a flat or stretched fill would cut the arm off mid-air, and a blurred copy ghosts a second hand and bottle - tried, unusable.\n\nThe label sits centre-left and seedream rewrote a label the last time it widened a frame, so the prompt pins every quoted line and negates the observed substitutions.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "changed label, altered label, GLUTATHIONE misspelled, GLUTATHIONE BRIGHTNING, RADIANT GLOV, changed face, changed pose, different model, duplicated hand, duplicated bottle, second person, seam, visible join, border, letterbox bars, mirrored copy"
+  },
+  "slots": [
+    {
+      "id": "GLUTWIDE",
+      "title": "Extend the Glutathione banner leftward to 3.27:1",
+      "class": "A",
+      "width": 8797,
+      "height": 2688,
+      "target_slot": "collection glutathione",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-glutathione-brightening-serum/glutathione-brightening-serum--C-face-full-eyes-open-left/glutathione-brightening-serum--C-face-full-eyes-open-left-nbp_pro_01.png"
+      ],
+      "prompt": "Extend this photograph to the LEFT onto a wider canvas. Reproduce the existing image EXACTLY as it is, unchanged, positioned at the RIGHT of the new frame - the same woman, the same face and expression, the same hand, the same serum bottle with its label untouched, the same lighting and colours. Do not crop, zoom, shift or restage any part of it. Add new picture area only to the LEFT, continuing what is already there: her forearm continues naturally out of frame, the same dark studio background above it, and the same dark table surface below at exactly the same height, all falling gently darker toward the left edge so a headline can sit on it. The join must be invisible - matching grain, lighting falloff and colour. The bottle label reads only: the Skingenetix DNA-helix mark as a fine double helix of small dots and dashes, the wordmark 'Skingenetix' with a capital S and the rest lower case, then 'GLUTATHIONE BRIGHTENING', then 'RADIANT GLOW SERUM', then 'PREMIUM FORMULA'. Introduce nothing new: no second person, no extra hand, no other objects, no text.",
+      "negative_extra": "bottle cropped, arm ending abruptly, floating arm, repeated bottle, ghosted copy"
+    }
+  ]
+}

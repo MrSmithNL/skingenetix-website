@@ -1,24 +1,24 @@
 {
   "created": "2026-08-24",
   "target": "live store \u2014 collection copper-peptide, new templates/collection.copper-peptide.json",
-  "decided_by": "Malcolm, 2026-08-24 \u2014 picked the source frame and asked for the canvas to be extended on the left so the full height shows in the header.",
-  "note": "Header banner for /collections/copper-peptide.\n\nSOURCE: banner library, copper-peptide-repair-serum--D-face-full-eyes-open-right gpt_image_01 (2048x848, 2.42:1). Label checked at 100% and correct as far as it goes: Skingenetix / COPPER PEPTIDE / ADVANCED REPAIR SERUM. It is the library's abbreviated label - PREMIUM FORMULA and the 2% GHK-CU | 30ML line are deliberately out of focus per that brief - which is fine for a collection header making no dosage claim, and is NOT the garbling that had to be fixed on the homepage hero. Skin is gpt-image's and carries none of the whorl artefact the Nano Banana renders showed.\n\nCANVAS EXTENDED, NOT CROPPED. The banner box is 100vw x 440px, so its aspect changes with the viewport - 3.27:1 at 1440, 3.44:1 at 1512, 4.36:1 at 1920 - and a 2.42:1 frame is narrower than all of them, so object-fit cover was cropping the height and taking the top of her head. Widening to 3000x848 (3.54:1) means cover now scales by height alone and the surplus width becomes croppable margin.\n\nTHE EASY CASE, MEASURED FIRST. Unlike the pdrn banner, nothing touches this left edge: the leftmost column runs mean 15.8-22.1 with a max of 25 from top to bottom, i.e. flat backdrop, so no shoulder had to be sheared out of frame. 952px of the shot's own backdrop was extended with its weave mirror-tiled and the existing vignette continued.\n\nWHY NOT image_size 'auto'. It would show the whole frame uncropped, but it leaves the image height auto inside a grid that spans the overlaid text, so cover then crops the SIDES instead - and it makes this header taller than every other collection page. Widening the master is the fix; the script's own docstring records that trap.\n\nobject-position is right center, so horizontal cropping only ever removes the extended backdrop and never the model or the bottle.\n\nWIDENED AGAIN AFTER MEASURING THE LIVE PAGE. The first master was 3000x848 (3.54:1) and the live banner was measured at three viewport widths: 100% of the height survived at 1440 and 1512, but only 81% at 1920, because the box is 100vw x 440px and reaches 4.36:1 there. The master is now 3750x848 (4.42:1), just past that, so the full height survives every common desktop width. Going wider costs nothing: object-position is right center, so the surplus is always cropped off the extended backdrop and never off the model or the bottle.\n\nNew filename because Shopify Files suffixes rather than replaces on a name collision. The mobile crop is byte-identical and keeps its existing handle.",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 asked for D-face-full-eyes-open-right gpt_image_01 from the DAY CREAM library. An earlier pass used the same shot id from the serum library; this corrects it.",
+  "note": "Header banner for /collections/copper-peptide.\n\nSOURCE: banner library, copper-peptide-day-repair-cream--D-face-full-eyes-open-right gpt_image_01 (2048x848, 2.42:1). Label checked at 100%: Skingenetix / COPPER PEPTIDE / ADVANCED DAY REPAIR / PREMIUM FORMULA, correct.\n\nCANVAS EXTENDED, NOT CROPPED. The banner box is 100vw x 440px, so its aspect follows the viewport - 3.27:1 at 1440, 3.44:1 at 1512, 4.36:1 at 1920 - and a 2.42:1 frame is narrower than all of them, so object-fit cover was cropping the height. Extended leftward to 3750x848 (4.42:1), just past the widest of those, so the full height survives every common desktop width. object-position is right center, so surplus width is always cropped off the extension, never off the model or the jar.\n\nTHIS FRAME IS THE HARD CASE, AND THE SERUM ONE WAS NOT. Her ARM touches the left edge: the leftmost columns read backdrop at mean 16 down to row 739, then jump to mean 87-141. So it takes the pdrn shoulder treatment, but with numbers measured off THIS photograph rather than pdrn's: its arm runs y=742 at x=0 to y=601 at x=290, i.e. 0.48px down per px left, against pdrn's 0.62.\n\nONE FAULT WORTH RECORDING. The first build printed two dark lens-shaped ghosts across the extension. Cause was the texture box: (0,650,0,600) looks like backdrop and is not - it clips her shoulder, max luminance 174 against a backdrop of ~16 - and mirror-tiling that across 1702px repeated the shoulder edge twice. The subject first intrudes into cols 0-700 at row ~550, so the box now stops at row 400, verified max 23. Measured, not eyeballed, is the whole difference.",
   "images": [
     {
       "slot": "collection_copper_desktop",
-      "source": "assets/publish-ready/collection-copper-peptide-banner/skingenetix-copper-peptide-ghk-cu-anti-ageing-repair-serum.jpg",
-      "filename": "skingenetix-copper-peptide-ghk-cu-anti-ageing-repair-serum.jpg",
-      "alt": "Woman resting her head on one side holding the Skingenetix Copper Peptide Advanced Repair Serum with 2% GHK-Cu against a dark studio backdrop",
-      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-anti-ageing-repair-serum.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-anti-ageing-repair-serum.jpg?v=1787582744"
+      "source": "assets/publish-ready/collection-copper-peptide-banner/skingenetix-copper-peptide-advanced-day-repair-cream.jpg",
+      "filename": "skingenetix-copper-peptide-advanced-day-repair-cream.jpg",
+      "alt": "Woman resting her head on one side holding a jar of Skingenetix Copper Peptide Advanced Day Repair cream against a dark studio backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-advanced-day-repair-cream.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-advanced-day-repair-cream.jpg?v=1787583656"
     },
     {
       "slot": "collection_copper_mobile",
-      "source": "assets/publish-ready/collection-copper-peptide-banner/skingenetix-copper-peptide-repair-serum-face-mobile.jpg",
-      "filename": "skingenetix-copper-peptide-repair-serum-face-mobile.jpg",
-      "alt": "Close crop of a woman holding the Skingenetix Copper Peptide Advanced Repair Serum beside her face",
-      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-repair-serum-face-mobile.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-repair-serum-face-mobile.jpg?v=1787582587"
+      "source": "assets/publish-ready/collection-copper-peptide-banner/skingenetix-copper-peptide-day-repair-cream-face-mobile.jpg",
+      "filename": "skingenetix-copper-peptide-day-repair-cream-face-mobile.jpg",
+      "alt": "Close crop of a woman holding the Skingenetix Copper Peptide Advanced Day Repair cream beside her face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-day-repair-cream-face-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-day-repair-cream-face-mobile.jpg?v=1787583655"
     }
   ],
   "image_assignments": []
