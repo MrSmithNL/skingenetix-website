@@ -112,6 +112,31 @@ BANNERS = {
     # serum frame tried first, her ARM touches this left edge: the leftmost columns
     # read backdrop (mean 16) down to row 739 and then jump to mean 87-141. So this
     # takes the pdrn treatment, with its own measured numbers rather than pdrn's.
+    # /pages/brightening-glow -- subject and bottle on the LEFT, so the room is made
+    # on the RIGHT. Measured before assuming: the rightmost columns read mean 24-31
+    # with a max of 32 from top to bottom, i.e. flat backdrop, so nothing has to be
+    # sheared out of frame.
+    "brightening-glow": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-glutathione-brightening-serum"
+                     / "glutathione-brightening-serum--A-face-full-prod-left"
+                     / "glutathione-brightening-serum--A-face-full-prod-left-gpt_image_01.png"),
+        "out": ROOT / "assets/publish-ready/page-brightening-glow-banner",
+        "desktop": "skingenetix-glutathione-brightening-radiant-glow-serum.jpg",
+        "mobile": "skingenetix-glutathione-brightening-radiant-glow-serum-mobile.jpg",
+        "side": "right",
+        #: inset from the LEFT edge for a right-extended banner - the subject side.
+        #: Keeps the bottle (x 60-350 of 2048) with her whole face.
+        "mobile_crop": (0, 1000),
+        #: 4.42:1, past the 4.36:1 the 100vw x 440px header reaches at a 1920 viewport
+        "target_width": 3750,
+        "bg_fit": (100, 700),
+        #: measured from the right edge, which is the edge being extended: rows 0-400
+        #: across the last 700px reads max 39 against a backdrop of ~31. Clean.
+        "texture_box": (0, 400, 0, 700),
+        "texture_mode": "tile",
+        #: nothing touches the right edge - max 32 over the full height
+        "shoulder": None,
+    },
     "copper-peptide": {
         "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-day-repair-cream"
                      / "copper-peptide-day-repair-cream--D-face-full-eyes-open-right"
@@ -421,10 +446,19 @@ def main():
     if extra <= 0:
         raise SystemExit(f"source is already {w}px wide — nothing to extend")
 
-    wide = np.concatenate([extend_left(im, extra, cfg), im], axis=1)
+    # Some frames put the subject on the LEFT, so the room has to be made on the
+    # right. Rather than write a mirrored copy of extend_left -- its edge profile,
+    # shear, texture tiling and join blend are all tuned and all assume a left edge --
+    # the frame is flipped, extended, and flipped back. The result is identical in
+    # orientation to the source, label included.
+    side = cfg.get("side", "left")
+    work = im[:, ::-1] if side == "right" else im
+    wide = np.concatenate([extend_left(work, extra, cfg), work], axis=1)
+    if side == "right":
+        wide = wide[:, ::-1]
     final = Image.fromarray(wide.astype(np.uint8))
     print(f"{w}x{h} ({w/h:.2f}:1)  ->  {target}x{h} ({target/h:.2f}:1), "
-          f"added {extra}px of backdrop on the left")
+          f"added {extra}px of backdrop on the {side}")
 
     out = cfg["out"]
     out.mkdir(parents=True, exist_ok=True)
@@ -438,11 +472,16 @@ def main():
                 subsampling=0)
     final.save(out / cfg["desktop"], **jpeg)
 
-    # Portrait crop for phones, measured in from the RIGHT edge so it stays on the
-    # same part of the shot no matter how far the canvas grew.
+    # Portrait crop for phones, measured in from the SUBJECT side so it stays on the
+    # same part of the shot no matter how far the canvas grew. That is the right edge
+    # for a left-extended banner and the left edge for a right-extended one -- anchor
+    # it to the extension instead and the phone crop is a rectangle of empty backdrop.
     inset, cw = cfg["mobile_crop"]
-    right = target - inset
-    final.crop((right - cw, 0, right, h)).save(out / cfg["mobile"], **jpeg)
+    if side == "right":
+        final.crop((inset, 0, inset + cw, h)).save(out / cfg["mobile"], **jpeg)
+    else:
+        right = target - inset
+        final.crop((right - cw, 0, right, h)).save(out / cfg["mobile"], **jpeg)
     final.save(out / "_master-extended.png", optimize=True)
 
     for name in (cfg["desktop"], cfg["mobile"]):

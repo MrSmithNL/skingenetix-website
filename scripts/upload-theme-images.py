@@ -236,22 +236,39 @@ def main():
     print(f"\n  registered {len(data['fileCreate']['files'])} files, waiting for READY")
 
     # 4. poll until Shopify has processed them, and read back the REAL filename
+    #
+    # Shopify sanitises names and suffixes on collision, so the name that comes back
+    # is authoritative. Matching it is where this used to go wrong: a startswith on
+    # the first 40 characters binds the WRONG file the moment a longer name shares
+    # that prefix. On 2026-08-24 the stem
+    #   skingenetix-glutathione-brightening-radiant-glow-serum
+    # matched ...-radiant-glow-serum-COLLECTION.jpg first - a different picture, at a
+    # different aspect, uploaded by another session - and would have published it.
+    # So: gather every READY candidate, then prefer an exact stem, and only fall back
+    # to the shortest prefix match when Shopify has genuinely renamed the file.
     for attempt in range(30):
         time.sleep(4)
         done = 0
         for it in items:
             stem = it["filename"].rsplit(".", 1)[0]
             res = gql(store, tok, POLL, {"q": f"filename:{stem}*"})
+            cands = []
             for edge in res["files"]["edges"]:
                 node = edge["node"]
                 if node["fileStatus"] != "READY" or not node.get("image"):
                     continue
                 real = node["image"]["url"].split("?")[0].split("/")[-1]
-                if real.rsplit(".", 1)[0].startswith(stem[:40]):
-                    it["uploaded_handle"] = f"shopify://shop_images/{real}"
-                    it["cdn_url"] = node["image"]["url"]
-                    done += 1
-                    break
+                if real.rsplit(".", 1)[0].startswith(stem):
+                    cands.append((real, node["image"]["url"]))
+            if not cands:
+                continue
+            exact = [c for c in cands if c[0].rsplit(".", 1)[0] == stem]
+            real, url = exact[0] if exact else min(cands, key=lambda c: len(c[0]))
+            if not exact:
+                print(f"    note: {stem} resolved to {real} (Shopify renamed it)")
+            it["uploaded_handle"] = f"shopify://shop_images/{real}"
+            it["cdn_url"] = url
+            done += 1
         print(f"    ready {done}/{len(items)}")
         if done == len(items):
             break
