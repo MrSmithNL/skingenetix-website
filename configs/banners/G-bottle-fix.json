@@ -1,0 +1,72 @@
+{
+  "wave": "G-bottle-fix",
+  "created": "2026-08-24",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Malcolm likes the G-face-full-over-shoulder composition on the copper peptide serum but the bottle and its text are wrong in all four candidates - nbp_flash rendered a tall navy cylinder with a stylised mark and SKINGENETIX in all capitals, nbp_pro and seedream kept the silhouette but drifted the helix. He did not name a supplier, so all four frames are repaired and he picks.\n\nEach frame is its own first reference with the two approved packshots behind it, and the prompt holds face, pose, lighting and background constant - an edit prompt that mentions only the fix invites a restage. The helix mark is described positively (dots and dashes) and the usual substitutions negated by name, since 'DNA-helix mark' alone has been drifting into ribbons and letter shapes.",
+  "defaults": {
+    "candidates": 1,
+    "negative_global": "watermark, signature, border, collage, multi-panel, second person, six fingers, extra fingers, malformed hand"
+  },
+  "slots": [
+    {
+      "id": "GFIX-gpt_image",
+      "title": "G over-shoulder from gpt_image, bottle corrected",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-repair-serum/copper-peptide-repair-serum--G-face-full-over-shoulder/copper-peptide-repair-serum--G-face-full-over-shoulder-gpt_image_01.png",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is. Keep the identical composition, the identical pose, the identical model and her face unchanged, the identical camera angle and framing, the identical lighting, shadows and background, and the identical position, size and angle of the hand and the bottle it holds. Change ONLY the bottle itself and the wording printed on it. The bottle must match the packshot references exactly: a 30ml frosted DEEP BLUE glass dropper bottle, straight-sided with square shoulders, fitted with a brushed satin NEUTRAL SILVER-GREY collar and a WHITE rubber-bulb pipette. The white bulb is an elongated capsule about 1.6 times taller than wide, standing about one third the height of the glass body. The glass is deep blue at the top fading to pale frosted at the base. It is not a tall cylinder, not a plain navy bottle, and it has a visible silver collar and white bulb. On the front, and nothing else: the Skingenetix DNA-helix mark - a fine double-helix of small dots and dashes, not a ribbon, swirl or letter Z - with the wordmark 'Skingenetix' spelled with a capital S and the rest lower case, never in all capitals. Beneath it 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM' on two lines. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. Do not alter her face, skin, hair, hand or the background in any way.",
+      "negative_extra": "tall cylinder bottle, plain navy bottle, no collar, no pipette bulb, black bulb, gold collar, SKINGENETIX in all capitals, ribbon logo, swirl logo, letter Z logo, changed face, changed pose, restaged shot, different model, different background, different lighting"
+    },
+    {
+      "id": "GFIX-nbp_flash",
+      "title": "G over-shoulder from nbp_flash, bottle corrected",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-repair-serum/copper-peptide-repair-serum--G-face-full-over-shoulder/copper-peptide-repair-serum--G-face-full-over-shoulder-nbp_flash_01.png",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is. Keep the identical composition, the identical pose, the identical model and her face unchanged, the identical camera angle and framing, the identical lighting, shadows and background, and the identical position, size and angle of the hand and the bottle it holds. Change ONLY the bottle itself and the wording printed on it. The bottle must match the packshot references exactly: a 30ml frosted DEEP BLUE glass dropper bottle, straight-sided with square shoulders, fitted with a brushed satin NEUTRAL SILVER-GREY collar and a WHITE rubber-bulb pipette. The white bulb is an elongated capsule about 1.6 times taller than wide, standing about one third the height of the glass body. The glass is deep blue at the top fading to pale frosted at the base. It is not a tall cylinder, not a plain navy bottle, and it has a visible silver collar and white bulb. On the front, and nothing else: the Skingenetix DNA-helix mark - a fine double-helix of small dots and dashes, not a ribbon, swirl or letter Z - with the wordmark 'Skingenetix' spelled with a capital S and the rest lower case, never in all capitals. Beneath it 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM' on two lines. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. Do not alter her face, skin, hair, hand or the background in any way.",
+      "negative_extra": "tall cylinder bottle, plain navy bottle, no collar, no pipette bulb, black bulb, gold collar, SKINGENETIX in all capitals, ribbon logo, swirl logo, letter Z logo, changed face, changed pose, restaged shot, different model, different background, different lighting"
+    },
+    {
+      "id": "GFIX-nbp_pro",
+      "title": "G over-shoulder from nbp_pro, bottle corrected",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-repair-serum/copper-peptide-repair-serum--G-face-full-over-shoulder/copper-peptide-repair-serum--G-face-full-over-shoulder-nbp_pro_01.png",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is. Keep the identical composition, the identical pose, the identical model and her face unchanged, the identical camera angle and framing, the identical lighting, shadows and background, and the identical position, size and angle of the hand and the bottle it holds. Change ONLY the bottle itself and the wording printed on it. The bottle must match the packshot references exactly: a 30ml frosted DEEP BLUE glass dropper bottle, straight-sided with square shoulders, fitted with a brushed satin NEUTRAL SILVER-GREY collar and a WHITE rubber-bulb pipette. The white bulb is an elongated capsule about 1.6 times taller than wide, standing about one third the height of the glass body. The glass is deep blue at the top fading to pale frosted at the base. It is not a tall cylinder, not a plain navy bottle, and it has a visible silver collar and white bulb. On the front, and nothing else: the Skingenetix DNA-helix mark - a fine double-helix of small dots and dashes, not a ribbon, swirl or letter Z - with the wordmark 'Skingenetix' spelled with a capital S and the rest lower case, never in all capitals. Beneath it 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM' on two lines. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. Do not alter her face, skin, hair, hand or the background in any way.",
+      "negative_extra": "tall cylinder bottle, plain navy bottle, no collar, no pipette bulb, black bulb, gold collar, SKINGENETIX in all capitals, ribbon logo, swirl logo, letter Z logo, changed face, changed pose, restaged shot, different model, different background, different lighting"
+    },
+    {
+      "id": "GFIX-seedream",
+      "title": "G over-shoulder from seedream, bottle corrected",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "banner library",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-repair-serum/copper-peptide-repair-serum--G-face-full-over-shoulder/copper-peptide-repair-serum--G-face-full-over-shoulder-seedream_01.png",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+        "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is. Keep the identical composition, the identical pose, the identical model and her face unchanged, the identical camera angle and framing, the identical lighting, shadows and background, and the identical position, size and angle of the hand and the bottle it holds. Change ONLY the bottle itself and the wording printed on it. The bottle must match the packshot references exactly: a 30ml frosted DEEP BLUE glass dropper bottle, straight-sided with square shoulders, fitted with a brushed satin NEUTRAL SILVER-GREY collar and a WHITE rubber-bulb pipette. The white bulb is an elongated capsule about 1.6 times taller than wide, standing about one third the height of the glass body. The glass is deep blue at the top fading to pale frosted at the base. It is not a tall cylinder, not a plain navy bottle, and it has a visible silver collar and white bulb. On the front, and nothing else: the Skingenetix DNA-helix mark - a fine double-helix of small dots and dashes, not a ribbon, swirl or letter Z - with the wordmark 'Skingenetix' spelled with a capital S and the rest lower case, never in all capitals. Beneath it 'COPPER PEPTIDE', then 'ADVANCED' and 'REPAIR SERUM' on two lines. Every remaining line falls outside the depth of field, visibly soft and blurred beyond any possibility of being read. Print no word that is not quoted here. Do not alter her face, skin, hair, hand or the background in any way.",
+      "negative_extra": "tall cylinder bottle, plain navy bottle, no collar, no pipette bulb, black bulb, gold collar, SKINGENETIX in all capitals, ribbon logo, swirl logo, letter Z logo, changed face, changed pose, restaged shot, different model, different background, different lighting"
+    }
+  ]
+}

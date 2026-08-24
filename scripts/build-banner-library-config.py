@@ -156,6 +156,35 @@ POSES = [
      "both eyes, full face, eye closed"),
 ]
 
+#: Every serum is a CLEAR liquid in tinted or frosted glass. Not one of the five
+#: product_desc files says so - they describe the glass colour and stop - so with
+#: nothing stated about the contents each supplier fills the bottle with whatever it
+#: assumes, and that assumption is milky white. It showed worst on Glutathione and
+#: Matrixyl because their glass is pale; Copper Peptide and PDRN hid it behind a
+#: strong tint. Stated here once for all serums rather than patched per product.
+SERUM_NOTE = (
+    "The glass colour described above is the colour of the GLASS ITSELF, not of the "
+    "contents. Inside, the serum is a CLEAR, COLOURLESS, WATER-TRANSPARENT liquid - "
+    "light passes straight through it, the pipette stem is visible through the bottle, "
+    "and the fluid in the pipette is clear. The contents are never milky, creamy, "
+    "opaque, white, pearlescent or yellow, and the bottle is never solid or painted."
+)
+
+SERUMS = {
+    "copper-peptide-repair-serum",
+    "pdrn-skin-repair-serum",
+    "glutathione-brightening-serum",
+    "matrixyl-3000-pro-collagen-serum",
+    "acetyl-hexapeptide-8-serum",
+}
+
+#: The creams are genuinely opaque, so they get no such note - a jar of cream that
+#: reads transparent would be just as wrong in the other direction.
+SERUM_NEG = (
+    ", milky liquid, creamy contents, white contents, opaque contents, pearlescent liquid, "
+    "yellow liquid, solid white bottle, painted plastic bottle, lotion inside the bottle"
+)
+
 NEG_GLOBAL = (
     "invented brand name, different brand, altered label, extra text on the product, mangled "
     "lettering, gibberish text, two products, packaging box, watermark, signature, border, "
@@ -209,6 +238,9 @@ def build(stem: str) -> dict:
         sys.exit(f"{stem}: no reference packshots in assets/publish-ready/{folder}")
     # First sentence of the product spec carries the physical description.
     physical = desc.split(". ")[0].strip()
+    if stem in SERUMS:
+        # rstrip the period: the template continues ", exactly as in the reference images"
+        physical = f"{physical}. {SERUM_NOTE}".rstrip(".")
     lines = product_lines(desc)
 
     slots = []
@@ -238,7 +270,8 @@ def build(stem: str) -> dict:
             "target_slot": "banner library",
             "ref_files": refs,
             "prompt": prompt,
-            "negative_extra": f"{neg}, product in the clear zone, product over the headline area",
+            "negative_extra": (f"{neg}, product in the clear zone, product over the headline area"
+                               + (SERUM_NEG if stem in SERUMS else "")),
         })
     return {
         "wave": f"banner-library-{stem}",
