@@ -14,20 +14,20 @@ The shared defaults actively damage a designed shot, so every page here turns th
 
   enable_parallax false  parallax renders the image at 130% and only ever reveals 77%
                          of its height, which cut the bottom off both banners.
-  image_size "auto"      the box is a FIXED pixel height (375/400/440) across a
-                         full-bleed width, so its aspect runs from ~1.0 on a phone to
-                         ~5.8 on a wide monitor and no single crop survives. "auto" is
-                         the theme's own no-crop option.
+  image_size "sm"        the theme's standard header height, unchanged from every
+                         other collection page. Cropping is handled by widening the
+                         masters and aiming object-position, not by growing the box.
   image / mobile_image   an explicit pair beats one image centre-cropped to a
                          near-square on phones.
   overlay_opacity        50 greyed the products out; each page carries its own value.
 
 THREE TRAPS, each of which cost a round (see ADR-005):
 
-  * "auto" leaves the image height as `auto`, and it is a grid item spanning every
-    row -- so it stretches to the height of the overlaid TEXT, and object-fit: cover
-    then crops the SIDES. Between 700 and 1099px the natural height is only width/3
-    and default type overflows it. Every page's CSS scales type down across that band.
+  * Do NOT reach for image_size "auto" to avoid cropping. It leaves the image height
+    as `auto`, and the image is a grid item spanning every row -- so it stretches to
+    the height of the overlaid TEXT and object-fit: cover then crops the SIDES. It
+    also makes the header taller than every other collection page. Widen the master
+    instead.
   * Section ids render as "shopify-section-template--<theme id>__<key>", so an id
     selector built from the section key silently matches nothing. Target the class.
   * Shopify rejects the `html` setting with a 422 if it contains "{{" or "}}" --
@@ -50,11 +50,7 @@ BACKUPS = ROOT / "backups"
 CSS_SECTION = "banner_text_width"
 
 
-TABLET_RATIO = 1.62   # the crop shape used between 700 and 1099px
-
-
-def css(text_width, scrim_from, cdn_url, crop, master_h, text_max="620px",
-        tablet_width="34vw"):
+def css(text_width, scrim_from, object_position, text_max="620px"):
     """Scoped CSS for one banner.
 
     text_width  : desktop measure, as a vw figure sized to the shot's clear zone
@@ -63,43 +59,23 @@ def css(text_width, scrim_from, cdn_url, crop, master_h, text_max="620px",
                   enough to carry white text over a lit subject would flatten the
                   whole shot, so a gradient is layered onto the same pseudo-element
                   and darkens only the strip the text occupies.
-    cdn_url     : the desktop file, used to build a server-side crop for tablets
-    crop        : Shopify crop anchor -- which part of the shot to keep
-    master_h    : the master's pixel height. The crop is sized from it because
-                  Shopify will not upscale: ask for a height above the source and
-                  it quietly ignores the crop and returns the full frame resized,
-                  which background-size: cover then centre-crops -- losing the jar
-                  entirely on /collections/pdrn.
 
-    THE TABLET CROP IS NOT COSMETIC. Squeezing a 3:1 banner into 700-1099px shrinks
-    the jar labels to ~3px per character, and at that size "PDRN" resolves as "PORN"
-    -- the exact failure .claude/rules/website-imagery.md rule 3 was written about,
-    reproduced here on both banners. Serving a bigger source does NOT fix it: the
-    limit is the display size, not the delivery (a forced 1600w source rendered the
-    same misread). Only enlarging the subject does, so this band gets a 1.62:1 crop
-    where the labels come back to ~6px per character -- the same density as the
-    1440px desktop view, which reads correctly. Shopify crops it on the fly, so no
-    extra file is uploaded. DPR2 devices were never affected; they already pull a
-    source big enough.
+    THE BANNER KEEPS THE THEME'S STANDARD HEIGHT. image_size stays "sm", the same
+    375/400/440 every other collection page uses -- an earlier pass set it to "auto"
+    to avoid cropping, which made these two headers taller than the rest of the site.
+    A fixed-height box crops by definition, so the masters are widened instead: at a
+    fixed height, object-fit cover scales purely by height, and the surplus width is
+    croppable margin rather than lost subject.
+
+    That margin is aimed with object-position. The theme centres it, which would eat
+    the model and the extension equally; anchoring to the shot's subject side means
+    horizontal cropping only ever removes extended backdrop.
     """
     direction = "to top" if scrim_from == "bottom" else "to bottom"
-    tablet = (f"{cdn_url}&width={round(master_h * TABLET_RATIO)}"
-              f"&height={master_h}&crop={crop}")
     return "\n".join([
         "@media screen and (min-width: 700px) {",
+        f"  .collection-banner > picture > img {{ object-position: {object_position}; }}",
         f"  .collection-banner .v-stack {{ max-width: clamp(320px, {text_width}, {text_max}); }}",
-        "}",
-        "@media screen and (min-width: 700px) and (max-width: 1099px) {",
-        "  .collection-banner h1 { font-size: clamp(30px, 4.4vw, 50px); }",
-        "  .collection-banner .prose { font-size: 0.85rem; line-height: 1.45; }",
-        f"  .collection-banner .v-stack {{ max-width: {tablet_width}; gap: 0.6rem; }}",
-        "  .collection-banner > picture { display: none; }",
-        "  .collection-banner {",
-        f"    min-height: {100 / TABLET_RATIO:.2f}vw;",
-        f'    background-image: url("{tablet}");',
-        "    background-size: cover;",
-        "    background-position: center;",
-        "  }",
         "}",
         "@media screen and (max-width: 699px) {",
         "  .collection-banner::before {",
@@ -124,7 +100,23 @@ PAGES = {
         "mobile_text": "place-self-end-center text-center",
         # centre keeps three of the four products; a right crop would halve the
         # copper-peptide bottle, which is the hero of the shot.
-        "css": dict(text_width="30vw", scrim_from="bottom", crop="center", master_h=724),
+        "css": dict(text_width="30vw", scrim_from="bottom", object_position="right center"),
+    },
+    # /collections/copper-peptide -- canvas extended left to 3000x848. Nothing touched
+    # that edge in the source, so the extension is plain backdrop and the dark zone now
+    # runs out to roughly x=700 of 1440, which gives the heading a wide clear measure.
+    # Phone crop is the face and bottle together; her eyes sit high in it, so the text
+    # goes bottom-centre where a scrim will not cover them.
+    "copper-peptide": {
+        "plan": "configs/banners/collection-copper-peptide-banner.json",
+        "desktop": "collection_copper_desktop",
+        "mobile": "collection_copper_mobile",
+        "overlay": 22,
+        "mobile_text": "place-self-end-center text-center",
+        # right, so horizontal cropping only ever eats the extended backdrop -- never
+        # the model or the bottle, both of which sit hard against the right edge.
+        "css": dict(text_width="42vw", scrim_from="bottom", text_max="660px",
+                    object_position="right center"),
     },
     # /collections/pdrn -- canvas extended left, so backdrop stays dark out to x=894
     # of 1440 and the text can breathe. The jar's label sits low in the phone crop,
@@ -137,7 +129,7 @@ PAGES = {
         "mobile_text": "place-self-start-center text-center",
         # right keeps the face and the jar together, which is the whole shot.
         "css": dict(text_width="40vw", scrim_from="top", text_max="640px",
-                    crop="right", master_h=848),
+                    object_position="right center"),
     },
 }
 
@@ -233,10 +225,7 @@ def main():
     missing = [k for k, v in handles.items() if not v]
     if missing:
         sys.exit(f"plan has no uploaded_handle for {missing} — run upload-theme-images.py first")
-    cdn = {i["slot"]: i.get("cdn_url") for i in plan["images"]}[page["desktop"]]
-    if not cdn:
-        sys.exit(f"plan has no cdn_url for {page['desktop']} — needed for the tablet crop")
-    page_css = css(cdn_url=cdn.split("&")[0], **page["css"])
+    page_css = css(**page["css"])
 
     base = rest(store, tok,
                 f"themes/{theme['id']}/assets.json?asset[key]=templates/collection.json")["asset"]
@@ -254,7 +243,7 @@ def main():
     before = dict(banner)
     banner.update({
         "enable_parallax": False,
-        "image_size": "auto",
+        "image_size": "sm",
         "overlay_opacity": page["overlay"],
         "desktop_text_position": "sm:place-self-center-start sm:text-start",
         "mobile_text_position": page["mobile_text"],

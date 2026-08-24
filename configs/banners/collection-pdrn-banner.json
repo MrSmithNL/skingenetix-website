@@ -2,23 +2,23 @@
   "created": "2026-08-24",
   "target": "live theme \u2014 Impact, new templates/collection.pdrn.json, collection-banner section",
   "decided_by": "Malcolm picked the source frame and asked for the canvas to be extended left",
-  "note": "Header banner for /collections/pdrn.\n\nSOURCE: banner library, pdrn-collagen-repair-cream--B-face-full-prod-right-gpt_image_01\n(2048x848, 2.41:1). Every quoted line on the jar was checked at 100% and is correct:\n  Skingenetix / PDRN COLLAGEN REPAIR / DEEP RENEWAL TREATMENT / PREMIUM FORMULA\nNo retouching of the product was needed.\n\nCANVAS EXTENDED, not cropped \u2014 Malcolm asked for the full height to stay visible in\nthe header, so the frame grew leftward to 3:1 (2544x848) instead of being trimmed to\nfit. scripts/extend-banner-canvas.py builds the 496px of new backdrop.\n\nThe subject TOUCHES the left edge: below y=632 the shoulder runs off frame, so flat\npadding would have smeared it into a bar. The fill is stitched from two parts \u2014 the\nbackdrop held at its own vertical gradient, and the edge profile sheared downward as\nit travels left so the shoulder sinks out of the bottom-left corner the way the real\none does. Backdrop weave is mirror-tiled from the shot; shoulder grain is scattered\nrather than tiled, because mirror-tiling skin drew a visible diamond across it.\nMeasured seam at the join is 1.7 levels against 2.0 for ordinary neighbouring\ncolumns \u2014 i.e. inside the image's own noise.",
+  "note": "Header banner for /collections/pdrn.\n\nSOURCE: banner library, pdrn-collagen-repair-cream--B-face-full-prod-right-gpt_image_01\n(2048x848, 2.41:1). Every quoted line on the jar was checked at 100% and is correct:\n  Skingenetix / PDRN COLLAGEN REPAIR / DEEP RENEWAL TREATMENT / PREMIUM FORMULA\nNo retouching of the product was needed.\n\nCANVAS EXTENDED, not cropped \u2014 Malcolm asked for the full height to stay visible in\nthe header, so the frame grew leftward to 3:1 (2544x848) instead of being trimmed to\nfit. scripts/extend-banner-canvas.py builds the 496px of new backdrop.\n\nThe subject TOUCHES the left edge: below y=632 the shoulder runs off frame, so flat\npadding would have smeared it into a bar. The fill is stitched from two parts \u2014 the\nbackdrop held at its own vertical gradient, and the edge profile sheared downward as\nit travels left so the shoulder sinks out of the bottom-left corner the way the real\none does. Backdrop weave is mirror-tiled from the shot; shoulder grain is scattered\nrather than tiled, because mirror-tiling skin drew a visible diamond across it.\nMeasured seam at the join is 1.7 levels against 2.0 for ordinary neighbouring\ncolumns \u2014 i.e. inside the image's own noise.\n\nREVISED 2026-08-24 after review \u2014 the header must keep the theme's STANDARD height\n(image_size sm, 375/400/440), the same as every other collection page; an earlier\npass used image_size \"auto\" to avoid cropping and made these two headers taller\nthan the rest of the site. A fixed-height box crops by definition, so the master is\nwidened to 3000px instead: at a fixed height object-fit cover scales purely by\nheight, and the surplus width becomes croppable margin that the template's\nobject-position aims at the extension rather than at the product.",
   "images": [
     {
       "slot": "collection_pdrn_desktop",
-      "source": "assets/publish-ready/collection-pdrn-banner/skingenetix-pdrn-collagen-repair-cream-skincare.jpg",
-      "filename": "skingenetix-pdrn-collagen-repair-cream-skincare.jpg",
+      "source": "assets/publish-ready/collection-pdrn-banner/skingenetix-pdrn-collagen-repair-deep-renewal-cream.jpg",
+      "filename": "skingenetix-pdrn-collagen-repair-deep-renewal-cream.jpg",
       "alt": "Woman resting her cheek against a jar of Skingenetix PDRN Collagen Repair deep renewal cream on a dark studio backdrop",
-      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-repair-cream-skincare.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-repair-cream-skincare.jpg?v=1787580513"
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-repair-deep-renewal-cream.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-repair-deep-renewal-cream.jpg?v=1787582509"
     },
     {
       "slot": "collection_pdrn_mobile",
-      "source": "assets/publish-ready/collection-pdrn-banner/skingenetix-pdrn-collagen-repair-cream-mobile.jpg",
-      "filename": "skingenetix-pdrn-collagen-repair-cream-mobile.jpg",
+      "source": "assets/publish-ready/collection-pdrn-banner/skingenetix-pdrn-collagen-repair-cream-face-mobile.jpg",
+      "filename": "skingenetix-pdrn-collagen-repair-cream-face-mobile.jpg",
       "alt": "Close-up of a jar of Skingenetix PDRN Collagen Repair deep renewal cream held against a woman's face",
-      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-repair-cream-mobile.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-repair-cream-mobile.jpg?v=1787580512"
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-repair-cream-face-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-repair-cream-face-mobile.jpg?v=1787582507"
     }
   ]
 }

@@ -34,28 +34,103 @@ from pathlib import Path
 from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-pdrn-collagen-repair-cream"
-              / "pdrn-collagen-repair-cream--B-face-full-prod-right"
-              / "pdrn-collagen-repair-cream--B-face-full-prod-right-gpt_image_01.png")
-OUT = ROOT / "assets/publish-ready/collection-pdrn-banner"
 
-DESKTOP = "skingenetix-pdrn-collagen-repair-cream-skincare.jpg"
-MOBILE = "skingenetix-pdrn-collagen-repair-cream-mobile.jpg"
+#: 3000 is the widest the pipeline keeps (upload-theme-images.py caps the long edge
+#: there). The banner box is a FIXED height, so a wider frame is strictly better:
+#: object-fit cover scales it by height alone and the surplus width becomes croppable
+#: margin, which the template's object-position aims at the extension. Widening the
+#: master is what lets these banners keep the theme's standard header height.
+TARGET_WIDTH = 3000
+#: Per-banner override, because "wide enough" is a property of the widest VIEWPORT the
+#: banner has to survive, not of the pipeline. The box is 100vw x 440px, so its aspect
+#: is viewport/440: 3.27:1 at 1440, 3.44:1 at 1512, 4.36:1 at 1920. A master narrower
+#: than the box crops the HEIGHT. Measured live on /collections/copper-peptide at
+#: 3000x848 (3.54:1): 100% of the height survived at 1440 and 1512 and only 81% at
+#: 1920. To keep full height at 1920 the master has to reach ~4.36:1.
+#: Going wider is close to free: object-position is anchored to the subject side, so
+#: the surplus is cropped off the EXTENSION, never off the model.
 
-TARGET_RATIO = 3.0      # matches the /collections/all banner
-EDGE_COLS = 6           # columns averaged into the edge profile
-SHOULDER_Y = 632        # row where the shoulder meets x=0
-SHEAR = 0.50            # px down per px left, measured off the shoulder line
-BG_FIT = (380, 560)     # clean backdrop rows used to model its vertical gradient
-TEXTURE_MAX_Y = 555     # last row that is backdrop at EVERY x in the texture patch
-VIGNETTE = 0.13         # how far the far-left edge is darkened
 QUALITY = 95            # matches .claude/rules/website-imagery.md rule 5: the CDN,
                         # not this script, does the compressing. No ICC is embedded
                         # either -- upload-theme-images.py strips metadata anyway.
-MOBILE_CROP = (1700, 2421)  # portrait crop: face and jar, label fully legible
+EDGE_COLS = 6           # columns averaged into the edge profile
+VIGNETTE = 0.13         # how far the far-left edge is darkened
+
+BANNERS = {
+    "pdrn": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-pdrn-collagen-repair-cream"
+                     / "pdrn-collagen-repair-cream--B-face-full-prod-right"
+                     / "pdrn-collagen-repair-cream--B-face-full-prod-right-gpt_image_01.png"),
+        "out": ROOT / "assets/publish-ready/collection-pdrn-banner",
+        "desktop": "skingenetix-pdrn-collagen-repair-deep-renewal-cream.jpg",
+        "mobile": "skingenetix-pdrn-collagen-repair-cream-face-mobile.jpg",
+        #: right-anchored so the crop stays put however far the canvas grows
+        "mobile_crop": (123, 721),      # (inset from right edge, width)
+        "bg_fit": (380, 560),           # clean backdrop rows modelling the gradient
+        "texture_box": (0, 555, 0, 820),
+        #: the backdrop cloth has real weave and blotches worth carrying across
+        "texture_mode": "tile",
+        #: The model's shoulder TOUCHES the left edge below this row.
+        "shoulder": {
+            "y": 632,
+            "skin_box": (662, None, 0, 460),
+        },
+    },
+    "copper-peptide": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-repair-serum"
+                     / "copper-peptide-repair-serum--D-face-full-eyes-open-right"
+                     / "copper-peptide-repair-serum--D-face-full-eyes-open-right-gpt_image_01.png"),
+        "out": ROOT / "assets/publish-ready/collection-copper-peptide-banner",
+        "desktop": "skingenetix-copper-peptide-ghk-cu-anti-ageing-repair-serum.jpg",
+        "mobile": "skingenetix-copper-peptide-repair-serum-face-mobile.jpg",
+        #: right-anchored, so it keeps the bottle (x 1199-1854 of 2048) together with
+        #: most of the face however far the canvas grows leftward.
+        "mobile_crop": (30, 900),
+        #: 4.42:1 - just past the 4.36:1 the box reaches at a 1920 viewport, which is
+        #: the widest common desktop. At 3000x848 (3.54:1) the live page still cropped
+        #: 19% of the height there.
+        "target_width": 3750,
+        "bg_fit": (100, 700),
+        "texture_box": (0, 400, 0, 600),   # measured mean 22.4, stdev 1.2 - clean backdrop
+        #: tile, as for pdrn: this is the same woven studio backdrop, and mirror-tiling
+        #: its weave keeps that texture. scatter is for the /collections/all sweep,
+        #: which has no weave to preserve.
+        "texture_mode": "tile",
+        #: Nothing touches this edge. The leftmost column runs mean 15.8-22.1 with a
+        #: max of 25 from top to bottom, i.e. flat backdrop all the way down, so no
+        #: shoulder has to be carried the way the pdrn banner's did.
+        "shoulder": None,
+    },
+    "all": {
+        "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
+        "out": ROOT / "assets/publish-ready/collection-all-banner",
+        "desktop": "skingenetix-peptide-skincare-copper-peptide-pdrn-range.jpg",
+        "mobile": "skingenetix-copper-peptide-pdrn-serums-mobile-crop.jpg",
+        "mobile_crop": (722, 620),
+        "bg_fit": (80, 640),
+        "texture_box": (0, 700, 0, 700),
+        #: near-black and featureless, so there is no structure worth preserving --
+        #: and mirror-tiling it drew faint vertical lines at every tile boundary.
+        "texture_mode": "scatter",
+        #: nothing touches this edge - it measures a mean luminance of 3 - so the
+        #: extension is plain backdrop and no shoulder has to be carried.
+        "shoulder": None,
+    },
+}
+
+#: The arm is NOT extended across the new canvas. Dragging its edge profile sideways
+#: gave a long, featureless ramp with no deltoid curve and no collarbone hollow -- it
+#: read as a smeared arm, because a 1-D profile translated sideways has by
+#: construction no variation along its length. Instead it leaves frame the way it
+#: physically would: steeply, on a curve, falling out of the key light into the dark
+#: backdrop. ARM_FADE is the distance over which it is gone.
+SHEAR = 0.62            # px down per px left at the join, measured off the real line
+SHEAR_CURVE = 0.0035    # the line steepens as it recedes; drops it out by d~175
+ARM_FADE = 190          # px over which the arm dissolves into backdrop shadow
+JOIN_BLEND = 40         # columns over which the extension is matched to the original
 
 
-def edge_profile(im):
+def edge_profile(im, bg_fit, shoulder):
     """Left-edge colour profile, and the backdrop lighting to use behind it.
 
     Above the shoulder the profile IS backdrop, so it is used as measured -- that
@@ -66,11 +141,13 @@ def edge_profile(im):
     """
     prof = ndimage.gaussian_filter1d(im[:, :EDGE_COLS].mean(axis=1), 2.0, axis=0)
     rows = np.arange(im.shape[0])
+    if shoulder is None:
+        return prof, prof          # nothing on this edge but backdrop
 
-    ys = np.arange(*BG_FIT)
+    ys = np.arange(*bg_fit)
     ramp = np.stack([np.polyval(np.polyfit(ys, prof[ys, c], 1), rows) for c in range(3)],
                     axis=-1)
-    hand_over = np.clip((rows - (SHOULDER_Y - 40)) / 40.0, 0, 1)[:, None]
+    hand_over = np.clip((rows - (shoulder["y"] - 40)) / 40.0, 0, 1)[:, None]
     return prof, prof * (1 - hand_over) + ramp * hand_over
 
 
@@ -115,71 +192,98 @@ def texture(im, box, sigma, h, w):
     return detail[np.ix_(ys, xs)]
 
 
-def extend_left(im, extra):
+def extend_left(im, extra, cfg):
     h = im.shape[0]
-    prof, backdrop = edge_profile(im)
+    shoulder = cfg["shoulder"]
+    prof, backdrop = edge_profile(im, cfg["bg_fit"], shoulder)
     out = np.zeros((h, extra, 3), dtype=np.float64)
     alpha = np.zeros((h, extra, 1), dtype=np.float64)
     rows = np.arange(h)
 
     for x in range(extra):
         d = extra - x                      # distance left of the original edge
-        # The shoulder line steepens as it recedes, so a straight shear reads as a
-        # ruled edge over 500px. The quadratic term sinks it out of frame by ~d=310.
-        shift = SHEAR * d + 0.0006 * d * d
+        col = backdrop.copy()
+        if shoulder is not None:
+            shift = SHEAR * d + SHEAR_CURVE * d * d
+            src = np.clip(rows - shift, 0, h - 1)
+            lo = np.floor(src).astype(int)
+            f = (src - lo)[:, None]
+            sheared = prof[lo] * (1 - f) + prof[np.clip(lo + 1, 0, h - 1)] * f
 
-        src = np.clip(rows - shift, 0, h - 1)
-        lo = np.floor(src).astype(int)
-        f = (src - lo)[:, None]
-        sheared = prof[lo] * (1 - f) + prof[np.clip(lo + 1, 0, h - 1)] * f
-
-        a = np.clip((rows - (SHOULDER_Y + shift)) / 8.0 + 0.5, 0, 1)[:, None]
-        col = backdrop * (1 - a) + sheared * a
-        col *= 1.0 - VIGNETTE * (d / extra) ** 2
+            # Two things retire the arm together: the shoulder line dives out of the
+            # bottom of the frame, and what is still in frame loses the key light.
+            # Without the second, the surviving wedge is a flat ramp with no form.
+            lit = max(0.0, 1.0 - d / ARM_FADE) ** 1.4
+            a = np.clip((rows - (shoulder["y"] + shift)) / 8.0 + 0.5, 0, 1)[:, None] * lit
+            col = backdrop * (1 - a) + sheared * a
+            alpha[:, x] = a
+        col = col * (1.0 - VIGNETTE * (d / extra) ** 2)
         out[:, x] = col
-        alpha[:, x] = a
 
-    weave = texture(im, (0, TEXTURE_MAX_Y, 0, 820), 25, h, extra)
-    skin = scatter(im, (SHOULDER_Y + 30, h, 0, 460), 5, h, extra, seed=20260824)
-    return np.clip(out + weave * (1 - alpha) + skin * alpha, 0, 255)
+    # .get, not [], so adding a banner without this key degrades to the safer of the
+    # two rather than dying with a KeyError three functions deep.
+    if cfg.get("texture_mode", "scatter") == "tile":
+        grain = texture(im, cfg["texture_box"], 25, h, extra)
+    else:
+        grain = scatter(im, cfg["texture_box"], 25, h, extra, seed=20260824)
+    out += grain * (1 - alpha)
+
+    # Null the join. The edge profile is an average of several columns, so it never
+    # equals the original's actual first column, and the residual step reads as a
+    # faint vertical line -- noise the eye ignores, a straight edge it does not.
+    # Ramping the difference in over the last few columns removes it exactly.
+    correction = im[:, 0] - out[:, -1]
+    ramp = np.linspace(0.0, 1.0, JOIN_BLEND)
+    out[:, -JOIN_BLEND:] += correction[:, None, :] * ramp[None, :, None]
+    if shoulder is not None:
+        y0, y1, x0, x1 = shoulder["skin_box"]
+        box = (y0, h if y1 is None else y1, x0, x1)
+        out += scatter(im, box, 5, h, extra, seed=20260824) * alpha
+    return np.clip(out, 0, 255)
 
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("banner", choices=sorted(BANNERS))
     ap.add_argument("--preview", action="store_true", help="write a PNG, skip the jpgs")
     args = ap.parse_args()
+    cfg = BANNERS[args.banner]
 
-    im = np.array(Image.open(SRC).convert("RGB")).astype(np.float64)
+    im = np.array(Image.open(cfg["src"]).convert("RGB")).astype(np.float64)
     h, w, _ = im.shape
-    target_w = int(round(h * TARGET_RATIO))
-    extra = target_w - w
+    target = cfg.get("target_width", TARGET_WIDTH)
+    extra = target - w
     if extra <= 0:
-        raise SystemExit(f"source is already {w / h:.2f}:1 — nothing to extend")
+        raise SystemExit(f"source is already {w}px wide — nothing to extend")
 
-    wide = np.concatenate([extend_left(im, extra), im], axis=1)
+    wide = np.concatenate([extend_left(im, extra, cfg), im], axis=1)
     final = Image.fromarray(wide.astype(np.uint8))
-    print(f"{w}x{h} ({w/h:.2f}:1)  ->  {target_w}x{h} ({target_w/h:.2f}:1), "
+    print(f"{w}x{h} ({w/h:.2f}:1)  ->  {target}x{h} ({target/h:.2f}:1), "
           f"added {extra}px of backdrop on the left")
 
-    OUT.mkdir(parents=True, exist_ok=True)
+    out = cfg["out"]
+    out.mkdir(parents=True, exist_ok=True)
     if args.preview:
-        p = OUT / "_preview-extended.png"
+        p = out / "_preview-extended.png"
         final.save(p)
         print(f"preview -> {p.relative_to(ROOT)}")
         return
 
     jpeg = dict(format="JPEG", quality=QUALITY, optimize=True, progressive=True,
                 subsampling=0)
-    final.save(OUT / DESKTOP, **jpeg)
+    final.save(out / cfg["desktop"], **jpeg)
 
-    # portrait crop for phones, anchored on the face and the jar
-    final.crop((MOBILE_CROP[0], 0, MOBILE_CROP[1], h)).save(OUT / MOBILE, **jpeg)
-    final.save(OUT / "_master-extended.png", optimize=True)
+    # Portrait crop for phones, measured in from the RIGHT edge so it stays on the
+    # same part of the shot no matter how far the canvas grew.
+    inset, cw = cfg["mobile_crop"]
+    right = target - inset
+    final.crop((right - cw, 0, right, h)).save(out / cfg["mobile"], **jpeg)
+    final.save(out / "_master-extended.png", optimize=True)
 
-    for name in (DESKTOP, MOBILE):
-        p = OUT / name
+    for name in (cfg["desktop"], cfg["mobile"]):
+        p = out / name
         iw, ih = Image.open(p).size
-        print(f"{name:<52} {iw}x{ih}  {p.stat().st_size / 1024:>6.0f} KB")
+        print(f"{name:<56} {iw}x{ih}  {p.stat().st_size / 1024:>6.0f} KB")
 
 
 if __name__ == "__main__":

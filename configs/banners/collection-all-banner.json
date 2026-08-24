@@ -2,23 +2,23 @@
   "created": "2026-08-24",
   "target": "live theme \u2014 Impact, new templates/collection.all.json, collection-banner section",
   "decided_by": "Malcolm picked the source frame; Claude retouched, cropped and sized it",
-  "note": "Header banner for /collections/all.\n\nSOURCE: ChatGPT frame 'ChatGPT Image Aug 21, 2026, 05_07_55 PM (4) copy.png' (2172x724).\n\nRETOUCHED before publishing \u2014 the generator mis-set three words that are legible at\nrender size. Fixes are moved pixels, not drawn type (scripts/retouch-collection-all-banner.py):\n  blue serum   'ADVANCED REPAIR / SEPAIR SERUM'      -> 'ADVANCED REPAIR / SERUM'\n  matrixyl jar 'FULL & FIRMING TREEAENT / FREATMENT' -> 'FULL & FIRMING'\nThe two pink labels were checked at 100% and were already correct.\n\nEvery quoted line on every label is now correct at 100% zoom:\n  blue  \u2014 COPPER PEPTIDE / ADVANCED REPAIR / SERUM / PREMIUM FORMULA / 2% GHK-CU | 30ML\n  pink  \u2014 PDRN SKIN REPAIR / DEEP RENEWAL TREATMENT / PREMIUM FORMULA / 1% (10,000 PPM) PDRN | 30ML\n  rose  \u2014 PDRN COLLAGEN REPAIR / DEEP RENEWAL TREATMENT / PREMIUM FORMULA / PDRN | COLLAGEN | COPPER PEPTIDE | 50ML\n  white \u2014 MATRIXYL 3000 PRO COLLAGEN / FULL & FIRMING / PREMIUM FORMULA\n\nSIZING: the collection-banner box is a FIXED pixel height (375/400/440) across a\nfull-bleed width, so its aspect ratio swings from ~1.0 on a phone to ~5.8 on a\n2560 monitor. No single image survives that. The new template therefore sets\nimage_size 'auto' (original image ratio, no crop at any width) and supplies a\nseparate portrait mobile crop. Parallax is off: it scales the image to 130% and\nonly ever shows 77% of its height, which cut the bottle bases.",
+  "note": "Header banner for /collections/all.\n\nSOURCE: ChatGPT frame 'ChatGPT Image Aug 21, 2026, 05_07_55 PM (4) copy.png' (2172x724).\n\nRETOUCHED before publishing \u2014 the generator mis-set three words that are legible at\nrender size. Fixes are moved pixels, not drawn type (scripts/retouch-collection-all-banner.py):\n  blue serum   'ADVANCED REPAIR / SEPAIR SERUM'      -> 'ADVANCED REPAIR / SERUM'\n  matrixyl jar 'FULL & FIRMING TREEAENT / FREATMENT' -> 'FULL & FIRMING'\nThe two pink labels were checked at 100% and were already correct.\n\nEvery quoted line on every label is now correct at 100% zoom:\n  blue  \u2014 COPPER PEPTIDE / ADVANCED REPAIR / SERUM / PREMIUM FORMULA / 2% GHK-CU | 30ML\n  pink  \u2014 PDRN SKIN REPAIR / DEEP RENEWAL TREATMENT / PREMIUM FORMULA / 1% (10,000 PPM) PDRN | 30ML\n  rose  \u2014 PDRN COLLAGEN REPAIR / DEEP RENEWAL TREATMENT / PREMIUM FORMULA / PDRN | COLLAGEN | COPPER PEPTIDE | 50ML\n  white \u2014 MATRIXYL 3000 PRO COLLAGEN / FULL & FIRMING / PREMIUM FORMULA\n\nSIZING: the collection-banner box is a FIXED pixel height (375/400/440) across a\nfull-bleed width, so its aspect ratio swings from ~1.0 on a phone to ~5.8 on a\n2560 monitor. No single image survives that. The new template therefore sets\nimage_size 'auto' (original image ratio, no crop at any width) and supplies a\nseparate portrait mobile crop. Parallax is off: it scales the image to 130% and\nonly ever shows 77% of its height, which cut the bottle bases.\n\nREVISED 2026-08-24 after review \u2014 the header must keep the theme's STANDARD height\n(image_size sm, 375/400/440), the same as every other collection page; an earlier\npass used image_size \"auto\" to avoid cropping and made these two headers taller\nthan the rest of the site. A fixed-height box crops by definition, so the master is\nwidened to 3000px instead: at a fixed height object-fit cover scales purely by\nheight, and the surplus width becomes croppable margin that the template's\nobject-position aims at the extension rather than at the product.",
   "images": [
     {
       "slot": "collection_all_desktop",
-      "source": "assets/publish-ready/collection-all-banner/skingenetix-peptide-skincare-collection-copper-peptide-pdrn.jpg",
-      "filename": "skingenetix-peptide-skincare-collection-copper-peptide-pdrn.jpg",
+      "source": "assets/publish-ready/collection-all-banner/skingenetix-peptide-skincare-copper-peptide-pdrn-range.jpg",
+      "filename": "skingenetix-peptide-skincare-copper-peptide-pdrn-range.jpg",
       "alt": "Skingenetix peptide skincare collection \u2014 Copper Peptide Advanced Repair Serum, PDRN Skin Repair Serum, PDRN Collagen Repair Cream and Matrixyl 3000 Pro Collagen Cream lit on a wet dark surface",
-      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-skincare-collection-copper-peptide-pdrn.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-skincare-collection-copper-peptide-pdrn.jpg?v=1787563340"
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-skincare-copper-peptide-pdrn-range.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-skincare-copper-peptide-pdrn-range.jpg?v=1787582525"
     },
     {
       "slot": "collection_all_mobile",
-      "source": "assets/publish-ready/collection-all-banner/skingenetix-copper-peptide-pdrn-serums-mobile.jpg",
-      "filename": "skingenetix-copper-peptide-pdrn-serums-mobile.jpg",
+      "source": "assets/publish-ready/collection-all-banner/skingenetix-copper-peptide-pdrn-serums-mobile-crop.jpg",
+      "filename": "skingenetix-copper-peptide-pdrn-serums-mobile-crop.jpg",
       "alt": "Skingenetix Copper Peptide Advanced Repair Serum and PDRN Skin Repair Serum bottles side by side",
-      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-pdrn-serums-mobile.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-pdrn-serums-mobile.jpg?v=1787563340"
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-pdrn-serums-mobile-crop.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-pdrn-serums-mobile-crop.jpg?v=1787582524"
     }
   ]
 }
