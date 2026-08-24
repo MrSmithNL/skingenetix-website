@@ -36,7 +36,7 @@ top edge at x0 plus a slope, never by a rectangle.
 Author: Claude Code, 2026-08-24.
 """
 import numpy as np
-from PIL import Image, ImageCms
+from PIL import Image
 from pathlib import Path
 from scipy import ndimage
 
@@ -47,7 +47,9 @@ OUT = ROOT / "assets/publish-ready/collection-all-banner"
 DESKTOP = "skingenetix-peptide-skincare-collection-copper-peptide-pdrn.jpg"
 MOBILE = "skingenetix-copper-peptide-pdrn-serums-mobile.jpg"
 MOBILE_CROP = (830, 0, 1450, 724)   # blue + pink serum, portrait 0.86
-QUALITY = 90                        # 4:4:4 -- the labels are small coloured type
+QUALITY = 95            # matches .claude/rules/website-imagery.md rule 5: the CDN,
+                        # not this script, does the compressing. No ICC is embedded
+                        # either -- upload-theme-images.py strips metadata anyway.
 
 PAD = 24                            # context so a filter is not edge-biased
 
@@ -169,9 +171,8 @@ def main():
     # 3. export
     OUT.mkdir(parents=True, exist_ok=True)
     final = Image.fromarray(im.astype(np.uint8))
-    srgb = ImageCms.ImageCmsProfile(ImageCms.createProfile("sRGB")).tobytes()
     jpeg = dict(format="JPEG", quality=QUALITY, optimize=True, progressive=True,
-                subsampling=0, icc_profile=srgb)
+                subsampling=0)
     final.save(OUT / DESKTOP, **jpeg)
     final.crop(MOBILE_CROP).save(OUT / MOBILE, **jpeg)
     final.save(OUT / "_master-retouched.png", optimize=True)

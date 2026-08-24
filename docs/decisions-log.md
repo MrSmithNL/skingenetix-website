@@ -72,7 +72,7 @@ Technical decisions recorded in ADR (Architecture Decision Record) format.
 **Date:** 2026-08-24
 **Status:** Accepted
 **Context:** The shop landing page needed a branded header banner. All thirteen collections shared `templates/collection.json`, so tuning the banner there would have changed `/collections/serums`, `/collections/pdrn` and ten others. The `collection-banner` section also had settings that actively damaged a designed product line-up: parallax renders the image at 130% and only ever reveals 77% of its height (it cut the bottle bases off), and a 50% overlay greyed the products out.
-**Decision:** Copy the shared template to `templates/collection.all.json`, edit only its banner, and point the collection at it with `templateSuffix`. Publish with `scripts/publish-collection-all-template.py` (has `--dry-run` and `--restore`).
+**Decision:** Copy the shared template to `templates/collection.<handle>.json`, edit only its banner, and point the collection at it with `templateSuffix`. Publish with `scripts/publish-collection-banner-template.py <handle>` (has `--dry-run` and `--restore`). Applied to `all` on 2026-08-24 and generalised to `pdrn` the same day; each page carries its own overlay, text placement, measured text width and tablet crop.
 **Rationale:**
 
 - The banner box is a **fixed pixel height** (375/400/440) across a full-bleed width, so its aspect ratio runs from ~1.0 on a phone to ~5.8 on a 2560 monitor. No single crop survives that, which is why the section ships with a separate mobile image slot.
@@ -82,3 +82,11 @@ Technical decisions recorded in ADR (Architecture Decision Record) format.
 - `image_size: "auto"` leaves the image height as `auto`, and it is a **grid item spanning every row** — so it stretches to the height of the overlaid text, and `object-fit: cover` then crops the **sides**. Between 700 and 1099px the natural height is only width/3 and the default type overflowed it, cutting the fourth product. The template's `custom-html` `<style>` scales the type down across that range to prevent it.
 - Section ids in a JSON template render as `shopify-section-template--<theme id>__<key>`, so an id selector built from the section key silently matches nothing. Target the section's class instead.
 - Shopify rejects the `html` setting with a 422 if it contains `{{` or `}}` — which minified CSS produces the moment a rule closes inside a media query (`;}}`). Keep the braces apart.
+
+**Amendment, 2026-08-24 — the 700–1099px band was misreading product names.**
+Squeezing a 3:1 banner into that width shrinks the jar labels to ~3px per character, and at that size **`PDRN` resolves as `PORN`** on both banners — the exact failure `.claude/rules/website-imagery.md` rule 3 was written about, reproduced live. Two findings worth keeping:
+
+- **Serving a bigger source does not fix it.** The limit is the *display* size, not the delivery: a forced 1600w source rendered the identical misread at 768px. Only enlarging the subject works. That band now gets a 1.62:1 crop where the labels return to ~6px per character — the same density as the 1440px view, which reads correctly. DPR2 devices were never affected; they already pull a big enough source.
+- **Shopify will not upscale, and fails silently when asked to.** Requesting `width=1600&height=988&crop=right` against an 848px-tall master returned `1600x533` — the *full frame resized, crop ignored*. `background-size: cover` then centre-cropped it and the jar vanished entirely. Size a crop request from the master's own height (`width = height × ratio`), never from the viewport.
+
+The crop is done by the CDN from the already-uploaded file, so no third image per banner is stored.
