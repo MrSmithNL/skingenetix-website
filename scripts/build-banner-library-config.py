@@ -180,6 +180,11 @@ SERUMS = {
 
 #: The creams are genuinely opaque, so they get no such note - a jar of cream that
 #: reads transparent would be just as wrong in the other direction.
+#: The helix mark drifts into a solid ribbon on every product, most often on nbp_pro.
+#: Naming what it IS beats naming it in the abstract - the same fix that worked on the
+#: bottle repair, where "DNA-helix mark" alone kept producing ribbons and letter shapes.
+HELIX_NEG = ", ribbon logo, swirl logo, spiral logo, letter Z logo, solid helix, SKINGENETIX in all capitals"
+
 SERUM_NEG = (
     ", milky liquid, creamy contents, white contents, opaque contents, pearlescent liquid, "
     "yellow liquid, solid white bottle, painted plastic bottle, lotion inside the bottle"
@@ -250,7 +255,9 @@ def build(stem: str) -> dict:
             f"old {pose}. One hand with five slender relaxed fingers holds the product, which sits "
             f"in the {third}, sharp and with its label turned square to camera. The product is "
             f"{physical}, exactly as in the reference images. Legible type on it reads only: the "
-            f"Skingenetix DNA-helix mark with the wordmark 'Skingenetix', then {lines}. Every "
+            f"Skingenetix DNA-helix mark - a fine double helix drawn as small dots and dashes, never a "
+            f"solid ribbon, swirl, spiral or letter shape - with the wordmark 'Skingenetix' spelled "
+            f"with a capital S and the rest lower case, never in all capitals, then {lines}. Every "
             f"remaining line falls outside the depth of field, visibly soft and blurred beyond any "
             f"possibility of being read. Print no word that is not quoted here. The background "
             f"beyond her is a deep graphite grey, colour #1A1A1A, dark and even. One directional "
@@ -271,7 +278,7 @@ def build(stem: str) -> dict:
             "ref_files": refs,
             "prompt": prompt,
             "negative_extra": (f"{neg}, product in the clear zone, product over the headline area"
-                               + (SERUM_NEG if stem in SERUMS else "")),
+                               + HELIX_NEG + (SERUM_NEG if stem in SERUMS else "")),
         })
     return {
         "wave": f"banner-library-{stem}",
