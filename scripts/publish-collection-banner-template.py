@@ -99,7 +99,11 @@ PAGES = {
         "overlay": 22,
         "mobile_text": "place-self-end-center text-center",
         # right, so horizontal cropping only ever removes extended backdrop
-        "css": dict(text_width="40vw", scrim_from="bottom", text_max="640px",
+        #: "Acetyl Hexapeptide-8" needs 654px at 1440 and 1512, and 668px at 1920, to
+        #: stay on one line - measured in the browser by widening the stack and reading
+        #: the h1's natural width, not guessed. clamp(320px, 40vw, 640px) resolved to
+        #: 576/605/640, short at every width, so the title broke after "Acetyl".
+        "css": dict(text_width="48vw", scrim_from="bottom", text_max="720px",
                     object_position="right center"),
     },
     # /collections/all -- lit background sweep begins at x=515 of 1440, so the text
