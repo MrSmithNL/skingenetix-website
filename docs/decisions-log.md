@@ -64,3 +64,21 @@ Technical decisions recorded in ADR (Architecture Decision Record) format.
 - Keeps email independent from Shopify
 - Domain registrar (OpenDomainRegistry) just needs MX records pointed to GoDaddy
   **Consequences:** Email management happens in GoDaddy control panel, not Shopify.
+
+---
+
+## ADR-005: Dedicated Template for /collections/all
+
+**Date:** 2026-08-24
+**Status:** Accepted
+**Context:** The shop landing page needed a branded header banner. All thirteen collections shared `templates/collection.json`, so tuning the banner there would have changed `/collections/serums`, `/collections/pdrn` and ten others. The `collection-banner` section also had settings that actively damaged a designed product line-up: parallax renders the image at 130% and only ever reveals 77% of its height (it cut the bottle bases off), and a 50% overlay greyed the products out.
+**Decision:** Copy the shared template to `templates/collection.all.json`, edit only its banner, and point the collection at it with `templateSuffix`. Publish with `scripts/publish-collection-all-template.py` (has `--dry-run` and `--restore`).
+**Rationale:**
+
+- The banner box is a **fixed pixel height** (375/400/440) across a full-bleed width, so its aspect ratio runs from ~1.0 on a phone to ~5.8 on a 2560 monitor. No single crop survives that, which is why the section ships with a separate mobile image slot.
+- `image_size: "auto"` is the theme's own no-crop option and keeps all four products visible at every width.
+- Every other collection keeps the shared template untouched.
+  **Consequences:** Two gotchas worth remembering, both cost a round to find:
+- `image_size: "auto"` leaves the image height as `auto`, and it is a **grid item spanning every row** — so it stretches to the height of the overlaid text, and `object-fit: cover` then crops the **sides**. Between 700 and 1099px the natural height is only width/3 and the default type overflowed it, cutting the fourth product. The template's `custom-html` `<style>` scales the type down across that range to prevent it.
+- Section ids in a JSON template render as `shopify-section-template--<theme id>__<key>`, so an id selector built from the section key silently matches nothing. Target the section's class instead.
+- Shopify rejects the `html` setting with a 422 if it contains `{{` or `}}` — which minified CSS produces the moment a rule closes inside a media query (`;}}`). Keep the braces apart.
