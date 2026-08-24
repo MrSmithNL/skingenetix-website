@@ -92,18 +92,22 @@ PAGES = {
     # /collections/acetyl-hexapeptide-8 -- canvas extended left, subject and bottle
     # hard right. Her eyes sit high in the phone crop, so the text goes bottom-centre
     # where the scrim will not cross them.
+    # /collections/acetyl-hexapeptide-8 -- on the J-body-and-face frame her bare
+    # shoulder crosses the MIDDLE of the picture: measured with the 22% overlay on, the
+    # clear zone is only 435px at centre height but 858px across the top. The title
+    # needs 654px at 1440 to stay on one line, so centre-left cannot hold it and the
+    # heading sits top-left instead. On the phone the bottle's label sits mid-frame,
+    # so the text goes top-centre as well -- a bottom scrim would cover
+    # ACETYL HEXAPEPTIDE-8.
     "acetyl-hexapeptide-8": {
         "plan": "configs/banners/collection-acetyl-hexapeptide-8-banner.json",
         "desktop": "collection_ahp8_desktop",
         "mobile": "collection_ahp8_mobile",
         "overlay": 22,
-        "mobile_text": "place-self-end-center text-center",
+        "desktop_text": "sm:place-self-start sm:text-start",
+        "mobile_text": "place-self-start-center text-center",
         # right, so horizontal cropping only ever removes extended backdrop
-        #: "Acetyl Hexapeptide-8" needs 654px at 1440 and 1512, and 668px at 1920, to
-        #: stay on one line - measured in the browser by widening the stack and reading
-        #: the h1's natural width, not guessed. clamp(320px, 40vw, 640px) resolved to
-        #: 576/605/640, short at every width, so the title broke after "Acetyl".
-        "css": dict(text_width="48vw", scrim_from="bottom", text_max="720px",
+        "css": dict(text_width="48vw", scrim_from="top", text_max="720px",
                     object_position="right center"),
     },
     # /collections/all -- lit background sweep begins at x=515 of 1440, so the text
@@ -263,7 +267,8 @@ def main():
         "enable_parallax": False,
         "image_size": "sm",
         "overlay_opacity": page["overlay"],
-        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "desktop_text_position": page.get(
+            "desktop_text", "sm:place-self-center-start sm:text-start"),
         "mobile_text_position": page["mobile_text"],
         "image": handles[page["desktop"]],
         "mobile_image": handles[page["mobile"]],
