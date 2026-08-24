@@ -124,6 +124,13 @@ def main():
             made.append(out)
 
     print(f"\n{len(made)} contact sheets on the Desktop")
+    # Tiles are ~900px wide from sources up to 6336px, a 7x downscale, and thin
+    # letterforms do not survive it. On 2026-08-24 this sheet showed "PORN SKIN
+    # REPAIR" on six candidates that all read "PDRN SKIN REPAIR" at native pixels.
+    # The sheet is for composition and lighting only.
+    print("NOTE: do not judge lettering from these sheets - the downscale breaks thin")
+    print("      type and has faked a misspelling before. Crop the label at native")
+    print("      pixels, and check again at the size the theme actually renders.")
     for m in made:
         subprocess.run(["open", str(m)])
 
