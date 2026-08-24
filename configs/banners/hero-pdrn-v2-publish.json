@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-24",
+  "target": "live theme \u2014 Impact, templates/index.json, hero slide 3",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 \"lets use the nbp_pro_02 image\" from the L1 set.",
+  "note": "Round 2 replacement for hero slide 3, fixing the two faults Malcolm found in the version shipped an hour earlier: the contents read as a white solid rather than a transparent pink liquid, and the model's skin carried subtle AI distortion.\n\nTHE LIQUID. The banner-library brief that produced the original frame had stated the opposite of what the product needs \u2014 'the serum is a CLEAR, COLOURLESS, WATER-TRANSPARENT liquid', with the pink belonging to the glass and not the contents \u2014 and that instruction is exactly what produced the milky fill. The brief now describes a transparent rose-pink fluid behind frosted rose glass, with the pipette stem visible through it and a meniscus at the fill line. Checked at native pixels on the chosen frame: the fill line reads, the air space above it reads, and the stem shows through. Frosted glass was kept rather than switching to clear glass so the hero still matches the rest of the PDRN product photography.\n\nTHE SKIN, AND A CALL I GOT WRONG ON THE WAY. At native pixels the shipped frame carried a swirling fingerprint-like whorl on the cheek beside the eye \u2014 concentric wavy micro-lines in no anatomical direction. Comparing engines at the identical region in ROUND 1, the artefact appeared in nbp_flash, nbp_pro and seedream and not in gpt-image, and I told Malcolm gpt-image would win round 2 on skin. That did not survive round 2: with the artefact named explicitly in the negatives, nbp_pro_02 came back with real freckles and moles, irregular pore structure and materially less whorl, while the gpt-image candidates came back MORE crinkled. Malcolm picked nbp_pro_02 on sight, and the measurement agreed with him. The lesson is that engine ranking is per-brief, not a standing property \u2014 'gpt-image does skin best' was true of one round's output and I generalised it too early.\n\nRESIDUAL. Some fine crepe remains under the eye. It is much reduced against what was live and is not visible at the hero's rendered width, but it is not zero, and it is on record here rather than glossed.\n\nCOMPOSITION AND CROP. Same framing as the version being replaced. Subject starts at x=108 of 6336, so the whole 300px needed to reach the slot's 2.246:1 came out of empty ground on the left and nothing of the subject was lost. The top-right headline zone survives at mean 24.7, stdev 1.4, so slide 3 keeps 'sm:place-self-start-end sm:text-end' and no setting changes.\n\nNEW FILENAME, NOT A RE-UPLOAD \u2014 Shopify Files suffixes rather than replaces on a name collision.",
+  "images": [
+    {
+      "slot": "hero3_pdrn_v2",
+      "source": "assets/publish-ready/homepage/skingenetix-hero-pdrn-skin-repair-v2-2026.jpg",
+      "generated_from": "assets/ai-generated/2026-08-22-multi-hero-pdrn-face-r2/PDRN-R2-L1-FROSTED/__PDRN-R2-L1-FROSTED-nbp_pro_02.png",
+      "filename": "skingenetix-hero-pdrn-skin-repair-v2-2026.jpg",
+      "alt": "A model resting her head on one side holding the Skingenetix PDRN Skin Repair Deep Renewal Treatment beside her face against a dark background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-hero-pdrn-skin-repair-v2-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-hero-pdrn-skin-repair-v2-2026.jpg?v=1787580576"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "block": "hero_slide_3",
+      "slot": "hero3_pdrn_v2"
+    }
+  ]
+}

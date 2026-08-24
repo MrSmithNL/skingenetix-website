@@ -54,3 +54,6 @@ encryptcontent.cache
 # Live-theme backups written by scripts/patch-homepage.py before each push.
 # Kept locally as the undo path; not useful in git.
 backups/
+
+# Scratch output of the upload optimiser
+.web-optimised/

@@ -1,0 +1,49 @@
+{
+  "created": "2026-08-24",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 standing instruction: every image uploaded to the site must be optimised for fast loading and carry an SEO filename.",
+  "note": "Re-publishes today's three homepage images under keyword-led filenames, through the optimising upload path added to scripts/upload-theme-images.py.\n\nWHAT THIS ACTUALLY BUYS, MEASURED RATHER THAN ASSERTED. Shopify's CDN already transcodes to WebP and resizes per srcset: measured on the live homepage, the 682KB source hero is delivered as 89KB of WebP at 1500px, and the whole page pulls 974KB of images across 32 files. So page weight was never dominated by these sources and re-encoding them is not a dramatic win. What it does win is genuine but bounded \u2014 19-45% off each source, no source larger than the 3000w the theme ever requests, and metadata stripped rather than shipped.\n\nFILENAMES. The old names carried 'v2' and '2026', which describe the revision rather than the subject and are worth nothing in an image search. The new ones lead with the product or concern a shopper would type. The old files stay in Files, unreferenced, so the undo is a template revert.\n\nNOT DONE HERE, AND WORTH KNOWING. The hero is the LCP element and carries no fetchpriority=\"high\"; the largest single image on the page is a review-section file at 163KB, not a hero. Both are separate from this change and neither was touched.",
+  "images": [
+    {
+      "slot": "hero3_seo",
+      "source": "assets/publish-ready/homepage/skingenetix-pdrn-skin-repair-deep-renewal-serum.jpg",
+      "filename": "skingenetix-pdrn-skin-repair-deep-renewal-serum.jpg",
+      "alt": "Skingenetix PDRN Skin Repair Deep Renewal Treatment serum held beside a model's face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-skin-repair-deep-renewal-serum.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-skin-repair-deep-renewal-serum.jpg?v=1787580841"
+    },
+    {
+      "slot": "hero1_seo",
+      "source": "assets/publish-ready/homepage/skingenetix-copper-peptide-ghk-cu-advanced-repair-serum.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-advanced-repair-serum.jpg",
+      "alt": "Skingenetix Copper Peptide Advanced Repair Serum with 2% GHK-Cu held beside a model's face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-advanced-repair-serum.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-advanced-repair-serum.jpg?v=1787580840"
+    },
+    {
+      "slot": "concern_seo",
+      "source": "assets/publish-ready/homepage/skingenetix-skin-firming-density-peptide-treatment.jpg",
+      "filename": "skingenetix-skin-firming-density-peptide-treatment.jpg",
+      "alt": "Defined jawline and neck in profile - Skingenetix peptide treatment for skin firming and density",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skin-firming-density-peptide-treatment.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skin-firming-density-peptide-treatment.jpg?v=1787580841"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "block": "hero_slide_3",
+      "slot": "hero3_seo"
+    },
+    {
+      "section": "hero",
+      "block": "hero_slide_1",
+      "slot": "hero1_seo"
+    },
+    {
+      "section": "skin_concerns",
+      "block": "c2",
+      "slot": "concern_seo"
+    }
+  ]
+}

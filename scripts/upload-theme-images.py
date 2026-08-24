@@ -82,6 +82,85 @@ query($q:String!){
 }"""
 
 
+#: Malcolm's standing instruction, 2026-08-24: every image uploaded to the site is
+#: optimised for fast loading and carries an SEO filename. Doing that by hand is
+#: something a session forgets, so it happens here, in the one place every theme
+#: image passes through.
+#:
+#: DO NOT "OPTIMISE" BY COMPRESSING THE SOURCE. That was tried here on 2026-08-24 and
+#: it made the site SLOWER. Shopify's CDN transcodes every image to WebP and resizes it
+#: per srcset, so the source JPEG is never what a visitor downloads. Re-encoding it at
+#: q85 first simply hands the WebP encoder a picture full of JPEG artefacts, and those
+#: artefacts cost bits to reproduce. Same photograph, measured off the live CDN:
+#:
+#:     source q93 ->  45,490B at w1000 |  83,478B at w1500 | 247,444B at w3000
+#:     source q85 ->  45,746B at w1000 |  85,102B at w1500 | 255,844B at w3000
+#:
+#: Whole-page image weight over the same change: 974KB before, 979KB after. The
+#: "41% smaller file" was real and bought nothing, because it was 41% off a number
+#: no visitor ever downloads.
+#:
+#: So what is left here is only what genuinely helps: cap the long edge at the widest
+#: size the theme ever requests, strip metadata, and keep the quality high so the CDN
+#: gets a clean picture to encode from.
+#:
+#: The real page-weight levers are in the THEME, not in these files: the hero is the
+#: LCP element and carries no fetchpriority="high", and the largest single image on the
+#: homepage is a 163KB review-section file, not a hero.
+WEB_MAX_EDGE = 3000        # the theme's srcset tops out at 3000w; larger is dead weight
+WEB_QUALITY = 95           # high on purpose - the CDN, not this script, does the compressing
+
+#: Words that carry no search value in a filename but keep appearing in them.
+SEO_NOISE = {"final", "new", "copy", "image", "img", "photo", "untitled", "asset",
+             "v1", "v2", "v3", "v4", "temp", "test"}
+
+
+def optimise(src: Path, work: Path) -> Path:
+    """Cap dimensions and strip metadata. Returns the path to upload.
+
+    Deliberately does NOT compress - see the note above WEB_QUALITY.
+    """
+    from PIL import Image
+
+    im = Image.open(src)
+    w, h = im.size
+    resized = max(w, h) > WEB_MAX_EDGE
+    if resized:
+        s = WEB_MAX_EDGE / max(w, h)
+        im = im.resize((round(w * s), round(h * s)), Image.LANCZOS)
+    elif not (im.info.get("exif") or im.info.get("icc_profile")):
+        print(f"    already web-ready: {w}x{h}, no metadata, left untouched")
+        return src
+    work.parent.mkdir(parents=True, exist_ok=True)
+    # 4:4:4 rather than 4:2:0: chroma subsampling throws away colour detail that the
+    # CDN's WebP pass would otherwise have kept, and costs nothing here.
+    # No exif= argument, so metadata is dropped rather than shipped to visitors.
+    im.convert("RGB").save(work, "JPEG", quality=WEB_QUALITY, optimize=True,
+                           progressive=True, subsampling="4:4:4")
+    note = f"capped to {im.width}x{im.height}" if resized else "metadata stripped"
+    print(f"    {note}: {src.stat().st_size/1024:.0f}K -> {work.stat().st_size/1024:.0f}K")
+    return work
+
+
+def check_seo_name(filename: str) -> list[str]:
+    """Warn, never block: a bad name is worth flagging, not worth failing an upload."""
+    stem = Path(filename).stem
+    out = []
+    if stem != stem.lower():
+        out.append("not lowercase")
+    if "_" in stem or " " in stem:
+        out.append("use hyphens, not underscores or spaces")
+    words = [w for w in stem.split("-") if w]
+    noise = [w for w in words if w in SEO_NOISE or w.isdigit()]
+    if noise:
+        out.append(f"words carrying no search value: {', '.join(noise)}")
+    if len(words) < 4:
+        out.append("too few keywords to describe the subject")
+    if len(stem) > 80:
+        out.append("over 80 characters")
+    return out
+
+
 def post_multipart(url, params, filepath, filename):
     boundary = "----skingenetix" + str(int(time.time()))
     body = b""
@@ -113,15 +192,26 @@ def main():
     print(f"Store : {store}")
     print(f"Upload: {len(items)} images\n")
 
-    # 1. staged targets
-    staged_in = []
+    # 0. optimise, and check the name is worth having in a search result
     for it in items:
         src = ROOT / it["source"]
         if not src.exists():
             sys.exit(f"missing source: {it['source']}")
+        print(f"  {it['filename']}")
+        problems = check_seo_name(it["filename"])
+        if problems:
+            print(f"    SEO filename: {'; '.join(problems)}")
+        it["_upload_path"] = optimise(
+            src, ROOT / ".web-optimised" / it["filename"])
+    print()
+
+    # 1. staged targets
+    staged_in = []
+    for it in items:
+        up = Path(it["_upload_path"])
         staged_in.append({"resource": "FILE", "filename": it["filename"],
                           "mimeType": mimetypes.guess_type(it["filename"])[0] or "image/jpeg",
-                          "httpMethod": "POST", "fileSize": str(src.stat().st_size)})
+                          "httpMethod": "POST", "fileSize": str(up.stat().st_size)})
 
     data = gql(store, tok, STAGED, {"input": staged_in})
     errs = data["stagedUploadsCreate"]["userErrors"]
@@ -132,7 +222,7 @@ def main():
     # 2. push bytes, 3. register
     files_in = []
     for it, tgt in zip(items, targets):
-        src = ROOT / it["source"]
+        src = Path(it["_upload_path"])
         print(f"  uploading {it['filename']} ...", end=" ", flush=True)
         post_multipart(tgt["url"], tgt["parameters"], src, it["filename"])
         print("ok")
@@ -168,6 +258,9 @@ def main():
     else:
         sys.exit("timed out waiting for files to reach READY")
 
+    # _upload_path is a scratch path for this run, not part of the plan's record.
+    for it in plan["images"]:
+        it.pop("_upload_path", None)
     plan_path.write_text(json.dumps(plan, indent=2) + "\n")
     print("\nResolved handles:")
     for it in plan["images"]:

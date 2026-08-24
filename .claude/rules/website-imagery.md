@@ -73,3 +73,57 @@ A contact sheet **cannot** judge label fidelity. `NEAT2_04` looked flawless tile
 | **NBP Pro** | 6x the price of NBP Flash and won *less often* on this project's own numbers ($0.81 vs $0.087 per chosen image). Justify per shot. |
 | **Gemini** | Daily quota of 250 generate-requests shared across Pro and Flash. Run the most important brief first. |
 | **All** | Named size presets are not portable — `square_hd` means 3072 on Seedream and 1024 on FLUX.2. Always pass explicit dimensions. |
+
+## 5. Every uploaded image is web-optimised and SEO-named
+
+Standing instruction from Malcolm, 2026-08-24: *"make sure all images you upload to the
+site are optimized for fast web loading and viewing and also that the image file name is
+SEO optimized with the main keywords."*
+
+Both are enforced in `scripts/upload-theme-images.py`, which every theme image passes
+through, rather than left to a session to remember.
+
+### Optimised does NOT mean compressed — this was measured, and the obvious move is wrong
+
+**Do not re-encode a source at a lower JPEG quality before uploading.** It was tried on
+2026-08-24 and made the site marginally *slower*. Shopify's CDN transcodes every image to
+WebP and resizes it per `srcset`, so the source JPEG is never what a visitor downloads.
+Compressing it first hands the WebP encoder a picture full of JPEG artefacts, and
+reproducing artefacts costs bits. Same photograph, measured off the live CDN:
+
+| source | w1000 | w1500 | w3000 |
+| --- | --- | --- | --- |
+| q93 | 45,490B | 83,478B | 247,444B |
+| q85 | 45,746B | 85,102B | 255,844B |
+
+Whole-page image weight across that change: **974KB before, 979KB after.** The "41%
+smaller file" was real and bought nothing, because it was 41% off a number no visitor
+ever downloads.
+
+What actually helps, and is what the script now does:
+
+- cap the long edge at 3000px, the widest the theme's `srcset` ever requests
+- strip EXIF/ICC rather than shipping it
+- keep quality at 95 and 4:4:4, so the CDN gets a clean picture to encode from
+
+**The real page-weight levers are in the theme, not in these files.** As of 2026-08-24
+the hero is the LCP element and carries no `fetchpriority="high"`, and the largest single
+image on the homepage is a 163KB review-section file, not a hero. Neither is fixed.
+
+### SEO filenames
+
+`check_seo_name()` warns (never blocks) on: uppercase, underscores or spaces, fewer than
+four keywords, over 80 characters, and words that carry no search value — `final`, `new`,
+`copy`, `image`, `img`, `photo`, `untitled`, `asset`, `v1`–`v4`, `temp`, `test`, and bare
+digits.
+
+Lead with the product or concern a shopper would type, brand first for consistency with
+the existing library:
+
+- `skingenetix-pdrn-skin-repair-deep-renewal-serum.jpg` ✅
+- `skingenetix-copper-peptide-ghk-cu-advanced-repair-serum.jpg` ✅
+- `skingenetix-hero-model-copper-peptide-v2-2026.jpg` ❌ — `v2` and `2026` describe the
+  revision, not the subject, and are worth nothing in an image search
+
+Note that a rename means a **new file**: Shopify Files suffixes rather than replaces on a
+name collision, so the old file stays and the theme is repointed.

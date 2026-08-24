@@ -66,6 +66,19 @@ def build(slot_dir: Path, out: Path) -> bool:
                         str(d)], check=True)
         scaled.append(d)
 
+    # Engines return different aspects for the same brief - gpt-image 2.246:1,
+    # Nano Banana 2.357:1, Seedream 2.246:1 - so after scaling to a common width
+    # the heights differ and hstack refuses the row. Pad every tile to the tallest
+    # rather than cropping, so nothing is silently cut out of a candidate.
+    tall = max(dims(s)[1] for s in scaled)
+    for s in scaled:
+        if dims(s)[1] != tall:
+            tmp = s.with_name(s.stem + "_pad.png")
+            subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(s),
+                            "-vf", f"pad={TILE_W}:{tall}:0:(oh-ih)/2:color=black",
+                            str(tmp)], check=True)
+            tmp.replace(s)
+
     # Two columns keeps wide banners legible; squares tile 2-up just as well.
     cols = 2
     rows = [scaled[i:i + cols] for i in range(0, len(scaled), cols)]
