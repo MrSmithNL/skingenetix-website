@@ -291,6 +291,38 @@ BANNERS = {
         #: nothing on the right edge, which is the edge being extended
         "shoulder": None,
     },
+    # /pages/the-science -- Malcolm's pick from the blue-glassware wave, 2026-08-24.
+    # The easy case for the extender: measured across the left 400 columns the bench
+    # runs mean 77.3, max 104, sd 7.9, and row 400 holds ~80 from x=0 out to x=500,
+    # so nothing touches this edge and no arm has to be sheared out of frame. The
+    # bench does carry a real vertical gradient (42 at the top, 88 at y=560, 70 at the
+    # bottom), which edge_profile reproduces as measured rather than modelling.
+    "the-science": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-the-science-microscope"
+                     / "the-science-scope--C-over-stage-type-left"
+                     / "the-science-scope--C-over-stage-type-left-gpt_image_02.png"),
+        "out": ROOT / "assets/publish-ready/page-the-science-banner",
+        "desktop": "skingenetix-peptide-science-laboratory-research-banner.jpg",
+        "mobile": "skingenetix-peptide-science-laboratory-research-mobile.jpg",
+        #: right-anchored; keeps the glassware and the microscope stage together
+        "mobile_crop": (648, 800),
+        #: 4.42:1, past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport
+        "target_width": 3750,
+        "bg_fit": (150, 650),
+        "texture_box": (150, 650, 0, 400),
+        #: tile, not scatter. The bench's texture is mid-frequency MOTTLE, blobs of
+        #: tens of pixels, and scatter resamples per pixel -- it turns that mottle into
+        #: fine noise and the fill reads smooth against a textured original, which
+        #: leaves the join visible even after the tone matches to 0.3 of a level.
+        "texture_mode": "tile",
+        #: This edge IS backdrop, so the measured profile is kept -- it just needs
+        #: smoothing hard, because the bench's mottle was printing as horizontal
+        #: stripes across the 1702px fill. flat_backdrop was tried and is wrong here:
+        #: its straight-line ramp cannot follow a gradient that rises then falls, and
+        #: it washed the far left several levels too light.
+        "profile_smooth": 30.0,
+        "shoulder": None,
+    },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
         "out": ROOT / "assets/publish-ready/collection-all-banner",
@@ -390,7 +422,7 @@ ARM_FADE = 190          # px over which the arm dissolves into backdrop shadow
 JOIN_BLEND = 40         # columns over which the extension is matched to the original
 
 
-def edge_profile(im, bg_fit, shoulder, flat_backdrop=False):
+def edge_profile(im, bg_fit, shoulder, flat_backdrop=False, smooth=2.0):
     """Left-edge colour profile, and the backdrop lighting to use behind it.
 
     Above the shoulder the profile IS backdrop, so it is used as measured -- that
@@ -412,7 +444,18 @@ def edge_profile(im, bg_fit, shoulder, flat_backdrop=False):
     original's true edge regardless, and because a frame that needs this has a
     near-black edge anyway -- hair at 2-27 against a modelled backdrop at ~3.
     """
-    prof = ndimage.gaussian_filter1d(im[:, :EDGE_COLS].mean(axis=1), 2.0, axis=0)
+    #: `smooth` is for a DIFFERENT failure from flat_backdrop, and the two are not
+    #: interchangeable. flat_backdrop is for an edge that is not backdrop at all, and
+    #: replaces the profile with a fitted ramp. `smooth` is for an edge that IS
+    #: backdrop but carries tonal mottle: the profile is repeated across every column
+    #: of the fill, so any row-to-row variation left in it prints as a horizontal
+    #: stripe the full width of the extension. Six averaged columns was not enough on
+    #: the science bench and its 1702px fill came out banded.
+    #: Reach for `smooth` first. flat_backdrop's ramp is a straight line, and on a
+    #: profile that rises then falls -- this bench runs 42 at the top, 88 at y=560, 70
+    #: at the bottom -- extrapolating that line washes the far edge several levels too
+    #: light, which is exactly what it did here before this was separated out.
+    prof = ndimage.gaussian_filter1d(im[:, :EDGE_COLS].mean(axis=1), smooth, axis=0)
     rows = np.arange(im.shape[0])
     if shoulder is None and not flat_backdrop:
         return prof, prof          # nothing on this edge but backdrop
@@ -474,7 +517,8 @@ def extend_left(im, extra, cfg):
     arm_fade = cfg.get("arm_fade", ARM_FADE)
     shoulder = cfg["shoulder"]
     prof, backdrop = edge_profile(im, cfg["bg_fit"], shoulder,
-                                  cfg.get("flat_backdrop", False))
+                                  cfg.get("flat_backdrop", False),
+                                  cfg.get("profile_smooth", 2.0))
     out = np.zeros((h, extra, 3), dtype=np.float64)
     alpha = np.zeros((h, extra, 1), dtype=np.float64)
     rows = np.arange(h)

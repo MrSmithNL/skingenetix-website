@@ -1,0 +1,63 @@
+{
+  "created": "2026-08-24",
+  "target": "live theme \u2014 Impact, templates/page.science.json, hero section",
+  "decided_by": "Malcolm picked gpt_image_02 from the blue-glassware wave, 2026-08-24",
+  "note": "Header banner for /pages/the-science.\n\nSOURCE: banner-the-science-microscope wave, slot C (over the stage, flask and beaker, type zone left), gpt_image candidate 2, 2048x848. CLASS B \u2014 no product in frame, so nothing branded to protect and nothing for an engine to invent.\n\nCHECKED AT 100%: the microscope stage carries faint garbled engraving, the one piece of lettering that survived the 'no lettering' negative. At the size the theme renders it (440/848 scale) no letterforms resolve \u2014 it reads as specks on the stage \u2014 so it is left alone rather than retouched.\n\nCANVAS EXTENDED to 3750x848 (4.42:1), past the 4.36:1 a 100vw x 440px box reaches at a 1920 viewport, so the full height survives there. The header keeps the theme's standard sm height like every other banner on the site.\n\nTWO EXTENDER FIXES CAME OUT OF THIS FRAME:\n  1. profile_smooth. The bench carries real tonal mottle, and the edge profile is repeated across every column of the fill, so that mottle printed as horizontal stripes the full 1702px width. Smoothing the profile hard (30.0) leaves only the lighting gradient and lets the grain carry the texture.\n  2. It is NOT the same fix as flat_backdrop, which was tried first and is wrong here. flat_backdrop replaces the profile with a straight-line ramp, and this bench's gradient rises then falls \u2014 42 at the top, 88 at y=560, 70 at the bottom \u2014 so extrapolating a line washed the far left several levels too light.\nTexture is mirror-tiled rather than scattered: the bench's texture is mid-frequency mottle, and scatter resamples per pixel, which turns mottle into fine noise and left the fill reading smooth against a textured original.\n\nJudged at render size, not at 100%: mirror-tile repeats and the join are both visible at full resolution and both disappear in the downscale to 440px, where only 26 percent of the visible banner is extension anyway.\n\nTEXT MOVES OFF CENTRE. The page currently centres its heading, which rule 2 of the art direction bars \u2014 the brief reserved the left 40 percent as an unbroken type zone, so the heading goes centre-left to match every other banner published today.\n\nSELECTOR NOTE: image-with-text-overlay wraps its text in .prose inside a positioning div, NOT in .v-stack the way collection-banner does. The first attempt reused the collection selector, matched nothing, and the description ran on under the flask. Target the direct div child of .content-over-media.",
+  "images": [
+    {
+      "slot": "science_desktop",
+      "source": "assets/publish-ready/page-the-science-banner/skingenetix-peptide-science-laboratory-research-banner.jpg",
+      "filename": "skingenetix-peptide-science-laboratory-research-banner.jpg",
+      "alt": "Conical flask and beaker of blue solution on a dark laboratory bench beside a microscope with petri dishes, representing the peptide research behind Skingenetix formulas",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-science-laboratory-research-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-science-laboratory-research-banner.jpg?v=1787591585"
+    },
+    {
+      "slot": "science_mobile",
+      "source": "assets/publish-ready/page-the-science-banner/skingenetix-peptide-science-laboratory-research-mobile.jpg",
+      "filename": "skingenetix-peptide-science-laboratory-research-mobile.jpg",
+      "alt": "Close-up of a conical flask and beaker of blue laboratory solution glowing on a dark bench beside a microscope",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-science-laboratory-research-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-science-laboratory-research-mobile.jpg?v=1787591583"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "science_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "science_mobile",
+      "setting": "mobile_image"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "image_size": "sm",
+        "enable_parallax": false,
+        "overlay_opacity": 22,
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-start-center text-center"
+      }
+    }
+  ],
+  "new_sections": [
+    {
+      "id": "hero_banner_css",
+      "insert_after": "hero",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>@media screen and (min-width: 700px) {\n  .shopify-section--image-with-text-overlay .content-over-media > picture > img,\n  .shopify-section--image-with-text-overlay .content-over-media > img { object-position: right center; }\n  /* This section wraps its text in .prose inside a positioning div - NOT in\n     .v-stack the way collection-banner does. Targeting .v-stack here matched\n     nothing and the description ran on under the flask. */\n  .shopify-section--image-with-text-overlay .content-over-media > div { max-width: clamp(320px, 46vw, 660px); }\n}\n@media screen and (max-width: 699px) {\n  .shopify-section--image-with-text-overlay .content-over-media::before {\n    background-image: linear-gradient(to bottom,\n      rgba(10, 14, 22, 0.85) 0%,\n      rgba(10, 14, 22, 0.62) 22%,\n      rgba(10, 14, 22, 0.00) 58%);\n  }\n}</style>"
+        }
+      }
+    }
+  ]
+}

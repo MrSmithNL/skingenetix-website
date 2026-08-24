@@ -1,0 +1,45 @@
+{
+  "wave": "banner-the-science-evidence-scope",
+  "created": "2026-08-24",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md, .claude/rules/website-imagery.md",
+  "note": "Second pass at the E2 'Evidence' concept for /pages/the-science, at Malcolm's request, 2026-08-24 — the first pass (wave banner-the-science, slot C) with a microscope added to the frame.\n\nWHAT THE FIRST PASS ALREADY GOT RIGHT, and is therefore held fixed here: gloved hands and forearms only with no face anywhere across eleven candidates; a dark graphite-and-stainless bench rather than a white lab; cool practical light hard enough to edge the glove; and a genuinely quiet left third. Blue nitrile against graphite also happens to land near the palette's Clinical blue, so the set already reads as brand rather than as stock.\n\nWHAT CHANGES: one laboratory microscope is now in frame. It is deliberately NOT the subject — the pipetting is. The briefs give it a supporting position and let it fall softer than the hands, because a microscope shot big enough to dominate turns this into a different concept, which is what the separate banner-the-science-microscope wave is for.\n\nThe one failure mode observed in the first pass was a single bright outlier (nbp_pro candidate 1) that came back looking like white-lab stock photography. 'No bright white laboratory' and 'no overexposed windows' are added as negatives to hold the darker register the rest of the set found on its own.\n\nHONESTY CONSTRAINT, carried over from the art-direction doc and still binding: this imagery must not be captioned as a facility Skingenetix owns. It is illustrative, or the contract laboratory if that is accurate. Two of the three framings put the type zone left to match the collection banners; one puts it right so the page has a choice.\n\nCLASS B — no product in frame, no references attached, so the brief asks for material and never for identity, and FLUX.2 stays in the run. Generated at the page-break band spec, 3072x1280 (2.4:1); the winner then goes through scripts/extend-banner-canvas.py to ~4.42:1 for the theme's fixed-height header box.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "no face, no head, no shoulders, no torso, no person identifiable, no name badge, no logos on equipment, no brand marks, no readable screens, no digital displays with numbers, no lettering of any kind, no text, no watermark, no signature, no border, no collage, no multi-panel layout, no clutter, no bright white laboratory, no overexposed windows, no daylight flooding the room, no botanicals, no bubbling flasks, no smoke, no lens flare, no neon glow, no sci-fi hologram, no dropper bottle, no cosmetic packaging"
+  },
+  "slots": [
+    {
+      "id": "the-science-eviscope--A-scope-behind-type-left",
+      "title": "evidence + scope — A · microscope behind the work, type zone left",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Documentary photograph along a dark laboratory bench. One pair of blue nitrile-gloved hands works in the right third of the frame, between 62 and 95 percent of frame width — one hand holding a single-channel pipette vertically over a clear plastic microplate, the other steadying the plate on the bench. Hands and forearms only; the frame stops well below the elbow, no face, no shoulders, nobody identifiable. One laboratory microscope in matte black and brushed stainless stands on the same bench just behind and left of the hands, at roughly 45 to 62 percent of frame width, clearly readable as a microscope but sitting a little softer than the hands, which are the sharpest thing in the picture.\n\nThe bench is dark brushed stainless; behind it, matte black instrument housings thrown far out of focus at f/2.5. Everything is deep and low-key, graphite and steel, the only colour in the frame the blue of the gloves. Cool practical light from above and slightly behind, hard enough to edge-light the glove and put a bright line along the pipette barrel and the microscope's stage. The left 40 percent of the frame, measured from 0 to 40 percent of frame width, is defocused dark bench held at even tone and low detail so a headline can sit on it unaided. Reportage, honest, unstyled, shot at eye level with the bench.",
+      "negative_extra": "no eyepieces pointing at camera, no coloured liquid, no test tube racks, no beakers, no notebooks, no pens, no rulers, no second pair of hands"
+    },
+    {
+      "id": "the-science-eviscope--B-scope-foreground-type-left",
+      "title": "evidence + scope — B · microscope foreground right, type zone left",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Documentary photograph across a dark laboratory bench, shot low and close. The lower body and stage of one laboratory microscope in matte black and brushed stainless occupies the right edge of the frame, between 78 and 100 percent of frame width, close to camera and cropped by the right edge, its stage catching a hard line of light. Beyond it, one pair of blue nitrile-gloved hands works at the bench between 48 and 78 percent of frame width, one hand lowering a single-channel pipette into a clear plastic microplate. Hands and forearms only; the frame stops well below the elbow, no face, no shoulders, nobody identifiable. The hands are sharp; the microscope in the near foreground falls slightly soft.\n\nThe bench is dark brushed stainless with matte black instrument housings far out of focus behind. Low-key throughout, graphite and steel, the blue of the gloves the only colour. Cool practical light from above and slightly behind, hard enough to edge the glove. The left 42 percent of the frame, measured from 0 to 42 percent of frame width, is defocused dark bench held at even tone and low detail so a headline can sit on it unaided. Reportage, honest, unstyled, shallow depth of field at f/2.8.",
+      "negative_extra": "no eyepieces pointing at camera, no coloured liquid, no test tube racks, no beakers, no notebooks, no rulers, no second pair of hands, no microscope filling the frame"
+    },
+    {
+      "id": "the-science-eviscope--C-scope-left-type-right",
+      "title": "evidence + scope — C · microscope left, type zone right",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Documentary photograph along a dark laboratory bench, worked from the left. One laboratory microscope in matte black and brushed stainless stands in the left quarter of the frame, between 5 and 28 percent of frame width, cropped by the top edge so its stage and objective turret carry the shape. Immediately right of it, between 28 and 55 percent of frame width, one pair of blue nitrile-gloved hands holds a single-channel pipette over a clear plastic microplate on the bench. Hands and forearms only; the frame stops well below the elbow, no face, no shoulders, nobody identifiable. The hands and the plate are the sharpest things in the picture.\n\nThe bench is dark brushed stainless, matte black instrument housings far out of focus behind. Low-key, graphite and steel, the blue of the gloves the only colour in frame. Cool practical light from above and slightly behind, hard enough to edge the glove and the microscope's stainless. The right 45 percent of the frame, measured from 55 to 100 percent of frame width, is defocused dark bench falling away to near black, held at even tone and low detail so a headline can sit on it unaided. Reportage, honest, unstyled, f/2.8.",
+      "negative_extra": "no eyepieces pointing at camera, no coloured liquid, no test tube racks, no beakers, no notebooks, no rulers, no second pair of hands, no subject on the right side of the frame"
+    }
+  ]
+}

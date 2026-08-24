@@ -1,0 +1,45 @@
+{
+  "wave": "banner-the-science-microscope",
+  "created": "2026-08-24",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md, .claude/rules/website-imagery.md",
+  "note": "Header banner batch for /pages/the-science — Malcolm's concept, 2026-08-24, revised the same day: a close-up of a microscope with petri dishes and one or two pieces of laboratory glassware holding BLUE liquid. The first cut put a Skingenetix serum bottle beside the microscope; Malcolm replaced it with glassware.\n\nThat swap moves the whole set from CLASS A to CLASS B. With no product in frame there is nothing branded to protect, so no references are attached and — per the art-direction doc — the brief must not be asked for identity at all, only for material. FLUX.2 is back in the run for the same reason: it invents brand identities, and there is now no branding for it to invent.\n\nNEGATIVES CHANGED WITH THE CONCEPT, which is the part worth remembering. The Class A cut carried 'no coloured liquid in beakers' and 'no bubbling flasks' as negatives; blue liquid in glassware is now the subject, so those are gone. The blanket 'no bottle' from the doc's Class B set is also gone and replaced with the specific things not wanted — no dropper bottle, no cosmetic packaging, no label, no logo, no lettering. A blanket 'no bottle' against a brief asking for glassware fights itself, and an engine resolving that contradiction picks for you.\n\nThe blue is the palette's Clinical blue, hex 014EB1 — the Copper Peptide scene colour. It ties the page to the flagship active without putting a product or a mark in frame.\n\nGenerated at the page-break band spec, 3072x1280 (2.4:1). The winner then goes through scripts/extend-banner-canvas.py to ~4.42:1 so full height survives a 1920 viewport in the theme's fixed-height header box.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "no dropper bottle, no cosmetic bottle, no serum bottle, no product packaging, no carton, no label, no logo, no brand mark, no lettering of any kind, no text, no numbers, no scale markings with digits, no watermark, no signature, no border, no collage, no multi-panel layout, not a flat-lay, no clutter, no person, no hands, no face, no readable screens, no branded equipment, no botanicals, no leaves, no flowers, no wood, no linen, no lens flare, no neon glow, no sci-fi hologram"
+  },
+  "slots": [
+    {
+      "id": "the-science-scope--A-bench-type-left",
+      "title": "the-science microscope — A · bench, two beakers, type zone left",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Close-up laboratory photograph across a dark bench. One laboratory microscope in matte black and brushed stainless stands in the right half of the frame, between 55 and 90 percent of frame width, cropped by the top edge so only its stage, objective turret and lower body are in view — a close-up, not the whole instrument. Two clear glass petri dishes lie flat on the bench in front of it, empty and clean, catching a thin rim of light and thrown gently out of focus. Two pieces of clear laboratory glassware stand together on the bench just left of the microscope, at roughly 40 to 58 percent of frame width: one low cylindrical beaker and one taller narrow graduated cylinder, both holding a clear vivid blue liquid, colour hex 014EB1, filled about two thirds. The glass is thin and precise, the liquid perfectly still with a clean meniscus, and the key light passes through it so the blue glows and throws a soft blue pool of light onto the bench beneath.\n\nThe bench and ground are deep graphite, colour hex 1A1A1A, falling to near black at the edges, so the blue is the only colour in the frame. One hard key light from the upper left rakes the stainless and edges the glassware; one soft fill. The left 40 percent of the frame, measured from 0 to 40 percent of frame width, is quiet defocused bench held at even tone and low detail so a headline can sit on it unaided. Shot at f/4 on a 50mm, clinical, cold, precise.",
+      "negative_extra": "no eyepieces pointing at camera, no coloured stains on slides, no rulers, no notebooks, no pens, no test tube racks, no bubbles, no fizzing, no smoke, no dry ice, no pouring, no splashing"
+    },
+    {
+      "id": "the-science-scope--B-macro-type-right",
+      "title": "the-science microscope — B · tight macro, one cylinder, type zone right",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Tight macro laboratory photograph. The objective turret and nosepiece of one laboratory microscope fill the left 35 percent of the frame in matte black and brushed stainless, very close, cropped hard by the left and top edges. One clear glass petri dish sits on the stage directly beneath the objectives, empty and clean, its rim catching a thin specular line. One tall narrow clear glass graduated cylinder stands immediately right of the microscope at roughly 40 to 55 percent of frame width, holding a clear vivid blue liquid, colour hex 014EB1, filled about two thirds, the liquid perfectly still with a clean meniscus. It is the sharpest thing in the frame; the key light passes straight through it so the blue glows from within and lays a soft blue caustic on the bench.\n\nGround and bench are deep graphite, colour hex 1A1A1A, falling to near black, so the blue is the only colour present. One hard key from the upper left, cold and directional, one soft fill. The right 45 percent of the frame, measured from 55 to 100 percent of frame width, is quiet defocused darkness held at even tone and low detail so a headline can sit on it unaided. Shot at f/5.6 on a 100mm macro, clinical and exact.",
+      "negative_extra": "no eyepieces pointing at camera, no coloured stains, no visible serial plates, no rulers, no test tube racks, no bubbles, no fizzing, no smoke, no pouring, no droplets on the glass"
+    },
+    {
+      "id": "the-science-scope--C-over-stage-type-left",
+      "title": "the-science microscope — C · over the stage, flask and beaker, type zone left",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Close-up laboratory photograph shot from a high three-quarter angle, looking down across the stage of one laboratory microscope in matte black and brushed stainless, which occupies the right 40 percent of the frame between 60 and 100 percent of frame width and is cropped by the right and top edges. One clear glass petri dish sits square on the stage under the objective, empty and clean; a second dish lies flat on the bench beside it, out of focus. Two pieces of clear laboratory glassware stand on the bench in the middle of the frame at roughly 38 to 58 percent of frame width, closest to camera and the sharpest things in the picture: one conical Erlenmeyer flask and one low cylindrical beaker, both holding a clear vivid blue liquid, colour hex 014EB1, filled about two thirds, still and clean with a crisp meniscus. Light passes through both so the blue glows and pools on the bench beneath them.\n\nBench and ground are deep graphite, colour hex 1A1A1A, falling to near black at the edges, so the blue is the only colour in the frame. One hard key light from the upper left throws real shadows across the bench; one soft fill. The left 38 percent of the frame, measured from 0 to 38 percent of frame width, is empty defocused bench held at even tone and low detail so a headline can sit on it unaided. Shot at f/4.5, clinical, cold, deep shadow.",
+      "negative_extra": "no eyepieces in frame, no coloured stains, no rulers, no notebooks, no test tube racks, no stacked slides, no bubbles, no fizzing, no smoke, no pouring, no cork or stopper"
+    }
+  ]
+}

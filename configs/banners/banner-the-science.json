@@ -1,0 +1,67 @@
+{
+  "wave": "banner-the-science",
+  "created": "2026-08-24",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md, .claude/rules/website-imagery.md",
+  "note": "Header banner set for /pages/the-science. Five concepts, every one CLASS B — reference-free, no product in frame — because the page argues for the evidence behind the formulas, not for one bottle, and because the art-direction doc's own count is 8 of 9 Wave-1 banners with no product in them. Class B may route to FLUX.2: there is no branding in frame for it to invent.\n\nThe live banner is scattered CGI molecular notation carrying invented chemical labels ('HI', 'OI') — the failure the doc's Class B negatives exist to stop. Every brief here asks for a PHYSICAL OBJECT under hard light rather than a diagram, so there is no notation to garble.\n\nType zone is the LEFT 45 percent on all five, stated as a measured fraction of frame width because a body/object anchor does not hold across suppliers. That matches the collection banners published today (heading left, subject right) so the concern and collection pages read as one system. It also moves the page off centred type, which rule 2 of the direction bars.\n\nGenerated at the doc's page-break band spec, 3072x1280 (2.4:1). The winner then goes through scripts/extend-banner-canvas.py to ~4.42:1 so the full height survives a 1920 viewport in the theme's fixed-height header box; the left type zone is flat graphite, which is the easy case for the extender.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "no botanicals, no leaves, no sprigs, no flowers, no citrus, no fruit, no herbs, no wood, no rough stone, no linen or textile props, no scattered pebbles, no water splashes, no bokeh sparkle overlays, no lens flare, no text, no watermark, no signature, no border, no collage, no multi-panel layout, not a flat-lay, no clutter, no more than one subject, no bottle, no jar, no dropper bottle, no tube, no packaging, no label, no logo, no brand mark, no lettering of any kind"
+  },
+  "slots": [
+    {
+      "id": "the-science--A-peptide-chain",
+      "title": "the-science — A · peptide chain (brand signature)",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Fine-art laboratory still-life photograph of one single chain of eight translucent frosted-glass spheres joined by short polished copper links, curving in a shallow S-curve through the right 55 percent of the frame. It reads as a physical scientific model of a peptide chain held in a laboratory, machined and precise, not as jewellery and not as a diagram. The ground is a seamless deep graphite sweep, colour hex 1A1A1A, falling off to near black at the edges of the frame. One hard key light from the upper left draws a long specular highlight down the glass spheres and lays a single hard-edged shadow to the right; one soft fill only. The left 45 percent of the frame, measured from 0 to 45 percent of frame width, is empty graphite held at even tone and low detail so a headline can sit on it unaided. Macro lens, f/8, clinical and exact, deep colour, no styling props of any kind.",
+      "negative_extra": "no necklace, no bracelet, no pearls, no jewellery, no chain links of gold, no DNA helix, no chemical notation, no molecular diagram, no atom labels"
+    },
+    {
+      "id": "the-science--B-copper-standard",
+      "title": "the-science — B · copper reference standard",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Fine-art photograph of one single upright cylinder of solid copper, machined on a lathe and lightly brushed so the turning marks catch the light, standing on end in the right third of the frame between 60 and 85 percent of frame width. It reads as a laboratory reference standard or a metal assay blank, an anonymous machined object, not a product and not a container. The ground is a seamless deep graphite sweep, colour hex 1A1A1A, falling off to near black at the edges. One hard key light from the upper left runs a long vertical specular down the copper and throws a single hard-edged shadow to the right across the sweep. The left 45 percent of the frame, measured from 0 to 45 percent of frame width, is empty graphite held at even tone and low detail so a headline can sit on it unaided. Shot on a 100mm macro at f/9, clinical, warm copper against cold graphite.",
+      "negative_extra": "no lid, no cap, no threaded neck, no engraving, no serial number, no measurement markings, no coin, no pipe fitting"
+    },
+    {
+      "id": "the-science--C-evidence-bench",
+      "title": "the-science — C · evidence, laboratory bench",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Documentary photograph of one pair of blue nitrile-gloved hands at a laboratory bench, mid-task, holding a single-channel pipette over a clear microplate. Hands and forearms only — the frame stops well below the elbow, no face, no shoulders, nobody identifiable. The hands and the plate sit in the right 45 percent of the frame, between 55 and 100 percent of frame width. Behind them a real bench of brushed stainless steel and matte black instrument housings, thrown far out of focus at f/2. Cool practical light from above and slightly behind, hard enough to edge-light the glove and the pipette barrel. The left 45 percent of the frame, measured from 0 to 45 percent of frame width, is the defocused dark bench held at even tone and low detail so a headline can sit on it unaided. Reportage, honest, no styling.",
+      "negative_extra": "no face, no head, no shoulders, no person identifiable, no name badge, no logos on equipment, no readable screens, no branded consumables, no microscope eyepieces, no beakers of coloured liquid, no bubbling flasks"
+    },
+    {
+      "id": "the-science--D-molecular-model",
+      "title": "the-science — D · physical molecular model",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Fine-art still-life photograph of one single physical ball-and-stick molecular model built from matte bone-white spheres and polished copper rods, the kind kept on a chemistry desk, standing in the right half of the frame between 55 and 95 percent of frame width. It is a real object photographed on a table, with weight and contact shadow, not a rendered diagram and not a floating graphic. The ground is a seamless deep graphite sweep, colour hex 1A1A1A, falling off to near black at the edges. One hard key light from the upper left picks out the copper rods and lays a single hard-edged shadow to the right. The left 45 percent of the frame, measured from 0 to 45 percent of frame width, is empty graphite held at even tone and low detail so a headline can sit on it unaided. Shot at f/8, clinical, precise, physically real.",
+      "negative_extra": "no chemical notation, no atom letters, no element symbols, no bond labels, no periodic table, no glowing energy, no neon, no wireframe render, no floating particles, no scattered second molecule"
+    },
+    {
+      "id": "the-science--E-refraction-study",
+      "title": "the-science — E · refraction study",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/the-science hero",
+      "ref_files": [],
+      "prompt": "Fine-art macro photograph of one single thick slab of optical glass lying on a seamless deep graphite surface, colour hex 1A1A1A, with one clear viscous bead of serum resting on its upper face, positioned in the right 40 percent of the frame between 60 and 100 percent of frame width. A hard raking key light from the upper right passes through the glass and the bead and throws a sharp caustic of light across the graphite beneath, the only bright event in the frame. The left 45 percent of the frame, measured from 0 to 45 percent of frame width, is empty graphite held at even tone and low detail so a headline can sit on it unaided. Extreme clarity, f/11, clinical, cold light, no colour cast beyond the graphite and the clear serum.",
+      "negative_extra": "no droplets scattered across the surface, no splash, no pouring, no ripples, no second slab, no prism rainbow, no coloured gel, no smoke, no dry ice"
+    }
+  ]
+}
