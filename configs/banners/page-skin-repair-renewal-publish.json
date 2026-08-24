@@ -1,18 +1,19 @@
 {
   "created": "2026-08-24",
+  "revised": "2026-08-24 — repoints the hero at the v1 frame Malcolm picked off library-pdrncream-1.png",
   "target": "templates/page.skin-repair-renewal.json — hero section",
   "decided_by": "Malcolm, 2026-08-24",
-  "note": "Publishes the widened PDRN cream banner to the Skin Repair & Renewal hero. Same four section changes the firming page needed, because the two templates are structurally identical (main / hero / content / routine / faq / related, hero = image-with-text-overlay at image_size sm):\n\n  enable_parallax  set false EXPLICITLY — absent from this section, so it was taking the schema default, and the theme's own help text says parallax crops images.\n  overlay_opacity  70 -> 25.\n  desktop_text     centre -> middle left; centre would put the heading across her face.\n  mobile_image     added, an 820x848 crop holding face and jar together.\n\nONE VALUE DIFFERS FROM THE FIRMING PAGE, and it is the important one: object-position is 93%, not 78%. This jar sits hard right at x 1664-3634 of 3750, so 78% would crop 166px off it at a 1280 viewport. 93% keeps it whole everywhere with 26px to spare at the tightest width. Text max-width is clamped to 23vw accordingly — 294px at 1280 against 297px of measured clear ground.\n\nCSS is additive in a custom-html section, scoped by .shopify-section--image-with-text-overlay (the section-TYPE class) rather than by section id: ids render as shopify-section-template--<theme id>__<key>, so a hand-built id selector matches nothing. Braces are kept apart because Shopify 422s an html setting containing '{{' or '}}'.",
+  "note": "Second pass on this hero. The section settings were already correct from the first pass (parallax off, overlay 25, text middle left, mobile image present) and are re-stated here so the plan is self-contained and re-runnable rather than a diff against a state nobody can see.\n\nONLY ONE THING CHANGES BESIDES THE IMAGES: object-position goes from 93% to right center. That is not tidying — 93% was measured for the v2 photograph, whose jar sits at x 1664-3634 of 3750. This frame's subject runs to x=3711, only 39px short of the edge, so 93% would crop her hand and the jar at 1024 and 1280. Measured across four anchors and four viewports before changing it.\n\nText max-width relaxes to 29vw accordingly: 371px at 1280 against 385px of measured clear ground, 418px at 1440 against 545px, 500px at 1920 against 1025px.\n\nThe two images uploaded by the first pass are left in Shopify Files rather than deleted — removing live media is a stop condition, and they cost nothing sitting there. They are skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg and skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg, and nothing references them once this plan is applied.",
   "images": [
     {
       "slot": "repair_hero_desktop",
-      "filename": "skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg",
-      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg"
+      "filename": "skingenetix-pdrn-collagen-repair-cream-skin-renewal-treatment.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-repair-cream-skin-renewal-treatment.jpg"
     },
     {
       "slot": "repair_hero_mobile",
-      "filename": "skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
-      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg"
+      "filename": "skingenetix-pdrn-collagen-repair-cream-renewal-mobile.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-repair-cream-renewal-mobile.jpg"
     }
   ],
   "setting_updates": [
@@ -41,7 +42,7 @@
           "full_width": true,
           "remove_vertical_spacing": true,
           "remove_horizontal_spacing": true,
-          "html": "<style>@media screen and (min-width: 700px) {\n  .shopify-section--image-with-text-overlay .content-over-media > picture > img { object-position: 93% center; }\n  .shopify-section--image-with-text-overlay .content-over-media > div { max-width: clamp(260px, 23vw, 460px); }\n}\n@media screen and (max-width: 699px) {\n  .shopify-section--image-with-text-overlay .content-over-media::before {\n    background-image: linear-gradient(to top,\n      rgba(10, 14, 22, 0.85) 0%,\n      rgba(10, 14, 22, 0.62) 22%,\n      rgba(10, 14, 22, 0.00) 58%);\n  }\n}</style>"
+          "html": "<style>@media screen and (min-width: 700px) {\n  .shopify-section--image-with-text-overlay .content-over-media > picture > img { object-position: right center; }\n  .shopify-section--image-with-text-overlay .content-over-media > div { max-width: clamp(280px, 29vw, 500px); }\n}\n@media screen and (max-width: 699px) {\n  .shopify-section--image-with-text-overlay .content-over-media::before {\n    background-image: linear-gradient(to top,\n      rgba(10, 14, 22, 0.85) 0%,\n      rgba(10, 14, 22, 0.62) 22%,\n      rgba(10, 14, 22, 0.00) 58%);\n  }\n}</style>"
         }
       }
     }

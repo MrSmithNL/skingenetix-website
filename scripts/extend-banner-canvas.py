@@ -76,36 +76,56 @@ BANNERS = {
             "skin_box": (662, None, 0, 460),
         },
     },
-    # /pages/skin-repair-renewal -- the SAME PHOTOGRAPH as the "pdrn" entry above,
-    # which Malcolm asked for again for this concern page. Every measurement below is
-    # therefore that entry's, unchanged; only three things differ.
+    # /pages/skin-repair-renewal -- the V1 frame, and READ THIS BEFORE "CORRECTING" IT
+    # BACK. Malcolm picks from contact sheets on his Desktop named library-<product>-N.
+    # "library-pdrncream-1" is a FILE, not a folder, and the batch it tiles is the v1
+    # wave now sitting in assets/ai-generated/_superseded/pdrn-cream-v1-PORN-label/.
+    # The current library folder holds the v2 REGENERATION, which is a different
+    # photograph with the same shot id. A first pass read the folder instead of the
+    # sheet and published the v2 frame; this is the correction.
     #
-    #   target_width  3000 -> 3750. The collection banner was built to 3.54:1 before
-    #                 the 1920 case was measured, and at that ratio it keeps its full
-    #                 height at 1440 and 1512 but only 81% at 1920. 4.42:1 clears it.
-    #                 (/collections/pdrn is still on the narrow master - worth raising.)
-    #   filenames     distinct, and keyed to THIS page's search terms rather than the
-    #                 collection's, per .claude/rules/website-imagery.md rule 5.
-    #   mobile_crop   wider, because this page's hero has no product grid under it to
-    #                 carry the jar a second time.
+    # Same shot id, three places, all different pictures:
+    #   _superseded/pdrn-cream-v1-PORN-label/...B-face-full-prod-right-gpt_image_01  <- this
+    #   2026-08-22-multi-banner-library-pdrn-collagen-repair-cream/...same id        <- v2
+    #   2026-08-22-multi-banner-library-pdrn-skin-repair-serum/...same id            <- serum
     #
-    # Extending further costs nothing here: the shoulder is retired by ARM_FADE within
-    # 190px of the join, so the extra 750px is plain backdrop either way.
+    # THE BATCH NAME SAYS PORN-LABEL AND THIS FRAME IS STILL FINE. The fault hit "most
+    # frames", not all; this one reads PDRN COLLAGEN REPAIR / DEEP RENEWAL TREATMENT /
+    # PREMIUM FORMULA cleanly at 100% and at rendered size. Verify per frame, never per
+    # batch - the folder name is a warning, not a verdict.
+    #
+    # Geometry is this photograph's own, not the v2 entry's:
+    #   shoulder y=846  her shoulder only clips the last two rows of the left edge,
+    #                   which is why the edge measures 17-18 all the way down and then
+    #                   47.8 at row 847. Left as a shoulder rather than None precisely
+    #                   so those two lit rows get replaced by the modelled backdrop
+    #                   ramp - repeated across 1702px they would draw a bright hairline
+    #                   along the bottom of the extension.
+    #   shear 0.82      measured off the real edge: y=847 at x=0 to y=601 at x=300.
+    #                   Steeper than pdrn v2's 0.62 and the day cream's 0.48, so the
+    #                   shoulder leaves frame at the corner and nothing is carried.
+    #   texture_box     (0,550,0,400) reads max 29. The v2 entry's (0,555,0,820) reads
+    #                   max 195 on THIS frame - it clips her shoulder crest, and
+    #                   mirror-tiling that is what printed ghosts on the day cream.
     "skin-repair-renewal": {
-        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-pdrn-collagen-repair-cream"
+        "src": (ROOT / "assets/ai-generated/_superseded/pdrn-cream-v1-PORN-label"
                      / "pdrn-collagen-repair-cream--B-face-full-prod-right"
                      / "pdrn-collagen-repair-cream--B-face-full-prod-right-gpt_image_01.png"),
         "out": ROOT / "assets/publish-ready/page-skin-repair-renewal-banner",
-        "desktop": "skingenetix-pdrn-collagen-deep-skin-repair-renewal-cream.jpg",
-        "mobile": "skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
-        "mobile_crop": (110, 820),
+        #: NEW filenames, not edits of the ones already uploaded. Shopify Files suffixes
+        #: on a name collision rather than replacing, so re-using a name keeps serving
+        #: the OLD picture - that has bitten this project three times.
+        "desktop": "skingenetix-pdrn-collagen-repair-cream-skin-renewal-treatment.jpg",
+        "mobile": "skingenetix-pdrn-collagen-repair-cream-renewal-mobile.jpg",
+        "mobile_crop": (50, 950),
         "target_width": 3750,
-        "bg_fit": (380, 560),
-        "texture_box": (0, 555, 0, 820),
+        "bg_fit": (300, 550),
+        "texture_box": (0, 550, 0, 400),
         "texture_mode": "tile",
+        "shear": 0.82,
         "shoulder": {
-            "y": 632,
-            "skin_box": (662, None, 0, 460),
+            "y": 846,
+            "skin_box": (800, None, 0, 300),
         },
     },
     # /collections/copper-peptide -- the DAY CREAM frame Malcolm chose. Unlike the
