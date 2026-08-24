@@ -1,0 +1,25 @@
+{
+  "wave": "collection-creams-wide-3",
+  "created": "2026-08-24",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Third attempt. Wave 2 produced the combination Malcolm asked for - a real elbow AND a gradual falloff - but the BOUND was still in the wrong place, and the reason is the crop window rather than the picture.\n\nAt a 1440 viewport a 4.42:1 master is shown from x0 = W - 1440/(440/H), which for 4096x928 is x=1058, i.e. the left 26% is never seen. Wave 2 said 'by 40 percent nothing of her remains', so its best candidate put the subject at 40% and left only 266px of heading ground, against 475px on the deterministic version already live. The other candidate placed a perfect elbow at 26% - exactly on the window edge - and measured 0px.\n\nSo the bound moves to 50 percent, which is where the live version's subject actually starts (1906 of 3750 = 51%) and what yields ~475px. The elbow moves with it, to 62-70 percent.\n\nNOTE FOR THE NEXT RUN: defaults.candidates in this file is IGNORED. generate-multi.py main() passes args.candidates, which defaults to 2 - pass --candidates on the command line.",
+  "defaults": {
+    "candidates": 4,
+    "negative_global": "changed label, altered label, COPPER PEPTIDE misspelled, COPER PEPTIDE, ADVANCED NIGHT REPIAR, changed face, changed expression, different model, different jar, duplicated hand, duplicated arm, duplicated jar, second person, second face, extra limb, seam, visible join, border, letterbox bars, mirrored copy, collage, split panel, watermark, text overlay"
+  },
+  "slots": [
+    {
+      "id": "CREAMSWIDE3",
+      "title": "Night cream banner at 4.42:1 - elbow at 62-70%, left 50% empty",
+      "class": "A",
+      "width": 4096,
+      "height": 927,
+      "target_slot": "collection creams-moisturizers",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-night-repair-cream/copper-peptide-night-repair-cream--D-face-full-eyes-open-right/copper-peptide-night-repair-cream--D-face-full-eyes-open-right-nbp_flash_01.png"
+      ],
+      "prompt": "A wide cinematic beauty photograph on a plain dark charcoal studio backdrop. Reproduce the supplied image EXACTLY as it is, unchanged, uncropped and at the SAME SCALE, occupying the RIGHT 53 percent of this wider frame: the same woman at the same size, the same face and open-eyed expression to camera, the same hand, the same jar with its label untouched, the same lighting and colours. Do not zoom in, do not enlarge her, do not re-frame or crop closer. The remaining area to the LEFT continues the same scene. She is lying with her head resting on her own forearm; that forearm continues out of the supplied picture toward the left and the bend of her ELBOW is fully visible and complete, positioned between 62 and 70 percent of the frame width measured from the left edge. Beyond the elbow her upper arm recedes away from the key light and dissolves into deep shadow over a long, soft, entirely gradual falloff, with no hard edge, no abrupt cut and no visible boundary, so that by 50 percent of the frame width nothing of her remains. The LEFT HALF of the frame is therefore empty, even, unlit dark charcoal backdrop, clean and uncluttered, dark enough for white headline text to sit on it. The jar is frosted pale blue-grey glass with a brushed aluminium lid, and its label carries only these lines, in this order and no others: a fine double-helix mark drawn as small dots and dashes, the wordmark 'Skingenetix' with a capital S and the rest lower case, then 'COPPER PEPTIDE', then 'ADVANCED NIGHT REPAIR', then 'PREMIUM FORMULA'. Introduce nothing new: no second person, no extra hand or arm, no other objects, no furniture, no text of any kind on the backdrop.",
+      "negative_extra": "zoomed in, cropped closer, re-framed, enlarged face, subject filling the frame, subject spanning the full width, face at left, arm reaching the left edge, elbow at the left edge, busy left side, forearm cut off, elbow cropped, arm ending abruptly, severed limb, hard shadow edge, hand without arm, jar cropped"
+    }
+  ]
+}

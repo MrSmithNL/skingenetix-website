@@ -50,7 +50,7 @@ BACKUPS = ROOT / "backups"
 CSS_SECTION = "banner_text_width"
 
 
-def css(text_width, scrim_from, object_position, text_max="620px"):
+def css(text_width, scrim_from, object_position, text_max="620px", desktop_scrim=None):
     """Scoped CSS for one banner.
 
     text_width  : desktop measure, as a vw figure sized to the shot's clear zone
@@ -70,12 +70,33 @@ def css(text_width, scrim_from, object_position, text_max="620px"):
     That margin is aimed with object-position. The theme centres it, which would eat
     the model and the extension equally; anchoring to the shot's subject side means
     horizontal cropping only ever removes extended backdrop.
+
+    desktop_scrim : optional percentage at which a LEFT-to-right darkening gradient
+                  reaches zero on desktop. Every other banner here leaves this off,
+                  because each has real dark ground for its heading and dimming it
+                  would only flatten the picture. It exists for a frame that has none:
+                  the night cream D pose measures 165px of ground at 1440 and 5px at
+                  1280 at its roomiest height, so the choice is to darken deliberately
+                  or to publish a heading nobody can read. The theme already does
+                  exactly this on phones, on the same pseudo-element -- this extends the
+                  idea sideways rather than inventing a mechanism.
     """
     direction = "to top" if scrim_from == "bottom" else "to bottom"
+    desk = []
+    if desktop_scrim:
+        desk = [
+            "  .collection-banner::before {",
+            "    background-image: linear-gradient(to right,",
+            "      rgba(10, 14, 22, 0.88) 0%,",
+            "      rgba(10, 14, 22, 0.72) 16%,",
+            f"      rgba(10, 14, 22, 0.00) {desktop_scrim});",
+            "  }",
+        ]
     return "\n".join([
         "@media screen and (min-width: 700px) {",
         f"  .collection-banner > picture > img {{ object-position: {object_position}; }}",
         f"  .collection-banner .v-stack {{ max-width: clamp(320px, {text_width}, {text_max}); }}",
+        *desk,
         "}",
         "@media screen and (max-width: 699px) {",
         "  .collection-banner::before {",
@@ -193,8 +214,13 @@ PAGES = {
         #: her eyes sit high in the phone crop, so the text goes bottom-centre where the
         #: scrim will not cross them - the same reasoning as the copper-peptide page.
         "mobile_text": "place-self-end-center text-center",
+        #: desktop_scrim is unique to this page. Measured on the chosen frame at its
+        #: roomiest height: 165px of heading ground at 1440 and 5px at 1280, and top,
+        #: middle and bottom bands all measure 0px at 1280 - there is no text position
+        #: that finds room. So the ground is darkened deliberately, using the same
+        #: pseudo-element the theme already scrims on phones, turned sideways.
         "css": dict(text_width="28vw", scrim_from="bottom", text_max="520px",
-                    object_position="right center"),
+                    object_position="right center", desktop_scrim="46%"),
     },
 }
 

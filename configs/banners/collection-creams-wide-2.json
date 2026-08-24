@@ -1,0 +1,25 @@
+{
+  "wave": "collection-creams-wide-2",
+  "created": "2026-08-24",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Second attempt at the wide night cream header. Malcolm: the full forearm in view, AND a subtle gradient — i.e. the elbow actually drawn, then a long gradual recession into dark so the heading still has ground.\n\nWHAT WAVE 1 GOT WRONG, and it was the brief, not the engine. It said the elbow should sit 'roughly one third of the way in from the new left edge'. That is an instruction to fill the left, and Seedream obliged by re-rendering the scene ZOOMED IN rather than reproducing the original and adding backdrop. Measured on the heading's own band (rows 0.30H-0.62H, share exceeding luminance 60): both wave-1 candidates left 0px of dark ground at a 1440 viewport, against 475px on the deterministic version already live. The elbow arrived and the text zone vanished.\n\nSO THE BOUND NOW RUNS THE OTHER WAY. The elbow is pinned between 52 and 60 percent of frame width, the recession into shadow is stated as a long gradual falloff rather than an edge, and the LEFT 40 PERCENT is required to be empty backdrop. Every one of those is a measured fraction: a body-part anchor put a bottle over the headline in four of five suppliers once, and 'roughly one third in' has now cost a wave.\n\nSEEDREAM ONLY, AND THAT IS EVIDENCE-BASED RATHER THAN ASSUMED. Wave 1 sent this brief to all four capable suppliers twenty minutes ago and the results are on disk: Seedream returned 4096x928 (4.41:1) as asked; NBP Pro and NBP Flash both ignored the pixel dimensions and returned the source's own 6336x2688 (2.36:1); gpt-image refuses any aspect beyond 3:1. Luma is barred from class A because it invents brand marks. Rule 1 asks that suppliers be seen failing rather than assumed to fail — they were, in this exact brief, so re-running them would buy nothing. Candidates raised to 4 on the one engine that can do the job.\n\nLabel pinned verbatim, and the wave-1 failure mode is now negated by name.",
+  "defaults": {
+    "candidates": 4,
+    "negative_global": "changed label, altered label, COPPER PEPTIDE misspelled, COPER PEPTIDE, ADVANCED NIGHT REPIAR, changed face, changed expression, different model, different jar, duplicated hand, duplicated arm, duplicated jar, second person, second face, extra limb, seam, visible join, border, letterbox bars, mirrored copy, collage, split panel, watermark, text overlay"
+  },
+  "slots": [
+    {
+      "id": "CREAMSWIDE2",
+      "title": "Night cream banner at 4.42:1 — elbow fully in view, then a long gradual falloff leaving the left 40% empty",
+      "class": "A",
+      "width": 4096,
+      "height": 927,
+      "target_slot": "collection creams-moisturizers",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-night-repair-cream/copper-peptide-night-repair-cream--D-face-full-eyes-open-right/copper-peptide-night-repair-cream--D-face-full-eyes-open-right-nbp_flash_01.png"
+      ],
+      "prompt": "A wide cinematic beauty photograph on a plain dark charcoal studio backdrop. Reproduce the supplied image EXACTLY as it is, unchanged, uncropped and at the SAME SCALE, occupying the RIGHT 53 percent of this wider frame: the same woman at the same size, the same face and open-eyed expression to camera, the same hand, the same jar with its label untouched, the same lighting and colours. Do not zoom in, do not enlarge her, do not re-frame or crop closer. The remaining area to the LEFT continues the same scene. She is lying with her head resting on her own forearm; that forearm continues out of the supplied picture toward the left and the bend of her ELBOW is fully visible and complete, positioned between 52 and 60 percent of the frame width measured from the left edge. Beyond the elbow her upper arm recedes away from the key light and dissolves into deep shadow over a long, soft, entirely gradual falloff, with no hard edge, no abrupt cut and no visible boundary, so that by 40 percent of the frame width nothing of her remains. The LEFT 40 PERCENT of the frame is therefore empty, even, unlit dark charcoal backdrop, clean and uncluttered, dark enough for white headline text to sit on it. The jar is frosted pale blue-grey glass with a brushed aluminium lid, and its label carries only these lines, in this order and no others: a fine double-helix mark drawn as small dots and dashes, the wordmark 'Skingenetix' with a capital S and the rest lower case, then 'COPPER PEPTIDE', then 'ADVANCED NIGHT REPAIR', then 'PREMIUM FORMULA'. Introduce nothing new: no second person, no extra hand or arm, no other objects, no furniture, no text of any kind on the backdrop.",
+      "negative_extra": "zoomed in, cropped closer, re-framed, enlarged face, subject filling the frame, subject spanning the full width, face at left, arm reaching the left edge, elbow at the left edge, busy left side, forearm cut off, elbow cropped, arm ending abruptly, severed limb, hard shadow edge, hand without arm, jar cropped"
+    }
+  ]
+}

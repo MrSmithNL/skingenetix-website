@@ -1,0 +1,25 @@
+{
+  "wave": "collection-creams-wide",
+  "created": "2026-08-24",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Regenerate the Creams & Moisturizers header WIDE, instead of extending its canvas deterministically.\n\nWHY. The published version used scripts/extend-banner-canvas.py, which does not draw anything new — it carries the shot's backdrop across and retires the limb that touches the edge by fading it into shadow within ~190px. On this frame that reads as her forearm being cut off. Malcolm asked for the picture re-created with the forearm and elbow fully in view, which is generative work: the arm has to be DRAWN continuing, not dissolved.\n\nGEOMETRY IS STATED AS FRACTIONS, not as body parts. 'Against her jaw' once put the bottle over the headline in four of five suppliers. The source is 2.357:1 and the target 4.418:1, so the existing photograph occupies exactly the RIGHT 53% of the new frame and the new picture area is the LEFT 47%.\n\nSIZE. 4096x927 is 4.418:1, past the 4.36:1 that a 100vw x 440px header reaches at a 1920 viewport. Seedream caps its long edge at 4096 and is the only supplier that honours an arbitrary aspect: gpt-image hard-refuses anything beyond 3:1, NBP ignores pixel dimensions and snaps to its nearest named ratio, and Luma is barred from class A because it invents brand marks. They are all sent the brief anyway, per rule 1 — a supplier that cannot do the job should be seen failing rather than assumed to fail.\n\nTHE LABEL IS PINNED VERBATIM because Seedream rewrote a label the last time it widened a frame, and every observed substitution is negated by name.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "changed label, altered label, COPPER PEPTIDE misspelled, COPER PEPTIDE, ADVANCED NIGHT REPIAR, changed face, changed expression, different model, different jar, duplicated hand, duplicated arm, duplicated jar, second person, second face, extra limb, seam, visible join, border, letterbox bars, mirrored copy, collage, split panel, watermark, text overlay"
+  },
+  "slots": [
+    {
+      "id": "CREAMSWIDE",
+      "title": "Re-create the night cream banner at 4.42:1 with the forearm and elbow fully in frame",
+      "class": "A",
+      "width": 4096,
+      "height": 927,
+      "target_slot": "collection creams-moisturizers",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-copper-peptide-night-repair-cream/copper-peptide-night-repair-cream--D-face-full-eyes-open-right/copper-peptide-night-repair-cream--D-face-full-eyes-open-right-nbp_flash_01.png"
+      ],
+      "prompt": "Extend this photograph onto a wider canvas, adding new picture area on the LEFT only. Reproduce the existing image EXACTLY as it is, unchanged and uncropped, occupying the RIGHT 53 percent of the new frame: the same woman, the same face and open-eyed expression to camera, the same hand, the same jar with its label untouched, the same lighting and the same colours. Do not zoom, shift, restage or re-light any part of it. The new area is the LEFT 47 percent of the frame and it continues the same scene: she is lying with her head resting on her own forearm, and that forearm now continues out of the existing picture into the new area and is shown COMPLETE, with the bend of her elbow fully visible and well inside the frame, roughly one third of the way in from the new left edge. The forearm lies along the same horizontal surface at the same height and in the same soft light, foreshortened naturally as it recedes; nothing about it is cropped by the frame edge. Behind and above it the same plain dark charcoal studio backdrop continues, unlit and even, falling gently darker toward the left edge so that white headline text can sit on it. The join must be invisible: matching grain, the same lighting falloff, the same colour. The jar is frosted pale blue-grey glass with a brushed aluminium lid, and its label carries only these lines, in this order and no others: a fine double-helix mark drawn as small dots and dashes, the wordmark 'Skingenetix' with a capital S and the rest lower case, then 'COPPER PEPTIDE', then 'ADVANCED NIGHT REPAIR', then 'PREMIUM FORMULA'. Introduce nothing new: no second person, no extra hand or arm, no other objects, no furniture, no text of any kind on the backdrop.",
+      "negative_extra": "forearm cut off, elbow cropped, arm ending abruptly, floating arm, severed limb, arm fading into shadow, blurred limb, hand without arm, jar cropped"
+    }
+  ]
+}
