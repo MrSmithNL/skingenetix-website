@@ -1,0 +1,23 @@
+{
+  "created": "2026-08-22",
+  "target": "live theme \u2014 Impact, templates/index.json, faq_section right column",
+  "decided_by": "Claude, within the standing brief \u2014 first candidate with no label faults at full size",
+  "note": "Final FAQ jar stack. Every quoted line on every jar is correct at 100% zoom:\n  white  \u2014 MATRIXYL 3000 PRO COLLAGEN / FULL & FIRMING TREATMENT / PREMIUM FORMULA /\n           MATRIXYL 3000 | TRIPLE COLLAGEN | ELASTIN | 50ML\n  pink   \u2014 PDRN COLLAGEN REPAIR / DEEP RENEWAL TREATMENT / PREMIUM FORMULA\n  navy   \u2014 COPPER PEPTIDE / ADVANCED DAY REPAIR\n  blue   \u2014 COPPER PEPTIDE / ADVANCED NIGHT REPAIR\n\nTHREE ENGINES WERE NEEDED FOR ONE IMAGE. Seedream produced the composition and the only stack with all jars the same size. gpt-image fixed MATRIXYL, which Seedream failed in ~30 of 50 candidates, and got the fine ingredient line right - but broke PDRN. NBP Flash then fixed PDRN without breaking MATRIXYL. On this same pass gpt-image and nbp_pro both still rendered 'PDRN COLLAGEIN', and Seedream produced 'MATRIXYL 5000'.\n\nThat is the all-suppliers rule paying for itself: no amount of re-prompting one engine would have reached a clean frame, because the failures do not overlap.",
+  "images": [
+    {
+      "slot": "faq_image",
+      "source": "assets/ai-generated/2026-08-22-multi-faq-pink-jar-fix/PINKFIX-jar-stack/PINKFIX-jar-stack-nbp_flash_01.png",
+      "filename": "skingenetix-faq-cream-jar-stack-2026-v3.jpg",
+      "alt": "Four Skingenetix cream jars stacked in a column on a dark ground - Copper Peptide Advanced Night Repair, Matrixyl 3000 Pro Collagen, PDRN Collagen Repair and Copper Peptide Advanced Day Repair",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-cream-jar-stack-2026-v3.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-cream-jar-stack-2026-v3.jpg?v=1787560501"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "faq_section",
+      "slot": "faq_image",
+      "setting": "team_avatar"
+    }
+  ]
+}

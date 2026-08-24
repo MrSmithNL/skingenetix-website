@@ -55,42 +55,98 @@ FOLDERS = {
 #: Product position is varied across the set so the library covers banners whose
 #: text sits left, right or centre. The clear zone is always opposite the product.
 POSES = [
-    ("A-recline-prod-left",
-     "lying with her head tipped back, seen in profile from the side and slightly above, "
-     "eyes closed, skin filling the frame edge to edge from the décolleté at the lower right "
-     "up the long sweep of the throat to the jaw and lips at the upper left",
-     "left third of the frame, between 0 and 33 percent of frame width",
+    ("A-face-full-prod-left",
+     "lying with her head resting back and turned toward the camera, her WHOLE FACE fully in "
+     "view and unobscured - brow, both eyes, nose, lips, cheekbones and jaw all inside the "
+     "frame and sharp - her eyes closed and her expression calm, the line of her neck and "
+     "décolleté running away to the right, skin filling the frame edge to edge",
+     "left third of the frame, between 0 and 33 percent of frame width, held below her chin "
+     "and clear of her face",
      "right half of the frame, which stays smooth and even in tone",
-     "eyes open"),
-    ("B-recline-prod-right",
-     "lying with her head tipped back, seen in profile from the side and slightly above, "
-     "eyes closed, skin filling the frame edge to edge from the décolleté at the lower left "
-     "up the long sweep of the throat to the jaw and lips at the upper right",
-     "right third of the frame, between 67 and 100 percent of frame width",
+     "face cropped, chin only, partial face, top of head cut off, eyes open"),
+    ("B-face-full-prod-right",
+     "lying with her head resting back and turned toward the camera, her WHOLE FACE fully in "
+     "view and unobscured - brow, both eyes, nose, lips, cheekbones and jaw all inside the "
+     "frame and sharp - her eyes closed and her expression calm, the line of her neck and "
+     "décolleté running away to the left, skin filling the frame edge to edge",
+     "right third of the frame, between 67 and 100 percent of frame width, held below her chin "
+     "and clear of her face",
      "left half of the frame, which stays smooth and even in tone",
-     "eyes open"),
-    ("C-recline-prod-centre",
-     "lying with her head tipped fully back and turned away, eyes closed, photographed from "
-     "almost directly above so the throat and décolleté read as an abstract landscape filling "
-     "the whole frame, the chin at the upper right",
-     "centre of the frame but low, in the bottom third of the frame height",
+     "face cropped, chin only, partial face, top of head cut off, eyes open"),
+    ("C-face-full-eyes-open-left",
+     "lying with her head resting on one side, looking directly into the lens with a level "
+     "composed gaze, her WHOLE FACE fully in view and unobscured - brow, both eyes, nose, lips, "
+     "cheekbones and jaw all inside the frame and sharp - the line of her neck and décolleté "
+     "running away to the right, skin filling the frame edge to edge",
+     "left third of the frame, between 0 and 33 percent of frame width, held clear of her face",
+     "right half of the frame, which stays smooth and even in tone",
+     "face cropped, partial face, top of head cut off, eyes closed, looking away"),
+    ("D-face-full-eyes-open-right",
+     "lying with her head resting on one side, looking directly into the lens with a level "
+     "composed gaze, her WHOLE FACE fully in view and unobscured - brow, both eyes, nose, lips, "
+     "cheekbones and jaw all inside the frame and sharp - the line of her neck and décolleté "
+     "running away to the left, skin filling the frame edge to edge",
+     "right third of the frame, between 67 and 100 percent of frame width, held clear of her face",
+     "left half of the frame, which stays smooth and even in tone",
+     "face cropped, partial face, top of head cut off, eyes closed, looking away"),
+    ("E-face-full-gaze-away",
+     "lying with her head resting back and tilted, her WHOLE FACE fully in view and unobscured "
+     "- brow, both eyes, nose, lips, cheekbones and jaw all inside the frame and sharp - her "
+     "eyes open and looking softly away from the lens, the line of her neck and décolleté "
+     "running away to the right, skin filling the frame edge to edge",
+     "left third of the frame, between 0 and 33 percent of frame width, held clear of her face",
+     "right half of the frame, which stays smooth and even in tone",
+     "face cropped, partial face, top of head cut off, eyes closed, direct eye contact"),
+    ("F-face-full-above-centre",
+     "lying down photographed from directly above, her WHOLE FACE fully in view and unobscured "
+     "- brow, both eyes, nose, lips, cheekbones and jaw all inside the frame and sharp - her "
+     "eyes closed, her hair spread away from her face, the neck and décolleté running down out "
+     "of frame, skin filling the frame edge to edge",
+     "centre of the frame but low, in the bottom third of the frame height, clear of her face",
      "upper third of the frame, which stays smooth and even in tone",
-     "eyes open, product high in the frame"),
-    ("D-face-eyes-to-camera",
-     "in close-up with her head resting on one side, looking directly into the lens with a "
-     "level composed gaze, her face filling the right half of the frame - brow, eyes, "
-     "cheekbone and lips all sharp - and the line of her neck running away to the left",
-     "right third of the frame, between 67 and 100 percent of frame width",
-     "left half of the frame, which stays smooth and even in tone",
-     "eyes closed, looking away"),
-    ("E-face-eyes-closed",
-     "in close-up with her head resting on one side and her eyes closed, lashes catching the "
-     "light, her face filling the left half of the frame and the line of her neck running away "
-     "to the right",
-     "left third of the frame, between 0 and 33 percent of frame width",
-     "right half of the frame, which stays smooth and even in tone",
-     "eyes open"),
-    ("F-eye-macro",
+     "face cropped, partial face, top of head cut off, eyes open, horizontal banding, flat "
+     "stripe across the frame"),
+    ("G-face-full-over-shoulder",
+     "lying on her front with her head turned back over her shoulder toward the camera, her "
+     "WHOLE FACE fully in view and unobscured - brow, both eyes, nose, lips, cheekbones and jaw "
+     "all inside the frame and sharp - eyes meeting the lens, the line of her shoulder running "
+     "across the lower frame, skin filling the frame edge to edge",
+     "right third of the frame, between 67 and 100 percent of frame width, standing close to "
+     "camera and clear of her face",
+     "centre and left of the frame, which stays smooth and even in tone",
+     "face cropped, partial face, back of the head, top of head cut off, eyes closed"),
+    # Malcolm: nbp_pro_01 was "the only one showing some of the body" and he wants
+    # more like it. The earlier poses all crop at the neck, so these two name the
+    # shoulder and upper body as being in frame rather than leaving it to chance.
+    ("I-body-and-face-left",
+     "lying back with her head and her upper body both in frame, her WHOLE FACE fully in view "
+     "and unobscured - brow, both eyes, nose, lips, cheekbones and jaw all inside the frame and "
+     "sharp - eyes closed, and the line of her shoulder, collar and décolleté clearly visible "
+     "sweeping away below and to the right, so the picture holds the body as well as the face, "
+     "skin filling the frame edge to edge",
+     "left third of the frame, between 0 and 33 percent of frame width, held clear of her face",
+     "right half of the frame above the shoulder line, which stays smooth and even in tone",
+     "face cropped, partial face, top of head cut off, head only, tight head crop, eyes open"),
+    ("J-body-and-face-right",
+     "lying back with her head and her upper body both in frame, her WHOLE FACE fully in view "
+     "and unobscured - brow, both eyes, nose, lips, cheekbones and jaw all inside the frame and "
+     "sharp - eyes open and looking softly away, and the line of her shoulder, collar and "
+     "décolleté clearly visible sweeping away below and to the left, so the picture holds the "
+     "body as well as the face, skin filling the frame edge to edge",
+     "right third of the frame, between 67 and 100 percent of frame width, held clear of her face",
+     "left half of the frame above the shoulder line, which stays smooth and even in tone",
+     "face cropped, partial face, top of head cut off, head only, tight head crop, eyes closed"),
+    # And a much tighter face crop than any pose so far.
+    ("K-face-macro-close",
+     "in very tight macro on her face alone, the face filling almost the entire frame from edge "
+     "to edge - the skin texture of the cheek, the lashes, the lips and the fine down on the "
+     "jaw all rendered in extreme detail - her eyes closed and her expression calm, no neck or "
+     "shoulder in frame at all",
+     "far right edge of the frame, within the last 20 percent of frame width, only partly in "
+     "frame and softly out of focus",
+     "left portion of the cheek and jaw, which stays smooth and even in tone",
+     "wide shot, neck in frame, shoulder in frame, whole head small in frame, eyes open"),
+    ("H-eye-macro",
      "in extreme macro on one eye and brow, the lashes, the fine skin of the lid and the "
      "texture of the brow filling the right two thirds of the frame, the eye open and looking "
      "slightly away from the lens, everything beyond falling into soft shadow",
@@ -98,21 +154,6 @@ POSES = [
      "out of focus",
      "centre and right of the frame beyond the eye, which stays smooth and even in tone",
      "both eyes, full face, eye closed"),
-    ("G-decollete-above",
-     "lying down photographed from directly above so her décolleté and the base of her throat "
-     "read as an abstract landscape running horizontally across the whole frame, her chin "
-     "entering at the top right, eyes outside the frame",
-     "left third of the frame, between 0 and 33 percent of frame width",
-     "centre and right of the frame, which stays smooth and even in tone",
-     "face in frame, eyes in frame"),
-    ("H-over-shoulder",
-     "lying on her front with her head turned back over her shoulder toward the camera, eyes "
-     "meeting the lens, the line of her shoulder running across the lower frame and her face "
-     "at the upper left",
-     "right third of the frame, between 67 and 100 percent of frame width, standing large and "
-     "close to camera and slightly soft",
-     "centre and left of the frame, which stays smooth and even in tone",
-     "eyes closed, looking away"),
 ]
 
 NEG_GLOBAL = (
@@ -185,7 +226,8 @@ def build(stem: str) -> dict:
             f"shadow. Skin real and finely textured with visible pores and fine down, unretouched. "
             f"The {clear}, carrying no hard edge, bright highlight or feature, so a headline can "
             f"sit there. Very shallow depth of field, fine film grain, cinematic wide format, "
-            f"sculptural, quiet and premium."
+            f"sculptural, quiet and premium. Her whole face stays inside the frame with clear space "
+            f"above her head, and the product never overlaps or obscures her face."
         )
         slots.append({
             "id": f"{stem}--{sid}",
