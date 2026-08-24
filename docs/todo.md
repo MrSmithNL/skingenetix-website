@@ -160,6 +160,73 @@ hair-growth advert**. See `memory/fabricated-social-proof-on-the-store.md`.
 `banner-contact-sheet.py`. Every theme push backs up the template first and prints its own
 `--restore` command.
 
+### 🔄 BRAND-003 — Every website image now goes to every supplier
+
+**Priority:** 🟡 Rule and tooling live (2026-08-22); banner library generating
+**Owner:** Claude (rule, tooling, briefs) + Malcolm (every image choice)
+**Rule:** `.claude/rules/website-imagery.md` · **Runner:** `scripts/generate-multi.py`
+
+**Malcolm's standing instruction, 2026-08-22.** Every image created for the website goes to
+**every supplier on its latest and most capable model**, so he compares real alternatives and
+chooses. One candidate per supplier is the floor.
+
+**What bought this rule.** The whole homepage banner run went through **Seedream alone** —
+`generate-banners.py` hardcodes two Seedream endpoints and has no routing. The product name
+MATRIXYL failed in roughly **thirty of fifty candidates** across five rewritten briefs, spelled
+letter by letter, every misspelling negated by name. It was treated as a prompting problem for
+hours. The same brief sent to **gpt-image rendered it correctly on the first attempt, both
+candidates** — then broke PDRN, which Seedream had always rendered correctly.
+
+The final FAQ image needed **three engines**: Seedream for the composition and the only stack
+with all jars the same size, gpt-image to fix MATRIXYL, NBP Flash to fix PDRN without breaking
+MATRIXYL again. The failure modes do not overlap. The product-photography skill had said so for
+months — "running the same brief across 3 backends raises per-variant pass rate from ~50% to
+~85%" — and the banner runner ignored it.
+
+**The roster had also drifted.** Checked 2026-08-22: `chatgpt-image-latest` and `gpt-image-1.5`
+existed at OpenAI and were wired into nothing; `gemini-3.1-flash-lite-image` was new at Google.
+Rule 2 is now to re-list before every production run, because a stale model id **404s silently**
+and just returns fewer candidates.
+
+**Judge twice, at different sizes.** A contact sheet cannot judge lettering — `NEAT2_04` looked
+flawless tiled and reads `MATPIXYL` at full size. And a correctly-generated `PDRN` arrived on the
+live page reading `PORN`, purely because the theme emitted `sizes="350px"` against a srcset
+topping out at 700w and the downscale thinned the D. The pixels were right; the delivery was
+wrong. Fixed at runtime by dropping srcset/sizes and requesting an explicit CDN width.
+
+**Live on the homepage**
+
+| Section | State |
+| ------- | ----- |
+| FAQ | Title centred above, questions 46% left, image right, support line full-width below, no card |
+| FAQ image | Four-jar stack — **every quoted line correct** at full size and at render size |
+| Philosophy band | Skin-art reclining profile, face in view, 720px tall |
+
+**In progress**
+
+- 🟡 **Banner library** — 9 products × 11 poses × 4 suppliers = 396 images, ~$22.
+  Poses vary body position, gaze direction and product placement (left / centre / right thirds)
+  so a banner's text can sit wherever the frame leaves room. Includes body-and-face and
+  face-macro registers, plus an eye macro. **`H-eye-macro` produces collages** in two of three
+  suppliers — a visible vertical seam splitting product and eye into panels — despite `collage`
+  and `multi-panel` being negated.
+- 🟢 Band copy is still a Claude draft; Malcolm to write it.
+
+**Supplier facts measured across this session**
+
+| Supplier | Finding |
+| -------- | ------- |
+| Seedream | Best label fidelity. **Refuses bare-skin subjects every time.** |
+| gpt-image | Solved MATRIXYL first attempt. Refuses most bare-skin briefs. |
+| NBP Flash | Cheapest at $0.02 and produced the clean FAQ stack and the chosen band |
+| NBP Pro | 6× Flash, weaker labels, tilts the product |
+| Luma | Best colour, but **invented an `XXX` mark on class A** — barred alongside FLUX.2 |
+| FLUX.2 | Barred from class A: substitutes fictional brands |
+
+Content filters refuse bare-skin briefs on Seedream, gpt-image and FLUX.2. Establishing clothing
+in the opening sentence cut refusals from 13/36 to 1/48 — but naming a garment also changes the
+picture, so it is not a free fix.
+
 ### 🔄 BRAND-002 — Homepage FAQ and brand band restructured on stock sections
 
 **Priority:** 🟡 Layout live (2026-08-21); two images outstanding

@@ -21,6 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DESKTOP = Path.home() / "Desktop"
 TILE_W = 900
+FONT = "/System/Library/Fonts/Supplemental/Arial.ttf"
 
 
 def dims(p: Path) -> tuple[int, int]:
@@ -35,8 +36,16 @@ def dims(p: Path) -> tuple[int, int]:
     return w, h
 
 
+#: generate-banners.py writes .jpg and generate-multi.py writes .png. Globbing only
+#: .jpg made this print "0 contact sheets" for a whole multi-supplier run on
+#: 2026-08-24 with no error — the sheet was empty, not broken, so nothing said so.
+def _shots(slot_dir: Path) -> list[Path]:
+    return sorted(p for p in slot_dir.iterdir()
+                  if p.suffix.lower() in (".jpg", ".jpeg", ".png"))
+
+
 def build(slot_dir: Path, out: Path) -> bool:
-    shots = sorted(slot_dir.glob("*.jpg"))
+    shots = _shots(slot_dir)
     if not shots:
         return False
 
@@ -45,8 +54,16 @@ def build(slot_dir: Path, out: Path) -> bool:
     scaled = []
     for i, s in enumerate(shots, 1):
         d = work / f"{i:02d}.png"
+        # Stamp the candidate name on the tile. Six suppliers land in one folder and
+        # a sheet without names cannot be turned back into a choice.
+        cap = s.stem.replace(f"{slot_dir.name}-", "").replace("'", "")
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(s),
-                        "-vf", f"scale={TILE_W}:-2", str(d)], check=True)
+                        # An explicit fontfile: drawtext falls back to fontconfig,
+                        # which is not configured on this Mac and errors out.
+                        "-vf", f"scale={TILE_W}:-2,"
+                               f"drawtext=fontfile={FONT}:text='{cap}':x=16:y=12:fontsize=30:"
+                               f"fontcolor=white:box=1:boxcolor=black@0.65:boxborderw=10",
+                        str(d)], check=True)
         scaled.append(d)
 
     # Two columns keeps wide banners legible; squares tile 2-up just as well.
@@ -89,7 +106,7 @@ def main():
     for slot_dir in sorted(p for p in run_dir.iterdir() if p.is_dir()):
         out = DESKTOP / f"skingenetix-{slot_dir.name}.png"
         if build(slot_dir, out):
-            n = len(list(slot_dir.glob("*.jpg")))
+            n = len(_shots(slot_dir))
             print(f"  {slot_dir.name:<30} {n} candidates -> {out.name}")
             made.append(out)
 

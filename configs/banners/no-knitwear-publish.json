@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-24",
+  "target": "live theme \u2014 Impact, templates/index.json",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 \"nbp_flash_01 from the skingenetix-CONCERN2-BARE-edit.png set is fine, lets use this one\"",
+  "note": "Swaps the firming concern tile for the version with no garment in view. Same woman, same profile, same #016569 ground and the same rim light along the jaw \u2014 it is the shipped frame edited, not a new shoot, which is what Malcolm asked for.\n\nNEW FILENAME, NOT A RE-UPLOAD. The file is skingenetix-concern-firming-skin-density-V2-2026.jpg, not the original name. Shopify Files does not replace on name collision, it suffixes and keeps serving the old asset \u2014 that has bitten this project three times \u2014 and shopify.md rule 7 bars re-uploading an existing name anyway because Langify keys translations off the URL. The original file stays in Files, untouched and simply unreferenced, so the undo is a one-line revert of the template.\n\nThe hero slide 3 request (same garment fix, plus the bottle label) is a separate run and is NOT in this plan.",
+  "images": [
+    {
+      "slot": "concern_c2_v2",
+      "source": "assets/publish-ready/homepage/skingenetix-concern-firming-skin-density-v2-2026.jpg",
+      "generated_from": "assets/ai-generated/2026-08-22-multi-no-knitwear/CONCERN2-BARE-edit/__CONCERN2-BARE-edit-nbp_flash_01.png",
+      "filename": "skingenetix-concern-firming-skin-density-v2-2026.jpg",
+      "alt": "Profile view of a defined jawline and bare neck against a deep teal background - Skingenetix firming and skin density peptide range",
+      "uploaded_handle": "shopify://shop_images/skingenetix-concern-firming-skin-density-v2-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-concern-firming-skin-density-v2-2026.jpg?v=1787561759"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "skin_concerns",
+      "block": "c2",
+      "slot": "concern_c2_v2"
+    }
+  ]
+}
