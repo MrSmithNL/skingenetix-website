@@ -150,9 +150,9 @@ BANNERS = {
         #: 4.42:1, past the 4.36:1 the 100vw x 440px header reaches at a 1920 viewport
         "target_width": 3750,
         "bg_fit": (100, 700),
-        #: measured from the right edge, which is the edge being extended: rows 0-400
-        #: across the last 700px reads max 39 against a backdrop of ~31. Clean.
-        "texture_box": (0, 400, 0, 700),
+        #: ORIGINAL-frame coordinates, like every other banner: rows 0-400 across the
+        #: last 700px (x 1348-2048) reads max 39 against a backdrop of ~31. Clean.
+        "texture_box": (0, 400, 1348, 2048),
         "texture_mode": "tile",
         #: nothing touches the right edge - max 32 over the full height
         "shoulder": None,
@@ -219,6 +219,35 @@ BANNERS = {
         "shear": 0.48,
         "shear_curve": 0.004,
         "arm_fade": 260,
+    },
+    # /collections/serums -- extends RIGHT, and the measurement is why. Her shoulder
+    # fills 50% of the LEFT edge (rows 426-848) and its top line is essentially level,
+    # 0.07px down per px travelled left, so it never leaves frame: extending that side
+    # would mean inventing ~1700px of horizontal arm, which this script's own notes
+    # record as reading like a smeared arm. The RIGHT edge is clean backdrop top to
+    # bottom at mean 24.6, so the room is made there instead.
+    "serums": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-acetyl-hexapeptide-8-serum"
+                     / "acetyl-hexapeptide-8-serum--J-body-and-face-right"
+                     / "acetyl-hexapeptide-8-serum--J-body-and-face-right-nbp_pro_01.png"),
+        "out": ROOT / "assets/publish-ready/collection-serums-banner",
+        "desktop": "skingenetix-peptide-face-serums-anti-wrinkle-skincare.jpg",
+        "mobile": "skingenetix-peptide-face-serums-anti-wrinkle-mobile.jpg",
+        "side": "right",
+        #: native is 6336x2688; every measurement below is in working pixels
+        "work_height": 848,
+        #: inset from the LEFT edge - the subject side for a right-extended banner.
+        #: Keeps her face with the bottle, which sits at x 1500-1850 of 1999.
+        "mobile_crop": (760, 1000),
+        "target_width": 3750,
+        "bg_fit": (100, 400),
+        #: the ONLY clean rectangle on this frame: rows 0-350 across cols 0-700 reads
+        #: max 37 against a backdrop of ~30. Every larger box tried is contaminated by
+        #: her shoulder - (0,500,0,500) hits max 208.
+        "texture_box": (0, 350, 0, 700),
+        "texture_mode": "tile",
+        #: nothing on the right edge, which is the edge being extended
+        "shoulder": None,
     },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
@@ -473,6 +502,22 @@ def main():
     # orientation to the source, label included.
     side = cfg.get("side", "left")
     work = im[:, ::-1] if side == "right" else im
+    # Every x in a banner's config is measured on the ORIGINAL frame, because that is
+    # what a person looks at when writing one. extend_left sees the MIRRORED frame, so
+    # those x ranges have to be mirrored with it. Forgetting this sampled the bottle
+    # and hand as "clean backdrop" on the serums banner and tiled them across the
+    # extension as ghosts.
+    cfg = dict(cfg)
+    if side == "right":
+        def flip(box):
+            y0, y1, x0, x1 = box
+            return (y0, y1, w - x1, w - x0)
+        cfg["texture_box"] = flip(cfg["texture_box"])
+        if cfg.get("shoulder"):
+            sh = dict(cfg["shoulder"])
+            y0, y1, x0, x1 = sh["skin_box"]
+            sh["skin_box"] = (y0, y1, w - x1, w - (x0 or 0))
+            cfg["shoulder"] = sh
     wide = np.concatenate([extend_left(work, extra, cfg), work], axis=1)
     if side == "right":
         wide = wide[:, ::-1]

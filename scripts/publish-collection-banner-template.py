@@ -89,6 +89,19 @@ def css(text_width, scrim_from, object_position, text_max="620px"):
 
 
 PAGES = {
+    # /collections/serums -- the one banner extended RIGHT, so everything mirrors: the
+    # heading goes centre-RIGHT over the extension, and object-position anchors LEFT so
+    # the crop eats the extension rather than her face or the bottle.
+    "serums": {
+        "plan": "configs/banners/collection-serums-banner.json",
+        "desktop": "collection_serums_desktop",
+        "mobile": "collection_serums_mobile",
+        "overlay": 22,
+        "desktop_text": "sm:place-self-center-end sm:text-end",
+        "mobile_text": "place-self-end-center text-center",
+        "css": dict(text_width="42vw", scrim_from="bottom", text_max="660px",
+                    object_position="left center"),
+    },
     # /collections/acetyl-hexapeptide-8 -- canvas extended left, subject and bottle
     # hard right. Her eyes sit high in the phone crop, so the text goes bottom-centre
     # where the scrim will not cross them.
@@ -268,7 +281,8 @@ def main():
         "image_size": "sm",
         "overlay_opacity": page["overlay"],
         "desktop_text_position": page.get(
-            "desktop_text", "sm:place-self-center-start sm:text-start"),
+            "desktop_text", page.get("desktop_text",
+                                     "sm:place-self-center-start sm:text-start")),
         "mobile_text_position": page["mobile_text"],
         "image": handles[page["desktop"]],
         "mobile_image": handles[page["mobile"]],
