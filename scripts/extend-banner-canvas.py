@@ -113,23 +113,35 @@ BANNERS = {
     # the leftmost columns read mean 11-15 with a max of 16 from top to bottom, so
     # nothing touches this edge and no arm has to be sheared out of frame.
     "acetyl-hexapeptide-8": {
+        #: Malcolm's pick, 2026-08-24, replacing the G-face-full-over-shoulder frame.
+        #: Label checked at 100%: Skingenetix / ACETYL HEXAPEPTIDE-8 / ANTI-WRINKLE all
+        #: correct; the line under it is behind her fingers, which is occlusion in the
+        #: shot and not a rendering fault.
         "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-acetyl-hexapeptide-8-serum"
-                     / "acetyl-hexapeptide-8-serum--G-face-full-over-shoulder"
-                     / "acetyl-hexapeptide-8-serum--G-face-full-over-shoulder-gpt_image_01.png"),
+                     / "acetyl-hexapeptide-8-serum--J-body-and-face-right"
+                     / "acetyl-hexapeptide-8-serum--J-body-and-face-right-nbp_pro_01.png"),
         "out": ROOT / "assets/publish-ready/collection-acetyl-hexapeptide-8-banner",
-        "desktop": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum.jpg",
-        "mobile": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-mobile.jpg",
-        #: right-anchored; keeps the bottle with the face and her over-shoulder look
-        "mobile_crop": (30, 1050),
+        "desktop": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-serum.jpg",
+        "mobile": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-face-mobile.jpg",
+        #: 6336x2688 native, far bigger than the other library frames
+        "work_height": 848,
+        #: right-anchored; keeps the bottle with the face
+        "mobile_crop": (40, 780),
         #: 4.42:1, past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport
         "target_width": 3750,
-        "bg_fit": (100, 700),
-        #: rows 0-650 cols 0-400 measures max 25 against a backdrop of ~14. The wider
-        #: (0,300,0,900) box looks similar and is NOT clean - max 164, her hair - which
-        #: is the mistake that printed ghosts across the day cream banner.
-        "texture_box": (0, 650, 0, 400),
+        "bg_fit": (100, 370),
+        #: rows 0-380 cols 0-300 measures mean 30.1, max 35, sd 1.3 at working size --
+        #: flat backdrop. Reading lower catches her shoulder, which crests at y=391.
+        "texture_box": (0, 380, 0, 300),
         "texture_mode": "tile",
-        "shoulder": None,
+        #: Her shoulder meets the left edge at y=428 and the line steepens as it
+        #: recedes: 391 at x=120, 401 at x=60, 428 at x=0 -- ~0.48px down per px left
+        #: at the edge. It has 420px to fall rather than the pdrn banner's 216, so it
+        #: carries a stronger curve and a longer fade.
+        "shoulder": {"y": 428, "skin_box": (470, None, 0, 380)},
+        "shear": 0.48,
+        "shear_curve": 0.004,
+        "arm_fade": 260,
     },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
@@ -177,6 +189,38 @@ BANNERS = {
         "texture_box": (0, 700, 0, 120),
         #: near-black at mean 9, so there is no weave worth mirror-tiling - the same
         #: reasoning as the "all" banner, whose tiles drew faint vertical lines.
+        "texture_mode": "scatter",
+        "shoulder": None,
+    },
+    # /pages/firming-skin-density -- the Matrixyl cream A-face-full-prod-left frame
+    # Malcolm chose. NOT a collection page, but the hero is measured at exactly the
+    # same 100vw x 440px box (checked live at a 1440 viewport: the band runs y=159 to
+    # y=598), so the same 4.42:1 target applies unchanged.
+    #
+    # THE POSE NAME SAYS "prod-left" AND THE EXTENSION STILL GOES LEFT. That reads
+    # backwards and is right: "left" describes where the jar sits inside the ORIGINAL
+    # frame, and the right edge of that frame is 100% lit skin - her neck and shoulder
+    # run off it at a mean luminance of 174 from the top row to the bottom. There is no
+    # backdrop on that side to extend into, so a rightward extension would have to
+    # invent shoulder, which is generative work this script cannot do honestly.
+    # The left edge is the opposite: mean 22.5, max 24.9, nothing above 25 anywhere
+    # down it, and the jar's own first column is x=121. So the canvas grows left, the
+    # jar lands at 47-62% of the new frame, and the heading takes the dark it vacates.
+    "firming-skin-density": {
+        "src": (ROOT / "assets/publish-ready/page-firming-skin-density-banner"
+                     / "_master-1999x848.png"),
+        "out": ROOT / "assets/publish-ready/page-firming-skin-density-banner",
+        "desktop": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-skin-density.jpg",
+        "mobile": "skingenetix-matrixyl-3000-firming-cream-face-mobile.jpg",
+        #: right-anchored; keeps the jar (x 121-560 of 1999) with the whole face
+        "mobile_crop": (760, 1000),
+        "target_width": 3750,
+        "bg_fit": (200, 600),              # unused while shoulder is None; kept for shape
+        #: cols 0-100 measure max 28 over the FULL height, so the box can run the whole
+        #: frame rather than stopping short of a limb the way the day cream's had to.
+        "texture_box": (0, 848, 0, 100),
+        #: near-black at mean 23 - no weave worth mirror-tiling, and tiling near-black
+        #: drew faint vertical lines on the "all" banner.
         "texture_mode": "scatter",
         "shoulder": None,
     },
@@ -304,8 +348,15 @@ def extend_left(im, extra, cfg):
     # faint vertical line -- noise the eye ignores, a straight edge it does not.
     # Ramping the difference in over the last few columns removes it exactly.
     correction = im[:, 0] - out[:, -1]
+    # Smoothed, and applied to BACKDROP only. A per-row correction ramped across 40
+    # columns holds each row's value constant along its length, so where it lands on
+    # skin it draws a comb of short horizontal lines -- clearly visible on the acetyl
+    # shoulder. The backdrop is where a residual step actually shows as a line, and
+    # there the correction has no fine detail to smear.
+    correction = ndimage.gaussian_filter1d(correction, 3.0, axis=0)
     ramp = np.linspace(0.0, 1.0, JOIN_BLEND)
-    out[:, -JOIN_BLEND:] += correction[:, None, :] * ramp[None, :, None]
+    backdrop_only = 1.0 - alpha[:, -JOIN_BLEND:]
+    out[:, -JOIN_BLEND:] += correction[:, None, :] * ramp[None, :, None] * backdrop_only
     if shoulder is not None:
         y0, y1, x0, x1 = shoulder["skin_box"]
         box = (y0, h if y1 is None else y1, x0, x1)
@@ -320,7 +371,18 @@ def main():
     args = ap.parse_args()
     cfg = BANNERS[args.banner]
 
-    im = np.array(Image.open(cfg["src"]).convert("RGB")).astype(np.float64)
+    src = Image.open(cfg["src"]).convert("RGB")
+    # Some library frames are far larger than the others (the acetyl J-pose is
+    # 6336x2688). Bring the source to the working height FIRST: every measurement in
+    # a banner's config -- shoulder row, texture box, mobile crop -- is in working
+    # pixels, and extending at native size would build an 11k-wide float array to
+    # reach the same aspect.
+    work_h = cfg.get("work_height")
+    if work_h and src.height != work_h:
+        src = src.resize((round(src.width * work_h / src.height), work_h), Image.LANCZOS)
+        print(f"source scaled to working height {work_h} -> {src.width}x{src.height}")
+
+    im = np.array(src).astype(np.float64)
     h, w, _ = im.shape
     target = cfg.get("target_width", TARGET_WIDTH)
     extra = target - w

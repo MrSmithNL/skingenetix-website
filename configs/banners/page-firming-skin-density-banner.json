@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-24",
+  "target": "live store \u2014 /pages/firming-skin-density, templates/page.firming-skin-density.json",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 asked for A-face-full-prod-left nbp_pro_01 from the Matrixyl 3000 Pro Collagen CREAM library, with the canvas widened so the full height of the image shows in the header.",
+  "note": "Hero banner for the Firming & Skin Density concern page.\n\nSOURCE: banner library, matrixyl-3000-pro-collagen-cream--A-face-full-prod-left nbp_pro_01 (6336x2688, 2.36:1). Downscaled to 1999x848 first, the height every other banner on this store uses, then extended. Label checked at 100%: Skingenetix with the dotted double-helix mark / MATRIXYL 3000 PRO COLLAGEN / FULL & FIRMING TREATMENT (teal) / PREMIUM FORMULA / MATRIXYL 3000 | TRIPLE COLLAGEN | ELASTIN | 50ML. All correct, including MATRIXYL, the word that failed in roughly thirty of fifty candidates on the 2026-08-21 Seedream-only run.\n\nSAME BOX AS THE COLLECTION BANNERS. This is a page, not a collection, and its hero is image-with-text-overlay rather than collection-banner \u2014 but measured live at a 1440 viewport the band runs y=159 to y=598, i.e. exactly 100vw x 440px. So the same 4.42:1 target applies: 3.27:1 at 1440, 3.44:1 at 1512, 4.36:1 at 1920, and a master narrower than the box loses HEIGHT.\n\nEXTENDED LEFT, DESPITE THE POSE BEING CALLED prod-left. 'Left' describes where the jar sits inside the original frame. The right edge of that frame is 100% lit skin \u2014 her neck and shoulder run off it at a mean luminance of 174 from the top row to the bottom \u2014 so a rightward extension would have to invent shoulder, which is generative work, not canvas work. The left edge measures mean 22.5 / max 24.9 with nothing above 25 anywhere down it, so it extends cleanly with no shoulder to shear.\n\nOBJECT-POSITION IS 78%, NOT right. The clear dark zone at a given viewport is fixed by the ORIGINAL frame's composition \u2014 (window_source_width - original_width + first_lit_column) x scale \u2014 so it is 306px at 1280 however far the canvas grows: the window's left edge and the jar move together. Anchoring at 78% instead of 100% shifts the crop and buys roughly 145px at 1280, paid for with ~280px off her outer shoulder, which carries nothing. The face ends at x=3100 of 3750 and is never touched.\n\nOVERLAY DROPPED 70 -> 25. Seventy flattened the previous placeholder into grey; twenty-five is what the four collection banners use.",
+  "images": [
+    {
+      "slot": "firming_hero_desktop",
+      "source": "assets/publish-ready/page-firming-skin-density-banner/skingenetix-matrixyl-3000-pro-collagen-firming-cream-skin-density.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-skin-density.jpg",
+      "alt": "Woman resting on her side with her eyes closed, holding a jar of Skingenetix Matrixyl 3000 Pro Collagen Full & Firming Treatment against her cheek",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-cream-skin-density.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-firming-cream-skin-density.jpg?v=1787585445"
+    },
+    {
+      "slot": "firming_hero_mobile",
+      "source": "assets/publish-ready/page-firming-skin-density-banner/skingenetix-matrixyl-3000-firming-cream-face-mobile.jpg",
+      "filename": "skingenetix-matrixyl-3000-firming-cream-face-mobile.jpg",
+      "alt": "Close crop of the Skingenetix Matrixyl 3000 Pro Collagen Full & Firming Treatment jar held beside a woman's face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-firming-cream-face-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-firming-cream-face-mobile.jpg?v=1787585444"
+    }
+  ],
+  "image_assignments": []
+}

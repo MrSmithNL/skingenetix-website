@@ -1,0 +1,49 @@
+{
+  "created": "2026-08-24",
+  "target": "templates/page.firming-skin-density.json — hero section",
+  "decided_by": "Malcolm, 2026-08-24",
+  "note": "Publishes the widened Matrixyl cream banner to the Firming & Skin Density hero and makes the four section changes the new picture needs.\n\nTHE SETTINGS MATTER AS MUCH AS THE IMAGE. Three attempts and about $0.50 were spent on 2026-08-24 reworking a collection banner whose real fault was enable_parallax; the rule since is to read the section's own settings before touching the asset. Here:\n\n  enable_parallax  set false EXPLICITLY. It was absent from this section, so it was taking the schema default, and the theme's own help text says 'Parallax crops images' — it renders at 130% and pans, so no supplied aspect ratio survives it.\n  overlay_opacity  70 -> 25. Seventy is a heavy dark wash that turned the previous placeholder flat grey; 25 is what the four collection banners use.\n  desktop_text     centre -> middle left. Centre puts the heading across her face, which is the exact fault just fixed on /collections/glutathione.\n  mobile_image     added. One landscape image centre-cropped to a near-square on a phone loses the jar; the 1000x848 crop keeps jar and face together.\n\nCSS is additive, in a custom-html section (.claude/rules/shopify.md 2 and 3 — no Liquid touched). It is scoped by .shopify-section--image-with-text-overlay, the section-TYPE class, not by section id: ids render as shopify-section-template--<theme id>__<key>, so an id selector built by hand silently matches nothing. This page has exactly one section of that type.\n\nBraces are kept on separate lines deliberately: Shopify rejects an html setting containing '{{' or '}}' with a 422, and minified CSS produces ';}}' the moment a rule closes inside a media query.",
+  "images": [
+    {
+      "slot": "firming_hero_desktop",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-skin-density.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-cream-skin-density.jpg"
+    },
+    {
+      "slot": "firming_hero_mobile",
+      "filename": "skingenetix-matrixyl-3000-firming-cream-face-mobile.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-firming-cream-face-mobile.jpg"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "enable_parallax": false,
+        "image_size": "sm",
+        "overlay_opacity": 25,
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-end-center text-center"
+      }
+    }
+  ],
+  "image_assignments": [
+    { "section": "hero", "slot": "firming_hero_desktop", "setting": "image" },
+    { "section": "hero", "slot": "firming_hero_mobile", "setting": "mobile_image" }
+  ],
+  "new_sections": [
+    {
+      "id": "banner_text_width",
+      "insert_after": "related",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>@media screen and (min-width: 700px) {\n  .shopify-section--image-with-text-overlay .content-over-media > picture > img { object-position: 78% center; }\n  .shopify-section--image-with-text-overlay .content-over-media > div { max-width: clamp(280px, 30vw, 480px); }\n}\n@media screen and (max-width: 699px) {\n  .shopify-section--image-with-text-overlay .content-over-media::before {\n    background-image: linear-gradient(to top,\n      rgba(10, 14, 22, 0.85) 0%,\n      rgba(10, 14, 22, 0.62) 22%,\n      rgba(10, 14, 22, 0.00) 58%);\n  }\n}</style>"
+        }
+      }
+    }
+  ]
+}
