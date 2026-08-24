@@ -239,43 +239,35 @@ BANNERS = {
     # /collections/acetyl-hexapeptide-8 -- the easy case, and measured to confirm it:
     # the leftmost columns read mean 11-15 with a max of 16 from top to bottom, so
     # nothing touches this edge and no arm has to be sheared out of frame.
+    # /collections/acetyl-hexapeptide-8 -- round 2 frame: the library original showed
+    # only three of the label's seven elements and an opaque white fill, so it was
+    # regenerated with the full label quoted and the serum described as a liquid.
+    # Malcolm picked AHP8-R2-B-BIGGER nbp_pro_03.
     "acetyl-hexapeptide-8": {
-        #: Malcolm's pick, 2026-08-24, replacing the G-face-full-over-shoulder frame.
-        #: Label checked at 100%: Skingenetix / ACETYL HEXAPEPTIDE-8 / ANTI-WRINKLE all
-        #: correct; the line under it is behind her fingers, which is occlusion in the
-        #: shot and not a rendering fault.
-        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-acetyl-hexapeptide-8-serum"
-                     / "acetyl-hexapeptide-8-serum--J-body-and-face-right"
-                     / "acetyl-hexapeptide-8-serum--J-body-and-face-right-nbp_pro_01.png"),
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-collection-ahp8-r2"
+                     / "AHP8-R2-B-BIGGER" / "AHP8-R2-B-BIGGER-nbp_pro_03.png"),
         "out": ROOT / "assets/publish-ready/collection-acetyl-hexapeptide-8-banner",
-        "desktop": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-serum.jpg",
-        "mobile": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-face-mobile.jpg",
-        #: 6336x2688 native, far bigger than the other library frames
+        "desktop": "skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-serum.jpg",
+        "mobile": "skingenetix-acetyl-hexapeptide-8-argireline-serum-mobile.jpg",
+        #: native 6336x2688; every measurement below is in working pixels
         "work_height": 848,
-        #: right-anchored; keeps the bottle with the face
-        "mobile_crop": (40, 780),
-        #: 4.42:1, past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport
+        #: right-anchored - the subject side - keeping the bottle with her face
+        "mobile_crop": (30, 1050),
         "target_width": 3750,
-        "bg_fit": (100, 370),
-        #: rows 0-380 cols 0-300 measures mean 30.1, max 35, sd 1.3 at working size --
-        #: flat backdrop. Reading lower catches her shoulder, which crests at y=391.
-        "texture_box": (0, 380, 0, 300),
-        "texture_mode": "tile",
-        #: Her shoulder meets the left edge at y=428 and the line steepens as it
-        #: recedes: 391 at x=120, 401 at x=60, 428 at x=0 -- ~0.48px down per px left
-        #: at the edge. It has 420px to fall rather than the pdrn banner's 216, so it
-        #: carries a stronger curve and a longer fade.
-        "shoulder": {"y": 428, "skin_box": (470, None, 0, 380)},
-        "shear": 0.48,
-        "shear_curve": 0.004,
-        "arm_fade": 260,
+        "bg_fit": (100, 400),
+        #: measured on this frame at working size: rows 0-420 across cols 0-690 reads
+        #: max 39 against a backdrop of ~22. The wider (0,940,0,2851) native box looks
+        #: like backdrop and is not - max 150, her hair.
+        "texture_box": (0, 420, 0, 690),
+        #: scatter, not tile. Mirror-tiling this backdrop left a visible seam at the
+        #: tile boundary: the largest column-to-column step in the extension measured
+        #: 0.52 levels at x=698, which is the 690px tile width. The backdrop here is
+        #: near-featureless, so there is no weave worth preserving anyway - the same
+        #: conclusion the "all" banner reached.
+        "texture_mode": "scatter",
+        #: left edge is backdrop top to bottom, mean 17.9 max 21
+        "shoulder": None,
     },
-    # /collections/serums -- extends RIGHT, and the measurement is why. Her shoulder
-    # fills 50% of the LEFT edge (rows 426-848) and its top line is essentially level,
-    # 0.07px down per px travelled left, so it never leaves frame: extending that side
-    # would mean inventing ~1700px of horizontal arm, which this script's own notes
-    # record as reading like a smeared arm. The RIGHT edge is clean backdrop top to
-    # bottom at mean 24.6, so the room is made there instead.
     "serums": {
         "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-acetyl-hexapeptide-8-serum"
                      / "acetyl-hexapeptide-8-serum--J-body-and-face-right"

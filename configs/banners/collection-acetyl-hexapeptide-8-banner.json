@@ -1,24 +1,24 @@
 {
   "created": "2026-08-24",
   "target": "live store \u2014 collection acetyl-hexapeptide-8, new templates/collection.acetyl-hexapeptide-8.json",
-  "decided_by": "Malcolm picked the source frame (2026-08-24), replacing G-face-full-over-shoulder",
-  "note": "Header banner for /collections/acetyl-hexapeptide-8.\n\nSOURCE: banner library, acetyl-hexapeptide-8-serum--J-body-and-face-right nbp_pro_01\n(6336x2688, 2.36:1 \u2014 far larger than the other library frames, so the extender scales\nit to the 848px working height first). Label checked at 100%: Skingenetix / ACETYL\nHEXAPEPTIDE-8 / ANTI-WRINKLE all correct; the line below is behind her fingers, which\nis occlusion in the shot rather than a rendering fault.\n\nCANVAS EXTENDED, not cropped, to 3750x848 (4.42:1) \u2014 past the 4.36:1 that a 100vw x\n440px box reaches at a 1920 viewport, so the full height survives there. The header\nkeeps the theme's standard sm height like every other collection page.\n\nHer shoulder TOUCHES the left edge at y=428 and the line steepens as it recedes\n(391 at x=120, 428 at x=0). It is not extended across the new canvas \u2014 it leaves\nframe the way it physically would, curving down and falling out of the key light,\ngone within ~260px. Backdrop measures mean 30.1, max 35, sd 1.3 over rows 0-380 and\ncols 0-300, so the weave is mirror-tiled from there.\n\nTEXT SITS TOP-LEFT, not centre-left: her shoulder crosses the middle, leaving only\n435px of clear zone at centre height against 858px across the top, and the title\nneeds 654px to stay on one line.",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 chose AHP8-R2-B-BIGGER nbp_pro_03 after the round-2 rebuild.",
+  "note": "Header banner for /collections/acetyl-hexapeptide-8.\n\nSOURCE: banner library, acetyl-hexapeptide-8-serum--J-body-and-face-right nbp_pro_01\n(6336x2688, 2.36:1 \u2014 far larger than the other library frames, so the extender scales\nit to the 848px working height first). Label checked at 100%: Skingenetix / ACETYL\nHEXAPEPTIDE-8 / ANTI-WRINKLE all correct; the line below is behind her fingers, which\nis occlusion in the shot rather than a rendering fault.\n\nCANVAS EXTENDED, not cropped, to 3750x848 (4.42:1) \u2014 past the 4.36:1 that a 100vw x\n440px box reaches at a 1920 viewport, so the full height survives there. The header\nkeeps the theme's standard sm height like every other collection page.\n\nHer shoulder TOUCHES the left edge at y=428 and the line steepens as it recedes\n(391 at x=120, 428 at x=0). It is not extended across the new canvas \u2014 it leaves\nframe the way it physically would, curving down and falling out of the key light,\ngone within ~260px. Backdrop measures mean 30.1, max 35, sd 1.3 over rows 0-380 and\ncols 0-300, so the weave is mirror-tiled from there.\n\nTEXT SITS TOP-LEFT, not centre-left: her shoulder crosses the middle, leaving only\n435px of clear zone at centre height against 858px across the top, and the title\nneeds 654px to stay on one line.\n\nROUND 2 FRAME, REPLACING THE LIBRARY ORIGINAL. Malcolm: the product text was not showing clearly and the liquid inside the frosted bottle should be transparent rather than white. Both traced to the banner-library brief, which showed only three of the label's seven elements and described the contents as an opaque fill. The rebuild quotes the full label verbatim with the weight of every line and describes the serum as a liquid. On the chosen frame all seven read at native pixels: Skingenetix / ACETYL HEXAPEPTIDE-8 / ANTI-WRINKLE SERUM / PREMIUM FORMULA / 10% ACETYL HEXAPEPTIDE-8 | 30ML.\n\nSCATTER, NOT TILE, AND MEASURED BOTH WAYS. Mirror-tiling this backdrop left a seam: the largest step in the extension's smoothed column profile landed exactly on the 690px tile width. Switching to scattered grain drops the worst residual step to 0.05 levels, well under anything an eye resolves. Worth recording that the first metric used - raw column-to-column difference - said scatter was WORSE, because random grain raises per-pixel variance; it was the wrong test. A seam is a step in the SMOOTHED profile, and that is what had to be measured.",
   "images": [
     {
       "slot": "collection_ahp8_desktop",
-      "source": "assets/publish-ready/collection-acetyl-hexapeptide-8-banner/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-serum.jpg",
-      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-serum.jpg",
-      "alt": "Woman holding a bottle of Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum against her cheek on a dark studio backdrop",
-      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-serum.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-serum.jpg?v=1787585523"
+      "source": "assets/publish-ready/collection-acetyl-hexapeptide-8-banner/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-serum.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-serum.jpg",
+      "alt": "Woman looking back over her shoulder holding the Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum, 10% Argireline, against a dark studio backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-serum.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-serum.jpg?v=1787589949"
     },
     {
       "slot": "collection_ahp8_mobile",
-      "source": "assets/publish-ready/collection-acetyl-hexapeptide-8-banner/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-face-mobile.jpg",
-      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-face-mobile.jpg",
-      "alt": "Close-up of a bottle of Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum held beside a woman's face",
-      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-face-mobile.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-face-mobile.jpg?v=1787585523"
+      "source": "assets/publish-ready/collection-acetyl-hexapeptide-8-banner/skingenetix-acetyl-hexapeptide-8-argireline-serum-mobile.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-argireline-serum-mobile.jpg",
+      "alt": "Close crop of a woman holding the Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum beside her face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-argireline-serum-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-argireline-serum-mobile.jpg?v=1787589949"
     }
   ],
   "image_assignments": []
