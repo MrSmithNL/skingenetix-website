@@ -185,6 +185,17 @@ SERUMS = {
 #: bottle repair, where "DNA-helix mark" alone kept producing ribbons and letter shapes.
 HELIX_NEG = ", ribbon logo, swirl logo, spiral logo, letter Z logo, solid helix, SKINGENETIX in all capitals"
 
+#: PDRN renders as PORN whenever the label is large enough to be set as type. It was
+#: dismissed as a small-print artefact when it first appeared on the cartons, because it
+#: was sub-legible there; on a cream jar the label is big and sharp and it is plainly
+#: readable. Unusable on a live skincare store, so the letters are spelled out and the
+#: substitution negated by name.
+SPELL_OUT = {
+    "PDRN": "PDRN, spelled with the four letters P, D, R, N and never as PORN",
+    "MATRIXYL 3000": "MATRIXYL 3000, spelled M, A, T, R, I, X, Y, L",
+}
+SPELL_NEG = ", PORN, PORN COLLAGEN, PORN COLLAGEN REPAIR, POBN, PDRM, MATIXYL, MATRXYL, MATPIXYL"
+
 SERUM_NEG = (
     ", milky liquid, creamy contents, white contents, opaque contents, pearlescent liquid, "
     "yellow liquid, solid white bottle, painted plastic bottle, lotion inside the bottle"
@@ -214,7 +225,11 @@ def product_lines(desc: str) -> str:
         if q.isupper() and q not in seen:
             seen.add(q)
             out.append(q)
-    return ", then ".join(f"'{q}'" for q in out[:3])
+    parts = []
+    for q in out[:3]:
+        hint = next((v for k, v in SPELL_OUT.items() if k in q), None)
+        parts.append(f"'{q}'" + (f" (that is {hint})" if hint else ""))
+    return ", then ".join(parts)
 
 
 def first_ref(folder: str) -> list[str]:
@@ -278,7 +293,7 @@ def build(stem: str) -> dict:
             "ref_files": refs,
             "prompt": prompt,
             "negative_extra": (f"{neg}, product in the clear zone, product over the headline area"
-                               + HELIX_NEG + (SERUM_NEG if stem in SERUMS else "")),
+                               + HELIX_NEG + SPELL_NEG + (SERUM_NEG if stem in SERUMS else "")),
         })
     return {
         "wave": f"banner-library-{stem}",
