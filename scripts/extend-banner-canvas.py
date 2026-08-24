@@ -128,6 +128,56 @@ BANNERS = {
             "skin_box": (800, None, 0, 300),
         },
     },
+    # /collections/creams-moisturizers -- the copper peptide NIGHT cream frame, and the
+    # tightest of the set so far, because this crop has no empty ground anywhere in it.
+    #
+    # WHICH EDGE. Measured both before choosing, and the answer is not obvious from
+    # looking: the RIGHT edge is entirely lit - mean 137, minimum 48.9 - because her hand
+    # and the jar occupy it top to bottom. The LEFT edge reads 2-27 for rows 0-660 (her
+    # hair, near-black) and only then runs into her forearm. So left, despite the jar
+    # already sitting on the right.
+    #
+    # THE ARM RISES AS IT LEAVES FRAME, which is why shear is NEGATIVE here and positive
+    # everywhere else. Measured off the real edge: the arm's top is y=727 at x=150 and
+    # y=680 at x=0, so travelling LEFT it climbs 47px over 150 - a shear of -0.31.
+    # shear_curve is zeroed with it; the default 0.0035 is a downward steepening that
+    # would fight the measured direction and swing the arm back down into frame.
+    #
+    # HOW MUCH ROOM THIS ACTUALLY BUYS. The clear zone is fixed by the original crop, not
+    # by the extension - the window's left edge and the subject move together - so it is
+    # 243px at 1280 and 403px at 1440 measured to the first original column. Her hair is
+    # near-black for the first ~150px of that content though, and white text reads over
+    # it perfectly well, which lifts the usable measure to roughly 321px and 480px.
+    # That is the whole budget for this banner's heading; there is no widening it.
+    "creams-moisturizers": {
+        "src": (ROOT / "assets/publish-ready/collection-creams-moisturizers-banner"
+                     / "_master-1999x848.png"),
+        "out": ROOT / "assets/publish-ready/collection-creams-moisturizers-banner",
+        "desktop": "skingenetix-copper-peptide-advanced-night-repair-cream-moisturizer.jpg",
+        "mobile": "skingenetix-copper-peptide-night-repair-cream-moisturizer-mobile.jpg",
+        #: right-anchored; keeps the jar (x 1378-1857 of 1999) with her whole face
+        "mobile_crop": (49, 950),
+        "target_width": 3750,
+        #: rows 300-520 are the flattest, darkest run on this edge (2.3 down to 1.8),
+        #: so the fitted ramp lands at ~1 where the real backdrop measures ~3. Fitting
+        #: on 400-620 instead put it at 22 and printed a visibly lighter rectangle.
+        "bg_fit": (300, 520),
+        #: this edge is HAIR, never backdrop - see flat_backdrop in edge_profile()
+        "flat_backdrop": True,
+        #: rows 430-610 of the leftmost 70 columns: max 63, mean 3.8. Reaching wider or
+        #: higher catches her hair highlight at 121-226, and mirror-tiling a highlight is
+        #: what printed ghosts across the day cream banner.
+        "texture_box": (430, 610, 0, 70),
+        #: near-black at mean 3.8, so there is no weave worth carrying - scatter, as on
+        #: the "all" banner, whose tiles drew faint vertical lines instead.
+        "texture_mode": "scatter",
+        "shear": -0.31,
+        "shear_curve": 0.0,
+        "shoulder": {
+            "y": 680,
+            "skin_box": (700, None, 0, 400),
+        },
+    },
     # /collections/copper-peptide -- the DAY CREAM frame Malcolm chose. Unlike the
     # serum frame tried first, her ARM touches this left edge: the leftmost columns
     # read backdrop (mean 16) down to row 739 and then jump to mean 87-141. So this
@@ -348,7 +398,7 @@ ARM_FADE = 190          # px over which the arm dissolves into backdrop shadow
 JOIN_BLEND = 40         # columns over which the extension is matched to the original
 
 
-def edge_profile(im, bg_fit, shoulder):
+def edge_profile(im, bg_fit, shoulder, flat_backdrop=False):
     """Left-edge colour profile, and the backdrop lighting to use behind it.
 
     Above the shoulder the profile IS backdrop, so it is used as measured -- that
@@ -356,15 +406,30 @@ def edge_profile(im, bg_fit, shoulder):
     reproduces the original's own edge exactly. Only below the shoulder line, where
     the real profile is skin, does the backdrop have to be modelled: a straight
     ramp fitted on clean rows and carried down into the area the shoulder vacates.
+
+    flat_backdrop MODELS THE WHOLE COLUMN INSTEAD, for the case that assumption
+    fails: a crop where the extended edge is never backdrop at any height. The night
+    cream D frame is one -- its left edge is her HAIR down to row 660 and her forearm
+    below that, so "the profile is backdrop above the shoulder" is simply untrue, and
+    using it repeats hair structure across every column of the extension. Measured on
+    that frame: 22.7 luminance levels peak-to-peak of horizontal streaking, against
+    the ~4 that a real backdrop edge produces. The ramp is still fitted on bg_fit
+    rows, so it keeps the shot's own vertical falloff; it just carries no subject.
+
+    The join stays invisible because JOIN_BLEND ramps the last columns onto the
+    original's true edge regardless, and because a frame that needs this has a
+    near-black edge anyway -- hair at 2-27 against a modelled backdrop at ~3.
     """
     prof = ndimage.gaussian_filter1d(im[:, :EDGE_COLS].mean(axis=1), 2.0, axis=0)
     rows = np.arange(im.shape[0])
-    if shoulder is None:
+    if shoulder is None and not flat_backdrop:
         return prof, prof          # nothing on this edge but backdrop
 
     ys = np.arange(*bg_fit)
     ramp = np.stack([np.polyval(np.polyfit(ys, prof[ys, c], 1), rows) for c in range(3)],
                     axis=-1)
+    if flat_backdrop:
+        return prof, ramp
     hand_over = np.clip((rows - (shoulder["y"] - 40)) / 40.0, 0, 1)[:, None]
     return prof, prof * (1 - hand_over) + ramp * hand_over
 
@@ -416,7 +481,8 @@ def extend_left(im, extra, cfg):
     shear_curve = cfg.get("shear_curve", SHEAR_CURVE)
     arm_fade = cfg.get("arm_fade", ARM_FADE)
     shoulder = cfg["shoulder"]
-    prof, backdrop = edge_profile(im, cfg["bg_fit"], shoulder)
+    prof, backdrop = edge_profile(im, cfg["bg_fit"], shoulder,
+                                  cfg.get("flat_backdrop", False))
     out = np.zeros((h, extra, 3), dtype=np.float64)
     alpha = np.zeros((h, extra, 1), dtype=np.float64)
     rows = np.arange(h)

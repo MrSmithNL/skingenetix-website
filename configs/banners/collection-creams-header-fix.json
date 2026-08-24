@@ -1,0 +1,16 @@
+{
+  "created": "2026-08-24",
+  "target": "templates/collection.creams-moisturizers.json — banner section",
+  "decided_by": "Claude, 2026-08-24 — legibility fix, reversible",
+  "note": "Turns the transparent header off for this one collection.\n\nThe shared collection template sets allow_transparent_header true, so the banner runs up behind the navigation. That works on every other collection page because each one's top-left corner is dark — the copper peptide and PDRN frames both put extended backdrop up there. This frame does not: the night cream D crop fills the top of the picture with her lit forehead and cheek, and white nav links crossing it are unreadable. 'Skin Solutions' and 'Scientific Research' both disappear at 1280.\n\nWith it false the header takes its own solid ground and the banner starts underneath, which is exactly what the two concern pages published earlier today already do. Site navigation has to be readable; that outranks matching the other collections' header treatment.\n\nUndo: set allow_transparent_header back to true, or re-run publish-collection-banner-template.py creams-moisturizers --restore to drop the whole dedicated template.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "banner",
+      "settings": {
+        "allow_transparent_header": false
+      }
+    }
+  ],
+  "image_assignments": []
+}

@@ -166,6 +166,36 @@ PAGES = {
         "css": dict(text_width="40vw", scrim_from="top", text_max="640px",
                     object_position="right center"),
     },
+    # /collections/creams-moisturizers -- the copper peptide NIGHT cream D frame, and
+    # the tightest text budget of the set. This crop has no empty ground in it at all:
+    # her face fills the left and centre, her hand and the jar own the right edge top to
+    # bottom (mean luminance 137, minimum 48.9). All the room the heading gets is the
+    # extension plus the ~150px of near-black hair at the original's own left edge.
+    #
+    # object_position is NOT a choice here. Her hand reaches x=3749 of 3750, so even a
+    # 96% anchor clips it at 1280 and 1440.
+    #
+    # 28vw, NOT the 25vw the dark ground alone would suggest. Measured honestly - the
+    # share of the heading's own band (source rows 254-526) that exceeds luminance 60 -
+    # the genuinely dark ground is 315px at 1280, 475px at 1440 and 955px at 1920. But
+    # "Moisturizers" needs ~330px at this theme's h0, and 25vw lands at 320px, which
+    # broke the word across lines as "Moisturizer" + "s" on the live page. A word split
+    # mid-stem is a worse fault than 40px of heading resting on near-black hair, so the
+    # measure is set by the longest word and the title size is left matching the other
+    # collection pages rather than being shrunk to fit.
+    "creams-moisturizers": {
+        "plan": "configs/banners/collection-creams-moisturizers-banner.json",
+        "desktop": "collection_creams_desktop",
+        "mobile": "collection_creams_mobile",
+        #: 22 like the other product collections; the extension is already near-black,
+        #: so a heavier wash would only flatten the lit side of her face.
+        "overlay": 22,
+        #: her eyes sit high in the phone crop, so the text goes bottom-centre where the
+        #: scrim will not cross them - the same reasoning as the copper-peptide page.
+        "mobile_text": "place-self-end-center text-center",
+        "css": dict(text_width="28vw", scrim_from="bottom", text_max="520px",
+                    object_position="right center"),
+    },
 }
 
 

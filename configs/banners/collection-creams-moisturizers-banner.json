@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-24",
+  "target": "live store \u2014 /collections/creams-moisturizers, new templates/collection.creams-moisturizers.json",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 D-face-full-eyes-open-right nbp_flash_01 from library-nightcream-1.png.",
+  "note": "Header banner for the Creams & Moisturizers collection.\n\nSOURCE resolved from the CONTACT SHEET first, not the folder \u2014 ~/Desktop/library-nightcream-1.png, row 4 (D-face-full-eyes-open-right), column 2 (nbp_flash). Checked for a library-nightcream-v2-*.png sibling before trusting the bare number, because on the PDRN cream that distinction was the difference between two different photographs sharing one shot id. There is none, and no _superseded night-cream wave exists either, so this frame is unambiguous. It is copper-peptide-night-repair-cream (6336x2688), downscaled to 1999x848 and extended left to 3750x848 (4.42:1).\n\nRIGHT PRODUCT CONFIRMED BY COLOUR: the jar is pale blue-silver. Copper Peptide DAY is the DARK cream and NIGHT is the LIGHT one, which reads backwards against the usual convention and has been written down inverted once before. Label checked at 100%: Skingenetix with the dotted double-helix mark / COPPER PEPTIDE / ADVANCED NIGHT REPAIR in blue / PREMIUM FORMULA.\n\nTHIS CROP HAS NO EMPTY GROUND ANYWHERE, and it needed a new capability rather than a new set of numbers.\n\n  WHICH EDGE. Measured both. The RIGHT edge is entirely lit \u2014 mean 137, minimum 48.9 \u2014 because her hand and the jar occupy it top to bottom. The LEFT edge reads 2-27 down to row 660 (her hair) and only then meets her forearm. So left, despite the jar already being on the right.\n\n  THE ARM RISES AS IT LEAVES FRAME. Its top edge is y=727 at x=150 and y=680 at x=0, so travelling left it climbs \u2014 a shear of -0.31, negative where every other banner here is positive. shear_curve is zeroed with it; the default downward steepening would have swung the arm back into frame.\n\n  THE EXTENSION NEEDED flat_backdrop, A NEW OPTION. The script's core assumption is that the edge being extended IS backdrop above the shoulder line, so the measured edge profile can be repeated across the new canvas. On this frame that is simply untrue at any height \u2014 the edge is hair, then arm. Repeating it printed 22.7 luminance levels peak-to-peak of horizontal streaking, plus a visibly lighter rectangle where the ramp was extrapolated from hair rather than backdrop. Modelling the whole column from the flattest, darkest run on the edge (rows 300-520) instead brings it to 2.00 levels on a background of 3.3, with a 6.46-level step across the join.\n\nThe extension is darker than this shot's own studio backdrop (4.5 against 33.3 measured behind her head) because there was no backdrop at the edge to sample. It reads as a lighting falloff to the left rather than an error, and it suits white heading type \u2014 but it is a property of this frame, not a house look.\n\nOBJECT-POSITION MUST BE right center. Her hand runs to x=3749 of 3750, so even a 96% anchor clips it at 1280 and 1440. Clear dark ground is still 323px at 1280, 483px at 1440 and 963px at 1920.",
+  "images": [
+    {
+      "slot": "collection_creams_desktop",
+      "source": "assets/publish-ready/collection-creams-moisturizers-banner/skingenetix-copper-peptide-advanced-night-repair-cream-moisturizer.jpg",
+      "filename": "skingenetix-copper-peptide-advanced-night-repair-cream-moisturizer.jpg",
+      "alt": "Woman resting her head on her arm looking to camera, holding a jar of Skingenetix Copper Peptide Advanced Night Repair cream",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-advanced-night-repair-cream-moisturizer.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-advanced-night-repair-cream-moisturizer.jpg?v=1787588920"
+    },
+    {
+      "slot": "collection_creams_mobile",
+      "source": "assets/publish-ready/collection-creams-moisturizers-banner/skingenetix-copper-peptide-night-repair-cream-moisturizer-mobile.jpg",
+      "filename": "skingenetix-copper-peptide-night-repair-cream-moisturizer-mobile.jpg",
+      "alt": "Close crop of a woman's face beside a jar of Skingenetix Copper Peptide Advanced Night Repair cream",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-night-repair-cream-moisturizer-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-night-repair-cream-moisturizer-mobile.jpg?v=1787588920"
+    }
+  ],
+  "image_assignments": []
+}
