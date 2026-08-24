@@ -1,0 +1,33 @@
+{
+  "created": "2026-08-24",
+  "target": "live theme \u2014 Impact, templates/index.json, hero slide 3",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 chose variant A, his own composition, and accepted moving that slide's headline rather than recomposing the shot.",
+  "note": "Puts the PDRN face frame on hero slide 3, with the bottle and label corrected, and moves that slide's headline out of the way.\n\nWHAT WAS WRONG WITH THE BOTTLE. Checked against the product's own hero shot: the frame Malcolm picked rendered a slim narrow bottle with a short collar, where the real product is wide and straight-sided with square shoulders and a tall brushed satin collar. On the label the wordmark, PDRN and SKIN REPAIR were right, but the vertical rose rule was absent, TREATMENT was missing from under DEEP RENEWAL, and PREMIUM FORMULA and the dosage line were absent altogether.\n\nTHOSE LINES WERE MISSING BY INSTRUCTION, NOT BY FAILURE. The banner-library brief that produced the frame said only four lines should be legible and 'every remaining line falls outside the depth of field'. Correct for a library banner, wrong for a hero. The label is now quoted in full, verbatim, with the colour of every line stated.\n\nAND IT COULD NOT HAVE BEEN FIXED IN PLACE. gpt-image caps its long edge at 2048, which left the original bottle about 165px wide and its label about 150px \u2014 enough for four short lines and not seven. Nano Banana Flash generates at 6336px, giving the same label about 1400px, so all seven lines form correctly before any downscale. Third time today the same lesson has decided a shot: resolution at the moment of generation.\n\nTHE HEADLINE MOVES, AND THIS IS THE COST OF KEEPING THE COMPOSITION. Every hero slide carried 'sm:place-self-center-start', headline centre-LEFT. This frame puts the bottle and hand in the left third: measured there it is mean 75, stdev 67, hostile to white type. The top right of the same frame is mean 25, stdev 1.5 \u2014 flatter and more even than any zone on the slides currently live, at every width and depth tested. So slide 3 alone takes 'sm:place-self-start-end sm:text-end'. The consequence, accepted deliberately: as the carousel rotates, slide 3's headline sits in a different place from slides 1 and 2. Malcolm was shown the alternative (variant C, recomposed, headline unchanged) and chose this.\n\nCROP. Generated 6336x2688 at 2.357:1; the hero slot is 2.246:1, so 300px came off. The subject starts at x=110, so 110px of that was empty ground on the left and cost nothing; the remaining 190px came off the right where her shoulder already runs out of frame. The text zone survives the crop unchanged at mean 24.8, stdev 1.5.\n\nSIDE EFFECT, AND A GOOD ONE. Slide 1 keeps the copper peptide image and slide 3 no longer duplicates it, which closes the duplication found earlier today when the same photograph was carrying two of three slides.\n\nNEW FILENAME, NOT A RE-UPLOAD \u2014 Shopify Files suffixes rather than replaces on a name collision, and shopify.md rule 7 bars re-uploading an existing name because Langify keys translations off the URL.",
+  "images": [
+    {
+      "slot": "hero3_pdrn",
+      "source": "assets/publish-ready/homepage/skingenetix-hero-pdrn-skin-repair-2026.jpg",
+      "generated_from": "assets/ai-generated/2026-08-22-multi-hero-pdrn-face/PDRN-A-FAITHFUL/__PDRN-A-FAITHFUL-nbp_flash_01.png",
+      "filename": "skingenetix-hero-pdrn-skin-repair-2026.jpg",
+      "alt": "A model resting her head on one side holding the Skingenetix PDRN Skin Repair Deep Renewal Treatment beside her face against a dark background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-hero-pdrn-skin-repair-2026.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-hero-pdrn-skin-repair-2026.jpg?v=1787578329"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "block": "hero_slide_3",
+      "slot": "hero3_pdrn"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "block": "hero_slide_3",
+      "settings": {
+        "desktop_text_position": "sm:place-self-start-end sm:text-end"
+      }
+    }
+  ]
+}
