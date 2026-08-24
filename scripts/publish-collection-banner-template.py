@@ -89,6 +89,19 @@ def css(text_width, scrim_from, object_position, text_max="620px"):
 
 
 PAGES = {
+    # /collections/acetyl-hexapeptide-8 -- canvas extended left, subject and bottle
+    # hard right. Her eyes sit high in the phone crop, so the text goes bottom-centre
+    # where the scrim will not cross them.
+    "acetyl-hexapeptide-8": {
+        "plan": "configs/banners/collection-acetyl-hexapeptide-8-banner.json",
+        "desktop": "collection_ahp8_desktop",
+        "mobile": "collection_ahp8_mobile",
+        "overlay": 22,
+        "mobile_text": "place-self-end-center text-center",
+        # right, so horizontal cropping only ever removes extended backdrop
+        "css": dict(text_width="40vw", scrim_from="bottom", text_max="640px",
+                    object_position="right center"),
+    },
     # /collections/all -- lit background sweep begins at x=515 of 1440, so the text
     # has to stay narrow. Phone crop is two bottles filling the frame, text sits
     # bottom-centre in the scrim.
@@ -102,7 +115,8 @@ PAGES = {
         # copper-peptide bottle, which is the hero of the shot.
         "css": dict(text_width="30vw", scrim_from="bottom", object_position="right center"),
     },
-    # /collections/copper-peptide -- canvas extended left to 3000x848. Nothing touched
+    # /collections/copper-peptide -- the DAY CREAM frame, canvas extended left to
+    # 3750x848. Her ARM touches that edge, so it is sheared out of frame. Nothing touched
     # that edge in the source, so the extension is plain backdrop and the dark zone now
     # runs out to roughly x=700 of 1440, which gives the heading a wide clear measure.
     # Phone crop is the face and bottle together; her eyes sit high in it, so the text

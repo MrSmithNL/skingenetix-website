@@ -109,6 +109,28 @@ BANNERS = {
             "skin_box": (760, None, 0, 460),
         },
     },
+    # /collections/acetyl-hexapeptide-8 -- the easy case, and measured to confirm it:
+    # the leftmost columns read mean 11-15 with a max of 16 from top to bottom, so
+    # nothing touches this edge and no arm has to be sheared out of frame.
+    "acetyl-hexapeptide-8": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-acetyl-hexapeptide-8-serum"
+                     / "acetyl-hexapeptide-8-serum--G-face-full-over-shoulder"
+                     / "acetyl-hexapeptide-8-serum--G-face-full-over-shoulder-gpt_image_01.png"),
+        "out": ROOT / "assets/publish-ready/collection-acetyl-hexapeptide-8-banner",
+        "desktop": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum.jpg",
+        "mobile": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-mobile.jpg",
+        #: right-anchored; keeps the bottle with the face and her over-shoulder look
+        "mobile_crop": (30, 1050),
+        #: 4.42:1, past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport
+        "target_width": 3750,
+        "bg_fit": (100, 700),
+        #: rows 0-650 cols 0-400 measures max 25 against a backdrop of ~14. The wider
+        #: (0,300,0,900) box looks similar and is NOT clean - max 164, her hair - which
+        #: is the mistake that printed ghosts across the day cream banner.
+        "texture_box": (0, 650, 0, 400),
+        "texture_mode": "tile",
+        "shoulder": None,
+    },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
         "out": ROOT / "assets/publish-ready/collection-all-banner",
@@ -122,6 +144,40 @@ BANNERS = {
         "texture_mode": "scatter",
         #: nothing touches this edge - it measures a mean luminance of 3 - so the
         #: extension is plain backdrop and no shoulder has to be carried.
+        "shoulder": None,
+    },
+    # /collections/glutathione -- the EASY case, and only because it has already been
+    # extended once. The library frame ran the forearm to the left edge, and seedream
+    # was asked to widen it generatively to 4096x1256; that extension faded the arm
+    # out, so this second pass starts from an edge that is pure backdrop. Measured on
+    # the seedream master: the leftmost 6 columns run 2-36 (the 36 is the table at the
+    # bottom, not skin) and the first column holding anything above 40 is x=123. So no
+    # shoulder has to be carried and no shear applies.
+    #
+    # Downscaled to 848 tall FIRST, which is the height every other banner on this
+    # store uses, so the five collection headers are one system rather than four plus
+    # an odd one. It costs 4096 -> 2765 across the subject; the theme's srcset tops out
+    # at 3000w, so none of that resolution was ever requested.
+    "glutathione": {
+        "src": (ROOT / "assets/publish-ready/collection-glutathione-banner"
+                     / "_master-2766x848.png"),
+        "out": ROOT / "assets/publish-ready/collection-glutathione-banner",
+        "desktop": "skingenetix-glutathione-brightening-radiant-glow-serum.jpg",
+        "mobile": "skingenetix-glutathione-brightening-serum-face-mobile.jpg",
+        #: right-anchored; keeps the bottle (x 979-1958 of 2765) with most of the face
+        "mobile_crop": (800, 950),
+        #: 4.42:1, matching copper-peptide, so the full height survives to a 1920
+        #: viewport. The live page measured at 3.26:1 keeps its height at 1440 and
+        #: loses the bottle's base beyond ~1600.
+        "target_width": 3750,
+        "bg_fit": (250, 450),              # unused while shoulder is None; kept for shape
+        #: MEASURED. (0,600,0,200) reads max 105 - that is the tip of her forearm, and
+        #: resampling it into the extension would scatter skin-toned speckle across the
+        #: dark. Stopping at x=120, three columns short of the arm, reads max 23.
+        "texture_box": (0, 700, 0, 120),
+        #: near-black at mean 9, so there is no weave worth mirror-tiling - the same
+        #: reasoning as the "all" banner, whose tiles drew faint vertical lines.
+        "texture_mode": "scatter",
         "shoulder": None,
     },
 }

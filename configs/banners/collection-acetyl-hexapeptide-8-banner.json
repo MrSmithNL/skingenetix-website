@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-24",
+  "target": "live store \u2014 collection acetyl-hexapeptide-8, new templates/collection.acetyl-hexapeptide-8.json",
+  "decided_by": "Malcolm, 2026-08-24 \u2014 chose G-face-full-over-shoulder gpt_image_01 from the 38-candidate library sheet.",
+  "note": "Header banner for /collections/acetyl-hexapeptide-8.\n\nSOURCE: banner library, acetyl-hexapeptide-8-serum--G-face-full-over-shoulder gpt_image_01 (2048x848, 2.42:1). Label checked at 100%: Skingenetix / ACETYL HEXAPEPTIDE-8 / ANTI-WRINKLE all crisp and correct; SERUM and PREMIUM FORMULA fall out of focus below them, which is the library brief's own instruction and not a rendering fault.\n\nCANVAS EXTENDED, NOT CROPPED. The banner box is 100vw x 440px, so its aspect follows the viewport - 3.27:1 at 1440, 3.44:1 at 1512, 4.36:1 at 1920 - and a 2.42:1 frame is narrower than all of them, so object-fit cover would crop the height and take the top of her head. Extended leftward to 3750x848 (4.42:1), past the widest of those. object-position is right center, so surplus width is only ever cropped off the extension.\n\nTHE EASY CASE, AND MEASURED TO CONFIRM IT RATHER THAN ASSUMED. The leftmost columns read mean 11-15 with a max of 16 from top to bottom, i.e. flat backdrop, so unlike the copper peptide day cream nothing had to be sheared out of frame.\n\nTEXTURE BOX CHOSEN BY MEASUREMENT. rows 0-650 cols 0-400 measures max 25 against a backdrop of ~14. The wider (0,300,0,900) box looks equally like backdrop and is not - max 164, her hair - and mirror-tiling that is exactly what printed ghosts across the day cream banner an hour earlier.",
+  "images": [
+    {
+      "slot": "collection_ahp8_desktop",
+      "source": "assets/publish-ready/collection-acetyl-hexapeptide-8-banner/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum.jpg",
+      "alt": "Woman looking back over her shoulder holding the Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum against a dark studio backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum.jpg?v=1787584677"
+    },
+    {
+      "slot": "collection_ahp8_mobile",
+      "source": "assets/publish-ready/collection-acetyl-hexapeptide-8-banner/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-mobile.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-mobile.jpg",
+      "alt": "Close crop of a woman holding the Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum beside her face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-mobile.jpg?v=1787584677"
+    }
+  ],
+  "image_assignments": []
+}
