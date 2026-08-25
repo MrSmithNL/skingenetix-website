@@ -1,0 +1,39 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.firming-skin-density.json, section 'content' (media-with-text), block 'intro'",
+  "decided_by": "Malcolm, 2026-08-25: 'on https://www.skingenetix.com/pages/firming-skin-density use this image: B-eyes-closed-back-of-fingers - from this batch: skingenetix-which-gpt-image-02.png'",
+  "note": "SOURCE: assets/ai-generated/2026-08-22-multi-block-copper-peptide-research-satisfaction-model/cpr-sat--B-eyes-closed-back-of-fingers/cpr-sat--B-eyes-closed-back-of-fingers-gpt_image_02.png, 2048x2048. The named batch is a Desktop contact sheet \u2014 ~/Desktop/skingenetix-which-gpt-image-02.png, four slots A-D all rendered by gpt_image_02 \u2014 so 'B-eyes-closed-back-of-fingers from that batch' resolves to the gpt_image_02 file of shot B. Only one shot folder on disk carries that name, so the slot letter is unambiguous this time (slot letters do restart per wave \u2014 globbed before acting).\n\nPLACEMENT ASSUMED, NOT STATED. Malcolm named a page and an image but not a block. Taken as the 'content' section's 'intro' block \u2014 the 'Understanding Skin Firmness & Density' split block \u2014 replacing skingenetix-pro-collagen-firming-cream-texture.jpg, by direct analogy with the same move on the sibling Skin Solutions page /pages/fine-lines-wrinkles earlier the same afternoon: same cpr-sat batch, same shot slot B, same block, a human-register face going into a slot that held a product texture. The page hero is a designed banner and was left alone.\n\nTHE MASTER IS SQUARE, AND THAT IS THE RULE HERE, NOT A CHOICE. In media-with-text the row height is max(text column, image natural height) and .media-with-text__media carries no aspect-ratio of its own, so a non-square master does not get cropped to fit the row \u2014 it STRETCHES the row and the block stops matching its five square siblings. That exact mistake was made and corrected on /pages/fine-lines-wrinkles the same afternoon (Malcolm: the block is taller than the other five), and the fix there was to go back to 1:1. It was very nearly repeated here: a 1792x2048 (0.875) master was built and published at 16:58, which put the intro row at 754px against siblings at 660 at 1440. Reverted to square within the same session.\n\nWHAT THE SQUARE COSTS, AND HOW IT IS PAID. Measured, not assumed: the profile reaches x=2045 of 2048 \u2014 the nose tip is 2px from the right edge and there is no margin on that side at all. At 1024 this block's text column is 512px against a 452px image column, so the text wins and the box becomes 452x512 (0.883). A CENTRED cover-crop of a square master then keeps x120-1928 and cuts 118px straight through the nose. Rendered and confirmed; also checked at three candidate left-trims, which do not fix it either (still clipped by 78px at master 0.961, by 38px at 0.922).\n\nSo the crop DIRECTION is moved instead of the crop being avoided: object-position 100% 50% on this one image pins the right edge, so the 1024 crop takes all 240px off the LEFT \u2014 out-of-focus hair and ear \u2014 and the profile survives intact. At every other measured width the box is 1:1, no crop happens at all, and the rule is a no-op. This is the same lever the page's own hero already uses (banner_text_width sets object-position: 78% center on the image-with-text-overlay), and the same pattern as hero_image_position on page.brightening-glow.\n\nSCOPED BY FILENAME, in a new template-local custom-html section. Not by section id \u2014 those render as shopify-section-template--<theme id>__<key> and go stale on every theme copy \u2014 and not by class, which would over-match all six blocks. img[src*='...'] is unique to this one image, and if the file is ever replaced the rule simply stops matching rather than mis-applying. The section lives on this template only, NOT in footer-group, which injects onto every page of the store and has caused two separate site-wide faults this week.\n\nNo long-edge cap or re-compression below q95: 2048x2048 is inside the 3000px ceiling and the theme's srcset tops out at 800w here. The CDN is what a visitor downloads \u2014 shopify-cdn-makes-source-compression-pointless.\n\nNEW FILENAME, and deliberately not a prefix or extension of the 0.875 file uploaded at 16:58 \u2014 Shopify Files suffixes a name collision and keeps serving the original, and a stem that prefixes another has previously bound two slots to the same file while polling. The 0.875 file and the pro-collagen cream texture both stay in Files and simply stop being referenced.\n\n\u26a0\ufe0f NOTE FOR MALCOLM: this is the same shot slot (B, eyes closed, back of fingers to cheek, near profile) already published on the sibling page /pages/fine-lines-wrinkles, there from a different engine. Different woman and different age, but the pose and framing read as a pair, and the two pages sit next to each other in the Skin Solutions menu.\n\nALT TEXT describes what is in frame and claims no trial, treatment or result.",
+  "images": [
+    {
+      "slot": "page_firming_intro",
+      "source": "assets/publish-ready/page-firming-skin-density-intro/skingenetix-firming-skin-density-collagen-elastin-skin-close-up.jpg",
+      "filename": "skingenetix-firming-skin-density-collagen-elastin-skin-close-up.jpg",
+      "alt": "Close-up of a woman's face in near profile, eyes closed with a faint smile, the backs of her fingers resting against her cheek and jawline",
+      "uploaded_handle": "shopify://shop_images/skingenetix-firming-skin-density-collagen-elastin-skin-close-up.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-firming-skin-density-collagen-elastin-skin-close-up.jpg?v=1787670133"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "intro",
+      "slot": "page_firming_intro",
+      "setting": "image"
+    }
+  ],
+  "new_sections": [
+    {
+      "id": "intro_image_position",
+      "insert_after": "banner_text_width",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>\n/* Intro block face: pin the crop to the right edge \u2014 Claude Code, 2026-08-25.\n   The master is square, which is what this section requires (a non-square one\n   stretches its grid row and the block stops matching its five siblings). At\n   viewports around 1000-1150 the text column is taller than the image column, so\n   the box goes to about 0.883 and object-fit: cover crops the sides. The profile\n   reaches 2045 of 2048px across the master, so a centred crop cuts through the\n   nose; pinned right, the same crop comes off the left, which is out-of-focus\n   hair. At every other width the box is 1:1 and this rule does nothing.\n   Scoped by filename: section ids go stale, and a class selector would hit all\n   six blocks in the section. */\n.media-with-text__item img[src*=\"firming-skin-density-collagen-elastin-skin-close-up\"] {\n  object-position: 100% 50%;\n}\n</style>"
+        }
+      }
+    }
+  ]
+}
