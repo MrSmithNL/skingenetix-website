@@ -127,3 +127,43 @@ the existing library:
 
 Note that a rename means a **new file**: Shopify Files suffixes rather than replaces on a
 name collision, so the old file stays and the theme is repointed.
+
+## 6. Credentials must be EXPORTED, not just sourced
+
+**Always start a generation run with `set -a`:**
+
+```bash
+set -a; source ~/.claude/config/image-credentials.env; set +a
+python3 scripts/generate-multi.py configs/banners/<wave>.json
+```
+
+`image-credentials.env` assigns bare (`FAL_KEY=...`, no `export` keyword), so a plain
+`source` creates **shell** variables, not **environment** variables. The shell can expand
+them, but a child process cannot see them — `os.environ` comes up empty. `set -a` marks
+every subsequent assignment for export and fixes it; `set +a` turns that back off.
+
+### The failure is silent in exactly the wrong way
+
+On 2026-08-25 the copper-peptide-research wave lost **five of six suppliers** to this. The
+run exited **0**, printed `6 images across 6 suppliers`, and wrote a manifest — because
+`generate-multi.py` catches per-supplier exceptions so one dead backend cannot kill a run.
+Ten minutes and three slots produced a Luma-only set, which is precisely the single-engine
+outcome rule 1 exists to prevent.
+
+Two things made it hard to spot, and both are worth knowing:
+
+- **A roster check passes while the run fails.** The rule-2 `curl` commands interpolate
+  `$OPENAI_API_KEY` *in the shell*, so they work fine on shell-only variables. Verifying
+  credentials that way proves nothing about what Python will see. Check with Python:
+  ```bash
+  python3 -c "import os; print({k: bool(os.environ.get(k)) for k in ('FAL_KEY','OPENAI_API_KEY','GEMINI_API_KEY')})"
+  ```
+- **Luma alone survives**, because it falls back to reading `~/.config/luma/api-key` off
+  disk when `LUMA_API_KEY` is unset — which it always is; that key is not in the env file.
+  So the one backend that keeps working is the one that never used the env in the first
+  place, and its success makes the run look healthy.
+
+**Read the per-supplier lines, never just the total.** `FAILED: 'OPENAI_API_KEY'` and
+`FAILED: No credentials found` are credential faults, not content refusals — related trap
+in the `a-missing-supplier-looks-like-a-refusal` memory, where two adapter bugs were read
+as the models declining the brief.
