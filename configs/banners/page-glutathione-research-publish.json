@@ -1,0 +1,40 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme — Impact, templates/page.glutathione-research.json, hero section",
+  "decided_by": "Malcolm, 2026-08-25 — chose GLR-4-GOLDEN-FLUID gpt_image_01 from the six-concept batch.",
+  "note": "Header banner for /pages/glutathione-research.\n\nWHAT IT REPLACES, AND THREE COMPOUNDING FAULTS. skingenetix-philosophy-ingredients.jpg - a bright lab scale with white powder, borrowed from the philosophy page rather than made for this one. Wrong subject; a LIGHT image carrying white type; and nearly square in a 4.4:1 band, so only 31% of its height survived at 1440 and 23% at 1920. The overlay had been raised to 50 to make the type readable, which is the move already recorded here as muting a picture to near-flat.\n\nCOLOUR AND MEANING. The palette gives Glutathione the scene colour Champagne #DFC08F on graphite #1A1A1A. Champagne is warm and light, so on graphite it has to arrive as LIGHT rather than as a painted object. The through-line briefed across all six concepts was luminosity returning to a dark field, glutathione being the body's master antioxidant - a third distinct idea after Matrixyl's rebuilt structure and Acetyl's motion coming to rest, so the three research banners read as a set without repeating a picture.\n\nTHE HEADING MOVES RIGHT. The chosen frame puts a glowing dish low-left with its pool of light spreading toward the middle, and falls to near-black on the right. Measured across the width at heading height: 54 mean at the far left, 100 where the dish sits, 27, then 7.5, 3.7 and 1.9 across the right half. A centred heading would sit in the pool at mean 27.3 with a stdev of 44.7 - the stdev is the real problem, since it means the type would cross both glow and dark. Moved to centre-end it sits at mean 4.0, stdev 2.6. Same fix as the acetyl research page, and off-centre headings are established here by research-copper-peptide.\n\nOVERLAY 50 -> 25, matching research-matrixyl and the acetyl page.\n\nONE HONEST LIMITATION. This master is 2048px wide, because gpt-image caps its long edge there. Every other banner on this site is 3000-6336. At a 1920 band that is fine at 1x but under-resolved on a 2x retina screen, where the browser would want 3840. The subject is mostly smooth falloff and a glass dish, which upscales gently, so it is acceptable - but it is a real difference from the rest of the set and is recorded rather than glossed. Re-running the same concept on Nano Banana would give a 6336px master if parity matters more than this exact frame.",
+  "images": [
+    {
+      "slot": "glutathione_research_hero",
+      "source": "assets/publish-ready/page-glutathione-research-banner/skingenetix-glutathione-master-antioxidant-brightening-research.jpg",
+      "filename": "skingenetix-glutathione-master-antioxidant-brightening-research.jpg",
+      "alt": "A shallow dish of champagne-coloured glutathione solution glowing on a graphite surface - glutathione antioxidant research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-master-antioxidant-brightening-research.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-master-antioxidant-brightening-research.jpg?v=1787662690"
+    },
+    {
+      "slot": "glutathione_research_mobile",
+      "source": "assets/publish-ready/page-glutathione-research-banner/skingenetix-glutathione-antioxidant-brightening-research-mobile.jpg",
+      "filename": "skingenetix-glutathione-antioxidant-brightening-research-mobile.jpg",
+      "alt": "Champagne-coloured glutathione solution glowing in a glass dish - antioxidant research, mobile crop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-antioxidant-brightening-research-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-antioxidant-brightening-research-mobile.jpg?v=1787662689"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "glutathione_research_hero"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 25,
+        "desktop_text_position": "sm:place-self-center-end sm:text-end",
+        "mobile_image": "shopify://shop_images/skingenetix-glutathione-antioxidant-brightening-research-mobile.jpg"
+      }
+    }
+  ]
+}

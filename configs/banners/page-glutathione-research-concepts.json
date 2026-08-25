@@ -1,0 +1,72 @@
+{
+  "wave": "page-glutathione-research-concepts",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Concept batch for the /pages/glutathione-research header.\n\nWHAT IS THERE NOW. skingenetix-philosophy-ingredients.jpg - a bright lab scale with white powder, borrowed from the philosophy page rather than made for this one. Three faults compound: it is the wrong subject, it is a light image carrying white type, and it is nearly square in a 4.4:1 band so only 31% of its height survives at 1440 and 23% at 1920. The overlay was raised to 50 to make the type readable, which is the same move already recorded on this project as muting a picture to near-flat.\n\nCOLOUR. The palette gives Glutathione the scene colour Champagne #DFC08F on graphite #1A1A1A, and the art-direction doc says research pages take their molecule's scene colour. Champagne is warm and light, so on graphite it has to arrive as LIGHT rather than as a painted object - which is what every concept below does.\n\nMEANING, because the picture should say what the molecule does. Glutathione is the body's master antioxidant: it neutralises oxidative damage and, by damping tyrosinase, evens tone. The through-line is therefore LUMINOSITY RETURNING TO A DARK FIELD - light coming back, tarnish lifting, sparks quenched. That is a different idea again from Matrixyl's rebuilt structure and Acetyl's motion coming to rest, which is deliberate: the three research banners should be recognisably a set without being the same picture.\n\nCOMPOSITION. Unlike the acetyl page, this heading is CENTRED and short - 'Glutathione' on one line, with an eyebrow above and three lines of body copy below, spanning roughly 20-75% of the band's height. So the middle must stay dark and even, with the champagne light entering from the edges. Stated as geometry in every brief, which is what finally made the silk batch work: say where the subject ends rather than asking for a quiet mood.\n\nCROP SURVIVAL. Generated at 3:1, the widest gpt-image accepts, then cropped to 4.400:1 - the band is 100vw x 440px, measured live. That removes the top and bottom 16%, so nothing important sits near those edges.\n\nFLUX.2 excluded: it lost the matrixyl concept batch with the brightest centres of all thirty and ignored the negative-space instruction on every concept.",
+  "defaults": {
+    "candidates": 1,
+    "negative_global": "bright centre, lit centre, subject in the middle of the frame, hard edge crossing the centre, specular highlight in the centre, white background, bone background, light grey background, pale ground, powder, laboratory scale, weighing scale, text, lettering, watermark, signature, numbers, labels, logo, brand mark, bottle, jar, packaging, product, human face, model, hands, botanicals, flowers, citrus, fruit, honey, bokeh sparkle, lens flare, glitter, sparkles, rainbow, neon, sci-fi HUD, glowing wireframe, banding, posterised gradient, plastic CGI, oversaturated, orange, brown, yellow highlighter, cluttered"
+  },
+  "slots": [
+    {
+      "id": "GLR-1-LIGHT-RETURNING",
+      "title": "Champagne light blooming back into a dark field",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page glutathione-research",
+      "prompt": "Fine-art photograph of light, very wide cinematic frame. A deep graphite field, colour #1A1A1A, fills the picture. From the far LEFT edge and again from the far RIGHT edge, a soft warm champagne light, colour #DFC08F, blooms inward as a slow smooth glow, strongest right at each edge and falling away steadily as it travels toward the centre. By the middle of the frame the two glows have faded completely and the ground is pure dark, even and featureless. There is no light source in shot, no lamp, no flare and no visible object - only the two soft falls of light and the dark between them. The transition is a long smooth gradient with no ring, no edge and no banding anywhere. Keep the whole effect within the central horizontal band of the frame. Fine film grain, real optical falloff rather than a graphic gradient, no colour beyond the champagne and the graphite. Quiet, warm, expensive.",
+      "negative_extra": "light in the centre, single central glow, sunburst, lamp in shot, vignette ring, hard-edged gradient, symmetrical mirror halves"
+    },
+    {
+      "id": "GLR-2-TARNISH-LIFTING",
+      "title": "Tarnish clearing from dark metal",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page glutathione-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame, of a sheet of dark oxidised metal lying almost flat and seen at a low grazing angle. At the far LEFT of the picture the surface is bright and clean, a warm champagne sheen, colour #DFC08F, with fine polish marks catching the light. Travelling to the right the surface darkens progressively as tarnish takes over, until by the middle of the frame it is deep graphite, colour #1A1A1A, dark and matte and even, and it stays that way to the right edge. The change is a long smooth transition with no edge and no line - one surface, not two. Keep the whole surface within the central horizontal band of the frame, clear of the top and bottom edges. 100mm macro at f8, very shallow depth of field, real metal grain visible where the light catches, fine film grain, no colour beyond the champagne and the graphite. Restrained, material, expensive.",
+      "negative_extra": "rust, orange corrosion, verdigris, green patina, two separate panels, seam, hard boundary, polished mirror reflection, engraving, scratches everywhere"
+    },
+    {
+      "id": "GLR-3-TRIPEPTIDE-THREE",
+      "title": "Three linked elements - the tripeptide made as glass",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page glutathione-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. THREE translucent glass forms, each a slightly different shape, are joined in a short chain, and the chain lies low across the LEFT THIRD of the picture. A warm champagne light, colour #DFC08F, passes through them from behind and below so each form glows from within and holds a darker core, and the light they cast falls away quickly. The rest of the frame - the middle and the whole right side - is empty graphite, colour #1A1A1A, dark and even, with nothing in it at all. Exactly three forms, joined by two short clear links, reading as one small assembly rather than a scatter. Keep the chain within the central horizontal band, clear of the top and bottom edges. Very shallow depth of field, the nearest form sharp and the furthest dissolving, fine film grain, no colour beyond the champagne and the graphite. Precise and quiet.",
+      "negative_extra": "many spheres, long chain, four or more forms, ball-and-stick diagram, chemistry illustration, DNA helix, chain across the centre, chain on the right"
+    },
+    {
+      "id": "GLR-4-GOLDEN-FLUID",
+      "title": "Champagne fluid held low in clear glass",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page glutathione-research",
+      "prompt": "Clinical still-life photograph, very wide cinematic frame. A shallow rectangular dish of plain unmarked clear laboratory glass sits in the LEFT THIRD of the picture, holding a thin layer of warm champagne-coloured liquid, colour #DFC08F. The liquid is perfectly still and lit from behind and below, so it glows and throws a soft pool of warm light onto the graphite surface immediately around the dish, colour #1A1A1A. That pool of light falls off quickly, and the middle and right of the frame are empty dark graphite surface with nothing on them. The glass is completely unbranded: no measurement marks, no printing, no labels. Keep the dish and its pool of light within the central horizontal band of the frame. 100mm macro at f8, deep shadows, one clean specular on the glass rim, fine film grain, no colour beyond the champagne and the graphite. Quiet, clinical, expensive.",
+      "negative_extra": "measurement markings, graduations, beaker, flask, test tube, honey, oil, drink, glass of wine, dish in the centre, light spreading across the whole frame"
+    },
+    {
+      "id": "GLR-5-SPARKS-QUENCHED",
+      "title": "Points of light going out toward the centre",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page glutathione-research",
+      "prompt": "Fine-art photograph of light, very wide cinematic frame. Fine points of warm champagne light, colour #DFC08F, hang suspended in a deep dark field, colour #1A1A1A. They are numerous, bright and tightly clustered at the far LEFT and far RIGHT edges of the picture, and as they travel inward they become sparser, dimmer and softer, until by the middle of the frame they have gone out entirely and there is nothing but dark. Each point is a small soft out-of-focus glow rather than a hard star, and they sit at different depths so the nearest are large and diffuse and the furthest are tiny. No point of light appears in the middle third of the frame at all. Keep them within the central horizontal band, clear of the top and bottom edges. Long lens, very shallow depth of field, real optical bokeh, fine film grain, no colour beyond the champagne and the graphite. Quiet and atmospheric.",
+      "negative_extra": "stars, night sky, galaxy, fireworks, glitter, sharp points, hard star shapes, points across the whole frame, points in the centre, snow"
+    },
+    {
+      "id": "GLR-6-DEPTH-GLOW",
+      "title": "Light rising through a dark translucent medium",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page glutathione-research",
+      "prompt": "Fine-art photograph, very wide cinematic frame, looking down into a deep body of dark translucent liquid or resin, colour #1A1A1A, that fills the picture. Far below the surface, a warm champagne light, colour #DFC08F, glows up from the LOWER LEFT, its light diffusing as it rises so that it reaches the surface as a soft indistinct bloom rather than a defined shape. The glow is strongest at the left and dies away completely before the middle of the frame, leaving the centre and right of the picture deep, dark and even. Faint suspended particles catch the light where it is strongest and are invisible elsewhere. No surface ripple crosses the middle, and there is no hard edge anywhere. Keep the whole effect within the central horizontal band. Very shallow depth of field, real volumetric falloff, fine film grain, no colour beyond the champagne and the graphite. Deep, still, expensive.",
+      "negative_extra": "underwater scene, bubbles, caustics, swimming pool, sun through water, glow in the centre, defined light source, lamp, ripples across the frame"
+    }
+  ]
+}
