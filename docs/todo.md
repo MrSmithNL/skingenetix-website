@@ -205,12 +205,68 @@ The last one **still fails on the PDRN cream**, whose jar sets the label large e
 drawn as a word rather than blurred. It was tolerated earlier on the cartons because it was
 sub-legible there — a tolerance that did not survive a change of product format.
 
-**Collection banners live**
+**Banners live** — audited against the live store 2026-08-25 08:40 by reading every
+collection's and page's `templateSuffix` and then the banner image inside each template.
+Read from the store, not from any earlier note in this file.
 
-| Page | Image |
-| ---- | ----- |
-| `/collections/matrixyl-3000` | Matrixyl cream `C` pose, widened to 3.27:1 |
-| `/collections/glutathione` | Glutathione serum `C` pose, extended left by Seedream |
+**Collections — 7 of 14 carry a banner**
+
+| Collection | Image |
+| ---------- | ----- |
+| `/collections/all` | four-product range shot, extended left |
+| `/collections/pdrn` | PDRN cream `B` pose, extended left |
+| `/collections/copper-peptide` | day cream frame, extended left, arm sheared |
+| `/collections/serums` | peptide face serums, extended right |
+| `/collections/creams-moisturizers` | copper peptide night cream |
+| `/collections/acetyl-hexapeptide-8` | acetyl serum, round-2 frame |
+| `/collections/fine-lines-wrinkles` | acetyl serum `J-body-and-face-right` nbp_flash, **extended right** |
+
+Still bare: `frontpage`, `glutathione`, `matrixyl-3000`, `firming-skin-density`,
+`skin-repair-renewal`, `brightening-glow`, `microneedling`.
+
+**Pages — 15 of 18 carry a banner**, including `skin-concerns`, `fine-lines-wrinkles`,
+`firming-skin-density`, `skin-repair-renewal`, `brightening-glow`, `the-science`,
+`ingredients`, `our-philosophy`, `reviews` and the three research pages. Bare: `contact`,
+`faq`, `shipping-returns`.
+
+**Note the split:** `firming-skin-density`, `skin-repair-renewal` and `brightening-glow`
+have a banner on the **page** but not on the **collection** of the same handle. Both URLs
+exist and both are reachable from the menus.
+
+**An earlier revision of this table claimed Matrixyl and Glutathione were live. They are
+not,** and still are not. Both sat on the *shared* `templates/collection.json` before the
+per-collection templates of ADR-005 existed, and that shared template now carries banner
+*settings* (parallax off, `sm`, overlay 25) with **no image**. The Glutathione assets are
+built and waiting in `assets/publish-ready/collection-glutathione-banner/`.
+
+**Two pages are still wearing borrowed images:** `/pages/pdrn-research` shows
+`skingenetix-philosophy-research.jpg` and `/pages/glutathione-research` shows
+`skingenetix-philosophy-ingredients.jpg` — both lifted from the philosophy page.
+
+**`/pages/skin-concerns` is the first banner that is not a product shot,** and the first
+where canvas extension does not apply. Measured on the frame, the body's edge *rises* as it
+travels left (skin starts y=259 at x=0 but y=295 at x=100), so extending would march the
+shoulder into the top-left the heading needs; the right edge is the head. The crop is
+anchored with `object-position: center top` instead, so the 28%–46% of height a fixed 440px
+band discards always comes off the lower chest. Overlay went 60 → 22. Full reasoning in
+`configs/banners/page-skin-concerns-banner.json`.
+
+**Three lessons from the 2026-08-25 acetyl banners** (details in
+`configs/banners/collection-fine-lines-wrinkles-banner.json`):
+
+- **`scatter()`'s grain can be wildly over-amplitude, and it is not obvious.** It
+  high-passes its sample patch with a hardcoded `sigma=25`; on a small or corner patch what
+  survives is the backdrop's own vignette falloff rather than grain. On the acetyl `J` frame
+  it measured **9.30 against the 0.565 the real backdrop has** — 16x — and shipped as a
+  visibly mottled panel butted against smooth dark. **Measure the extension's
+  high-frequency std against the source backdrop's before publishing any extension.**
+- **`scatter()` builds each output ROW from a single source row,** so a patch narrower than
+  a few hundred columns gives row means too noisy to settle and streaks the full width of
+  the extension. The patch does not have to come from the edge being grown — only high
+  frequencies are carried, so any clean region of the same backdrop will do.
+- **Measure the h1 in the browser, do not estimate it.** The collection banner's h1 needs
+  681px for one line; a 552px figure taken from a *page* banner was wrong enough to make the
+  heading wrap at every width.
 
 **The banner section was the real blocker, not the images.** `templates/collection.json`
 had `enable_parallax: true` — the theme's schema says *"Parallax crops images"* — so no
@@ -220,13 +276,33 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
 
 **Open**
 
-1. 🔴 **Glutathione banner: the heading sits across the bottle.** Extending leftward pushed
-   the subject into the centred text. Fix by extending right instead, or moving the text.
-2. 🟡 **PDRN cream** — retire, use only small-label poses, or repair chosen frames individually.
-3. 🟡 **Copper Peptide + PDRN serums** — re-run with the clear-liquid brief (~$5) so all five match.
-4. 🟡 **`image_size: sm` → `md`** would make the band 2.57:1 against the library's native
-   2.36:1, removing most of the need to extend images at all. Raised, undecided.
-5. 🟢 Only two frames marked so far (PDRN serum `B`, plus the repaired G-pose pair awaiting a pick).
+1. 🔴 **Glutathione banner is built but not published.** The overlap is fixed — the master
+   was rebuilt to 3750px wide with the text anchored right — but the collection still has no
+   `templateSuffix`, and `publish-collection-banner-template.py` has no `glutathione` entry
+   in `PAGES`. Note the publish plan predates the rebuild and reuses the same filename;
+   Shopify Files suffixes rather than replaces, so it needs a fresh name.
+2. 🔴 **Six bare collections**, three of which already have a banner on their same-named
+   *page*: `firming-skin-density`, `skin-repair-renewal`, `brightening-glow`, plus
+   `matrixyl-3000`, `microneedling` and `frontpage`.
+3. 🟡 **Two research pages wear philosophy-page images** — `/pages/pdrn-research` and
+   `/pages/glutathione-research`. Both products have a full banner library already.
+4. 🟡 **Fold the runtime-injected banner configs into the scripts.** The three banners of
+   2026-08-24/25 were built by injecting config into `extend-banner-canvas.py` and
+   `publish-collection-banner-template.py` at import time, because a second session was
+   committing to both files at the same moment. Every setting is recorded in the three plan
+   files; `scatter()`'s `sigma` needs to become configurable before the grain rescale can
+   move in cleanly.
+5. 🟡 **PDRN cream** — retire, use only small-label poses, or repair chosen frames individually.
+6. 🟡 **Copper Peptide + PDRN serums** — re-run with the clear-liquid brief (~$5) so all five match.
+7. 🟡 **`image_size: sm` → `md`** would make the band 2.57:1 against the library's native
+   2.36:1, removing most of the need to extend images at all. Raised, undecided — and now
+   also relevant to the skin-art register, where `md` would cut the discarded height on
+   `/pages/skin-concerns` from 28% to roughly 8% at 1440.
+8. 🟢 Five frames marked by Malcolm: PDRN serum `B`; the repaired G-pose pair awaiting a
+   pick; `SKIN8-reclining-sweep-nbp_pro_02` → `/pages/skin-concerns`;
+   `acetyl-hexapeptide-8 I-body-and-face-left-nbp_flash_01` → `/pages/fine-lines-wrinkles`;
+   `acetyl-hexapeptide-8 J-body-and-face-right-nbp_flash_01` →
+   `/collections/fine-lines-wrinkles`.
 
 ### 🔄 BRAND-003 — Every website image now goes to every supplier
 
