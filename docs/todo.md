@@ -281,9 +281,13 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    `templateSuffix`, and `publish-collection-banner-template.py` has no `glutathione` entry
    in `PAGES`. Note the publish plan predates the rebuild and reuses the same filename;
    Shopify Files suffixes rather than replaces, so it needs a fresh name.
-2. 🔴 **Six bare collections**, three of which already have a banner on their same-named
-   *page*: `firming-skin-density`, `skin-repair-renewal`, `brightening-glow`, plus
-   `matrixyl-3000`, `microneedling` and `frontpage`.
+2. 🔴 **Five bare collections**, two of which already have a banner on their same-named
+   *page*: `firming-skin-density`, `skin-repair-renewal`, plus `matrixyl-3000`,
+   `microneedling` and `frontpage`.
+   ⚠️ `brightening-glow` was in this list and is **now done** (2026-08-25 09:15) — the
+   COLLECTION carries the glutathione `A-face-full-prod-left` nbp_flash frame, extended
+   LEFT, distinct from the gpt_image take on the same-named *page*. Its concentration line
+   was repaired from `25i` to `2%` first.
 3. 🟡 **Two research pages wear philosophy-page images** — `/pages/pdrn-research` and
    `/pages/glutathione-research`. Both products have a full banner library already.
 4. 🟡 **Fold the runtime-injected banner configs into the scripts.** The three banners of
@@ -303,6 +307,59 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    `acetyl-hexapeptide-8 I-body-and-face-left-nbp_flash_01` → `/pages/fine-lines-wrinkles`;
    `acetyl-hexapeptide-8 J-body-and-face-right-nbp_flash_01` →
    `/collections/fine-lines-wrinkles`.
+
+### 🔄 BRAND-005 — Ingredients page: real products, two registers, one size
+
+**Priority:** 🟡 Live (2026-08-25); banner still a placeholder
+**Owner:** Claude (build) + Malcolm (every image choice)
+**Plans:** `configs/banners/page-ingredients-*.json` · **Tool:** `scripts/normalise-tile-scale.py`
+
+`/pages/ingredients` carried nine placeholder products across **18 slots** — each product
+appears twice, once as a small selector tile and once in its own detail section. All 18 are
+now the real products.
+
+**Two of the placeholders should not have been on a live Skingenetix page at all:** the
+Glutathione tile showed a bottle branded **QUINER** — a competitor — and the Copper Peptide
+Day Gel-Cream tile read **`SKINGENETIX®`**, a registered mark the brand does not use.
+
+**Two registers, deliberately different** (Malcolm: the rows were "flat" when both used the
+same shot):
+
+| Row | Register |
+| --- | --- |
+| Small selector tiles | product hero on **white**, uniform |
+| Large detail sections | product **in use** — pipette lifted with a drop forming, or jar open |
+
+**No new uploads for the already-live heroes.** They are referenced in place as
+`shopify://shop_images/<filename>`; copying them would break shopify.md rule 7 (Langify keys
+translations off the URL) and create duplicates. The SEO naming rule governs what we
+*upload*, not what we *reference*. It also means these tiles now **track the product pages**.
+
+**Product scale is normalised, and the measurement was the hard part.**
+`scripts/normalise-tile-scale.py` re-frames each tile so every serum fills 71.0% of frame
+(the PDRN bottle) and every jar 47.4% (the Copper Peptide night cream) — both references
+chosen by Malcolm. **Nothing is resampled**: only the canvas moves, so the pixels are the
+originals. Canvas is grown by **replicating the border**, not filling flat — a median-colour
+fill left a visible rectangle on five of nine tiles, because these sweeps are gradients.
+
+⚠️ **The auto-measured boxes were wrong twice and shipped.** Edge energy cannot tell a
+bottle from its reflection nor find a white bulb on a white sweep: copper measured 1215→1669
+(rendered at 56% of frame) and matrixyl 1825→1539 (rendered at 91%). The *reference itself*
+was 4% out. All five serums now carry a `y_override` read off a labelled pixel grid. Full
+account in `memory/a-number-checked-only-against-itself-gets-believed.md`.
+
+**Three frames Malcolm has never personally marked** are live on this page — the Copper Day
+Gel-Cream white hero, and the two Matrixyl white heroes (serum #3, cream #7) taken from
+`2026-08-21/run-01`. None carries his `_` or `__`. Worth his eye.
+
+**Open**
+
+1. 🟡 **The page banner is still a placeholder** — three unbranded generic dropper bottles,
+   no Skingenetix product. A banner cannot sensibly be one product hero; the `/collections/all`
+   range shot would fit. Malcolm's call.
+2. 🟢 Four of eight Matrixyl white-hero candidates in each set were unusable — blocky helix
+   marks, a teal lid the cream does not have, and two misspellings (`MATRIXEL`, `MATRIYEL`).
+   Recorded so nobody picks off a filename without checking at 100%.
 
 ### 🔄 BRAND-003 — Every website image now goes to every supplier
 
