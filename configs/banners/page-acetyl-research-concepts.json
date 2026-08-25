@@ -1,0 +1,72 @@
+{
+  "wave": "page-acetyl-research-concepts",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Concept batch for the /pages/acetyl-hexapeptide-8-research header.\n\nTHIS PAGE HAS NO BANNER AT ALL - IT IS BROKEN, NOT MERELY OFF-BRAND. The hero section points at skingenetix-research-acetyl-hexapeptide-8-banner.jpg, and that file 404s on the CDN: it does not exist in Files. The section falls back to Shopify's own placeholder artwork, so a live research page is currently showing line drawings of a handbag, a shoe and a feather behind its heading. That also explains the 3KB reading in the banner audit, where every real banner measures 20-63KB.\n\nCOLOUR. The palette gives Acetyl Hexapeptide-8 the scene colour Pearl grey #D8D6D4, on the standard graphite ground #1A1A1A. Pearl is nearly neutral, so unlike the Matrixyl teal it cannot carry the picture by hue - these concepts have to work on light, material and form instead, which is why they lean on glass, frost, silk and water rather than on a coloured glow.\n\nWHAT THE INGREDIENT ACTUALLY DOES, because the picture should mean something. Acetyl Hexapeptide-8 (Argireline) damps the neurotransmitter signalling that drives repeated micro-contraction, so expression lines soften. The through-line of every concept below is therefore MOTION COMING TO REST: a ripple settling to glass, a crease relaxing out, a signal losing amplitude, a drop held still. That is a different idea from the Matrixyl banner, which is about structure being rebuilt.\n\nCOMPOSITION. The heading is short - 'Acetyl Hexapeptide-8' sits on one line - but it is still centre-aligned with an eyebrow above and two lines of body copy below, so the middle of the frame must stay quiet and even. Interest belongs at the left and right edges. Every brief states it and negates anything bright crossing the centre.\n\nCLASS B, so FLUX.2 could run. It is left OUT. On the Matrixyl concept batch it lost outright - centres measuring 44 to 79 against a best of 8, subject straight through the middle on all six concepts - so it demonstrably does not respect a negative-space instruction, which is the one thing that matters here.\n\nASPECT. 3072x1024 (3:1), the widest gpt-image will accept. The band is 100vw x 496px, so the winner is taken to about 3.9:1 afterwards - by cropping if the frame allows it, as the Matrixyl banner did, and only by extending if it does not.",
+  "defaults": {
+    "candidates": 1,
+    "negative_global": "bright centre, busy centre, subject in the middle of the frame, hard edge crossing the centre, specular highlight in the centre, colour, saturated colour, teal, blue, gold, brown, amber, pink, green, text, lettering, watermark, signature, numbers, labels, logo, brand mark, bottle, jar, packaging, product, human face, model, hands, botanicals, flowers, bokeh sparkle, lens flare, rainbow, neon, sci-fi HUD, glowing wireframe, banding, posterised gradient, clip art, plastic CGI, oversaturated, cluttered"
+  },
+  "slots": [
+    {
+      "id": "AHR-1-STILLED-RIPPLE",
+      "title": "A ripple settling back to glass",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art photograph, very wide cinematic frame, of a shallow pool of perfectly still dark water seen almost edge-on. At the far LEFT of the picture a set of fine concentric ripple rings is still spreading, close together and catching the light on their crests. As the rings travel toward the middle of the frame they flatten and fade, until by the centre the surface is completely smooth and mirror-still, and stays that way to the right edge. The water sits on a deep graphite ground, colour #1A1A1A, and the light is a cool near-neutral pearl grey, colour #D8D6D4, raking low from the left so only the ripple crests catch it. The middle and right of the frame are calm dark mirror with no highlight and no hard edge, so a centred headline can sit there. Long lens, very shallow depth of field, fine film grain, no colour anywhere - only pearl grey light on graphite. Quiet, precise, expensive.",
+      "negative_extra": "splash, droplet impact crown, waves, choppy water, ripples across the whole frame, ripples on the right, reflections of objects, sky reflection"
+    },
+    {
+      "id": "AHR-2-RELAXING-SILK",
+      "title": "A crease easing out of a smooth plane",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame, of a single sheet of fine matte silk lying almost flat and seen at a very low angle. At the far LEFT and far RIGHT edges of the picture the silk is gathered into fine parallel creases, close-packed and catching the light along their ridges. Toward the middle of the frame those creases relax and smooth away, until the centre of the sheet is an unbroken flat plane with no fold in it at all. The ground is deep graphite, colour #1A1A1A, the silk itself a cool near-neutral pearl grey, colour #D8D6D4, lit by one soft low light so the ridges glow faintly and the flat centre falls into even shadow. The middle of the frame is smooth, dark and quiet, carrying no crease and no highlight. 100mm macro, very shallow depth of field, real fabric fibre visible at the nearest ridges, fine film grain, no colour at all. Calm and restrained.",
+      "negative_extra": "crumpled fabric, heavy folds, drapery, curtain, bedsheet, wrinkles across the centre, satin sheen, shiny fabric, pattern, weave print"
+    },
+    {
+      "id": "AHR-3-SIGNAL-DAMPED",
+      "title": "A wave losing amplitude across the frame",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art photograph of light, very wide cinematic frame. A single fine luminous line travels horizontally across the picture. At the far LEFT it oscillates strongly, a tight energetic wave with tall peaks; as it moves right the oscillation steadily loses height, the peaks growing shallower and further apart, until by the right of the frame it has settled into an almost perfectly straight quiet line. The line is a cool near-neutral pearl grey, colour #D8D6D4, with a soft real optical bloom around its brightest peaks only. The ground is deep graphite, colour #1A1A1A, completely empty above and below the line. Through the middle third of the frame the line runs low, thin and dim, so a centred headline can sit above it. Long-exposure light-painting quality rather than a graphic, fine film grain, no colour at all. Quiet, scientific, restrained.",
+      "negative_extra": "oscilloscope screen, ECG trace, audio waveform bars, graph axes, grid lines, neon tube, laser, equal amplitude across the frame, wave filling the centre"
+    },
+    {
+      "id": "AHR-4-PEARL-MATERIAL",
+      "title": "Pearl material study - the ingredient's own colour as substance",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art still-life photograph, very wide cinematic frame. Two smooth spheres of pearl-grey material, colour #D8D6D4, rest on a seamless graphite surface, colour #1A1A1A - one larger sphere at the far LEFT of the picture, one smaller at the far RIGHT, with a long stretch of empty polished graphite between them. Their surfaces are softly iridescent, like the inside of a shell: a slow shift of cool light across each one, never a mirror and never metallic. A single large soft light from above and behind gives each sphere one broad soft highlight and a long soft shadow that falls away from the camera. The middle of the frame is empty graphite surface, even in tone, with no object, no highlight and no hard edge, so a centred headline can sit there. 100mm at f8, deep soft shadows, fine film grain, no colour beyond the pearl grey and the graphite. Museum-quiet.",
+      "negative_extra": "many spheres, cluster of balls, sphere in the centre, marbles, mirror ball, chrome, metallic, gold, glass balls with reflections, checkerboard reflection"
+    },
+    {
+      "id": "AHR-5-FROST-SOFTENING",
+      "title": "Frost crystals relaxing into smooth glass",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Extreme macro photograph, very wide cinematic frame, of a sheet of cold dark glass. At the far LEFT and far RIGHT edges of the picture, fine frost crystals have grown across the surface in sharp branching needles, dense and intricate, catching the light along their edges. Toward the middle of the frame the crystals thin out and disappear, and the glass there is completely clear, smooth and dark. The ground behind the glass is deep graphite, colour #1A1A1A. The light is a cool near-neutral pearl grey, colour #D8D6D4, raking across the surface from the side so only the crystal edges glow while the clear centre stays dark. Real depth: the nearest needles sharp, the further ones softening. The middle third carries no crystal, no highlight and no hard edge. Fine film grain, no colour at all, cold and precise.",
+      "negative_extra": "snowflake shapes, christmas imagery, ice cubes, frozen window scene, crystals across the whole frame, crystals in the centre, warm light, sunlight"
+    },
+    {
+      "id": "AHR-6-SUSPENDED-DROP",
+      "title": "A droplet held perfectly still above its own reflection",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. A single clear droplet hangs perfectly still in the LEFT third of the picture, held at the very tip of a fine unmarked glass rod that enters from the top of the frame, on the point of falling but not falling. Directly below it, a mirror-still dark surface holds the droplet's reflection. The rest of the frame, from the middle to the right edge, is empty: seamless graphite, colour #1A1A1A, above and a smooth dark reflective plane below, meeting in a soft horizon that is even in tone all the way across. The light is a cool near-neutral pearl grey, colour #D8D6D4, coming from behind so the droplet glows from within and the rod stays almost invisible. Nothing bright and nothing hard-edged sits in the middle or right of the frame, so a centred headline can sit there. 100mm macro at f8, very shallow depth of field, fine film grain, no colour at all. Held, silent, expensive.",
+      "negative_extra": "droplet falling, splash, impact rings, multiple droplets, droplet in the centre, pipette with markings, syringe, medical dropper, milk, white liquid"
+    }
+  ]
+}

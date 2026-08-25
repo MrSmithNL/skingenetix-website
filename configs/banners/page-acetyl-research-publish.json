@@ -1,0 +1,39 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme — Impact, templates/page.research-argireline.json, hero section",
+  "decided_by": "Malcolm, 2026-08-25 — asked twice for this page to work like the others, so the banner was chosen on the measurements from the concept batch he commissioned.",
+  "note": "Header banner for /pages/acetyl-hexapeptide-8-research, and the fix for a page that was BROKEN rather than merely off-brand.\n\nTHE FAULT. The hero pointed at skingenetix-research-acetyl-hexapeptide-8-banner.jpg, which 404s on the CDN - the file does not exist in Files. The section therefore fell back to Shopify's own placeholder artwork, so a live research page was showing line drawings of a handbag, a shoe and a feather behind its heading. It also explains the 3KB reading for this page in the banner audit, where every working banner measures 20-63KB.\n\nAUDITED AGAINST THE PAGES THAT WORK before changing anything. Structure was never the problem: this template carries the same eight sections in the same order as research-matrixyl and research-copper-peptide, with the same block counts - overview 3, key findings 3, FAQ 5, related 4 - and comparable content weight throughout. Only the hero was wrong, in exactly two ways: the missing image, and overlay_opacity at 50 where the working research pages sit at 22-25. Fifty is the stale theme default this project has already recorded as muting a picture to near-flat.\n\nTHE IMAGE. AHR-3-SIGNAL-DAMPED nbp_pro_01, from a six-concept batch. Chosen because it is the only concept that IS the mechanism rather than decoration around it: Acetyl Hexapeptide-8 damps the neurotransmitter signalling that drives repeated micro-contraction, and the picture is a wave losing amplitude from left to right until it lies flat. Measured centre block 19.9 mean / 10.9 stdev before cropping, 20.3 / 12.7 after - dark and even under a centred white heading.\n\nCROPPED, NOT EXTENDED. The band is 100vw x 496px, needing about 3.9:1 to hold full height at 1920; the source is 2.357:1. 531px came off the top and bottom symmetrically - symmetric because the wave sits on the vertical centre line, unlike the matrixyl banner whose bright fibres were all at the top and needed a one-sided crop. No invented pixels.\n\nA MOBILE IMAGE IS SET, which research-matrixyl still lacks. research-copper-peptide is the only research page that had one, and it is the right pattern: a 3.9:1 band centre-cropped on a phone keeps almost nothing. The phone crop keeps the left of the frame, where the wave still has amplitude.\n\nRATIO CORRECTED AFTER MEASURING THE LIVE BAND. The first crop used 3.9:1, carried over from the matrixyl research page. That was wrong for THIS page: measured live, its band is 100vw x 440px, not the matrixyl page's 496px, because its heading is one line rather than four - the band's height follows its content. At 3.899:1 the image held full height at 1440 but only 89% at 1920. Rebuilt at 4.400:1, which clears the 4.364:1 the band reaches at 1920. The lesson is that the target aspect is a property of the PAGE, not of the theme: two pages using the same section type differ by 56px of band height purely because one heading wraps.",
+  "images": [
+    {
+      "slot": "acetyl_research_hero",
+      "source": "assets/publish-ready/page-acetyl-research-banner/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-research.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-research.jpg",
+      "alt": "A wave of light losing amplitude until it lies flat - Acetyl Hexapeptide-8 Argireline anti-wrinkle peptide research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-research.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-research.jpg?v=1787658909"
+    },
+    {
+      "slot": "acetyl_research_mobile",
+      "source": "assets/publish-ready/page-acetyl-research-banner/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-mobile.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-mobile.jpg",
+      "alt": "A damping wave of light on graphite - Acetyl Hexapeptide-8 Argireline research, mobile crop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-mobile.jpg?v=1787658909"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "acetyl_research_hero"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 25,
+        "mobile_image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-argireline-anti-wrinkle-mobile.jpg"
+      }
+    }
+  ]
+}
