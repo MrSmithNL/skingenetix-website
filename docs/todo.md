@@ -271,17 +271,29 @@ One cosmetic consequence: the fine-lines photograph has a near-white backdrop an
 the page where the other three sit on a visible block of colour. On the homepage the same
 file is fine because it wears a 40% dark overlay.
 
-**The homepage overlay was then put on all four tiles for Malcolm to judge** (13:54, live,
+**The four tiles now carry a 20% wash that lifts to 0 on hover** (live 14:0x,
 `configs/banners/page-skin-concerns-tile-overlay.json`). It is CSS, not a setting: the
 homepage tiles are `image-link-blocks`, whose overlay exists because link text sits ON the
 picture; these are `multiple-images-with-text`, whose schema has no overlay at all. Drawn
 through the additive `custom-html` pattern this template already uses for
-`banner_crop_anchor`. **Undecided — awaiting Malcolm.** My read: it fixes the dissolve but
-costs more than it buys, and "Brightening & Glow" now reads muddy, which is the one tile
-whose whole promise is radiance. If it goes, `remove_sections: ["concern_overlay_css"]`
-takes it off; a lighter 12–15% wash, or simply setting `concern_1`'s background to the
-`#f7f7f7` the alternating sections already use, would fix the dissolve without dulling
-four photographs.
+`banner_crop_anchor`. Remove with `remove_sections: ["concern_overlay_css"]`.
+
+**Why 20% and not the homepage's 40%.** At 40% the photographs go grey and "Brightening &
+Glow" reads muddiest of the four — the one tile whose whole promise is radiance. Judged on
+a ladder at 0/12/20/28/40% composited locally against the real captured page, which is
+faithful because the browser's own 40% was measured landing on `0.6*src + 0.4*26` to within
+1/255. 12% barely marks the photograph though it does grey the near-white fine-lines
+backdrop; 28% starts going grey. The homepage keeps 40% because white link text must stay
+legible on its tiles; nothing sits on these.
+
+**The hover reveal is what earns the overlay its place** — it turns a wash into an
+affordance. These images are *not* links (the anchor is the button beside the picture), so
+the reveal is invitation rather than navigation, and touch devices lose nothing: they keep
+the tint. `:has(> img:hover)` rather than a bare `:hover` because **the list element is
+524px against the image's 500px** (measured live), so a bare `:hover` would fire from the
+empty margin beside the picture. Guarded by `@media (hover: hover)`, with an
+`@supports not selector(:has(*))` fallback and a `prefers-reduced-motion` cut to 1ms.
+**Verified in a real browser on all four tiles: 0.2 at rest → 0 on hover → 0.2 on exit.**
 
 ⚠️ **The first push of that overlay changed nothing at all, and looked completely correct
 while doing so.** Two independent faults, either of which alone is silent — the theme
