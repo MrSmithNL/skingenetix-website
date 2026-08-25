@@ -1,25 +1,26 @@
 {
   "created": "2026-08-24",
-  "target": "live store \u2014 collection serums, new templates/collection.serums.json",
-  "decided_by": "Malcolm, 2026-08-24 \u2014 chose acetyl-hexapeptide-8-serum--J-body-and-face-right nbp_pro_01.",
-  "note": "Header banner for /collections/serums.\n\nSOURCE: banner library, acetyl-hexapeptide-8-serum--J-body-and-face-right nbp_pro_01, native 6336x2688, worked at 848 high (1999x848, 2.36:1).\n\nEXTENDED RIGHT, AND THE MEASUREMENT DECIDED THAT. Her shoulder fills 50% of the LEFT edge - skin from row 426 to the bottom - and its top line is essentially level at 0.07px down per px travelled left, so it never leaves frame. Extending that side would have meant inventing ~1700px of horizontal arm, which this project already recorded as reading like a smeared arm. The RIGHT edge is clean backdrop top to bottom at mean 24.6, so the room was made there.\n\nEverything mirrors as a result: the heading goes centre-RIGHT over the extension, and object-position anchors LEFT so horizontal cropping only ever removes extension - never her face or the bottle, which sits at x 1500-1850 of 1999.\n\n3750x848 (4.42:1), past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport.\n\nA BUG THIS FRAME EXPOSED. The first build tiled mirrored ghosts of the bottle and an eye across the extension. Cause: every x in a banner config is measured on the ORIGINAL frame, but extend_left receives the MIRRORED frame for a right-side extension, so 'cols 0-700' sampled the bottle and hand instead of the clean top-left backdrop. main() now mirrors those x ranges automatically, so configs stay in the orientation a person actually looks at. The brightening-glow box was restated in the same convention and rebuilt identically.\n\nTexture sampled from the only clean rectangle on this frame: rows 0-350 across cols 0-700, max 37 against a backdrop of ~30. Every larger box tried is contaminated - (0,500,0,500) hits max 208.",
+  "target": "live store \u2014 /collections/serums, templates/collection.serums.json",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 nbp_flash_01 from ~/Desktop/skingenetix-acetyl-hexapeptide-8-serum--A-face-full-prod-left.png, named for /collections/serums. Chosen while the two faulty acetyl labels elsewhere are being repaired.",
+  "note": "Header banner for /collections/serums.\n\nSOURCE resolved from the contact sheet, and checked for a -v2- sibling first. Only one file on disk carries this shot id, and there is no superseded acetyl wave, so it is unambiguous: acetyl-hexapeptide-8-serum--A-face-full-prod-left-nbp_flash_01, 6336x2688 (2.357:1), scaled to a 1999x848 working frame and extended LEFT to 3750x848 (4.42:1).\n\nTHE LABEL IS THE REASON THIS FRAME IS WORTH PUBLISHING. Checked at 100%: all six elements present, correctly spelled and cleanly drawn - the helix as dots and dashes, 'Skingenetix' with a capital S, 'ACETYL HEXAPEPTIDE-8' with the hyphen before the digit, 'ANTI-WRINKLE SERUM' with a real W, 'PREMIUM FORMULA', and '10% ACETYL HEXAPEPTIDE-8 | 30ML'. That is reference quality, and it is rare on this product: the same day, the fine-lines banner shipped with its last two lines missing entirely and SERUMS-R2-A seedream_01 mangled five of six.\n\nTHE SWAP FLIPS THE BANNER. The previous frame extended RIGHT. This one cannot: its right edge is her neck and shoulder at mean luminance 160, minimum 115 - lit skin top to bottom, nothing to sample. The left edge measures 21.3 to 26.4 with nothing above 45 anywhere down it. So the canvas grows left, the heading moves left with it, and object-position flips from left center to right center.\n\nTEXTURE IS SCATTERED, NOT TILED, AND THE MAX-LUMINANCE CHECK DID NOT CATCH WHY. The sample box reads max 30 against a backdrop of 24 - clean by every threshold test - but it carries a faint vertical structure, and mirror-tiling it across 1751px printed seven evenly spaced dark lens shapes down the middle of the extension. Caught by looking, not by measuring. Scatter has no tile boundaries to line up. Residual row banding: 2.31 levels on a background of 23.\n\nHeading ground after extension: 336px at 1280, 496px at 1440, 975px at 1920 - roomier than any other banner published this week, so no desktop scrim is needed here.",
   "images": [
     {
       "slot": "collection_serums_desktop",
-      "source": "assets/publish-ready/collection-serums-banner/skingenetix-peptide-face-serums-anti-wrinkle-skincare.jpg",
-      "filename": "skingenetix-peptide-face-serums-anti-wrinkle-skincare.jpg",
-      "alt": "Woman resting her head to one side holding a Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum against a dark studio backdrop",
-      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-face-serums-anti-wrinkle-skincare.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-face-serums-anti-wrinkle-skincare.jpg?v=1787588391"
+      "source": "assets/publish-ready/collection-serums-banner/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-face-serum.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-face-serum.jpg",
+      "alt": "Woman lying with her eyes closed holding a bottle of Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum against her cheek",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-face-serum.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-face-serum.jpg?v=1787640910"
     },
     {
       "slot": "collection_serums_mobile",
-      "source": "assets/publish-ready/collection-serums-banner/skingenetix-peptide-face-serums-anti-wrinkle-mobile.jpg",
-      "filename": "skingenetix-peptide-face-serums-anti-wrinkle-mobile.jpg",
-      "alt": "Close crop of a woman holding a Skingenetix peptide face serum beside her face",
-      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-face-serums-anti-wrinkle-mobile.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-face-serums-anti-wrinkle-mobile.jpg?v=1787588391"
+      "source": "assets/publish-ready/collection-serums-banner/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-face-serum-mobile.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-face-serum-mobile.jpg",
+      "alt": "Close crop of the Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum bottle held beside a woman's face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-face-serum-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-face-serum-mobile.jpg?v=1787640910"
     }
   ],
-  "image_assignments": []
+  "image_assignments": [],
+  "revised": "2026-08-25 \u2014 swapped to the A-face-full-prod-left frame Malcolm chose"
 }

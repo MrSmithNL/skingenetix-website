@@ -268,27 +268,54 @@ BANNERS = {
         #: left edge is backdrop top to bottom, mean 17.9 max 21
         "shoulder": None,
     },
+    # /collections/serums -- Malcolm replaced the J-pose frame with the A-face-full-prod-left
+    # nbp_flash frame on 2026-08-25, and the swap FLIPS THE WHOLE BANNER.
+    #
+    # WHY THIS FRAME. Its label is the only reference-quality one in the acetyl set:
+    # all six elements present, correctly spelled and cleanly drawn - helix as dots and
+    # dashes, ACETYL HEXAPEPTIDE-8 with the hyphen, ANTI-WRINKLE with a real W, PREMIUM
+    # FORMULA, and 10% ACETYL HEXAPEPTIDE-8 | 30ML. The same product's label failed twice
+    # on 2026-08-25 elsewhere: the fine-lines banner dropped its last two lines entirely,
+    # and SERUMS-R2-A seedream_01 mangled five of six.
+    #
+    # WHY THE SIDE CHANGED. The previous frame extended RIGHT. This one cannot: its right
+    # edge is her neck and shoulder, mean luminance 160 with a minimum of 115 - lit skin
+    # from the top row to the bottom, nothing to sample. The LEFT edge is the opposite,
+    # measuring 21.3 to 26.4 with nothing above 45 anywhere down it, and a texture box
+    # spanning the FULL height at max 30. So the canvas grows left, the heading moves to
+    # the left with it, and object-position flips to right center.
+    #
+    # Projected heading ground after extension: 336px at 1280, 496px at 1440, 975px at
+    # 1920 - roomier than any other banner published this week.
     "serums": {
         "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-acetyl-hexapeptide-8-serum"
-                     / "acetyl-hexapeptide-8-serum--J-body-and-face-right"
-                     / "acetyl-hexapeptide-8-serum--J-body-and-face-right-nbp_pro_01.png"),
+                     / "acetyl-hexapeptide-8-serum--A-face-full-prod-left"
+                     / "acetyl-hexapeptide-8-serum--A-face-full-prod-left-nbp_flash_01.png"),
         "out": ROOT / "assets/publish-ready/collection-serums-banner",
-        "desktop": "skingenetix-peptide-face-serums-anti-wrinkle-skincare.jpg",
-        "mobile": "skingenetix-peptide-face-serums-anti-wrinkle-mobile.jpg",
-        "side": "right",
+        #: NEW filenames - Shopify Files suffixes on a name collision rather than
+        #: replacing, so re-using the old pair would keep serving the OLD picture.
+        "desktop": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-peptide-face-serum.jpg",
+        "mobile": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-face-serum-mobile.jpg",
         #: native is 6336x2688; every measurement below is in working pixels
         "work_height": 848,
-        #: inset from the LEFT edge - the subject side for a right-extended banner.
-        #: Keeps her face with the bottle, which sits at x 1500-1850 of 1999.
-        "mobile_crop": (760, 1000),
+        #: inset from the RIGHT edge - the subject side for a LEFT-extended banner.
+        #: Keeps the bottle (x 179-540 of 1999) with her whole face.
+        "mobile_crop": (560, 1250),
         "target_width": 3750,
-        "bg_fit": (100, 400),
-        #: the ONLY clean rectangle on this frame: rows 0-350 across cols 0-700 reads
-        #: max 37 against a backdrop of ~30. Every larger box tried is contaminated by
-        #: her shoulder - (0,500,0,500) hits max 208.
-        "texture_box": (0, 350, 0, 700),
-        "texture_mode": "tile",
-        #: nothing on the right edge, which is the edge being extended
+        "bg_fit": (100, 700),
+        #: the full height is clean on this edge - cols 0-120 reads max 30 against a
+        #: backdrop of ~24 - so the box does not have to stop short of a limb the way
+        #: the previous frame's did.
+        "texture_box": (0, 848, 0, 120),
+        #: SCATTER, NOT TILE, and the max luminance is why that is not obvious. This box
+        #: reads max 30 against a backdrop of 24, which looks clean by every threshold
+        #: test - but it carries a faint vertical structure, and mirror-tiling it across
+        #: 1751px printed seven evenly spaced dark lens shapes straight down the middle
+        #: of the extension. Tiling amplifies structure that a max-luminance check cannot
+        #: see, because the eye finds repetition long before it finds contrast.
+        #: Independent per-pixel resampling has no tile boundaries to line up.
+        "texture_mode": "scatter",
+        #: nothing touches the left edge, which is the edge being extended
         "shoulder": None,
     },
     # /pages/the-science -- Malcolm's pick from the blue-glassware wave, 2026-08-24.

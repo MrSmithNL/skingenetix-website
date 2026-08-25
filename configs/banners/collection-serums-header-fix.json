@@ -1,0 +1,16 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/collection.serums.json \u2014 banner section",
+  "decided_by": "Claude, 2026-08-24 \u2014 legibility fix, reversible",
+  "note": "Turns the transparent header off for /collections/serums, for the same reason it was turned off for creams-moisturizers: the shared collection template runs the banner up behind the navigation, which works on pages whose top-left corner is dark, and this frame puts her lit forehead and cheek across the top. 'Skin Solutions', 'Scientific Research', 'Discover' and 'Support' all disappear at 1280.\n\nNOTE FOR WHOEVER REPUBLISHES THIS PAGE: publish-collection-banner-template.py rebuilds the template from the shared default every time it runs, which silently drops this setting. It has to be re-applied after every republish. Same trap already hit on creams-moisturizers.\n\nUndo: set allow_transparent_header back to true, or re-run publish-collection-banner-template.py serums --restore to drop the dedicated template.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "banner",
+      "settings": {
+        "allow_transparent_header": false
+      }
+    }
+  ],
+  "image_assignments": []
+}

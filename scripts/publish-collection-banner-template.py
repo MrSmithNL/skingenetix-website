@@ -110,18 +110,29 @@ def css(text_width, scrim_from, object_position, text_max="620px", desktop_scrim
 
 
 PAGES = {
-    # /collections/serums -- the one banner extended RIGHT, so everything mirrors: the
-    # heading goes centre-RIGHT over the extension, and object-position anchors LEFT so
-    # the crop eats the extension rather than her face or the bottle.
+    # /collections/serums -- FLIPPED on 2026-08-25. This page used to be the one banner
+    # extended RIGHT, with the heading centre-right and object-position anchored left.
+    # Malcolm swapped in the A-face-full-prod-left frame, whose right edge is her neck
+    # and shoulder (mean luminance 160, minimum 115 - lit skin top to bottom, nothing to
+    # sample), so the canvas now grows LEFT and every mirrored setting flips back:
+    # heading centre-LEFT, object-position right center so the crop eats the extension
+    # rather than her face or the bottle.
+    #
+    # 26vw, not the 42vw this page carried when it was extended the other way. Measured
+    # heading ground after the new extension is 336px at 1280, 496px at 1440 and 975px at
+    # 1920 - as a share of viewport that is 26.3%, 34.4% and 50.8%, so the TIGHTEST case
+    # sets the bound. 42vw is 538px at 1280 and ran the body copy onto the bottle on the
+    # live page. A vw measure tracks the clear zone here because both scale with viewport.
+    # No desktop scrim is needed - unlike creams-moisturizers, this frame has real ground.
     "serums": {
         "plan": "configs/banners/collection-serums-banner.json",
         "desktop": "collection_serums_desktop",
         "mobile": "collection_serums_mobile",
         "overlay": 22,
-        "desktop_text": "sm:place-self-center-end sm:text-end",
+        "desktop_text": "sm:place-self-center-start sm:text-start",
         "mobile_text": "place-self-end-center text-center",
-        "css": dict(text_width="42vw", scrim_from="bottom", text_max="660px",
-                    object_position="left center"),
+        "css": dict(text_width="26vw", scrim_from="bottom", text_max="660px",
+                    object_position="right center"),
     },
     # /collections/acetyl-hexapeptide-8 -- canvas extended left, subject and bottle
     # hard right. Her eyes sit high in the phone crop, so the text goes bottom-centre
@@ -171,7 +182,7 @@ PAGES = {
         "mobile_text": "place-self-end-center text-center",
         # right, so horizontal cropping only ever eats the extended backdrop -- never
         # the model or the bottle, both of which sit hard against the right edge.
-        "css": dict(text_width="42vw", scrim_from="bottom", text_max="660px",
+        "css": dict(text_width="26vw", scrim_from="bottom", text_max="660px",
                     object_position="right center"),
     },
     # /collections/pdrn -- canvas extended left, so backdrop stays dark out to x=894

@@ -1,0 +1,26 @@
+{
+  "wave": "flw-bottle-text-fix",
+  "created": "2026-08-25",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Repair the bottle wording on the /collections/fine-lines-wrinkles header.\n\nTHE FAULT. The published banner's label carries the helix mark, 'Skingenetix', 'ACETYL HEXAPEPTIDE-8' and 'ANTI-WRINKLE SERUM' — all correctly spelled — and then stops. The bottom third of the label is empty, with the vertical accent rule running down past the type into blank glass. Measured against the product's own 2026 artwork render (assets/images/_refs-2026-08-19/acetyl-hexapeptide-8-serum/product_tight.png) two lines are missing outright: 'PREMIUM FORMULA' and '10% ACETYL HEXAPEPTIDE-8 | 30ML'.\n\nHOW IT GOT PAST REVIEW, which is the part worth keeping. The banner's own config records the label being checked twice — at 100% and again at rendered size — and both checks passed, because both asked whether the lines PRESENT were spelled correctly. Neither asked whether the lines that should be there were there. Checking for last time's fault is not the same as checking the product is right.\n\nWHY THE LIBRARY FRAME AND NOT THE LIVE MASTER. The live master is 3750x848 (4.42:1) and only Seedream can return that aspect — gpt-image hard-refuses beyond 3:1 and NBP ignores pixel dimensions. But Seedream is the wrong engine for THIS label: its own J-pose candidate renders all five lines and misspells two of them, 'ANTI-VIRINKLE' and 'PREMIUN FORMILA'. So the repair runs on the 2.36:1 library frame, where every supplier can compete, and the winner is extended afterwards. Failure modes do not overlap; that is the whole reason for fanning out.\n\nTHE REPAIR PROMPT CHANGES ONLY THE BOTTLE. An edit prompt that mentions just the fix invites a restage — face, pose, lighting and framing are all held constant by name, following the G-bottle-fix wave that repaired the copper peptide serum.\n\nEvery label line is quoted verbatim with its colour and its position in the stack, and the risky strings are spelled out: the '-8' suffix and the 'W' in ANTI-WRINKLE are both stated, because those are exactly what drifted on the other engines' attempts.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "changed face, changed expression, different model, changed pose, changed hand, changed camera angle, changed framing, changed lighting, changed background, restaged, zoomed, cropped differently, ACETYL misspelled, HEXAPEPTIDE misspelled, HEXAPEPTIDE 8 without hyphen, ANTI-VIRINKLE, ANTI-WRINCLE, PREMIUN, FORMILA, FORMLA, missing PREMIUM FORMULA, missing concentration line, blank lower label, empty label panel, extra label lines, invented wording, second bottle, duplicated hand, watermark"
+  },
+  "slots": [
+    {
+      "id": "FLWFIX",
+      "title": "Acetyl serum bottle — restore PREMIUM FORMULA and the 10% | 30ML line",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "collection fine-lines-wrinkles",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-acetyl-hexapeptide-8-serum/acetyl-hexapeptide-8-serum--J-body-and-face-right/acetyl-hexapeptide-8-serum--J-body-and-face-right-nbp_flash_01.png",
+        "assets/images/_refs-2026-08-19/acetyl-hexapeptide-8-serum/product_tight.png"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is. Keep the identical composition, the identical pose, the identical model and her face unchanged, the identical camera angle and framing, the identical lighting, shadows and background, and the identical position, size and angle of the hand and the bottle it holds. Change ONLY the wording printed on the bottle. The bottle itself stays exactly as it is: a 30ml frosted clear glass dropper bottle, straight-sided with square shoulders, a brushed satin silver collar and a white rubber-bulb pipette, holding a clear colourless water-transparent serum — the frosting is the glass, not the contents. Print the label exactly as the second reference shows it, as five stacked elements, centred as a block on the front of the glass: first a fine double helix drawn as small dots and dashes, never a solid ribbon or swirl; below it the wordmark 'Skingenetix' with a capital S and the rest lower case; below that, in black capitals on two lines, 'ACETYL' then 'HEXAPEPTIDE-8', with a hyphen before the digit 8; below that, in soft grey capitals on two lines, 'ANTI-WRINKLE' then 'SERUM', where ANTI-WRINKLE begins with the letter W; below that, in smaller grey capitals, 'PREMIUM FORMULA'; and last, as a single fine line of small grey capitals, '10% ACETYL HEXAPEPTIDE-8 | 30ML'. A slim vertical rule sits to the left of those lines and stops level with the last of them. THE LOWER THIRD OF THE LABEL MUST NOT BE BLANK: the published version printed only the first four elements and left the bottom of the glass empty below the accent rule, which is the fault being corrected. Every one of the six elements above must be present and legible. Add nothing else to the bottle: no other words, no numbers, no symbols, no registered or trademark marks.",
+      "negative_extra": "label text stopping after SERUM, empty lower label, accent rule running past the text, four-line label"
+    }
+  ]
+}
