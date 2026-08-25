@@ -1,0 +1,48 @@
+{
+  "created": "2026-08-24",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'hero' (image-with-text-overlay)",
+  "decided_by": "Malcolm picked acetyl-hexapeptide-8-serum--I-body-and-face-left-nbp_flash_01 and named /pages/fine-lines-wrinkles as the target",
+  "note": "Header banner for /pages/fine-lines-wrinkles. Replaces skingenetix-concern-fine-lines-wrinkles.jpg.\n\nSOURCE: banner library, acetyl-hexapeptide-8-serum--I-body-and-face-left-nbp_flash_01, 6336x2688 (2.357:1). Label checked at 100% on the extended master: 'Skingenetix', 'ACETYL HEXAPEPTIDE-8' and 'ANTI-WRINKLE' are all correct and crisp, and the helix mark is drawn as dots and dashes rather than the solid ribbon that failed earlier waves. The product is the right one for this page \u2014 Acetyl Hexapeptide-8 is the anti-wrinkle peptide the page is about.\n\nCANVAS EXTENDED LEFT to 3750x848 (4.42:1). This frame has the cleanest left edge of any banner on the store: columns 0-80 read mean 16.6, max 24.0, sd 2.16 over the FULL height, and the hand's first bright column is x=90. So nothing touches the edge, no shoulder has to be sheared, and the fill is plain backdrop. Texture is scattered rather than mirror-tiled because at mean 16.6 there is no weave worth preserving and tiling near-black drew faint vertical lines on the 'all' banner. The join at x=1751 measures flat across x=1741-1761 (column means 15.2-15.9) and is invisible at 100%.\n\nOBJECT-POSITION IS CENTRE, NOT RIGHT \u2014 this is a deliberate departure from the other banners, and it was measured. With the conventional 'right center', a 1440 viewport shows master x975-3750, which puts the hand's first bright column only 450px in from the left edge; the h1 'Fine Lines & Wrinkles' is wider than that and ran straight into the bottle. Centring the crop moves the window to x487-3262 and opens the clear dark to 702px, which fits the heading on one line. The cost is 487 master px off the right, which is outer shoulder only \u2014 the face ends at master x2901 and is never touched. At 1920 the surplus is 51px, so centring changes almost nothing there.\n\nNo CSS section is needed: 'center center' is already the browser default for an object-fit image, so the theme's own behaviour is correct here and nothing has to be overridden.\n\nOVERLAY 70 -> 22. At 70 this shot is a grey rectangle.\n\nMOBILE: cropped from original x150-1200 (1050x848), keeping the bottle with the face out to the mouth. The white dropper cap peaks at 255 in the top strip, so a scrim is baked into the file \u2014 same stops as the other banners (0.85 at 0%, 0.62 at 22%, 0 at 58%). Top 30% now reads mean 24.8, max 123.\n\nBUILT WITHOUT EDITING scripts/extend-banner-canvas.py. A second Claude Code session was committing to that file while this ran, so the banner config was injected into the module at runtime from a scratchpad driver instead. If this banner is to be rebuilt later, the entry needs adding to BANNERS properly:\n\n  side: left \u00b7 work_height: 848 \u00b7 target_width: 3750 \u00b7 mobile_crop: (799, 1050)\n  texture_box: (0, 848, 0, 80) \u00b7 texture_mode: scatter \u00b7 shoulder: None \u00b7 bg_fit: (100, 400)\n\nMOBILE TEXT MOVED TO THE BOTTOM, and the mobile file rebuilt, after seeing it live. With the text at the top the body copy landed exactly on the bottle's brand line \u2014 'Understand what causes wrinkles...' sat across 'Skingenetix' at roughly 47-53% of the crop height, and the label's own lines sit at 48-60%. A scrim cannot separate them because they occupy the same band; only moving the text does. The text now sits in the hand-and-hair zone below the bottle, and the scrim was rebuilt bottom-up (0 to 42%, 0.62 at 78%, 0.85 at 100%), which reads mean 32.3 / max 110 across the bottom 28% while leaving the label band at mean 114.7 untouched.\n\nThe mobile file carries a NEW NAME rather than being re-uploaded over the old one: Shopify Files suffixes a name collision and keeps serving the original, which has caught this store three times.\n\nMOBILE REBUILT FACE-LED \u2014 Malcolm's choice (option B of three shown). The crop moves to original x600-1650, which takes the bottle out of frame entirely; the desktop banner carries the product, and on a 393px screen the bottle and the heading were competing for the same band whichever way the text was placed.\n\nThat changes which edge is dark, so the text moves back to the TOP: without the bottle's white dropper the top quarter reads mean 26.9 / max 89.0, against 78.4 along the bottom. The scrim was retuned rather than reused \u2014 the standard stops left the heading on a forehead peaking at 225, and a deep scrim flattened the skin, which is the one thing a skincare image cannot afford. Stops are now 0.86 at 0%, 0.70 at 28%, 0.38 at 55%, 0.08 at 78%, 0 at 100%: rows 0-58% read mean 39.6 / max 153.3 with the face's form intact.\n\nNew filename again, for the same Shopify Files reason.",
+  "images": [
+    {
+      "slot": "page_fine_lines_desktop",
+      "source": "assets/publish-ready/page-fine-lines-wrinkles-banner/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines.jpg",
+      "alt": "Woman reclining with her eyes closed, holding a bottle of Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum beside her face on a dark studio backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines.jpg?v=1787587931"
+    },
+    {
+      "slot": "page_fine_lines_mobile",
+      "source": "assets/publish-ready/page-fine-lines-wrinkles-banner/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines-face-mobile.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines-face-mobile.jpg",
+      "alt": "Close-up of a woman's face in profile, eyes closed, lit against a dark backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines-face-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines-face-mobile.jpg?v=1787639621"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 22,
+        "enable_parallax": false,
+        "image_size": "sm",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-start-center text-center"
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "page_fine_lines_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "page_fine_lines_mobile",
+      "setting": "mobile_image"
+    }
+  ]
+}
