@@ -140,6 +140,33 @@ Also fixed site-wide: four- and five-item link-block rows now fill the full row 
 sizes by items-per-row, so a 4-block row at `large` left a 274px dead column). Applied via a
 `custom-html` section in `footer-group`, so it also corrected `page.ingredients` untouched.
 
+⚠️ **That same footer-group section put dead carousel arrows on six other pages for four
+days** — fixed 2026-08-25, `configs/banners/fix-stray-slider-arrows.json`. The reviews
+slider is built in two halves that have to agree on one number, and they did not: the CSS
+turns a `media-with-text` into a horizontal scroller only at
+`:has(> .media-with-text__item:nth-child(6))`, while the arrow-injection JS guarded on
+`items.length < 2`. **JS said 2, CSS said 6.** So every `media-with-text` with two or more
+blocks got arrows — and because those sections were never converted to scrollers,
+`scrollBy({left: …})` had nothing to scroll. The always-visible rule then pinned them on
+permanently, advertising an interaction that could not happen. Six pages carried them, found
+by scanning all 57 templates: `key_findings` on **copper-peptide, matrixyl, argireline,
+pdrn and glutathione research**, plus `science_story` on **philosophy** — every one a
+3-block section. Malcolm spotted it on copper-peptide-research. The JS threshold is now 6,
+with a comment tying it to the CSS rule. Verified live on five pages: 0 arrows on the
+3-block sections, 2 on the genuine 6-block sliders, and the homepage reviews slider still
+advances a full panel (scrollLeft 0 → 1392).
+
+**Lesson: a homepage that looks right hides a site-wide fault.** The reviews section has
+exactly six items, so the drifted threshold was invisible exactly where the feature was
+built and tested. Anything injected from `footer-group` runs on **every page** — check what
+else its selector matches before shipping.
+
+🩹 **Capture artefact, not a bug — do not report it as one.** In a full-section Playwright
+screenshot the third Key Findings block renders as a blank white card. It is fine: the theme
+uses `reveal-on-scroll`, and an *element* screenshot captures content that is still below the
+viewport at `opacity: 0`. Scrolled into view it reads `opacity: 1` with all its text. It
+looked like a broken block twice.
+
 **Follow-ups**
 
 1. 🔴 **Review copy is invented.** Six names/quotes, five stars, on a store with no orders —
