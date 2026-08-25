@@ -205,10 +205,40 @@ with a comment tying it to the CSS rule. Verified live on five pages: 0 arrows o
 3-block sections, 2 on the genuine 6-block sliders, and the homepage reviews slider still
 advances a full panel (scrollLeft 0 → 1392).
 
+⚠️⚠️ **Reconciling the two halves at six was still wrong, and the same day it hid five
+whole pages** — fixed 2026-08-25 16:45,
+`configs/banners/solution-pages-remove-content-carousel.json`. Malcolm: "for all of the
+solution pages: remove the carousel function from the content blocks, so that the content
+blocks are all shown on the page." A block count is a *proxy* for the reviews slider, not a
+description of it, and six sections on this store have six or more `media-with-text` blocks.
+One is the reviews slider. The other five are the `content` sections of the **Skin
+Solutions** pages — brightening-glow, collagen-skin-plumping, fine-lines-wrinkles,
+firming-skin-density, skin-repair-renewal — each carrying six editorial blocks (intro,
+causes, approach, three products). All five were long-form reading collapsed to **one
+visible block with the other five behind a horizontal scroll**: measured on
+fine-lines-wrinkles, `scrollWidth` 8184 against `clientWidth` 1344.
+
+Both halves now ask the same question, and it is not a count: **does this section contain
+the "See All Customer Reviews" link**, `a[href$="/pages/reviews"]` — the one thing actually
+unique to the reviews slider. `$=` rather than `=` so a Langify locale prefix
+(`/de/pages/reviews`) still matches. Checked against all 57 live templates: 22
+`media-with-text` sections exist and that link is in exactly one. Section ids were not an
+option — they render as `shopify-section-template--<theme id>__<key>` and go stale — and
+`custom-html` rejects Liquid, so section content is the only stable discriminator available
+from a sitewide style block. Verified live on all five pages: `grid-auto-flow: row`,
+`overflow-x: hidden`, no horizontal scroll, 0 arrows, all six blocks stacked and alternating
+(page heights 4308–4732px). Homepage reviews slider unchanged: 6 items, column flow,
+scrollWidth 8304, 2 arrows. Research and philosophy pages unaffected.
+
 **Lesson: a homepage that looks right hides a site-wide fault.** The reviews section has
 exactly six items, so the drifted threshold was invisible exactly where the feature was
 built and tested. Anything injected from `footer-group` runs on **every page** — check what
 else its selector matches before shipping.
+
+**Lesson: scope by what the thing IS, not by a number that happens to match it.** Two bugs
+in two days came out of one count. The first fix made the count consistent; only the second
+replaced it with a selector that describes the target. When a sitewide rule needs to hit one
+section, find the markup unique to that section — a count will always eventually collide.
 
 🩹 **Capture artefact, not a bug — do not report it as one.** In a full-section Playwright
 screenshot the third Key Findings block renders as a blank white card. It is fine: the theme
