@@ -1,0 +1,85 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.science.json, transparency section",
+  "decided_by": "Malcolm, 2026-08-25: make the Transparency Commitment section a branded banner on this image",
+  "note": "Turns the 'Our Transparency Commitment' block on /pages/the-science from a flat grey rich-text panel into a branded full-bleed band.\n\nSECTION TYPE CHANGES, which is why this is a section replacement rather than a settings update: rich-text has no image at all. image-with-text-overlay is the same section the page's hero already uses, and it takes the same heading and richtext blocks, so BOTH blocks move across with their copy byte-for-byte \u2014 no words are rewritten by this change.\n\nIMAGE: evidence+microscope wave, slot A (scope behind the work, type zone left), gpt_image candidate 2. Class B, no product and no branding in frame. Canvas extended 2048 -> 3750x848 (4.42:1) so the full height survives a 1920 viewport in the theme's fixed-height box. Its left edge is the flattest in the set \u2014 leftmost column min 24, max 34, column means holding 27-33 out to x=700 \u2014 so the fill is plain backdrop with scattered grain and the join measures 0.59 levels against a 0.66 reference.\n\nTEXT GOES LEFT, into the reserved zone the brief held clear, matching the page hero and every collection banner published this week. It also takes the band off centred type, which rule 2 of the art direction bars.\n\nHONESTY CONSTRAINT, binding on this image and doubly so under a heading about transparency: this is illustrative laboratory imagery. It must NOT be captioned, or allowed to imply, that Skingenetix owns or operates the facility shown. The copy it sits behind says the opposite \u2014 that we commission no studies of our own \u2014 so the two must not be allowed to contradict each other.\n\nSCOPING: the CSS rides in a `liquid` BLOCK inside the section, so it can use {{ section.id }} and resolve the real id at render time. A custom-html section cannot - Shopify rejects Liquid syntax in that setting - and a hardcoded template id is what left the brightening-glow page's style block matching nothing. A class selector would also hit the page hero, which wants a different mobile scrim.",
+  "images": [
+    {
+      "slot": "transparency_desktop",
+      "source": "assets/publish-ready/page-the-science-transparency-banner/skingenetix-peptide-research-transparency-laboratory-banner.jpg",
+      "filename": "skingenetix-peptide-research-transparency-laboratory-banner.jpg",
+      "alt": "Gloved hands pipetting into a microplate at a dark laboratory bench beside a microscope, illustrating independent peer-reviewed peptide research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-research-transparency-laboratory-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-research-transparency-laboratory-banner.jpg?v=1787639866"
+    },
+    {
+      "slot": "transparency_mobile",
+      "source": "assets/publish-ready/page-the-science-transparency-banner/skingenetix-peptide-research-transparency-laboratory-mobile.jpg",
+      "filename": "skingenetix-peptide-research-transparency-laboratory-mobile.jpg",
+      "alt": "Close-up of gloved hands pipetting into a microplate at a laboratory bench",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-research-transparency-laboratory-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-research-transparency-laboratory-mobile.jpg?v=1787639865"
+    }
+  ],
+  "new_sections": [
+    {
+      "id": "transparency",
+      "insert_after": "ingredients_overview",
+      "image_slot": "transparency_desktop",
+      "section": {
+        "type": "image-with-text-overlay",
+        "blocks": {
+          "transparency_sub": {
+            "type": "subheading",
+            "settings": {
+              "text": "How We Work"
+            }
+          },
+          "transparency_heading": {
+            "type": "heading",
+            "settings": {
+              "text": "Our Transparency Commitment",
+              "heading_tag": "h2"
+            }
+          },
+          "transparency_text": {
+            "type": "richtext",
+            "settings": {
+              "content": "<p>We do not commission our own clinical studies. All research we reference is independent, peer-reviewed, and publicly accessible via PubMed or scientific journal databases.</p><p>Topical peptide delivery remains an active area of research. We reference studies conducted at cosmetically relevant concentrations and clearly distinguish between laboratory (in-vitro) conditions and human trials (in-vivo).</p>"
+            }
+          },
+          "transparency_css": {
+            "type": "liquid",
+            "settings": {
+              "liquid": "{%- comment -%}\n  Scoped with section.id resolved by Liquid at render time, NOT with a hardcoded\n  template id. The brightening-glow page carries a style block written the other\n  way and it has been dead ever since its template id changed - zero matches, so\n  its image sits centre-cropped instead of pinned. A class selector is no good\n  either here: it would hit the page hero as well, and the two bands want\n  different mobile scrims.\n{%- endcomment -%}\n<style>\n#shopify-section-{{ section.id }} .content-over-media > picture > img,\n#shopify-section-{{ section.id }} .content-over-media > img { object-position: right center; }\n@media screen and (min-width: 700px) {\n  #shopify-section-{{ section.id }} .content-over-media > div { max-width: clamp(320px, 44vw, 640px); }\n}\n@media screen and (max-width: 699px) {\n  #shopify-section-{{ section.id }} .content-over-media::before {\n    background-image: linear-gradient(to bottom, rgba(10,14,22,0.88) 0%, rgba(10,14,22,0.70) 45%, rgba(10,14,22,0.60) 100%);\n  }\n}\n</style>"
+            }
+          }
+        },
+        "block_order": [
+          "transparency_sub",
+          "transparency_heading",
+          "transparency_text",
+          "transparency_css"
+        ],
+        "settings": {
+          "full_width": true,
+          "allow_transparent_header": false,
+          "enable_parallax": false,
+          "image_size": "md",
+          "mobile_text_position": "place-self-center text-center",
+          "desktop_text_position": "sm:place-self-center-start sm:text-start",
+          "text_color": "#ffffff",
+          "overlay_color": "#0A0E16",
+          "overlay_opacity": 30
+        }
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "transparency",
+      "slot": "transparency_mobile",
+      "setting": "mobile_image"
+    }
+  ]
+}

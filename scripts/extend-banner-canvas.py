@@ -323,6 +323,33 @@ BANNERS = {
         "profile_smooth": 30.0,
         "shoulder": None,
     },
+    # /pages/the-science, "Our Transparency Commitment" band. Malcolm's pick from the
+    # evidence+microscope wave, 2026-08-25. Easiest edge of the set: the leftmost
+    # column runs min 24, max 34, and column means hold 27-33 all the way out to
+    # x=700, so nothing touches it and there is barely a gradient to preserve.
+    "the-science-transparency": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-the-science-evidence-scope"
+                     / "the-science-eviscope--A-scope-behind-type-left"
+                     / "the-science-eviscope--A-scope-behind-type-left-gpt_image_02.png"),
+        "out": ROOT / "assets/publish-ready/page-the-science-transparency-banner",
+        "desktop": "skingenetix-peptide-research-transparency-laboratory-banner.jpg",
+        "mobile": "skingenetix-peptide-research-transparency-laboratory-mobile.jpg",
+        #: right-anchored; keeps the gloved hands and the plate
+        "mobile_crop": (40, 800),
+        #: 4.42:1, past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport
+        "target_width": 3750,
+        "bg_fit": (100, 700),
+        #: rows 0-848 cols 0-250 measures mean 31.0, max 39, sd 2.6 - flat dark bench
+        "texture_box": (0, 848, 0, 250),
+        #: scatter: at sd 2.6 there is no mottle structure worth tiling, and scatter
+        #: cannot produce the mirror seams that tiling would over a 1702px fill.
+        "texture_mode": "scatter",
+        #: mild. The edge is nearly flat (10 levels top to bottom) so there is little
+        #: gradient to lose, but the profile is still repeated across every column and
+        #: the science bench showed what happens when row variation survives into it.
+        "profile_smooth": 15.0,
+        "shoulder": None,
+    },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
         "out": ROOT / "assets/publish-ready/collection-all-banner",
