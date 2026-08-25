@@ -1,0 +1,22 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.reviews.json, hero",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 chosen, not interim",
+  "note": "The /pages/reviews hero, replacing skingenetix-reviews-page-banner.jpg (a hands-and-pipette shot of which the box only ever showed the middle 41%).\n\nWHICH FRAME. Malcolm asked for CLOSE1-level-eyes-and-smile-fill-frame-nbp_flash_02 off the round-two contact sheet. That exact file was destroyed before it could be used: a re-run of the same slot, launched to fix the crop fault, wrote over it with an identically-named sibling \u2014 generate-multi.py names candidates `<slot>-<supplier>_NN.png` and re-running a slot overwrites rather than versions. There is no seed control, so the original could not be reproduced. Malcolm reviewed the surviving 900px copy against the new nbp_flash_02 and chose the new one: same brief, same slot, same engine, warmer key light, fuller smile, full 6336x2688.\n\nREFRAMED, NOT JUST CROPPED. The master is 2.357:1 and the box is a fixed 440px height across a full-bleed width, so at 1920 the theme discards 46% of the height and cut the smile off entirely \u2014 verified in an in-situ render, not assumed. The face band (eyes to lower lip, source rows 430-2489) is 2059px tall and no 4.36:1 window of a 6336px-wide master can hold it. So scripts/reframe-banner-to-box.py trimmed 231px off the top to centre the band and extended the left backdrop by 3492px, giving 9828x2457 (4.000:1). Extension is safe here specifically because the left edge is flat near-black (per-row std 1.33, subject starts at column 2600) \u2014 the failure case is an edge a limb runs off, which smears.\n\nVERIFIED AT THREE VIEWPORTS before upload: the full smile survives at 1440 and 1920. At 2560 the lower lip reaches the bottom edge \u2014 a wider master would fix that but would crop the face's right side at 1440, so 4.0:1 is the chosen compromise.\n\nMOBILE IS NOT SOLVED. The section carries no mobile_image and the phone box shows only the middle ~35% of the master, which is backdrop. A mobile companion is still owed.",
+  "images": [
+    {
+      "slot": "image",
+      "source": "assets/publish-ready/_reviews/reviews-hero-close1-nbp-flash-02-reframed.png",
+      "filename": "skingenetix-peptide-skincare-customer-reviews-real-results.jpg",
+      "alt": "Close-up of a smiling woman with clear, healthy skin and natural laughter lines \u2014 Skingenetix peptide skincare customer reviews",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-skincare-customer-reviews-real-results.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-skincare-customer-reviews-real-results.jpg?v=1787679448"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "image"
+    }
+  ]
+}

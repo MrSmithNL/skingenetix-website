@@ -54,9 +54,12 @@ def build(slot_dir: Path, out: Path) -> bool:
     scaled = []
     for i, s in enumerate(shots, 1):
         d = work / f"{i:02d}.png"
-        # Stamp the candidate name on the tile. Six suppliers land in one folder and
-        # a sheet without names cannot be turned back into a choice.
-        cap = s.stem.replace(f"{slot_dir.name}-", "").replace("'", "")
+        # Stamp the FULL candidate name on the tile. Six suppliers land in one folder
+        # and a sheet without names cannot be turned back into a choice. The slot
+        # prefix used to be stripped to save width, which made every sheet in a run
+        # carry a tile called `luma_01` - the same string names a different
+        # photograph in every slot, so a name copied off a sheet was ambiguous.
+        cap = s.stem.replace("'", "")
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(s),
                         # An explicit fontfile: drawtext falls back to fontconfig,
                         # which is not configured on this Mac and errors out.
