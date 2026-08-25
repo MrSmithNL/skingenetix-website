@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-25",
+  "target": "live store \u2014 collection skin-repair-renewal, new templates/collection.skin-repair-renewal.json",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 chose SRR-FIX-B-BIGGER nbp_pro_02 after the label rebuild.",
+  "note": "Header banner for /collections/skin-repair-renewal.\n\nSOURCE: pdrn-collagen-repair-cream--I-body-and-face-left nbp_pro_01, regenerated because Malcolm flagged the label as wrong. It was, in five ways, none of them visible below native pixels: the DNA helix sat ABOVE the wordmark as a loose scatter instead of beside it; the vertical rose rule was missing; DEEP RENEWAL TREATMENT was black instead of dusty rose, the only coloured line on the real jar; the ingredient line had collapsed to a lowercase '50ml'; and invented letter-shaped noise ran down both curved sides.\n\nAll five are correct on the chosen frame: helix beside the wordmark on one line, rose rule present, DEEP RENEWAL TREATMENT in rose, PDRN | COLLAGEN | COPPER PEPTIDE | 50ML in full, and no side text. Her thumb clips part of the ingredient line, which is inherited from the pose and is legible.\n\nNOT A MISSPELLING. PDRN COLLAGEN REPAIR was already correct on the original; the contact sheet made several jars in this library look like PORN and every one checked at native pixels reads PDRN. That is the 760px tile downscale eating the stem of the D. Checked rather than assumed, because this product has a superseded v1 library named for exactly that fault.\n\nEXTENDED LEFT: the right edge is 554 of 848 rows of lit shoulder, the left edge is clean backdrop at mean 24.9 max 28. 3750x848 (4.42:1), past the 4.36:1 the 100vw x 440px box reaches at 1920.\n\nTEXTURE BOX SEARCHED, NOT GUESSED. The jar sits hard left here and reaches luminance 255, so every box that worked on other banners is contaminated - (0,400,0,700) hits max 255. A full-height strip of cols 0-90 is the widest genuinely clean sample at mean 25.4 / max 31; cols 0-120 already catches the jar at 219. Scattered rather than tiled, since a 90px sample repeated across 1751px would tile 19 times.\n\nDISTINCT FROM /pages/skin-repair-renewal, which runs its own PDRN cream banner: compared as thumbnails the two differ by 39.3 luminance levels, where the same shot would sit near zero.",
+  "images": [
+    {
+      "slot": "collection_srr_desktop",
+      "source": "assets/publish-ready/collection-skin-repair-renewal-banner/skingenetix-pdrn-collagen-copper-peptide-skin-repair-renewal-cream.jpg",
+      "filename": "skingenetix-pdrn-collagen-copper-peptide-skin-repair-renewal-cream.jpg",
+      "alt": "Woman resting her head to one side holding a jar of Skingenetix PDRN Collagen Repair Deep Renewal Treatment against a dark backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-copper-peptide-skin-repair-renewal-cream.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-copper-peptide-skin-repair-renewal-cream.jpg?v=1787643241"
+    },
+    {
+      "slot": "collection_srr_mobile",
+      "source": "assets/publish-ready/collection-skin-repair-renewal-banner/skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+      "filename": "skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+      "alt": "Close crop of a woman holding the Skingenetix PDRN Collagen Repair deep renewal cream beside her face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg?v=1787586342"
+    }
+  ],
+  "image_assignments": []
+}

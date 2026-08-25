@@ -110,6 +110,19 @@ def css(text_width, scrim_from, object_position, text_max="620px", desktop_scrim
 
 
 PAGES = {
+    # /collections/skin-repair-renewal -- PDRN cream with the label rebuilt. Jar left,
+    # subject right, canvas extended LEFT, so the heading keeps the standard
+    # centre-left position over the extension.
+    "skin-repair-renewal": {
+        "plan": "configs/banners/collection-skin-repair-renewal-publish.json",
+        "desktop": "collection_srr_desktop",
+        "mobile": "collection_srr_mobile",
+        "overlay": 22,
+        "mobile_text": "place-self-end-center text-center",
+        # right, so horizontal cropping only ever removes extended backdrop
+        "css": dict(text_width="42vw", scrim_from="bottom", text_max="660px",
+                    object_position="right center"),
+    },
     # /collections/firming-skin-density -- matrixyl cream, jar right, canvas extended
     # left, so the heading keeps the standard centre-left position over the extension.
     "firming-skin-density": {

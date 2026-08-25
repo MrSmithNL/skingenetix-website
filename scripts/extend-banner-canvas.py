@@ -406,6 +406,33 @@ BANNERS = {
             "skin_box": (836, None, 0, 400),
         },
     },
+    # /collections/skin-repair-renewal -- PDRN cream, label rebuilt. Jar LEFT, subject
+    # right, so the canvas grows LEFT: the right edge is 554 of 848 rows of lit skin
+    # (her shoulder), the left edge is clean backdrop at mean 24.9 max 28.
+    "skin-repair-renewal-collection": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-collection-skin-repair-renewal-fix"
+                     / "SRR-FIX-B-BIGGER" / "SRR-FIX-B-BIGGER-nbp_pro_02.png"),
+        "out": ROOT / "assets/publish-ready/collection-skin-repair-renewal-banner",
+        "desktop": "skingenetix-pdrn-collagen-copper-peptide-skin-repair-renewal-cream.jpg",
+        "mobile": "skingenetix-pdrn-collagen-skin-repair-renewal-cream-mobile.jpg",
+        #: native 6336x2688; measurements below are in working pixels
+        "work_height": 848,
+        #: right-anchored - the subject side - keeping her face with the jar
+        "mobile_crop": (30, 1100),
+        "target_width": 3750,
+        "bg_fit": (100, 700),
+        #: SEARCHED, not guessed. The jar sits hard left in this frame and reaches
+        #: luminance 255, so every box that worked on other banners is contaminated
+        #: here - (0,400,0,700) hits max 255. A full-height strip of cols 0-90 is the
+        #: widest genuinely clean sample: mean 25.4, max 31. cols 0-120 already
+        #: catches the jar at 219.
+        "texture_box": (0, 848, 0, 90),
+        #: scatter: a 90px-wide sample mirror-tiled across 1751px would repeat 19
+        #: times, and tiling has already left a measurable seam on this store.
+        "texture_mode": "scatter",
+        #: left edge is backdrop top to bottom
+        "shoulder": None,
+    },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
         "out": ROOT / "assets/publish-ready/collection-all-banner",
@@ -546,22 +573,37 @@ BANNERS = {
     # texture_box has to stop at x=120: her fingers reach x=65 in the lower rows, and the
     # boxes one step wider read max 173-185 where this one reads 27.
     "brightening-glow-collection": {
-        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-glutathione-brightening-serum"
-                     / "glutathione-brightening-serum--A-face-full-prod-left"
-                     / "glutathione-brightening-serum--A-face-full-prod-left-nbp_flash_01.png"),
+        #: the REPAIRED frame. The library original prints "25i GLUTATHIONE | 30ML" where
+        #: the product is 2%; this is Malcolm's pick from the four-supplier repair wave,
+        #: verified at 100%: 2% GLUTATHIONE | 30ML with all six elements clean.
+        #: He chose it over the lower-drift nbp_flash candidates (3.85 against this one's
+        #: 8.57) - and the drift here is tonal plus a slightly different crop ratio
+        #: (2.415:1 native against the library frame's 2.357:1), not a restage: pose,
+        #: face, hand and bottle all hold.
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-glut-a-bottle-text-fix"
+                     / "GLUTAFIX" / "GLUTAFIX-gpt_image_02.png"),
         "out": ROOT / "assets/publish-ready/collection-brightening-glow-banner",
         #: deliberately distinct from the PAGE banner's filenames, which are
         #: skingenetix-glutathione-brightening-radiant-glow-serum{,-mobile}.jpg. Shopify
         #: Files suffixes on collision rather than replacing, so a near-miss name would
         #: quietly serve the page's picture here.
-        "desktop": "skingenetix-brightening-glow-glutathione-radiant-serum-banner.jpg",
-        "mobile": "skingenetix-brightening-glow-glutathione-radiant-serum-mobile.jpg",
+        #: NEW names again - this is the third distinct pair in this family, after the
+        #: page banner and the faulty-label collection banner. Shopify Files suffixes on
+        #: collision rather than replacing, so reusing either would keep serving the old
+        #: picture.
+        "desktop": "skingenetix-brightening-glow-glutathione-serum-2-percent.jpg",
+        "mobile": "skingenetix-brightening-glow-glutathione-serum-2-percent-mobile.jpg",
+        #: native 2048x848, already at working height
         "work_height": 848,
         #: inset from the RIGHT edge - the subject side for a LEFT-extended banner.
-        #: Holds the bottle (x 65-500 of 1999) together with her face.
-        "mobile_crop": (620, 1350),
+        #: Holds the bottle together with her face.
+        "mobile_crop": (620, 1380),
         "target_width": 3750,
         "bg_fit": (100, 700),
+        #: RE-MEASURED for this render, not carried over. Its left edge runs 14.8-21.8
+        #: with nothing above 45, but the clean box is SHALLOWER than the library
+        #: frame's: rows 0-400 cols 0-120 reads max 25, while the full-height version of
+        #: the same box reads 192 because her fingers sit higher in this crop.
         "texture_box": (0, 400, 0, 120),
         #: scatter, per the serums banner: a box passing the max-luminance test can still
         #: carry vertical structure that mirror-tiling turns into repeated lens shapes.
