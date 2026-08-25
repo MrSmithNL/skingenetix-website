@@ -1,0 +1,39 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/page.skin-repair-renewal.json, section `content`, blocks `causes` and `approach`",
+  "decided_by": "Claude, within Malcolm's brief of 2026-08-25",
+  "template": "templates/page.skin-repair-renewal.json",
+  "note": "THE MOLECULE CHECK DECIDED BOTH PICKS, AND IT OVERTURNED THE ONE THAT LOOKED BEST.\n\nnbp_pro_01 won the approach block on the contact sheet and on the render-size pairing \u2014 closest palette to the live Matrixyl set, cleanest block geometry, best match to the chosen causes frame. At 100% it fails twice: its copper chains carry FIVE beads, not three, and its bead ladders visibly SPIRAL. GHK-Cu is a TRIpeptide, so five beads is not a styling preference, it is the wrong molecule; and a spiralling ladder is the DNA-double-helix clich\u00e9 the whole explainer set has negated from the start. Neither fault is visible below about 40% zoom.\n\nSo every one of the eleven candidates was cropped to its sphere band at full resolution and the beads counted. On the count: gpt-image (both), nbp_flash (both), nbp_pro_02, seedream (both) and luma_01 all render the tripeptide correctly as pearl-copper-pearl; nbp_pro_01 and luma_02 do not; FLUX.2 adds GOLD beads alongside the copper, which is negated by name. That is the same lesson as the shipping-box helix, one level further in \u2014 a chain that reads right at thumbnail size can be the wrong molecule at full size, and only counting finds it.\n\nOf the candidates that survive the count, nbp_flash_02 is the best picture: four spheres, two ladders and two tripeptides, shafts of light rather than the solid copper RODS nbp_pro_02 rendered, and a soft high-key palette that sits with the Matrixyl set instead of gpt-image's saturated blue wall.\n\ncauses  keeps nbp_pro_01 \u2014 it is a different slot and its faults were all in the sphere band, which that frame does not have. Verified at 100%: piled lifting plates, grey specks settling into the hollows, cell rows thinned to a sparse row, the surface sagging into a broad furrow over an empty gap, sparse slack fibre, and NO spheres, shafts or glints anywhere.",
+  "images": [
+    {
+      "slot": "causes",
+      "source": "assets/ai-generated/2026-08-22-multi-block-skin-repair-renewal-medical/srr-f1-renewal-slowed/srr-f1-renewal-slowed-nbp_pro_01.png",
+      "filename": "skingenetix-what-slows-skin-repair-renewal-cross-section.jpg",
+      "alt": "Medical explainer cross-section of ageing skin: surface cells piled up and dull with airborne particles settling on them, a thinned cell layer beneath, and sparse slack collagen fibres below letting the surface sink into a furrow",
+      "uploaded_handle": "shopify://shop_images/skingenetix-what-slows-skin-repair-renewal-cross-section.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-what-slows-skin-repair-renewal-cross-section.jpg?v=1787674672"
+    },
+    {
+      "slot": "approach",
+      "source": "assets/ai-generated/2026-08-22-multi-block-skin-repair-renewal-medical/srr-f2-renewal-supported/srr-f2-renewal-supported-nbp_flash_02.png",
+      "filename": "skingenetix-pdrn-copper-peptide-skin-renewal-diagram.jpg",
+      "alt": "Medical explainer cross-section of skin showing PDRN polynucleotide ladders and copper peptide tripeptides delivered in droplets, reaching the renewal cell layer and the collagen fibres below, with the surface layer left intact",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-copper-peptide-skin-renewal-diagram.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-copper-peptide-skin-renewal-diagram.jpg?v=1787674672"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "causes",
+      "slot": "causes",
+      "setting": "image"
+    },
+    {
+      "section": "content",
+      "block": "approach",
+      "slot": "approach",
+      "setting": "image"
+    }
+  ]
+}

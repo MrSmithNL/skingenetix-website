@@ -48,6 +48,49 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### ✅ BRAND-007 — /pages/skin-repair-renewal: two medical explainer diagrams
+
+**Closed 2026-08-25.** Malcolm: professional medical-beauty explainer diagrams for the
+*What Slows Skin Repair?* and *The Renewal Approach* blocks, in the style of the Matrixyl
+explainer set. Both blocks wore borrowed stock — a cream-texture swirl and a turquoise
+laboratory scene — neither of which explained anything.
+
+**Style inherited unchanged** from the live Matrixyl set on `/pages/matrixyl-3000-research`:
+layered skin cross-section, three legible strata, actives as translucent spheres above the
+surface, delivery as shafts of light rather than arrows, starburst glints at arrival,
+high-key hazy ground, peach-cream tissue. Colour is Clinical blue `#014EB1` — this concern's
+ground colour in the concern-to-colour map — with teal and turquoise negated so it never
+blurs into the Matrixyl page, the mirror of that brief negating copper.
+
+**The two pictures are deliberately not interchangeable**, which is the r3 lesson:
+
+- **causes is the deficit state** and carries *no* spheres, *no* shafts and *no* glints — the
+  whole delivery vocabulary is absent on purpose. Its four faults are the four the copy
+  names, each in the stratum it belongs to: piled dull surface plates (slower renewal), grey
+  motes settling on them (environmental stress), sparse slack fibre below (loss of firmness),
+  and the surface sagging into the gap (reduced resilience).
+- **approach is the supported state**, and it had to carry the copy's *negative* argument —
+  renewal skincare supports the skin's own processes rather than forcing turnover through
+  exfoliation, "which can thin the skin". So the outer layer is explicitly whole, and
+  peeling, flaking, dissolving and scrub particles are all negated by name. A picture that
+  stripped the surface would illustrate the thing the paragraph argues against.
+
+**Two actives, two devices, two destinations**, because this page is not a single-ingredient
+page: PDRN as a flat untwisted ladder of paired beads reaching the renewal cell layer, GHK-Cu
+as a three-bead chain with a copper centre reaching the fibre zone.
+
+**The molecule check overturned the best-looking candidate.** `nbp_pro_01` won the approach
+block on the contact sheet *and* on the render-size pairing. At 100% its copper chains carry
+**five** beads and its ladders visibly **spiral** — the wrong molecule for a tripeptide, and
+the DNA cliché the set has negated throughout. Neither fault is visible below ~40% zoom. All
+eleven candidates were then cropped to the sphere band at full resolution and the beads
+counted: gpt-image, nbp_flash, nbp_pro_02, seedream and luma_01 render it correctly;
+nbp_pro_01 and luma_02 do not; FLUX.2 adds gold beads, negated by name. `nbp_flash_02` won on
+the count *and* the picture.
+
+Configs: `block-skin-repair-renewal-medical.json` (the briefs),
+`block-skin-repair-renewal-publish.json` (picks, handles and the reasoning).
+
 ### ✅ BRAND-006 — /pages/faq category blocks: titles to the top, real photography in all five
 
 **Closed 2026-08-25.** Malcolm: align the block titles to the top of the image area, then
