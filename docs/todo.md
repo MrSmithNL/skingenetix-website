@@ -431,8 +431,34 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    **also on `/pages/our-philosophy`** — its home — so the file was left alone and only this
    page's reference moved. The section alternates `media_position` per block, so f2 renders
    image-right and the lattice's dense end lands nearest the text.
-   **Still outstanding on that page: `key_findings.f3` wears
-   `skingenetix-philosophy-quality.jpg`**, a generic lab bench, the same borrowing.
+   **`key_findings.f3` is now done too** (2026-08-25, verified live: the page references
+   `skingenetix-copper-peptide-ghk-cu-radiant-skin-appearance.jpg` and no longer
+   `skingenetix-philosophy-quality.jpg`). Malcolm's pick
+   `cpr-sat--C-direct-gaze-clinical-blue-gpt_image_02` — a photograph, deliberately, because
+   f3's finding (Miller 2006) is **self-reported satisfaction**, so a woman appraising her own
+   skin depicts the actual endpoint where a third mechanism illustration would depict
+   something the study never measured. Alt text does not present her as a trial participant.
+   **All three blocks on `/pages/copper-peptide-research` are therefore done.**
+
+   ✅ **`/pages/matrixyl-3000-research` — all three Key Findings blocks done, 2026-08-25 16:20**,
+   `configs/banners/page-matrixyl-research-key-findings.json`. It had the same borrowing on all
+   three: a product shot of the serum on f1, and the two philosophy-page frames on f2 and f3.
+   Malcolm chose the **`nbp_flash_01` set** — one engine, one candidate index, all three blocks —
+   over a per-block mix, because the three sit stacked on one page and the object language has
+   to be identical. The wave (`block-matrixyl-research-medical`, commit `a79f93f`) generated 31
+   candidates across 6 suppliers; the alternative offered was `gpt_image_02`, stronger on f1's
+   sparse-to-dense mechanism but a softer, painterly render that sits differently against
+   nbp_flash's crisp CGI. Set coherence won.
+   Uploaded under three new names, none a prefix of another (the uploader binds on
+   `filename:<stem>*`): `…-collagen-network-supports-skin-surface`,
+   `…-fibroblasts-building-collagen-matrix`, `…-signalling-fibroblast-collagen-synthesis`.
+   All three replaced files are untouched and still live at their own homes.
+   ⚠️ **Correction to the box geometry recorded on the copper-peptide job:** the media box is
+   **not** 1:1 at every width. Measured live here, `key_findings.f1` is **660×764** at 1440 —
+   the taller text column stretches the row, so a square master **is** cropped ~7% off each
+   side on that block. f2 and f3 are 660×660, and all three are 350×350 at 390. Nothing
+   important is lost on f1 (centred subject, pale surround) but the "no square has ever been
+   cropped in this section" claim is wrong and should not be inherited again.
    ⚠️ The claim above that `/pages/pdrn-research` shows `skingenetix-philosophy-research.jpg`
    is **stale** — the page returns 200 and no longer references that file. Re-check before
    acting on it.
