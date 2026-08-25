@@ -1,0 +1,72 @@
+{
+  "wave": "page-acetyl-research-silk",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Silver-silk batch for the /pages/acetyl-hexapeptide-8-research header. Malcolm rejected the damping-wave banner and asked for silk.\n\nWHY THE FIRST SILK ATTEMPTS FAILED, so these do not repeat it. The RELAXING-SILK concept was in the previous batch and lost on measurement, not on taste: its four candidates measured centre-block means of 45, 54, 58 and 65 against a batch best of 14. The cause was structural - every engine filled the frame with fabric, and lit silk is bright by definition, so a centred white heading had nothing dark to sit on. Asking for a 'quiet centre' was not enough when the subject occupies the whole picture.\n\nWHAT IS DIFFERENT HERE. The dark centre is made a matter of GEOMETRY rather than of lighting mood. Every brief below places the silk in a stated part of the frame - the lower third, the two outer quarters, a single low diagonal - and states that the remainder is unlit graphite with nothing in it at all. That is the same move that made the collection banners work: say where the subject ends, and the empty space stops being a hope.\n\nCROP SURVIVAL. Generated at 3:1, the widest gpt-image accepts, then cropped to 4.400:1 for this page's band - which is 100vw x 440px, measured live, because its heading is one line. That crop removes the top and bottom 16% of the frame, so every brief is written to keep the whole composition inside the central horizontal band and to put nothing important near the top or bottom edge.\n\nCOLOUR. Acetyl Hexapeptide-8's scene colour is Pearl grey #D8D6D4 on graphite #1A1A1A. Silk is the right material for it: pearl is a sheen rather than a hue, and silk is how a sheen becomes a subject. No other colour appears.\n\nMEANING. The ingredient softens expression lines by damping repeated micro-contraction, so the through-line stays 'creased becoming smooth' - which silk carries naturally, and which the wave carried too abstractly.\n\nSuppliers: gpt-image, NBP Flash, NBP Pro, Seedream. FLUX.2 stays out - it lost the matrixyl concept batch outright with the brightest centres of all thirty, and centre discipline is the whole requirement here.",
+  "defaults": {
+    "candidates": 1,
+    "negative_global": "silk filling the frame, fabric across the whole picture, bright centre, lit centre, subject in the middle of the frame, hard edge crossing the centre, specular highlight in the centre, colour, saturated colour, gold, champagne, warm light, blue, teal, pink, green, text, lettering, watermark, signature, logo, brand mark, bottle, jar, packaging, product, human face, model, hands, body, clothing, garment, dress, curtain, bedsheet, pillow, drapery in folds, tassels, embroidery, pattern, print, floral, bokeh sparkle, lens flare, banding, posterised gradient, plastic CGI, oversaturated, cluttered"
+  },
+  "slots": [
+    {
+      "id": "SILK-1-LOW-BAND",
+      "title": "Silk along the bottom, graphite above",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. A single sheet of fine silver-grey silk, colour #D8D6D4, lies across the LOWER THIRD of the picture only, seen at a very low grazing angle so it recedes away from the camera. Within that lower band the silk is gathered into fine parallel creases at the far left and far right, and smooths to an unbroken flat plane in the middle. Everything ABOVE the silk - the upper two thirds of the frame - is empty unlit graphite, colour #1A1A1A, dark and even, with nothing in it at all: no fabric, no highlight, no edge. One soft light rakes from the left, low and almost parallel to the silk, so only the crease ridges pick up a thin sheen and the flat centre stays in shadow. Keep the entire composition within the central horizontal band of the frame, with nothing important close to the top or bottom edge. 100mm macro, very shallow depth of field, real silk fibre visible on the nearest ridges, fine film grain, no colour at all. Calm, restrained, expensive.",
+      "negative_extra": "silk in the upper half, fabric filling the frame, horizon in the middle, bright sky above, fabric touching the top edge"
+    },
+    {
+      "id": "SILK-2-TWO-EDGES",
+      "title": "Silk gathered at both outer quarters, empty dark middle",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. Fine silver-grey silk, colour #D8D6D4, is gathered into soft vertical folds in the OUTER QUARTER of the picture on the left, and again in the OUTER QUARTER on the right. The whole MIDDLE HALF of the frame between them is empty unlit graphite, colour #1A1A1A - not fabric in shadow but genuinely nothing, dark and even and featureless. Where the silk meets that empty middle it falls away steeply into darkness rather than ending at a hard line. One soft light from each side catches the fold ridges nearest the outer edges and leaves everything inward of them dark. Keep the folds within the central horizontal band of the frame, clear of the top and bottom edges. 100mm macro, very shallow depth of field, visible silk fibre on the nearest folds, fine film grain, no colour at all. Quiet and symmetrical without being mirrored.",
+      "negative_extra": "fabric crossing the middle, silk stretched between the two sides, curtain opening, theatre curtains, mirrored halves, bright gap, glow in the gap"
+    },
+    {
+      "id": "SILK-3-SINGLE-DIAGONAL",
+      "title": "One silk edge crossing low on a diagonal",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. The cut EDGE of a single sheet of fine silver-grey silk, colour #D8D6D4, crosses the picture on a long shallow diagonal, entering low on the left and leaving slightly lower on the right, so it stays within the bottom half of the frame throughout. Below and behind that edge the silk lies in soft shallow creases; above it there is only empty unlit graphite, colour #1A1A1A, dark and even, occupying most of the picture. The creases are finest and most numerous near the left edge of the frame and relax away to almost nothing by the right. One soft low light from the left runs along the silk edge so it reads as a thin bright line for part of its length and dissolves into shadow for the rest. Keep everything within the central horizontal band, well clear of the top and bottom edges. 100mm macro, very shallow depth of field, fine film grain, no colour at all. Minimal and precise.",
+      "negative_extra": "edge crossing the centre high, diagonal through the middle of the frame, fabric in the upper half, steep diagonal, edge touching a corner"
+    },
+    {
+      "id": "SILK-4-FALLING-AWAY",
+      "title": "Silk falling away into deep shadow",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. Fine silver-grey silk, colour #D8D6D4, fills the LEFT QUARTER of the picture in soft shallow folds, lit by one low soft light from the far left. As the fabric travels toward the right it turns away from that light and falls progressively into deep shadow, so that by the middle of the frame it has become indistinguishable from the graphite ground, colour #1A1A1A, and the entire right half of the picture is simply dark and empty. The transition is a long smooth fall in brightness with no edge, no line and no visible boundary anywhere. Keep the lit fabric within the central horizontal band, clear of the top and bottom edges. 100mm macro, very shallow depth of field, real silk fibre visible where the light catches, fine film grain, no colour at all. A study in falloff.",
+      "negative_extra": "even lighting, fabric visible on the right, second light source, rim light on the right, hard shadow line, vignette ring"
+    },
+    {
+      "id": "SILK-5-STACKED-EDGES",
+      "title": "Folded silk seen edge-on, stacked at the sides",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. Several sheets of fine silver-grey silk, colour #D8D6D4, lie folded and stacked flat, seen almost exactly edge-on so that only their folded edges show as a series of fine horizontal lines. The stack sits in the LEFT THIRD of the picture and a second, lower stack in the RIGHT THIRD; between them the frame is empty unlit graphite, colour #1A1A1A, dark and even with nothing in it. The folded edges are crisp and evenly spaced in the left stack, and looser and further apart in the right one. One soft light from above catches the top edge of each fold and leaves the faces of the sheets dark. Keep both stacks within the central horizontal band of the frame, clear of the top and bottom edges. 100mm macro at f8, very shallow depth of field, fine film grain, no colour at all. Ordered, quiet, architectural.",
+      "negative_extra": "stack in the centre, fabric bridging the two stacks, towels, folded laundry, paper, book pages, ream of paper, even spacing across the whole frame"
+    },
+    {
+      "id": "SILK-6-OVER-CURVE",
+      "title": "Silk drawn over a curve, one thin rim of light",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page acetyl-hexapeptide-8-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. A single sheet of fine silver-grey silk, colour #D8D6D4, is drawn taut over a broad shallow curve that rises out of the bottom-left of the picture and sinks back down before the middle, like fabric over the shoulder of a smooth form. Only the crest of that curve catches the light, as one long thin rim of sheen; everywhere else the silk falls into shadow and merges with the graphite ground, colour #1A1A1A. The whole right half of the frame is empty and dark. Fine tension creases radiate from the crest and fade out within a short distance. Keep the curve inside the central horizontal band of the frame, clear of the top and bottom edges. 100mm macro, very shallow depth of field, real silk fibre on the lit crest, fine film grain, no colour at all. Sculptural and quiet.",
+      "negative_extra": "body underneath, shoulder, knee, figure under the fabric, ghost shape, curve in the centre, curve on the right, two curves, bright fabric across the frame"
+    }
+  ]
+}
