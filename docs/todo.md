@@ -94,8 +94,31 @@ id, because template-scoped ids go stale.
 Shopify Files. Deleting data from an external service needs Malcolm's explicit go-ahead
 (CLAUDE.md hard boundary). Nothing references them — search Files for `faq-placeholder`.
 
+**Two corrections, same day.** Malcolm: *"redo the Returns & Refunds image with a caucasian
+middle aged woman"* and *"redo the Skincare & Routine image removing the black section at the
+top covering the models face."*
+
+- **Returns** needed no new generation. The original run already held **seven** Caucasian
+  candidates across four engines — the East Asian model had been a choice made for range
+  across the page, not the only thing the batch produced. gpt-image 01 wins it at render
+  size, and the swap cost nothing. The all-suppliers rule paid twice: once for the first
+  choice, again for making a change free.
+- **Skincare did need re-shooting, and my brief caused the fault.** It asked for a backdrop
+  *"falling to near-black at the top of the frame so the upper third is quiet and almost
+  empty"* — written to give the white title a dark ground. At a 4:3 crop of a face that
+  close, a quiet empty upper third **is** a black bar across the forehead. Every engine did
+  exactly what was asked. The rewrite states the frame as an **edge condition** — skin
+  reaches all four edges, no backdrop anywhere — because the way to stop an engine putting
+  something behind her is to leave nothing behind her to describe. All nine candidates came
+  back clean, so it was the brief, not the engines.
+- Without a dark ground the new frame reads 6.4:1 under the title. Flagged `bright`, it
+  reads 15.0:1. **That flag is why a photograph never has to be composed around the type.**
+  All five now measure 10.6 / 11.2 / 19.4 / 20.7 / 15.0.
+
 Configs: `page-faq-image-layout.json` (layout + CSS), `faq-category-images.json` (the three
-new briefs), `faq-category-images-publish.json` (all five, with handles and reasoning).
+new briefs), `faq-category-images-publish.json` (the first five, with handles and reasoning),
+`faq-skincare-no-black-band.json` (the re-shoot brief), `faq-revisions-publish.json` (the two
+replacements).
 
 ### PHOTO-002 — 2026 redesign: reference sets built, configs outstanding
 

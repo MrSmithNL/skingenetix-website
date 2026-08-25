@@ -1,0 +1,27 @@
+{
+  "created": "2026-08-25",
+  "target": "/pages/faq \u2014 replacing two of the five category pictures",
+  "decided_by": "Claude, on Malcolm's two corrections of 2026-08-25",
+  "supersedes": "the faq_returns and faq_skincare entries of configs/banners/faq-category-images-publish.json",
+  "note": "TWO CORRECTIONS, AND ONLY ONE OF THEM NEEDED NEW PICTURES.\n\nRETURNS & REFUNDS - 'redo with a caucasian middle aged woman'. Nothing was regenerated, because the original run already held SEVEN Caucasian candidates across four engines; the East Asian model was a choice made for range across the page, not the only thing the batch produced. Re-running would have spent four minutes to arrive back at the same shortlist. gpt-image 01 wins it at render size: a genuinely unforced smile that creases the eyes, freckles and crow's feet intact at 100%, the screen angled away and invisible, and a near-black ground that puts the title at about 20:1 with no help from the scrim. THE ALL-SUPPLIERS RULE PAID TWICE HERE - once for the original choice, and again for making a change free.\n\nSKINCARE & ROUTINE - 'remove the black section at the top covering the models face'. This one genuinely needed re-shooting, and the fault was in my own brief. It asked for a graphite backdrop 'falling to near-black at the top of the frame so the upper third is quiet and almost empty', written to give the white title somewhere dark to sit. At a 4:3 crop of a face that close, a quiet empty upper third IS a black bar across the forehead, with a hard horizontal edge where the backdrop meets the skin. Every engine did exactly what was asked. Same shape as the-brief-caused-the-plainness: the instruction meant to buy one quality bought a fault instead.\n\nThe rewrite states the frame as an EDGE CONDITION - skin reaches all four edges, no backdrop appears anywhere - rather than describing a background, because the reliable way to stop an engine putting something behind her is to leave nothing behind her to describe. All nine candidates came back clean, so it was the brief and not the engines.\n\nCONTRAST CAME BACK FROM THE SCRIM, NOT FROM THE PICTURE. Without a dark ground the new frame reads 6.4:1 under the title on the standard ramp. Flagged `bright` - the per-block steeper ramp added earlier today for the pale open-jar shot - it reads 10.5:1, in line with the 10.6 and 11.2 of the two blocks above it. That flag exists so a photograph never has to be composed around the type.\n\nSeedream put a rubber bulb on the dropper in one candidate despite the negative naming it; NBP Pro's two both carry a cool blue rim light the others do not. Neither is worth a re-run - they are why the brief goes to every engine.",
+  "template": "templates/page.faq.json",
+  "images": [
+    {
+      "slot": "faq_returns",
+      "source": "assets/ai-generated/2026-08-22-multi-faq-category-images/FAQPHONE-returns/FAQPHONE-returns-gpt_image_01.png",
+      "filename": "skingenetix-smiling-woman-checking-skincare-order-phone.jpg",
+      "alt": "A smiling middle-aged woman looking down at her mobile phone, pleased with what she is reading, against a deep graphite background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-smiling-woman-checking-skincare-order-phone.png",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-smiling-woman-checking-skincare-order-phone.png?v=1787669912"
+    },
+    {
+      "slot": "faq_skincare",
+      "source": "assets/ai-generated/2026-08-22-multi-faq-skincare-no-black-band/FAQPIPETTE2-skincare/FAQPIPETTE2-skincare-nbp_flash_01.png",
+      "filename": "skingenetix-clear-serum-pipette-drop-on-cheek-macro.jpg",
+      "alt": "A macro close-up filling the frame with a woman's cheek as a clear serum falls from a glass pipette held just above her cheekbone",
+      "bright": true,
+      "uploaded_handle": "shopify://shop_images/skingenetix-clear-serum-pipette-drop-on-cheek-macro.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clear-serum-pipette-drop-on-cheek-macro.jpg?v=1787669910"
+    }
+  ]
+}
