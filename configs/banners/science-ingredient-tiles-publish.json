@@ -1,0 +1,52 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.science.json, section ingredients_overview",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 narrowed a 9-frame shortlist to exactly three winners, one per remaining placeholder block: E-single-cell flux2_01, E-single-cell-lit seedream_01, D-double-helix gpt_image_01.",
+  "note": "The three ingredient tiles on /pages/the-science that were still wearing borrowed photographs.\n\nWHICH THREE, AND WHY ONLY THREE. ingredients_overview has five blocks. ingredient_1 (Copper Peptide) and ingredient_3 (Matrixyl) already carry purpose-made 2048x2048 images published earlier by a parallel session, so they are untouched here. The remaining three were on borrowed stock: ingredient_2 on skingenetix-ingredients-argireline-serum.jpg, ingredient_4 and ingredient_5 on philosophy-page photographs.\n\nSLOT IDS WERE RESOLVED AGAINST THE FILESYSTEM, NOT ASSUMED. Slot letters A-F restart in every wave, so a bare name like 'E-single-cell' is not unique across the nine ingredient waves. Each winner was globbed and confirmed to exactly one file before use:\n  E-single-cell flux2_01        -> ingredient_2 acetyl wave    (pearl grey)\n  E-single-cell-lit seedream_01 -> ingredient_5 glutathione     (champagne)\n  D-double-helix gpt_image_01   -> ingredient_4 pdrn            (blush)\nNote 'E-single-cell' and 'E-single-cell-lit' are DIFFERENT slots in DIFFERENT waves; the shorter name belongs to acetyl. An earlier shortlist also named D-cell-field, which existed in two waves as two different photographs; Malcolm's final three retire that ambiguity entirely.\n\nEACH BLOCK TAKES ONE IMAGE, which is why the shortlist had to narrow. Glutathione had four candidates and acetyl three.\n\nCOLOURS ARE ALREADY CORRECT PER INGREDIENT, and that is the point of the set: pearl grey for Acetyl Hexapeptide-8, blush for PDRN, champagne for Glutathione \u2014 the scene colours from the concern-to-colour map, so the five tiles read as one system rather than five stock pictures.\n\nLOADING SPEED, MEASURED RATHER THAN ASSERTED (Malcolm's instruction, 2026-08-25). The tile's srcset ladder tops out at 800w \u2014 measured off the live DOM, sizes '(max-width: 699px) calc(73vw - 40px), (max-width: 999px) calc(38vw - 64px), calc(min(1440px, 100vw) / 3)' \u2014 and the img already carries loading=\"lazy\". So a 2048 master is never exceeded by any request and is not dead weight; it also matches the two tiles already published, so the five stay consistent.\n\nThe sources were converted PNG -> JPEG at quality 95, 4:4:4, progressive, metadata dropped, which is what the pipeline does everywhere else. Deliberately NOT compressed harder: that was measured on 2026-08-24 and made the site marginally SLOWER, because Shopify's CDN transcodes every image to WebP and resizes per srcset, so the source JPEG is never what a visitor downloads \u2014 handing the WebP encoder a picture full of JPEG artefacts costs bits to reproduce. Whole-page image weight across that change was 974KB before and 979KB after. Rule 5 of .claude/rules/website-imagery.md.\n\nSEO FILENAMES follow the convention set by the two tiles already live (skingenetix-<ingredient>-<subject>-<context>.jpg): brand first, then the ingredient a shopper would actually type, then what the picture shows. check_seo_name() will warn on the bare digits in 'hexapeptide-8' \u2014 as it already does for the live 'matrixyl-3000' file \u2014 which is the ingredient's real name, not filler, so the warning is accepted rather than designed around.",
+  "images": [
+    {
+      "slot": "acetyl_tile",
+      "source": "assets/publish-ready/science-ingredient-tiles/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg",
+      "alt": "Electron-microscope style view of a single skin cell in cool pearl grey, representing Acetyl Hexapeptide-8 expression-line research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg?v=1787656228"
+    },
+    {
+      "slot": "glutathione_tile",
+      "source": "assets/publish-ready/science-ingredient-tiles/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg",
+      "filename": "skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg",
+      "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228"
+    },
+    {
+      "slot": "pdrn_tile",
+      "source": "assets/publish-ready/science-ingredient-tiles/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg",
+      "filename": "skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg",
+      "alt": "Polynucleotide double helix rendered in soft blush pink, representing PDRN skin repair and renewal research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?v=1787656228"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "ingredients_overview",
+      "block": "ingredient_2",
+      "slot": "acetyl_tile",
+      "setting": "image"
+    },
+    {
+      "section": "ingredients_overview",
+      "block": "ingredient_4",
+      "slot": "pdrn_tile",
+      "setting": "image"
+    },
+    {
+      "section": "ingredients_overview",
+      "block": "ingredient_5",
+      "slot": "glutathione_tile",
+      "setting": "image"
+    }
+  ]
+}

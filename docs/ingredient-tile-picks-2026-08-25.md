@@ -105,3 +105,23 @@ built and published earlier the same day from a different wave entirely —
 
 The copper-peptide **block f1** tile (`key_findings`) has a 55-candidate wave generated and
 sheeted (`block-copper-peptide-collagen-pathways`) and is **still awaiting a pick**.
+
+---
+
+## RESOLVED — published 2026-08-25
+
+Malcolm narrowed the nine-frame shortlist to **three winners**, one per remaining
+placeholder block. The ambiguous `D-cell-field` pair was not chosen, so the collision
+never had to be resolved.
+
+| Block | Ingredient | Winner | Published as |
+|---|---|---|---|
+| `ingredient_2` | Acetyl Hexapeptide-8 | `E-single-cell` `flux2_01` | `skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg` |
+| `ingredient_4` | PDRN | `D-double-helix` `gpt_image_01` | `skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg` |
+| `ingredient_5` | Glutathione | `E-single-cell-lit` `seedream_01` | `skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg` |
+
+`ingredient_1` (Copper Peptide) and `ingredient_3` (Matrixyl) already carried
+purpose-made images from a parallel session and were left untouched; both verified
+intact after the patch. **No placeholders remain in this section.**
+
+Undo: `python3 scripts/patch-template.py --restore backups/page.science-20260825-131042.json --template templates/page.science.json`
