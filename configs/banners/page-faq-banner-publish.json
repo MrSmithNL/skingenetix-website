@@ -1,0 +1,46 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.faq.json, section `hero`",
+  "decided_by": "Malcolm picked SKIN8-reclining-sweep-nbp_flash_02 from the skin-art round-3 batch for /pages/faq",
+  "note": "Header banner for /pages/faq. This FILLS AN EMPTY SLOT rather than replacing anything: the hero section existed with no image at all and `overlay_opacity: 100`, so the page has been rendering a solid black band with the heading on it.\n\nSOURCE: brand-band skin-art round 3, SKIN8-reclining-sweep, Nano Banana Flash candidate 02. Class B, no product in frame. Same pose family as the /pages/skin-concerns header, which took nbp_pro_02 from the same slot \u2014 a different candidate, so the two pages share a register without repeating a picture.\n\nCROPPED, NOT EXTENDED. The band measures 1920x440 live, needing 4.364:1, and the source is 2.357:1. 1236px of 2688 comes off, leaving 6336x1452 at 4.364:1 with nothing invented.\n\nTHE CROP OFFSET IS THE WHOLE DECISION HERE, because this frame has no dark zone and the heading is CENTRED. Measured across candidate bands, the text zone \u2014 middle 46% wide by middle 30% tall \u2014 reads 117.9 at the top of the frame and 120.4 in the middle, both far too bright to carry white type. At top=1224 it reads 54.7. The frame runs bright at the top-left and falls away to the bottom-right, so the bottom band is the only one where a centred heading has any ground at all.\n\nOVERLAY 100 -> 25. At 100 the image is invisible, which is what the page does today. 25 matches the research pages and leaves the skin its warmth; 40 was tested and reads duller for no legibility gain the crop had not already won.\n\nMOBILE: the phone band is 1.048:1. Six crops were measured and the centre \u2014 where the heading sits \u2014 ranged from 150.6 down to 49.0; the crop at left=3515 is the darkest by a wide margin and keeps the face and throat. It also gets a CENTRE-WEIGHTED scrim rather than an edge one, because the heading sits in the middle of the phone band: 5% at the frame edges rising to 42% at the centre. Heading zone goes from mean 54.8 / max 236 to 39.7 / 153, while the top of the crop stays at 96.3 and the bottom at 16.2 \u2014 the skin keeps its range instead of being flattened.\n\nOPTIMISATION: capped at 3000 on the long edge, quality 95, 4:4:4, metadata stripped, and not compressed harder \u2014 the CDN re-encodes to WebP and a pre-compressed source hands it artefacts to reproduce.",
+  "images": [
+    {
+      "slot": "faq_desktop",
+      "source": "assets/publish-ready/page-faq-banner/skingenetix-skincare-faq-questions-answered-header.jpg",
+      "filename": "skingenetix-skincare-faq-questions-answered-header.jpg",
+      "alt": "Close-up of a reclining woman's shoulder, throat and jaw lit softly against a warm neutral backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skincare-faq-questions-answered-header.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skincare-faq-questions-answered-header.jpg?v=1787665083"
+    },
+    {
+      "slot": "faq_mobile",
+      "source": "assets/publish-ready/page-faq-banner/skingenetix-skincare-faq-questions-answered-mobile.jpg",
+      "filename": "skingenetix-skincare-faq-questions-answered-mobile.jpg",
+      "alt": "Close-up of a reclining woman's throat and jaw lit softly against a warm neutral backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skincare-faq-questions-answered-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skincare-faq-questions-answered-mobile.jpg?v=1787665083"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 25,
+        "enable_parallax": false,
+        "image_size": "sm"
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "faq_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "faq_mobile",
+      "setting": "mobile_image"
+    }
+  ]
+}
