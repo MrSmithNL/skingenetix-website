@@ -263,7 +263,20 @@ def main():
             if not cands:
                 continue
             exact = [c for c in cands if c[0].rsplit(".", 1)[0] == stem]
-            real, url = exact[0] if exact else min(cands, key=lambda c: len(c[0]))
+            # A prefix match is only ever a guess, and while polling it is the WRONG
+            # guess: a file that is merely still processing looks identical to one
+            # Shopify renamed. On 2026-08-25 the desktop stem
+            #   skingenetix-brightening-glow-glutathione-serum-2-percent
+            # was not READY on the first pass, so the only candidate was its own
+            # ...-2-percent-MOBILE sibling, and both slots bound to the phone crop --
+            # which would have published a 1380x848 portrait as a 3750x848 banner. The
+            # note it printed was the only warning, and it scrolls past.
+            # So: hold out for the exact stem until the polling budget is nearly spent,
+            # and only then accept a rename, and only when it is unambiguous.
+            last_chance = attempt >= 26
+            if not exact and not (last_chance and len(cands) == 1):
+                continue
+            real, url = exact[0] if exact else cands[0]
             if not exact:
                 print(f"    note: {stem} resolved to {real} (Shopify renamed it)")
             it["uploaded_handle"] = f"shopify://shop_images/{real}"
