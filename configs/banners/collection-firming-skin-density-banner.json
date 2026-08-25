@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-25",
+  "target": "live store \u2014 collection firming-skin-density, new templates/collection.firming-skin-density.json",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 chose matrixyl-3000-pro-collagen-cream--D-face-full-eyes-open-right gpt_image_01.",
+  "note": "Header banner for /collections/firming-skin-density.\n\nSOURCE: banner library, matrixyl-3000-pro-collagen-cream--D-face-full-eyes-open-right gpt_image_01 (2048x848, 2.42:1). Label checked at 100%: Skingenetix / MATRIXYL 3000 PRO COLLAGEN / FULL & FIRMING TREATMENT in teal / PREMIUM FORMULA, all correct - including MATRIXYL, the word that failed in roughly thirty of fifty candidates on the 2026-08-21 single-engine run. The dosage line is the library's deliberate abbreviation, as on the other collection headers.\n\nEXTENDED LEFT. The jar and her arm occupy the right edge - 400 of 848 rows there are lit skin - so the room was made on the left, which measures backdrop the whole way down except the bottom 10 rows where her shoulder clips the corner. Those 10 rows are handled as a shoulder rather than ignored: left alone they would be dragged across 1702px as a horizontal streak.\n\n3750x848 (4.42:1), past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport. object-position right center, so cropping only removes extension.\n\nNOT THE SAME AS /pages/firming-skin-density, which carries A-face-full-prod-left nbp_pro_01 of the same product. Different frame, different woman - checked, because a page and a collection sharing a name would be an easy place to duplicate a shot by accident.\n\nA BUILD FAULT CAUGHT HERE. The first attempt silently produced the PAGE's filenames from the PAGE's source: both entries were keyed 'firming-skin-density' in BANNERS, and a duplicate key in a Python dict literal is legal - the last one wins, with no error. This one is now keyed 'firming-skin-density-collection', and extend-banner-canvas.py refuses to run if any key is duplicated.",
+  "images": [
+    {
+      "slot": "collection_firming_desktop",
+      "source": "assets/publish-ready/collection-firming-skin-density-banner/skingenetix-matrixyl-3000-pro-collagen-full-firming-treatment.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-full-firming-treatment.jpg",
+      "alt": "Woman resting her head on one side holding a jar of Skingenetix Matrixyl 3000 Pro Collagen Full & Firming Treatment against a dark studio backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-full-firming-treatment.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-full-firming-treatment.jpg?v=1787641328"
+    },
+    {
+      "slot": "collection_firming_mobile",
+      "source": "assets/publish-ready/collection-firming-skin-density-banner/skingenetix-matrixyl-3000-collagen-firming-treatment-mobile.jpg",
+      "filename": "skingenetix-matrixyl-3000-collagen-firming-treatment-mobile.jpg",
+      "alt": "Close crop of a woman holding the Skingenetix Matrixyl 3000 Pro Collagen firming treatment beside her face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-firming-treatment-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-collagen-firming-treatment-mobile.jpg?v=1787641329"
+    }
+  ],
+  "image_assignments": []
+}

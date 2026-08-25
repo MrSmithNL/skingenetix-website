@@ -110,6 +110,18 @@ def css(text_width, scrim_from, object_position, text_max="620px", desktop_scrim
 
 
 PAGES = {
+    # /collections/firming-skin-density -- matrixyl cream, jar right, canvas extended
+    # left, so the heading keeps the standard centre-left position over the extension.
+    "firming-skin-density": {
+        "plan": "configs/banners/collection-firming-skin-density-banner.json",
+        "desktop": "collection_firming_desktop",
+        "mobile": "collection_firming_mobile",
+        "overlay": 22,
+        "mobile_text": "place-self-end-center text-center",
+        # right, so horizontal cropping only ever removes extended backdrop
+        "css": dict(text_width="44vw", scrim_from="bottom", text_max="700px",
+                    object_position="right center"),
+    },
     # /collections/serums -- FLIPPED on 2026-08-25. This page used to be the one banner
     # extended RIGHT, with the heading centre-right and object-position anchored left.
     # Malcolm swapped in the A-face-full-prod-left frame, whose right edge is her neck

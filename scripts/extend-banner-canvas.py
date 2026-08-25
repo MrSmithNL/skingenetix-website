@@ -28,6 +28,7 @@ white heading text clean.
 Author: Claude Code, 2026-08-24.
 """
 import argparse
+import re
 import numpy as np
 from PIL import Image
 from pathlib import Path
@@ -377,6 +378,34 @@ BANNERS = {
         "profile_smooth": 15.0,
         "shoulder": None,
     },
+    # /collections/firming-skin-density -- jar right, so the canvas grows LEFT. The
+    # right edge is 400 of 848 rows of lit skin (her arm), the left edge is backdrop
+    # except the bottom 10 rows where her shoulder clips the corner - handled as a
+    # shoulder so those rows are not dragged left as a streak.
+    "firming-skin-density-collection": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-matrixyl-3000-pro-collagen-cream"
+                     / "matrixyl-3000-pro-collagen-cream--D-face-full-eyes-open-right"
+                     / "matrixyl-3000-pro-collagen-cream--D-face-full-eyes-open-right-gpt_image_01.png"),
+        "out": ROOT / "assets/publish-ready/collection-firming-skin-density-banner",
+        "desktop": "skingenetix-matrixyl-3000-pro-collagen-full-firming-treatment.jpg",
+        "mobile": "skingenetix-matrixyl-3000-collagen-firming-treatment-mobile.jpg",
+        #: right-anchored - the subject side - keeping the jar with her face
+        "mobile_crop": (30, 1000),
+        "target_width": 3750,
+        "bg_fit": (100, 700),
+        #: rows 0-400 across cols 0-700 reads max 41 against a backdrop of ~29.
+        #: (0,500,0,500) and (0,650,0,400) both look like backdrop and are not -
+        #: max 172 and 187, her shoulder.
+        "texture_box": (0, 400, 0, 700),
+        #: scatter: this backdrop is near-featureless, and mirror-tiling one like it
+        #: left a measurable seam at the tile boundary on the acetyl banner.
+        "texture_mode": "scatter",
+        #: only the last 10 rows, but left unhandled they smear across 1702px
+        "shoulder": {
+            "y": 836,
+            "skin_box": (836, None, 0, 400),
+        },
+    },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
         "out": ROOT / "assets/publish-ready/collection-all-banner",
@@ -459,6 +488,18 @@ BANNERS = {
         "shoulder": None,
     },
 }
+
+
+#: Duplicate keys in a dict literal are legal Python - the last one silently wins.
+#: On 2026-08-25 a second "firming-skin-density" entry was added for the collection
+#: while one already existed for the page, and the build ran the PAGE's source and
+#: wrote the PAGE's filenames with no error at all. Two sessions edit this file, so
+#: the collision is checked rather than trusted.
+_keys = re.findall(r'^    "([a-z0-9-]+)": \{', Path(__file__).read_text(), re.M)
+_dupes = {k for k in _keys if _keys.count(k) > 1}
+if _dupes:
+    raise SystemExit(f"duplicate banner keys in BANNERS: {sorted(_dupes)} - "
+                     f"the later definition would silently win")
 
 #: The arm is NOT extended across the new canvas. Dragging its edge profile sideways
 #: gave a long, featureless ramp with no deltoid curve and no collarbone hollow -- it
