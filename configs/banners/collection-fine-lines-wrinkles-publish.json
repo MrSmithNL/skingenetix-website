@@ -1,0 +1,22 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/collection.fine-lines-wrinkles.json — banner section",
+  "decided_by": "Malcolm, 2026-08-25 — chose FLWFIX nbp_flash_01 to replace the faulty-label banner",
+  "note": "Swaps ONLY the two images on this banner, leaving every section setting exactly as it is.\n\nWhy so narrow: this collection's template was not built through publish-collection-banner-template.py — it has no PAGES entry there — so re-running that publisher would rebuild it from the shared default and silently discard whatever tuning it carries (text position, overlay, the custom-html measure). That is the same trap that dropped allow_transparent_header on two other pages today. A targeted image_assignments patch touches nothing else.\n\nThe settings being preserved, for the record: desktop text centre-RIGHT, mobile text bottom-centre, overlay 22, parallax off, image_size sm, transparent header on.",
+  "images": [
+    {
+      "slot": "collection_flw_desktop",
+      "filename": "skingenetix-acetyl-hexapeptide-8-fine-lines-wrinkles-serum-banner.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-fine-lines-wrinkles-serum-banner.jpg"
+    },
+    {
+      "slot": "collection_flw_mobile",
+      "filename": "skingenetix-acetyl-hexapeptide-8-fine-lines-wrinkles-serum-mobile.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-fine-lines-wrinkles-serum-mobile.jpg"
+    }
+  ],
+  "image_assignments": [
+    { "section": "banner", "slot": "collection_flw_desktop", "setting": "image" },
+    { "section": "banner", "slot": "collection_flw_mobile", "setting": "mobile_image" }
+  ]
+}

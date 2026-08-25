@@ -1,0 +1,16 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/collection.fine-lines-wrinkles.json \u2014 banner section",
+  "decided_by": "Claude, 2026-08-24 \u2014 legibility fix, reversible",
+  "note": "Turns the transparent header off for /collections/fine-lines-wrinkles - the third page today to need it, for the same reason each time: the shared collection template runs the banner up behind the navigation, which works where the top-left corner is dark, and this frame puts her lit forehead and cheek there. 'Shop' and 'Skin Solutions' both disappear at 1280.\n\nThree pages in one day suggests the shared default is wrong for photographic banners generally, not that three frames were unlucky. Worth considering flipping it in templates/collection.json and letting the pages that genuinely want a transparent header opt back in - raised, not done, because that would change every collection page at once.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "banner",
+      "settings": {
+        "allow_transparent_header": false
+      }
+    }
+  ],
+  "image_assignments": []
+}

@@ -487,6 +487,44 @@ BANNERS = {
         "texture_mode": "scatter",
         "shoulder": None,
     },
+    # /collections/fine-lines-wrinkles -- the REPAIRED acetyl frame. The banner that
+    # shipped here had a label missing its last two lines (PREMIUM FORMULA and the
+    # 10% ACETYL HEXAPEPTIDE-8 | 30ML line); FLWFIX-nbp_flash_01 is the repair Malcolm
+    # picked, chosen on two axes rather than one - a clean label is worthless if the
+    # repair restaged the shot, and this one drifts only 4.40 mean abs from the original
+    # against 7.6-9.1 for the gpt-image and seedream attempts.
+    #
+    # Extends RIGHT, matching the banner this replaces: her shoulder runs off the LEFT
+    # edge (that edge measures mean 81.5 with a max of 183.8 - lit skin), while the right
+    # edge is clean end to end at 26.1 to 33.3 with nothing above 45 anywhere down it.
+    #
+    # texture_box is written in ORIGINAL-frame coordinates and the script mirrors it for
+    # a right-side extension. It has to stop at x=1899: her fingers reach x=1975, and the
+    # boxes one step wider read max 212 where this one reads 36.
+    "fine-lines-wrinkles": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-flw-bottle-text-fix"
+                     / "FLWFIX" / "FLWFIX-nbp_flash_01.png"),
+        "out": ROOT / "assets/publish-ready/collection-fine-lines-wrinkles-banner",
+        #: NEW filenames - Shopify Files suffixes on collision rather than replacing, so
+        #: re-using the old pair would keep serving the OLD, faulty-label picture.
+        "desktop": "skingenetix-acetyl-hexapeptide-8-fine-lines-wrinkles-serum-banner.jpg",
+        "mobile": "skingenetix-acetyl-hexapeptide-8-fine-lines-wrinkles-serum-mobile.jpg",
+        "side": "right",
+        "work_height": 848,
+        #: inset from the LEFT edge - the subject side for a right-extended banner.
+        #: Holds her face (x 600-1100) together with the bottle (x 1500-1760 of 1999).
+        "mobile_crop": (550, 1300),
+        "target_width": 3750,
+        "bg_fit": (100, 700),
+        "texture_box": (0, 300, 1899, 1999),
+        #: SCATTER. This box reads max 36 against a backdrop of 32 - clean by every
+        #: threshold - but the serums banner proved a box passing exactly that test can
+        #: still carry faint vertical structure that mirror-tiling turns into evenly
+        #: spaced dark lens shapes. Scatter has no tile boundaries to line up.
+        "texture_mode": "scatter",
+        #: nothing touches the right edge, which is the edge being extended
+        "shoulder": None,
+    },
 }
 
 
