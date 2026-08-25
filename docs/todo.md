@@ -266,10 +266,31 @@ else. Files are **referenced by `shopify://shop_images/` handle, never re-upload
 shopify.md rule 7 — which also carries their existing descriptive alt text across
 unchanged. Plan: `configs/banners/page-skin-concerns-tiles.json`.
 
-One cosmetic consequence, left as-is: the fine-lines photograph has a near-white backdrop
-and `concern_1`'s section background is `#ffffff`, so that one tile's left edge dissolves
-into the page where the other three sit on a visible block of colour. On the homepage the
-same file is fine because it wears a 40% dark overlay.
+One cosmetic consequence: the fine-lines photograph has a near-white backdrop and
+`concern_1`'s section background is `#ffffff`, so that one tile's left edge dissolves into
+the page where the other three sit on a visible block of colour. On the homepage the same
+file is fine because it wears a 40% dark overlay.
+
+**The homepage overlay was then put on all four tiles for Malcolm to judge** (13:54, live,
+`configs/banners/page-skin-concerns-tile-overlay.json`). It is CSS, not a setting: the
+homepage tiles are `image-link-blocks`, whose overlay exists because link text sits ON the
+picture; these are `multiple-images-with-text`, whose schema has no overlay at all. Drawn
+through the additive `custom-html` pattern this template already uses for
+`banner_crop_anchor`. **Undecided — awaiting Malcolm.** My read: it fixes the dissolve but
+costs more than it buys, and "Brightening & Glow" now reads muddy, which is the one tile
+whose whole promise is radiance. If it goes, `remove_sections: ["concern_overlay_css"]`
+takes it off; a lighter 12–15% wash, or simply setting `concern_1`'s background to the
+`#f7f7f7` the alternating sections already use, would fix the dissolve without dulling
+four photographs.
+
+⚠️ **The first push of that overlay changed nothing at all, and looked completely correct
+while doing so.** Two independent faults, either of which alone is silent — the theme
+places the picture in grid column 2 (`grid-area: 1 / 2 / -1`) with a selector that outscores
+an added one, and gives it `will-change: transform`, which paints it above any
+non-positioned `::after`. The served HTML carried the CSS verbatim the whole time, so
+reading it back "confirmed" a fix that did not exist. **A full-page pixel diff before and
+after is the only check that catches this**; it showed zero changed rows outside the
+announcement bar.
 
 **Three lessons from the 2026-08-25 acetyl banners** (details in
 `configs/banners/collection-fine-lines-wrinkles-banner.json`):

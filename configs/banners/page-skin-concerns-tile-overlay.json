@@ -1,0 +1,27 @@
+{
+  "note": "Put the homepage's tile overlay on the four concern photographs on /pages/skin-concerns, so Malcolm can judge whether it reads better than the bare photo (2026-08-25). REVERSIBLE — remove_sections: ['concern_overlay_css'] takes it straight back off.",
+  "why_css_and_not_a_setting": "The homepage tiles are 'image-link-blocks', where the link text sits ON the picture; its overlay is a real block setting (overlay_color #1a1a1a, overlay_opacity 40) rendered as --content-over-media-overlay. The concern sections here are 'multiple-images-with-text', where the text sits BESIDE the picture — that section's schema has no overlay setting at all. So the same effect has to be drawn in CSS. Theme Liquid is never edited (shopify.md rule 2); the additive custom-html section is the established pattern on this very template, which already carries one (banner_crop_anchor).",
+  "how_it_is_pinned_to_the_image": "The image list is display:grid with width:100%, so a plain inset-0 ::after would bleed past the photo at the 1000-1150px breakpoint where the column is 0.8fr but the image caps at 500px. The ::after is instead placed in the photograph's own grid cell and given the same box rules the theme gives the img, so it tracks the picture exactly at every width.",
+  "two_faults_in_the_first_attempt_measured_not_guessed": [
+    "WRONG CELL. theme.css puts the picture in column 2, not column 1: `.multiple-images-with-text__image-list:not([layout=stacked])>img:first-child{grid-area:1 / 2 / -1}`. My first pass tried to drag the img back to 1/1, but that theme selector scores (0,3,1) against my (0,2,1) and won, so the img stayed in column 2 while the overlay sat alone in an empty column 1. The fix is to move the OVERLAY to the img's cell, not the img to the overlay's.",
+    "WRONG PAINT ORDER. theme.css also sets `will-change:transform` on that img, which makes it a stacking context painted in the positioned layer at z-index 0 — above any non-positioned ::after, however it is placed. The overlay therefore rendered *behind* the photograph. The ::after needs position:relative + z-index:1 to sit on top.",
+    "Either fault alone produces a page that looks completely untouched, which is exactly what the first push did: a full-page capture before and after was identical to the pixel outside the announcement bar. The CSS was on the page and verbatim correct-looking the whole time — reading the served HTML would have 'confirmed' it worked."
+  ],
+  "template": "templates/page.skin-concerns.json",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "concern_overlay_css",
+      "insert_after": "banner_crop_anchor",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>\n  /* The homepage tile overlay, drawn on a section whose schema has no overlay setting. */\n  .shopify-section--multiple-images-with-text .multiple-images-with-text__image-list::after {\n    content: \"\";\n    /* the photograph's own cell - theme.css puts it in column 2, not column 1 */\n    grid-area: 1 / 2 / -1;\n    /* the theme gives that img will-change:transform, so only a positioned\n       box with a z-index paints above it */\n    position: relative;\n    z-index: 1;\n    /* mirror the img's box so the wash tracks the picture, not the column */\n    width: 100%;\n    max-width: var(--multiple-images-with-text-image-max-width, 390px);\n    margin-inline: auto;\n    align-self: stretch;\n    background: rgb(26 26 26 / 0.4);\n    border-radius: var(--rounded-sm);\n    pointer-events: none;\n  }\n</style>"
+        }
+      }
+    }
+  ]
+}
