@@ -1,0 +1,48 @@
+{
+  "created": "2026-08-25",
+  "target": "Shopify Files \u2014 serum selector tiles, re-measured",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 the matrixyl bottle looked bigger and the copper peptide smaller than the rest",
+  "note": "Re-frames the five SERUM tiles against boxes read off a labelled grid instead of found automatically. The cream tiles are unchanged and are not re-uploaded.\n\nWHAT WENT WRONG. Edge-energy detection cannot tell a bottle from its mirror image, nor find a white pipette bulb against a white sweep:\n  copper    the box ran down into the bottle's REFLECTION, overstating height 1215 -> 1669, so re-framing shrank the real bottle to 56% of frame while its neighbours sat near 75%.\n  matrixyl  the box CUT OFF the white bulb, understating height 1825 -> 1539, so re-framing blew it up to 91%.\nThe reference itself was 4% out as well - PDRN measures 71.0% true against 76.9% detected, shadow included - which is why acetyl and glutathione came out consistent with each other but not with the stated target.\n\nMeasured, all five now land on 71.0%: the PDRN bottle, which is the reference Malcolm chose.\n\nTHE LESSON IS THE CHECK, NOT THE ALGORITHM. Each box was verified against a drawn overlay before the first publish and two were already rejected that way - but the two that survived were wrong in the one direction an overlay at thumbnail size does not reveal. A number checked only against itself gets believed; these needed the rendered page, at size, side by side.\n\nNEW FILENAMES: Shopify Files suffixes on collision rather than replacing, so re-using the -selector names would have kept serving the old framing.",
+  "images": [
+    {
+      "slot": "t_copper",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_copper.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-repair-serum-product-hero.jpg",
+      "alt": "Skingenetix Copper Peptide GHK-Cu Advanced Repair Serum, 2%, 30ml - blue frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-repair-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-repair-serum-product-hero.jpg?v=1787651554"
+    },
+    {
+      "slot": "t_acetyl",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_acetyl.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-product-hero.jpg",
+      "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 10%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-product-hero.jpg?v=1787651554"
+    },
+    {
+      "slot": "t_matrixyl",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_matrixyl.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-serum-product-hero.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro Collagen Firming Repair Serum, 10%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-serum-product-hero.jpg?v=1787651554"
+    },
+    {
+      "slot": "t_pdrn",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_pdrn.jpg",
+      "filename": "skingenetix-pdrn-skin-repair-serum-product-hero.jpg",
+      "alt": "Skingenetix PDRN Skin Repair Deep Renewal Serum, 30ml - pink frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-skin-repair-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-skin-repair-serum-product-hero.jpg?v=1787651554"
+    },
+    {
+      "slot": "t_glut",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_glut.jpg",
+      "filename": "skingenetix-glutathione-radiant-glow-serum-product-hero.jpg",
+      "alt": "Skingenetix Glutathione Brightening Radiant Glow Serum, 2%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-radiant-glow-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-radiant-glow-serum-product-hero.jpg?v=1787651554"
+    }
+  ]
+}

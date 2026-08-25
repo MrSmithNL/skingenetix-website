@@ -34,19 +34,35 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets/publish-ready/page-ingredients-tiles"
 PR = "assets/publish-ready"; RUN = "assets/ai-generated"
 
-#: (slot, kind, source, edge-sensitivity). Lower sensitivity finds fainter edges;
-#: 0.10 suits a product that contrasts with its ground, 0.04 is needed where the
-#: product is white-on-white and 0.10 finds only its printed label.
+#: (slot, kind, source, edge-sensitivity, y_override).
+#:
+#: y_override is (top, base) READ OFF A LABELLED GRID, and the five serums all carry
+#: one because automatic detection got two of them badly wrong in ways that showed on
+#: the live page. Malcolm: "the matrixyl serum bottle is bigger than the others, the
+#: copper peptide serum bottle is smaller".
+#:   copper    detection ran the box down into the bottle's REFLECTION, overstating
+#:             height 1215 -> 1669, so re-framing shrank the real bottle to 56% of
+#:             frame while its neighbours sat near 75%.
+#:   matrixyl  detection CUT OFF the white pipette bulb, understating height
+#:             1825 -> 1539, so re-framing blew the bottle up to 91%.
+#: Both failures are the same root cause: a silhouette found from edge energy cannot
+#: tell a bottle from its mirror image, nor find a white bulb against a white sweep.
+#: A number that is only checked against itself will be believed; these were caught
+#: because the page was looked at afterwards.
+#:
+#: The reference PDRN was 4% out too (71.0% true against 76.9% detected, shadow
+#: included), which is why acetyl and glutathione were consistent with each other but
+#: not with the stated target.
 TILES = [
- ("t_copper","serum", f"{PR}/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg", 0.10),
- ("t_acetyl","serum", f"{PR}/acetyl-hexapeptide-8-serum/_acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_hero_white_bg_2_skingenetix.jpg", 0.10),
- ("t_matrixyl","serum", f"{RUN}/2026-08-21-matrixyl-3000-pro-collagen-serum/run-01/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_hero_white_bg_3_skingenetix.png", 0.10),
- ("t_pdrn","serum", f"{PR}/pdrn-skin-repair-serum/__pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg", 0.10),
- ("t_glut","serum", f"{PR}/glutathione-brightening-serum/_glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_hero_white_bg_1_skingenetix.jpg", 0.04),
- ("t_cday","cream", f"{PR}/copper-peptide-day-repair-cream/copper_peptide_ghk_cu_advanced_day_repair_face_cream_hero_whitebg_1_skingenetix.jpg", 0.10),
- ("t_cnight","cream", f"{PR}/copper-peptide-night-repair-cream/__copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix.jpg", 0.10),
- ("t_mcream","cream", f"{RUN}/2026-08-21-matrixyl-3000-pro-collagen-cream/run-01/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_hero_whitebg_7_skingenetix.png", 0.10),
- ("t_pcream","cream", f"{PR}/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg", 0.10),
+ ("t_copper","serum", f"{PR}/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg", 0.10, (415, 1630)),
+ ("t_acetyl","serum", f"{PR}/acetyl-hexapeptide-8-serum/_acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_hero_white_bg_2_skingenetix.jpg", 0.10, (250, 1870)),
+ ("t_matrixyl","serum", f"{RUN}/2026-08-21-matrixyl-3000-pro-collagen-serum/run-01/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_hero_white_bg_3_skingenetix.png", 0.10, (125, 1950)),
+ ("t_pdrn","serum", f"{PR}/pdrn-skin-repair-serum/__pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg", 0.10, (290, 1745)),
+ ("t_glut","serum", f"{PR}/glutathione-brightening-serum/_glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_hero_white_bg_1_skingenetix.jpg", 0.04, (250, 1880)),
+ ("t_cday","cream", f"{PR}/copper-peptide-day-repair-cream/copper_peptide_ghk_cu_advanced_day_repair_face_cream_hero_whitebg_1_skingenetix.jpg", 0.10, None),
+ ("t_cnight","cream", f"{PR}/copper-peptide-night-repair-cream/__copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix.jpg", 0.10, None),
+ ("t_mcream","cream", f"{RUN}/2026-08-21-matrixyl-3000-pro-collagen-cream/run-01/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_hero_whitebg_7_skingenetix.png", 0.10, None),
+ ("t_pcream","cream", f"{PR}/pdrn-collagen-repair-cream/__pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg", 0.10, None),
 ]
 REF = {"serum": "t_pdrn", "cream": "t_cnight"}
 
@@ -103,11 +119,16 @@ def reframe(im, box, target):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--check", action="store_true")
     args = ap.parse_args()
-    boxes = {s: bbox(p, f) for s, k, p, f in TILES}
+    boxes = {}
+    for slot, kind, path, fac, yo in TILES:
+        im, b = bbox(path, fac)
+        if yo:                       # measured off a grid; x still from detection
+            b = (b[0], yo[0], b[2], yo[1])
+        boxes[slot] = (im, b)
     tgt = {k: (lambda b: (b[1][3] - b[1][1]) / b[0].size[1])(boxes[REF[k]]) for k in REF}
     print("targets: " + ", ".join(f"{k} {v*100:.1f}% (from {REF[k]})" for k, v in tgt.items()))
     OUT.mkdir(parents=True, exist_ok=True)
-    for slot, kind, path, fac in TILES:
+    for slot, kind, path, fac, yo in TILES:
         im, box = boxes[slot]
         before = (box[3] - box[1]) / im.size[1]
         new = reframe(im, box, tgt[kind])

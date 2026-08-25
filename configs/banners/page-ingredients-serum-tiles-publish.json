@@ -1,0 +1,80 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/page.ingredients.json \u2014 five serum tiles only",
+  "decided_by": "Malcolm, 2026-08-25",
+  "note": "Repoints only the five serum selector tiles at the re-measured framing. Cream tiles and all nine detail sections untouched.",
+  "images": [
+    {
+      "slot": "t_copper",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_copper.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-repair-serum-product-hero.jpg",
+      "alt": "Skingenetix Copper Peptide GHK-Cu Advanced Repair Serum, 2%, 30ml - blue frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-repair-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-repair-serum-product-hero.jpg?v=1787651554"
+    },
+    {
+      "slot": "t_acetyl",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_acetyl.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-product-hero.jpg",
+      "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 10%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-product-hero.jpg?v=1787651554"
+    },
+    {
+      "slot": "t_matrixyl",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_matrixyl.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-serum-product-hero.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro Collagen Firming Repair Serum, 10%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-serum-product-hero.jpg?v=1787651554"
+    },
+    {
+      "slot": "t_pdrn",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_pdrn.jpg",
+      "filename": "skingenetix-pdrn-skin-repair-serum-product-hero.jpg",
+      "alt": "Skingenetix PDRN Skin Repair Deep Renewal Serum, 30ml - pink frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-skin-repair-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-skin-repair-serum-product-hero.jpg?v=1787651554"
+    },
+    {
+      "slot": "t_glut",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_glut.jpg",
+      "filename": "skingenetix-glutathione-radiant-glow-serum-product-hero.jpg",
+      "alt": "Skingenetix Glutathione Brightening Radiant Glow Serum, 2%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-radiant-glow-serum-product-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-radiant-glow-serum-product-hero.jpg?v=1787651554"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "nav_serums",
+      "block": "ilb_copper",
+      "slot": "t_copper",
+      "setting": "image"
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_argireline",
+      "slot": "t_acetyl",
+      "setting": "image"
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_matrixyl",
+      "slot": "t_matrixyl",
+      "setting": "image"
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_pdrn",
+      "slot": "t_pdrn",
+      "setting": "image"
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_glutathione",
+      "slot": "t_glut",
+      "setting": "image"
+    }
+  ]
+}
