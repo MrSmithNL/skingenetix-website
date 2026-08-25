@@ -13,6 +13,7 @@
   },
   "the_fix_a_local_scrim": "Keep the flat overlay at 20% and add a gradient that only darkens the bottom of each tile, where the label lives — the standard editorial pattern. Verified live: every tile clears 4.5:1, worst 4.74:1, while the top half of every photograph keeps the bare 20% wash. Implemented by overriding the theme's own overlay pseudo-element rather than adding a competing layer: .content-over-media:before already paints the flat overlay at z-index 1 with a .2s transition, so the gradient is layered ON that same background, above rgb(var(--content-over-media-overlay)). Adding a separate ::after would have fought the z-index — the content div is also z-index 1 and later in tree order, so an ::after would paint on top of the label.",
   "scoped_to_one_section": "The homepage has a SECOND image-link-blocks section — find_serum, 'Find Your Perfect Product', four tiles at 50% overlay. It is untouched: Malcolm asked about the concern tiles. That is why the CSS is keyed to the skin_concerns section id and not to .shopify-section--image-link-blocks, which would have caught both.",
+  "undo": "python3 scripts/patch-template.py --restore backups/index-20260825-140544.json --template templates/index.json — that stamp is the pre-change 40% state. NOT index-20260825-140846.json, which is the half-done 20%-without-scrim state and would leave the labels failing contrast.",
   "template": "templates/index.json",
   "images": [],
   "setting_updates": [
