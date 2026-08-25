@@ -1,30 +1,24 @@
 {
   "created": "2026-08-25",
-  "target": "live theme — Impact, templates/page.research-argireline.json, hero section",
-  "decided_by": "Malcolm, 2026-08-25 — rejected the damping wave and asked for silver silk; chose SILK-4-FALLING-AWAY nbp_pro_01.",
-  "note": "Header banner for /pages/acetyl-hexapeptide-8-research, and the fix for a page that was BROKEN rather than merely off-brand.\n\nTHE FAULT. The hero pointed at skingenetix-research-acetyl-hexapeptide-8-banner.jpg, which 404s on the CDN - the file does not exist in Files. The section therefore fell back to Shopify's own placeholder artwork, so a live research page was showing line drawings of a handbag, a shoe and a feather behind its heading. It also explains the 3KB reading for this page in the banner audit, where every working banner measures 20-63KB.\n\nAUDITED AGAINST THE PAGES THAT WORK before changing anything. Structure was never the problem: this template carries the same eight sections in the same order as research-matrixyl and research-copper-peptide, with the same block counts - overview 3, key findings 3, FAQ 5, related 4 - and comparable content weight throughout. Only the hero was wrong, in exactly two ways: the missing image, and overlay_opacity at 50 where the working research pages sit at 22-25. Fifty is the stale theme default this project has already recorded as muting a picture to near-flat.\n\nTHE IMAGE. AHR-3-SIGNAL-DAMPED nbp_pro_01, from a six-concept batch. Chosen because it is the only concept that IS the mechanism rather than decoration around it: Acetyl Hexapeptide-8 damps the neurotransmitter signalling that drives repeated micro-contraction, and the picture is a wave losing amplitude from left to right until it lies flat. Measured centre block 19.9 mean / 10.9 stdev before cropping, 20.3 / 12.7 after - dark and even under a centred white heading.\n\nCROPPED, NOT EXTENDED. The band is 100vw x 496px, needing about 3.9:1 to hold full height at 1920; the source is 2.357:1. 531px came off the top and bottom symmetrically - symmetric because the wave sits on the vertical centre line, unlike the matrixyl banner whose bright fibres were all at the top and needed a one-sided crop. No invented pixels.\n\nA MOBILE IMAGE IS SET, which research-matrixyl still lacks. research-copper-peptide is the only research page that had one, and it is the right pattern: a 3.9:1 band centre-cropped on a phone keeps almost nothing. The phone crop keeps the left of the frame, where the wave still has amplitude.\n\nRATIO CORRECTED AFTER MEASURING THE LIVE BAND. The first crop used 3.9:1, carried over from the matrixyl research page. That was wrong for THIS page: measured live, its band is 100vw x 440px, not the matrixyl page's 496px, because its heading is one line rather than four - the band's height follows its content. At 3.899:1 the image held full height at 1440 but only 89% at 1920. Rebuilt at 4.400:1, which clears the 4.364:1 the band reaches at 1920. The lesson is that the target aspect is a property of the PAGE, not of the theme: two pages using the same section type differ by 56px of band height purely because one heading wraps.\n\nSILK REPLACES THE WAVE. Malcolm rejected the damping-wave banner and asked for silver silk. The first silk attempt had already lost a batch on measurement - its four candidates scored centre-block means of 45, 54, 58 and 65 against a best of 14 - because every engine filled the frame with fabric, and lit silk is bright by definition. The re-brief made the dark area a matter of GEOMETRY rather than of lighting mood: each concept states which part of the frame the silk occupies and declares the rest genuinely empty. That worked - the new batch's best centre measured 2.2.\n\nTHE HEADING MOVES RIGHT, AND THAT IS THE REAL FIX HERE. The chosen frame puts the silk on the LEFT and falls to empty graphite on the right. Measured across the width where the heading sits: 176 mean at the far left, 87, then 48, then 28 with a stdev of 1.4 across the right third. A centred heading would straddle lit fabric at mean 43.6 / stdev 21.7; moved to centre-end it sits at 29.0 / stdev 2.2. One setting, and it is established on these pages already - research-copper-peptide runs an off-centre heading too.\n\nThe phone crop is taken from 30% across rather than from the edge, so it keeps the silk fold at its left and dark ground to the right, instead of being either a wall of fabric or an empty rectangle.",
+  "target": "live theme \u2014 Impact, templates/page.research-argireline.json, section `hero`",
+  "decided_by": "Malcolm picked the-science--E-refraction-study-luma_01 for /pages/acetyl-hexapeptide-8-research",
+  "note": "Header banner for /pages/acetyl-hexapeptide-8-research. Replaces skingenetix-argireline-acetyl-hexapeptide-8-expression-lines-research.jpg \u2014 a working banner, not a placeholder, so this is a swap on Malcolm's preference rather than a fix.\n\nSOURCE: the-science banner wave, concept E (refraction study), Luma candidate 01 \u2014 a plain glass slide carrying a single droplet on a graphite surface, throwing a caustic. Monochrome silver on graphite, which is exactly Acetyl Hexapeptide-8's own pearl-grey scene colour, so it lands on-system without recolouring.\n\nEXTENDED LEFT, NOT CROPPED. The band measures 1920x440 live, needing 4.364:1, and Luma returns 1.851:1. Cropping to that aspect would have taken 58% of the height and thrown away the caustic, which is the best thing in the frame. The left half is already empty \u2014 bright content starts at x=1309 \u2014 and the left edge measures mean 24.6, sd 2.4, so the extension is flat backdrop and invents nothing structural. Height was first trimmed to y300-1300 (2.78:1) to keep slide, droplet and caustic, then the canvas grew left by 1580px to 4362x1000 (4.362:1).\n\nA ONE-PIXEL ARTEFACT IN THE SOURCE COST TWO ATTEMPTS, and is worth recording. Luma left a bright border on column 0 of the frame: mean 31.95 against 24.7 for every column after it. extend_left nulls its join against `im[:, 0]`, so that single bad column dragged the last 40 columns of the extension up with it, producing a soft vertical edge across a flat dark field. It looked like an extension bug and was not one. Cropping x from 2 fixed it: the join now reads 24.4, 24.5, 24.2, 24.7 | 24.7, 24.9, 25.4 \u2014 continuous.\n\nflat_backdrop is FALSE here. It was tried first, on the theory that a modelled column avoids row streaking, and it put the extension about 6 levels light. This edge is clean enough that the measured profile matches the original exactly, which is the whole point of using it. Row streaking is handled instead with profile_smooth 25.0 \u2014 the setting added to the script for this exact problem \u2014 which takes row-mean spread from 6.4 to 4.4 peak-to-peak across 1000 rows, a gentle vertical gradient rather than banding, with the join step still 0.51.\n\nGrain was rescaled to this frame's own measured backdrop (1.285), the same guard the fine-lines collection banner needed after scatter()'s fixed sigma returned vignette falloff as grain at 16x amplitude. Extension grain reads 1.183 against the original's 1.304.\n\nTEXT MOVES FROM RIGHT TO LEFT. The page currently sets `sm:place-self-center-end sm:text-end`, and this frame puts its subject hard right \u2014 the heading would have sat on the glass. The left third measures mean 24.4, max 45.7, which is clean ground for white type. This also matches the Copper Peptide research page, which is already left-aligned.\n\nMOBILE: the phone band is 1.048:1 against a 4.36:1 desktop frame, so cover would have shown a slice of empty backdrop. The phone gets a subject-side crop holding the slide, droplet and caustic, with a scrim baked into the bottom for the centred text \u2014 that zone was mean 90.5 / max 225 because the caustic runs through it, and now reads 39.1 / 114.\n\nOPTIMISATION: capped at 3000 on the long edge, quality 95, 4:4:4, metadata stripped, not compressed harder \u2014 the CDN re-encodes to WebP and a pre-compressed source hands it artefacts to reproduce.",
   "images": [
     {
-      "slot": "acetyl_research_hero",
-      "source": "assets/publish-ready/page-acetyl-research-banner/skingenetix-argireline-acetyl-hexapeptide-8-expression-lines-research.jpg",
-      "filename": "skingenetix-argireline-acetyl-hexapeptide-8-expression-lines-research.jpg",
-      "alt": "Silver silk falling away into shadow - Acetyl Hexapeptide-8 Argireline research into expression lines",
-      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-8-expression-lines-research.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-acetyl-hexapeptide-8-expression-lines-research.jpg?v=1787660617"
+      "slot": "acetyl_research_desktop",
+      "source": "assets/publish-ready/page-acetyl-research-banner/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg",
+      "alt": "A single clear droplet resting on a plain glass slide, refracting a bright caustic across a dark graphite surface",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg?v=1787664404"
     },
     {
       "slot": "acetyl_research_mobile",
-      "source": "assets/publish-ready/page-acetyl-research-banner/skingenetix-argireline-acetyl-hexapeptide-8-research-mobile.jpg",
-      "filename": "skingenetix-argireline-acetyl-hexapeptide-8-research-mobile.jpg",
-      "alt": "Silver silk on graphite - Acetyl Hexapeptide-8 Argireline research, mobile crop",
-      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-8-research-mobile.jpg",
-      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-acetyl-hexapeptide-8-research-mobile.jpg?v=1787660617"
-    }
-  ],
-  "image_assignments": [
-    {
-      "section": "hero",
-      "slot": "acetyl_research_hero"
+      "source": "assets/publish-ready/page-acetyl-research-banner/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-mobile.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-mobile.jpg",
+      "alt": "Close view of a clear droplet on a glass slide refracting light onto a dark graphite surface",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-mobile.jpg?v=1787664404"
     }
   ],
   "setting_updates": [
@@ -32,9 +26,23 @@
       "section": "hero",
       "settings": {
         "overlay_opacity": 25,
-        "desktop_text_position": "sm:place-self-center-end sm:text-end",
-        "mobile_image": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-8-research-mobile.jpg"
+        "enable_parallax": false,
+        "image_size": "sm",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-end-center text-center"
       }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "acetyl_research_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "acetyl_research_mobile",
+      "setting": "mobile_image"
     }
   ]
 }
