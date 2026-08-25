@@ -245,6 +245,23 @@ PAGES = {
         "css": dict(text_width="28vw", scrim_from="bottom", text_max="520px",
                     object_position="right center", desktop_scrim="46%"),
     },
+    # /collections/brightening-glow -- the glutathione A-prod-left frame, extended LEFT,
+    # so the heading goes centre-LEFT and object-position anchors right. Distinct from
+    # /pages/brightening-glow, which carries the gpt_image take of the same pose.
+    #
+    # 26vw for the same reason as serums: measured heading ground is 336px at 1280, 496px
+    # at 1440 and 975px at 1920, which as a share of viewport is 26.3% / 34.4% / 50.8%.
+    # The tightest case sets the bound. No desktop scrim - this frame has real ground.
+    "brightening-glow": {
+        "plan": "configs/banners/collection-brightening-glow-banner.json",
+        "desktop": "collection_bglow_desktop",
+        "mobile": "collection_bglow_mobile",
+        "overlay": 22,
+        "desktop_text": "sm:place-self-center-start sm:text-start",
+        "mobile_text": "place-self-end-center text-center",
+        "css": dict(text_width="26vw", scrim_from="bottom", text_max="620px",
+                    object_position="right center"),
+    },
 }
 
 

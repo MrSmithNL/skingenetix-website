@@ -525,6 +525,50 @@ BANNERS = {
         #: nothing touches the right edge, which is the edge being extended
         "shoulder": None,
     },
+    # /collections/brightening-glow -- NOT the same thing as the "brightening-glow"
+    # entry above, which publishes to the PAGE /pages/brightening-glow using the
+    # gpt_image frame. This one is the COLLECTION, which had no dedicated banner at all,
+    # and Malcolm picked the nbp_flash frame of the same pose for it.
+    #
+    # EXTENDS LEFT, which is the opposite of the page entry's direction, because a
+    # different engine's frame has different edges. Measured: the RIGHT edge carries her
+    # neck and shoulder from row 264 to the bottom (mean 119.6, max 194.6), so there is
+    # nothing to sample there; the LEFT edge is clean end to end at 18.1 to 24.0 with
+    # nothing above 45 anywhere. Same pose, same product, opposite treatment - the edge
+    # decides, not the pose name.
+    #
+    # KNOWN FAULT IN THIS FRAME, carried knowingly: the concentration line reads
+    # '25i GLUTATHIONE | 30ML' where the product is 2%. At the rendered 440px band that
+    # line is about 4px of cap height, so it is sub-legible - but it is still a wrong
+    # concentration on a skincare product, and configs/banners/glut-a-bottle-text-fix.json
+    # is the repair wave. Swap the src to the chosen repair when one is picked.
+    #
+    # texture_box has to stop at x=120: her fingers reach x=65 in the lower rows, and the
+    # boxes one step wider read max 173-185 where this one reads 27.
+    "brightening-glow-collection": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-glutathione-brightening-serum"
+                     / "glutathione-brightening-serum--A-face-full-prod-left"
+                     / "glutathione-brightening-serum--A-face-full-prod-left-nbp_flash_01.png"),
+        "out": ROOT / "assets/publish-ready/collection-brightening-glow-banner",
+        #: deliberately distinct from the PAGE banner's filenames, which are
+        #: skingenetix-glutathione-brightening-radiant-glow-serum{,-mobile}.jpg. Shopify
+        #: Files suffixes on collision rather than replacing, so a near-miss name would
+        #: quietly serve the page's picture here.
+        "desktop": "skingenetix-brightening-glow-glutathione-radiant-serum-banner.jpg",
+        "mobile": "skingenetix-brightening-glow-glutathione-radiant-serum-mobile.jpg",
+        "work_height": 848,
+        #: inset from the RIGHT edge - the subject side for a LEFT-extended banner.
+        #: Holds the bottle (x 65-500 of 1999) together with her face.
+        "mobile_crop": (620, 1350),
+        "target_width": 3750,
+        "bg_fit": (100, 700),
+        "texture_box": (0, 400, 0, 120),
+        #: scatter, per the serums banner: a box passing the max-luminance test can still
+        #: carry vertical structure that mirror-tiling turns into repeated lens shapes.
+        "texture_mode": "scatter",
+        #: nothing touches the left edge, which is the edge being extended
+        "shoulder": None,
+    },
 }
 
 

@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-25",
+  "target": "live store \u2014 /collections/brightening-glow, new templates/collection.brightening-glow.json",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 A-face-full-prod-left nbp_flash from GLUT-library-1.png, named for /collections/brightening-glow.",
+  "note": "Header banner for the Brightening & Glow COLLECTION.\n\nNOT THE PAGE. /pages/brightening-glow already has a hero built from the gpt_image version of this same pose. Malcolm's URL was the collection, which had no dedicated banner and was sitting on the shared default template. Both now exist, from different engines' takes on the same shot \u2014 filenames are deliberately far apart so Shopify's suffix-on-collision behaviour cannot serve one in place of the other.\n\nEXTENDS LEFT, opposite to the page entry, because a different engine's frame has different edges. Measured: the RIGHT edge carries her neck and shoulder from row 264 to the bottom (mean 119.6, max 194.6) \u2014 nothing to sample. The LEFT edge is clean end to end at 18.1\u201324.0 with nothing above 45 anywhere. Same pose, same product, opposite treatment; the edge decides, not the pose name.\n\nKNOWN FAULT, CARRIED KNOWINGLY AND FLAGGED. The concentration line reads '25i GLUTATHIONE | 30ML' where the product is 2%. Five of six label elements are correct \u2014 helix as dots and dashes, 'Skingenetix', 'GLUTATHIONE BRIGHTENING', 'RADIANT GLOW SERUM' in gold, 'PREMIUM FORMULA'. At the rendered 440px band the fine line is about 4px of cap height, so no visitor reads it, but it is still a wrong concentration on a skincare product. configs/banners/glut-a-bottle-text-fix.json is the repair wave; swap the src when a candidate is chosen.\n\ntexture_box stops at x=120 because her fingers reach x=65 in the lower rows and the boxes one step wider read max 173\u2013185 against this one's 27. Scatter rather than tile, per the serums banner. Residual banding 1.72 levels on a background of 20.2 \u2014 the cleanest extension of the session.\n\nHeading ground after extension: 336px at 1280, 496px at 1440, 975px at 1920.",
+  "images": [
+    {
+      "slot": "collection_bglow_desktop",
+      "source": "assets/publish-ready/collection-brightening-glow-banner/skingenetix-brightening-glow-glutathione-radiant-serum-banner.jpg",
+      "filename": "skingenetix-brightening-glow-glutathione-radiant-serum-banner.jpg",
+      "alt": "Woman lying with her eyes closed holding a bottle of Skingenetix Glutathione Brightening Radiant Glow Serum beside her face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-brightening-glow-glutathione-radiant-serum-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-brightening-glow-glutathione-radiant-serum-banner.jpg?v=1787642491"
+    },
+    {
+      "slot": "collection_bglow_mobile",
+      "source": "assets/publish-ready/collection-brightening-glow-banner/skingenetix-brightening-glow-glutathione-radiant-serum-mobile.jpg",
+      "filename": "skingenetix-brightening-glow-glutathione-radiant-serum-mobile.jpg",
+      "alt": "Close crop of the Skingenetix Glutathione Brightening Radiant Glow Serum bottle held beside a woman's face",
+      "uploaded_handle": "shopify://shop_images/skingenetix-brightening-glow-glutathione-radiant-serum-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-brightening-glow-glutathione-radiant-serum-mobile.jpg?v=1787642490"
+    }
+  ],
+  "image_assignments": []
+}

@@ -1,0 +1,16 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/collection.brightening-glow.json \u2014 banner section",
+  "decided_by": "Claude, 2026-08-24 \u2014 legibility fix, reversible",
+  "note": "Transparent header off for /collections/brightening-glow - the FOURTH collection page today to need it. Her lit forehead and cheek sit across the top of this frame, exactly where the navigation renders, and white links vanish into it.\n\nFour pages in one day is not four unlucky frames. The shared templates/collection.json sets allow_transparent_header true, which suits a banner with dark ground at the top and suits none of the photographic frames being published this week. The real fix is to flip the shared default and let pages opt back in; raised repeatedly, not done, because it changes every collection page at once and that is Malcolm's call.\n\nAlso note: publish-collection-banner-template.py rebuilds from the shared default on every run, so this has to be re-applied after any republish.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "banner",
+      "settings": {
+        "allow_transparent_header": false
+      }
+    }
+  ],
+  "image_assignments": []
+}

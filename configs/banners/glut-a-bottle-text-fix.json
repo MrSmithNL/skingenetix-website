@@ -1,0 +1,26 @@
+{
+  "wave": "glut-a-bottle-text-fix",
+  "created": "2026-08-25",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Repair the concentration line on glutathione A-face-full-prod-left nbp_flash_01, the frame Malcolm chose for /collections/brightening-glow.\n\nTHE FAULT, read at 100%: five of the six label elements are correct - helix as dots and dashes, 'Skingenetix', 'GLUTATHIONE BRIGHTENING', 'RADIANT GLOW SERUM' in gold, 'PREMIUM FORMULA'. The last line reads '25i GLUTATHIONE | 30ML' where the product is 2% GLUTATHIONE | 30ML.\n\nIT IS SUB-LEGIBLE AT BANNER SIZE AND STILL WORTH FIXING. At the rendered 440px band that line is about 4px of cap height, so no visitor reads it - but it states a wrong concentration on a skincare product, and the precedent on this project is explicit: a fault that is only acceptable because it is too small to read is not fixed. PORN was tolerated on cartons for exactly that reason and then appeared legibly on a jar.\n\nSame repair brief as the acetyl waves, retargeted to this product's wording, and fanned to all four suppliers rather than back to nbp_flash.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "changed face, changed expression, different model, changed pose, changed hand, changed camera angle, changed framing, changed lighting, changed background, restaged, zoomed, cropped differently, 25i, RADIENT GLOW, GLUTATHIONE misspelled, invented wording, extra label lines, second bottle, duplicated hand, watermark"
+  },
+  "slots": [
+    {
+      "id": "GLUTAFIX",
+      "title": "Glutathione A-prod-left - correct the concentration line to 2% GLUTATHIONE | 30ML",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "collection brightening-glow",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-banner-library-glutathione-brightening-serum/glutathione-brightening-serum--A-face-full-prod-left/glutathione-brightening-serum--A-face-full-prod-left-nbp_flash_01.png",
+        "assets/images/_refs-2026-08-19/glutathione-brightening-serum/product_tight.png"
+      ],
+      "prompt": "Reproduce the first reference photograph exactly as it is. Keep the identical composition, the identical pose, the identical model and her face unchanged, the identical camera angle and framing, the identical lighting, shadows and background, and the identical position, size and angle of the hand and the bottle it holds. Change ONLY the wording printed on the bottle. The bottle itself stays exactly as it is: a 30ml frosted clear glass dropper bottle with a brushed satin silver collar and a white rubber-bulb pipette, holding a clear colourless water-transparent serum - the frosting is the glass, not the contents. Print the label exactly as the second reference shows it, as six stacked elements: first a fine double helix drawn as small dots and dashes, never a solid ribbon or swirl; below it the wordmark 'Skingenetix' with a capital S and the rest lower case; below that, in black capitals on two lines, 'GLUTATHIONE' then 'BRIGHTENING'; below that, in gold capitals on two lines, 'RADIANT GLOW' then 'SERUM'; below that, in smaller grey capitals, 'PREMIUM FORMULA'; and last, as a single fine line of small grey capitals, '2% GLUTATHIONE | 30ML' - that is the digit 2 followed by a PERCENT SIGN, then the word GLUTATHIONE, then a vertical bar, then 30ML. THE LAST LINE IS THE FAULT BEING CORRECTED: the version being repaired prints '25i GLUTATHIONE | 30ML', with the percent sign drawn as the characters 5 and i. It must read 2% and nothing else. A slim vertical gold rule sits to the left of those lines. Every one of the six elements must be present, correctly spelled and cleanly drawn. Add nothing else to the bottle: no other words, no numbers, no symbols, no registered or trademark marks.",
+      "negative_extra": "25i, 25l, 2Si, 251, percent sign drawn as 5i, wrong concentration, missing percent sign, GLUTATHIONE misspelled, RADIENT, changed bottle, illegible fine line, blurred label text"
+    }
+  ]
+}
