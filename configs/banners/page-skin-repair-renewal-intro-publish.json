@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/page.skin-repair-renewal.json \u2014 section `content`, block `intro` (\"Understanding Skin Repair & Renewal\")",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 'use seedream 01 from skingenetix-cpr-sat--B-eyes-closed-back-of-fingers to replace skingenetix-pdrn-cellular-repair-serum-texture'.",
+  "note": "Swaps the borrowed PDRN serum texture shot on the /pages/skin-repair-renewal intro block for a skin model photograph.\n\nWHICH FILE. `skingenetix-cpr-sat--B-eyes-closed-back-of-fingers.png` on the Desktop is the contact sheet for the wave `2026-08-22-multi-block-copper-peptide-research-satisfaction-model`, slot `cpr-sat--B-eyes-closed-back-of-fingers`; the named tile resolves to `...-seedream_01.png`. Batch name and slot name match exactly, so there is no cross-wave slot-letter ambiguity here (the trap in the slot-letters-restart-per-wave memory).\n\nASPECT IS 1:1 AND THAT IS NOT OPTIONAL. `media-with-text` is a CSS grid with one row per block and `.media-with-text__media` carries no aspect-ratio of its own, so the master's OWN intrinsic aspect sets the row height and a non-square master makes this block taller than its five siblings. Verified on the live CDN that all three sibling masters on this page (pdrn-collagen-repair-cream-texture, home-science-peptides-laboratory, pdrn-cellular-repair-serum-bottle) are 1:1. Source is 2048x2048 and ships unchanged. This lesson has now been learned three times on this store \u2014 see the key-findings-box memory.\n\nJUDGED AT 100%. The batch config warns that Seedream produced a swirling fingerprint-like whorl of concentric micro-lines on the cheek beside the eye, the exact fault Malcolm rejected the PDRN hero for on 2026-08-24. Cropped native-pixel at the cheek/eye, the nose/mouth and the hand: pore texture is natural, no whorl, lashes resolve individually, four fingers with correct nail beds and cuticles. Clean.\n\nNO PRODUCT IN FRAME, so no label to misspell and no brand mark to draw wrong \u2014 the two failure modes that dominate this store's image QA do not apply.\n\nWHY THIS PICTURE SUITS THIS BLOCK. The copy is the problem statement: the renewal cycle slows with age, and the result is 'a duller complexion, accumulated signs of environmental stress and a loss of the glow'. The frame is a woman with visible uneven tone and sun spots on the cheek, eyes closed, the back of her fingers resting against her jaw \u2014 the condition the block describes, before any product is named. Note this is NOT the register the batch was briefed for (it was generated for the copper-peptide f3 satisfaction block, which wanted a pleased, unblemished face); repurposed here deliberately, and it reads better as a cause than as a result.\n\nOPTIMISATION, PER THE MEASURED RULE. Do not read the 714K JPEG as a regression. Shopify's CDN transcodes to WebP and resizes per srcset, so this source is never what a visitor downloads; re-encoding it smaller first hands the WebP encoder JPEG artefacts and costs delivered bytes (measured 2026-08-24: a 41% smaller source delivered MORE bytes at every width). So: q95, 4:4:4, progressive, metadata dropped, and the long edge left at 2048. This block's sizes attribute is `(max-width: 999px) 100vw, min(720px, 50vw)`, so the widest it is ever asked for is 2x on a 999px viewport = 1998px \u2014 2048 covers retina exactly with nothing dead. Delivered bytes verified off the live CDN after publish, never the local file size.\n\nOLD FILE UNTOUCHED. `skingenetix-pdrn-cellular-repair-serum-texture.jpg` stays in Files, unreferenced by this template. Per .claude/rules/shopify.md rule 7 an existing image is never renamed or re-uploaded because Langify keys translations off the URL. The undo is a template revert, printed by patch-template.py.",
+  "images": [
+    {
+      "slot": "srr_intro",
+      "source": "assets/publish-ready/page-skin-repair-renewal-intro/skingenetix-skin-repair-renewal-mature-skin-uneven-tone-face.jpg",
+      "filename": "skingenetix-skin-repair-renewal-mature-skin-uneven-tone-face.jpg",
+      "alt": "Close-up of a woman with her eyes closed resting the back of her fingers against her jaw, her cheek showing uneven tone and sun spots as the skin's natural renewal cycle slows with age",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skin-repair-renewal-mature-skin-uneven-tone-face.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skin-repair-renewal-mature-skin-uneven-tone-face.jpg?v=1787673573"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "intro",
+      "slot": "srr_intro",
+      "setting": "image"
+    }
+  ]
+}
