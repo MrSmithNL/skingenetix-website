@@ -38,6 +38,15 @@ JOBS = [
     ("assets/ai-generated/ALL-copper-peptide-night-repair-cream/"
      "_run-02__08_open_jar_single_lid_seedream_0.png",
      "faq-ingredients-safety.png", 0),
+    # Superseded the line above on 2026-08-25 at Malcolm's request: the block wanted
+    # the formulation, not the pack. Gemini delivers 4800x3584, which is 1.339 rather
+    # than 1.333 — 22px per side. Nothing would be visible at that margin, but the
+    # other four masters are cut to exact 4:3 and one odd member of a set is how a
+    # column of pictures starts looking mismatched. See
+    # configs/banners/faq-ingredients-cream-macro.json.
+    ("assets/ai-generated/2026-08-22-multi-faq-ingredients-cream-macro/"
+     "FAQJAR-ingredients/FAQJAR-ingredients-nbp_pro_02.png",
+     "faq-ingredients-cream-macro.png", 0),
 ]
 
 
@@ -45,10 +54,20 @@ def crop_43(src: Path, dst: Path, trim: int) -> None:
     im = Image.open(src).convert("RGB")
     if trim:
         im = im.crop((trim, trim, im.width - trim, im.height - trim))
-    height = round(im.width * 3 / 4)
-    top = (im.height - height) // 2
-    im.crop((0, top, im.width, top + height)).save(dst)
-    print(f"  {dst.name}  {im.width}x{height}")
+    # Cut whichever axis is surplus. The first two sources were square, so only the
+    # height ever needed taking; a 4800x3584 Gemini frame is a hair WIDER than 4:3,
+    # and taking the height there asks PIL for rows the image does not have — which
+    # it answers with black padding rather than an error.
+    if im.width * 3 >= im.height * 4:
+        width = round(im.height * 4 / 3)
+        left = (im.width - width) // 2
+        box = (left, 0, left + width, im.height)
+    else:
+        height = round(im.width * 3 / 4)
+        top = (im.height - height) // 2
+        box = (0, top, im.width, top + height)
+    im.crop(box).save(dst)
+    print(f"  {dst.name}  {box[2] - box[0]}x{box[3] - box[1]}")
 
 
 def main() -> None:
