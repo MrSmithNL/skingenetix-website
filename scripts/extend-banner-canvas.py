@@ -591,8 +591,20 @@ BANNERS = {
         #: page banner and the faulty-label collection banner. Shopify Files suffixes on
         #: collision rather than replacing, so reusing either would keep serving the old
         #: picture.
-        "desktop": "skingenetix-brightening-glow-glutathione-serum-2-percent.jpg",
-        "mobile": "skingenetix-brightening-glow-glutathione-serum-2-percent-mobile.jpg",
+        #: SEO names, checked with upload-theme-images.check_seo_name(). The previous
+        #: pair was flagged: "...-serum-2-percent" trips the bare-digit rule, because a
+        #: lone "2" carries no search value in an image search. These lead with what a
+        #: shopper types for THIS page - glutathione, serum, brightening, glow - and end
+        #: on hyperpigmentation, which is the concern the collection's own description
+        #: names. Both clean, 64 and 53 characters, under the 80 cap.
+        #:
+        #: AND NEITHER STEM IS A PREFIX OF THE OTHER. That is not cosmetic: on
+        #: 2026-08-25 "...-2-percent" prefixed "...-2-percent-mobile" and both slots
+        #: bound to the phone crop, which would have published a 1380x848 portrait as a
+        #: 3750x848 banner. upload-theme-images.py is fixed, but the naming rule is the
+        #: cheaper guard.
+        "desktop": "skingenetix-glutathione-serum-brightening-glow-hyperpigmentation.jpg",
+        "mobile": "skingenetix-glutathione-serum-brightening-glow-mobile.jpg",
         #: native 2048x848, already at working height
         "work_height": 848,
         #: inset from the RIGHT edge - the subject side for a LEFT-extended banner.
