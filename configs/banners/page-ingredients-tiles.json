@@ -1,0 +1,80 @@
+{
+  "created": "2026-08-25",
+  "target": "Shopify Files \u2014 normalised ingredient selector tiles",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 make the selector tiles all show the product at the same size; serums to the PDRN bottle, jars to the Copper Peptide night cream pot",
+  "note": "Nine re-framed selector tiles. Product scale was ranging 47%-84% of frame because the nine shots came from nine different shoots, so the rows read as ragged.\n\nNOTHING IS RESAMPLED. The product is never scaled - only the canvas around it changes, so the pixels a visitor sees are the originals. New canvas edge = product_height / target_fraction; the canvas grows to make a product relatively smaller and is cropped in to make it larger.\n\nFINDING THE PRODUCT WAS THE HARD PART. Brightness thresholding does not work: a frosted white bottle on a white sweep has almost no brightness contrast, and that approach measured the acetyl bottle at 18% of frame against a true 80%. The silhouette comes from gradient magnitude instead - the product has sharp edges, the studio background only smooth ones - closed solid, holes filled, largest blob kept. The glutathione frame needed a more sensitive threshold than the rest and carries its own value.\n\nEDGE REPLICATION, NOT FLAT FILL. The first build sampled a median background colour and filled with it, which left a visible rectangle on five of the nine tiles where the fill butted against the original - these sweeps are gradients, not white. Replicating the border outward carries the gradient instead and the join has nothing to show.\n\nEvery box was checked by eye against a drawn overlay before anything was written, which is how the two mis-detections were caught rather than published.",
+  "images": [
+    {
+      "slot": "t_copper",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_copper.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-renewal-serum-selector.jpg",
+      "alt": "Skingenetix Copper Peptide GHK-Cu Advanced Repair Serum, 2%, 30ml - blue frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-renewal-serum-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-renewal-serum-selector.jpg?v=1787647608"
+    },
+    {
+      "slot": "t_acetyl",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_acetyl.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-selector.jpg",
+      "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 10%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-selector.jpg?v=1787647608"
+    },
+    {
+      "slot": "t_matrixyl",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_matrixyl.jpg",
+      "filename": "skingenetix-matrixyl-3000-collagen-serum-selector.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro Collagen Firming Repair Serum, 10%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-serum-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-collagen-serum-selector.jpg?v=1787647608"
+    },
+    {
+      "slot": "t_pdrn",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_pdrn.jpg",
+      "filename": "skingenetix-pdrn-renewal-serum-selector.jpg",
+      "alt": "Skingenetix PDRN Skin Repair Deep Renewal Serum, 30ml - pink frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-renewal-serum-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-renewal-serum-selector.jpg?v=1787647608"
+    },
+    {
+      "slot": "t_glut",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_glut.jpg",
+      "filename": "skingenetix-glutathione-brightening-serum-selector.jpg",
+      "alt": "Skingenetix Glutathione Brightening Radiant Glow Serum, 2%, 30ml - frosted bottle on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-brightening-serum-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-brightening-serum-selector.jpg?v=1787647608"
+    },
+    {
+      "slot": "t_cday",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_cday.jpg",
+      "filename": "skingenetix-copper-peptide-day-gel-cream-selector.jpg",
+      "alt": "Skingenetix Copper Peptide GHK-Cu Advanced Day Repair gel-cream, 50ml - blue jar on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-day-gel-cream-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-day-gel-cream-selector.jpg?v=1787647609"
+    },
+    {
+      "slot": "t_cnight",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_cnight.jpg",
+      "filename": "skingenetix-copper-peptide-night-cream-selector.jpg",
+      "alt": "Skingenetix Copper Peptide GHK-Cu Advanced Night Repair cream, 50ml - pale blue jar on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-night-cream-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-night-cream-selector.jpg?v=1787647608"
+    },
+    {
+      "slot": "t_mcream",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_mcream.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-selector.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro Collagen Full & Firming cream, 50ml - frosted jar on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-cream-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-firming-cream-selector.jpg?v=1787647608"
+    },
+    {
+      "slot": "t_pcream",
+      "source": "assets/publish-ready/page-ingredients-tiles/t_pcream.jpg",
+      "filename": "skingenetix-pdrn-collagen-night-cream-selector.jpg",
+      "alt": "Skingenetix PDRN Collagen Repair Deep Renewal cream, 50ml - pink jar on white",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-night-cream-selector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-night-cream-selector.jpg?v=1787647608"
+    }
+  ]
+}
