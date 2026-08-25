@@ -1,0 +1,82 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/page.ingredients.json \u2014 nav tile presentation",
+  "decided_by": "Claude, 2026-08-25 \u2014 legibility fix after the product-hero swap, reversible",
+  "note": "Turns stretch-to-fill off on the nine ingredient nav tiles.\n\nWHY IT BROKE. These tiles print the product name in WHITE over the image, dimmed by a 30% dark overlay. That worked against the old placeholders, which were dark, contrasty stock shots. The real product heroes are shot on white and light grey, so white text over them is close to invisible - 'Matrixyl 3000 + Hyaluronic Acid Collagen Serum' reads as white on white. The swap was right; this is its consequence.\n\nWHY NOT JUST RAISE THE OVERLAY. Pushing it to ~55% would make the text legible by greying out nine product photographs on a page whose entire job is to show the products. Dark text instead does not work either: the tile captions sit low, and on the copper peptide and PDRN bottles that is dark blue and deep pink glass.\n\nThe section's own schema says 'Overlay is ignored when Stretch to fill is disabled', so turning stretch off drops the text out of the image and into a caption beneath it - product on its own ground, name fully legible, and nine tiles at one consistent size instead of nine different crops. Reversible: set stretch_image back to true.\n\nAND THE CAPTION COLOUR HAD TO FOLLOW. Each block carried text_color #ffffff, which was right while the name sat over a dimmed image. With stretch off the caption moves onto the page's own light grey ground, where white is just as unreadable as it was over the white product shots - the fault moved rather than went away. Set to #1a1a1a to match the page's body text. Caught by looking at the result rather than by assuming the layout change was sufficient.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "nav_serums",
+      "block": "ilb_copper",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_argireline",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_matrixyl",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_pdrn",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_glutathione",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    },
+    {
+      "section": "nav_creams",
+      "block": "ilb_cream1",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    },
+    {
+      "section": "nav_creams",
+      "block": "ilb_cream2",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    },
+    {
+      "section": "nav_creams",
+      "block": "ilb_cream3",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    },
+    {
+      "section": "nav_creams",
+      "block": "ilb_cream4",
+      "settings": {
+        "stretch_image": false,
+        "text_color": "#1a1a1a"
+      }
+    }
+  ],
+  "image_assignments": []
+}

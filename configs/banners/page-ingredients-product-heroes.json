@@ -1,0 +1,172 @@
+{
+  "created": "2026-08-25",
+  "target": "templates/page.ingredients.json \u2014 18 product image slots",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 replace the placeholder images with the hero images of the actual products",
+  "note": "Swaps every product placeholder on /pages/ingredients for that product's own live hero image.\n\nWHAT THE PLACEHOLDERS WERE, and two of them are worth recording. The nine images were unbranded stock-style bottles and jars. The Glutathione one carried a COMPETITOR'S BRAND - the bottle reads 'QUINER' - live on a Skingenetix page. The Copper Peptide Day Gel-Cream one read 'SKINGENETIX(R)' with a registered mark the brand does not use, the same stray-(R) fault the first production run was corrected for. Both are gone with this swap.\n\nNO NEW UPLOADS, DELIBERATELY. Every hero already lives in Shopify Files (cdn/shop/files/...), so the theme can reference it directly as shopify://shop_images/<filename>. Re-uploading copies would have broken shopify.md rule 7 - Langify keys translations off the image URL, so an original is never renamed or re-uploaded - and would have created nine duplicate files for no gain. It also means these tiles now track the product pages: change a product's featured image and this page follows.\n\nThe filenames are underscored and long, which check_seo_name would flag - but they are EXISTING product media, not new uploads, and renaming them is exactly what rule 7 forbids. The SEO naming rule governs what we upload, not what we reference.\n\nEach product appears twice on this page - once in a nav row of image-link-blocks, once in its own media-with-text section - so nine images fill eighteen slots.",
+  "images": [
+    {
+      "slot": "copper_serum",
+      "filename": "copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+      "product": "Copper Peptide (GHK-Cu) Renewal Serum"
+    },
+    {
+      "slot": "acetyl_serum",
+      "filename": "acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg",
+      "product": "Acetyl Hexapeptide-8 Anti-Wrinkle Serum"
+    },
+    {
+      "slot": "matrixyl_serum",
+      "filename": "matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_colourblock_soft_pastel_2_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_colourblock_soft_pastel_2_skingenetix.jpg",
+      "product": "Matrixyl 3000 + Hyaluronic Acid Collagen Serum"
+    },
+    {
+      "slot": "pdrn_serum",
+      "filename": "pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg",
+      "product": "PDRN Renewal Serum"
+    },
+    {
+      "slot": "glut_serum",
+      "filename": "glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg",
+      "product": "Glutathione Brightening Serum"
+    },
+    {
+      "slot": "copper_day",
+      "filename": "copper_peptide_ghk_cu_advanced_day_repair_face_cream_silver_jar_dramatic_shadow_5_skingenetix_e2760725-1fe3-4119-8f22-99258f059d86.jpg",
+      "uploaded_handle": "shopify://shop_images/copper_peptide_ghk_cu_advanced_day_repair_face_cream_silver_jar_dramatic_shadow_5_skingenetix_e2760725-1fe3-4119-8f22-99258f059d86.jpg",
+      "product": "Copper Peptide (GHK-Cu) Day Gel-Cream"
+    },
+    {
+      "slot": "copper_night",
+      "filename": "copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix_604f3b41-ff68-45ba-baaa-65a4747ce8c6.jpg",
+      "uploaded_handle": "shopify://shop_images/copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix_604f3b41-ff68-45ba-baaa-65a4747ce8c6.jpg",
+      "product": "Copper Peptide (GHK-Cu) Night Cream"
+    },
+    {
+      "slot": "matrixyl_cream",
+      "filename": "matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_lid_off_product_only_2_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_lid_off_product_only_2_skingenetix.jpg",
+      "product": "Matrixyl 3000 Pro-Collagen Firming Cream"
+    },
+    {
+      "slot": "pdrn_cream",
+      "filename": "pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+      "product": "PDRN + Collagen Night Cream"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "nav_serums",
+      "block": "ilb_copper",
+      "slot": "copper_serum",
+      "setting": "image"
+    },
+    {
+      "section": "product_copper",
+      "block": "copper_block",
+      "slot": "copper_serum",
+      "setting": "image"
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_argireline",
+      "slot": "acetyl_serum",
+      "setting": "image"
+    },
+    {
+      "section": "product_argireline",
+      "block": "argireline_block",
+      "slot": "acetyl_serum",
+      "setting": "image"
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_matrixyl",
+      "slot": "matrixyl_serum",
+      "setting": "image"
+    },
+    {
+      "section": "product_matrixyl",
+      "block": "matrixyl_block",
+      "slot": "matrixyl_serum",
+      "setting": "image"
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_pdrn",
+      "slot": "pdrn_serum",
+      "setting": "image"
+    },
+    {
+      "section": "product_pdrn",
+      "block": "pdrn_block",
+      "slot": "pdrn_serum",
+      "setting": "image"
+    },
+    {
+      "section": "nav_serums",
+      "block": "ilb_glutathione",
+      "slot": "glut_serum",
+      "setting": "image"
+    },
+    {
+      "section": "product_glutathione",
+      "block": "glutathione_block",
+      "slot": "glut_serum",
+      "setting": "image"
+    },
+    {
+      "section": "nav_creams",
+      "block": "ilb_cream1",
+      "slot": "copper_day",
+      "setting": "image"
+    },
+    {
+      "section": "product_copper-day-gel-cream",
+      "block": "b",
+      "slot": "copper_day",
+      "setting": "image"
+    },
+    {
+      "section": "nav_creams",
+      "block": "ilb_cream2",
+      "slot": "copper_night",
+      "setting": "image"
+    },
+    {
+      "section": "product_copper-night-cream",
+      "block": "b",
+      "slot": "copper_night",
+      "setting": "image"
+    },
+    {
+      "section": "nav_creams",
+      "block": "ilb_cream3",
+      "slot": "matrixyl_cream",
+      "setting": "image"
+    },
+    {
+      "section": "product_pro-collagen-cream",
+      "block": "b",
+      "slot": "matrixyl_cream",
+      "setting": "image"
+    },
+    {
+      "section": "nav_creams",
+      "block": "ilb_cream4",
+      "slot": "pdrn_cream",
+      "setting": "image"
+    },
+    {
+      "section": "product_pdrn-collagen-cream",
+      "block": "b",
+      "slot": "pdrn_cream",
+      "setting": "image"
+    }
+  ]
+}
