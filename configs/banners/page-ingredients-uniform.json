@@ -1,0 +1,138 @@
+{
+  "created": "2026-08-25",
+  "target": "Shopify Files \u2014 ingredients page tile + detail images",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 uniform white-background hero for the small tiles; pipette-removed / jar-open for the large sections",
+  "note": "Ten NEW uploads (SEO-named) plus nine already-live files referenced in place.\n\nAlready-live files keep their existing underscored product-media names: renaming or re-uploading an original breaks Langify, which keys translations off the URL (shopify.md rule 7). New uploads get SEO names per website-imagery rule 5.\n\nTHREE COMPROMISES, all flagged to Malcolm rather than hidden:\n  * Matrixyl 3000 SERUM has no white-background hero anywhere - not in live media, not in the local finals. Substituted its pedestal-edge hero, which is teal.\n  * Matrixyl Firming CREAM likewise - substituted its gradient hero, also teal.\n  * Copper Peptide SERUM has no pipette-pulled-out shot; its macro dropper-tip gel pour is the nearest.\nThe two teal tiles break exactly the uniformity Malcolm asked for. Generating white-background heroes for those two products is the real fix.",
+  "images": [
+    {
+      "slot": "t_copper",
+      "filename": "copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg",
+      "alt": ""
+    },
+    {
+      "slot": "t_acetyl",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-white-hero.jpg",
+      "source": "assets/publish-ready/acetyl-hexapeptide-8-serum/_acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_hero_white_bg_2_skingenetix.jpg",
+      "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 10%, 30ml - frosted bottle on a white background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-white-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-white-hero.jpg?v=1787645419"
+    },
+    {
+      "slot": "t_matrixyl",
+      "filename": "skingenetix-matrixyl-3000-collagen-serum-pedestal-hero.jpg",
+      "source": "assets/publish-ready/matrixyl-3000-pro-collagen-serum/_matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_pedestal_edge_hero_1_skingenetix.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro Collagen Serum, 10%, 30ml - bottle on a pedestal against a soft teal ground",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-serum-pedestal-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-collagen-serum-pedestal-hero.jpg?v=1787645420"
+    },
+    {
+      "slot": "t_pdrn",
+      "filename": "pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg",
+      "alt": ""
+    },
+    {
+      "slot": "t_glut",
+      "filename": "skingenetix-glutathione-brightening-radiant-serum-white-hero.jpg",
+      "source": "assets/publish-ready/glutathione-brightening-serum/_glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_hero_white_bg_1_skingenetix.jpg",
+      "alt": "Skingenetix Glutathione Brightening Radiant Glow Serum, 2%, 30ml - frosted bottle on a white background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-brightening-radiant-serum-white-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-brightening-radiant-serum-white-hero.jpg?v=1787645420"
+    },
+    {
+      "slot": "t_cday",
+      "filename": "skingenetix-copper-peptide-day-gel-cream-white-hero.jpg",
+      "source": "assets/publish-ready/copper-peptide-day-repair-cream/copper_peptide_ghk_cu_advanced_day_repair_face_cream_hero_whitebg_1_skingenetix.jpg",
+      "alt": "Skingenetix Copper Peptide GHK-Cu Advanced Day Repair gel-cream, 50ml - blue jar on a white background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-day-gel-cream-white-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-day-gel-cream-white-hero.jpg?v=1787645420"
+    },
+    {
+      "slot": "t_cnight",
+      "filename": "copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix_604f3b41-ff68-45ba-baaa-65a4747ce8c6.jpg",
+      "uploaded_handle": "shopify://shop_images/copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix_604f3b41-ff68-45ba-baaa-65a4747ce8c6.jpg",
+      "alt": ""
+    },
+    {
+      "slot": "t_mcream",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-gradient-hero.jpg",
+      "source": "assets/publish-ready/matrixyl-3000-pro-collagen-cream/_matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_gradient_hero_1_skingenetix.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro Collagen Full & Firming cream, 50ml - jar against a soft gradient ground",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-cream-gradient-hero.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-firming-cream-gradient-hero.jpg?v=1787645420"
+    },
+    {
+      "slot": "t_pcream",
+      "filename": "pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg",
+      "alt": ""
+    },
+    {
+      "slot": "d_copper",
+      "filename": "skingenetix-copper-peptide-ghk-cu-serum-pipette-lifted-drop.jpg",
+      "alt": "Skingenetix Copper Peptide GHK-Cu Advanced Repair Serum, 2%, 30ml - pipette lifted clear with a drop on a fingertip",
+      "source": "assets/publish-ready/copper-peptide-repair-serum/__copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hands_only_dropper_4_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-serum-pipette-lifted-drop.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-serum-pipette-lifted-drop.jpg?v=1787645655"
+    },
+    {
+      "slot": "d_acetyl",
+      "filename": "skingenetix-acetyl-hexapeptide-8-serum-pipette-drop-forming.jpg",
+      "source": "assets/publish-ready/acetyl-hexapeptide-8-serum/__acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_pipette_pulled_out_drop_forming_3_skingenetix.jpg",
+      "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 10%, 30ml - pipette lifted clear with a drop forming",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-serum-pipette-drop-forming.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-serum-pipette-drop-forming.jpg?v=1787645419"
+    },
+    {
+      "slot": "d_matrixyl",
+      "filename": "skingenetix-matrixyl-3000-collagen-serum-pipette-drop-forming.jpg",
+      "source": "assets/publish-ready/matrixyl-3000-pro-collagen-serum/_matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_pipette_pulled_out_drop_forming_4_skingenetix.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro Collagen Serum, 10%, 30ml - pipette lifted clear with a drop forming",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-serum-pipette-drop-forming.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-collagen-serum-pipette-drop-forming.jpg?v=1787645420"
+    },
+    {
+      "slot": "d_pdrn",
+      "filename": "skingenetix-pdrn-renewal-serum-pipette-drop-forming.jpg",
+      "source": "assets/publish-ready/pdrn-skin-repair-serum/_pdrn_skin_repair_deep_renewal_face_serum_pipette_pulled_out_drop_forming_5_skingenetix.jpg",
+      "alt": "Skingenetix PDRN Skin Repair Deep Renewal Serum, 30ml - pipette lifted clear with a drop forming",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-renewal-serum-pipette-drop-forming.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-renewal-serum-pipette-drop-forming.jpg?v=1787645420"
+    },
+    {
+      "slot": "d_glut",
+      "filename": "skingenetix-glutathione-brightening-serum-pipette-drop-forming.jpg",
+      "source": "assets/publish-ready/glutathione-brightening-serum/_glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_pipette_pulled_out_drop_forming_1_skingenetix.jpg",
+      "alt": "Skingenetix Glutathione Brightening Radiant Glow Serum, 2%, 30ml - pipette lifted clear with a drop forming",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-brightening-serum-pipette-drop-forming.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-brightening-serum-pipette-drop-forming.jpg?v=1787645420"
+    },
+    {
+      "slot": "d_cday",
+      "filename": "skingenetix-copper-peptide-day-gel-cream-open-jar-lid.jpg",
+      "source": "assets/publish-ready/copper-peptide-day-repair-cream/_copper_peptide_ghk_cu_advanced_day_repair_face_cream_open_jar_single_lid_1_skingenetix.jpg",
+      "alt": "Skingenetix Copper Peptide GHK-Cu Advanced Day Repair gel-cream, 50ml - jar open with the lid beside it",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-day-gel-cream-open-jar-lid.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-day-gel-cream-open-jar-lid.jpg?v=1787645420"
+    },
+    {
+      "slot": "d_cnight",
+      "filename": "copper_peptide_ghk_cu_advanced_night_repair_skin_cream_open_jar_swatch_1_skingenetix_86e32b2d-8988-4423-b28f-d24c85a8f5f5.jpg",
+      "uploaded_handle": "shopify://shop_images/copper_peptide_ghk_cu_advanced_night_repair_skin_cream_open_jar_swatch_1_skingenetix_86e32b2d-8988-4423-b28f-d24c85a8f5f5.jpg",
+      "alt": ""
+    },
+    {
+      "slot": "d_mcream",
+      "filename": "matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_open_jar_swatch_3_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_open_jar_swatch_3_skingenetix.jpg",
+      "alt": ""
+    },
+    {
+      "slot": "d_pcream",
+      "filename": "pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_open_jar_swatch_2_skingenetix.jpg",
+      "uploaded_handle": "shopify://shop_images/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_open_jar_swatch_2_skingenetix.jpg",
+      "alt": ""
+    }
+  ]
+}
