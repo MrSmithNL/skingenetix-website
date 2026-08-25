@@ -1,0 +1,45 @@
+{
+  "wave": "banner-lab-glassware-graphite",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md, .claude/rules/website-imagery.md",
+  "note": "General-purpose graphite header band: laboratory glassware close up, scientific equipment thrown out of focus behind. Malcolm, 2026-08-25. Not tied to one page — briefed at the standard band spec so it can take any header that wants a lab register without a model or a product in it.\n\nCLASS B. No product and no branding in frame, so no references are attached, the brief asks for material and never for identity, and FLUX.2 stays in the run because there is nothing for it to invent.\n\nNEGATIVES ARE SPECIFIC, NOT BLANKET. The art-direction doc's Class B set bars 'no bottle', which fights a brief whose subject IS glassware — and an engine resolving that contradiction picks for you. So the exclusions name what is actually unwanted: dropper bottles, cosmetic packaging, labels, logos, lettering and printed graduation digits. Digits matter: FLUX.2 ignored that instruction on the earlier microscope wave and rendered '100 ml / 50 / 40' scale markings, which are the detail most likely to garble at another seed.\n\nGROUND is Graphite 1A1A1A throughout, with one hard key and a real shadow — the direction's rule 4, and the opposite of the flat diffuse light the old stock banners used. Depth of field does the work the brief asks for: the glassware sharp and close, the equipment behind it reduced to soft shape and specular, never readable.\n\nTHREE FRAMINGS: A and C hold the type zone left to match every banner published this week; B holds it right so a page with the subject on the left has an option. C is the only one carrying colour — the palette's Clinical blue, 014EB1 — so the set offers both a neutral and an accented version rather than committing to one.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "no dropper bottle, no cosmetic bottle, no serum bottle, no product packaging, no carton, no label, no logo, no brand mark, no lettering of any kind, no text, no numbers, no printed graduation digits, no scale markings with numerals, no watermark, no signature, no border, no collage, no multi-panel layout, not a flat-lay, no clutter, no person, no hands, no face, no readable screens, no branded equipment, no botanicals, no leaves, no flowers, no wood, no linen, no lens flare, no neon glow, no sci-fi hologram, no bubbling, no smoke, no dry ice"
+  },
+  "slots": [
+    {
+      "id": "lab-glass--A-cluster-type-left",
+      "title": "lab glassware graphite — A · cluster close up, equipment behind, type zone left",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "graphite header band",
+      "ref_files": [],
+      "prompt": "Close-up laboratory photograph. A small cluster of clear borosilicate glassware stands together on a dark bench in the right half of the frame, between 55 and 92 percent of frame width: one conical Erlenmeyer flask, one low cylindrical beaker and one tall narrow test tube in a simple stand. The glass is empty and immaculately clean, thin-walled and precise, its rims and edges catching hard specular lines. It is the sharpest thing in the picture and sits close to camera.\n\nBehind it, a working laboratory reduced to shape and light: matte black instrument housings, a chrome stand, the curve of a larger apparatus, all thrown far out of focus at f/2 so nothing on them is identifiable and no surface is readable. The ground and bench are deep graphite, colour hex 1A1A1A, falling away to near black at the frame edges.\n\nOne hard key light from the upper left rakes across the glass, drawing bright edges down each vessel and laying hard-edged shadows to the right across the bench; one soft fill only. The left 42 percent of the frame, measured from 0 to 42 percent of frame width, is empty defocused bench held at even tone and low detail so a headline can sit on it unaided. Shot on a 50mm, clinical, cold, precise, no styling props.",
+      "negative_extra": "no coloured liquid, no glassware touching or overlapping confusingly, no spillage, no droplets on the bench, no cork or rubber stopper, no visible measurement lines"
+    },
+    {
+      "id": "lab-glass--B-macro-type-right",
+      "title": "lab glassware graphite — B · macro rim, equipment behind, type zone right",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "graphite header band",
+      "ref_files": [],
+      "prompt": "Extreme macro laboratory photograph. The upper body and rim of one single clear borosilicate beaker fills the left 38 percent of the frame, between 3 and 38 percent of frame width, very close to camera and cropped by the left edge. The glass is empty and immaculately clean; a hard raking light runs a single bright specular line around the rim and down the wall, and the thickness of the base bends that light into a small caustic on the bench.\n\nBeyond it a working laboratory is reduced to soft shape and specular only: matte black instrument housings and the chrome of a stand, thrown far out of focus at f/1.8, nothing on them identifiable or readable. The bench and ground are deep graphite, colour hex 1A1A1A, falling to near black.\n\nOne hard key from the upper left, cold and directional, one soft fill. The right 45 percent of the frame, measured from 55 to 100 percent of frame width, is defocused darkness held at even tone and low detail so a headline can sit on it unaided. Shot on a 100mm macro, clinical, exact, deep shadow.",
+      "negative_extra": "no coloured liquid, no second beaker in focus, no fingerprints, no water droplets on the glass, no cork or rubber stopper, no visible measurement lines"
+    },
+    {
+      "id": "lab-glass--C-blue-accent-type-left",
+      "title": "lab glassware graphite — C · clinical blue accent, type zone left",
+      "class": "B",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "graphite header band",
+      "ref_files": [],
+      "prompt": "Close-up laboratory photograph. Two pieces of clear borosilicate glassware stand on a dark bench in the right half of the frame, between 58 and 90 percent of frame width: one conical Erlenmeyer flask and one low cylindrical beaker, each holding a clear vivid blue liquid, colour hex 014EB1, filled about two thirds, perfectly still with a crisp meniscus. The key light passes through both so the blue glows from within and pools a soft blue light onto the bench beneath them. The glassware is close to camera and the sharpest thing in the picture.\n\nBehind it a working laboratory reduced to shape and light: matte black instrument housings and a chrome stand, thrown far out of focus at f/2, nothing identifiable or readable on any of it. The bench and ground are deep graphite, colour hex 1A1A1A, falling to near black at the edges, so the blue is the only colour in the frame.\n\nOne hard key light from the upper left rakes the glass and lays hard-edged shadows to the right; one soft fill. The left 42 percent of the frame, measured from 0 to 42 percent of frame width, is empty defocused bench held at even tone and low detail so a headline can sit on it unaided. Shot on a 50mm, clinical, cold, precise.",
+      "negative_extra": "no bubbles, no fizzing, no pouring, no stirring rod, no spillage, no cork or rubber stopper, no visible measurement lines, no second colour"
+    }
+  ]
+}

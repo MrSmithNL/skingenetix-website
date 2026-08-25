@@ -530,6 +530,33 @@ BANNERS = {
         "edge_trim": 4,
         "shoulder": None,
     },
+    # /pages/ingredients, second pass. Malcolm's pick from the product-colour glassware
+    # wave, 2026-08-25 - framing A, whose type zone is left and therefore matches the
+    # page's left-aligned heading. (The C pick is opposite-handed and needs a page
+    # whose text sits right.)
+    "ingredients-glassware": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-lab-glassware-product-colours"
+                     / "lab-colours--A-cluster-type-left"
+                     / "lab-colours--A-cluster-type-left-nbp_flash_02.png"),
+        "out": ROOT / "assets/publish-ready/page-ingredients-glassware-banner",
+        "desktop": "skingenetix-peptide-laboratory-glassware-blue-pink-serum-actives.jpg",
+        "mobile": "skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg",
+        "work_height": 848,
+        #: right-anchored; keeps all three vessels
+        "mobile_crop": (60, 950),
+        "target_width": 3750,
+        #: MEASURED, not eyeballed. Cols 0-400 look uniformly dark and are not: rows
+        #: 180-300 peak at 146 and rows 600-800 at 162, both background equipment
+        #: catching light. Only rows 300-500 are genuinely clean, max 25. Sampling the
+        #: wider box is the mistake that tiled ghosts across the day-cream banner.
+        "bg_fit": (300, 500),
+        "texture_box": (300, 500, 0, 400),
+        "texture_mode": "scatter",
+        #: the edge itself is clean and fringe-free - leftmost columns all 23.3-23.7,
+        #: adjacent deltas 0.79-0.86 - so no edge_trim is needed here.
+        "profile_smooth": 20.0,
+        "shoulder": None,
+    },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
         "out": ROOT / "assets/publish-ready/collection-all-banner",

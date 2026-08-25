@@ -1,0 +1,36 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.ingredients.json, banner section",
+  "decided_by": "Malcolm picked lab-colours A nbp_flash_02 and asked for one of his two picks on this page, 2026-08-25",
+  "note": "Second pass at the /pages/ingredients header. Replaces the three-serum product line-up published earlier today with the laboratory glassware frame.\n\nWHY FRAMING A AND NOT C: Malcolm picked one candidate from each of two framings and said one should go on this page. The page decides which. Its heading sits left \u2014 desktop_text_position is centre-start with the banner CSS pinning object-position right \u2014 so the image needs its subject on the RIGHT, which is framing A. The C pick is opposite-handed, subject left with the space on the right, and would need the page's text moved across; it is better held for a header that wants that.\n\nSOURCE: banner-lab-glassware-product-colours wave, slot A, nbp_flash candidate 2. Class B \u2014 no product, no branding, nothing for an engine to invent. Liquids are the products' own scene colours: Clinical blue 014EB1 for Copper Peptide, Blush F3BFC2 for PDRN, and water-clear for the frosted-white products.\n\nKNOWN DEPARTURE, and Malcolm picked it knowing: this candidate SWAPPED the briefed order \u2014 pink beaker left of the blue flask rather than blue then pink. It reads well alone; it just will not match other frames from the same wave if several are used together.\n\nEXTENDED 1999 -> 3750x848 (4.42:1), standard sm header height. The left edge is clean and fringe-free (leftmost columns 23.3-23.7, adjacent deltas 0.79-0.86) so no edge_trim was needed. The texture box is rows 300-500 only: cols 0-400 LOOK uniformly dark and are not \u2014 rows 180-300 peak at 146 and rows 600-800 at 162, both background equipment catching light, and tiling either would have printed ghosts across the fill. Verified after the fact: brightest pixel anywhere in the 1751px fill is 53.\n\nNO SECTION SETTINGS CHANGE. The banner already carries the liquid-block CSS, left text and 25% overlay from this morning's pass, so this swaps the two images and nothing else.\n\nTO REVERT to the product line-up: repoint banner.image and banner.mobile_image at skingenetix-peptide-serum-range-copper-pdrn-glutathione.jpg and its -mobile pair, both still on the CDN.",
+  "images": [
+    {
+      "slot": "ingredients_glass_desktop",
+      "source": "assets/publish-ready/page-ingredients-glassware-banner/skingenetix-peptide-laboratory-glassware-blue-pink-serum-actives.jpg",
+      "filename": "skingenetix-peptide-laboratory-glassware-blue-pink-serum-actives.jpg",
+      "alt": "Laboratory glassware on a dark bench holding blue and rose-pink solutions beside a clear test tube, with scientific equipment out of focus behind",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pink-serum-actives.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-laboratory-glassware-blue-pink-serum-actives.jpg?v=1787659706"
+    },
+    {
+      "slot": "ingredients_glass_mobile",
+      "source": "assets/publish-ready/page-ingredients-glassware-banner/skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg",
+      "filename": "skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg",
+      "alt": "Close-up of laboratory glassware holding blue and rose-pink solutions on a dark bench",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg?v=1787659706"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "banner",
+      "slot": "ingredients_glass_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "banner",
+      "slot": "ingredients_glass_mobile",
+      "setting": "mobile_image"
+    }
+  ]
+}
