@@ -1,0 +1,22 @@
+{
+  "note": "Swap the first Key Findings image on /pages/copper-peptide-research. Malcolm's pick, 2026-08-25: nbp_flash_02 from the cp-collagen--C-copper-node-network batch. The slot is key_findings.f1, headed 'Supports the skin's own collagen & renewal pathways' \u2014 a copper node radiating through a blue fibre mesh states that claim; the serum bottle it replaces did not.",
+  "what_it_replaces": "skingenetix-ingredients-copper-peptide-serum.jpg \u2014 a product shot borrowed from the ingredients page. That file is left alone and stays live where it belongs: only THIS page's reference changes. Re-uploading over the name would break Langify, which keys translations off the image URL (shopify.md rule 7).",
+  "template": "templates/page.research-copper-peptide.json",
+  "images": [
+    {
+      "slot": "copper_node_network",
+      "source": "assets/ai-generated/2026-08-22-multi-block-copper-peptide-collagen-pathways/cp-collagen--C-copper-node-network/cp-collagen--C-copper-node-network-nbp_flash_02.png",
+      "filename": "skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg",
+      "alt": "A single copper node radiating fine filaments through a blue collagen-fibre network - Skingenetix copper peptide GHK-Cu research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg?v=1787663139"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "key_findings",
+      "block": "f1",
+      "slot": "copper_node_network"
+    }
+  ]
+}

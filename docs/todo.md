@@ -386,6 +386,18 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    was repaired from `25i` to `2%` first.
 3. 🟡 **Two research pages wear philosophy-page images** — `/pages/pdrn-research` and
    `/pages/glutathione-research`. Both products have a full banner library already.
+   ⚠️ `/pages/copper-peptide-research` had the same fault in its **body**, not its banner,
+   and **block 1 is now fixed** (2026-08-25, `configs/banners/page-copper-peptide-research-key-finding.json`).
+   `key_findings.f1` — "Supports the skin's own collagen & renewal pathways" — showed a
+   generic unbranded dropper bottle borrowed from the ingredients page. It now carries
+   Malcolm's pick `cp-collagen--C-copper-node-network-nbp_flash_02`: a copper node radiating
+   through a blue fibre mesh, which actually states the claim in the heading. Uploaded under
+   a **new** name (`skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg`) and the
+   slot repointed — `skingenetix-ingredients-copper-peptide-serum.jpg` is untouched and still
+   live on `/pages/ingredients` and `/pages/skin-concerns`. Delivered at 800w into a 660px
+   box, so no downscale trap. **Blocks f2 and f3 on that page still wear
+   `skingenetix-philosophy-research.jpg` and `skingenetix-philosophy-quality.jpg`** — generic
+   lab benches, the same borrowing, not yet addressed.
 4. 🟡 **Fold the runtime-injected banner configs into the scripts.** The three banners of
    2026-08-24/25 were built by injecting config into `extend-banner-canvas.py` and
    `publish-collection-banner-template.py` at import time, because a second session was
