@@ -1,0 +1,42 @@
+{
+  "wave": "science-ingredient-acetyl-hexapeptide-8",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Ingredient tile for Acetyl Hexapeptide-8 on /pages/the-science, section `ingredients_overview`, block `ingredient_2`. Square 1:1 at 2048; the theme asks for 1400x1400 and the art direction generates tiles at 2048.\n\nReplaces a placeholder — all five ingredient tiles are currently wearing mega-menu thumbnails or images borrowed from the philosophy page.\n\nCLASS B: no product in frame, so no product description and no brand identity is supplied. The Class B negative list was rewritten rather than reused — the standard one bars bottles and jars outright, and plain laboratory glass is the subject of two of these three concepts.\n\nGround colour is a soft pearl grey (#D8D6D4), taken from this active's existing scene colour rather than invented, so the tile matches the product photography.\n\nNothing is named that can be described: no brief here says DNA, helix, collagen fibre or polynucleotide.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "cosmetic packaging, product bottle, dropper bottle with a cap, jar, tube, label, logo, brand mark, lettering, text, numbers, watermark, signature, botanicals, leaves, flowers, herbs, fruit, wood, rough stone, linen, water splash, lens flare, bokeh sparkle, border, collage, multi-panel, flat-lay, clutter, more than one subject, hands, people, face"
+  },
+  "slots": [
+    {
+      "id": "ingredient_2--A-dish-of-solution",
+      "title": "Shallow laboratory dish holding the solution, on the ground colour",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "page.science:ingredients_overview.ingredient_2",
+      "prompt": "Laboratory still-life photograph, one subject only. A shallow circular borosilicate glass dish, plain and entirely unmarked, sits on a smooth seamless surface of a soft pearl grey (#D8D6D4). The dish holds a shallow pool of a completely transparent, colourless liquid — water-clear and lightly viscous, visible only as refraction, edge caustics and highlight, roughly eight millimetres deep, its surface perfectly still so the rim throws a clean elliptical caustic onto the floor of the dish. Photographed from about thirty degrees above, the dish centred and filling roughly sixty percent of the frame width, the ground running out to all four edges. Colour is restricted to the ground, the glass and the liquid. A single hard key light from the upper left rakes across the subject and lays one crisp shadow down to the lower right; a soft fill lifts the core of that shadow just enough to hold detail. The look is clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": ""
+    },
+    {
+      "id": "ingredient_2--B-material-macro",
+      "title": "Macro study of the material itself",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "page.science:ingredients_overview.ingredient_2",
+      "prompt": "Extreme macro photograph, one subject only, filling the frame: a flat rectangular glass microscope slide carrying a thin smear of colourless crystalline material, lit from beneath so the crystals read as bright structure against the dark of the slide's edge. Behind it, a smooth seamless surface of a soft pearl grey (#D8D6D4) shows only at the very edges of the frame. Focus falls off steeply with depth, so the nearest structure is razor sharp and the rest dissolves. Colour is restricted to the ground and the material. A single hard key light from the upper left rakes across the subject and lays one crisp shadow down to the lower right; a soft fill lifts the core of that shadow just enough to hold detail. The look is clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": ""
+    },
+    {
+      "id": "ingredient_2--C-pipette-and-droplet",
+      "title": "Glass pipette releasing a single droplet",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "page.science:ingredients_overview.ingredient_2",
+      "prompt": "Laboratory still-life photograph, one subject only. A slender straight glass pipette, plain and entirely unmarked, enters from the top of the frame and hangs vertically, its drawn tip at about the upper third. A single pendant droplet of completely clear colourless liquid hangs from the tip, elongated and about to fall, caught sharp. Behind it a smooth seamless surface of a soft pearl grey (#D8D6D4) runs out to all four edges. The pipette occupies a narrow vertical band at the centre and the ground is otherwise unbroken. Colour is restricted to the ground, the glass and the liquid. A single hard key light from the upper left rakes across the subject and lays one crisp shadow down to the lower right; a soft fill lifts the core of that shadow just enough to hold detail. The look is clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": ""
+    }
+  ]
+}

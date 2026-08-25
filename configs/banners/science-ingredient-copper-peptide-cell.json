@@ -1,0 +1,42 @@
+{
+  "wave": "science-ingredient-copper-peptide-cell",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Ingredient tile for Copper Peptide GHK-Cu on /pages/the-science, section `ingredients_overview`, block `ingredient_1`. Square 1:1 at 2048; the theme asks for 1400x1400 and the art direction generates tiles at 2048.\n\nReplaces a placeholder — all five ingredient tiles are currently wearing mega-menu thumbnails or images borrowed from the philosophy page.\n\nCLASS B: no product in frame, so no product description and no brand identity is supplied. The Class B negative list was rewritten rather than reused — the standard one bars bottles and jars outright, and plain laboratory glass is the subject of two of these three concepts.\n\nGround colour is a saturated clinical blue (#014EB1), taken from this active's existing scene colour rather than invented, so the tile matches the product photography.\n\nCELL REGISTER, Malcolm 2026-08-25: 'lets try more cell level images'. The material-macro wave produced a usable Copper Peptide and Matrixyl but a weak Acetyl — several suppliers gave a black slide against a beige ground, losing the committed pearl-grey entirely — and a PDRN whose 'fine translucent threads' read as hair or fishing line on about half the candidates.\n\nThe negative list is EXTENDED for this register. Real microscopy is published with scale bars, arrows, channel labels and grid overlays, so every supplier's idea of 'under a microscope' arrives annotated, and an annotated tile is a diagram rather than a photograph. Multi-channel fluorescence is also conventionally garish, which would wreck the one-ground-colour rule.\n\nPDRN NAMES ITS SUBJECT, WHICH IS A DELIBERATE EXCEPTION. The standing rule on this project is describe-don't-name, because a named noun gets filled in from each supplier's own stock idea. Here the stock idea IS the subject — PDRN is sodium DNA, as the page's own copy says — so the brief names the double helix AND describes its geometry, pinning the form without inviting clip-art. This has nothing to do with the brand's helix MARK, which stays dots-and-dashes and never appears in a Class B frame.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "cosmetic packaging, product bottle, dropper bottle with a cap, jar, tube, label, logo, brand mark, lettering, text, numbers, watermark, signature, botanicals, leaves, flowers, herbs, fruit, wood, rough stone, linen, water splash, lens flare, bokeh sparkle, border, collage, multi-panel, flat-lay, clutter, more than one subject, hands, people, face, scale bar, annotation, arrow, callout, grid overlay, diagram, chart, microscope eyepiece, circular vignette frame, split channel panel, rainbow colours, multicoloured fluorescence, green and red channels together"
+  },
+  "slots": [
+    {
+      "id": "ingredient_1--D-fibroblast-field",
+      "title": "A field of spindle-shaped cells",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "page.science:ingredients_overview.ingredient_1",
+      "prompt": "Scientific microscopy photograph, one subject only, filling the frame: a wide field of elongated spindle-shaped cells seen through a microscope, each tapering to fine processes at both ends and loosely aligned with its neighbours, overlapping in several layers and tiling away into shallow focus. Everything is rendered in a saturated clinical blue (#014EB1) and its own lighter and darker values — a single colour family across the whole frame, no second hue anywhere. The background falls away into deep shadow at the frame edges. Depth of field is shallow, so the nearest structure is razor sharp and the rest dissolves. This is a clean photographic plate: no annotation, no measurement marks, no circular eyepiece framing. A single hard key light from the upper left rakes across the subject and lays one crisp shadow down to the lower right; a soft fill lifts the core of that shadow just enough to hold detail. The look is clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": ""
+    },
+    {
+      "id": "ingredient_1--E-single-fibroblast",
+      "title": "One spindle cell, close",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "page.science:ingredients_overview.ingredient_1",
+      "prompt": "Scientific microscopy photograph, one subject only, filling the frame: one single elongated spindle-shaped cell filling the frame diagonally, a denser rounded body at its middle and long fine processes tapering away from both ends toward the frame edges, its boundary crisp and faintly luminous. Everything is rendered in a saturated clinical blue (#014EB1) and its own lighter and darker values — a single colour family across the whole frame, no second hue anywhere. The background falls away into deep shadow at the frame edges. Depth of field is shallow, so the nearest structure is razor sharp and the rest dissolves. This is a clean photographic plate: no annotation, no measurement marks, no circular eyepiece framing. A single hard key light from the upper left rakes across the subject and lays one crisp shadow down to the lower right; a soft fill lifts the core of that shadow just enough to hold detail. The look is clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": ""
+    },
+    {
+      "id": "ingredient_1--F-cell-and-matrix",
+      "title": "A cell reaching into the surrounding network",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "page.science:ingredients_overview.ingredient_1",
+      "prompt": "Scientific microscopy photograph, one subject only, filling the frame: one elongated spindle-shaped cell embedded in a surrounding network of extremely fine filaments, its long processes reaching out and merging into that network, the cell sharp and the filament web falling away into depth around it. Everything is rendered in a saturated clinical blue (#014EB1) and its own lighter and darker values — a single colour family across the whole frame, no second hue anywhere. The background falls away into deep shadow at the frame edges. Depth of field is shallow, so the nearest structure is razor sharp and the rest dissolves. This is a clean photographic plate: no annotation, no measurement marks, no circular eyepiece framing. A single hard key light from the upper left rakes across the subject and lays one crisp shadow down to the lower right; a soft fill lifts the core of that shadow just enough to hold detail. The look is clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": ""
+    }
+  ]
+}

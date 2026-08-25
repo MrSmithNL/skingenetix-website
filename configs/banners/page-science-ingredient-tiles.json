@@ -1,0 +1,38 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.science.json, section `ingredients_overview`",
+  "decided_by": "Malcolm picked ingredient_1--B-material-macro-nbp_flash_02 for Copper Peptide and asked to see it live before the rest; then ingredient_3--B-material-macro-gpt_image_01 for Matrixyl 3000",
+  "note": "Ingredient tiles for /pages/the-science. The section carries five `item` blocks, one per active, and all five are wearing placeholders: `ingredient_1` and `ingredient_3` are mega-menu thumbnails, `ingredient_4` and `ingredient_5` were lifted off the philosophy page.\n\nThis plan fills them one at a time as Malcolm picks. Copper Peptide first \u2014 the rest stay on their placeholders until chosen, which is why only one image is listed.\n\nSOURCE: wave `science-ingredient-copper-peptide`, concept B (material macro), Nano Banana Flash candidate 02. Class B \u2014 no product in frame, so no product description or brand identity was supplied and nothing in the frame is branded.\n\nNBP FLASH RETURNED 4096x4096 AGAINST A REQUESTED 2048. That is its documented behaviour \u2014 it ignores explicit pixel dimensions and snaps to its own nearest named ratio \u2014 so the file was resampled down to 2048 here rather than shipped at whatever the backend felt like. 2048 is the art direction's tile spec (\u00a74) and the theme asks for 1400x1400; the tile itself renders at roughly 389px.\n\nGround colour is the clinical blue already agreed for Copper Peptide product photography, not a new one, so the tile belongs to the same world as the product shots.\n\nMATRIXYL 3000 added 2026-08-25, same wave, same concept B, gpt-image candidate 01. Delivered at 2048 natively so no resampling was needed. It reads as a translucent cellular matrix on the teal ground already agreed for Matrixyl \u2014 which is the closest of the whole set to the cell-level register Malcolm asked for next.",
+  "images": [
+    {
+      "slot": "science_ingredient_copper",
+      "source": "assets/publish-ready/page-science-ingredients/skingenetix-copper-peptide-ghk-cu-blue-crystals-laboratory.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-blue-crystals-laboratory.jpg",
+      "alt": "Deep blue GHK-Cu copper peptide crystals in a small heap, lit by a single hard laboratory light against a clinical blue background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-blue-crystals-laboratory.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-blue-crystals-laboratory.jpg?v=1787645880"
+    },
+    {
+      "slot": "science_ingredient_matrixyl",
+      "source": "assets/publish-ready/page-science-ingredients/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg",
+      "filename": "skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg",
+      "alt": "Translucent open cellular matrix structure lit against a deep emerald-teal background, representing the Matrixyl 3000 peptide's role in the skin's collagen network",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg?v=1787650938"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "ingredients_overview",
+      "block": "ingredient_1",
+      "slot": "science_ingredient_copper",
+      "setting": "image"
+    },
+    {
+      "section": "ingredients_overview",
+      "block": "ingredient_3",
+      "slot": "science_ingredient_matrixyl",
+      "setting": "image"
+    }
+  ]
+}
