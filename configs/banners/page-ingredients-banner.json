@@ -1,0 +1,60 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.ingredients.json, banner section",
+  "decided_by": "Malcolm picked graphite nbp_pro_01 from the ingredients range batch, 2026-08-25",
+  "note": "Header banner for /pages/ingredients, replacing the unbranded stock frame (three generic dropper bottles on white) with our own range.\n\nSOURCE: banner-ingredients-range-graphite wave, slot A (row of three, type zone left), nbp_pro candidate 1 \u2014 one of the candidates that came back clean on ALL THREE labels at full resolution. Class A: PDRN Skin Repair (rose-pink), Copper Peptide (deep blue) and Glutathione (frosted white), every line quoted verbatim from the product configs.\n\nCANVAS EXTENDED 1995 -> 3750x848 (4.42:1), past the 4.36:1 a 100vw x 440px box reaches at a 1920 viewport, so full height survives there. The header keeps the theme's standard sm height.\n\nEDGE FRINGE TRIMMED, which is a new one worth recording. The generated frame carried a bright fringe on its first few columns \u2014 38.8, 37.0, 34.7 against a settled 33.2 \u2014 and that matters more than it looks, because the edge profile averages the first columns AND the join correction anchors to column 0 exactly. The fringe was therefore both smeared across the whole 1755px fill and pinned at the seam, drawing a visible vertical edge down the join. Trimming four columns first drops the join to 0.67 levels against a 0.74 reference.\n\nTEXT MOVES OFF CENTRE to the left, into the zone the brief held clear, matching every other banner published this week. Overlay drops 40 -> 25: the shot is already dark and 40 was flattening the bottles.",
+  "images": [
+    {
+      "slot": "ingredients_desktop",
+      "source": "assets/publish-ready/page-ingredients-banner/skingenetix-peptide-serum-range-copper-pdrn-glutathione.jpg",
+      "filename": "skingenetix-peptide-serum-range-copper-pdrn-glutathione.jpg",
+      "alt": "Three Skingenetix peptide serums on a dark studio sweep \u2014 PDRN Skin Repair, Copper Peptide Advanced Repair and Glutathione Brightening Radiant Glow",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-serum-range-copper-pdrn-glutathione.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-serum-range-copper-pdrn-glutathione.jpg?v=1787650817"
+    },
+    {
+      "slot": "ingredients_mobile",
+      "source": "assets/publish-ready/page-ingredients-banner/skingenetix-peptide-serum-range-copper-pdrn-glutathione-mobile.jpg",
+      "filename": "skingenetix-peptide-serum-range-copper-pdrn-glutathione-mobile.jpg",
+      "alt": "Three Skingenetix peptide serum bottles side by side on a dark studio sweep",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-serum-range-copper-pdrn-glutathione-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-serum-range-copper-pdrn-glutathione-mobile.jpg?v=1787650817"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "banner",
+      "slot": "ingredients_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "banner",
+      "slot": "ingredients_mobile",
+      "setting": "mobile_image"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "banner",
+      "settings": {
+        "image_size": "sm",
+        "enable_parallax": false,
+        "overlay_opacity": 25,
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-center text-center"
+      }
+    }
+  ],
+  "new_blocks": [
+    {
+      "section": "banner",
+      "id": "banner_css",
+      "block": {
+        "type": "liquid",
+        "settings": {
+          "liquid": "{%- comment -%}\n  Scoped with section.id resolved at render time, not with a hardcoded template id.\n  The brightening-glow page carries a style block written the other way and it has\n  matched nothing ever since its template id changed.\n{%- endcomment -%}\n<style>\n#shopify-section-{{ section.id }} .content-over-media > picture > img,\n#shopify-section-{{ section.id }} .content-over-media > img { object-position: right center; }\n@media screen and (min-width: 700px) {\n  #shopify-section-{{ section.id }} .content-over-media > div { max-width: clamp(320px, 44vw, 640px); }\n}\n@media screen and (max-width: 699px) {\n  #shopify-section-{{ section.id }} .content-over-media::before {\n    background-image: linear-gradient(to bottom, rgba(10,14,22,0.86) 0%, rgba(10,14,22,0.66) 45%, rgba(10,14,22,0.55) 100%);\n  }\n}\n</style>"
+        }
+      }
+    }
+  ]
+}

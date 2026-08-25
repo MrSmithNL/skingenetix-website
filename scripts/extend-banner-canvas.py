@@ -501,6 +501,35 @@ BANNERS = {
         #: left edge is backdrop top to bottom
         "shoulder": None,
     },
+    # /pages/ingredients header. Malcolm's pick from the graphite range batch,
+    # 2026-08-25 - one of the candidates that came back clean on all three labels.
+    # Left edge measures min 22, max 57, with column means holding 35-37 out to x=900
+    # before the first bottle, so nothing touches it.
+    "ingredients": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-ingredients-range-graphite"
+                     / "ingredients-graphite--A-row-of-three"
+                     / "ingredients-graphite--A-row-of-three-nbp_pro_01.png"),
+        "out": ROOT / "assets/publish-ready/page-ingredients-banner",
+        "desktop": "skingenetix-peptide-serum-range-copper-pdrn-glutathione.jpg",
+        "mobile": "skingenetix-peptide-serum-range-copper-pdrn-glutathione-mobile.jpg",
+        #: 6336x2688 native, so bring it to the working height before extending
+        "work_height": 848,
+        #: right-anchored; keeps all three bottles together
+        "mobile_crop": (30, 1000),
+        "target_width": 3750,
+        "bg_fit": (100, 500),
+        #: upper-left sweep only. Below y~560 the tabletop lifts to 43-55 and that is
+        #: tone, not grain - the profile carries it, the texture box should not.
+        "texture_box": (0, 560, 0, 400),
+        "texture_mode": "scatter",
+        #: the edge runs 23 at the top, 24 through the middle, then lifts to 55 at the
+        #: bottom where the tabletop catches light. Smoothed, that ramp is preserved;
+        #: flat_backdrop would fit a straight line through it and lose the shape.
+        "profile_smooth": 20.0,
+        #: measured: cols 0-3 run 38.8, 37.0, 34.7, 33.3 against a settled 33.2
+        "edge_trim": 4,
+        "shoulder": None,
+    },
     "all": {
         "src": ROOT / "assets/publish-ready/collection-all-banner/_master-retouched.png",
         "out": ROOT / "assets/publish-ready/collection-all-banner",
@@ -890,6 +919,18 @@ def main():
         print(f"source scaled to working height {work_h} -> {src.width}x{src.height}")
 
     im = np.array(src).astype(np.float64)
+
+    #: Generators often leave a bright fringe a few columns wide at the frame edge.
+    #: It matters here more than it looks: the profile averages the first EDGE_COLS
+    #: columns, and JOIN_BLEND anchors the fill to column 0 exactly, so a fringe is
+    #: copied across the whole extension AND pinned at the seam. The ingredients
+    #: source runs 38.8, 37.0, 34.7 before settling at 33.2 by column 4, which put a
+    #: visible vertical edge down the join. Trim it before anything reads the edge.
+    trim = cfg.get("edge_trim", 0)
+    if trim:
+        im = im[:, trim:]
+        print(f"trimmed {trim} columns of edge fringe")
+
     h, w, _ = im.shape
     target = cfg.get("target_width", TARGET_WIDTH)
     extra = target - w
