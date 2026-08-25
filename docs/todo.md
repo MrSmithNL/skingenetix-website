@@ -233,6 +233,22 @@ Still bare: `frontpage`, `glutathione`, `matrixyl-3000`, `firming-skin-density`,
 have a banner on the **page** but not on the **collection** of the same handle. Both URLs
 exist and both are reachable from the menus.
 
+**Changed after that audit, 2026-08-25 (this session):**
+
+| Page | Change |
+| ---- | ------ |
+| `/pages/the-science` | header replaced with the blue-glassware microscope frame; **the "Our Transparency Commitment" section converted from a grey `rich-text` panel into a full-bleed `image-with-text-overlay` band** on the evidence+microscope frame. Copy moved across byte-for-byte |
+| `/pages/ingredients` | header replaced twice — first with the three-serum range shot, then with the laboratory-glassware frame Malcolm picked. Both files remain on the CDN; reverting is a repoint of `banner.image` + `banner.mobile_image` |
+
+All four carry `object-position: right center` and a measured text max-width via a **`liquid`
+block inside the section** (`{{ section.id }}` resolved at render time) rather than a
+`custom-html` style block — see the brightening-glow fault below.
+
+⚠️ **`/pages/brightening-glow` has a dead style block.** Its `hero_image_position`
+`custom-html` targets `#shopify-section-template--26438110871937__hero`; the live section is
+`template--26327016702337__hero`. **Zero matches**, so its image sits centre-cropped instead
+of pinned left, and nothing errors. Fix with the same `liquid`-block pattern.
+
 **An earlier revision of this table claimed Matrixyl and Glutathione were live. They are
 not,** and still are not. Both sat on the *shared* `templates/collection.json` before the
 per-collection templates of ADR-005 existed, and that shared template now carries banner

@@ -67,8 +67,8 @@ A contact sheet **cannot** judge label fidelity. `NEAT2_04` looked flawless tile
 
 | Supplier | Trap |
 | --- | --- |
-| **Luma** | No negative-prompt field, so negatives fold into the prompt body and trip the content filter. Keep its negative list short or it returns `content_moderated` and you lose the backend silently. |
-| **FLUX.2** | Invents brand identities that look clean and are wrong. Barred from any shot where branding is legible; fine for reference-free material and skin studies. |
+| **Luma** | No negative-prompt field, so negatives fold into the prompt body and trip the content filter. Keep its negative list short or it returns `content_moderated` and you lose the backend silently. **Never name a misread word in a negative** for the same reason — it puts the word into the prompt. Weakest engine on branded work: on 2026-08-25 it supplied most of the wrong helix marks and the only wrong collar metal, and was the slowest by far (392s against gpt-image's 39s). Its value is composition variety, not label fidelity. |
+| **FLUX.2** | Invents brand identities that look clean and are wrong. Barred from any shot where branding is legible; fine for reference-free material and skin studies. **Also renders printed graduation digits on lab glassware** — `100 / 50 / 10`, `500 ml`, `2500` — on all three glassware waves of 2026-08-25 despite `no numbers, no printed graduation digits` in the negatives, and it is the only engine that does. Treat as a fixed trait: check its candidates at full size before use. It also returns **1 candidate per call regardless of `--candidates`**, so it is under-represented on every contact sheet. |
 | **gpt-image** | Rejects any dimension not divisible by 16 with a 400. Long edge caps at 2048. |
 | **NBP Pro** | 6x the price of NBP Flash and won *less often* on this project's own numbers ($0.81 vs $0.087 per chosen image). Justify per shot. |
 | **Gemini** | Daily quota of 250 generate-requests shared across Pro and Flash. Run the most important brief first. |
