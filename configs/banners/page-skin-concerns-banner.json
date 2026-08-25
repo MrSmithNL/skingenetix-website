@@ -1,0 +1,63 @@
+{
+  "created": "2026-08-24",
+  "target": "live theme \u2014 Impact, templates/page.skin-concerns.json, section 'hero' (image-with-text-overlay)",
+  "decided_by": "Malcolm picked SKIN8-reclining-sweep nbp_pro_02 and named /pages/skin-concerns as the target",
+  "note": "Header banner for /pages/skin-concerns. Replaces skingenetix-home-hero-peptide-serums.jpg, which was the HOMEPAGE hero being reused as a placeholder.\n\nSOURCE: brand-band skin-art round 3, SKIN8-reclining-sweep-nbp_pro_02, 6336x2688 (2.357:1, Nano Banana Pro's native ratio). No product in frame \u2014 this is the brand register, not a product shot. Seedream and gpt-image both refused this brief on content policy, so nbp_pro and nbp_flash were the only engines that returned it at all.\n\nTHE CANVAS IS NOT EXTENDED, AND THAT IS DELIBERATE. Every other banner on this store grows leftward into dark backdrop. Measured here, that technique fails: the body's edge RISES as it travels left \u2014 skin starts at y=259 at x=0 but y=295 at x=100, so about 0.36px up per px left. Continuing that slope across an extension marches the shoulder into the top-left, which is the exact region the heading needs. There is no dark edge to grow into on the right either; that is the head.\n\nSO THE CROP IS ANCHORED TO THE TOP INSTEAD. The band is a fixed 100vw x 440px box at image_size sm, so a 2.357:1 master loses height at every viewport: 28% at 1440, 46% at 1920. With object-position 'center top' all of that loss comes off the BOTTOM \u2014 the lower chest, which carries nothing \u2014 and the dark upper-left survives intact at any width. Centre-anchoring (the theme default) would have taken 118px off the top at 1440 and 187px at 1920, leaving only 72px of clean dark above the shoulder line on a wide screen.\n\nMEASURED CLEAR ZONE: rows 0-220, cols 0-900 of the 1999x848 working frame reads mean 25.2, max 31.3, sd 2.5 \u2014 flat dark across 45% of the width and 26% of the height. That is where the heading, subheading and body copy sit, hence desktop text top-left rather than the theme's centre.\n\nOVERLAY 60 -> 22. At 60 the skin goes grey and the whole point of the image is lost; the image is its own contrast here because the text sits on near-black backdrop, not on skin.\n\nMOBILE: cropped to working x700-1750, which keeps the chin, jaw and neck sweep. It was the darkest of three candidate crops across the top strip (mean 56 against 78 and 90) but the forehead still reaches the top edge at max 231, so a scrim is BAKED INTO THE FILE rather than applied as CSS \u2014 the theme paints its overlay through a pseudo-element whose selector I would have been guessing at, and a wrong guess ships white text on a lit forehead. Same stops the collection banners use: 0.85 at 0%, 0.62 at 22%, 0 at 58%. Top strip now reads mean 28.3, max 115.\n\nFILENAMES ARE NEW. Shopify Files suffixes a same-name upload and keeps serving the old image \u2014 that has bitten this store three times.",
+  "images": [
+    {
+      "slot": "page_skin_concerns_desktop",
+      "source": "assets/publish-ready/page-skin-concerns-banner/skingenetix-skin-concerns-peptide-skincare-banner.jpg",
+      "filename": "skingenetix-skin-concerns-peptide-skincare-banner.jpg",
+      "alt": "Close-up of a woman reclining with her head tilted back, light sweeping across bare skin from collarbone to jaw against a dark studio backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skin-concerns-peptide-skincare-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skin-concerns-peptide-skincare-banner.jpg?v=1787586227"
+    },
+    {
+      "slot": "page_skin_concerns_mobile",
+      "source": "assets/publish-ready/page-skin-concerns-banner/skingenetix-skin-concerns-peptide-skincare-banner-mobile.jpg",
+      "filename": "skingenetix-skin-concerns-peptide-skincare-banner-mobile.jpg",
+      "alt": "Close-up of a woman's jaw, throat and collarbone lit against a dark backdrop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skin-concerns-peptide-skincare-banner-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skin-concerns-peptide-skincare-banner-mobile.jpg?v=1787586227"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 22,
+        "enable_parallax": false,
+        "image_size": "sm",
+        "desktop_text_position": "sm:place-self-start sm:text-start",
+        "mobile_text_position": "place-self-start-center text-center"
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "page_skin_concerns_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "page_skin_concerns_mobile",
+      "setting": "mobile_image"
+    }
+  ],
+  "new_sections": [
+    {
+      "id": "banner_crop_anchor",
+      "insert_after": "cta",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style> image-banner > picture > img { object-position: center top; } </style>"
+        }
+      }
+    }
+  ]
+}
