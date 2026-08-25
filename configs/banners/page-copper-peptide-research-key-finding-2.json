@@ -1,0 +1,23 @@
+{
+  "note": "Swap the second Key Findings image on /pages/copper-peptide-research. Malcolm's pick, 2026-08-25: nbp_pro_01 from the cp-collagen--E-lattice-sparse-to-dense batch. The slot is key_findings.f2, headed 'Supports skin-renewal cell activity (independent lab study)' \u2014 a lattice thickening from loose strands into a dense copper-studded matrix reads as renewal; the stock lab bench it replaces read as nothing in particular.",
+  "what_it_replaces": "skingenetix-philosophy-research.jpg \u2014 an open journal and amber vials, borrowed from the philosophy page. Checked across the live site before touching it: that file is ALSO on /pages/our-philosophy, which is its home. Only THIS page's reference changes; the file itself is untouched and stays live there. Re-uploading over the name would break Langify, which keys translations off the image URL (shopify.md rule 7).",
+  "composition_note": "Sparse on the left, dense on the right. The section alternates media_position per block, so f2 renders image-right \u2014 the dense mass lands nearest the text, which is the right way round. The on-page box is taller than it is wide, so the square is cropped top and bottom with full width kept: the sparse-to-dense sweep survives the crop intact.",
+  "template": "templates/page.research-copper-peptide.json",
+  "images": [
+    {
+      "slot": "collagen_lattice_density",
+      "source": "assets/ai-generated/2026-08-22-multi-block-copper-peptide-collagen-pathways/cp-collagen--E-lattice-sparse-to-dense/cp-collagen--E-lattice-sparse-to-dense-nbp_pro_01.png",
+      "filename": "skingenetix-copper-peptide-collagen-lattice-density-research.jpg",
+      "alt": "A blue collagen-fibre lattice thickening from loose strands into a dense copper-studded matrix - Skingenetix copper peptide skin renewal research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-collagen-lattice-density-research.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-collagen-lattice-density-research.jpg?v=1787663644"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "key_findings",
+      "block": "f2",
+      "slot": "collagen_lattice_density"
+    }
+  ]
+}

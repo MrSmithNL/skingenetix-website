@@ -395,9 +395,20 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    a **new** name (`skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg`) and the
    slot repointed — `skingenetix-ingredients-copper-peptide-serum.jpg` is untouched and still
    live on `/pages/ingredients` and `/pages/skin-concerns`. Delivered at 800w into a 660px
-   box, so no downscale trap. **Blocks f2 and f3 on that page still wear
-   `skingenetix-philosophy-research.jpg` and `skingenetix-philosophy-quality.jpg`** — generic
-   lab benches, the same borrowing, not yet addressed.
+   box, so no downscale trap.
+   **`key_findings.f2` followed the same afternoon** — "Supports skin-renewal cell activity
+   (independent lab study)" now carries Malcolm's pick
+   `cp-collagen--E-lattice-sparse-to-dense-nbp_pro_01`, uploaded as
+   `skingenetix-copper-peptide-collagen-lattice-density-research.jpg`. It replaces
+   `skingenetix-philosophy-research.jpg`, which was checked across the live site first and is
+   **also on `/pages/our-philosophy`** — its home — so the file was left alone and only this
+   page's reference moved. The section alternates `media_position` per block, so f2 renders
+   image-right and the lattice's dense end lands nearest the text.
+   **Still outstanding on that page: `key_findings.f3` wears
+   `skingenetix-philosophy-quality.jpg`**, a generic lab bench, the same borrowing.
+   ⚠️ The claim above that `/pages/pdrn-research` shows `skingenetix-philosophy-research.jpg`
+   is **stale** — the page returns 200 and no longer references that file. Re-check before
+   acting on it.
 4. 🟡 **Fold the runtime-injected banner configs into the scripts.** The three banners of
    2026-08-24/25 were built by injecting config into `extend-banner-canvas.py` and
    `publish-collection-banner-template.py` at import time, because a second session was
