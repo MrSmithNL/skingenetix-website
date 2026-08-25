@@ -1,0 +1,42 @@
+{
+  "wave": "page-pdrn-research-banner",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Header banner for /pages/pdrn-research. Replaces skingenetix-philosophy-research.jpg — an image lifted off the philosophy page, showing an open journal and amber vials, which is neither this molecule nor this palette.\n\nON-SYSTEM WITH THE SIBLING RESEARCH PAGES. Copper Peptide research runs graphite plus its own clinical blue; Matrixyl research runs graphite plus its own teal. The art direction says a research page takes its molecule's scene colour, so this one is graphite #1A1A1A plus PDRN's blush pink #F3BFC2.\n\nBAND MEASURED, NOT ASSUMED. The live band on this page is 1440x454 and 1920x454 — 3.17:1 and 4.23:1. The Matrixyl research band is 496px tall, so its numbers do not transfer. Generating at 3072x700 (4.389:1) clears the 4.23:1 the widest viewport needs, with a little margin for object-position to aim.\n\nRESERVED TYPE ZONE, measured as a fraction. The left 40% of every frame is held as near-empty graphite so a headline sits on it unaided. This is rule 2 of the five production constraints, and unlike the ingredient tiles — where type renders below the image — it genuinely applies here, because the heading is overlaid.\n\nTHE WORD SALMON APPEARS NOWHERE IN THESE BRIEFS, deliberately. PDRN is salmon-derived and the page copy says so, but naming the source in an image brief invites a fish, and this is a clinical research page. The material is described instead: fine translucent strands, a double helix, a repairing membrane.\n\nPDRN NAMES THE DOUBLE HELIX, as its ingredient tile does. The standing rule here is describe-don't-name, but PDRN is sodium DNA, so the stock idea IS the subject; the brief names it AND describes the geometry, which pins the form without inviting clip-art. This is unrelated to the brand's helix mark, which stays dots-and-dashes and never appears in a Class B frame.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "cosmetic packaging, product bottle, dropper bottle, jar, tube, label, logo, brand mark, lettering, text, numbers, watermark, signature, fish, salmon, animal, marine life, water surface, botanicals, leaves, flowers, wood, rough stone, linen, lens flare, bokeh sparkle, border, collage, multi-panel, flat-lay, clutter, hands, people, face, scale bar, annotation, arrow, diagram, microscope eyepiece, rainbow colours"
+  },
+  "slots": [
+    {
+      "id": "PDR-1-helix-right",
+      "title": "One double helix, right of frame, graphite left",
+      "class": "B",
+      "width": 3072,
+      "height": 700,
+      "target_slot": "page.pdrn-research:hero",
+      "prompt": "Wide cinematic scientific photograph on a seamless graphite ground (#1A1A1A) that runs out to all four edges. One DNA double helix stands in the RIGHT THIRD of the frame, running from the top edge down toward the lower right: two smooth strands winding around a common axis in a regular repeating twist, joined at even intervals by short straight rungs between them. It is rendered in soft blush pink (#F3BFC2), rim-lit so its near edges glow against the dark and its far turns fall away into shadow. The LEFT 40% OF THE FRAME IS EMPTY GRAPHITE at an even tone, holding no structure at all. A single hard key light from the upper right rakes across the helix and lays a soft shadow to the left; nothing else is lit. Clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": "helix at the centre, helix on the left, structure filling the left side, symmetrical composition"
+    },
+    {
+      "id": "PDR-2-strand-drift",
+      "title": "Fine strands drifting, dense right, dissolving left",
+      "class": "B",
+      "width": 3072,
+      "height": 700,
+      "target_slot": "page.pdrn-research:hero",
+      "prompt": "Wide cinematic scientific photograph on a seamless graphite ground (#1A1A1A). Extremely fine translucent strands drift and curl through the RIGHT HALF of the frame at different depths, some crossing and looping past one another, each catching a soft blush pink (#F3BFC2) rim light along its length. They thin out and dissolve completely as they travel left, so the LEFT 40% OF THE FRAME IS EMPTY GRAPHITE at an even tone. The nearest strands are razor sharp and the deeper ones fall away into shadow. A single hard key light from the upper right; nothing else is lit. Clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": "strands filling the whole frame, strands on the left, hair, fur, fishing line, rope, thick cords"
+    },
+    {
+      "id": "PDR-3-membrane-knit",
+      "title": "A fine membrane knitting closed — renewal",
+      "class": "B",
+      "width": 3072,
+      "height": 700,
+      "target_slot": "page.pdrn-research:hero",
+      "prompt": "Wide cinematic scientific photograph on a seamless graphite ground (#1A1A1A). In the RIGHT HALF of the frame, an extremely fine translucent membrane is drawing closed across a gap: fine filaments reach from both sides and interlace where they meet, denser and more complete toward the right edge and progressively more open toward the middle. The filaments carry a soft blush pink (#F3BFC2) glow along their lit edges. The LEFT 40% OF THE FRAME IS EMPTY GRAPHITE at an even tone, with no structure. A single hard key light from the upper right rakes across the membrane; the deeper layers fall into shadow. Clinical, rigorous and expensive — a research laboratory, not a spa.",
+      "negative_extra": "wound, blood, injury, scab, skin damage, gore, mesh filling the whole frame, symmetrical composition"
+    }
+  ]
+}

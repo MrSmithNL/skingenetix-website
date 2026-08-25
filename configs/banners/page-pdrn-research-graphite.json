@@ -1,0 +1,42 @@
+{
+  "wave": "page-pdrn-research-graphite",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Second batch for the /pages/pdrn-research header. Malcolm: another DNA-helix run, but matched to the look and feel of the Matrixyl 3000 research header now live.\n\nWHAT THAT HEADER ACTUALLY DOES, read off the live file rather than remembered: an extreme macro of fine translucent fibres, massed and tangled at the far LEFT and far RIGHT and thinning to nothing across the middle, so the centre of the frame is an open, dark, out-of-focus hole. Deep graphite receding to near-black. The accent colour arrives as a backlight, so fibres glow where they catch it and drop to silhouette where they do not. Near layers sharp, deeper layers dissolving. Fine grain, no colour but the accent and the graphite.\n\nTHE QUIET CENTRE IS NOT A STYLE CHOICE, IT IS WHAT MAKES THE PAGE WORK. Both research pages centre their heading. A composition that reserves the LEFT third — which is what the first PDRN batch did, and what the art direction's rule 2 asks for in general — fights a centred headline. Matching this register resolves the open question from that batch: the text stays centred, and the picture gets out of its way.\n\nSo the negatives here bar a bright or busy centre explicitly, as the Matrixyl brief does, along with the CGI look that the first PDRN helices drifted toward.\n\nACCENT IS BLUSH PINK #F3BFC2 — PDRN's own scene colour, as teal is Matrixyl's. Ground is graphite #1A1A1A.\n\nASPECT, AND WHY THE REQUEST IS WIDE BUT THE PLAN IS TO CROP. This page's band measures 1920x454 live, so it needs 4.229:1 to hold full height at the widest viewport. Only Seedream and FLUX.2 honour an explicit wide size; Nano Banana returns 6336x2688 (2.357:1) whatever it is asked for, and Luma 1.851:1. The Matrixyl header solved exactly this by CROPPING a Nano Banana frame rather than extending it — 1063px off the top, no invented pixels at all. The same is planned here, so each brief keeps its structure spanning the full width and away from the extreme top and bottom, where a crop will land.\n\nTHE WORD SALMON APPEARS NOWHERE, as in the first batch: naming the source invites a fish onto a clinical research page. The double helix IS named, because PDRN is sodium DNA and the stock idea is the subject — but its geometry is described too, which is what stops it arriving as clip-art.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "bright centre, busy centre, subject in the middle of the frame, hard edge crossing the centre, specular highlight in the centre, blue, teal, green, gold, amber, brown, sepia, warm orange, rainbow, neon, cyberpunk, sci-fi HUD, glowing wireframe grid, 3d render look, plastic CGI, oversaturated, banding, posterised gradient, clip art, text, lettering, watermark, signature, numbers, label, logo, brand mark, bottle, jar, packaging, product, human face, model, hands, fish, salmon, marine life, botanicals, flowers, water splash, bokeh sparkle, lens flare, spider, cobweb"
+  },
+  "slots": [
+    {
+      "id": "PDG-1-helices-both-edges",
+      "title": "Helices massed left and right, dark open centre",
+      "class": "B",
+      "width": 3072,
+      "height": 700,
+      "target_slot": "page.pdrn-research:hero",
+      "prompt": "Extreme macro photograph, very wide cinematic frame, of DNA double helices at many depths — each two smooth strands winding around a common axis in a regular repeating twist, joined at even intervals by short straight rungs. They are densest and most overlapping at the far LEFT and far RIGHT of the picture and thin out toward the middle, so the centre of the frame is open, dark and quiet. The ground is deep graphite, colour #1A1A1A, receding to near-black behind them. A soft blush pink light, colour #F3BFC2, comes from behind and above, so the strands glow where they catch it and fall to silhouette where they do not. Depth is real: near helices sharp, deeper ones softening into the dark. Nothing bright and nothing hard-edged crosses the middle third of the frame. Fine film grain, no colour except blush pink and graphite, quiet and clinical rather than decorative.",
+      "negative_extra": "single helix, helix in the centre, symmetrical mirror composition, empty left side, empty right side"
+    },
+    {
+      "id": "PDG-2-helix-and-strands",
+      "title": "Helices dissolving into loose strands toward the middle",
+      "class": "B",
+      "width": 3072,
+      "height": 700,
+      "target_slot": "page.pdrn-research:hero",
+      "prompt": "Extreme macro photograph, very wide cinematic frame. At the far LEFT and far RIGHT, DNA double helices are tightly wound and clearly resolved — two strands winding around a common axis with regular rungs between them. Travelling toward the middle they unwind and loosen into fine separate translucent strands, which thin out and vanish, leaving the centre of the frame open, dark and quiet. The ground is deep graphite, colour #1A1A1A, receding to near-black. A soft blush pink light, colour #F3BFC2, rakes from behind and above, so the strands glow along their lit edges and drop to silhouette elsewhere. Near structure sharp, deeper layers dissolving into the dark. Nothing bright and nothing hard-edged crosses the middle third. Fine film grain, no colour except blush pink and graphite, quiet and clinical rather than decorative.",
+      "negative_extra": "hair, fur, fishing line, rope, thick cords, structure crossing the centre"
+    },
+    {
+      "id": "PDG-3-helix-depth-field",
+      "title": "A deep field of helices, nearest at the edges",
+      "class": "B",
+      "width": 3072,
+      "height": 700,
+      "target_slot": "page.pdrn-research:hero",
+      "prompt": "Extreme macro photograph, very wide cinematic frame, looking into a deep field of DNA double helices receding away from the camera — each two smooth strands winding around a common axis, joined at even intervals by short straight rungs. The nearest and sharpest sit at the far LEFT and far RIGHT edges, close enough to be cut by the frame; behind them the field falls away fast, and toward the middle only the faintest out-of-focus forms remain, so the centre reads as open, dark and quiet. The ground is deep graphite, colour #1A1A1A, going to near-black at the greatest depth. A soft blush pink light, colour #F3BFC2, comes from behind, rimming the near strands and leaving the rest in silhouette. Nothing bright and nothing hard-edged crosses the middle third. Fine film grain, no colour except blush pink and graphite, quiet and clinical rather than decorative.",
+      "negative_extra": "flat composition, everything in focus, even spacing, subject centred, tunnel or vortex perspective"
+    }
+  ]
+}

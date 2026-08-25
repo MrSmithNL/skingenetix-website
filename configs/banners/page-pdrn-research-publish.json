@@ -1,0 +1,47 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.pdrn-research.json, section `hero`",
+  "decided_by": "Malcolm picked PDG-1-helices-both-edges-nbp_pro_01 from the graphite-register batch",
+  "note": "Header banner for /pages/pdrn-research. Replaces skingenetix-philosophy-research.jpg \u2014 an open journal and amber vials lifted off the philosophy page, which is neither this molecule nor this palette.\n\nSOURCE: wave `page-pdrn-research-graphite`, concept PDG-1, Nano Banana Pro candidate 01. Class B \u2014 no product in frame, no brand identity supplied.\n\nCROPPED, NOT EXTENDED. Nano Banana returns 6336x2688 (2.357:1) whatever size it is asked for, and the band measures 1920x454 live, needing 4.229:1. The Matrixyl research header solved the same problem the same way \u2014 take the surplus off, invent nothing. Here 1190px comes off, leaving 6336x1498 at 4.230:1.\n\nTHE CROP OFFSET WAS MEASURED, NOT CENTRED. Nine candidate bands were scored on two things: bright helices at the edges, dark ground in the middle where the centred heading sits. A top-anchored crop scored best on edge/centre separation (+78.8) but put a blown highlight directly behind the heading \u2014 the text zone measured max 242. At top=444 that zone reads mean 30.0, max 76, and the helices at both edges survive intact. Separation is not the whole story; what sits behind the type is.\n\nMALCOLM CHOSE THIS FRAME OVER MY RECOMMENDATION, and my reservation is recorded rather than hidden: at mean luminance 74.8 it is far brighter than the Matrixyl header it was asked to resemble (40.0), so the two research pages will not read as a matched pair. That reservation applies to the frame overall. It does not apply to legibility \u2014 the centre, which is what the heading sits on, measures 30.7.\n\nOVERLAY 50 -> 25, matching the sibling research pages (Matrixyl 25, Copper Peptide 22). At 50 this shot goes flat and grey.\n\nMOBILE: the desktop frame is 4.23:1 and the phone band is 1.048:1, so cover would have shown only the empty dark centre \u2014 a blank rectangle. The phone gets its own crop instead, taken across the LEFT bank of helices so it has a subject at all, with a scrim baked into the bottom of the file for the centred text. Bottom 26% reads mean 23.7, max 90, against 44.5 / 188 before.\n\nOPTIMISATION, MEASURED NOT ASSUMED: desktop capped at 3000 on the long edge \u2014 the widest the theme's srcset requests for a full-bleed banner \u2014 quality 95, 4:4:4, metadata stripped, and deliberately not compressed harder, because Shopify's CDN re-encodes to WebP and a pre-compressed source hands it artefacts to reproduce.",
+  "images": [
+    {
+      "slot": "pdrn_research_desktop",
+      "source": "assets/publish-ready/page-pdrn-research-banner/skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg",
+      "filename": "skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg",
+      "alt": "Banks of DNA double helices lit in blush pink at either side of a dark graphite field, representing the salmon-derived polynucleotides (INCI Sodium DNA) in PDRN",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg?v=1787661986"
+    },
+    {
+      "slot": "pdrn_research_mobile",
+      "source": "assets/publish-ready/page-pdrn-research-banner/skingenetix-pdrn-sodium-dna-polynucleotide-research-mobile.jpg",
+      "filename": "skingenetix-pdrn-sodium-dna-polynucleotide-research-mobile.jpg",
+      "alt": "Close view of DNA double helices lit in blush pink against a dark graphite background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-sodium-dna-polynucleotide-research-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-sodium-dna-polynucleotide-research-mobile.jpg?v=1787661986"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 25,
+        "enable_parallax": false,
+        "image_size": "sm",
+        "mobile_text_position": "place-self-end-center text-center"
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "pdrn_research_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "pdrn_research_mobile",
+      "setting": "mobile_image"
+    }
+  ]
+}
