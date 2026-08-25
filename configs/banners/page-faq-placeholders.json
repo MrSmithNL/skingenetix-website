@@ -1,0 +1,46 @@
+{
+  "note": "PLACEHOLDERS ONLY. Five temporary images for the /pages/faq category blocks, so Malcolm can judge the image+title-left / accordions-right layout before choosing real photography. Every file is named -placeholder- and every one carries the word PLACEHOLDER rendered into the picture, so none can be mistaken for a decision or quietly become permanent.",
+  "delete_when_real_images_land": "Shopify Files > search 'faq-placeholder'. Five files. Replace the five entries in configs/banners/page-faq-image-layout.json and re-run, then delete these.",
+  "images": [
+    {
+      "slot": "faq_products",
+      "source": "assets/placeholders/skingenetix-faq-placeholder-products-usage.jpg",
+      "filename": "skingenetix-faq-placeholder-products-usage.jpg",
+      "alt": "Placeholder image - Skingenetix FAQ, Products & Usage",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-placeholder-products-usage.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-placeholder-products-usage.jpg?v=1787665621"
+    },
+    {
+      "slot": "faq_ingredients",
+      "source": "assets/placeholders/skingenetix-faq-placeholder-ingredients-safety.jpg",
+      "filename": "skingenetix-faq-placeholder-ingredients-safety.jpg",
+      "alt": "Placeholder image - Skingenetix FAQ, Ingredients & Safety",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-placeholder-ingredients-safety.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-placeholder-ingredients-safety.jpg?v=1787665621"
+    },
+    {
+      "slot": "faq_shipping",
+      "source": "assets/placeholders/skingenetix-faq-placeholder-orders-shipping.jpg",
+      "filename": "skingenetix-faq-placeholder-orders-shipping.jpg",
+      "alt": "Placeholder image - Skingenetix FAQ, Orders & Shipping",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-placeholder-orders-shipping.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-placeholder-orders-shipping.jpg?v=1787665621"
+    },
+    {
+      "slot": "faq_returns",
+      "source": "assets/placeholders/skingenetix-faq-placeholder-returns-refunds.jpg",
+      "filename": "skingenetix-faq-placeholder-returns-refunds.jpg",
+      "alt": "Placeholder image - Skingenetix FAQ, Returns & Refunds",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-placeholder-returns-refunds.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-placeholder-returns-refunds.jpg?v=1787665621"
+    },
+    {
+      "slot": "faq_skincare",
+      "source": "assets/placeholders/skingenetix-faq-placeholder-skincare-routine.jpg",
+      "filename": "skingenetix-faq-placeholder-skincare-routine.jpg",
+      "alt": "Placeholder image - Skingenetix FAQ, Skincare & Routine",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-placeholder-skincare-routine.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-placeholder-skincare-routine.jpg?v=1787665621"
+    }
+  ]
+}

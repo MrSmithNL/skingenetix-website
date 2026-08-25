@@ -1130,3 +1130,58 @@ picked, publish to Shopify via the Admin GraphQL API; C2PA-sign any destined for
 | 2026-03-05 | Project created. Research completed. Initial architecture and standard files set up.                                                                                                                                               |
 | 2026-05-06 | State-discovery: found store far ahead of docs. Handover written (handover-2026-05-06.md). No store changes.                                                                                                                       |
 | 2026-08-03 | Set HS-code 3304.99.5000 + origin CN on all 9 products (US import). Set Shopify taxonomy categories (5x Face Serums, 4x Face Moisturizers). Fixed expired Skingenetix client secret in business dashboard. Doc-sync (this update). |
+
+### 🔄 BRAND-006 — /pages/faq category blocks carry a picture (PLACEHOLDERS LIVE)
+
+**Priority:** 🟡 Layout done and live 2026-08-25; real photography not chosen
+**Owner:** Claude (layout) + Malcolm (every image choice)
+**Plans:** `configs/banners/page-faq-image-layout.json`, `configs/banners/page-faq-placeholders.json`
+
+Malcolm, 2026-08-25: *"where the faq block title is — lets make this block an image with
+the title on top. So image and title left and faq right. use placeholder images for now."*
+
+**The two-column layout needed nothing.** `accordion-content` already defaults to
+`text_position: start`, which gives `.section-stack--horizontal` with a 50%
+`.section-stack__intro` left and `.section-stack__main` right. Measured at 1440: intro
+x=48 w=636, main x=756 w=636. The left column was a title floating in 636px of empty
+space. This fills it.
+
+**The picture had to be injected.** `accordion-content` has **no image setting anywhere in
+its schema**, and its `content` field is a richtext whose Shopify sanitiser strips `<img>`.
+So a page-scoped `custom-html` section injects a real `<img>` at runtime — chosen over a
+three-line CSS `background-image` because these are content images on a live store and a
+background throws away alt text, native lazy-loading and the srcset. Keyed on the section
+id **suffix** (`faq_products`), never the full id, which carries a template-scoped prefix
+that changes whenever the template is rebuilt.
+
+**A bottom scrim is already in place** for when real photographs replace the flat
+placeholders — same reasoning as the homepage tiles earlier the same day: a flat overlay
+strong enough for the type greys the whole picture, a bottom gradient buys contrast only
+where the type sits.
+
+**Two variants, one class apart.** Shipped with the title **over** the picture. Adding
+`.sg-faq-title-above` to a section switches it to title **above**. Both rule sets ship, so
+the two can be compared on the live page without another publish.
+
+⚠️ **The five images are PLACEHOLDERS and are live on the store.** Named `-placeholder-`
+*and* carrying the word PLACEHOLDER rendered into the picture, so neither can quietly
+become permanent. Regenerate with `scripts/make-faq-placeholders.py` (`assets/` is
+gitignored, so the script is the reproducible artefact, not the JPEGs).
+
+**Open**
+
+1. 🔴 **Choose real photography for the five categories** — Products & Usage, Ingredients &
+   Safety, Orders & Shipping, Returns & Refunds, Skincare & Routine. Then swap the five
+   entries in `page-faq-image-layout.json`, re-run, and **delete the placeholders** from
+   Shopify Files (search `faq-placeholder`, five files).
+2. 🟡 **Decide title-over vs title-above** — currently over.
+
+**Verified live at 1440 and 390:** five images injected, 636×477 desktop serving the 800w
+candidate, 350×263 mobile serving 400w, title inside the image bounds at both, no
+horizontal page overflow.
+
+⚠️ **A `custom-html` `html` setting cannot contain `{{`, `}}`, `{%` or `%}`** — Shopify
+reads them as Liquid and 422s. **JSON is what trips it, not Liquid**: an inlined
+`json.dumps(mapping)` ends in two abutting closing braces. `patch-template.py` prints only
+`HTTP Error 422: Unprocessable Entity`; the actual message is in the response body it
+discards. Emit the map indented and assert on all four tokens before pushing.
