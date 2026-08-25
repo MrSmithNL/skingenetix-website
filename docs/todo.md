@@ -48,6 +48,55 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### ✅ BRAND-006 — /pages/faq category blocks: titles to the top, real photography in all five
+
+**Closed 2026-08-25.** Malcolm: align the block titles to the top of the image area, then
+fill the five pictures — two from images we already had, three newly made.
+
+**The alignment.** The title was absolutely positioned at the *foot* of the picture, which
+put it roughly 400px below the first accordion row in the right-hand column. It is now at
+the top, so the two columns start on the same line. The scrim went with it: a bottom scrim
+under a top title would darken the empty half of the frame and leave the type sitting on
+whatever happened to be up there.
+
+**What went in each block, and why.**
+
+| Block | Picture | Source |
+|---|---|---|
+| Products & Usage | Woman applying pale-blue cream to her cheekbone | library — cream-application-faces, NBP Flash |
+| Ingredients & Safety | Open Copper Peptide Night Repair jar, lid resting beside it | library — ALL-copper-peptide-night-repair-cream, Seedream |
+| Orders & Shipping | White shipping box, brand mark on the lid | **new** — NBP Pro |
+| Returns & Refunds | Smiling woman reading her phone | **new** — Seedream |
+| Skincare & Routine | Macro cheek, clear serum falling from a glass pipette | **new** — NBP Flash |
+
+**NBP Pro won the box on the HELIX, not on the spelling.** gpt-image spelled `Skingenetix`
+correctly on both its candidates and drew the mark as bare vertical dashes with no
+continuous strand — right word, wrong logo. Only NBP Pro reproduced the reference mark:
+S-curve strand crossing the dashes, scattered dots, capital S, bold italic lowercase, and
+no other lettering anywhere on the box. **A brand check is not a spellcheck** — same
+lesson as `count-label-elements`, one level up: the mark itself is an element to verify.
+
+**The two library images were cropped to 4:3 before upload, not left square.** `object-fit:
+cover` discards 25% of a square's height at every viewport; cropping here chose what went
+instead of letting the browser choose. `scripts/make-faq-category-crops.py` makes both
+reproducible, since `assets/` is gitignored. It also trims the ~50px ragged black film
+border NBP Flash baked into the cream-application frame — measured at 51/50/42/42px on a
+4096 square, trimmed at 70. Left in, it renders as a dark bar down both sides of the block.
+
+**One block needed its own scrim, and measuring is what found it.** With the standard ramp
+the five blocks read 10.6 / **4.0** / 19.4 / 20.5 / 19.4 to one, measured off the live page.
+The open-jar shot is a bright product frame on a pale ground and was five times weaker than
+its neighbours. It now carries `.sg-faq-bright` — a steeper ramp on that block alone — and
+reads 11.2:1. Which blocks are pale is **data in the IMAGES map**, not a hardcoded section
+id, because template-scoped ids go stale.
+
+**Left deliberately undone:** the five `skingenetix-faq-placeholder-*.jpg` files are still in
+Shopify Files. Deleting data from an external service needs Malcolm's explicit go-ahead
+(CLAUDE.md hard boundary). Nothing references them — search Files for `faq-placeholder`.
+
+Configs: `page-faq-image-layout.json` (layout + CSS), `faq-category-images.json` (the three
+new briefs), `faq-category-images-publish.json` (all five, with handles and reasoning).
+
 ### PHOTO-002 — 2026 redesign: reference sets built, configs outstanding
 
 **Priority:** 🔴 High

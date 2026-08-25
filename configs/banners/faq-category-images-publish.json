@@ -1,0 +1,52 @@
+{
+  "created": "2026-08-25",
+  "target": "/pages/faq \u2014 the five category-block pictures, replacing the PLACEHOLDER set",
+  "decided_by": "Claude, within Malcolm's brief of 2026-08-25: two blocks filled from images that already existed, three generated new.",
+  "supersedes": "configs/banners/page-faq-placeholders.json \u2014 delete those five files from Shopify Files once this is live (search 'faq-placeholder')",
+  "note": "WHY THESE FIVE READ AS ONE SET. Every frame is 4:3, deep-ground, one soft key, 85mm-class compression. That is not decoration: the category title sits ON the picture in white at the top, so each image has to hand the type a quiet dark top third, and five pictures lit five different ways would look like five unrelated stock buys stacked down one column.\n\nTHE TWO EXISTING ONES WERE CROPPED TO 4:3 BEFORE UPLOAD, not left square for the theme to crop. object-fit cover would have thrown the surplus away at every viewport with no say in what went; cutting them here chose what goes.\n\nProducts & Usage also had ~50px of ragged near-black film border baked in by NBP Flash, measured at 51/50/42/42 px on a 4096 square and trimmed at 70 to be safe. Left in, it would have shown as a dark bar down the left and right of the block.\n\nENGINE PER SLOT, AND WHY.\n  shipping  NBP Pro     \u2014 the only candidate whose HELIX MARK is right. gpt-image spelled\n                          'Skingenetix' correctly on both candidates but drew the mark as\n                          bare dashes with no continuous strand. Checked at 100%: capital S,\n                          bold italic lowercase, S-curve strand crossing the dashes with\n                          scattered dots, and no other lettering anywhere on the box.\n  returns   Seedream    \u2014 genuine unforced smile, screen angled away and invisible, and an\n                          East Asian model, which with the West African model on Products &\n                          Usage keeps the page from being one face repeated.\n  skincare  NBP Flash   \u2014 closest crop of the nine, pores and vellus hair intact at 100%,\n                          colourless droplet, plain glass with no graduation marks, and the\n                          quietest top-left of the shortlist for the title to sit on.\n\nSeedream returned the two pipette frames rotated on their side and both are unusable; FLUX.2 delivered one candidate per slot as it always does. Neither is a fault to fix, both are why the brief goes to every engine.",
+  "template": "templates/page.faq.json",
+  "images": [
+    {
+      "slot": "faq_products",
+      "source": "assets/faq-final/faq-products-usage.png",
+      "origin": "assets/ai-generated/2026-08-22-multi-cream-application-faces/CREAM-2-WEST-AFRICAN-LIGHTBLUE/CREAM-2-WEST-AFRICAN-LIGHTBLUE-nbp_flash_01.png, border trimmed 70px, cropped to 4:3",
+      "filename": "skingenetix-woman-applying-peptide-face-cream-to-cheek.jpg",
+      "alt": "A woman applying a small dab of pale blue peptide face cream to her cheekbone with her fingertips, against a deep graphite background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-woman-applying-peptide-face-cream-to-cheek.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-woman-applying-peptide-face-cream-to-cheek.jpg?v=1787668926"
+    },
+    {
+      "slot": "faq_ingredients",
+      "source": "assets/faq-final/faq-ingredients-safety.png",
+      "origin": "assets/ai-generated/ALL-copper-peptide-night-repair-cream/_run-02__08_open_jar_single_lid_seedream_0.png, cropped to 4:3",
+      "filename": "skingenetix-copper-peptide-night-repair-cream-open-jar.jpg",
+      "alt": "An open jar of Skingenetix Copper Peptide Advanced Night Repair night cream with the silver lid resting beside it, the pale blue cream visible inside",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-night-repair-cream-open-jar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-night-repair-cream-open-jar.jpg?v=1787668926"
+    },
+    {
+      "slot": "faq_shipping",
+      "source": "assets/ai-generated/2026-08-22-multi-faq-category-images/FAQBOX-shipping/FAQBOX-shipping-nbp_pro_01.png",
+      "filename": "skingenetix-skincare-order-packed-white-shipping-box.jpg",
+      "alt": "A plain white shipping box sealed with paper tape and printed with the Skingenetix helix mark on the lid, on a dark graphite surface",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skincare-order-packed-white-shipping-box.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skincare-order-packed-white-shipping-box.jpg?v=1787668926"
+    },
+    {
+      "slot": "faq_returns",
+      "source": "assets/ai-generated/2026-08-22-multi-faq-category-images/FAQPHONE-returns/FAQPHONE-returns-seedream_01.png",
+      "filename": "skingenetix-happy-customer-checking-order-on-phone.jpg",
+      "alt": "A smiling woman looking down at her mobile phone, pleased with what she is reading, against a deep graphite background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-happy-customer-checking-order-on-phone.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-happy-customer-checking-order-on-phone.jpg?v=1787668926"
+    },
+    {
+      "slot": "faq_skincare",
+      "source": "assets/ai-generated/2026-08-22-multi-faq-category-images/FAQPIPETTE-skincare/FAQPIPETTE-skincare-nbp_flash_01.png",
+      "filename": "skingenetix-clear-peptide-serum-pipette-drop-on-cheek.jpg",
+      "alt": "A macro close-up of a woman's cheek as a clear peptide serum falls from a glass pipette, one colourless droplet already resting on the skin",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clear-peptide-serum-pipette-drop-on-cheek.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clear-peptide-serum-pipette-drop-on-cheek.jpg?v=1787668926"
+    }
+  ]
+}
