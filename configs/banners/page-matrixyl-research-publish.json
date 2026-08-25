@@ -1,0 +1,30 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.research-matrixyl.json, hero section",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 chose MXR-2-COLLAGEN-MESH nbp_pro_01 from the six-concept batch.",
+  "note": "Header banner for /pages/matrixyl-3000-research.\n\nREPLACES AN OFF-SYSTEM IMAGE. The previous banner was a warm brown and gold DNA helix. The palette gives this page graphite #1A1A1A and teal #016569 - teal being Matrixyl's own scene colour, already used on its product photography and the Firming & Skin Density concern - and the art-direction doc states that research pages take their molecule's scene colour. Brown and gold belonged to no part of that system.\n\nCROPPED, NOT EXTENDED, AND THE CROP IS THE FIX. The band is 100vw x 496px, so it needs about 3.9:1 to keep full height at a 1920 viewport, and the source is 2.357:1. Every other banner on this store got there by extending the canvas sideways. This one did not need to: taking 1063px off the TOP reaches 6336x1625 (3.899:1) with no invented pixels at all - and the top is precisely where the bright fibres were. Measured down the centre 46% of the frame before cropping: the top tenth ran mean 119, the next mean 71, the third mean 52. The page's eyebrow line sits 10% down the band, so it would have landed on the brightest teal in the picture. After the crop the whole heading block measures mean 28.5, stdev 13.6, dark and even for white type.\n\nThe concept was chosen for meaning as well as tone: a collagen scaffold is the thing Matrixyl 3000 acts on, so the picture is about the ingredient rather than decorating around it. Dense fibre at both edges, open dark centre - which is what this page needs, since unlike the collection banners its heading is centred and wraps to four lines.\n\nOVERLAY 50 -> 25. Fifty is what this project has already recorded as 'muting the picture to near-flat, which is why a new image read as no change'. The cropped frame is dark enough behind the type on its own measurement.",
+  "images": [
+    {
+      "slot": "research_matrixyl_hero",
+      "source": "assets/publish-ready/page-matrixyl-research-banner/skingenetix-matrixyl-3000-collagen-peptide-research.jpg",
+      "filename": "skingenetix-matrixyl-3000-collagen-peptide-research.jpg",
+      "alt": "Macro study of a collagen fibre network lit in teal against graphite - Matrixyl 3000 peptide research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-peptide-research.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-collagen-peptide-research.jpg?v=1787657248"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "research_matrixyl_hero"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 25
+      }
+    }
+  ]
+}

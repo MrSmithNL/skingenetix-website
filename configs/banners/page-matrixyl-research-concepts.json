@@ -1,0 +1,72 @@
+{
+  "wave": "page-matrixyl-research-concepts",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Concept batch for the /pages/matrixyl-3000-research header. Malcolm asked for a spread of ideas in the graphite branding style before committing to one.\n\nWHAT IS THERE NOW, AND WHY IT IS OFF-SYSTEM. The live banner is a warm brown and gold DNA helix. The visual-identity palette gives this page graphite #1A1A1A as the ground and teal #016569 as the accent - teal is Matrixyl's own scene colour, already used for its product photography and for the Firming & Skin Density concern - and the art-direction doc states in terms that the research pages get their molecule's scene colour. Brown and gold belong to no part of that system.\n\nTHE CONSTRAINT THAT SHAPES EVERY CONCEPT: THE TEXT IS CENTRED, AND LONG. This page's heading is 'Matrixyl 3000 (Palmitoyl Tripeptide-1 and Tetrapeptide-7)', which wraps to FOUR lines at 1440, with an eyebrow above and two lines of body copy below. It is centre-aligned, not pushed to one side like the collection banners. So the usual trick of parking the subject on one side and leaving the other clear does not work here: what this banner needs is a quiet, even MIDDLE with the interest at the left and right edges. Every brief below states that explicitly, and negates anything bright or busy crossing the centre.\n\nCLASS B, SO FLUX.2 IS IN. No product and no branding appears in any of these, which is the one condition under which FLUX.2 is allowed - it invents brand identities, but there is nothing here for it to invent. That gains a sixth supplier on a purely material brief, which is exactly the kind of shot it is good at.\n\nASPECT. Generated at 3072x1024 (3:1) because gpt-image refuses any aspect wider than 3:1 outright, and dropping it would lose the engine that has produced the cleanest material studies on this project. The canvas is extended to the header's real ratio afterwards - measured live, the band is 1440x496 at a 1440 viewport, so it needs about 3.9:1 to keep full height at 1920.\n\nSIX CONCEPTS, deliberately spread rather than six variations of one idea: the brand's own peptide-chain signature; the collagen mesh the ingredient acts on; a clinical still life; the collagen triple helix drawn as line; the dual-peptide idea made literal; and a dermal cross-section. One candidate each per supplier keeps the batch readable.",
+  "defaults": {
+    "candidates": 1,
+    "negative_global": "brown, gold, amber, warm orange, sepia, yellow, bright centre, busy centre, subject in the middle of the frame, hard edge crossing the centre, specular highlight in the centre, text, lettering, watermark, signature, numbers, labels, logo, brand mark, bottle, jar, packaging, product, human face, model, hands, skin of a person, botanicals, flowers, water splash, bokeh sparkle, lens flare, rainbow, neon, cyberpunk, sci-fi HUD, glowing wireframe grid, banding, posterised gradient, clip art, 3d render look, plastic CGI, oversaturated"
+  },
+  "slots": [
+    {
+      "id": "MXR-1-PEPTIDE-CHAIN",
+      "title": "The brand's peptide-chain signature, teal on graphite",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page matrixyl-3000-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. A single chain of linked translucent glass spheres runs horizontally across the picture, each sphere joined to the next by a short clear link, like a molecular model made in real glass rather than drawn. The chain enters at the left edge, dips low through the middle of the frame, and rises out at the right edge. The ground behind it is deep graphite, colour #1A1A1A, seamless and even, falling off to near-black at the top and bottom. A cool teal light, colour #016569, rakes the chain from behind and below so the spheres glow at their rims and hold a dark core, with one or two catching a small clean highlight. The MIDDLE THIRD of the frame is quiet: there the chain runs low and small against unbroken graphite, with no bright highlight and no hard edge crossing it, so a centred headline can sit over it. Very shallow depth of field, the near spheres sharp and the far ones dissolving. Fine film grain, no colour anywhere except the teal and the graphite, restrained and expensive, like a laboratory photographed by a still-life photographer.",
+      "negative_extra": "chain filling the centre, chain across the middle at full size, ball-and-stick diagram, chemistry textbook illustration, DNA double helix"
+    },
+    {
+      "id": "MXR-2-COLLAGEN-MESH",
+      "title": "The collagen network the ingredient acts on",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page matrixyl-3000-research",
+      "prompt": "Extreme macro photograph, very wide cinematic frame, of a dense three-dimensional mesh of fine translucent fibres, layered and interwoven like the collagen scaffold under skin. The fibres are thickest and most tangled at the far LEFT and far RIGHT of the picture and thin out toward the middle, so the centre of the frame is open, dark and quiet. The ground is deep graphite, colour #1A1A1A, receding to near-black behind the mesh. A cool teal light, colour #016569, comes from behind and above, so the fibres glow where they catch it and fall to silhouette where they do not. Depth is real: near fibres sharp, deeper layers softening into the dark. Nothing bright and nothing hard-edged crosses the middle third of the frame. Fine film grain, no colour except teal and graphite, quiet and clinical rather than decorative.",
+      "negative_extra": "flat pattern, wallpaper texture, evenly spaced grid, net, fabric weave, spider web, dense mesh across the centre"
+    },
+    {
+      "id": "MXR-3-LAB-GLASS",
+      "title": "Clinical still life - pipette and slide",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page matrixyl-3000-research",
+      "prompt": "Clinical still-life photograph, very wide cinematic frame. On the LEFT of the picture a plain laboratory glass pipette hangs vertically, unbranded and unmarked, holding a single clear droplet at its tip. On the RIGHT, a flat glass slide lies on a graphite surface with a small pool of clear liquid spread across it, catching the light. Between them the middle of the frame is empty graphite surface, colour #1A1A1A, smooth and even and quiet. A cool teal light, colour #016569, comes from low behind, passing through the droplet and the pool so both glow from within while the glass itself stays almost colourless. Everything is unbranded: plain laboratory glass with no printing, no measurement marks, no labels of any kind. 100mm macro at f5.6, near-black shadows, one clean specular per glass surface, fine film grain, restrained and expensive.",
+      "negative_extra": "measurement markings on the glass, graduations, printed scale, beaker, flask, test tube rack, coloured liquid, blue liquid, green liquid, anything in the centre of the frame"
+    },
+    {
+      "id": "MXR-4-TRIPLE-HELIX-LINE",
+      "title": "Collagen's triple helix drawn as fine filament",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page matrixyl-3000-research",
+      "prompt": "Fine-art photograph of light, very wide cinematic frame. Three fine luminous filaments wind around one another in a long slow braid, like the triple helix of a collagen molecule rendered as three threads of light rather than as a diagram. The braid runs the full width of the picture, entering low at the left, staying low and tight through the middle, and opening out larger toward the right edge. The ground is deep graphite, colour #1A1A1A, empty and even above and below the braid. The filaments are cool teal, colour #016569, brightest where they cross in front and dimming as they turn behind, with a soft bloom around the brightest crossings only. The middle third of the frame stays dark and quiet, the braid running small and low there, so a centred headline can sit above it. Long-exposure light-painting quality, real optical bloom rather than a graphic glow, fine film grain, no colour except teal and graphite.",
+      "negative_extra": "DNA double helix, two strands only, ladder rungs, wireframe, vector illustration, hard graphic line, neon tube, laser beam, braid filling the centre"
+    },
+    {
+      "id": "MXR-5-TWO-PEPTIDES",
+      "title": "The dual-peptide idea made literal - two chains converging",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page matrixyl-3000-research",
+      "prompt": "Fine-art macro photograph, very wide cinematic frame. TWO separate chains of small translucent glass beads travel toward each other from opposite sides of the picture - one entering at the upper left, one at the lower right - and their leading ends almost meet just off-centre, close but not touching, with a narrow dark gap between them. Each chain is distinct: the upper one made of slightly larger, rounder beads, the lower one of smaller, more angular ones, so they read as two different molecules rather than one broken chain. The ground is deep graphite, colour #1A1A1A, seamless and even. A cool teal light, colour #016569, rakes from behind so both chains glow at their rims against the dark. The exact middle of the frame, where the two ends approach, stays low in the frame and low in brightness, with unbroken graphite above it, so a centred headline can sit there. Very shallow depth of field, fine film grain, no colour except teal and graphite, quiet and precise.",
+      "negative_extra": "chains touching, chains merging, one continuous chain, three or more chains, symmetrical mirror composition, bright meeting point, flare where they meet, explosion of light"
+    },
+    {
+      "id": "MXR-6-DERMAL-STRATA",
+      "title": "Skin's layers abstracted as luminous strata",
+      "class": "B",
+      "width": 3072,
+      "height": 1024,
+      "target_slot": "page matrixyl-3000-research",
+      "prompt": "Abstract macro photograph, very wide cinematic frame, of translucent layers stacked one behind another in depth, like a cross-section through the layers of the skin rendered as sheets of frosted glass and fine suspended fibre rather than as a medical illustration. The layers are densest and most detailed at the LEFT and RIGHT edges of the picture, where their edges catch the light, and open into clear dark space through the middle. The ground behind everything is deep graphite, colour #1A1A1A, receding to near-black. A cool teal light, colour #016569, passes through the layers from behind, so their edges glow and their bodies stay smoky and dark. Depth is real, with the nearest layer sharp and the deepest dissolving into the dark. The middle third carries no bright edge and no hard line. Fine film grain, no colour except teal and graphite, quiet, sectional and clinical.",
+      "negative_extra": "medical diagram, anatomical illustration, labelled layers, cutaway drawing, hair follicles, cells with visible nuclei, microscope slide look, horizontal band across the centre"
+    }
+  ]
+}
