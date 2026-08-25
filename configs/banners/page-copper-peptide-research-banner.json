@@ -1,0 +1,63 @@
+{
+  "created": "2026-08-25",
+  "target": "live theme \u2014 Impact, templates/page.research-copper-peptide.json, hero section",
+  "decided_by": "Malcolm, 2026-08-25 \u2014 asked for nbp_pro_02 from the slot-B contact sheet (high three-quarter, powder dish nearest camera).",
+  "note": "Header banner for /pages/copper-peptide-research.\n\nSOURCE: banner-copper-peptide-research wave, slot B (high three-quarter, powder dish front), nbp_pro candidate 2, delivered 6336x2688 (2.357:1). CLASS B \u2014 no product in frame, so nothing branded to protect and nothing for an engine to invent.\n\nWHAT IT REPLACES: skingenetix-research-copper-peptide-banner.jpg, a stock cyan CGI ball-and-stick molecule at 16:9 that predates the banner system. Wrong ratio for the header box, wrong blue, and the heading was centred over the middle of it \u2014 three things the art direction now rules out.\n\nCHECKED AT 100%: the objective turret carries 10x, 40x and 100x oil with the 1 curving round the barrel, and the correct colour rings (yellow on 10x, blue on 40x). That is accurate laboratory equipment, not garbled lettering and not an invented mark, so it is kept. The wave's 'no lettering' negative was aimed at brand marks and chemical notation; neither appeared on any of the 33 candidates.\n\nCANVAS EXTENDED, NOT CROPPED, to 3750x848 (4.42:1). The banner box is 100vw x 440px, so its aspect follows the viewport \u2014 3.27:1 at 1440, 3.44:1 at 1512, 4.36:1 at 1920 \u2014 and the 2.36:1 source is narrower than all of them, so object-fit cover was cropping the HEIGHT. 4.42:1 clears the widest of those. object-position is right center, so surplus width is always cropped off the extension, never off the glassware or the microscope.\n\nTHIS FRAME IS THE EASY EDGE, and the interesting decision was the texture mode. Nothing touches the left edge \u2014 the bench is clean out to x=550 \u2014 so no shoulder handling. But the fill is 1751px wide, and TILE, chosen first on the science bench's precedent, measured worse than scatter here:\n\n              blotch amp   periodicity   fine grain (original 1.003)\n    tile           1.345    8.86x mean         1.035\n    scatter        0.717    2.25x mean         0.657\n\nTile matches the original's grain almost exactly and still loses, because what the eye catches across a fill that wide is not amplitude but SYMMETRY \u2014 the mirror-tiled 400px box repeating at ~438px, legible at render size even at 1.3 levels. Scatter's grain deficit is the bigger number on paper and the invisible one in practice, because this bench sits near black where fine grain cannot be resolved. The science bench went the other way for the opposite reason: lighter, with real mottle to carry.\n\nEVERY EXTENDER VALUE WAS MEASURED, not carried over. texture_box (0,848,0,400) reads mean 17.3, max 62, p99.9 39 \u2014 and that max is 6 pixels in 339,200, four blobs of 3px or less, neutral rather than blue, i.e. bench grain. Widening the box to lengthen the tile period is barred: at x=500 the bright-pixel count jumps 45x, from 12 to 546, and turns blue as the scattered granules enter. profile_smooth is 20.0, not the science bench's 30.0, because this edge is cleaner \u2014 5.61 levels of residual raw, 2.18 at sigma 20, already under the ~4 a real backdrop edge produces. flat_backdrop is wrong here for the same measured reason as on the science bench: the profile RISES THEN FALLS, 8.3 at the top, 14.0 at mid, 10.7 at the bottom, and a straight-line ramp cannot follow that.\n\nJOIN VERIFIED: column means run 10.29 into the join and 10.73 out of it, a 0.44-level step, and high-passed grain reads 1.041 in the fill against 1.003 immediately the other side.\n\nTEXT MOVES OFF CENTRE. The page centres its heading today, which rule 2 of the art direction bars, and every frame in this wave reserves the left 45 percent as an unbroken type zone. Heading goes centre-left to match /pages/the-science and the collection headers.\n\nOVERLAY DROPS 50 -> 22. The shot is already near black under the type zone; a 50 percent tint over it flattens the glassware and kills the blue, which is the only colour in the frame.\n\nSELECTOR NOTE, carried from the science banner and still true: image-with-text-overlay wraps its text in .prose inside a positioning div, NOT in .v-stack the way collection-banner does. Target the direct div child of .content-over-media, or the description runs on under the flask.",
+  "images": [
+    {
+      "slot": "cpr_desktop",
+      "source": "assets/publish-ready/page-copper-peptide-research-banner/skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg",
+      "alt": "Blue copper peptide crystals in a glass dish beside a conical flask and beaker of blue solution and a laboratory microscope, representing GHK-Cu clinical research",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg?v=1787645156"
+    },
+    {
+      "slot": "cpr_mobile",
+      "source": "assets/publish-ready/page-copper-peptide-research-banner/skingenetix-copper-peptide-ghk-cu-clinical-research-mobile.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-clinical-research-mobile.jpg",
+      "alt": "Close crop of blue copper peptide crystals in a glass dish with a flask and beaker of blue solution on a dark laboratory bench",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-clinical-research-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-clinical-research-mobile.jpg?v=1787645156"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "cpr_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "cpr_mobile",
+      "setting": "mobile_image"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "image_size": "sm",
+        "enable_parallax": false,
+        "overlay_opacity": 22,
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-start-center text-center"
+      }
+    }
+  ],
+  "new_sections": [
+    {
+      "id": "hero_banner_css",
+      "insert_after": "hero",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>@media screen and (min-width: 700px) {\n  .shopify-section--image-with-text-overlay .content-over-media > picture > img,\n  .shopify-section--image-with-text-overlay .content-over-media > img { object-position: right center; }\n  /* This section wraps its text in .prose inside a positioning div - NOT in\n     .v-stack the way collection-banner does. Targeting .v-stack matches nothing\n     and the description runs on under the flask. */\n  .shopify-section--image-with-text-overlay .content-over-media > div { max-width: clamp(320px, 46vw, 660px); }\n}\n@media screen and (max-width: 699px) {\n  .shopify-section--image-with-text-overlay .content-over-media::before {\n    background-image: linear-gradient(to bottom,\n      rgba(10, 14, 22, 0.85) 0%,\n      rgba(10, 14, 22, 0.62) 22%,\n      rgba(10, 14, 22, 0.00) 58%);\n  }\n}</style>"
+        }
+      }
+    }
+  ]
+}

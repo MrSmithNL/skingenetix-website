@@ -351,6 +351,74 @@ BANNERS = {
         "profile_smooth": 30.0,
         "shoulder": None,
     },
+    # /pages/copper-peptide-research header. Malcolm's pick from the blue-powder wave,
+    # 2026-08-25: slot B (high three-quarter), nbp_pro candidate 2. Replaces stock cyan
+    # CGI molecular notation that predates the banner system.
+    #
+    # EVERY VALUE BELOW WAS MEASURED ON THIS FRAME, at the 1999x848 working size:
+    #   texture_box   (0,848,0,400) reads mean 17.3, max 62, p99.9 39. That max is not
+    #                 a subject - it is 6 pixels in 339,200, four blobs of <=3px, and
+    #                 neutral rather than blue (blue-minus-red 9.5), i.e. bench grain.
+    #                 The box has to stop well short of 550, where the scattered
+    #                 granules and the blue light pool first lift a column (p99.5 54
+    #                 against a baseline of 11).
+    #   profile_smooth  20.0, NOT the science bench's 30.0. This edge is genuinely
+    #                 cleaner: residual after removing the lighting shape is 5.61
+    #                 levels raw, and 2.18 at sigma 20 - already under the ~4 that a
+    #                 real backdrop edge produces. 30 would work and is simply more
+    #                 flattening than this frame needs.
+    #   flat_backdrop is WRONG here, same as on the science bench, and for the same
+    #                 measured reason: the profile RISES THEN FALLS - 8.3 at the top,
+    #                 14.0 at mid, 10.7 at the bottom - and a straight-line ramp
+    #                 cannot follow that shape.
+    #   bg_fit        recorded for the sake of the entry but NEVER READ: edge_profile
+    #                 returns early when shoulder is None and flat_backdrop is off.
+    #   mobile_crop   blue subject spans x 694-1400 and the microscope owns 1400-1917,
+    #                 so the phone window is x 880-1680 on the source. After a 1751px
+    #                 extension that is inset 319 from the right edge of the 3750.
+    "copper-peptide-research": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-copper-peptide-research"
+                     / "cpr-scope--B-high-angle-powder-front"
+                     / "cpr-scope--B-high-angle-powder-front-nbp_pro_02.png"),
+        "out": ROOT / "assets/publish-ready/page-copper-peptide-research-banner",
+        "desktop": "skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg",
+        "mobile": "skingenetix-copper-peptide-ghk-cu-clinical-research-mobile.jpg",
+        #: right-anchored; keeps the granule dish, flask and beaker together with the
+        #: microscope stage rather than cropping a rectangle of empty bench
+        "mobile_crop": (319, 800),
+        #: nbp_pro delivers 6336x2688, far larger than the 2048-wide library frames,
+        #: so it comes down to the working height first - every x and y above is in
+        #: working pixels, and extending at native size would build an 11k-wide array
+        #: to reach the same aspect.
+        "work_height": 848,
+        #: 4.42:1, past the 4.36:1 the 100vw x 440px box reaches at a 1920 viewport
+        "target_width": 3750,
+        "bg_fit": (100, 800),
+        "texture_box": (0, 848, 0, 400),
+        #: SCATTER, and this is the opposite of the call made on the science bench one
+        #: entry below - so the reasoning, not the setting, is what to carry forward.
+        #: tile was tried here first, on the science precedent, and measured worse:
+        #:
+        #:            blotch amp   periodicity      fine grain  (original reads 1.003)
+        #:   tile         1.345    8.86x mean            1.035
+        #:   scatter      0.717    2.25x mean            0.657
+        #:
+        #: tile matches the original's grain almost exactly and STILL loses, because
+        #: what the eye catches in a 1751px fill is not amplitude but SYMMETRY: the
+        #: mirror-tiled 400px box repeated with a period of ~438px, and those butterfly
+        #: blotches were legible at render size even at 1.3 levels. scatter's grain
+        #: deficit is the larger number on paper and the invisible one in practice,
+        #: because this bench sits near black where fine grain cannot be resolved.
+        #: The science bench was the other way round: lighter, with real mid-frequency
+        #: mottle to carry, so there the smoothing was the visible fault.
+        #: Widening the texture box to lengthen the period was tried and is barred -
+        #: at x=500 the bright-pixel count jumps 45x (12 to 546) and turns blue, which
+        #: is the scattered granules entering the box. 450 is the hard ceiling.
+        "texture_mode": "scatter",
+        "profile_smooth": 20.0,
+        #: nothing touches the left edge; the bench is clean out to x=550
+        "shoulder": None,
+    },
     # /pages/the-science, "Our Transparency Commitment" band. Malcolm's pick from the
     # evidence+microscope wave, 2026-08-25. Easiest edge of the set: the leftmost
     # column runs min 24, max 34, and column means hold 27-33 all the way out to
