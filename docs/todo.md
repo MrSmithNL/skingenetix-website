@@ -251,6 +251,26 @@ anchored with `object-position: center top` instead, so the 28%–46% of height 
 band discards always comes off the lower chest. Overlay went 60 → 22. Full reasoning in
 `configs/banners/page-skin-concerns-banner.json`.
 
+**The four concern sections on `/pages/skin-concerns` now share the homepage's tiles**
+(2026-08-25 13:45). They were the worst placeholders found on the store so far: Fine Lines
+carried an **oil-painting landscape of a cottage and a country lane**, and Firming carried a
+**screenshot of a text prompt** with the words "Minimalist still life… No text.
+Photorealistic." visibly set in type. Repair had a stock DNA helix, Brightening a stock
+bubble macro. All four were 800×600 or 1024×1024.
+
+Malcolm chose the **model/skin set** — the same four files the homepage `skin_concerns`
+section (`image-link-blocks`, "Targeted Solutions for Every Skin") already uses, rather than
+the abstract texture set from the homepage's `find_serum` section. The blocks map 1:1
+(`c1`–`c4`, same four `link_url`s), so the plan is four `image_assignments` and nothing
+else. Files are **referenced by `shopify://shop_images/` handle, never re-uploaded** —
+shopify.md rule 7 — which also carries their existing descriptive alt text across
+unchanged. Plan: `configs/banners/page-skin-concerns-tiles.json`.
+
+One cosmetic consequence, left as-is: the fine-lines photograph has a near-white backdrop
+and `concern_1`'s section background is `#ffffff`, so that one tile's left edge dissolves
+into the page where the other three sit on a visible block of colour. On the homepage the
+same file is fine because it wears a 40% dark overlay.
+
 **Three lessons from the 2026-08-25 acetyl banners** (details in
 `configs/banners/collection-fine-lines-wrinkles-banner.json`):
 

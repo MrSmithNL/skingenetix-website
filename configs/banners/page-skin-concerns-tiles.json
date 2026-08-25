@@ -1,0 +1,32 @@
+{
+  "note": "Point the four concern sections on /pages/skin-concerns at the same model/skin tiles the homepage 'Targeted Solutions for Every Skin' section already uses. Malcolm's call, 2026-08-25: 'use the model / skin images'. The files are already live on Shopify Files and carry good alt text, so they are referenced by handle and never re-uploaded (shopify.md rule 7 — Langify keys translations off the image URL). Replaces four placeholders, two of which were not skincare at all: a cottage landscape painting on Fine Lines, and a screenshot of a text prompt on Firming.",
+  "template": "templates/page.skin-concerns.json",
+  "images": [
+    {
+      "slot": "fine_lines",
+      "filename": "skingenetix-concern-fine-lines-wrinkles-2026.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-concern-fine-lines-wrinkles-2026.jpg"
+    },
+    {
+      "slot": "firming",
+      "filename": "skingenetix-skin-firming-density-peptide-treatment.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skin-firming-density-peptide-treatment.jpg"
+    },
+    {
+      "slot": "repair",
+      "filename": "skingenetix-concern-skin-repair-renewal-2026.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-concern-skin-repair-renewal-2026.jpg"
+    },
+    {
+      "slot": "brightening",
+      "filename": "skingenetix-concern-brightening-glow-2026.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-concern-brightening-glow-2026.jpg"
+    }
+  ],
+  "image_assignments": [
+    { "section": "concern_1", "block": "c1", "slot": "fine_lines" },
+    { "section": "concern_2", "block": "c2", "slot": "firming" },
+    { "section": "concern_3", "block": "c3", "slot": "repair" },
+    { "section": "concern_4", "block": "c4", "slot": "brightening" }
+  ]
+}
