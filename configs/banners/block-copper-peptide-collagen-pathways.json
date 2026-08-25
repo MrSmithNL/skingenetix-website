@@ -1,0 +1,67 @@
+{
+  "wave": "block-copper-peptide-collagen-pathways",
+  "created": "2026-08-25",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md, .claude/rules/website-imagery.md",
+  "note": "Scientific tile for the FIRST content block on /pages/copper-peptide-research — templates/page.research-copper-peptide.json, section `key_findings`, block `f1`. Malcolm's brief, 2026-08-25: a modern scientific image conveying 'Supports the skin's own collagen & renewal pathways', with the two research bullets being collagen/elastin/renewal pathways and antioxidant defence/barrier support.\n\nWHAT IT REPLACES: skingenetix-ingredients-copper-peptide-serum.jpg, a borrowed product photograph of a cyan serum bottle on marble. Its blue is not the brand's — bright turquoise against Clinical 014EB1 — and a bottle argues nothing about collagen. Blocks f2 and f3 are wearing borrowed philosophy-page photographs too; not in scope here, flagged.\n\nSQUARE, 2048x2048. Measured off the live DOM, not assumed: the slot is a 1:1 card rendering ~658px CSS at a 1440 viewport, sizes 'min(720px, 50vw)'. The current file is 900x900, which is undersized for retina; 2048 covers it.\n\nLIGHT REGISTER, NOT DARK. The banner at the top of this page is graphite, but this section is white-carded on the Bone page ground and blocks f2/f3 are light photographs. The art direction runs two registers deliberately and this block is the light one, so the ground is Bone F0F0F0 rather than Graphite 1A1A1A. A dark tile here would fight the two blocks beneath it.\n\nNO TYPE ZONE, and this is the one rule that does NOT carry over from the banners. Rule 2 of the art direction reserves 40 percent of a frame for a headline, but that is for text sitting ON the image. Here the copy is in its own column beside the tile, so the square is composed full. Briefing a clear zone into it would just produce a half-empty picture.\n\nTHE PEPTIDE CHAIN IS THE BRAND'S SIGNATURE DEVICE and, per the homepage-visual-system memory, is the intended treatment for the five research pages specifically. Slot A leads with it. Clinical blue 014EB1 is the Copper Peptide scene colour, so the tile ties to the banner above it and to the concern-to-colour map; copper B87333 is the accent that names the active without writing it.\n\nEVERY SLOT IS A PHYSICAL OBJECT UNDER HARD LIGHT, NEVER A DIAGRAM, and that is deliberate rather than timid. This page's previous banner was scattered CGI molecular notation carrying invented chemical labels — 'HI' and 'OI' — which is the exact failure the Class B negatives exist to stop, and MATRIXYL failed in roughly 30 of 50 candidates on this project when a brief asked for a word. An engine asked for a labelled diagram will produce labels, and they will be wrong. The words are already set in type immediately beside this image, so the picture does not need to repeat them: it needs to look like it came from somewhere rigorous. Hence 'a dense woven lattice of fine translucent filaments' rather than the word collagen (describe-the-thing-dont-name-it).\n\nNEGATIVES DIVERGE FROM THE DOC. 'No more than one subject' is dropped — a lattice, a chain and a node are one composition, and a negative that fights its own brief gets resolved by the engine, not by you. The blanket branding negatives stay. 'No DNA double helix' is added explicitly: the brand device is a PEPTIDE chain and every engine reaches for a double helix when it hears anything biological.\n\nCLASS B throughout, so no references and FLUX.2 is in the run.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "no lettering of any kind, no text, no labels, no captions, no callout lines, no leader lines, no numbers, no chemical notation, no element symbols, no atom letters, no periodic table, no measurement scale, no ruler, no watermark, no signature, no border, no collage, no multi-panel layout, no logo, no brand mark, no bottle, no jar, no dropper, no packaging, no botanicals, no leaves, no flowers, no wood, no linen, no person, no face, no hands, no DNA double helix, no sci-fi hologram, no neon glow, no lens flare, no cartoon, no flat vector illustration, no infographic"
+  },
+  "slots": [
+    {
+      "id": "cp-collagen--A-chain-into-lattice",
+      "title": "A · peptide chain meeting the fibre lattice (brand signature)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "/pages/copper-peptide-research key_findings f1",
+      "ref_files": [],
+      "prompt": "Fine-art scientific still-life photograph, square format. One single chain of six translucent frosted-glass spheres joined by short polished copper links curves in a shallow arc through the upper left of the frame, machined and precise, reading as a physical laboratory model held in the air. Where the chain ends, at roughly the centre of the frame, its last sphere rests against a dense woven lattice of very fine translucent filaments that fills the lower right two thirds — hundreds of hair-thin strands crossing and interlocking in three dimensions like a spun net, each strand catching a thin specular highlight. The filaments are a clear vivid blue, colour hex 014EB1, glowing where the light passes through them and fading to near-transparent at the edges of the mass. The copper links are warm polished metal, colour hex B87333.\n\nThe ground is a seamless soft off-white sweep, colour hex F0F0F0, clean and evenly lit with a gentle falloff to pale grey in the corners. One hard key light from the upper left draws long highlights down the glass spheres and rakes across the lattice so the strands separate and read individually; one soft fill. Macro lens, f/8, extreme clarity, clinical and exact, physically real with true contact shadows.",
+      "negative_extra": "no necklace, no bracelet, no pearls, no jewellery, no rope, no textile weave, no fabric, no spider web, no dew drops, no molecular diagram, no ball-and-stick notation, no floating particles"
+    },
+    {
+      "id": "cp-collagen--B-triple-helix-bundle",
+      "title": "B · triple-helix fibre bundle (collagen and elastin, as material)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "/pages/copper-peptide-research key_findings f1",
+      "ref_files": [],
+      "prompt": "Extreme macro photograph, square format, of one single bundle of three fine translucent filaments wound tightly around one another into a rope, running diagonally from the lower left to the upper right of the frame and filling roughly two thirds of its width. It reads as a real physical fibre photographed under a laboratory lens — it has thickness, weight and surface — not as a rendered graphic. The three strands are a clear vivid blue, colour hex 014EB1, glassy and translucent so the key light passes through the bundle and glows from inside it, with a thin bright specular running the length of each strand. Where the strands cross, one short collar of polished copper, colour hex B87333, clasps the bundle, warm against the cold blue.\n\nBehind and around it the same fibre continues far out of focus as a soft blue haze, giving depth. The ground is a seamless soft off-white sweep, colour hex F0F0F0, clean and evenly lit. One hard raking key from the upper right, one soft fill. Shot on a 100mm macro at f/5.6, shallow depth of field, clinical, cold, precise.",
+      "negative_extra": "no DNA, no double helix, no barber pole stripe, no candy twist, no rope fibres of hemp or jute, no knitting, no yarn, no cable, no electrical wire, no insulation"
+    },
+    {
+      "id": "cp-collagen--C-copper-node-network",
+      "title": "C · copper node at a network junction (the active, at work)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "/pages/copper-peptide-research key_findings f1",
+      "ref_files": [],
+      "prompt": "Fine-art scientific still-life photograph, square format, of a three-dimensional network of very fine translucent filaments spanning the whole frame, hair-thin strands running in every direction and meeting at junctions, like a physical model of a support structure suspended in air. The strands are a clear vivid blue, colour hex 014EB1, glassy and translucent, sharpest at the centre of the frame and softening out of focus toward the corners.\n\nAt one junction, positioned slightly left of centre and slightly above the middle, sits one single polished sphere of solid copper, colour hex B87333, machined and lightly brushed so the turning marks catch the light. It is the brightest and sharpest object in the picture, and the filaments that meet it are lit noticeably brighter close to it, glowing along their length for a short distance before fading back to cool blue — so the sphere reads as the source of the light in the network.\n\nThe ground is a seamless soft off-white sweep, colour hex F0F0F0, clean and evenly lit with a gentle falloff. One hard key light from the upper left, one soft fill. Macro, f/8, extreme clarity, clinical, physically real.",
+      "negative_extra": "no atom labels, no bond notation, no molecular diagram, no constellation, no star map, no circuit board, no fibre optic cable, no glowing energy trails, no bokeh sparkle, no floating dust"
+    },
+    {
+      "id": "cp-collagen--D-layered-barrier",
+      "title": "D · ordered layered barrier, seen edge-on (barrier and antioxidant support)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "/pages/copper-peptide-research key_findings f1",
+      "ref_files": [],
+      "prompt": "Fine-art macro photograph, square format, of a stack of many thin translucent sheets seen almost edge-on, lying horizontally and filling the frame, like a cross-section through a layered material photographed in a laboratory. The upper layers are tightly ordered and closely spaced, each sheet clean-edged and parallel to the next; lower down the layers become slightly thicker and more open, and a dense mesh of very fine filaments threads through them, tying one layer to the next.\n\nThe sheets are glassy and near-colourless at their faces and a clear vivid blue, colour hex 014EB1, where the light catches their edges, so the whole stack draws a series of glowing blue lines across the frame. A few short elements of polished copper, colour hex B87333, sit between the layers, warm points in a cold structure. A hard key light from the upper right skims along the edges of the sheets so they separate cleanly and throws a soft caustic beneath the stack.\n\nThe ground is a seamless soft off-white sweep, colour hex F0F0F0, clean and evenly lit. Shot at f/11, extreme clarity, clinical, cold, physically real with true shadows.",
+      "negative_extra": "no medical illustration, no anatomical diagram, no skin cross-section drawing, no cells, no bricks, no masonry, no book pages, no stacked paper, no mille-feuille, no geological strata, no rock"
+    },
+    {
+      "id": "cp-collagen--E-lattice-sparse-to-dense",
+      "title": "E · lattice thickening across the frame (renewal, without an arrow)",
+      "class": "B",
+      "width": 2048,
+      "height": 2048,
+      "target_slot": "/pages/copper-peptide-research key_findings f1",
+      "ref_files": [],
+      "prompt": "Fine-art scientific still-life photograph, square format, of one continuous three-dimensional lattice of very fine translucent filaments spanning the frame from left to right. On the left third the lattice is sparse and open, with wide gaps between thin, dim strands. Moving right it becomes progressively denser and brighter, until on the right third it is a thick, closely woven mass of hundreds of interlocking strands, fully lit and glowing. The change is smooth and continuous across the frame, one single structure rather than two.\n\nThe filaments are a clear vivid blue, colour hex 014EB1, glassy and translucent, each catching a thin specular highlight; the dense right side glows from within where the light passes through the mass. A few junctions in the dense region hold small polished copper spheres, colour hex B87333, warm against the blue.\n\nThe ground is a seamless soft off-white sweep, colour hex F0F0F0, clean and evenly lit with a gentle falloff to pale grey. One hard key light from the upper left, one soft fill. Macro, f/8, extreme clarity, clinical and exact, physically real.",
+      "negative_extra": "no arrows, no chevrons, no progress bar, no before and after split, no dividing line, no gradient overlay, no chart, no graph, no bar chart, no timeline, no spider web, no net curtain"
+    }
+  ]
+}
