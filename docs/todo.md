@@ -304,6 +304,33 @@ reading it back "confirmed" a fix that did not exist. **A full-page pixel diff b
 after is the only check that catches this**; it showed zero changed rows outside the
 announcement bar.
 
+**The homepage concern tiles went 40% → 20% to match** (live 2026-08-25,
+`configs/banners/homepage-concern-tile-overlay-20.json`). Unlike the concern page this is a
+real block setting — `image-link-blocks` has `overlay_opacity` in its schema. The *second*
+`image-link-blocks` section on the homepage, `find_serum` ("Find Your Perfect Product",
+four tiles at 50%), is deliberately untouched, which is why the CSS below is keyed to the
+`skin_concerns` section id rather than the section class.
+
+**These tiles carry their white label ON the photograph, so 20% alone was not shippable.**
+At 20% flat, `Skin Repair & Renewal` and `Firming & Skin Density` sat at 4.12 and 4.14
+against the 4.5:1 that 15px bold text requires, and `Fine Lines & Wrinkles` had **no dark
+ground left at all** — 100% of its label box was too pale, white on near-white, because
+that photograph's backdrop is pale grey exactly where the label sits. Fixed with a **bottom
+scrim** layered onto the theme's own `.content-over-media::before` (never an `::after` —
+the content div is also `z-index: 1` and later in tree order, so an `::after` paints over
+the label). All four now pass: **worst 4.74:1**, top half of every picture still at the
+bare 20% wash.
+
+⚠️ **Do not locate a text label by counting bright pixels per row.** The first contrast pass
+did, and on photographs of skin the specular highlights clear any threshold — the "label
+band" came back as 292 rows, essentially the whole tile, so every number was white text
+against the *entire photograph* (it called 40% marginal at 3.89–4.17 and 20% a failure at
+2.51–2.72; the true figures are 7.12–7.80 and 4.12–6.44). Worse, it could not detect its own
+error: after the scrim the median moved but the 95th percentile did not, because the
+brightest 5% lived in the untouched top of the picture. **Take the box from the DOM** — a
+`Range` over the text node gives 19px at y=453. Same family as
+`a-number-checked-only-against-itself-gets-believed`.
+
 **Three lessons from the 2026-08-25 acetyl banners** (details in
 `configs/banners/collection-fine-lines-wrinkles-banner.json`):
 

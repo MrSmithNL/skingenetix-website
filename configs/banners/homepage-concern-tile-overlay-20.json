@@ -1,0 +1,39 @@
+{
+  "note": "Take the homepage 'Targeted Solutions for Every Skin' tiles from a 40% overlay to 20%, matching /pages/skin-concerns. Malcolm's call, 2026-08-25. Unlike the concern page this is a real block SETTING, not injected CSS — image-link-blocks has overlay_color/overlay_opacity in its schema — so no custom-html is involved.",
+  "measured_legibility_problem": {
+    "why_these_tiles_are_not_the_concern_page": "Each carries its white link label ON the photograph, bottom-left, so the flat overlay was doing legibility work, not decoration. The label is 15px bold — below WCAG's 18.66px 'large text' threshold — so it needs 4.5:1, not 3:1.",
+    "method": "Measured on the rendered page. Label boxes come from the DOM via a Range over each text node — NOT from pixel heuristics. Glyphs and their antialias halo are masked; the remaining ground gives median and 95th-percentile (the brightest thing the text sits on) contrast against pure white. Other opacities are derived by recovering the un-overlaid photo from the live 20% capture — (px - 0.2*26) / 0.8 — and recompositing, which is exact.",
+    "DO_NOT_locate_the_label_by_counting_bright_pixels": "The first pass found the label band by counting near-white pixels per row inside each tile. On photographs of skin, specular highlights clear any such threshold, so the 'label band' came back as rows 179-471 — 292 rows, essentially the whole tile. Every contrast number from that pass was white-text-against-the-entire-photograph and was wrong (it reported 40% as marginal at 3.89-4.17 and 20% as 2.51-2.72). It also could not detect its own error: adding the scrim moved the median but not the 95th percentile, because the brightest 5% lived in the untouched top of the picture. The label is 19px tall at y=453; ask the DOM.",
+    "worst_case_contrast_at_the_real_label_box": {
+      "40 (what it was)": "Fine Lines 7.12, Firming 7.80, Repair 7.13 — comfortable. Brightening unmeasurable in that capture, hidden behind the newsletter popup.",
+      "20 flat (what was asked for)": "Firming 4.12, Repair 4.14, Brightening 6.44 — two marginal. Fine Lines could not be measured at all because there was no dark ground left to measure: 100% of its label box was too pale for 4.5:1. White on near-white.",
+      "20 + bottom scrim (live)": "Fine Lines 5.41, Firming 6.62, Repair 4.74, Brightening 10.49 — all four PASS, and the too-pale share of every label box falls to ~12%, which is the antialias halo itself, i.e. the floor."
+    },
+    "conclusion": "The flat overlay was the wrong lever — the value that makes the labels legible is the value that greys the photographs, which is the whole reason for going to 20%. A local scrim buys the contrast only where it is needed."
+  },
+  "the_fix_a_local_scrim": "Keep the flat overlay at 20% and add a gradient that only darkens the bottom of each tile, where the label lives — the standard editorial pattern. Verified live: every tile clears 4.5:1, worst 4.74:1, while the top half of every photograph keeps the bare 20% wash. Implemented by overriding the theme's own overlay pseudo-element rather than adding a competing layer: .content-over-media:before already paints the flat overlay at z-index 1 with a .2s transition, so the gradient is layered ON that same background, above rgb(var(--content-over-media-overlay)). Adding a separate ::after would have fought the z-index — the content div is also z-index 1 and later in tree order, so an ::after would paint on top of the label.",
+  "scoped_to_one_section": "The homepage has a SECOND image-link-blocks section — find_serum, 'Find Your Perfect Product', four tiles at 50% overlay. It is untouched: Malcolm asked about the concern tiles. That is why the CSS is keyed to the skin_concerns section id and not to .shopify-section--image-link-blocks, which would have caught both.",
+  "template": "templates/index.json",
+  "images": [],
+  "setting_updates": [
+    { "section": "skin_concerns", "block": "c1", "settings": { "overlay_opacity": 20 } },
+    { "section": "skin_concerns", "block": "c2", "settings": { "overlay_opacity": 20 } },
+    { "section": "skin_concerns", "block": "c3", "settings": { "overlay_opacity": 20 } },
+    { "section": "skin_concerns", "block": "c4", "settings": { "overlay_opacity": 20 } }
+  ],
+  "new_sections": [
+    {
+      "id": "concern_tile_scrim",
+      "insert_after": "brand_story_band",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>\n  /* The concern tiles run a 20% flat overlay so the photographs stay alive.\n     The white label needs more ground than that, but only where it sits, so\n     the contrast is bought locally with a bottom scrim instead of globally\n     by darkening the whole picture.\n\n     Layered onto the theme's OWN overlay pseudo-element. Do not move this to\n     an ::after: .content-over-media > .content is also z-index 1 and later in\n     tree order, so an ::after would paint over the label itself. */\n  #shopify-section-template--26275134079361__skin_concerns .content-over-media::before {\n    background:\n      linear-gradient(to top,\n        rgb(0 0 0 / 0.48) 0%,\n        rgb(0 0 0 / 0.36) 16%,\n        rgb(0 0 0 / 0.12) 34%,\n        rgb(0 0 0 / 0) 50%),\n      rgb(var(--content-over-media-overlay));\n  }\n</style>"
+        }
+      }
+    }
+  ]
+}
