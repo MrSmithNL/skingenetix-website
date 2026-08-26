@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'content' (media-with-text), block 'daycream'",
+  "decided_by": "Malcolm, 2026-08-26: 'replace this image: skingenetix-copper-peptide-day-gel-cream-bottle with this one: assets/ai-generated/2026-08-20-copper-peptide-day-repair-cream/run-01 copper_peptide_ghk_cu_advanced_day_repair_face_cream_model_face_2_skingenetix.png' \u2014 third block in a row on fine-lines-wrinkles, after argireline and matrixyl.",
+  "note": "SOURCE: assets/ai-generated/2026-08-20-copper-peptide-day-repair-cream/run-01/copper_peptide_ghk_cu_advanced_day_repair_face_cream_model_face_2_skingenetix.png, 2048x2048, 5776K PNG.\n\n\u26a0\ufe0f SCOPE: HE NAMED NO PAGE THIS TIME. A store-wide scan of all 57 templates found skingenetix-copper-peptide-day-gel-cream-bottle.jpg in exactly TWO blocks: content.daycream on page.fine-lines-wrinkles, and content.daycream on page.brightening-glow ('Copper Peptide (GHK-Cu) Day Gel-Cream - All-Day Protection'). Only fine-lines-wrinkles was changed, because that is the page he has been working through block by block for the last three requests. The brightening-glow block still carries the old file and is flagged to him rather than swapped on assumption.\n\nLABEL VERIFIED AT FULL SIZE BY COUNTING ELEMENTS. All six present and correct: the dotted double-helix mark in white, the 'Skingenetix' wordmark, 'COPPER PEPTIDE', 'ADVANCED DAY REPAIR' in blue, 'PREMIUM FORMULA', and the sun glyph followed by 'DAY CREAM | 2% GHK-CU | 50ML'. GHK-CU is correct (the ChatGPT-sourced artwork carried GHD-CU) and 50ML is right for the cream.\n\n\u26a0\ufe0f THIS FRAME IS THE CLEAREST EVIDENCE YET OF THE DAY/NIGHT INVERSION. The DAY cream here is deep navy blue. The NIGHT cream published earlier in this same session, on page.skin-repair-renewal, is pale ice blue on bright marble. So the day product reads dark and the night product reads light \u2014 backwards, and already recorded against the artwork rather than against any one shot. The two never appear on the same page, so nothing here needs changing; noted because both are now live and the pair is easier to see side by side than it was this morning.\n\nFILENAME AUDITED IN ALL THREE DIRECTIONS against the 40 existing skingenetix-copper-peptide-* files: no exact match, no existing file is a prefix of this name, and no existing file extends it. That check has already changed three names today, including one on this very page, because this library is dense with names that are prefixes of each other \u2014 and a prefix collision is silently suffixed while the OLD file keeps serving.\n\nRESOLUTION IS AN UPGRADE: the file it replaces is 1024x1024, which caps the theme's generated srcset at 1000w and serves an upscale to a 2x screen. At 2048 the srcset reaches 2000w. The old file stays in Files and simply stops being referenced by this one block \u2014 nothing is renamed or overwritten, because Langify keys translations off the URL and because brightening-glow still uses it.\n\nMASTER IS SQUARE, which media-with-text requires: the row height is max(text column, image natural height) and .media-with-text__media carries no aspect-ratio of its own, so a non-square master stretches its row. This block measured 0.877 at 1440 before the swap, inside a sibling range of 0.823-1.000.\n\nWEB LOADING. Converted from the 5776K PNG to JPEG q95 4:4:4 progressive with metadata dropped, 1193K \u2014 the documented policy in .claude/rules/website-imagery.md rule 5. Not re-encoded below that; compressing the source was measured on 2026-08-24 and made the site marginally slower. Long edge 2048, inside the 3000px cap and above the 2000w top of this block's srcset.\n\nALT TEXT describes what is in frame and claims no trial, treatment or result.",
+  "images": [
+    {
+      "slot": "page_flw_daycream",
+      "source": "assets/publish-ready/page-fine-lines-wrinkles-daycream/skingenetix-copper-peptide-ghk-cu-day-gel-cream-model-holding-jar.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-day-gel-cream-model-holding-jar.jpg",
+      "alt": "Woman holding a deep blue frosted glass jar of Skingenetix Copper Peptide Advanced Day Repair cream, 50ml, up beside her jaw",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-day-gel-cream-model-holding-jar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-day-gel-cream-model-holding-jar.jpg?v=1787758156"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "daycream",
+      "slot": "page_flw_daycream",
+      "setting": "image"
+    }
+  ]
+}
