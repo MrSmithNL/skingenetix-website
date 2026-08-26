@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.brightening-glow.json, section 'content' (media-with-text), block 'intro'",
+  "decided_by": "Malcolm, 2026-08-26: 'there is some hair showing in the models neck. lets remove that' \u2014 a retouch of the portrait he chose an hour earlier, not a new photograph.",
+  "note": "WHAT WAS WRONG. Two sets of hair had escaped the gathered style below her ears: on the left a frizzy tail that ran down beside the neck and ended in a dense dark clump against the background, and on the right a loop of fine flyaways. Both sat almost entirely on the background rather than on skin, which is what made a clean removal possible.\n\nTHE FIRST ATTEMPT WAS WRONG AND WAS THROWN AWAY, and the reason is worth keeping. A masked gpt-image-2 edit over two rectangles removed the hair in both candidates \u2014 and also REDREW THE SILHOUETTE, because the mask spanned the jaw and neck outline. One candidate narrowed the jaw, the other widened the neck. A retouch that changes the woman's shape is not a retouch, and no amount of prompt wording fixes it: anything inside the mask is the model's to reinvent.\n\nWHAT WAS DONE INSTEAD \u2014 deterministic, and it CANNOT move the outline. The background here is a smooth cream gradient, measured RGB about (228,210,189), and a second-order polynomial fits it to a residual of 1.2-1.9 levels per channel. So the strands were painted out with a fitted background rather than a generated one, with grain added back at the measured residual so the repaint is not smoother than its surroundings.\n\nSKIN AND HAIR SEPARATE CLEANLY ON CHROMA (max channel minus min), which is what makes the mask safe: background 39, hair-over-background 47-61, skin 80-115. Pixels are repainted only where chroma < 68.\n\nTHE TWO FAILURES THAT TOOK THREE PASSES, both found by looking at the result at 100% rather than trusting the numbers:\n  1. A colour test alone BIT INTO THE JAW. Shaded skin drops to chroma 61, under the threshold, so patches of her jaw were painted as background. Fixed by protecting skin morphologically \u2014 close the chroma>70 mask with an 11px disk and fill holes, so low-chroma pixels sitting inside skin are protected by their neighbours rather than by their own value.\n  2. Protecting skin with a 4px OUTWARD dilation left A THIN DARK RESIDUE hugging the jaw and neck \u2014 the strands inside the collar survived and read as a hard outline. Fixed by protecting only true skin with no outward growth: the anti-aliased edge band (chroma 65-70) is then neither painted nor protected and simply stays as it is.\n\nWHAT CHANGED, MEASURED: 43,214 pixels, 1.0% of the frame, confined to the two strand areas. The difference map is black across the face, eyes, mouth and the hair on her head. The hairstyle's own frizz at the crown and temples is untouched \u2014 Malcolm asked about the neck, and that frizz is what stops the style looking wigged.\n\nJUDGED AT BOTH SIZES, per rule 3. At 100% the strands are gone with no halo, no seam at the repaint boundary (background luminance steps about 1 level across it) and no cut-out edge. At the sizes the block actually renders \u2014 660px desktop, 350px mobile \u2014 the grey smudge that was visible at the left of the neck has gone and nothing else reads as different.\n\nNEW FILENAME, NOT A RE-UPLOAD. Shopify Files suffixes rather than replaces on a name collision, so re-using the old name would have kept serving the old picture. Audited in all three directions against the live list (470 images): no exact match, not a prefix of anything, nothing a prefix of it. 69 characters.\n\nALT TEXT IS UNCHANGED from r2 \u2014 the retouch removed hair, it did not change what the picture shows or claim anything new.",
+  "images": [
+    {
+      "slot": "page_bg_intro_r3",
+      "source": "assets/publish-ready/page-brightening-glow-intro/skingenetix-brightening-glow-luminous-radiant-complexion-close-up.jpg",
+      "filename": "skingenetix-brightening-glow-luminous-radiant-complexion-close-up.jpg",
+      "alt": "Close-up of a woman with her eyes closed and her face tilted up towards soft light, smiling gently",
+      "uploaded_handle": "shopify://shop_images/skingenetix-brightening-glow-luminous-radiant-complexion-close-up.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-brightening-glow-luminous-radiant-complexion-close-up.jpg?v=1787771710"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "intro",
+      "slot": "page_bg_intro_r3",
+      "setting": "image"
+    }
+  ]
+}
