@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.firming-skin-density.json, section 'content' (media-with-text), block 'causes'",
+  "decided_by": "Chosen from the r4 wave and published on Malcolm's 'proceed', 2026-08-26. Easy to swap: the alternates are in assets/ai-generated/2026-08-22-multi-block-firming-loss-of-firmness-r4.",
+  "note": "WINNER: fsd-r4--A-centre-loss-broad-compacted-nbp_flash_02, 4096x4096, downsampled to 3000x3000 (the theme's srcset never asks for more; see shopify-cdn-makes-source-compression-pointless). Replaces skingenetix-copper-peptide-night-cream-texture.jpg, a product texture shot the block had borrowed.\n\nFOUR ROUNDS, AND EACH ONE CHANGED EXACTLY ONE THING:\n  r1  three concepts, Matrixyl teal fibre \u2014 wrong: the concern-to-colour map colours the tiles and banners, not the anatomy\n  r2  same three concepts in generic skin colour; Malcolm chose C luma_02\n  r3  one concept, front elevation and zoomed, layer stack transcribed off luma_02; leader was C nbp_flash_02\n  r4  the damage moved from the right end into the middle, sound tissue at both edges\n\nWHY THIS CANDIDATE. It is the only one of the r4 leaders that satisfies all four things the brief was actually protecting:\n  1. The block is sound at BOTH ends and fails through the middle, so the picture has no direction in it and therefore makes no before-and-after claim.\n  2. The two sound ends are NOT mirror images \u2014 the fibre courses differ left from right, the lobules differ in size and spacing, and the failure zone sits off centre. The mirrored-diptych failure this round was written to prevent did not occur.\n  3. The block stays ONE CONTINUOUS PIECE. The middle is thinned, parted and sagging; it is never cut through. A gap top to bottom would read as a wound, which is a far worse claim than a loss of density.\n  4. At 100% the parted fibre ends are SOLID and rounded. This is what settled it against nbp_pro_01, whose ends have a visible open bore and read as cut piping rather than fibre \u2014 the same fault that appeared on two r3 candidates and was added to the r4 negatives.\n\nAll four causes in the copy are legible without a single label: granules crumbling and drifting (collagen degradation), fibres frayed and parted with the ends drawn back (elastin fragmentation), lobules shrunk to small beads with the floor dipping over them (fat pad redistribution), and the surface sinking into a valley over the whole zone \u2014 the one part a shopper reads as their own face. Hormonal change is not depicted, because it is a driver and not a visible structure.\n\nSQUARE, 1:1, NON-NEGOTIABLE. The row height in `media-with-text` is set by the master's own aspect: a non-square file stretches the row and makes this block taller than its five siblings. Learned twice on this store in one day \u2014 see the key-findings-box memory.\n\nNo actives in frame: no spheres, no light shafts, no glints. This block is the damage; the next block on the page, 'The Collagen-Peptide Approach to Firming', is where the repair belongs.\n\nNEW FILENAME, never a re-upload: Shopify Files suffixes a name collision and keeps serving the original. ALT TEXT describes the illustration as an illustration and claims no result.",
+  "images": [
+    {
+      "slot": "page_firming_causes",
+      "source": "assets/publish-ready/page-firming-skin-density-causes/skingenetix-loss-of-skin-firmness-collagen-elastin-cross-section.jpg",
+      "filename": "skingenetix-loss-of-skin-firmness-collagen-elastin-cross-section.jpg",
+      "alt": "Illustrated cross-section of skin showing collagen and elastin fibres thinned and parted through the middle, the cell layer crumbling and the fat layer shrunken, with the surface sinking above it",
+      "uploaded_handle": "shopify://shop_images/skingenetix-loss-of-skin-firmness-collagen-elastin-cross-section.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-loss-of-skin-firmness-collagen-elastin-cross-section.jpg?v=1787739393"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "causes",
+      "slot": "page_firming_causes",
+      "setting": "image"
+    }
+  ]
+}
