@@ -14,6 +14,7 @@ survives.
 
 Author: Claude Code, 2026-08-21.
 """
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -118,9 +119,15 @@ def main():
     if not run_dir.exists():
         sys.exit(f"not found: {run_dir}")
 
+    # The wave has to be in the Desktop filename. Two waves of the same brief at
+    # different sizes (a 4.4:1 set and a 3:1 gpt-image set) carry IDENTICAL slot
+    # names, so naming sheets by slot alone made the second run silently overwrite
+    # the first — nine candidates replaced by two, with no error and no clue.
+    wave = re.sub(r"^\d{4}-\d{2}-\d{2}-(multi-)?", "", run_dir.name)
+
     made = []
     for slot_dir in sorted(p for p in run_dir.iterdir() if p.is_dir()):
-        out = DESKTOP / f"skingenetix-{slot_dir.name}.png"
+        out = DESKTOP / f"skingenetix-{slot_dir.name}--{wave}.png"
         if build(slot_dir, out):
             n = len(_shots(slot_dir))
             print(f"  {slot_dir.name:<30} {n} candidates -> {out.name}")
