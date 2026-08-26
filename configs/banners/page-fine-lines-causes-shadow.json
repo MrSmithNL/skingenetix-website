@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'content', block 'causes'",
+  "decided_by": "Malcolm, 2026-08-26: 'lets make the causes shadow the same as the approach one'.",
+  "note": "THE CAUSES FRAME HAD ALMOST NO CAST SHADOW and read as floating, while the approach frame is firmly grounded by a strong warm shadow spreading down and to the right of its glass plate.\n\nTRANSPLANTING THE ACTUAL SHADOW WAS TRIED FIRST AND FAILED. The plan was to lift the approach's shadow as a darkening map \u2014 1 minus (image / fitted background) \u2014 and paste it under the causes plate at the plate-width ratio. It came back as a flat grey RECTANGLE with hard edges, because that darkening map carries the frame's global vignette as well as the cast shadow, so the strip did not fall to zero at its own borders and the crop boundary showed. Discarded rather than patched.\n\nWHAT WAS DONE INSTEAD: the approach shadow was MEASURED and an equivalent synthesised, which is controllable and carries no borrowed artefacts.\n  PEAK DARKENING  0.53 just below the plate, measured against an unshadowed reference strip at the same rows.\n  COLOUR          not neutral grey. At full strength the multiply is R x0.659, G x0.415, B x0.311 \u2014 the shadow eats blue and green far harder than red, which is why a grey shadow would have looked wrong on this warm ground.\n  DIRECTION       light from the upper left: the shadow starts INSIDE the plate's left edge by 0.085 of the plate width and runs 1.106 plate-widths to the right of it.\n  FALLOFF         0.27 at the contact line, peaking at +30px, then 0.51 / 0.49 / 0.45 / 0.42 / 0.37 at +60/90/120/150/180px.\nEvery one of those is expressed in PLATE-RELATIVE units and rescaled by 0.798, the ratio of the two plates' widths, so the causes shadow is proportionally the same shadow rather than a copy of the wrong size.\n\nONE DELIBERATE DEPARTURE: the approach's shadow is clipped by the bottom of its frame, so it never visibly ends. The causes block is smaller and has 400px of clear background beneath it, where an abruptly-ending shadow would look like a mistake. A taper was added over the last third so it fades to nothing by 0.94 of the frame height.\n\nJudged at full size and at the 660x802 render box before publishing, not from the numbers alone \u2014 the first attempt's rectangle was invisible in every metric and obvious the moment it was looked at.\n\nNEW FILENAME because Shopify Files suffixes rather than replaces; audited in all three directions against the live list and against the approach stem.",
+  "images": [
+    {
+      "slot": "flw_causes_v3",
+      "source": "assets/publish-ready/page-fine-lines-explainers/skingenetix-fine-lines-wrinkles-collagen-elastin-fibre-loss-cross-section.jpg",
+      "filename": "skingenetix-fine-lines-wrinkles-collagen-elastin-fibre-loss-cross-section.jpg",
+      "alt": "Illustration of a cross-section of skin, with the collagen and elastin fibres thinned and broken beneath a deep crease in the surface",
+      "uploaded_handle": "shopify://shop_images/skingenetix-fine-lines-wrinkles-collagen-elastin-fibre-loss-cross-section.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-fine-lines-wrinkles-collagen-elastin-fibre-loss-cross-section.jpg?v=1787780687"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "causes",
+      "slot": "flw_causes_v3",
+      "setting": "image"
+    }
+  ]
+}
