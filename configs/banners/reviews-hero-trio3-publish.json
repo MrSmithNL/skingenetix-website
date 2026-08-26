@@ -1,0 +1,22 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.reviews.json, hero",
+  "decided_by": "Malcolm, 2026-08-26 \u2014 chosen, not interim",
+  "note": "The /pages/reviews hero: three women friends laughing, spread across the full width. Replaces the TRIO1 cluster published earlier the same day.\n\nWHICH FRAME. Malcolm chose TRIO3-spread-across-even-centre-gpt_image_02, copied to _chosen/ the moment he named it.\n\nTRIO3 WAS THE RISKY SLOT AND THIS IS THE ONE THAT WORKED. The brief spread all three faces across the width, which normally puts the centred headline straight onto a face. It was survivable only if the middle woman sat further back, in softer focus and lower tone, leaving a quiet band through the centre. Most candidates in the slot lit her as brightly as the other two and the headline fought the picture. gpt-image did what was asked: she is set back, soft, and darker, so the type reads cleanly over her.\n\nA CROP, NOT AN EXTENSION. Source 2048x688 (2.977:1). Cropping 2048x465 at y=103 gives 4.400:1 exactly, aimed at the three-face band (eyes to mouths, rows ~130-540) with margin either side. Verified in the real 1920x440 box with the theme's own 40% overlay and centred headline before upload.\n\nRESOLUTION IS THE COST, AND IT IS REAL. gpt-image caps its long edge at 2048, so this master is 2048px wide where the outgoing one was 3000. The theme's srcset requests up to 3000w, so the CDN now has less to work with: fine at a 1920 CSS-px viewport, softer than its predecessor on a 2x retina display. It was NOT upscaled \u2014 upload-theme-images.py only ever downscales, and inventing pixels would trade honest softness for smeared detail. If the sharpness matters more than this particular frame, the Seedream and NBP candidates in the same slot are 5280 and 6336 wide.\n\nMOBILE IS STILL NOT SOLVED. No mobile_image on this section; the phone box shows the middle ~35% of the master, which here is the middle woman alone rather than three friends.",
+  "images": [
+    {
+      "slot": "image",
+      "source": "assets/publish-ready/_reviews/reviews-hero-trio3-gpt-image-02-4400.png",
+      "filename": "skingenetix-peptide-skincare-reviews-three-women-laughing-together.jpg",
+      "alt": "Three women friends laughing together in close-up with warm natural light and healthy skin \u2014 Skingenetix peptide skincare customer reviews",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-skincare-reviews-three-women-laughing-together.png",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-skincare-reviews-three-women-laughing-together.png?v=1787753484"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "image"
+    }
+  ]
+}
