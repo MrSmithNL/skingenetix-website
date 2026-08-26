@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.brightening-glow.json, section 'content' (media-with-text), block 'intro'",
+  "decided_by": "Malcolm, 2026-08-26: 'on this page: https://www.skingenetix.com/pages/brightening-glow replace this image: skingenetix-glutathione-brightening-serum-texture with this image: D-upward-gaze-warm-light from skingenetix-which-gpt-image-02.png'",
+  "note": "RESOLVING THE SOURCE, WHICH IS NAMED THE WAY MALCOLM NAMES THINGS. 'skingenetix-which-gpt-image-02.png' is not a folder \u2014 it is a contact sheet on his Desktop (~/Desktop/skingenetix-which-gpt-image-02.png, 7.8MB, built 2026-08-25), holding four slots A-D all rendered by gpt_image_02. So 'D-upward-gaze-warm-light from that sheet' resolves to the gpt_image_02 candidate of shot D. Globbed before acting, because slot letters restart per wave and a bare 'D-...' names different photographs in different waves: exactly one folder on disk matches, assets/ai-generated/2026-08-22-multi-block-copper-peptide-research-satisfaction-model/cpr-sat--D-upward-gaze-warm-light/, so the letter is unambiguous this time. 2048x2048, 5806K PNG.\n\nTARGET CONFIRMED STORE-WIDE, NOT JUST ON THE NAMED PAGE. All 57 templates were scanned for skingenetix-glutathione-brightening-serum-texture.jpg: exactly ONE block uses it, content.intro on this page ('Understanding Skin Brightness & Glow'). No scoping decision to make.\n\nNO LABEL CHECK APPLIES \u2014 there is no product in frame. This is a human-register close-up: a woman looking up and off-camera in warm light, fingertips resting at her cheekbone. It replaces a product texture shot, which is the same move already made on the intro blocks of the two sibling Skin Solutions pages.\n\n\u26a0\ufe0f NOTE FOR MALCOLM: this is the third Skin Solutions intro to be filled from the same cpr-sat shoot. firming-skin-density took slot B (eyes closed, back of fingers), fine-lines-wrinkles took slot B from a different engine, and this is slot D. Different shot and a different woman here, so they do not read as a set \u2014 but those three pages sit next to each other in the Skin Solutions menu and now share a photographic source.\n\nGEOMETRY IS THE EASIEST OF ANY BLOCK TOUCHED TODAY. Measured as a set beforehand: this block renders 1.000 at 1440 and 0.974 at 1024, against siblings spanning 0.850-1.000 and 0.581-0.974. So it is effectively square at both widths and the cover-crop is negligible \u2014 no object-position rule is needed, unlike the firming-skin-density intro where the profile reached 2px from the frame edge and the crop had to be pinned right.\n\nMASTER IS SQUARE, which media-with-text requires: row height is max(text column, image natural height) and .media-with-text__media carries no aspect-ratio of its own, so a non-square master stretches its row.\n\nFILENAME AUDITED IN ALL THREE DIRECTIONS against the 22 existing skingenetix-brightening-* and skingenetix-glutathione-* files: no exact match, nothing is a prefix of it, nothing extends it. 61 characters. Built from the page topic and what is in frame, matching the sibling convention (skingenetix-firming-skin-density-collagen-elastin-skin-close-up).\n\nRESOLUTION IS AN UPGRADE: the file it replaces renders from a 720px derivative and the new master is 2048, so the srcset reaches 2000w. The old file stays in Files and simply stops being referenced \u2014 nothing renamed or overwritten, because Langify keys translations off the URL.\n\nWEB LOADING. Converted from the 5806K PNG to JPEG q95 4:4:4 progressive with metadata dropped, 1173K \u2014 the documented policy in .claude/rules/website-imagery.md rule 5. Not re-encoded below that; compressing the source was measured on 2026-08-24 and made the site marginally slower.\n\nALT TEXT describes what is in frame and claims no trial, treatment or result \u2014 no 'brighter', no 'results', because this is a stock-style portrait beside brightening copy and the alt text must not imply an outcome.",
+  "images": [
+    {
+      "slot": "page_bg_intro",
+      "source": "assets/publish-ready/page-brightening-glow-intro/skingenetix-brightening-glow-even-skin-tone-radiance-close-up.jpg",
+      "filename": "skingenetix-brightening-glow-even-skin-tone-radiance-close-up.jpg",
+      "alt": "Close-up of a woman looking up and away from the camera in warm light, resting two fingertips against her cheekbone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-brightening-glow-even-skin-tone-radiance-close-up.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-brightening-glow-even-skin-tone-radiance-close-up.jpg?v=1787759260"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "intro",
+      "slot": "page_bg_intro",
+      "setting": "image"
+    }
+  ]
+}
