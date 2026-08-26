@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'content', block 'causes'",
+  "decided_by": "Malcolm, 2026-08-27: 'try again to get the shadows the same. And remove the dark bottom right corner of the causes image'.",
+  "note": "THE DARK CORNER WAS MINE, AND IT CAME FROM THE RESCALE, NOT THE SHADOW. Traced through every version: the original luma frame has a bottom-right corner at luminance 163; after the rescale step it was 67; adding the shadow only took it to 64. The cause was the background model. To avoid fitting the object's own cast shadow, that fit sampled only the top and side edges \u2014 so a 4th-order polynomial surface had NO DATA in the bottom region and extrapolated into it, which is exactly where polynomials go wild. I had checked the join gradients and the centring and never checked the corners.\n\nTHE BACKGROUND IS NOW SOLVED, NOT FITTED. A polynomial cannot describe this frame's soft radial glow: the best fit still differed from the real background by 10-17 levels, and blending it against the real background drew a visible rectangle around the object. Replaced with LAPLACE INPAINTING \u2014 mask the object, then iterate blur-and-restore-known at 96px until the hole fills by diffusion, and upsample. Because the known pixels are re-imposed every iteration, the result EQUALS the real background at the hole's boundary by construction, so no seam is possible. Measured: mean absolute difference from the source outside the hole 0.60 levels, p99 3.0. The corners now land at 187/185/229/173 against the source's 187/185/216/163.\n\nTHE HOLE HAD TO BE SIZED TO THE WHOLE OBJECT, WHICH TOOK A SECOND PASS. Sized to the tissue block it left GHOSTS \u2014 the original glass plate overhangs the block, so its corners survived outside the mask and floated beside the shrunken copy. Auto-detecting the extent failed too: the background's own horizontal vignette deviates from any edge reference, so the detector returned the entire frame. The bounds were finally read off a rendered pixel grid by eye, which is the same conclusion the parallel session reached on this engine.\n\nTHE SHADOW IS NOW THE APPROACH'S OWN, NOT A SYNTHESIS. The previous attempt measured the approach shadow and rebuilt it parametrically; it was faithful on the numbers and still read as lighter. This one extracts the real thing: for every row below the plate, alpha = 1 minus pixel over that ROW'S OWN reference taken from the unshadowed left margin. Normalising per row cancels the vertical vignette \u2014 which is what turned the very first extraction into a grey rectangle. The alpha map is then scaled by 0.798, the ratio of the two plates' widths, and anchored so the approach's plate-left maps onto the causes plate-left, so it lands as the same shadow in plate-relative terms. Its warm multiply is preserved: R x0.659, G x0.415, B x0.311.\n\nThe approach's shadow is clipped by its own frame on the right and bottom \u2014 it never visibly ends. The causes block is smaller and has clear ground beneath it, so the transplant is tapered over its last third vertically and last sixth horizontally, to die out rather than stop in mid-air.\n\nKNOWN RESIDUAL, FLAGGED RATHER THAN HIDDEN: a very faint horizontal band remains near the top of the frame where the inpaint boundary sits. It is visible on close inspection at full size and marginal at the 660px render. It is far less objectionable than the black corner it replaces, but it is not perfect.",
+  "images": [
+    {
+      "slot": "flw_causes_v4",
+      "source": "assets/publish-ready/page-fine-lines-explainers/skingenetix-fine-lines-wrinkles-collagen-elastin-damage-cross-section.jpg",
+      "filename": "skingenetix-fine-lines-wrinkles-collagen-elastin-damage-cross-section.jpg",
+      "alt": "Illustration of a cross-section of skin, with the collagen and elastin fibres thinned and broken beneath a deep crease in the surface",
+      "uploaded_handle": "shopify://shop_images/skingenetix-fine-lines-wrinkles-collagen-elastin-damage-cross-section.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-fine-lines-wrinkles-collagen-elastin-damage-cross-section.jpg?v=1787781674"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "causes",
+      "slot": "flw_causes_v4",
+      "setting": "image"
+    }
+  ]
+}
