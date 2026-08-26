@@ -1,0 +1,22 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.reviews.json, hero",
+  "decided_by": "Malcolm, 2026-08-26 \u2014 chosen, not interim",
+  "note": "The /pages/reviews hero: three women friends laughing together. Replaces the single smiling face published 2026-08-25, which itself replaced the hands-and-pipette shot.\n\nWHICH FRAME. Malcolm chose TRIO1-cluster-right-laughing-together-nbp_pro_01 from the round's contact sheet and in-situ renders. The file was copied to assets/publish-ready/_reviews/_chosen/ the moment he named it, before any further generation could run \u2014 on 2026-08-25 a re-run overwrote a frame he had just picked, because generate-multi.py names candidates <slot>-<supplier>_NN.png and re-running a slot overwrites rather than versions.\n\nA CROP, NOT AN EXTENSION. NBP ignores requested pixel dimensions and snaps to its nearest named ratio, so this came back 6336x2688 (2.357:1) against a brief asking for 4.400:1. Cropping 6336x1440 at y=536 hits 4.400:1 EXACTLY with no synthetic canvas at all \u2014 the master is wide enough, it was only ever too tall. The window was aimed at the three-face band (brows to chins, source rows 747-1765), which sits inside it with 211px of margin above and below.\n\nThis is very nearly the window the theme was already choosing on its own (rows 617-2070); the crop just aims it ~90px higher so the faces are centred rather than the frame. Verified by rendering into the real 1920x440 box with the theme's own 40% #1A1A1A overlay and the real centred headline before upload: all three faces whole, nothing cut at either edge, the headline on clean dark ground with only a slight overlap onto the left-hand model's hair.\n\nNo extension was needed, so scripts/reframe-banner-to-box.py was not used here. Its flatness guard would have passed anyway \u2014 the left edge measured std 1.28 with the subject starting at column 2638.\n\nWHY nbp_pro AND NOT THE NATIVE-ASPECT ENGINES. Seedream and FLUX.2 both honoured 4.400:1 exactly and needed no post-work at all, but Malcolm preferred this photograph. The dimension cost was one crop.\n\nMOBILE IS STILL NOT SOLVED. The section carries no mobile_image and the phone box shows only the middle ~35% of the master, which here is backdrop and the left-hand model's hair, not three faces. A mobile companion is still owed and is now more important than it was with a single face.",
+  "images": [
+    {
+      "slot": "image",
+      "source": "assets/publish-ready/_reviews/reviews-hero-trio1-nbp-pro-01-4400.png",
+      "filename": "skingenetix-customer-reviews-three-women-laughing-peptide-skincare.jpg",
+      "alt": "Three women friends laughing together in close-up, with clear healthy skin and natural laughter lines \u2014 Skingenetix peptide skincare customer reviews",
+      "uploaded_handle": "shopify://shop_images/skingenetix-customer-reviews-three-women-laughing-peptide-skincare.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-customer-reviews-three-women-laughing-peptide-skincare.jpg?v=1787751631"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "image"
+    }
+  ]
+}
