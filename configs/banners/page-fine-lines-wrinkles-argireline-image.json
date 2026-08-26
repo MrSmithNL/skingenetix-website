@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'content' (media-with-text), block 'argireline'",
+  "decided_by": "Malcolm, 2026-08-26: 'on this page: https://www.skingenetix.com/pages/fine-lines-wrinkles replace this image: skingenetix-argireline-10-anti-wrinkle-peptide-serum with this one: assets/ai-generated/2026-08-21-acetyl-hexapeptide-8-serum/run-01 _acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_model_applying_with_dropper_2_skingenetix.png'. Standing requirements from the same conversation: web-optimised for fast loading, filename SEO-optimised for the page and the content block.",
+  "note": "SOURCE: assets/ai-generated/2026-08-21-acetyl-hexapeptide-8-serum/run-01/_acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_model_applying_with_dropper_2_skingenetix.png, 2048x2048, 5211K PNG, carrying his single-underscore mark.\n\nSCOPED TO THIS PAGE, WHICH MATTERED HERE. skingenetix-argireline-10-anti-wrinkle-peptide-serum.jpg is used on THREE templates: this page's 'argireline' content block, and the 'r1' related-block on both page.firming-skin-density and page.skin-repair-renewal. Malcolm said 'on this page', so only the fine-lines-wrinkles occurrence is changed; the two related-blocks elsewhere still point at the old file and are untouched. Checked every block on this template first \u2014 exactly one occurrence here, and this page's own related-blocks use different files.\n\nLABEL VERIFIED AT FULL SIZE BY COUNTING ELEMENTS. All six present and correct: the dotted double-helix mark, the 'Skingenetix' wordmark, 'ACETYL HEXAPEPTIDE-8', 'ANTI-WRINKLE SERUM' in grey, 'PREMIUM FORMULA', and '10% ACETYL HEXAPEPTIDE-8 | 30ML'. The ingredient name is spelled correctly in both places it appears. 30ML is right for the serum.\n\nTHE FILENAME AUDIT CHANGED THE NAME, FOR THE SECOND TIME TODAY. The obvious SEO name, skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-applying-dropper, has an EXISTING file as a strict prefix: skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum.jpg, a 3000x678 banner. This namespace is unusually dense \u2014 32 existing skingenetix-acetyl-* and skingenetix-argireline-* files, several of which are prefixes of each other \u2014 so the check is not theoretical here. Settled on skingenetix-acetyl-hexapeptide-8-expression-lines-serum-applying-dropper, taken from the block's own title ('A Topical Peptide for Expression Lines') and verified in all three directions: no exact match, nothing is a prefix of it, nothing extends it.\n\nRESOLUTION IS PARITY, NOT AN UPGRADE. The file it replaces is already 2048x2048. It stays in Files and simply stops being referenced on this page \u2014 nothing is renamed or overwritten, because Langify keys translations off the URL, and because two other templates still use it.\n\nMASTER IS SQUARE, which media-with-text requires: the row height is max(text column, image natural height) and .media-with-text__media carries no aspect-ratio of its own, so a non-square master stretches its row and the block stops matching its five siblings. Measured as a set after publishing.\n\nWEB LOADING. Converted from the 5211K PNG to JPEG q95 4:4:4 progressive with metadata dropped, 976K \u2014 the documented policy in .claude/rules/website-imagery.md rule 5: quality 95 and 4:4:4 so the CDN's WebP pass encodes from a clean picture rather than one already full of JPEG artefacts. Not re-encoded below that; compressing the source was measured on 2026-08-24 and made the site marginally slower. Long edge 2048, inside the 3000px cap and above the 2000w top of this block's srcset.\n\nALT TEXT describes what is in frame and claims no trial, treatment or result.",
+  "images": [
+    {
+      "slot": "page_flw_argireline",
+      "source": "assets/publish-ready/page-fine-lines-wrinkles-argireline/skingenetix-acetyl-hexapeptide-8-expression-lines-serum-applying-dropper.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-expression-lines-serum-applying-dropper.jpg",
+      "alt": "Close-up of a woman with her eyes closed holding a 30ml frosted glass bottle of Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum and releasing a drop from the glass dropper beside her cheek",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-expression-lines-serum-applying-dropper.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-expression-lines-serum-applying-dropper.jpg?v=1787757849"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "argireline",
+      "slot": "page_flw_argireline",
+      "setting": "image"
+    }
+  ]
+}
