@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.skin-repair-renewal.json, section 'content' (media-with-text), block 'copper'",
+  "decided_by": "Malcolm, 2026-08-26: 'replace this image: skingenetix-copper-peptide-ghk-cu-firming-repair-serum with this image: assets/ai-generated/2026-08-20-copper-peptide-repair-serum/run-01 copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_model_holding_near_face_3_skingenetix.png'. Standing requirements from the same conversation: web-optimised for fast loading, filename SEO-optimised for the page and the content block.",
+  "note": "SOURCE: assets/ai-generated/2026-08-20-copper-peptide-repair-serum/run-01/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_model_holding_near_face_3_skingenetix.png, 2048x2048, 5822K PNG. Folder and file both named exactly.\n\nLABEL VERIFIED AT FULL SIZE BY COUNTING ELEMENTS. All six present and correct: the dotted double-helix mark in white, the 'Skingenetix' wordmark, 'COPPER PEPTIDE', 'ADVANCED REPAIR SERUM', 'PREMIUM FORMULA', and '2% GHK-CU | 30ML'. GHK-CU specifically checked because the ChatGPT-sourced artwork for this ingredient carried GHD-CU; it is correct here. 30ML is right for the serum (the creams are 50ML).\n\nTHE FILENAME AUDIT CAUGHT A REAL HAZARD AND THE NAME WAS CHANGED BECAUSE OF IT. The obvious SEO name, skingenetix-copper-peptide-ghk-cu-advanced-repair-serum-held-near-face, has an EXISTING file as a strict prefix: skingenetix-copper-peptide-ghk-cu-advanced-repair-serum.jpg, a 3000x1336 banner. That is the shape that once bound two slots to the same uploaded file while polling. It would probably have survived \u2014 the uploader polls filename:<stem>* and the longer stem cannot match the shorter name \u2014 but 'probably safe' is not a reason to ship a name that is one query change away from breaking. Renamed to skingenetix-copper-peptide-ghk-cu-repair-serum-model-holding-near-face, which was checked in all three directions against the 40 existing skingenetix-copper-peptide-* files: no exact match, no existing file is a prefix of it, and no existing file extends it. Same keywords, same length, no prefix relationship with anything.\n\nWHAT IT REPLACES. skingenetix-copper-peptide-ghk-cu-firming-repair-serum.jpg, 2048x2048 \u2014 so this one is parity on resolution, not an upgrade, unlike the other four blocks swapped today. It stays in Files and simply stops being referenced, because Langify keys translations off the URL.\n\nMASTER IS SQUARE, which media-with-text requires: the row height is max(text column, image natural height) and .media-with-text__media carries no aspect-ratio of its own, so a non-square master stretches its row and the block stops matching its five siblings. This block measured 0.936 at 1440 before the swap, inside a sibling range of 0.906-1.000.\n\nWEB LOADING. Converted from the 5822K PNG to JPEG q95 4:4:4 progressive with metadata dropped, 1045K \u2014 the documented policy in .claude/rules/website-imagery.md rule 5: quality 95 and 4:4:4 so the CDN's WebP pass encodes from a clean picture rather than one already full of JPEG artefacts. Not re-encoded below that; compressing the source was measured on 2026-08-24 and made the site marginally slower. Long edge 2048, inside the 3000px cap and above the 2000w top of this block's srcset. Delivered bytes verified off the CDN after upload, because the CDN is what a visitor downloads.\n\nSEO FILENAME built from the page and the block: brand, 'copper peptide' and 'ghk cu' and 'repair serum' from the block title 'Copper Peptide (GHK-Cu) Serum - Multi-Pathway Repair', and 'model holding near face' for what is in frame. 70 characters.\n\nALT TEXT describes what is in frame and claims no trial, treatment or result.",
+  "images": [
+    {
+      "slot": "page_srr_copper",
+      "source": "assets/publish-ready/page-skin-repair-renewal-copper-serum/skingenetix-copper-peptide-ghk-cu-repair-serum-model-holding-near-face.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-repair-serum-model-holding-near-face.jpg",
+      "alt": "Woman holding a deep blue frosted glass bottle of Skingenetix Copper Peptide Advanced Repair Serum, 30ml, up beside her cheek and jawline",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-repair-serum-model-holding-near-face.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-repair-serum-model-holding-near-face.jpg?v=1787756218"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "copper",
+      "slot": "page_srr_copper",
+      "setting": "image"
+    }
+  ]
+}
