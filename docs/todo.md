@@ -88,8 +88,38 @@ counted: gpt-image, nbp_flash, nbp_pro_02, seedream and luma_01 render it correc
 nbp_pro_01 and luma_02 do not; FLUX.2 adds gold beads, negated by name. `nbp_flash_02` won on
 the count *and* the picture.
 
-Configs: `block-skin-repair-renewal-medical.json` (the briefs),
-`block-skin-repair-renewal-publish.json` (picks, handles and the reasoning).
+**Re-run twice more, and both rounds were my brief's fault, not the engines'.**
+
+- Malcolm: *"the underside of the skin isn't good enough … it now looks like a half empty
+  area"*. Round 1 had told every engine the deep zone held bundles that were *"thin, sparse
+  and slack … with wide empty gaps between them"* — my own way of signalling lost firmness.
+  Six engines obliged and made an arch-shaped void. Research settled it: ageing skin does
+  **not** empty — collagen fragments and disorganises, elastic fibres clump, fibroblasts
+  fall, and the **dermal-epidermal junction flattens**, which round 1 lacked entirely
+  ([Baumann 2007](https://pathsocjournals.onlinelibrary.wiley.com/doi/full/10.1002/path.2098),
+  [Am J Pathol 2020](https://ajp.amjpathol.org/article/S0002-9440(20)30142-5/fulltext),
+  [StatPearls: Dermis](https://www.ncbi.nlm.nih.gov/books/NBK535346/)).
+- Round 2 then **overshot**: "packed edge to edge" cured the void and produced a dense
+  fibrous mat, in a different visual world from its own partner. **Filled and uncrowded are
+  both achievable** — round 1 and round 2 are two ends of one knob.
+- Malcolm: *"get the style to fit … they need to fit together as a pair"* and *"show a clear
+  wrinkle so you can see the damage underneath"*. Round 3 states the style as a
+  **description of the published frame** rather than a genre, and re-runs **both** blocks —
+  no work on one image makes it pair with the other while the colours disagree.
+
+**Reddish pink is also the anatomically right answer**, not only a preference: dermis is
+eosinophilic and densely vascular, pink in every H&E section and every professional plate.
+
+**Published 2026-08-26: both frames from `nbp_pro_01`.** One engine for both was the
+deciding criterion — the blocks sit directly above and below each other, so a split pick
+wins each picture and loses the pair. Molecules counted at 100% first: two flat PDRN
+ladders and two three-bead copper tripeptides, balanced. Five of eleven pass; `luma_02`
+renders five beads and FLUX.2 omits the tripeptide.
+
+Configs: `block-skin-repair-renewal-medical.json` (round 1),
+`block-srr-causes-dermis-detail.json` (round 2),
+`block-srr-matched-pair.json` (round 3 briefs),
+`block-srr-pair-publish.json` (the published pair, handles and delivered CDN bytes).
 
 ### ✅ BRAND-006 — /pages/faq category blocks: titles to the top, real photography in all five
 

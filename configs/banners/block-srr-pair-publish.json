@@ -1,0 +1,40 @@
+{
+  "created": "2026-08-26",
+  "target": "templates/page.skin-repair-renewal.json, section `content`, blocks `causes` and `approach`",
+  "decided_by": "Claude's recommendation, approved by Malcolm 2026-08-26 (\"upload your 2 recommendations\")",
+  "template": "templates/page.skin-repair-renewal.json",
+  "supersedes": "configs/banners/block-skin-repair-renewal-publish.json \u2014 the blue pair, and the two round-2 attempts",
+  "note": "BOTH FRAMES COME FROM ONE ENGINE, AND THAT WAS THE DECIDING CRITERION. These two blocks sit directly above and below each other in the same column, so the cube, the quilted top surface, the pearl-cream cell rows, the glossy tube treatment and the ground have to be identical. Taking the best causes frame from one engine and the best approach frame from another wins each picture and loses the pair. nbp_pro_01 is the strongest frame on BOTH sides, so no trade was needed.\n\nWHY nbp_pro_01 AND NOT gpt-image, which has the deeper fold: its tubes sweep out past the block on both sides, which is what the previously published approach frame does. That single habit is most of what makes the two read as one set. gpt-image keeps the dermis inside the cube and sits further from the established look.\n\nMOLECULES COUNTED AT 100% BEFORE UPLOAD, not eyeballed: two flat untwisted PDRN ladders and two chains of exactly three beads with a copper centre, balanced two and two. Five of the eleven candidates pass that test. luma_02 still renders five beads \u2014 the wrong molecule for a tripeptide \u2014 and FLUX.2 omits the tripeptide entirely, which is why the count is run every time rather than trusted.\n\nSEO FILENAMES CARRY THE PAGE AND THE TOPIC, per Malcolm's instruction: both begin with the page slug skin-repair-renewal so the file is attributable to the page it serves, then the subject of the individual picture. Both are new names \u2014 Shopify suffixes rather than replaces on a collision, so the old blue files stay in Files and the theme is simply repointed.\n\nWEB OPTIMISATION IS WHAT upload-theme-images.py DOES, AND DELIBERATELY NOT MORE. Long edge capped at 3000, which is the widest the theme's srcset ever requests; EXIF and ICC stripped; quality held at 95 with 4:4:4 chroma. It does NOT re-compress the source, because that was measured on this store on 2026-08-24 and made the site marginally SLOWER: Shopify's CDN transcodes every image to WebP per srcset, so a pre-compressed source just hands the encoder JPEG artefacts that cost bits to reproduce. Delivered bytes off the live CDN are recorded below as proof rather than assumed.",
+  "images": [
+    {
+      "slot": "causes",
+      "source": "assets/ai-generated/2026-08-22-multi-block-srr-matched-pair/srr-pair-causes/srr-pair-causes-nbp_pro_01.png",
+      "filename": "skingenetix-skin-repair-renewal-ageing-skin-wrinkle-collagen-diagram.jpg",
+      "alt": "Medical explainer cross-section of ageing skin showing one deep wrinkle, with the dermal junction flattened and the pink collagen fibres broken and slumped directly beneath it, and firmer ordered fibres further along the same block",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skin-repair-renewal-ageing-skin-wrinkle-collagen-diagram.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skin-repair-renewal-ageing-skin-wrinkle-collagen-diagram.jpg?v=1787748990"
+    },
+    {
+      "slot": "approach",
+      "source": "assets/ai-generated/2026-08-22-multi-block-srr-matched-pair/srr-pair-approach/srr-pair-approach-nbp_pro_01.png",
+      "filename": "skingenetix-skin-repair-renewal-pdrn-copper-peptide-ghk-cu-diagram.jpg",
+      "alt": "Medical explainer cross-section of skin showing PDRN polynucleotide ladders and copper peptide GHK-Cu tripeptides delivered in droplets, reaching the renewal cell layer and the pink collagen fibres below, with the surface layer left whole",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skin-repair-renewal-pdrn-copper-peptide-ghk-cu-diagram.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skin-repair-renewal-pdrn-copper-peptide-ghk-cu-diagram.jpg?v=1787748990"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "causes",
+      "slot": "causes",
+      "setting": "image"
+    },
+    {
+      "section": "content",
+      "block": "approach",
+      "slot": "approach",
+      "setting": "image"
+    }
+  ]
+}
