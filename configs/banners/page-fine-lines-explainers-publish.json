@@ -1,0 +1,38 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'content' (media-with-text), blocks 'causes' and 'approach'",
+  "decided_by": "Malcolm, 2026-08-26: 'lets use: luma_01 for causes and Luma_01 for approach' \u2014 his picks from the r3 wave (configs/banners/block-fine-lines-explainers-r3.json), chosen against the full 21-candidate sheet with the firming reference beside it.",
+  "note": "FIRST TIME EITHER BLOCK HAS CARRIED ITS OWN PICTURE. Both were wearing borrowed product photographs \u2014 `causes` had skingenetix-matrixyl-serum-texture-closeup.jpg and `approach` had skingenetix-copper-peptide-serum-dropper-detail.jpg, neither of which illustrates anything the copy says. Three waves and two sessions went into getting here: r1 was rejected as faded and cool, r2 fixed the palette after measuring that this store has separate warm SOLUTION and cool RESEARCH explainer families, and r3 added the inset framing and the extra failure states.\n\nMALCOLM PICKED LUMA ON BOTH, WHICH I HAD NOT SHORTLISTED. My shortlist was nbp_pro and nbp_flash on both blocks; I had called luma 'dramatic but the layers muddle together' from the contact sheet. At full size that reading was wrong on the causes frame \u2014 the crease is the deepest and most clearly SET of any candidate, the broken cables have frayed torn ends rather than clean cuts, the bead field is visibly thinned into the sag, and the strata are hard-edged all the way across. This is the third time tonight a contact-sheet judgement has been overturned at 100%, which is precisely what the house rule says a contact sheet cannot do.\n\nSQUARE 2048 MASTERS, which media-with-text requires: row height is max(text column, image natural height) and .media-with-text__media carries no aspect-ratio of its own, so a non-square master stretches its row past its siblings.\n\nCENTRING WAS MEASURED BY EYE OFF A GRID, NOT AUTOMATED, AND THAT WAS DELIBERATE. Two automated attempts at an object bounding box both returned the full frame: luma's background carries a vignette, so neither a global threshold nor a per-column reference taken from the top rows can separate object from ground. The parallel session hit the identical failure three times on the same engine tonight and concluded the same thing \u2014 read the bounds off a rendered pixel grid instead. Doing that: the approach frame is centred (x .495, y .49); the causes frame sits about 35px left and 50px low on a 2048 master, roughly 2%, which is about 11px and 16px at the 660px render size. Both published as generated. The offset is small, it is Malcolm's chosen framing, and cropping it would tighten the background margin that the reference diagrams rely on \u2014 so it is flagged rather than silently corrected.\n\nWHAT THE APPROACH FRAME DOES NOT SHOW, RECORDED HONESTLY BECAUSE THE COPY NEXT TO IT DOES. r3's whole design was to distinguish the two jobs the copy names \u2014 'Signal peptides support the skin's natural collagen activity' and 'Other peptides help visibly relax the look of expression lines' \u2014 by giving them different bead counts and different destinations. Neither landed in any candidate, this one included: its four chains are all long and much the same length, and all four beams drive to the collagen layer with none stopping at the surface. The fault was in the brief, not the engines: at the size this renders, a sphere is about 60px and a pearl about 10px, so a four-versus-five-bead distinction is sub-pixel \u2014 a difference no viewer could see even if drawn perfectly. It is not a claims problem; the copy says 'peptides' throughout and a picture of unspecified peptide chains arriving and rebuilding the matrix overclaims nothing. It simply does not illustrate that one sentence. If it ever matters, the fix is a far larger contrast \u2014 three pearls against seven, and one beam visibly stopping in the surface layer.\n\nNO NEUROMUSCULAR JUNCTION, carried through all three waves and still true of the published frame: no nerve, no synapse, no muscle. 'Relax the LOOK OF expression lines' is a cosmetic claim; a nerve firing at a muscle would assert a pharmacological one and read as needle-free botox \u2014 the comparison the copy's own opening paragraph distances itself from.\n\nFILENAMES AUDITED IN ALL THREE DIRECTIONS against the live list (472 images, re-queried after the parallel session finished uploading its three stems), and additionally against EACH OTHER: neither is a prefix of the other. That last check is not pedantry \u2014 upload-theme-images.py binds a file by prefix match while polling for READY, and this repo has already had two slots bind to the same image because one stem prefixed another.\n\nWEB LOADING: converted to JPEG q95 4:4:4 progressive with metadata dropped, 1404K and 1006K. Converted here rather than in the uploader, which returns a source untouched when it is already under 3000px with no metadata \u2014 which for a PNG source would ship PNG bytes under a .jpg name.\n\nALT TEXT describes what is in frame and claims no result \u2014 no 'reduces', no 'rebuilds', no 'younger'.",
+  "images": [
+    {
+      "slot": "flw_causes",
+      "source": "assets/publish-ready/page-fine-lines-explainers/skingenetix-fine-lines-wrinkles-collagen-elastin-breakdown-cross-section.jpg",
+      "filename": "skingenetix-fine-lines-wrinkles-collagen-elastin-breakdown-cross-section.jpg",
+      "alt": "Illustration of a cross-section of skin, with the collagen and elastin fibres thinned and broken beneath a deep crease in the surface",
+      "uploaded_handle": "shopify://shop_images/skingenetix-fine-lines-wrinkles-collagen-elastin-breakdown-cross-section.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-fine-lines-wrinkles-collagen-elastin-breakdown-cross-section.jpg?v=1787779320"
+    },
+    {
+      "slot": "flw_approach",
+      "source": "assets/publish-ready/page-fine-lines-explainers/skingenetix-peptide-approach-wrinkle-reduction-collagen-matrix-diagram.jpg",
+      "filename": "skingenetix-peptide-approach-wrinkle-reduction-collagen-matrix-diagram.jpg",
+      "alt": "Illustration of a cross-section of skin, with peptide chains held in clear spheres above it and points of light reaching the collagen layer below",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-approach-wrinkle-reduction-collagen-matrix-diagram.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-approach-wrinkle-reduction-collagen-matrix-diagram.jpg?v=1787779320"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "causes",
+      "slot": "flw_causes",
+      "setting": "image"
+    },
+    {
+      "section": "content",
+      "block": "approach",
+      "slot": "flw_approach",
+      "setting": "image"
+    }
+  ]
+}

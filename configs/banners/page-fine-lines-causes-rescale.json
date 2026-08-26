@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'content', block 'causes'",
+  "decided_by": "Malcolm, 2026-08-26: 'lets make the causes cross section smaller to match the size of the approach cross section'.",
+  "note": "THE TWO MASTERS WERE ALREADY THE SAME SIZE \u2014 the mismatch was made by the layout, and that is why the fix is a scale rather than a re-generation. Measured structurally, the causes block is 0.822 of its frame and the approach block 0.772, only 6% apart. But `causes` carries four paragraphs of copy against the approach block's two, so its text column is taller: the row renders 660x802 while the approach row renders 660x660. media-with-text stretches the image to the row height with object-fit: cover, so a square causes master is scaled up by 802/660 = 1.22x and cropped 9% off EACH side. That is what made it look bigger, and it also cut off both modelled end faces and both edges of the glass plate \u2014 undoing the exact inset work r3 was briefed for, by a route the brief could not reach.\n\nThIS IS THE SECTION'S STANDING BEHAVIOUR, NOT A FAULT INTRODUCED HERE. The reference diagram on /pages/firming-skin-density is cropped the same way, 0.876 at 1440 and 0.614 at 1024. The box ratio is not even stable: causes measures 0.823 at 1440, 0.732 at 1280, 0.559 at 1024, and 1.000 at both 768 and 390. No single master aspect satisfies that range, so a taller master is not the answer \u2014 at 768 it would push the row taller than the text and break the layout. Scaling the object down inside a square master is.\n\nSCALE FACTOR DERIVED, NOT EYEBALLED. At 1440 the approach block renders 0.772 x 660 = 509px wide. For the causes block to match at 509px inside an 802px-tall cover box it must occupy 509/802 = 0.635 of the master, against 0.822 today \u2014 a scale of 0.773. Verified by simulating the cover crop at 660x802 before publishing: both end faces and the full glass plate survive, and the block matches the approach on screen.\n\nBACKGROUND WAS REBUILT, AND THE FIRST TWO ATTEMPTS LEFT A VISIBLE JOIN. Shrinking the object means inventing background, and this frame's luma vignette is not flat. A quadratic fit left a 14.6-level step; a 4th-order fit plus a wide feather still left 1.8 levels per pixel at the left join, where anything above about 1 reads as an edge. The actual bug was geometric, not numerical: the feathered mask straddled the paste boundary, so the blend only happened on the inside half and the boundary itself kept a hard step of half the difference. Eroding the mask by 50px before blurring puts the whole ramp inside the pasted background band \u2014 which is 141px wide between the box edge and the object \u2014 and drops the joins to 0.16-0.18 levels per pixel on the top and bottom edges, below the frame's own grain. The left and right joins measure higher but were confirmed clean by eye at full size, which is the check that decides.\n\nThe object is also now centred, which incidentally corrects the 35px-left, 50px-low offset flagged when this frame was first published.\n\nNEW FILENAME because Shopify Files suffixes rather than replaces; audited in all three directions against the live list of 474 and against the approach stem. The previous causes file stays in Files and simply stops being referenced.",
+  "images": [
+    {
+      "slot": "flw_causes_v2",
+      "source": "assets/publish-ready/page-fine-lines-explainers/skingenetix-fine-lines-wrinkles-collagen-elastin-loss-skin-cross-section.jpg",
+      "filename": "skingenetix-fine-lines-wrinkles-collagen-elastin-loss-skin-cross-section.jpg",
+      "alt": "Illustration of a cross-section of skin, with the collagen and elastin fibres thinned and broken beneath a deep crease in the surface",
+      "uploaded_handle": "shopify://shop_images/skingenetix-fine-lines-wrinkles-collagen-elastin-loss-skin-cross-section.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-fine-lines-wrinkles-collagen-elastin-loss-skin-cross-section.jpg?v=1787779994"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "causes",
+      "slot": "flw_causes_v2",
+      "setting": "image"
+    }
+  ]
+}
