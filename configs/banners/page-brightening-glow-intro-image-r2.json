@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-26",
+  "target": "live theme \u2014 Impact, templates/page.brightening-glow.json, section 'content' (media-with-text), block 'intro'",
+  "decided_by": "Malcolm, 2026-08-26: 'use this image: bgi-glow--E-eyes-closed-face-tilted-to-the-light-gpt_image_01' \u2014 his pick from the six-slot glow-model wave he commissioned earlier the same evening ('we need a batch of beautiful model images as an alternative ... the models should show a glow ... model age between 30 and 35 ... close up face - model smiling gently').",
+  "note": "SECOND REPLACEMENT OF THE SAME BLOCK IN ONE DAY, AND THAT IS THE POINT. This morning the intro block was moved off a serum texture shot onto the cpr-sat slot-D portrait (configs/banners/page-brightening-glow-intro-image.json). Malcolm then judged that portrait too old, too unsmiling and too matte for a page about glow, commissioned the wave, and picked slot E from gpt-image. So the file that went live this morning stops being referenced tonight. It is NOT deleted or renamed \u2014 Langify keys translations off the URL, and Shopify Files suffixes rather than replaces on a name collision, so the old file simply stops being pointed at.\n\nWHAT HE CHOSE. Slot E was the 'eyes closed, chin lifted into the light' brief: a Southern European woman of about thirty-three, dark hair back off her face, eyes softly closed, a small closed-lip smile, lit by one large soft source above and in front with a wide bounce under the chin so nothing falls into a hollow. The glow is light on hydrated skin \u2014 a soft bloom on the forehead, cheekbones, nose bridge and chin \u2014 with no highlighter, shimmer, oil or water anywhere, all of which were negated by name.\n\nWHY IT SURVIVED THE FRECKLE PROBLEM THAT KILLED OTHER CANDIDATES. Every brief in the wave asked for a few natural moles and freckles, the standard defence against poreless filtered skin. Beside copy about 'the appearance of dark spots and patchiness' that backfired: several engines rendered the marks as dark pigment clusters, worst in F-luma, F-flux2, D-flux2 and A-flux2. This candidate carries its realism in pores, vellus hair and the fine lines at the outer eye instead, with only two small unobtrusive marks \u2014 so it reads as healthy skin rather than as the concern the page is about.\n\nMASTER IS SQUARE, 2048x2048, which media-with-text requires: the row height is max(text column, image natural height) and .media-with-text__media carries no aspect-ratio of its own, so a non-square master would stretch this row past its five siblings. The block was measured as a set this morning \u2014 1.000 at 1440, 0.974 at 1024 \u2014 so the cover-crop is negligible and no object-position rule is needed.\n\nFILENAME AUDITED IN ALL THREE DIRECTIONS against the live Files list (466 images, queried rather than read off the stale docs/theme-image-audit.json, which predates today's uploads): no exact match, it is not a prefix of any existing file, and no existing file is a prefix of it. 63 characters, six keywords. That third check is not pedantry \u2014 an upload once bound to a neighbouring file because one stem prefixed another.\n\nWEB LOADING. Converted from the 5320K PNG to JPEG q95 4:4:4 progressive with metadata dropped, 1037K \u2014 the documented policy in .claude/rules/website-imagery.md rule 5. Converted here rather than left to the uploader: optimise() returns the source untouched when it is already under 3000px with no metadata, which for a PNG source would have shipped PNG bytes under a .jpg name and a JPEG mime type.\n\nALT TEXT describes what is in frame and claims no trial, treatment or result. No 'radiant', no 'brighter', no 'glowing' \u2014 this is a stock-style portrait beside brightening copy, and the alt text must not imply an outcome the copy itself only claims as an appearance.",
+  "images": [
+    {
+      "slot": "page_bg_intro_r2",
+      "source": "assets/publish-ready/page-brightening-glow-intro/skingenetix-brightening-glow-radiant-luminous-skin-close-up.jpg",
+      "filename": "skingenetix-brightening-glow-radiant-luminous-skin-close-up.jpg",
+      "alt": "Close-up of a woman with her eyes closed and her face tilted up towards soft light, smiling gently",
+      "uploaded_handle": "shopify://shop_images/skingenetix-brightening-glow-radiant-luminous-skin-close-up.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-brightening-glow-radiant-luminous-skin-close-up.jpg?v=1787770479"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "intro",
+      "slot": "page_bg_intro_r2",
+      "setting": "image"
+    }
+  ]
+}
