@@ -48,6 +48,44 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 NAV-001 — Main-menu image tiles (2026-08-27)
+
+**Shipped.** Every top-level dropdown except **Shop** now shows its sub-links as a centred row of
+square photo tiles with the link title over the image, and no text column beside them. Skin
+Solutions (4 tiles), Scientific Research (5), Discover (3), Support (3). Reviews has no children
+and stays a plain link. Shop is untouched.
+
+Built as additive CSS over the sub-links the theme already renders, because the theme's own promo
+slots are capped at three images — see the change-log entry in `docs/architecture.md` for the full
+reasoning. Script: `scripts/menu-image-tiles.py`.
+
+Undo:
+
+```
+python3 scripts/menu-image-tiles.py --restore backups/header-group-20260827-162507.json --key sections/header-group.json
+python3 scripts/menu-image-tiles.py --restore backups/footer-group-20260827-162507.json --key sections/footer-group.json
+```
+
+**Outstanding — 🔴 High**
+
+- **Three library images have their generation brief printed into the photograph.** None is
+  referenced by any live template, so nothing is currently broken, but they must never be used and
+  should be deleted or regenerated:
+  - `skingenetix-contact-banner.jpg` — brief text across the frame *and* an unbranded,
+    competitor-looking bottle in shot.
+  - `skingenetix-homepage-tile-firming.jpg` — brief text down the left edge.
+  - `skingenetix-concern-brightening-glow.jpg` — marketing typography ("…Your Inner Radiance")
+    baked in rather than a brief, but equally unusable as a tile.
+
+**Outstanding — 🟡 Medium**
+
+- **Contact has no purpose-made photograph.** The tile currently borrows
+  `skingenetix-copper-peptide-day-gel-cream-bathroom-vanity.jpg`. A proper "get in touch" frame
+  would be better, and would let `skingenetix-contact-banner.jpg` be retired outright.
+- **The five `skingenetix-faq-placeholder-*.jpg` files are literal PLACEHOLDER cards** — grey
+  panels reading "PLACEHOLDER / Skincare & Routine" etc. Not live anywhere, but they will look
+  like real assets to the next session that searches for FAQ imagery.
+
 ### 🔄 REVIEW-001 — /pages/reviews before/after review carousel (2026-08-27)
 
 **Shipped.** `sections/reviews-before-after.liquid` replaced the `multi-column` before/after grid
