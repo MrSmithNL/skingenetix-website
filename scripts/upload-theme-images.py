@@ -116,7 +116,7 @@ SEO_NOISE = {"final", "new", "copy", "image", "img", "photo", "untitled", "asset
 
 
 def optimise(src: Path, work: Path) -> Path:
-    """Cap dimensions and strip metadata. Returns the path to upload.
+    """Cap dimensions, force JPEG, strip metadata. Returns the path to upload.
 
     Deliberately does NOT compress - see the note above WEB_QUALITY.
     """
@@ -125,12 +125,28 @@ def optimise(src: Path, work: Path) -> Path:
     im = Image.open(src)
     w, h = im.size
     resized = max(w, h) > WEB_MAX_EDGE
+    # A source that is already small enough and carries no metadata used to be returned
+    # untouched — but that test was blind to the FORMAT, so a PNG straight out of a
+    # generation run was uploaded as a PNG. It is not a cosmetic difference. Measured off
+    # this store's own CDN on 2026-08-27, the same 2048px picture delivered at w1000:
+    #
+    #     PNG source  -> 166,464B WebP  ... and 1,591,711B of raw PNG to any client
+    #                                       that does not send `Accept: image/webp`
+    #     JPEG source ->  45,490B WebP  (the measured table above WEB_QUALITY)
+    #
+    # Roughly 3.7x the bytes for WebP clients and about 35x for everyone else, because
+    # Shopify's WebP pass inherits losslessness from a lossless source. So format is now
+    # part of what "web-ready" means, and a photograph is always re-encoded to JPEG.
+    # Author: Claude Code, 2026-08-27.
+    is_jpeg = (im.format or "").upper() in ("JPEG", "MPO")
     if resized:
         s = WEB_MAX_EDGE / max(w, h)
         im = im.resize((round(w * s), round(h * s)), Image.LANCZOS)
-    elif not (im.info.get("exif") or im.info.get("icc_profile")):
-        print(f"    already web-ready: {w}x{h}, no metadata, left untouched")
+    elif is_jpeg and not (im.info.get("exif") or im.info.get("icc_profile")):
+        print(f"    already web-ready: {w}x{h} JPEG, no metadata, left untouched")
         return src
+    elif not is_jpeg:
+        print(f"    {im.format} source at {w}x{h} — re-encoding to JPEG")
     work.parent.mkdir(parents=True, exist_ok=True)
     # 4:4:4 rather than 4:2:0: chroma subsampling throws away colour detail that the
     # CDN's WebP pass would otherwise have kept, and costs nothing here.
@@ -262,7 +278,17 @@ def main():
                     cands.append((real, node["image"]["url"]))
             if not cands:
                 continue
-            exact = [c for c in cands if c[0].rsplit(".", 1)[0] == stem]
+            # Match the WHOLE filename first, extension included. Comparing only the
+            # extension-stripped stem treats `<stem>.png` and `<stem>.jpg` as equally
+            # exact, so the winner is whichever Shopify happened to return first — and
+            # on 2026-08-27 that was a superseded PNG of the same picture, uploaded
+            # minutes earlier by the format bug fixed in optimise(). The plan asked for
+            # a .jpg and got a handle pointing at the .png. Same family of fault as the
+            # prefix note above: a match that is nearly right is not right.
+            # Author: Claude Code, 2026-08-27.
+            exact = [c for c in cands if c[0] == it["filename"]]
+            if not exact:
+                exact = [c for c in cands if c[0].rsplit(".", 1)[0] == stem]
             # A prefix match is only ever a guess, and while polling it is the WRONG
             # guess: a file that is merely still processing looks identical to one
             # Shopify renamed. On 2026-08-25 the desktop stem
