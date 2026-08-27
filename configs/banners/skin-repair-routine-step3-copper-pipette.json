@@ -1,0 +1,14 @@
+{
+  "_note": "/pages/skin-repair-renewal, routine step 3 'Copper Peptide Serum'. Malcolm picked slot G, 'copper pipette lifted drop', from ~/Desktop/skingenetix-discover-tile-options.png. Slot G was identified by cropping the sheet cell and matching it against every copper dropper/hand file in Shopify Files: the winner scored 21.2 against a next-best of 162.1, then confirmed side by side. The file already exists in Shopify Files with correct alt text, so it is referenced, not re-uploaded - rule 7, a re-upload would be suffixed rather than replaced and would leave a duplicate. It is 2048x2048 square, which matters because a multi-column item renders 300x300 with object-fit: fill and stretches a non-square master. Label verified at full size: helix mark correct, 'Skingenetix' correct, 2% GHK-CU not GHB-CU. Claude Code, 2026-08-27.",
+  "template": "templates/page.skin-repair-renewal.json",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "routine",
+      "block": "step3",
+      "settings": {
+        "image": "shopify://shop_images/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hands_only_dropper_4_skingenetix.jpg"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "wave": "menu-contact-tile-publish",
+  "created": "2026-08-27",
+  "note": "Malcolm chose candidate 2 from the 24-image dermatologist batch \u2014 CONTACT-A-listening, gpt_image. Single clinician large in frame with the client's head soft in the near foreground, which is the shape that survives the downscale to the 232px the menu tile actually paints.\n\nQA before publishing: the collar-and-chest band of all 24 candidates was cropped at native resolution and checked for embroidery, badges or printed characters on the coat. All clean, this one included.\n\nSource is a 2048px PNG straight out of the run; the uploader re-encodes it to JPEG, which is not cosmetic \u2014 a PNG source makes Shopify's WebP pass lossless and ships roughly 3.7x the bytes to WebP clients and about 35x to everyone else.",
+  "images": [
+    {
+      "slot": "contact-tile",
+      "source": "assets/ai-generated/2026-08-22-multi-menu-contact-dermatologist/CONTACT-A-listening/CONTACT-A-listening-gpt_image_01.png",
+      "filename": "skingenetix-dermatologist-skin-consultation-client-conversation.jpg",
+      "alt": "A dermatologist in a white coat listening to a client during a skin consultation",
+      "uploaded_handle": "shopify://shop_images/skingenetix-dermatologist-skin-consultation-client-conversation.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-dermatologist-skin-consultation-client-conversation.jpg?v=1787844654"
+    }
+  ]
+}
