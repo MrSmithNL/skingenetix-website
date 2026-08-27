@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.brightening-glow.json, section 'routine', block 'step3', setting 'image'",
+  "decided_by": "Malcolm, 2026-08-27: use the bathroom shelf lifestyle shot for '3. Day Gel-Cream' \u2014 first naming candidate _1, then, on being shown its label was wrong, candidate #6",
+  "template": "templates/page.brightening-glow.json",
+  "note": "Step 3 of the routine on /pages/brightening-glow. Completes the fix of a pre-existing bug: routine.step3 and routine.step4 both pointed at skingenetix-howto-step4-spf.jpg, so the four-step routine rendered only three distinct pictures. Both blocks now have their own image.\n\nSOURCE: assets/ai-generated/ALL-copper-peptide-day-repair-cream/_supplied-by-malcolm__27_bathroom_shelf_lifestyle_external_6.png, 1254x1254 (1.000:1), matching the other three routine steps so the row keeps one shape. Malcolm's own supplied photograph \u2014 'external', where its siblings carry supplier names.\n\n\u26a0\ufe0f THE FIRST CHOICE HAD A MISSPELLED ACTIVE AND WAS NOT PUBLISHED. Malcolm originally named candidate _1. Read at native pixels, its jar reads '2% GHD-CU'. The ingredient is GHK-Cu. This is the FOURTH spelling seen on this one ingredient across this project \u2014 GHK-CU, GHD-CU, GHB-CU, and now GHD-CU again \u2014 which is why every label goes through a native-pixel read rather than a contact-sheet glance.\n\nREPAIRING IT WAS CONSIDERED AND REJECTED ON A MEASUREMENT, NOT A PREFERENCE. There is precedent: commit 2d48de6 repaired GHB-CU to GHK-CU on the brightening-glow day cream rather than swapping the frame, because GHB is a controlled substance and Malcolm asked for a fix. That repair worked at a 46px cap height with a 7px stroke. HERE the glyph is SEVEN PIXELS TALL in a 1254px frame \u2014 at that scale there is no bowl-versus-arms to reconstruct, and any 'K' drawn would be three pixels of invention presented as a correction. So the precedent does not transfer, and the honest move was to surface it and let Malcolm pick a clean sibling.\n\nAll six slot-27 candidates were read: _1 is GHD-CU; _2 and _3 are GHK-CU; _4, _5 and _6 are GHK-CU. Malcolm chose #6.\n\n#6'S LABEL WAS THEN READ AT NATIVE PIXELS IN FULL, ALL SIX ELEMENTS CORRECT: the dots-and-dashes helix mark, 'Skingenetix', 'COPPER PEPTIDE', 'ADVANCED DAY REPAIR', 'PREMIUM FORMULA', and '\u2600 DAY CREAM | 2% GHK-CU | 50ML'. The 2% agrees with the actual catalogue \u2014 every copper peptide product on the store states 2%.\n\nTHE BLUE CREAM IS CORRECT, NOT A FAULT. GHK-Cu is a copper complex and is genuinely blue; clinical blue is also the scene colour the brand assigns to copper peptide. A white cream here would have been the error.\n\nNOTE ON PRODUCT CHOICE: this is the Copper Peptide day cream appearing in a Glutathione brightening routine. That is consistent with the catalogue \u2014 the store's only day gel-cream IS the Copper Peptide (GHK-Cu) Day Gel-Cream \u2014 but the jar's artwork says 'ADVANCED DAY REPAIR' where the step is titled 'Day Gel-Cream'.\n\nThe outgoing skingenetix-howto-step4-spf.jpg is left in Files untouched per .claude/rules/shopify.md rule 7.",
+  "images": [
+    {
+      "slot": "routine_step3",
+      "source": "assets/publish-ready/page-brightening-glow-routine/skingenetix-copper-peptide-day-gel-cream-bathroom-vanity.jpg",
+      "filename": "skingenetix-copper-peptide-day-gel-cream-bathroom-vanity.jpg",
+      "alt": "Open jar of Skingenetix Copper Peptide Advanced Day Repair cream on a marble bathroom vanity, a swatch of blue cream beside it and a woman applying it in the background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-day-gel-cream-bathroom-vanity.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-day-gel-cream-bathroom-vanity.jpg?v=1787834455"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "routine",
+      "block": "step3",
+      "slot": "routine_step3",
+      "setting": "image"
+    }
+  ]
+}

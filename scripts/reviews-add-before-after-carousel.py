@@ -20,13 +20,18 @@ lifted verbatim from those same bodies. Nothing here invents customer testimony 
 it is real: the store has not launched and has no orders. See the fabricated-social-proof note
 in docs/architecture.md before treating any of it as content.
 
-THREE CARDS, NOT FOUR
-The fourth pair, "Skin Firmness", is dropped. `skingenetix-ba-firmness-combined.jpg` has the AI
-image brief rendered into the photograph — a white panel reading "image-container",
-"body: display: flex...", "alt 'Close of skin with sagging'" — and its after frame is two
-different faces. It needs regenerating, not re-cropping. The section shows its carousel controls
-only when it holds more than three cards (the theme's own `is-scrollable` gate), so with three it
-renders as a static row until the fourth returns.
+FIFTEEN SLOTS, THREE OF THEM FILLED
+Malcolm's brief, 2026-08-27: fifteen before/after reviews. Only three photographs are usable, so
+twelve slots ship EMPTY — no photograph, no name, no rating, no verified badge — each seeded with
+the product it is for so the slot carries a working thumbnail and link. An empty card must never
+claim a rating or a verified customer it does not have, which is also why none of them is
+pre-filled with invented copy: Malcolm is supplying the real reviews. See
+`docs/reviews-content-to-supply.csv` for the fifteen rows to fill.
+
+The original fourth pair, "Skin Firmness", is gone for good. `skingenetix-ba-firmness-combined.jpg`
+has the AI image brief rendered into the photograph — a white panel reading "image-container",
+"body: display: flex...", "alt 'Close of skin with sagging'" — and its after frame is two different
+faces. It needs regenerating, not re-cropping.
 
 Author: Claude Code, 2026-08-27.
 """
@@ -46,8 +51,9 @@ TEMPLATE = "templates/page.reviews.json"
 SECTION_ID = "before_after"
 
 CARDS = [
+    # ---- the three that have a usable photograph -------------------------------------------
     {
-        "id": "rv_1",
+        "id": "rv_01",
         "image": "shopify://shop_images/skingenetix-review-before-after-fine-lines-acetyl-hexapeptide-8.jpg",
         "before_label": "Before",
         "after_label": "After 8 weeks",
@@ -57,11 +63,10 @@ CARDS = [
         "content": "<p>The Acetyl Hexapeptide-8 serum is my holy grail for forehead lines. "
                    "At 10% concentration, it actually works. I have recommended it to everyone "
                    "in my skincare group.</p>",
-        "product_text": "Acetyl Hexapeptide-8 Anti-Wrinkle Serum",
-        "product_url": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+        "product": "acetyl-hexapeptide-8-anti-wrinkle-serum",
     },
     {
-        "id": "rv_2",
+        "id": "rv_02",
         "image": "shopify://shop_images/skingenetix-review-before-after-skin-texture-matrixyl-3000.jpg",
         "before_label": "Before",
         "after_label": "After 8 weeks",
@@ -71,11 +76,10 @@ CARDS = [
         "content": "<p>Good products with honest ingredient lists. The Matrixyl 3000 serum took "
                    "a bit longer to show results than I expected, but after 6 weeks my skin "
                    "definitely looks plumper and more even.</p>",
-        "product_text": "Matrixyl 3000 + Hyaluronic Acid Collagen Serum",
-        "product_url": "/products/matrixyl-3000-hyaluronic-acid-collagen-serum",
+        "product": "matrixyl-3000-hyaluronic-acid-collagen-serum",
     },
     {
-        "id": "rv_3",
+        "id": "rv_03",
         "image": "shopify://shop_images/skingenetix-review-before-after-radiance-peptide-routine.jpg",
         "before_label": "Before",
         "after_label": "After 6 weeks",
@@ -85,10 +89,57 @@ CARDS = [
         "content": "<p>I bought all three serums and have been layering them in my routine. "
                    "The combination has made a real difference to my skin texture and firmness. "
                    "Shipping to France was fast too.</p>",
+        "product_image": "shopify://shop_images/skingenetix-menu-all-serums.jpg",
         "product_text": "The peptide serum range",
         "product_url": "/collections/serums",
     },
+
+    # ---- twelve empty slots, one per product, waiting on a photograph and a real review ------
+    # `placeholder: True` means: no name, no stars, no verified badge and no photograph. An empty
+    # card must never claim a rating or a verified customer it does not have — that is the whole
+    # reason these are not pre-filled with invented copy. The product IS set, so each slot still
+    # shows which product it is for and carries a working link and thumbnail.
+    {"id": "rv_04", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-04-copper-peptide.jpg", "after_label": "After 12 weeks",
+     "product": "copper-peptide-ghk-cu-renewal-serum"},
+    {"id": "rv_05", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-05-pdrn.jpg", "after_label": "After 8 weeks",
+     "product": "pdrn-renewal-serum"},
+    {"id": "rv_06", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-06-glutathione.jpg", "after_label": "After 8 weeks",
+     "product": "glutathione-brightening-serum"},
+    {"id": "rv_07", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-07-copper-peptide.jpg", "after_label": "After 12 weeks",
+     "product": "copper-peptide-ghk-cu-day-gel-cream"},
+    {"id": "rv_08", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-08-copper-peptide.jpg", "after_label": "After 12 weeks",
+     "product": "copper-peptide-ghk-cu-night-cream"},
+    {"id": "rv_09", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-09-matrixyl-3000.jpg", "after_label": "After 12 weeks",
+     "product": "matrixyl-3000-pro-collagen-firming-cream"},
+    {"id": "rv_10", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-10-pdrn.jpg", "after_label": "After 10 weeks",
+     "product": "pdrn-collagen-night-cream"},
+    {"id": "rv_11", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-11-microneedling.jpg", "after_label": "After 4 weeks",
+     "product": "copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month"},
+    {"id": "rv_12", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-12-microneedling.jpg", "after_label": "After 4 weeks",
+     "product": "pdrn-microneedling-facial-stamp-set-1-month"},
+    {"id": "rv_13", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-13-copper-peptide.jpg", "after_label": "After 16 weeks",
+     "product": "copper-peptide-ghk-cu-renewal-serum"},
+    {"id": "rv_14", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-14-pdrn.jpg", "after_label": "After 12 weeks",
+     "product": "pdrn-renewal-serum"},
+    {"id": "rv_15", "placeholder": True,
+     "image": "shopify://shop_images/skingenetix-review-before-after-placeholder-rv-15-glutathione.jpg", "after_label": "After 12 weeks",
+     "product": "glutathione-brightening-serum"},
 ]
+
+PLACEHOLDER_TITLE = "Results coming soon"
+PLACEHOLDER_BODY = ("<p>We are collecting verified before and after results for this product. "
+                    "Bought it? We would like to see how you got on.</p>")
 
 
 def env():
@@ -141,22 +192,32 @@ def build_section(old):
     old_settings = old.get("settings", {})
     blocks = {}
     for c in CARDS:
+        ph = c.get("placeholder", False)
         blocks[c["id"]] = {
             "type": "review",
             "settings": {
-                "image": c["image"],
-                "before_label": c["before_label"],
-                "after_label": c["after_label"],
-                "author": c["author"],
-                "show_verified": True,
+                "image": c.get("image", ""),
+                # No labels on an empty slot. "AFTER 12 WEEKS" over a picture that does not exist
+                # asserts a result nobody has measured — the same reason the placeholders carry no
+                # stars, no name and no verified badge. The duration is kept in the CARDS entry so
+                # it is ready for the image brief; it just is not published yet.
+                "before_label": "" if c.get("placeholder") else c.get("before_label", "Before"),
+                "after_label": "" if c.get("placeholder") else c["after_label"],
+                "author": c.get("author", ""),
+                "show_verified": not ph,
                 "verified_label": "Verified Customer",
-                "show_rating": True,
-                "rating": c["rating"],
-                "title": c["title"],
-                "content": c["content"],
+                "show_rating": not ph,
+                "rating": c.get("rating", 5),
+                "title": PLACEHOLDER_TITLE if ph else c["title"],
+                "content": PLACEHOLDER_BODY if ph else c["content"],
                 "product_prefix": "Reviewing",
-                "product_text": c["product_text"],
-                "product_url": c["product_url"],
+                # A picked product supplies its own thumbnail, name and URL. The overrides are
+                # only filled where there is no single product to pick — one card points at
+                # the serums collection.
+                "product": c.get("product", ""),
+                "product_image": c.get("product_image", ""),
+                "product_text": c.get("product_text", ""),
+                "product_url": c.get("product_url", ""),
             },
         }
     section = {

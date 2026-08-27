@@ -1,0 +1,80 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme — Impact, templates/page.philosophy.json, section 'pillars'",
+  "decided_by": "Malcolm, 2026-08-27: find icons to use for each of the Four Commitments on /pages/our-philosophy",
+  "template": "templates/page.philosophy.json",
+  "note": "THE SECTION HAD NO ICON SLOT, SO IT CHANGES TYPE. 'Four Commitments' was `multi-column`, which offers an image per block but no icon. `text-with-icons` is the theme's icon section, it is what 'What You Will Never Find in Our Formulas' already uses further down THIS SAME PAGE, and it ships 51 vector pictos. Converting costs nothing and needs no new assets.\n\nTHE OBVIOUS OBJECTION WAS CHECKED AND DOES NOT HOLD. Swapping a section that renders four <h3> headings for one that renders <p> would be an SEO regression on a credibility page. It is not one: `multi-column` renders block titles as `<p class=\"{{ block.settings.heading_tag }}\">` (its own Liquid, line 40) and `text-with-icons` renders `<p class=\"{{ section.settings.heading_tag }}\">` (line 93). Both are paragraphs styled as headings; `heading_tag` is a CSS class in both, never an element. So no heading structure exists today and none is lost. `heading_tag` is set to h3 at section level to keep the type size identical.\n\nCUSTOM ICON IMAGES WERE THE ALTERNATIVE AND WERE REJECTED. `multi-column` blocks take an image_picker, and `text-with-icons` blocks take a `custom_icon` image too, so four bespoke icons could have been generated and uploaded. They would be raster, would need to hold up against the crisp vector pictos used on the homepage, the science page and the skin-concerns page, and would be four more assets to maintain. The theme's own set is the right answer.\n\nTWO OF THE FOUR ICONS FOLLOW AN EXISTING HOUSE CONVENTION RATHER THAN BEING PICKED FRESH. Surveyed what the store already does before choosing:\n\n  picto-jewelry    -> 'High-Purity Ingredients'   (index/trust_option_a AND index/why_skingenetix — the SAME heading, twice)\n  picto-document   -> published research           (index/why_skingenetix 'Backed by Published Research', page.science 'Publicly Accessible', page.skin-concerns 'Published Research')\n  picto-validation -> peer review / science-not-hype\n  picto-target     -> targeted or dose-specific\n  picto-leaf       -> clean formulas\n\nSo:\n\n  pillar_1 High-Purity Ingredients  -> picto-jewelry   — the store's established icon for this exact phrase, in two places.\n  pillar_2 Research First           -> picto-document  — the store's established icon for published research.\n  pillar_3 Full Transparency        -> picto-percent   — literal: the copy is 'Exact percentages disclosed on every product'. Unused anywhere else on the store, so it reads as this idea and no other.\n  pillar_4 Manufactured to Standard -> picto-shield    — EU Cosmetics Regulation, GMP, and an independent safety report; shield reads as compliance and safety. Also unused elsewhere.\n\nDELIBERATELY NOT USED: picto-validation and picto-target, both of which would fit loosely but are already carrying specific meanings elsewhere on the store — reusing them would blur two established signals. And picto-leaf, which the brand's own art direction rules out: the visual identity is explicitly anti-botanical because the brand sells synthesised peptides, and a leaf on the philosophy page would argue against the positioning.\n\nICON STYLING MATCHES THIS PAGE, NOT THE STORE AVERAGE. `icon_background_type: none` at width 48 / mobile 36, which is exactly what `what_we_reject` uses directly below on this page. The science page and homepage `why_skingenetix` use `circle` instead — deliberately not copied, because within-page consistency matters more here than store-wide sameness.\n\nBLOCK IDS PRESERVED (pillar_1..pillar_4). Only English is published on this store and `translatableResources` shows zero translations on any theme JSON template, so the swap loses nothing translated — checked, not assumed.\n\n`text-with-icons` caps at 5 blocks; four fits. The homepage `trust_option_a` already renders four blocks in this section type, so the four-across layout is proven.",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "pillars",
+      "insert_after": "problem",
+      "section": {
+        "type": "text-with-icons",
+        "blocks": {
+          "pillar_1": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-jewelry",
+              "mobile_icon_width": 36,
+              "icon_width": 48,
+              "icon_background_type": "none",
+              "title": "High-Purity Ingredients",
+              "content": "<p>High-purity active ingredients, carefully sourced from vetted suppliers and checked against a Certificate of Analysis before use. The concentration of every key active is published so you can compare it to the research.</p>"
+            }
+          },
+          "pillar_2": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-document",
+              "mobile_icon_width": 36,
+              "icon_width": 48,
+              "icon_background_type": "none",
+              "title": "Research First",
+              "content": "<p>Every formula starts with published studies, not marketing trends. We review the clinical literature on dose, delivery mechanism, and ingredient interaction before formulating.</p>"
+            }
+          },
+          "pillar_3": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-percent",
+              "mobile_icon_width": 36,
+              "icon_width": 48,
+              "icon_background_type": "none",
+              "title": "Full Transparency",
+              "content": "<p>Exact percentages disclosed on every product. No proprietary blend language. No hidden ingredients. What you read on the label is exactly what is inside the bottle.</p>"
+            }
+          },
+          "pillar_4": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-shield",
+              "mobile_icon_width": 36,
+              "icon_width": 48,
+              "icon_background_type": "none",
+              "title": "Manufactured to Standard",
+              "content": "<p>Produced under the EU Cosmetics Regulation (EC 1223/2009) in facilities operating to GMP (ISO 22716) standards. Every product has a Cosmetic Product Safety Report (CPSR) completed by an independent qualified safety assessor before it goes on sale.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "pillar_1",
+          "pillar_2",
+          "pillar_3",
+          "pillar_4"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "title": "Four Commitments",
+          "heading_tag": "h3",
+          "text_alignment": "center",
+          "icon_spacing": "medium",
+          "background": "#f7f7f7",
+          "background_gradient": "",
+          "text_color": ""
+        }
+      }
+    }
+  ]
+}

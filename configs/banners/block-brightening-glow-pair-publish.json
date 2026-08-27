@@ -1,0 +1,36 @@
+{
+  "note": "The causes + approach explainer pair for /pages/brightening-glow, section `content`. Both blocks wore borrowed photographs. Pair 2 (full-stack, nbp_flash_02) chosen by Malcolm 2026-08-26; the causes frame was reframed from full-bleed to the approach block's width (scale 0.7905), sat on the same baseline, and regraded onto the approach frame's own ground so the two read as one set. REVISION 2026-08-26 20:45: at 1440 the `causes` row is text-driven (660x730) while `approach` is image-driven (660x660), so a square master was side-cropped 4.8% per edge by object-fit:cover and the block still read wider than its partner. The causes master is now built at the box's own 660:730 aspect so it renders uncropped and the two cross-sections match exactly. REVISION 2 (Malcolm, 2026-08-26): nbp_flash_02's block ran off-frame, so reframing it left the strata sliced flat in 2D. Switched the causes frame to nbp_flash_01 from the same wave, whose block is already inset with MODELLED ends - whole spheres at the granular band edge, rounded cable tips, the peach plates showing a top face, lobules bulging - so scaling it to the approach block's width preserves that modelling instead of inventing it. REVISION 3 (Malcolm chose nbp_pro_01, 2026-08-26): nbp_flash_01 turned out to be modelled on its LEFT end only - its right margin measured 0.006 and cut flat. Of the 11 candidates only 4 are inset on BOTH sides. nbp_pro_01 is inset 0.133/0.080 with a block already 0.787 wide, so it needed near-zero scaling, and its fibre cables end in rounded closed tips rather than nbp_pro's usual hollow bores. Known trade-off: its granular band is finer-grained than the approach frame's larger spheres. REVISION 4 (Malcolm, 2026-08-26): cross-section recentred on both axes - block centre now 2047.8/2048 horizontal and 2264.8/2265 vertical, i.e. the block was sitting 790px low. REVISION 5: rev 4's centring was measured on the TISSUE BLOCK only, which ignored the glass plate's left overhang and the surface flakes reaching up - the object actually sat 70px left and 100px high. Now centred on the WHOLE object bbox: final margins L169/R170, T630/B631.",
+  "template": "templates/page.brightening-glow.json",
+  "images": [
+    {
+      "slot": "causes",
+      "source": "assets/publish-ready/brightening-glow-explainers/skingenetix-dull-uneven-skin-causes-oxidative-stress-pigment-skin-cross-section.jpg",
+      "filename": "skingenetix-dull-uneven-skin-causes-oxidative-stress-pigment-skin-cross-section.jpg",
+      "alt": "Cross-section diagram of skin showing what causes dull, uneven tone: soft brown pigment clusters gathering in the granular layer, grey oxidative-stress particles settling onto the surface, and dead surface cells piling up as cell turnover slows.",
+      "uploaded_handle": "shopify://shop_images/skingenetix-dull-uneven-skin-causes-oxidative-stress-pigment-skin-cross-section.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-dull-uneven-skin-causes-oxidative-stress-pigment-skin-cross-section.jpg?v=1787771571"
+    },
+    {
+      "slot": "approach",
+      "source": "assets/publish-ready/brightening-glow-explainers/skingenetix-glutathione-antioxidant-brightening-approach-skin-diagram.jpg",
+      "filename": "skingenetix-glutathione-antioxidant-brightening-approach-skin-diagram.jpg",
+      "alt": "Cross-section diagram of the antioxidant approach to brightening: glutathione tripeptide chains, vitamin C crystals and supporting peptides descending in glassy spheres into the skin's surface layers, breaking up grey oxidative-stress particles as they arrive.",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-antioxidant-brightening-approach-skin-diagram.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-antioxidant-brightening-approach-skin-diagram.jpg?v=1787769418"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "content",
+      "block": "causes",
+      "slot": "causes",
+      "setting": "image"
+    },
+    {
+      "section": "content",
+      "block": "approach",
+      "slot": "approach",
+      "setting": "image"
+    }
+  ]
+}

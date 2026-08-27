@@ -1,0 +1,91 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme — Impact, templates/collection.fine-lines-wrinkles.json, section 'related_collections'",
+  "decided_by": "Malcolm, 2026-08-27: the 'Continue Exploring' section should have the same styling as 'Targeted Solutions for Every Skin' on the homepage — then, on being shown the same section was on 11 templates: apply it to all collection pages",
+  "template": "templates/collection.fine-lines-wrinkles.json",
+  "note": "THE TWO SECTIONS ARE DIFFERENT SECTION TYPES, WHICH IS WHY SETTINGS ALONE COULD NOT DO IT. Measured live at 1440: the homepage's 'Targeted Solutions' is `image-link-blocks` - SQUARE cards (318x318, ratio 1.000), a small sans-serif label bottom-left, overlay 20, and a description paragraph under the heading. 'Continue Exploring' is `collection-list` - 318x222 cards (ratio 1.430), huge SERIF titles that dominate the card, overlay 40, no description. Card aspect ratio and title typography are baked into each section's own Liquid, not exposed as settings, so matching the styling means matching the section TYPE. The section is therefore rebuilt as `image-link-blocks`.\n\nA SECTION SWAP NORMALLY RISKS TRANSLATIONS, AND THAT WAS CHECKED RATHER THAN ASSUMED. .claude/rules/situational/production-safety.md is explicit that replacing blocks loses translations keyed to the block ID. Queried before touching anything: the store publishes ONE locale (en, primary), and `translatableResources(ONLINE_STORE_THEME_JSON_TEMPLATE)` returns 7 translatable keys under `related_collections` on each of 11 collection templates with ZERO existing translations on any of them. So nothing translated is lost here - but the same swap on a store with published locales would not be safe, and the check is the reason this is going ahead rather than a guess that it would be fine.\n\nBLOCK IDS ARE PRESERVED (rc_wrinkles / rc_firming / rc_repair / rc_brightening) even though nothing keys off them today, because keeping them costs nothing and a future translation would.\n\nIMAGES CHANGE, AND THAT IS PART OF THE STYLING RATHER THAN A SEPARATE DECISION. `collection-list` pulls each collection's own featured image, which on this store is the WIDE collection banner (4.4:1) - fine in a 1.43:1 card, badly cropped in a square one. `image-link-blocks` takes explicit images, so the four blocks now carry the same concern portraits the homepage section uses, which are already proven at exactly this size in exactly this section.\n\nDESTINATIONS ARE UNCHANGED - still /collections/<handle>, not the /pages/<concern> the homepage points at. Malcolm asked for the styling to match, not the links, and 'Continue Exploring' at the foot of a collection page should continue into collections.\n\nHEADING, DESCRIPTION AND THE 'VIEW ALL' LINK ARE KEPT AS THEY WERE: title 'Continue Exploring', no description paragraph, and the '/collections' link labelled 'View All Collections'. The homepage carries a paragraph and no link; copying that would have meant inventing body copy for this page, which is not what was asked for. `background` and `text_color` are cleared to \"\" to inherit exactly what the homepage section inherits, rather than the explicit #f7f7f7 / #1a1a1a this section carried.\n\nAPPLIED TO ALL 11 COLLECTION TEMPLATES - collection (the default), acetyl-hexapeptide-8, all, brightening-glow, copper-peptide, creams-moisturizers, fine-lines-wrinkles, firming-skin-density, pdrn, serums, skin-repair-renewal. fine-lines-wrinkles went first on its own; the other ten followed once Malcolm asked for the whole set.\n\nTHE TEN WERE SURVEYED BEFORE BEING OVERWRITTEN, NOT ASSUMED IDENTICAL. A single section object pushed across ten templates destroys any per-page difference silently, so each was read first and compared on section type, block order, the four collection handles, the four titles, the heading, the link text and the link target. All ten matched each other exactly and all ten sat at the same position in `order` (after `impact_numbers`), which is what made one plan safe. Had one differed - a page excluding its own collection, say - it would have needed its own plan.\n\nRun as: for t in <the ten>; do python3 scripts/patch-template.py configs/banners/collection-continue-exploring-restyle.json --template templates/$t.json; done. The explicit --template overrides this file's own `template` key, which names fine-lines-wrinkles. Each run wrote its own backup under backups/<template stem>-20260827-1123**.json.\n\nVERIFIED ON THE LIVE STOREFRONT, not in the template JSON: all ten collection pages plus fine-lines-wrinkles render section type `image-link-blocks` with four 318x318 cards (ratio 1.000) and the four /collections/ destinations intact.",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "related_collections",
+      "insert_after": "impact_numbers",
+      "section": {
+        "type": "image-link-blocks",
+        "blocks": {
+          "rc_wrinkles": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-concern-fine-lines-wrinkles-2026.jpg",
+              "stretch_image": true,
+              "link_text": "Fine Lines & Wrinkles",
+              "link_url": "/collections/fine-lines-wrinkles",
+              "background": "",
+              "text_color": "#ffffff",
+              "overlay_color": "#1a1a1a",
+              "overlay_opacity": 20
+            }
+          },
+          "rc_firming": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-skin-firming-density-peptide-treatment.jpg",
+              "stretch_image": true,
+              "link_text": "Firming & Skin Density",
+              "link_url": "/collections/firming-skin-density",
+              "background": "",
+              "text_color": "#ffffff",
+              "overlay_color": "#1a1a1a",
+              "overlay_opacity": 20
+            }
+          },
+          "rc_repair": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-concern-skin-repair-renewal-2026.jpg",
+              "stretch_image": true,
+              "link_text": "Skin Repair & Renewal",
+              "link_url": "/collections/skin-repair-renewal",
+              "background": "",
+              "text_color": "#ffffff",
+              "overlay_color": "#1a1a1a",
+              "overlay_opacity": 20
+            }
+          },
+          "rc_brightening": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-concern-brightening-glow-2026.jpg",
+              "stretch_image": true,
+              "link_text": "Brightening & Glow",
+              "link_url": "/collections/brightening-glow",
+              "background": "",
+              "text_color": "#ffffff",
+              "overlay_color": "#1a1a1a",
+              "overlay_opacity": 20
+            }
+          }
+        },
+        "block_order": [
+          "rc_wrinkles",
+          "rc_firming",
+          "rc_repair",
+          "rc_brightening"
+        ],
+        "settings": {
+          "full_width": true,
+          "block_size": "large",
+          "subheading": "",
+          "title": "Continue Exploring",
+          "content": "",
+          "link_url": "/collections",
+          "link_text": "View All Collections",
+          "background": "",
+          "background_gradient": "",
+          "text_color": "",
+          "heading_color": "",
+          "heading_gradient": ""
+        }
+      }
+    }
+  ]
+}

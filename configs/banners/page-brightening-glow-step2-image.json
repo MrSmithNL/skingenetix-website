@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.brightening-glow.json, section 'routine', block 'step2', setting 'image'",
+  "decided_by": "Malcolm, 2026-08-27: replace skingenetix-howto-step2-serum with _supplied-by-malcolm__34_model_applying_with_dropper_external_1.png",
+  "template": "templates/page.brightening-glow.json",
+  "note": "Step 2 of the routine on /pages/brightening-glow. The slot is a BLOCK image (routine.step2.image) inside a multi-column section, not a section-level setting.\n\nSOURCE: assets/ai-generated/ALL-glutathione-brightening-serum/_supplied-by-malcolm__34_model_applying_with_dropper_external_1.png, 1254x1254. The filename says what it is: this is Malcolm's own supplied photograph dropped into the slot-34 candidate set, not something generated here \u2014 'external' rather than a supplier name, where its siblings are run-01/run-02 across seedream, luma, flux2, nbp_flash and nbp_pro.\n\nASPECT WAS CHECKED AGAINST ITS SIBLINGS, NOT JUST AGAINST ITSELF. The three other routine steps are all 1024x1024 (1.000:1) and this is 1254x1254 (1.000:1), so the row keeps a single shape and nothing stretches. A block image that disagrees with its neighbours on ratio is what makes a multi-column row uneven \u2014 the fault has to be measured across the SET, because each image looks fine on its own.\n\nTHE LABEL WAS CHECKED AT NATIVE PIXELS AND ALL SIX ELEMENTS ARE PRESENT AND CORRECT: the dots-and-dashes helix mark, 'Skingenetix', 'GLUTATHIONE BRIGHTENING', 'RADIANT GLOW SERUM' set in the champagne the brand assigns to brightening, 'PREMIUM FORMULA', and the fine line '2% GLUTATHIONE | 30ML'.\n\nTHE CONCENTRATION AGREES EVERYWHERE, WHICH IS NOT SOMETHING TO ASSUME ON THIS STORE. Label 2%, the page's own body copy 2% (twice), and the Glutathione Brightening Serum product 2%. Checked because the same job on /pages/copper-peptide-research surfaced a jar labelled 2% beside an FAQ answer reading 1%.\n\n\u26a0\ufe0f SEPARATE PRE-EXISTING BUG FOUND WHILE LOCATING THE SLOT, NOT FIXED HERE: routine.step3 and routine.step4 BOTH point at skingenetix-howto-step4-spf.jpg. step3 is titled '3. Day Gel-Cream' but renders the SPF picture, so the four-step routine shows three distinct images for four steps. Flagged to Malcolm rather than fixed, because it needs a day-gel-cream shot chosen, not just a reassignment.\n\nThe outgoing skingenetix-howto-step2-serum.jpg is left in Files untouched per .claude/rules/shopify.md rule 7.",
+  "images": [
+    {
+      "slot": "routine_step2",
+      "source": "assets/publish-ready/page-brightening-glow-routine/skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg",
+      "filename": "skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg",
+      "alt": "Woman applying Skingenetix Glutathione Radiant Glow Serum to her cheek with a dropper, holding the bottle in her other hand",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg?v=1787833359"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "routine",
+      "block": "step2",
+      "slot": "routine_step2",
+      "setting": "image"
+    }
+  ]
+}

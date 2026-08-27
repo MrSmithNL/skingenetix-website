@@ -16,6 +16,7 @@ Author: Claude Code, 2026-08-21.
 """
 import argparse
 import json
+import re
 import sys
 import time
 import urllib.request
@@ -69,7 +70,13 @@ def main():
     ap.add_argument("plan", nargs="?")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--restore")
-    ap.add_argument("--template", default="templates/index.json")
+    # Defaulted to templates/index.json until 2026-08-27. Every plan file in
+    # configs/banners/ already declares its own `template`, and the script ignored it —
+    # so running a page plan without the flag silently targeted the HOMEPAGE. A dry run
+    # of the philosophy banner did exactly that and was caught only because the backup
+    # was named `index-...`. Explicit flag still wins; the plan's own declaration is now
+    # the fallback, and index.json only applies when neither says anything.
+    ap.add_argument("--template", default=None)
     args = ap.parse_args()
 
     e = env()
@@ -83,7 +90,14 @@ def main():
 
     if args.restore:
         body = (ROOT / args.restore).read_text()
-        key = json.loads(body) and args.template
+        # Backups are named "<template stem>-<stamp>.json", so the file itself says which
+        # template it came from. Recovering it beats defaulting to index.json, which would
+        # restore a page backup over the homepage.
+        stem = re.sub(r"-\d{8}-\d{6}$", "", Path(args.restore).stem)
+        inferred = f"templates/{stem}.json"
+        key = json.loads(body) and (args.template or inferred)
+        if not args.template:
+            print(f"Template   : {key} (inferred from the backup filename)")
         call(store, tok, f"themes/{tid}/assets.json", "PUT",
              {"asset": {"key": key, "value": body}})
         print(f"RESTORED {key} from {args.restore}")
@@ -95,7 +109,11 @@ def main():
     if missing:
         sys.exit(f"no uploaded handle yet for: {missing} — run upload-theme-images.py first")
 
-    tpl = args.template
+    tpl = args.template or plan.get("template") or "templates/index.json"
+    src = ("--template" if args.template
+           else "the plan's own `template` key" if plan.get("template")
+           else "the default — THE PLAN NAMES NO TEMPLATE")
+    print(f"Template   : {tpl}  (from {src})")
     current = call(store, tok, f"themes/{tid}/assets.json?asset[key]={tpl}")["asset"]["value"]
     doc = json.loads(current)
 

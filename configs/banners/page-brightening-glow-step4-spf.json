@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.brightening-glow.json, section 'routine', block 'step4', setting 'image'",
+  "decided_by": "Malcolm, 2026-08-27: de-jar the matrixyl cheek shot, then move it to '4. SPF (Essential!)' and rename it to match the SPF",
+  "template": "templates/page.brightening-glow.json",
+  "note": "Step 4 of the routine on /pages/brightening-glow. Fixes a PRE-EXISTING BUG at the same time: routine.step3 and routine.step4 both pointed at skingenetix-howto-step4-spf.jpg, so the four-step routine rendered three distinct pictures. step4 now has its own.\n\nSOURCE: matrixyl_3000_..._applying_to_cheek_closeup_4_skingenetix.png, with the product jar and the teal background removed. Malcolm asked for the jar and the green corner taken out so only the woman applying the swatch remains.\n\nCROPPING WAS TRIED FIRST AND REJECTED ON EVIDENCE. The jar's top-left corner measures (1020,1030) in a 2048px frame, so the widest jar-free square from the origin is 1030px. Three candidate crops were rendered: all three reduced an already-tight macro to an eye and pores, losing the 'woman applying cream' reading entirely. Cropping cannot solve this one.\n\nTHE REMOVAL WAS FRAMED TO AVOID THE KNOWN FAILURE MODE. A generative masked edit reinvents everything inside the mask, including any silhouette crossing it - that is on record here, where a hair retouch redrew a jaw and a neck. Behind the jar, her jawline meets the teal background, and that boundary IS a silhouette. The fix was to remove the background TOO: with the teal gone and skin asked to reach every edge, nothing structural crosses the mask and there is no outline for a model to invent. That is why both instructions were run as one edit rather than two.\n\nMask built from a colour test for the teal plus the measured jar box (x>=1000, y>=1010), dilated 9px, then CHECKED VISUALLY before any generation - the fingertips sit above y=1010 and are untouched, as are the swatch and the eye.\n\nFOUR CANDIDATES ACROSS TWO ENGINES, PICKED ON A MEASUREMENT. gpt-image-2 (true masked edit, but it returns 1024px) and Seedream v5 edit (2048px, no mask - it regenerates the whole frame). All four removed the jar and the teal completely (teal 0.00% in every one). Fidelity was then measured on the region that was NEVER meant to change - the untouched top-left block - as mean absolute difference against the original: gpt_image_01 6.06, gpt_image_02 6.26, seedream_02 6.44, seedream_01 10.19. seedream_02 wins on the combination that matters: full 2048px AND fidelity level with the gpt pair, where seedream_01 redrew noticeably more.\n\nThe filled area was then checked at 100%: real pore texture, no seam at the join, fingers correctly formed with a proper nail.\n\nAspect 1.000:1, matching the other three routine steps at 1024x1024, so the row keeps one shape.\n\nThe outgoing skingenetix-howto-step4-spf.jpg is left in Files untouched per .claude/rules/shopify.md rule 7 - and it is still referenced by step3 until that block is reassigned.",
+  "images": [
+    {
+      "slot": "routine_step4",
+      "source": "assets/publish-ready/page-brightening-glow-routine/skingenetix-daily-spf-sunscreen-cream-application-face.jpg",
+      "filename": "skingenetix-daily-spf-sunscreen-cream-application-face.jpg",
+      "alt": "Close-up of a woman smoothing a swatch of cream into her cheek with her fingertips",
+      "uploaded_handle": "shopify://shop_images/skingenetix-daily-spf-sunscreen-cream-application-face.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-daily-spf-sunscreen-cream-application-face.jpg?v=1787834341"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "routine",
+      "block": "step4",
+      "slot": "routine_step4",
+      "setting": "image"
+    }
+  ]
+}

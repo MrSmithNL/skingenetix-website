@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.research-copper-peptide.json, section 'faq', setting 'team_avatar'",
+  "decided_by": "Malcolm, 2026-08-27: replace the FAQ image skingenetix-faq-cream-jar-stack-2026-v3 with _run-01__32_model_shoulder_gpt_image_0.png",
+  "template": "templates/page.research-copper-peptide.json",
+  "note": "FAQ image on /pages/copper-peptide-research. The slot is the `faq` section's `team_avatar` setting (rendered at team_avatar_width 350), not a block image \u2014 the four q1-q4 blocks carry no image at all.\n\nSOURCE: assets/ai-generated/ALL-copper-peptide-day-repair-cream/_run-01__32_model_shoulder_gpt_image_0.png, 2048x2048 (1:1). Malcolm named this file exactly, leading underscore and all \u2014 it carries his single-underscore shortlist mark, and the same slot has a marked luma sibling (_run-01__32_model_shoulder_luma_0.png) plus unmarked flux2 and seedream ones. Square suits the slot, which renders square.\n\nTHE LABEL WAS CHECKED AT NATIVE PIXELS, NOT ON A CONTACT SHEET, AND ALL SIX ELEMENTS ARE PRESENT AND CORRECT: the dots-and-dashes helix mark, 'Skingenetix', 'COPPER PEPTIDE', 'ADVANCED DAY REPAIR', 'PREMIUM FORMULA', and the fine line '\u2600 DAY CREAM | 2% GHK-CU | 50ML'. The last one is the reason this check is not optional: the 3072px day-cream renders from an earlier wave read GHB-CU, and a QUINER-branded bottle once went live on this store. This one reads GHK-CU. The run's own _qa-verdicts.txt also records PASS for this file.\n\n\u26a0\ufe0f THE IMAGE IS RIGHT AND THE PAGE IS WRONG - A PRE-EXISTING FACTUAL CONTRADICTION, NOT SOMETHING THIS CHANGE INTRODUCES, BUT SOMETHING IT MAKES VISIBLE. The jar in this photograph is labelled 2% GHK-Cu. The FAQ block q3 on this very page answers 'What concentration does Skingenetix use?' with: 'Skingenetix uses 1% GHK-Cu, which falls within the clinically validated range (0.5-2%)...'. Checked against the actual catalogue: the Copper Peptide Renewal Serum, Day Gel-Cream, Night Cream and Microneedling Facial Stamp all state 2%, the stamp explicitly as '2% GHK-Cu'. So 2% is the range-wide figure and the page's 1% contradicts every product the store sells. After this swap that contradiction sits side by side - a jar reading 2% next to an answer reading 1%.\n\nThe copy was NOT changed here. Correcting a published concentration is a claims change on a research page with regulatory weight, and it is Malcolm's call, not a side effect of swapping a picture. Flagged to him at the same time as this went live.\n\nThe outgoing skingenetix-faq-cream-jar-stack-2026-v3.jpg is left in Files untouched per .claude/rules/shopify.md rule 7 - images are never renamed or re-uploaded, only superseded.",
+  "images": [
+    {
+      "slot": "faq_model",
+      "source": "assets/publish-ready/page-copper-peptide-research/skingenetix-copper-peptide-ghk-cu-day-repair-cream-model.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-day-repair-cream-model.jpg",
+      "alt": "Woman holding a jar of Skingenetix Copper Peptide Advanced Day Repair cream beside her face in natural light",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-day-repair-cream-model.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-day-repair-cream-model.jpg?v=1787832420"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "faq",
+      "slot": "faq_model",
+      "setting": "team_avatar"
+    }
+  ]
+}

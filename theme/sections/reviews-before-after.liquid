@@ -79,7 +79,13 @@
       display: grid;
       grid: auto / auto-flow var(--rbac-item-width);
       gap: var(--grid-gutter);
-      align-items: start;
+      /* `stretch`, so every card in the row is as tall as the tallest and the product line lands
+         on one baseline — reviews are never the same length, and at 15 cards the spread was 630px
+         to 749px. Safe here only because .rbac-card__media carries a fixed `aspect-ratio: 1 / 1`,
+         so the picture cannot grow with the card and the labels positioned against it cannot be
+         pushed off it. The sibling `research-before-after` section had exactly that bug and needs
+         `align-self: start` for the opposite reason: its media box has no aspect-ratio. */
+      align-items: stretch;
     }
 
     #shopify-section-{{ section.id }} .scrollbar {
@@ -127,7 +133,7 @@
        a flat overlay dulls the photograph instead of fixing legibility. */
     #shopify-section-{{ section.id }} .rbac-card__label {
       position: absolute;
-      bottom: var(--spacing-2-5);
+      top: var(--spacing-2-5);
       margin: 0;
       padding: 0.35em 0.75em;
       border-radius: 999px;
@@ -191,11 +197,28 @@
 
     /* Pushed to the bottom so the product line sits on one baseline across cards of unequal copy length. */
     #shopify-section-{{ section.id }} .rbac-card__product {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
       margin: var(--spacing-4) 0 0;
       padding-top: var(--spacing-4);
       font-size: 0.8rem;
       margin-top: auto;
     }
+
+    /* A pack shot on a white ground, so `contain` rather than `cover`: cropping a bottle to fill
+       a square is worse than letterboxing it. The tinted ground keeps a white-on-white pack
+       readable as an object. */
+    #shopify-section-{{ section.id }} .rbac-card__product-thumb {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      object-fit: contain;
+      background: rgb(var(--border-color) / 0.3);
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__product-copy { min-width: 0; }
 
     /* The gap is a margin, not a literal space in the markup. The whitespace-stripping form of
        the surrounding Liquid tags eats any space typed between the prefix and the link, so the
@@ -203,8 +226,9 @@
        (Do not write the stripping tag delimiters into a comment here either — Liquid parses
        this file before the browser ever sees it, and a 422 on upload is what that costs.) */
     #shopify-section-{{ section.id }} .rbac-card__product .rbac-card__product-prefix {
+      display: block;
       opacity: 0.55;
-      margin-inline-end: 0.35em;
+      margin-bottom: 0.15em;
     }
 
     #shopify-section-{{ section.id }} .rbac-card__product a {
@@ -310,17 +334,58 @@
                   <div class="rbac-card__text prose">{{ block.settings.content }}</div>
                 {%- endif -%}
 
-                {%- if block.settings.product_text != blank -%}
-                  <p class="rbac-card__product">
-                    {%- if block.settings.product_prefix != blank -%}
-                      <span class="rbac-card__product-prefix">{{ block.settings.product_prefix | escape }}</span>
+                {%- comment -%}
+                  The product line resolves from a real product when one is picked, so the thumbnail,
+                  the name and the URL all stay correct if the product is renamed or its image
+                  changes — and the name is translated by Shopify's own product resource rather than
+                  needing a second copy of it here. `product_text` / `product_url` still win when
+                  set, because one card points at a collection ("the peptide serum range") and there
+                  is no product to pick. `product_image` covers the thumbnail for that same case.
+                {%- endcomment -%}
+                {%- liquid
+                  assign product = block.settings.product
+
+                  assign product_text = block.settings.product_text
+                  if product_text == blank and product != blank
+                    assign product_text = product.title
+                  endif
+
+                  assign product_url = block.settings.product_url
+                  if product_url == blank and product != blank
+                    assign product_url = product.url
+                  endif
+
+                  assign product_thumb = block.settings.product_image
+                  if product_thumb == blank and product != blank
+                    assign product_thumb = product.featured_image
+                  endif
+                -%}
+
+                {%- if product_text != blank -%}
+                  <div class="rbac-card__product">
+                    {%- if product_thumb != blank -%}
+                      {{-
+                        product_thumb
+                        | image_url: width: 132
+                        | image_tag:
+                          class: 'rbac-card__product-thumb',
+                          widths: '44,88,132',
+                          sizes: '44px',
+                          loading: 'lazy',
+                          alt: product_thumb.alt
+                      -}}
                     {%- endif -%}
-                    {%- if block.settings.product_url != blank -%}
-                      <a href="{{ block.settings.product_url }}">{{ block.settings.product_text | escape }}</a>
-                    {%- else -%}
-                      {{ block.settings.product_text | escape }}
-                    {%- endif -%}
-                  </p>
+                    <p class="rbac-card__product-copy">
+                      {%- if block.settings.product_prefix != blank -%}
+                        <span class="rbac-card__product-prefix">{{ block.settings.product_prefix | escape }}</span>
+                      {%- endif -%}
+                      {%- if product_url != blank -%}
+                        <a href="{{ product_url }}">{{ product_text | escape }}</a>
+                      {%- else -%}
+                        {{ product_text | escape }}
+                      {%- endif -%}
+                    </p>
+                  </div>
                 {%- endif -%}
               </div>
             </div>
@@ -388,9 +453,15 @@
         { "type": "text", "id": "title", "label": "Review title" },
         { "type": "richtext", "id": "content", "label": "Review text" },
         { "type": "header", "content": "Product reviewed" },
+        {
+          "type": "paragraph",
+          "content": "Pick the product and the thumbnail, name and link fill themselves in. Use the three fields below it only when the review points somewhere a product picker cannot reach, such as a collection."
+        },
+        { "type": "product", "id": "product", "label": "Product" },
         { "type": "text", "id": "product_prefix", "label": "Prefix", "default": "Reviewing" },
-        { "type": "text", "id": "product_text", "label": "Product or treatment" },
-        { "type": "url", "id": "product_url", "label": "Product URL" }
+        { "type": "image_picker", "id": "product_image", "label": "Thumbnail override" },
+        { "type": "text", "id": "product_text", "label": "Name override" },
+        { "type": "url", "id": "product_url", "label": "Link override" }
       ]
     }
   ],

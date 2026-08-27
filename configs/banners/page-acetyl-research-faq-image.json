@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.research-argireline.json, section 'faq', setting 'team_avatar'",
+  "decided_by": "Malcolm, 2026-08-27: replace the FAQ image skingenetix-faq-cream-jar-stack-2026-v3 with _acetyl_hexapeptide_8_10_percent_..._model_face_dropper_closeup_2_skingenetix.png",
+  "template": "templates/page.research-argireline.json",
+  "note": "FAQ image on /pages/acetyl-hexapeptide-8-research. The slot is the `faq` section's `team_avatar` setting (rendered at team_avatar_width 350), not a block image \u2014 the five q1-q5 blocks carry no image.\n\nSOURCE: assets/ai-generated/2026-08-21-acetyl-hexapeptide-8-serum/run-01/_acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_model_face_dropper_closeup_2_skingenetix.png, 2048x2048 (1:1), which suits a slot that renders square. Malcolm named the file exactly, leading underscore included \u2014 his shortlist mark. Note the `_2` in the name is the CANDIDATE index, not a version: closeup_1 and closeup_4 are unmarked siblings and closeup_3 carries the same underscore mark, so the bare number distinguishes candidates rather than revisions.\n\nTHE LABEL WAS CHECKED AT NATIVE PIXELS, NOT ON A CONTACT SHEET, AND ALL SIX ELEMENTS ARE PRESENT AND CORRECT: the dots-and-dashes helix mark drawn properly rather than as a solid ribbon, 'Skingenetix', 'ACETYL HEXAPEPTIDE-8', 'ANTI-WRINKLE SERUM', 'PREMIUM FORMULA', and the fine line '10% ACETYL HEXAPEPTIDE-8 | 30ML'. Counting the elements matters as much as spellchecking them: a label missing two of its six lines passes a check that only reads the lines that are present.\n\nTHE CONCENTRATION WAS CROSS-CHECKED AND THIS PAGE DOES NOT CONTRADICT ITSELF - unlike /pages/copper-peptide-research, where the same job surfaced a jar labelled 2% sitting beside an answer reading 1%. Here the label says 10%, the page's own q4 'What concentration does Skingenetix use?' gives no number at all ('a well-studied cosmetic level, in line with the published clinical studies'), and 10% is the figure used consistently across a dozen configs in this repo. So nothing on the page conflicts with the picture.\n\n\u26a0\ufe0f WORTH SEPARATE ATTENTION, NOT FIXED HERE: the product description for the Acetyl Hexapeptide-8 Anti-Wrinkle Serum publishes NO percentage, and this research page's q4 declines to give one - while /pages/our-philosophy promises 'Exact percentages disclosed on every product' and 'The concentration of every key active is published'. The label in this photograph states 10% plainly. That is a positioning gap rather than an image fault, and changing published claims is Malcolm's call.\n\nThe outgoing skingenetix-faq-cream-jar-stack-2026-v3.jpg is left in Files untouched per .claude/rules/shopify.md rule 7. It is a SHARED placeholder - the same file is still the FAQ image on other research pages, so this swap fixes one page and leaves the rest on the generic jar stack.",
+  "images": [
+    {
+      "slot": "faq_model",
+      "source": "assets/publish-ready/page-acetyl-research-faq/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg",
+      "alt": "Woman holding a dropper of Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum beside her cheek, the bottle in her other hand",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg?v=1787832939"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "faq",
+      "slot": "faq_model",
+      "setting": "team_avatar"
+    }
+  ]
+}

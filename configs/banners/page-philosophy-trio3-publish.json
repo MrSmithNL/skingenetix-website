@@ -1,0 +1,49 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.philosophy.json, section 'hero' (image-with-text-overlay)",
+  "decided_by": "Malcolm, 2026-08-27: stop the lab-scientist banner run and use TRIO3-spread-across-even-centre-seedream_01 instead",
+  "note": "Header banner for /pages/our-philosophy. Replaces the lab-scientist banner published earlier the same day (skingenetix-peptide-research-laboratory-scientist-banner.jpg), which itself replaced a 1920x1080 glassware still-life.\n\nSOURCE: TRIO3-spread-across-even-centre-seedream_01, 5280x1200, from assets/ai-generated/2026-08-22-multi-reviews-hero-three-friends. Generated for the REVIEWS hero, not for this page - it is being reused, not re-briefed.\n\nTHIS IS A DELIBERATE DEPARTURE FROM THE GRAPHITE DIRECTION, AND THE RECORD MATTERS BECAUSE IT MOVED TODAY. Earlier this session Malcolm asked for the graphite branding style and the whole lab wave was rewritten to it. This frame is warm brown and gold - the opposite register. He chose it after seeing the graphite banner live, so the choice is informed, but nothing about the graphite direction has been retracted and the rest of the store is still on it.\n\nNO CROP DECISION WAS MADE. The source is 4.400:1 against a 4.4222:1 target, so the master is a 6px trim off the height and a resize. Nothing is composed away, and unlike every other banner on this store there is no aiming judgement to record.\n\nTEXT STAYS LEFT AND THE OVERLAY STAYS AT 22 - both measured on this image rather than carried over. All three faces run the full width, so there is no clear zone and the type sits on skin wherever it goes. Contrast was measured in the actual text boxes against white type: LEFT headline reads 12.2:1 mean and 5.6:1 at the worst 5% of pixels; CENTRED headline reads 10.4:1 and 4.2:1. Both clear the 3:1 that WCAG asks of large text, LEFT by the wider margin, and LEFT is already what the section carries. Raising the overlay to 30/38/45 was measured too and buys only 0.7-2.3:1 at the worst 5% while flattening the picture - not worth it.\n\nMOBILE: the 1.04:1 phone box holds ONE face out of three at this width, so it is the centre woman - the only one facing the camera; the other two are in profile and read as fragments once cropped. Source x2016-3264 at full height, output 1200x1154.\n\nTHE PHONE SCRIM IS RETUNED FOR THIS PICTURE, NOT REUSED. The ramp tuned for the lab-scientist crop (0.86 at 0%) took the face band to mean 39 here and killed it. Measuring showed why: this source is ALREADY low-key - the face band reads mean 45.7 with no scrim at all, against the lab crop's much brighter start. So the scrim is far lighter (0.48 at 0%, 0.36 at 32%, 0.18 at 62%, 0.04 at 85%, 0 at 100%), which holds white text at 6.0:1 in the worst 5% while leaving the face at mean 41.7. Carrying the old ramp forward would have been the same mistake as carrying a stale negative list forward.\n\nFILENAMES DO NOT SHARE A PREFIX (asserted before upload) - a shared stem once bound both slots to the phone crop on this store.",
+  "template": "templates/page.philosophy.json",
+  "images": [
+    {
+      "slot": "philosophy_desktop",
+      "source": "assets/publish-ready/page-philosophy-banner/skingenetix-skincare-research-real-people-banner.jpg",
+      "filename": "skingenetix-skincare-research-real-people-banner.jpg",
+      "alt": "Three women laughing together in close-up, lit warmly against a dark background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-skincare-research-real-people-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-skincare-research-real-people-banner.jpg?v=1787820871"
+    },
+    {
+      "slot": "philosophy_mobile",
+      "source": "assets/publish-ready/page-philosophy-banner/skingenetix-radiant-healthy-skin-portrait-phone.jpg",
+      "filename": "skingenetix-radiant-healthy-skin-portrait-phone.jpg",
+      "alt": "Close-up of a woman laughing with her eyes closed, lit warmly against a dark background",
+      "uploaded_handle": "shopify://shop_images/skingenetix-radiant-healthy-skin-portrait-phone.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-radiant-healthy-skin-portrait-phone.jpg?v=1787820871"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 22,
+        "enable_parallax": false,
+        "image_size": "sm",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-center text-center"
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "philosophy_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "philosophy_mobile",
+      "setting": "mobile_image"
+    }
+  ]
+}

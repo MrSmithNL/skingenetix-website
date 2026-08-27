@@ -1,0 +1,25 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.firming-skin-density.json, section 'routine', block 'step2', setting 'image'",
+  "decided_by": "Malcolm, 2026-08-27: swap step 2 again, from cheekbone_4 to cheekbone_5",
+  "template": "templates/page.firming-skin-density.json",
+  "note": "Second pass at step 2 '2. Matrixyl 3000 Serum' on /pages/firming-skin-density, published an hour after the first. Same slot in the same wave, different candidate: cheekbone_5 rather than cheekbone_4.\n\nSOURCE: _matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_applying_to_cheekbone_5_skingenetix.png, 2048x2048 (1.000:1), carrying Malcolm's underscore mark \u2014 cheekbone_4, which it replaces, does NOT carry one. The trailing digit is the candidate index within the slot, not a version.\n\nNO BRANDING IS IN FRAME \u2014 a glass dropper, a run of clear serum and skin \u2014 so there is no label to read and nothing an engine could have misspelled. The difference from cheekbone_4 is the shot, not the copy: this one is tighter, the serum reads as a running bead rather than a single drop, and the out-of-focus teal bottle sits at the left edge instead of a soft neutral field.\n\nA NEW FILENAME RATHER THAN A RE-UPLOAD OF THE OLD ONE. Shopify suffixes a name collision and keeps serving the original, so replacing the picture behind skingenetix-matrixyl-3000-pro-collagen-firming-serum-dropper-cheekbone.jpg was never an option \u2014 the theme is repointed instead. Asserted before upload that the new stem neither prefixes nor is prefixed by any sibling in this row, including the file it supersedes.\n\n1.000:1, matching the other three steps, so the row keeps one shape.\n\nThe superseded file is left in Shopify Files untouched per .claude/rules/shopify.md rule 7. It is now unreferenced.",
+  "images": [
+    {
+      "slot": "fsd_step2_r2",
+      "source": "assets/publish-ready/page-firming-skin-density-routine/skingenetix-matrixyl-3000-firming-serum-drop-on-cheekbone-macro.jpg",
+      "filename": "skingenetix-matrixyl-3000-firming-serum-drop-on-cheekbone-macro.jpg",
+      "alt": "Glass dropper releasing Matrixyl 3000 firming serum onto a woman's cheekbone, the serum running down her skin in close-up",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-firming-serum-drop-on-cheekbone-macro.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-firming-serum-drop-on-cheekbone-macro.jpg?v=1787835949"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "routine",
+      "block": "step2",
+      "slot": "fsd_step2_r2",
+      "setting": "image"
+    }
+  ]
+}

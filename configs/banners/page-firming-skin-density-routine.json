@@ -1,0 +1,52 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.firming-skin-density.json, section 'routine', blocks step2 / step3 / step4",
+  "decided_by": "Malcolm, 2026-08-27: replace the Matrixyl 3000 Serum, Firming Cream and Protect images",
+  "template": "templates/page.firming-skin-density.json",
+  "note": "Three of the four routine steps on /pages/firming-skin-density, in one push.\n\nTHIS PAGE CARRIED THE SAME DUPLICATE BUG AS /pages/brightening-glow, and these three replacements resolve it. Before: step3 '3. Firming Cream' and step4 '4. Protect' BOTH pointed at skingenetix-howto-step4-spf.jpg, so a four-step routine rendered three distinct pictures. After: four steps, four images.\n\nstep2 '2. Matrixyl 3000 Serum' <- matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_applying_to_cheekbone_4_skingenetix.png, 2048x2048. NO BRANDING IS IN FRAME - a glass dropper and a bead of serum against skin - so there is no label to verify and nothing for an engine to have misspelled. Replaces skingenetix-howto-step2-serum.jpg, the generic stock serum shot this page shared with brightening-glow.\n\nstep3 '3. Firming Cream' <- _matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_open_jar_swatch_2_skingenetix.png, 2048x2048, carrying Malcolm's underscore mark. LABEL READ AT NATIVE PIXELS, ALL SIX ELEMENTS CORRECT: the dots-and-dashes helix mark, 'Skingenetix', 'MATRIXYL 3000 PRO COLLAGEN', 'FULL & FIRMING TREATMENT', 'PREMIUM FORMULA', and 'MATRIXYL 3000 | TRIPLE COLLAGEN | ELASTIN | 50ML'. Both of this project's known failure words are right: MATRIXYL (which failed in roughly thirty of fifty candidates on one Seedream-only evening, coming back as MATPIXYL among others) and TRIPLE (recorded as TRIPPLE on the carton artwork). Neither can be judged from a contact sheet.\n\nstep4 '4. Protect' <- skingenetix-daily-spf-sunscreen-cream-application-face.jpg, ALREADY ON SHOPIFY from the brightening-glow step-4 job earlier today - the de-jarred matrixyl cheek shot. Its uploaded_handle is pre-filled here so scripts/upload-theme-images.py skips it (it filters on `not i.get('uploaded_handle')`). Re-uploading the same name would NOT replace the file: Shopify suffixes a collision and keeps serving the original, which has caught this store three times. The same picture now appears as step 4 on two pages, which is deliberate reuse rather than an oversight.\n\nAll three are 1.000:1, matching step1 at 1024x1024, so the row keeps a single shape - the fault has to be measured across the SET, because each image looks fine alone.\n\nOutgoing files are left in Shopify Files untouched per .claude/rules/shopify.md rule 7.",
+  "images": [
+    {
+      "slot": "fsd_step2",
+      "source": "assets/publish-ready/page-firming-skin-density-routine/skingenetix-matrixyl-3000-pro-collagen-firming-serum-dropper-cheekbone.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-serum-dropper-cheekbone.jpg",
+      "alt": "Glass dropper releasing a bead of Matrixyl 3000 firming serum onto a woman's cheekbone in close-up",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-serum-dropper-cheekbone.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-firming-serum-dropper-cheekbone.jpg?v=1787835609"
+    },
+    {
+      "slot": "fsd_step3",
+      "source": "assets/publish-ready/page-firming-skin-density-routine/skingenetix-matrixyl-3000-pro-collagen-firming-cream-open-jar-swatch.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-open-jar-swatch.jpg",
+      "alt": "Open jar of Skingenetix Matrixyl 3000 Pro Collagen Full and Firming Treatment on marble with a swatch of white cream beside it",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-cream-open-jar-swatch.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-firming-cream-open-jar-swatch.jpg?v=1787835609"
+    },
+    {
+      "slot": "fsd_step4",
+      "source": "assets/publish-ready/page-brightening-glow-routine/skingenetix-daily-spf-sunscreen-cream-application-face.jpg",
+      "filename": "skingenetix-daily-spf-sunscreen-cream-application-face.jpg",
+      "alt": "Close-up of a woman smoothing a swatch of cream into her cheek with her fingertips",
+      "uploaded_handle": "shopify://shop_images/skingenetix-daily-spf-sunscreen-cream-application-face.jpg"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "routine",
+      "block": "step2",
+      "slot": "fsd_step2",
+      "setting": "image"
+    },
+    {
+      "section": "routine",
+      "block": "step3",
+      "slot": "fsd_step3",
+      "setting": "image"
+    },
+    {
+      "section": "routine",
+      "block": "step4",
+      "slot": "fsd_step4",
+      "setting": "image"
+    }
+  ]
+}

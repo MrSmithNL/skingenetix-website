@@ -1,0 +1,49 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.philosophy.json, section 'hero' (image-with-text-overlay)",
+  "decided_by": "Malcolm picked P1-graphite-woman-38-nbp_pro_01 from the graphite wave and asked for it live",
+  "note": "Header banner for /pages/our-philosophy. Replaces skingenetix-philosophy-hero-banner.jpg, a 1920x1080 still-life of lab glassware that the 4.36:1 box was cropping to a strip.\n\nSOURCE: P1-graphite-woman-38-nbp_pro_01, 6336x2688 (2.357:1), from the graphite wave. It is the SMOKE-TEST candidate, not a full-wave one - it was generated at 08:46 while proving the revised brief, and the full wave writes the identical filename, so it was copied to chosen/ the moment Malcolm named it. Re-running a slot destroys the chosen candidate on this project and has done before.\n\nDESKTOP MASTER: the 4.42:1 band taken from y0, full width, scaled 6336x1433 -> 3750x848. The band is taken from the VERY TOP and not from 4% down, which was the tool's default: her head begins 3.7% down, so any offset at all clips it. Measured after cropping - her head band spans master x2375-2868, centre x2621 = 0.70 across, which is exactly what the brief asked for.\n\nNARROW-VIEWPORT BEHAVIOUR IS MEASURED, NOT ASSUMED. With object-position 50% 50% the visible master window is x25-3725 at 1920, x487-3263 at 1440, x790-2960 at 1024 - she is whole at every one. At 768 the window is x1061-2689 and clips 179px off the right of her face. That is what the mobile_image slot is for, and the theme swaps to it below ~750px; the exposed band is therefore roughly 750-1000px. Checked live after publishing rather than left to the arithmetic.\n\nMOBILE MASTER: source x3037-5833 at full height, 1.04:1 to match the 390x375 phone box, output 1200x1154. Text on this section is CENTRED on mobile and would land on her face, so a top-down scrim is baked into the file on the ramp tuned for the fine-lines phone crop (0.86 at 0%, 0.70 at 28%, 0.38 at 55%, 0.08 at 78%, 0 at 100%). Measured: the top 42% goes from mean 54.4 / max 226.0 to mean 34.9 / max 104.0, while the face band at 45-85% holds mean 97.9 / max 216.0 - the heading gets its contrast and her modelling survives, which is the trade a flatter overlay cannot make.\n\nFILENAMES DELIBERATELY DO NOT SHARE A PREFIX. `...-scientist-banner` and `...-scientist-phone` were originally `...-scientist` and `...-scientist-mobile`, where the first is a strict prefix of the second - the exact shape that once bound both slots to the phone crop and would have published a portrait as a 3750x848 banner. Asserted before upload.\n\nTWO SETTINGS CHANGE WITH THE IMAGE, AND BOTH ARE FAULTS IN WHAT IS LIVE TODAY:\n\n1. OVERLAY 45 -> 22. At 45 this section renders as a grey rectangle - that is what is wrong with the banner on the page now, and it is a settings fault rather than an image fault. Verified by rendering candidates at 1920x440 with the page's own headline drawn on them.\n\n2. DESKTOP TEXT CENTRE -> LEFT. Rendered at 1920, the centred headline runs x545-x1375 and a head at 0.70 across lands at x1350 - the type and the face are both asking for the middle of the frame, and no crop resolves that. Left-aligning into a capped column clears her completely. This is the arrangement already shipped on /pages/fine-lines-wrinkles. MOBILE TEXT STAYS CENTRED, which is what the baked scrim was tuned for.\n\nParallax is already false on this section and stays false - it renders the image at 130% and reveals only 77% of its height.",
+  "template": "templates/page.philosophy.json",
+  "images": [
+    {
+      "slot": "philosophy_desktop",
+      "source": "assets/publish-ready/page-philosophy-banner/skingenetix-peptide-research-laboratory-scientist-banner.jpg",
+      "filename": "skingenetix-peptide-research-laboratory-scientist-banner.jpg",
+      "alt": "Cosmetic chemistry scientist in a white laboratory coat smiling at the camera in a low-lit research laboratory, a colleague working at a microscope out of focus behind her",
+      "uploaded_handle": "shopify://shop_images/skingenetix-peptide-research-laboratory-scientist-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-peptide-research-laboratory-scientist-banner.jpg?v=1787813883"
+    },
+    {
+      "slot": "philosophy_mobile",
+      "source": "assets/publish-ready/page-philosophy-banner/skingenetix-cosmetic-chemistry-scientist-phone.jpg",
+      "filename": "skingenetix-cosmetic-chemistry-scientist-phone.jpg",
+      "alt": "Cosmetic chemistry scientist in a white laboratory coat smiling at the camera, holding a glass pipette in a low-lit research laboratory",
+      "uploaded_handle": "shopify://shop_images/skingenetix-cosmetic-chemistry-scientist-phone.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-cosmetic-chemistry-scientist-phone.jpg?v=1787813883"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "overlay_opacity": 22,
+        "enable_parallax": false,
+        "image_size": "sm",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-center text-center"
+      }
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "hero",
+      "slot": "philosophy_desktop",
+      "setting": "image"
+    },
+    {
+      "section": "hero",
+      "slot": "philosophy_mobile",
+      "setting": "mobile_image"
+    }
+  ]
+}

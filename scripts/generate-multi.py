@@ -277,8 +277,18 @@ def main():
                 print(f"  {sup:<10} skipped (barred from reference shots)", flush=True)
                 continue
             t0 = time.time()
+            # A slot may carry `prompt_<supplier>` to override the shared brief for one
+            # backend. Added 2026-08-27 for Luma, which answers anything over 6000
+            # characters with a bare `HTTP 422: Unprocessable Content` — no mention of
+            # length, so it reads exactly like a content refusal. Trimming the shared
+            # brief to suit the one backend with a cap would cost every other backend the
+            # detail it is using; blind truncation is worse still, because the paragraph
+            # that falls off the end is the last one, which on this project is where the
+            # palette and lighting instructions live.
+            # Author: Claude Code, 2026-08-27.
+            prompt = slot.get(f"prompt_{sup}") or slot["prompt"]
             try:
-                paths = FNS[sup](slot["prompt"], neg, slot["width"], slot["height"],
+                paths = FNS[sup](prompt, neg, slot["width"], slot["height"],
                                  args.candidates, refs, out_root / slot["id"],
                                  f"{slot['id']}-{sup}")
                 print(f"  {sup:<10} {len(paths)} in {time.time() - t0:.0f}s", flush=True)

@@ -15,7 +15,7 @@ one is a *customer review* in a carousel card.
 |---|---|
 | Theme file (live) | `sections/reviews-before-after.liquid` on theme `184835965313` (Impact) |
 | Source of truth | `theme/sections/reviews-before-after.liquid` **in this repo** — edit here, then deploy |
-| In use on | `templates/page.reviews.json`, section id **`before_after`**, blocks `rv_1` `rv_2` `rv_3` |
+| In use on | `templates/page.reviews.json`, section id **`before_after`**, blocks `rv_01`–`rv_15` |
 | Replaced | the previous `before_after` section (type `multi-column`, 4 image tiles) |
 | Deploy | `python3 scripts/reviews-add-before-after-carousel.py [--dry-run]` |
 | Undo | the same script prints its own `--restore backups/page.reviews-<stamp>.json` line |
@@ -143,9 +143,45 @@ Per block (type `review`, max 24 blocks):
 | `title` | text | ✅ | review headline |
 | `content` | richtext | ✅ | review body |
 | `product_prefix` | text | ✅ | default "Reviewing" |
-| `product_text` / `product_url` | text / url | ✅ / — | the product or treatment, and its link |
+| `product` | product | — | **pick this and the thumbnail, name and link fill themselves in** |
+| `product_image` / `product_text` / `product_url` | image_picker / text / url | — / ✅ / — | overrides, for when the review points somewhere a product picker cannot reach |
 
 ---
+
+## 6a. Changes on 2026-08-27, second pass
+
+Malcolm's four asks, and what each became:
+
+1. **Labels to the top of the picture.** `bottom` to `top` on `.rbac-card__label`. Measured live
+   at 10px from the top of the media box on every card.
+2. **A product thumbnail left of the product link.** The block gained a real `product` setting:
+   pick the product and the 44px thumbnail, the name and the URL all resolve from it, so they
+   stay correct if the product is renamed or reshot, and the name is translated by Shopify's own
+   product resource rather than needing a second copy of it here. `product_image` /
+   `product_text` / `product_url` remain as overrides — one card points at the serums collection,
+   which a product picker cannot reach.
+3. **"Make the content section a carousel."** No work: this section already was one. It simply
+   had nothing to scroll to at three cards, and does at fifteen.
+4. **Fifteen reviews.** Twelve slots added, one per product with three repeats on the hero
+   serums. Card heights are now equalised — see the `align-items: stretch` comment in the file
+   for why that is safe here and is the opposite of what `research-before-after` needs.
+
+### The twelve empty slots
+
+They ship with **no name, no rating, no verified badge and no before/after labels**. An empty card
+must never claim a rating or a verified customer it does not have, and "AFTER 12 WEEKS" over a
+picture that does not exist asserts a result nobody has measured. Each carries only
+"Results coming soon", an honest line, and the product it is for — so the thumbnail and link work.
+
+**The photograph in those slots is brand artwork, not a photograph** —
+`scripts/build-review-ba-placeholders.py` draws a 1200×1200 diptych per slot in the concern colour
+from the homepage visual system, with the peptide chain across it, no text of any kind. The obvious
+alternative, repeating one of the three real pairs across twelve cards, was rejected: a
+before/after photograph on a review card reads as a *result*, and the same result on five cards is
+a claim nobody has measured.
+
+`docs/reviews-content-to-supply.csv` is the fifteen rows for Malcolm to fill; it is generated from
+the deploy script's own `CARDS` list, so it cannot drift from what is live.
 
 ## 7. Two things caught during the build, both worth remembering
 
@@ -172,14 +208,21 @@ python3 - <<'PY'
 PY
 ```
 
-Measured live 2026-08-27 after deploy:
+Measured live 2026-08-27 after the fifteen-card deploy:
 
 | | desktop 1440 | mobile 390 |
 |---|---|---|
-| media box | 432 × 432 (ratio 1.000) | 289 × 289 (ratio 1.000) |
-| labels inside the picture | 3/3 | 3/3 |
-| six fields present | 3/3 | 3/3 |
-| track overflow | `scrollWidth == clientWidth` — controls correctly hidden | 946 vs 390, `is-scrollable`, controls shown |
+| cards | 15 | 15 |
+| media box ratio | 1.000 on all 15 | 1.000 on all 15 |
+| every label inside its own picture | pass | pass |
+| card heights | one value, 749px | one value, 687px |
+| images decoded | 15/15, no SVG placeholders | 15/15 |
+| thumbnails + links | 15/15 | 15/15 |
+| stars / verified badges | 3 — only the cards that have a review | 3 |
+| carousel | `is-scrollable`, 6816 vs 1344, prev disabled, next live, both real `PrevButton`/`NextButton` | 4649 vs 390 |
+
+Scope the label check **to the block, not the section** — `section.querySelector('img')` returns
+the first image for all fifteen cards and produces nonsense.
 
 ---
 
