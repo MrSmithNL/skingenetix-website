@@ -14,8 +14,8 @@ paths:
 3. **Additive CSS only** — Brand styling in custom CSS, never overwrite theme CSS
 4. **Annotate all code** — Every Claude-written code block includes author, date, and purpose comment
 5. **Theme Check validation** — Run Theme Check on any Liquid changes before committing
-6. **One translation system** — Langify only. Never enable Shopify native Translate & Adapt alongside it.
-7. **Image URL stability** — Never rename or re-upload original images (breaks Langify translations)
+6. **One translation system** — **Translate & Adapt** (Shopify native) only; it is what is actually installed. Never add Langify alongside it. ⚠️ This rule said the exact opposite until 2026-08-27, when `appInstallations` showed Translate & Adapt installed and no Langify. Theme/template text is translatable natively as `ONLINE_STORE_THEME_JSON_TEMPLATE` resources — see `docs/research-before-after-section.md` §3.
+7. **Image URL stability** — Never rename or re-upload original images (breaks translations, which key off the URL)
 8. **Rate limit awareness** — Shopify allows 40 req/sec on GraphQL. Batch operations must be throttled.
 
 ## Quality Gates

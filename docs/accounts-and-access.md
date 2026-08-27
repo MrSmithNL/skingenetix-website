@@ -11,7 +11,7 @@
 | Shopify            | TBD                    | Malcolm Smith  | Store platform + hosting  | Bitwarden           |
 | OpenDomainRegistry | opendomainregistry.net | Malcolm Smith  | Domain registrar          | Bitwarden           |
 | GoDaddy            | godaddy.com            | Malcolm Smith  | Email hosting             | Bitwarden           |
-| Langify            | (Shopify app)          | Via Shopify    | Translation (9 languages) | Via Shopify OAuth   |
+| Translate & Adapt  | (Shopify native app)   | Via Shopify    | Translation (9 languages planned; only EN published). ⚠️ Langify is NOT installed — ADR-002a | Via Shopify OAuth   |
 | Klaviyo            | klaviyo.com            | Malcolm Smith  | Email marketing + reviews | Bitwarden           |
 | Kaching            | (Shopify app)          | Via Shopify    | Product bundles           | Via Shopify OAuth   |
 | Google Analytics   | analytics.google.com   | Malcolm Smith  | Traffic analytics         | Google account      |

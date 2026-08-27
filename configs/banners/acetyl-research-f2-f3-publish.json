@@ -1,0 +1,36 @@
+{
+  "note": "f2 and f3 on /pages/acetyl-hexapeptide-8-research, section key_findings. Malcolm's picks 2026-08-27, both from the before-after-r3 crow's-feet detail wave. f2 = the f1-slot seedream_01 frame (identified by his quoted caption 'heavy freckling preserved exactly'); it was briefed at the 48.9% magnitude but is going on the ~30% block. f3 = nbp_flash_02, fine lines softened while the deeper creases are untouched, which is what the 14.6% ceiling requires. Neither carries burnt-in text - the one glyph-like component flagged on f2 was a skin crease, checked at 3x.",
+  "template": "templates/page.research-argireline.json",
+  "images": [
+    {
+      "slot": "f2",
+      "source": "assets/publish-ready/acetyl-research-findings/skingenetix-acetyl-hexapeptide-8-wrinkle-depth-before-after-eye-close-up.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-wrinkle-depth-before-after-eye-close-up.jpg",
+      "alt": "Close-up comparison of the freckled skin at the outer corner of one eye, the crow's-feet lines holding a shallower shadow in the second image. Illustration accompanying the Acetyl Hexapeptide-8 research summary.",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-wrinkle-depth-before-after-eye-close-up.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-wrinkle-depth-before-after-eye-close-up.jpg?v=1787812161"
+    },
+    {
+      "slot": "f3",
+      "source": "assets/publish-ready/acetyl-research-findings/skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg",
+      "alt": "Close-up comparison of the fine lines at the outer corner of one eye, slightly softened in the second image while the deeper creases are unchanged. Illustration accompanying the Acetyl Hexapeptide-8 research summary.",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg?v=1787812161"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "key_findings",
+      "block": "f2",
+      "slot": "f2",
+      "setting": "image"
+    },
+    {
+      "section": "key_findings",
+      "block": "f3",
+      "slot": "f3",
+      "setting": "image"
+    }
+  ]
+}

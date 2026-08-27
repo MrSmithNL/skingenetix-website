@@ -24,7 +24,7 @@ graph TB
     end
 
     subgraph "Apps & Integrations"
-        LANG[Langify<br/>9 Languages]
+        LANG[Translate &amp; Adapt<br/>9 Languages planned]
         KLAV[Klaviyo<br/>Email + Reviews]
         KACH[Kaching<br/>Bundles]
         HCAP[hCaptcha<br/>Security]
@@ -66,7 +66,7 @@ graph TB
 | Email             | Email hosting for store domain                              | GoDaddy (TBD)                                 | 🔜 To configure                              |
 | GraphQL Admin API | Programmatic store management                               | Shopify                                       | ✅ Active (Client Credentials, auto-refresh) |
 | Products          | 9 active skincare products (serums + creams), all EUR 49,95 | Shopify                                       | ✅ Live (0 inventory - not selling yet)      |
-| Langify           | Translation (9 languages)                                   | Shopify App Store                             | 🔜 To install (only EN locale published)     |
+| Translate & Adapt | Translation (9 languages planned)                           | Shopify native                                | ✅ Installed (only EN locale published). ⚠️ Langify is NOT installed — see ADR-002a |
 | Klaviyo           | Email marketing + reviews                                   | Shopify App Store                             | 🔜 To install                                |
 | Kaching Bundles   | Product bundles                                             | Shopify App Store                             | 🔜 To install                                |
 | hCaptcha          | Form security                                               | Shopify App Store                             | 🔜 To install                                |
@@ -85,7 +85,7 @@ graph TB
 | Business Dashboard | Shopify    | REST Admin API (Client Credentials)                  | ✅ Active  | Sales/forecast reporting (Fly.io) |
 | Domain             | Shopify    | DNS A/CNAME records                                  | ✅ Active  | Domain routing                    |
 | Domain             | Email Host | MX records                                           | 🔜 Pending | Email delivery                    |
-| Shopify            | Langify    | Shopify App OAuth                                    | 🔜 Pending | Translations                      |
+| Shopify            | Translate & Adapt | Shopify native                                | ✅ Installed | Translations (theme/template text is natively translatable — ADR-002a) |
 | Shopify            | Klaviyo    | Shopify App OAuth                                    | 🔜 Pending | Email marketing                   |
 | Shopify            | GA4        | Measurement ID                                       | 🔜 Pending | Analytics                         |
 

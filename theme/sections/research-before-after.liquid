@@ -1,0 +1,209 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+  research-before-after.liquid
+  Skingenetix / Claude Code — created 2026-08-27
+
+  WHY THIS EXISTS
+  The theme's `media-with-text` section has no caption, overlay, label or badge setting, so labels cannot be
+  placed on an image inside it. The theme's own `before-after-image` section does have labels, but it takes two
+  separate images, renders a drag-to-compare slider, and offers only two labels — it cannot carry the third
+  ("X% improvement of ...") that this page needs.
+
+  This section keeps the side-by-side diptych the page already uses and overlays three (optionally four) labels
+  on it, each one a `text` setting.
+
+  WHY THE LABELS ARE TRANSLATABLE
+  Shopify exposes every text setting of a section stored in a page template as a translatable resource of type
+  ONLINE_STORE_THEME_JSON_TEMPLATE, keyed
+      section.page.<template>.json.<section-id>.<block-id>.<setting-id>:<hash>
+  So these labels appear in Translate & Adapt automatically, with no app configuration and no custom plumbing.
+  Nothing in this file carries the translation — the settings mechanism does.
+  (Note: the store runs Shopify's own Translate & Adapt. Langify is NOT installed, despite what older docs say.)
+
+  ADDITIVE ONLY — this is a new file. No core theme file is modified.
+  CSS is scoped to #shopify-section-{{ section.id }}, the same pattern the theme's own sections use.
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<style>
+  /* Geometry matched to the theme's own `media-with-text`, measured live on
+     /pages/copper-peptide-research: 24px column gap (which yields a 660px media at 1440),
+     white card at 10px radius with 80px padding, card stretched to the media's height. */
+  #shopify-section-{{ section.id }} .rba__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--rba-gap, 24px);
+    align-items: stretch;
+  }
+  #shopify-section-{{ section.id }} .rba__row + .rba__row { margin-top: var(--rba-gap, 24px); }
+  #shopify-section-{{ section.id }} .rba__row--reverse .rba__media { order: 2; }
+
+  #shopify-section-{{ section.id }} .rba__text {
+    background: var(--rba-card-bg, #fff);
+    border-radius: 10px;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .rba__media {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--rounded-block, 8px);
+    line-height: 0;
+  }
+  #shopify-section-{{ section.id }} .rba__media img { width: 100%; height: auto; display: block; }
+
+  /* Contrast is bought with a local pill behind each label, never a flat wash over the picture. */
+  #shopify-section-{{ section.id }} .rba__label {
+    position: absolute;
+    margin: 0;
+    padding: 0.45em 0.85em;
+    border-radius: 999px;
+    background: var(--rba-pill-bg, rgba(26, 26, 26, 0.62));
+    color: var(--rba-pill-fg, #fff);
+    font-size: clamp(0.72rem, 1.05vw, 0.95rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.25;
+    white-space: nowrap;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+  /* The masters are diptychs split at exactly 50%, so half-relative placement is deterministic. */
+  #shopify-section-{{ section.id }} .rba__label--before { top: 3.5%; left: 3%; }
+  #shopify-section-{{ section.id }} .rba__label--after  { top: 3.5%; left: 53%; }
+  /* `left:50%` makes an absolutely-positioned box shrink-to-fit inside only the REMAINING 50% of the
+     container, which forced this label onto two lines however much room the image had.
+     `width: max-content` sizes it to its text instead, so it stays on one line. */
+  #shopify-section-{{ section.id }} .rba__label--result {
+    bottom: 3.5%; left: 50%; transform: translateX(-50%);
+    width: max-content; max-width: 94%;
+    white-space: nowrap; text-align: center;
+    text-transform: none; letter-spacing: 0.01em;
+    background: var(--rba-result-bg, rgba(26, 26, 26, 0.72));
+  }
+  #shopify-section-{{ section.id }} .rba__label--note {
+    top: 3.5%; right: 3%;
+    text-transform: none; font-weight: 500; letter-spacing: 0;
+    font-size: clamp(0.62rem, 0.85vw, 0.78rem);
+    background: var(--rba-note-bg, rgba(26, 26, 26, 0.45));
+  }
+
+  @media screen and (max-width: 999px) {
+    #shopify-section-{{ section.id }} .rba__row { grid-template-columns: 1fr; gap: 20px; }
+    #shopify-section-{{ section.id }} .rba__row + .rba__row { margin-top: 20px; }
+    #shopify-section-{{ section.id }} .rba__row--reverse .rba__media { order: 0; }
+    #shopify-section-{{ section.id }} .rba__text { padding: 40px 32px; }
+  }
+  @media screen and (max-width: 699px) {
+    #shopify-section-{{ section.id }} .rba__label { padding: 0.35em 0.7em; font-size: 0.68rem; }
+    #shopify-section-{{ section.id }} .rba__label--note { display: none; }
+    /* At phone width a long result label genuinely cannot fit on one line at a readable size,
+       so wrapping is allowed here and only here. */
+    #shopify-section-{{ section.id }} .rba__label--result { white-space: normal; max-width: 92%; }
+  }
+</style>
+
+<div {% render 'section-properties' %}>
+  {%- if section.settings.title != blank -%}
+    <div class="section-stack__intro">
+      <div class="prose text-center">
+        <h2 class="h2">{{ section.settings.title | escape }}</h2>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- for block in section.blocks -%}
+    {%- liquid
+      assign img = block.settings.image
+      assign reverse = false
+      if block.settings.media_position == 'end'
+        assign reverse = true
+      endif
+    -%}
+    <div class="rba__row {% if reverse %}rba__row--reverse{% endif %}" {{ block.shopify_attributes }}
+         style="--rba-pill-bg: {{ block.settings.label_background }}; --rba-pill-fg: {{ block.settings.label_text_color }};">
+      <div class="rba__media">
+        {%- if img != blank -%}
+          <picture>
+            {%- if block.settings.image_mobile != blank -%}
+              <source media="(max-width: 699px)"
+                      srcset="{{ block.settings.image_mobile | image_url: width: 500 }} 500w, {{ block.settings.image_mobile | image_url: width: 800 }} 800w"
+                      width="{{ block.settings.image_mobile.width }}" height="{{ block.settings.image_mobile.height }}">
+            {%- endif -%}
+            {{- img | image_url: width: img.width | image_tag:
+                  sizes: '(max-width: 999px) 100vw, 660px',
+                  widths: '400,600,800,1000,1200,1400,1600,2000',
+                  loading: 'lazy',
+                  alt: img.alt -}}
+          </picture>
+        {%- else -%}
+          {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
+        {%- endif -%}
+
+        {%- if block.settings.before_label != blank -%}
+          <p class="rba__label rba__label--before">{{ block.settings.before_label | escape }}</p>
+        {%- endif -%}
+        {%- if block.settings.after_label != blank -%}
+          <p class="rba__label rba__label--after">{{ block.settings.after_label | escape }}</p>
+        {%- endif -%}
+        {%- if block.settings.result_label != blank -%}
+          <p class="rba__label rba__label--result">{{ block.settings.result_label | escape }}</p>
+        {%- endif -%}
+        {%- if block.settings.note_label != blank -%}
+          <p class="rba__label rba__label--note">{{ block.settings.note_label | escape }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="rba__text">
+        <div class="prose">
+          {%- if block.settings.subheading != blank -%}
+            <p class="subheading">{{ block.settings.subheading | escape }}</p>
+          {%- endif -%}
+          {%- if block.settings.title != blank -%}
+            <h3 class="h2">{{ block.settings.title | escape }}</h3>
+          {%- endif -%}
+          {{- block.settings.content -}}
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Research before/after",
+  "tag": "section",
+  "class": "shopify-section--research-before-after",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "title", "label": "Section heading" }
+  ],
+  "blocks": [
+    {
+      "type": "finding",
+      "name": "Finding",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Before/after image (side-by-side)" },
+        { "type": "image_picker", "id": "image_mobile", "label": "Image (mobile)" },
+        { "type": "select", "id": "media_position", "label": "Image position", "default": "start",
+          "options": [ { "value": "start", "label": "Left" }, { "value": "end", "label": "Right" } ] },
+        { "type": "header", "content": "Labels on the image" },
+        { "type": "text", "id": "before_label", "label": "Before label", "default": "Before" },
+        { "type": "text", "id": "after_label", "label": "After label", "default": "After" },
+        { "type": "text", "id": "result_label", "label": "Result label" },
+        { "type": "text", "id": "note_label", "label": "Note label (top right)" },
+        { "type": "color", "id": "label_background", "label": "Label background", "default": "#1a1a1a" },
+        { "type": "color", "id": "label_text_color", "label": "Label text", "default": "#ffffff" },
+        { "type": "header", "content": "Text" },
+        { "type": "text", "id": "subheading", "label": "Subheading" },
+        { "type": "text", "id": "title", "label": "Heading" },
+        { "type": "richtext", "id": "content", "label": "Content" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "Research before/after", "category": "Media" } ]
+}
+{% endschema %}

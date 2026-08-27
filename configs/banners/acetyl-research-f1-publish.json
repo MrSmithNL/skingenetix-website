@@ -1,0 +1,22 @@
+{
+  "note": "f1 on /pages/acetyl-hexapeptide-8-research (templates/page.research-argireline.json, section key_findings). Malcolm's pick 2026-08-27: the before-after-r3 crow's-feet detail shot, nbp_pro_01, with its burnt-in FIRST VISIT / FOLLOW-UP (WEEKS LATER) labels REMOVED at his request - clean skin transplanted from directly above each text line and tone-matched against the target's low frequency computed with the text pixels excluded, so no ghost remains. Crow's feet is the site Wang 2013 actually measured (periorbital). NOTE: the image this replaces, skingenetix-ingredients-acetyl-hexapeptide-8-serum.jpg, returns 404 and is absent from the Files API - the block has been rendering with no image at all.",
+  "template": "templates/page.research-argireline.json",
+  "images": [
+    {
+      "slot": "f1",
+      "source": "assets/publish-ready/acetyl-research-findings/skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg",
+      "alt": "Close-up comparison of the skin at the outer corner of one eye, the fan of expression lines less deeply etched in the second image than the first. Illustration accompanying the Acetyl Hexapeptide-8 research summary.",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg?v=1787811412"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "key_findings",
+      "block": "f1",
+      "slot": "f1",
+      "setting": "image"
+    }
+  ]
+}

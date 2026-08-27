@@ -48,5 +48,5 @@ skingenetix-website/
 1. **No secrets in this repo** — All credentials stored in Bitwarden
 2. **Document everything** — Every change, decision, and account recorded
 3. **Shopify is the host** — This repo is for management, not hosting
-4. **One translation system** — Langify only (same as Hairgenetix)
+4. **One translation system** — **Translate & Adapt** (Shopify native) only. ⚠️ Langify is NOT installed, despite older docs; verified 2026-08-27.
 5. **No core theme edits** — Only additive changes to Shopify theme

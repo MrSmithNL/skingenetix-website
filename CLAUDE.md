@@ -38,7 +38,7 @@ Claude has Malcolm's standing approval (granted 2026-04-22) to Edit, Write, Crea
 | **Platform**    | Shopify                | Hosted — no separate hosting      |
 | **Theme**       | TBD (Sense or Refresh) | Free Shopify 2.0 theme            |
 | **API**         | GraphQL Admin API      | Via custom app access token       |
-| **Translation** | Langify                | 9 languages (same as Hairgenetix) |
+| **Translation** | **Translate & Adapt** (Shopify native) | 9 languages planned; only `en` published. ⚠️ **Langify is NOT installed** — verified 2026-08-27 via `appInstallations`. Earlier docs and ADR-002 said Langify; they were wrong. See `docs/research-before-after-section.md` §3. |
 | **Email**       | Klaviyo                | Same as Hairgenetix               |
 | **Credentials** | Bitwarden              | All tokens/keys stored here       |
 

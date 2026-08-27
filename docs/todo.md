@@ -650,6 +650,20 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    women** while all casting since 2026-08-25 has been Caucasian, and all three trials measured the
    **periorbital** region, so any forehead or mouth/chin frame shows a different site from the one
    the number came from.
+   ✅ **`/pages/acetyl-hexapeptide-8-research` — all three Key Findings blocks published 2026-08-27**,
+   with Before / After N / result labels overlaid. Built as a NEW additive theme section,
+   `sections/research-before-after.liquid` (source of truth: `theme/sections/` in this repo), replacing
+   the `media-with-text` `key_findings` section — which has no caption, overlay or label setting of any
+   kind, and the theme's own `before-after-image` needs two images, renders a drag slider and offers only
+   two labels. **The labels are `text` settings, so Shopify exposes them as
+   `ONLINE_STORE_THEME_JSON_TEMPLATE` translatable resources with no app configuration** — 12 label keys
+   verified live. How it works and how to translate it: **`docs/research-before-after-section.md`**.
+   ⚠️ **The translation app is Translate & Adapt, not Langify** — Langify was never installed; every doc
+   said otherwise until 2026-08-27. Corrected in CLAUDE.md, AGENTS.md, README.md, architecture.md,
+   accounts-and-access.md, rules/shopify.md, and recorded as ADR-002a.
+   Residual: on f1/f2 the copy card renders taller than the 660px image (703/727px) because those study
+   descriptions are longer than the originals — tops align, bottoms do not. Fixing it means clipping copy
+   or cropping faces, so it needs a copy trim rather than a CSS change.
 4. 🟡 **Fold the runtime-injected banner configs into the scripts.** The three banners of
    2026-08-24/25 were built by injecting config into `extend-banner-canvas.py` and
    `publish-collection-banner-template.py` at import time, because a second session was

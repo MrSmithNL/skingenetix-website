@@ -26,7 +26,7 @@ Technical decisions recorded in ADR (Architecture Decision Record) format.
 ## ADR-002: Use Langify for Translations (Same as Hairgenetix)
 
 **Date:** 2026-03-05
-**Status:** Proposed
+**Status:** ⚠️ **NOT IMPLEMENTED — superseded by ADR-002a (2026-08-27)**
 **Context:** Multiple translation options exist — Shopify native Translate & Adapt (free), Langify ($17.50/mo), Transcy, LangShop.
 **Decision:** Use Langify for consistency with Hairgenetix.
 **Rationale:**
@@ -37,6 +37,41 @@ Technical decisions recorded in ADR (Architecture Decision Record) format.
 - Manual quality control for sensitive skincare claims
 - Running two different translation systems across brands adds complexity
   **Consequences:** $17.50/month cost. Text translations can be registered via Shopify's native translation API and Langify will pick them up (they're compatible). Image/video translations require manual work in Langify UI.
+
+---
+
+## ADR-002a: Translate & Adapt is the translation system (correcting ADR-002)
+
+**Date:** 2026-08-27
+**Status:** Accepted — describes the live store
+**Context:** ADR-002 proposed Langify in March and was never implemented, but the rest of the
+documentation was written as though it had been. `CLAUDE.md`, `AGENTS.md`, `README.md`,
+`docs/architecture.md` and `.claude/rules/shopify.md` all instructed future sessions to use Langify and to
+**never** enable Translate & Adapt. That is backwards, and it was found only because a translation
+requirement forced the question.
+
+**Evidence (2026-08-27, `appInstallations`):** the installed apps include **Translate & Adapt**
+(`translate-and-adapt`). There is **no Langify**. Only the `en` locale is published, so no translation
+work has been done under either system and nothing is lost by the correction.
+
+**Decision:** **Translate & Adapt** (Shopify native, free) is the translation system for this store.
+Do not install Langify alongside it — the one-system rule stands, only the name changes.
+
+**Rationale:** it is what is installed; it is free where Langify is $17.50/mo; and — the deciding
+practical point — theme and template text is exposed natively as `ONLINE_STORE_THEME_JSON_TEMPLATE`
+translatable resources, so section settings become translatable with **no app configuration at all**.
+That property is what made the labelled before/after section possible without custom translation
+plumbing.
+
+**Consequences:**
+
+- Any **text setting** added to a section in a page template is automatically translatable. Prefer that
+  over baked-in image text, hardcoded strings or `custom-html` blocks whenever the words must translate.
+- Langify's image/video translation is not available. Nothing currently depends on it.
+- ⚠️ Translation keys carry a `:hash` of the value — **editing English text invalidates that key's
+  translation**, and moving a block to a new section id orphans its keys entirely. Settle wording before
+  translating. Full detail: `docs/research-before-after-section.md` §3.
+- Older handovers still assert the Langify rule; treat this ADR as the authority.
 
 ---
 

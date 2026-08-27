@@ -1,0 +1,71 @@
+{
+  "note": "Replaces the media-with-text `key_findings` section on /pages/acetyl-hexapeptide-8-research with the new additive `research-before-after` section, so the three diptychs can carry Before / After N / result labels as TEXT SETTINGS. Those settings are exposed by Shopify as ONLINE_STORE_THEME_JSON_TEMPLATE translatable resources, so Translate & Adapt (which is what this store actually runs - Langify is NOT installed) picks them up with no extra configuration. Copy and images carried over verbatim.",
+  "template": "templates/page.research-argireline.json",
+  "new_sections": [
+    {
+      "id": "key_findings_ba",
+      "insert_after": "overview",
+      "section": {
+        "type": "research-before-after",
+        "blocks": {
+          "f1": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg",
+              "media_position": "start",
+              "before_label": "Before",
+              "after_label": "After 4 weeks",
+              "result_label": "48.9% overall anti-wrinkle efficacy vs placebo",
+              "note_label": "Illustration",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "title": "48.9% Overall Anti-Wrinkle Efficacy vs Placebo",
+              "content": "<p>A randomized, placebo-controlled trial examined the anti-wrinkle effects of topical Acetyl Hexapeptide-8 applied twice daily to the periorbital region (crow's feet area).</p><p><strong>Study design:</strong> RCT, placebo-controlled, 60 subjects (3:1 ratio), 4 weeks, twice daily application</p><p><strong>Key results:</strong></p><ul><li><strong>48.9% total anti-wrinkle efficacy</strong> in the Acetyl Hexapeptide-8 group vs 0% in placebo</li><li>All objective roughness parameters decreased significantly (p < 0.01)</li></ul><p><em>Wang Y et al. (2013). American Journal of Clinical Dermatology. <a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>View on PubMed</a></em></p>"
+            }
+          },
+          "f2": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-wrinkle-depth-before-after-eye-close-up.jpg",
+              "media_position": "end",
+              "before_label": "Before",
+              "after_label": "After 30 days",
+              "result_label": "Up to ~30% softer-looking wrinkle depth",
+              "note_label": "Illustration",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "title": "Up to ~30% Softer-Looking Wrinkle Depth in 30 Days",
+              "content": "<p>An early study by the peptide's developers combined laboratory (in-vitro) mechanism data with a small in-use test of an Acetyl Hexapeptide-8 emulsion.</p><p><strong>Study design:</strong> Combined in-vitro + in-use proof-of-concept, healthy female volunteers, 30 days.</p><p><strong>Key results:</strong></p><ul><li><strong>Up to ~30% reduction in measured wrinkle depth</strong> after 30 days (early proof-of-concept by the developers)</li><li>Supported the appearance of smoother skin around the eyes over 30 days</li></ul><p><em>Blanes-Mira C et al. (2002). International Journal of Cosmetic Science. <a href='https://pubmed.ncbi.nlm.nih.gov/18498523/' target='_blank' rel='noopener'>View on PubMed</a></em></p>"
+            }
+          },
+          "f3": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg",
+              "media_position": "start",
+              "before_label": "Before",
+              "after_label": "After 5 days",
+              "result_label": "14.6% fine wrinkle improvement",
+              "note_label": "Illustration",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "title": "14.6% Improvement in Just 5 Days",
+              "content": "<p>A double-blind, randomized trial tested microneedle patches containing Acetyl Hexapeptide-8 against patches alone on 52 Korean female subjects using a split-face design.</p><p><strong>Study design:</strong> Double-blind RCT, split-face, 52 subjects, 29 days</p><p><strong>Key results:</strong></p><ul><li><strong>14.6% fine wrinkle improvement</strong> vs 5.9% for patch alone (p < 0.05)</li><li><strong>13.6% deep wrinkle improvement</strong> vs 3.5% for patch alone</li><li>Statistically significant results within just 5 days</li></ul><p><em>An JH et al. (2019). Annals of Dermatology. <a href='https://anndermatol.org/DOIx.php?id=10.5021/ad.2019.31.3.263' target='_blank' rel='noopener'>View study</a></em></p>"
+            }
+          }
+        },
+        "block_order": [
+          "f1",
+          "f2",
+          "f3"
+        ],
+        "settings": {}
+      }
+    }
+  ],
+  "remove_sections": [
+    "key_findings"
+  ],
+  "images": [],
+  "image_assignments": []
+}
