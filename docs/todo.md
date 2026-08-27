@@ -461,6 +461,20 @@ built and waiting in `assets/publish-ready/collection-glutathione-banner/`.
 `skingenetix-philosophy-research.jpg` and `/pages/glutathione-research` shows
 `skingenetix-philosophy-ingredients.jpg` — both lifted from the philosophy page.
 
+**Update 2026-08-27 — the glutathione line above is stale on the hero and partly fixed on
+the body.** The `/pages/glutathione-research` *hero* was replaced on 2026-08-25 with
+`skingenetix-glutathione-master-antioxidant-brightening-research.jpg` (plan:
+`configs/banners/page-glutathione-research-publish.json`), so it no longer wears
+`philosophy-ingredients.jpg`. In the `key_findings` section, block **`f2`** ("Antioxidant
+defence against environmental stress", Grandi 2019) now carries its own explainer,
+`skingenetix-glutathione-antioxidant-defence-uv-oxidative-stress-diagram.jpg` — plan
+`configs/banners/page-glutathione-research-antioxidant-publish.json`, briefs
+`block-glutathione-research-antioxidant-defence{,-r2}.json`. **Blocks `f1` and `f3` are
+still borrowed** (`home-science-peptides-laboratory.jpg` and `philosophy-research.jpg`) and
+want the same treatment. Note `philosophy-research.jpg` and `philosophy-quality.jpg` are
+*also* in use on `/pages/acetyl-hexapeptide-8-research`, so neither may be renamed —
+repoint the block, never the file.
+
 **`/pages/skin-concerns` is the first banner that is not a product shot,** and the first
 where canvas extension does not apply. Measured on the frame, the body's edge *rises* as it
 travels left (skin starts y=259 at x=0 but y=295 at x=100), so extending would march the
