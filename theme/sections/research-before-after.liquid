@@ -46,11 +46,23 @@
     align-items: center;
   }
 
+  /* align-self: start is load-bearing, not tidying. Added by Claude Code, 2026-08-27.
+     .rba__row is align-items: stretch, so this box grew to the height of the copy card
+     beside it while its image stayed at its own square height. Every label is positioned
+     absolutely against THIS box, so on any block whose copy is long enough to stretch the
+     row, the result label was pushed off the bottom of the photograph and onto the page
+     background. Measured live before the fix: media 727px against a 649px image on acetyl
+     f1 and f2, putting the label 21px below the picture, and 736px against 649px on
+     glutathione f1, putting it 30px below. Blocks with shorter copy happened to escape,
+     which is why it survived since the section was built.
+     Only the MEDIA stops stretching; the copy card still does, so the two columns still
+     start level and the white card keeps filling the row as designed. */
   #shopify-section-{{ section.id }} .rba__media {
     position: relative;
     overflow: hidden;
     border-radius: var(--rounded-block, 8px);
     line-height: 0;
+    align-self: start;
   }
   #shopify-section-{{ section.id }} .rba__media img { width: 100%; height: auto; display: block; }
 
