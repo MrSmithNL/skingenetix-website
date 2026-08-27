@@ -637,6 +637,19 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    ⚠️ The claim above that `/pages/pdrn-research` shows `skingenetix-philosophy-research.jpg`
    is **stale** — the page returns 200 and no longer references that file. Re-check before
    acting on it.
+   🔴 **`/pages/acetyl-hexapeptide-8-research` — all three Key Findings blocks still on
+   placeholders**, and this is the largest unlanded job on the store: **fifteen waves and ~350
+   candidates generated across 2026-08-25/26, nothing chosen, nothing published.** f1/f2/f3 still
+   serve `…-acetyl-hexapeptide-8-serum.jpg`, `…-philosophy-research.jpg` and
+   `…-philosophy-quality.jpg`. The whole setup — target template (`page.research-argireline.json`,
+   **not** `page.research-acetyl-*`), the three studies and what each number claims, the honesty
+   rules, the wave-by-wave decision record, the reusable 16-step prompt skeleton, the
+   failure/negative table, supplier exclusions and the exact commands — is documented at
+   **`docs/clinical-trial-before-after-images.md`** (2026-08-27). Do not re-derive it.
+   Two honesty questions are open and have never been put to Malcolm: **An 2019 studied 52 Korean
+   women** while all casting since 2026-08-25 has been Caucasian, and all three trials measured the
+   **periorbital** region, so any forehead or mouth/chin frame shows a different site from the one
+   the number came from.
 4. 🟡 **Fold the runtime-injected banner configs into the scripts.** The three banners of
    2026-08-24/25 were built by injecting config into `extend-banner-canvas.py` and
    `publish-collection-banner-template.py` at import time, because a second session was
