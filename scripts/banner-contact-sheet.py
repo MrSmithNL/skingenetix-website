@@ -114,8 +114,75 @@ def build(slot_dir: Path, out: Path) -> bool:
     return True
 
 
+
+# --------------------------------------------------------------------------------------
+# Wave-level sheet. Added 2026-08-27 for the copper-peptide before/after round, which is
+# 96 slots x 3 suppliers: one sheet per slot would be 96 sheets, which is not a review, it
+# is a filing job. This lays a whole wave out as one grid instead — a row per woman, a
+# column per supplier — so the engines can be compared against each other on the same
+# casting at a glance, which is the actual decision being made.
+#
+# Still true, and still the reason the per-slot mode exists: a tile this size CANNOT judge
+# fine detail. Use this to shortlist on composition, pose difference and obvious honesty
+# failures, then open the shortlisted files at native pixels before choosing.
+# --------------------------------------------------------------------------------------
+WAVE_TILE_W = 640
+
+
+def build_wave_sheet(run_dir: Path, out: Path) -> bool:
+    slot_dirs = sorted(d for d in run_dir.iterdir() if d.is_dir() and not d.name.startswith("."))
+    rows_src = [(d.name, _shots(d)) for d in slot_dirs]
+    rows_src = [(n, sh) for n, sh in rows_src if sh]
+    if not rows_src:
+        return False
+
+    work = run_dir / ".wavesheet"
+    work.mkdir(exist_ok=True)
+    cols = max(len(sh) for _, sh in rows_src)
+
+    row_files = []
+    for r, (slot_name, shots) in enumerate(rows_src):
+        tiles = []
+        for c, sfile in enumerate(shots):
+            d = work / f"r{r:02d}c{c}.png"
+            # Supplier is the only part of the name that varies inside a row, but stamp
+            # the whole stem anyway: slot letters restart every wave, so a bare supplier
+            # name copied off a sheet names a different photograph in every other wave.
+            cap = sfile.stem.replace("'", "")
+            subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(sfile),
+                            "-vf", f"scale={WAVE_TILE_W}:{WAVE_TILE_W},"
+                                   f"drawtext=fontfile={FONT}:text='{cap}':x=12:y=10:"
+                                   f"fontsize=22:fontcolor=white:box=1:boxcolor=black@0.7:"
+                                   f"boxborderw=8",
+                            str(d)], check=True)
+            tiles.append(d)
+        while len(tiles) < cols:
+            pad = work / f"r{r:02d}c{len(tiles)}.png"
+            subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi",
+                            "-i", f"color=c=black:s={WAVE_TILE_W}x{WAVE_TILE_W}",
+                            "-frames:v", "1", str(pad)], check=True)
+            tiles.append(pad)
+
+        rf = work / f"row{r:02d}.png"
+        args = ["ffmpeg", "-loglevel", "error", "-y"]
+        for t in tiles:
+            args += ["-i", str(t)]
+        args += ["-filter_complex", f"hstack=inputs={len(tiles)}", str(rf)]
+        subprocess.run(args, check=True)
+        row_files.append(rf)
+
+    args = ["ffmpeg", "-loglevel", "error", "-y"]
+    for rf in row_files:
+        args += ["-i", str(rf)]
+    args += ["-filter_complex", f"vstack=inputs={len(row_files)}", str(out)]
+    subprocess.run(args, check=True)
+    return True
+
+
 def main():
-    run_dir = ROOT / sys.argv[1]
+    argv = [a for a in sys.argv[1:] if a != "--per-wave"]
+    per_wave = "--per-wave" in sys.argv
+    run_dir = ROOT / argv[0]
     if not run_dir.exists():
         sys.exit(f"not found: {run_dir}")
 
@@ -124,6 +191,15 @@ def main():
     # names, so naming sheets by slot alone made the second run silently overwrite
     # the first — nine candidates replaced by two, with no error and no clue.
     wave = re.sub(r"^\d{4}-\d{2}-\d{2}-(multi-)?", "", run_dir.name)
+
+    if per_wave:
+        out = DESKTOP / f"skingenetix-wave--{wave}.png"
+        if build_wave_sheet(run_dir, out):
+            print(f"  {wave} -> {out.name}")
+            subprocess.run(["open", str(out)])
+        else:
+            print(f"  {wave}: nothing to tile")
+        return
 
     made = []
     for slot_dir in sorted(p for p in run_dir.iterdir() if p.is_dir()):
