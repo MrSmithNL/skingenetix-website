@@ -92,6 +92,42 @@
       --text-color: {{ section.settings.text_color.rgb | default: settings.text_color.rgb }};
     }
 
+    /* ---- prev/next on the left and right edges, vertically centred on the cards ----------------
+       This is the theme's own `floating-controls-container` pattern, not a new one: theme.css
+       already gives `.floating-controls-container .circle-button` `position: absolute` and
+       `top: calc(50% - 24px)`, and places the first button at `left: var(--spacing-5)` and the
+       last at `right: var(--spacing-5)` — with the four `:lang()` variants that flip them for
+       right-to-left locales, which matters here because nine are planned.
+
+       Two things about it have to be corrected, and both are why this block exists.
+
+       1. The container must wrap ONLY the track. `top: 50%` is 50% of the positioned ancestor, so
+          wrapping the whole `.scrollable-with-controls` would centre the buttons against the track
+          PLUS the progress bar beneath it, and they would sit low.
+       2. The theme reveals them on hover only —
+          `.floating-controls-container:hover .is-scrollable ~ .circle-button:not([disabled])`.
+          On a review carousel the controls are the only cue that there are twelve more cards, so
+          they are always on here. Note the theme's rule needs `is-scrollable` on the sibling track
+          or nothing appears, hover or not; the theme's own JS adds that class from real overflow.
+
+       Disabled is shown, not hidden: at the start the prev button greys out rather than vanishing,
+       so the pair does not jump into existence on the first click. */
+    #shopify-section-{{ section.id }} .floating-controls-container .is-scrollable ~ .circle-button {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    #shopify-section-{{ section.id }} .floating-controls-container .is-scrollable ~ .circle-button[disabled] {
+      opacity: 0.35;
+    }
+
+    /* Below 700px a card is 74vw, so an edge button would sit on top of the photograph. Touch
+       swipes the track anyway, and the progress bar still shows there is more. */
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .floating-controls-container > .circle-button { display: none; }
+    }
+
     #shopify-section-{{ section.id }} .rbac-card {
       background: {{ section.settings.card_background }};
       color: {{ section.settings.card_text_color }};
@@ -252,6 +288,7 @@
       <div class="scrollable-with-controls">
         {%- assign scroll_area_id = 'scroll-area-' | append: section.id -%}
 
+        <div class="floating-controls-container">
         <scroll-carousel id="{{ scroll_area_id }}" class="rbac-list scroll-area bleed md:unbleed {% if section.blocks.size > 3 %}is-scrollable{% endif %}">
           {%- for block in section.blocks -%}
             {%- liquid
@@ -392,14 +429,49 @@
           {%- endfor -%}
         </scroll-carousel>
 
+          {%- comment -%}
+            These are DIRECT SIBLINGS of the track and come after it, with no wrapper. Both the
+            theme's reveal rule and its left/right placement depend on it: the reveal is
+            `.is-scrollable ~ .circle-button`, a general sibling combinator, and the sides come
+            from `:first-of-type` / `:last-of-type` among the container's buttons. Wrap these two
+            in a div and they land in the middle, invisible. `aria-controls` is the whole wiring —
+            it is how the theme's prev-button / next-button elements find what they scroll.
+          {%- endcomment -%}
+          <button
+            is="prev-button"
+            class="circle-button circle-button--fill ring group"
+            aria-controls="{{ scroll_area_id }}"
+            disabled
+          >
+            <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
+            <span class="animated-arrow animated-arrow--reverse"></span>
+          </button>
+
+          <button
+            is="next-button"
+            class="circle-button circle-button--fill ring group"
+            aria-controls="{{ scroll_area_id }}"
+          >
+            <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
+            <span class="animated-arrow"></span>
+          </button>
+        </div>
+
         {%- comment -%}
           The scrollbar snippet carries `peer-not-scrollable:hidden`, so with three or fewer cards
           — which do not overflow — the arrows and progress bar hide themselves. That is the same
           gate `testimonials` uses, and it is why no block-count test is written here: a count is a
           proxy for the target and this store has twice shipped a bug from scoping on one.
         {%- endcomment -%}
+        {%- comment -%}
+          `show_buttons: false` — the prev/next pair now lives on the left and right edges of the
+          track, so rendering the snippet's own pair underneath would put two identical sets of
+          arrows on one carousel. The progress bar stays: it is the only thing that says how far
+          through fifteen cards you are, and it is the sole cue on mobile, where the edge buttons
+          are hidden.
+        {%- endcomment -%}
         {%- assign default_progress = 3.0 | divided_by: section.blocks.size -%}
-        {%- render 'scrollbar', observes: scroll_area_id, default_progress: default_progress, show_buttons: true -%}
+        {%- render 'scrollbar', observes: scroll_area_id, default_progress: default_progress, show_buttons: false -%}
       </div>
     </div>
   </div>

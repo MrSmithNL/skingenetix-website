@@ -66,6 +66,10 @@ The carousel is **not custom**. It is the theme's own machinery, assembled:
 - The star row is `{% render 'icon' with 'rating-star' %}`, the identical markup `testimonials`
   renders, so ratings match the rest of the store.
 - Breakpoints are copied from `testimonials`: 1 card below 700px, 2 to 1150px, 3 above.
+- The **left/right edge arrows** are the theme's `floating-controls-container` pattern, which
+  theme.css already positions absolutely at `top: calc(50% - 24px)` with `left`/`right:
+  var(--spacing-5)` — including four `:lang()` variants that flip the sides for right-to-left
+  locales, which matters with nine planned.
 
 Hairgenetix's equivalent component loads **Swiper 11 from jsDelivr**. Nothing external is loaded
 here.
@@ -183,6 +187,36 @@ a claim nobody has measured.
 `docs/reviews-content-to-supply.csv` is the fifteen rows for Malcolm to fill; it is generated from
 the deploy script's own `CARDS` list, so it cannot drift from what is live.
 
+## 6b. The edge arrows, added 2026-08-27
+
+Prev/next circle buttons sit on the left and right of the track, vertically centred, and the
+snippet's own pair below was turned off (`show_buttons: false`) so there is only one set. The
+progress bar stays — it is the only thing that says how far through fifteen cards you are, and on
+mobile it is the only cue at all, because the edge buttons are hidden below 700px where a 74vw
+card would sit under them.
+
+Three things had to be got right, and each fails silently:
+
+1. **The container must wrap only the track.** `top: 50%` resolves against the positioned
+   ancestor, so wrapping the whole `.scrollable-with-controls` centres the buttons against the
+   track *plus* the progress bar and they sit low.
+2. **The buttons must be direct siblings of the track, after it, with no wrapper.** The theme's
+   reveal rule is `.is-scrollable ~ .circle-button` — a sibling combinator — and the sides come
+   from `:first-of-type` / `:last-of-type` among the container's buttons. Wrapped in a div they
+   land in the middle and never show.
+3. **The theme reveals them on hover only.** On a review carousel the controls are the only cue
+   that twelve more cards exist, so they are always on here, and `disabled` is *shown* at 0.35
+   opacity rather than hidden — otherwise the prev button pops into existence on the first click.
+
+### Safari: no fallback is needed, contrary to an older note
+
+`is="prev-button"` is a customized built-in. A note in this project's memory said Safari does not
+support those and a plain click fallback was required. **That was out of date** — Safari has
+supported them since 16.4 (March 2023). Tested against the live page in Playwright WebKit 26.4:
+both buttons reported `constructor.name` of `PrevButton` / `NextButton`, disabled state tracked
+scroll position, and a click scrolled the track 0 → 456px, identical to Chromium. The memory has
+been corrected.
+
 ## 7. Two things caught during the build, both worth remembering
 
 **The whitespace-stripping Liquid tags ate the space** between the "Reviewing" prefix and the
@@ -220,6 +254,8 @@ Measured live 2026-08-27 after the fifteen-card deploy:
 | thumbnails + links | 15/15 | 15/15 |
 | stars / verified badges | 3 — only the cards that have a review | 3 |
 | carousel | `is-scrollable`, 6816 vs 1344, prev disabled, next live, both real `PrevButton`/`NextButton` | 4649 vs 390 |
+| edge arrows | 48×48, 20px from each edge, **0px from the vertical middle of the card**, click scrolls 0 → 456 | `display: none` by design |
+| edge arrows in WebKit 26.4 | identical to Chromium — upgraded, disabled-state correct, scrolls | — |
 
 Scope the label check **to the block, not the section** — `section.querySelector('img')` returns
 the first image for all fifteen cards and produces nonsense.
