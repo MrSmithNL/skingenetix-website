@@ -216,7 +216,14 @@ def luma(prompt, negative, w, h, n, refs, out_dir, stem):
                                               "Content-Type": "application/json"})
         gen = json.loads(urllib.request.urlopen(req, timeout=120).read())
         gid = gen.get("id")
-        for _ in range(60):
+        # 60 polls x 4s = 240s was not enough and quietly cost Luma its slot. This
+        # project has measured Luma at 392s for a single frame (2026-08-25), so a
+        # 4-minute budget times out mid-generation and raises "luma processing: None"
+        # — which reads exactly like a refusal or an adapter bug, when in fact the
+        # image was still being drawn. Luma is the slowest backend by a wide margin
+        # and that is a known trait, not an error, so the budget matches the trait:
+        # 180 x 4s = 12 minutes. Author: Claude Code, 2026-08-27.
+        for _ in range(180):
             time.sleep(4)
             r = urllib.request.Request(f"{base}/generations/{gid}",
                                        headers={"Authorization": f"Bearer {key}"})
@@ -224,6 +231,12 @@ def luma(prompt, negative, w, h, n, refs, out_dir, stem):
             if st.get("state") in ("completed", "failed"):
                 break
         if st.get("state") != "completed":
+            # Say which of the two it was. "luma processing: None" is a timeout dressed
+            # up as a failure and sent a session hunting for a content refusal that had
+            # not happened.
+            if st.get("state") not in ("failed",):
+                raise RuntimeError(f"luma TIMED OUT after 720s still in state "
+                                   f"'{st.get('state')}' — not a refusal, just slow")
             raise RuntimeError(f"luma {st.get('state')}: {str(st.get('failure_reason'))[:160]}")
         out.append(_save(_fetch(st["output"][0]["url"]), out_dir, stem, i))
     return out
