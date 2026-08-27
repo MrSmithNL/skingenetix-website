@@ -1,0 +1,81 @@
+{
+  "_note": "Homepage 'Formulated with' credential bar. Replaces the fabricated press bar Malcolm asked to reactivate: the five Vogue/Forbes/Elle/Bazaar/Cosmopolitan wordmarks on templates/product.json claim coverage the brand has not had (flagged in docs/todo.md:353 and docs/visual-identity/02-inventory-and-gaps.md:147). Same logo-list section, same black-and-white bar, but naming the branded actives the products genuinely contain. Swap to real press logos the moment there is real press.",
+  "template": "templates/index.json",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "formulated_with",
+      "insert_after": "serums_collection",
+      "section": {
+        "type": "logo-list",
+        "blocks": {
+          "tech_pdrn": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-pdrn-bw.png",
+              "logo_width": 70,
+              "link": "/products/pdrn-renewal-serum"
+            }
+          },
+          "tech_matrixyl": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-matrixyl-3000-bw.png",
+              "logo_width": 200,
+              "link": "/products/matrixyl-3000-hyaluronic-acid-collagen-serum"
+            }
+          },
+          "tech_acetyl": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-acetyl-hexapeptide-8-bw.png",
+              "logo_width": 290,
+              "link": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum"
+            }
+          },
+          "tech_ghkcu": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-ghk-cu-bw.png",
+              "logo_width": 100,
+              "link": "/products/copper-peptide-ghk-cu-renewal-serum"
+            }
+          },
+          "tech_glutathione": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-glutathione-bw.png",
+              "logo_width": 170,
+              "link": "/products/glutathione-brightening-serum"
+            }
+          }
+        },
+        "block_order": [
+          "tech_pdrn",
+          "tech_matrixyl",
+          "tech_acetyl",
+          "tech_ghkcu",
+          "tech_glutathione"
+        ],
+        "custom_css": [
+          ".section {padding-block-start: 34px; padding-block-end: 38px;}"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_mobile": true,
+          "title": "Formulated With",
+          "content": "",
+          "text_alignment": "center",
+          "items_per_row": 5,
+          "background": "#f7f7f7",
+          "background_gradient": "",
+          "text_color": "#8a8a8a",
+          "heading_color": "#8a8a8a",
+          "heading_gradient": "",
+          "logo_item_background": "#f7f7f7",
+          "logo_item_border": ""
+        }
+      }
+    }
+  ]
+}

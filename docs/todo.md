@@ -350,8 +350,49 @@ looked like a broken block twice.
    research-page banners, two of which still borrow another page's image.
 3. 🟡 **Before/after images** — two files carry the results claim across ~30 slots,
    provenance unconfirmed.
-4. 🟡 **Press logos** — Vogue/Forbes/Elle/Bazaar/Cosmopolitan under "featured in".
+4. 🔴 **Press logos are live on all 11 product pages, not dormant.** Section `featured_in`
+   (`logo-list`) on `templates/product.json` shows Vogue / Forbes / Elle / Harper's Bazaar /
+   Cosmopolitan under "featured in". Every product carries an empty `templateSuffix`, so all
+   eleven render it. Measured live 2026-08-27 on `/products/pdrn-renewal-serum`: 128px tall,
+   five images served. The five files are typed grey serif wordmarks, not the real mastheads —
+   which is the only reason it currently reads as a theme placeholder rather than a claim.
+   **Malcolm to confirm whether any coverage is real; otherwise remove the section.** Do not
+   swap in the genuine mastheads — that converts a placeholder into a false endorsement.
 5. 🟢 Remaining pages unstyled: collections, products, concern pages, research pages.
+
+### ✅ Homepage "Formulated With" credential bar — 2026-08-27
+
+Malcolm asked to reactivate the "in the news" bar on the homepage and upgrade its placeholders to
+real logos in black and white. Two things were not as expected: the bar was on the **product**
+template, not the homepage (and enabled, see follow-up 4 above), and no homepage backup since
+21 Aug has ever held a `logo-list` — so this was an addition, not a reactivation.
+
+Shipped instead: a new `formulated_with` (`logo-list`) section on `templates/index.json`, inserted
+after `serums_collection`, naming the branded actives the products genuinely contain — PDRN,
+MATRIXYL® 3000, ACETYL HEXAPEPTIDE-8, GHK-Cu, GLUTATHIONE — each linked to its product. Same
+black-and-white credential-bar look, nothing that cannot be backed up. Swap to real press logos
+the moment there is real press.
+
+**Assets.** Five transparent PNG wordmarks set in Mulish 300, `#1a1a1a`, 0.14em tracking, rendered
+headless at 120px canvas height: `skingenetix-tech-{pdrn,matrixyl-3000,acetyl-hexapeptide-8,ghk-cu,
+glutathione}-bw.png`. Uploaded as **PNG**, not JPEG — `scripts/upload-theme-images.py` force-converts
+to JPEG, which would put a white box behind every transparent wordmark. A few KB each, so the
+rule-5 compression argument does not apply.
+
+**Plans.** `configs/banners/homepage-formulated-with-bar.json` (v1, insert) and
+`homepage-formulated-with-bar-v2.json` (v2, whole-section rewrite with the final CSS).
+
+**Verified live** at 1440 / 900 / 390 / 360: all five wordmarks render at identical height in every
+band — 22px, 19px, 15px, 15px. Below 700px the theme forces 2 per row, so the five land 2-2-1 with
+the last item orphaned; grid behaviour, not a sizing fault, but worth a look.
+
+**Two traps, both now in memory.** `custom_css` is a **top-level section key, a sibling of
+`settings`** — routing it through `patch-template.py`'s `setting_updates` succeeds, prints
+`custom_css = [4 rule(s)]`, and silently does nothing. And `logo_width` in `logo-list` is a
+*maximum*, not a size: the theme clamps each image to its grid cell, so the longest wordmark
+renders the **smallest** — `ACETYL HEXAPEPTIDE-8` came back 20px against its neighbours' 27-29px.
+Size a logo bar with a uniform CSS `height` per breakpoint, never by per-block `logo_width`.
+(`logo_width` also has `"step": 10`; a value like 196 is a 422.)
 
 **Removed this session:** a section headed "Hear From Our Customers" on the fallback product
 template, holding three invented video testimonials that all pointed at a **Hairgenetix

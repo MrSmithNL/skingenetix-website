@@ -1,0 +1,87 @@
+{
+  "_note": "Second pass on the homepage 'Formulated with' bar, as a full in-place section replacement. Two faults measured on the live page at 1440px: (1) the grid cell is 250px with 16px item padding, so 218px was the real ceiling and ACETYL HEXAPEPTIDE-8 was clamped to it, rendering 20px tall against its neighbours' 27-29px; (2) the heading inherits h2/48px Fraunces and shouts over the wordmarks it introduces. NOTE the trap this file exists to work around: `custom_css` is a TOP-LEVEL key of a section, a sibling of `settings`, not a member of it. Sending it through patch-template.py's `setting_updates` writes it inside `settings`, where Shopify ignores it — the push succeeds, the logo_width changes land, and the CSS silently does not. Only a whole-section write puts it in the right place.",
+  "template": "templates/index.json",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "formulated_with",
+      "insert_after": "serums_collection",
+      "section": {
+        "type": "logo-list",
+        "blocks": {
+          "tech_pdrn": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-pdrn-bw.png",
+              "logo_width": 60,
+              "link": "/products/pdrn-renewal-serum"
+            }
+          },
+          "tech_matrixyl": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-matrixyl-3000-bw.png",
+              "logo_width": 160,
+              "link": "/products/matrixyl-3000-hyaluronic-acid-collagen-serum"
+            }
+          },
+          "tech_acetyl": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-acetyl-hexapeptide-8-bw.png",
+              "logo_width": 240,
+              "link": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum"
+            }
+          },
+          "tech_ghkcu": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-ghk-cu-bw.png",
+              "logo_width": 80,
+              "link": "/products/copper-peptide-ghk-cu-renewal-serum"
+            }
+          },
+          "tech_glutathione": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/skingenetix-tech-glutathione-bw.png",
+              "logo_width": 140,
+              "link": "/products/glutathione-brightening-serum"
+            }
+          }
+        },
+        "block_order": [
+          "tech_pdrn",
+          "tech_matrixyl",
+          "tech_acetyl",
+          "tech_ghkcu",
+          "tech_glutathione"
+        ],
+        "custom_css": [
+          ".section {padding-block-start: 30px; padding-block-end: 34px;}",
+          ".prose h2 {font-family: var(--text-font-family); font-size: 11px; font-weight: 400; letter-spacing: 0.26em; text-transform: uppercase; color: #8a8a8a; margin-block-end: 0;}",
+          ".logo-list__item {padding: 0;}",
+          ".logo-list {column-gap: 12px; align-items: center;}",
+          ".logo-list__image {width: auto; height: 22px; max-width: 100%;}",
+          "@media screen and (max-width: 999px) {.logo-list__image {height: 19px;}}",
+          "@media screen and (max-width: 699px) {.logo-list__image {height: 15px;}}"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_mobile": true,
+          "title": "Formulated With",
+          "content": "",
+          "text_alignment": "center",
+          "items_per_row": 5,
+          "background": "#f7f7f7",
+          "background_gradient": "",
+          "text_color": "#8a8a8a",
+          "heading_color": "#8a8a8a",
+          "heading_gradient": "",
+          "logo_item_background": "#f7f7f7",
+          "logo_item_border": ""
+        }
+      }
+    }
+  ]
+}
