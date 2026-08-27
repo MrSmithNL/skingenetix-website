@@ -1,0 +1,27 @@
+{
+  "note": "skin-repair-renewal routine: steps 2, 3 and 4 each get their own product image. Blocks located by title, not by hardcoded id.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "routine",
+      "block": "step2",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-pdrn-skin-repair-serum-model-applying-with-dropper.jpg"
+      }
+    },
+    {
+      "section": "routine",
+      "block": "step3",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-serum-model-applying-with-dropper.jpg"
+      }
+    },
+    {
+      "section": "routine",
+      "block": "step4",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-pdrn-collagen-repair-cream-applying-to-cheek-close-up.jpg"
+      }
+    }
+  ]
+}
