@@ -105,3 +105,30 @@ Two things this page added to the recipe:
 
 Delivered as a `liquid` block inside the section (`configs/banners/page-acetyl-research-pin-right.json`, pushed with `scripts/patch-template.py`), so `{{ section.id }}` resolves at render time. A `custom-html` section would 422 on the Liquid, and a hardcoded template id goes stale silently — `/pages/brightening-glow` still carries one that matches nothing.
 
+
+## ADR-006: A `custom-html` Style Section Is Never Placed Mid-Order
+
+**Date:** 2026-08-27
+**Status:** Accepted
+**Context:** On `/pages/the-science`, "Our Evidence Standard" sat flush against the bottom of the hero banner with no gap, while the equivalent section on every other page had a normal 80px above it. The section's own settings were not the fault: `research_standard` computed `padding-top: 0px` against a normal `padding-bottom: 80px`, and its siblings — `/pages/acetyl-hexapeptide-8-research` `overview`, `/pages/skin-repair-renewal` `content`, and the same page's `ingredients_overview` — all read 80/80.
+
+The cause was a `custom-html` section named `hero_banner_css` holding the hero's injected `<style>`, sitting in the section order **between** the hero and `research_standard`. The theme's `section-spacing-collapsing` snippet emits
+
+```
+#shopify-section-<id> + * { --previous-section-background-hash: <hash> }
+```
+
+so whatever section physically precedes another becomes its "previous section" for the collapse test. A `custom-html` section has no background, so its hash is `0`; `research_standard` has no background either, so its hash is `0`; the two matched and the theme collapsed the top padding — behaving exactly as designed, on a section the designer never intended to be there. On every other page nothing sits in that gap, so `--previous-section-background-hash` is never set, the test fails, and the padding survives. Note the hero itself never emits the rule: `image-with-text-overlay` renders the snippet only `{%- unless section.settings.full_width -%}`, and these heroes are all full width.
+
+**Decision:** Injected CSS goes in a **`liquid` block inside the section it styles**. Where a standalone `custom-html` section is genuinely needed, it is appended at the **end of the section order**, never inserted mid-page. `hero_banner_css` was deleted and its CSS moved into a `hero_css` block (`configs/banners/page-science-hero-css-into-block.json`).
+
+**Rationale:**
+
+- A zero-height section is not a zero-effect section. It is still a sibling, and the theme's spacing model is built on sibling adjacency.
+- The block form also fixes scoping. The old CSS was scoped by **class** (`.shopify-section--image-with-text-overlay`), and this page carries two sections of that type, so the hero's rules were also landing on the `transparency` band — which was only keeping its own look because its `transparency_css` block scores (1,1,1) on ID against the class rule's (0,2,1).
+
+**Consequences:**
+
+- **Audited all 32 JSON templates for the same pattern.** `/pages/the-science` was the only instance. Every other injected style section (`banner_text_width` on ten collection templates, `concern_tile_scrim` on the homepage, `hero_image_position`, `faq_image_layout`, `banner_crop_anchor`, `intro_image_position`, `concern_overlay_css`) is **last in its section order** or followed only by another `custom-html`, so none of them collapses anything visible. `page.research-copper-peptide.json` has `hero_banner_css` mid-order but the section after it carries a background, so its hash differs and it never collapsed.
+- **A `liquid` block brings its own 8px cost, which must be paid back.** The theme renders the block as `<div {{ block.shopify_attributes }}>…</div>` inside `.prose`, and that empty div takes a gap in the text stack — enough to push a vertically-centred hero heading up by 8px (301 → 293 on the-science; 334 → 326 on the acetyl page). Add `#shopify-section-{{ section.id }} .prose > div:has(> style) { display: none; }` to the block's own CSS. The `<style>` inside still applies: `display` does not affect the CSSOM.
+- Verified by full-page pixel diff at 390 and 1440. Above the gap the only changed rows are the rotating announcement bar; below it, once shifted by the 80px (40px on mobile) that was added, the page is identical to the pixel.
