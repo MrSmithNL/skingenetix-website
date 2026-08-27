@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'routine' (multi-column), block 'step2'",
+  "decided_by": "Malcolm, 2026-08-27: 'replace the 2. Acetyl Hexapeptide-8 Serum image with this one: acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_applying_to_cheekbone_2_skingenetix.png' from assets/ai-generated/2026-08-21-acetyl-hexapeptide-8-serum/run-01.",
+  "note": "Replaces skingenetix-howto-step2-serum.jpg on step 2 of the four-step routine with a macro of the dropper laying serum along a cheekbone.\n\nTHE BLOCK IS `step2` IN THE `routine` SECTION, not one of the media-with-text explainer rows. The heading '2. Acetyl Hexapeptide-8 Serum' appears nowhere in the rendered block ids, so the section was read off the live template through the Admin API rather than guessed: routine is a multi-column with block_order step1..step4, and step2 is the one that carries this heading.\n\nWORTH KNOWING, AND DELIBERATELY NOT FIXED HERE: **step2 and step3 currently point at the SAME FILE** \u2014 skingenetix-howto-step2-serum.jpg serves both '2. Acetyl Hexapeptide-8 Serum' and '3. Matrixyl 3000 Serum', so the two tiles render identically today. This change repoints step2 only, which is what was asked. step3 keeps the shared file and still wants its own picture; it is now the only tile using it.\n\nSQUARE, MATCHING ITS SIBLINGS. All four routine tiles are square \u2014 the three others are 1024x1024 naturals \u2014 and this master is 2048x2048, so the row stays even and nothing reflows. A non-square tile here would break the run of four.\n\nNO PRODUCT IN FRAME, SO NO LABEL CHECK APPLIES. The shot is a macro of skin, a glass dropper and the serum itself; there is no bottle, no carton and no branding to verify. Two things were checked instead: the serum reads CLEAR AND COLOURLESS rather than the milky white this store's serum renders default to when nothing specifies the liquid, and the skin is clean and even with no blemish or redness.\n\nAN UNMARKED FILE, CHOSEN BY NAME. Unlike the FAQ frame published earlier today, this source carries no leading underscore \u2014 it is not one of Malcolm's marked keepers. He named it explicitly, so it is his pick regardless of the mark. Read in place, neither renamed nor moved; the JPEG for upload went to its own publish-ready folder.\n\nNEW FILENAME, NEVER A RE-UPLOAD: Shopify Files suffixes a name collision and keeps serving the original. Checked against every live acetyl stem \u2014 ...anti-wrinkle-serum-fine-lines, ...anti-wrinkle-serum-fine-lines-face-mobile, ...expression-lines-serum-applying-dropper, and ...anti-wrinkle-serum-dropper-model-face uploaded earlier today. All of them continue 'anti-wrinkle-' or 'expression-' after the product, where this one continues 'serum-', so no stem is a prefix of another. This matters because the uploader binds by prefix while polling, and note that the live pair ...fine-lines and ...fine-lines-face-mobile is exactly the prefix relationship that has bound two slots to one image on this repo before.\n\nOPTIMISED, NOT COMPRESSED. 2048x2048 is under the 3000px cap the theme's srcset tops out at, so it goes up at native size with EXIF and ICC stripped, quality 95 at 4:4:4. Re-encoding harder was measured on this store on 2026-08-24 and made pages marginally slower, because the CDN transcodes to WebP and reproducing JPEG artefacts costs bits.\n\nTHE OUTGOING FILE STAYS UPLOADED and is still referenced by step3, so it must not be deleted or renamed under any circumstances.",
+  "images": [
+    {
+      "slot": "flw_step2",
+      "source": "assets/publish-ready/page-fine-lines-routine/skingenetix-acetyl-hexapeptide-8-serum-dropper-applying-to-cheekbone.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-serum-dropper-applying-to-cheekbone.jpg",
+      "alt": "Close-up of a glass dropper laying a trail of clear Skingenetix Acetyl Hexapeptide-8 serum along a cheekbone, beneath the eye",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-serum-dropper-applying-to-cheekbone.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-serum-dropper-applying-to-cheekbone.jpg?v=1787834387"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "routine",
+      "block": "step2",
+      "slot": "flw_step2",
+      "setting": "image"
+    }
+  ]
+}
