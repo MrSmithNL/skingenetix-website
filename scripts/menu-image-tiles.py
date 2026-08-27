@@ -52,31 +52,43 @@ CROP = "?width=560&height=560&crop=center"
 
 # href -> image file. The href is matched with $= so a locale-prefixed URL
 # (/de/pages/...) still matches once more languages are published.
+# Malcolm's picks, 2026-08-27. Two rules run through them: Skin Solutions reuses
+# the SAME masters as the homepage `skin_concerns` tiles so the two surfaces agree,
+# and Scientific Research reuses the per-ingredient research squares from
+# `page.science.json` → `ingredients_overview`. Everything here is already square,
+# so the CDN crop takes nothing off the subject.
 TILES = {
-    # Skin Solutions
+    # --- Skin Solutions: the homepage solution tiles (templates/index.json →
+    # `skin_concerns`), so the menu and the homepage show the same picture.
     "/pages/fine-lines-wrinkles": "skingenetix-concern-fine-lines-wrinkles-2026.jpg",
-    # Was skingenetix-concern-firming-density.jpg — a teal bottle that is not a
-    # Skingenetix product, and the odd one out in a row of four skin shots.
-    "/pages/firming-skin-density": "skingenetix-collection-banner-firming.jpg",
-    "/pages/skin-repair-renewal": "skingenetix-home-concern-skin-repair.jpg",
-    # Was skingenetix-concern-brightening-glow.jpg — marketing typography baked
-    # into the photograph ("...Your Inner Radiance"), which fights the tile label.
-    "/pages/brightening-glow": "skingenetix-brightening-glow-radiant-luminous-skin-close-up.jpg",
-    # Scientific Research
-    "/pages/copper-peptide-research": "skingenetix-research-copper-peptide-banner.jpg",
-    "/pages/matrixyl-3000-research": "skingenetix-research-matrixyl-banner.jpg",
-    "/pages/acetyl-hexapeptide-8-research": "skingenetix-research-argireline-banner.jpg",
+    "/pages/firming-skin-density": "skingenetix-skin-firming-density-peptide-treatment.jpg",
+    "/pages/skin-repair-renewal": "skingenetix-concern-skin-repair-renewal-2026.jpg",
+    # The one deliberate departure from the homepage set: Malcolm picked this frame
+    # off the options sheet rather than the homepage's brightening-glow-2026 tile.
+    "/pages/brightening-glow": "skingenetix-brightening-glow-luminous-radiant-complexion-close-up.jpg",
+
+    # --- Scientific Research: the key-ingredient research squares already used on
+    # /pages/the-science. All five are 1400px+ square masters.
+    "/pages/copper-peptide-research": "skingenetix-copper-peptide-ghk-cu-fibroblast-collagen-matrix.jpg",
+    "/pages/matrixyl-3000-research": "skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg",
+    "/pages/acetyl-hexapeptide-8-research": "skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg",
     "/pages/pdrn-research": "skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg",
     "/pages/glutathione-research": "skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg",
-    # Discover
-    "/pages/the-science": "skingenetix-science-pillar-banner.jpg",
-    "/pages/ingredients": "skingenetix-ingredients-page-banner.jpg",
-    "/pages/our-philosophy": "skingenetix-philosophy-hero-banner.jpg",
-    # Support
+
+    # --- Discover
+    # The microscope frame that was the Discover mega menu's own promo image before
+    # this rebuild — Malcolm asked for it back.
+    "/pages/the-science": "skingenetix-menu-scientific-research-2026-v3.jpg",
+    "/pages/ingredients": "skingenetix-copper-peptide-ghk-cu-blue-crystals-laboratory.jpg",
+    "/pages/our-philosophy": "skingenetix-philosophy-quality-cream-texture-macro-swirl.jpg",
+
+    # --- Support
     "/pages/faq": "skingenetix-skincare-faq-questions-answered-mobile.jpg",
-    # No purpose-made contact photograph exists. skingenetix-contact-banner.jpg is
-    # unusable: the generation brief is printed across it and it shows an
-    # unbranded competitor-looking bottle.
+    # STAND-IN. No purpose-made contact photograph exists yet — a dermatologist
+    # two-shot batch is being generated (configs/banners/menu-contact-dermatologist.json).
+    # skingenetix-contact-banner.jpg, the only file named for the job, is unusable:
+    # the generation brief is printed across it and it shows an unbranded
+    # competitor-looking bottle.
     "/pages/contact": "skingenetix-copper-peptide-day-gel-cream-bathroom-vanity.jpg",
     "/pages/shipping-returns": "skingenetix-skincare-order-packed-white-shipping-box.jpg",
 }
