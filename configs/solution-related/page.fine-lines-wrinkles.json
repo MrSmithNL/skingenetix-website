@@ -1,0 +1,26 @@
+{
+  "note": "Related Skin Solutions: current-label bottle-and-carton pack shots, plus an explicit empty `content` \u2014 the key was absent, so Impact fell back to its schema default and printed 'Organize content into multiple columns...' live on the page.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "related",
+      "settings": {
+        "content": ""
+      }
+    },
+    {
+      "section": "related",
+      "block": "r2",
+      "settings": {
+        "image": "shopify://shop_images/pdrn_skin_repair_deep_renewal_face_serum_product_and_box_angled_6_skingenetix.jpg"
+      }
+    },
+    {
+      "section": "related",
+      "block": "r3",
+      "settings": {
+        "image": "shopify://shop_images/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg"
+      }
+    }
+  ]
+}
