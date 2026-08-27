@@ -386,14 +386,25 @@ looked like a broken block twice.
    research-page banners, two of which still borrow another page's image.
 3. 🟡 **Before/after images** — two files carry the results claim across ~30 slots,
    provenance unconfirmed.
-4. 🔴 **Press logos are live on all 11 product pages, not dormant.** Section `featured_in`
-   (`logo-list`) on `templates/product.json` shows Vogue / Forbes / Elle / Harper's Bazaar /
-   Cosmopolitan under "featured in". Every product carries an empty `templateSuffix`, so all
-   eleven render it. Measured live 2026-08-27 on `/products/pdrn-renewal-serum`: 128px tall,
-   five images served. The five files are typed grey serif wordmarks, not the real mastheads —
-   which is the only reason it currently reads as a theme placeholder rather than a claim.
-   **Malcolm to confirm whether any coverage is real; otherwise remove the section.** Do not
-   swap in the genuine mastheads — that converts a placeholder into a false endorsement.
+4. ✅ **Press logos — deactivated store-wide 2026-08-27, on Malcolm's instruction.** Section
+   `featured_in` (`logo-list`) carried Vogue / Forbes / Elle / Harper's Bazaar / Cosmopolitan
+   under "featured in". It was **live, not dormant**: `templates/product.json` held the five
+   press images and every product carries an empty `templateSuffix`, so all eleven rendered it
+   (measured 128px tall on `/products/pdrn-renewal-serum` before the change). A scan of all 60
+   theme JSON assets found `featured_in` on **ten** product templates, not one — the nine
+   suffixed ones were headed "Featured In" with no images, unassigned today but ready to
+   resurface the claim the moment a product pointed at them.
+   All ten now carry `"disabled": true` via `scripts/toggle-section.py featured_in --disable`.
+   **Nothing was deleted** — blocks, images and settings are intact, so `--enable` restores it
+   untouched. Verified live across all 11 product pages: zero `skingenetix-press-*` images
+   served, no `featured_in` node in the DOM.
+   Still open: the five `skingenetix-press-*.png` files remain in Shopify Files (deleting a
+   Shopify File is a stop condition). If real coverage ever exists, rebuild with the genuine
+   mastheads *linked to the articles* — never swap them into a bar that claims coverage the
+   brand has not had.
+   ⚠️ Not touched, and not the same thing: `standards` on `templates/page.philosophy.json` is a
+   separate `logo-list` holding EU Cosmetics and GMP badges under "Certified Quality Standards".
+   Whether those two certifications are earned is its own unanswered question.
 5. 🟢 Remaining pages unstyled: collections, products, concern pages, research pages.
 
 ### ✅ Homepage "Formulated With" credential bar — 2026-08-27
