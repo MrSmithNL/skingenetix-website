@@ -28,6 +28,35 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+#: The credential file this script's own usage line tells you to `source` contains bare
+#: `KEY=value` lines with no `export`, so sourcing it creates SHELL parameters and not
+#: environment variables — and a child python process inherits nothing. Every supplier
+#: that reads os.environ therefore dies instantly with "no GEMINI_API_KEY" / KeyError,
+#: while Luma keeps working because it falls back to ~/.config/luma/api-key. On
+#: 2026-08-27 that turned a six-supplier run into a one-supplier run with no visible
+#: error: python block-buffers stdout through a pipe, so the five failures printed
+#: nothing until the process exited, and a run failing 5/6 looks exactly like a run
+#: that is merely slow. Reading the file here rather than trusting the shell makes the
+#: documented invocation correct instead of silently wrong.
+#: Author: Claude Code, 2026-08-27.
+CRED_FILE = Path.home() / ".claude" / "config" / "image-credentials.env"
+
+
+def _load_credentials():
+    """Fill any missing key from the central credential file. Never overwrites a real
+    environment variable, so an explicitly exported key still wins."""
+    if not CRED_FILE.exists():
+        return
+    for line in CRED_FILE.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        k, v = k.strip().removeprefix("export "), v.strip().strip('"').strip("'")
+        if v and not os.environ.get(k):
+            os.environ[k] = v
+
+
 #: Long edge each supplier can actually deliver, measured not documented.
 #: Seedream reaches 4096; FLUX.2 and gpt-image cap at 2048; Gemini tiers by name.
 SUPPLIERS = ["seedream", "gpt_image", "nbp_pro", "nbp_flash", "flux2", "luma"]
@@ -212,6 +241,7 @@ def main():
     ap.add_argument("--candidates", type=int, default=2)
     args = ap.parse_args()
 
+    _load_credentials()
     cfg = json.loads((ROOT / args.config).read_text())
     slots = cfg["slots"]
     if args.only:
@@ -224,25 +254,36 @@ def main():
         neg = ", ".join(x for x in (cfg["defaults"].get("negative_global"),
                                     slot.get("negative_extra")) if x)
         refs = [str(ROOT / r) for r in slot.get("ref_files") or []]
-        print(f"\n{'=' * 62}\n{slot['id']} — {slot['width']}x{slot['height']}")
+        # flush= on every line below: this runs for the best part of an hour and is
+        # almost always piped to tee or a log, where python block-buffers stdout and
+        # nothing appears until the process exits. A supplier that fails in the first
+        # minute has to say so in the first minute, or the run cannot be rescued.
+        print(f"\n{'=' * 62}\n{slot['id']} — {slot['width']}x{slot['height']}", flush=True)
         for sup in want:
             if sup == "flux2" and refs:
-                print(f"  {sup:<10} skipped (barred from reference shots)")
+                print(f"  {sup:<10} skipped (barred from reference shots)", flush=True)
                 continue
             t0 = time.time()
             try:
                 paths = FNS[sup](slot["prompt"], neg, slot["width"], slot["height"],
                                  args.candidates, refs, out_root / slot["id"],
                                  f"{slot['id']}-{sup}")
-                print(f"  {sup:<10} {len(paths)} in {time.time() - t0:.0f}s")
+                print(f"  {sup:<10} {len(paths)} in {time.time() - t0:.0f}s", flush=True)
                 manifest += [{"slot": slot["id"], "supplier": sup, "path": str(p)} for p in paths]
             except Exception as e:                                # noqa: BLE001
-                print(f"  {sup:<10} FAILED: {str(e)[:170]}")
+                print(f"  {sup:<10} FAILED: {str(e)[:170]}", flush=True)
                 manifest.append({"slot": slot["id"], "supplier": sup, "error": str(e)[:300]})
     out_root.mkdir(parents=True, exist_ok=True)
     (out_root / "manifest.json").write_text(json.dumps(manifest, indent=2))
     ok = sum(1 for m in manifest if m.get("path"))
-    print(f"\n{ok} images across {len(want)} suppliers -> {out_root.relative_to(ROOT)}")
+    print(f"\n{ok} images across {len(want)} suppliers -> {out_root.relative_to(ROOT)}", flush=True)
+    # Rule 1 of website-imagery.md is that every image goes to every supplier. A run
+    # that quietly lost half its backends still prints a cheerful image count, which is
+    # how five silent failures survived a whole wave — so name them at the end too.
+    lost = sorted({m["supplier"] for m in manifest if m.get("error")})
+    if lost:
+        print(f"WARNING: {len(lost)} supplier(s) returned nothing — {', '.join(lost)}",
+              flush=True)
 
 
 if __name__ == "__main__":
