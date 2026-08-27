@@ -1,0 +1,30 @@
+{
+  "note": "our-philosophy science_story: the three text panels rendered black because `background` and `text_color` were ABSENT, so Impact fell back to its dark default - nobody chose it. Set explicitly to the same white/#333 the research pages' media-with-text blocks use. The impact_numbers and cta bands are left dark on purpose: those are full-width brand bands used site-wide.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "science_story",
+      "block": "story_1",
+      "settings": {
+        "background": "#ffffff",
+        "text_color": "#333333"
+      }
+    },
+    {
+      "section": "science_story",
+      "block": "story_2",
+      "settings": {
+        "background": "#ffffff",
+        "text_color": "#333333"
+      }
+    },
+    {
+      "section": "science_story",
+      "block": "story_3",
+      "settings": {
+        "background": "#ffffff",
+        "text_color": "#333333"
+      }
+    }
+  ]
+}
