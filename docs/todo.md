@@ -48,6 +48,52 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 PHOTO-CPBA-001 — Copper-peptide before/after round: 96 diptychs (2026-08-27)
+
+**In progress.** Malcolm's brief: 3 shot types x 4 concerns (fine lines, firming, repair,
+brightening) x 8 amateur women aged 40-60 = **96 before/after diptychs**, generating across
+seedream / gpt_image / nbp_flash. Builder
+`scripts/build-copper-peptide-before-after-configs.py` emits twelve configs
+`configs/banners/block-copper-peptide-ba-<concern>-<shot>.json`.
+
+Full write-up, including the two faults this round fixes and the one it cannot:
+`docs/clinical-trial-before-after-images.md` §11.
+
+**What this round changed:** camera height, tilt, head-turn degree, distance and
+position-in-frame are now stated separately per panel — the old skeleton applied one crop
+paragraph to both panels, which is why earlier pairs read as one photo retouched twice. The
+side of the face is locked within a pair (left cheek in one panel and right in the other
+compares two different areas of skin and proves nothing). Gaze subtle on all, noticeably
+different on 30%.
+
+**Outstanding — 🔴 High**
+
+- **Malcolm has not picked anything yet.** Contact sheets per wave still to be built and shown.
+- **Shot types must be cropped in post.** All three engines returned head-and-shoulders
+  portraits for both the skin-macro and the part-of-face crops — eight engine-runs across two
+  brief families now say a tight crop cannot be briefed on a face. Each panel needs its OWN
+  crop box, because the two panels deliberately sit at different distances.
+- **Seedream broke four honesty guards on the smoke test** — mascara appeared in the after
+  panel, cheek moles vanished, she read younger. Kept in the round on Malcolm's call; its
+  candidates must be checked against the honesty table before any shortlisting.
+
+**Outstanding — 🟡 Medium**
+
+- Which page blocks these land in is **undecided**. The copper-peptide page's f1 (Pickart
+  2018, literature review) and f2 (Kang 2009, cultured keratinocytes — no human subject) are
+  mechanism findings; only f3 (Miller 2006) is a human trial. Putting a face beside a
+  petri-dish study is the claim `docs/clinical-trial-before-after-images.md` §2 warns against.
+- The `brightening` batch cannot take "different lighting for each before and after" in full:
+  colour temperature and exposure must MATCH between the halves or the tone comparison is
+  corrupted (§10). Direction still varies. Flagged to Malcolm 2026-08-27.
+- `firming` substitutes a jaw-and-neck crop for its macro shot, because a cheek macro has no
+  contour in it and firmness is contour.
+
+Undo: nothing is published. Output lives in
+`assets/ai-generated/2026-08-22-multi-block-copper-peptide-ba-*/`; the nine images made under
+the superseded first brief were moved to
+`assets/ai-generated/superseded-oldbrief-20260827/`, not deleted.
+
 ### 🔄 NAV-001 — Main-menu image tiles (2026-08-27)
 
 **Shipped.** Every top-level dropdown except **Shop** now shows its sub-links as a centred row of

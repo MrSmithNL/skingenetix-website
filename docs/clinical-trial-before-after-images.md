@@ -292,6 +292,120 @@ freckles and sun spots are identity anchors and may not disappear.**
 
 ---
 
+---
+
+## 11. Reusing this for the copper-peptide round — 3 shot types x 4 concerns x 8 women
+
+Malcolm, 2026-08-27: a new batch for the copper-peptide clinical research, in three shot
+types across four concerns, eight amateur women each — **96 diptychs**. Builder:
+`scripts/build-copper-peptide-before-after-configs.py`, which emits twelve configs
+`configs/banners/block-copper-peptide-ba-<concern>-<shot>.json`, eight slots each.
+
+Age band moves to **40–60** (was 45–55) and the negative list is corrected to match. Every
+earlier config in this family carried `no woman over fifty-five`; left alone it would have
+fought the casting on more than a third of the slots.
+
+### The structural change, and the cause it fixes
+
+> *"the position, pose, distance from camera and head position were too similar — so it
+> looked like the image was a duplicate."*
+
+**This was never a wording fault.** §5 step 8 of the acetyl skeleton pins the framing
+identically in both panels — "the phone is held right up close and her face completely fills
+the panel, the frame cuts across her forehead just below the hairline and at the point of
+her chin" — and that paragraph is applied to the earlier day *and* the later day. Room, wall
+colour, light direction, garment and hair were all briefed to vary; head size and head
+position in frame, which are what most say *same photograph*, were held constant. The
+glutathione r2 builder added a head-and-gaze paragraph but hedged it — "the difference is
+small, she is recognisably in the same kind of pose both times" — which is the hedge that
+had to go.
+
+Camera height, camera tilt, degree of head turn, distance and position-in-frame are now
+stated **separately per panel** (paragraph 6 of every prompt). Verified on three engines:
+all three produced two genuinely different photographs.
+
+### ⚠️ But the side of the face must be locked, or the pair proves nothing
+
+The first version of the viewpoint table turned her head *opposite* ways on eight of twelve
+pairs. Malcolm caught it:
+
+> *"it should always be showing the same part of the face — if showing the front then the
+> front, if showing the left side then the left side in the before and after. Not before:
+> left side and After: right side."*
+
+Left cheek and right cheek are **different areas of skin**, with different lines, different
+moles and different pigmentation. There is nothing to compare, and it is the same class of
+fault as the panels being two different women. The table now carries a `side` per pair — four
+front, four her-left-cheek, four her-right-cheek — the *direction* of turn is constant within
+a pair and only its *degree* changes, and paragraph 6b states the rule outright.
+
+**The camera moves; the side it looks at does not.**
+
+### The distance guard (paragraph 7)
+
+If the later panel is further away or softer, the lines look shallower *because of the
+camera* and the pair stops being evidence. Do **not** fix this by always putting the after
+closer — across ~100 images "the after is the close one" becomes its own tell. Distance
+varies in both directions, bounded so the region of interest stays equally resolved in both
+panels, and the prompt says outright that the change may not be explainable by distance,
+softness or blur.
+
+### Gaze
+
+Subtly different on all, **noticeably different on 30%** (30 of 96, indexed globally so the
+proportion holds across the round rather than rounding inside each batch of eight). Gaze is
+the free axis: it can move anywhere while the head stays locked to one side.
+
+### The four concerns, and the one that inverts
+
+`fine-lines`, `firming` and `repair` take **raking sidelight**. `brightening` takes **soft
+broad frontal light** and matched colour between the halves, per §10 — which partially
+overrides Malcolm's "different lighting for each before and after": on that batch the light
+*direction* still differs between days, colour temperature and exposure may not. Flagged to
+him 2026-08-27.
+
+`firming` also **substitutes its macro shot**: firmness is contour, a cheek macro has no
+contour in it, so that cell uses a very close **jaw-and-neck** crop instead. Named in the
+config note rather than quietly swapped.
+
+### Shot types cannot be briefed — see §10, now confirmed on three more engines
+
+seedream, gpt_image and nbp_flash **all three** returned head-and-shoulders portraits for the
+skin-only macro, and again for the "part of the face" vertical slice, which came back framed
+almost like the whole-face wave. With the five engines of §10 that is eight engine-runs
+across two brief families. **Generate at the framing the engines give, and crop the winners
+to their shot type in post.** Note that once the two panels sit at different distances and
+angles, one uniform crop box will not land on the same region in both — each panel needs its
+own. `scripts/face-landmarks.swift` is in the repo for that.
+
+### Suppliers and cost
+
+seedream, gpt_image, nbp_flash — 96 slots x 3 = 288 images, **≈$8.60**. nbp_pro excluded
+(seven waves of invented captions), flux2 excluded (0/8 on the glutathione before/after
+family, fabricates a stock-photo watermark), luma answers this family with HTTP 422.
+
+⚠️ **Run with `--candidates 1`.** `generate-multi.py` reads `args.candidates` and **never**
+reads `defaults.candidates` from the config, so the config's own `"candidates": 1` is
+decorative. The flag defaults to 2 and would silently double the round to ≈$17.20.
+
+⚠️ **nbp_flash returns 4096² unasked** where 2048 was requested. Harmless, and useful if a
+macro crop is the target.
+
+### Observed on the smoke tests
+
+| engine | side-lock | moles preserved | makeup | age |
+|---|---|---|---|---|
+| gpt_image | ✅ | ✅ | none added | held |
+| nbp_flash | ✅ | ✅ one-for-one, cheek/jaw/neck | none added | held |
+| seedream | ✅ | ❌ several cheek moles gone | ❌ mascara appeared in the after panel | ❌ read younger |
+
+Seedream broke four guards at once on the first sample. Kept in the round on Malcolm's call
+(2026-08-27) — rule 1 is that every image goes to every supplier and he chooses, and one
+sample is not evidence enough to drop an engine. **Check its candidates against the honesty
+table before shortlisting any of them.**
+
+---
+
 *Related: `.claude/rules/website-imagery.md` (every image to every supplier; judge at 100% and at render
 size), `docs/visual-identity/03-art-direction-and-briefs.md`, and the project memory entries
 `before-after-pairs-need-two-sessions-not-two-frames`, `slot-letters-restart-per-wave`,
