@@ -1,0 +1,38 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'routine' (multi-column), blocks 'step3' and 'step4'",
+  "decided_by": "Malcolm, 2026-08-27: 'replace the 3. Matrixyl 3000 Serum image with matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_applying_to_cheekbone_4_skingenetix.png' (assets/ai-generated/2026-08-21-matrixyl-3000-pro-collagen-serum/run-01) 'and replace the 4. Moisturise + SPF image with enetix-daily-spf-sunscreen-cream-application-face'.",
+  "note": "Completes the four-step routine row on /pages/fine-lines-wrinkles. With step2 repointed earlier today, all four tiles now carry their own picture.\n\nSTEP 3 ALSO CLEARS A WATERMARK OFF THIS PAGE. The outgoing file, skingenetix-howto-step2-serum.jpg, carries a visible stock watermark reading 'WatativePrext' across its lower third, found at full size while doing the step2 swap. It served BOTH step2 and step3 until today, so the same watermark was showing twice on this page. After this change /pages/fine-lines-wrinkles is clean of it \u2014 but it is STILL LIVE on /pages/firming-skin-density and /pages/skin-repair-renewal, so the file must not be deleted or renamed. Its liquid is also golden amber, which is wrong for a Matrixyl serum. Steps 1 and 4 were checked and never carried a watermark.\n\nSTEP 4 IS A REPOINT, NOT AN UPLOAD. skingenetix-daily-spf-sunscreen-cream-application-face.jpg is already on the CDN, published for the /pages/brightening-glow routine. Re-uploading the same name would not replace it anyway \u2014 Shopify Files suffixes a collision and keeps serving the original \u2014 so the existing handle is reused directly and the uploader has nothing to do for this slot. CONSEQUENCE WORTH KNOWING: this frame now appears on TWO routine rows, brightening-glow and fine-lines-wrinkles. That is defensible because it is the same step meaning the same thing in both routines, but it is a deliberate reuse rather than an oversight.\n\nBOTH ARE SQUARE, MATCHING THE ROW. All four routine tiles render 300x300 at 1440; both masters are 2048x2048, so the run of four stays even and nothing reflows. A non-square tile here would break the row.\n\nNO PRODUCT LABEL IN EITHER FRAME, so there is nothing to spell-check \u2014 but the Matrixyl frame has an OUT-OF-FOCUS BOTTLE in the background, and this store has had a competitor-branded bottle go live before. It was examined at native resolution and doubled: it is entirely abstract, a teal-green blur with no letterforms, no logo and no legible mark of any kind. Also checked: the serum reads clear and colourless rather than the milky white this store's serum renders default to, and the SPF frame's cream is a plain white swatch with no packaging in shot.\n\nAN UNMARKED SOURCE, CHOSEN BY NAME. The Matrixyl source carries no leading underscore \u2014 the run does contain marked files (__..._2 and _..._5), but Malcolm named _4 explicitly, so it is his pick regardless of the marks. Read in place, neither renamed nor moved.\n\nNEW FILENAME FOR THE MATRIXYL FRAME, never a re-upload. Checked against every live matrixyl stem: ...-3000-hyaluronic-acid-collagen-matrix-serum-held-near-face and ...-3000-pro-collagen-firming-serum-and-carton both continue 'hyaluronic-' or 'pro-' after the product where this one continues 'serum-', so no stem is a prefix of another. That matters because the uploader binds by prefix while polling, and this repo has bound two slots to one image that way before.\n\nOPTIMISED, NOT COMPRESSED. 2048x2048 is under the 3000px cap the theme's srcset tops out at, so it goes up at native size with EXIF and ICC stripped, q95 4:4:4. Compressing the source harder was measured on this store and made pages slower, because the CDN transcodes to WebP and reproducing JPEG artefacts costs bits.",
+  "images": [
+    {
+      "slot": "flw_step3",
+      "source": "assets/publish-ready/page-fine-lines-routine/skingenetix-matrixyl-3000-serum-dropper-applying-to-cheekbone.jpg",
+      "filename": "skingenetix-matrixyl-3000-serum-dropper-applying-to-cheekbone.jpg",
+      "alt": "Close-up of a glass dropper releasing a bead of clear Skingenetix Matrixyl 3000 Pro Collagen serum onto a cheekbone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-serum-dropper-applying-to-cheekbone.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-serum-dropper-applying-to-cheekbone.jpg?v=1787835038"
+    },
+    {
+      "slot": "flw_step4",
+      "source": "assets/publish-ready/page-brightening-glow-routine/skingenetix-daily-spf-sunscreen-cream-application-face.jpg",
+      "filename": "skingenetix-daily-spf-sunscreen-cream-application-face.jpg",
+      "alt": "Close-up of a woman smoothing a white swatch of SPF moisturiser across her cheekbone with two fingers",
+      "uploaded_handle": "shopify://shop_images/skingenetix-daily-spf-sunscreen-cream-application-face.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-daily-spf-sunscreen-cream-application-face.jpg?v=1787834341"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "routine",
+      "block": "step3",
+      "slot": "flw_step3",
+      "setting": "image"
+    },
+    {
+      "section": "routine",
+      "block": "step4",
+      "slot": "flw_step4",
+      "setting": "image"
+    }
+  ]
+}
