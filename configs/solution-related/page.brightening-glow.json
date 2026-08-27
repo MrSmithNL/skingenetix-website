@@ -1,5 +1,5 @@
 {
-  "note": "Related Skin Solutions: current-label bottle-and-carton pack shots, plus an explicit empty `content` \u2014 the key was absent, so Impact fell back to its schema default and printed 'Organize content into multiple columns...' live on the page.",
+  "note": "Related Skin Solutions: current-label bottle-and-carton pack shots, plus an explicit empty `content` \u2014 the key was absent, so Impact fell back to its schema default and printed 'Organize content into multiple columns...' live on the page. Adds the missing Collagen & Skin Plumping card (r4) - it was absent from all four sibling pages. column_size 3 -> 4 so the four cards sit in one row instead of wrapping 3+1.",
   "images": [],
   "setting_updates": [
     {
@@ -12,14 +12,51 @@
       "section": "related",
       "block": "r1",
       "settings": {
-        "image": "shopify://shop_images/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg"
+        "image": "shopify://shop_images/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg",
+        "column_size": "4"
       }
     },
     {
       "section": "related",
       "block": "r3",
       "settings": {
-        "image": "shopify://shop_images/pdrn_skin_repair_deep_renewal_face_serum_product_and_box_angled_6_skingenetix.jpg"
+        "image": "shopify://shop_images/pdrn_skin_repair_deep_renewal_face_serum_product_and_box_angled_6_skingenetix.jpg",
+        "column_size": "4"
+      }
+    },
+    {
+      "section": "related",
+      "block": "r2",
+      "settings": {
+        "column_size": "4"
+      }
+    },
+    {
+      "section": "related",
+      "block": "r4",
+      "settings": {
+        "column_size": "4"
+      }
+    }
+  ],
+  "new_blocks": [
+    {
+      "section": "related",
+      "id": "r4",
+      "insert_after": "r3",
+      "inherit_from": "r3",
+      "block": {
+        "type": "item",
+        "settings": {
+          "image": "shopify://shop_images/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_product_and_box_hero_2_skingenetix.jpg",
+          "column_size": "4",
+          "title": "Collagen & Skin Plumping",
+          "heading_tag": "h3",
+          "content": "",
+          "link_text": "Explore",
+          "link_url": "/pages/collagen-skin-plumping",
+          "link_style": "link"
+        }
       }
     }
   ]
