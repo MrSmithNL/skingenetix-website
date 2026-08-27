@@ -788,7 +788,7 @@ wrong. Fixed at runtime by dropping srcset/sizes and requesting an explicit CDN 
 | Section | State |
 | ------- | ----- |
 | FAQ | Title centred above, questions 46% left, image right, support line full-width below, no card |
-| FAQ image | Four-jar stack — **every quoted line correct** at full size and at render size |
+| FAQ image | **Replaced 2026-08-27** — now the Acetyl Hexapeptide-8 model-with-dropper shot (`skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model-face.jpg`, plan `configs/banners/faq-image-publish-5.json`). The four-jar stack it replaced stays uploaded and unreferenced; it cost three engines to make and is one command to restore. Note the slot is `hidden lg:block` — **desktop only**, by theme design, and was so for the jar stack too |
 | Philosophy band | Skin-art reclining profile, face in view, 720px tall |
 
 **In progress**
