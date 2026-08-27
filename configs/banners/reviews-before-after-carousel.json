@@ -1,0 +1,27 @@
+{
+  "_note": "Reviews page: replace the multi-column 'before_after' grid with the new reviews-before-after carousel. Images are 1:1 diptychs rebuilt from the existing 2:1 files with the burnt-in BEFORE/AFTER bars removed (scripts/build-review-ba-squares.py). The fourth pair, 'Skin Firmness', is deliberately absent: skingenetix-ba-firmness-combined.jpg has the AI image brief rendered into the photograph and needs regenerating, not cropping. Claude Code, 2026-08-27.",
+  "template": "templates/page.reviews.json",
+  "images": [
+    {
+      "source": "assets/review-before-after/skingenetix-review-before-after-fine-lines-acetyl-hexapeptide-8.jpg",
+      "filename": "skingenetix-review-before-after-fine-lines-acetyl-hexapeptide-8.jpg",
+      "alt": "Before and after, eight weeks of Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum: fine lines around the eye",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-fine-lines-acetyl-hexapeptide-8.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-fine-lines-acetyl-hexapeptide-8.jpg?v=1787838915"
+    },
+    {
+      "source": "assets/review-before-after/skingenetix-review-before-after-skin-texture-matrixyl-3000.jpg",
+      "filename": "skingenetix-review-before-after-skin-texture-matrixyl-3000.jpg",
+      "alt": "Before and after, eight weeks of Skingenetix Matrixyl 3000 and Hyaluronic Acid Collagen Serum: skin texture on the cheek",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-skin-texture-matrixyl-3000.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-skin-texture-matrixyl-3000.jpg?v=1787838915"
+    },
+    {
+      "source": "assets/review-before-after/skingenetix-review-before-after-radiance-peptide-routine.jpg",
+      "filename": "skingenetix-review-before-after-radiance-peptide-routine.jpg",
+      "alt": "Before and after, six weeks of a full Skingenetix peptide serum routine: overall radiance and skin tone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-radiance-peptide-routine.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-radiance-peptide-routine.jpg?v=1787838915"
+    }
+  ]
+}

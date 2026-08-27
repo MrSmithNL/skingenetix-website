@@ -48,6 +48,42 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 REVIEW-001 — /pages/reviews before/after review carousel (2026-08-27)
+
+**Shipped.** `sections/reviews-before-after.liquid` replaced the `multi-column` before/after grid
+on `templates/page.reviews.json`. One card now carries the pair, the customer name, a verified
+badge, stars, a review title, the review body and a link to the product reviewed. Full write-up:
+`docs/reviews-before-after-carousel.md`.
+
+Undo: `python3 scripts/reviews-add-before-after-carousel.py --restore backups/page.reviews-20260827-155643.json`
+
+**Outstanding — 🔴 High**
+
+- **Regenerate the before/after pairs.** All four live pairs are **two different people**, and
+  `skingenetix-ba-firmness-combined.jpg` has the AI image brief **rendered into the photograph**
+  ("image-container", "body: display: flex…", `alt "Close of skin with sagging"`). That one is
+  excluded from the section, so the carousel is 3 cards instead of 4 until it is replaced.
+  Follow `docs/clinical-trial-before-after-images.md` — two photographic sessions, one subject.
+  New masters must be **1:1 overall, split at exactly 50%, with no text burnt into the pixels**.
+- **The three placeholder reviews now appear twice on the page**, once in the carousel and once
+  in the `testimonials` section below it. Decide whether `testimonials` stays.
+- **The review copy is invented** — as is every other name on this page. Existing exposure, not
+  new: nothing was written for this build, the page's own testimony was re-attached to the
+  matching photograph. Still needs resolving before the store takes orders.
+
+**Outstanding — 🟡 Medium**
+
+- **Install the Klaviyo Reviews block.** It is the standard widget for the review corpus and the
+  sister brand already runs it (hairgenetix.com, 4.8 average, 1,613 reviews, verified-buyer
+  pills, linked product chips). Klaviyo is **already on the Skingenetix account** — only the
+  onsite/email script is installed, not `klaviyo_reviews`. That would also retire the invented
+  `testimonials` and `press` blocks in favour of real submissions.
+- **Interim masters cap at 560px.** Against a 432px card at 2× the CDN has nothing wider to
+  serve, so they are soft on a retina display. Fixed by regeneration, not by re-encoding.
+- The page's `trust` section claims *"Verified Reviews — All reviews from confirmed customers"*
+  on a store with no reviews app and no orders.
+
+
 ### ✅ BRAND-007 — /pages/skin-repair-renewal: two medical explainer diagrams
 
 **Closed 2026-08-25.** Malcolm: professional medical-beauty explainer diagrams for the
