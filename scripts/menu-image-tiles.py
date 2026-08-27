@@ -88,12 +88,13 @@ TILES = {
 
     # --- Support
     "/pages/faq": "skingenetix-skincare-faq-questions-answered-mobile.jpg",
-    # STAND-IN. No purpose-made contact photograph exists yet — a dermatologist
-    # two-shot batch is being generated (configs/banners/menu-contact-dermatologist.json).
-    # skingenetix-contact-banner.jpg, the only file named for the job, is unusable:
-    # the generation brief is printed across it and it shows an unbranded
-    # competitor-looking bottle.
-    "/pages/contact": "skingenetix-copper-peptide-day-gel-cream-bathroom-vanity.jpg",
+    # Purpose-made: candidate 2 of the 24-image dermatologist batch
+    # (configs/banners/menu-contact-dermatologist.json, CONTACT-A-listening / gpt_image),
+    # chosen by Malcolm and published via configs/banners/menu-contact-tile-publish.json.
+    # Replaces a bathroom-vanity stand-in. The only file the store had named for this
+    # job, skingenetix-contact-banner.jpg, is unusable: the generation brief is printed
+    # across it and it shows an unbranded competitor-looking bottle.
+    "/pages/contact": "skingenetix-dermatologist-skin-consultation-client-conversation.jpg",
     "/pages/shipping-returns": "skingenetix-skincare-order-packed-white-shipping-box.jpg",
 }
 
@@ -173,6 +174,10 @@ def build_css():
     hover_scope = ",\n".join(
         f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"]) .mega-menu__nav > li > a:hover'
         for h in SIGNATURES)
+    hover_after_scope = ",\n".join(
+        f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"]) '
+        f'.mega-menu__nav > li > a:hover::after'
+        for h in SIGNATURES)
     span_scope = ",\n".join(
         f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"]) .mega-menu__nav > li > a > span'
         for h in SIGNATURES)
@@ -243,26 +248,58 @@ def build_css():
   overflow: hidden;
   border-radius: 6px;
   background-color: #efece7;
-  background-size: cover;
+  /* 100% 100% rather than `cover` on purpose: the tile is exactly square and the
+     CDN crop is exactly square, so the two are identical here — but a percentage
+     is animatable and the `cover` keyword is not, which is what makes the hover
+     zoom below possible. */
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  transition: transform .4s cubic-bezier(.2, .6, .3, 1);
+  /* The theme's own image hover, lifted verbatim from `.zoom-image` in theme.css
+     (scale 1.06 over 1.5s, same easing) so the tiles and Shop's promo images
+     behave identically. Driven off background-size rather than `transform`
+     because a transform on this anchor measurably does NOT apply, however the
+     rule is written: Chrome reports the anchor matching :hover and lists the rule
+     among the matched styles, yet the computed transform stays at identity at
+     200ms, 600ms, 1.2s and 2s, on every menu. An injected `transform ... !important`
+     on the same node DOES apply, so the element is transformable — the hover rule
+     specifically is not honoured. background-size is, and it is verified live. */
+  transition: background-size 1.5s cubic-bezier(.22, 1, .36, 1);
 }}
-/* Label contrast comes from a local scrim over the lower third, never from
-   flattening the whole photograph. */
+{hover_scope} {{
+  background-size: 106% 106%;
+}}
+/* RESTING: the brand overlay. #1a1a1a at 22% is not a taste choice — it is the
+   value every collection banner and the science hero already use, so the menu and
+   the banners read as one system.
+   HOVER: the flat overlay lifts to zero and the picture brightens. Malcolm's call,
+   2026-08-27.
+   The bottom gradient is NOT part of that lift and stays constant. Without it the
+   label would lose its contrast at exactly the moment the overlay disappears, and
+   label contrast on this store is bought with a local scrim, never by flattening
+   the whole photograph. */
 {scrim_scope} {{
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to top,
-    rgba(0, 0, 0, .68) 0%,
-    rgba(0, 0, 0, .34) 30%,
-    rgba(0, 0, 0, .06) 55%,
-    rgba(0, 0, 0, 0) 75%);
+  background:
+    linear-gradient(to top,
+      rgba(0, 0, 0, .58) 0%,
+      rgba(0, 0, 0, .26) 32%,
+      rgba(0, 0, 0, .04) 60%,
+      rgba(0, 0, 0, 0) 78%),
+    rgba(26, 26, 26, .22);
+  transition: background .35s ease-in-out;
 }}
-{hover_scope} {{
-  transform: scale(1.015);
+{hover_after_scope} {{
+  background:
+    linear-gradient(to top,
+      rgba(0, 0, 0, .58) 0%,
+      rgba(0, 0, 0, .26) 32%,
+      rgba(0, 0, 0, .04) 60%,
+      rgba(0, 0, 0, 0) 78%),
+    rgba(26, 26, 26, 0);
 }}
 {span_scope} {{
   color: #fff;
