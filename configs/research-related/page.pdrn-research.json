@@ -1,0 +1,34 @@
+{
+  "note": "Explore More Research cards -> the per-ingredient research images already used on /pages/the-science. Repairs 3 dead file references (copper/pdrn/glutathione).",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "related",
+      "block": "r_copper",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-fibroblast-collagen-matrix.jpg"
+      }
+    },
+    {
+      "section": "related",
+      "block": "r_argireline",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg"
+      }
+    },
+    {
+      "section": "related",
+      "block": "r_matrixyl",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg"
+      }
+    },
+    {
+      "section": "related",
+      "block": "r_glutathione",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg"
+      }
+    }
+  ]
+}
