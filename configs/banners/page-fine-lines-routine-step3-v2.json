@@ -1,0 +1,24 @@
+{
+  "created": "2026-08-27",
+  "target": "live theme \u2014 Impact, templates/page.fine-lines-wrinkles.json, section 'routine' (multi-column), block 'step3'",
+  "decided_by": "Malcolm, 2026-08-27: 'replace the 3. Matrixyl 3000 Serum image with this one: __matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_hands_only_dropper_5_skingenetix.png' from assets/ai-generated/2026-08-21-matrixyl-3000-pro-collagen-serum/run-01.",
+  "note": "Second pass on step3. Replaces skingenetix-matrixyl-3000-serum-dropper-applying-to-cheekbone.jpg, which was published to this block about half an hour earlier in the same session; that file stays uploaded and unreferenced.\n\nMALCOLM'S FINAL MARK. The source carries a DOUBLE underscore, which is his strongest mark \u2014 a chosen final, not a shortlist keeper. The same run holds a single-underscore alternate (_..._5 of the cheekbone set) and several unmarked frames. Read in place, neither renamed nor moved; the JPEG for upload went to publish-ready.\n\nTHE PRODUCT IS IN FRAME AND THE LABEL IS LEGIBLE, so unlike the cheekbone macro this one needed a full check. COUNTED AS ELEMENTS RATHER THAN SPELLCHECKED, at 3x native, because a label missing a line passes a read of the lines that are present. Six elements, all correct:\n  helix mark   the Skingenetix mark \u2014 S-curve, vertical ticks crossing it, scattered rounded\n               dots \u2014 matching the official Skingenetix-logo-black.png. Checked as its own\n               element, because this store has shipped a wrong helix on a frame whose wordmark\n               was spelled perfectly.\n  wordmark     Skingenetix\n  product      MATRIXYL 3000 PRO COLLAGEN\n  descriptor   FIRMING REPAIR TREATMENT, set in teal \u2014 Matrixyl's brand colour on this store,\n               which is correct here\n  tier         PREMIUM FORMULA\n  fine line    10% MATRIXYL | 30ML\n\nMATRIXYL IS THE WORD THAT BREAKS ENGINES ON THIS STORE and the reason it was checked at native rather than off a contact sheet: Seedream failed it in roughly thirty of fifty candidates across five rewritten briefs on 2026-08-21, spelling it letter by letter, and produced 'MATRIXYL 5000' on a later pass. This frame renders it correctly. 30ML is also right for a serum \u2014 three cartons in the artwork set wrongly state 50ML and this bottle does not.\n\nSQUARE, MATCHING THE ROW. All four routine tiles render 300x300 at 1440 and this master is 2048x2048, so the run of four stays even.\n\nTHE WATERMARK STAYS OFF THIS PAGE. step3 previously carried skingenetix-howto-step2-serum.jpg, which has a stock watermark reading 'WatativePrext' across its lower third. That was cleared earlier today and this change does not bring it back. It is STILL LIVE on /pages/firming-skin-density and /pages/skin-repair-renewal, so that file must not be deleted or renamed.\n\nNEW FILENAME, NEVER A RE-UPLOAD: Shopify Files suffixes a name collision and keeps serving the original. Checked against every live matrixyl stem \u2014 ...-3000-hyaluronic-acid-collagen-matrix-serum-held-near-face, ...-3000-pro-collagen-firming-serum-and-carton, ...-3000-pro-collagen-firming-cream-jar-open-in-hands, ...-3000-pro-collagen-firming-cream-skin-density, and ...-3000-serum-dropper-applying-to-cheekbone from earlier today. After 'matrixyl-3000-pro-collagen-' this one continues 'serum-' where the others continue 'firming-', so no stem is a prefix of another. That matters because the uploader binds by prefix while polling and this repo has bound two slots to one image that way before.\n\nOPTIMISED, NOT COMPRESSED. 2048x2048 is under the 3000px cap the theme's srcset tops out at, so it goes up at native size with EXIF and ICC stripped, q95 4:4:4.",
+  "images": [
+    {
+      "slot": "flw_step3_v2",
+      "source": "assets/publish-ready/page-fine-lines-routine/skingenetix-matrixyl-3000-pro-collagen-serum-bottle-in-hands-dropper.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-serum-bottle-in-hands-dropper.jpg",
+      "alt": "Two hands holding a 30ml frosted glass bottle of Skingenetix Matrixyl 3000 Pro Collagen Firming Repair Treatment serum and lifting out the glass dropper",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-serum-bottle-in-hands-dropper.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-serum-bottle-in-hands-dropper.jpg?v=1787835910"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "routine",
+      "block": "step3",
+      "slot": "flw_step3_v2",
+      "setting": "image"
+    }
+  ]
+}
