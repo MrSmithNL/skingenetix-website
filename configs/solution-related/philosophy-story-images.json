@@ -1,0 +1,27 @@
+{
+  "note": "our-philosophy science_story: all three story images replaced. story_1 -> microscope over-stage (1B), story_2 -> raw GHK-Cu crystals (2C, already in Files and unused), story_3 -> cream macro swirl (3C). All square masters; the section renders 648x648 with object-fit: cover.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "science_story",
+      "block": "story_1",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-philosophy-published-research-microscope-petri-dish.jpg"
+      }
+    },
+    {
+      "section": "science_story",
+      "block": "story_2",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-blue-crystals-laboratory.jpg"
+      }
+    },
+    {
+      "section": "science_story",
+      "block": "story_3",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-philosophy-quality-cream-texture-macro-swirl.jpg"
+      }
+    }
+  ]
+}
