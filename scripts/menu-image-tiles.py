@@ -80,7 +80,11 @@ TILES = {
     # this rebuild — Malcolm asked for it back.
     "/pages/the-science": "skingenetix-menu-scientific-research-2026-v3.jpg",
     "/pages/ingredients": "skingenetix-copper-peptide-ghk-cu-blue-crystals-laboratory.jpg",
-    "/pages/our-philosophy": "skingenetix-philosophy-quality-cream-texture-macro-swirl.jpg",
+    # Malcolm's pick off the model head-shot sheet, 2026-08-27. Note this frame is
+    # also the homepage `skin_concerns` Brightening & Glow tile, so the same
+    # photograph reads as two different things on two surfaces. Flagged, not
+    # changed — it was chosen on sight.
+    "/pages/our-philosophy": "skingenetix-concern-brightening-glow-2026.jpg",
 
     # --- Support
     "/pages/faq": "skingenetix-skincare-faq-questions-answered-mobile.jpg",
