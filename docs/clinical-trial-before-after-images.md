@@ -242,7 +242,57 @@ before acting on a filename.
 
 ---
 
+---
+
+## 10. Reusing this on a page that measures TONE, not line depth — the glutathione build
+
+`/pages/glutathione-research` needed the same form for blocks **f1** (Watanabe 2014, 2% GSSG,
+10 weeks) and **f3** (Khanna 2025 systematic review). Built 2026-08-27 from this document. Config
+builder: `scripts/build-glutathione-before-after-config.py`; briefs
+`configs/banners/block-glutathione-research-before-after-{r1,r2}.json`.
+
+**Most of the skeleton transfers unchanged** — two sessions not two frames, one prompt per slot,
+the identity lock, the visible-improvement floor, no hand or phone, no baked-in text. **Three
+things must be inverted, and they are not optional:**
+
+| §5 step | On a wrinkle page | On a tone page |
+|---|---|---|
+| 14 — lighting | **Raking sidelight**, so every line casts its own shadow | **Soft, broad, frontal daylight.** A shadow gradient across a cheek is indistinguishable from a patch of pigment — raking light manufactures the fault in the left panel |
+| 9 — camera tells | "Indoor white balance a little wrong" | **Dropped.** A warm half and a cool half is a tone difference the product did not cause. Buy amateur-ness with framing, focus and noise instead — and brief colour as a **match between the halves**, not a property of each |
+| 12 — honesty clause | `no lighter skin in the right panel` | Contradicts a trial whose endpoint *is* melanin index. Re-cut: the **patches converge toward her own surrounding tone**; the skin between them, under the jaw and on the neck is identical. Negate only whitening, bleaching, chalky/grey and changed ethnicity |
+
+**Position beat wording.** r1 carried the freckle rule explicitly, in paragraph 17, and gpt_image,
+nbp_flash and seedream all cleared the discrete marks anyway — the engine's own prior (brightening
+= removing spots) got there first. Moving the identical rule to **paragraph 3** fixed it on every
+engine in r2. Split the marks: **diffuse mottling is the subject and evens out; discrete moles,
+freckles and sun spots are identity anchors and may not disappear.**
+
+**Yield, 8 slots × 5 suppliers:** gpt_image **8/8**, nbp_flash **7/8**, seedream 4/8, luma 4/8,
+**flux2 0/8**. Roughly 22 of 40 clean.
+
+### Failure modes this page adds to §6
+
+| failure seen | guard |
+|---|---|
+| "A dull greyish cast" painted as a discrete slate patch that reads as a **bruise** (luma, seedream, 3 slots) | Never give a colour word for the whole cast. Say *warmer, muddier, less clear than the skin beside it* |
+| Before panel reads as **clinical disease** — confluent lentigines, raised yellow lesions (seedream) | Cap the left panel explicitly: everyday uneven tone, nothing a dermatologist would treat |
+| A **cheek macro** pulled back to a half-face portrait by all five engines, on both slots that asked | An extreme crop cannot be briefed on a face. Ask for half-face, crop tighter in post |
+| Phone and hand in frame (nbp_flash, 1 slot) | Unchanged from §6 — the room element helps but does not eliminate it |
+| flux2: different, older woman; desaturation; zero difference; **a fabricated stock-photo watermark** | Exclude flux2 from this brief family, as nbp_pro already is |
+
+### Two honesty questions for Malcolm, not yet put to him
+
+1. **Watanabe 2014 was split-face** — one face, treated side against placebo side. These diptychs
+   read as week 0 against week 10, which is how the paper reports each side against its own
+   baseline and is the form the section labels support. It illustrates the trial; it does not
+   depict it.
+2. **f3 illustrates a systematic review, not a trial.** A before/after is a weaker fit for a pooled
+   conclusion than for a single study. Its magnitude is capped accordingly, but the alternative is a
+   non-photographic block there.
+
+---
+
 *Related: `.claude/rules/website-imagery.md` (every image to every supplier; judge at 100% and at render
 size), `docs/visual-identity/03-art-direction-and-briefs.md`, and the project memory entries
 `before-after-pairs-need-two-sessions-not-two-frames`, `slot-letters-restart-per-wave`,
-`label-text-must-be-quoted`.*
+`label-text-must-be-quoted`, `a-tone-pair-inverts-the-lighting-rule-of-a-wrinkle-pair`.*
