@@ -387,6 +387,159 @@ SHOTS = {
 SHOT_ORDER = ["macro", "half", "close"]
 
 # --------------------------------------------------------------------------------------
+# THE AMATEUR / BAD-PHOTOGRAPH STYLE. Malcolm, 2026-08-28:
+#
+#   "add another batch that is noticeably bad quality photo (not the detail - but clearly a
+#    home made selfie photo with bad lighting), and with more variation in the variables
+#    that make the before and after unique from each other. Quality of the realism should
+#    stay as real as possible. This is a new type of image we are trying out."
+#
+# ⚠️ THE CENTRAL DISTINCTION, AND THE WHOLE REASON THIS NEEDS ITS OWN CODE PATH:
+# THE PHOTOGRAPH IS BAD. THE IMAGE IS NOT. Told simply to make a bad photo, every engine
+# degrades the RENDER — soft mush, low detail, smeared faces, obvious artefacts — which
+# destroys the only thing these pictures exist to show. What is wanted is a sharp,
+# high-fidelity, entirely believable image OF a badly-taken snapshot: the light is wrong,
+# the framing is careless, the phone struggled, but the skin is still real skin with real
+# pores in it. Paragraph 12a states that separation in as many words, and the negative list
+# bans the degradation words rather than the darkness words.
+#
+# ⚠️ BAD LIGHT CAN FABRICATE THE ENTIRE RESULT, and this is a worse risk here than the
+# distance confound was. If the earlier panel gets harsh raking light and the later panel
+# gets soft kind light, the "improvement" is the lamp. It would also be almost invisible as
+# a fault, because bad lighting is *supposed* to differ between the two days. So the brief
+# requires both panels to be badly lit TO A SIMILAR DEGREE, with neither one flattering, and
+# the lines readable in both despite it.
+#
+# ⚠️ THE NEGATIVE LIST HAD TO BE REBUILT. The standard list bans `no dark room, no dim room,
+# no murky lighting, no underexposed picture, no camera flash, no orange tungsten glow, no
+# heavy shadow across the face, no bathroom, no fluorescent strip light` — every one of which
+# forbids exactly what this batch asks for. Left in place they would have fought the brief on
+# all eight slots, which is the stale-negative trap these configs keep warning about.
+#
+# HANDS AND ARMS COME BACK. Acetyl wave 11 found that banning arms is precisely why several
+# waves read as portraits taken by somebody else: "the raised near arm is the strongest tell
+# there is." It is allowed here. The phone itself still cannot appear — this is the view
+# through its own front camera — and no mirrors, or the phone comes with them.
+# --------------------------------------------------------------------------------------
+AMATEUR_SCENES = [
+    ("a cramped hallway with a scuffed off-white wall",
+     "the ceiling light directly overhead and nothing else, throwing hard shadows straight down "
+     "into her eye sockets and under her nose and chin",
+     "evening", "the edge of a door architrave"),
+    ("a small bedroom with a plain painted wall",
+     "one warm bedside lamp low and off to one side, so everything is orange and the far half of "
+     "her face falls away into shadow",
+     "night", "the corner of a headboard"),
+    ("a kitchen with a plain wall",
+     "a bright window directly behind her, so she is backlit and her whole face is underexposed "
+     "while the wall beyond her blows out to white",
+     "the middle of the day", "the blurred edge of a worktop"),
+    ("a landing at the top of the stairs",
+     "a dim overcast window a long way off, so the picture is dark and the phone has pushed its "
+     "sensitivity right up",
+     "a grey late afternoon", "the vertical line of a bannister rail"),
+    ("a sitting room with a plain wall",
+     "one harsh window very close on one side, blowing that cheek out to almost pure white while "
+     "the other side of her face drops to near black",
+     "morning", "the out-of-focus back of a sofa"),
+    ("a bathroom with a plain painted wall",
+     "a strip light above the mirror, flat and slightly green, greying her skin and flattening "
+     "her face completely",
+     "early morning", "the soft edge of a hanging towel"),
+    ("a hallway by the front door",
+     "a ceiling spotlight set slightly behind her, so the top of her head is bright and her face "
+     "sits in its own shadow",
+     "evening", "the dark edge of a coat hanging up"),
+    ("a bedroom with a plain wall",
+     "the cold light of an overcast window on one side mixed with a warm lamp on the other, so "
+     "one half of her face reads blue and the other orange",
+     "afternoon", "the blurred upright of a wardrobe door"),
+    ("a spare room with a bare magnolia wall",
+     "a single bulb with no shade, close and above, burning out her forehead and the bridge of "
+     "her nose while the rest goes muddy",
+     "night", "the corner of an empty shelf"),
+    ("a dining room with a plain wall",
+     "low evening sun coming in almost horizontally and hitting one side of her face far too "
+     "hard, with a hard-edged shadow across the other",
+     "early evening", "the blurred top of a chair back"),
+    ("a hallway with a plain wall",
+     "the light from a screen off to one side, cold and bluish, with the rest of the room dark "
+     "around her",
+     "night", "the faint line where the wall meets the ceiling"),
+    ("a bedroom with a plain painted wall",
+     "an overcast window straight in front of her, flat and grey and far too dim, so the picture "
+     "is dull and noisy throughout",
+     "a wet morning", "the soft fall of a curtain"),
+    ("a utility area with a plain wall",
+     "a bare ceiling fitting behind and above her, leaving her face in a broad soft shadow with "
+     "the wall brighter than she is",
+     "evening", "the blurred edge of a doorframe"),
+    ("a small study with a plain wall",
+     "a desk lamp pointing up at her from below and off to one side, lighting her from underneath "
+     "so the shadows all run the wrong way",
+     "night", "the out-of-focus corner of a desk"),
+    ("a bedroom with a plain wall",
+     "bright hard midday sun coming through an uncovered window and striking her at a steep angle, "
+     "clipping the highlights on her cheek to white",
+     "midday", "the blurred vertical of a wardrobe edge"),
+    ("a hallway with a plain painted wall",
+     "one dim wall light a long way off, so almost nothing reaches her and the phone has lifted "
+     "the whole picture until it is grainy",
+     "late evening", "the soft dark shape of a coat on a hook"),
+]
+
+# The negative list for the amateur batch. Note what it does NOT ban compared with
+# NEGATIVE_GLOBAL: darkness, dimness, murk, underexposure, flash, tungsten, strip lights,
+# bathrooms, heavy facial shadow and hands are all now WANTED. What it bans instead is the
+# thing an engine reaches for when it hears "bad photo" — a degraded RENDER.
+NEGATIVE_GLOBAL_AMATEUR = (
+    "no text, no lettering of any kind, no words, no letters, no numbers, no percentages, "
+    "no captions, no labels, no watermark, no stock photo watermark, no printed text overlay, "
+    "no logo, no signature, no timestamp, no date stamp, "
+    "no illustration, no drawing, no painting, no render, no 3d render, no cgi, no video game "
+    "character, no cartoon, no anime, no doll, no mannequin, no waxwork, "
+    "no low resolution, no pixelated image, no blocky compression destroying the face, "
+    "no heavily degraded image, no unusable blur, no motion blur across the whole face, "
+    "no smeared face, no melted features, no distorted anatomy, no extra fingers, "
+    "no plastic skin, no waxy skin, no airbrushed skin, no beauty-filter smoothing, "
+    "no frequency separation, no uniform skin texture, no poreless skin, "
+    "no bottle, no jar, no dropper, no packaging, no product, no jewellery, no spectacles, "
+    "no makeup, no foundation, no powder, no concealer, no eyeliner, no mascara, no false "
+    "lashes, no eyeshadow, no lipstick, no glitter, "
+    "no wound, no bruise, no rash, no blood, no needle, no drawn lines on the skin, "
+    "no clinical disease, no dermatological condition, no lesion, "
+    "no phone, no smartphone, no phone case, no selfie stick, no mirror, no reflection, "
+    "no studio backdrop, no seamless paper, no professional lighting, no softbox, no beauty "
+    "dish, no fashion photograph, no glamour, no styled hair, no salon blow-dry, no retouching, "
+    "no model, no supermodel, no bokeh portrait mode, "
+    "no elderly woman, no woman over sixty, no woman under forty, no full head of white hair, "
+    "no heavy jowls, no badly sagging neck, "
+    "no three panels, no four panels, no grid of panels, no picture frame, no border, "
+    "no vignette, no gap between panels, no dividing line of any colour, "
+    "no non-white model, no black model, no asian model, no south asian model, "
+    "no readable object, no text on the wall, no photographs on the wall, no posters, "
+    "no full body, no distant framing"
+)
+
+NEGATIVE_AMATEUR_EXTRA = (
+    "no identical backgrounds between the panels, no same room in both panels, "
+    "no identical framing between the panels, no same camera angle in both panels, "
+    "no same head position in both panels, no same distance in both panels, "
+    "no same lighting in both panels, no mirrored pose, no copy of the left panel, "
+    "no different side of the face between the panels, no left cheek in one panel and right "
+    "cheek in the other, no mirror image of the left panel, no flipped view, "
+    "no flattering light in the right panel, no soft kind light in the right panel, "
+    "no better lit right panel, no studio light in either panel, "
+    "no unchanged skin between the panels, no zero difference between the panels, "
+    "no different woman between the panels, no younger woman in the right panel, "
+    "no makeup appearing in the right panel, no change of skin colour between the panels, "
+    "no moles disappearing between the panels, no freckles disappearing between the panels, "
+    "no face hidden in shadow, no eyes lost in darkness, no unreadable face, "
+    "no smiling, no teeth"
+)
+
+
+# --------------------------------------------------------------------------------------
 # The four concerns.
 #
 # `light` is the whole lighting paragraph and it is where brightening inverts.
@@ -544,6 +697,10 @@ CONCERNS = {
 }
 
 CONCERN_ORDER = ["fine-lines", "firming", "repair", "brightening"]
+
+#: Concerns the bad-photograph style is run on. Brightening is deliberately excluded - see
+#: the comment in main().
+AMATEUR_CONCERNS = ["fine-lines", "firming"]
 
 # --------------------------------------------------------------------------------------
 # The thirty-two women, eight per concern. Caucasian, 40-60, ordinary, unglamorous.
@@ -793,7 +950,7 @@ NEGATIVE_SHARED_EXTRA = (
 
 
 def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
-                 view: dict, gaze: tuple) -> str:
+                 view: dict, gaze: tuple, style: str = "clean") -> str:
     """Assemble one slot's brief.
 
     Paragraph order is load-bearing. The honesty rules sit at paragraph 3, before the engine
@@ -803,12 +960,42 @@ def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
     """
     c = CONCERNS[concern_key]
     shot = SHOTS[shot_key]
-    r1, r2 = ROOMS[rooms[0]], ROOMS[rooms[1]]
+    amateur_style = style == "amateur"
+    if amateur_style:
+        r1, r2 = AMATEUR_SCENES[rooms[0]], AMATEUR_SCENES[rooms[1]]
+    else:
+        r1, r2 = ROOMS[rooms[0]], ROOMS[rooms[1]]
     v1, v2 = view["a"], view["b"]
     g1, g2 = gaze
-    kind = "phone selfies" if shot["selfie"] else "close photographs"
+    kind = "phone selfies" if (shot["selfie"] or amateur_style) else "close photographs"
 
-    if shot["selfie"]:
+    if amateur_style and shot_key.startswith("macro"):
+        # The arm cannot be in a macro. At this crop skin fills the panel, so demanding a
+        # raised shoulder in the corner asks for two incompatible things at once - and a
+        # brief that contradicts itself is how the cheek macro became a portrait on eight
+        # engine-runs. The self-taken feel is carried by the closeness and the bad light
+        # instead, and the phone and mirror stay banned for the same reason as everywhere.
+        hands = (
+            "SHE IS HOLDING THE PHONE HERSELF, RIGHT UP CLOSE. Because the frame is filled with her "
+            "skin there is no room for anything else in it: NO HAND, NO FINGERS, NO ARM, NO "
+            "SHOULDER, NO PHONE, NO PHONE CASE, NO MIRROR AND NO REFLECTION anywhere in either "
+            "panel. Just her skin, and a sliver of the room at the very edge.\n\n"
+        )
+    elif amateur_style:
+        # Acetyl wave 11: banning arms is precisely why several waves read as portraits taken
+        # by somebody else. "The raised near arm is the strongest tell there is." The phone
+        # still cannot appear - it is the thing taking the picture - and nor can a mirror,
+        # because a mirror brings the phone with it.
+        hands = (
+            "IT MUST BE UNMISTAKABLE THAT SHE TOOK THIS HERSELF ON HER OWN PHONE. The arm holding "
+            "the phone is raised, and the top of that near shoulder and the upper arm come into "
+            "the bottom corner of the frame at an angle, close to the lens and a little soft - the "
+            "single strongest sign that nobody else is in the room. BUT THE PHONE ITSELF IS NEVER "
+            "VISIBLE: this is the view through its own front camera, so the phone cannot appear in "
+            "its own picture, and there is NO MIRROR and NO REFLECTION anywhere, because a mirror "
+            "would put the phone back in shot.\n\n"
+        )
+    elif shot["selfie"]:
         hands = (
             "IT MUST BE OBVIOUS AT A GLANCE THAT SHE TOOK THIS HERSELF - BUT THE PHONE AND HER HANDS ARE "
             "NEVER IN THE PICTURE. This is the view THROUGH the front camera of the phone she is holding, "
@@ -823,9 +1010,37 @@ def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
             "the room behind her.\n\n"
         )
 
+    # The amateur batch pushes every camera fault hard - and then spends a whole paragraph
+    # separating the BAD PHOTOGRAPH from a BAD IMAGE, because that is the one place this
+    # brief can destroy itself. An engine told to make a bad photo degrades the render.
+    if amateur_style:
+        amateur = (
+            "THIS IS A BADLY TAKEN PHOTOGRAPH AND IT SHOULD LOOK LIKE ONE. Nobody set this up. The "
+            "frame is properly crooked - several degrees off level, not a token tilt - and badly "
+            "centred, with her head jammed towards one edge or one corner and either far too much "
+            "empty space above her or the top of her head clipped off. The phone got the exposure "
+            "wrong: some of it is blown out to featureless white and some is blocked up into "
+            "shadow. The white balance is well off, and off in a different direction on each of the "
+            "two days. The autofocus has not quite landed - it is a touch soft on the eye - and in "
+            "the low light the sensor has been pushed hard, so there is real luminance grain "
+            "through the shadows and the phone's noise reduction has left the flatter areas "
+            "slightly waxy and smeared. It has the look of a picture that has been sent to somebody "
+            "over a messaging app: a little compressed, a little rough.\n\n"
+
+            "⚠️ BUT THE PHOTOGRAPH IS BAD, NOT THE IMAGE, AND THIS IS THE MOST IMPORTANT SENTENCE "
+            "IN THIS BRIEF. This is a SHARP, HIGH-RESOLUTION, COMPLETELY BELIEVABLE PHOTOGRAPH OF A "
+            "BADLY TAKEN SNAPSHOT. Every fault above belongs to the PHOTOGRAPHER, THE ROOM AND THE "
+            "PHONE - the light was wrong, the framing was careless, the camera struggled. NONE of "
+            "them is a fault in the picture's fidelity. Her skin is still real skin, rendered "
+            "faithfully and in full detail: individual pores, fine vellus hair, the actual texture "
+            "of a real face. It is NOT low resolution, NOT mushy, NOT smeared across the features, "
+            "NOT an illustration and NOT obviously artificial. A real person really photographed, "
+            "badly, on a real phone - and every part of her that IS in focus and IS properly "
+            "exposed holds up completely at full size.\n\n"
+        )
     # The brightening batch keeps colour matched between the halves; the other three want the
     # ordinary amateur white-balance error. See CONCERNS[...]['light'] and §10 of the doc.
-    if concern_key == "brightening":
+    elif concern_key == "brightening":
         amateur = (
             "IT IS AN AMATEUR PICTURE, AND THE TELLS ARE IN THE FRAMING, NOT IN THE COLOUR. The angle is "
             "not eye level, the frame is a few degrees crooked and off-centre, the focus is not perfect "
@@ -908,18 +1123,37 @@ def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
         "the earlier panel.\n\n"
 
         # 8 — two rooms
-        f"THE TWO PLACES ARE DIFFERENT ROOMS. On the earlier day she is in an ordinary room with {r1[0]} "
-        f"behind her and, far out of focus at one edge, {r1[2]}; the daylight comes {r1[1]}. On the later "
-        f"day she is in an ordinary room with {r2[0]} behind her and, well out of focus at one edge, "
-        f"{r2[2]}; the daylight comes {r2[1]}. Two plainly different plain interiors - a different wall "
-        "colour and a different light direction each time. Apart from that one soft out-of-focus thing at "
-        "the edge, nothing is in view behind her but the painted wall: no furniture, no pictures, no "
-        "shelves, no appliances, no window in shot, no clutter.\n\n"
+        + (
+            f"THE TWO PLACES ARE COMPLETELY DIFFERENT, AND SO IS THE TIME OF DAY. On the earlier "
+            f"day she is in {r1[0]}, {r1[2]}, and the only light on her is {r1[1]}; at one edge, "
+            f"well out of focus, {r1[3]}. On the later day she is in {r2[0]}, {r2[2]}, and the only "
+            f"light on her is {r2[1]}; at one edge, out of focus, {r2[3]}. Two different rooms in "
+            "the house, on two different days, at two different times, lit by whatever happened to "
+            "be on. Nothing is in view behind her but the wall and that one soft thing at the edge."
+            if amateur_style else
+            f"THE TWO PLACES ARE DIFFERENT ROOMS. On the earlier day she is in an ordinary room with "
+            f"{r1[0]} behind her and, far out of focus at one edge, {r1[2]}; the daylight comes "
+            f"{r1[1]}. On the later day she is in an ordinary room with {r2[0]} behind her and, well "
+            f"out of focus at one edge, {r2[2]}; the daylight comes {r2[1]}. Two plainly different "
+            "plain interiors - a different wall colour and a different light direction each time. "
+            "Apart from that one soft out-of-focus thing at the edge, nothing is in view behind her "
+            "but the painted wall: no furniture, no pictures, no shelves, no appliances, no window "
+            "in shot, no clutter."
+        ) + "\n\n"
 
-        # 9 — also different
-        "ALSO COMPLETELY DIFFERENT BETWEEN THE TWO DAYS: her clothing, if any of it is in view - a "
-        "different everyday garment in a different colour and a different neckline each time, nothing "
-        "smart or styled; and her hair, the same cut and colour but unstyled and falling differently.\n\n"
+        # 9 — also different. The amateur style pushes this further: Malcolm asked for MORE
+        # variation in the things that separate the two days, so hair goes up on one day and
+        # down on the other, and the garment changes kind rather than just colour.
+        + ("ALSO COMPLETELY DIFFERENT BETWEEN THE TWO DAYS, AND NOT SUBTLY: a completely different "
+           "kind of everyday garment each time - a t-shirt one day and a jumper, hoodie, dressing "
+           "gown or vest the other, in different colours with different necklines; and her hair "
+           "worn differently, the same cut and colour but scraped up out of the way on one day and "
+           "loose and unbrushed on the other. She has clearly just picked up her phone on two "
+           "unrelated days and taken a picture of herself.\n\n"
+           if amateur_style else
+           "ALSO COMPLETELY DIFFERENT BETWEEN THE TWO DAYS: her clothing, if any of it is in view - a "
+           "different everyday garment in a different colour and a different neckline each time, nothing "
+           "smart or styled; and her hair, the same cut and colour but unstyled and falling differently.\n\n")
 
         # 10 — hands and phone
         + hands +
@@ -944,11 +1178,31 @@ def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
         "temples is right and expected. But she is NOT elderly and must not read as elderly: she has "
         "none of the deep folds, heavy jowls or crepe-papery slackness of a woman in her seventies.\n\n"
 
-        # 15 — lighting. This is where brightening inverts.
-        + c["light"] + "\n\n"
+        # 15 — lighting. Brightening inverts it; the amateur style replaces it outright, and
+        # carries the guard that stops bad light fabricating the whole result.
+        + (
+            "THE LIGHTING IS BAD ON BOTH DAYS, AND THAT IS DELIBERATE. This is whatever light "
+            "happened to be on in that room at that time, falling on her however it fell. It is "
+            "unflattering, it is uneven, and it is nothing anybody would choose - one side too "
+            "bright and the other too dark, or coming from above or below or behind her, or simply "
+            "too dim for the room. The two days are lit by completely different bad light, from "
+            "different directions and in different colours.\n\n"
+
+            "⚠️ BUT NEITHER DAY IS THE FLATTERING ONE, AND THIS IS WHAT KEEPS THE PAIR HONEST. Both "
+            "photographs are badly lit TO THE SAME DEGREE. The later one is NOT softer, NOT kinder, "
+            "NOT more even and NOT better exposed than the earlier one - if it were, the "
+            "improvement in her skin would just be the better light, and the picture would be a "
+            "lie. If anything the later day's light is the harsher of the two. AND IN SPITE OF THE "
+            "BAD LIGHT, THE SKIN THIS PICTURE IS ABOUT MUST STILL BE CLEARLY READABLE IN BOTH "
+            "PANELS: her lines and the surface of her skin are visible and comparable in each, not "
+            "buried in shadow, not lost in a blown-out highlight, and not hidden by the murk. A "
+            "panel where her face has disappeared into darkness is a failed picture.\n\n"
+            if amateur_style else
+            c["light"] + "\n\n"
+        )
 
         # 16 — skin realism
-        "THE SKIN MUST HOLD UP AS REAL AND UNFLATTERED, and at this crop it is most of the picture. Pores "
+        + "THE SKIN MUST HOLD UP AS REAL AND UNFLATTERED, and at this crop it is most of the picture. Pores "
         "are clearly visible and vary in size and density by zone - open across the nose and inner "
         "cheeks, finer at the temples and jaw - with several individually larger than their neighbours. "
         "Pigmentation is uneven and asymmetric, never mirrored from one side to the other. Fine vellus "
@@ -977,12 +1231,16 @@ def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
     )
 
 
-def build_wave(concern_key: str, shot_key: str) -> dict:
+def build_wave(concern_key: str, shot_key: str, style: str = "clean") -> dict:
     c = CONCERNS[concern_key]
+    amateur_style = style == "amateur"
     shot_name = c["macro_shot"] if shot_key == "macro" else shot_key
     shot = SHOTS[shot_name]
     women = WOMEN[concern_key]
     wave = f"block-copper-peptide-ba-{concern_key}-{shot_key}"
+    if amateur_style:
+        wave += "-amateur"
+    scenes = AMATEUR_SCENES if amateur_style else ROOMS
 
     # Room and viewpoint offsets are advanced per shot type so that a woman photographed in
     # all three batches is never in the same room, at the same angle, twice.
@@ -999,15 +1257,17 @@ def build_wave(concern_key: str, shot_key: str) -> dict:
         # (docs/clinical-trial-before-after-images.md §4, "the structural fix").
         # The shot offset then shifts the whole allocation, so a woman photographed in all
         # three batches is never in a room she has already been in.
-        r_a = (i * 2 + shot_index * 8) % len(ROOMS)
-        r_b = (r_a + 1) % len(ROOMS)
+        r_a = (i * 2 + shot_index * 8) % len(scenes)
+        r_b = (r_a + 1) % len(scenes)
         view = VIEWPOINTS[(i + shot_index * 4) % len(VIEWPOINTS)]
 
         # Gaze strength: subtle on every slot, NOTICEABLY different on roughly three in ten.
         # Indexed globally across all 96 so the 30% holds over the round rather than being
         # rounded up or down inside each batch of eight.
         gi = concern_index * 24 + shot_index * 8 + i
-        if gi % 10 < 3:
+        # The amateur batch takes the NOTICEABLE gaze on every slot: Malcolm asked for more
+        # difference between the two days on this style, not the round's usual 30%.
+        if amateur_style or gi % 10 < 3:
             gaze = GAZE_NOTICEABLE[gi % len(GAZE_NOTICEABLE)]
             gaze_note = "noticeable"
         else:
@@ -1022,7 +1282,7 @@ def build_wave(concern_key: str, shot_key: str) -> dict:
             "height": SIZE,
             "target_slot": f"copper-peptide before/after library — {c['title']} — {shot['label']}",
             "ref_files": [],
-            "prompt": build_prompt(concern_key, shot_name, w, (r_a, r_b), view, gaze),
+            "prompt": build_prompt(concern_key, shot_name, w, (r_a, r_b), view, gaze, style),
             "label": {
                 "left": "BEFORE",
                 "right": "AFTER",
@@ -1030,7 +1290,8 @@ def build_wave(concern_key: str, shot_key: str) -> dict:
                 "measure": "(labels added in the theme, never in the pixels)",
                 "cite": "miller-2006 / pickart-2018 / kang-2009 — block not yet assigned",
             },
-            "negative_extra": NEGATIVE_SHARED_EXTRA + ", " + c["negatives"],
+            "negative_extra": ((NEGATIVE_AMATEUR_EXTRA if amateur_style else NEGATIVE_SHARED_EXTRA)
+                               + ", " + c["negatives"]),
         })
 
     return {
@@ -1039,7 +1300,30 @@ def build_wave(concern_key: str, shot_key: str) -> dict:
         "doc": ("docs/clinical-trial-before-after-images.md, .claude/rules/website-imagery.md, "
                 "scripts/build-copper-peptide-before-after-configs.py"),
         "note": (
-            f"{c['title']} — {shot['label']} — eight amateur women, 40-60, one before/after diptych each. "
+            (("⚠️ THE BAD-PHOTOGRAPH STYLE TEST. Malcolm, 2026-08-28: a batch that is noticeably bad "
+              "quality as a PHOTOGRAPH - clearly a home-made selfie with bad lighting - while the "
+              "REALISM of the rendering stays as high as possible, plus more difference between the "
+              "two days than the standard waves carry.\n\n"
+              "The distinction is the whole brief and it has its own paragraph: the light is wrong, "
+              "the framing is careless and the phone struggled, but the IMAGE is sharp, "
+              "high-resolution and faithful - real pores, real vellus hair, nothing mushy or "
+              "smeared. An engine told simply to make a bad photo degrades the render instead, "
+              "which would destroy the only thing these pictures exist to show.\n\n"
+              "⚠️ BAD LIGHT CAN FABRICATE THE WHOLE RESULT, and that risk is worse here than the "
+              "distance confound. If the earlier panel gets harsh light and the later panel gets "
+              "kind light, the improvement is the lamp. Both panels are badly lit to the same "
+              "degree, the later one is never the more flattering, and the skin must stay readable "
+              "in both in spite of it.\n\n"
+              "THE NEGATIVE LIST IS REBUILT for this batch. The standard one bans no dark room, no "
+              "dim room, no murky lighting, no underexposed picture, no camera flash, no orange "
+              "tungsten glow, no heavy shadow across the face, no bathroom and no fluorescent strip "
+              "light - every one of which forbids what this batch is for. It bans the degradation "
+              "words instead. Hands and the raised near arm are ALLOWED here (acetyl wave 11: the "
+              "raised near arm is the strongest selfie tell there is); the phone and mirrors still "
+              "are not.\n\n"
+              "Noticeable gaze difference on all eight, not the round's usual 30%.\n\n")
+             if amateur_style else "")
+            + f"{c['title']} — {shot['label']} — eight amateur women, 40-60, one before/after diptych each. "
             "Part of the twelve-wave copper-peptide round (3 shot types x 4 concerns x 8 women = 96 "
             "diptychs) briefed by Malcolm on 2026-08-27.\n\n"
             "THE CHANGE THAT DEFINES THIS ROUND: the camera position, head position, eye gaze and "
@@ -1080,7 +1364,7 @@ def build_wave(concern_key: str, shot_key: str) -> dict:
                                  "settings carry the labels so Translate & Adapt can translate them.",
         "defaults": {
             "candidates": 1,
-            "negative_global": NEGATIVE_GLOBAL,
+            "negative_global": NEGATIVE_GLOBAL_AMATEUR if amateur_style else NEGATIVE_GLOBAL,
             "negative_class_b": "",
         },
         "slots": slots,
@@ -1097,6 +1381,18 @@ def main() -> None:
     for concern_key in CONCERN_ORDER:
         for shot_key in SHOT_ORDER:
             waves.append(build_wave(concern_key, shot_key))
+
+    # The bad-photograph style test. Malcolm, 2026-08-28: "do all of them for wrinkle
+    # reduction and for skin firming" - so all three shot types on those two concerns.
+    #
+    # It is NOT run on brightening, and that is not an omission. A tone pair needs the two
+    # halves matched for colour and brightness or the comparison is corrupted
+    # (docs/clinical-trial-before-after-images.md §10), and this style's whole point is
+    # wrong light that differs between the days. The two briefs contradict each other.
+    # `repair` is left out simply because it was not asked for.
+    for concern_key in AMATEUR_CONCERNS:
+        for shot_key in SHOT_ORDER:
+            waves.append(build_wave(concern_key, shot_key, style="amateur"))
 
     total = sum(len(w["slots"]) for w in waves)
     if args.list:

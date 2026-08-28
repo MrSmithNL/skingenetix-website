@@ -378,6 +378,59 @@ to their shot type in post.** Note that once the two panels sit at different dis
 angles, one uniform crop box will not land on the same region in both — each panel needs its
 own. `scripts/face-landmarks.swift` is in the repo for that.
 
+### The bad-photograph style — waves 13–18, added 2026-08-28
+
+Malcolm: *"a batch that is noticeably bad quality photo (not the detail — but clearly a home
+made selfie photo with bad lighting) ... Quality of the realism should stay as real as
+possible."* Then: *"do all of them for wrinkle reduction and for skin firming"* — so all
+three shot types on `fine-lines` and `firming`, six waves, 48 diptychs.
+
+Built as a `style` axis on the same builder (`style="amateur"`), not a second script.
+
+**The central distinction, and it needs its own paragraph in every prompt: THE PHOTOGRAPH IS
+BAD, THE IMAGE IS NOT.** An engine told to make a bad photo degrades the *render* — soft
+mush, smeared features, obvious artefacts — which destroys the only thing these pictures
+exist to show. The brief separates them explicitly: the light was wrong, the framing was
+careless and the phone struggled, but the image is sharp, high-resolution and faithful, with
+real pores and real vellus hair. Verified on the smoke test: both gpt_image and nbp_flash
+produced convincingly awful snapshots with the skin detail fully intact.
+
+**⚠️ Bad light can fabricate the entire result, and it is a worse risk than the distance
+confound.** If the earlier panel gets harsh light and the later panel gets kind light, the
+improvement is the lamp — and it would be nearly invisible as a fault, because bad lighting
+is *supposed* to differ between the two days. Both panels are therefore badly lit **to the
+same degree**, the later is never the more flattering, and the skin must stay readable in
+both in spite of it. `no flattering light in the right panel, no soft kind light in the right
+panel, no better lit right panel` are negated. **Check this specifically when judging** — on
+the gpt_image smoke test the later panel came back warmer and lower in contrast, which is
+borderline.
+
+**The negative list had to be rebuilt.** The standard `NEGATIVE_GLOBAL` bans `no dark room,
+no dim room, no murky lighting, no underexposed picture, no camera flash, no orange tungsten
+glow, no heavy shadow across the face, no bathroom, no fluorescent strip light` — every one
+of which forbids exactly what this batch is for. `NEGATIVE_GLOBAL_AMATEUR` bans the
+*degradation* words instead (`no low resolution, no smeared face, no illustration, no cgi,
+no melted features`). Left unchanged those nine stale negatives would have fought the brief
+on all 48 slots.
+
+**Hands and arms come back.** Acetyl wave 11 found that banning arms is why several waves
+read as portraits taken by someone else — "the raised near arm is the strongest tell there
+is". It is required here on the `close` and `half` shots. **But not on `macro`:** at that
+crop skin fills the panel, so demanding a raised shoulder in the corner asks for two
+incompatible things at once, and a self-contradicting brief is how the cheek macro became a
+portrait on eight engine-runs. The phone and mirrors stay banned everywhere — a mirror puts
+the phone back in shot.
+
+**Not run on `brightening`, and that is deliberate**, not an omission: a tone pair needs the
+two halves matched for colour and brightness (§10), and this style's whole point is wrong
+light differing between the days. The two briefs contradict each other.
+
+Gaze is **noticeably different on all eight** slots here rather than the round's 30%, and the
+per-day variation is pushed further — different room *type*, different time of day, hair up
+one day and loose the other, a different *kind* of garment rather than a different colour.
+`AMATEUR_SCENES` carries sixteen bad-light setups (overhead ceiling light, warm bedside lamp,
+backlit window, strip light, uplighting desk lamp, screen light, and so on).
+
 ### Suppliers and cost
 
 seedream, gpt_image, nbp_flash — 96 slots x 3 = 288 images, **≈$8.60**. nbp_pro excluded
