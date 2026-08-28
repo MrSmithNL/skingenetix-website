@@ -431,6 +431,54 @@ one day and loose the other, a different *kind* of garment rather than a differe
 `AMATEUR_SCENES` carries sixteen bad-light setups (overhead ceiling light, warm bedside lamp,
 backlit window, strip light, uplighting desk lamp, screen light, and so on).
 
+### Region bands, and two magnitudes — waves 19–30, added 2026-08-28
+
+Malcolm supplied **seven real before/after pairs** as reference, with *"we don't need any more
+repair and brightening waves, we need more lines/wrinkle reduction and skin firming."*
+
+**The most useful thing about the references is what they ARE.** Not one of the seven is a
+head-and-shoulders portrait, and not one is a cheek macro. Every one is a **horizontal
+anatomical band**, framed frontally and cropped at *features* rather than at an arbitrary
+distance:
+
+| band | frame | what it carries |
+|---|---|---|
+| `forehead` | hairline down to just below the eyes | horizontal forehead lines, crosshatching, glabellar creases |
+| `lower` | under the nose down to the collarbones | lip lines, marionette lines, jaw against neck, under-chin softness, neck banding |
+| `eyes` | mid-forehead down to the top lip | crow's feet, under-eye puffiness and shadow, top of the nasolabial |
+
+**This finally explains the framing result the round kept hitting.** gpt_image honoured the
+jaw-and-neck crop and every engine refused the cheek macro — and the difference is that a band
+bounded by **features** gives the engine two edges it can actually find on a face. "A very
+close picture of one cheek" gives it nothing to anchor to, so it falls back to the portrait it
+knows. Eight engine-runs of evidence, and the fix turned out to be in the reference material,
+not in more wording. **Brief a tight crop as a band between two named features.**
+
+The bands are frontal, so they take only the **four FRONT viewpoint pairs** — a forehead band
+cannot survive a forty-degree head turn, and a lower-face band needs her square on or the jaw
+line is not comparable. Camera height, tilt, distance and placement still vary per panel; the
+side-lock and the distance guard are unchanged.
+
+### Two magnitudes, generated side by side
+
+The references show far more change than the 30% Malcolm had specified — the six-treatment
+forehead goes from deep crosshatching to near-smooth, and the neck pair loses its vertical
+banding entirely. That is 50–70%. He chose to generate **both** and decide from images rather
+than from a number, so every band wave exists at `-m30` and `-m50` (`STRENGTHS` in the
+builder; the magnitude text is tokenised with `{DEGREE}`, `{DEGREECAPS}`, `{FIRM}`,
+`{FIRMDEG}`).
+
+⚠️ **Keep this attached to the m50 set.** The reference pairs are captioned *"after 1 / 3 / 6 /
+10 **treatments**"* — they are clinic device courses (RF, microneedling), not a topical cream.
+A cream matching that result is a stronger claim than this page's research carries: Miller 2006
+measured *self-reported satisfaction with appearance*, and Pickart 2018 and Kang 2009 are a
+literature review and a cell-culture study. **m30 is what the evidence supports; m50 is a
+commercial decision, taken with that on the record** (Malcolm, 2026-08-28).
+
+Also note the references carry **burnt-in "Before" / "After N treatments" labels**. Ours must
+not — see §3: pixels cannot be translated, and the labels live in the theme's own text
+settings.
+
 ### Suppliers and cost
 
 seedream, gpt_image, nbp_flash — 96 slots x 3 = 288 images, **≈$8.60**. nbp_pro excluded

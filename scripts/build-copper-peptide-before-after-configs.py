@@ -610,6 +610,36 @@ NEGATIVE_AMATEUR_EXTRA = (
 
 
 # --------------------------------------------------------------------------------------
+# Magnitude strengths. Malcolm, 2026-08-28, chose to generate BOTH and decide from images
+# rather than from a number, after seeing that his seven reference pairs show far more change
+# than the 30% he had specified.
+#
+# ⚠️ Worth keeping attached to the m50 set: those references are captioned "after 1 / 3 / 6 /
+# 10 TREATMENTS" - they are clinic device courses (RF, microneedling), not a topical cream.
+# A cream matching that result is a stronger claim than the research on this page carries;
+# Miller 2006 measured self-reported satisfaction with appearance, and Pickart 2018 and Kang
+# 2009 are a literature review and a cell-culture study. The m30 set is what the evidence
+# supports. The m50 set is a commercial decision, taken with that on the record.
+# --------------------------------------------------------------------------------------
+STRENGTHS = {
+    "m30": dict(
+        label="~30%",
+        DEGREE="about A THIRD",
+        DEGREECAPS="ABOUT A THIRD",
+        FIRM="a little more firmly",
+        FIRMDEG="slightly more",
+    ),
+    "m50": dict(
+        label="~50%",
+        DEGREE="about A HALF",
+        DEGREECAPS="ABOUT A HALF",
+        FIRM="clearly more firmly",
+        FIRMDEG="noticeably more",
+    ),
+}
+
+
+# --------------------------------------------------------------------------------------
 # The four concerns.
 #
 # `light` is the whole lighting paragraph and it is where brightening inverts.
@@ -640,15 +670,15 @@ CONCERNS = {
         # this concern as well as on `firming`, because copper peptide claims both.
         magnitude=(
             "TWO THINGS HAVE IMPROVED, AND BOTH MUST BE THERE.\n\n"
-            "FIRST, THE LINES ARE SHALLOWER. Each one is about A THIRD less deep, holding a lighter and "
+            "FIRST, THE LINES ARE SHALLOWER. Each one is {DEGREE} less deep, holding a lighter and "
             "shorter shadow.\n\n"
-            "SECOND, HER SKIN LOOKS FIRMER AND BETTER SUPPORTED. It sits a little more firmly over the "
-            "bone, with slightly more of a cushioned, resilient quality and slightly less of a thin, "
-            "slack one - most readable along the jaw and the outer cheek.\n\n"
+            "SECOND, HER SKIN LOOKS FIRMER AND BETTER SUPPORTED. It sits {FIRM} over the bone, with "
+            "{FIRMDEG} of a cushioned, resilient quality and less of a thin, slack one - most readable "
+            "along the jaw and the outer cheek.\n\n"
             "THE SIZE OF THE CHANGE IS THE POINT AND IT IS NARROW AT BOTH ENDS. It must be NOTICEABLE - "
             "a viewer looking at the two halves should SEE that the later one is better without being "
             "told to look for it, and should be able to point to which lines are softer and where the "
-            "skin sits differently. But it is ABOUT A THIRD, NOT A TRANSFORMATION: every single line is "
+            "skin sits differently. But it is {DEGREECAPS}, NOT A TRANSFORMATION: every single line is "
             "STILL THERE, in the same place and the same number, and not one has disappeared. A viewer "
             "must be able to match them up one for one between the panels. Her face is the same shape, "
             "the same width and the same weight - nothing lifted, slimmed, tightened or contoured. A "
@@ -686,16 +716,16 @@ CONCERNS = {
         # the other to see it" — was too quiet for what he asked for and is now "noticeable".
         magnitude=(
             "TWO THINGS HAVE IMPROVED, AND BOTH MUST BE THERE.\n\n"
-            "FIRST, HER SKIN IS FIRMER AND BETTER SUPPORTED. It sits more firmly over the bone, the "
-            "softness along the jaw is less pronounced so the edge of the jaw is drawn a little more "
-            "cleanly against the neck, and the surface has a resilient, cushioned quality where it was "
-            "thin and papery.\n\n"
-            "SECOND, HER FINE LINES ARE SHALLOWER - about A THIRD less deep, each holding a lighter and "
+            "FIRST, HER SKIN IS FIRMER AND BETTER SUPPORTED. It sits {FIRM} over the bone, the softness "
+            "along the jaw is less pronounced so the edge of the jaw is drawn {FIRMDEG} cleanly against "
+            "the neck, and the surface has a resilient, cushioned quality where it was thin and "
+            "papery.\n\n"
+            "SECOND, HER FINE LINES ARE SHALLOWER - {DEGREE} less deep, each holding a lighter and "
             "shorter shadow.\n\n"
             "THE SIZE OF THE CHANGE IS THE POINT AND IT IS NARROW AT BOTH ENDS. It must be NOTICEABLE - "
             "a viewer looking at the two halves should SEE that the later one is better without being "
             "told to look for it, and should be able to point to where the skin sits differently and "
-            "which lines are softer. But it is ABOUT A THIRD, NOT A TRANSFORMATION, and this is the "
+            "which lines are softer. But it is {DEGREECAPS}, NOT A TRANSFORMATION, and this is the "
             "most easily overstated change in the whole set: her face has NOT been lifted, tightened, "
             "slimmed or contoured, her jaw is the SAME JAW and the same shape, her cheekbones have not "
             "become more prominent, and she has not lost any weight. Every fold and every line she has "
@@ -1045,8 +1075,17 @@ NEGATIVE_SHARED_EXTRA = (
 )
 
 
+def _fill(text: str, strength: str) -> str:
+    """Substitute the magnitude tokens. Concerns without tokens pass through unchanged."""
+    for k, v in STRENGTHS[strength].items():
+        if k != "label":
+            text = text.replace("{" + k + "}", v)
+    return text
+
+
 def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
-                 view: dict, gaze: tuple, style: str = "clean") -> str:
+                 view: dict, gaze: tuple, style: str = "clean",
+                 strength: str = "m30") -> str:
     """Assemble one slot's brief.
 
     Paragraph order is load-bearing. The honesty rules sit at paragraph 3, before the engine
@@ -1310,7 +1349,8 @@ def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
         + c["subject"] + woman["before"] + "\n\n"
 
         # 18 — the right panel: floor and ceiling
-        "ON THE LATER DAY, IN THE RIGHT PANEL: " + c["magnitude"] + "\n\n"
+        "ON THE LATER DAY, IN THE RIGHT PANEL: "
+        + _fill(c["magnitude"], strength) + "\n\n"
 
         # 19 — the honesty clause restated at the point of change, because describing the
         # improvement is exactly the moment an engine reaches for its own idea of improvement.
@@ -1327,7 +1367,8 @@ def build_prompt(concern_key: str, shot_key: str, woman: dict, rooms: tuple,
     )
 
 
-def build_wave(concern_key: str, shot_key: str, style: str = "clean") -> dict:
+def build_wave(concern_key: str, shot_key: str, style: str = "clean",
+               strength: str = "m30") -> dict:
     c = CONCERNS[concern_key]
     amateur_style = style == "amateur"
     shot_name = c["macro_shot"] if shot_key == "macro" else shot_key
@@ -1336,6 +1377,8 @@ def build_wave(concern_key: str, shot_key: str, style: str = "clean") -> dict:
     wave = f"block-copper-peptide-ba-{concern_key}-{shot_key}"
     if amateur_style:
         wave += "-amateur"
+    if shot_key in REGION_SHOTS:
+        wave += f"-{strength}"
     scenes = AMATEUR_SCENES if amateur_style else ROOMS
 
     # Room and viewpoint offsets are advanced per shot type so that a woman photographed in
@@ -1384,13 +1427,14 @@ def build_wave(concern_key: str, shot_key: str, style: str = "clean") -> dict:
 
         slots.append({
             "id": f"cpba-{concern_key}-{shot_key}-{w['key']}",
-            "title": f"{c['title']} · {shot['label']} · {w['key'].upper()} · gaze {gaze_note}",
+            "title": f"{c['title']} · {shot['label']} · {STRENGTHS[strength]['label']} · "
+                     f"{w['key'].upper()} · gaze {gaze_note}",
             "class": "B",
             "width": SIZE,
             "height": SIZE,
             "target_slot": f"copper-peptide before/after library — {c['title']} — {shot['label']}",
             "ref_files": [],
-            "prompt": build_prompt(concern_key, shot_name, w, (r_a, r_b), view, gaze, style),
+            "prompt": build_prompt(concern_key, shot_name, w, (r_a, r_b), view, gaze, style, strength),
             "label": {
                 "left": "BEFORE",
                 "right": "AFTER",
@@ -1507,7 +1551,8 @@ def main() -> None:
     # firming." Frontal anatomical bands, on those two concerns only.
     for concern_key in REGION_CONCERNS:
         for shot_key in REGION_SHOTS:
-            waves.append(build_wave(concern_key, shot_key))
+            for strength in ("m30", "m50"):
+                waves.append(build_wave(concern_key, shot_key, strength=strength))
 
     total = sum(len(w["slots"]) for w in waves)
     if args.list:
