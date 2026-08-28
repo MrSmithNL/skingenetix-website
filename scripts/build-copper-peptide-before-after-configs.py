@@ -563,18 +563,33 @@ CONCERNS = {
         subject=(
             "ON THE EARLIER DAY, IN THE LEFT PANEL, HER EXPRESSION LINES ARE THE SUBJECT OF THE PICTURE. "
         ),
+        # Malcolm, 2026-08-28: "the whole point is that there should be a noticeable (though
+        # subtle - maybe 30%) improvement in reduction of fine wrinkles AND firmer skin in the
+        # after image." Two changes from what shipped in the first twelve waves: the magnitude
+        # comes down from a half to about a third, and FIRMNESS is now part of the result on
+        # this concern as well as on `firming`, because copper peptide claims both.
         magnitude=(
-            "The lines are VISIBLY SOFTER - each one about half as deep, holding a lighter and shorter "
-            "shadow, so the difference is plain when the halves are compared. BUT THE CEILING MATTERS AS "
-            "MUCH AS THE FLOOR: every single line is STILL THERE, in the same place and the same number, "
-            "and not one has disappeared. A viewer must be able to match them up one for one between the "
-            "panels and say 'that one, and that one, are shallower'. A right panel with smooth, "
-            "line-free skin is a failure, not a success."
+            "TWO THINGS HAVE IMPROVED, AND BOTH MUST BE THERE.\n\n"
+            "FIRST, THE LINES ARE SHALLOWER. Each one is about A THIRD less deep, holding a lighter and "
+            "shorter shadow.\n\n"
+            "SECOND, HER SKIN LOOKS FIRMER AND BETTER SUPPORTED. It sits a little more firmly over the "
+            "bone, with slightly more of a cushioned, resilient quality and slightly less of a thin, "
+            "slack one - most readable along the jaw and the outer cheek.\n\n"
+            "THE SIZE OF THE CHANGE IS THE POINT AND IT IS NARROW AT BOTH ENDS. It must be NOTICEABLE - "
+            "a viewer looking at the two halves should SEE that the later one is better without being "
+            "told to look for it, and should be able to point to which lines are softer and where the "
+            "skin sits differently. But it is ABOUT A THIRD, NOT A TRANSFORMATION: every single line is "
+            "STILL THERE, in the same place and the same number, and not one has disappeared. A viewer "
+            "must be able to match them up one for one between the panels. Her face is the same shape, "
+            "the same width and the same weight - nothing lifted, slimmed, tightened or contoured. A "
+            "right panel with smooth, line-free skin, or one that reads as a facelift, is a failure, "
+            "not a success."
         ),
         honesty=(
             "AND AT THE SAME TIME, IN THAT SAME RIGHT PANEL: the number and position of her lines is "
             "unchanged and NOT ONE HAS DISAPPEARED. Every mole, freckle and mark is still there, in the "
-            "same place and the same number. Only the DEPTH of the lines has changed."
+            "same place and the same number. What has changed is the DEPTH of the lines and how firmly "
+            "her skin sits - not the shape of her face, not her age and not her weight."
         ),
         negatives=("no line disappearing between the panels, no smooth line-free skin in the right panel, "
                    "no flat frontal lighting, no shadowless face"),
@@ -595,22 +610,33 @@ CONCERNS = {
             "ON THE EARLIER DAY, IN THE LEFT PANEL, THE SLACKNESS AND THINNESS OF HER SKIN IS THE SUBJECT "
             "OF THE PICTURE. "
         ),
+        # Same instruction as on `fine-lines` (Malcolm, 2026-08-28), led the other way round:
+        # firmness first because that is this batch's subject, with the line softening carried
+        # alongside it. The previous wording — "a viewer should HAVE TO LOOK from one panel to
+        # the other to see it" — was too quiet for what he asked for and is now "noticeable".
         magnitude=(
-            "The skin looks a little DENSER AND BETTER SUPPORTED - it sits slightly more firmly over the "
-            "bone, the softness along the jaw is a little less pronounced, and the surface has more of a "
-            "resilient, cushioned quality and less of a thin, papery one. THIS IS THE MOST EASILY "
-            "OVERSTATED OF ALL THE CHANGES AND THE CEILING IS HARD: her face has NOT been lifted, "
-            "tightened, slimmed or contoured, her jaw is the SAME JAW and the same shape, her cheekbones "
-            "have not become more prominent, and she has not lost any weight. Every fold and every line "
-            "she has is still there. A viewer should have to look from one panel to the other to see it, "
-            "and should then be able to point to where the skin sits differently. Anything that reads as "
-            "a facelift is a complete failure."
+            "TWO THINGS HAVE IMPROVED, AND BOTH MUST BE THERE.\n\n"
+            "FIRST, HER SKIN IS FIRMER AND BETTER SUPPORTED. It sits more firmly over the bone, the "
+            "softness along the jaw is less pronounced so the edge of the jaw is drawn a little more "
+            "cleanly against the neck, and the surface has a resilient, cushioned quality where it was "
+            "thin and papery.\n\n"
+            "SECOND, HER FINE LINES ARE SHALLOWER - about A THIRD less deep, each holding a lighter and "
+            "shorter shadow.\n\n"
+            "THE SIZE OF THE CHANGE IS THE POINT AND IT IS NARROW AT BOTH ENDS. It must be NOTICEABLE - "
+            "a viewer looking at the two halves should SEE that the later one is better without being "
+            "told to look for it, and should be able to point to where the skin sits differently and "
+            "which lines are softer. But it is ABOUT A THIRD, NOT A TRANSFORMATION, and this is the "
+            "most easily overstated change in the whole set: her face has NOT been lifted, tightened, "
+            "slimmed or contoured, her jaw is the SAME JAW and the same shape, her cheekbones have not "
+            "become more prominent, and she has not lost any weight. Every fold and every line she has "
+            "is still there, in the same place and the same number. Anything that reads as a facelift "
+            "is a complete failure."
         ),
         honesty=(
             "AND AT THE SAME TIME, IN THAT SAME RIGHT PANEL: her face is the SAME SHAPE - the same jaw, "
             "the same cheekbones, the same weight, the same width. Nothing has been slimmed, lifted or "
             "sculpted. Every mole, freckle and mark is still there in the same place, and every line she "
-            "has is still there."
+            "has is still there, just less deeply cut. She is the same age and the same person."
         ),
         negatives=("no facelift, no tightened face, no slimmer face, no contoured cheekbones, no weight "
                    "loss between the panels, no jawline reshaped, no flat frontal lighting, no shadowless "
