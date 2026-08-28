@@ -384,6 +384,76 @@ SHOTS = {
     ),
 }
 
+
+# --------------------------------------------------------------------------------------
+# REGION BANDS. Added 2026-08-28 from seven real before/after pairs Malcolm supplied as
+# reference. They are the single most useful thing anyone has handed this brief, because
+# they show what the successful examples actually ARE, and it is not what this round has
+# been generating.
+#
+# NONE of the seven is a head-and-shoulders portrait and none is a cheek macro. Every one is
+# a HORIZONTAL ANATOMICAL BAND, framed frontally, cropped at features rather than at an
+# arbitrary distance:
+#
+#   - brow to hairline, eyes just inside the bottom edge          (the two forehead pairs)
+#   - under the nose to the collarbones                            (the lip/chin/neck pair)
+#   - mid-forehead to the top lip                                  (the under-eye pairs)
+#
+# That is the same reason the jaw-and-neck crop was the one tight framing gpt_image honoured
+# while every engine refused a cheek macro: a band bounded by FEATURES can be briefed, because
+# the engine can find both edges on the face. "A very close picture of one cheek" gives it
+# nothing to anchor to, so it falls back to the portrait it knows.
+#
+# These are frontal, so they are restricted to the four FRONT viewpoint pairs - a forehead
+# band cannot survive a forty-degree head turn - and the camera still varies by height, tilt,
+# distance and placement between the panels.
+# --------------------------------------------------------------------------------------
+SHOTS["forehead"] = dict(
+    selfie=True,
+    label="forehead band",
+    text=(
+        "THE PANEL IS A BAND ACROSS THE UPPER FACE AND THE FOREHEAD IS ALMOST ALL OF IT. The frame "
+        "runs from her hairline at the top down to just below her eyes at the bottom, and out past "
+        "both temples at the sides. Her eyebrows and both eyes are inside the bottom of the frame so "
+        "it is unmistakably a face, but there is NO nose tip, NO mouth and NO chin in view at all - "
+        "they are outside the frame entirely. THE HORIZONTAL LINES ACROSS HER FOREHEAD, the fine "
+        "crosshatching between them and the vertical creases between her brows ARE WHAT THE PICTURE "
+        "IS OF, and they run the full width of the panel."
+    ),
+)
+
+SHOTS["lower"] = dict(
+    selfie=True,
+    label="mouth, jaw and neck",
+    text=(
+        "THE PANEL IS A BAND ACROSS THE LOWER FACE AND THE NECK. The frame runs from just under her "
+        "nose at the top - the nostrils are just inside the top edge, the eyes are NOT in the picture "
+        "at all - down over her mouth, chin and jaw and on down the neck to her collarbones at the "
+        "bottom, with the sides of her jaw running out to both edges. She is square to the camera. "
+        "THE VERTICAL LINES ON HER LIPS, THE LINES RUNNING DOWN FROM THE CORNERS OF HER MOUTH, THE "
+        "LINE OF THE JAW AGAINST THE NECK, THE SOFTNESS UNDER THE CHIN AND THE SLACK VERTICAL "
+        "BANDING DOWN THE FRONT OF THE NECK ARE WHAT THE PICTURE IS OF."
+    ),
+)
+
+SHOTS["eyes"] = dict(
+    selfie=True,
+    label="eyes and mid-face",
+    text=(
+        "THE PANEL IS A BAND ACROSS THE MIDDLE OF THE FACE. The frame runs from the middle of her "
+        "forehead at the top down to her top lip at the bottom, and out past both cheekbones at the "
+        "sides. Both eyes, both brows, the whole of her nose and the tops of both cheeks are in view; "
+        "her mouth and chin are NOT in the picture. She is square to the camera and both sides of her "
+        "face are in frame. THE CREASES AT THE OUTER CORNERS OF BOTH EYES, THE LOOSE PUFFY SKIN AND "
+        "SHADOW UNDER THEM, AND THE LINES BEGINNING TO RUN DOWN FROM EACH SIDE OF THE NOSE ARE WHAT "
+        "THE PICTURE IS OF."
+    ),
+)
+
+#: Frontal bands only - see the comment above. Run on the two concerns Malcolm asked for.
+REGION_SHOTS = ["forehead", "lower", "eyes"]
+REGION_CONCERNS = ["fine-lines", "firming"]
+
 SHOT_ORDER = ["macro", "half", "close"]
 
 # --------------------------------------------------------------------------------------
@@ -1270,7 +1340,12 @@ def build_wave(concern_key: str, shot_key: str, style: str = "clean") -> dict:
 
     # Room and viewpoint offsets are advanced per shot type so that a woman photographed in
     # all three batches is never in the same room, at the same angle, twice.
-    shot_index = SHOT_ORDER.index(shot_key)
+    # Region bands are not in SHOT_ORDER; give them their own offsets so their room and
+    # viewpoint allocation does not collide with the three standard shot types.
+    if shot_key in REGION_SHOTS:
+        shot_index = 3 + REGION_SHOTS.index(shot_key)
+    else:
+        shot_index = SHOT_ORDER.index(shot_key)
     concern_index = CONCERN_ORDER.index(concern_key)
 
     slots = []
@@ -1285,7 +1360,14 @@ def build_wave(concern_key: str, shot_key: str, style: str = "clean") -> dict:
         # three batches is never in a room she has already been in.
         r_a = (i * 2 + shot_index * 8) % len(scenes)
         r_b = (r_a + 1) % len(scenes)
-        view = VIEWPOINTS[(i + shot_index * 4) % len(VIEWPOINTS)]
+        if shot_key in REGION_SHOTS:
+            # Frontal bands only. A forehead band cannot survive a forty-degree head turn,
+            # and a lower-face band needs her square on or the jaw line is not comparable.
+            # VIEWPOINTS[0:4] are the four front pairs; the camera still varies by height,
+            # tilt, distance and placement between the two panels.
+            view = VIEWPOINTS[(i + shot_index) % 4]
+        else:
+            view = VIEWPOINTS[(i + shot_index * 4) % len(VIEWPOINTS)]
 
         # Gaze strength: subtle on every slot, NOTICEABLY different on roughly three in ten.
         # Indexed globally across all 96 so the 30% holds over the round rather than being
@@ -1419,6 +1501,13 @@ def main() -> None:
     for concern_key in AMATEUR_CONCERNS:
         for shot_key in SHOT_ORDER:
             waves.append(build_wave(concern_key, shot_key, style="amateur"))
+
+    # The region bands, from Malcolm's seven reference pairs (2026-08-28): "we don't need any
+    # more repair and brightening waves, we need more lines/wrinkle reduction and skin
+    # firming." Frontal anatomical bands, on those two concerns only.
+    for concern_key in REGION_CONCERNS:
+        for shot_key in REGION_SHOTS:
+            waves.append(build_wave(concern_key, shot_key))
 
     total = sum(len(w["slots"]) for w in waves)
     if args.list:
