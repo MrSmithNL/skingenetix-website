@@ -179,9 +179,98 @@ def build_wave_sheet(run_dir: Path, out: Path) -> bool:
     return True
 
 
+
+# --------------------------------------------------------------------------------------
+# Strength-pair sheet. Added 2026-08-28: the copper-peptide band waves exist at two
+# magnitudes (-m30 and -m50) and the decision Malcolm is making is BETWEEN them, on the same
+# woman. Two separate sheets cannot answer that — you would be flipping between windows
+# comparing a face against your memory of a face. This lays the pair adjacent: a row per
+# woman, and for each engine its m30 tile immediately beside its m50 tile.
+# --------------------------------------------------------------------------------------
+def build_pair_sheet(dir_a: Path, dir_b: Path, out: Path) -> bool:
+    slots_a = sorted(d for d in dir_a.iterdir() if d.is_dir() and not d.name.startswith("."))
+    if not slots_a:
+        return False
+
+    work = dir_a / ".pairsheet"
+    work.mkdir(exist_ok=True)
+    row_files = []
+
+    for r, sa in enumerate(slots_a):
+        sb = dir_b / sa.name
+        if not sb.is_dir():
+            continue
+        # Interleave by SUPPLIER so each engine's two magnitudes sit side by side. Matching on
+        # the supplier token rather than on sort order matters: a slot that lost a supplier to
+        # a transient error would otherwise shift every later tile one column left and silently
+        # pair m30 of one engine against m50 of another.
+        tiles = []
+        for sup in ("gpt_image", "nbp_flash", "seedream"):
+            for tag, sd in (("m30", sa), ("m50", sb)):
+                match = [f for f in _shots(sd) if sup in f.name]
+                d = work / f"r{r:02d}_{sup}_{tag}.png"
+                if match:
+                    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(match[0]),
+                                    "-vf", f"scale={WAVE_TILE_W}:{WAVE_TILE_W},"
+                                           f"drawtext=fontfile={FONT}:text='{sup} {tag}':x=12:y=10:"
+                                           f"fontsize=24:fontcolor=white:box=1:boxcolor=black@0.7:"
+                                           f"boxborderw=8",
+                                    str(d)], check=True)
+                else:
+                    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi",
+                                    "-i", f"color=c=black:s={WAVE_TILE_W}x{WAVE_TILE_W}",
+                                    "-frames:v", "1", str(d)], check=True)
+                tiles.append(d)
+
+        rf = work / f"row{r:02d}.png"
+        args = ["ffmpeg", "-loglevel", "error", "-y"]
+        for t in tiles:
+            args += ["-i", str(t)]
+        args += ["-filter_complex", f"hstack=inputs={len(tiles)}", str(rf)]
+        subprocess.run(args, check=True)
+        row_files.append(rf)
+
+    if not row_files:
+        return False
+    args = ["ffmpeg", "-loglevel", "error", "-y"]
+    for rf in row_files:
+        args += ["-i", str(rf)]
+    args += ["-filter_complex", f"vstack=inputs={len(row_files)}", str(out)]
+    subprocess.run(args, check=True)
+    _sweep(dir_a)
+    return True
+
+
+def _sweep(run_dir: Path) -> None:
+    """Delete this tool's own scratch tiles.
+
+    They live in dot-directories so Finder hides them, which is exactly why they went
+    unnoticed: 576 intermediate PNGs had accumulated across nineteen run folders by
+    2026-08-28, inflating every image count by more than double. Worse, they are named
+    r00c0.png and row00.png, so a glob collecting Malcolm's marked winners out of a run
+    directory would have swept them up too.
+    """
+    for scratch in (".sheet", ".wavesheet", ".pairsheet"):
+        for d in run_dir.rglob(scratch):
+            for f in d.iterdir():
+                f.unlink()
+            d.rmdir()
+
+
 def main():
-    argv = [a for a in sys.argv[1:] if a != "--per-wave"]
+    argv = [a for a in sys.argv[1:] if a not in ("--per-wave", "--pair")]
     per_wave = "--per-wave" in sys.argv
+    pair = "--pair" in sys.argv
+    if pair:
+        a, b = ROOT / argv[0], ROOT / argv[1]
+        name = re.sub(r"^\d{4}-\d{2}-\d{2}-(multi-)?", "", a.name).replace("-m30", "")
+        out = DESKTOP / f"skingenetix-pair--{name}.png"
+        if build_pair_sheet(a, b, out):
+            print(f"  {name} -> {out.name}")
+            subprocess.run(["open", str(out)])
+        else:
+            print(f"  {name}: nothing to tile")
+        return
     run_dir = ROOT / argv[0]
     if not run_dir.exists():
         sys.exit(f"not found: {run_dir}")
@@ -195,6 +284,7 @@ def main():
     if per_wave:
         out = DESKTOP / f"skingenetix-wave--{wave}.png"
         if build_wave_sheet(run_dir, out):
+            _sweep(run_dir)
             print(f"  {wave} -> {out.name}")
             subprocess.run(["open", str(out)])
         else:
