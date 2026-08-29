@@ -87,6 +87,21 @@ ALT_BY_CONCERN = {
     "General": "Before and after skin comparison showing improved skin condition and texture",
 }
 
+#: Hand swaps applied AFTER the pooled allocation, as (person_a, person_b) — the two trade
+#: products. They live here rather than as an edit to configs/product-reviews.json because
+#: that file is regenerated from this script: a hand edit there would be silently wiped by the
+#: next rebuild, and the carousel would revert without anyone touching it.
+#:
+#: A swap may cross pools, and that is fine. The `concern` field records which Drive folder a
+#: photograph CAME FROM — provenance, so the allocation stays auditable after the SEO rename —
+#: not which product it belongs to. Emma-H stays a Wrinkles photograph while sitting on the
+#: firming cream.
+#:
+#: Counts are untouched: a swap is one-for-one.
+SWAPS = [
+    ("Emma-H", "Mallory-B"),        # Malcolm, 2026-08-29
+]
+
 PLACEHOLDER_TITLE = "PLACEHOLDER — review headline"
 PLACEHOLDER_BODY = ("PLACEHOLDER — the customer's review text goes here. This card has not "
                     "been written yet.")
@@ -160,6 +175,15 @@ def build() -> dict:
                 "before_label": BEFORE_LABEL,
                 "after_label": AFTER_LABEL,
             })
+
+    by_person = {c["person"]: c for c in cards}
+    for a, b in SWAPS:
+        for who in (a, b):
+            if who not in by_person:
+                raise SystemExit(f"swap names an unknown person: {who}")
+        by_person[a]["product"], by_person[b]["product"] = (
+            by_person[b]["product"], by_person[a]["product"])
+        print(f"  swapped {a} <-> {b}")
 
     leftover = {c: len(pools[c]) - cursor[c] for c in pools}
     return {
