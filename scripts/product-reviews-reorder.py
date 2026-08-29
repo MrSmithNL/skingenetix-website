@@ -41,70 +41,70 @@ PLAN = ROOT / "configs" / "product-reviews.json"
 #: shot: face | neck | macro
 TAGS = {
     # acetyl
-    "Stephanie-M": ("blonde", "fair", "face"), "Sophie-H": ("blonde", "fair", "face"),
-    "Kelly-E": ("blonde", "fair", "face"), "Deirdre-O": ("blonde", "fair", "face"),
-    "Meredith-H": ("dark", "olive", "face"), "Elizabeth-L": ("brunette", "fair", "face"),
-    "Corinne-J": ("greyblonde", "fair", "face"), "Nicole-T": ("brunette", "fair", "face"),
+    "Stephanie-M": ("blonde", "fair", "close"), "Sophie-H": ("blonde", "fair", "close"),
+    "Kelly-E": ("blonde", "fair", "close"), "Deirdre-O": ("blonde", "fair", "close"),
+    "Meredith-H": ("dark", "olive", "half"), "Elizabeth-L": ("brunette", "fair", "close"),
+    "Corinne-J": ("greyblonde", "fair", "close"), "Nicole-T": ("brunette", "fair", "close"),
     # matrixyl serum
-    "Tabitha-J": ("greyblonde", "fair", "face"), "Francine-S": ("greyblonde", "fair", "face"),
-    "Janine-L": ("dark", "olive", "face"), "Amanda-P": ("dark", "olive", "face"),
-    "Michelle-R": ("greyblonde", "fair", "face"), "Petra-J": ("dark", "olive", "face"),
-    "Mallory-B": ("red", "fair", "face"), "Caroline-D": ("brunette", "fair", "face"),
-    "Evelyn-L": ("brunette", "fair", "face"),
+    "Tabitha-J": ("greyblonde", "fair", "close"), "Francine-S": ("greyblonde", "fair", "half"),
+    "Janine-L": ("dark", "olive", "close"), "Amanda-P": ("dark", "olive", "forehead"),
+    "Michelle-R": ("greyblonde", "fair", "close"), "Petra-J": ("dark", "olive", "close"),
+    "Mallory-B": ("red", "fair", "close"), "Caroline-D": ("brunette", "fair", "close"),
+    "Evelyn-L": ("brunette", "fair", "close"),
     # matrixyl cream
-    "Emma-H": ("brunette", "fair", "face"), "Elena-S": ("dark", "olive", "neck"),
-    "Blythe-V": ("greyblonde", "fair", "face"), "Daphne-N": ("blonde", "fair", "neck"),
-    "Lorelei-D": ("brunette", "fair", "neck"), "Simone-K": ("red", "fair", "face"),
-    "Katarina-S": ("blonde", "fair", "face"), "Alexandra-B": ("blonde", "fair", "face"),
+    "Emma-H": ("brunette", "fair", "half"), "Elena-S": ("dark", "olive", "neck"),
+    "Blythe-V": ("greyblonde", "fair", "close"), "Daphne-N": ("blonde", "fair", "neck"),
+    "Lorelei-D": ("brunette", "fair", "half"), "Simone-K": ("red", "fair", "close"),
+    "Katarina-S": ("blonde", "fair", "neck"), "Alexandra-B": ("blonde", "fair", "close"),
     "Gabrielle-D": ("brunette", "olive", "neck"),
     # glutathione
-    "Dana-T": ("dark", "deep", "face"), "Amy-T": ("blonde", "fair", "face"),
-    "Jennifer-T": ("blonde", "fair", "face"), "Arantxa-R": ("brunette", "olive", "face"),
-    "Silvia-M": ("brunette", "olive", "face"), "Bri-E": ("brunette", "fair", "face"),
-    "Lucia-M": ("brunette", "olive", "face"), "Joyce-G": ("brunette", "fair", "face"),
-    "Martine M": ("dark", "olive", "face"),
+    "Dana-T": ("dark", "deep", "close"), "Amy-T": ("blonde", "fair", "close"),
+    "Jennifer-T": ("blonde", "fair", "close"), "Arantxa-R": ("brunette", "olive", "half"),
+    "Silvia-M": ("brunette", "olive", "close"), "Bri-E": ("brunette", "fair", "close"),
+    "Lucia-M": ("brunette", "olive", "close"), "Joyce-G": ("brunette", "fair", "close"),
+    "Martine M": ("dark", "olive", "close"),
     # copper renewal serum
-    "Celeste-N": ("brunette", "fair", "face"), "Sarah-E": ("brunette", "fair", "face"),
-    "Beatriz-B": ("dark", "olive", "face"), "Rachel-R": ("blonde", "fair", "face"),
-    "Sabine-G": ("greyblonde", "fair", "face"), "Shannon-P": ("brunette", "fair", "face"),
-    "Samantha-F": ("brunette", "fair", "face"), "Ashley-H": ("brunette", "fair", "face"),
-    "Bianca-P": ("brunette", "fair", "face"),
+    "Celeste-N": ("brunette", "fair", "close"), "Sarah-E": ("brunette", "fair", "close"),
+    "Beatriz-B": ("dark", "olive", "close"), "Rachel-R": ("blonde", "fair", "close"),
+    "Sabine-G": ("greyblonde", "fair", "close"), "Shannon-P": ("brunette", "fair", "close"),
+    "Samantha-F": ("brunette", "fair", "close"), "Ashley-H": ("brunette", "fair", "half"),
+    "Bianca-P": ("brunette", "fair", "close"),
     # copper night
-    "Kendra-C": ("greyblonde", "fair", "face"), "Tamsin-A": ("greyblonde", "fair", "neck"),
-    "Marie-R": ("brunette", "fair", "face"), "Justine-L": ("blonde", "fair", "face"),
-    "Nelle-N": ("brunette", "olive", "face"), "Anja-G": ("brunette", "olive", "macro"),
-    "Jolene-A": ("brunette", "fair", "face"), "Mei-W": ("greyblonde", "fair", "face"),
-    "Gillian-L": ("brunette", "fair", "face"),
+    "Kendra-C": ("greyblonde", "fair", "close"), "Tamsin-A": ("greyblonde", "fair", "neck"),
+    "Marie-R": ("brunette", "fair", "neck"), "Justine-L": ("blonde", "fair", "close"),
+    "Nelle-N": ("brunette", "olive", "close"), "Anja-G": ("brunette", "olive", "macro"),
+    "Jolene-A": ("brunette", "fair", "half"), "Mei-W": ("greyblonde", "fair", "close"),
+    "Gillian-L": ("brunette", "fair", "close"),
     # copper day
-    "Tabitha-S": ("red", "fair", "face"), "Fiona-C": ("greyblonde", "fair", "face"),
-    "Melissa-M": ("brunette", "fair", "face"), "Rowena-G": ("blonde", "fair", "face"),
-    "Sage-D": ("blonde", "fair", "face"), "Helen-S": ("brunette", "fair", "macro"),
-    "Kimberly-N": ("brunette", "fair", "macro"), "Isabella-E": ("brunette", "fair", "face"),
-    "Catalina-B": ("blonde", "fair", "face"),
+    "Tabitha-S": ("red", "fair", "close"), "Fiona-C": ("greyblonde", "fair", "close"),
+    "Melissa-M": ("brunette", "fair", "close"), "Rowena-G": ("blonde", "fair", "close"),
+    "Sage-D": ("blonde", "fair", "half"), "Helen-S": ("brunette", "fair", "eye"),
+    "Kimberly-N": ("brunette", "fair", "eye"), "Isabella-E": ("brunette", "fair", "close"),
+    "Catalina-B": ("blonde", "fair", "close"),
     # pdrn serum
-    "Maud-H": ("greyblonde", "fair", "face"), "Mila-F": ("brunette", "fair", "face"),
-    "Felicia-P": ("brunette", "fair", "face"), "Faye-N": ("brunette", "fair", "face"),
-    "Fenna-S": ("dark", "olive", "face"), "Linda-P": ("red", "fair", "face"),
-    "Rosalie-W": ("red", "fair", "face"), "Josephine-R": ("greyblonde", "fair", "face"),
-    "Robin-J": ("brunette", "fair", "face"),
+    "Maud-H": ("greyblonde", "fair", "close"), "Mila-F": ("brunette", "fair", "close"),
+    "Felicia-P": ("brunette", "fair", "close"), "Faye-N": ("brunette", "fair", "close"),
+    "Fenna-S": ("dark", "olive", "eye"), "Linda-P": ("red", "fair", "close"),
+    "Rosalie-W": ("red", "fair", "half"), "Josephine-R": ("greyblonde", "fair", "close"),
+    "Robin-J": ("brunette", "fair", "close"),
     # pdrn cream
-    "Nola-S": ("brunette", "fair", "macro"), "Isa-D": ("brunette", "fair", "macro"),
-    "Lana-D": ("dark", "olive", "face"), "Mara-F": ("greyblonde", "fair", "face"),
-    "June-K": ("brunette", "fair", "macro"), "Livia-B": ("brunette", "fair", "face"),
-    "Marion-H": ("greyblonde", "fair", "face"), "Danielle-S": ("greyblonde", "fair", "face"),
-    "Madeline-W": ("brunette", "fair", "face"),
+    "Nola-S": ("brunette", "fair", "eye"), "Isa-D": ("brunette", "fair", "eye"),
+    "Lana-D": ("dark", "olive", "close"), "Mara-F": ("greyblonde", "fair", "close"),
+    "June-K": ("brunette", "fair", "eye"), "Livia-B": ("brunette", "fair", "close"),
+    "Marion-H": ("greyblonde", "fair", "close"), "Danielle-S": ("greyblonde", "fair", "close"),
+    "Madeline-W": ("brunette", "fair", "half"),
     # pdrn stamp
-    "Maelis-S": ("brunette", "fair", "face"), "Senne-P": ("brunette", "fair", "macro"),
-    "Eliza-V": ("brunette", "fair", "face"), "Noemi-R": ("red", "fair", "face"),
-    "Tessa-T": ("brunette", "fair", "face"), "Romy-S": ("greyblonde", "fair", "face"),
-    "Elara-M": ("dark", "olive", "face"), "Adriana-A": ("dark", "olive", "face"),
-    "Valentina-L": ("brunette", "fair", "face"),
+    "Maelis-S": ("brunette", "fair", "half"), "Senne-P": ("brunette", "fair", "forehead"),
+    "Eliza-V": ("brunette", "fair", "close"), "Noemi-R": ("red", "fair", "close"),
+    "Tessa-T": ("brunette", "fair", "close"), "Romy-S": ("greyblonde", "fair", "close"),
+    "Elara-M": ("dark", "olive", "close"), "Adriana-A": ("dark", "olive", "forehead"),
+    "Valentina-L": ("brunette", "fair", "close"),
     # copper stamp
-    "Liv-A": ("greyblonde", "fair", "face"), "Brenda-S": ("dark", "deep", "face"),
-    "Livia-M": ("greyblonde", "fair", "face"), "Jade-C": ("blonde", "fair", "face"),
-    "Selma-D": ("blonde", "fair", "face"), "Elina-B": ("brunette", "fair", "face"),
-    "Yara-P": ("brunette", "fair", "face"), "Sandra-P": ("dark", "olive", "face"),
-    "Beth-H": ("greyblonde", "fair", "face"),
+    "Liv-A": ("greyblonde", "fair", "close"), "Brenda-S": ("dark", "deep", "close"),
+    "Livia-M": ("greyblonde", "fair", "close"), "Jade-C": ("blonde", "fair", "close"),
+    "Selma-D": ("blonde", "fair", "close"), "Elina-B": ("brunette", "fair", "close"),
+    "Yara-P": ("brunette", "fair", "close"), "Sandra-P": ("dark", "olive", "close"),
+    "Beth-H": ("greyblonde", "fair", "close"),
 }
 
 #: blonde and greyblonde read as the same "type" at a glance, which is the whole complaint, so
@@ -112,7 +112,13 @@ TAGS = {
 NEAR = {("blonde", "greyblonde"), ("greyblonde", "blonde"),
         ("brunette", "dark"), ("dark", "brunette")}
 
-W_HAIR, W_TONE, W_SHOT = 6, 3, 1
+W_HAIR, W_TONE = 6, 3
+
+#: Two identical DISTINCTIVE shots side by side is the thing Malcolm actually sees — two neck
+#: crops or two eye macros in a row read as a mistake. Two ordinary close-ups do not, and
+#: cannot be avoided anyway: 72 of the 99 photographs are close-ups, so a nine-card carousel
+#: holds six to eight of them and some adjacency is arithmetic, not choice. Priced accordingly.
+W_SHOT_DISTINCT, W_SHOT_CLOSE = 9, 1
 
 
 def tags(card):
@@ -130,7 +136,7 @@ def cost(a, b):
     if ta == tb:
         c += W_TONE
     if sa == sb:
-        c += W_SHOT
+        c += W_SHOT_CLOSE if sa == "close" else W_SHOT_DISTINCT
     return c
 
 
