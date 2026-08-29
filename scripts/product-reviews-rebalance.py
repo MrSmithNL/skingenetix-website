@@ -126,7 +126,7 @@ def main():
             raise SystemExit(f"missing source: {src}")
         cards.append({
             "product": product, "concern": concern, "person": person, "filename": fn,
-            "title": "PLACEHOLDER — review headline",
+            "title": "PLACEHOLDER: review headline",
             "body": "PLACEHOLDER — the customer's review text goes here. This card has not been written yet.",
             "author": person.replace("-", " "), "rating": 5, "verified": True,
             "before_label": "Before", "after_label": "After",

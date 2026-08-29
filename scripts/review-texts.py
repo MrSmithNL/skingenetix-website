@@ -114,7 +114,7 @@ REVIEWS = [
       "from this cream, and it sits beautifully under SPF and make-up.", source_lang="nl"),
     R("pdrn_cream", "I recommend this PDRN cream",
       "I buy this PDRN cream for the autumn and winter. It is perfect for mature, sensitive "
-      "skin with rosacea — it calms and strengthens the skin barrier. Although my skin is "
+      "skin with rosacea. It calms and strengthens the skin barrier. Although my skin is "
       "acne-prone, it doesn't clog my pores or cause breakouts. A perfect choice in winter and "
       "whenever the skin needs repairing.", source_lang="nl"),
     R("pdrn_cream", "The glow of time",
@@ -136,7 +136,7 @@ REVIEWS = [
       "I am in love with this serum. I have been using it for five days and the results are "
       "noticeable from the very first application.", source_lang="nl"),
     R("general", "Radiant skin",
-      "I really didn't expect it to work this well — radiant skin, beautifully hydrated. I use "
+      "I really didn't expect it to work this well. Radiant skin, beautifully hydrated. I use "
       "it in the evening and in the morning I wake up with a smoothed face.", source_lang="nl"),
     R("pdrn_cream", "A beautiful product",
       "I have had problems with dry, itchy skin, and this product has really helped my skin "
@@ -152,10 +152,10 @@ REVIEWS = [
     R("general", "So good",
       "Absolutely brilliant. My skin used to look oily an hour after putting make-up on. This "
       "makes it look so good and I don't go shiny. I don't carry extra powder around any more. "
-      "It also smooths the skin. My forehead has never looked better — not oily, but glass "
+      "It also smooths the skin. My forehead has never looked better. Not oily, but glass "
       "skin. I've had so many compliments about my skin.", source_lang="nl"),
     R("general", "Hydrating and glowing",
-      "A wonderful, fine texture — firm, but bouncy and jelly-like. It gives a lot of moisture "
+      "A wonderful, fine texture that is firm but bouncy and jelly-like. It gives a lot of moisture "
       "and a beautiful glow. It works brilliantly under sunscreen and make-up, and it doesn't "
       "pill or cake. Because it isn't thin and runny you can take as much or as little as you "
       "need, and it lasts a very long time.", source_lang="nl"),
@@ -188,10 +188,14 @@ REVIEWS = [
       "I wasn't expecting much because I've tried a lot of expensive serums before, but this "
       "one has impressed me. My skin feels smoother, looks brighter and the overall tone seems "
       "more even and fuller. I'll definitely keep using it."),
+    # Malcolm rewrote this one, 2026-08-29. It sits on Ashley-H, whose photograph shows
+    # redness and irritation rather than expression lines — the original spoke about fine
+    # lines around the eyes, which was the weaker match of the two.
     R("copper_serum", "Already a lifetime fan",
-      "I'm 47 and mainly bought this for the fine lines around my eyes and forehead. I "
-      "wouldn't say they disappeared, obviously, but after five weeks they definitely look "
-      "softer and my skin has more bounce to it. I'm already a lifetime fan.", age=47),
+      "I'm 47 and mainly bought this for the skin repair qualities. I had very irritable skin "
+      "and at times it was painful and really didn't help my confidence. But after five weeks "
+      "my skin has been transformed. It's beautifully healthy now, it definitely feels softer "
+      "and my skin has more bounce to it. I'm already a lifetime fan.", age=47),
     R("copper_serum", "No pilling, no greasy layer",
       "Love this. I use it in the evening before my moisturiser and it doesn't pill or leave "
       "that greasy layer some serums do. After around a month I noticed my skin texture looked "
@@ -319,7 +323,7 @@ REVIEWS = [
       "ran out and actually noticed the difference."),
     R("antiwrinkle", "One of the few serums I stick with",
       "Normally I start skincare products, use them religiously for two weeks and then forget "
-      "about them. Somehow I've actually stuck with this one — probably because it feels nice "
+      "about them. Somehow I've actually stuck with this one, probably because it feels nice "
       "and doesn't add another complicated step to my routine."),
     R("antiwrinkle", "Around six weeks in",
       "Around six weeks in I started noticing my forehead looked smoother. Then I noticed the "
@@ -362,7 +366,7 @@ REVIEWS = [
       "It literally makes my face glow. That's it, that's the review."),
     R("pdrn_serum", "It delivered",
       "At first I thought this was doing absolutely nothing and I nearly stopped using it. "
-      "Somewhere around week three or four my skin suddenly started looking really nice — "
+      "Somewhere around week three or four my skin suddenly started looking really nice. It was "
       "smoother, more even and definitely more hydrated. I even see a noticeable improvement "
       "in the fine lines and wrinkles."),
     R("pdrn_serum", "I didn't expect to repurchase",
@@ -402,7 +406,7 @@ REVIEWS = [
     R("firming_cream", "It actually looks plumper",
       "I'm 44 and recently started noticing that my cheeks looked a bit less full, especially "
       "when I'm tired. I've been using this morning and night for around six weeks and my skin "
-      "does look more plump. Not facelift plump, obviously — just healthier and less drawn.",
+      "does look more plump. Not facelift plump, obviously, just healthier and less drawn.",
       age=44),
     R("firming_cream", "Great under foundation",
       "This is probably the best moisturiser I've used under make-up in a long time. My "
@@ -420,7 +424,7 @@ REVIEWS = [
       "longer than I expected too, because you don't need loads."),
     R("firming_cream", "I noticed it in photos",
       "Weirdly, I didn't notice much looking in the mirror every morning. Then I saw some "
-      "photos from a birthday recently and thought my skin looked really good — much smoother "
+      "photos from a birthday recently and thought my skin looked really good. Much smoother "
       "through the cheeks and less tired looking. I've been using this around seven or eight "
       "weeks, so maybe it's finally doing its thing."),
     R("firming_cream", "Finally something for dry menopausal skin",
@@ -429,7 +433,7 @@ REVIEWS = [
       "this, and my skin stays comfortable until morning. It looks fuller and less papery "
       "around the cheeks too, which I'm very happy about."),
     R("firming_cream", "A proper cream",
-      "This feels like an actual cream, if that makes sense — not one of those watery gel "
+      "This feels like an actual cream, if that makes sense, not one of those watery gel "
       "moisturisers that disappears and then your face feels dry again half an hour later. My "
       "skin feels cushioned and soft but not greasy. I've been using it about a month and I'm "
       "starting to notice the lines around my mouth look a little softer too."),
@@ -455,12 +459,12 @@ REVIEWS = [
       "did before. I wouldn't say my dark spots are gone, but everything looks more even "
       "somehow. Really nice serum."),
     R("glutathione", "That glow",
-      "I bought this mostly for old acne marks, but the first thing I noticed was the glow — "
+      "I bought this mostly for old acne marks, but the first thing I noticed was the glow. "
       "my skin just looks healthier even without make-up. Some of the marks on my cheeks are "
       "starting to look lighter too, but I've only been using it about five weeks."),
     R("glutathione", "Finally something for my dull skin",
       "My skin always looks tired no matter how much I sleep, and this has actually helped. "
-      "Not overnight — it probably took two or three weeks before I noticed anything. Now my "
+      "Not overnight. It probably took two or three weeks before I noticed anything. Now my "
       "face just looks fresher and a bit more even. I've started using it on my neck too."),
     R("glutathione", "Acne marks are fading",
       "This is what sold me on it. I had three dark marks left from spots on my cheek that "
@@ -474,14 +478,14 @@ REVIEWS = [
       "I bought it because I had a patch of pigmentation on one side of my face that was "
       "driving me mad. I'm not going to say it disappeared, because it didn't, but after "
       "around two months it is definitely less noticeable. What I wasn't expecting is how good "
-      "the rest of my skin looks — much brighter and smoother. I've actually been wearing less "
+      "the rest of my skin looks. Much brighter and smoother. I've actually been wearing less "
       "foundation lately."),
     R("glutathione", "Nice for sensitive skin",
       "My skin reacts to basically everything, so I was expecting some stinging or redness. "
       "Nothing. I've been using it every second night for about five weeks and my skin looks "
       "much calmer and more even. So far I'm impressed."),
     R("glutathione", "It makes my skin look alive again",
-      "I'm 50, and pigmentation isn't even my biggest issue — it's that my skin has started "
+      "I'm 50, and pigmentation isn't even my biggest issue. It's that my skin has started "
       "looking dull and tired all the time. This has really helped with that. There's more "
       "glow to my face now and my skin tone looks cleaner and more even. Hard to explain, but "
       "I look less exhausted.", age=50),
@@ -496,7 +500,7 @@ REVIEWS = [
       "for just over a month. My face looks brighter and one stubborn mark beside my nose is "
       "finally starting to fade."),
     R("glutathione", "Slow changes, but definitely changes",
-      "I've been using this for nearly three months now — not perfectly every day, but pretty "
+      "I've been using this for nearly three months now, not perfectly every day, but pretty "
       "consistently. The first thing I noticed was just glow. Maybe after a month my face "
       "looked less dull. Then gradually the marks from old breakouts started getting lighter "
       "and the uneven areas around my cheeks looked better. Nothing disappeared overnight and "
@@ -509,7 +513,23 @@ REVIEWS = [
 ]
 
 
+def check_punctuation():
+    """No em dashes in customer copy. Malcolm, 2026-08-29: "remove all the ' — ' from all the
+    review texts, and use normal punctuation/structure."
+
+    An assertion rather than a normaliser on purpose. A blanket replace cannot tell a dash that
+    joins two clauses (wants a full stop) from one tagging an aside (wants a comma), and would
+    produce copy that reads like it was processed. This fails the build instead, so the next
+    person transcribing a review has to make the same judgement by hand.
+    """
+    bad = [r["title"] for r in REVIEWS
+           if "—" in r["body"] or "—" in r["title"] or "–" in r["body"]]
+    if bad:
+        raise SystemExit("em dash in review copy, rewrite it by hand: " + ", ".join(bad))
+
+
 def main():
+    check_punctuation()
     ap = argparse.ArgumentParser()
     ap.add_argument("--audit", action="store_true")
     args = ap.parse_args()

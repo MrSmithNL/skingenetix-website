@@ -113,8 +113,8 @@ SWAPS = [
     ("Emma-H", "Mallory-B"),        # Malcolm, 2026-08-29
 ]
 
-PLACEHOLDER_TITLE = "PLACEHOLDER — review headline"
-PLACEHOLDER_BODY = ("PLACEHOLDER — the customer's review text goes here. This card has not "
+PLACEHOLDER_TITLE = "PLACEHOLDER: review headline"
+PLACEHOLDER_BODY = ("PLACEHOLDER: the customer's review text goes here. This card has not "
                     "been written yet.")
 BEFORE_LABEL = "Before"
 AFTER_LABEL = "After"

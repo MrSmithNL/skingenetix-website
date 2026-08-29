@@ -112,6 +112,17 @@ TAGS = {
 NEAR = {("blonde", "greyblonde"), ("greyblonde", "blonde"),
         ("brunette", "dark"), ("dark", "brunette")}
 
+#: Hand placements that beat the scheduler. `person` is moved to sit immediately after
+#: `after` within its own product.
+#:
+#: The tags are read off a 250px tile and they are not always right. Lana-D was tagged dark
+#: brunette, which is true of her hair, but she sat between Nola-S and Livia-B where the
+#: scheduler saw no clash while Malcolm saw two blondes needing breaking up. When he moves
+#: someone by hand it is because the photograph says something the three tags do not.
+MANUAL_AFTER = [
+    ("pdrn-collagen-night-cream", "Lana-D", "Danielle-S"),      # Malcolm, 2026-08-29
+]
+
 W_HAIR, W_TONE = 6, 3
 
 #: Two identical DISTINCTIVE shots side by side is the thing Malcolm actually sees — two neck
@@ -218,6 +229,14 @@ def main():
         after_total += a
         print(f"  {prod[:52]:<54} clash {b:>3} -> {a:>3}")
         print("      " + " | ".join(c["person"] for c in ng))
+        for prod_h, person, after in MANUAL_AFTER:
+            if prod_h != prod:
+                continue
+            names = [c["person"] for c in ng]
+            if person in names and after in names:
+                card = ng.pop(names.index(person))
+                ng.insert([c["person"] for c in ng].index(after) + 1, card)
+                print(f"      manual: {person} placed after {after}")
         new_cards.extend(ng)
     print(f"\n  {'TOTAL adjacency clash':<54} {before_total:>5} -> {after_total:>3}")
 
