@@ -1,0 +1,492 @@
+{%- liquid
+  assign reviews = product.metafields.custom.customer_reviews.value
+  assign review_count = 0
+  if reviews != blank
+    assign review_count = reviews.size
+  endif
+-%}
+
+{%- comment -%}
+  Render nothing at all when the product has no reviews attached. A heading over an empty
+  track is worse than an absent section: it asserts that reviews exist. The theme's own
+  scrollbar already hides its controls when the track does not overflow, so a product with
+  two reviews still looks deliberate.
+{%- endcomment -%}
+{%- comment -%}
+  product-reviews-before-after.liquid
+  ===================================
+  The per-product customer before/after carousel.
+
+  This is `reviews-before-after.liquid` with ONE structural change: it iterates
+  `product.metafields.custom.customer_reviews.value` instead of `section.blocks`. Everything
+  visual is identical, deliberately — the card, the theme's own <scroll-carousel>, the
+  `scrollbar` snippet whose controls hide themselves when the track does not overflow, the
+  theme's `rating-star` icon, the breakpoints and the edge prev/next buttons.
+
+  WHY A METAFIELD AND NOT BLOCKS. Blocks live in template JSON, so unique content per product
+  means a template per product. The sister brand shows where that ends: Hairgenetix drives its
+  before/after from section blocks and has the SAME fourteen customers copy-pasted into all
+  four of its product templates. One section here, on the shared templates/product.json,
+  resolving its content from whichever product is rendering. See
+  docs/product-reviews-before-after-plan.md §3 and §3a.
+
+  TRANSLATION. Every string on the card comes from a `customer_review` metaobject entry, which
+  is a first-class translatable resource in Translate & Adapt (ADR-002a — Translate & Adapt,
+  NOT Langify). Each entry is translated once and applies everywhere it is referenced. Nothing
+  is baked into the pixels, because pixels cannot be translated and nine locales are planned.
+
+  Author: Claude Code, 2026-08-29.
+{%- endcomment -%}
+
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+  reviews-before-after.liquid
+  Skingenetix / Claude Code — created 2026-08-27
+
+  WHY THIS EXISTS
+  A customer review slide needs six things at once: a before/after pair, the customer's name, a verified badge, a
+  star rating, a review title, the review body, and a link to the product reviewed. Every stock Impact section was
+  read before this file was written and none carries more than five of the six:
+
+    testimonials          — name, rating, title, body, native carousel; but its image is an AVATAR, rendered at
+                            `sizes: 40px, 56px` with a srcset topping out at 168w. A before/after pair is impossible
+                            there, and there is no per-block link.
+    multi-column          — image, title, body, link; no name, no rating, and it only carousels below `md`.
+    media-with-text       — image, title, body, link; no rating, no carousel of any kind.
+    before-after-image    — two images and a drag-to-compare slider; no name, rating, title, body or link.
+    slideshow             — a real carousel with one image and one button; no rating, no name.
+
+  WHAT IS REUSED RATHER THAN REBUILT
+  The carousel is NOT custom. It is the theme's own `<scroll-carousel>` element plus the theme's own `scrollbar`
+  snippet, exactly as `sections/testimonials.liquid` uses them — same `scroll-area bleed` classes, same
+  `is-scrollable` gate at more than three blocks, same breakpoints, same prev/next circle-buttons. So the arrows,
+  the progress bar, the snap behaviour and the Safari fallbacks all come from the theme. No external library is
+  loaded (Hairgenetix pulls Swiper 11 off a CDN for the equivalent component; that is not needed here).
+  The star row is the theme's `icon` snippet with `rating-star`, the same markup `testimonials` renders.
+
+  WHY THE TEXT IS ALL `text` SETTINGS
+  Shopify exposes every text setting of a section stored in a page template as a translatable resource of type
+  ONLINE_STORE_THEME_JSON_TEMPLATE, keyed
+      section.page.<template>.json.<section-id>.<block-id>.<setting-id>:<hash>
+  so the labels, names, titles and the product link text all appear in Translate & Adapt with no app configuration.
+  (The store runs Shopify's own Translate & Adapt. Langify is NOT installed, despite older docs.)
+  This is why the BEFORE/AFTER labels are DOM text and must never be baked into the image pixels — the four images
+  on this page in August 2026 had them burnt in, and pixels cannot be translated.
+
+  THE IMAGE CONTRACT
+  `image` is ONE file holding both frames, split at exactly 50%, and the whole pair is SQUARE (1:1) — so each half
+  is a portrait rectangle, half as wide as it is tall. The before label sits over the left half and the after label
+  over the right half at fixed percentages, so a master that is not an even 50/50 split will misplace them.
+
+  ADDITIVE ONLY — this is a new file. No core theme file is modified.
+  CSS is scoped to #shopify-section-{{ section.id }}, the pattern the theme's own sections use.
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+{%- if review_count > 0 -%}
+  {%- render 'section-spacing-collapsing' -%}
+
+  <style>
+    /* Breakpoints mirror sections/testimonials.liquid so this section keeps the same rhythm as the
+       theme's own card carousel. 1 card up to 700px, 2 to 1150px, 3 above it. */
+    #shopify-section-{{ section.id }} {
+      --rbac-items-per-row: 1;
+      --rbac-item-width: 74vw;
+      --rbac-radius: 10px;
+    }
+
+    @media screen and (min-width: 700px) {
+      #shopify-section-{{ section.id }} {
+        --rbac-items-per-row: 2;
+        --rbac-item-width: 52vw;
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      #shopify-section-{{ section.id }} {
+        --rbac-item-width: 36vw;
+      }
+    }
+
+    @media screen and (min-width: 1150px) {
+      #shopify-section-{{ section.id }} {
+        --rbac-items-per-row: 3;
+        --rbac-item-width: calc(100% / 3 - (var(--grid-gutter) / 3 * 2));
+      }
+    }
+
+    #shopify-section-{{ section.id }} .rbac-list {
+      display: grid;
+      grid: auto / auto-flow var(--rbac-item-width);
+      gap: var(--grid-gutter);
+      /* `stretch`, so every card in the row is as tall as the tallest and the product line lands
+         on one baseline — reviews are never the same length, and at 15 cards the spread was 630px
+         to 749px. Safe here only because .rbac-card__media carries a fixed `aspect-ratio: 1 / 1`,
+         so the picture cannot grow with the card and the labels positioned against it cannot be
+         pushed off it. The sibling `research-before-after` section had exactly that bug and needs
+         `align-self: start` for the opposite reason: its media box has no aspect-ratio. */
+      align-items: stretch;
+    }
+
+    #shopify-section-{{ section.id }} .scrollbar {
+      --text-color: {{ section.settings.text_color.rgb | default: settings.text_color.rgb }};
+    }
+
+    /* ---- prev/next on the left and right edges, vertically centred on the cards ----------------
+       This is the theme's own `floating-controls-container` pattern, not a new one: theme.css
+       already gives `.floating-controls-container .circle-button` `position: absolute` and
+       `top: calc(50% - 24px)`, and places the first button at `left: var(--spacing-5)` and the
+       last at `right: var(--spacing-5)` — with the four `:lang()` variants that flip them for
+       right-to-left locales, which matters here because nine are planned.
+
+       Two things about it have to be corrected, and both are why this block exists.
+
+       1. The container must wrap ONLY the track. `top: 50%` is 50% of the positioned ancestor, so
+          wrapping the whole `.scrollable-with-controls` would centre the buttons against the track
+          PLUS the progress bar beneath it, and they would sit low.
+       2. The theme reveals them on hover only —
+          `.floating-controls-container:hover .is-scrollable ~ .circle-button:not([disabled])`.
+          On a review carousel the controls are the only cue that there are twelve more cards, so
+          they are always on here. Note the theme's rule needs `is-scrollable` on the sibling track
+          or nothing appears, hover or not; the theme's own JS adds that class from real overflow.
+
+       Disabled is shown, not hidden: at the start the prev button greys out rather than vanishing,
+       so the pair does not jump into existence on the first click. */
+    #shopify-section-{{ section.id }} .floating-controls-container .is-scrollable ~ .circle-button {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    #shopify-section-{{ section.id }} .floating-controls-container .is-scrollable ~ .circle-button[disabled] {
+      opacity: 0.35;
+    }
+
+    /* Below 700px a card is 74vw, so an edge button would sit on top of the photograph. Touch
+       swipes the track anyway, and the progress bar still shows there is more. */
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .floating-controls-container > .circle-button { display: none; }
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card {
+      background: {{ section.settings.card_background }};
+      color: {{ section.settings.card_text_color }};
+      border-radius: var(--rbac-radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* The master is a 1:1 diptych, so the media box is square and the two halves are portrait.
+       `aspect-ratio` rather than the image's own ratio, so a master that is slightly off does not
+       drag the card out of line with its siblings. */
+    #shopify-section-{{ section.id }} .rbac-card__media {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      line-height: 0;
+      background: rgb(var(--border-color) / 0.35);
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* A seam between the two frames, so the pair reads as two photographs rather than one wide one. */
+    #shopify-section-{{ section.id }} .rbac-card__seam {
+      position: absolute;
+      inset-block: 0;
+      left: 50%;
+      width: 2px;
+      transform: translateX(-1px);
+      background: {{ section.settings.card_background }};
+      pointer-events: none;
+    }
+
+    /* Contrast is bought with a local chip behind each label, never a wash over the whole picture —
+       a flat overlay dulls the photograph instead of fixing legibility. */
+    #shopify-section-{{ section.id }} .rbac-card__label {
+      position: absolute;
+      top: var(--spacing-2-5);
+      margin: 0;
+      padding: 0.35em 0.75em;
+      border-radius: 999px;
+      background: {{ section.settings.label_background }};
+      color: {{ section.settings.label_text_color }};
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.2;
+      white-space: nowrap;
+      max-width: 44%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__label--before { left: 3%; }
+    #shopify-section-{{ section.id }} .rbac-card__label--after { left: 53%; }
+
+    #shopify-section-{{ section.id }} .rbac-card__body {
+      display: flex;
+      flex-direction: column;
+      padding: var(--spacing-6) var(--spacing-6-5) var(--spacing-7);
+      flex: 1 1 auto;
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__author {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin: var(--spacing-1-5) 0 0;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: {{ section.settings.verified_color }};
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__verified svg { flex: none; }
+    #shopify-section-{{ section.id }} .rbac-card__rating { margin-top: var(--spacing-2-5); }
+
+    #shopify-section-{{ section.id }} .rbac-card__title {
+      margin: var(--spacing-3) 0 0;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__text {
+      margin-top: var(--spacing-2);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.82;
+    }
+
+    /* Pushed to the bottom so the product line sits on one baseline across cards of unequal copy length. */
+    #shopify-section-{{ section.id }} .rbac-card__product {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+      margin: var(--spacing-4) 0 0;
+      padding-top: var(--spacing-4);
+      font-size: 0.8rem;
+      margin-top: auto;
+    }
+
+    /* A pack shot on a white ground, so `contain` rather than `cover`: cropping a bottle to fill
+       a square is worse than letterboxing it. The tinted ground keeps a white-on-white pack
+       readable as an object. */
+    #shopify-section-{{ section.id }} .rbac-card__product-thumb {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      object-fit: contain;
+      background: rgb(var(--border-color) / 0.3);
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__product-copy { min-width: 0; }
+
+    /* The gap is a margin, not a literal space in the markup. The whitespace-stripping form of
+       the surrounding Liquid tags eats any space typed between the prefix and the link, so the
+       line rendered as "ReviewingAcetyl Hexapeptide-8..." on the live page. Caught 2026-08-27.
+       (Do not write the stripping tag delimiters into a comment here either — Liquid parses
+       this file before the browser ever sees it, and a 422 on upload is what that costs.) */
+    #shopify-section-{{ section.id }} .rbac-card__product .rbac-card__product-prefix {
+      display: block;
+      opacity: 0.55;
+      margin-bottom: 0.15em;
+    }
+
+    #shopify-section-{{ section.id }} .rbac-card__product a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  </style>
+
+  <div {% render 'section-properties' %}>
+    <div class="section-stack">
+      {%- render 'section-header',
+        subheading: section.settings.subheading,
+        heading: section.settings.title,
+        heading_color: section.settings.heading_color,
+        content: section.settings.content,
+        link_text: section.settings.link_text,
+        link_url: section.settings.link_url
+      -%}
+
+      <div class="scrollable-with-controls">
+        {%- assign scroll_area_id = 'scroll-area-' | append: section.id -%}
+
+        <div class="floating-controls-container">
+        <scroll-carousel id="{{ scroll_area_id }}" class="rbac-list scroll-area bleed md:unbleed {% if reviews.size > 3 %}is-scrollable{% endif %}">
+          {%- for review in reviews -%}
+            {%- liquid
+              assign img = review.image.value
+
+              assign loading_strategy = nil
+              if section.index > 2 or forloop.index > 3
+                assign loading_strategy = 'lazy'
+              endif
+            -%}
+            <div class="rbac-card snap-start">
+              <div class="rbac-card__media">
+                {%- if img != blank -%}
+                  <picture>
+                    {{-
+                      img
+                      | image_url: width: img.width
+                      | image_tag:
+                        sizes: '(max-width: 699px) 74vw, (max-width: 1149px) 52vw, 440px',
+                        widths: '400,560,700,880,1100,1320',
+                        loading: loading_strategy,
+                        alt: img.alt
+                    -}}
+                  </picture>
+                  <span class="rbac-card__seam" aria-hidden="true"></span>
+                {%- else -%}
+                  {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
+                {%- endif -%}
+
+                {%- if review.before_label.value != blank -%}
+                  <p class="rbac-card__label rbac-card__label--before">{{ review.before_label.value | escape }}</p>
+                {%- endif -%}
+                {%- if review.after_label.value != blank -%}
+                  <p class="rbac-card__label rbac-card__label--after">{{ review.after_label.value | escape }}</p>
+                {%- endif -%}
+              </div>
+
+              <div class="rbac-card__body">
+                {%- comment -%}
+                  Every one of these is guarded on its own value rather than on a "show" toggle.
+                  An entry with no author and no rating renders a card with no author and no
+                  rating — which is exactly what the "illustrative, not testimony" option in the
+                  plan needs, and it needs no second code path to get it.
+                {%- endcomment -%}
+                {%- if review.author.value != blank -%}
+                  <p class="rbac-card__author">{{ review.author.value | escape }}</p>
+                {%- endif -%}
+
+                {%- if review.verified.value -%}
+                  <p class="rbac-card__verified">
+                    <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                      <path d="M8 1l1.9 1.4 2.3-.2.7 2.2 1.9 1.3-.9 2.2.9 2.2-1.9 1.3-.7 2.2-2.3-.2L8 15l-1.9-1.4-2.3.2-.7-2.2L1.2 10l.9-2.2-.9-2.2 1.9-1.3.7-2.2 2.3.2L8 1z" fill="currentColor"/>
+                      <path d="M5.6 8.1l1.7 1.7 3.2-3.4" stroke="{{ section.settings.card_background }}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    {{ section.settings.verified_label | escape }}
+                  </p>
+                {%- endif -%}
+
+                {%- assign rating_value = review.rating.value -%}
+                {%- if rating_value > 0 -%}
+                  <div class="rating rbac-card__rating">
+                    <div class="rating__stars" role="img" aria-label="{{ 'general.rating.info' | t: rating_value: rating_value, rating_max: 5 }}">
+                      {%- for i in (1..5) -%}
+                        {%- if i <= rating_value -%}
+                          {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--full' -%}
+                        {%- else -%}
+                          {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--empty' -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                {%- endif -%}
+
+                {%- if review.title.value != blank -%}
+                  <p class="rbac-card__title">{{ review.title.value | escape }}</p>
+                {%- endif -%}
+
+                {%- if review.body.value != blank -%}
+                  <div class="rbac-card__text prose">{{ review.body.value | newline_to_br }}</div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </scroll-carousel>
+
+          {%- comment -%}
+            These are DIRECT SIBLINGS of the track and come after it, with no wrapper. Both the
+            theme's reveal rule and its left/right placement depend on it: the reveal is
+            `.is-scrollable ~ .circle-button`, a general sibling combinator, and the sides come
+            from `:first-of-type` / `:last-of-type` among the container's buttons. Wrap these two
+            in a div and they land in the middle, invisible. `aria-controls` is the whole wiring —
+            it is how the theme's prev-button / next-button elements find what they scroll.
+          {%- endcomment -%}
+          <button
+            is="prev-button"
+            class="circle-button circle-button--fill ring group"
+            aria-controls="{{ scroll_area_id }}"
+            disabled
+          >
+            <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
+            <span class="animated-arrow animated-arrow--reverse"></span>
+          </button>
+
+          <button
+            is="next-button"
+            class="circle-button circle-button--fill ring group"
+            aria-controls="{{ scroll_area_id }}"
+          >
+            <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
+            <span class="animated-arrow"></span>
+          </button>
+        </div>
+
+        {%- comment -%}
+          The scrollbar snippet carries `peer-not-scrollable:hidden`, so with three or fewer cards
+          — which do not overflow — the arrows and progress bar hide themselves. That is the same
+          gate `testimonials` uses, and it is why no block-count test is written here: a count is a
+          proxy for the target and this store has twice shipped a bug from scoping on one.
+        {%- endcomment -%}
+        {%- comment -%}
+          `show_buttons: false` — the prev/next pair now lives on the left and right edges of the
+          track, so rendering the snippet's own pair underneath would put two identical sets of
+          arrows on one carousel. The progress bar stays: it is the only thing that says how far
+          through fifteen cards you are, and it is the sole cue on mobile, where the edge buttons
+          are hidden.
+        {%- endcomment -%}
+        {%- assign default_progress = 3.0 | divided_by: review_count -%}
+        {%- render 'scrollbar', observes: scroll_area_id, default_progress: default_progress, show_buttons: false -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Product before/after",
+  "tag": "section",
+  "class": "shopify-section--product-reviews-before-after",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "paragraph", "content": "Cards come from each product's **Customer reviews (before/after)** metafield, so every product shows its own. Edit the reviews themselves under Content \u203a Metaobjects \u203a Customer Review." },
+    { "type": "checkbox", "id": "full_width", "label": "Full width", "default": false },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Real results" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Before and after" },
+    { "type": "richtext", "id": "content", "label": "Text" },
+    { "type": "text", "id": "verified_label", "label": "Verified badge text", "default": "Verified Customer" },
+    { "type": "text", "id": "link_text", "label": "Link text" },
+    { "type": "url", "id": "link_url", "label": "Link" },
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "background", "label": "Background" },
+    { "type": "color_background", "id": "background_gradient", "label": "Background gradient" },
+    { "type": "color", "id": "text_color", "label": "Text" },
+    { "type": "color", "id": "heading_color", "label": "Heading" },
+    { "type": "color", "id": "card_background", "label": "Card background", "default": "#ffffff" },
+    { "type": "color", "id": "card_text_color", "label": "Card text", "default": "#1a1a1a" },
+    { "type": "color", "id": "label_background", "label": "Label background", "default": "#0f2f2b" },
+    { "type": "color", "id": "label_text_color", "label": "Label text", "default": "#ffffff" },
+    { "type": "color", "id": "verified_color", "label": "Verified badge", "default": "#0f7b6c" }
+  ],
+  "presets": [{ "name": "Product before/after" }]
+}
+{% endschema %}

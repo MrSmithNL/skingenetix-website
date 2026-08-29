@@ -1,6 +1,10 @@
 # Plan — a unique before/after review carousel on every product page
 
-**Status: PLAN, nothing built.** Written 2026-08-29 from Malcolm's brief: put the
+**Status: BUILT AND LIVE, 2026-08-29, with placeholder copy.** Malcolm: *"use placeholder
+texts for now, I will give you the texts next."* All 11 product pages now carry their own
+carousel. §10 records what shipped and what is still open.
+
+Originally written as a plan; kept as written so the reasoning survives. Written 2026-08-29 from Malcolm's brief: put the
 `reviews-before-after` carousel on each product page, unique per product, sourced from the
 customer review photos in Drive, splitting reviews across products where a solution type has
 several. It must be **easy to manage** and **fully translatable**.
@@ -271,3 +275,57 @@ before `related-products`. One section, all 11 products.
    these pages runs 4–12 weeks; a label should not outrun it.
 4. **Do the two microneedling stamp sets get face reviews at all?** They are a device, not a
    cream, and the `General` photographs illustrate skin change rather than device use.
+
+
+---
+
+## 10. What actually shipped, 2026-08-29
+
+| | |
+|---|---|
+| Metaobject | `customer_review`, 9 fields, `translatable` capability on, storefront-readable |
+| Product metafield | `custom.customer_reviews` (`list.metaobject_reference`, validated to the definition) |
+| Images | **76 uploaded** as SEO-named JPEGs via `scripts/upload-theme-images.py` |
+| Entries | **76**, upserted by stable handle `review-<concern>-<person>` |
+| Section | `sections/product-reviews-before-after.liquid` — new file, no core Liquid touched |
+| Template | `templates/product.json` section `before_after` **swapped in place** |
+| Scripts | `product-reviews-setup.py`, `-build-plan.py`, `-publish.py`, `-add-section.py` |
+
+**The template already had a `before_after` section** — a `multi-column` of three static tiles
+headed "Verified Customer Results", the same three on all eleven products. It was **replaced in
+place, keeping the section id**, not appended: two before/after sections on one product page is
+worse than the generic one alone. Keeping the id also held its position in `order` without
+touching the array. Same approach `reviews-add-before-after-carousel.py` took on the reviews page.
+
+Undo: `python3 scripts/product-reviews-add-section.py --restore backups/product.json-20260829-114101.json`
+
+### Verified live, measured off the DOM (not `innerText`, which lies on this theme)
+
+| | desktop 1440 | mobile 390 |
+|---|---|---|
+| card counts match allocation on all 11 products | ✅ 76 total | — |
+| media aspect ratio | 1.000 on every card | 1.000 |
+| labels inside their own picture | ✅ | ✅ |
+| card heights | one value, 595px | one value, 520px |
+| track overflows (carousel active) | ✅ 3648 vs 1200 | ✅ |
+| edge prev/next buttons | shown | correctly hidden below 700px |
+| horizontal page overflow | — | none |
+| console errors | 0 | 0 |
+
+### ⚠️ Open, and each one is Malcolm's
+
+1. **The copy is placeholder.** Every card reads "PLACEHOLDER — review headline". Deliberately
+   obvious: plausible filler survives review and ships.
+2. **§2 is still unanswered** — whether these are presented as customer testimony at all. The
+   cards currently show a name, five stars and a "Verified Customer" badge, because the fields
+   are populated. Emptying `author`, `rating` and `verified` turns every card illustrative with
+   no code change; the section guards each field on its own value.
+3. **"Fiona C" appears on two products** — `glutathione-brightening-serum` and one wrinkle
+   product. Two *different* photographs (she is in both the Wrinkles and Brightening Drive
+   folders) but the same name, which reads as one customer reviewing two products. Fix when the
+   real names arrive; nothing else is duplicated.
+4. **The `customer_reviews` testimonials section still sits below** on the same template, with
+   four invented quotes ("Sarah M. - Verified Customer"). It now makes the same claim twice on
+   one page. Removing it was out of scope for this change.
+5. **Klaviyo Reviews' product-reviews block is ALREADY INSTALLED** on `templates/product.json`.
+   Earlier notes had this as outstanding; it is not. Real reviews have somewhere to land.

@@ -60,6 +60,20 @@ ALLOCATION = [
     ("copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month", "General",    7),
 ]
 
+#: Alt text is WRITTEN, not derived from the filename — a rule this project has learned the
+#: hard way. It is also deliberately DESCRIPTIVE rather than testimonial: it says what the
+#: photograph shows, not that a named customer achieved it, because whether these are
+#: presented as customer testimony is still Malcolm's open decision (plan §2). Alt text that
+#: asserted "customer result" would quietly settle that question in the accessibility layer,
+#: where nobody would think to look for it.
+ALT_BY_CONCERN = {
+    "Wrinkles": "Before and after skin comparison showing softer fine lines and wrinkles",
+    "Firming": "Before and after skin comparison showing firmer, better supported skin "
+               "along the jaw and cheek",
+    "Brightening": "Before and after skin comparison showing a more even, brighter skin tone",
+    "General": "Before and after skin comparison showing improved skin condition and texture",
+}
+
 PLACEHOLDER_TITLE = "PLACEHOLDER — review headline"
 PLACEHOLDER_BODY = ("PLACEHOLDER — the customer's review text goes here. This card has not "
                     "been written yet.")
@@ -102,7 +116,8 @@ def build() -> dict:
         for src in take:
             person = src.stem                       # "Heather-S"
             fname = seo_name(concern, person)
-            images.append({"source": str(src), "filename": fname})
+            images.append({"source": str(src), "filename": fname,
+                           "alt": ALT_BY_CONCERN[concern]})
             cards.append({
                 "product": handle,
                 "concern": concern,
