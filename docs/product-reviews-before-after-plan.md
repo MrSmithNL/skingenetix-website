@@ -106,6 +106,44 @@ value, so editing the English silently orphans that string's translations.
 
 ---
 
+## 3a. What Hairgenetix actually does — and why it argues against copying it
+
+Inspected live 2026-08-29 (`a24be5-c5.myshopify.com`, theme `165687230796`), because Malcolm
+asked what could be learned from the sister brand's per-product setup.
+
+**The decisive finding: there is no per-product setup.** `sections/sw--before_after.liquid` is
+section-block driven, and the same section id `sw_before_after_dcCkxq` with the **same 14
+customers** — Stuart US, Karen UK, Diego US, Aven US, Miguel US, Denise Belgium… — is
+copy-pasted into all four product templates (`product.json`,
+`product.copper-peptide-product.json`, `product.supplements-and-serum.json`,
+`product.cartridges.json`). 17 products, 4 templates, **one dataset duplicated four times**.
+
+That is worth stating plainly: **the architecture Hairgenetix uses is what produced the
+duplication Malcolm is asking us to avoid.** Blocks-in-template-JSON makes copy-paste the path
+of least resistance, and the sister store is the evidence of where that ends up. It is the
+strongest argument for §3's metaobject model, not against it.
+
+### Worth taking
+
+- **Labels as `text` settings** (`before_img_text`, `after_img_text`) rather than baked into
+  the pixels — the same conclusion this project reached independently, and it validates it.
+- **Country appended to the customer name** ("Karen, UK", "Andres, Denmark"). Good signal on an
+  international store; worth adopting in `author`.
+- Two separate images per card is a viable alternative to one diptych — but **not for us**: our
+  76 source files are already single-file diptychs, and one file guarantees the 50% split that
+  the labels are positioned against.
+
+### Worth avoiding, all of it observed live
+
+| fault | why it matters |
+|---|---|
+| `img_url: 'master'` on every slide | serves the **full-size original** with no `srcset` — a 2048px master into a small card, on 14 slides, on every product page. Ours uses the theme's responsive pipeline |
+| `review_star` is an **`html` setting** | raw HTML per block: untranslatable, and Shopify **422s** any `html` setting containing `{{`, `}}`, `{%` or `%}` (ADR-005, learned here the hard way). Ours is a numeric range rendered through the theme's own `rating-star` icon |
+| **Swiper 11 loaded from jsDelivr** | an external library on every product page. Ours reuses the theme's `<scroll-carousel>` and `scrollbar` snippet — nothing external, and the prev/next controls hide themselves when the track does not overflow |
+| **Invalid JSON in the live schema** | `"label": "Add Customer Name",` — a trailing comma, live right now. It parses in no JSON parser |
+| `customer_headline1` / `2` / `3` | three fixed slots instead of one repeatable structure |
+| Parallel index-aligned metafield lists | `custom.ingredients_titles` / `_sub_titles` / `_descriptions` / `_images` / `_popup_des` assemble item N from index N of five separate lists. Delete one entry and **everything after it silently misaligns** |
+
 ## 4. The data model
 
 **New metaobject definition `customer_review`** — the existing `before_after` definition
