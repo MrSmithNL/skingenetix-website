@@ -43,6 +43,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PLAN = ROOT / "configs" / "product-reviews.json"
 
+#: Photograph swaps Malcolm asked for by name, applied after the automatic spread.
+#: Only the photograph moves; each card keeps the review text bound to its product.
+MANUAL_PHOTO_SWAPS = [
+    ("Amanda-P", "Adriana-A"),      # Malcolm, 2026-08-29
+]
+
 TARGET_MIN = 2          # distinctive shots every carousel should end up with
 AGE_RE = re.compile(r"I'm (\d\d)|I am (\d\d)|I just turned (\d\d)|My (\d\d)-year-old")
 
@@ -101,8 +107,13 @@ def main():
                      if shot_of(c) == "close" and not aged(c)), None)
         if not give or not take:
             break
+        # `author` moves with the face. It is derived from the person, so leaving it behind
+        # labels one woman's photograph with another woman's name — which is exactly what
+        # happened on the Amanda-P / Adriana-A swap and is invisible in the JSON diff.
         for f in ("person", "concern", "filename"):
             give[f], take[f] = take[f], give[f]
+        give["author"] = give["person"].replace("-", " ")
+        take["author"] = take["person"].replace("-", " ")
         moves.append((rich, poor, take["person"], give["person"]))
 
     print("\nmoves (photograph only; text stays with its product):")

@@ -40,6 +40,8 @@ API = "2025-01"
 #: Mirrored into IMAGE_RENAMES in product-reviews-build-plan.py so a rebuild keeps it.
 NEW_NAMES = {
     "Arantxa-R": "skingenetix-review-before-after-brightening-glow-arantxa-r.jpg",
+    "Petra-J": "skingenetix-review-before-after-fine-lines-petra-j.jpg",
+    "Janine-L": "skingenetix-review-before-after-fine-lines-janine-l.jpg",
 }
 
 
@@ -167,6 +169,19 @@ def main():
     if d["userErrors"]:
         sys.exit(json.dumps(d["userErrors"], indent=2))
     print(f"repointed: {d['metaobject']['handle']}")
+
+    # 4. AND update the plan, or the next publish silently undoes all of the above.
+    #    product-reviews-publish.py resolves each card's image from its `filename`, so a card
+    #    still naming the superseded file repoints the entry straight back to it. Repointing
+    #    the metaobject alone looks like a complete job and is not one.
+    old_name = card["filename"]
+    card["filename"] = new_name
+    for img in plan.get("images", []):
+        if img.get("filename") == old_name:
+            img["filename"] = new_name
+            img.pop("uploaded_handle", None)
+    PLAN.write_text(json.dumps(plan, indent=2, ensure_ascii=False) + "\n")
+    print(f"plan     : card + image entry now name {new_name}")
     print("\nNOTE: the old file is still in Shopify Files and is now unreferenced.")
     print(f"      {card['filename']}  — deleting it needs Malcolm's go-ahead.")
 
