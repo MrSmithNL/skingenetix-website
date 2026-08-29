@@ -124,6 +124,12 @@ MANUAL_FIRST = [
     ("copper-peptide-ghk-cu-day-gel-cream", ["Isabella-E", "Rowena-G"]),   # Malcolm, 2026-08-29
 ]
 
+#: Two cards trading places within one carousel. Both keep their own photograph and their own
+#: text; only their positions change.
+MANUAL_SWAP = [
+    ("copper-peptide-ghk-cu-night-cream", "Justine-L", "Sabine-G"),   # Malcolm, 2026-08-29
+]
+
 MANUAL_AFTER = [
     ("pdrn-collagen-night-cream", "Lana-D", "Danielle-S"),      # Malcolm, 2026-08-29
     ("matrixyl-3000-firming-serum", "Evelyn-L", "Mallory-B"),   # Malcolm, 2026-08-29
@@ -245,6 +251,14 @@ def main():
             firsts = [c for n in names for c in ng if c["person"] == n]
             ng = firsts + [c for c in ng if c not in firsts]
             print(f"      manual: {', '.join(names)} pinned to the front")
+        for prod_h, x, y in MANUAL_SWAP:
+            if prod_h != prod:
+                continue
+            nm = [c["person"] for c in ng]
+            if x in nm and y in nm:
+                i, j = nm.index(x), nm.index(y)
+                ng[i], ng[j] = ng[j], ng[i]
+                print(f"      manual: {x} <-> {y} swapped positions")
         for prod_h, person, after in MANUAL_AFTER:
             if prod_h != prod:
                 continue
