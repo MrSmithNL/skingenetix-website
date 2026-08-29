@@ -87,6 +87,17 @@ ALT_BY_CONCERN = {
     "General": "Before and after skin comparison showing improved skin condition and texture",
 }
 
+#: Replacement filenames for photographs Malcolm has re-edited in Drive.
+#:
+#: This is load-bearing, not bookkeeping. seo_name() derives a filename from the person and
+#: the pool, so without an override here a rebuild would regenerate the ORIGINAL name — and
+#: product-reviews-publish.py resolves entries by filename, so it would quietly repoint the
+#: live card back at the superseded image. The update would undo itself with nobody touching
+#: it. Keep in step with NEW_NAMES in product-reviews-refresh-image.py.
+IMAGE_RENAMES = {
+    "Arantxa-R": "skingenetix-review-before-after-brightening-glow-arantxa-r.jpg",
+}
+
 #: Hand swaps applied AFTER the pooled allocation, as (person_a, person_b) — the two trade
 #: products. They live here rather than as an edit to configs/product-reviews.json because
 #: that file is regenerated from this script: a hand edit there would be silently wiped by the
@@ -159,7 +170,7 @@ def build() -> dict:
                 break
         for src in take:
             person = src.stem                       # "Heather-S"
-            fname = seo_name(concern, person)
+            fname = IMAGE_RENAMES.get(person) or seo_name(concern, person)
             images.append({"source": str(src), "filename": fname,
                            "alt": ALT_BY_CONCERN[concern]})
             cards.append({
