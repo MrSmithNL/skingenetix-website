@@ -297,7 +297,18 @@ place, keeping the section id**, not appended: two before/after sections on one 
 worse than the generic one alone. Keeping the id also held its position in `order` without
 touching the array. Same approach `reviews-add-before-after-carousel.py` took on the reviews page.
 
-Undo: `python3 scripts/product-reviews-add-section.py --restore backups/product.json-20260829-114101.json`
+Undo the section swap: `python3 scripts/product-reviews-add-section.py --restore backups/product.json-20260829-114101.json`
+
+**Moved up 2026-08-29** on Malcolm's instruction — "directly beneath the product info, above
+'How to Use — 3 Simple Steps'". Order is now `main → before_after → featured_in → how_to_use →
+…`. Only the `order` array changed; no section id, setting or block was touched, so no
+translation key moved and nothing was deleted and recreated.
+
+Taken literally, "directly beneath the product info" puts it above `featured_in` (the press
+bar) as well. That turns out to be moot: **`featured_in` renders nothing on product pages** —
+the `logo-list` section is in the template order but produces no DOM at all. Worth knowing
+separately from this change.
+Undo the move: `--restore backups/product.json-20260829-122332.json`
 
 ### Verified live, measured off the DOM (not `innerText`, which lies on this theme)
 
