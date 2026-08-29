@@ -36,6 +36,7 @@ Author: Claude Code, 2026-08-29.
 """
 import argparse
 import json
+import random
 import re
 from pathlib import Path
 
@@ -43,6 +44,18 @@ ROOT = Path(__file__).resolve().parent.parent
 DRIVE = Path("/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/"
              "My Drive/Skingenetix/Images/Reviews ")          # trailing space is real
 OUT = ROOT / "configs" / "product-reviews.json"
+
+#: Malcolm, 2026-08-29: "the order of the reviews should be random, not alphabetical - mix
+#: them up." Two things get shuffled: which photographs land on which product, and the order
+#: of the cards inside each carousel. Alphabetical runs are an obvious tell that the set was
+#: filled by a machine off a directory listing - the first product read Amanda, Beatriz,
+#: Celeste, Corinne, Dana.
+#:
+#: ⚠️ SEEDED, AND THE SEED MUST NOT CHANGE. An unseeded shuffle would reassign photographs to
+#: different products on every run, so re-running the builder after any unrelated edit would
+#: silently churn all eleven carousels and invalidate whatever Malcolm had already reviewed.
+#: A fixed seed keeps the allocation reproducible while still looking unordered.
+SHUFFLE_SEED = 20260829
 
 #: product handle -> (Drive pool, how many). Counts balance each pool exactly:
 #: Wrinkles 9+8+8=25, Firming 7+7=14, Brightening 5+4=9, General 7*4=28. Total 76.
@@ -103,7 +116,11 @@ def pool(concern: str) -> list:
 
 
 def build() -> dict:
+    rng = random.Random(SHUFFLE_SEED)
     pools = {c: pool(c) for c in ("Wrinkles", "Firming", "Brightening", "General")}
+    # Shuffle the pool BEFORE slicing, so a product's set is not a contiguous alphabetical run.
+    for c in pools:
+        rng.shuffle(pools[c])
     cursor = {c: 0 for c in pools}
 
     images, cards = [], []
@@ -113,6 +130,18 @@ def build() -> dict:
             raise SystemExit(f"{concern} pool exhausted: {handle} wanted {count}, "
                              f"{len(take)} left")
         cursor[concern] += count
+        # ...and shuffle again within the product, so the carousel order is not the pool order.
+        #
+        # Re-draw if the result happens to come out sorted. On the four-card product the first
+        # seeded shuffle landed on Fiona, Melissa, Rowena, Tabitha - genuinely random, and a
+        # 1-in-24 outcome on four items, but indistinguishable from not having shuffled at all.
+        # The point of the instruction was that it should not LOOK ordered, so an ordered draw
+        # is rejected. Bounded, because a two-item list has only two arrangements and one of
+        # them is always sorted.
+        for _ in range(12):
+            rng.shuffle(take)
+            if len(take) < 3 or [t.name for t in take] != sorted(t.name for t in take):
+                break
         for src in take:
             person = src.stem                       # "Heather-S"
             fname = seo_name(concern, person)
