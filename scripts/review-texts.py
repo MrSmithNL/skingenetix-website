@@ -1,0 +1,475 @@
+#!/usr/bin/env python3
+"""The customer review copy, structured, translated, and mapped to products.
+
+    python3 scripts/review-texts.py --audit      # counts and gaps, writes nothing
+    python3 scripts/review-texts.py              # writes configs/review-texts.json
+
+SOURCE: `Cusomer Reviews.docx` in the Drive Reviews folder. The document is organised by
+product heading, but titles and bodies run together inside single paragraphs and several
+sections leak raw OOXML into the text, so it cannot be parsed reliably — it is transcribed
+here by hand instead. 86 reviews.
+
+⚠️ THE NAMES ARE GONE. Malcolm: "we lost the customer names - so we will have to pair up the
+texts to the products they are for - but also get the text to match the image/person they
+represent (because some mention age)." So a text is bound to a PRODUCT by what it talks about,
+and — where it states an age — to a PERSON whose photograph can carry that age. `age` below is
+that constraint; `AGE_BOUND` reviews may only land on a card whose photograph has been checked.
+
+DUTCH REVIEWS ARE TRANSLATED, NOT PARAPHRASED. 16 of the 86 are Dutch. `source_lang: nl` keeps
+that visible, because the English is now the master copy that Translate & Adapt will hash and
+translate into the other locales — including back into Dutch. Whoever reviews the Dutch locale
+later should know it is a round trip and check it against the original wording here.
+
+PRODUCT KEYS map to the document's own headings. Two products have NO source section at all
+and one has only indirect material — see --audit.
+
+Author: Claude Code, 2026-08-29.
+"""
+import argparse
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "configs" / "review-texts.json"
+
+# --------------------------------------------------------------------------------------
+# key -> the product handle its reviews belong to. `general` and `glow` are not headings in
+# the document; they are reviews that name no product and are grouped by what they describe.
+# --------------------------------------------------------------------------------------
+SECTION_TO_PRODUCT = {
+    "copper_serum": "copper-peptide-ghk-cu-renewal-serum",
+    "copper_day": "copper-peptide-ghk-cu-day-gel-cream",
+    "copper_night": "copper-peptide-ghk-cu-night-cream",
+    "antiwrinkle": "acetyl-hexapeptide-8-anti-wrinkle-serum",
+    "pdrn_serum": "pdrn-renewal-serum",
+    "pdrn_cream": "pdrn-collagen-night-cream",
+    "firming_cream": "matrixyl-3000-pro-collagen-firming-cream",
+    "glow": "glutathione-brightening-serum",
+    "general": None,          # usable anywhere that names no product — incl. the Reviews page
+}
+
+R = lambda s, t, b, **kw: dict(section=s, title=t, body=b, **kw)
+
+REVIEWS = [
+    # ---- unattributed English, from the opening block -----------------------------------
+    R("glow", "Genuinely satisfied",
+      "At first I thought it was not working, but after a few weeks I noticed the difference. "
+      "My cheeks are not flat any more, my skin glows and all my friends are asking what I am "
+      "doing. I recommend Skingenetix."),
+    R("general", "A difference straight away",
+      "I felt a noticeable difference the next day. It hydrates my skin and it feels so much "
+      "better."),
+    R("glow", "I recommend it to everyone",
+      "I was shocked seeing my before and after photos. I didn't realise how much my skin had "
+      "improved. I feel so much more confident wearing open tops now. My skin looks much more "
+      "even, less red and all round healthier. Happy I found this product."),
+    R("general", "Amazing",
+      "I'm so happy. I've been using the products for two months and they have made such a "
+      "difference to my skin. I had tried a lot of products before, but with just one bottle "
+      "of the serum and staying consistent with the cream I've seen a huge change."),
+    R("glow", "Outstanding",
+      "I'm so impressed with the results. I noticed a difference after a few weeks. I am so "
+      "surprised at how much younger the skin on my neck and chest looks. Wrinkles have "
+      "significantly reduced, sun spots are lighter and my skin looks and feels more "
+      "rejuvenated."),
+    R("general", "I wish I had this years ago",
+      "After two weeks I began to see results, and after six weeks the changes in my skin were "
+      "dramatic. I have now been using Skingenetix six months and loving the compliments. I "
+      "bought the products for my daughters too so they could start at a younger age. I wish I "
+      "had found Skingenetix when I was younger. I am 64.", age=64),
+    R("general", "My skin returned to life",
+      "I just turned 54. My skin was extremely dry and while using this product my skin "
+      "returned to life. I am so impressed with it. You will not regret buying it. I really "
+      "see the change in my skin.", age=54),
+    R("copper_serum", "I can't go a day without it",
+      "Straight away I noticed results with the copper peptide treatment. After the first week "
+      "my skin looked clearer and more balanced. People ask me now how I got my skin so "
+      "hydrated and bright, with less redness. I don't think I can go a day without it."),
+    R("glow", "Worth every penny",
+      "I will never go without this. I tried several solutions for my hyperpigmentation that "
+      "really dried out my skin. Ever since adding this to my routine I have little to no "
+      "irritation or dryness. I use it as the last layer at night and I wake up with glowing, "
+      "hydrated skin."),
+
+    # ---- Dutch, translated (source_lang nl) ---------------------------------------------
+    R("pdrn_cream", "An absolute game changer for the skin barrier",
+      "Fantastic cream. It hydrates deeply and calms the skin barrier perfectly. It absorbs "
+      "quickly and leaves a wonderful, smooth texture. Highly recommended.", source_lang="nl"),
+    R("pdrn_cream", "A very good cream",
+      "The cream has a rich consistency. In winter I use it both during the day and in the "
+      "evening; in summer only in the evening, because it can be a little much to wear "
+      "sunscreen on top. It hydrates well and my skin feels soft and full in the morning and "
+      "through the day.", source_lang="nl"),
+    R("pdrn_cream", "It saved my skin",
+      "It really saved my skin. I can see a big difference after one month.", source_lang="nl"),
+    R("pdrn_cream", "So far I like it a great deal",
+      "I have tried several PDRN creams and this one from Skingenetix is much better. I love "
+      "the texture, which is light and super hydrating. My combination skin doesn't get oily "
+      "from this cream, and it sits beautifully under SPF and make-up.", source_lang="nl"),
+    R("pdrn_cream", "I recommend this PDRN cream",
+      "I buy this PDRN cream for the autumn and winter. It is perfect for mature, sensitive "
+      "skin with rosacea — it calms and strengthens the skin barrier. Although my skin is "
+      "acne-prone, it doesn't clog my pores or cause breakouts. A perfect choice in winter and "
+      "whenever the skin needs repairing.", source_lang="nl"),
+    R("pdrn_cream", "The glow of time",
+      "This cream came warmly recommended by a friend and I had to try it myself. The "
+      "consistency is cool and supple and absorbs straight away, and the skin feels extremely "
+      "hydrated and radiant. I felt reborn and I will definitely buy it again.",
+      source_lang="nl"),
+    R("general", "Better skin",
+      "I have used this product several times and I have noticed that my skin really shines "
+      "and looks lovely. Thank you.", source_lang="nl"),
+    R("pdrn_cream", "It sinks in beautifully and hydrates",
+      "Creamy and very hydrating. You need very little product each time. It leaves the skin "
+      "soft and lovely, and it penetrates very well.", source_lang="nl"),
+    R("pdrn_cream", "It repairs and hydrates",
+      "After a week of using it in the evening, my skin still feels soft the day after "
+      "applying. It works beautifully as a night cream because it gives my dry skin enough "
+      "moisture. My skin also has a lovely sheen.", source_lang="nl"),
+    R("pdrn_serum", "Excellent product",
+      "I am in love with this serum. I have been using it for five days and the results are "
+      "noticeable from the very first application.", source_lang="nl"),
+    R("glow", "Radiant skin",
+      "I really didn't expect it to work this well — radiant skin, beautifully hydrated. I use "
+      "it in the evening and in the morning I wake up with a smoothed face.", source_lang="nl"),
+    R("pdrn_cream", "A beautiful product",
+      "I have had problems with dry, itchy skin, and this product has really helped my skin "
+      "feel better.", source_lang="nl"),
+    R("pdrn_serum", "The best all-in-one serum",
+      "This serum leaves my skin so plump and radiant, while it also repairs my damaged "
+      "barrier and fades my acne scars. The best all-in-one serum you can get.",
+      source_lang="nl"),
+    R("pdrn_serum", "Game changer",
+      "Perfect for my combination skin, which gets dry patches in winter. It absorbs quickly, "
+      "but the skin becomes incredibly plump and hydrated. I am so pleased with it.",
+      source_lang="nl"),
+    R("glow", "So good",
+      "Absolutely brilliant. My skin used to look oily an hour after putting make-up on. This "
+      "makes it look so good and I don't go shiny. I don't carry extra powder around any more. "
+      "It also smooths the skin. My forehead has never looked better — not oily, but glass "
+      "skin. I've had so many compliments about my skin.", source_lang="nl"),
+    R("glow", "Hydrating and glowing",
+      "A wonderful, fine texture — firm, but bouncy and jelly-like. It gives a lot of moisture "
+      "and a beautiful glow. It works brilliantly under sunscreen and make-up, and it doesn't "
+      "pill or cake. Because it isn't thin and runny you can take as much or as little as you "
+      "need, and it lasts a very long time.", source_lang="nl"),
+
+    # ---- Copper Peptide Serum -----------------------------------------------------------
+    R("copper_serum", "The colour surprised me",
+      "The blue colour surprised me at first, but I actually love the look and feel of this "
+      "serum. It feels very lightweight and a little goes a long way. After a few weeks my "
+      "skin seems firmer and the texture around my cheeks looks noticeably better."),
+    R("copper_serum", "It feels much more premium",
+      "Really nice serum, and it feels much more premium than most products I've tried. It "
+      "sinks into the skin almost immediately and works well under my moisturiser. After the "
+      "first few days my complexion already looked more even and rested, and after a few weeks "
+      "of consistent use the difference is noticeable. I regularly get compliments about my "
+      "skin."),
+    R("copper_serum", "A much healthier glow",
+      "This has quickly become one of my favourite products in my evening routine. My skin was "
+      "looking a bit dull and tired, and after several weeks it has a much healthier glow. I "
+      "also feel like the fine lines around my eyes are less noticeable."),
+    R("copper_serum", "A surprisingly big difference",
+      "I have quite dry skin and this has made a surprisingly big difference. My face feels "
+      "much more comfortable and hydrated throughout the day, without feeling oily. Even my "
+      "make-up seems to sit better on my skin now."),
+    R("copper_serum", "Smoother and more resilient",
+      "I was curious about copper peptides after reading so much about them and decided to "
+      "give this serum a try. The texture is beautiful and feels very calming on the skin. "
+      "After about three weeks my skin feels smoother and definitely more resilient and "
+      "firmer."),
+    R("copper_serum", "It impressed me",
+      "I wasn't expecting much because I've tried a lot of expensive serums before, but this "
+      "one has impressed me. My skin feels smoother, looks brighter and the overall tone seems "
+      "more even and fuller. I'll definitely keep using it."),
+    R("copper_serum", "Already a lifetime fan",
+      "I'm 47 and mainly bought this for the fine lines around my eyes and forehead. I "
+      "wouldn't say they disappeared, obviously, but after five weeks they definitely look "
+      "softer and my skin has more bounce to it. I'm already a lifetime fan.", age=47),
+    R("copper_serum", "No pilling, no greasy layer",
+      "Love this. I use it in the evening before my moisturiser and it doesn't pill or leave "
+      "that greasy layer some serums do. After around a month I noticed my skin texture looked "
+      "much smoother in daylight."),
+
+    # ---- Copper Peptide Day Cream -------------------------------------------------------
+    R("copper_day", "Skin feels smoother and firmer",
+      "I've been using the day cream for about six weeks now and I'm really happy with it. It "
+      "feels quite rich when you first apply it, but it sinks in quickly and doesn't leave my "
+      "skin greasy. My skin feels noticeably smoother and more hydrated throughout the day. "
+      "I've also started to notice a little more firmness around my cheeks and jawline."),
+    R("copper_day", "Great for combination skin",
+      "I have combination skin, so I'm always careful with day creams because a lot of them "
+      "feel too heavy. This one has a really nice balance and gives me enough moisture without "
+      "making my forehead shiny. After about a month my skin feels softer and looks more "
+      "rested. It also sits really well underneath SPF and make-up."),
+    R("copper_day", "It improves with consistent use",
+      "I bought this because I wanted to try copper peptides but didn't want to add another "
+      "serum to my routine. At first I mainly noticed that my skin felt softer and more "
+      "comfortable. After a few weeks the texture started looking smoother and the fine lines "
+      "around my eyes seemed a bit less noticeable."),
+    R("copper_day", "My new morning favourite",
+      "This has quickly become one of my favourite morning products. The texture is creamy but "
+      "still light enough for daytime, and it absorbs without leaving a film on the skin. My "
+      "face stays hydrated for much longer than with my previous moisturiser. After around two "
+      "months my skin looks plumper, smoother and generally healthier."),
+    R("copper_day", "I love the blue cream",
+      "I wasn't sure what to expect when I opened it and saw the blue colour, but I actually "
+      "really like it. You don't need much and it spreads very easily. I've been using it for "
+      "about a month and my skin is noticeably softer and has a really nice healthy look."),
+    R("copper_day", "One of my favourites now",
+      "I've tried a ridiculous amount of skincare over the years and this has become one of "
+      "the few products I actually look forward to using. It feels luxurious without being "
+      "thick or sticky. The longer-term difference has been in the overall texture and "
+      "firmness. I wouldn't say my lines have disappeared, but they look softer because my "
+      "skin looks healthier and more hydrated."),
+    R("copper_day", "Almost perfect",
+      "Really nice consistency, and I like that it doesn't have an overpowering perfume smell. "
+      "It absorbs quickly as long as I don't use too much. I did notice a little pilling once "
+      "when I layered several products over it, so now I use a smaller amount and wait before "
+      "applying my SPF. Apart from that, my skin really likes it and feels much smoother."),
+    R("copper_day", "My skin loves this",
+      "I've been using this every morning for around five weeks now. It feels really creamy "
+      "going on but somehow isn't heavy once it absorbs. My skin feels softer and I'm "
+      "definitely noticing more smoothness around my cheeks and forehead."),
+
+    # ---- Copper Peptide Night Cream -----------------------------------------------------
+    R("copper_night", "I look forward to putting it on",
+      "Probably one of the few skincare products I actually look forward to applying every "
+      "night. It feels luxurious but not heavy, and my skin looks noticeably fresher the next "
+      "morning. After using it consistently my face seems more hydrated and firm."),
+    R("copper_night", "My skin looks so much better in the morning",
+      "I've been using this every night for about a month and the biggest difference is how my "
+      "skin looks when I wake up. It feels really soft and has a nice healthy glow without "
+      "looking oily. The cream feels quite rich when you apply it but sinks in surprisingly "
+      "quickly."),
+    R("copper_night", "A really lovely night cream",
+      "Very creamy and nourishing, but not heavy at all. My skin feels soft and plump the next "
+      "morning and I've noticed the dry patches around my cheeks have pretty much disappeared. "
+      "A little goes a long way too."),
+    R("copper_night", "Waking up with softer skin",
+      "This is one of those products where I noticed the difference more in how my skin feels "
+      "than anything else at first. Every morning my face feels incredibly soft and smooth. "
+      "After about five weeks I'm also starting to notice that my skin looks a little firmer "
+      "and more refreshed."),
+    R("copper_night", "Better than I expected",
+      "I bought this because I kept seeing copper peptides everywhere. I honestly wasn't "
+      "expecting to notice anything for months, but after about four weeks my skin looks "
+      "noticeably healthier. It feels more supple and there's a nice plumpness in the morning "
+      "that wasn't there before. I'm 49 and mainly wanted something for texture and early loss "
+      "of firmness, so I'm really pleased.", age=49),
+    R("copper_night", "Rich without feeling greasy",
+      "This has exactly the texture I want from a night cream. It's thick enough that my skin "
+      "feels properly moisturised, but once it absorbs there isn't a greasy layer left behind. "
+      "I wake up with really soft skin and my face somehow looks more rested. After about two "
+      "months I'm also noticing smoother texture around my forehead."),
+    R("copper_night", "Simple but really effective",
+      "Cleanse, serum, this cream and I'm done. My skin feels hydrated all night and very "
+      "smooth the following morning. I've stopped switching between different moisturisers "
+      "because this one just seems to agree with my skin."),
+    R("copper_night", "Subtle changes, but definitely changes",
+      "I've been using this for just over two months, which is probably long enough to give it "
+      "a fair review. My wrinkles haven't magically disappeared, but that wasn't what I "
+      "expected. What I have noticed is smoother texture, more hydration and a slightly firmer "
+      "feeling around my cheeks and lower face. My skin generally looks healthier and less "
+      "tired, and for me that's enough reason to keep using it."),
+    R("copper_night", "Great for my older skin",
+      "I'm 58 and my skin has got much drier in the last few years, especially around my "
+      "cheeks and neck. This has helped a lot with that. I put a generous amount on at night "
+      "and by morning it has all absorbed. My skin feels softer and I think the lines around "
+      "my mouth look less dry, if that makes sense.", age=58),
+    R("copper_night", "Very nice texture",
+      "Creamy but not greasy. It absorbs much better than the night cream I had before and I "
+      "don't feel like half of it ends up on my pillow. My skin feels really nice in the "
+      "morning. Simple but good."),
+
+    # ---- Anti-Wrinkle / Anti-Ageing Serum ------------------------------------------------
+    R("antiwrinkle", "I'm actually seeing a difference",
+      "I'm 48 and have tried so many serums over the years that I wasn't expecting much. I've "
+      "been using this about seven weeks now and the little lines on my forehead are "
+      "definitely softer. Not gone, obviously, but my skin looks smoother in general. I "
+      "noticed yesterday that I wasn't reaching for as much foundation either.", age=48),
+    R("antiwrinkle", "Skin feels great",
+      "Really like this. It absorbs quickly and my skin feels super soft afterwards. I've only "
+      "been using it about three weeks so I can't say much about deep wrinkles yet, but I'm "
+      "happy with how my face looks."),
+    R("antiwrinkle", "Much smoother",
+      "My skin texture has changed more than I expected from this, especially around my cheeks "
+      "where it was getting a little rough and uneven. It feels really smooth now and has more "
+      "of a glow. I use two pumps at night followed by my normal moisturiser."),
+    R("antiwrinkle", "It didn't irritate my skin",
+      "I have pretty sensitive skin so this was the thing I was most worried about. No "
+      "redness, peeling or burning at all for me. I've slowly worked up to using it every "
+      "night and my face is definitely looking smoother."),
+    R("antiwrinkle", "Fine lines look better",
+      "I'm 55 and mainly bought it for the lines around my mouth and eyes. I've been using it "
+      "for almost two months and they do look softer, especially around my eyes. I wouldn't "
+      "say I suddenly look ten years younger, but my skin definitely looks fresher and more "
+      "even. That's enough for me.", age=55),
+    R("antiwrinkle", "A monthly buy",
+      "Eighth bottle ordered. That probably says it all."),
+    R("antiwrinkle", "I noticed when I stopped",
+      "My skin feels smoother, looks more hydrated and the lines on my forehead aren't as "
+      "obvious as they used to be. I stopped using it for about a week when the first bottle "
+      "ran out and actually noticed the difference."),
+    R("antiwrinkle", "One of the few serums I stick with",
+      "Normally I start skincare products, use them religiously for two weeks and then forget "
+      "about them. Somehow I've actually stuck with this one — probably because it feels nice "
+      "and doesn't add another complicated step to my routine."),
+    R("antiwrinkle", "Around six weeks in",
+      "Around six weeks in I started noticing my forehead looked smoother. Then I noticed the "
+      "skin under my eyes wasn't looking quite so creased in the morning. It could be because "
+      "it's more hydrated, it could be the serum itself. I don't really care, because it's "
+      "working for me."),
+    R("antiwrinkle", "I didn't think I needed it until I saw photos",
+      "This was funny, because looking in the mirror every day I didn't think much was "
+      "happening. Then I compared a photo from about two months ago and my skin genuinely "
+      "looks better now. The area around my eyes looks smoother and my face just looks less "
+      "dull somehow."),
+    R("antiwrinkle", "Finally something I keep using",
+      "I have a cupboard full of half-used serums, so the fact this one is nearly empty says a "
+      "lot. It's easy to use, doesn't feel sticky and my skin looks more alive somehow. The "
+      "deeper lines are still there, but the smaller ones look softer and my face doesn't look "
+      "as tired in the morning."),
+
+    # ---- PDRN Serum ----------------------------------------------------------------------
+    R("pdrn_serum", "My skin is so glowy",
+      "I didn't really believe all the PDRN hype, but I get it now. My skin looks so much more "
+      "hydrated and kind of bouncy, especially in the morning. I use two drops before "
+      "moisturiser and that's enough for my whole face."),
+    R("pdrn_serum", "Hooked",
+      "I didn't even wait for the first one to finish before ordering another. It gives me such "
+      "a nice glow without making me look oily. My make-up has also been sitting way better "
+      "lately."),
+    R("pdrn_serum", "It helped when I wrecked my skin barrier",
+      "I overdid it with retinol and acids and my face was angry for almost a week. I started "
+      "using this with just a basic moisturiser and it really seemed to calm everything down. "
+      "Less tight, less red, and my skin felt normal again pretty quickly."),
+    R("pdrn_serum", "Beautiful under foundation",
+      "This is actually where I noticed the biggest difference. My foundation normally catches "
+      "around the dry areas near my nose, but lately it goes on really smoothly. My skin feels "
+      "plumper too."),
+    R("pdrn_serum", "My 46-year-old skin loves it",
+      "I've only been using this about six weeks but my skin looks genuinely better. Not "
+      "younger exactly, just less tired and more full of life. The little dehydration lines "
+      "around my eyes aren't as obvious either. I use it morning and evening now.", age=46),
+    R("pdrn_serum", "Glow",
+      "It literally makes my face glow. That's it, that's the review."),
+    R("pdrn_serum", "It delivered",
+      "At first I thought this was doing absolutely nothing and I nearly stopped using it. "
+      "Somewhere around week three or four my skin suddenly started looking really nice — "
+      "smoother, more even and definitely more hydrated. I even see a noticeable improvement "
+      "in the fine lines and wrinkles."),
+    R("pdrn_serum", "I didn't expect to repurchase",
+      "I bought it because I was curious about the salmon DNA, fully expecting it to be another "
+      "skincare trend. I ended up loving the serum itself regardless of which ingredient is "
+      "responsible. It's light, it doesn't sting, and my skin feels ridiculously soft "
+      "afterwards."),
+    R("pdrn_serum", "My redness looks better",
+      "I have pretty reactive skin and usually wake up with redness around my cheeks. Since "
+      "using this it's been noticeably calmer. I'm not saying it's cured anything, but my skin "
+      "seems less annoyed all the time."),
+    R("pdrn_serum", "A 'my skin but better' product",
+      "There wasn't one morning where I suddenly thought wow. It's been more gradual than "
+      "that. I realised after maybe two months that my skin hadn't been flaky in ages, my "
+      "pores looked less obvious and overall everything just looked smoother. Then I ran out "
+      "for about ten days and I definitely noticed."),
+    R("pdrn_serum", "My acne-prone skin likes it",
+      "I was nervous trying this because I've seen people say PDRN broke them out. For me it's "
+      "been the complete opposite. No new clogged pores, and my face is much less dehydrated, "
+      "which seems to have helped everything look calmer. Five weeks so far and still loving "
+      "it."),
+    R("pdrn_serum", "I keep touching my face",
+      "My skin is so smooth since I started this. I probably shouldn't keep touching it but I "
+      "can't help it. It also gives that glassy look without feeling oily, which I love."),
+    R("pdrn_serum", "I was sceptical, now I understand the hype",
+      "I'm 51, combination skin and quite a bit of sun damage from being terrible with SPF when "
+      "I was younger. I've been using this morning and night for around two months. The first "
+      "thing was hydration, basically straight away. The longer I've used it, the more even my "
+      "skin seems, and there's a softness and plumpness that wasn't really there before. My "
+      "pigmentation hasn't disappeared, but my face just looks healthier.", age=51),
+
+    # ---- Plumping and Firming Cream ------------------------------------------------------
+    R("firming_cream", "My skin feels bouncy again",
+      "I'm not sure how else to explain it, but my skin just has more bounce since using this, "
+      "especially my cheeks. I'm 52 and everything was starting to feel a little flat and dry. "
+      "This has made a noticeable difference.", age=52),
+    R("firming_cream", "It actually looks plumper",
+      "I'm 44 and recently started noticing that my cheeks looked a bit less full, especially "
+      "when I'm tired. I've been using this morning and night for around six weeks and my skin "
+      "does look more plump. Not facelift plump, obviously — just healthier and less drawn.",
+      age=44),
+    R("firming_cream", "Great under foundation",
+      "This is probably the best moisturiser I've used under make-up in a long time. My "
+      "foundation doesn't catch on the dry bits around my nose any more and my cheeks look "
+      "much smoother. I don't know whether that's the plumping effect or just really good "
+      "hydration, but either way I'm happy."),
+    R("firming_cream", "I keep going back to it",
+      "I've tried replacing this twice now because it isn't cheap, and both times I ended up "
+      "buying it again. There are cheaper moisturisers that hydrate just as well at first, but "
+      "my skin doesn't have the same smooth, bouncy feel after a few weeks."),
+    R("firming_cream", "My neck looks better too",
+      "I started bringing this down onto my neck, because that's where I'm noticing ageing the "
+      "most lately. I've been doing that for about two months now and I actually think the "
+      "skin there looks smoother. Not perfect, obviously, but less crepey. The jar lasts "
+      "longer than I expected too, because you don't need loads."),
+    R("firming_cream", "I noticed it in photos",
+      "Weirdly, I didn't notice much looking in the mirror every morning. Then I saw some "
+      "photos from a birthday recently and thought my skin looked really good — much smoother "
+      "through the cheeks and less tired looking. I've been using this around seven or eight "
+      "weeks, so maybe it's finally doing its thing."),
+    R("firming_cream", "Finally something for dry menopausal skin",
+      "Since the menopause my skin has basically decided that no amount of moisturiser is "
+      "enough. This has been one of the better ones I've found. I use a serum first and then "
+      "this, and my skin stays comfortable until morning. It looks fuller and less papery "
+      "around the cheeks too, which I'm very happy about."),
+    R("firming_cream", "A proper cream",
+      "This feels like an actual cream, if that makes sense — not one of those watery gel "
+      "moisturisers that disappears and then your face feels dry again half an hour later. My "
+      "skin feels cushioned and soft but not greasy. I've been using it about a month and I'm "
+      "starting to notice the lines around my mouth look a little softer too."),
+    R("firming_cream", "It works",
+      "I've been using this for about ten weeks now, usually morning and night. At first I "
+      "thought it was basically just a very expensive moisturiser. Around the second month I "
+      "started noticing that my cheeks looked better, a bit more rounded and plump, and my "
+      "skin texture was smoother. I also don't get as much foundation settling into the fine "
+      "lines beside my mouth. Is it dramatically lifting my face? No. But comparing my skin "
+      "now to when I started, yes, I do think it looks better."),
+    R("firming_cream", "Cheeks look fuller",
+      "I didn't really expect much beyond a nice moisturiser, but my cheeks definitely look a "
+      "bit fuller after using this for a while. I noticed it more in photos than in the "
+      "mirror. My skin feels lovely too, especially first thing in the morning."),
+    R("firming_cream", "Really nice on my neck as well",
+      "I started using this on my face, but now I use whatever is left on my fingers down my "
+      "neck and chest. Weirdly, that's where I've noticed the biggest improvement. The skin on "
+      "my neck looks less dry and crepey and feels much smoother."),
+]
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--audit", action="store_true")
+    args = ap.parse_args()
+
+    from collections import Counter
+    per_section = Counter(r["section"] for r in REVIEWS)
+    aged = [r for r in REVIEWS if r.get("age")]
+    dutch = [r for r in REVIEWS if r.get("source_lang") == "nl"]
+
+    print(f"{len(REVIEWS)} reviews transcribed "
+          f"({len(dutch)} translated from Dutch, {len(aged)} state an age)\n")
+    for s, n in per_section.most_common():
+        print(f"  {s:<16} {n:>3}   -> {SECTION_TO_PRODUCT[s] or '(any product)'}")
+    print("\nages stated:", sorted(r["age"] for r in aged))
+
+    if args.audit:
+        return
+    OUT.write_text(json.dumps(
+        {"source": "Cusomer Reviews.docx (Drive/Skingenetix/Images/Reviews )",
+         "transcribed": "2026-08-29",
+         "section_to_product": SECTION_TO_PRODUCT,
+         "reviews": REVIEWS}, indent=2, ensure_ascii=False) + "\n")
+    print(f"\nwrote {OUT.relative_to(ROOT)}")
+
+
+if __name__ == "__main__":
+    main()
