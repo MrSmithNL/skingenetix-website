@@ -113,8 +113,12 @@ def to_input(node, keep_ids=True):
 
 
 def show(items, indent=2):
+    """Tolerant of a thin node: the menuUpdate payload returns only id and title,
+    so type/url are absent there and printing them blew up an otherwise successful
+    restore."""
     for i in items:
-        print(" " * indent + f"- {i['title']}  ({i['type']}) {i.get('url') or ''}")
+        extra = f"  ({i['type']}) {i.get('url') or ''}" if "type" in i else ""
+        print(" " * indent + f"- {i['title']}{extra}")
         for k in i.get("items") or []:
             print(" " * (indent + 4) + f"- {k['title']}")
 
