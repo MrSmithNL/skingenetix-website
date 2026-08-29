@@ -21,7 +21,14 @@ MATCHING RULES, in order:
      woman in the photograph. They are listed by --report rather than placed blind.
   3. The `general` pool — reviews naming no product at all — fills whatever is left over,
      product-agnostic by construction.
-  4. Anything still unfilled keeps its PLACEHOLDER text, which is deliberately obvious.
+  4. BEST FIT PASS. Malcolm, 2026-08-29: "if the reviews work - and fit the before and after
+     image - then use the best text & image fit." So a leftover text may cross to another
+     product, but only if it names NO conflicting format: a review saying "night cream",
+     "serum", "two pumps" or "the jar" cannot sit on a microneedling stamp set, whatever else
+     it says. Among the texts that pass that filter, the one whose language best matches the
+     card's concern wins — a pigmentation review goes on a tone photograph, a line review on a
+     wrinkle photograph.
+  5. Anything still unfilled keeps its PLACEHOLDER text, which is deliberately obvious.
 
 Author: Claude Code, 2026-08-29.
 """
@@ -47,6 +54,41 @@ PLACEHOLDER = "PLACEHOLDER"
 AGE_SWAPS = [
     ("Emma-H", "Elena-S"),          # 44 <-> 52, checked 2026-08-29
 ]
+
+
+#: Words that tie a review to a physical format. A text containing any of these cannot be
+#: moved to a product of a different format — most importantly the two microneedling stamp
+#: sets, which are a device and not something you pump, pour or scoop.
+FORMAT_WORDS = ("serum", "cream", "moisturis", "moisturiz", "jar", "bottle", "drops", "pump",
+                "spf", "lotion", "gel", "oil")
+
+#: Rough vocabulary per concern, used only to RANK candidates that already passed the format
+#: filter. It decides which honest text fits a given photograph best; it never makes a text
+#: eligible that was not already eligible.
+CONCERN_WORDS = {
+    "Wrinkles":    ("line", "wrinkle", "crease", "smooth", "forehead", "eyes"),
+    "Firming":     ("firm", "plump", "bounce", "jaw", "slack", "papery", "full", "cheek"),
+    "Brightening": ("bright", "tone", "even", "pigment", "dull", "glow", "mark", "spot",
+                    "patch"),
+    "General":     ("hydrat", "soft", "texture", "calm", "comfort", "healthy"),
+}
+
+
+def fits_format(review, card_product):
+    """True if this text carries no format word that would clash with the target product."""
+    body = (review["title"] + " " + review["body"]).lower()
+    named = [w for w in FORMAT_WORDS if w in body]
+    if not named:
+        return True                      # format-neutral: safe anywhere
+    target = card_product.lower()
+    # a text naming a format may only move to a product whose handle names the same thing
+    return any(w in target for w in named)
+
+
+def fit_score(review, card):
+    body = (review["title"] + " " + review["body"]).lower()
+    words = CONCERN_WORDS.get(card.get("concern", ""), ())
+    return sum(1 for w in words if w in body)
 
 
 def load():
@@ -86,6 +128,21 @@ def assign(plan, texts, place_aged=False):
                 assigned[id(card)] = generals[gi]
                 used.add(id(generals[gi]))
                 gi += 1
+
+    # 4. best-fit pass over everything still unplaced
+    leftover = [r for r in texts["reviews"]
+                if id(r) not in used and (place_aged or not r.get("age"))]
+    for handle, group in by_product.items():
+        for card in group:
+            if id(card) in assigned:
+                continue
+            candidates = [r for r in leftover
+                          if id(r) not in used and fits_format(r, handle)]
+            if not candidates:
+                continue
+            best = max(candidates, key=lambda r: fit_score(r, card))
+            assigned[id(card)] = best
+            used.add(id(best))
     return assigned, by_product
 
 

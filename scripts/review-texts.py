@@ -33,8 +33,14 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "configs" / "review-texts.json"
 
 # --------------------------------------------------------------------------------------
-# key -> the product handle its reviews belong to. `general` and `glow` are not headings in
-# the document; they are reviews that name no product and are grouped by what they describe.
+# key -> the product handle its reviews belong to.
+#
+# ⚠️ `glow` USED TO BE A KEY HERE AND SHOULD NOT HAVE BEEN. It was not a heading in the
+# document; it was seven unattributed reviews grouped by what they DESCRIBED — radiance, even
+# tone, pigmentation — and then pointed at the Glutathione serum. Malcolm caught it: "I don't
+# think the reviews you have used now are for Glutathione are they?" They were not. Sorting by
+# topic is a guess, and giving the guess a section name here made it look like attribution.
+# Those seven are now `general`, which is what they honestly are.
 # --------------------------------------------------------------------------------------
 SECTION_TO_PRODUCT = {
     "copper_serum": "copper-peptide-ghk-cu-renewal-serum",
@@ -44,7 +50,7 @@ SECTION_TO_PRODUCT = {
     "pdrn_serum": "pdrn-renewal-serum",
     "pdrn_cream": "pdrn-collagen-night-cream",
     "firming_cream": "matrixyl-3000-pro-collagen-firming-cream",
-    "glow": "glutathione-brightening-serum",
+    "glutathione": "glutathione-brightening-serum",
     "general": None,          # usable anywhere that names no product — incl. the Reviews page
 }
 
@@ -52,14 +58,14 @@ R = lambda s, t, b, **kw: dict(section=s, title=t, body=b, **kw)
 
 REVIEWS = [
     # ---- unattributed English, from the opening block -----------------------------------
-    R("glow", "Genuinely satisfied",
+    R("general", "Genuinely satisfied",
       "At first I thought it was not working, but after a few weeks I noticed the difference. "
       "My cheeks are not flat any more, my skin glows and all my friends are asking what I am "
       "doing. I recommend Skingenetix."),
     R("general", "A difference straight away",
       "I felt a noticeable difference the next day. It hydrates my skin and it feels so much "
       "better."),
-    R("glow", "I recommend it to everyone",
+    R("general", "I recommend it to everyone",
       "I was shocked seeing my before and after photos. I didn't realise how much my skin had "
       "improved. I feel so much more confident wearing open tops now. My skin looks much more "
       "even, less red and all round healthier. Happy I found this product."),
@@ -67,7 +73,7 @@ REVIEWS = [
       "I'm so happy. I've been using the products for two months and they have made such a "
       "difference to my skin. I had tried a lot of products before, but with just one bottle "
       "of the serum and staying consistent with the cream I've seen a huge change."),
-    R("glow", "Outstanding",
+    R("general", "Outstanding",
       "I'm so impressed with the results. I noticed a difference after a few weeks. I am so "
       "surprised at how much younger the skin on my neck and chest looks. Wrinkles have "
       "significantly reduced, sun spots are lighter and my skin looks and feels more "
@@ -85,7 +91,7 @@ REVIEWS = [
       "Straight away I noticed results with the copper peptide treatment. After the first week "
       "my skin looked clearer and more balanced. People ask me now how I got my skin so "
       "hydrated and bright, with less redness. I don't think I can go a day without it."),
-    R("glow", "Worth every penny",
+    R("general", "Worth every penny",
       "I will never go without this. I tried several solutions for my hyperpigmentation that "
       "really dried out my skin. Ever since adding this to my routine I have little to no "
       "irritation or dryness. I use it as the last layer at night and I wake up with glowing, "
@@ -129,7 +135,7 @@ REVIEWS = [
     R("pdrn_serum", "Excellent product",
       "I am in love with this serum. I have been using it for five days and the results are "
       "noticeable from the very first application.", source_lang="nl"),
-    R("glow", "Radiant skin",
+    R("general", "Radiant skin",
       "I really didn't expect it to work this well — radiant skin, beautifully hydrated. I use "
       "it in the evening and in the morning I wake up with a smoothed face.", source_lang="nl"),
     R("pdrn_cream", "A beautiful product",
@@ -143,12 +149,12 @@ REVIEWS = [
       "Perfect for my combination skin, which gets dry patches in winter. It absorbs quickly, "
       "but the skin becomes incredibly plump and hydrated. I am so pleased with it.",
       source_lang="nl"),
-    R("glow", "So good",
+    R("general", "So good",
       "Absolutely brilliant. My skin used to look oily an hour after putting make-up on. This "
       "makes it look so good and I don't go shiny. I don't carry extra powder around any more. "
       "It also smooths the skin. My forehead has never looked better — not oily, but glass "
       "skin. I've had so many compliments about my skin.", source_lang="nl"),
-    R("glow", "Hydrating and glowing",
+    R("general", "Hydrating and glowing",
       "A wonderful, fine texture — firm, but bouncy and jelly-like. It gives a lot of moisture "
       "and a beautiful glow. It works brilliantly under sunscreen and make-up, and it doesn't "
       "pill or cake. Because it isn't thin and runny you can take as much or as little as you "
@@ -442,6 +448,64 @@ REVIEWS = [
       "I started using this on my face, but now I use whatever is left on my fingers down my "
       "neck and chest. Weirdly, that's where I've noticed the biggest improvement. The skin on "
       "my neck looks less dry and crepey and feels much smoother."),
+
+    # ---- Glutathione Brightening Serum — added to the document 2026-08-29 17:02 -----------
+    R("glutathione", "My skin looks brighter",
+      "I've been using this around a month and my face definitely doesn't look as dull as it "
+      "did before. I wouldn't say my dark spots are gone, but everything looks more even "
+      "somehow. Really nice serum."),
+    R("glutathione", "That glow",
+      "I bought this mostly for old acne marks, but the first thing I noticed was the glow — "
+      "my skin just looks healthier even without make-up. Some of the marks on my cheeks are "
+      "starting to look lighter too, but I've only been using it about five weeks."),
+    R("glutathione", "Finally something for my dull skin",
+      "My skin always looks tired no matter how much I sleep, and this has actually helped. "
+      "Not overnight — it probably took two or three weeks before I noticed anything. Now my "
+      "face just looks fresher and a bit more even. I've started using it on my neck too."),
+    R("glutathione", "Acne marks are fading",
+      "This is what sold me on it. I had three dark marks left from spots on my cheek that "
+      "seemed to have been there forever. They're still visible but much lighter now, after "
+      "about six weeks. I use it every night, and SPF religiously in the daytime."),
+    R("glutathione", "I didn't realise how dull my skin was",
+      "I honestly thought my skin was fine before. Then after using this for a month I looked "
+      "at some older photos and realised how much more even my complexion looks now. It isn't "
+      "a massive dramatic change, just less grey and tired looking, if that makes sense."),
+    R("glutathione", "Really surprised by this",
+      "I bought it because I had a patch of pigmentation on one side of my face that was "
+      "driving me mad. I'm not going to say it disappeared, because it didn't, but after "
+      "around two months it is definitely less noticeable. What I wasn't expecting is how good "
+      "the rest of my skin looks — much brighter and smoother. I've actually been wearing less "
+      "foundation lately."),
+    R("glutathione", "Nice for sensitive skin",
+      "My skin reacts to basically everything, so I was expecting some stinging or redness. "
+      "Nothing. I've been using it every second night for about five weeks and my skin looks "
+      "much calmer and more even. So far I'm impressed."),
+    R("glutathione", "It makes my skin look alive again",
+      "I'm 50, and pigmentation isn't even my biggest issue — it's that my skin has started "
+      "looking dull and tired all the time. This has really helped with that. There's more "
+      "glow to my face now and my skin tone looks cleaner and more even. Hard to explain, but "
+      "I look less exhausted.", age=50),
+    R("glutathione", "My freckles haven't disappeared, and that's fine",
+      "I wasn't looking to erase my freckles or completely change my skin colour. I just "
+      "wanted the patchiness and old acne pigmentation to look less obvious. After roughly "
+      "seven weeks that's exactly what I'm seeing. My complexion looks more even but still "
+      "like my skin. Very happy with that."),
+    R("glutathione", "I didn't expect such a nice texture",
+      "I normally hate brightening serums because they can feel sticky or weirdly drying. This "
+      "one is really light and disappears into my skin. I've been using it morning and night "
+      "for just over a month. My face looks brighter and one stubborn mark beside my nose is "
+      "finally starting to fade."),
+    R("glutathione", "Slow changes, but definitely changes",
+      "I've been using this for nearly three months now — not perfectly every day, but pretty "
+      "consistently. The first thing I noticed was just glow. Maybe after a month my face "
+      "looked less dull. Then gradually the marks from old breakouts started getting lighter "
+      "and the uneven areas around my cheeks looked better. Nothing disappeared overnight and "
+      "I still have pigmentation, but comparing my skin now to photos from before I started, "
+      "there is definitely a difference."),
+    R("glutathione", "My face looks more even",
+      "I mainly bought this for the uneven tone around my cheeks and forehead. After about six "
+      "weeks it definitely looks softer and less patchy. I still have some darker areas, but "
+      "overall my skin just looks cleaner and brighter."),
 ]
 
 
