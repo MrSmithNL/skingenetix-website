@@ -432,7 +432,7 @@ REVIEWS = [
       "enough. This has been one of the better ones I've found. I use a serum first and then "
       "this, and my skin stays comfortable until morning. It looks fuller and less papery "
       "around the cheeks too, which I'm very happy about."),
-    R("firming_cream", "A proper cream",
+    R("firming_cream", "A Premium quality cream",
       "This feels like an actual cream, if that makes sense, not one of those watery gel "
       "moisturisers that disappears and then your face feels dry again half an hour later. My "
       "skin feels cushioned and soft but not greasy. I've been using it about a month and I'm "
