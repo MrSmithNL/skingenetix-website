@@ -52,6 +52,7 @@ MANUAL_PHOTO_SWAPS = [
     # other way, which also keeps every photograph in use exactly once.
     ("Fenna-S", "Elizabeth-L"),
     ("June-K", "Gabrielle-D"),
+    ("Nola-S", "Stephanie-M"),      # Nola-S is an eye macro with clear crow's feet
 ]
 
 TARGET_MIN = 2          # distinctive shots every carousel should end up with
