@@ -129,6 +129,7 @@ MANUAL_FIRST = [
 #: text; only their positions change.
 MANUAL_SWAP = [
     ("copper-peptide-ghk-cu-night-cream", "Justine-L", "Sabine-G"),   # Malcolm, 2026-08-29
+    ("pdrn-renewal-serum", "Mila-F", "Maud-H"),                       # Malcolm, 2026-08-29
 ]
 
 MANUAL_AFTER = [
