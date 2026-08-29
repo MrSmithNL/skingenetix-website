@@ -89,7 +89,53 @@ section replaced had them burnt in as a dark teal bar and a green bar across the
 pixels cannot be translated — nine locales are planned. The labels are `text` settings for
 exactly this reason.
 
-### Current images are placeholders
+### 2026-08-29 — the photographs are now Malcolm's real customer images
+
+All fifteen cards carry a real before/after photograph from
+`~/Library/CloudStorage/GoogleDrive-.../Skingenetix/Images/Reviews /General`
+(the parent folder really does have a trailing space). Twenty-eight are available; fifteen were
+selected for a spread of skin tone, age and framing. `scripts/prepare-customer-review-images.py`
+copies and converts them; the Drive originals are untouched.
+
+Every one of them satisfies the contract that the images they replaced did not:
+
+| | old placeholder set | Malcolm's customer set |
+|---|---|---|
+| aspect | 1:1 (composed) | **1:1 natively, all 28** |
+| both halves the same person | **no** — different people per pair | **yes** |
+| text burnt into pixels | yes on the originals | **none** |
+| resolution | capped at 560px | 2048–4096px, capped to 3000 on upload |
+
+Checks run over the whole set before selecting:
+
+- Content-hash across all four `Reviews` subfolders found **two photographs filed under two
+  different customer names**: `General/Romy-S` == `Wrinkles/Heather-S`, and `General/Selma-D` ==
+  `Wrinkles/Megan-A`. Neither is in use. If the other folders are ever drawn on as well, those two
+  must not both appear, or one person becomes two customers.
+- `Fenna-S`, `June-K` and `Brenda-S` tripped an automated "the halves look too similar" threshold.
+  Looked at full size, **all three show a real, visible change** — the threshold was wrong, not the
+  photographs. Do not re-run that check and act on its output without looking.
+
+The PNGs are re-encoded to JPEG deliberately: Shopify's CDN inherits losslessness from a lossless
+source, so a PNG master ships roughly 3.7x the bytes to WebP clients and about 35x to everyone
+else.
+
+### What the cards deliberately do NOT claim yet
+
+No card shows a star rating or a verified badge, and none carries a written review. The photograph
+and the name came from Malcolm; the rating and the words did not, and a star rating nobody gave is
+the one thing on this page that would be an outright invention. The Before/After labels read plainly
+**"Before" / "After"** with no duration, because the source folder records the customer, not how
+long she used anything.
+
+`docs/reviews-content-to-supply.csv` is the fifteen rows to fill.
+
+⚠️ **The product on each card is scaffolding, not fact.** The `General` folder carries no product
+attribution — it is general. Each slot was seeded with a different product so the range is covered
+and every link works; that is not a record of what any of these customers used. The CSV has a
+column for the correction.
+
+### The previous placeholder images
 
 `scripts/build-review-ba-squares.py` rebuilt three 1:1 masters from the old 2:1 files by cropping
 the label bar off and centre-cropping each half. They are **560×560**, which is the ceiling the
@@ -248,6 +294,8 @@ Measured live 2026-08-27 after the fifteen-card deploy:
 |---|---|---|
 | cards | 15 | 15 |
 | media box ratio | 1.000 on all 15 | 1.000 on all 15 |
+| customer photographs decoded (2026-08-29) | 15/15, zero placeholder artwork left | 15/15 |
+| star ratings / verified badges | 0 — by design, until the reviews arrive | 0 |
 | every label inside its own picture | pass | pass |
 | card heights | one value, 749px | one value, 687px |
 | images decoded | 15/15, no SVG placeholders | 15/15 |
