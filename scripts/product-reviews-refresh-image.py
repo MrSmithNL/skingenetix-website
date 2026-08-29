@@ -42,6 +42,7 @@ NEW_NAMES = {
     "Arantxa-R": "skingenetix-review-before-after-brightening-glow-arantxa-r.jpg",
     "Petra-J": "skingenetix-review-before-after-fine-lines-petra-j.jpg",
     "Janine-L": "skingenetix-review-before-after-fine-lines-janine-l.jpg",
+    "Shannon-P": "skingenetix-review-before-after-skin-repair-shannon-p.jpg",
 }
 
 

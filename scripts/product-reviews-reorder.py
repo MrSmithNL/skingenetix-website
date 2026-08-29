@@ -122,6 +122,7 @@ NEAR = {("blonde", "greyblonde"), ("greyblonde", "blonde"),
 #: Cards pinned to the front of their carousel, in this order, before the scheduler's output.
 MANUAL_FIRST = [
     ("copper-peptide-ghk-cu-day-gel-cream", ["Isabella-E", "Rowena-G"]),   # Malcolm, 2026-08-29
+    ("copper-peptide-ghk-cu-renewal-serum", ["Bianca-P", "Shannon-P"]),    # Malcolm, 2026-08-29
 ]
 
 #: Two cards trading places within one carousel. Both keep their own photograph and their own
