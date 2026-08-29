@@ -121,6 +121,8 @@ NEAR = {("blonde", "greyblonde"), ("greyblonde", "blonde"),
 #: someone by hand it is because the photograph says something the three tags do not.
 MANUAL_AFTER = [
     ("pdrn-collagen-night-cream", "Lana-D", "Danielle-S"),      # Malcolm, 2026-08-29
+    ("matrixyl-3000-firming-serum", "Evelyn-L", "Mallory-B"),   # Malcolm, 2026-08-29
+    ("matrixyl-3000-firming-serum", "Petra-J", "Caroline-D"),   # Malcolm, 2026-08-29
 ]
 
 W_HAIR, W_TONE = 6, 3
