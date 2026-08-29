@@ -47,6 +47,11 @@ PLAN = ROOT / "configs" / "product-reviews.json"
 #: Only the photograph moves; each card keeps the review text bound to its product.
 MANUAL_PHOTO_SWAPS = [
     ("Amanda-P", "Adriana-A"),      # Malcolm, 2026-08-29
+    # Malcolm, 2026-08-29: Fenna-S and June-K are plainly wrinkle photographs, so they belong
+    # on the anti-wrinkle serum. Gabrielle-D (a firming neck crop) and Elizabeth-L go back the
+    # other way, which also keeps every photograph in use exactly once.
+    ("Fenna-S", "Elizabeth-L"),
+    ("June-K", "Gabrielle-D"),
 ]
 
 TARGET_MIN = 2          # distinctive shots every carousel should end up with

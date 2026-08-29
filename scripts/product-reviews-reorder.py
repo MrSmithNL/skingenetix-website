@@ -119,6 +119,11 @@ NEAR = {("blonde", "greyblonde"), ("greyblonde", "blonde"),
 #: brunette, which is true of her hair, but she sat between Nola-S and Livia-B where the
 #: scheduler saw no clash while Malcolm saw two blondes needing breaking up. When he moves
 #: someone by hand it is because the photograph says something the three tags do not.
+#: Cards pinned to the front of their carousel, in this order, before the scheduler's output.
+MANUAL_FIRST = [
+    ("copper-peptide-ghk-cu-day-gel-cream", ["Isabella-E", "Rowena-G"]),   # Malcolm, 2026-08-29
+]
+
 MANUAL_AFTER = [
     ("pdrn-collagen-night-cream", "Lana-D", "Danielle-S"),      # Malcolm, 2026-08-29
     ("matrixyl-3000-firming-serum", "Evelyn-L", "Mallory-B"),   # Malcolm, 2026-08-29
@@ -231,6 +236,12 @@ def main():
         after_total += a
         print(f"  {prod[:52]:<54} clash {b:>3} -> {a:>3}")
         print("      " + " | ".join(c["person"] for c in ng))
+        for prod_h, names in MANUAL_FIRST:
+            if prod_h != prod:
+                continue
+            firsts = [c for n in names for c in ng if c["person"] == n]
+            ng = firsts + [c for c in ng if c not in firsts]
+            print(f"      manual: {', '.join(names)} pinned to the front")
         for prod_h, person, after in MANUAL_AFTER:
             if prod_h != prod:
                 continue
