@@ -1,0 +1,33 @@
+{
+  "wave": "review-image-swap-destiny-kelly",
+  "created": "2026-08-29",
+  "note": "Malcolm: swap the photographs on two Firming customer reviews, keeping the review text as it is.\n\n  review-firming-marie-r   gets Destiny-C.png\n  review-firming-tamsin-a  gets Kelly-T.png\n\nBoth sources come from the Google Drive reviews folder, which is mounted locally at ~/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews. Destiny-C and Kelly-T sit in the folder root; the two they replace are in the Firming subfolder.\n\nAll four are square 1:1 masters, which is the contract for these diptychs \u2014 the section splits the picture at exactly 50%, so each half is a portrait rectangle. Kelly-T is 4096px and will be capped to 3000 by the uploader, which is the widest the theme's srcset ever asks for.\n\nNamed after the person in the photograph, following the rest of the library. The old names are NOT reused: Shopify suffixes rather than replaces on a filename collision, so re-uploading under `...-marie-r.jpg` would keep serving the old picture.",
+  "images": [
+    {
+      "slot": "destiny-c",
+      "source": "/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews /Destiny-C.png",
+      "filename": "skingenetix-review-before-after-firming-destiny-c.jpg",
+      "alt": "Before and after firming and skin density results from a Skingenetix customer",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-firming-destiny-c.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-firming-destiny-c.jpg?v=1788024367"
+    },
+    {
+      "slot": "kelly-t",
+      "source": "/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews /Kelly-T.png",
+      "filename": "skingenetix-review-before-after-firming-kelly-t.jpg",
+      "alt": "Before and after firming and skin density results from a Skingenetix customer",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-firming-kelly-t.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-firming-kelly-t.jpg?v=1788024368"
+    }
+  ],
+  "swaps": [
+    {
+      "review_handle": "review-firming-marie-r",
+      "new_filename": "skingenetix-review-before-after-firming-destiny-c.jpg"
+    },
+    {
+      "review_handle": "review-firming-tamsin-a",
+      "new_filename": "skingenetix-review-before-after-firming-kelly-t.jpg"
+    }
+  ]
+}
