@@ -130,6 +130,7 @@ MANUAL_AFTER = [
     ("matrixyl-3000-firming-serum", "Petra-J", "Caroline-D"),   # Malcolm, 2026-08-29
     # Puts three cards between the carousel's two eye-region crops, Fenna-S and June-K.
     ("acetyl-hexapeptide-8-anti-wrinkle-serum", "June-K", "Corinne-J"),
+    ("pdrn-collagen-night-cream", "Livia-B", "Marion-H"),       # Malcolm, 2026-08-29
 ]
 
 W_HAIR, W_TONE = 6, 3
