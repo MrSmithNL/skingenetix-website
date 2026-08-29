@@ -20,18 +20,24 @@ lifted verbatim from those same bodies. Nothing here invents customer testimony 
 it is real: the store has not launched and has no orders. See the fabricated-social-proof note
 in docs/architecture.md before treating any of it as content.
 
-FIFTEEN SLOTS, THREE OF THEM FILLED
-Malcolm's brief, 2026-08-27: fifteen before/after reviews. Only three photographs are usable, so
-twelve slots ship EMPTY — no photograph, no name, no rating, no verified badge — each seeded with
-the product it is for so the slot carries a working thumbnail and link. An empty card must never
-claim a rating or a verified customer it does not have, which is also why none of them is
-pre-filled with invented copy: Malcolm is supplying the real reviews. See
-`docs/reviews-content-to-supply.csv` for the fifteen rows to fill.
+MIRRORS THE PER-PRODUCT ALLOCATION — DO NOT ATTRIBUTE INDEPENDENTLY
+Every card here is read from `configs/product-reviews.json`, the allocation that drives the
+per-product carousels on all 11 product pages. Customer, photograph and product are copied from
+it verbatim, so a woman shown on this page reviewing a product is shown reviewing the SAME
+product on that product's page.
 
-The original fourth pair, "Skin Firmness", is gone for good. `skingenetix-ba-firmness-combined.jpg`
-has the AI image brief rendered into the photograph — a white panel reading "image-container",
-"body: display: flex...", "alt 'Close of skin with sagging'" — and its after frame is two different
-faces. It needs regenerating, not re-cropping.
+This is not tidiness. Before 2026-08-29 this page attributed its own products independently and
+**all 14 customers ended up against a different product on each page** — the same woman reviewing
+two different things, which reads as invented the moment anyone compares. If the allocation
+changes, re-run this script; never edit an attribution here by hand.
+
+Four names are deliberately excluded: Romy S / Heather S and Selma D / Megan A are two
+photographs filed under two customer names each, and both pairs are live on product pages. Adding
+either to this page would put the same face on the site a third time. Rowena G / Regita G is the
+same fault, not yet live.
+
+FOURTEEN CARDS, ONE PER PRODUCT PLUS THREE
+The written reviews are still to come, so no card claims a rating or a verified badge.
 
 Author: Claude Code, 2026-08-27.
 """
@@ -53,94 +59,87 @@ SECTION_ID = "before_after"
 CARDS = [
     {
         "id": "rv_01",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-maud-h.jpg",
-        "author": "Maud H.",
+        "image": "shopify://shop_images/skingenetix-review-before-after-wrinkles-stephanie-m.jpg",
+        "author": "Stephanie M.",
         "product": "acetyl-hexapeptide-8-anti-wrinkle-serum",
     },
     {
         "id": "rv_02",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-lana-d.jpg",
-        "author": "Lana D.",
+        "image": "shopify://shop_images/skingenetix-review-before-after-wrinkles-tabitha-j.jpg",
+        "author": "Tabitha J.",
         "product": "matrixyl-3000-firming-serum",
     },
     {
         "id": "rv_03",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-faye-n.jpg",
-        "author": "Faye N.",
-        "product_image": "shopify://shop_images/skingenetix-menu-all-serums.jpg",
-        "product_text": "The peptide serum range",
-        "product_url": "/collections/serums",
+        "image": "shopify://shop_images/skingenetix-review-before-after-wrinkles-emma-h.jpg",
+        "author": "Emma H.",
+        "product": "matrixyl-3000-pro-collagen-firming-cream",
     },
     {
         "id": "rv_04",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-linda-p.jpg",
-        "author": "Linda P.",
+        "image": "shopify://shop_images/skingenetix-review-before-after-wrinkles-celeste-n.jpg",
+        "author": "Celeste N.",
         "product": "copper-peptide-ghk-cu-renewal-serum",
     },
     {
         "id": "rv_05",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-brenda-s.jpg",
-        "author": "Brenda S.",
-        "product": "pdrn-renewal-serum",
-    },
-    {
-        "id": "rv_06",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-mila-f.jpg",
-        "author": "Mila F.",
-        "product": "glutathione-brightening-serum",
-    },
-    # rv_07 (Jade C.) removed on Malcolm's instruction, 2026-08-29. The remaining ids are
-    # deliberately NOT renumbered: a block id is what Translate & Adapt keys a translation to,
-    # so resequencing would orphan every key on every card after this one. A gap costs nothing.
-    # Her uploaded file is left in Shopify Files, unused — deleting store data is not done
-    # without being asked. Note this was the only card for the Copper Peptide Day Gel-Cream.
-    {
-        "id": "rv_08",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-livia-m.jpg",
-        "author": "Livia M.",
+        "image": "shopify://shop_images/skingenetix-review-before-after-firming-kendra-c.jpg",
+        "author": "Kendra C.",
         "product": "copper-peptide-ghk-cu-night-cream",
     },
     {
-        "id": "rv_09",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-elara-m.jpg",
-        "author": "Elara M.",
-        "product": "matrixyl-3000-pro-collagen-firming-cream",
+        "id": "rv_06",
+        "image": "shopify://shop_images/skingenetix-review-before-after-brightening-amy-t.jpg",
+        "author": "Amy T.",
+        "product": "glutathione-brightening-serum",
     },
     {
-        "id": "rv_10",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-noemi-r.jpg",
-        "author": "Noemi R.",
+        "id": "rv_07",
+        "image": "shopify://shop_images/skingenetix-review-before-after-brightening-tabitha-s.jpg",
+        "author": "Tabitha S.",
+        "product": "copper-peptide-ghk-cu-day-gel-cream",
+    },
+    {
+        "id": "rv_08",
+        "image": "shopify://shop_images/skingenetix-review-before-after-general-maud-h.jpg",
+        "author": "Maud H.",
+        "product": "pdrn-renewal-serum",
+    },
+    {
+        "id": "rv_09",
+        "image": "shopify://shop_images/skingenetix-review-before-after-general-nola-s.jpg",
+        "author": "Nola S.",
         "product": "pdrn-collagen-night-cream",
     },
     {
+        "id": "rv_10",
+        "image": "shopify://shop_images/skingenetix-review-before-after-general-maelis-s.jpg",
+        "author": "Maelis S.",
+        "product": "pdrn-microneedling-facial-stamp-set-1-month",
+    },
+    {
         "id": "rv_11",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-isa-d.jpg",
-        "author": "Isa D.",
+        "image": "shopify://shop_images/skingenetix-review-before-after-general-liv-a.jpg",
+        "author": "Liv A.",
         "product": "copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month",
     },
     {
         "id": "rv_12",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-felicia-p.jpg",
-        "author": "Felicia P.",
-        "product": "pdrn-microneedling-facial-stamp-set-1-month",
+        "image": "shopify://shop_images/skingenetix-review-before-after-wrinkles-sophie-h.jpg",
+        "author": "Sophie H.",
+        "product": "acetyl-hexapeptide-8-anti-wrinkle-serum",
     },
     {
         "id": "rv_13",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-eliza-v.jpg",
-        "author": "Eliza V.",
-        "product": "copper-peptide-ghk-cu-renewal-serum",
+        "image": "shopify://shop_images/skingenetix-review-before-after-wrinkles-francine-s.jpg",
+        "author": "Francine S.",
+        "product": "matrixyl-3000-firming-serum",
     },
     {
         "id": "rv_14",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-elina-b.jpg",
-        "author": "Elina B.",
-        "product": "pdrn-renewal-serum",
-    },
-    {
-        "id": "rv_15",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-june-k.jpg",
-        "author": "June K.",
-        "product": "glutathione-brightening-serum",
+        "image": "shopify://shop_images/skingenetix-review-before-after-firming-elena-s.jpg",
+        "author": "Elena S.",
+        "product": "matrixyl-3000-pro-collagen-firming-cream",
     },
 ]
 
