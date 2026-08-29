@@ -46,11 +46,11 @@ OUT = ROOT / "assets" / "review-before-after" / "customers"
 MAX_EDGE = 3000
 QUALITY = 95
 
-# Fifteen of the twenty-eight, chosen for a spread of skin tone, age and framing (full face and
+# Fourteen of the twenty-eight (Jade-C was removed on Malcolm's instruction, 2026-08-29), chosen for a spread of skin tone, age and framing (full face and
 # macro), and for a change that is actually visible at card size.
 SELECTED = [
     "Maud-H", "Lana-D", "Faye-N", "Linda-P", "Brenda-S",
-    "Mila-F", "Jade-C", "Livia-M", "Elara-M", "Noemi-R",
+    "Mila-F", "Livia-M", "Elara-M", "Noemi-R",
     "Isa-D", "Felicia-P", "Eliza-V", "Elina-B", "June-K",
 ]
 

@@ -89,12 +89,11 @@ CARDS = [
         "author": "Mila F.",
         "product": "glutathione-brightening-serum",
     },
-    {
-        "id": "rv_07",
-        "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-jade-c.jpg",
-        "author": "Jade C.",
-        "product": "copper-peptide-ghk-cu-day-gel-cream",
-    },
+    # rv_07 (Jade C.) removed on Malcolm's instruction, 2026-08-29. The remaining ids are
+    # deliberately NOT renumbered: a block id is what Translate & Adapt keys a translation to,
+    # so resequencing would orphan every key on every card after this one. A gap costs nothing.
+    # Her uploaded file is left in Shopify Files, unused — deleting store data is not done
+    # without being asked. Note this was the only card for the Copper Peptide Day Gel-Cream.
     {
         "id": "rv_08",
         "image": "shopify://shop_images/skingenetix-before-after-peptide-skincare-livia-m.jpg",

@@ -15,7 +15,7 @@ one is a *customer review* in a carousel card.
 |---|---|
 | Theme file (live) | `sections/reviews-before-after.liquid` on theme `184835965313` (Impact) |
 | Source of truth | `theme/sections/reviews-before-after.liquid` **in this repo** — edit here, then deploy |
-| In use on | `templates/page.reviews.json`, section id **`before_after`**, blocks `rv_01`–`rv_15` |
+| In use on | `templates/page.reviews.json`, section id **`before_after`**, blocks `rv_01`–`rv_15` **less `rv_07`** — 14 cards |
 | Replaced | the previous `before_after` section (type `multi-column`, 4 image tiles) |
 | Deploy | `python3 scripts/reviews-add-before-after-carousel.py [--dry-run]` |
 | Undo | the same script prints its own `--restore backups/page.reviews-<stamp>.json` line |
@@ -94,7 +94,14 @@ exactly this reason.
 All fifteen cards carry a real before/after photograph from
 `~/Library/CloudStorage/GoogleDrive-.../Skingenetix/Images/Reviews /General`
 (the parent folder really does have a trailing space). Twenty-eight are available; fifteen were
-selected for a spread of skin tone, age and framing. `scripts/prepare-customer-review-images.py`
+selected for a spread of skin tone, age and framing, and **`rv_07` (Jade C.) was removed on
+Malcolm's instruction on 2026-08-29**, leaving fourteen.
+
+**The remaining ids are deliberately not renumbered.** A block id is what Translate & Adapt keys a
+translation to, so resequencing after a removal would orphan every key on every card below it. A
+gap in the sequence costs nothing. Her uploaded file is left in Shopify Files, unused — store data
+is not deleted without being asked. Note hers was the only card for the Copper Peptide Day
+Gel-Cream, so that product is now unrepresented. `scripts/prepare-customer-review-images.py`
 copies and converts them; the Drive originals are untouched.
 
 Every one of them satisfies the contract that the images they replaced did not:
