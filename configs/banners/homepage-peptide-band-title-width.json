@@ -1,0 +1,26 @@
+{
+  "wave": "homepage-peptide-band-title-width",
+  "created": "2026-08-30",
+  "template": "templates/index.json",
+  "doc": "docs/decisions-log.md ADR-006",
+  "note": "Malcolm, 2026-08-30: the 'THE PEPTIDE STANDARD' band heading on the homepage should be on ONE line, not three.\n\nMEASURED ON THE LIVE PAGE AT 1512px, not guessed. The heading 'Clinically studied actives. Never trace amounts.' renders in Fraunces at 48px and needs 1001px to sit on one line. The box it lives in is 780px, so it broke to three. Same fault, same cause as the collection banner titles fixed earlier today in scripts/widen-collection-banner-titles.py: the text column was starving the heading, not the type being too big.\n\nWHERE THE 780 COMES FROM. The image-with-text-overlay section puts its blocks in a div carrying the place-self classes, and that div is capped at 780px. Its parent grid column is 1416px wide at a 1512 viewport, so there is room to widen without touching grid placement.\n\nWHY 1040 AND NOT MORE. The heading needs 1001px. 1040 gives it that with a small margin for font-loading differences and no more. At 1512 the heading then ends at x=1049. Luminance measured across the band in the heading rows: the ground stays under 32 mean out to x=1050, and the bright helix core does not start until x=1128. So the line finishes on dark ground and clears the subject. Checked by rendering, not by arithmetic alone.\n\nTHE BODY COPY IS HELD BACK AT 780. Widening the whole column also stretched the paragraph to 1040px, which is far too long a measure to read and pushed its first line into the helix. The second rule pins every child except the heading back to the original 780, so only the heading gets the extra width.\n\nVERIFIED AT FIVE WIDTHS. The heading size is fluid, which is why this scales: 1920 one line (48px), 1512 one line (48px), 1280 one line (40px), 1024 one line (40px), 390 unchanged at three lines (32px, 350px column, no horizontal overflow). Mobile is untouched because the available width is already below the cap.\n\nSCOPED BY CONTENT SIGNATURE, NOT BY SECTION ID. The homepage's existing concern_tile_scrim hardcodes 'shopify-section-template--26275134079361__skin_concerns', which goes stale if the theme is duplicated. This uses the band's own signature instead: it is the only image-with-text-overlay section on the page containing a link ending /pages/the-science. Verified in the DOM to match exactly one element, and the sibling brand_story_band was confirmed still at 780px afterwards. The href suffix match also survives locale prefixes.\n\nAPPENDED LAST per ADR-006 — a custom-html style section placed mid-order collapses the following section's padding. remove_vertical_spacing keeps it zero-height.\n\nNo Liquid delimiters appear anywhere in the html value, including the comment: custom-html returns a 422 on a doubled brace, and Liquid parses a CSS comment too.",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "peptide_band_title_width",
+      "insert_after": "concern_tile_scrim",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>\n  /* Homepage 'THE PEPTIDE STANDARD' band: let the heading run to one line.\n\n     The heading needs 1001px in Fraunces at 48px; the place-self column caps\n     its children at 780px, so it broke to three lines. The parent grid column\n     is 1416px at a 1512 viewport, so widening to 1040 costs nothing and the\n     line still finishes on dark ground well before the helix highlights.\n\n     Scoped by the band's own content signature rather than its section id,\n     which goes stale when the theme is duplicated. The suffix match on the\n     href keeps working under a locale prefix. */\n  .shopify-section--image-with-text-overlay:has(a[href$=\"/pages/the-science\"]) :has(> .prose) {\n    max-width: 1040px;\n  }\n\n  /* Widening the column stretched the body copy to 1040px too, which is an\n     unreadable measure and put its first line into the helix. Everything that\n     is not the heading goes back to the original 780. */\n  .shopify-section--image-with-text-overlay:has(a[href$=\"/pages/the-science\"]) .prose > *:not(.h2) {\n    max-width: 780px;\n  }\n</style>",
+          "background": "",
+          "background_gradient": "",
+          "text_color": ""
+        }
+      }
+    }
+  ]
+}
