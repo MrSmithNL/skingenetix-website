@@ -1,0 +1,15 @@
+{
+  "wave": "night-cream-faq-image",
+  "created": "2026-08-30",
+  "note": "Malcolm picked the bathroom-shelf lifestyle frame for the Copper Peptide Night Cream FAQ, and asked for it to come out of the product gallery.\n\nIt is uploaded to Files rather than reused from the gallery on purpose: a file_reference metafield points at Content > Files, and product media is a separate store. Uploading also means the picture survives the gallery deletion.\n\nOrder of operations matters \u2014 the metafield is set and verified live BEFORE the product media is deleted, so there is never a moment where the FAQ has no image.",
+  "images": [
+    {
+      "slot": "night-cream-faq",
+      "source": "assets/publish-ready/copper-peptide-night-repair-cream/__copper_peptide_ghk_cu_advanced_night_repair_skin_cream_bathroom_shelf_lifestyle_1_skingenetix.jpg",
+      "filename": "skingenetix-faq-copper-peptide-ghk-cu-night-cream-bathroom-shelf-lifestyle.jpg",
+      "alt": "Skingenetix copper peptide night cream on a bathroom shelf",
+      "uploaded_handle": "shopify://shop_images/skingenetix-faq-copper-peptide-ghk-cu-night-cream-bathroom-shelf-lifestyle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-faq-copper-peptide-ghk-cu-night-cream-bathroom-shelf-lifestyle.jpg?v=1788079983"
+    }
+  ]
+}
