@@ -1,0 +1,225 @@
+{%- comment -%}
+----------------------------------------------------------------------------------------------------------------------
+PRODUCT FAQ — Claude Code, rebuilt 2026-08-30.
+
+Malcolm asked for the product FAQ to carry the research pages' layout: questions left,
+image right, title centred above, "the same standard Shopify content widget set up".
+
+It is NOT built on the stock `faq` section, and that is deliberate. Two things this
+section does that the stock one cannot, both of which swapping would have silently
+destroyed:
+
+  1. PER-PRODUCT QUESTIONS. The questions come from
+     `product.metafields.custom.faq_items`, a list of `faq_item` metaobjects. All 11
+     products carry their own six. The stock section only reads its own blocks, so
+     every product page would have shown the same six generic questions.
+  2. FAQPage STRUCTURED DATA. The JSON-LD below puts the questions in Google's FAQ
+     rich results. The stock section emits none.
+
+What HAS changed is the markup, which now mirrors `sections/faq.liquid` exactly —
+`section-stack--horizontal`, `section-stack--reverse` for a right-hand image, an
+intro column holding the heading and a `.faq-availability` block, and the accordion
+in `section-stack__main`. The schema `class` is `shopify-section--faq` so the
+brand-layout rule that lifts the heading full-width and centres it
+(`.shopify-section--faq:has(.faq-availability img)` in the sitewide `brand_layout_css`
+block) applies here with no CSS change at all.
+
+THE IMAGE IS PER PRODUCT. All 11 products share one template — the per-product
+templates were consolidated away — so a section-level image_picker would put the same
+photograph on every product page. The image is therefore read from
+`product.metafields.custom.faq_image` first, falling back to the section setting so
+the section is still usable outside a product context.
+----------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+{%- render 'section-spacing-collapsing' -%}
+
+{%- liquid
+  assign faq_items = product.metafields.custom.faq_items.value
+  assign use_meta = false
+  if faq_items != blank and faq_items != empty
+    assign use_meta = true
+  endif
+
+  assign text_position = section.settings.text_position
+
+  # Per-product first, section setting as the fallback.
+  assign faq_image = product.metafields.custom.faq_image.value
+  if faq_image == blank
+    assign faq_image = section.settings.team_avatar
+  endif
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-stack-intro: {% if text_position == 'center' %}60%{% else %}50%{% endif %};
+    --section-stack-main: {% if text_position == 'center' %}60%{% else %}50%{% endif %};
+  }
+</style>
+
+<div {% render 'section-properties' %}>
+  <div class="section-stack {% if text_position != 'center' %}section-stack--horizontal{% else %}section-stack--center{% endif %} {% if text_position == 'end' %}section-stack--reverse{% endif %}">
+    {%- capture content -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="subheading">{{ section.settings.subheading | escape }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.title != blank -%}
+        <h2 class="h2">{{ section.settings.title }}</h2>
+      {%- endif -%}
+
+      {{- section.settings.content -}}
+    {%- endcapture -%}
+
+    {%- comment -%}
+      The wrapper class `faq-availability` is what the sitewide heading rule keys on,
+      so it is kept even when only the image is present.
+    {%- endcomment -%}
+    {%- capture subcontent -%}
+      <div class="faq-availability">
+        {%- if faq_image != blank or section.settings.support_hours != blank or section.settings.answer_time != blank -%}
+          <div class="v-stack gap-4">
+            {%- if faq_image != blank -%}
+              {%- capture sizes -%}{{ section.settings.team_avatar_width }}px{%- endcapture -%}
+              {%- capture widths -%}{{ section.settings.team_avatar_width }}, {{ section.settings.team_avatar_width | times: 2 | at_most: faq_image.width }}{%- endcapture -%}
+              {%- capture style -%}max-width: {{ section.settings.team_avatar_width }}px{%- endcapture -%}
+              {{- faq_image | image_url: width: faq_image.width | image_tag: style: style, sizes: sizes, widths: widths, class: 'rounded' -}}
+            {%- endif -%}
+
+            {%- if section.settings.support_hours != blank or section.settings.answer_time != blank -%}
+              <div class="v-stack">
+                {{- section.settings.support_hours -}}
+
+                {%- if section.settings.answer_time != blank -%}
+                  <span class="text-subdued">{{ section.settings.answer_time }}</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endcapture -%}
+
+    {%- if content != blank or subcontent != blank -%}
+      <div class="section-stack__intro">
+        <div class="v-stack gap-10">
+          {%- if content != blank -%}
+            <div class="prose {% if text_position == 'center' %}text-center{% endif %}">
+              {{- content -}}
+            </div>
+          {%- endif -%}
+
+          {%- if text_position != 'center' and subcontent != blank -%}
+            <div class="hidden lg:block">
+              {{- subcontent -}}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <div class="section-stack__main">
+      <div {% render 'surface', class: 'accordion-box rounded', background: section.settings.accordion_background, text_color: section.settings.accordion_text_color, background_fallback: 'bg-secondary' %}>
+        {%- if use_meta -%}
+          {%- for item in faq_items -%}
+            {%- if item.question.value != blank and item.answer.value != blank -%}
+              {%- capture ac -%}<div class="prose"><p>{{ item.answer.value }}</p></div>{%- endcapture -%}
+              {%- render 'accordion', title: item.question.value, content: ac, icon: 'none' -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- else -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.title != blank and block.settings.content != blank -%}
+              {%- capture ac -%}<div class="prose">{{ block.settings.content }}</div>{%- endcapture -%}
+              {%- render 'accordion', title: block.settings.title, content: ac, icon: 'none', block: block -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- liquid
+  assign q = 0
+-%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- if use_meta -%}
+      {%- for item in faq_items -%}
+        {%- if item.question.value != blank and item.answer.value != blank -%}
+          {%- if q > 0 %},{% endif -%}
+          {"@type":"Question","name":{{ item.question.value | json }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer.value | json }}}}
+          {%- assign q = q | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- else -%}
+      {%- for block in section.blocks -%}
+        {%- if block.settings.title != blank and block.settings.content != blank -%}
+          {%- if q > 0 %},{% endif -%}
+          {"@type":"Question","name":{{ block.settings.title | json }},"acceptedAnswer":{"@type":"Answer","text":{{ block.settings.content | strip_html | json }}}}
+          {%- assign q = q | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  ]
+}
+</script>
+
+{% schema %}
+{
+  "name": "Product FAQ",
+  "class": "shopify-section--faq",
+  "tag": "section",
+  "settings": [
+    { "type": "checkbox", "id": "full_width", "label": "Full width", "default": false },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "text", "id": "title", "label": "Title", "default": "Frequently Asked Questions" },
+    { "type": "richtext", "id": "content", "label": "Text" },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
+      ],
+      "default": "end"
+    },
+    { "type": "header", "content": "Image" },
+    {
+      "type": "image_picker",
+      "id": "team_avatar",
+      "label": "Image",
+      "info": "Fallback only. On a product page the image comes from the product's own FAQ image metafield (custom.faq_image)."
+    },
+    { "type": "range", "id": "team_avatar_width", "min": 50, "max": 350, "step": 10, "unit": "px", "label": "Image width", "default": 350 },
+    { "type": "header", "content": "Support" },
+    { "type": "richtext", "id": "support_hours", "label": "Support hours" },
+    { "type": "text", "id": "answer_time", "label": "Answer time" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "background", "label": "Background" },
+    { "type": "color", "id": "text_color", "label": "Text color" },
+    { "type": "color", "id": "accordion_background", "label": "Accordion background" },
+    { "type": "color", "id": "accordion_text_color", "label": "Accordion text color" }
+  ],
+  "blocks": [
+    {
+      "name": "Item",
+      "type": "item",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icon", "default": "none" },
+        { "type": "range", "id": "icon_width", "min": 16, "max": 40, "step": 2, "unit": "px", "label": "Icon width", "default": 20 },
+        { "type": "text", "id": "title", "label": "Question" },
+        { "type": "richtext", "id": "content", "label": "Answer" },
+        { "type": "page", "id": "page", "label": "Page" }
+      ]
+    }
+  ],
+  "max_blocks": 20
+}
+{% endschema %}
