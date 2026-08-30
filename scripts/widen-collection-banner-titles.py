@@ -46,13 +46,14 @@ any box narrower than that breaks mid-word.
 NOT EVERY TITLE CAN BE ONE LINE, AND TWO SHOULD NOT BE
   skin-repair-renewal  stays at two lines. One line needs 808px and the wider type runs across the
                        jar and the model's face — checked by rendering it.
-  copper-peptide       renders on THREE lines and always has, at every width from 560px to 780px.
-                       This is not a width problem: the theme's `split-lines` element treats the
-                       hyphen in "(GHK-Cu)" as a break, giving "Copper Peptide / (GHK- / Cu)".
-                       Releasing the column to 960px puts it on one line but still renders
-                       "GHK- Cu" with a gap. The fix is in the text, not the CSS — a non-breaking
-                       hyphen (U+2011) in the collection title — and that is a content change to
-                       the collection name, so it is left for Malcolm to decide.
+  copper-peptide       FIXED 2026-08-30, but not with CSS. It rendered on THREE lines at every
+                       width from 560px to 780px, breaking "(GHK-Cu)" into "(GHK- / Cu)".
+                       `word-break: keep-all` and `line-break: strict` both did nothing;
+                       `white-space: nowrap` gave one line but 949px, overflowing the column.
+                       The fix was the CHARACTER: the collection title now uses a **non-breaking
+                       hyphen, U+2011**, which renders identically and cannot be broken. Two clean
+                       lines, "(GHK-Cu)" intact. If a title ever breaks at a hyphen again, this is
+                       the tool — CSS cannot suppress a hyphen wrap opportunity.
 
 Author: Claude Code, 2026-08-30.
 """
