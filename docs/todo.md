@@ -117,7 +117,7 @@ python3 scripts/menu-image-tiles.py --restore backups/footer-group-20260827-1625
 - **Three library images have their generation brief printed into the photograph.** None is
   referenced by any live template, so nothing is currently broken, but they must never be used and
   should be deleted or regenerated:
-  - `skingenetix-contact-banner.jpg` — brief text across the frame *and* an unbranded,
+  - `skingenetix-contact-banner.jpg` — brief text across the frame _and_ an unbranded,
     competitor-looking bottle in shot.
   - `skingenetix-homepage-tile-firming.jpg` — brief text down the left edge.
   - `skingenetix-concern-brightening-glow.jpg` — marketing typography ("…Your Inner Radiance")
@@ -149,11 +149,14 @@ Undo: `python3 scripts/reviews-add-before-after-carousel.py --restore backups/pa
   excluded from the section, so the carousel is 3 cards instead of 4 until it is replaced.
   Follow `docs/clinical-trial-before-after-images.md` — two photographic sessions, one subject.
   New masters must be **1:1 overall, split at exactly 50%, with no text burnt into the pixels**.
-- **The three placeholder reviews now appear twice on the page**, once in the carousel and once
-  in the `testimonials` section below it. Decide whether `testimonials` stays.
-- **The review copy is invented** — as is every other name on this page. Existing exposure, not
-  new: nothing was written for this build, the page's own testimony was re-attached to the
-  matching photograph. Still needs resolving before the store takes orders.
+- ⚠️ **CORRECTED 2026-08-30 — "the review copy is invented" was wrong for the carousel.**
+  Malcolm confirmed the before/after reviews are **real verified customers**; the photographs
+  are his and the texts were transcribed from his source document. The carousel is fine.
+  What **is** invented on this page is the separate `testimonials` section below it — eight
+  names written at project setup in March (Caroline B., Sophie L., Hannah V., Nicole P.,
+  Rebecca S., Isabelle M., Elena G., Katharina H.), checked against all 99 real cards on
+  2026-08-30 with **zero full-name matches**. Decide whether `testimonials` stays.
+  See `docs/product-reviews-before-after-plan.md` §2 for the full verification.
 
 **Outstanding — 🟡 Medium**
 
@@ -164,14 +167,60 @@ Undo: `python3 scripts/reviews-add-before-after-carousel.py --restore backups/pa
   `testimonials` and `press` blocks in favour of real submissions.
 - **Interim masters cap at 560px.** Against a 432px card at 2× the CDN has nothing wider to
   serve, so they are soft on a retina display. Fixed by regeneration, not by re-encoding.
-- The page's `trust` section claims *"Verified Reviews — All reviews from confirmed customers"*
-  on a store with no reviews app and no orders.
+- The page's `trust` section claims _"Verified Reviews — All reviews from confirmed customers"_.
+  Accurate for the carousel as of 2026-08-30; not for the `testimonials` block below it.
 
+### 🔄 REVIEW-002 — per-product before/after review carousels, all 11 products (2026-08-29)
+
+**Priority:** 🟡 Live and working; 8 cards await the microneedling round
+**Owner:** Claude (build) + Malcolm (photographs, copy, every image choice)
+**Plan:** `docs/product-reviews-before-after-plan.md` — the current status document
+**Source of truth:** `configs/product-reviews.json` (99 cards) + `configs/review-texts.json`
+
+**Shipped 2026-08-29.** Each product page carries its **own** customers, nine cards each. Built
+on a `customer_review` **metaobject** (9 fields, `translatable`, storefront-readable) plus a
+`custom.customer_reviews` product metafield — _not_ template content, which is why grepping the
+theme for a customer name finds nothing. New `sections/product-reviews-before-after.liquid`. The
+template's old generic "Verified Customer Results" `multi-column` was **replaced in place keeping
+its section id**, so its position held and no translation key moved.
+
+Undo the section swap: `python3 scripts/product-reviews-add-section.py --restore backups/product.json-20260829-114101.json`
+Undo the position move: `--restore backups/product.json-20260829-122332.json`
+
+**Script order** (`product-reviews-build-plan.py` is **STALE** — it still describes the 76-card
+allocation; use `-rebalance.py` if the allocation itself must change):
+`-setup.py --create-schema` → `-build-plan.py` → `upload-theme-images.py` → `-publish.py`, then
+the editing tools `-reorder.py`, `-refresh-image.py`, `-spread-shots.py`, `-fill-copy.py`,
+`swap-review-image.py`.
+
+**Measured live 2026-08-30:** 103 metaobjects exist, **99 attached** (9 × 11), **91 carry real
+copy**.
+
+**Outstanding — 🟡 Medium**
+
+1. **8 cards on `copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month` are live with
+   PLACEHOLDER copy** and publicly visible. The pool is **exhausted, not unrun**: 98 texts
+   transcribed, 12 held back for stating an age, 2 surplus — and both surplus texts name a
+   serum, so the `FORMAT_WORDS` filter correctly bars them from a device.
+   **Malcolm 2026-08-30: leave them, the microneedling products are the next round.**
+2. **The four setup-written `customer_reviews` quotes still sit below on every product page** —
+   "Sarah M. - Verified Customer" and three others, no full-name match to any real customer. The
+   page now makes the same claim twice. Awaiting instruction; nothing removed.
+3. **"Fiona C" appears on two products** with two different photographs — reads as one customer
+   reviewing two products.
+4. **4 orphan metaobjects** unattached to any product: `review-wrinkles-heather-s` and
+   `review-wrinkles-megan-a` (the deliberate duplicate-photograph detachments — detached, not
+   deleted, because deleting drops every locale), plus `review-firming-marie-r` and
+   `review-brightening-fiona-c`.
+5. ⚠️ **~150MB of orphaned duplicate images** remain in Files from the 2026-08-29 re-upload
+   (Shopify **suffixes rather than replaces** on a name collision). Harmless — `resolve_files()`
+   matches the exact basename — but **check `uploaded_handle` coverage before running the
+   uploader over an existing plan.**
 
 ### ✅ BRAND-007 — /pages/skin-repair-renewal: two medical explainer diagrams
 
 **Closed 2026-08-25.** Malcolm: professional medical-beauty explainer diagrams for the
-*What Slows Skin Repair?* and *The Renewal Approach* blocks, in the style of the Matrixyl
+_What Slows Skin Repair?_ and _The Renewal Approach_ blocks, in the style of the Matrixyl
 explainer set. Both blocks wore borrowed stock — a cream-texture swirl and a turquoise
 laboratory scene — neither of which explained anything.
 
@@ -184,12 +233,12 @@ blurs into the Matrixyl page, the mirror of that brief negating copper.
 
 **The two pictures are deliberately not interchangeable**, which is the r3 lesson:
 
-- **causes is the deficit state** and carries *no* spheres, *no* shafts and *no* glints — the
+- **causes is the deficit state** and carries _no_ spheres, _no_ shafts and _no_ glints — the
   whole delivery vocabulary is absent on purpose. Its four faults are the four the copy
   names, each in the stratum it belongs to: piled dull surface plates (slower renewal), grey
   motes settling on them (environmental stress), sparse slack fibre below (loss of firmness),
   and the surface sagging into the gap (reduced resilience).
-- **approach is the supported state**, and it had to carry the copy's *negative* argument —
+- **approach is the supported state**, and it had to carry the copy's _negative_ argument —
   renewal skincare supports the skin's own processes rather than forcing turnover through
   exfoliation, "which can thin the skin". So the outer layer is explicitly whole, and
   peeling, flaking, dissolving and scrub particles are all negated by name. A picture that
@@ -200,30 +249,30 @@ page: PDRN as a flat untwisted ladder of paired beads reaching the renewal cell 
 as a three-bead chain with a copper centre reaching the fibre zone.
 
 **The molecule check overturned the best-looking candidate.** `nbp_pro_01` won the approach
-block on the contact sheet *and* on the render-size pairing. At 100% its copper chains carry
+block on the contact sheet _and_ on the render-size pairing. At 100% its copper chains carry
 **five** beads and its ladders visibly **spiral** — the wrong molecule for a tripeptide, and
 the DNA cliché the set has negated throughout. Neither fault is visible below ~40% zoom. All
 eleven candidates were then cropped to the sphere band at full resolution and the beads
 counted: gpt-image, nbp_flash, nbp_pro_02, seedream and luma_01 render it correctly;
 nbp_pro_01 and luma_02 do not; FLUX.2 adds gold beads, negated by name. `nbp_flash_02` won on
-the count *and* the picture.
+the count _and_ the picture.
 
 **Re-run twice more, and both rounds were my brief's fault, not the engines'.**
 
-- Malcolm: *"the underside of the skin isn't good enough … it now looks like a half empty
-  area"*. Round 1 had told every engine the deep zone held bundles that were *"thin, sparse
-  and slack … with wide empty gaps between them"* — my own way of signalling lost firmness.
+- Malcolm: _"the underside of the skin isn't good enough … it now looks like a half empty
+  area"_. Round 1 had told every engine the deep zone held bundles that were _"thin, sparse
+  and slack … with wide empty gaps between them"_ — my own way of signalling lost firmness.
   Six engines obliged and made an arch-shaped void. Research settled it: ageing skin does
   **not** empty — collagen fragments and disorganises, elastic fibres clump, fibroblasts
   fall, and the **dermal-epidermal junction flattens**, which round 1 lacked entirely
   ([Baumann 2007](https://pathsocjournals.onlinelibrary.wiley.com/doi/full/10.1002/path.2098),
-  [Am J Pathol 2020](https://ajp.amjpathol.org/article/S0002-9440(20)30142-5/fulltext),
+  [Am J Pathol 2020](<https://ajp.amjpathol.org/article/S0002-9440(20)30142-5/fulltext>),
   [StatPearls: Dermis](https://www.ncbi.nlm.nih.gov/books/NBK535346/)).
 - Round 2 then **overshot**: "packed edge to edge" cured the void and produced a dense
   fibrous mat, in a different visual world from its own partner. **Filled and uncrowded are
   both achievable** — round 1 and round 2 are two ends of one knob.
-- Malcolm: *"get the style to fit … they need to fit together as a pair"* and *"show a clear
-  wrinkle so you can see the damage underneath"*. Round 3 states the style as a
+- Malcolm: _"get the style to fit … they need to fit together as a pair"_ and _"show a clear
+  wrinkle so you can see the damage underneath"_. Round 3 states the style as a
   **description of the published frame** rather than a genre, and re-runs **both** blocks —
   no work on one image makes it pair with the other while the colours disagree.
 
@@ -246,7 +295,7 @@ Configs: `block-skin-repair-renewal-medical.json` (round 1),
 **Closed 2026-08-25.** Malcolm: align the block titles to the top of the image area, then
 fill the five pictures — two from images we already had, three newly made.
 
-**The alignment.** The title was absolutely positioned at the *foot* of the picture, which
+**The alignment.** The title was absolutely positioned at the _foot_ of the picture, which
 put it roughly 400px below the first accordion row in the right-hand column. It is now at
 the top, so the two columns start on the same line. The scrim went with it: a bottom scrim
 under a top title would darken the empty half of the frame and leave the type sitting on
@@ -254,13 +303,13 @@ whatever happened to be up there.
 
 **What went in each block, and why.**
 
-| Block | Picture | Source |
-|---|---|---|
-| Products & Usage | Woman applying pale-blue cream to her cheekbone | library — cream-application-faces, NBP Flash |
+| Block                | Picture                                                     | Source                                                    |
+| -------------------- | ----------------------------------------------------------- | --------------------------------------------------------- |
+| Products & Usage     | Woman applying pale-blue cream to her cheekbone             | library — cream-application-faces, NBP Flash              |
 | Ingredients & Safety | Open Copper Peptide Night Repair jar, lid resting beside it | library — ALL-copper-peptide-night-repair-cream, Seedream |
-| Orders & Shipping | White shipping box, brand mark on the lid | **new** — NBP Pro |
-| Returns & Refunds | Smiling woman reading her phone | **new** — Seedream |
-| Skincare & Routine | Macro cheek, clear serum falling from a glass pipette | **new** — NBP Flash |
+| Orders & Shipping    | White shipping box, brand mark on the lid                   | **new** — NBP Pro                                         |
+| Returns & Refunds    | Smiling woman reading her phone                             | **new** — Seedream                                        |
+| Skincare & Routine   | Macro cheek, clear serum falling from a glass pipette       | **new** — NBP Flash                                       |
 
 **NBP Pro won the box on the HELIX, not on the spelling.** gpt-image spelled `Skingenetix`
 correctly on both its candidates and drew the mark as bare vertical dashes with no
@@ -287,9 +336,9 @@ id, because template-scoped ids go stale.
 Shopify Files. Deleting data from an external service needs Malcolm's explicit go-ahead
 (CLAUDE.md hard boundary). Nothing references them — search Files for `faq-placeholder`.
 
-**Two corrections, same day.** Malcolm: *"redo the Returns & Refunds image with a caucasian
-middle aged woman"* and *"redo the Skincare & Routine image removing the black section at the
-top covering the models face."*
+**Two corrections, same day.** Malcolm: _"redo the Returns & Refunds image with a caucasian
+middle aged woman"_ and _"redo the Skincare & Routine image removing the black section at the
+top covering the models face."_
 
 - **Returns** needed no new generation. The original run already held **seven** Caucasian
   candidates across four engines — the East Asian model had been a choice made for range
@@ -297,8 +346,8 @@ top covering the models face."*
   size, and the swap cost nothing. The all-suppliers rule paid twice: once for the first
   choice, again for making a change free.
 - **Skincare did need re-shooting, and my brief caused the fault.** It asked for a backdrop
-  *"falling to near-black at the top of the frame so the upper third is quiet and almost
-  empty"* — written to give the white title a dark ground. At a 4:3 crop of a face that
+  _"falling to near-black at the top of the frame so the upper third is quiet and almost
+  empty"_ — written to give the white title a dark ground. At a 4:3 crop of a face that
   close, a quiet empty upper third **is** a black bar across the forehead. Every engine did
   exactly what was asked. The rewrite states the frame as an **edge condition** — skin
   reaches all four edges, no backdrop anywhere — because the way to stop an engine putting
@@ -373,7 +422,7 @@ and therefore survives review.
 
 **What prompted it.** Malcolm: every image on the site is a placeholder. A live capture of
 Augustinus Bader, Dr. Barbara Sturm, La Mer, La Prairie and Tatcha, compared against a full
-audit of the theme's 239 image slots, found the store was *not* missing images — 236 of 239
+audit of the theme's 239 image slots, found the store was _not_ missing images — 236 of 239
 slots were filled and every file returned HTTP 200. The faults were art direction and
 architecture:
 
@@ -391,15 +440,15 @@ the agreed product-photography scene colours so banners and packshots are one sy
 
 **Live on the homepage:**
 
-| Section | State |
-| ------- | ----- |
-| Hero | 3-slide slideshow — model → laboratory glass → Matrixyl bottle, left-aligned type |
-| Targeted Solutions ×4 | Human register, each on its ingredient's colour |
-| The Science of Peptides | Peptide-chain macro (replaced a cyan stock lab shot) |
-| **The Peptide Standard** | **NEW** full-bleed band, peptide helix render |
-| Customer reviews | **NEW** 6-slide slider, Tatcha layout, prev/next arrows, per-slide product link |
-| Find Your Product ×4 | Material register, matched colours |
-| **Brand band** | **NEW** full-width closer above the footer |
+| Section                  | State                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------- |
+| Hero                     | 3-slide slideshow — model → laboratory glass → Matrixyl bottle, left-aligned type |
+| Targeted Solutions ×4    | Human register, each on its ingredient's colour                                   |
+| The Science of Peptides  | Peptide-chain macro (replaced a cyan stock lab shot)                              |
+| **The Peptide Standard** | **NEW** full-bleed band, peptide helix render                                     |
+| Customer reviews         | **NEW** 6-slide slider, Tatcha layout, prev/next arrows, per-slide product link   |
+| Find Your Product ×4     | Material register, matched colours                                                |
+| **Brand band**           | **NEW** full-width closer above the footer                                        |
 
 Also fixed site-wide: four- and five-item link-block rows now fill the full row (the theme
 sizes by items-per-row, so a 4-block row at `large` left a 274px dead column). Applied via a
@@ -425,7 +474,7 @@ advances a full panel (scrollLeft 0 → 1392).
 whole pages** — fixed 2026-08-25 16:45,
 `configs/banners/solution-pages-remove-content-carousel.json`. Malcolm: "for all of the
 solution pages: remove the carousel function from the content blocks, so that the content
-blocks are all shown on the page." A block count is a *proxy* for the reviews slider, not a
+blocks are all shown on the page." A block count is a _proxy_ for the reviews slider, not a
 description of it, and six sections on this store have six or more `media-with-text` blocks.
 One is the reviews slider. The other five are the `content` sections of the **Skin
 Solutions** pages — brightening-glow, collagen-skin-plumping, fine-lines-wrinkles,
@@ -458,7 +507,7 @@ section, find the markup unique to that section — a count will always eventual
 
 🩹 **Capture artefact, not a bug — do not report it as one.** In a full-section Playwright
 screenshot the third Key Findings block renders as a blank white card. It is fine: the theme
-uses `reveal-on-scroll`, and an *element* screenshot captures content that is still below the
+uses `reveal-on-scroll`, and an _element_ screenshot captures content that is still below the
 viewport at `opacity: 0`. Scrolled into view it reads `opacity: 1` with all its text. It
 looked like a broken block twice.
 
@@ -484,7 +533,7 @@ looked like a broken block twice.
    served, no `featured_in` node in the DOM.
    Still open: the five `skingenetix-press-*.png` files remain in Shopify Files (deleting a
    Shopify File is a stop condition). If real coverage ever exists, rebuild with the genuine
-   mastheads *linked to the articles* — never swap them into a bar that claims coverage the
+   mastheads _linked to the articles_ — never swap them into a bar that claims coverage the
    brand has not had.
    ⚠️ Not touched, and not the same thing: `standards` on `templates/page.philosophy.json` is a
    separate `logo-list` holding EU Cosmetics and GMP badges under "Certified Quality Standards".
@@ -520,7 +569,7 @@ the last item orphaned; grid behaviour, not a sizing fault, but worth a look.
 **Two traps, both now in memory.** `custom_css` is a **top-level section key, a sibling of
 `settings`** — routing it through `patch-template.py`'s `setting_updates` succeeds, prints
 `custom_css = [4 rule(s)]`, and silently does nothing. And `logo_width` in `logo-list` is a
-*maximum*, not a size: the theme clamps each image to its grid cell, so the longest wordmark
+_maximum_, not a size: the theme clamps each image to its grid cell, so the longest wordmark
 renders the **smallest** — `ACETYL HEXAPEPTIDE-8` came back 20px against its neighbours' 27-29px.
 Size a logo bar with a uniform CSS `height` per breakpoint, never by per-block `logo_width`.
 (`logo_width` also has `"step": 10`; a value like 196 is a 422.)
@@ -551,29 +600,29 @@ jaw") put the bottle over the headline in four of five suppliers.
 
 **Per-product state**
 
-| Product | Images | State |
-| ------- | ------ | ----- |
-| Copper Peptide Serum | 57 | ⚠️ pre-fix — milky liquid behind blue glass |
-| PDRN Serum | 44 | ⚠️ pre-fix — milky behind pink glass |
-| Glutathione Serum | 44 | ✅ regenerated, clear liquid |
-| Matrixyl Serum | 44 | ✅ regenerated, clear liquid |
-| Acetyl Serum | 38 | ✅ (Seedream refused 6) |
-| Day Cream | 44 | ✅ |
-| Night Cream | 44 | ✅ + helix fix |
-| Matrixyl Cream | 44 | ✅ + helix + spell-out |
-| PDRN Cream | 43 | ❌ **`PORN` on most frames** — two regenerations failed |
+| Product              | Images | State                                                   |
+| -------------------- | ------ | ------------------------------------------------------- |
+| Copper Peptide Serum | 57     | ⚠️ pre-fix — milky liquid behind blue glass             |
+| PDRN Serum           | 44     | ⚠️ pre-fix — milky behind pink glass                    |
+| Glutathione Serum    | 44     | ✅ regenerated, clear liquid                            |
+| Matrixyl Serum       | 44     | ✅ regenerated, clear liquid                            |
+| Acetyl Serum         | 38     | ✅ (Seedream refused 6)                                 |
+| Day Cream            | 44     | ✅                                                      |
+| Night Cream          | 44     | ✅ + helix fix                                          |
+| Matrixyl Cream       | 44     | ✅ + helix + spell-out                                  |
+| PDRN Cream           | 43     | ❌ **`PORN` on most frames** — two regenerations failed |
 
 Superseded batches kept in `assets/ai-generated/_superseded/`, not deleted.
 
-**Four brief faults found and fixed, all one root cause** — the brief *named* a thing
-without *describing* it, so each supplier filled the gap:
+**Four brief faults found and fixed, all one root cause** — the brief _named_ a thing
+without _describing_ it, so each supplier filled the gap:
 
-| Fault | Brief said | Fix |
-| ----- | ---------- | --- |
-| Garbled small print | "too small to read" | outside the depth of field |
-| Milky serum | glass colour only | the colour is the glass, not the contents |
-| Ribbon helix | "DNA-helix mark" | dots and dashes, never a solid ribbon |
-| `PORN` label | "PDRN" | spelled P, D, R, N |
+| Fault               | Brief said          | Fix                                       |
+| ------------------- | ------------------- | ----------------------------------------- |
+| Garbled small print | "too small to read" | outside the depth of field                |
+| Milky serum         | glass colour only   | the colour is the glass, not the contents |
+| Ribbon helix        | "DNA-helix mark"    | dots and dashes, never a solid ribbon     |
+| `PORN` label        | "PDRN"              | spelled P, D, R, N                        |
 
 The last one **still fails on the PDRN cream**, whose jar sets the label large enough to be
 drawn as a word rather than blurred. It was tolerated earlier on the cartons because it was
@@ -585,15 +634,15 @@ Read from the store, not from any earlier note in this file.
 
 **Collections — 7 of 14 carry a banner**
 
-| Collection | Image |
-| ---------- | ----- |
-| `/collections/all` | four-product range shot, extended left |
-| `/collections/pdrn` | PDRN cream `B` pose, extended left |
-| `/collections/copper-peptide` | day cream frame, extended left, arm sheared |
-| `/collections/serums` | peptide face serums, extended right |
-| `/collections/creams-moisturizers` | copper peptide night cream |
-| `/collections/acetyl-hexapeptide-8` | acetyl serum, round-2 frame |
-| `/collections/fine-lines-wrinkles` | acetyl serum `J-body-and-face-right` nbp_flash, **extended right** |
+| Collection                          | Image                                                              |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| `/collections/all`                  | four-product range shot, extended left                             |
+| `/collections/pdrn`                 | PDRN cream `B` pose, extended left                                 |
+| `/collections/copper-peptide`       | day cream frame, extended left, arm sheared                        |
+| `/collections/serums`               | peptide face serums, extended right                                |
+| `/collections/creams-moisturizers`  | copper peptide night cream                                         |
+| `/collections/acetyl-hexapeptide-8` | acetyl serum, round-2 frame                                        |
+| `/collections/fine-lines-wrinkles`  | acetyl serum `J-body-and-face-right` nbp_flash, **extended right** |
 
 Still bare: `frontpage`, `glutathione`, `matrixyl-3000`, `firming-skin-density`,
 `skin-repair-renewal`, `brightening-glow`, `microneedling`.
@@ -609,10 +658,10 @@ exist and both are reachable from the menus.
 
 **Changed after that audit, 2026-08-25 (this session):**
 
-| Page | Change |
-| ---- | ------ |
+| Page                 | Change                                                                                                                                                                                                                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `/pages/the-science` | header replaced with the blue-glassware microscope frame; **the "Our Transparency Commitment" section converted from a grey `rich-text` panel into a full-bleed `image-with-text-overlay` band** on the evidence+microscope frame. Copy moved across byte-for-byte |
-| `/pages/ingredients` | header replaced twice — first with the three-serum range shot, then with the laboratory-glassware frame Malcolm picked. Both files remain on the CDN; reverting is a repoint of `banner.image` + `banner.mobile_image` |
+| `/pages/ingredients` | header replaced twice — first with the three-serum range shot, then with the laboratory-glassware frame Malcolm picked. Both files remain on the CDN; reverting is a repoint of `banner.image` + `banner.mobile_image`                                             |
 
 All four carry `object-position: right center` and a measured text max-width via a **`liquid`
 block inside the section** (`{{ section.id }}` resolved at render time) rather than a
@@ -624,9 +673,9 @@ block inside the section** (`{{ section.id }}` resolved at render time) rather t
 of pinned left, and nothing errors. Fix with the same `liquid`-block pattern.
 
 **An earlier revision of this table claimed Matrixyl and Glutathione were live. They are
-not,** and still are not. Both sat on the *shared* `templates/collection.json` before the
+not,** and still are not. Both sat on the _shared_ `templates/collection.json` before the
 per-collection templates of ADR-005 existed, and that shared template now carries banner
-*settings* (parallax off, `sm`, overlay 25) with **no image**. The Glutathione assets are
+_settings_ (parallax off, `sm`, overlay 25) with **no image**. The Glutathione assets are
 built and waiting in `assets/publish-ready/collection-glutathione-banner/`.
 
 **Two pages are still wearing borrowed images:** `/pages/pdrn-research` shows
@@ -634,7 +683,7 @@ built and waiting in `assets/publish-ready/collection-glutathione-banner/`.
 `skingenetix-philosophy-ingredients.jpg` — both lifted from the philosophy page.
 
 **Update 2026-08-27 — the glutathione line above is stale on the hero and partly fixed on
-the body.** The `/pages/glutathione-research` *hero* was replaced on 2026-08-25 with
+the body.** The `/pages/glutathione-research` _hero_ was replaced on 2026-08-25 with
 `skingenetix-glutathione-master-antioxidant-brightening-research.jpg` (plan:
 `configs/banners/page-glutathione-research-publish.json`), so it no longer wears
 `philosophy-ingredients.jpg`. In the `key_findings` section, block **`f2`** ("Antioxidant
@@ -644,11 +693,11 @@ defence against environmental stress", Grandi 2019) now carries its own explaine
 `block-glutathione-research-antioxidant-defence{,-r2}.json`. **Blocks `f1` and `f3` are
 still borrowed** (`home-science-peptides-laboratory.jpg` and `philosophy-research.jpg`) and
 want the same treatment. Note `philosophy-research.jpg` and `philosophy-quality.jpg` are
-*also* in use on `/pages/acetyl-hexapeptide-8-research`, so neither may be renamed —
+_also_ in use on `/pages/acetyl-hexapeptide-8-research`, so neither may be renamed —
 repoint the block, never the file.
 
 **`/pages/skin-concerns` is the first banner that is not a product shot,** and the first
-where canvas extension does not apply. Measured on the frame, the body's edge *rises* as it
+where canvas extension does not apply. Measured on the frame, the body's edge _rises_ as it
 travels left (skin starts y=259 at x=0 but y=295 at x=100), so extending would march the
 shoulder into the top-left the heading needs; the right edge is the head. The crop is
 anchored with `object-position: center top` instead, so the 28%–46% of height a fixed 440px
@@ -691,7 +740,7 @@ backdrop; 28% starts going grey. The homepage keeps 40% because white link text 
 legible on its tiles; nothing sits on these.
 
 **The hover reveal is what earns the overlay its place** — it turns a wash into an
-affordance. These images are *not* links (the anchor is the button beside the picture), so
+affordance. These images are _not_ links (the anchor is the button beside the picture), so
 the reveal is invitation rather than navigation, and touch devices lose nothing: they keep
 the tint. `:has(> img:hover)` rather than a bare `:hover` because **the list element is
 524px against the image's 500px** (measured live), so a bare `:hover` would fire from the
@@ -710,7 +759,7 @@ announcement bar.
 
 **The homepage concern tiles went 40% → 20% to match** (live 2026-08-25,
 `configs/banners/homepage-concern-tile-overlay-20.json`). Unlike the concern page this is a
-real block setting — `image-link-blocks` has `overlay_opacity` in its schema. The *second*
+real block setting — `image-link-blocks` has `overlay_opacity` in its schema. The _second_
 `image-link-blocks` section on the homepage, `find_serum` ("Find Your Perfect Product",
 four tiles at 50%), is deliberately untouched, which is why the CSS below is keyed to the
 `skin_concerns` section id rather than the section class.
@@ -728,7 +777,7 @@ bare 20% wash.
 ⚠️ **Do not locate a text label by counting bright pixels per row.** The first contrast pass
 did, and on photographs of skin the specular highlights clear any threshold — the "label
 band" came back as 292 rows, essentially the whole tile, so every number was white text
-against the *entire photograph* (it called 40% marginal at 3.89–4.17 and 20% a failure at
+against the _entire photograph_ (it called 40% marginal at 3.89–4.17 and 20% a failure at
 2.51–2.72; the true figures are 7.12–7.80 and 4.12–6.44). Worse, it could not detect its own
 error: after the scrim the median moved but the 95th percentile did not, because the
 brightest 5% lived in the untouched top of the picture. **Take the box from the DOM** — a
@@ -749,11 +798,11 @@ brightest 5% lived in the untouched top of the picture. **Take the box from the 
   the extension. The patch does not have to come from the edge being grown — only high
   frequencies are carried, so any clean region of the same backdrop will do.
 - **Measure the h1 in the browser, do not estimate it.** The collection banner's h1 needs
-  681px for one line; a 552px figure taken from a *page* banner was wrong enough to make the
+  681px for one line; a 552px figure taken from a _page_ banner was wrong enough to make the
   heading wrap at every width.
 
 **The banner section was the real blocker, not the images.** `templates/collection.json`
-had `enable_parallax: true` — the theme's schema says *"Parallax crops images"* — so no
+had `enable_parallax: true` — the theme's schema says _"Parallax crops images"_ — so no
 aspect ratio survived, and `overlay_opacity: 50` flattened every picture. Both changed
 (parallax off, overlay 25); this improved **all five collection pages** at once. Three
 attempts and ~$0.50 were spent reworking the image before the settings were read.
@@ -766,11 +815,11 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    in `PAGES`. Note the publish plan predates the rebuild and reuses the same filename;
    Shopify Files suffixes rather than replaces, so it needs a fresh name.
 2. 🔴 **Five bare collections**, two of which already have a banner on their same-named
-   *page*: `firming-skin-density`, `skin-repair-renewal`, plus `matrixyl-3000`,
+   _page_: `firming-skin-density`, `skin-repair-renewal`, plus `matrixyl-3000`,
    `microneedling` and `frontpage`.
    ⚠️ `brightening-glow` was in this list and is **now done** (2026-08-25 09:15) — the
    COLLECTION carries the glutathione `A-face-full-prod-left` nbp_flash frame, extended
-   LEFT, distinct from the gpt_image take on the same-named *page*. Its concentration line
+   LEFT, distinct from the gpt_image take on the same-named _page_. Its concentration line
    was repaired from `25i` to `2%` first.
 3. 🟡 **Two research pages wear philosophy-page images** — `/pages/pdrn-research` and
    `/pages/glutathione-research`. Both products have a full banner library already.
@@ -850,6 +899,7 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    Residual: on f1/f2 the copy card renders taller than the 660px image (703/727px) because those study
    descriptions are longer than the originals — tops align, bottoms do not. Fixing it means clipping copy
    or cropping faces, so it needs a copy trim rather than a CSS change.
+
 4. 🟡 **Fold the runtime-injected banner configs into the scripts.** The three banners of
    2026-08-24/25 were built by injecting config into `extend-banner-canvas.py` and
    `publish-collection-banner-template.py` at import time, because a second session was
@@ -885,15 +935,15 @@ Day Gel-Cream tile read **`SKINGENETIX®`**, a registered mark the brand does no
 **Two registers, deliberately different** (Malcolm: the rows were "flat" when both used the
 same shot):
 
-| Row | Register |
-| --- | --- |
-| Small selector tiles | product hero on **white**, uniform |
+| Row                   | Register                                                             |
+| --------------------- | -------------------------------------------------------------------- |
+| Small selector tiles  | product hero on **white**, uniform                                   |
 | Large detail sections | product **in use** — pipette lifted with a drop forming, or jar open |
 
 **No new uploads for the already-live heroes.** They are referenced in place as
 `shopify://shop_images/<filename>`; copying them would break shopify.md rule 7 (Langify keys
 translations off the URL) and create duplicates. The SEO naming rule governs what we
-*upload*, not what we *reference*. It also means these tiles now **track the product pages**.
+_upload_, not what we _reference_. It also means these tiles now **track the product pages**.
 
 **Product scale is normalised, and the measurement was the hard part.**
 `scripts/normalise-tile-scale.py` re-frames each tile so every serum fills 71.0% of frame
@@ -904,7 +954,7 @@ fill left a visible rectangle on five of nine tiles, because these sweeps are gr
 
 ⚠️ **The auto-measured boxes were wrong twice and shipped.** Edge energy cannot tell a
 bottle from its reflection nor find a white bulb on a white sweep: copper measured 1215→1669
-(rendered at 56% of frame) and matrixyl 1825→1539 (rendered at 91%). The *reference itself*
+(rendered at 56% of frame) and matrixyl 1825→1539 (rendered at 91%). The _reference itself_
 was 4% out. All five serums now carry a `y_override` read off a labelled pixel grid. Full
 account in `memory/a-number-checked-only-against-itself-gets-believed.md`.
 
@@ -957,11 +1007,11 @@ wrong. Fixed at runtime by dropping srcset/sizes and requesting an explicit CDN 
 
 **Live on the homepage**
 
-| Section | State |
-| ------- | ----- |
-| FAQ | Title centred above, questions 46% left, image right, support line full-width below, no card |
-| FAQ image | **Replaced 2026-08-27** — now the Acetyl Hexapeptide-8 model-with-dropper shot (`skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model-face.jpg`, plan `configs/banners/faq-image-publish-5.json`). The four-jar stack it replaced stays uploaded and unreferenced; it cost three engines to make and is one command to restore. Note the slot is `hidden lg:block` — **desktop only**, by theme design, and was so for the jar stack too |
-| Philosophy band | Skin-art reclining profile, face in view, 720px tall |
+| Section         | State                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FAQ             | Title centred above, questions 46% left, image right, support line full-width below, no card                                                                                                                                                                                                                                                                                                                                                          |
+| FAQ image       | **Replaced 2026-08-27** — now the Acetyl Hexapeptide-8 model-with-dropper shot (`skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model-face.jpg`, plan `configs/banners/faq-image-publish-5.json`). The four-jar stack it replaced stays uploaded and unreferenced; it cost three engines to make and is one command to restore. Note the slot is `hidden lg:block` — **desktop only**, by theme design, and was so for the jar stack too |
+| Philosophy band | Skin-art reclining profile, face in view, 720px tall                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 **In progress**
 
@@ -975,14 +1025,14 @@ wrong. Fixed at runtime by dropping srcset/sizes and requesting an explicit CDN 
 
 **Supplier facts measured across this session**
 
-| Supplier | Finding |
-| -------- | ------- |
-| Seedream | Best label fidelity. **Refuses bare-skin subjects every time.** |
-| gpt-image | Solved MATRIXYL first attempt. Refuses most bare-skin briefs. |
-| NBP Flash | Cheapest at $0.02 and produced the clean FAQ stack and the chosen band |
-| NBP Pro | 6× Flash, weaker labels, tilts the product |
-| Luma | Best colour, but **invented an `XXX` mark on class A** — barred alongside FLUX.2 |
-| FLUX.2 | Barred from class A: substitutes fictional brands |
+| Supplier  | Finding                                                                          |
+| --------- | -------------------------------------------------------------------------------- |
+| Seedream  | Best label fidelity. **Refuses bare-skin subjects every time.**                  |
+| gpt-image | Solved MATRIXYL first attempt. Refuses most bare-skin briefs.                    |
+| NBP Flash | Cheapest at $0.02 and produced the clean FAQ stack and the chosen band           |
+| NBP Pro   | 6× Flash, weaker labels, tilts the product                                       |
+| Luma      | Best colour, but **invented an `XXX` mark on class A** — barred alongside FLUX.2 |
+| FLUX.2    | Barred from class A: substitutes fictional brands                                |
 
 Content filters refuse bare-skin briefs on Seedream, gpt-image and FLUX.2. Establishing clothing
 in the opening sentence cut refusals from 13/36 to 1/48 — but naming a garment also changes the
@@ -1007,10 +1057,10 @@ two-column layout at ≥1150px. No new section, no custom code.
 The heading, though, always renders **inside** one of those two columns. Malcolm wanted it
 centred above both. Two routes were built and compared:
 
-| Route | Result | Cost |
-| ----- | ------ | ---- |
-| Stock **Rich text** section above the FAQ | Works, but leaves a visible seam — `section-spacing-collapsing` **deliberately disables** collapsing for boxed sections above 700px, so two adjacent white cards cannot merge | zero code |
-| Re-flow the FAQ's own `section-stack` as a 2-col grid, heading spanning row 1 | One card, title centred above, questions left, image right | 8 lines CSS |
+| Route                                                                         | Result                                                                                                                                                                        | Cost        |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| Stock **Rich text** section above the FAQ                                     | Works, but leaves a visible seam — `section-spacing-collapsing` **deliberately disables** collapsing for boxed sections above 700px, so two adjacent white cards cannot merge | zero code   |
+| Re-flow the FAQ's own `section-stack` as a 2-col grid, heading spanning row 1 | One card, title centred above, questions left, image right                                                                                                                    | 8 lines CSS |
 
 Malcolm chose the second. Section height ~1000px → ~530px.
 
@@ -1029,9 +1079,9 @@ Image size setting (`md` 560px → `lg` 720px).
 
 **Live on the homepage:**
 
-| Section | State |
-| ------- | ----- |
-| FAQ | Title centred above, 9 questions left, image right, one card |
+| Section    | State                                                                                    |
+| ---------- | ---------------------------------------------------------------------------------------- |
+| FAQ        | Title centred above, 9 questions left, image right, one card                             |
 | Brand band | 720px tall, centred, X-Small heading, filled white button, eyebrow and body copy blanked |
 
 **Outstanding**
@@ -1043,10 +1093,10 @@ Image size setting (`md` 560px → `lg` 720px).
    space on the left, which is now the wrong side: the text is centred. Three briefs generated,
    all holding the **central 45%** of the frame quiet.
 3. 🟢 Band copy is a first draft (`"Skingenetix began with a simple refusal: no proprietary
-   blends."`) — Malcolm to improve.
+blends."`) — Malcolm to improve.
 
 **Notes for the next session.** The FAQ CSS is scoped by `:has(.faq-availability img)` rather
-than by section id — ids are template-scoped and change, and the FAQ *page* has no avatar image
+than by section id — ids are template-scoped and change, and the FAQ _page_ has no avatar image
 so it is untouched. The `!important` on the image width is required: the section's own
 `team_avatar_width` range writes an inline `max-width` capped at 350px.
 
@@ -1539,11 +1589,20 @@ picked, publish to Shopify via the Admin GraphQL API; C2PA-sign any destined for
 
 ## Session Log
 
-| Date       | What Was Worked On                                                                                                                                                                                                                 |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2026-03-05 | Project created. Research completed. Initial architecture and standard files set up.                                                                                                                                               |
-| 2026-05-06 | State-discovery: found store far ahead of docs. Handover written (handover-2026-05-06.md). No store changes.                                                                                                                       |
-| 2026-08-03 | Set HS-code 3304.99.5000 + origin CN on all 9 products (US import). Set Shopify taxonomy categories (5x Face Serums, 4x Face Moisturizers). Fixed expired Skingenetix client secret in business dashboard. Doc-sync (this update). |
+| Date       | What Was Worked On                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-03-05 | Project created. Research completed. Initial architecture and standard files set up.                                                                                                                                                                                                                                                                                                                                                                                |
+| 2026-05-06 | State-discovery: found store far ahead of docs. Handover written (handover-2026-05-06.md). No store changes.                                                                                                                                                                                                                                                                                                                                                        |
+| 2026-08-03 | Set HS-code 3304.99.5000 + origin CN on all 9 products (US import). Set Shopify taxonomy categories (5x Face Serums, 4x Face Moisturizers). Fixed expired Skingenetix client secret in business dashboard. Doc-sync (this update).                                                                                                                                                                                                                                  |
+| 2026-08-13 | Repo sync + asset-path repair: fast-forwarded 10 commits behind origin; repaired 47 asset dirs whose content sat in cloud-sync `" (1)"` twins. P6-FU-4 closed.                                                                                                                                                                                                                                                                                                      |
+| 2026-08-19 | Photography pipeline rebuilt end to end in smith-os (`product-photography` v3.0). 2026 product redesign intake: 9 products, reference sets built (36 crops). Audit: 25 runs / 4,077 images / $122.37, of which 8 reached the live store.                                                                                                                                                                                                                            |
+| 2026-08-20 | **First images published from the rebuilt pipeline** — 8 onto the PDRN cream. Four runs, 680 candidates, $51.15, 140 images selected and prepared. Found: the Gemini key is not in this project's `.env` (see architecture.md).                                                                                                                                                                                                                                     |
+| 2026-08-21 | Homepage rebuilt against a five-brand premium benchmark (BRAND-001).                                                                                                                                                                                                                                                                                                                                                                                                |
+| 2026-08-24 | Homepage FAQ restructured on stock sections; brand band rebuilt. **402-frame banner library** built across 9 products / 11 poses / 4 suppliers (~$25). Matrixyl + Glutathione collection banners live. Root cause of banner cropping found: `enable_parallax`, not the assets.                                                                                                                                                                                      |
+| 2026-08-25 | `/pages/ingredients` rebuilt on two registers. Banners for `/collections/all`, `/collections/pdrn`, `/collections/acetyl-hexapeptide-8`, `/pages/the-science`. Header height standardised on `image_size: sm` with ~4.42:1 masters. The five Skin Solutions pages stopped being carousels. BRAND-006 FAQ layout live with placeholders.                                                                                                                             |
+| 2026-08-27 | Research pages: all three acetyl Key Findings blocks published with labelled before/after diptychs on the new `research-before-after.liquid`. `/pages/reviews` got a real before/after carousel (REVIEW-001). Main-menu dropdowns became photo tiles. **ADR-002a: the store runs Translate & Adapt, not Langify** — six documents corrected.                                                                                                                        |
+| 2026-08-29 | **Per-product before/after review carousels shipped on all 11 products** — see REVIEW-002 below. 76 duplicate review files deleted behind five checks. 86 real review texts transcribed and placed. Reviews pulled out of the storefront nav but kept in the Navigation admin.                                                                                                                                                                                      |
+| 2026-08-30 | Product-page FAQ moved under the before/after block and took the research layout. "Explore More Research" card images became clickable with the menu hover treatment (scoped structurally across all 48 templates). **Review-copy coverage measured live: 91 of 99 cards real, 8 placeholder.** Plan §2 "honesty problem" corrected — the cards are real customers; the twelve _setup-written_ testimonial quotes are the actual open item. Doc-sync (this update). |
 
 ### 🔄 BRAND-006 — /pages/faq category blocks carry a picture (PLACEHOLDERS LIVE)
 
@@ -1551,8 +1610,8 @@ picked, publish to Shopify via the Admin GraphQL API; C2PA-sign any destined for
 **Owner:** Claude (layout) + Malcolm (every image choice)
 **Plans:** `configs/banners/page-faq-image-layout.json`, `configs/banners/page-faq-placeholders.json`
 
-Malcolm, 2026-08-25: *"where the faq block title is — lets make this block an image with
-the title on top. So image and title left and faq right. use placeholder images for now."*
+Malcolm, 2026-08-25: _"where the faq block title is — lets make this block an image with
+the title on top. So image and title left and faq right. use placeholder images for now."_
 
 **The two-column layout needed nothing.** `accordion-content` already defaults to
 `text_position: start`, which gives `.section-stack--horizontal` with a 50%
@@ -1578,7 +1637,7 @@ where the type sits.
 the two can be compared on the live page without another publish.
 
 ⚠️ **The five images are PLACEHOLDERS and are live on the store.** Named `-placeholder-`
-*and* carrying the word PLACEHOLDER rendered into the picture, so neither can quietly
+_and_ carrying the word PLACEHOLDER rendered into the picture, so neither can quietly
 become permanent. Regenerate with `scripts/make-faq-placeholders.py` (`assets/` is
 gitignored, so the script is the reproducible artefact, not the JPEGs).
 

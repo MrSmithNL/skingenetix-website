@@ -1,8 +1,13 @@
 # Plan — a unique before/after review carousel on every product page
 
-**Status: BUILT AND LIVE, 2026-08-29, with placeholder copy.** Malcolm: *"use placeholder
-texts for now, I will give you the texts next."* All 11 product pages now carry their own
-carousel. §10 records what shipped and what is still open.
+**Status: BUILT AND LIVE. Copy 91 of 99 real, as measured 2026-08-30.** All 11 product pages
+carry their own carousel, nine cards each. The 8 remaining placeholder cards are all on the
+Copper Peptide microneedling stamp set and are parked by Malcolm's instruction until the
+microneedling round. §10 records what shipped and what is still open.
+
+⚠️ **§2 was corrected on 2026-08-30** — the cards are **real verified customers**, not the
+invented testimony this document originally assumed. Read §2 before quoting any older doc on
+the subject.
 
 Originally written as a plan; kept as written so the reasoning survives. Written 2026-08-29 from Malcolm's brief: put the
 `reviews-before-after` carousel on each product page, unique per product, sourced from the
@@ -16,15 +21,15 @@ Related: `docs/reviews-before-after-carousel.md` (the section as built for `/pag
 
 ## 1. What exists right now
 
-| | |
-|---|---|
-| Section | `theme/sections/reviews-before-after.liquid` — built 2026-08-27, live on `/pages/reviews` |
-| Card carries | before/after pair, name, verified badge, star rating, title, body, product link |
-| Carousel | the theme's own `<scroll-carousel>` + `scrollbar` snippet. Nothing external loaded |
-| Image contract | **one file, both frames, split at exactly 50%, square (1:1)** |
-| Products | **11** — 9 skincare + 2 microneedling stamp sets, all `active` |
-| Product templates | **`templates/product.json` only** (+ `product.pre-order.json`). All 11 share one |
-| Review photos | **76**, in Drive under `Images/Reviews /` (⚠️ trailing space in the folder name) |
+|                   |                                                                                           |
+| ----------------- | ----------------------------------------------------------------------------------------- |
+| Section           | `theme/sections/reviews-before-after.liquid` — built 2026-08-27, live on `/pages/reviews` |
+| Card carries      | before/after pair, name, verified badge, star rating, title, body, product link           |
+| Carousel          | the theme's own `<scroll-carousel>` + `scrollbar` snippet. Nothing external loaded        |
+| Image contract    | **one file, both frames, split at exactly 50%, square (1:1)**                             |
+| Products          | **11** — 9 skincare + 2 microneedling stamp sets, all `active`                            |
+| Product templates | **`templates/product.json` only** (+ `product.pre-order.json`). All 11 share one          |
+| Review photos     | **76**, in Drive under `Images/Reviews /` (⚠️ trailing space in the folder name)          |
 
 ### The photographs are already correct
 
@@ -33,12 +38,12 @@ diptychs split at 50%, one woman, two occasions. **They already satisfy the sect
 contract exactly.** No cropping, no re-splitting. They are named by customer (`Heather-S.png`)
 and filed by concern:
 
-| folder | images |
-|---|---|
-| `Wrinkles` | 25 |
-| `General` | 28 |
-| `Firming` | 14 |
-| `Brightening` | 9 |
+| folder        | images |
+| ------------- | ------ |
+| `Wrinkles`    | 25     |
+| `General`     | 28     |
+| `Firming`     | 14     |
+| `Brightening` | 9      |
 
 ---
 
@@ -63,13 +68,13 @@ anything) are still live and are **not** his customers. Verified 2026-08-30 agai
 real cards: **zero full-name matches** (a few first names coincide — there is a Sarah E and an
 Emma H — but no Sarah M. or Emma R.).
 
-| Where | Section | Names |
-|---|---|---|
-| Every product page, directly below the real carousel | `customer_reviews`, "What Our Customers Say" | Sarah M., Emma R., Lisa K., Anna D. — each suffixed **"- Verified Customer"**, 5 stars |
-| `/pages/reviews` | `testimonials`, "Customer Testimonials" | Caroline B., Sophie L., Hannah V., Nicole P., Rebecca S., Isabelle M., Elena G., Katharina H. |
+| Where                                                | Section                                      | Names                                                                                         |
+| ---------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Every product page, directly below the real carousel | `customer_reviews`, "What Our Customers Say" | Sarah M., Emma R., Lisa K., Anna D. — each suffixed **"- Verified Customer"**, 5 stars        |
+| `/pages/reviews`                                     | `testimonials`, "Customer Testimonials"      | Caroline B., Sophie L., Hannah V., Nicole P., Rebecca S., Isabelle M., Elena G., Katharina H. |
 
-Their voice gives them away — *"What convinced me was the transparency - actual PubMed links,
-real concentrations, no marketing fluff."* On the product page the effect is that real
+Their voice gives them away — _"What convinced me was the transparency - actual PubMed links,
+real concentrations, no marketing fluff."_ On the product page the effect is that real
 testimony and setup copy now sit on one page both claiming "Verified Customer". The store is
 EUR/EU-facing, where the Omnibus Directive prohibits presenting fabricated reviews as genuine.
 **Awaiting Malcolm's instruction; nothing has been removed.**
@@ -99,15 +104,15 @@ The obvious route is a template per product (`templates/product.<handle>.json` v
 `template_suffix`, the ADR-005 pattern used for collection banners), each carrying its own
 blocks. **It is the wrong choice here, on both of Malcolm's stated criteria.**
 
-| | per-product templates | **metaobjects (recommended)** |
-|---|---|---|
-| Templates to maintain | **11** | **1** — the existing `product.json` |
-| Where a review lives | a block inside one template | one entry in Content → Metaobjects |
-| Managing it | open the theme customiser, find the product's template, find the block | edit the entry; it is a searchable list |
-| Reusing a review | copy it into a second template by hand | reference it from a second product |
-| Translation unit | ~460 hash-keyed template settings | **76 metaobject entries, translated once each** |
-| Editing English | invalidates that key's translation (`:hash`) | same, but on 1 field not 11 copies |
-| Adding a 12th product | write a 12th template | set one metafield |
+|                       | per-product templates                                                  | **metaobjects (recommended)**                   |
+| --------------------- | ---------------------------------------------------------------------- | ----------------------------------------------- |
+| Templates to maintain | **11**                                                                 | **1** — the existing `product.json`             |
+| Where a review lives  | a block inside one template                                            | one entry in Content → Metaobjects              |
+| Managing it           | open the theme customiser, find the product's template, find the block | edit the entry; it is a searchable list         |
+| Reusing a review      | copy it into a second template by hand                                 | reference it from a second product              |
+| Translation unit      | ~460 hash-keyed template settings                                      | **76 metaobject entries, translated once each** |
+| Editing English       | invalidates that key's translation (`:hash`)                           | same, but on 1 field not 11 copies              |
+| Adding a 12th product | write a 12th template                                                  | set one metafield                               |
 
 **The store already does this.** There are three metaobject definitions live —
 `how_to_step`, `faq_item` and a minimal `before_after` — and products already carry
@@ -121,7 +126,7 @@ product it is rendering. That is what makes each carousel unique without 11 of a
 ### Translation
 
 Metaobject entries are a first-class translatable resource in **Translate & Adapt** (ADR-002a
-— Translate & Adapt, *not* Langify, whatever older docs say). Each entry's `title`, `body`,
+— Translate & Adapt, _not_ Langify, whatever older docs say). Each entry's `title`, `body`,
 `author`, `before_label` and `after_label` translate once and apply everywhere the entry is
 referenced. Nine locales are planned; only `en` is published.
 
@@ -159,31 +164,31 @@ strongest argument for §3's metaobject model, not against it.
 
 ### Worth avoiding, all of it observed live
 
-| fault | why it matters |
-|---|---|
-| `img_url: 'master'` on every slide | serves the **full-size original** with no `srcset` — a 2048px master into a small card, on 14 slides, on every product page. Ours uses the theme's responsive pipeline |
+| fault                                  | why it matters                                                                                                                                                                                                                    |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `img_url: 'master'` on every slide     | serves the **full-size original** with no `srcset` — a 2048px master into a small card, on 14 slides, on every product page. Ours uses the theme's responsive pipeline                                                            |
 | `review_star` is an **`html` setting** | raw HTML per block: untranslatable, and Shopify **422s** any `html` setting containing `{{`, `}}`, `{%` or `%}` (ADR-005, learned here the hard way). Ours is a numeric range rendered through the theme's own `rating-star` icon |
-| **Swiper 11 loaded from jsDelivr** | an external library on every product page. Ours reuses the theme's `<scroll-carousel>` and `scrollbar` snippet — nothing external, and the prev/next controls hide themselves when the track does not overflow |
-| **Invalid JSON in the live schema** | `"label": "Add Customer Name",` — a trailing comma, live right now. It parses in no JSON parser |
-| `customer_headline1` / `2` / `3` | three fixed slots instead of one repeatable structure |
-| Parallel index-aligned metafield lists | `custom.ingredients_titles` / `_sub_titles` / `_descriptions` / `_images` / `_popup_des` assemble item N from index N of five separate lists. Delete one entry and **everything after it silently misaligns** |
+| **Swiper 11 loaded from jsDelivr**     | an external library on every product page. Ours reuses the theme's `<scroll-carousel>` and `scrollbar` snippet — nothing external, and the prev/next controls hide themselves when the track does not overflow                    |
+| **Invalid JSON in the live schema**    | `"label": "Add Customer Name",` — a trailing comma, live right now. It parses in no JSON parser                                                                                                                                   |
+| `customer_headline1` / `2` / `3`       | three fixed slots instead of one repeatable structure                                                                                                                                                                             |
+| Parallel index-aligned metafield lists | `custom.ingredients_titles` / `_sub_titles` / `_descriptions` / `_images` / `_popup_des` assemble item N from index N of five separate lists. Delete one entry and **everything after it silently misaligns**                     |
 
 ## 4. The data model
 
 **New metaobject definition `customer_review`** — the existing `before_after` definition
 (`image`, `label`, `caption`) is too thin and is used elsewhere; leave it alone.
 
-| field | type | translatable | notes |
-|---|---|---|---|
-| `image` | `file_reference` | — | the 1:1 diptych, split at 50% |
-| `author` | `single_line_text_field` | ✅ | omit under §2 option 1 |
-| `rating` | `number_integer` | — | 1–5; omit under option 1 |
-| `title` | `single_line_text_field` | ✅ | review headline |
-| `body` | `multi_line_text_field` | ✅ | review text |
-| `before_label` | `single_line_text_field` | ✅ | default "Before" |
-| `after_label` | `single_line_text_field` | ✅ | e.g. "After 8 weeks" |
-| `verified` | `boolean` | — | omit under option 1 |
-| `concern` | `single_line_text_field` | — | wrinkles / firming / brightening / general — for filtering and audit |
+| field          | type                     | translatable | notes                                                                |
+| -------------- | ------------------------ | ------------ | -------------------------------------------------------------------- |
+| `image`        | `file_reference`         | —            | the 1:1 diptych, split at 50%                                        |
+| `author`       | `single_line_text_field` | ✅           | omit under §2 option 1                                               |
+| `rating`       | `number_integer`         | —            | 1–5; omit under option 1                                             |
+| `title`        | `single_line_text_field` | ✅           | review headline                                                      |
+| `body`         | `multi_line_text_field`  | ✅           | review text                                                          |
+| `before_label` | `single_line_text_field` | ✅           | default "Before"                                                     |
+| `after_label`  | `single_line_text_field` | ✅           | e.g. "After 8 weeks"                                                 |
+| `verified`     | `boolean`                | —            | omit under option 1                                                  |
+| `concern`      | `single_line_text_field` | —            | wrinkles / firming / brightening / general — for filtering and audit |
 
 **New product metafield** `custom.customer_reviews`, type `list.metaobject_reference`
 (→ `customer_review`). Exactly mirrors `custom.faq_items`.
@@ -204,20 +209,20 @@ Each product is therefore assigned **one primary pool**, and every photograph is
 and only once** — a review shown against two products is the same customer reviewing two
 things, which reads as invented the moment anyone notices.
 
-| product | pool | count |
-|---|---|---|
-| `acetyl-hexapeptide-8-anti-wrinkle-serum` | Wrinkles | 9 |
-| `matrixyl-3000-firming-serum` | Wrinkles | 8 |
-| `copper-peptide-ghk-cu-renewal-serum` | Wrinkles | 8 |
-| `matrixyl-3000-pro-collagen-firming-cream` | Firming | 7 |
-| `copper-peptide-ghk-cu-night-cream` | Firming | 7 |
-| `glutathione-brightening-serum` | Brightening | 5 |
-| `copper-peptide-ghk-cu-day-gel-cream` | Brightening | 4 |
-| `pdrn-renewal-serum` | General | 7 |
-| `pdrn-collagen-night-cream` | General | 7 |
-| `pdrn-microneedling-facial-stamp-set-1-month` | General | 7 |
-| `copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month` | General | 7 |
-| | **total** | **76** |
+| product                                                        | pool        | count  |
+| -------------------------------------------------------------- | ----------- | ------ |
+| `acetyl-hexapeptide-8-anti-wrinkle-serum`                      | Wrinkles    | 9      |
+| `matrixyl-3000-firming-serum`                                  | Wrinkles    | 8      |
+| `copper-peptide-ghk-cu-renewal-serum`                          | Wrinkles    | 8      |
+| `matrixyl-3000-pro-collagen-firming-cream`                     | Firming     | 7      |
+| `copper-peptide-ghk-cu-night-cream`                            | Firming     | 7      |
+| `glutathione-brightening-serum`                                | Brightening | 5      |
+| `copper-peptide-ghk-cu-day-gel-cream`                          | Brightening | 4      |
+| `pdrn-renewal-serum`                                           | General     | 7      |
+| `pdrn-collagen-night-cream`                                    | General     | 7      |
+| `pdrn-microneedling-facial-stamp-set-1-month`                  | General     | 7      |
+| `copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month` | General     | 7      |
+|                                                                | **total**   | **76** |
 
 Pools balance exactly: Wrinkles 9+8+8=25, Firming 7+7=14, Brightening 5+4=9, General 7×4=28.
 
@@ -259,7 +264,7 @@ before `related-products`. One section, all 11 products.
 - **SEO filenames**, brand first: `skingenetix-review-before-after-<concern>-<name>.jpg`.
 - **Web-ready means the format too.** The uploader shipped a PNG once and handed back a handle
   pointing at it — 35× the bytes for non-WebP clients. These are PNGs; they must land as JPEG.
-- **Do not pre-compress.** Measured on this store: a 41% smaller upload delivered *more* bytes,
+- **Do not pre-compress.** Measured on this store: a 41% smaller upload delivered _more_ bytes,
   because Shopify's CDN transcodes to WebP and JPEG artefacts cost bits to reproduce. Cap the
   long edge at 3000, strip EXIF, quality 95.
 - ⚠️ **Uploads are suffixed, not replaced.** Re-uploading a name keeps serving the old image —
@@ -296,20 +301,19 @@ before `related-products`. One section, all 11 products.
 4. **Do the two microneedling stamp sets get face reviews at all?** They are a device, not a
    cream, and the `General` photographs illustrate skin change rather than device use.
 
-
 ---
 
 ## 10. What actually shipped, 2026-08-29
 
-| | |
-|---|---|
-| Metaobject | `customer_review`, 9 fields, `translatable` capability on, storefront-readable |
+|                   |                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| Metaobject        | `customer_review`, 9 fields, `translatable` capability on, storefront-readable       |
 | Product metafield | `custom.customer_reviews` (`list.metaobject_reference`, validated to the definition) |
-| Images | **76 uploaded** as SEO-named JPEGs via `scripts/upload-theme-images.py` |
-| Entries | **76**, upserted by stable handle `review-<concern>-<person>` |
-| Section | `sections/product-reviews-before-after.liquid` — new file, no core Liquid touched |
-| Template | `templates/product.json` section `before_after` **swapped in place** |
-| Scripts | `product-reviews-setup.py`, `-build-plan.py`, `-publish.py`, `-add-section.py` |
+| Images            | **76 uploaded** as SEO-named JPEGs via `scripts/upload-theme-images.py`              |
+| Entries           | **76**, upserted by stable handle `review-<concern>-<person>`                        |
+| Section           | `sections/product-reviews-before-after.liquid` — new file, no core Liquid touched    |
+| Template          | `templates/product.json` section `before_after` **swapped in place**                 |
+| Scripts           | `product-reviews-setup.py`, `-build-plan.py`, `-publish.py`, `-add-section.py`       |
 
 **The template already had a `before_after` section** — a `multi-column` of three static tiles
 headed "Verified Customer Results", the same three on all eleven products. It was **replaced in
@@ -332,16 +336,16 @@ Undo the move: `--restore backups/product.json-20260829-122332.json`
 
 ### Verified live, measured off the DOM (not `innerText`, which lies on this theme)
 
-| | desktop 1440 | mobile 390 |
-|---|---|---|
-| card counts match allocation on all 11 products | ✅ 76 total | — |
-| media aspect ratio | 1.000 on every card | 1.000 |
-| labels inside their own picture | ✅ | ✅ |
-| card heights | one value, 595px | one value, 520px |
-| track overflows (carousel active) | ✅ 3648 vs 1200 | ✅ |
-| edge prev/next buttons | shown | correctly hidden below 700px |
-| horizontal page overflow | — | none |
-| console errors | 0 | 0 |
+|                                                 | desktop 1440        | mobile 390                   |
+| ----------------------------------------------- | ------------------- | ---------------------------- |
+| card counts match allocation on all 11 products | ✅ 76 total         | —                            |
+| media aspect ratio                              | 1.000 on every card | 1.000                        |
+| labels inside their own picture                 | ✅                  | ✅                           |
+| card heights                                    | one value, 595px    | one value, 520px             |
+| track overflows (carousel active)               | ✅ 3648 vs 1200     | ✅                           |
+| edge prev/next buttons                          | shown               | correctly hidden below 700px |
+| horizontal page overflow                        | —                   | none                         |
+| console errors                                  | 0                   | 0                            |
 
 ### ⚠️ Open — state as measured live on 2026-08-30
 
@@ -361,7 +365,7 @@ Undo the move: `--restore backups/product.json-20260829-122332.json`
 2. ~~**§2 is still unanswered.**~~ **Resolved — see §2.** The cards are real customers, so the
    name, rating and badge are accurate and stay.
 3. **"Fiona C" appears on two products** — `glutathione-brightening-serum` and one wrinkle
-   product. Two *different* photographs (she is in both the Wrinkles and Brightening Drive
+   product. Two _different_ photographs (she is in both the Wrinkles and Brightening Drive
    folders) but the same name, which reads as one customer reviewing two products.
 4. **The setup-written testimonial quotes are still live** — four on every product page
    (`customer_reviews`) and eight on `/pages/reviews` (`testimonials`), none matching a real
