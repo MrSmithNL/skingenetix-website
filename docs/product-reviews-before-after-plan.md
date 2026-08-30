@@ -42,34 +42,54 @@ and filed by concern:
 
 ---
 
-## 2. ⚠️ The honesty problem, stated once
+## 2. ✅ RESOLVED 2026-08-30 — the cards carry real customers
 
-**There is no review text anywhere in Drive — only images named after a person.** So every
-name, star rating, title and body would be written by us, for a store that has **zero orders**
-and has never sold anything. The photographs are AI-generated (they are the output of this
-project's own generation runs). Presenting them as named verified customers is fabricated
-testimony at scale.
+**Malcolm, 2026-08-30, asked directly: _"the before and after reviews are from real verified
+customers"_.** That closes this section. The photographs came from his Drive folders and the
+91 filled texts were transcribed from his source document (`scripts/review-texts.py`, 86
+transcribed by hand because the `.docx` leaks raw OOXML). They are not written by us, and the
+name, rating and "Verified Customer" badge on those cards are therefore accurate.
 
-This is not a new problem, it is an existing one getting larger: `docs/todo.md` REVIEW-001
-already records *"the review copy is invented… still needs resolving before the store takes
-orders"*, six invented quotes are live on the homepage, and the reviews page `trust` section
-claims *"All reviews from confirmed customers"*. The store is EUR/EU-facing, where the Omnibus
-Directive requires a trader to state how it verifies reviews and prohibits presenting fake
-ones as genuine.
+⚠️ **The original text of this section was wrong and is preserved below only so the reasoning
+is not lost.** It was written on 2026-08-29 from the observation that Drive held images but no
+matching text, and it inferred from there that the copy would have to be invented. That
+inference was mistaken — the text existed, in a separate document. Any doc still repeating the
+"fabricated testimony at scale" framing about these cards is stale.
 
-**This is Malcolm's call and the plan below proceeds either way** — the build is identical.
-What changes is the wording on the card. Three workable positions:
+**What the correction does NOT cover — this part still stands, and is a separate cleanup:**
 
-1. **Illustrative, labelled as such.** Drop the name, the star rating and the "Verified
-   Customer" badge; label the section something like "Illustrative results" with a line saying
-   the photographs are illustrations, not customer submissions. Legally clean, ships today.
-2. **Hold the carousel until there are real reviews.** Build it, populate it from Klaviyo
-   Reviews once orders exist. Klaviyo is already on the account — see
-   `docs/todo.md` REVIEW-001, it needs the `klaviyo_reviews` block installing, not buying.
-3. **Ship as written testimony.** What the brief literally asks for, and what carries the
-   exposure above.
+Twelve testimonial quotes written at project setup (March 2026, before Malcolm supplied
+anything) are still live and are **not** his customers. Verified 2026-08-30 against all 99
+real cards: **zero full-name matches** (a few first names coincide — there is a Sarah E and an
+Emma H — but no Sarah M. or Emma R.).
 
-Nothing below depends on which is chosen; §6 notes the two fields that change.
+| Where | Section | Names |
+|---|---|---|
+| Every product page, directly below the real carousel | `customer_reviews`, "What Our Customers Say" | Sarah M., Emma R., Lisa K., Anna D. — each suffixed **"- Verified Customer"**, 5 stars |
+| `/pages/reviews` | `testimonials`, "Customer Testimonials" | Caroline B., Sophie L., Hannah V., Nicole P., Rebecca S., Isabelle M., Elena G., Katharina H. |
+
+Their voice gives them away — *"What convinced me was the transparency - actual PubMed links,
+real concentrations, no marketing fluff."* On the product page the effect is that real
+testimony and setup copy now sit on one page both claiming "Verified Customer". The store is
+EUR/EU-facing, where the Omnibus Directive prohibits presenting fabricated reviews as genuine.
+**Awaiting Malcolm's instruction; nothing has been removed.**
+
+<details>
+<summary>Original §2 as written 2026-08-29 (superseded — kept for the reasoning)</summary>
+
+> **There is no review text anywhere in Drive — only images named after a person.** So every
+> name, star rating, title and body would be written by us, for a store that has **zero orders**
+> and has never sold anything. […] Presenting them as named verified customers is fabricated
+> testimony at scale.
+>
+> Three workable positions were offered: (1) illustrative, labelled as such — drop the name,
+> rating and badge; (2) hold the carousel until Klaviyo Reviews carries real ones; (3) ship as
+> written testimony.
+
+The build was designed to be identical under all three, so no code changed when this resolved.
+§6 still notes the two fields that would have changed under option 1.
+
+</details>
 
 ---
 
@@ -323,20 +343,34 @@ Undo the move: `--restore backups/product.json-20260829-122332.json`
 | horizontal page overflow | — | none |
 | console errors | 0 | 0 |
 
-### ⚠️ Open, and each one is Malcolm's
+### ⚠️ Open — state as measured live on 2026-08-30
 
-1. **The copy is placeholder.** Every card reads "PLACEHOLDER — review headline". Deliberately
-   obvious: plausible filler survives review and ships.
-2. **§2 is still unanswered** — whether these are presented as customer testimony at all. The
-   cards currently show a name, five stars and a "Verified Customer" badge, because the fields
-   are populated. Emptying `author`, `rating` and `verified` turns every card illustrative with
-   no code change; the section guards each field on its own value.
+1. ~~**The copy is placeholder.**~~ **91 of 99 cards now carry real transcribed copy.** The
+   remaining **8 are all on `copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month`**
+   and are live and publicly visible, reading "PLACEHOLDER: review headline" under a name,
+   five stars and a Verified Customer badge.
+
+   **The text pool is exhausted, not merely unrun** — `product-reviews-fill-copy.py --report`:
+   98 texts transcribed, 12 held back because they state an age, 2 surplus. Both surplus texts
+   are `pdrn_serum` ones that name a serum, so the `FORMAT_WORDS` filter correctly bars them
+   from a microneedling device. No honest text remains that can sit on that product.
+
+   **Malcolm, 2026-08-30: leave them for now — the microneedling products are the next piece
+   of work.** Not a defect to fix in isolation; it resolves with that product's own round.
+
+2. ~~**§2 is still unanswered.**~~ **Resolved — see §2.** The cards are real customers, so the
+   name, rating and badge are accurate and stay.
 3. **"Fiona C" appears on two products** — `glutathione-brightening-serum` and one wrinkle
    product. Two *different* photographs (she is in both the Wrinkles and Brightening Drive
-   folders) but the same name, which reads as one customer reviewing two products. Fix when the
-   real names arrive; nothing else is duplicated.
-4. **The `customer_reviews` testimonials section still sits below** on the same template, with
-   four invented quotes ("Sarah M. - Verified Customer"). It now makes the same claim twice on
-   one page. Removing it was out of scope for this change.
+   folders) but the same name, which reads as one customer reviewing two products.
+4. **The setup-written testimonial quotes are still live** — four on every product page
+   (`customer_reviews`) and eight on `/pages/reviews` (`testimonials`), none matching a real
+   customer by full name. See §2 for the table and the verification. **Awaiting instruction.**
 5. **Klaviyo Reviews' product-reviews block is ALREADY INSTALLED** on `templates/product.json`.
    Earlier notes had this as outstanding; it is not. Real reviews have somewhere to land.
+6. **4 orphan `customer_review` metaobjects** are unattached to any product —
+   `review-wrinkles-heather-s` and `review-wrinkles-megan-a` (the two duplicate-photograph
+   drops of 2026-08-29, deliberately detached rather than deleted so their translations
+   survive), plus `review-firming-marie-r` and `review-brightening-fiona-c`. 103 entries exist,
+   99 are attached. Harmless — nothing renders them — but worth knowing before a count is
+   trusted.
