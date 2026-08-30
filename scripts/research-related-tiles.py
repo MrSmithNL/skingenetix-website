@@ -85,6 +85,20 @@ a.sgx-research-tile:hover::after,
 a.sgx-research-tile:focus-visible::after {
   background: rgba(26, 26, 26, 0);
 }
+/* NO OVERLAY on the solution pages' `Related Skin Solutions` — Malcolm, 2026-08-30.
+   Those cards are product packshots on a pale ground, and a 22% wash over a
+   product shot dulls the packaging colour that identifies it. The research cards
+   are scientific imagery, where the overlay reads as intended, so they keep it.
+
+   Told apart by the card's own href, which is the same discriminator the wrapper
+   script uses and the only one available: both sections share the section key
+   `related`. Every research card links to a *-research page and no solution card
+   does. `*=` rather than `$=` so a locale-prefixed URL still matches.
+
+   The zoom is untouched — it applies to both. */
+a.sgx-research-tile:not([href*="-research"])::after {
+  background: rgba(26, 26, 26, 0) !important;
+}
 a.sgx-research-tile > img {
   display: block;
   width: 100%;
