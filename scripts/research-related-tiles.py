@@ -16,21 +16,25 @@ overlay at rest, lifting to nothing on hover while the picture zooms 6%.
 SCOPE — this is the part that matters. `brand_layout_css` renders on every page,
 and this store has 18 multi-column sections. Scoping by a block count has broken
 five pages here before, and scoping by the heading text would break the day a
-second locale publishes. So the test is structural and content-based, and neither:
+second locale publishes. So the test is structural, and neither of those:
 
-  a section whose id ends `__related`   (the section key, stable across themes;
-                                         the numeric middle of a Shopify section
-                                         id is what goes stale, not the suffix)
-  AND whose card links point at a *-research page
+  a multi-column section whose id ends `__related`
+      (the section key, stable across themes; the numeric middle of a Shopify
+       section id is what goes stale, not the suffix)
+  AND a card with a direct-child <img> AND a link to follow
 
-Checked against all 48 templates. That matches exactly the 5 research pages'
-`related` sections and nothing else:
+Enumerated across all 48 templates: exactly TEN sections are keyed `related`,
+all of them multi-column, all with 4 images and 4 links —
 
-  - `Related Skin Solutions` on the 5 solution pages also uses the key `related`,
-    but its cards link to /pages/<concern>, so it is excluded.
-  - `Clinically Studied Actives` on /pages/the-science does link to research
-    pages, but its key is `ingredients_overview`, so it is excluded. It is the
-    same kind of card and could be included later by adding its key here.
+  - `Explore More Research` on the 5 research pages   (added 2026-08-30)
+  - `Related Skin Solutions` on the 5 solution pages  (added 2026-08-30, second pass)
+
+and nothing else. `related-products` on the product template does not match:
+that id ends `__related-products`, not `__related`.
+
+Deliberately still excluded: `Clinically Studied Actives` on /pages/the-science.
+Same card style and it does link to research pages, but its key is
+`ingredients_overview`. Add that key here if it should behave the same.
 
 Author: Claude Code, 2026-08-30.
 """
@@ -98,9 +102,11 @@ a.sgx-research-tile:focus-visible {
 </style>
 <script>
 (function () {
-  // See the scope note in scripts/research-related-tiles.py. Two conditions,
-  // both structural: the section key is `related`, and the card links at a
-  // research page. Never a block count, never the heading text.
+  // See the scope note in scripts/research-related-tiles.py. Structural only:
+  // a multi-column section keyed `related`, and a card that has both a picture
+  // and a link to follow. Never a block count, never the heading text.
+  // Ten sections match store-wide — Explore More Research on the 5 research
+  // pages, Related Skin Solutions on the 5 solution pages.
   function wrap(root) {
     (root || document).querySelectorAll(
       '[id$="__related"].shopify-section--multi-column .multi-column__item'
@@ -108,8 +114,8 @@ a.sgx-research-tile:focus-visible {
       if (item.querySelector('a.sgx-research-tile')) return;      // already done
       var img = item.querySelector(':scope > img');
       if (!img) return;
-      var link = item.querySelector('a[href*="-research"]');
-      if (!link) return;                                          // not a research card
+      var link = item.querySelector('a[href]');
+      if (!link) return;                                          // nowhere to go
       var a = document.createElement('a');
       a.className = 'sgx-research-tile';
       a.setAttribute('href', link.getAttribute('href'));
