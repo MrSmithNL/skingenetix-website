@@ -141,8 +141,17 @@ Undo: `python3 scripts/patch-template.py --restore backups/index-20260831-111943
 
 **Outstanding — 🟡 Medium**
 
-- **Seven slots still generating** (dark blue ×2, white ×2, and the second woman for pink,
-  light blue and clear). Contact sheet to be rebuilt and shown when they land.
+- ✅ **All 10 slots generated 2026-08-31 — 50 images, 5 engines.** One flux2 slot was lost to
+  a fal `downstream_service_unavailable` (infrastructure, not a content refusal) and was
+  retried successfully. Full sheet grouped by substance: `~/Desktop/skingenetix-r3-full.png`.
+- 🔴 **DARK BLUE is the one substance that failed and wants a re-run.** `#2F4C9B` is briefed
+  as "a soft blue with light in it, not a flat navy and not black", and it has come back as
+  flat navy on all five engines — largest and worst on nbp_pro, nbp_flash and flux2, where it
+  reads as the clay-mask/bruise failure the round-2 notes already warned about for this
+  colour. seedream and gpt_image are closest but still dark. The other four substances are
+  good: white and light blue are the strongest of the set, pink and clear both read correctly.
+- **Swatch size still varies by engine even after the fingernail fix** — seedream and
+  gpt_image run small and accurate; nbp_pro and nbp_flash consistently larger.
 - **flux2 is off-brief on every frame** — pale grey ground instead of graphite `#1A1A1A`
   despite the negative, and casting visibly past 40. A known trait, kept in per the
   all-suppliers rule; expect to discard its column.
