@@ -1,0 +1,29 @@
+{
+  "wave": "review-add-joselyn-h",
+  "created": "2026-08-31",
+  "product": "glutathione-brightening-serum",
+  "position": 0,
+  "note": "Malcolm, 2026-08-31: add a new before/after review to the Glutathione product page, at the beginning, using Joselyn-H, with his supplied copy.\n\nThe review text is Malcolm's, used verbatim including the capitalised SO in the headline \u2014 that is how a real customer wrote it and flattening it into house style would make it read like marketing.\n\nTHE PHOTOGRAPH BACKS THE COPY, WHICH WAS CHECKED BEFORE WRITING. The copy claims dull and uneven skin looking refreshed, and old acne marks fading. Joselyn-H's before frame is exactly that: flat, uneven tone with scattered post-acne marks across the cheek and jaw. In the after those marks are softened but still visible, and the raised mole on her temple is unchanged in both frames. The alt says softened rather than gone, because that is what the picture shows \u2014 on this page the alt is a claim like any other and the honesty rules in docs/clinical-trial-before-after-images.md apply to it.\n\nADDED WITH add-review-card.py, NOT product-reviews-publish.py. The bulk publisher upserts all 99 cards from configs/product-reviews.json and rewrites every product's list in allocation order. That config still names Jennifer T, Lucia M and Martine M, whose entries now display Casandra C, Trudie T and Stephanie G, and it knows nothing about the Bri E / Stephanie G position swap \u2014 so running it today would have silently undone all of it. The config has been reconciled to production in the same commit so the trap is defused rather than merely avoided.\n\nUpserted by handle, never deleted and recreated: the handle is the identity translations key off, and recreating an entry drops every locale.\n\nSquare 1:1 at 2048px, the section's contract, so it passes the 3000px cap untouched. PNG to JPEG is left to upload-theme-images.py.",
+  "images": [
+    {
+      "slot": "joselyn-h",
+      "source": "/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews /Joselyn-H.png",
+      "filename": "skingenetix-review-before-after-brightening-joselyn-h.jpg",
+      "alt": "Before and after photographs from a Skingenetix customer, showing dull, uneven tone with scattered post-acne marks on the cheek looking brighter and more even, the marks softened rather than gone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-brightening-joselyn-h.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-brightening-joselyn-h.jpg?v=1788175630"
+    }
+  ],
+  "card": {
+    "handle": "review-brightening-joselyn-h",
+    "author": "Joselyn H",
+    "rating": 5,
+    "title": "Wow, my skin looks SO much brighter",
+    "body": "I honestly wasn't expecting this much of a difference. My skin was looking really dull and uneven and after about a month it looks completely refreshed. I've actually stopped wearing foundation most days because I like how my skin looks without it. My old acne marks are fading too. Absolutely keeping this in my routine.",
+    "before_label": "Before",
+    "after_label": "After",
+    "verified": true,
+    "concern": "Brightening",
+    "image_filename": "skingenetix-review-before-after-brightening-joselyn-h.jpg"
+  }
+}
