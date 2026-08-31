@@ -71,12 +71,12 @@ sweeps:
 
 | shape | `step_ratio` (chevron arms) | `rise_ratio` | `front_gap` (6-up row 1) | `rear_gap` (3-up row 2) | `apex_step` (rows 3+) |
 | --- | --- | --- | --- | --- | --- |
-| bottle | 0.46 | 0.24 | 1.06 | 1.40 | 0.46 |
+| bottle | 0.46 | 0.24 | 1.06 | 1.80 | 0.46 |
 | jar | 0.28 | 0.90 | 1.04 | 1.16 | 0.37 |
 
 `front_gap` and `rear_gap` are centre-to-centre as a multiple of THAT ROW'S own unit width, so
 each reads directly as the daylight between the pair and neither drifts when `DEPTH_SCALE`
-changes. Measured on the current masters: front pair +30px / +25px, second row +213px / +137px. The bottle's `rear_gap` is the looser of the two because the serum 3-up is the one image where width is NOT the binding constraint - it fills 62% of the frame against 83% of its height - so spreading that row costs no unit size at all.
+changes. Measured on the current masters: front pair +30px / +25px, second row +426px / +137px. The bottle's `rear_gap` is the looser of the two because the serum 3-up is the one image where width is NOT the binding constraint - it fills 62% of the frame against 83% of its height - so spreading that row costs no unit size at all - the bottles stay at 602px at every value tried. Its ceiling is instead ~2.1, where the front bottle stops overlapping the rear pair and the trio reads as three separate bottles rather than one group; at the 1.80 shipped that overlap is still +88px.
 
 ⚠️ **Three separate knobs were all riding on `step_ratio`, and each only became visible once
 the one before it was freed.** The 6-up's front pair could not be separated without throwing
@@ -101,6 +101,60 @@ serving more than one row before you change it.
    stops reading as further back and starts reading as merely higher. Left at 0.28/0.90.
 4. `assets/images/_sprites/` is gitignored with the rest of `assets/` — the sprites are
    reproducible from Drive in one command and are not backed up by this repo.
+
+### 🔄 PHOTO-CAF3-001 — Homepage review-carousel face wave, round 3 (2026-08-31)
+
+**Priority:** 🟡 Three of six live; seven slots still generating
+**Owner:** Claude (brief, generation, publishing) + Malcolm (every image choice)
+**Brief:** `scripts/build-cream-application-faces-r3.py` → `configs/banners/cream-application-faces-r3.json`
+**Publish plan:** `configs/banners/homepage-review-carousel-r3-publish.json`
+
+Malcolm: close-up face shots of beautiful Caucasian women 35–40 gently applying a small
+swatch — light blue / dark blue / pink / white cream and transparent serum — with their
+fingertips. Ten slots: five substances × two women, one fairer and one olive complexion
+each, because how a tint reads depends on the skin behind it and the clear serum is the
+extreme case. Parent is the round-2 builder, left untouched.
+
+**Live on the homepage 2026-08-31** — Malcolm's three picks, uploaded under new SEO
+filenames and the block `image` settings repointed:
+
+| Block | Slide sells | New image |
+| --- | --- | --- |
+| `review_2` | PDRN Renewal Serum | PINK cream, nbp_pro |
+| `review_4` | Glutathione Brightening Serum | LIGHT BLUE cream, nbp_flash |
+| `review_6` | Acetyl Hexapeptide-8 Serum | CLEAR serum, nbp_flash |
+
+Undo: `python3 scripts/patch-template.py --restore backups/index-20260831-111943.json --template templates/index.json`
+
+**Outstanding — 🔴 High**
+
+- ⚠️ **`review_4` shows a blue cream on a slide selling a colourless serum.** The light blue
+  is the Copper Peptide NIGHT cream `#A6C4E0`; the Glutathione serum is transparent and
+  untinted. `review_2` is a near-miss but defensible (the PDRN serum is itself rose-pink);
+  `review_6` is an exact match. If the carousel should be substance-accurate, `review_4`
+  wants a clear-serum frame and the light blue belongs on a Copper Peptide Night Cream
+  slide. Flagged 2026-08-31, not blocked — Malcolm chose it having seen the sheet.
+- **The carousel is six slides and the brief named five substances**, so the mapping was
+  never 1:1. The remaining three slides (`review_1` CP serum, `review_3` Matrixyl cream,
+  `review_5` CP Night cream) still wear the old `-v4`/`-v5` model shots. Dark blue — the
+  Copper Peptide **Day** cream — has no slide at all.
+
+**Outstanding — 🟡 Medium**
+
+- **Seven slots still generating** (dark blue ×2, white ×2, and the second woman for pink,
+  light blue and clear). Contact sheet to be rebuilt and shown when they land.
+- **flux2 is off-brief on every frame** — pale grey ground instead of graphite `#1A1A1A`
+  despite the negative, and casting visibly past 40. A known trait, kept in per the
+  all-suppliers rule; expect to discard its column.
+- The theme requests **720w into a 648px box**, so at 2× the carousel is soft. The masters
+  are 3000px and the CDN could serve more — the limit is the theme's `sizes`, and the three
+  unreplaced siblings behave identically, so this is pre-existing, not a regression.
+
+**Two brief lessons, both recorded in `docs/architecture.md`:** the swatch size and the
+fingertip contact faults from round 2 both returned and were **invisible on the contact
+sheet** — only a native-pixel crop showed them. And a fixed-pixel crop across masters of
+different native size (2048 vs 4096) is not a like-for-like comparison; it nearly
+mis-called the retest.
 
 ### 🔄 PHOTO-CPBA-001 — Copper-peptide before/after round: 96 diptychs (2026-08-27)
 
