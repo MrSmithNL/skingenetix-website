@@ -114,6 +114,20 @@ WEB_QUALITY = 95           # high on purpose - the CDN, not this script, does th
 SEO_NOISE = {"final", "new", "copy", "image", "img", "photo", "untitled", "asset",
              "v1", "v2", "v3", "v4", "temp", "test"}
 
+#: A bare number is usually a revision or a year and worth flagging - but not when
+#: it is COUNTING something, and then it is often the most searched part of the
+#: name. "3-bottle-bundle" and "1-month" are what a shopper types; "v2" and "2026"
+#: are not. So a numeral is excused only when the very next word is one of these.
+#: Added 2026-08-31 with the Pumper bundle thumbnails, where every 3-up and 6-up
+#: filename tripped the digit rule. That mattered more than the noise: a warning
+#: left in place invites a later session to "fix" the name, and renaming is not
+#: free here - Shopify SUFFIXES rather than replaces on a name collision, so the
+#: rename becomes a new file at a new URL and whatever pointed at the old one
+#: quietly keeps serving the old one.
+SEO_COUNTED = {"bottle", "bottles", "jar", "jars", "pack", "bundle", "set",
+               "ml", "month", "months", "day", "days", "piece", "pieces", "step",
+               "steps", "percent"}
+
 
 def optimise(src: Path, work: Path) -> Path:
     """Cap dimensions, force JPEG, strip metadata. Returns the path to upload.
@@ -167,7 +181,12 @@ def check_seo_name(filename: str) -> list[str]:
     if "_" in stem or " " in stem:
         out.append("use hyphens, not underscores or spaces")
     words = [w for w in stem.split("-") if w]
-    noise = [w for w in words if w in SEO_NOISE or w.isdigit()]
+    nxt = words[1:] + [""]
+    noise = [
+        w
+        for w, after in zip(words, nxt)
+        if w in SEO_NOISE or (w.isdigit() and after not in SEO_COUNTED)
+    ]
     if noise:
         out.append(f"words carrying no search value: {', '.join(noise)}")
     if len(words) < 4:

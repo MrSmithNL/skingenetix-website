@@ -52,8 +52,54 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter
 ROOT = Path(__file__).resolve().parent.parent
 SPRITES = ROOT / "assets/images/_sprites"
 OUT_DIR = ROOT / "assets/ai-generated/2026-08-31-bundle-prototype"
+WEB_DIR = ROOT / "assets/publish-ready/product-bundles"
+PLAN = ROOT / "configs/banners/product-bundle-images-2026-08-31.json"
 
 CANVAS = 2048
+
+#: Long edge of the file that actually gets uploaded. NOT 3000 like every other
+#: image on this site, and the difference is the point.
+#:
+#: `upload-theme-images.py` caps at 3000 because that is the widest the THEME's
+#: srcset ever asks for. These do not go through the theme. Pumper Bundles prints
+#: the bare Shopify CDN URL with no `&width=` and no srcset, so whatever is
+#: uploaded is what every visitor downloads, at full size, for a thumbnail the app
+#: renders at 64 CSS px (`imageSize: [64, 64, 64]` in its offer config).
+#:
+#: Measured off this store's CDN on 2026-08-31, the file live in that slot today:
+#:     1021px PNG -> 1,058.5K raw to any client that does not send Accept: webp,
+#:                      35.0K WebP to one that does
+#: and the same picture re-rendered, WebP at q80 as the CDN proxy:
+#:     192px -> 4.2K   256px -> 6.4K   384px -> 11.9K
+#:     512px -> 17.6K  768px -> 31.1K  2048px -> 102.0K
+#:
+#: 64 CSS px needs 192px on a 3x display. 512 is chosen over 192 for headroom -
+#: it still covers 3x if the slot is ever doubled to 128 - and it halves what the
+#: slot delivers today. Uploading the 2048px render instead would have tripled it.
+WEB_EDGE = 512
+
+#: Sprite key -> live Shopify product handle. They differ, and not by accident:
+#: the Drive master is named for the artwork ("Copper Peptide Repair Serum", whose
+#: label reads ADVANCED REPAIR SERUM) while the store sells it as "Copper Peptide
+#: (GHK-Cu) 2% Renewal Serum". The existing product media carries the same
+#: mismatch, so the filenames here follow the STORE, which is what a shopper
+#: searches and what the product page ranks for.
+SHOPIFY_HANDLE = {
+    "copper-peptide-repair-serum": "copper-peptide-ghk-cu-renewal-serum",
+    "copper-peptide-day-repair-cream": "copper-peptide-ghk-cu-day-gel-cream",
+}
+UNIT_NOUN = {"bottle": "bottle", "jar": "jar"}
+
+#: Store title and pack size, for alt text. Written out rather than derived from
+#: the filename: alt text is read aloud by a screen reader and indexed by an image
+#: search, and neither is served by "copper-peptide-ghk-cu-renewal-serum-3-bottle".
+#: The volume comes off the label in the render (30ML on the bottle, 50ML on the
+#: jar), so the alt text and the picture agree.
+PRODUCT_ALT = {
+    "copper-peptide-repair-serum": ("Copper Peptide (GHK-Cu) 2% Renewal Serum", "30ml"),
+    "copper-peptide-day-repair-cream": ("Copper Peptide (GHK-Cu) 2% Day Gel-Cream", "50ml"),
+}
+COUNT_WORD = {1: "a single", 3: "three", 6: "six"}
 
 #: Per product-shape tuning. A tall narrow bottle can overlap much harder than a
 #: squat wide jar before the rear unit stops reading as a separate object, so the
@@ -114,6 +160,10 @@ FIT_W, FIT_H = 0.90, 0.80
 #: be a half-step, which is what lets the chevron sit symmetrically about the
 #: centre line without a unit actually standing on it. Depth is the step index.
 LAYOUTS = {
+    # Pumper's quantity breaks are 1 / 3 / 6, so the set needs a one-up too. Built
+    # from the same sprite on the same sweep rather than reusing an existing hero
+    # shot, so all three tiers sit at one scale under one light.
+    ("single", 1): [(0.0, 0)],
     ("apex", 3): [(0.0, 0), (-1.0, 1), (1.0, 1)],
     ("apex", 5): [(0.0, 0), (-1.0, 1), (1.0, 1), (-2.0, 2), (2.0, 2)],
     ("chevron", 6): [
@@ -325,6 +375,66 @@ def build(sprite, shape, layout, count, size=CANVAS):
     return canvas
 
 
+def seo_name(key, count, kind):
+    """Filename a shopper's search would match, per .claude/rules/website-imagery.md.
+
+    Brand first, then the product as the STORE names it, then what the picture
+    shows. The pack size is the whole point of the image, so it stays a numeral -
+    "3-bottle-bundle" is what gets typed into a search box, and `check_seo_name`
+    knows not to flag a digit that is naming a pack size.
+    """
+    handle = SHOPIFY_HANDLE.get(key, key)
+    noun = UNIT_NOUN[kind]
+    tail = f"single-{noun}" if count == 1 else f"{count}-{noun}-bundle"
+    return f"skingenetix-{handle}-{tail}.jpg"
+
+
+def export_web(made, manifest):
+    """Write the upload-sized copies and the publish plan next to them."""
+    WEB_DIR.mkdir(parents=True, exist_ok=True)
+    images = []
+    for path, key, count in made:
+        kind = manifest[key]["kind"]
+        name = seo_name(key, count, kind)
+        dest = WEB_DIR / name
+        im = Image.open(path).convert("RGB")
+        im = im.resize((WEB_EDGE, WEB_EDGE), Image.LANCZOS)
+        # Saved without an exif= argument, so no metadata reaches a visitor. 4:4:4
+        # for the same reason upload-theme-images.py uses it: the CDN's WebP pass
+        # keeps colour detail that chroma subsampling would already have thrown out.
+        im.save(dest, "JPEG", quality=95, optimize=True, progressive=True,
+                subsampling="4:4:4")
+        title, volume = PRODUCT_ALT[key]
+        noun = UNIT_NOUN[kind] + ("" if count == 1 else "s")
+        images.append({
+            # `source` and `filename` are the keys upload-theme-images.py reads.
+            "slot": f"{SHOPIFY_HANDLE.get(key, key)}-qty-{count}",
+            "source": str(dest.relative_to(ROOT)),
+            "filename": name,
+            "alt": f"Skingenetix {title}, {COUNT_WORD[count]} {volume} {noun}",
+            "pumper_quantity": count,
+        })
+        print(f"  {name}  {WEB_EDGE}x{WEB_EDGE}  {dest.stat().st_size/1024:.0f}K")
+
+    plan = {
+        "wave": "product-bundle-images-2026-08-31",
+        "created": "2026-08-31",
+        "note": (
+            "Pumper Bundles quantity-break thumbnails, 1 / 3 / 6, for the copper "
+            "peptide serum and day gel-cream. Rendered by scripts/build-bundle-shot.py "
+            f"at 2048px and exported here at {WEB_EDGE}px because Pumper prints the bare "
+            "CDN URL with no srcset and no &width=, so the uploaded file is what every "
+            "visitor downloads for a slot the app renders at 64 CSS px. See WEB_EDGE in "
+            "that script for the measured figures. Upload only - these are NOT wired to "
+            "the offer, which is a Pumper-side change (see docs/todo.md BUNDLE-001)."
+        ),
+        "images": images,
+    }
+    PLAN.parent.mkdir(parents=True, exist_ok=True)
+    PLAN.write_text(json.dumps(plan, indent=2) + "\n")
+    print(f"\nplan -> {PLAN.relative_to(ROOT)}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--product")
@@ -332,17 +442,16 @@ def main():
     ap.add_argument("--layout", default="apex")
     ap.add_argument("--all", action="store_true", help="every prototype variant")
     ap.add_argument("--sheet", action="store_true", help="contact sheet + open")
+    ap.add_argument("--web", action="store_true",
+                    help=f"also write {WEB_EDGE}px SEO-named copies + an upload plan")
     args = ap.parse_args()
 
     manifest = json.loads((SPRITES / "sprites.json").read_text())
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
+    tiers = ((1, "single"), (3, "apex"), (6, "chevron"))
     if args.all:
-        jobs = [
-            (k, c, lay)
-            for k in manifest
-            for c, lay in ((3, "apex"), (6, "chevron"))
-        ]
+        jobs = [(k, c, lay) for k in manifest for c, lay in tiers]
     else:
         if not args.product:
             sys.exit("give --product <key> or --all")
@@ -356,11 +465,14 @@ def main():
         img = build(sprite, manifest[key]["kind"], layout, count)
         dest = OUT_DIR / f"{key}_bundle-{count}_{layout}.jpg"
         img.save(dest, quality=94, subsampling=0)
-        made.append(dest)
+        made.append((dest, key, count))
         print(f"{dest.name}  {img.size[0]}x{img.size[1]}")
 
+    if args.web:
+        print(f"\nweb deliverables at {WEB_EDGE}px:")
+        export_web(made, manifest)
     if args.sheet:
-        contact_sheet(made)
+        contact_sheet([p for p, _, _ in made])
 
 
 def contact_sheet(paths, tile=560):

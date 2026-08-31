@@ -86,15 +86,37 @@ on the jar those two rear units were overlapping each other by 15% of their widt
 fourth if a row ever needs tuning — check whether the number you are about to change is
 serving more than one row before you change it.
 
+**Shipped 2026-08-31.** Six images live in Shopify Files — 1 / 3 / 6 for
+`copper-peptide-ghk-cu-renewal-serum` and `copper-peptide-ghk-cu-day-gel-cream`.
+Plan + resolved handles: `configs/banners/product-bundle-images-2026-08-31.json`.
+
+⚠️ **UPLOADED BUT NOT WIRED, AND THE WIRING IS BLOCKED.** The bundles function is
+the **Pumper Bundles** app, whose quantity-break thumbnails are what these are for.
+Two things stop the last step, and both are Pumper-side:
+
+1. **One offer covers five products.** Offer `15717c` ("Copper Peptide Serum")
+   serves the copper serum, the acetyl serum, the matrixyl serum, the day gel-cream
+   AND the night cream — with one shared `image` array and titles that read
+   "1 Bottle / 3 Bottles / 6 Bottles" even on the jars. Per-product bundle images
+   are impossible until that offer is split, one per product (or at least one per
+   shape). That is a decision + a change in Pumper's own admin.
+2. **Pumper's config is not reachable from our app.** Its offer lives in an
+   app-owned metafield; `shop.metafields` returns sendcloud, appstle_subscription
+   and klaviyo namespaces and no pumper one, and reading its `metaId` by node id
+   returns null. So the image swap cannot be scripted — it is done in Pumper's UI
+   by pasting the CDN URLs, or by re-uploading through Pumper's own picker.
+
+Also worth knowing: **all three current tiers serve the identical file**,
+byte-for-byte (sha256 `47860af9505d6231`, 1,083,930 B, three UUID copies). So
+"1 Bottle", "3 Bottles" and "6 Bottles" all show the same picture today.
+
 **Outstanding — 🟡 Medium**
 
 1. **Roll out to the remaining seven products.** Each needs two measured numbers added to
    `PRODUCTS` in `extract-product-sprite.py`: the contact line `base_y` and, for bottles,
    the axis `axis_x`. Do NOT copy the serum's figures — they are specific to that master.
    Sweep the threshold and take the middle of the plateau, as documented in the script.
-2. **Nothing is published.** Output sits in `assets/ai-generated/2026-08-31-bundle-prototype/`.
-   Publishing needs SEO filenames and `scripts/upload-theme-images.py`, then a decision on
-   which gallery slot each bundle takes on the product template.
+2. **Wire the six live images into Pumper** — blocked on item 1 above.
 3. **The cream 6-up fills 90% of the width but only 61% of the height.** Six squat
    jars in a V is an inherently wide, short group; 0.24/1.02 reaches 70% but leaves the rear
    pair overlapping the front by about a tenth of a jar, which is the point where a unit
