@@ -65,8 +65,19 @@ and still fans out to every supplier.
 
 **Settled with Malcolm 2026-08-31:** the 6-up is a **chevron** — two units side by side at
 the front, arms receding — because a symmetric V around a single front unit holds 1 + 2A
-units and so can never be 6. Stagger is weighted toward the vertical: bottles
-`step 0.46 / rise 0.24`, jars `step 0.37 / rise 0.64`, both picked off rendered sweeps.
+units and so can never be 6. Stagger is weighted toward the vertical, and the front pair is
+fully in view with both units on one baseline. Four figures per shape, all off rendered
+sweeps:
+
+| shape | `step_ratio` (chevron arms) | `rise_ratio` | `front_gap` | `apex_step` (3-up) |
+| --- | --- | --- | --- | --- |
+| bottle | 0.46 | 0.24 | 1.06 | 0.46 |
+| jar | 0.28 | 0.90 | 1.04 | 0.37 |
+
+⚠️ `front_gap` and `apex_step` exist because ONE NUMBER WAS DOING TWO JOBS, twice. The front
+pair's separation was a multiple of the arm step, so it could not be widened without throwing
+the arms apart; and `step_ratio` also drove the 3-up, so retuning the 6-up silently restacked
+the 3-up. Keep them separate when tuning the remaining seven products.
 
 **Outstanding — 🟡 Medium**
 
@@ -77,9 +88,10 @@ units and so can never be 6. Stagger is weighted toward the vertical: bottles
 2. **Nothing is published.** Output sits in `assets/ai-generated/2026-08-31-bundle-prototype/`.
    Publishing needs SEO filenames and `scripts/upload-theme-images.py`, then a decision on
    which gallery slot each bundle takes on the product template.
-3. **The cream 6-up fills 90% of the frame's width but only 57% of its height.** Six squat
-   jars in a V is an inherently wide, short group; 0.34/0.72 reaches 64% but starts reading
-   as a steep stack with the rear pair detached. Left at 0.37/0.64 deliberately.
+3. **The cream 6-up fills 90% of the width but only 61% of the height.** Six squat
+   jars in a V is an inherently wide, short group; 0.24/1.02 reaches 70% but leaves the rear
+   pair overlapping the front by about a tenth of a jar, which is the point where a unit
+   stops reading as further back and starts reading as merely higher. Left at 0.28/0.90.
 4. `assets/images/_sprites/` is gitignored with the rest of `assets/` — the sprites are
    reproducible from Drive in one command and are not backed up by this repo.
 

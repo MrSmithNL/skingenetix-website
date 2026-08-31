@@ -74,6 +74,8 @@ SHAPES = {
     "bottle": {
         "step_ratio": 0.46,  # lateral step, in front-unit widths
         "rise_ratio": 0.24,  # lift per depth step, in front-unit heights
+        "front_gap": 1.06,  # centre-to-centre of the front pair, in unit widths
+        "apex_step": 0.46,  # the 3-up spreads off its centre unit on its own figure
     },
     "jar": {
         # A jar is ~1.2x wider than tall, so the same 0.60 step buries the rear
@@ -89,8 +91,10 @@ SHAPES = {
         # wide, so at two steps back the outer pair cleared its neighbours
         # entirely and the occlusion cue vanished with the overlap - six jars in a
         # row at different heights, not a V receding.
-        "step_ratio": 0.37,
-        "rise_ratio": 0.64,
+        "step_ratio": 0.28,
+        "rise_ratio": 0.90,
+        "front_gap": 1.04,
+        "apex_step": 0.37,
     },
 }
 
@@ -119,6 +123,37 @@ LAYOUTS = {
 }
 
 DEPTH_SCALE = 0.885  # each step back is this much of the step in front of it
+
+
+def place(units, cfg):
+    """Resolve each (lateral, depth) to an offset in front-unit widths.
+
+    The front pair's separation is its OWN figure and not a multiple of the arm
+    step. Malcolm, 2026-08-31: both front units fully in view. They sat at half a
+    step from centre, and a step is 0.46 of a unit width for a bottle and 0.37 for
+    a jar, so the pair overlapped by more than half its own width and the left one
+    was largely hidden behind the right. Widening the step to separate them would
+    have thrown the arms apart at the same time, because one number was doing two
+    jobs. `front_gap` is centre-to-centre in unit widths, so anything above 1.0
+    leaves daylight between them.
+
+    The apex layouts step off their centre unit on `apex_step`, which is theirs
+    alone. Sharing `step_ratio` with the chevron was the same fault in a second
+    place: tuning the six-up's arms silently retuned the three-up, and the cream
+    three-up moved from a spread trio to a near-stack without being asked to.
+    """
+    apex = any(abs(l) < 1e-9 for l, _ in units)
+    out = []
+    for lateral, depth in units:
+        if abs(lateral) < 1e-9:
+            off = 0.0
+        elif apex:
+            off = lateral * cfg["apex_step"]
+        else:
+            arm = (abs(lateral) - 0.5) * cfg["step_ratio"]
+            off = (1 if lateral > 0 else -1) * (cfg["front_gap"] / 2 + arm)
+        out.append((off, depth))
+    return out
 
 
 def rise_at(depth, rise_ratio):
@@ -230,10 +265,9 @@ def solve_fit(sprite, cfg, units, size):
     """
     aspect = sprite.height / sprite.width
     xs, ys = [], []
-    for lateral, depth in units:
+    for cx, depth in place(units, cfg):
         scale = DEPTH_SCALE**depth
         w, h = scale, scale * aspect  # in front-unit widths
-        cx = lateral * cfg["step_ratio"]
         foot = -rise_at(depth, cfg["rise_ratio"]) * aspect
         xs += [cx - w / 2, cx + w / 2]
         ys += [foot - h, foot]
@@ -248,24 +282,24 @@ def solve_fit(sprite, cfg, units, size):
     top = (size - span_h * front_w) / 2
     base_y = top - min(ys) * front_w
     centre_x = size / 2 - (max(xs) + min(xs)) / 2 * front_w
-    return front_w, front_h, front_w * cfg["step_ratio"], base_y, centre_x
+    return front_w, front_h, base_y, centre_x
 
 
 def build(sprite, shape, layout, count, size=CANVAS):
     cfg = SHAPES[shape]
     units = LAYOUTS[(layout, count)]
     canvas = ground(size)
-    front_w, front_h, step, base_y, centre_x = solve_fit(sprite, cfg, units, size)
+    front_w, front_h, base_y, centre_x = solve_fit(sprite, cfg, units, size)
 
     # Back to front, so near units occlude far ones. Ties broken by |lateral| so
     # that within one depth step the outer units go down first.
-    for lateral, depth in sorted(units, key=lambda u: (-u[1], -abs(u[0]))):
+    for offset, depth in sorted(place(units, cfg), key=lambda u: (-u[1], -abs(u[0]))):
         scale = DEPTH_SCALE**depth
         w = max(int(round(front_w * scale)), 1)
         h = max(int(round(front_h * scale)), 1)
         unit = recede(sprite.resize((w, h), Image.LANCZOS), depth)
 
-        cx = centre_x + lateral * step
+        cx = centre_x + offset * front_w
         foot = base_y - rise_at(depth, cfg["rise_ratio"]) * front_h
         x, y = int(round(cx - w / 2)), int(round(foot - h))
 
