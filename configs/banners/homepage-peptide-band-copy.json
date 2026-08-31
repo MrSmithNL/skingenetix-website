@@ -1,0 +1,16 @@
+{
+  "wave": "homepage-peptide-band-copy",
+  "created": "2026-08-31",
+  "template": "templates/index.json",
+  "note": "Malcolm, 2026-08-31: take the em dash out of the Peptide Standard band copy on the homepage and punctuate it properly.\n\nBefore:\n  Every Skingenetix formula is built on high-purity peptides at the concentrations shown to work in published research — not a token inclusion added for the ingredient list.\n\nAfter:\n  Every Skingenetix formula is built on high-purity peptides at the concentrations shown to work in published research, not on token inclusions added for the ingredient list.\n\nTHE FIX IS THE WORD 'ON', NOT THE COMMA. Simply swapping the dash for a comma would leave the contrast hanging off the wrong noun: '...in published research, not a token inclusion' reads as though the research were the token inclusion. Repeating the preposition — 'built ON peptides... not ON token inclusions' — pins the contrast back to what is actually being contrasted, and a plain comma is then correct on its own. No dash, no colon, no sentence fragment.\n\n'Inclusion' also went plural to agree with 'peptides', which the original never did.\n\nThe other route considered was two sentences ending in a fragment, 'Never a token inclusion added for the ingredient list.', which would echo the hero slider's 'Never trace amounts.' cadence shipped earlier today. Rejected here because the brief asked for proper punctuation, and a deliberate fragment is a style choice rather than punctuation. Worth knowing it is available if the band should sound blunter.\n\nThis was the only em dash left anywhere on the homepage; the whole template was scanned rather than just this section.\n\nThe line is 8 characters longer, and this paragraph is the one pinned to 780px by the `peptide_band_title_width` rule added earlier today, so the rendered wrap is checked after pushing rather than assumed.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "peptide_standard_band",
+      "block": "band_text",
+      "settings": {
+        "content": "<p>Every Skingenetix formula is built on high-purity peptides at the concentrations shown to work in published research, not on token inclusions added for the ingredient list.</p>"
+      }
+    }
+  ]
+}
