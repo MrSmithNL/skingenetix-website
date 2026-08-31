@@ -76,7 +76,7 @@ SHAPES = {
         "rise_ratio": 0.24,  # lift per depth step, in front-unit heights
         "front_gap": 1.06,  # centre-to-centre of the front pair, in unit widths
         "apex_step": 0.46,  # spacing BEYOND the second row, for a 5-up or 7-up
-        "rear_gap": 1.16,  # centre-to-centre of the 3-up's second row, in THEIR widths
+        "rear_gap": 1.40,  # centre-to-centre of the 3-up's second row, in THEIR widths
     },
     "jar": {
         # A jar is ~1.2x wider than tall, so the same 0.60 step buries the rear

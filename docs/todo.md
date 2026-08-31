@@ -71,12 +71,12 @@ sweeps:
 
 | shape | `step_ratio` (chevron arms) | `rise_ratio` | `front_gap` (6-up row 1) | `rear_gap` (3-up row 2) | `apex_step` (rows 3+) |
 | --- | --- | --- | --- | --- | --- |
-| bottle | 0.46 | 0.24 | 1.06 | 1.16 | 0.46 |
+| bottle | 0.46 | 0.24 | 1.06 | 1.40 | 0.46 |
 | jar | 0.28 | 0.90 | 1.04 | 1.16 | 0.37 |
 
 `front_gap` and `rear_gap` are centre-to-centre as a multiple of THAT ROW'S own unit width, so
 each reads directly as the daylight between the pair and neither drifts when `DEPTH_SCALE`
-changes. Measured on the current masters: front pair +30px / +25px, second row +85px / +137px.
+changes. Measured on the current masters: front pair +30px / +25px, second row +213px / +137px. The bottle's `rear_gap` is the looser of the two because the serum 3-up is the one image where width is NOT the binding constraint - it fills 62% of the frame against 83% of its height - so spreading that row costs no unit size at all.
 
 ⚠️ **Three separate knobs were all riding on `step_ratio`, and each only became visible once
 the one before it was freed.** The 6-up's front pair could not be separated without throwing
