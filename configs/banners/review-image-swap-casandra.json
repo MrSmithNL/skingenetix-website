@@ -1,0 +1,23 @@
+{
+  "wave": "review-image-swap-casandra",
+  "created": "2026-08-31",
+  "template": "n/a \u2014 customer_review metaobject, not template content",
+  "note": "Malcolm, 2026-08-31: on /products/glutathione-brightening-serum, replace Jennifer T with Casandra-C. Third card swapped on this carousel today, after Trudie T and Stephanie G.\n\n  review-brightening-jennifer-t -> Casandra C, Casandra-C.png\n\nCasandra-C.png sits in the root of the Google Drive reviews folder. It was NOT there when that folder was listed an hour ago for the Trudie/Stephanie swap, so it has just synced \u2014 worth knowing that this folder changes under you and is worth re-listing rather than trusting an earlier reading.\n\nTHE REVIEW TEXT STAYS AND FITS. Jennifer's card is 'Finally something for my dull skin' \u2014 'My skin always looks tired no matter how much I sleep... Now my face just looks fresher'. Casandra-C's before frame is flat and dull with dense freckling and pigment across the cheek; the after is fresher and more even. Checked before writing, as with the other two.\n\nThis entry is attached to ONE product only, verified by walking every product's `custom.customer_reviews` list, so the swap cannot surface somewhere unintended.\n\nALT DESCRIBES WHAT PERSISTS, NOT ONLY WHAT IMPROVES. Her freckles and forehead lines are still there in the after frame and the alt says so. The honesty rules in docs/clinical-trial-before-after-images.md treat a disappearing line as the thing to avoid, and the alt is a claim like any other on this page.\n\n\u26a0\ufe0f ONE THING FOR MALCOLM RATHER THAN FOR THE CODE. The two halves are not lit alike: the before is on a cool grey wall, the after on a warm beige one, and the after is noticeably warmer. Some of the apparent evenness is white balance rather than skin. The alt is worded to avoid leaning on it, but if this pair is ever challenged that is where it is weakest, and it is his photograph and his call.\n\nSquare 1:1 at 2048px, which is the section's contract, so it passes the 3000px cap untouched. PNG to JPEG is left to upload-theme-images.py. The filename is Casandra's, not Jennifer's: Shopify suffixes rather than replaces on a name collision, so reusing the old name would keep serving the old photograph.",
+  "images": [
+    {
+      "slot": "casandra-c",
+      "source": "/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews /Casandra-C.png",
+      "filename": "skingenetix-review-before-after-brightening-casandra-c.jpg",
+      "alt": "Before and after photographs from a Skingenetix customer, showing freckling and pigment across the cheek looking lighter and the overall tone fresher, with her freckles and forehead lines unchanged",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-brightening-casandra-c.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-brightening-casandra-c.jpg?v=1788172049"
+    }
+  ],
+  "swaps": [
+    {
+      "review_handle": "review-brightening-jennifer-t",
+      "new_filename": "skingenetix-review-before-after-brightening-casandra-c.jpg",
+      "new_author": "Casandra C"
+    }
+  ]
+}
