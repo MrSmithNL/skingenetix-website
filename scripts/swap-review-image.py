@@ -9,11 +9,17 @@ Reviews on this store are NOT template content — they are `customer_review`
 metaobjects (101 of them), which is why grepping the theme for a customer's name
 finds nothing. The reviews-before-after section reads them at render time.
 
-Only the `image` field is written. The headline, body, rating, author, verified
-flag and the before/after labels are read back and re-asserted unchanged, so a
-partial write cannot quietly drop one of them.
+By default only the `image` field is written. The headline, body, rating, author,
+verified flag and the before/after labels are read back and re-asserted unchanged,
+so a partial write cannot quietly drop one of them.
 
-Author: Claude Code, 2026-08-29.
+A swap may also carry `new_author`, in which case the name is written alongside the
+picture. The photograph IS the person, so changing one without the other leaves a
+card that attributes someone's face to someone else's name — on 2026-08-31 two
+Brightening cards needed exactly that pairing. The backup records the previous
+author as well, so `--restore` puts both halves back.
+
+Author: Claude Code, 2026-08-29. Extended for `new_author`, 2026-08-31.
 """
 import argparse
 import json
@@ -114,13 +120,19 @@ def main():
     if args.restore:
         saved = json.loads((ROOT / args.restore).read_text())
         for s in saved:
+            fields = [{"key": "image", "value": s["image_gid"]}]
+            # Older backups predate author swapping and carry no `fields` block; those
+            # restore the picture only, which is exactly what they captured.
+            prev_author = (s.get("fields") or {}).get("author")
+            if prev_author:
+                fields.append({"key": "author", "value": prev_author})
             data = gql(store, tok, UPDATE, {
-                "id": s["id"],
-                "metaobject": {"fields": [{"key": "image", "value": s["image_gid"]}]}})
+                "id": s["id"], "metaobject": {"fields": fields}})
             errs = data["metaobjectUpdate"]["userErrors"]
             if errs:
                 sys.exit(f"{s['handle']}: {errs}")
-            print(f"  RESTORED {s['handle']} -> {s['image_file']}")
+            who = f" / {prev_author}" if prev_author else ""
+            print(f"  RESTORED {s['handle']} -> {s['image_file']}{who}")
         return
 
     plan = json.loads((ROOT / args.plan).read_text())
@@ -145,8 +157,13 @@ def main():
 
     for s, b in zip(swaps, before):
         gid = file_gid(store, tok, s["new_filename"])
+        new_author = s.get("new_author")
         print(f"{b['handle']}")
-        print(f"   author  {b['fields'].get('author')}   (unchanged)")
+        if new_author:
+            print(f"   author  {b['fields'].get('author')}")
+            print(f"        -> {new_author}")
+        else:
+            print(f"   author  {b['fields'].get('author')}   (unchanged)")
         print(f"   title   {b['fields'].get('title')}   (unchanged)")
         print(f"   body    {(b['fields'].get('body') or '')[:64]}...   (unchanged)")
         print(f"   image   {b['image_file']}")
@@ -154,8 +171,11 @@ def main():
         if args.dry_run:
             print()
             continue
+        fields = [{"key": "image", "value": gid}]
+        if new_author:
+            fields.append({"key": "author", "value": new_author})
         data = gql(store, tok, UPDATE,
-                   {"id": b["id"], "metaobject": {"fields": [{"key": "image", "value": gid}]}})
+                   {"id": b["id"], "metaobject": {"fields": fields}})
         errs = data["metaobjectUpdate"]["userErrors"]
         if errs:
             sys.exit(f"metaobjectUpdate: {errs}")

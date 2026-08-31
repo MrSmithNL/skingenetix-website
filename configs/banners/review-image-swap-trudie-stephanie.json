@@ -1,0 +1,36 @@
+{
+  "wave": "review-image-swap-trudie-stephanie",
+  "created": "2026-08-31",
+  "template": "n/a \u2014 customer_review metaobjects, not template content",
+  "note": "Malcolm, 2026-08-31: on /products/glutathione-brightening-serum, replace the image and name of Lucia M with Trudie-T, and Martine M with Stephanie-G.\n\n  review-brightening-lucia-m    -> Trudie T,    Trudie-T.png\n  review-brightening-martine-m  -> Stephanie G, Stephanie-G.png\n\nBoth sources sit in the root of the Google Drive reviews folder, mounted at ~/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews (the folder really is named with a trailing space).\n\nTHE REVIEW TEXT STAYS, AND IT FITS THE NEW PHOTOGRAPHS BETTER THAN THE OLD ONES. This looked at first like re-attributing one person's words to another, so both pairs were opened and checked before anything was written. Martine's card is titled 'My freckles haven't disappeared, and that's fine' and Stephanie-G is a heavily freckled woman whose freckles are plainly still there in the after frame. Lucia's card is 'Nice for sensitive skin', about expecting stinging or redness, and Trudie-T's before frame is flushed across the cheeks and nose with that redness settled in the after. The swap is correcting a mismatch, not creating one.\n\nALT TEXT IS REWRITTEN, NOT CARRIED OVER. The old alt described what was visible in the old photographs \u2014 'melasma across both cheeks clearing to an even tone' and 'sun-damage pigment on the cheek evening out'. Neither is what these two pictures show. The new alt describes what is actually in each frame, and nothing more: on a page in this category the alt is a claim like any other, and the honesty rules in docs/clinical-trial-before-after-images.md apply to it. Note in particular that Stephanie's freckles are described as unchanged, because they are.\n\nBOTH MASTERS ARE SQUARE, which is the section's contract \u2014 one file holds both frames and the section splits it at exactly 50%, so each half is a portrait rectangle. Trudie-T is 2048px and passes through untouched; Stephanie-G is 4096px and is capped to 3000, the widest the theme's srcset ever requests. Both are re-encoded from PNG to JPEG by upload-theme-images.py, which owns that step: a lossless master makes the CDN serve roughly 3.7x the bytes to WebP clients and about 35x to everyone else. The sources are handed over as the original Drive PNGs rather than pre-converted copies, so there is one conversion in one place and no second copy to drift.\n\nFILENAMES DO NOT REUSE THE OLD ONES. Shopify suffixes rather than replaces on a name collision, so uploading as `...-lucia-m.jpg` would leave the old picture being served. Each file is named for the person actually in it, as the rest of the library is.",
+  "images": [
+    {
+      "slot": "trudie-t",
+      "source": "/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews /Trudie-T.png",
+      "filename": "skingenetix-review-before-after-brightening-trudie-t.jpg",
+      "alt": "Before and after photographs from a Skingenetix customer, showing flushed redness across the cheeks and nose settling to a calmer, more even tone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-brightening-trudie-t.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-brightening-trudie-t.jpg?v=1788169568"
+    },
+    {
+      "slot": "stephanie-g",
+      "source": "/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews /Stephanie-G.png",
+      "filename": "skingenetix-review-before-after-brightening-stephanie-g.jpg",
+      "alt": "Before and after photographs from a Skingenetix customer, showing dull, uneven tone looking brighter and clearer, with her freckles unchanged",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-brightening-stephanie-g.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-brightening-stephanie-g.jpg?v=1788169568"
+    }
+  ],
+  "swaps": [
+    {
+      "review_handle": "review-brightening-lucia-m",
+      "new_filename": "skingenetix-review-before-after-brightening-trudie-t.jpg",
+      "new_author": "Trudie T"
+    },
+    {
+      "review_handle": "review-brightening-martine-m",
+      "new_filename": "skingenetix-review-before-after-brightening-stephanie-g.jpg",
+      "new_author": "Stephanie G"
+    }
+  ]
+}
