@@ -1,0 +1,29 @@
+{
+  "wave": "review-add-magda-b",
+  "created": "2026-08-31",
+  "product": "glutathione-brightening-serum",
+  "after": "review-brightening-martine-m",
+  "note": "Malcolm, 2026-08-31: add a Magda B review to the Glutathione carousel, placed after Stephanie G.\n\nPOSITIONED BY NEIGHBOUR, NOT BY INDEX. `after` names Stephanie G's metaobject handle, which is still `review-brightening-martine-m` \u2014 the handle never followed the author rename, because translations key off it. Resolving the neighbour at run time rather than hardcoding position 8 keeps this plan correct if the carousel is reordered again, which it has been twice already today.\n\nMalcolm's copy is used verbatim, including 'SO' in capitals, the doubled exclamation and the ellipsis. 'Finally!!' is kept on its own line: the section renders the body through `newline_to_br`, so the break survives to the page and the card reads the way he wrote it rather than collapsing into one paragraph.\n\nTHE PHOTOGRAPH SUPPORTS THE COPY, BUT NOT ALL OF IT EQUALLY, AND THE ALT SAYS SO. The review is about pigmentation \u2014 'darker marks getting lighter'. In Magda-B's pair the brown sun spots on the cheek are still plainly there in the after frame; what has changed most is the redness around them settling, which makes the whole cheek read as more even and the spots less stark. So the alt describes the redness calming and the tone evening, with the darker spots less pronounced but still present. Claiming they cleared would not survive looking at the picture.\n\nThis is a good pair on the terms docs/clinical-trial-before-after-images.md sets out: same crop, same angle, same warm background and the same light in both frames, and the small moles along her jaw and neck are identical in each \u2014 so it is visibly the same person photographed the same way, not two different shoots. Worth noting against the Casandra-C pair added earlier today, whose halves are lit differently.\n\nIt is a tighter crop than its neighbours in the carousel \u2014 cheek and eye rather than a full face \u2014 but it is square 1:1, which is the section's only contract, so the 50% split still gives two clean portrait halves.\n\nSquare 2048px, so it passes the 3000px cap untouched; PNG to JPEG is left to upload-theme-images.py. Added with add-review-card.py, never the bulk publisher.",
+  "images": [
+    {
+      "slot": "magda-b",
+      "source": "/Users/malcolmsmith/Library/CloudStorage/GoogleDrive-msmithnl@gmail.com/My Drive/Skingenetix/Images/Reviews /Magda-B.png",
+      "filename": "skingenetix-review-before-after-brightening-magda-b.jpg",
+      "alt": "Before and after photographs from a Skingenetix customer, showing redness across the cheek settling and the tone looking more even, with the darker sun spots less pronounced but still present",
+      "uploaded_handle": "shopify://shop_images/skingenetix-review-before-after-brightening-magda-b.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-review-before-after-brightening-magda-b.jpg?v=1788176753"
+    }
+  ],
+  "card": {
+    "handle": "review-brightening-magda-b",
+    "author": "Magda B",
+    "rating": 5,
+    "title": "Obsessed with this serum",
+    "body": "Finally!!\nI've tried SO many products for pigmentation and most did basically nothing. This is the first one where I can genuinely see my darker marks getting lighter. I'm about 7 weeks in and the difference in my overall complexion is amazing. Brighter, smoother, more even... just really good skin days lately.",
+    "before_label": "Before",
+    "after_label": "After",
+    "verified": true,
+    "concern": "Brightening",
+    "image_filename": "skingenetix-review-before-after-brightening-magda-b.jpg"
+  }
+}

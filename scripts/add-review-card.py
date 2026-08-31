@@ -19,6 +19,11 @@ it, so recreating an entry drops every locale. That mistake cost the sister bran
 mega-menu (production-safety incident log, 2026-03-14). Re-running this plan updates the same
 entry in place.
 
+POSITION: PREFER `after`, NOT `position`. A plan may say either. `"after": "<handle>"` is
+resolved against the live list at run time and puts the new card immediately behind that one;
+a bare `"position": n` is an absolute index and quietly means something different once the
+carousel is reordered, which happened twice on 2026-08-31 alone.
+
 The backup captures the product's previous list, so --restore removes the card again by
 putting the old order back. It does not delete the metaobject; a card that is not referenced
 by any product does not render.
@@ -138,7 +143,6 @@ def main():
     plan = json.loads((ROOT / args.plan).read_text())
     card = plan["card"]
     product_handle = plan["product"]
-    position = plan.get("position", 0)
 
     p = gql(store, tok, FETCH, {"handle": product_handle})["productByHandle"]
     if not p:
@@ -146,6 +150,18 @@ def main():
     mf = p.get("metafield")
     order = [n["id"] for n in mf["references"]["nodes"]] if mf else []
     handles = [n["handle"] for n in mf["references"]["nodes"]] if mf else []
+
+    # `after` is preferred over a bare `position`. Malcolm asks for these as "after
+    # Stephanie G", and an absolute index silently means something different the next
+    # time the carousel is reordered — which it has been twice already today. Resolving
+    # a neighbour handle at run time keeps the plan re-runnable and self-describing.
+    if plan.get("after"):
+        if plan["after"] not in handles:
+            sys.exit(f"--after {plan['after']} is not on {product_handle}. "
+                     f"Present: {', '.join(handles)}")
+        position = handles.index(plan["after"]) + 1
+    else:
+        position = plan.get("position", 0)
 
     BACKUPS.mkdir(exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
