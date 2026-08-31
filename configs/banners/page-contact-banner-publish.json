@@ -1,0 +1,36 @@
+{
+  "wave": "page-contact-banner-publish",
+  "created": "2026-08-30",
+  "note": "Malcolm chose CONTACT-GRAPHITE-A-speaking-restyle-nbp_pro_02 for the /pages/contact hero, 2026-08-30: his round-1 pick relit into the graphite register with the consultation room kept behind her rather than replaced by a flat sweep.\n\nGEOMETRY matches the live house masters exactly, measured off the CDN rather than derived: the-science and copper-peptide-research are both 3000x678 (4.425:1) desktop with a separate near-square mobile. nbp returns 6336x2688 (2.357:1), so the canvas was extended 1402px leftward into the dark side by scripts/extend-banner-canvas.py (entry `contact`). That side is the easiest case in the file - the first column holding any pixel above 120 luma is 2585, at 0.408 of the width, and cols 0-400 read max 26-29 over the full height, so there is no shoulder to carry and no skin to scatter into the fill.\n\nVERIFIED after the build: the join at x=1402 steps 0.28 luma levels, and row means across the fill run 21.1-24.0 with std 0.79 - no seam, no stripes, no ghosts. Coat checked at native pixels (2408x1291 crop): plain, press studs only, no embroidery, no badge, no lettering, and it holds detail rather than clipping to paper-white.\n\n⚠️ The hero currently has NO image at all and paints flat #1A1A1A at overlay_opacity 100. That opacity must come down when the image lands or the photograph is invisible; siblings run 22-25. Handled in the template patch, not here.",
+  "images": [
+    {
+      "slot": "page.contact hero desktop",
+      "source": "assets/publish-ready/page-contact-banner/skingenetix-dermatologist-skin-consultation-contact-banner.jpg",
+      "filename": "skingenetix-dermatologist-skin-consultation-contact-banner.jpg",
+      "alt": "A dermatologist in a white coat smiling as she talks with a client during a skin consultation",
+      "uploaded_handle": "shopify://shop_images/skingenetix-dermatologist-skin-consultation-contact-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-dermatologist-skin-consultation-contact-banner.jpg?v=1788158805"
+    },
+    {
+      "slot": "page.contact hero mobile",
+      "source": "assets/publish-ready/page-contact-banner/skingenetix-dermatologist-skin-consultation-contact-mobile.jpg",
+      "filename": "skingenetix-dermatologist-skin-consultation-contact-mobile.jpg",
+      "alt": "A dermatologist in a white coat smiling as she talks with a client during a skin consultation",
+      "uploaded_handle": "shopify://shop_images/skingenetix-dermatologist-skin-consultation-contact-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-dermatologist-skin-consultation-contact-mobile.jpg?v=1788158805"
+    }
+  ],
+  "template": "templates/page.contact.json",
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-dermatologist-skin-consultation-contact-banner.jpg",
+        "mobile_image": "shopify://shop_images/skingenetix-dermatologist-skin-consultation-contact-mobile.jpg",
+        "overlay_opacity": 22,
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-start-center text-center"
+      }
+    }
+  ]
+}

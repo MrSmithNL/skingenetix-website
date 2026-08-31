@@ -1,0 +1,51 @@
+{
+  "wave": "page-contact-banner-graphite-room",
+  "created": "2026-08-30",
+  "doc": ".claude/rules/website-imagery.md",
+  "note": "Round 3 of the /pages/contact banner, and the correction is one clause in the brief.\n\nMalcolm, 2026-08-30, on round 2: 'the background should not be a flat graphite coloured background. it should still be the photo background. But the graphite style used. you can still use a graphite colour background on the left - but also use overlays and gradients and opacity to create the graphite effect. Or re-render the image.'\n\nROUND 2 CAUSED ITS OWN FAULT. Its restyle prompt said 'replace the bright pale room behind them with a seamless deep graphite studio sweep ... nothing remains in the background'. The engines did exactly that, and a seamless sweep is a flat colour fill, not a photograph. Same shape as the-brief-caused-the-plainness: the clause written to buy the house style is the clause that removed the room.\n\nAnd the house style was never a flat fill. the-science is a graphite BENCH with visible surface texture; copper-peptide-research is a dark laboratory with real depth and falloff; skin-concerns is a real body on a ground that recedes. All dark photographs, none of them a colour field.\n\nSO THIS ROUND KEEPS THE ROOM AND UNDEREXPOSES IT. The consultation room stays behind them - wall planes, depth, the fall of light across it - but exposed for the key on their faces, so it sits several stops down and reads graphite rather than white. That is a lighting change, not a background swap, and it is the thing an engine can do that a curve cannot.\n\n⚠️ WHY NOT JUST GRADE IT IN POST. Tried first, on Malcolm's own suggestion, with scripts/graphite-grade.py. The left scrim works and is kept - that part IS best done deterministically. But the global darkening cannot separate subject from background: raising gamma far enough to drop the bright wall behind the clinician takes the FACES down with it and past it, because the wall is brighter than the skin. Measured on the D pick at gamma 1.55 / 2.10 / 2.60 - the faces go muddy while the wall is still bright. A curve has no notion of what is subject. So: engine relights the room, graphite-grade.py lays the left scrim afterwards.\n\nAll three slots are CLASS A, referencing the frames Malcolm chose in round 1, because the round-2 restyles proved the people survive a relight convincingly - that prediction was wrong in the useful direction and these are the stronger half.\n\n⚠️ Luma failed the round-2 restyles outright (returned different women in dark suits) and its ratio is unusable at 1.851:1. FLUX.2 is barred from reference shots by the runner. Expect 4 suppliers, not 6, and that is correct rather than a fault.",
+  "defaults": {
+    "candidates": 2,
+    "negative_global": "seamless studio backdrop, plain colour background, flat background, empty void behind the subject, cyclorama, paper backdrop, text, lettering, embroidered name, pocket badge, logo, brand mark, watermark, signature, border, collage, cartoon, illustration, plastic waxy airbrushed skin, blown out clipped white coat, hard black band across the frame, vignette ring, cut-out composite edge"
+  },
+  "slots": [
+    {
+      "id": "CONTACT-ROOM-D-seated",
+      "title": "D — Malcolm's pick, room kept and underexposed",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/contact hero",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-page-contact-banner/CONTACT-BANNER-D-seated-wider/CONTACT-BANNER-D-seated-wider-gpt_image_01.png"
+      ],
+      "prompt": "Keep the two women in the reference photograph exactly as they are - the same faces, the same hair, the same clothing, the same poses, the same expressions and the same positions in the frame. Change only the lighting and the exposure.\n\nKEEP THE CONSULTATION ROOM BEHIND THEM. It stays a real room with its wall planes, its depth and its receding perspective, and it must remain visible and readable as a place. Do not replace it with a studio backdrop, a seamless sweep, a plain colour field or an empty void.\n\nRelight the scene so it is exposed for their faces rather than for the room: one hard key light from the front-left at head height, and the room several stops underexposed beneath it. The walls that currently read bright white should now read as deep graphite - dark, but still showing where one plane meets another and how the light falls away across them. Texture and depth survive; brightness does not. The far left of the room goes deepest, close to black, with smooth continuous gradation and no visible edge, band, line or vignette ring anywhere.\n\nThe two women stay lit. Their key side keeps its brightness and their shadow side genuinely darkens, so they separate from the room by light rather than by being cut out of it.\n\nThe white coat holds its detail: white where the key strikes it, falling into shadow on its unlit side, lapel and collar still readable. Never blown out to flat paper-white.\n\nSkin stays real and unretouched - visible pores, fine lines, faint natural colour variation. Do not smooth either face. Colour is deep graphite, near-black, white and natural skin tones only. Photorealistic editorial photography, deep colour, no filter.",
+      "negative_extra": "no change to either face, no change of pose, no bright rim light outlining the subjects, no furniture added, no window added"
+    },
+    {
+      "id": "CONTACT-ROOM-B-two-faces",
+      "title": "B — Malcolm's pick, room kept and underexposed",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/contact hero",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-page-contact-banner/CONTACT-BANNER-B-two-faces/CONTACT-BANNER-B-two-faces-gpt_image_02.png"
+      ],
+      "prompt": "Keep the two women in the reference photograph exactly as they are - the same faces, the same hair, the same clothing, the same poses, the same expressions and the same positions in the frame. Change only the lighting and the exposure.\n\nKEEP THE CONSULTATION ROOM BEHIND THEM. It stays a real room with its wall planes, its depth and its receding perspective, and it must remain visible and readable as a place. Do not replace it with a studio backdrop, a seamless sweep, a plain colour field or an empty void.\n\nRelight the scene so it is exposed for their faces rather than for the room: one hard key light from the front-left at head height, and the room several stops underexposed beneath it. The walls that currently read bright white should now read as deep graphite - dark, but still showing where one plane meets another and how the light falls away across them. Texture and depth survive; brightness does not. The far left of the room goes deepest, close to black, with smooth continuous gradation and no visible edge, band, line or vignette ring anywhere.\n\nThe two women stay lit. Their key side keeps its brightness and their shadow side genuinely darkens, so they separate from the room by light rather than by being cut out of it.\n\nThe white coat holds its detail: white where the key strikes it, falling into shadow on its unlit side, lapel and collar still readable. Never blown out to flat paper-white. The pale blue collarless top underneath stays as it is.\n\nSkin stays real and unretouched - visible pores, fine lines, faint natural colour variation. Do not smooth either face. Colour is deep graphite, near-black, white, pale blue and natural skin tones only. Photorealistic editorial photography, deep colour, no filter.",
+      "negative_extra": "no change to either face, no change of pose, no bright rim light outlining the subjects, no furniture added, no window added"
+    },
+    {
+      "id": "CONTACT-ROOM-A-speaking",
+      "title": "A — Malcolm's pick, room kept and underexposed",
+      "class": "A",
+      "width": 3072,
+      "height": 1280,
+      "target_slot": "/pages/contact hero",
+      "ref_files": [
+        "assets/ai-generated/2026-08-22-multi-page-contact-banner/CONTACT-BANNER-A-speaking/CONTACT-BANNER-A-speaking-flux2_01.png"
+      ],
+      "prompt": "Keep the clinician in the reference photograph exactly as she is - the same face, the same hair, the same white coat and grey top, the same pose, the same smile and the same position in the frame. Keep the out-of-focus back of the client's head at the right edge. Change only the lighting and the exposure.\n\nKEEP THE CONSULTATION ROOM BEHIND HER. It stays a real room with its wall planes, its depth and its receding perspective, and it must remain visible and readable as a place. Do not replace it with a studio backdrop, a seamless sweep, a plain colour field or an empty void.\n\nRelight the scene so it is exposed for her face rather than for the room: one hard key light from the front-left at head height, and the room several stops underexposed beneath it. The walls that currently read bright white should now read as deep graphite - dark, but still showing where one plane meets another and how the light falls away across them. Texture and depth survive; brightness does not. The far left of the room goes deepest, close to black, with smooth continuous gradation and no visible edge, band, line or vignette ring anywhere.\n\nShe stays lit. Her key side keeps its brightness and her shadow side genuinely darkens, so she separates from the room by light rather than by being cut out of it. The foreground client reads as a dark mass at the right edge.\n\nThe white coat holds its detail: white where the key strikes it, falling into shadow on its unlit side, lapel and collar still readable. Never blown out to flat paper-white.\n\nSkin stays real and unretouched - visible pores, fine lines at the outer eye, faint natural colour variation. Do not smooth her face. Colour is deep graphite, near-black, white and natural skin tones only. Photorealistic editorial photography, deep colour, no filter.",
+      "negative_extra": "no change to her face, no change of pose, no bright rim light outlining the subject, no furniture added, no window added"
+    }
+  ]
+}

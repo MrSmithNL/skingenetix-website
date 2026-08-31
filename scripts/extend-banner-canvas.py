@@ -58,6 +58,48 @@ EDGE_COLS = 6           # columns averaged into the edge profile
 VIGNETTE = 0.13         # how far the far-left edge is darkened
 
 BANNERS = {
+    # /pages/contact -- the frame Malcolm chose 2026-08-30,
+    # CONTACT-GRAPHITE-A-speaking-restyle-nbp_pro_02: his round-1 pick relit into the
+    # graphite register with the consultation room kept behind her.
+    #
+    # THE EASIEST EXTENSION IN THIS FILE, and measured rather than assumed. nbp returns
+    # 6336x2688 (2.357:1) and the subject does not come near the left edge: the first
+    # column holding any pixel above 120 luma is 2585, at 0.408 of the width. Columns
+    # 0-8 read mean 24.2 max 27-28, and the whole of cols 0-400 across the full height
+    # reads max 26-29. So there is no shoulder to carry and no skin to scatter into the
+    # fill.
+    #
+    # The vertical profile is nearly flat as well -- 23 at the top to 26 at the bottom,
+    # three levels over 2688 rows -- so profile_smooth is cheap insurance rather than a
+    # fix for mottle.
+    #
+    # scatter, not tile: at mean 24 there is no weave worth mirror-tiling, and tiles
+    # drew faint vertical lines on the "all" and glutathione banners at similar levels.
+    #
+    # 3000x678 is the house desktop master, measured off the live files -- the-science
+    # and copper-peptide-research are both exactly 3000x678 (4.425:1). Working at
+    # height 678 lands on it directly.
+    "contact": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-page-contact-banner-graphite"
+                     / "CONTACT-GRAPHITE-A-speaking-restyle"
+                     / "CONTACT-GRAPHITE-A-speaking-restyle-nbp_pro_02.png"),
+        "out": ROOT / "assets/publish-ready/page-contact-banner",
+        "desktop": "skingenetix-dermatologist-skin-consultation-contact-banner.jpg",
+        "mobile": "skingenetix-dermatologist-skin-consultation-contact-mobile.jpg",
+        #: right-anchored. Her face centres near x=2442 of the finished 3000; a 639-wide
+        #: crop (0.943:1, the house mobile shape) puts it at 2122-2761, so the inset is
+        #: 239. Anchored right of the client's dark head at the extreme edge.
+        "mobile_crop": (239, 639),
+        "work_height": 678,
+        "target_width": 3000,
+        "bg_fit": (200, 500),              # unused while shoulder is None; kept for shape
+        #: MEASURED: cols 0-400 read max 26-29 over the full height, all clean backdrop.
+        #: Stopping at 400 keeps a wide margin before the subject at 2585.
+        "texture_box": (0, 2688, 0, 400),
+        "texture_mode": "scatter",
+        "profile_smooth": 24,
+        "shoulder": None,
+    },
     "pdrn": {
         "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-pdrn-collagen-repair-cream"
                      / "pdrn-collagen-repair-cream--B-face-full-prod-right"
