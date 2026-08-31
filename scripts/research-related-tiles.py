@@ -51,8 +51,29 @@ ROOT = Path(__file__).resolve().parent.parent
 API = "2025-01"
 BACKUPS = ROOT / "backups"
 FOOTER_KEY = "sections/footer-group.json"
-MARK_START = "/* === SGX RESEARCH RELATED TILES START === */"
-MARK_END = "/* === SGX RESEARCH RELATED TILES END === */"
+#: ⚠️ THESE ARE HTML COMMENTS, AND THAT IS NOT COSMETIC. They were CSS comments
+#: (`/* === ... === */`) until 2026-08-31, and because this block opens with `<style>`
+#: rather than being wrapped in one, the START marker sat at the TOP LEVEL of the
+#: html setting — a bare text node. It rendered as visible grey text reading
+#: "/* === SGX RESEARCH RELATED TILES START ===" in a 24px-tall div at the foot of
+#: EVERY page on the store, because brand_layout_css is in footer-group.
+#:
+#: The sibling blocks in the same setting use CSS comments and are fine, which is what
+#: made this easy to miss: their markers happen to fall INSIDE a `<style>` body, where
+#: a CSS comment is a comment. Whether `/* */` is inert depends entirely on where it
+#: lands, so the marker must not depend on that. An HTML comment is inert in both.
+#:
+#: Caught by measuring the live DOM after an unrelated change: a section reporting
+#: height 24 with a text node whose parent was a DIV at display:block. innerText alone
+#: would not have proved it — see memory/innertext-lies-on-this-theme.md — so it was
+#: confirmed by walking for a painted text node and by a screenshot.
+MARK_START = "<!-- === SGX RESEARCH RELATED TILES START === -->"
+MARK_END = "<!-- === SGX RESEARCH RELATED TILES END === -->"
+
+#: The CSS-comment markers this block shipped with. Kept so an install over the top of
+#: the old block finds and replaces it instead of leaving it stranded in the setting.
+LEGACY_START = "/* === SGX RESEARCH RELATED TILES START === */"
+LEGACY_END = "/* === SGX RESEARCH RELATED TILES END === */"
 
 BLOCK = MARK_START + """
 <style>
@@ -194,10 +215,17 @@ def call(store, tok, path, method="GET", payload=None):
 
 
 def upsert(html, block):
-    if MARK_START in html and MARK_END in html:
-        head = html.split(MARK_START)[0]
-        tail = html.split(MARK_END, 1)[1]
-        return head + block + tail if block else (head.rstrip() + "\n" + tail.lstrip())
+    """Replace (or strip) this script's block, matching either marker generation.
+
+    The legacy pass runs FIRST and unconditionally, so an install over the top of the
+    old CSS-comment block replaces it rather than appending a second copy and leaving
+    the visible-text one behind.
+    """
+    for start, end in ((LEGACY_START, LEGACY_END), (MARK_START, MARK_END)):
+        if start in html and end in html:
+            head = html.split(start)[0]
+            tail = html.split(end, 1)[1]
+            html = head.rstrip() + "\n" + tail.lstrip()
     if not block:
         return html
     return html.rstrip() + "\n" + block + "\n"
