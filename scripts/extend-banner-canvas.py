@@ -100,6 +100,45 @@ BANNERS = {
         "profile_smooth": 24,
         "shoulder": None,
     },
+    # /pages/shipping-returns -- the frame Malcolm chose 2026-08-31,
+    # SHIPPING-GRAPHITE-D-threshold-wider-nbp_pro_01. Doorway handover in the graphite
+    # register: the hallway kept and underexposed, the key motivated by the open door.
+    #
+    # Cleaner even than the contact entry, and measured the same way. First column
+    # holding any pixel above 120 luma is 2430, at 0.384 of the width; cols 0-400 read
+    # mean 6-14 and max 15-22 over the full height. Darker than contact's 24/29, so
+    # scatter again rather than tile -- there is no weave at mean 10.
+    #
+    # Native QA before the build: carton blank on every face with its corrugated edge
+    # still reading, driver back-of-head only with no cap and an unbranded shirt, all
+    # four hands with five fingers.
+    "shipping": {
+        "src": (ROOT / "assets/ai-generated/2026-08-22-multi-page-shipping-returns-banner-graphite"
+                     / "SHIPPING-GRAPHITE-D-threshold-wider"
+                     / "SHIPPING-GRAPHITE-D-threshold-wider-nbp_pro_01.png"),
+        "out": ROOT / "assets/publish-ready/page-shipping-returns-banner",
+        "desktop": "skingenetix-parcel-delivery-free-shipping-returns-banner.jpg",
+        "mobile": "skingenetix-parcel-delivery-free-shipping-returns-mobile.jpg",
+        #: right-anchored. Her face lands near x=2305 of the finished 3000, so a 639-wide
+        #: crop sits at 1986-2625 and the inset is 375. Keeps her and the carton, and
+        #: stops short of the driver's head at the extreme right.
+        "mobile_crop": (375, 639),
+        "work_height": 678,
+        "target_width": 3000,
+        "bg_fit": (200, 500),              # unused while shoulder is None; kept for shape
+        #: MEASURED: cols 0-400 read max 15-22 over the full height, all clean interior.
+        "texture_box": (0, 2688, 0, 400),
+        "texture_mode": "scatter",
+        "profile_smooth": 24,
+        #: MEASURED, and the one knob this frame needed. Without it the join stepped
+        #: 6.29 luma levels: the source's first columns carry a bright fringe (means
+        #: rising 16.3 -> 19.5 across x=1396-1400) which the edge profile averages in
+        #: AND the join correction anchors to, so the fill was built to a tone the rest
+        #: of the frame does not have. Trimming 5 columns drops it to under a level.
+        #: Contact needed none of this - its edge measured flat at 24 either side.
+        "edge_trim": 5,
+        "shoulder": None,
+    },
     "pdrn": {
         "src": (ROOT / "assets/ai-generated/2026-08-22-multi-banner-library-pdrn-collagen-repair-cream"
                      / "pdrn-collagen-repair-cream--B-face-full-prod-right"

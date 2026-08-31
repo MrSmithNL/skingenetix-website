@@ -1,0 +1,36 @@
+{
+  "wave": "page-shipping-returns-banner-publish",
+  "created": "2026-08-31",
+  "template": "templates/page.shipping-returns.json",
+  "note": "Malcolm chose SHIPPING-GRAPHITE-D-threshold-wider-nbp_pro_01 for the /pages/shipping-returns hero, 2026-08-31: the doorway handover in the graphite register, with the hallway kept and underexposed and the key motivated by the open door.\n\nNATIVE QA BEFORE THE BUILD (scripts/native-crop-qa.py, box 0.42/0.30): carton blank on every visible face with its corrugated edge still reading, no label, barcode or courier mark; driver back-of-head only, no face, no cap, unbranded slate polo; all four hands with five correctly proportioned fingers.\n\nGEOMETRY: 6336x2688 (2.357:1) extended 1407px leftward to the house 3000x678 (4.425:1) by extend-banner-canvas.py entry `shipping`. Left edge measured cleaner than the contact frame - cols 0-400 read mean 6-14 max 15-22 over the full height, and the first column holding any pixel above 120 luma is 2430 at 0.384 of the width. shoulder None, scatter fill.\n\n⚠️ edge_trim 5 WAS NEEDED HERE AND NOT ON CONTACT. Without it the join stepped 6.29 luma levels: the source's first columns carry a bright fringe, means rising 16.3 -> 19.5 across x=1396-1400, which the edge profile averages in AND the join correction anchors to, so the fill was built to a tone the rest of the frame does not have.\n\n⚠️ AND A NOTE ON HOW IT WAS JUDGED. A 7x contrast stretch of the join band showed vertical striping across the fill, and it is a false alarm - at a mean of 10 any per-column variation amplifies enormously. At real contrast, and at the 440px band the theme actually renders, the extension is seamless. The project has already lost two rounds to artifacts that do not survive delivery; judge at render size.\n\n⚠️ The hero has NO image today and paints flat #1A1A1A at overlay_opacity 100, which would make the photograph invisible. Dropped to 22 with the image, matching the-science and the contact page.",
+  "images": [
+    {
+      "slot": "page.shipping-returns hero desktop",
+      "source": "assets/publish-ready/page-shipping-returns-banner/skingenetix-parcel-delivery-free-shipping-returns-banner.jpg",
+      "filename": "skingenetix-parcel-delivery-free-shipping-returns-banner.jpg",
+      "alt": "A woman smiling as she takes a plain white parcel from a delivery driver at her door",
+      "uploaded_handle": "shopify://shop_images/skingenetix-parcel-delivery-free-shipping-returns-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-parcel-delivery-free-shipping-returns-banner.jpg?v=1788160554"
+    },
+    {
+      "slot": "page.shipping-returns hero mobile",
+      "source": "assets/publish-ready/page-shipping-returns-banner/skingenetix-parcel-delivery-free-shipping-returns-mobile.jpg",
+      "filename": "skingenetix-parcel-delivery-free-shipping-returns-mobile.jpg",
+      "alt": "A woman smiling as she takes a plain white parcel from a delivery driver at her door",
+      "uploaded_handle": "shopify://shop_images/skingenetix-parcel-delivery-free-shipping-returns-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-parcel-delivery-free-shipping-returns-mobile.jpg?v=1788160553"
+    }
+  ],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "settings": {
+        "image": "shopify://shop_images/skingenetix-parcel-delivery-free-shipping-returns-banner.jpg",
+        "mobile_image": "shopify://shop_images/skingenetix-parcel-delivery-free-shipping-returns-mobile.jpg",
+        "overlay_opacity": 22,
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "mobile_text_position": "place-self-start-center text-center"
+      }
+    }
+  ]
+}
