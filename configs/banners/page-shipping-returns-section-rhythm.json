@@ -1,0 +1,17 @@
+{
+  "wave": "page-shipping-returns-section-rhythm",
+  "created": "2026-08-31",
+  "template": "templates/page.shipping-returns.json",
+  "doc": "docs/visual-identity/03-art-direction-and-briefs.md",
+  "note": "Malcolm, 2026-08-31, two asks on /pages/shipping-returns: alternate the section backgrounds so the blocks read as separate, and centre 'Delivery times & carriers' into one column.\n\nALTERNATING BACKGROUNDS FIX A SPACING BUG TOO, WHICH IS THE REAL WIN. Measured before choosing anything: every content section reported `--section-background-hash: 0` and, apart from the first, `padding-top: 0px`. The theme's section-spacing-collapsing uses sibling adjacency on that hash — identical backgrounds means the gap between two sections collapses to one section's padding instead of two. That is a large part of why the page read as one undifferentiated run rather than a sequence of blocks. Giving neighbours different backgrounds changes the hash, so the theme restores the top padding by itself. The colour is the visible half of the fix; the spacing is the half that was actually broken.\n\nWHITE ON BONE, NOT A DEEPER GREY. Both were rendered full-page and compared side by side. Bone is #F0F0F0, already the theme page ground, so the alternate has to be either lighter or darker. A deeper grey (#E4E4E4 was tried) makes the bands heavy and, worse, brings the specification-table's own grey chart panel to almost the same value as the section behind it, so the table stops reading as a distinct object. White keeps the Bone bands reading as panels on paper, and keeps both the chart panel and the FAQ accordion card clearly separate from whatever sits behind them. It also suits Clinical Luminism, which is a bright, high-key direction.\n\nThe ladder, hero and CTA already being graphite at either end:\n  hero               #1A1A1A  (unchanged, overlay)\n  promises           #FFFFFF\n  shipping_overview  #F0F0F0\n  delivery_table     #FFFFFF\n  shipping_details   #F0F0F0\n  returns_policy     #FFFFFF\n  damaged_orders     #F0F0F0\n  faq                #FFFFFF\n  cta                #1A1A1A  (unchanged)\n\nEvery value is set explicitly rather than leaving the Bone ones unset. An unset background and an explicit #F0F0F0 are the same colour but not necessarily the same hash, and the whole point here is that neighbouring hashes differ.\n\nDELIVERY TABLE TO ONE COLUMN. `text_position` on specification-table is not merely alignment — the section swaps `section-stack--horizontal` for `section-stack--center`, which is what puts the heading above the table instead of in a column beside it. At `start` the title, subheading and note sat in a left column with the table pinned right, leaving a tall empty gap under the note. This is the same fault the FAQ had before its `text_position` went to center.",
+  "images": [],
+  "setting_updates": [
+    { "section": "promises", "settings": { "background": "#FFFFFF" } },
+    { "section": "shipping_overview", "settings": { "background": "#F0F0F0" } },
+    { "section": "delivery_table", "settings": { "background": "#FFFFFF", "text_position": "center" } },
+    { "section": "shipping_details", "settings": { "background": "#F0F0F0" } },
+    { "section": "returns_policy", "settings": { "background": "#FFFFFF" } },
+    { "section": "damaged_orders", "settings": { "background": "#F0F0F0" } },
+    { "section": "faq", "settings": { "background": "#FFFFFF" } }
+  ]
+}
