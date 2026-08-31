@@ -1,0 +1,371 @@
+{
+  "wave": "page-shipping-returns-restructure",
+  "created": "2026-08-31",
+  "template": "templates/page.shipping-returns.json",
+  "doc": "docs/architecture.md",
+  "note": "Malcolm, 2026-08-31: /pages/shipping-returns is a messy unstructured page and should be rebuilt on the theme's stock sections.\n\nAUDITED THE LIVE PAGE FIRST. Three faults were structural, and two of them were bugs rather than layout taste:\n\n  1. The best-organised content on the page was SWITCHED OFF. The multi-column section `shipping_overview` — three Shipping Zones cards carrying free/paid, transit time and carrier — has `\"disabled\": true` in the template and does not render at all. Nobody had seen it.\n  2. The closing call to action was INVISIBLE. `cta` sets its heading to #ffffff and its button to a white fill, which is a block designed to sit on a dark ground, but the section carries no background at all, so white type was rendering on the theme's Bone #F0F0F0 page. 'Still have questions?' was white-on-near-white.\n  3. `Returns &amp; Refunds` rendered LITERALLY, entity and all. A `text` setting is escaped on output, so an ampersand written as an HTML entity gets double-escaped. The hero one line above it is written as a plain '&' and renders correctly — that is the proof. Richtext settings are unaffected because their HTML is emitted raw, which is why 'Delivery times & carriers' inside the prose was always fine.\n\nAND THE PAGE SAID EVERYTHING TWICE. Three rich-text walls (1239px, 650px and 328px tall) restated all ten FAQ answers in prose: delivery times, costs, customs, changes, the 30-day window, free returns, refunds, exclusions, damaged orders. The prose is now cut back to the facts the structured sections do not already carry, and the FAQ keeps the question-and-answer form — it also feeds the JSON-LD in `faq_schema`, so it has to stay.\n\nNOTHING FACTUAL WAS DROPPED. Fifteen policy facts were inventoried before the rewrite and every one survives: processing window, confirmation email, the eight country/carrier/transit rows, the estimates disclaimer, free-in-Europe and the checkout fee, EU VAT included, non-EU duties paid by the recipient, the two-hour change window, tracking, the 30-day return window, prepaid labels, the 14-day refund, the hygiene exclusion, the 7-day damage report, and the re-shipment cost on a bad address.\n\nSTOCK SECTIONS ONLY, no custom Liquid:\n  hero               unchanged — the dark title band\n  promises           NEW text-with-icons. A four-icon strip so the whole policy is scannable before any prose.\n  shipping_overview  RE-ENABLED. The three zone cards that were already written and hidden.\n  delivery_table     NEW specification-table. The eight-row country/carrier/days list was a table pretending to be a bullet list. max_rows is 8 so all rows show rather than collapsing behind the default 5-row 'View all' toggle.\n  shipping_details   rich-text wall -> multi-column, four cards: processing, costs, taxes, changes.\n  returns_policy     rich-text wall -> multi-column, four cards: window, free returns, refunds, exclusions.\n  damaged_orders     kept as prose — it is genuinely prose — but centred at medium width so it reads as a closing note, not a fourth wall.\n  faq                text_position start -> center. Start left the title alone in a wide empty column beside the accordion.\n  cta                given the #1A1A1A ground its white heading and white button were always designed for.\n\nBlock ids change where a section changes type. Only `en` is published on this store, so no translation keys are orphaned — this would need re-checking before the other eight locales go live.\n\nHEADING SIZES CORRECTED AFTER LOOKING AT IT. The first push set the card titles to h3, which renders at 36px in Fraunces — far too heavy for a four-up card, and 'What can't be returned' wrapped to two lines while its three siblings sat on one. Card titles are now h5 in the four-up rows and h4 in the three-up zone row, and the icon strip is back to the schema's own h5 default. The section titles stay h2.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "faq",
+      "settings": {
+        "text_position": "center",
+        "subheading": "Questions"
+      }
+    },
+    {
+      "section": "cta",
+      "settings": {
+        "full_width": true,
+        "content_width": "medium",
+        "text_position": "center",
+        "background": "#1A1A1A",
+        "text_color": "#ffffff"
+      }
+    }
+  ],
+  "new_sections": [
+    {
+      "id": "promises",
+      "insert_after": "hero",
+      "section": {
+        "type": "text-with-icons",
+        "blocks": {
+          "p_ship": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-truck",
+              "icon_background_type": "circle",
+              "title": "Free shipping in Europe",
+              "content": "<p>Delivered by PostNL, Bpost, DHL, Colissimo, GLS and DPD.</p>"
+            }
+          },
+          "p_return": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-return",
+              "icon_background_type": "circle",
+              "title": "Free 30-day returns",
+              "content": "<p>Unopened products, prepaid label, no return postage to pay.</p>"
+            }
+          },
+          "p_track": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-pin",
+              "icon_background_type": "circle",
+              "title": "Tracked all the way",
+              "content": "<p>Every order ships with tracking and a link by email.</p>"
+            }
+          },
+          "p_world": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-earth",
+              "icon_background_type": "circle",
+              "title": "Worldwide delivery",
+              "content": "<p>Outside Europe a small fee is shown at checkout before you pay.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "p_ship",
+          "p_return",
+          "p_track",
+          "p_world"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "text_alignment": "center",
+          "icon_spacing": "medium",
+          "heading_tag": "h5"
+        }
+      }
+    },
+    {
+      "id": "shipping_overview",
+      "insert_after": "promises",
+      "section": {
+        "type": "multi-column",
+        "blocks": {
+          "zone_nl": {
+            "type": "item",
+            "settings": {
+              "column_size": "3",
+              "heading_tag": "h4",
+              "title": "Netherlands",
+              "content": "<p><strong>FREE</strong></p><p>1–2 business days</p><p>PostNL</p>"
+            }
+          },
+          "zone_eu": {
+            "type": "item",
+            "settings": {
+              "column_size": "3",
+              "heading_tag": "h4",
+              "title": "Europe",
+              "content": "<p><strong>FREE</strong></p><p>3–7 business days</p><p>Bpost · DHL · Colissimo · GLS · DPD</p>"
+            }
+          },
+          "zone_intl": {
+            "type": "item",
+            "settings": {
+              "column_size": "3",
+              "heading_tag": "h4",
+              "title": "Rest of the world",
+              "content": "<p><strong>Small fee at checkout</strong></p><p>7–14 business days</p><p>FedEx</p>"
+            }
+          }
+        },
+        "block_order": [
+          "zone_nl",
+          "zone_eu",
+          "zone_intl"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "gap": "medium",
+          "text_alignment": "center",
+          "subheading": "Delivery",
+          "title": "Shipping Zones",
+          "content": "<p>Free shipping across Europe. Outside Europe a small fee is shown at checkout before you pay.</p>"
+        }
+      }
+    },
+    {
+      "id": "delivery_table",
+      "insert_after": "shipping_overview",
+      "section": {
+        "type": "specification-table",
+        "blocks": {
+          "r_nl": {
+            "type": "row",
+            "settings": {
+              "heading": "Netherlands",
+              "value": "<p>PostNL · 1–2 business days</p>"
+            }
+          },
+          "r_be": {
+            "type": "row",
+            "settings": {
+              "heading": "Belgium",
+              "value": "<p>Bpost · 3–4 business days</p>"
+            }
+          },
+          "r_de": {
+            "type": "row",
+            "settings": {
+              "heading": "Germany",
+              "value": "<p>DHL · 4–7 business days</p>"
+            }
+          },
+          "r_fr": {
+            "type": "row",
+            "settings": {
+              "heading": "France",
+              "value": "<p>Colissimo · 4–7 business days</p>"
+            }
+          },
+          "r_sc": {
+            "type": "row",
+            "settings": {
+              "heading": "Scandinavia",
+              "value": "<p>GLS · 4–7 business days</p>"
+            }
+          },
+          "r_see": {
+            "type": "row",
+            "settings": {
+              "heading": "Southern & Eastern Europe",
+              "value": "<p>DPD · 4–7 business days</p>"
+            }
+          },
+          "r_uk": {
+            "type": "row",
+            "settings": {
+              "heading": "United Kingdom",
+              "value": "<p>DPD · 4–7 business days</p>"
+            }
+          },
+          "r_row": {
+            "type": "row",
+            "settings": {
+              "heading": "Rest of the world",
+              "value": "<p>FedEx · 7–14 business days</p>"
+            }
+          }
+        },
+        "block_order": [
+          "r_nl",
+          "r_be",
+          "r_de",
+          "r_fr",
+          "r_sc",
+          "r_see",
+          "r_uk",
+          "r_row"
+        ],
+        "settings": {
+          "full_width": true,
+          "subheading": "Transit times",
+          "title": "Delivery times & carriers",
+          "content": "<p>Counted from the day your order ships. These are estimates and are not guaranteed.</p>",
+          "text_position": "start",
+          "max_rows": 8
+        }
+      }
+    },
+    {
+      "id": "shipping_details",
+      "insert_after": "delivery_table",
+      "section": {
+        "type": "multi-column",
+        "blocks": {
+          "d_process": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "heading_tag": "h5",
+              "title": "Order processing",
+              "content": "<p>Orders are processed within 1–2 business days (Mon–Fri, excluding public holidays). You'll receive a confirmation email with tracking as soon as your order ships.</p>"
+            }
+          },
+          "d_costs": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "heading_tag": "h5",
+              "title": "Shipping costs",
+              "content": "<p>Free shipping within Europe. A small shipping fee applies to orders outside Europe and is shown at checkout before you pay.</p>"
+            }
+          },
+          "d_tax": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "heading_tag": "h5",
+              "title": "Taxes & customs",
+              "content": "<p>Within the EU, VAT is included in the price and there are no extra charges. For orders outside the EU (including the United Kingdom), import duties, VAT and customs fees are set by the destination country and are paid by the recipient.</p>"
+            }
+          },
+          "d_change": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "heading_tag": "h5",
+              "title": "Changing or cancelling",
+              "content": "<p>Email <a href=\"mailto:support@skingenetix.com\">support@skingenetix.com</a> within 2 hours of ordering. We process orders quickly and, because of time-zone differences, we can't always catch it in time — but we'll do our best. Once an order has shipped it can no longer be changed or cancelled.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "d_process",
+          "d_costs",
+          "d_tax",
+          "d_change"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "gap": "medium",
+          "text_alignment": "start",
+          "subheading": "Ordering",
+          "title": "Before your parcel leaves us",
+          "content": ""
+        }
+      }
+    },
+    {
+      "id": "returns_policy",
+      "insert_after": "shipping_details",
+      "section": {
+        "type": "multi-column",
+        "blocks": {
+          "r_window": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "heading_tag": "h5",
+              "title": "30-day returns",
+              "content": "<p>You can return unopened, unused products in their original packaging within 30 days of delivery.</p>"
+            }
+          },
+          "r_free": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "heading_tag": "h5",
+              "title": "Free returns",
+              "content": "<p>Returns are free. To start a return, email <a href=\"mailto:support@skingenetix.com\">support@skingenetix.com</a> and we'll send you a prepaid return label.</p>"
+            }
+          },
+          "r_refund": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "heading_tag": "h5",
+              "title": "Refunds",
+              "content": "<p>Once we receive your return we inspect it and refund your original payment method within 14 days.</p>"
+            }
+          },
+          "r_excluded": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "heading_tag": "h5",
+              "title": "What can't be returned",
+              "content": "<p>For hygiene and safety reasons, opened or used skincare cannot be returned unless it arrived faulty or damaged.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "r_window",
+          "r_free",
+          "r_refund",
+          "r_excluded"
+        ],
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "gap": "medium",
+          "text_alignment": "start",
+          "subheading": "Returns",
+          "title": "Returns & Refunds",
+          "content": "<p>We want you to love your skincare. If something isn't right, here's how returns work.</p>"
+        }
+      }
+    },
+    {
+      "id": "damaged_orders",
+      "insert_after": "returns_policy",
+      "section": {
+        "type": "rich-text",
+        "blocks": {
+          "h": {
+            "type": "heading",
+            "settings": {
+              "text": "Damaged, faulty or missing orders",
+              "heading_tag": "h2"
+            }
+          },
+          "t": {
+            "type": "richtext",
+            "settings": {
+              "content": "<p>If your order arrives damaged or faulty, or if tracking shows it as delivered but you haven't received it, email <a href=\"mailto:support@skingenetix.com\">support@skingenetix.com</a> within 7 days of the delivery date with your order number, and a photo if it's damaged. We'll resolve it quickly with the carrier — a replacement or a refund, whichever is appropriate.</p><p>Please double-check your shipping address at checkout. If a parcel comes back to us as undeliverable we'll contact you to arrange re-shipment, and re-shipping costs may apply.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "h",
+          "t"
+        ],
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "center"
+        }
+      }
+    }
+  ]
+}
