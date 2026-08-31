@@ -86,9 +86,9 @@ on the jar those two rear units were overlapping each other by 15% of their widt
 fourth if a row ever needs tuning — check whether the number you are about to change is
 serving more than one row before you change it.
 
-**Shipped 2026-08-31.** **24 images live in Shopify Files — 1 / 3 / 6 for eight of
-the nine skincare products**, all 512×512, READY, with written alt text. Verified
-per filename against Shopify: 24 correct, 0 suffixed duplicates.
+**Shipped 2026-08-31 — COMPLETE.** **27 images live in Shopify Files — 1 / 3 / 6 for
+all nine skincare products**, every one 512×512, READY, with written alt text.
+Verified per filename against Shopify: 27 correct, 0 suffixed duplicates.
 
 | product (store handle) | shape |
 | --- | --- |
@@ -100,17 +100,21 @@ per filename against Shopify: 24 correct, 0 suffixed duplicates.
 | `matrixyl-3000-pro-collagen-firming-cream` | jar |
 | `pdrn-renewal-serum` | bottle |
 | `pdrn-collagen-night-cream` | jar |
+| `acetyl-hexapeptide-8-anti-wrinkle-serum` | bottle |
 
 Plans: `configs/banners/product-bundle-images-2026-08-31.json` (first two products)
-and `-rollout.json` (all eight; the first six carry their handles across so the run
-skips them rather than creating suffixed duplicates).
+`-rollout.json` (eight; the first six carry their handles across so the run skips
+them rather than creating suffixed duplicates) and `-acetyl.json`.
 
-⚠️ **`acetyl-hexapeptide-8-anti-wrinkle-serum` is NOT done — it has no artwork
-master.** Every other product has a dedicated single-product render in Drive under
-`Images/Products/<Product>/`; the acetyl folder holds only AI-generated shots. Its
-`_refs-2026-08-19/` reference was built by cropping a pack shot and is 1024px, which
-would still serve a 512px deliverable but is a different source from the rest of the
-range. Needs either the master locating in Drive or a decision to use the crop.
+⚠️ **Acetyl is the one product built from a GENERATED frame, not an artwork master**
+— it has none in Drive, so Malcolm supplied
+`assets/ai-generated/2026-08-21-acetyl-hexapeptide-8-serum/run-01/_acetyl_..._hero_white_bg_3_...png`.
+Because a generated label is clean and legible and therefore survives review, it was
+checked against the built reference rather than merely read: all six label elements
+present and correct, wordmark spelled right, and the helix inspected at native pixels
+against `logo_mark.png`. It matches the reference closely. It is also the only product
+here with **no threshold plateau** — frosted white glass on a white ground falls off
+gradually, so its `thr_lo` was read off a ruled crop instead.
 
 ⚠️ **UPLOADED BUT NOT WIRED, AND THE WIRING IS BLOCKED.** The bundles function is
 the **Pumper Bundles** app, whose quantity-break thumbnails are what these are for.
@@ -134,8 +138,8 @@ byte-for-byte (sha256 `47860af9505d6231`, 1,083,930 B, three UUID copies). So
 
 **Outstanding — 🟡 Medium**
 
-1. **Acetyl is the only product left** — see the note above; it has no artwork master.
-   ⚠️ When adding it, note what the rollout learned: an automatic plateau-finder was
+1. **All nine products are done.** ⚠️ What the rollout learned, for whoever tunes this
+   next: an automatic plateau-finder was
    written to save the measuring and it was **wrong**. It proposed `thr_lo` 35 for the
    PDRN serum, at which the bbox starts at y612 and the whole dropper bulb is gone,
    because it required the entire bbox to hold still and a soft white bulb top creeps a
@@ -144,6 +148,11 @@ byte-for-byte (sha256 `47860af9505d6231`, 1,083,930 B, three UUID copies). So
    jar with no reflection. **`base_y` is read off a ruled crop by eye.** The three other
    serums share copper's figures because they are measurably the same bottle in the same
    scene (body x747–1285, contact line y1697–1700, axis x1016), not to save effort.
+   And `check_seo_name`'s bare-digit rule was wrong twice: on this brand a numeral is
+   nearly always the most searched part of a name (MATRIXYL 3000, HEXAPEPTIDE-8, a
+   3-bottle bundle), so it now flags only year-like and revision-like numerals. The
+   second miss went unnoticed because the warning printed during a 24-file upload whose
+   output was tailed — **read the per-file lines, not just the total.**
 2. **Wire the six live images into Pumper** — blocked on item 1 above.
 3. **The cream 6-up fills 90% of the width but only 61% of the height.** Six squat
    jars in a V is an inherently wide, short group; 0.24/1.02 reaches 70% but leaves the rear

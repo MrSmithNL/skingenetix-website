@@ -1,0 +1,34 @@
+{
+  "wave": "product-bundle-images-2026-08-31",
+  "created": "2026-08-31",
+  "note": "Pumper Bundles quantity-break thumbnails, 1 / 3 / 6, for the copper peptide serum and day gel-cream. Rendered by scripts/build-bundle-shot.py at 2048px and exported here at 512px because Pumper prints the bare CDN URL with no srcset and no &width=, so the uploaded file is what every visitor downloads for a slot the app renders at 64 CSS px. See WEB_EDGE in that script for the measured figures. Upload only - these are NOT wired to the offer, which is a Pumper-side change (see docs/todo.md BUNDLE-001).",
+  "images": [
+    {
+      "slot": "acetyl-hexapeptide-8-anti-wrinkle-serum-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-single-bottle.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-single-bottle.jpg",
+      "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, a single 30ml bottle",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-single-bottle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-single-bottle.jpg?v=1788170106"
+    },
+    {
+      "slot": "acetyl-hexapeptide-8-anti-wrinkle-serum-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-3-bottle-bundle.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-3-bottle-bundle.jpg",
+      "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, three 30ml bottles",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-3-bottle-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-3-bottle-bundle.jpg?v=1788170106"
+    },
+    {
+      "slot": "acetyl-hexapeptide-8-anti-wrinkle-serum-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-6-bottle-bundle.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-6-bottle-bundle.jpg",
+      "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, six 30ml bottles",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-6-bottle-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-6-bottle-bundle.jpg?v=1788170106"
+    }
+  ]
+}

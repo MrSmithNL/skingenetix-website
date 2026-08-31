@@ -187,6 +187,41 @@ PRODUCTS = {
         "axis_x": None,
         "kind": "jar",
     },
+    # Acetyl is the exception in this table twice over, and both need stating.
+    #
+    # (1) IT IS NOT AN ARTWORK MASTER. There is no dedicated single-product render
+    # for this product in Drive - its folder holds only generated shots. Malcolm
+    # supplied this frame on 2026-08-31. Because a generated label is clean and
+    # legible and therefore survives review, it was checked against the built
+    # reference rather than merely read: all six label elements present and
+    # correct (helix, wordmark, ACETYL HEXAPEPTIDE-8, ANTI-WRINKLE SERUM, PREMIUM
+    # FORMULA, "10% ACETYL HEXAPEPTIDE-8 | 30ML"), wordmark spelled right, and the
+    # helix inspected at native pixels against `logo_mark.png` because this project
+    # has had a frame spell the brand perfectly and draw the mark wrong.
+    #
+    # (2) IT HAS NO THRESHOLD PLATEAU, and that is real rather than a measuring
+    # failure. Every other product here holds one bbox across a wide band. This is
+    # frosted WHITE glass on a WHITE ground, so the edge genuinely falls off
+    # gradually: the width shrinks steadily from x752-2231 at thr 10 to x1050-2020
+    # at thr 34, with no band where it rests. The value below is therefore read off
+    # a ruled crop - the glass edge sits at x~1043-2022, which is what thr 30
+    # finds; everything looser was picking up the soft glow around the bottle and
+    # calling it bottle. This is the white-on-white case that cost this project
+    # seven attempts once before, and the lesson held: measure the boundary, do not
+    # detect it.
+    "acetyl-hexapeptide-8-serum": {
+        "master": (
+            "assets/ai-generated/2026-08-21-acetyl-hexapeptide-8-serum/run-01/"
+            "_acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_"
+            "serum_hero_white_bg_3_skingenetix.png"
+        ),
+        "bg_model": "flat",
+        "base_y": 2745,  # contact line read off a ruled crop; 3072px frame
+        "thr_lo": 30,
+        "thr_hi": 46,
+        "axis_x": 1536.0,  # measured 1535-1538, and the frame centre is 1536
+        "kind": "bottle",
+    },
 }
 
 
@@ -331,9 +366,13 @@ def main():
     manifest = {}
     for key in keys:
         cfg = PRODUCTS[key]
+        # Masters normally live in Drive, but acetyl's source is a frame inside
+        # this repo, so a repo-relative path is accepted too.
         master = MASTERS / cfg["master"]
         if not master.exists():
-            sys.exit(f"master not found: {master}")
+            master = ROOT / cfg["master"]
+        if not master.exists():
+            sys.exit(f"master not found: {cfg['master']}")
         sprite, bbox = extract(
             master,
             cfg["bg_model"],

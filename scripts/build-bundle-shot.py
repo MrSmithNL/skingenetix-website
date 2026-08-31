@@ -53,7 +53,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SPRITES = ROOT / "assets/images/_sprites"
 OUT_DIR = ROOT / "assets/ai-generated/2026-08-31-bundle-prototype"
 WEB_DIR = ROOT / "assets/publish-ready/product-bundles"
-PLAN = ROOT / "configs/banners/product-bundle-images-2026-08-31-rollout.json"
+PLAN = ROOT / "configs/banners/product-bundle-images-2026-08-31-acetyl.json"
 
 CANVAS = 2048
 
@@ -93,6 +93,7 @@ SHOPIFY_HANDLE = {
     "matrixyl-3000-pro-collagen-cream": "matrixyl-3000-pro-collagen-firming-cream",
     "pdrn-skin-repair-serum": "pdrn-renewal-serum",
     "pdrn-collagen-repair-cream": "pdrn-collagen-night-cream",
+    "acetyl-hexapeptide-8-serum": "acetyl-hexapeptide-8-anti-wrinkle-serum",
 }
 UNIT_NOUN = {"bottle": "bottle", "jar": "jar"}
 
@@ -116,6 +117,7 @@ PRODUCT_ALT = {
     "matrixyl-3000-pro-collagen-cream": ("Matrixyl 3000 Pro-Collagen Firming Cream", "50ml"),
     "pdrn-skin-repair-serum": ("PDRN 1% Renewal Serum", "30ml"),
     "pdrn-collagen-repair-cream": ("PDRN 1% Collagen Night Cream", "50ml"),
+    "acetyl-hexapeptide-8-serum": ("Acetyl Hexapeptide-8 Anti-Wrinkle Serum", "30ml"),
 }
 COUNT_WORD = {1: "a single", 3: "three", 6: "six"}
 

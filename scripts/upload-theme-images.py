@@ -114,19 +114,26 @@ WEB_QUALITY = 95           # high on purpose - the CDN, not this script, does th
 SEO_NOISE = {"final", "new", "copy", "image", "img", "photo", "untitled", "asset",
              "v1", "v2", "v3", "v4", "temp", "test"}
 
-#: A bare number is usually a revision or a year and worth flagging - but not when
-#: it is COUNTING something, and then it is often the most searched part of the
-#: name. "3-bottle-bundle" and "1-month" are what a shopper types; "v2" and "2026"
-#: are not. So a numeral is excused only when the very next word is one of these.
-#: Added 2026-08-31 with the Pumper bundle thumbnails, where every 3-up and 6-up
-#: filename tripped the digit rule. That mattered more than the noise: a warning
-#: left in place invites a later session to "fix" the name, and renaming is not
-#: free here - Shopify SUFFIXES rather than replaces on a name collision, so the
-#: rename becomes a new file at a new URL and whatever pointed at the old one
-#: quietly keeps serving the old one.
-SEO_COUNTED = {"bottle", "bottles", "jar", "jars", "pack", "bundle", "set",
-               "ml", "month", "months", "day", "days", "piece", "pieces", "step",
-               "steps", "percent"}
+#: "A bare digit carries no search value" was too blunt, and on this brand it is
+#: usually backwards. Digits here are nearly always the most searched part of the
+#: name: MATRIXYL 3000, ACETYL HEXAPEPTIDE-8, a 3-bottle bundle, a 1-month set.
+#: The noise this rule was written for is narrower than that - a revision or a
+#: date - so it now flags only those.
+#:
+#: Caught twice on 2026-08-31, and the second time is the instructive one. The
+#: first pass excused a digit when the NEXT word was counting something, which let
+#: "3-bottle-bundle" through and still flagged "matrixyl-3000" and
+#: "hexapeptide-8". Worse, that warning was printed during a 24-file upload and
+#: went unread because the output was tailed - so the rule was quietly failing on
+#: files that had already shipped.
+#:
+#: This matters more than tidiness. A warning left standing invites a later
+#: session to "fix" a filename, and renaming is not free: Shopify SUFFIXES rather
+#: than replaces on a name collision, so the rename lands a second file at a new
+#: URL while everything pointing at the old one keeps serving the old one.
+def _is_number_noise(word: str) -> bool:
+    """True only for a year-like or revision-like numeral, not a naming one."""
+    return word.isdigit() and len(word) == 4 and 1900 <= int(word) <= 2099
 
 
 def optimise(src: Path, work: Path) -> Path:
@@ -181,12 +188,7 @@ def check_seo_name(filename: str) -> list[str]:
     if "_" in stem or " " in stem:
         out.append("use hyphens, not underscores or spaces")
     words = [w for w in stem.split("-") if w]
-    nxt = words[1:] + [""]
-    noise = [
-        w
-        for w, after in zip(words, nxt)
-        if w in SEO_NOISE or (w.isdigit() and after not in SEO_COUNTED)
-    ]
+    noise = [w for w in words if w in SEO_NOISE or _is_number_noise(w)]
     if noise:
         out.append(f"words carrying no search value: {', '.join(noise)}")
     if len(words) < 4:
