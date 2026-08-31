@@ -75,7 +75,8 @@ SHAPES = {
         "step_ratio": 0.46,  # lateral step, in front-unit widths
         "rise_ratio": 0.24,  # lift per depth step, in front-unit heights
         "front_gap": 1.06,  # centre-to-centre of the front pair, in unit widths
-        "apex_step": 0.46,  # the 3-up spreads off its centre unit on its own figure
+        "apex_step": 0.46,  # spacing BEYOND the second row, for a 5-up or 7-up
+        "rear_gap": 1.16,  # centre-to-centre of the 3-up's second row, in THEIR widths
     },
     "jar": {
         # A jar is ~1.2x wider than tall, so the same 0.60 step buries the rear
@@ -95,6 +96,7 @@ SHAPES = {
         "rise_ratio": 0.90,
         "front_gap": 1.04,
         "apex_step": 0.37,
+        "rear_gap": 1.16,
     },
 }
 
@@ -137,10 +139,15 @@ def place(units, cfg):
     jobs. `front_gap` is centre-to-centre in unit widths, so anything above 1.0
     leaves daylight between them.
 
-    The apex layouts step off their centre unit on `apex_step`, which is theirs
-    alone. Sharing `step_ratio` with the chevron was the same fault in a second
-    place: tuning the six-up's arms silently retuned the three-up, and the cream
-    three-up moved from a spread trio to a near-stack without being asked to.
+    The apex layouts size their second row on `rear_gap` for the same reason, and
+    it is the same fault a third time: that pair's separation was a multiple of
+    the arm step, so it could not be set. It came out at +3.5% of a unit width on
+    the bottle - a hair of daylight - and at MINUS 15% on the jar, where the two
+    rear jars overlapped each other behind the front one. `rear_gap` is
+    centre-to-centre as a multiple of the rear units' OWN width, so it is read
+    directly as the daylight between them and does not drift when the depth scale
+    changes. `apex_step` now only spaces rows beyond the second, which a 5-up or
+    7-up would use.
     """
     apex = any(abs(l) < 1e-9 for l, _ in units)
     out = []
@@ -148,7 +155,10 @@ def place(units, cfg):
         if abs(lateral) < 1e-9:
             off = 0.0
         elif apex:
-            off = lateral * cfg["apex_step"]
+            half = cfg["rear_gap"] / 2 * DEPTH_SCALE
+            off = (1 if lateral > 0 else -1) * (
+                half + (abs(lateral) - 1) * cfg["apex_step"]
+            )
         else:
             arm = (abs(lateral) - 0.5) * cfg["step_ratio"]
             off = (1 if lateral > 0 else -1) * (cfg["front_gap"] / 2 + arm)

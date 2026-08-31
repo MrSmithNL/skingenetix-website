@@ -69,15 +69,22 @@ units and so can never be 6. Stagger is weighted toward the vertical, and the fr
 fully in view with both units on one baseline. Four figures per shape, all off rendered
 sweeps:
 
-| shape | `step_ratio` (chevron arms) | `rise_ratio` | `front_gap` | `apex_step` (3-up) |
-| --- | --- | --- | --- | --- |
-| bottle | 0.46 | 0.24 | 1.06 | 0.46 |
-| jar | 0.28 | 0.90 | 1.04 | 0.37 |
+| shape | `step_ratio` (chevron arms) | `rise_ratio` | `front_gap` (6-up row 1) | `rear_gap` (3-up row 2) | `apex_step` (rows 3+) |
+| --- | --- | --- | --- | --- | --- |
+| bottle | 0.46 | 0.24 | 1.06 | 1.16 | 0.46 |
+| jar | 0.28 | 0.90 | 1.04 | 1.16 | 0.37 |
 
-⚠️ `front_gap` and `apex_step` exist because ONE NUMBER WAS DOING TWO JOBS, twice. The front
-pair's separation was a multiple of the arm step, so it could not be widened without throwing
-the arms apart; and `step_ratio` also drove the 3-up, so retuning the 6-up silently restacked
-the 3-up. Keep them separate when tuning the remaining seven products.
+`front_gap` and `rear_gap` are centre-to-centre as a multiple of THAT ROW'S own unit width, so
+each reads directly as the daylight between the pair and neither drifts when `DEPTH_SCALE`
+changes. Measured on the current masters: front pair +30px / +25px, second row +85px / +137px.
+
+⚠️ **Three separate knobs were all riding on `step_ratio`, and each only became visible once
+the one before it was freed.** The 6-up's front pair could not be separated without throwing
+the arms apart; then `step_ratio` turned out to drive the 3-up too, so retuning the 6-up
+restacked it; then the 3-up's second row turned out to have no figure of its own either, and
+on the jar those two rear units were overlapping each other by 15% of their width. Assume a
+fourth if a row ever needs tuning — check whether the number you are about to change is
+serving more than one row before you change it.
 
 **Outstanding — 🟡 Medium**
 
