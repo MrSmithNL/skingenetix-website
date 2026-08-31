@@ -1,0 +1,49 @@
+{
+  "wave": "homepage-hero-line-breaks",
+  "created": "2026-08-31",
+  "template": "templates/index.json",
+  "note": "Malcolm, 2026-08-31: break the hero slider subtitles (and slide 2's title) in sensible places, and take out the AI dashes.\n\nTHE BREAKS COULD NOT BE DONE WITH <br>, WHICH IS WHAT WAS ASKED FOR. Both fields are escaped on output: the subheading is rendered `{{ block.settings.subheading | escape }}`, and the title goes through the `styled-text` snippet which also ends in `| escape`. A literal <br> in either setting therefore prints on the page as the characters &lt;br&gt;. Two mechanisms are used instead, chosen per field.\n\nSUBTITLES: a measured max-width, desktop only. Every width below was measured on the live page in the real 15px/700 Muli, not estimated. Slide 1: sentence one is 411px, sentence two 153px, the whole line 568px against a 560px box - which is why it was breaking one word from the end and orphaning 'amounts.' A 430px cap fits sentence one and cannot fit 'Never'. Slide 2: sentences of 313px and 309px sat on one 720px line. Slide 3: sentences of 417px and 429px, and sentence one plus 'For' is 444px, so the cap must sit at or above 429 and below 444. 436 is the middle of that 14px window and is the one number here worth re-measuring if the theme font ever changes. Below 700px nothing is applied: these lines wrap to three or four in a 350px column and forcing a break there only fights the wrap.\n\nSLIDE 2 TITLE: a non-breaking space, not CSS. Capping the title's width was tried first and made it WORSE - at 560px it went to three lines, 'Peptide Science, / Made / Visible.', which arithmetic said should not happen and the screenshot showed anyway. Rather than chase that, 'Made' and 'Visible.' are bound with U+00A0 and the box is left at its original 720px. The title is 794px, so it must break somewhere, and the only breakable space left is after the comma. That is deterministic rather than fitted. Same technique as the U+2011 non-breaking hyphen already used to hold '(GHK-Cu)' together on the collection banners. It is safe on mobile: at the 40px mobile size 'Made Visible.' is about 233px inside a 350px box.\n\nAI DASHES REMOVED from slides 1 and 3, which were the only two that had them. Each em dash became a full stop and a new sentence, which is also what gives the subtitles a natural place to break - the two asks solve each other. Hyphens inside compound words are left alone: 'High-purity', 'salmon-derived' and 'revitalised-looking' are spelling, not punctuation. The approved claim wording on slide 3 keeps its '-looking' hedge intact.\n\nThe CSS lands in a trailing custom-html section per ADR-006, and is scoped by each slide's own button link rather than nth-child, because the slides are not the only children of the carousel element so positional selectors would be wrong. Verified each selector matches exactly one slide.\n\nSLIDE 2's TITLE: THE NON-BREAKING SPACE DID NOT WORK, AND THE WIDTH CAP MADE IT WORSE. Both were tried and both are recorded here so the next session does not repeat them. U+00A0 was placed between 'Made' and 'Visible.' and verified present in the DOM at the right index, and the browser broke the line at it anyway; setting overflow-wrap:normal on the heading did not restore it either. Capping the title width was worse still: every value from 420px to 560px produced THREE lines, not two. A trap worth knowing for the whole slideshow: the first readings were taken while slide 2 was NOT the active slide. An inactive slide in this fade carousel reports believable but wrong geometry, so every measurement of a slideshow must wait for `.is-selected` first. Two of the contradictions above came from that.\n\nWhat actually fixes it is width, in the other direction. The title is 794px and the box was 720px, so it had to break, and the only place it could was one word from the end - orphaning 'Visible.' Raising `content_max_width` to 820 lets the whole title sit on ONE line, which is smoother than any two-line break. The block setting is the lever, not CSS: the `.place-self` container carries content_max_width, so a `.prose` override underneath it does nothing.\n\nThe subheading is unaffected by that widening because the CSS above caps it at 340px independently.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "block": "hero_slide_1",
+      "settings": {
+        "subheading": "High-purity peptides at clinically effective concentrations. Never trace amounts."
+      }
+    },
+    {
+      "section": "hero",
+      "block": "hero_slide_2",
+      "settings": {
+        "title": "Peptide Science, Made Visible.",
+        "content_max_width": 820
+      }
+    },
+    {
+      "section": "hero",
+      "block": "hero_slide_3",
+      "settings": {
+        "subheading": "1% PDRN (Sodium DNA), salmon-derived polynucleotides. For a firmer, smoother, more revitalised-looking complexion."
+      }
+    }
+  ],
+  "new_sections": [
+    {
+      "id": "hero_line_breaks",
+      "insert_after": "peptide_band_title_width",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>\n  /* Homepage hero slider: make the two-line breaks fall at the sentence, not at\n     whatever word happens to reach the edge of the box.\n\n     Desktop only. Below 700px these subheadings wrap to three or four lines in a\n     350px column and any forced break there would fight the wrap, so mobile is\n     left exactly as the theme wraps it.\n\n     Widths are measured, not chosen by eye. At 15px/700 Muli:\n       slide 1  sentence 1 = 411px, sentence 2 = 153px, whole line = 568px.\n                A cap of 430 fits sentence 1 and cannot fit \"Never\", so it breaks\n                after \"concentrations.\"\n       slide 2  sentence 1 = 313px, sentence 2 = 309px. A cap of 340 fits either\n                but not both, so it breaks at the full stop instead of running to\n                one long line.\n       slide 3  sentence 1 = 417px, sentence 2 = 429px, and sentence 1 plus \"For\"\n                is 444px. The cap has to sit at or above 429 and below 444, so 436\n                is the middle of a 14px window. If the theme font ever changes,\n                this is the first number to re-measure.\n\n     Slide 3 is the right-aligned slide, so its narrowed box needs pushing back to\n     the right edge or the text detaches from the heading above it.\n\n     Scoped by each slide's own button link rather than nth-child: the slides are\n     not the only children of the carousel element, so positional selectors are\n     wrong here, and a link target is stable and readable. */\n  @media screen and (min-width: 700px) {\n    .shopify-section--slideshow .slideshow__slide:has(a[href*=\"copper-peptide-ghk-cu-renewal-serum\"]) .subheading {\n      max-width: 430px;\n    }\n\n    .shopify-section--slideshow .slideshow__slide:has(a[href$=\"/pages/the-science\"]) .subheading {\n      max-width: 340px;\n    }\n\n    .shopify-section--slideshow .slideshow__slide:has(a[href$=\"/collections/all\"]) .subheading {\n      max-width: 436px;\n      margin-left: auto;\n    }\n  }\n</style>",
+          "background": "",
+          "background_gradient": "",
+          "text_color": ""
+        }
+      }
+    }
+  ]
+}
