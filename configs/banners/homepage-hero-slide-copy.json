@@ -1,0 +1,27 @@
+{
+  "wave": "homepage-hero-slide-copy",
+  "created": "2026-08-31",
+  "template": "templates/index.json",
+  "doc": "docs/content-strategy.md",
+  "note": "Malcolm, 2026-08-31: use the third slide's text on the first slide, and write a new title and subtitle for the third (PDRN) slide.\n\nWHY IT READS BETTER THIS WAY. Slide 1 is the first thing anyone sees, and it was carrying a single-product line — 'Copper Peptides, Clinically Dosed.' with a 2% GHK-Cu subheading. Slide 3 was carrying the brand-level statement. Swapping puts the statement of what Skingenetix IS in the opening frame and lets slide 3 become a proper PDRN slide, which is what its photograph has always shown.\n\nThe copper-peptide line is not moved anywhere — it is retired. That is what 'use the third slide's text for the first' means, and slide 1 still shows the copper peptide bottle and still links to it, so the flagship keeps its frame and its button.\n\nTHE NEW PDRN COPY IS GROUNDED IN THE PRODUCT, NOT INVENTED. Pulled from the live `pdrn-renewal-serum` description rather than written fresh: 1% PDRN, Sodium DNA, salmon-derived polynucleotides. The claim clause is the store's own approved wording, verbatim — 'firmer, smoother, more revitalised-looking complexion'. The '-looking' hedge is deliberate and load-bearing on a skincare page and must not be tightened into a result claim; this is a YMYL category and the store already carries an unresolved review-compliance issue.\n\nThe title follows the house pattern the other slides use — a named molecule plus how it is dosed, in four words with a full stop. 'Polynucleotides, Precisely Dosed.' also inherits the cadence of the copper-peptide line being retired, so nothing is lost from the set.\n\nTEXT ONLY. Positions, widths, images, buttons and colours are untouched, because the ask was about copy. One consequence to watch: slide 3 is now PDRN-specific while its button still reads 'Shop the Range' to /collections/all. That mismatch is a direct product of this change and is flagged rather than fixed, since retargeting a homepage CTA is a separate decision.\n\nSlide 1's box is `content_max_width` 460 against slide 3's 560, so the moved subheading sits in a narrower column than it did. Checked on the rendered page after pushing rather than assumed.\n\nSLIDE 1's BOX WIDENED 460 -> 560, WHICH THE MOVED TEXT REQUIRED. Checked on the rendered page as planned, and the headline was breaking to three lines with the break falling mid-sentence: 'Premium / Peptides. Visible / Results.' Measured the type rather than guessing a width: 'Premium Peptides.' is 505px at the 60px display size and the whole line is 914px, so any box between those two numbers breaks it into two lines AT THE FULL STOP. Slide 3's 560 sits inside that window, which is precisely why the line read well where it used to live. Matching it moves the text and the box it was written for, rather than the text alone.",
+  "images": [],
+  "setting_updates": [
+    {
+      "section": "hero",
+      "block": "hero_slide_1",
+      "settings": {
+        "title": "Premium Peptides. Visible Results.",
+        "subheading": "High-purity peptides at clinically effective concentrations — never trace amounts.",
+        "content_max_width": 560
+      }
+    },
+    {
+      "section": "hero",
+      "block": "hero_slide_3",
+      "settings": {
+        "title": "Polynucleotides, Precisely Dosed.",
+        "subheading": "1% PDRN (Sodium DNA), salmon-derived — for a firmer, smoother, more revitalised-looking complexion."
+      }
+    }
+  ]
+}
