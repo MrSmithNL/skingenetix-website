@@ -48,6 +48,41 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 BUNDLE-001 — 3-up and 6-up bundle imagery, all products (2026-08-31)
+
+**Priority:** 🟡 Prototype approved in shape; rollout and publishing outstanding
+**Owner:** Claude (build) + Malcolm (every image choice)
+**Scripts:** `scripts/extract-product-sprite.py` → `scripts/build-bundle-shot.py`
+
+Product pages need "buy 3" and "buy 6" imagery. Prototyped on the first serum
+(`copper-peptide-repair-serum`) and the first cream (`copper-peptide-day-repair-cream`).
+
+**Composited from the Drive masters, not generated** — a deliberate exception to BRAND-003,
+reasoned out in full in the `docs/architecture.md` change-log entry for 2026-08-31. Short
+version: six units side by side is six independent chances to garble a label, and a
+composite makes them identical by construction. A bundle in a *scene* is a separate brief
+and still fans out to every supplier.
+
+**Settled with Malcolm 2026-08-31:** the 6-up is a **chevron** — two units side by side at
+the front, arms receding — because a symmetric V around a single front unit holds 1 + 2A
+units and so can never be 6. Stagger is weighted toward the vertical: bottles
+`step 0.46 / rise 0.24`, jars `step 0.37 / rise 0.64`, both picked off rendered sweeps.
+
+**Outstanding — 🟡 Medium**
+
+1. **Roll out to the remaining seven products.** Each needs two measured numbers added to
+   `PRODUCTS` in `extract-product-sprite.py`: the contact line `base_y` and, for bottles,
+   the axis `axis_x`. Do NOT copy the serum's figures — they are specific to that master.
+   Sweep the threshold and take the middle of the plateau, as documented in the script.
+2. **Nothing is published.** Output sits in `assets/ai-generated/2026-08-31-bundle-prototype/`.
+   Publishing needs SEO filenames and `scripts/upload-theme-images.py`, then a decision on
+   which gallery slot each bundle takes on the product template.
+3. **The cream 6-up fills 90% of the frame's width but only 57% of its height.** Six squat
+   jars in a V is an inherently wide, short group; 0.34/0.72 reaches 64% but starts reading
+   as a steep stack with the rear pair detached. Left at 0.37/0.64 deliberately.
+4. `assets/images/_sprites/` is gitignored with the rest of `assets/` — the sprites are
+   reproducible from Drive in one command and are not backed up by this repo.
+
 ### 🔄 PHOTO-CPBA-001 — Copper-peptide before/after round: 96 diptychs (2026-08-27)
 
 **In progress.** Malcolm's brief: 3 shot types x 4 concerns (fine lines, firming, repair,
