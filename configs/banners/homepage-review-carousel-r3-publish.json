@@ -1,0 +1,55 @@
+{
+  "wave": "homepage-review-carousel-r3-publish",
+  "created": "2026-08-31",
+  "template": "templates/index.json",
+  "target": "homepage `reviews` section (media-with-text, 6 blocks) \u2014 three of the six model photographs replaced",
+  "decided_by": "Malcolm, 2026-08-31, from the cream-application-faces-r3 contact sheet",
+  "source_wave": "configs/banners/cream-application-faces-r3.json",
+  "note": "Malcolm's three picks from the r3 sheet, replacing three of the six review-carousel model shots.\n\n  review_2  PDRN Renewal Serum        <- CREAM-R3-01-FAIR-RED-PINK / nbp_pro\n  review_4  Glutathione Brightening   <- CREAM-R3-02-FAIR-ASHBLONDE-LIGHTBLUE / nbp_flash\n  review_6  Acetyl Hexapeptide-8      <- CREAM-R3-09-OLIVE-DARKCHESTNUT-CLEAR / nbp_flash\n\nNEW FILENAMES, NOT THE v4 NAMES. Shopify SUFFIXES rather than replaces on a name collision, so re-uploading `skingenetix-review-model-pdrn-serum-2026-v4.jpg` would leave the OLD image being served and quietly add a `_1` twin. The three old files are therefore left untouched on the CDN and only the block's `image` setting is repointed \u2014 which is also shopify.md rule 7, since translations key off the URL. The old files stay live and reusable; nothing is deleted.\n\nTHE NEW NAMES ARE ALSO BETTER SEO THAN THE ONES THEY REPLACE. `...-2026-v4` spends two of its words on a revision number that no shopper will ever type, and `check_seo_name()` flags both `v4` and a bare `2026` as carrying no search value. The new names lead with the product a shopper would search for and then describe the picture. `acetyl-hexapeptide-8` will still trip the bare-digit warning on its `8`; that is a false positive - the 8 is part of the ingredient's actual name and is worth keeping.\n\nWEB-READY MEANS RE-ENCODED, NOT JUST RESIZED. The three masters are 4096x4096 PNGs at ~9.4MB each. `upload-theme-images.py` caps the long edge at 3000 (the widest the theme's srcset ever requests), re-encodes to progressive JPEG at q95 4:4:4, and strips EXIF/ICC. Quality stays HIGH deliberately: Shopify's CDN transcodes to WebP per breakpoint, so the uploaded JPEG is never what a visitor downloads, and pre-compressing it just hands the WebP encoder a picture full of artefacts. Measured on this store: a q85 source delivered MORE bytes at every width than a q93 one.\n\n\u26a0\ufe0f COLOUR-TO-PRODUCT MISMATCH ON review_4, FLAGGED TO MALCOLM. The light-blue cream is the Copper Peptide NIGHT cream #A6C4E0. The slide it now sits on is headed by a Glutathione review and its button reads 'Shop Glutathione Brightening Serum' - and the Glutathione serum is a completely transparent, untinted liquid. So that slide shows a blue cream while selling a colourless serum. review_2 is a near-miss of the same kind but defensible: the pink cream is the PDRN Collagen Repair CREAM #F3BFC2 while the slide sells the PDRN Renewal SERUM, whose own substance is a translucent rose-pink - both are pink, so the picture does not contradict the product. review_6 is an exact match: Acetyl Hexapeptide-8 is one of the three transparent serums. Malcolm chose these having seen the sheet; nothing is blocked on it, but if the carousel should be substance-accurate then review_4 wants the clear-serum frame and the light blue belongs on a Copper Peptide Night Cream slide.\n\nThe alt text describes what is actually in each photograph rather than the product being sold, which is both correct for accessibility and keeps the review_4 discrepancy visible instead of papering over it. No woman is described as a customer or a trial participant.",
+  "images": [
+    {
+      "slot": "pdrn",
+      "source": "assets/publish-ready/review-carousel-r3-20260831/CREAM-R3-01-FAIR-RED-PINK-nbp_pro_01.png",
+      "filename": "skingenetix-pdrn-renewal-serum-woman-applying-pink-cream-cheek.jpg",
+      "alt": "Woman applying a small dab of pale pink cream to her cheekbone with her fingertips",
+      "replaces": "skingenetix-review-model-pdrn-serum-2026-v4.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-renewal-serum-woman-applying-pink-cream-cheek.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-renewal-serum-woman-applying-pink-cream-cheek.jpg?v=1788167963"
+    },
+    {
+      "slot": "glutathione",
+      "source": "assets/publish-ready/review-carousel-r3-20260831/CREAM-R3-02-FAIR-ASHBLONDE-LIGHTBLUE-nbp_flash_01.png",
+      "filename": "skingenetix-glutathione-brightening-serum-woman-applying-cream-cheek.jpg",
+      "alt": "Woman applying a small dab of pale blue cream to her cheekbone with her fingertips",
+      "replaces": "skingenetix-review-model-glutathione-serum-2026-v4.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-brightening-serum-woman-applying-cream-cheek.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-brightening-serum-woman-applying-cream-cheek.jpg?v=1788167963"
+    },
+    {
+      "slot": "acetyl",
+      "source": "assets/publish-ready/review-carousel-r3-20260831/CREAM-R3-09-OLIVE-DARKCHESTNUT-CLEAR-nbp_flash_01.png",
+      "filename": "skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-woman-applying.jpg",
+      "alt": "Woman applying a small amount of clear serum to her cheekbone with her fingertips",
+      "replaces": "skingenetix-review-model-acetyl-hexapeptide-8-2026-v4.jpg",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-woman-applying.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-woman-applying.jpg?v=1788167963"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "reviews",
+      "block": "review_2",
+      "slot": "pdrn"
+    },
+    {
+      "section": "reviews",
+      "block": "review_4",
+      "slot": "glutathione"
+    },
+    {
+      "section": "reviews",
+      "block": "review_6",
+      "slot": "acetyl"
+    }
+  ]
+}
