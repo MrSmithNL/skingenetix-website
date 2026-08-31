@@ -1,0 +1,217 @@
+{
+  "wave": "product-bundle-images-2026-08-31",
+  "created": "2026-08-31",
+  "note": "Pumper Bundles quantity-break thumbnails, 1 / 3 / 6, for the copper peptide serum and day gel-cream. Rendered by scripts/build-bundle-shot.py at 2048px and exported here at 512px because Pumper prints the bare CDN URL with no srcset and no &width=, so the uploaded file is what every visitor downloads for a slot the app renders at 64 CSS px. See WEB_EDGE in that script for the measured figures. Upload only - these are NOT wired to the offer, which is a Pumper-side change (see docs/todo.md BUNDLE-001). The six copper-peptide files already uploaded on 2026-08-31 carry their handles from configs/banners/product-bundle-images-2026-08-31.json, so this run skips them. Re-uploading a name Shopify already holds does NOT replace it - Shopify suffixes, so the duplicate would land at a new URL and the original would keep serving.",
+  "images": [
+    {
+      "slot": "copper-peptide-ghk-cu-renewal-serum-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-renewal-serum-single-bottle.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-renewal-serum-single-bottle.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, a single 30ml bottle",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-renewal-serum-single-bottle.jpg"
+    },
+    {
+      "slot": "copper-peptide-ghk-cu-renewal-serum-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-renewal-serum-3-bottle-bundle.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-renewal-serum-3-bottle-bundle.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, three 30ml bottles",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-renewal-serum-3-bottle-bundle.jpg"
+    },
+    {
+      "slot": "copper-peptide-ghk-cu-renewal-serum-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-renewal-serum-6-bottle-bundle.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-renewal-serum-6-bottle-bundle.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, six 30ml bottles",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-renewal-serum-6-bottle-bundle.jpg"
+    },
+    {
+      "slot": "copper-peptide-ghk-cu-day-gel-cream-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-day-gel-cream-single-jar.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-day-gel-cream-single-jar.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, a single 50ml jar",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-day-gel-cream-single-jar.jpg"
+    },
+    {
+      "slot": "copper-peptide-ghk-cu-day-gel-cream-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-day-gel-cream-3-jar-bundle.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-day-gel-cream-3-jar-bundle.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, three 50ml jars",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-day-gel-cream-3-jar-bundle.jpg"
+    },
+    {
+      "slot": "copper-peptide-ghk-cu-day-gel-cream-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-day-gel-cream-6-jar-bundle.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-day-gel-cream-6-jar-bundle.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, six 50ml jars",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-day-gel-cream-6-jar-bundle.jpg"
+    },
+    {
+      "slot": "glutathione-brightening-serum-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-glutathione-brightening-serum-single-bottle.jpg",
+      "filename": "skingenetix-glutathione-brightening-serum-single-bottle.jpg",
+      "alt": "Skingenetix Glutathione 2% Brightening Serum, a single 30ml bottle",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-brightening-serum-single-bottle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-brightening-serum-single-bottle.jpg?v=1788169267"
+    },
+    {
+      "slot": "glutathione-brightening-serum-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-glutathione-brightening-serum-3-bottle-bundle.jpg",
+      "filename": "skingenetix-glutathione-brightening-serum-3-bottle-bundle.jpg",
+      "alt": "Skingenetix Glutathione 2% Brightening Serum, three 30ml bottles",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-brightening-serum-3-bottle-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-brightening-serum-3-bottle-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "glutathione-brightening-serum-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-glutathione-brightening-serum-6-bottle-bundle.jpg",
+      "filename": "skingenetix-glutathione-brightening-serum-6-bottle-bundle.jpg",
+      "alt": "Skingenetix Glutathione 2% Brightening Serum, six 30ml bottles",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-brightening-serum-6-bottle-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-brightening-serum-6-bottle-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "matrixyl-3000-firming-serum-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-matrixyl-3000-firming-serum-single-bottle.jpg",
+      "filename": "skingenetix-matrixyl-3000-firming-serum-single-bottle.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Firming Serum, a single 30ml bottle",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-firming-serum-single-bottle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-firming-serum-single-bottle.jpg?v=1788169268"
+    },
+    {
+      "slot": "matrixyl-3000-firming-serum-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-matrixyl-3000-firming-serum-3-bottle-bundle.jpg",
+      "filename": "skingenetix-matrixyl-3000-firming-serum-3-bottle-bundle.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Firming Serum, three 30ml bottles",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-firming-serum-3-bottle-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-firming-serum-3-bottle-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "matrixyl-3000-firming-serum-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-matrixyl-3000-firming-serum-6-bottle-bundle.jpg",
+      "filename": "skingenetix-matrixyl-3000-firming-serum-6-bottle-bundle.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Firming Serum, six 30ml bottles",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-firming-serum-6-bottle-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-firming-serum-6-bottle-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "pdrn-renewal-serum-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-pdrn-renewal-serum-single-bottle.jpg",
+      "filename": "skingenetix-pdrn-renewal-serum-single-bottle.jpg",
+      "alt": "Skingenetix PDRN 1% Renewal Serum, a single 30ml bottle",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-renewal-serum-single-bottle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-renewal-serum-single-bottle.jpg?v=1788169267"
+    },
+    {
+      "slot": "pdrn-renewal-serum-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-pdrn-renewal-serum-3-bottle-bundle.jpg",
+      "filename": "skingenetix-pdrn-renewal-serum-3-bottle-bundle.jpg",
+      "alt": "Skingenetix PDRN 1% Renewal Serum, three 30ml bottles",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-renewal-serum-3-bottle-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-renewal-serum-3-bottle-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "pdrn-renewal-serum-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-pdrn-renewal-serum-6-bottle-bundle.jpg",
+      "filename": "skingenetix-pdrn-renewal-serum-6-bottle-bundle.jpg",
+      "alt": "Skingenetix PDRN 1% Renewal Serum, six 30ml bottles",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-renewal-serum-6-bottle-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-renewal-serum-6-bottle-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "copper-peptide-ghk-cu-night-cream-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-night-cream-single-jar.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-night-cream-single-jar.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Night Cream, a single 50ml jar",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-night-cream-single-jar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-night-cream-single-jar.jpg?v=1788169267"
+    },
+    {
+      "slot": "copper-peptide-ghk-cu-night-cream-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-night-cream-3-jar-bundle.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-night-cream-3-jar-bundle.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Night Cream, three 50ml jars",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-night-cream-3-jar-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-night-cream-3-jar-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "copper-peptide-ghk-cu-night-cream-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-copper-peptide-ghk-cu-night-cream-6-jar-bundle.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-night-cream-6-jar-bundle.jpg",
+      "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Night Cream, six 50ml jars",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-night-cream-6-jar-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-night-cream-6-jar-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "matrixyl-3000-pro-collagen-firming-cream-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-matrixyl-3000-pro-collagen-firming-cream-single-jar.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-single-jar.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, a single 50ml jar",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-cream-single-jar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-firming-cream-single-jar.jpg?v=1788169267"
+    },
+    {
+      "slot": "matrixyl-3000-pro-collagen-firming-cream-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-matrixyl-3000-pro-collagen-firming-cream-3-jar-bundle.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-3-jar-bundle.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, three 50ml jars",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-cream-3-jar-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-firming-cream-3-jar-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "matrixyl-3000-pro-collagen-firming-cream-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-matrixyl-3000-pro-collagen-firming-cream-6-jar-bundle.jpg",
+      "filename": "skingenetix-matrixyl-3000-pro-collagen-firming-cream-6-jar-bundle.jpg",
+      "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, six 50ml jars",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-cream-6-jar-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-firming-cream-6-jar-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "pdrn-collagen-night-cream-qty-1",
+      "source": "assets/publish-ready/product-bundles/skingenetix-pdrn-collagen-night-cream-single-jar.jpg",
+      "filename": "skingenetix-pdrn-collagen-night-cream-single-jar.jpg",
+      "alt": "Skingenetix PDRN 1% Collagen Night Cream, a single 50ml jar",
+      "pumper_quantity": 1,
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-night-cream-single-jar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-night-cream-single-jar.jpg?v=1788169267"
+    },
+    {
+      "slot": "pdrn-collagen-night-cream-qty-3",
+      "source": "assets/publish-ready/product-bundles/skingenetix-pdrn-collagen-night-cream-3-jar-bundle.jpg",
+      "filename": "skingenetix-pdrn-collagen-night-cream-3-jar-bundle.jpg",
+      "alt": "Skingenetix PDRN 1% Collagen Night Cream, three 50ml jars",
+      "pumper_quantity": 3,
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-night-cream-3-jar-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-night-cream-3-jar-bundle.jpg?v=1788169267"
+    },
+    {
+      "slot": "pdrn-collagen-night-cream-qty-6",
+      "source": "assets/publish-ready/product-bundles/skingenetix-pdrn-collagen-night-cream-6-jar-bundle.jpg",
+      "filename": "skingenetix-pdrn-collagen-night-cream-6-jar-bundle.jpg",
+      "alt": "Skingenetix PDRN 1% Collagen Night Cream, six 50ml jars",
+      "pumper_quantity": 6,
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-collagen-night-cream-6-jar-bundle.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-collagen-night-cream-6-jar-bundle.jpg?v=1788169268"
+    }
+  ]
+}

@@ -86,9 +86,31 @@ on the jar those two rear units were overlapping each other by 15% of their widt
 fourth if a row ever needs tuning — check whether the number you are about to change is
 serving more than one row before you change it.
 
-**Shipped 2026-08-31.** Six images live in Shopify Files — 1 / 3 / 6 for
-`copper-peptide-ghk-cu-renewal-serum` and `copper-peptide-ghk-cu-day-gel-cream`.
-Plan + resolved handles: `configs/banners/product-bundle-images-2026-08-31.json`.
+**Shipped 2026-08-31.** **24 images live in Shopify Files — 1 / 3 / 6 for eight of
+the nine skincare products**, all 512×512, READY, with written alt text. Verified
+per filename against Shopify: 24 correct, 0 suffixed duplicates.
+
+| product (store handle) | shape |
+| --- | --- |
+| `copper-peptide-ghk-cu-renewal-serum` | bottle |
+| `copper-peptide-ghk-cu-day-gel-cream` | jar |
+| `copper-peptide-ghk-cu-night-cream` | jar |
+| `glutathione-brightening-serum` | bottle |
+| `matrixyl-3000-firming-serum` | bottle |
+| `matrixyl-3000-pro-collagen-firming-cream` | jar |
+| `pdrn-renewal-serum` | bottle |
+| `pdrn-collagen-night-cream` | jar |
+
+Plans: `configs/banners/product-bundle-images-2026-08-31.json` (first two products)
+and `-rollout.json` (all eight; the first six carry their handles across so the run
+skips them rather than creating suffixed duplicates).
+
+⚠️ **`acetyl-hexapeptide-8-anti-wrinkle-serum` is NOT done — it has no artwork
+master.** Every other product has a dedicated single-product render in Drive under
+`Images/Products/<Product>/`; the acetyl folder holds only AI-generated shots. Its
+`_refs-2026-08-19/` reference was built by cropping a pack shot and is 1024px, which
+would still serve a 512px deliverable but is a different source from the rest of the
+range. Needs either the master locating in Drive or a decision to use the crop.
 
 ⚠️ **UPLOADED BUT NOT WIRED, AND THE WIRING IS BLOCKED.** The bundles function is
 the **Pumper Bundles** app, whose quantity-break thumbnails are what these are for.
@@ -112,10 +134,16 @@ byte-for-byte (sha256 `47860af9505d6231`, 1,083,930 B, three UUID copies). So
 
 **Outstanding — 🟡 Medium**
 
-1. **Roll out to the remaining seven products.** Each needs two measured numbers added to
-   `PRODUCTS` in `extract-product-sprite.py`: the contact line `base_y` and, for bottles,
-   the axis `axis_x`. Do NOT copy the serum's figures — they are specific to that master.
-   Sweep the threshold and take the middle of the plateau, as documented in the script.
+1. **Acetyl is the only product left** — see the note above; it has no artwork master.
+   ⚠️ When adding it, note what the rollout learned: an automatic plateau-finder was
+   written to save the measuring and it was **wrong**. It proposed `thr_lo` 35 for the
+   PDRN serum, at which the bbox starts at y612 and the whole dropper bulb is gone,
+   because it required the entire bbox to hold still and a soft white bulb top creeps a
+   few rows per threshold step. The stable thing is the bottle's SIDES. It also proposed
+   `base_y` 2020 for the copper serum against a measured 1697, and 876 — mid-jar — for a
+   jar with no reflection. **`base_y` is read off a ruled crop by eye.** The three other
+   serums share copper's figures because they are measurably the same bottle in the same
+   scene (body x747–1285, contact line y1697–1700, axis x1016), not to save effort.
 2. **Wire the six live images into Pumper** — blocked on item 1 above.
 3. **The cream 6-up fills 90% of the width but only 61% of the height.** Six squat
    jars in a V is an inherently wide, short group; 0.24/1.02 reaches 70% but leaves the rear

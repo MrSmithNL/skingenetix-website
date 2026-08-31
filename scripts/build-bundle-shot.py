@@ -53,7 +53,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SPRITES = ROOT / "assets/images/_sprites"
 OUT_DIR = ROOT / "assets/ai-generated/2026-08-31-bundle-prototype"
 WEB_DIR = ROOT / "assets/publish-ready/product-bundles"
-PLAN = ROOT / "configs/banners/product-bundle-images-2026-08-31.json"
+PLAN = ROOT / "configs/banners/product-bundle-images-2026-08-31-rollout.json"
 
 CANVAS = 2048
 
@@ -87,6 +87,12 @@ WEB_EDGE = 512
 SHOPIFY_HANDLE = {
     "copper-peptide-repair-serum": "copper-peptide-ghk-cu-renewal-serum",
     "copper-peptide-day-repair-cream": "copper-peptide-ghk-cu-day-gel-cream",
+    "copper-peptide-night-repair-cream": "copper-peptide-ghk-cu-night-cream",
+    "glutathione-brightening-serum": "glutathione-brightening-serum",
+    "matrixyl-3000-pro-collagen-serum": "matrixyl-3000-firming-serum",
+    "matrixyl-3000-pro-collagen-cream": "matrixyl-3000-pro-collagen-firming-cream",
+    "pdrn-skin-repair-serum": "pdrn-renewal-serum",
+    "pdrn-collagen-repair-cream": "pdrn-collagen-night-cream",
 }
 UNIT_NOUN = {"bottle": "bottle", "jar": "jar"}
 
@@ -95,9 +101,21 @@ UNIT_NOUN = {"bottle": "bottle", "jar": "jar"}
 #: search, and neither is served by "copper-peptide-ghk-cu-renewal-serum-3-bottle".
 #: The volume comes off the label in the render (30ML on the bottle, 50ML on the
 #: jar), so the alt text and the picture agree.
+#: The title is the STORE's, the volume is the LABEL's, and on several products
+#: those two describe the same thing differently - the store sells a "2% Renewal
+#: Serum" whose bottle reads ADVANCED REPAIR SERUM, and a "Collagen Night Cream"
+#: whose jar reads PDRN COLLAGEN REPAIR. That mismatch is pre-existing and runs
+#: through the whole range; it is not resolved here, but a shopper searches the
+#: store's words, so those are what the alt text carries.
 PRODUCT_ALT = {
     "copper-peptide-repair-serum": ("Copper Peptide (GHK-Cu) 2% Renewal Serum", "30ml"),
     "copper-peptide-day-repair-cream": ("Copper Peptide (GHK-Cu) 2% Day Gel-Cream", "50ml"),
+    "copper-peptide-night-repair-cream": ("Copper Peptide (GHK-Cu) 2% Night Cream", "50ml"),
+    "glutathione-brightening-serum": ("Glutathione 2% Brightening Serum", "30ml"),
+    "matrixyl-3000-pro-collagen-serum": ("Matrixyl 3000 Firming Serum", "30ml"),
+    "matrixyl-3000-pro-collagen-cream": ("Matrixyl 3000 Pro-Collagen Firming Cream", "50ml"),
+    "pdrn-skin-repair-serum": ("PDRN 1% Renewal Serum", "30ml"),
+    "pdrn-collagen-repair-cream": ("PDRN 1% Collagen Night Cream", "50ml"),
 }
 COUNT_WORD = {1: "a single", 3: "three", 6: "six"}
 

@@ -109,6 +109,84 @@ PRODUCTS = {
         "axis_x": None,
         "kind": "jar",
     },
+    # ---- rolled out to the rest of the range, 2026-08-31 ----------------------
+    #
+    # THE THREE SERUMS SHARE THEIR FIGURES, AND THAT IS A MEASUREMENT, NOT A
+    # SHORTCUT. All four serum masters are the same bottle rendered in the same
+    # scene: every one measures a body spanning x747-1285, a contact line at
+    # y1697-1700, and an axis on x1016. Copper's threshold of 22 was swept and
+    # verified, so the others take it rather than each re-deriving the same value.
+    #
+    # ⚠️ An automatic plateau finder was written to save that measuring and it was
+    # WRONG on the PDRN serum - it proposed 35, at which the bbox starts at y612
+    # and the entire dropper bulb is gone. The fault is instructive: it required
+    # the whole bbox to hold still, and the bulb's top edge is a soft white
+    # gradient that creeps a few rows with every threshold step, so the run never
+    # settled and the longest "plateau" it found was a 3-wide band up where the
+    # bulb had already been lost. The stable thing is the bottle's SIDES
+    # (x747-1284, unmoved from 10 to 36); the top is soft by nature. The same
+    # finder also proposed base_y 2020 for the copper serum against a measured
+    # 1697, and 876 - mid-jar - for a jar that has no reflection at all. base_y is
+    # therefore still read off a ruled crop of each master by eye.
+    "glutathione-brightening-serum": {
+        "master": "Glutahione Brightening Serum/Glutathione Radient Glow Serum.png",
+        "bg_model": "rows",
+        "base_y": 1700,
+        "thr_lo": 22,
+        "thr_hi": 36,
+        "axis_x": 1016.0,
+        "kind": "bottle",
+    },
+    "matrixyl-3000-pro-collagen-serum": {
+        "master": "Matrixyl 3000 Pro Collagen Serum/Matrixyl Pro Collagen Serum.png",
+        "bg_model": "rows",
+        "base_y": 1700,
+        "thr_lo": 22,
+        "thr_hi": 36,
+        "axis_x": 1016.0,
+        "kind": "bottle",
+    },
+    "pdrn-skin-repair-serum": {
+        "master": "PDRN Skin Repair Serum/PDRN Skin Repair Serum.png",
+        "bg_model": "rows",
+        "base_y": 1700,
+        "thr_lo": 22,
+        "thr_hi": 36,
+        "axis_x": 1015.5,
+        "kind": "bottle",
+    },
+    # The jars stand on flat white with no reflection, so no base_y and no mirror,
+    # exactly like the day cream. Their thresholds are NOT shared - unlike the
+    # serums these are three different renders on three different grounds, and
+    # each plateau was measured on its own master.
+    "copper-peptide-night-repair-cream": {
+        "master": "Copper Peptide Night Repair Cream/Copper Peptide Night Cream.png",
+        "bg_model": "flat",
+        "base_y": None,
+        "thr_lo": 28,  # plateau 26-30
+        "thr_hi": 40,
+        "axis_x": None,
+        "kind": "jar",
+    },
+    "matrixyl-3000-pro-collagen-cream": {
+        # NOTE the trailing space in the Drive folder name. It is real.
+        "master": "Matrixyl 3000 Pro Collagen Cream /Matrixyl Pro Collagen Cream.png",
+        "bg_model": "flat",
+        "base_y": None,
+        "thr_lo": 19,  # plateau 16-21
+        "thr_hi": 31,
+        "axis_x": None,
+        "kind": "jar",
+    },
+    "pdrn-collagen-repair-cream": {
+        "master": "PDRN Collagen Repair Cream/PDRN Collagen Repair Cream.png",
+        "bg_model": "flat",
+        "base_y": None,
+        "thr_lo": 27,  # plateau 25-29
+        "thr_hi": 39,
+        "axis_x": None,
+        "kind": "jar",
+    },
 }
 
 
