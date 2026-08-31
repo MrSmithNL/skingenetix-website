@@ -1,0 +1,20 @@
+{
+  "wave": "page-shipping-returns-banner-height",
+  "created": "2026-08-31",
+  "template": "templates/page.shipping-returns.json",
+  "note": "Malcolm, 2026-08-31: reduce the header banner height on /pages/shipping-returns (asked for alongside /pages/contact).\n\nThis hero carries NO image — it is a flat #1A1A1A band at overlay_opacity 100 — so unlike the contact banner there is no subject to crop and the height can simply come down. Measured before choosing a number: at 390px the box was 375px tall around 109px of type, leaving 133px of dead space above AND below. The new heights leave a comfortable 86px.\n\nThe theme's own `sm` ladder is 375 / 400 / 440 across `(pointer:fine)`, `min-width:700px` and `min-width:1400px`, so the override matches that ladder rather than inventing new breakpoints: 280 / 300 / 340. The desktop 340px lands within a pixel of what the contact banner now resolves to at 1512 (341px), so the two page headers read as the same object.\n\nScoped with `{{ section.id }}` in a liquid block per ADR-006, not a custom-html section — a hardcoded section id goes stale and a section class would catch any other image-with-text-overlay that later lands on this template.\n\nThe wrapper div the theme puts around a liquid block is hidden. It is a flex/grid child of the text stack, so leaving it visible adds a gap and pushes the heading off centre; the style inside still applies while its wrapper is display:none. This is the same guard the contact hero block already carries.",
+  "images": [],
+  "new_blocks": [
+    {
+      "section": "hero",
+      "id": "hero_css",
+      "insert_after": "hero_sub",
+      "block": {
+        "type": "liquid",
+        "settings": {
+          "liquid": "<style>\n/* Claude Code, 2026-08-31 - shorter header banner for /pages/shipping-returns.\n\n   No image in this hero, so there is no subject to crop and the box can simply\n   come down. Matches the theme's own sm ladder of 375 / 400 / 440 rather than\n   inventing breakpoints. Measured first: at 390px the old 375px box held 109px\n   of type with 133px of dead space above and below it. */\n#shopify-section-{{ section.id }} .content-over-media {\n  --content-over-media-height: 280px;\n}\n\n@media screen and (min-width: 700px) {\n  #shopify-section-{{ section.id }} .content-over-media {\n    --content-over-media-height: 300px;\n  }\n}\n\n@media screen and (min-width: 1400px) {\n  #shopify-section-{{ section.id }} .content-over-media {\n    --content-over-media-height: 340px;\n  }\n}\n\n/* The theme wraps a liquid block in a plain div, which takes a gap in the text\n   stack and pushes the heading off centre. The style inside still applies while\n   its wrapper is display:none. */\n#shopify-section-{{ section.id }} .prose > div:has(> style) { display: none; }\n</style>"
+        }
+      }
+    }
+  ]
+}
