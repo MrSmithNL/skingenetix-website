@@ -60,7 +60,7 @@ Product pages need "buy 3" and "buy 6" imagery. Prototyped on the first serum
 **Composited from the Drive masters, not generated** — a deliberate exception to BRAND-003,
 reasoned out in full in the `docs/architecture.md` change-log entry for 2026-08-31. Short
 version: six units side by side is six independent chances to garble a label, and a
-composite makes them identical by construction. A bundle in a *scene* is a separate brief
+composite makes them identical by construction. A bundle in a _scene_ is a separate brief
 and still fans out to every supplier.
 
 **Settled with Malcolm 2026-08-31:** the 6-up is a **chevron** — two units side by side at
@@ -69,10 +69,10 @@ units and so can never be 6. Stagger is weighted toward the vertical, and the fr
 fully in view with both units on one baseline. Four figures per shape, all off rendered
 sweeps:
 
-| shape | `step_ratio` (chevron arms) | `rise_ratio` | `front_gap` (6-up row 1) | `rear_gap` (3-up row 2) | `apex_step` (rows 3+) |
-| --- | --- | --- | --- | --- | --- |
-| bottle | 0.46 | 0.24 | 1.06 | 1.80 | 0.46 |
-| jar | 0.28 | 0.90 | 1.04 | 1.16 | 0.37 |
+| shape  | `step_ratio` (chevron arms) | `rise_ratio` | `front_gap` (6-up row 1) | `rear_gap` (3-up row 2) | `apex_step` (rows 3+) |
+| ------ | --------------------------- | ------------ | ------------------------ | ----------------------- | --------------------- |
+| bottle | 0.46                        | 0.24         | 1.06                     | 1.80                    | 0.46                  |
+| jar    | 0.28                        | 0.90         | 1.04                     | 1.16                    | 0.37                  |
 
 `front_gap` and `rear_gap` are centre-to-centre as a multiple of THAT ROW'S own unit width, so
 each reads directly as the daylight between the pair and neither drifts when `DEPTH_SCALE`
@@ -90,17 +90,17 @@ serving more than one row before you change it.
 all nine skincare products**, every one 512×512, READY, with written alt text.
 Verified per filename against Shopify: 27 correct, 0 suffixed duplicates.
 
-| product (store handle) | shape |
-| --- | --- |
-| `copper-peptide-ghk-cu-renewal-serum` | bottle |
-| `copper-peptide-ghk-cu-day-gel-cream` | jar |
-| `copper-peptide-ghk-cu-night-cream` | jar |
-| `glutathione-brightening-serum` | bottle |
-| `matrixyl-3000-firming-serum` | bottle |
-| `matrixyl-3000-pro-collagen-firming-cream` | jar |
-| `pdrn-renewal-serum` | bottle |
-| `pdrn-collagen-night-cream` | jar |
-| `acetyl-hexapeptide-8-anti-wrinkle-serum` | bottle |
+| product (store handle)                     | shape  |
+| ------------------------------------------ | ------ |
+| `copper-peptide-ghk-cu-renewal-serum`      | bottle |
+| `copper-peptide-ghk-cu-day-gel-cream`      | jar    |
+| `copper-peptide-ghk-cu-night-cream`        | jar    |
+| `glutathione-brightening-serum`            | bottle |
+| `matrixyl-3000-firming-serum`              | bottle |
+| `matrixyl-3000-pro-collagen-firming-cream` | jar    |
+| `pdrn-renewal-serum`                       | bottle |
+| `pdrn-collagen-night-cream`                | jar    |
+| `acetyl-hexapeptide-8-anti-wrinkle-serum`  | bottle |
 
 Plans: `configs/banners/product-bundle-images-2026-08-31.json` (first two products)
 `-rollout.json` (eight; the first six carry their handles across so the run skips
@@ -177,11 +177,11 @@ extreme case. Parent is the round-2 builder, left untouched.
 **Live on the homepage 2026-08-31** — Malcolm's three picks, uploaded under new SEO
 filenames and the block `image` settings repointed:
 
-| Block | Slide sells | New image |
-| --- | --- | --- |
-| `review_2` | PDRN Renewal Serum | PINK cream, nbp_pro |
+| Block      | Slide sells                   | New image                   |
+| ---------- | ----------------------------- | --------------------------- |
+| `review_2` | PDRN Renewal Serum            | PINK cream, nbp_pro         |
 | `review_4` | Glutathione Brightening Serum | LIGHT BLUE cream, nbp_flash |
-| `review_6` | Acetyl Hexapeptide-8 Serum | CLEAR serum, nbp_flash |
+| `review_6` | Acetyl Hexapeptide-8 Serum    | CLEAR serum, nbp_flash      |
 
 Undo: `python3 scripts/patch-template.py --restore backups/index-20260831-111943.json --template templates/index.json`
 
@@ -346,6 +346,43 @@ Undo: `python3 scripts/reviews-add-before-after-carousel.py --restore backups/pa
 - The page's `trust` section claims _"Verified Reviews — All reviews from confirmed customers"_.
   Accurate for the carousel as of 2026-08-30; not for the `testimonials` block below it.
 
+### ✅ BANNER-001 — every page and collection now carries a header banner (2026-08-31)
+
+**Closed 2026-08-31.** `/pages/contact` and `/pages/shipping-returns` were the last two pages
+with **no hero image at all** — both painted flat `#1A1A1A` at `overlay_opacity: 100` behind
+centred type. Both now carry a photograph in the graphite register.
+
+|           |                                                                                               |
+| --------- | --------------------------------------------------------------------------------------------- |
+| Contact   | `CONTACT-GRAPHITE-A-speaking-restyle-nbp_pro_02` — Malcolm's round-1 pick relit               |
+| Shipping  | `SHIPPING-GRAPHITE-D-threshold-wider-nbp_pro_01` — doorway handover, hallway underexposed     |
+| Geometry  | house standard **3000x678 (4.425:1)** desktop + near-square mobile, measured off the live CDN |
+| Machinery | `extend-banner-canvas.py` entries `contact` and `shipping`; new `scripts/native-crop-qa.py`   |
+
+**Three rounds, and rounds 1–2 are worth not repeating.** Round 1 came back high-key (bright
+clinic / bright doorway) and off-brand. Round 2's restyle brief said _"replace the room with a
+seamless graphite studio sweep"_ — the engines did exactly that, and a flat colour fill is not
+the house style: `the-science` is a graphite bench with visible texture, `copper-peptide-research`
+a dark lab with real depth. Round 3 said _"keep the room and underexpose it"_ and worked.
+
+**Both templates needed the same three fixes after the image landed**, none of which is optional:
+
+1. `overlay_opacity` **100 → 22** — it was 100 because the hero was a flat colour field; left
+   there the photograph is invisible.
+2. **Desktop right-pin** — at 1440 the box is 3.27:1 against a 4.425:1 master, so `cover` drops
+   ~508px of width and centred takes half of it off the subject side.
+3. **Mobile top scrim** — on contact this was unavoidable: her head reaches the top edge, so every
+   780px window containing her face reads p95 144 / max 215 in its top 12%, and padding graphite
+   above would mean inventing the crown of her head.
+
+⚠️ `edge_trim: 5` was needed on shipping and **not** on contact — its source carries a bright
+fringe on the first columns which the edge profile averages in, stepping the join 6.29 luma levels.
+
+**Outstanding — 🟢 Low**
+
+- The `allow_transparent_header: true` default is still set on collection banners and the
+  publisher drops the fix on every republish (pre-existing; see the memory entry).
+
 ### 🔄 REVIEW-002 — per-product before/after review carousels, all 11 products (2026-08-29)
 
 **Priority:** 🟡 Live and working; 8 cards await the microneedling round
@@ -429,9 +466,9 @@ block on the contact sheet _and_ on the render-size pairing. At 100% its copper 
 **five** beads and its ladders visibly **spiral** — the wrong molecule for a tripeptide, and
 the DNA cliché the set has negated throughout. Neither fault is visible below ~40% zoom. All
 eleven candidates were then cropped to the sphere band at full resolution and the beads
-counted: gpt-image, nbp_flash, nbp_pro_02, seedream and luma_01 render it correctly;
+counted: gpt-image, nbp*flash, nbp_pro_02, seedream and luma_01 render it correctly;
 nbp_pro_01 and luma_02 do not; FLUX.2 adds gold beads, negated by name. `nbp_flash_02` won on
-the count _and_ the picture.
+the count \_and* the picture.
 
 **Re-run twice more, and both rounds were my brief's fault, not the engines'.**
 
@@ -994,8 +1031,8 @@ attempts and ~$0.50 were spent reworking the image before the settings were read
    _page_: `firming-skin-density`, `skin-repair-renewal`, plus `matrixyl-3000`,
    `microneedling` and `frontpage`.
    ⚠️ `brightening-glow` was in this list and is **now done** (2026-08-25 09:15) — the
-   COLLECTION carries the glutathione `A-face-full-prod-left` nbp_flash frame, extended
-   LEFT, distinct from the gpt_image take on the same-named _page_. Its concentration line
+   COLLECTION carries the glutathione `A-face-full-prod-left` nbp*flash frame, extended
+   LEFT, distinct from the gpt_image take on the same-named \_page*. Its concentration line
    was repaired from `25i` to `2%` first.
 3. 🟡 **Two research pages wear philosophy-page images** — `/pages/pdrn-research` and
    `/pages/glutathione-research`. Both products have a full banner library already.
@@ -1765,20 +1802,22 @@ picked, publish to Shopify via the Admin GraphQL API; C2PA-sign any destined for
 
 ## Session Log
 
-| Date       | What Was Worked On                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2026-03-05 | Project created. Research completed. Initial architecture and standard files set up.                                                                                                                                                                                                                                                                                                                                                                                |
-| 2026-05-06 | State-discovery: found store far ahead of docs. Handover written (handover-2026-05-06.md). No store changes.                                                                                                                                                                                                                                                                                                                                                        |
-| 2026-08-03 | Set HS-code 3304.99.5000 + origin CN on all 9 products (US import). Set Shopify taxonomy categories (5x Face Serums, 4x Face Moisturizers). Fixed expired Skingenetix client secret in business dashboard. Doc-sync (this update).                                                                                                                                                                                                                                  |
-| 2026-08-13 | Repo sync + asset-path repair: fast-forwarded 10 commits behind origin; repaired 47 asset dirs whose content sat in cloud-sync `" (1)"` twins. P6-FU-4 closed.                                                                                                                                                                                                                                                                                                      |
-| 2026-08-19 | Photography pipeline rebuilt end to end in smith-os (`product-photography` v3.0). 2026 product redesign intake: 9 products, reference sets built (36 crops). Audit: 25 runs / 4,077 images / $122.37, of which 8 reached the live store.                                                                                                                                                                                                                            |
-| 2026-08-20 | **First images published from the rebuilt pipeline** — 8 onto the PDRN cream. Four runs, 680 candidates, $51.15, 140 images selected and prepared. Found: the Gemini key is not in this project's `.env` (see architecture.md).                                                                                                                                                                                                                                     |
-| 2026-08-21 | Homepage rebuilt against a five-brand premium benchmark (BRAND-001).                                                                                                                                                                                                                                                                                                                                                                                                |
-| 2026-08-24 | Homepage FAQ restructured on stock sections; brand band rebuilt. **402-frame banner library** built across 9 products / 11 poses / 4 suppliers (~$25). Matrixyl + Glutathione collection banners live. Root cause of banner cropping found: `enable_parallax`, not the assets.                                                                                                                                                                                      |
-| 2026-08-25 | `/pages/ingredients` rebuilt on two registers. Banners for `/collections/all`, `/collections/pdrn`, `/collections/acetyl-hexapeptide-8`, `/pages/the-science`. Header height standardised on `image_size: sm` with ~4.42:1 masters. The five Skin Solutions pages stopped being carousels. BRAND-006 FAQ layout live with placeholders.                                                                                                                             |
-| 2026-08-27 | Research pages: all three acetyl Key Findings blocks published with labelled before/after diptychs on the new `research-before-after.liquid`. `/pages/reviews` got a real before/after carousel (REVIEW-001). Main-menu dropdowns became photo tiles. **ADR-002a: the store runs Translate & Adapt, not Langify** — six documents corrected.                                                                                                                        |
-| 2026-08-29 | **Per-product before/after review carousels shipped on all 11 products** — see REVIEW-002 below. 76 duplicate review files deleted behind five checks. 86 real review texts transcribed and placed. Reviews pulled out of the storefront nav but kept in the Navigation admin.                                                                                                                                                                                      |
-| 2026-08-30 | Product-page FAQ moved under the before/after block and took the research layout. "Explore More Research" card images became clickable with the menu hover treatment (scoped structurally across all 48 templates). **Review-copy coverage measured live: 91 of 99 cards real, 8 placeholder.** Plan §2 "honesty problem" corrected — the cards are real customers; the twelve _setup-written_ testimonial quotes are the actual open item. Doc-sync (this update). |
+| Date       | What Was Worked On                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-03-05 | Project created. Research completed. Initial architecture and standard files set up.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 2026-05-06 | State-discovery: found store far ahead of docs. Handover written (handover-2026-05-06.md). No store changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 2026-08-03 | Set HS-code 3304.99.5000 + origin CN on all 9 products (US import). Set Shopify taxonomy categories (5x Face Serums, 4x Face Moisturizers). Fixed expired Skingenetix client secret in business dashboard. Doc-sync (this update).                                                                                                                                                                                                                                                                                                                                              |
+| 2026-08-13 | Repo sync + asset-path repair: fast-forwarded 10 commits behind origin; repaired 47 asset dirs whose content sat in cloud-sync `" (1)"` twins. P6-FU-4 closed.                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 2026-08-19 | Photography pipeline rebuilt end to end in smith-os (`product-photography` v3.0). 2026 product redesign intake: 9 products, reference sets built (36 crops). Audit: 25 runs / 4,077 images / $122.37, of which 8 reached the live store.                                                                                                                                                                                                                                                                                                                                        |
+| 2026-08-20 | **First images published from the rebuilt pipeline** — 8 onto the PDRN cream. Four runs, 680 candidates, $51.15, 140 images selected and prepared. Found: the Gemini key is not in this project's `.env` (see architecture.md).                                                                                                                                                                                                                                                                                                                                                 |
+| 2026-08-21 | Homepage rebuilt against a five-brand premium benchmark (BRAND-001).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 2026-08-24 | Homepage FAQ restructured on stock sections; brand band rebuilt. **402-frame banner library** built across 9 products / 11 poses / 4 suppliers (~$25). Matrixyl + Glutathione collection banners live. Root cause of banner cropping found: `enable_parallax`, not the assets.                                                                                                                                                                                                                                                                                                  |
+| 2026-08-25 | `/pages/ingredients` rebuilt on two registers. Banners for `/collections/all`, `/collections/pdrn`, `/collections/acetyl-hexapeptide-8`, `/pages/the-science`. Header height standardised on `image_size: sm` with ~4.42:1 masters. The five Skin Solutions pages stopped being carousels. BRAND-006 FAQ layout live with placeholders.                                                                                                                                                                                                                                         |
+| 2026-08-27 | Research pages: all three acetyl Key Findings blocks published with labelled before/after diptychs on the new `research-before-after.liquid`. `/pages/reviews` got a real before/after carousel (REVIEW-001). Main-menu dropdowns became photo tiles. **ADR-002a: the store runs Translate & Adapt, not Langify** — six documents corrected.                                                                                                                                                                                                                                    |
+| 2026-08-29 | **Per-product before/after review carousels shipped on all 11 products** — see REVIEW-002 below. 76 duplicate review files deleted behind five checks. 86 real review texts transcribed and placed. Reviews pulled out of the storefront nav but kept in the Navigation admin.                                                                                                                                                                                                                                                                                                  |
+| 2026-08-31 | **`/pages/contact` and `/pages/shipping-returns` banners went live — the last two pages on the site without one.** Three generation rounds: round 1 high-key (off-brand), round 2 a flat graphite sweep (the brief caused it), round 3 the room kept and underexposed. Both published at the house 3000x678, right-pinned, with a mobile top scrim. Also: 'Formulated With' hidden, the concerns heading pulled to one line, the copper-peptide research hero pulled to one line, and the SGX marker comment that had been printing as visible text on every page of the store. |
+| 2026-09-10 | `/collections/copper-peptide` banner title stopped splitting `(GHK-Cu)` across rows. A literal hyphen is always a CSS break opportunity — `overflow-wrap` does not govern it. Fixed with `nowrap` + a derived size curve. Doc-sync (this update).                                                                                                                                                                                                                                                                                                                               |
+| 2026-08-30 | Product-page FAQ moved under the before/after block and took the research layout. "Explore More Research" card images became clickable with the menu hover treatment (scoped structurally across all 48 templates). **Review-copy coverage measured live: 91 of 99 cards real, 8 placeholder.** Plan §2 "honesty problem" corrected — the cards are real customers; the twelve _setup-written_ testimonial quotes are the actual open item. Doc-sync (this update).                                                                                                             |
 
 ### 🔄 BRAND-006 — /pages/faq category blocks carry a picture (PLACEHOLDERS LIVE)
 
