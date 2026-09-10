@@ -1,0 +1,24 @@
+{
+  "wave": "page-philosophy-standards-layout",
+  "created": "2026-09-10",
+  "template": "templates/page.philosophy.json",
+  "target": "/pages/our-philosophy — centre the standards section's header, leaving the two columns left-aligned",
+  "decided_by": "Malcolm, 2026-09-10",
+  "note": "Malcolm: 'Center align the first text block.' That is the section header — subheading, heading and intro paragraph — and NOT the two standards columns, whose body copy stays left-aligned because centred four-line paragraphs read badly.\n\nWHY THIS NEEDS CSS AND NOT THE SETTING. `multi-column` has one `text_alignment` setting and it drives BOTH halves: the snippet is rendered with `text_alignment: section.settings.text_alignment`, and the same value is emitted onto every block as a `justify-<value>` class. Setting it to `center` would centre the columns too and then need CSS to undo that — two rules and a fight with the setting. Leaving it at `start` and centring only the header is one rule.\n\nMEASURED, NOT GUESSED. `section-header` is a GRID whose track is `grid-template-columns: 700px` with `justify-content: start`, sitting in a 1344px container at a 1440 viewport — so the heading is a 700px column pinned left, and `text-align` alone would not move it. Centring the TRACK is what is required, which is `justify-content`. At 390 the track measures 350px against a 350px container, so the same rule is a no-op there and mobile is unaffected.\n\nSCOPING. This style section lives in `templates/page.philosophy.json`, so it only loads on this page, and the page carries exactly one `multi-column` (measured live). The class is therefore sufficient and, unlike a `shopify-section-template--<theme id>__standards` id selector, it does not go stale when the theme is duplicated. Section ids were not an option for that reason.\n\nAPPENDED AT THE END OF THE TEMPLATE, after `cta`. ADR-006 warns that a `custom-html` section dropped mid-order silently collapses the FOLLOWING section's padding — a zero-height section is not zero-effect. Placing it last means there is no following section for it to collapse, which is why every style section on `templates/index.json` sits at the end. `remove_vertical_spacing` and `remove_horizontal_spacing` are both true so the wrapper itself contributes no height.\n\nNo Liquid tags and no `{{` anywhere in the CSS, including inside the comments — `custom-html` rejects double braces with a 422 whose real message is buried in the response body, and Liquid parses the contents of a CSS comment too.",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "standards_layout_css",
+      "insert_after": "cta",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true,
+          "html": "<style>\n  /* /pages/our-philosophy — centre the standards section's header only.\n\n     section-header is a grid with a fixed 700px track and justify-content:\n     start, so the heading sits as a 700px column pinned to the left of a\n     1344px container. text-align on its own moves the text inside the track\n     but not the track itself, so the block would still read left. Centring\n     the TRACK is the actual fix; justify-items and text-align then centre\n     the subheading, heading and intro within it.\n\n     At 390 the track is 350px in a 350px container, so this is a no-op on\n     mobile and nothing there changes.\n\n     Scoped by class rather than by section id: this style section lives in\n     the philosophy template so it loads on no other page, and the page holds\n     exactly one multi-column. A template--<theme id>__standards selector goes\n     stale the moment the theme is duplicated. */\n  .shopify-section--multi-column section-header {\n    justify-content: center;\n    justify-items: center;\n    text-align: center;\n  }\n\n  /* The two standards columns stay LEFT. They already do, because the section\n     setting is start — this is a guard, so that if the alignment setting is\n     ever flipped in the theme editor to centre the header the hard way, the\n     body copy does not silently become centred with it. */\n  .shopify-section--multi-column .multi-column__item {\n    text-align: start;\n  }\n</style>"
+        }
+      }
+    }
+  ]
+}
