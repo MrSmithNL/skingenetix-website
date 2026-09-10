@@ -48,6 +48,72 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 SET-001 — Copper Peptide three-product set shots (2026-09-10)
+
+**Priority:** 🔴 Generating; nothing shown, nothing picked
+**Owner:** Claude (brief, generation, contact sheets) + Malcolm (every image choice)
+**Config:** `configs/banners/copper-peptide-set-2026-09-10.json`
+**Run:** `set -a; source ~/.claude/config/image-credentials.env; set +a` then
+`python3 scripts/generate-multi.py configs/banners/copper-peptide-set-2026-09-10.json`
+
+Malcolm's brief, 2026-09-10: _"lets create a product image run for the product bundles. Lets
+start with the Copper Peptide product set. So the Copper Peptide Serum together with the Night
+and Day creams. We need to make a selection of product shoot images with the three products
+shown as a set/bundle."_
+
+**This is NOT BUNDLE-001.** That one is N units of ONE product, composited from Drive masters
+so the label is identical by construction. This is THREE DIFFERENT products in one photograph,
+which BUNDLE-001's own note parks as a separate brief that "still fans out to every supplier"
+per BRAND-003. It is therefore generated, not composited.
+
+Five compositions, all 2048×2048 square, all reference-locked to the three `product_tight.png`
+crops in `assets/images/_refs-2026-08-19/`:
+
+| slot | composition |
+| --- | --- |
+| `set-a-graphite-hero` | graphite ground, cool key from upper left, bottle centre |
+| `set-b-clinical-white` | seamless white, flat catalogue light, single row |
+| `set-c-flatlay-stone` | overhead on pale grey stone, jars lid-up, bottle on its side |
+| `set-d-stepped-plinths` | three stone plinths at three heights |
+| `set-e-vanity-daylight` | bathroom vanity, cool morning daylight, background soft |
+
+**The one thing this brief exists to protect.** The line shares one carton blue but **three
+different container blues** — serum deep blue, Day cream deep navy, Night cream pale ice-blue.
+In a single-product shot an engine cannot conflate them; in a set shot it is the *default*
+failure, picking one blue and painting all three. Every slot states the three-way separation
+as its own instruction after the per-product blocks, and the negative bars a shared blue by
+name. All three labels are quoted verbatim with their ink colours, because an unspecified
+label is an invented one.
+
+**Smoke test 2026-09-10 — `set-a-graphite-hero`, 1 candidate, all suppliers: 5/5 returned and
+the three blues held.** Judged at native pixels, not off the contact sheet:
+
+- **seedream** (2048) — three blues cleanly separated, all six label elements on each
+  container. ⚠️ the DNA-helix mark is drawn as loose dots and dashes rather than the real
+  helix, and some letters of "COPPER" carry a pink tint instead of white ink.
+- **nbp_pro** (4096) — cleanest of the set. Correct helix, correct inks including the night
+  jar's black-on-pale. ⚠️ "COPPER PEPTIDE" broke to two lines on the serum where the spec says
+  one, and its day-navy sits closer to the serum blue than seedream's does.
+
+⚠️ **flux2 is skipped automatically** whenever `ref_files` are present, so this is a
+**5-supplier** run, not 6. Expect 45 candidates: slot A has 1 per supplier (the smoke test,
+deliberately not re-run — identical filenames and no seed, so a re-run would destroy the two
+frames already judged), slots B–E have 2 per supplier.
+
+**Outstanding**
+
+- 🔴 **Contact sheets to build and show; Malcolm has picked nothing yet.** Judge at native
+  pixels as well as tiled — the smoke test's helix fault was only visible at full size.
+- 🟡 **Roster drift, noted 2026-09-10:** OpenAI shipped `gpt-image-2.5-flare` and
+  `gpt-image-2.5-sunburst` on 2026-09-08. The run is wired to `gpt-image-2`, which is not
+  stale — it returned images in the smoke test — so it was left alone rather than swapping an
+  untested model in mid-run. Worth a head-to-head before the next wave.
+- 🟡 **A cartons-in-frame variant was deliberately not briefed** in round 1. The cartons carry
+  far more copy than the containers, so each one is another surface to garble; add it only if
+  Malcolm wants packaging in shot.
+- Only the Copper Peptide trio is briefed. PDRN, Matrixyl and the rest are the obvious
+  rollout once a composition wins.
+
 ### 🔄 BUNDLE-001 — 3-up and 6-up bundle imagery, all products (2026-08-31)
 
 **Priority:** 🟡 Prototype approved in shape; rollout and publishing outstanding
@@ -160,6 +226,37 @@ byte-for-byte (sha256 `47860af9505d6231`, 1,083,930 B, three UUID copies). So
    stops reading as further back and starts reading as merely higher. Left at 0.28/0.90.
 4. `assets/images/_sprites/` is gitignored with the rest of `assets/` — the sprites are
    reproducible from Drive in one command and are not backed up by this repo.
+
+### 🔄 STANDARDS-001 — /pages/our-philosophy quality-standards explainer (2026-09-10)
+
+**Priority:** 🔴 Substantiation unanswered — copy is safe meanwhile
+**Plan:** `configs/banners/page-philosophy-standards-explainer.json`
+
+Malcolm asked for explainer copy on both certifications and better badge images. Research
+changed the answer on the images: **the two badges were self-made** and were removed rather
+than restyled. Malcolm picked "no seal at all" from a six-concept sheet
+(`~/Desktop/sgx-standards-concepts.png`). Section rebuilt `logo-list` → `multi-column` in
+place, heading now "The Standards Behind Every Formula". Live and verified at 1440 and 390.
+
+Undo: `python3 scripts/patch-template.py --restore backups/page.philosophy-20260910-113739.json --template templates/page.philosophy.json`
+
+**Outstanding — 🔴 High**
+
+- **Is any of it substantiated?** Unanswered since 2026-08-21. Needed: an EU Responsible
+  Person, CPSR + CPNP records per formula, and a GMP certificate from the filling facility.
+  The copy currently states only what each standard *requires* — no certificate, audit result
+  or Responsible Person is claimed — so it is true as written. **But the section's presence
+  still implies the brand meets both.** If none of it holds, retire the section rather than
+  restyle it. If it does hold, the copy can get specific, which is a copy edit not a rebuild.
+- ⚠️ Note the store's products carry **origin CN and US import HS codes** while the storefront
+  is EUR with EU-city reviews. Which market they are actually placed on changes which
+  regulation applies. Worth settling alongside the above.
+
+**Outstanding — 🟡 Medium**
+
+- `skingenetix-badge-eu-cosmetics.png` and `skingenetix-badge-gmp.png` are now **orphaned in
+  Shopify Files, not deleted** (deleting a file is a stop condition). They will look like real
+  assets to the next session that searches for badge imagery.
 
 ### 🔄 PHOTO-CAF3-001 — Homepage review-carousel face wave, round 3 (2026-08-31)
 
@@ -328,11 +425,13 @@ Undo: `python3 scripts/reviews-add-before-after-carousel.py --restore backups/pa
 - ⚠️ **CORRECTED 2026-08-30 — "the review copy is invented" was wrong for the carousel.**
   Malcolm confirmed the before/after reviews are **real verified customers**; the photographs
   are his and the texts were transcribed from his source document. The carousel is fine.
-  What **is** invented on this page is the separate `testimonials` section below it — eight
-  names written at project setup in March (Caroline B., Sophie L., Hannah V., Nicole P.,
-  Rebecca S., Isabelle M., Elena G., Katharina H.), checked against all 99 real cards on
-  2026-08-30 with **zero full-name matches**. Decide whether `testimonials` stays.
-  See `docs/product-reviews-before-after-plan.md` §2 for the full verification.
+  ✅ **AND THE `testimonials` SECTION IS FINE TOO — CLOSED 2026-09-10.** Malcolm, direct
+  answer: _"These are verified real reviews. We just changed the customer names. So no issue
+  there. leave them and no longer flag."_ The eight names written at project setup (Caroline
+  B., Sophie L., Hannah V., Nicole P., Rebecca S., Isabelle M., Elena G., Katharina H.) are
+  real testimony under pseudonyms. `testimonials` **stays as it is**. The 2026-08-30
+  zero-full-name-match check proved nothing — a pseudonym breaks a name-match by design.
+  See `docs/product-reviews-before-after-plan.md` §2.
 
 **Outstanding — 🟡 Medium**
 
@@ -416,9 +515,10 @@ copy**.
    transcribed, 12 held back for stating an age, 2 surplus — and both surplus texts name a
    serum, so the `FORMAT_WORDS` filter correctly bars them from a device.
    **Malcolm 2026-08-30: leave them, the microneedling products are the next round.**
-2. **The four setup-written `customer_reviews` quotes still sit below on every product page** —
-   "Sarah M. - Verified Customer" and three others, no full-name match to any real customer. The
-   page now makes the same claim twice. Awaiting instruction; nothing removed.
+2. ~~**The four setup-written `customer_reviews` quotes still sit below on every product page.**~~
+   ✅ **CLOSED 2026-09-10 — real reviews under changed names** (Malcolm, direct answer). "Sarah
+   M. - Verified Customer" and the other three stay exactly as they are. Not a defect and **not
+   to be flagged again.**
 3. **"Fiona C" appears on two products** with two different photographs — reads as one customer
    reviewing two products.
 4. **4 orphan metaobjects** unattached to any product: `review-wrinkles-heather-s` and
@@ -726,8 +826,9 @@ looked like a broken block twice.
 
 **Follow-ups**
 
-1. 🔴 **Review copy is invented.** Six names/quotes, five stars, on a store with no orders —
-   now the most prominent section on the page. Malcolm to supply real reviews before launch.
+1. ~~🔴 **Review copy is invented.**~~ ✅ **CLOSED 2026-09-10 — the six homepage slider
+   names/quotes are real reviews published under changed names** (Malcolm, direct answer).
+   No replacement needed, not a launch blocker, **not to be flagged again.**
 2. 🟡 **P3 microscopy image** chosen by Malcolm and not yet placed — intended for the five
    research-page banners, two of which still borrow another page's image.
 3. 🟡 **Before/after images** — two files carry the results claim across ~30 slots,
@@ -748,9 +849,11 @@ looked like a broken block twice.
    Shopify File is a stop condition). If real coverage ever exists, rebuild with the genuine
    mastheads _linked to the articles_ — never swap them into a bar that claims coverage the
    brand has not had.
-   ⚠️ Not touched, and not the same thing: `standards` on `templates/page.philosophy.json` is a
-   separate `logo-list` holding EU Cosmetics and GMP badges under "Certified Quality Standards".
-   Whether those two certifications are earned is its own unanswered question.
+   ✅ **Addressed 2026-09-10 — see STANDARDS-001 below.** `standards` on
+   `templates/page.philosophy.json` held two self-made EU Cosmetics and GMP badges under
+   "Certified Quality Standards". The badges are gone and the section is now an explainer.
+   ⚠️ The substantiation question it raised is **still open** — the copy was written
+   definitional precisely so it is true without documents in hand.
 5. 🟢 Remaining pages unstyled: collections, products, concern pages, research pages.
 
 ### ✅ Homepage "Formulated With" credential bar — 2026-08-27

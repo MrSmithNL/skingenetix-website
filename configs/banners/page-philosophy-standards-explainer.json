@@ -1,0 +1,51 @@
+{
+  "wave": "page-philosophy-standards-explainer",
+  "created": "2026-09-10",
+  "template": "templates/page.philosophy.json",
+  "target": "/pages/our-philosophy — the `standards` section rebuilt from a logo-list of two badges into an explainer",
+  "decided_by": "Malcolm, 2026-09-10 — chose concept 3, 'no seal at all, typographic standards block'",
+  "note": "Malcolm: add explainer text for both certifications saying what they actually mean and why that is valuable to the customer, and improve the badge images. After research the badges are being REMOVED rather than improved, and Malcolm chose that direction from a six-concept sheet.\n\nWHY THE SEALS GO. The two live badges (`skingenetix-badge-eu-cosmetics.png`, `skingenetix-badge-gmp.png`) are self-made: plain outlined circles with type set inside, drawn for this brand and appearing nowhere else. That is the exact pattern the trade press names as the tell of a self-awarded badge — a genuine certification applies published standards across many brands. Under a heading reading 'Certified Quality Standards' two invented seals read as awards the brand won, which is the same class of problem as the press bar (deactivated 2026-08-27) and the setup-written testimonials.\n\nTHE HEADING WAS ALSO WRONG, INDEPENDENTLY OF SUBSTANTIATION. 'Certified Quality Standards' cannot be right for EC 1223/2009 under ANY set of facts: it is not a certification and no body issues it. It is the law that governs selling a cosmetic in Europe. So the heading becomes 'The Standards Behind Every Formula' — a claim about practice rather than an award.\n\nSECTION TYPE HAD TO CHANGE, and this is the structural reason the copy could not simply be added. `logo-list` blocks carry `logo` and `logo_width` and NOTHING ELSE — there is no per-block text setting, so there was nowhere for an explainer to go. `multi-column`'s `item` block carries `title` + richtext `content` with the image OPTIONAL, which is what concept 3 needs, and it is already used across this store. `text-with-icons` was considered first and rejected: its `icon` select has 51 options and none of them is 'none', so it cannot render an item without an icon, and concept 3 has no icons by design.\n\nREPLACED IN PLACE, KEEPING THE SECTION ID. `new_sections` with an existing id updates that id rather than adding a second section, so `standards` keeps its position between `impact_numbers` and `what_we_reject`. Nothing translatable is lost: the outgoing blocks held no text settings at all, so the only translated string on the section was its `title`, and that is being deliberately rewritten.\n\nBACKGROUND LEFT UNSET, deliberately unchanged. The page alternates and `standards` currently sits bone between a graphite `impact_numbers` and a `#f7f7f7` `what_we_reject`, so it already differs from both neighbours and the theme's section-spacing collapse cannot trigger. Changing only what needs changing keeps the vertical rhythm exactly as it is.\n\n⚠️ THE COPY IS DELIBERATELY DEFINITIONAL, AND THIS IS THE OPEN ITEM. Every sentence states what the standard REQUIRES, not what Skingenetix holds. Nothing here claims a certificate, an audit result, or a Responsible Person by name. That is the only version that is true without documents in hand, and Malcolm has not yet confirmed whether there is an EU Responsible Person, CPSR/CPNP records, or a GMP certificate from the filling facility. The section's mere presence still implies the brand meets these standards, so if none of it is substantiated the section should be retired rather than restyled — flagged to Malcolm 2026-09-10, not blocked. If it IS substantiated the copy gets stronger and more specific, and that is a copy edit, not a rebuild.\n\nRESEARCH BEHIND THE COPY. EC 1223/2009 requires a Cosmetic Product Safety Report per formula signed by a qualified assessor, a Responsible Person established in the EU, a Product Information File, and CPNP notification before sale. ISO 22716 is the cosmetics GMP standard covering traceability, equipment control, batch records and retained samples; it is audited AT THE FACILITY and is held by the manufacturer, not the brand — so the copy says 'audited at the factory rather than granted to a brand' rather than implying Skingenetix holds it.\n\nTHE TWO BADGE PNGs BECOME ORPHANED but are NOT deleted — removing a file from Shopify is a stop condition, and they are harmless sitting unreferenced. Search Files for `skingenetix-badge-` if they are ever wanted back.",
+  "images": [],
+  "new_sections": [
+    {
+      "id": "standards",
+      "insert_after": "impact_numbers",
+      "section": {
+        "type": "multi-column",
+        "blocks": {
+          "std_eu": {
+            "type": "item",
+            "settings": {
+              "column_size": "2",
+              "title": "EU Cosmetics Regulation",
+              "heading_tag": "h3",
+              "content": "<p><strong>EC 1223/2009</strong></p><p>Before a cosmetic may legally be sold in Europe it needs three things: a Cosmetic Product Safety Report signed by a qualified assessor, a named Responsible Person inside the EU who answers for the product, and a notification filed on the EU's central portal before it goes on sale. It is not an award a brand applies for. It is the condition of being allowed onto the market at all.</p><p>What it rules out is the unassessed product — the one shipped straight from an overseas marketplace with no safety file behind it and nobody in Europe accountable for what is in the bottle.</p>"
+            }
+          },
+          "std_gmp": {
+            "type": "item",
+            "settings": {
+              "column_size": "2",
+              "title": "Good Manufacturing Practice",
+              "heading_tag": "h3",
+              "content": "<p><strong>ISO 22716</strong></p><p>The international standard for how a cosmetic is actually made: raw materials traceable to their source, equipment cleaned and controlled to a written procedure, a batch record kept for every production run, and retained samples held so any batch can still be checked long after it has shipped.</p><p>It is audited at the factory rather than granted to a brand, and that is precisely the point of it — the difference between a formula that is good on paper and one that is made the same way every single time.</p>"
+            }
+          }
+        },
+        "block_order": ["std_eu", "std_gmp"],
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "gap": "x-large",
+          "text_alignment": "start",
+          "subheading": "Standards",
+          "title": "The Standards Behind Every Formula",
+          "content": "<p>Two things decide whether a cosmetic sold in Europe can be trusted: whether it was assessed as safe before it ever went on sale, and how carefully it was made. Neither is a marketing claim, and neither is a badge anyone hands out. Here is what each one actually requires.</p>",
+          "background": "",
+          "background_gradient": "",
+          "text_color": ""
+        }
+      }
+    }
+  ]
+}
