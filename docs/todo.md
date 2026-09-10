@@ -39,7 +39,7 @@ The store is **much further along** than the item statuses below suggest (those 
 - **9 active products** (serums + creams), all EUR 49,95, but **0 inventory** (not selling yet)
 - **18 content pages** + **13 collections** live
 - Blog "News" exists but **0 articles**
-- **Only English** locale published (no multilingual yet)
+- ⚠️ **SIX locales published and live** — `en` (primary), `de`, `es`, `fr`, `it`, `nl`. Corrected 2026-09-10 from `shopLocales`; this line previously said English-only and was wrong. **Any English copy change is a five-locale change.**
 - All 9 products have **HS-code 3304.99.5000 + origin CN** (US import) and **Shopify taxonomy categories** (Face Serums / Face Moisturizers) as of 2026-08-03
 
 Biggest open gaps for "further building": multilingual (9 languages), blog content, SEO audit, and inventory/launch readiness. See `handover-2026-05-06.md` for the full state-discovery notes.
