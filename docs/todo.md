@@ -100,10 +100,50 @@ the three blues held.** Judged at native pixels, not off the contact sheet:
 deliberately not re-run — identical filenames and no seed, so a re-run would destroy the two
 frames already judged), slots B–E have 2 per supplier.
 
+**Round 2 — ten more compositions, 2026-09-10.** Malcolm after round 1: _"we also need more
+variations of product bundle images. With different positions and different settings."_ Built
+by `scripts/build-copper-peptide-set-batch2.py` →
+`configs/banners/copper-peptide-set-batch2-2026-09-10.json`. **100 candidates, 100 returned,
+zero supplier failures.** Compositions researched rather than invented — pyramid hierarchy,
+black-glass reflection, wet slate, silk drape with one unit lying down, hard-shadow colour
+block, tilted flat-lay, low hero angle, ice, bathroom shelf, shallow depth of field.
+
+Sheets: `~/Desktop/skingenetix-cp-set-round1.png` (A1–E10) and
+`~/Desktop/skingenetix-cp-set-batch2.png` (B2-A1–B2-J10).
+
+**Round-1 verdict from Malcolm:** gpt_image, nbp_flash and seedream usable; **nbp_flash and
+seedream the best two**. Note he rejected nbp_pro, which this session had rated cleanest —
+and nbp_pro is 6× nbp_flash's price, so its record on this project stays poor.
+
+**Engine behaviour confirmed at native pixels, both rounds**
+
+- **nbp_flash is the label-accuracy winner.** `b2-b-black-glass-reflection` is the strongest
+  frame of the 145: all six label elements correct on all three containers, correct inks
+  including the night jar's black-on-pale, three blues separated, clean mirror reflection.
+- **seedream composes well and garbles type.** `b2-f-tilted-flatlay` returned "ADVAICCED DAY
+  REPAIR" and "DAY GREAM", and the serum's volume line appears to read 50ML where it must read
+  30ML. Same failure mode as the MATRIXYL evening of 2026-08-21. **Never ship a seedream frame
+  without reading every line at 100%.**
+- seedream also draws the DNA-helix mark as loose dots and dashes rather than the helix.
+
+**Two brief faults found and one already fixed**
+
+- ⚠️ **Round 1's `set-c-flatlay-stone` is structurally wrong for a bundle image** and the brief
+  caused it: it says the jars lie **lid-up**, so the engines correctly rendered two brushed
+  metal discs and **two of the three products carry no visible branding at all**. Fixed in
+  round 2's `b2-f-tilted-flatlay`, which specifies the jars lie **label-up** with their front
+  labels reading to camera — verified working.
+- ⚠️ **`set-e-vanity-daylight` leaks off-brief scene colour despite the negatives** — a
+  sage-green bowl intrudes top-right and the counter reads as warm beige granite rather than
+  pale grey stone. Green and warm casts are both barred by name in `negative_global`, so the
+  negative is not holding on scene props; state the surface and the props as positive
+  requirements rather than trusting the bar.
+
 **Outstanding**
 
-- 🔴 **Contact sheets to build and show; Malcolm has picked nothing yet.** Judge at native
-  pixels as well as tiled — the smoke test's helix fault was only visible at full size.
+- 🔴 **Malcolm has picked nothing yet.** 145 candidates across 15 compositions are on the two
+  sheets above. Judge picks at native pixels as well as tiled — every label fault found so far
+  was invisible on the contact sheet.
 - 🟡 **Roster drift, noted 2026-09-10:** OpenAI shipped `gpt-image-2.5-flare` and
   `gpt-image-2.5-sunburst` on 2026-09-08. The run is wired to `gpt-image-2`, which is not
   stale — it returned images in the smoke test — so it was left alone rather than swapping an
