@@ -93,12 +93,27 @@ def main():
     e = env()
     store = e["SHOPIFY_SKINGENETIX_STORE"]
     tok = token(e)
-    rid = plan["resource_id"]
 
-    print(f"Store    : {store}")
+    # A plan is either one resource at the top level, or several under `resources`.
+    # Both shapes are accepted so a single-resource plan stays readable.
+    units = plan.get("resources") or [plan]
+
+    print(f"Store     : {store}")
+    print(f"Resources : {len(units)}  ({'DRY RUN' if dry else 'LIVE'})\n")
+
+    all_ok = True
+    for unit in units:
+        if not run_unit(store, tok, unit, dry):
+            all_ok = False
+    if not dry:
+        print("\nAll resources verified." if all_ok else "\nSOME RESOURCES INCOMPLETE — see above.")
+
+
+def run_unit(store, tok, plan, dry):
+    rid = plan["resource_id"]
     print(f"Resource : {rid}")
     print(f"Locales  : {', '.join(plan['translations'].keys())}")
-    print(f"Keys     : {len(plan['keys'])}  ({'DRY RUN' if dry else 'LIVE'})\n")
+    print(f"Keys     : {len(plan['keys'])}\n")
 
     for locale, values in plan["translations"].items():
         data = gql(store, tok, FETCH, {"id": rid, "locale": locale})
@@ -140,7 +155,7 @@ def main():
         print(f"    registered {len(res['translationsRegister']['translations'])}\n")
 
     if dry:
-        return
+        return True
 
     # Verify by re-reading, never trust the mutation's own response.
     print("Verify:")
@@ -167,7 +182,8 @@ def main():
         print(f"  {locale}: {flag}"
               + (f"  missing={missing}" if missing else "")
               + (f"  outdated={stale}" if stale else ""))
-    print("\nAll locales verified." if ok else "\nSOME LOCALES INCOMPLETE — see above.")
+    print()
+    return ok
 
 
 if __name__ == "__main__":

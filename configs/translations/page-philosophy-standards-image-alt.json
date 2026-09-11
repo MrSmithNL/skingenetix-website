@@ -1,0 +1,55 @@
+{
+  "wave": "page-philosophy-standards-image-alt-translations",
+  "created": "2026-09-11",
+  "note": "Alt text for the two standards photographs, in the five published non-English locales.\n\nShopify DOES expose file alt text as translatable, under the MEDIA_IMAGE resource type with a single `alt` key — worth knowing, because it is not obvious and the resource is the MediaImage gid rather than anything derived from the filename. The gids are recorded here; they are stable for the life of the file.\n\nThe alt describes what is VISIBLE and claims nothing. These are illustrative photographs, not documentation of Skingenetix's own supplier, and on a page about regulatory compliance an image of an inspector sits close to implying it depicts this brand's facility. No locale says 'our laboratory' or 'our factory'.\n\nGendered forms follow the picture: the inspector reads as a woman, so DE/FR/ES/IT use feminine forms. Dutch has no gendered form here.",
+  "resources": [
+    {
+      "resource_id": "gid://shopify/MediaImage/70906616283521",
+      "title": "EU block — inspector with blue solution",
+      "keys": [
+        "alt"
+      ],
+      "translations": {
+        "de": {
+          "alt": "Qualitätsprüferin in Schutzkleidung, die im Labor ein Becherglas mit klarer blauer Lösung gegen das Licht hält"
+        },
+        "fr": {
+          "alt": "Inspectrice qualité en tenue de protection examinant à contre-jour un bécher de solution bleue limpide dans un laboratoire"
+        },
+        "es": {
+          "alt": "Inspectora de calidad con equipo de protección examinando a contraluz un vaso de precipitados con una solución azul transparente en un laboratorio"
+        },
+        "it": {
+          "alt": "Ispettrice della qualità in tuta protettiva che esamina in controluce un becher con una soluzione blu trasparente in laboratorio"
+        },
+        "nl": {
+          "alt": "Kwaliteitsinspecteur in beschermende kleding die in een laboratorium een bekerglas met heldere blauwe oplossing tegen het licht houdt"
+        }
+      }
+    },
+    {
+      "resource_id": "gid://shopify/MediaImage/70906616316289",
+      "title": "GMP block — inspector at the mixing vessel",
+      "keys": [
+        "alt"
+      ],
+      "translations": {
+        "de": {
+          "alt": "Qualitätsprüferin in Schutzkleidung bei der Kontrolle eines Rührbehälters aus Edelstahl in einer Kosmetikproduktion"
+        },
+        "fr": {
+          "alt": "Inspectrice qualité en tenue de protection contrôlant une cuve de mélange en acier inoxydable dans une usine de cosmétiques"
+        },
+        "es": {
+          "alt": "Inspectora de calidad con equipo de protección revisando un tanque de mezcla de acero inoxidable en una fábrica de cosméticos"
+        },
+        "it": {
+          "alt": "Ispettrice della qualità in tuta protettiva che controlla un serbatoio di miscelazione in acciaio inox in uno stabilimento cosmetico"
+        },
+        "nl": {
+          "alt": "Kwaliteitsinspecteur in beschermende kleding die een roestvrijstalen mengtank controleert in een cosmeticafabriek"
+        }
+      }
+    }
+  ]
+}

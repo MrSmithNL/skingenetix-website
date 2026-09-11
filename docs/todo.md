@@ -292,11 +292,20 @@ Undo: `python3 scripts/patch-template.py --restore backups/page.philosophy-20260
   is EUR with EU-city reviews. Which market they are actually placed on changes which
   regulation applies. Worth settling alongside the above.
 
+**Done since**
+
+- ✅ **Header centred, columns left** (2026-09-10) — needed CSS, not the section setting.
+- ✅ **Both blocks carry a photograph** (2026-09-11) — gpt_image for both, 2048x1360 each.
+- ✅ **Copy and image alt translated into all five live locales** (de/es/fr/it/nl).
+
 **Outstanding — 🟡 Medium**
 
 - `skingenetix-badge-eu-cosmetics.png` and `skingenetix-badge-gmp.png` are now **orphaned in
   Shopify Files, not deleted** (deleting a file is a stop condition). They will look like real
   assets to the next session that searches for badge imagery.
+- The theme requests **720w into a 616px box**, so the two photographs are soft on a retina
+  display. The masters are 2048px and the CDN could serve more — the limit is the theme's
+  `sizes` attribute, and it affects every `multi-column` image on the store, not just these.
 
 ### 🔄 PHOTO-CAF3-001 — Homepage review-carousel face wave, round 3 (2026-08-31)
 

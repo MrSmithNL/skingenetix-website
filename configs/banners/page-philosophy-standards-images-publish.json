@@ -1,0 +1,38 @@
+{
+  "wave": "page-philosophy-standards-images-publish",
+  "created": "2026-09-11",
+  "template": "templates/page.philosophy.json",
+  "target": "/pages/our-philosophy \u2014 the two `standards` blocks each get their photograph",
+  "decided_by": "Malcolm, 2026-09-10/11, from the standards-photos and eu-lab contact sheets",
+  "note": "Malcolm's two picks, both gpt_image:\n\n  std_eu   <- STD-EU-lab-blue-liquid / gpt_image_01     (inspector examining a blue solution)\n  std_gmp  <- STD-GMP-inspector-plant / gpt_image_01    (inspector auditing the plant)\n\nONE ENGINE FOR THE PAIR, WHICH WAS THE DECIDING CRITERION. These two render side by side in the same row, so a split pick wins each picture and loses the pair \u2014 the same lesson the skin-repair explainer set cost, except those sat stacked and these sit adjacent, which is less forgiving. Both are gpt_image and share its cool desaturated rendering.\n\nBOTH ARE EXACTLY 2048x1360, so NOTHING NEEDED NORMALISING. That is load-bearing rather than lucky: multi-column renders a block image at its NATURAL aspect ratio, with no wrapper ratio and no object-fit, so two different ratios would have produced two columns of visibly different heights. On both waves nbp_pro and nbp_flash silently returned 4:3 and Luma 16:9 against an explicit 3:2 request, so an nbp or Luma winner would have had to be cropped before it could be used.\n\nTHE TWO FIGURES FACE EACH OTHER. The GMP inspector sits right of frame looking left; the EU inspector sits left of centre looking right. std_eu renders in the LEFT column and std_gmp in the RIGHT, so the pair turns inward instead of both staring off the same edge.\n\nBLUE IS THE ONLY COLOUR IN EITHER FRAME \u2014 the nitrile gloves in the GMP shot, the gloves and the solution in the EU shot. Everything else in both is graphite, steel and white gowning.\n\n\u26a0\ufe0f flux2 WAS DISCARDED ON BOTH WAVES, on evidence rather than preference: it rendered a legible table of numbered rows on the safety dossier, a marking on the beaker glass, and came back warm-toned against a negated brown ground on all three attempts. That is its documented trait on every glassware wave this project has run.\n\n\u26a0\ufe0f THE ALT TEXT DESCRIBES THE PICTURE AND CLAIMS NOTHING. These are illustrative photographs, not documentation of Skingenetix's own supplier, and on a page about regulatory compliance an image of an inspector sits close to implying it depicts this brand's facility. So neither alt says 'our factory' or 'our laboratory' \u2014 they say what is visible and nothing more. Same discipline as the copy above them.\n\nNo image is being replaced: both blocks currently have no image at all, so there is no old file to strip and nothing to repoint.",
+  "images": [
+    {
+      "slot": "eu",
+      "source": "assets/publish-ready/philosophy-standards-20260910/STD-EU-lab-blue-liquid-gpt_image_01.png",
+      "filename": "skingenetix-eu-cosmetics-regulation-laboratory-safety-testing-inspector.jpg",
+      "alt": "Quality inspector in protective gowning examining a beaker of clear blue solution against the light in a laboratory",
+      "uploaded_handle": "shopify://shop_images/skingenetix-eu-cosmetics-regulation-laboratory-safety-testing-inspector.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-eu-cosmetics-regulation-laboratory-safety-testing-inspector.jpg?v=1789119837"
+    },
+    {
+      "slot": "gmp",
+      "source": "assets/publish-ready/philosophy-standards-20260910/STD-GMP-inspector-plant-gpt_image_01.png",
+      "filename": "skingenetix-good-manufacturing-practice-cosmetics-facility-inspection.jpg",
+      "alt": "Quality inspector in protective gowning checking a stainless steel mixing vessel in a cosmetics manufacturing facility",
+      "uploaded_handle": "shopify://shop_images/skingenetix-good-manufacturing-practice-cosmetics-facility-inspection.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-good-manufacturing-practice-cosmetics-facility-inspection.jpg?v=1789119838"
+    }
+  ],
+  "image_assignments": [
+    {
+      "section": "standards",
+      "block": "std_eu",
+      "slot": "eu"
+    },
+    {
+      "section": "standards",
+      "block": "std_gmp",
+      "slot": "gmp"
+    }
+  ]
+}
