@@ -155,10 +155,51 @@
       "saved_as": "B3-G1-b3-g-low-key-dark-stone-gpt_image_01.png",
       "supplier": "gpt_image_01",
       "wave": "copper-peptide-bathroom-batch3-2026-09-11"
+    },
+    {
+      "ref": "B4-A2",
+      "slot": "b4-a-row-contact-shadow",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-hero-white-batch4-2026-09-11/b4-a-row-contact-shadow/b4-a-row-contact-shadow-gpt_image_02.png",
+      "saved_as": "B4-A2-b4-a-row-contact-shadow-gpt_image_02.png",
+      "supplier": "gpt_image_02",
+      "wave": "copper-peptide-hero-white-batch4-2026-09-11"
+    },
+    {
+      "ref": "B4-A6",
+      "slot": "b4-a-row-contact-shadow",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-hero-white-batch4-2026-09-11/b4-a-row-contact-shadow/b4-a-row-contact-shadow-nbp_flash_02.png",
+      "saved_as": "B4-A6-b4-a-row-contact-shadow-nbp_flash_02.png",
+      "supplier": "nbp_flash_02",
+      "wave": "copper-peptide-hero-white-batch4-2026-09-11"
+    },
+    {
+      "ref": "B4-A7",
+      "slot": "b4-a-row-contact-shadow",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-hero-white-batch4-2026-09-11/b4-a-row-contact-shadow/b4-a-row-contact-shadow-nbp_pro_01.png",
+      "saved_as": "B4-A7-b4-a-row-contact-shadow-nbp_pro_01.png",
+      "supplier": "nbp_pro_01",
+      "wave": "copper-peptide-hero-white-batch4-2026-09-11"
+    },
+    {
+      "ref": "B4-A10",
+      "slot": "b4-a-row-contact-shadow",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-hero-white-batch4-2026-09-11/b4-a-row-contact-shadow/b4-a-row-contact-shadow-seedream_02.png",
+      "saved_as": "B4-A10-b4-a-row-contact-shadow-seedream_02.png",
+      "supplier": "seedream_02",
+      "wave": "copper-peptide-hero-white-batch4-2026-09-11"
+    },
+    {
+      "ref": "B4-F5",
+      "slot": "b4-f-gloss-reflection",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-hero-white-batch4-2026-09-11/b4-f-gloss-reflection/b4-f-gloss-reflection-nbp_flash_01.png",
+      "saved_as": "B4-F5-b4-f-gloss-reflection-nbp_flash_01.png",
+      "supplier": "nbp_flash_01",
+      "wave": "copper-peptide-hero-white-batch4-2026-09-11"
     }
   ],
   "unresolved": [
-    "row I (b2-i-bathroom-shelf) - his line was truncated to 'I Skingeneti'"
+    "row I (b2-i-bathroom-shelf) - his line was truncated to 'I Skingeneti'",
+    "B5-01 gpt_image_01 (2026-09-11): row letter unreadable. BOTH b5-a-open-day-jar-swatch-model and b5-g-model-holding-both-jars have a gpt_image_01 at column 1, so the supplier label does not disambiguate it. Not guessed. Awaiting confirmation."
   ],
   "deselected": [
     {

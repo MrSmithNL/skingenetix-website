@@ -47,7 +47,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from copper_peptide_set_spec import (  # noqa: E402
     DAY_CREAM_SUBSTANCE, DAY_JAR, DAY_JAR_S, NIGHT_CREAM_SUBSTANCE, NIGHT_JAR, NIGHT_JAR_S,
-    OPEN_JAR, REF_FILES, SERUM_BOTTLE, SERUM_BOTTLE_S, build_slot,
+    MODEL, MODEL_S, OPEN_JAR, REF_FILES, SERUM_BOTTLE, SERUM_BOTTLE_S, build_slot,
+    open_jar,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -58,44 +59,28 @@ BOTH_JARS_S = [DAY_JAR_S, NIGHT_JAR_S]
 ALL_THREE = [DAY_JAR, SERUM_BOTTLE, NIGHT_JAR]
 ALL_THREE_S = [DAY_JAR_S, SERUM_BOTTLE_S, NIGHT_JAR_S]
 
-MODEL = (
-    "THE MODEL is a White European woman of about 35 with natural, believable skin - visible "
-    "pores, fine texture and a few small freckles, not airbrushed and not plastic. Light "
-    "natural make-up, clean groomed brows, hair loosely gathered back off her face. Her "
-    "expression is calm and unforced, a faint closed-mouth smile at most. She wears a simple "
-    "cream or pale grey vest top with narrow straps. Her hands are clean with short natural "
-    "nails and no nail polish, no rings, no bracelets and no watch."
-)
-
-MODEL_S = (
-    "THE MODEL is a White European woman of about 35 with natural believable skin - visible "
-    "pores and a few small freckles, not airbrushed. Light make-up, hair loosely gathered back. "
-    "Calm unforced expression. A simple pale vest top. Clean hands, short natural nails, no "
-    "polish and no jewellery."
-)
-
 #: (id, ARRANGEMENT, SCENE, FRAME, products, products_short, separation, extra)
 COMPOSITIONS = [
     (
         "b5-a-open-day-jar-swatch-model",
-        "ARRANGEMENT. The day jar stands OPEN and slightly right of centre, close to the camera and filling much of the lower frame, its front label square to the lens and fully legible. Its lid lies flat on the surface behind and to the left of it, top face up. On the surface in front of the jar, a single generous SMEAR of the deep blue cream has been drawn across the stone with a palette knife, thick at one end and thinning to a tapered edge.",
+        "ARRANGEMENT. ALL THREE PRODUCTS ARE IN FRAME TOGETHER as a set. The day jar stands OPEN and nearest the camera, slightly right of centre and largest in frame, its front label square to the lens and fully legible; its lid lies flat on the surface behind and to the left of it, top face up. The serum bottle stands CLOSED just behind and to the left of the open jar, taller than it, its own front label facing the camera. The night jar stands CLOSED behind and to the right, turned a few degrees inward, its front label also facing the camera. On the surface in front of the open jar, a single generous SMEAR of the deep blue cream has been drawn across the stone with a palette knife, thick at one end and thinning to a tapered edge. All three front labels stay legible.",
         "SCENE. A pale grey-white marble surface with fine soft veining. Behind it, thrown well out of focus, a bright modern bathroom: a brushed steel soap dispenser at the left, a small green plant in a white pot behind it, and further back a woman standing at a mirror with her fingertips at her cheek, so soft she reads as atmosphere rather than as a subject. Cool clean daylight, bright and airy.",
         "FRAME. Camera low and very close, at the height of the jar's label. The open jar is fully inside the frame with its whole label visible; nothing of the jar is cut by any edge. Everything behind the jar is strongly out of focus while the jar, its rim, the cream inside it and the smear in front are all razor sharp. Square format. Every line of the front label legible.",
-        BOTH_JARS[:1], BOTH_JARS_S[:1], False, [OPEN_JAR, DAY_CREAM_SUBSTANCE],
+        ALL_THREE, ALL_THREE_S, True, [open_jar('DAY JAR'), DAY_CREAM_SUBSTANCE],
     ),
     (
         "b5-b-open-night-jar-swatch-model",
-        "ARRANGEMENT. The night jar stands OPEN and slightly right of centre, close to the camera and filling much of the lower frame, its front label square to the lens and fully legible. Its lid lies flat on the surface behind and to the left of it, top face up. On the surface in front of the jar, a single generous SMEAR of the soft light blue cream has been drawn across the stone with a palette knife, thick at one end and thinning to a tapered edge.",
+        "ARRANGEMENT. ALL THREE PRODUCTS ARE IN FRAME TOGETHER as a set. The night jar stands OPEN and nearest the camera, slightly right of centre and largest in frame, its front label square to the lens and fully legible; its lid lies flat on the surface behind and to the left of it, top face up. The serum bottle stands CLOSED just behind and to the left of the open jar, taller than it, its own front label facing the camera. The day jar stands CLOSED behind and to the right, turned a few degrees inward, its front label also facing the camera. On the surface in front of the open jar, a single generous SMEAR of the soft light blue cream has been drawn across the stone with a palette knife, thick at one end and thinning to a tapered edge. All three front labels stay legible.",
         "SCENE. A pale grey-white marble surface with fine soft veining. Behind it, thrown well out of focus, a calm modern bathroom in cooler evening light: a brushed steel soap dispenser at the left, a small green plant in a white pot behind it, and further back a woman standing at a mirror with her fingertips at her cheek, so soft she reads as atmosphere rather than as a subject. Cool, quiet, low-key but not dark.",
         "FRAME. Camera low and very close, at the height of the jar's label. The open jar is fully inside the frame with its whole label visible; nothing of the jar is cut by any edge. Everything behind the jar is strongly out of focus while the jar, its rim, the cream inside it and the smear in front are all razor sharp. Square format. Every line of the front label legible.",
-        [NIGHT_JAR], [NIGHT_JAR_S], False, [OPEN_JAR, NIGHT_CREAM_SUBSTANCE],
+        ALL_THREE, ALL_THREE_S, True, [open_jar('NIGHT JAR'), NIGHT_CREAM_SUBSTANCE],
     ),
     (
         "b5-c-open-day-jar-swatch-clean",
-        "ARRANGEMENT. The day jar stands OPEN and centred, close to the camera, its front label square to the lens and fully legible, its lid lying flat on the surface behind it. A single SMEAR of the deep blue cream is drawn across the stone in front of the jar, and a second much smaller dab sits apart from it. Nothing else is on the surface.",
+        "ARRANGEMENT. ALL THREE PRODUCTS ARE IN FRAME TOGETHER as a set. The day jar stands OPEN and nearest the camera at the centre, largest in frame, its front label square to the lens and fully legible, its lid lying flat on the surface behind it. The serum bottle stands CLOSED behind and to the left, taller than it, and the night jar stands CLOSED behind and to the right, both with their front labels facing the camera. A single SMEAR of the deep blue cream is drawn across the stone in front of the open jar, and a second much smaller dab sits apart from it. All three front labels stay legible.",
         "SCENE. A pale grey-white marble surface with fine soft veining, and behind it a plain bright bathroom wall thrown completely out of focus into a soft pale wash with no identifiable object in it at all. Cool clean daylight from the left, bright and airy.",
         "FRAME. Camera low and very close, at the height of the jar's label. The open jar is fully inside the frame with its whole label visible; nothing of the jar is cut by any edge. The jar, its rim, the cream inside and the smear are razor sharp against a completely soft background. Square format. Every line of the front label legible.",
-        [DAY_JAR], [DAY_JAR_S], False, [OPEN_JAR, DAY_CREAM_SUBSTANCE],
+        ALL_THREE, ALL_THREE_S, True, [open_jar('DAY JAR'), DAY_CREAM_SUBSTANCE],
     ),
     (
         "b5-d-oak-shelf-trio-styled",
@@ -109,7 +94,7 @@ COMPOSITIONS = [
         "ARRANGEMENT. The day jar stands OPEN at the centre of a light oak floating shelf, its lid lying flat on the oak beside it, its front label square to the camera and fully legible, the deep blue cream visible at the rim. The night jar stands closed a little to the right, turned a few degrees inward, its own label also fully legible. To the left, a small matte beige ceramic bottle vase holds six slim natural reed diffuser sticks.",
         "SCENE. A wall of pale grey plaster with a fine sandy texture and a light oak floating shelf with a square front edge and visible straight grain. A framed black-line figure drawing on plain white leans against the wall at the far right, partly in frame. Soft even daylight from the left, bright and calm.",
         "FRAME. Camera straight on and close, at the height of the jar labels. Both jars are fully inside the frame with their whole labels visible; nothing is cut by any edge. Square format. Sharp focus on both front labels and on the cream at the open rim, every line legible.",
-        BOTH_JARS, BOTH_JARS_S, False, [OPEN_JAR, DAY_CREAM_SUBSTANCE],
+        BOTH_JARS, BOTH_JARS_S, False, [open_jar('DAY JAR'), DAY_CREAM_SUBSTANCE],
     ),
     (
         "b5-f-oak-shelf-wider-room",

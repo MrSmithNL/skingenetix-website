@@ -148,6 +148,28 @@ SEPARATION_S = (
     "three by a wide margin. Never one shared blue, never two matching."
 )
 
+#: One casting, shared by every wave that puts a person in frame, so the woman does not change
+#: age, colouring or styling between waves and the candidates stay comparable. Malcolm asked
+#: for 35. The skin instruction is deliberate: an unqualified "beautiful woman" renders as
+#: airbrushed plastic on every engine, and pores, texture and a few freckles are what buy
+#: realism back. No jewellery and short unpainted nails keep the eye on the product and remove
+#: the hand detail engines most often mangle.
+MODEL = (
+    "THE MODEL is a White European woman of about 35 with natural, believable skin - visible "
+    "pores, fine texture and a few small freckles, not airbrushed and not plastic. Light "
+    "natural make-up, clean groomed brows, hair loosely gathered back off her face. Her "
+    "expression is calm and unforced, a faint closed-mouth smile at most. She wears a simple "
+    "cream or pale grey vest top with narrow straps. Her hands are clean with short natural "
+    "nails and no nail polish, no rings, no bracelets and no watch."
+)
+
+MODEL_S = (
+    "THE MODEL is a White European woman of about 35 with natural believable skin - visible "
+    "pores and a few small freckles, not airbrushed. Light make-up, hair loosely gathered back. "
+    "Calm unforced expression. A simple pale vest top. Clean hands, short natural nails, no "
+    "polish and no jewellery."
+)
+
 NEGATIVE = (
     "rose-gold, copper-coloured metal, champagne metal, brass, gold, warm-tinted metal, chrome "
     "mirror finish, terracotta, amber, peach, blush pink, warm brown, teal, green, purple, warm "
@@ -187,6 +209,24 @@ OPEN_JAR = (
     "are visible, and the cream inside comes right up to the rim and is peaked into a soft swirl "
     "where a fingertip has lifted some out, so it reads as a substance and not a flat disc."
 )
+
+
+def open_jar(which):
+    """The OPEN_JAR paragraph, but naming WHICH jar is open.
+
+    Needed the moment more than one product is in frame: `OPEN_JAR` says "THE JAR", which is
+    unambiguous in a single-product shot and an invitation to open the wrong one - or all of
+    them - in a set shot. Malcolm, 2026-09-11: the open-jar scenes must show all three products
+    together with ONE pot open, so every set shot that opens a lid must say which lid.
+    """
+    return (
+        f"THE {which} IS OPEN AND IT IS THE ONLY ONE THAT IS OPEN - every other product in the "
+        f"frame stays closed with its lid on. The {which.lower()}'s brushed satin aluminium lid "
+        "is off, resting flat on the surface beside and slightly behind it with its top face "
+        "showing. Its glass rim and screw thread are visible, and the cream inside comes right "
+        "up to the rim and is peaked into a soft swirl where a fingertip has lifted some out, "
+        "so it reads as a substance and not a flat disc."
+    )
 
 
 def build_slot(slot_id, opening, arrangement, scene, frame, width=2048, height=2048,
