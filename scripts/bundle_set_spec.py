@@ -53,30 +53,38 @@ REFS = ROOT / "assets" / "images" / "_refs-2026-08-19"
 #:   config  the per-product photography spec; `product_desc` is the verbatim label block
 #:   name    how a composition refers to it, e.g. "{A}" resolves to this
 #:   form    bottle | jar. Decides which compositions can apply and drives SHAPE separation.
-#:   body    clear | opaque. See the note below — this is the field that was wrong.
-#:   colour  what the container READS AS in a photograph. Drives LADDER separation.
+#:   body    colourless | tinted | opaque — THE CONTENTS, never the glass. A serum is a
+#:           translucent liquid (tinted or not); a cream is opaque. The glass is frosted
+#:           on all nine.
+#:   colour  what the filled container READS AS. Drives LADDER separation.
 #:   value   0 = darkest, 100 = lightest/clearest. Only used to order a ladder; never printed.
 #:   accent  the accent-rule colour on the label. The only lever LABEL separation has.
 #:
-#: THE COLOUR FIELD DESCRIBES WHAT YOU SEE, NOT WHAT THE SPEC PROSE SAYS, and the difference
-#: cost a wrong brief. Every bottle in the range is the same frosted CLEAR glass; what gives a
-#: container its colour is the LIQUID INSIDE IT. Copper Peptide reads blue because the serum is
-#: blue, PDRN reads pink because the serum is pink, and Matrixyl, Glutathione and Acetyl read
-#: TRANSPARENT because their contents are colourless. The cream jars read opaque because cream
-#: is opaque.
+#: THE GLASS IS FROSTED ON ALL NINE PRODUCTS. That is the constant, and it took two
+#: corrections from Malcolm to state it correctly.
 #:
-#: The first version of this table took `colour` from the phrase "frosted NEUTRAL WHITE glass"
-#: in each config's product_desc and recorded the Matrixyl serum and the Matrixyl cream as
-#: sharing one colour. Malcolm caught it: "the Matrixyl serum is transparent, the cream is
-#: white." Verified against every product_tight.png reference on 2026-09-11 — the background
-#: shows straight through the serum bottles and not at all through the cream jars. The
-#: consequence was not cosmetic: that bundle was being briefed with a SHAPE clause asserting
-#: "both are neutral white and that is CORRECT, do not tint either to tell them apart", which
-#: would have driven the serum to render as an opaque white bottle.
+#: What varies is the LIQUID INSIDE, and the frosted glass takes its apparent colour from it.
+#: Copper Peptide reads blue because its serum is blue; PDRN reads pink because its serum is
+#: pink; Matrixyl, Glutathione and Acetyl read pale and neutral because their liquid is
+#: COLOURLESS — not because the glass is white. Every cream jar reads solid because opaque
+#: cream fills it.
+#:
+#: Two wrong versions preceded this one, and the second was worse than the first. Version one
+#: took `colour` from the phrase "frosted NEUTRAL WHITE glass" in each product_desc and so
+#: recorded the Matrixyl serum and cream as sharing one colour — briefing them as
+#: interchangeable whites. Malcolm: "the Matrixyl serum is transparent. the cream is white."
+#: Version two then swung too far and called those three bottles CLEAR AND SEE-THROUGH, with a
+#: clause telling every engine the background must be visible THROUGH the glass. Malcolm again:
+#: "the glass of the bottle ... are all frosted glass - the same as the other products. Its only
+#: the color of the liquid inside that is transparent." Clear see-through glass is a different
+#: product from frosted glass, so that brief was as wrong as the first, in the opposite
+#: direction.
+#:
+#: `body` therefore describes THE CONTENTS, never the glass: `colourless` or `opaque`.
 PRODUCTS = {
     "cp_serum": dict(
         config="copper-peptide-repair-serum", name="THE COPPER PEPTIDE SERUM BOTTLE",
-        form="bottle", body="opaque", colour="deep blue", value=30,
+        form="bottle", body="tinted", colour="deep blue", value=30,
         accent="light cornflower-blue"),
     "cp_day": dict(
         config="copper-peptide-day-repair-cream", name="THE COPPER PEPTIDE DAY CREAM JAR",
@@ -88,7 +96,7 @@ PRODUCTS = {
         accent="strong royal-blue"),
     "pdrn_serum": dict(
         config="pdrn-skin-repair-serum", name="THE PDRN SERUM BOTTLE",
-        form="bottle", body="opaque", colour="dusty rose-pink", value=55,
+        form="bottle", body="tinted", colour="dusty rose-pink", value=55,
         accent="soft rose-pink"),
     "pdrn_cream": dict(
         config="pdrn-collagen-repair-cream", name="THE PDRN NIGHT CREAM JAR",
@@ -96,7 +104,7 @@ PRODUCTS = {
         accent="soft rose-pink"),
     "mat_serum": dict(
         config="matrixyl-3000-pro-collagen-serum", name="THE MATRIXYL 3000 SERUM BOTTLE",
-        form="bottle", body="clear", colour="clear and transparent", value=100,
+        form="bottle", body="colourless", colour="pale neutral, untinted", value=100,
         accent="deep emerald-teal"),
     "mat_cream": dict(
         config="matrixyl-3000-pro-collagen-cream", name="THE MATRIXYL 3000 CREAM JAR",
@@ -104,23 +112,48 @@ PRODUCTS = {
         accent="deep emerald-teal"),
     "glut_serum": dict(
         config="glutathione-brightening-serum", name="THE GLUTATHIONE SERUM BOTTLE",
-        form="bottle", body="clear", colour="clear and transparent", value=100,
+        form="bottle", body="colourless", colour="pale neutral, untinted", value=100,
         accent="champagne gold"),
     "acetyl_serum": dict(
         config="acetyl-hexapeptide-8-serum", name="THE ACETYL HEXAPEPTIDE-8 SERUM BOTTLE",
-        form="bottle", body="clear", colour="clear and transparent", value=100,
+        form="bottle", body="colourless", colour="pale neutral, untinted", value=100,
         accent="monochrome silver-grey, with no coloured accent at all"),
 }
 
 #: Emitted whenever a bundle mixes see-through and solid containers. Without it an engine
 #: renders a clear bottle as an opaque white one, which is the specific fault Malcolm caught.
-CLEAR_VS_OPAQUE = (
-    "CLEAR CONTAINERS AND SOLID CONTAINERS IN ONE FRAME. {clear} — the glass is frosted but "
-    "SEE-THROUGH and the liquid inside is colourless, so the background is visible THROUGH the "
-    "bottle and it must never be rendered as a solid white or milky object. {opaque} — solid "
-    "and not see-through, because opaque product fills them. This difference must be obvious "
-    "in the photograph."
+#: Emitted whenever a bundle mixes colourless and opaque CONTENTS. The glass is frosted on
+#: every product, so this says nothing about the glass — only about what is behind it.
+CONTENTS_CLAUSE = (
+    "WHAT IS INSIDE EACH CONTAINER, WHICH IS WHAT GIVES IT ITS COLOUR. Every container here is "
+    "the same FROSTED glass - softly matte and translucent, never clear see-through glass and "
+    "never opaque plastic. {parts} That difference comes from the CONTENTS: do not change the "
+    "glass itself, and do not tint anything to exaggerate it."
 )
+
+ALL_COLOURLESS_CLAUSE = (
+    "WHAT IS INSIDE EACH CONTAINER. Every container here is the same FROSTED glass - softly "
+    "matte and translucent, never clear see-through glass and never opaque plastic - and every "
+    "one holds a COLOURLESS liquid. With no tint behind the frosting they read pale and "
+    "neutral. Do not give the glass or the liquid any colour, and do not render them as solid "
+    "milky white plastic."
+)
+
+#: How each contents type reads through frosted glass, phrased for the brief. Two forms,
+#: because one product takes a singular verb and several take a plural one, and a brief that
+#: reads "THE SERUM BOTTLE hold a colourless liquid" is a brief someone will stop trusting.
+CONTENTS_PHRASE = {
+    "colourless": ("hold{s} a COLOURLESS liquid, so there is no tint behind the frosting and "
+                   "{they} read{r} pale and neutral, lighter and less dense than the others"),
+    "tinted": ("hold{s} a TRANSLUCENT TINTED liquid, so the frosted glass takes that colour and "
+               "read{r} as a soft, light-filled colour rather than a flat painted one"),
+    "opaque": "{is} filled with OPAQUE cream, so {they} read{r} solid and dense",
+}
+
+
+def _agree(phrase, n):
+    return phrase.format(s="s" if n == 1 else "", r="s" if n == 1 else "",
+                         they="it" if n == 1 else "they", **{"is": "is" if n == 1 else "are"})
 
 SHARED_RULES = (
     "SHARED RULES FOR EVERY PRODUCT IN FRAME. Every metal part is NEUTRAL SILVER-GREY brushed "
@@ -219,26 +252,29 @@ def separation(keys):
     clusters = _colour_clusters(keys)
     parts, negs = [], []
 
-    # 0. See-through vs solid, before anything about hue. This is the distinction an engine
-    # loses first: a colourless serum in frosted clear glass renders as a solid white bottle
-    # unless the transparency is asserted.
-    clear = [k for k in keys if PRODUCTS[k]["body"] == "clear"]
-    opaque = [k for k in keys if PRODUCTS[k]["body"] == "opaque"]
-    if clear and opaque:
-        parts.append(CLEAR_VS_OPAQUE.format(
-            clear=" and ".join(names[k] for k in clear) +
-                  (" is" if len(clear) == 1 else " are") + " CLEAR AND SEE-THROUGH",
-            opaque=" and ".join(names[k] for k in opaque) +
-                   (" is" if len(opaque) == 1 else " are") + " OPAQUE"))
-        negs.append("a clear see-through bottle rendered as solid white or milky, "
-                    "an opaque jar rendered as transparent")
-    elif clear and not opaque:
-        who = " and ".join(names[k] for k in clear)
-        parts.append(
-            f"EVERY CONTAINER IN THIS FRAME IS CLEAR AND SEE-THROUGH. {who} — frosted but "
-            "transparent glass holding a colourless liquid, so the background is visible "
-            "THROUGH each bottle. Never render them as solid white, milky or opaque objects.")
-        negs.append("solid white bottle, milky bottle, opaque glass, coloured liquid")
+    # 0. Contents, before anything about hue. The glass is frosted on every product; what an
+    # engine loses first is what is BEHIND that frosting - and a serum is a translucent liquid,
+    # tinted or not, while a cream is opaque. Calling a tinted serum "opaque" is as wrong as
+    # calling frosted glass "clear".
+    by_body = {}
+    for k in keys:
+        by_body.setdefault(PRODUCTS[k]["body"], []).append(k)
+    if len(by_body) > 1:
+        bits = []
+        for body in ("colourless", "tinted", "opaque"):
+            members = by_body.get(body)
+            if not members:
+                continue
+            who = " and ".join(names[k] for k in members)
+            bits.append(f"{who} {_agree(CONTENTS_PHRASE[body], len(members))}.")
+        parts.append(CONTENTS_CLAUSE.format(parts=" ".join(bits)))
+        negs.append("clear see-through glass, opaque plastic container, "
+                    "a colourless liquid rendered as milky white, tinted liquid on a "
+                    "colourless product")
+    elif "colourless" in by_body:
+        parts.append(ALL_COLOURLESS_CLAUSE)
+        negs.append("clear see-through glass, opaque plastic container, "
+                    "a colourless liquid rendered as milky white, tinted liquid")
 
     # 1. Across colours — only meaningful when more than one colour is present.
     if len(clusters) > 1:
@@ -277,10 +313,10 @@ def separation(keys):
             # Same colour AND same form — the label is the only lever left.
             bits = [f"{names[k]}, whose accent rule is {PRODUCTS[k]['accent']}" for k in members]
             parts.append(
-                f"{who} ARE DELIBERATELY IDENTICAL CONTAINERS and that is CORRECT: same "
-                f"{colour} frosted glass, same shape and size, same brushed satin aluminium "
-                "collar, same white rubber-bulb pipette, and the same water-clear colourless "
-                "liquid inside. Do NOT tint the glass, the liquid or the metal to tell them "
+                f"{who} ARE DELIBERATELY IDENTICAL CONTAINERS and that is CORRECT: the same "
+                "FROSTED glass, the same shape and size, the same brushed satin aluminium "
+                "collar, the same white rubber-bulb pipette, and the same colourless liquid "
+                "inside. Do NOT tint the glass, the liquid or the metal to tell them "
                 "apart. THE ONLY DIFFERENCES ARE THE PRINTED LABEL TEXT AND THE COLOUR OF THE "
                 "NARROW ACCENT RULE beside it: " + "; ".join(bits) + ". Every line of both "
                 "labels must therefore be sharp and fully legible, because the label is the "
