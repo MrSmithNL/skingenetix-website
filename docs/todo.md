@@ -48,6 +48,82 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 SET-002 — Bundle set imagery for the 9 remaining bundle products (2026-09-11)
+
+**Priority:** 🔴 Pilot running; rollout gated on Malcolm's review
+**Owner:** Claude (machinery, generation, QA) + Malcolm (every image choice)
+**Build:** `scripts/build-bundle-set.py <short>` → `configs/banners/bundle-<short>-<date>.json`
+**Run:** `set -a; source ~/.claude/config/image-credentials.env; set +a` then
+`python3 scripts/generate-multi.py <config> --suppliers seedream,gpt_image,nbp_pro,nbp_flash --candidates 2`
+**Sheets:** `python3 scripts/wave-contact-sheet.py <wave> --expect 8`
+
+The Copper Peptide routine bundle shipped 2026-09-11 (SET-001). The other **nine bundle
+products have 0 media each** and cannot be published without imagery.
+
+**What the Copper run measured, and why this one is smaller.** 51 slots, 510 candidates, 36
+selections, 12 final marks — and **31 of the 51 slots earned nothing at all**. Batch 6 alone
+was 11 slots and 110 candidates for 3 shortlist picks and no final marks. So the library is
+the **14 compositions that earned a selection**, not all 51. Per supplier across the final 12:
+nbp_flash 8, nbp_pro 2, seedream 2, gpt_image 0, luma 0 of 36.
+
+**Decisions taken with Malcolm 2026-09-11:** drop luma only (keep gpt_image as a fourth
+opinion); pilot two bundles before rolling out the other seven.
+
+| bundle (short) | products | jars | strategy | slots |
+| --- | --- | --- | --- | --- |
+| `copper-peptide-duo` | CP day + night | 2 | ladder | 14 |
+| `pdrn-ritual` | PDRN serum + cream | 1 | ladder | 13 |
+| `matrixyl-ritual` **[PILOT A]** | Matrixyl serum + cream | 1 | ladder | 13 |
+| `brightening-duo` | Glutathione + CP day | 1 | ladder | 13 |
+| `repair-renewal-duo` | PDRN serum + CP day | 1 | ladder | 13 |
+| `repair-renewal-routine` | PDRN serum + CP day + PDRN cream | 2 | ladder | 14 |
+| `wrinkles-routine` | Acetyl + Matrixyl + CP day | 1 | **label** | 13 |
+| `firming-routine` | Matrixyl serum + cream + CP night | 2 | ladder | 14 |
+| `wrinkles-duo` **[PILOT B]** | Acetyl + Matrixyl serums | 0 | **label** | 10 |
+
+**⚠️ THE CONTAINER MODEL — corrected twice by Malcolm, and the middle version was the worst.**
+The glass is **FROSTED on all nine products**; it never varies. What varies is the CONTENTS,
+and the frosting takes its apparent colour from whatever sits behind it:
+
+- **colourless** — Matrixyl, Glutathione, Acetyl serums → pale and neutral, no tint
+- **tinted** — Copper Peptide, PDRN serums → translucent, light-filled colour
+- **opaque** — all four cream jars → solid and dense
+
+Version one read "frosted NEUTRAL WHITE glass" out of each `product_desc` and briefed the
+Matrixyl serum and cream as interchangeable whites. Version two over-corrected to "CLEAR AND
+SEE-THROUGH", instructing engines that the background must be visible *through* the glass —
+a different material, and a fault that would look deliberate in a render rather than broken.
+Version two also had the Copper Peptide and PDRN serums as opaque, which would have briefed a
+translucent blue liquid as solid paint.
+
+**Other faults found by rendering rather than reading**
+
+- **Separation was computed per bundle, not per colour cluster.** Matrixyl serum + cream + CP
+  night was classified label-only and the clause then asserted the night jar was "the same
+  neutral white frosted glass … water-clear colourless liquid". It is a pale ice-blue jar of
+  light blue cream.
+- **A two-product brief returned THREE bottles** — the Matrixyl duplicated at both ends with
+  the Acetyl between them — because compositions said "{A} at the centre", which implies a
+  symmetric row. `duplicate products` was already in the negative and did not hold. Counts are
+  now asserted positively and all wording is count-aware.
+
+**The hardest case passes.** Acetyl + Matrixyl are the same frosted glass, shape, collar and
+colourless contents, separable only by label text and accent-rule colour — and Acetyl's rule is
+legitimately silver-grey, exactly what an engine produces when it garbles a coloured one.
+Smoke-tested: two bottles, silver-grey rule on the Acetyl, deep teal on the Matrixyl, every
+label line correct, neither tinted to differentiate.
+
+**Outstanding**
+
+- 🔴 **Pilots running** — `matrixyl-ritual` 13 slots + `wrinkles-duo` 10 slots, 184 candidates.
+  Review gate before the remaining seven.
+- 🟡 **Rollout after the gate** — 7 bundles, 94 slots, ~752 candidates, roughly $56.
+- 🟡 **Publishing** reuses `scripts/publish-product-gallery.py` per bundle. All nine are DRAFT,
+  so nothing is customer-visible until Malcolm publishes.
+- ⚠️ `pack_full.png` contamination (PHOTO-003) is **not** a blocker here — set briefs use
+  `product_tight.png` only — but Matrixyl serum, Matrixyl cream and Acetyl list it as a second
+  reference in their own configs, so it must not be pulled in.
+
 ### 🔄 SET-001 — Copper Peptide three-product set shots (2026-09-10)
 
 **Priority:** 🔴 Generating; nothing shown, nothing picked
