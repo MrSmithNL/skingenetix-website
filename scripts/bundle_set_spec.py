@@ -20,16 +20,20 @@ THE SEPARATION CLAUSE IS THE PART THAT ACTUALLY MATTERS, and it is not one parag
 A set shot's default failure is that the engine makes the products look alike. How you fight
 that depends entirely on how the real products differ, and the range has three distinct cases:
 
-  LADDER   — the products differ in value. Name them darkest to lightest and forbid a match.
-             This is the proven Copper Peptide wording (deep navy / mid blue / pale ice).
-  SHAPE    — the products genuinely SHARE a colour and differ in form, e.g. the Matrixyl serum
-             and cream are both neutral white. The clause must say the shared colour is
-             CORRECT, or an engine "helpfully" tints one of them to tell them apart.
-  LABEL    — the products are the same colour AND the same form. Matrixyl, Glutathione and
-             Acetyl serums are all 30ml frosted neutral-white glass with the same silver collar
-             and the same water-clear contents. They differ only in printed label text and in
-             the colour of the accent rule. This is the hardest case in the range and the one
-             with no colour lever at all.
+  LADDER   — the products differ in what they READ AS. Name them darkest to lightest and
+             forbid a match. This is the proven Copper Peptide wording.
+  SHAPE    — the products genuinely SHARE a colour and differ only in form. The clause must
+             say the shared colour is CORRECT, or an engine "helpfully" tints one to tell
+             them apart.
+  LABEL    — same colour AND same form. Matrixyl, Glutathione and Acetyl serums are all the
+             same frosted CLEAR glass with the same silver collar and the same colourless
+             contents, so all three read transparent. They differ only in printed label text
+             and accent-rule colour. Hardest case in the range: no colour lever at all.
+
+A fourth clause rides alongside these: CLEAR vs OPAQUE. Every bottle here is frosted CLEAR
+glass and takes its apparent colour from the liquid inside, so the colourless serums read
+see-through while every cream jar reads solid. A bundle mixing the two must say so, or the
+clear bottle renders as a solid white one.
 
 WHY THE LABEL CASE NEEDS ITS OWN NEGATIVE. Acetyl's accent is deliberately monochrome silver-
 grey. That is exactly what an engine produces when it garbles a coloured rule — so a Matrixyl
@@ -49,39 +53,74 @@ REFS = ROOT / "assets" / "images" / "_refs-2026-08-19"
 #:   config  the per-product photography spec; `product_desc` is the verbatim label block
 #:   name    how a composition refers to it, e.g. "{A}" resolves to this
 #:   form    bottle | jar. Decides which compositions can apply and drives SHAPE separation.
-#:   colour  the CONTAINER colour, short. Drives LADDER separation.
-#:   value   0 = darkest, 100 = lightest. Only used to order a ladder; never printed.
+#:   body    clear | opaque. See the note below — this is the field that was wrong.
+#:   colour  what the container READS AS in a photograph. Drives LADDER separation.
+#:   value   0 = darkest, 100 = lightest/clearest. Only used to order a ladder; never printed.
 #:   accent  the accent-rule colour on the label. The only lever LABEL separation has.
+#:
+#: THE COLOUR FIELD DESCRIBES WHAT YOU SEE, NOT WHAT THE SPEC PROSE SAYS, and the difference
+#: cost a wrong brief. Every bottle in the range is the same frosted CLEAR glass; what gives a
+#: container its colour is the LIQUID INSIDE IT. Copper Peptide reads blue because the serum is
+#: blue, PDRN reads pink because the serum is pink, and Matrixyl, Glutathione and Acetyl read
+#: TRANSPARENT because their contents are colourless. The cream jars read opaque because cream
+#: is opaque.
+#:
+#: The first version of this table took `colour` from the phrase "frosted NEUTRAL WHITE glass"
+#: in each config's product_desc and recorded the Matrixyl serum and the Matrixyl cream as
+#: sharing one colour. Malcolm caught it: "the Matrixyl serum is transparent, the cream is
+#: white." Verified against every product_tight.png reference on 2026-09-11 — the background
+#: shows straight through the serum bottles and not at all through the cream jars. The
+#: consequence was not cosmetic: that bundle was being briefed with a SHAPE clause asserting
+#: "both are neutral white and that is CORRECT, do not tint either to tell them apart", which
+#: would have driven the serum to render as an opaque white bottle.
 PRODUCTS = {
     "cp_serum": dict(
         config="copper-peptide-repair-serum", name="THE COPPER PEPTIDE SERUM BOTTLE",
-        form="bottle", colour="deep blue", value=40, accent="light cornflower-blue"),
+        form="bottle", body="opaque", colour="deep blue", value=30,
+        accent="light cornflower-blue"),
     "cp_day": dict(
         config="copper-peptide-day-repair-cream", name="THE COPPER PEPTIDE DAY CREAM JAR",
-        form="jar", colour="deep navy blue", value=20, accent="light sky-blue"),
+        form="jar", body="opaque", colour="deep navy blue", value=15,
+        accent="light sky-blue"),
     "cp_night": dict(
         config="copper-peptide-night-repair-cream", name="THE COPPER PEPTIDE NIGHT CREAM JAR",
-        form="jar", colour="pale ice-blue", value=85, accent="strong royal-blue"),
+        form="jar", body="opaque", colour="pale ice-blue", value=70,
+        accent="strong royal-blue"),
     "pdrn_serum": dict(
         config="pdrn-skin-repair-serum", name="THE PDRN SERUM BOTTLE",
-        form="bottle", colour="dusty rose-pink", value=60, accent="soft rose-pink"),
+        form="bottle", body="opaque", colour="dusty rose-pink", value=55,
+        accent="soft rose-pink"),
     "pdrn_cream": dict(
         config="pdrn-collagen-repair-cream", name="THE PDRN NIGHT CREAM JAR",
-        form="jar", colour="pale rose-pink", value=75, accent="soft rose-pink"),
+        form="jar", body="opaque", colour="pale rose-pink", value=65,
+        accent="soft rose-pink"),
     "mat_serum": dict(
         config="matrixyl-3000-pro-collagen-serum", name="THE MATRIXYL 3000 SERUM BOTTLE",
-        form="bottle", colour="neutral white", value=95, accent="deep emerald-teal"),
+        form="bottle", body="clear", colour="clear and transparent", value=100,
+        accent="deep emerald-teal"),
     "mat_cream": dict(
         config="matrixyl-3000-pro-collagen-cream", name="THE MATRIXYL 3000 CREAM JAR",
-        form="jar", colour="neutral white", value=95, accent="deep emerald-teal"),
+        form="jar", body="opaque", colour="opaque white", value=85,
+        accent="deep emerald-teal"),
     "glut_serum": dict(
         config="glutathione-brightening-serum", name="THE GLUTATHIONE SERUM BOTTLE",
-        form="bottle", colour="neutral white", value=95, accent="champagne gold"),
+        form="bottle", body="clear", colour="clear and transparent", value=100,
+        accent="champagne gold"),
     "acetyl_serum": dict(
         config="acetyl-hexapeptide-8-serum", name="THE ACETYL HEXAPEPTIDE-8 SERUM BOTTLE",
-        form="bottle", colour="neutral white", value=95,
+        form="bottle", body="clear", colour="clear and transparent", value=100,
         accent="monochrome silver-grey, with no coloured accent at all"),
 }
+
+#: Emitted whenever a bundle mixes see-through and solid containers. Without it an engine
+#: renders a clear bottle as an opaque white one, which is the specific fault Malcolm caught.
+CLEAR_VS_OPAQUE = (
+    "CLEAR CONTAINERS AND SOLID CONTAINERS IN ONE FRAME. {clear} — the glass is frosted but "
+    "SEE-THROUGH and the liquid inside is colourless, so the background is visible THROUGH the "
+    "bottle and it must never be rendered as a solid white or milky object. {opaque} — solid "
+    "and not see-through, because opaque product fills them. This difference must be obvious "
+    "in the photograph."
+)
 
 SHARED_RULES = (
     "SHARED RULES FOR EVERY PRODUCT IN FRAME. Every metal part is NEUTRAL SILVER-GREY brushed "
@@ -179,6 +218,27 @@ def separation(keys):
     names = {k: PRODUCTS[k]["name"] for k in keys}
     clusters = _colour_clusters(keys)
     parts, negs = [], []
+
+    # 0. See-through vs solid, before anything about hue. This is the distinction an engine
+    # loses first: a colourless serum in frosted clear glass renders as a solid white bottle
+    # unless the transparency is asserted.
+    clear = [k for k in keys if PRODUCTS[k]["body"] == "clear"]
+    opaque = [k for k in keys if PRODUCTS[k]["body"] == "opaque"]
+    if clear and opaque:
+        parts.append(CLEAR_VS_OPAQUE.format(
+            clear=" and ".join(names[k] for k in clear) +
+                  (" is" if len(clear) == 1 else " are") + " CLEAR AND SEE-THROUGH",
+            opaque=" and ".join(names[k] for k in opaque) +
+                   (" is" if len(opaque) == 1 else " are") + " OPAQUE"))
+        negs.append("a clear see-through bottle rendered as solid white or milky, "
+                    "an opaque jar rendered as transparent")
+    elif clear and not opaque:
+        who = " and ".join(names[k] for k in clear)
+        parts.append(
+            f"EVERY CONTAINER IN THIS FRAME IS CLEAR AND SEE-THROUGH. {who} — frosted but "
+            "transparent glass holding a colourless liquid, so the background is visible "
+            "THROUGH each bottle. Never render them as solid white, milky or opaque objects.")
+        negs.append("solid white bottle, milky bottle, opaque glass, coloured liquid")
 
     # 1. Across colours — only meaningful when more than one colour is present.
     if len(clusters) > 1:
