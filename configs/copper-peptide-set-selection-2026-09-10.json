@@ -1,5 +1,5 @@
 {
-  "_comment": "Malcolm's first selection from the round-2 Copper Peptide SET sheet, 2026-09-10, named by grid reference off ~/Desktop/skingenetix-cp-set-batch2.png. Recorded here because assets/ is gitignored: the FILES are not backed up by this repo, so the CHOICE has to be. Four separate tools on this project have lost his marks; a manifest cannot be lost by a rename. Column index maps to the sorted glob: 1-2 gpt_image, 3-4 luma, 5-6 nbp_flash, 7-8 nbp_pro, 9-10 seedream - confirmed against the labels he wrote out himself. D6 was named twice in his list and is stored once. ONE ENTRY UNRESOLVED: a line reading only 'I Skingeneti' - row I is the bathroom shelf. Not guessed, because guessing a pick is the one thing that must not happen here. Awaiting confirmation.",
+  "_comment": "Malcolm's first selection from the round-2 Copper Peptide SET sheet, 2026-09-10, named by grid reference off ~/Desktop/skingenetix-cp-set-batch2.png. Recorded here because assets/ is gitignored: the FILES are not backed up by this repo, so the CHOICE has to be. Four separate tools on this project have lost his marks; a manifest cannot be lost by a rename. Column index maps to the sorted glob: 1-2 gpt_image, 3-4 luma, 5-6 nbp_flash, 7-8 nbp_pro, 9-10 seedream - confirmed against the labels he wrote out himself. D6 was named twice in his list and is stored once. ONE ENTRY UNRESOLVED: a line reading only 'I Skingeneti' - row I is the bathroom shelf. Not guessed, because guessing a pick is the one thing that must not happen here. Awaiting confirmation. 2026-09-11: three added from the bathroom wave. NOTE row b3-e lost luma to a 422, so that slot's sorted glob is 8 long and its column indices do NOT line up with the 10-wide rows. Malcolm named the supplier on every pick, so picks are resolved by supplier name, never by column position.",
   "wave": "copper-peptide-set-batch2-2026-09-10",
   "folder": "assets/selections/copper-peptide-set-2026-09-10",
   "selected": [
@@ -107,6 +107,54 @@
       "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-set-batch2-2026-09-10/b2-h-ice-and-glass/b2-h-ice-and-glass-nbp_flash_01.png",
       "saved_as": "B2-H5-b2-h-ice-and-glass-nbp_flash_01.png",
       "supplier": "nbp_flash_01"
+    },
+    {
+      "ref": "B3-D5",
+      "slot": "b3-d-basin-rim-droplets",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-bathroom-batch3-2026-09-11/b3-d-basin-rim-droplets/b3-d-basin-rim-droplets-nbp_flash_01.png",
+      "saved_as": "B3-D5-b3-d-basin-rim-droplets-nbp_flash_01.png",
+      "supplier": "nbp_flash_01",
+      "wave": "copper-peptide-bathroom-batch3-2026-09-11"
+    },
+    {
+      "ref": "B3-E6",
+      "slot": "b3-e-backlit-mirror-halo",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-bathroom-batch3-2026-09-11/b3-e-backlit-mirror-halo/b3-e-backlit-mirror-halo-nbp_pro_02.png",
+      "saved_as": "B3-E6-b3-e-backlit-mirror-halo-nbp_pro_02.png",
+      "supplier": "nbp_pro_02",
+      "wave": "copper-peptide-bathroom-batch3-2026-09-11"
+    },
+    {
+      "ref": "B3-E2",
+      "slot": "b3-e-backlit-mirror-halo",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-bathroom-batch3-2026-09-11/b3-e-backlit-mirror-halo/b3-e-backlit-mirror-halo-gpt_image_02.png",
+      "saved_as": "B3-E2-b3-e-backlit-mirror-halo-gpt_image_02.png",
+      "supplier": "gpt_image_02",
+      "wave": "copper-peptide-bathroom-batch3-2026-09-11"
+    },
+    {
+      "ref": "B3-J6",
+      "slot": "b3-j-stone-shelf-shadow-play",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-bathroom-batch3-2026-09-11/b3-j-stone-shelf-shadow-play/b3-j-stone-shelf-shadow-play-nbp_flash_02.png",
+      "saved_as": "B3-J6-b3-j-stone-shelf-shadow-play-nbp_flash_02.png",
+      "supplier": "nbp_flash_02",
+      "wave": "copper-peptide-bathroom-batch3-2026-09-11"
+    },
+    {
+      "ref": "B3-G6",
+      "slot": "b3-g-low-key-dark-stone",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-bathroom-batch3-2026-09-11/b3-g-low-key-dark-stone/b3-g-low-key-dark-stone-nbp_flash_02.png",
+      "saved_as": "B3-G6-b3-g-low-key-dark-stone-nbp_flash_02.png",
+      "supplier": "nbp_flash_02",
+      "wave": "copper-peptide-bathroom-batch3-2026-09-11"
+    },
+    {
+      "ref": "B3-G1",
+      "slot": "b3-g-low-key-dark-stone",
+      "source": "assets/ai-generated/2026-08-22-multi-copper-peptide-bathroom-batch3-2026-09-11/b3-g-low-key-dark-stone/b3-g-low-key-dark-stone-gpt_image_01.png",
+      "saved_as": "B3-G1-b3-g-low-key-dark-stone-gpt_image_01.png",
+      "supplier": "gpt_image_01",
+      "wave": "copper-peptide-bathroom-batch3-2026-09-11"
     }
   ],
   "unresolved": [

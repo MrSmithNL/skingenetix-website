@@ -164,7 +164,34 @@ NEGATIVE = (
 LUMA_CAP = 6000
 
 
-def build_slot(slot_id, opening, arrangement, scene, frame, width=2048, height=2048):
+#: What is actually INSIDE each jar, for any shot where a lid comes off. Taken verbatim from
+#: the `formulation` blocks of configs/copper-peptide-{day,night}-repair-cream.json. Stated
+#: because the specs never describe the liquid and every engine's default for an unnamed
+#: skincare substance is milky white - which would make the day cream and the night cream
+#: identical, the same conflation the container colours already have to fight.
+DAY_CREAM_SUBSTANCE = (
+    "THE DAY CREAM ITSELF is an opaque cream of a DEEP, SATURATED DARK BLUE, smooth and satin "
+    "rather than glossy - richly tinted by the copper peptides it carries. Never white, "
+    "off-white, ivory, cream-coloured, pale blue, golden or pink."
+)
+
+NIGHT_CREAM_SUBSTANCE = (
+    "THE NIGHT CREAM ITSELF is an opaque cream of a SOFT LIGHT BLUE, clearly paler than the day "
+    "cream, smooth and satin rather than glossy - lightly tinted by the copper peptides it "
+    "carries. Never white, off-white, ivory, navy, dark blue, golden or pink."
+)
+
+OPEN_JAR = (
+    "THE JAR IS OPEN. Its brushed satin aluminium lid is off, resting flat on the surface beside "
+    "and slightly behind the jar with its top face showing. The glass rim and the screw thread "
+    "are visible, and the cream inside comes right up to the rim and is peaked into a soft swirl "
+    "where a fingertip has lifted some out, so it reads as a substance and not a flat disc."
+)
+
+
+def build_slot(slot_id, opening, arrangement, scene, frame, width=2048, height=2048,
+               products=None, products_short=None, separation=True, extra=None,
+               extra_short=None):
     """Assemble one generate-multi.py slot from the shared spec plus this composition's parts.
 
     `arrangement`, `scene` and `frame` are kept as three separate strings by every caller so a
@@ -172,14 +199,21 @@ def build_slot(slot_id, opening, arrangement, scene, frame, width=2048, height=2
     the bundle-shot geometry, where three knobs all rode on one ratio and each only became
     visible once the one before it was freed.
     """
-    prompt = "\n\n".join([
-        opening, SHARED_RULES, DAY_JAR, SERUM_BOTTLE, NIGHT_JAR,
-        SEPARATION, arrangement, scene, frame,
-    ])
-    prompt_luma = "\n\n".join([
-        opening, SHARED_RULES_S, DAY_JAR_S, SERUM_BOTTLE_S, NIGHT_JAR_S,
-        SEPARATION_S, arrangement, scene, frame,
-    ])
+    # `products` lets a slot carry a SUBSET - the two jars without the serum, or one jar alone.
+    # The three-way SEPARATION paragraph is only meaningful when all three are in frame, and on
+    # a two-product shot it actively misleads by naming an object that is not there, so it is
+    # switchable. Default stays all three, which is what waves 1-4 all want.
+    prods = [DAY_JAR, SERUM_BOTTLE, NIGHT_JAR] if products is None else products
+    prods_s = ([DAY_JAR_S, SERUM_BOTTLE_S, NIGHT_JAR_S]
+               if products_short is None else products_short)
+    sep = [SEPARATION] if separation else []
+    sep_s = [SEPARATION_S] if separation else []
+
+    prompt = "\n\n".join(
+        [opening, SHARED_RULES] + prods + (extra or []) + sep + [arrangement, scene, frame])
+    prompt_luma = "\n\n".join(
+        [opening, SHARED_RULES_S] + prods_s + (extra_short if extra_short is not None else (extra or []))
+        + sep_s + [arrangement, scene, frame])
     # Fail at build time, not an hour into a run: over the cap Luma returns a bare 422 that is
     # indistinguishable from a content refusal, and the backend is lost silently.
     if len(prompt_luma) >= LUMA_CAP:
