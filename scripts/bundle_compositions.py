@@ -327,9 +327,18 @@ COMPOSITIONS = [
 ]
 
 
-def applicable(comp, n_products, n_jars):
+def applicable(comp, n_products, n_jars, n_bottles=0):
+    """Can this composition serve a bundle of this shape?
+
+    `bottles` matters as much as `jars`: the serum bridge lays a BOTTLE across two jars, and
+    the Copper Peptide day+night duo is two jars with no bottle at all. Without this the
+    builder emitted a brief naming a product the bundle does not contain - caught by the
+    unresolved-placeholder guard rather than shipped, but the filter is where it belongs.
+    """
     r = comp.get("requires", {})
-    return n_products >= r.get("min_products", 2) and n_jars >= r.get("jars", 0)
+    return (n_products >= r.get("min_products", 2)
+            and n_jars >= r.get("jars", 0)
+            and n_bottles >= r.get("bottles", 0))
 
 
 # ---------------------------------------------------------------------------------------
@@ -440,7 +449,7 @@ ADDITIONAL = [
          arrangement="ARRANGEMENT. {JAR} and {JAR2} are STACKED, {JAR} on the bottom, but the upper jar is ROTATED about thirty degrees around the vertical axis and pushed slightly off centre, so the tower reads deliberately, elegantly precarious rather than neatly squared up. Its FLAT BASE still rests directly ON the lid beneath it, in full contact, no gap, no visible support, the two staying separate objects with a clear seam. Both front labels stay fully legible. Any remaining product stands upright a little apart, straight and square.",
          scene="SCENE. A cool pale-grey seamless background and matching surface. ONE hard directional light from the upper left, so the tower throws a single long crisp-edged shadow to the lower right and the offset reads in that shadow too. Graphic and spare.",
          frame="FRAME. Camera straight on, slightly below the seam so the tower reads tall. The tower, any other product and the full shadow are fully inside the frame. Square format."),
-    dict(id="three-tier-tower", requires=dict(min_products=3, jars=2),
+    dict(id="three-tier-tower", requires=dict(min_products=3, jars=2, bottles=1),
          arrangement="ARRANGEMENT. All three products form ONE TOWER of three tiers: {JAR} on the bottom, {JAR2} squarely on top of it, and {BOTTLE} standing upright and centred on top. All three are axis-aligned. Where one sits on another its FLAT BASE rests directly ON the lid beneath, in full contact, no gap and no visible support; they stay separate objects with a clear seam and never merge into one vessel. Every front label faces the camera and stays fully legible.",
          scene="SCENE. A deep cool graphite background falling to near-black at the corners, and a dark matte surface beneath. Cool rim light from behind on both sides draws a bright edge down the flank of every tier, with a soft frontal fill keeping every label readable. Monumental and quiet.",
          frame="FRAME. Camera LOW, below the base of the tower, angled slightly UP. The whole tower from base to top is fully inside the frame with clear dark space above, and the BASE of the bottom product is not cut by the lower edge. Square format."),
@@ -452,7 +461,7 @@ ADDITIONAL = [
          arrangement="ARRANGEMENT. The products are PILED loosely on each other, as if set down in a heap rather than arranged: one lies on its side at the bottom with its front label turned up, another rests ON it tilted at an angle and also label-up, and any third lies across them both. The pile is relaxed and slightly untidy, nothing is level, and every front label is still turned enough to be fully legible.",
          scene="SCENE. A cool pale-grey matte surface and a soft cool grey background, out of focus. Soft directional light from the upper left, the shadows between the piled containers left soft rather than crushed.",
          frame="FRAME. Camera above the pile at a three-quarter angle, looking down across it. Every product is fully inside the frame with clear surface visible around the pile. Square format."),
-    dict(id="serum-bridge", requires=dict(jars=2),
+    dict(id="serum-bridge", requires=dict(jars=2, bottles=1),
          arrangement="ARRANGEMENT. {JAR} and {JAR2} stand upright and apart, a little further apart than the length of {BOTTLE}. {BOTTLE} LIES HORIZONTALLY ACROSS THE TOP OF BOTH, spanning the gap like a lintel, its base resting on one lid and its shoulder on the other, its front label turned up and towards the camera so it stays fully legible. Together they make a simple bridge shape with a clear opening beneath it.",
          scene="SCENE. A cool mid-grey seamless background and matching matte surface. Even cool light from the front and slightly above, with soft shadows under each jar and a gentle shadow cast into the opening beneath the bridge. Architectural and calm.",
          frame="FRAME. Camera straight on at the height of the jar lids, level with the span. Everything is fully inside the frame with clear margin above the bridge. Square format."),
@@ -482,9 +491,9 @@ ADDITIONAL = [
          scene="SCENE. A pale grey-white marble surface with soft natural veining, lit by a large soft window from one side so the light is directional but gentle, with a long soft shadow falling away from the group. A folded edge of pale grey-white linen lies behind. Calm, curated, minimal. The palette is {ACCENT_PALETTE}.",
          frame="FRAME. Camera slightly above at a gentle three-quarter angle, the group off-centre with clean surface to one side. Every product is fully inside the frame. Square format."),
     dict(id="packaging-macro-group", requires=dict(),
-         arrangement="ARRANGEMENT. An extreme close view of the products standing shoulder to shoulder, cropped to the LABEL BAND only so the frosted glass grain, the printed type and the brushed metal texture fill the frame. Every product's brand mark and at least its first two label lines are fully visible and sharp. No container is cut vertically through its label - the crop is above and below the type, never through it.",
+         arrangement="ARRANGEMENT. A very close view of the products standing shoulder to shoulder and almost touching, filling the frame so the frosted glass grain, the printed type and the brushed metal collars dominate. Each container is COMPLETE from side to side with its whole front label visible and nothing cut off at the left or right - close, but not cropped through any lettering. Every label line is sharp and fully legible.",
          scene="SCENE. Raking side light at a shallow angle across the frosted glass so the grain and the slight relief of the printing read, with a controlled specular strip on each metal collar. A cool dark ground falls away behind. The palette is {ACCENT_PALETTE}.",
-         frame="FRAME. Camera very close and square on, at label height. The crop is deliberate and horizontal: the top and bottom of the containers fall outside the frame, but every label line in shot is complete and razor sharp. Square format."),
+         frame="FRAME. Camera very close and square on at label height, framed tight enough that the group fills nearly the whole picture with only a narrow margin of ground around it. Every product is fully inside the frame - nothing is cut by any edge. Square format. Every line of every label razor sharp."),
     dict(id="floating-droplet-spheres", requires=dict(),
          arrangement="ARRANGEMENT. The products stand in a close group, {A} {LEAD_POS}, with a sparse scatter of translucent liquid spheres suspended in the air around and between them at varying distances and sizes. The spheres are few and calm, never a dense cloud, and none covers a label. Every front label faces the camera and stays fully legible.",
          scene="SCENE. A smooth cool gradient background in {ACCENT_PALETTE}, darker at the corners. Cool backlight catching each suspended sphere so it glows and refracts, with a soft frontal fill keeping the labels open.",

@@ -120,13 +120,14 @@ def build(handle, stamp):
     b = BUNDLES[handle]
     keys = b["products"]
     n_jars = sum(1 for k in keys if PRODUCTS[k]["form"] == "jar")
+    n_bottles = len(keys) - n_jars
     ground, palette = accent(keys)
     sub, ordered = placeholders(keys, b["label"], ground, palette)
 
     slots = []
     skipped = []
     for c in COMPOSITIONS:
-        if not applicable(c, len(keys), n_jars):
+        if not applicable(c, len(keys), n_jars, n_bottles):
             skipped.append(c["id"])
             continue
         sid = f"{b['short']}-{c['id']}"
@@ -181,7 +182,9 @@ def main():
     if a.list:
         for h, b in BUNDLES.items():
             n_jars = sum(1 for k in b["products"] if PRODUCTS[k]["form"] == "jar")
-            n = sum(1 for c in COMPOSITIONS if applicable(c, len(b["products"]), n_jars))
+            n_bot = len(b["products"]) - n_jars
+            n = sum(1 for c in COMPOSITIONS
+                    if applicable(c, len(b["products"]), n_jars, n_bot))
             done = f"   [{b['done']}]" if b.get("done") else ""
             print(f"  {b['short']:<24} {len(b['products'])}p {n_jars}jar  "
                   f"{strategy(b['products']):<6} {n:>2} slots{done}")
