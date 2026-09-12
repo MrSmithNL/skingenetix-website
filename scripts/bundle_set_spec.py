@@ -155,6 +155,51 @@ def _agree(phrase, n):
     return phrase.format(s="s" if n == 1 else "", r="s" if n == 1 else "",
                          they="it" if n == 1 else "they", **{"is": "is" if n == 1 else "are"})
 
+#: The scene accent for a bundle, taken from the products' own label accent rules.
+#:
+#: Malcolm, 2026-09-12: "the blue colored background should be the color that best fits the
+#: product. in the case of matryxil it should be teal. The colors used for the line and the
+#: colored text on the labels of the products should be used as a guide for the appropriate
+#: background or setting accent colors."
+#:
+#: So a coloured ground is never a fixed brand blue any more - it is read off the accent rule
+#: printed on the label. Where a bundle mixes accents, the first COLOURED one wins: Acetyl's
+#: accent is deliberately monochrome silver-grey, and a bundle pairing it with Matrixyl should
+#: take the teal rather than fall back to grey. A bundle of only monochrome products gets cool
+#: graphite, which is its actual identity rather than a default.
+ACCENT_SCENE = {
+    "light cornflower-blue": ("deep cornflower blue", "cool blues and steel greys"),
+    "light sky-blue": ("deep sky blue", "cool blues and steel greys"),
+    "strong royal-blue": ("deep royal blue", "cool blues and pale ice tones"),
+    "soft rose-pink": ("soft dusty rose-pink", "blush pinks, warm rose neutrals and soft ivories"),
+    "deep emerald-teal": ("deep emerald-teal", "deep teals, cool sea greens and pale cool greys"),
+    "champagne gold": ("warm champagne gold", "champagne golds, soft ivories and pale sand"),
+}
+MONOCHROME_SCENE = ("cool graphite grey", "pearl silvers, cool greys and soft graphite")
+
+
+def accent(keys):
+    """(ground colour, palette phrase) for this bundle, from its labels' accent rules."""
+    for k in keys:
+        hit = ACCENT_SCENE.get(PRODUCTS[k]["accent"])
+        if hit:
+            return hit
+    return MONOCHROME_SCENE
+
+
+#: One casting, shared by every bundle wave that puts a person in frame, so she does not change
+#: age, colouring or styling between bundles. Copied forward from the Copper Peptide waves,
+#: where it was bought with two rounds: an unqualified "beautiful woman" renders as airbrushed
+#: plastic on every engine, and pores, texture and a few freckles are what buy realism back.
+MODEL = (
+    "THE MODEL is a White European woman of about 35 with natural, believable skin - visible "
+    "pores, fine texture and a few small freckles, not airbrushed and not plastic. Light "
+    "natural make-up, clean groomed brows, hair loosely gathered back off her face. Her "
+    "expression is calm and unforced, a faint closed-mouth smile at most. She wears a simple "
+    "cream or pale grey vest top with narrow straps. Her hands are clean with short natural "
+    "nails and no nail polish, no rings, no bracelets and no watch."
+)
+
 SHARED_RULES = (
     "SHARED RULES FOR EVERY PRODUCT IN FRAME. Every metal part is NEUTRAL SILVER-GREY brushed "
     "satin aluminium with a fine grain - never rose-gold, copper, champagne, brass or "

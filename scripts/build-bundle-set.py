@@ -38,7 +38,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from bundle_compositions import COMPOSITIONS, applicable  # noqa: E402
 from bundle_registry import BUNDLES  # noqa: E402
-from bundle_set_spec import PRODUCTS, build_slot, strategy  # noqa: E402
+from bundle_set_spec import (  # noqa: E402
+    MODEL, PRODUCTS, accent, build_slot, strategy,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 #: The registry's `label` already begins with "Skingenetix" — it is the alt-text prefix used at
@@ -55,7 +57,7 @@ def resolve_handle(arg):
     sys.exit(f"unknown bundle {arg!r}. --list to see them.")
 
 
-def placeholders(keys, label):
+def placeholders(keys, label, ground, palette):
     """Map every placeholder a composition may use to this bundle's real product names.
 
     Products are ordered bottles-first so {A} is the tall element in a mixed bundle, which is
@@ -74,6 +76,18 @@ def placeholders(keys, label):
         "LEAD_POS": "on the left" if len(names) == 2 else "at the centre",
         "OTHERS": "the other product" if len(names) == 2 else "the others",
         "SIT": "sits" if len(names) == 2 else "sit",
+        # A coloured ground is read off the products' own label accent rules, never a fixed
+        # brand blue - Malcolm, 2026-09-12: the Matrixyl set should sit on teal, not blue.
+        "ACCENT": ground,
+        "ACCENT_PALETTE": palette,
+        # Two hands hold two products; a third has to go somewhere she can still present it.
+        "MODEL_HOLD": (
+            f"The model holds {names[0]} in one hand and {names[1]} in the other, raised to "
+            "about chest height and turned so both front labels face the camera."
+            if len(names) == 2 else
+            f"The model holds {names[0]} in one hand and {names[1]} in the other at about "
+            f"chest height, with {names[2]} standing on the counter in front of her, all "
+            "turned so every front label faces the camera."),
         # Only mention a third object when there IS one - "any further product"
         # is an invitation to invent one in a two-product bundle.
         "THIRD_LYING": ("" if len(names) < 3 else
@@ -106,7 +120,8 @@ def build(handle, stamp):
     b = BUNDLES[handle]
     keys = b["products"]
     n_jars = sum(1 for k in keys if PRODUCTS[k]["form"] == "jar")
-    sub, ordered = placeholders(keys, b["label"])
+    ground, palette = accent(keys)
+    sub, ordered = placeholders(keys, b["label"], ground, palette)
 
     slots = []
     skipped = []
@@ -121,7 +136,8 @@ def build(handle, stamp):
             ordered,
             fill(c["arrangement"], sub, sid),
             fill(c["scene"], sub, sid),
-            fill(c["frame"], sub, sid)))
+            fill(c["frame"], sub, sid),
+            extra=[MODEL] if c.get("model") else None))
 
     out = ROOT / "configs" / "banners" / f"bundle-{b['short']}-{stamp}.json"
     cfg = {
