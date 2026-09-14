@@ -113,10 +113,47 @@ legitimately silver-grey, exactly what an engine produces when it garbles a colo
 Smoke-tested: two bottles, silver-grey rule on the Acetyl, deep teal on the Matrixyl, every
 label line correct, neither tinted to differentiate.
 
+**ROLLOUT COMPLETE 2026-09-13 — 430 slots, 3,439 candidates, 9 bundles.** Seven supplier drops
+in total (~0.2%), all infrastructure: a fal `downstream_service_error`, a gpt_image
+`Connection error`, and five slots where a supplier returned one candidate instead of two. Six
+retried and filled; `pdrn-ritual-model-holding-set` would not and sits at 7 tiles.
+
+**⚠️ THE CONTAINER MODEL WAS WRONG TWICE — see the warning block above.** Runs were stopped
+mid-flight both times. Corrected and re-smoked before the rollout.
+
+**Two more faults found by rendering, not reading:** `requires` did not know about BOTTLES, so
+`copper-peptide-duo-serum-bridge` named a product that bundle does not contain (the
+unresolved-placeholder guard caught it at build time); and the label macro asked for an extreme
+crop AND complete label lines while the negative barred cropped products — the render came back
+reading "MATRIXYL 3000 PRO C", cut mid-word. Reframed as a close group shot.
+
+### Published so far (all DRAFT — nothing customer-visible)
+
+| bundle | gallery | FAQ | selection |
+| --- | --- | --- | --- |
+| `complete-copper-peptide-…-routine` | 4 | ✅ | 12 marked of 36 |
+| `day-night-copper-peptide-…-duo-set` | 5 | ✅ | 34 saved |
+| `full-matrixyl-3000-ritual-serum-cream` | 5 | ✅ | 28 saved |
+| `complete-firming-skin-density-…` | 5 | ✅ | 44 saved |
+
+Selections live in `assets/selections/<bundle>-<date>/` with a committed manifest in
+`configs/<bundle>-selection-*.json` — `assets/` is gitignored, so the CHOICE is backed up even
+though the files are not.
+
 **Outstanding**
 
-- 🔴 **Pilots running** — `matrixyl-ritual` 13 slots + `wrinkles-duo` 10 slots, 184 candidates.
-  Review gate before the remaining seven.
+- 🔴 **Six bundles awaiting Malcolm's selection** — `wrinkles-duo`, `pdrn-ritual`,
+  `brightening-duo`, `repair-renewal-duo`, `repair-renewal-routine`, `wrinkles-routine`. Sheets
+  are on his Desktop as `skingenetix-bundle-<short>-2026-09-12.png`.
+- ⚠️ **`pdrn-ritual` is the one sheet where a bare grid ref can mislead** — its
+  `model-holding-set` row has 7 tiles, so every column after the gap shifts. Ask for the engine
+  name on anything picked from that row.
+- ⚠️ **Do NOT rebuild a sheet whose refs are still in play.** Rows past Z were labelled `Z26`,
+  `Z27` (a tile reads `Z308` for row Z30 column 8). `scripts/wave-contact-sheet.py` now emits
+  `AA`, `AB` instead — rebuilding an old sheet would relabel it and silently invalidate refs
+  already given.
+- 🟡 **Publishing** reuses `scripts/publish-product-gallery.py` per bundle. All nine are DRAFT;
+  going live is Malcolm's separate decision.
 - 🟡 **Rollout after the gate** — 7 bundles, 94 slots, ~752 candidates, roughly $56.
 - 🟡 **Publishing** reuses `scripts/publish-product-gallery.py` per bundle. All nine are DRAFT,
   so nothing is customer-visible until Malcolm publishes.
