@@ -123,7 +123,10 @@ def main():
     # Row letters follow slot order, so a reference stays meaningful across a re-run.
     y = PAD
     for i, (name, files) in enumerate(kept):
-        letter = chr(ord("A") + i) if i < 26 else f"Z{i}"
+        # A..Z then AA, AB, AC ... Row 26 used to be labelled "Z26", which made a tile read
+        # "Z264" for row Z26 column 4 - parseable only because a column is always one digit,
+        # and horrible to read back. Two-letter rows are unambiguous.
+        letter = chr(ord("A") + i) if i < 26 else "A" + chr(ord("A") + (i - 26))
         short = re.sub(r"^[a-z0-9-]*?-(?=[a-z])", "", name, count=1) or name
         tag = "" if len(files) >= full else f"   STILL FILLING {len(files)}/{full}"
         dr.text((PAD, y + 4), f"{letter}   {short}   ({len(files)}){tag}",
