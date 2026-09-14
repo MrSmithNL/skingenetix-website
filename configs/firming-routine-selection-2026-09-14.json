@@ -1,5 +1,5 @@
 {
-  "_comment": "Malcolm's selection from the Firming & Skin Density Routine wave, 2026-09-14, named off ~/Desktop/skingenetix-bundle-firming-routine-2026-09-12.png. Bare grid refs with no supplier labels, resolved by column position - safe because all 51 rows carry the full 8 tiles. TWO REFS WERE NOT RESOLVED and are NOT in this list: 'Z7455' and 'Z7475'. Neither yields a valid row (this sheet runs A-Z then Z26-Z50). The only reading that works is a stray '7' after the Z, giving Z45 col 5 and Z47 col 5 - plausible, but a guessed pick is the one thing that must not happen here, so both are held pending confirmation.",
+  "_comment": "Malcolm's selection from the Firming & Skin Density Routine wave, 2026-09-14, named off ~/Desktop/skingenetix-bundle-firming-routine-2026-09-12.png. Bare grid refs with no supplier labels, resolved by column position - safe because all 51 rows carry the full 8 tiles. TWO REFS WERE NOT RESOLVED and are NOT in this list: 'Z7455' and 'Z7475'. Neither yields a valid row (this sheet runs A-Z then Z26-Z50). The only reading that works is a stray '7' after the Z, giving Z45 col 5 and Z47 col 5 - plausible, but a guessed pick is the one thing that must not happen here, Malcolm confirmed that reading on 2026-09-14 and both are now in the selection.",
   "wave": "bundle-firming-routine-2026-09-12",
   "bundle_handle": "complete-firming-skin-density-day-night-routine-matrixyl-3000-pro-collagen-cream-night-cream",
   "product_gid": "gid://shopify/Product/15527317504385",
@@ -256,10 +256,27 @@
       "slot": "firming-routine-white-staggered-depth",
       "supplier": "nbp_pro_02",
       "saved_as": "Z496-firming-routine-white-staggered-depth-nbp_pro_02.png"
+    },
+    {
+      "ref": "Z7455",
+      "row": "Z45",
+      "column": 5,
+      "slot": "firming-routine-white-lead-forward",
+      "supplier": "nbp_pro_01",
+      "source": "assets/ai-generated/2026-08-22-multi-bundle-firming-routine-2026-09-12/firming-routine-white-lead-forward/firming-routine-white-lead-forward-nbp_pro_01.png",
+      "saved_as": "Z7455-firming-routine-white-lead-forward-nbp_pro_01.png",
+      "note": "confirmed by Malcolm: the written ref carried a stray '7'"
+    },
+    {
+      "ref": "Z7475",
+      "row": "Z47",
+      "column": 5,
+      "slot": "firming-routine-white-pyramid-silhouette",
+      "supplier": "nbp_pro_01",
+      "source": "assets/ai-generated/2026-08-22-multi-bundle-firming-routine-2026-09-12/firming-routine-white-pyramid-silhouette/firming-routine-white-pyramid-silhouette-nbp_pro_01.png",
+      "saved_as": "Z7475-firming-routine-white-pyramid-silhouette-nbp_pro_01.png",
+      "note": "confirmed by Malcolm: the written ref carried a stray '7'"
     }
   ],
-  "unresolved": [
-    "Z7455 - reads as Z45 col 5 (white-lead-forward) if the 7 is a typo",
-    "Z7475 - reads as Z47 col 5 (white-pyramid-silhouette) if the 7 is a typo"
-  ]
+  "unresolved": []
 }
