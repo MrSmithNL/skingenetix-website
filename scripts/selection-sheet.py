@@ -80,7 +80,7 @@ def main():
     sheet = Image.new("RGB", (W, H), (18, 18, 18))
     dr = ImageDraw.Draw(sheet)
 
-    fh, fr, fs = font(30), font(21), font(16, bold=False)
+    fh, fr, fs, fn = font(30), font(21), font(16, bold=False), font(30)
     dr.text((PAD, 14), f'{man["wave"]}   —   {len(picks)} selected',
             fill=(120, 190, 255), font=fh)
 
@@ -91,9 +91,28 @@ def main():
         im = Image.open(folder / p["saved_as"]).convert("RGB")
         im.thumbnail((S, S), Image.LANCZOS)
         sheet.paste(im, (x + (S - im.width) // 2, y + (S - im.height) // 2))
-        dr.text((x, y + S + 5), f'{p["ref"]}   {p["supplier"]}', fill=(245, 235, 220), font=fr)
+        # NUMBER BADGE. Malcolm calls picks out by number off this sheet, so it has to be
+        # readable at a glance and unambiguous. The grid ref stays printed underneath: the
+        # number is only an index INTO THIS SHEET, while the ref+supplier is what identifies
+        # the file for good. Both are written to the index JSON beside the sheet.
+        n = f"{i + 1}"
+        bw = 34 if len(n) < 2 else 50
+        dr.rectangle([x + 8, y + 8, x + 8 + bw, y + 50], fill=(15, 15, 15))
+        dr.rectangle([x + 8, y + 8, x + 8 + bw, y + 50], outline=(255, 190, 90), width=3)
+        dr.text((x + 8 + bw / 2, y + 29), n, fill=(255, 190, 90), font=fn, anchor="mm")
+        dr.text((x, y + S + 5), f'{n}.  {p["ref"]}   {p["supplier"]}',
+                fill=(245, 235, 220), font=fr)
         short = p["slot"].split("-", 2)[-1] if p["slot"].count("-") >= 2 else p["slot"]
         dr.text((x, y + S + 27), short, fill=(150, 150, 150), font=fs)
+
+    index = {str(i + 1): p["saved_as"] for i, p in enumerate(picks)}
+    idx_path = folder / "_sheet-index.json"
+    idx_path.write_text(json.dumps(
+        {"wave": man["wave"], "note": "number on the contact sheet -> file in this folder",
+         "index": index}, indent=2) + "\n")
+    for i, p in enumerate(picks):
+        print(f'  {i + 1:>3}.  {p["ref"]:<6} {p["supplier"]:<22} {p["slot"]}')
+    print(f"\n  index -> {idx_path}")
 
     out = Path(a.out) if a.out else DESKTOP / f'skingenetix-selected-{man["wave"]}.png'
     sheet.save(out)
