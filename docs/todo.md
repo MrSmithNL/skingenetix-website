@@ -50,6 +50,39 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ### 🔄 SET-002 — Bundle set imagery for the 9 remaining bundle products (2026-09-11)
 
+> **🛑 BLOCKED 2026-09-14 — the Matrixyl and PDRN product renders are geometrically wrong.**
+> Malcolm rejected all eight white/light-grey compositions of `wrinkles-routine`: the two serum
+> bottles came back different heights with different collars. The cause is not the brief —
+> `bundle_set_spec.py` already carries the substance block, the separation clause and negatives
+> for "a colourless liquid rendered as milky white". **The references were wrong**, and a
+> picture outranks text.
+>
+> Two separate faults were found:
+>
+> 1. **Truncation — FIXED.** `build-refs-2026-08-19.py` cropped each product independently and
+>    three of five serum refs taught the engines a *cut-off* bottle. The Drive source renders
+>    are clean; the damage was the crop. `scripts/normalise-serum-ref.py` rebuilds all five on
+>    one frame from the uncropped sources, written additively as `product_tight_norm.png`.
+>    Residual: Acetyl is 12% narrow — it is a photograph, not a render, because it still has no
+>    isolated render on Drive (its own carries the superseded ARGIRELINE artwork).
+> 2. **Collar seat — NOT FIXABLE HERE.** Matrixyl (collar top y=305) and PDRN (307) seat the
+>    collar ~14px higher than Copper (319) and Glutathione (320) in an identical frame. Malcolm
+>    confirms Copper and Glutathione are correct and **both Matrixyl and PDRN are wrong**. This
+>    is baked into the source renders, so no reframing reaches it.
+>
+> **Needed:** corrected Matrixyl and PDRN serum renders, collar seated as Copper/Glutathione,
+> same 2048 canvas and camera as the existing four. This is design work, not a Claude task.
+>
+> **Affected — 7 of 10 bundles.** Pending: `pdrn-ritual`, `repair-renewal-duo`,
+> `repair-renewal-routine`, `wrinkles-routine`, `wrinkles-duo`. **Already published on the wrong
+> bottle: `matrixyl-ritual` and `firming-routine`** — their galleries may need rebuilding once
+> corrected renders exist.
+>
+> **Not blocked:** `brightening-duo` (Glutathione + Copper day) is clean and can run at any time.
+>
+> No generation run was made and nothing was spent on 2026-09-14.
+
+
 **Priority:** 🔴 Pilot running; rollout gated on Malcolm's review
 **Owner:** Claude (machinery, generation, QA) + Malcolm (every image choice)
 **Build:** `scripts/build-bundle-set.py <short>` → `configs/banners/bundle-<short>-<date>.json`
