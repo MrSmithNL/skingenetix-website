@@ -1,0 +1,80 @@
+{
+  "_comment": "Full Matrixyl 3000 Ritual gallery, 2026-09-14. Malcolm's order: Z7 main, then J4, U6, Z6, Z363 - and Y3 for the FAQ section image, which goes to Files because a theme section references shopify://shop_images/<name> and cannot reference product media. Z7 and Z6 are the same composition from different engines and carry different names so Shopify cannot suffix one over the other.",
+  "product_handle": "full-matrixyl-3000-ritual-serum-cream",
+  "product_gid": "gid://shopify/Product/15527306625409",
+  "product_label": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream",
+  "source_dir": "assets/publish-ready/matrixyl-3000-ritual",
+  "gallery": [
+    {
+      "file": "skingenetix-matrixyl-3000-pro-collagen-serum-cream-set-overhead-water.jpg",
+      "alt": "the firming serum and cream photographed from above in shallow teal water",
+      "ref": "Z7",
+      "media_id": "gid://shopify/MediaImage/70932764557697"
+    },
+    {
+      "file": "skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg",
+      "alt": "the firming serum and cream on a teal background with long shadows",
+      "ref": "J4",
+      "media_id": "gid://shopify/MediaImage/70932765081985"
+    },
+    {
+      "file": "skingenetix-matrixyl-3000-serum-cream-set-styled-bathroom-shelf.jpg",
+      "alt": "the firming serum and cream styled on an oak bathroom shelf",
+      "ref": "U6",
+      "media_id": "gid://shopify/MediaImage/70932765704577"
+    },
+    {
+      "file": "skingenetix-matrixyl-3000-serum-cream-set-teal-water-flat-lay.jpg",
+      "alt": "an overhead flat-lay of the firming serum and cream in teal water",
+      "ref": "Z6",
+      "media_id": "gid://shopify/MediaImage/70932766589313"
+    },
+    {
+      "file": "skingenetix-matrixyl-3000-serum-cream-set-water-ripple-scene.jpg",
+      "alt": "the firming serum and cream standing in shallow rippled water",
+      "ref": "Z363",
+      "media_id": "gid://shopify/MediaImage/70932767932801"
+    }
+  ],
+  "files_only": [
+    {
+      "file": "skingenetix-matrixyl-3000-pro-collagen-cream-open-jar-texture-swatch.jpg",
+      "alt": "the pro-collagen cream jar open beside the serum, with a cream swatch",
+      "ref": "Y3",
+      "earmarked": "FAQ section image"
+    }
+  ],
+  "_published": {
+    "at": "20260914-140425",
+    "backup": "backups/product-gallery-20260914-140425.json",
+    "gallery": [
+      {
+        "file": "skingenetix-matrixyl-3000-pro-collagen-serum-cream-set-overhead-water.jpg",
+        "media_id": "gid://shopify/MediaImage/70932764557697"
+      },
+      {
+        "file": "skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg",
+        "media_id": "gid://shopify/MediaImage/70932765081985"
+      },
+      {
+        "file": "skingenetix-matrixyl-3000-serum-cream-set-styled-bathroom-shelf.jpg",
+        "media_id": "gid://shopify/MediaImage/70932765704577"
+      },
+      {
+        "file": "skingenetix-matrixyl-3000-serum-cream-set-teal-water-flat-lay.jpg",
+        "media_id": "gid://shopify/MediaImage/70932766589313"
+      },
+      {
+        "file": "skingenetix-matrixyl-3000-serum-cream-set-water-ripple-scene.jpg",
+        "media_id": "gid://shopify/MediaImage/70932767932801"
+      }
+    ],
+    "files": [
+      {
+        "id": "gid://shopify/MediaImage/70932768686465",
+        "stored_name": "skingenetix-matrixyl-3000-pro-collagen-cream-open-jar-texture-swatch.jpg",
+        "handle": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-cream-open-jar-texture-swatch.jpg"
+      }
+    ]
+  }
+}
