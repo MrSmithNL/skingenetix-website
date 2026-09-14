@@ -237,16 +237,44 @@ def product_block(key):
 
 
 def substance_block(key):
-    """What is INSIDE, for any shot that opens a lid.
+    """What is INSIDE. Required on EVERY shot, not only ones that open a lid.
 
-    No spec on this project describes the substance unless asked, which is why serum bottles
-    kept arriving milky white. Read from the same config so it cannot drift.
+    This function existed from the start and was NEVER CALLED - build_slot assembled opening,
+    rules, count, product blocks, separation, arrangement, scene and frame, and nothing else. So
+    the one paragraph that says what the contents look like never reached an engine, and the
+    configs' `formulation` field was dead data. Malcolm found it from the output on 2026-09-14:
+    every Glutathione bottle came back holding a MILKY liquid instead of a transparent one, and
+    the Copper Peptide day cream read pale blue or white instead of its actual deep navy.
+
+    ITS ORIGINAL DOCSTRING SAID "for any shot that opens a lid", and that scoping is why it was
+    easy to leave unwired - it reads as a special case. It is not. Every container on this brand
+    is FROSTED glass, so the contents give the filled container its apparent colour whether the
+    lid is on or off. A closed navy jar is navy because of the cream inside it.
+
+    Read from the same config as everything else so the two cannot drift.
     """
     p = PRODUCTS[key]
     cfg = json.loads((ROOT / "configs" / f"{p['config']}.json").read_text())
     f = cfg["formulation"]
     return (f"THE SUBSTANCE INSIDE {p['name']} is {f['appearance']}. "
             f"Never {f['never']}.")
+
+
+#: Bottle-to-jar proportions, MEASURED off two frames Malcolm named as correct on 2026-09-14
+#: (Z441 and Z466 of the brightening-duo wave) rather than described. Both agree closely:
+#: bottle height / jar height 1.76 and 1.89; jar width / bottle width 1.81 and 1.77; the jar's
+#: lid top reaches 57% and 53% of the bottle's height. A ratio survives across engines where
+#: "a tall bottle beside a squat jar" does not - the same lesson as the pipette proportions.
+#: Real volumes back it up: the bottle is 30ml, the jar 50ml and much wider.
+PROPORTION_CLAUSE = (
+    "RELATIVE SIZE, AND IT IS A MEASUREMENT, NOT AN IMPRESSION. Stand every container on the "
+    "same surface with their BASES LEVEL. The serum bottle measured from its base to the top of "
+    "its pipette bulb is the tallest object. The closed cream jar measured from its base to the "
+    "top of its lid reaches only a little OVER HALF that height - about 55 percent of it. The "
+    "jar is much WIDER than the bottle, close to 1.8 times the bottle's width, so it reads as "
+    "squat and broad beside a slim upright bottle. Do not make the jar as tall as the bottle "
+    "and do not make the bottle as wide as the jar."
+)
 
 
 def ref_files(keys):
@@ -411,9 +439,14 @@ def build_slot(slot_id, opening, keys, arrangement, scene, frame,
              f"repeat any of them, and do not show two copies of the same product.")
 
     sep_body, sep_neg = separation(keys)
+    # The substance blocks go in DIRECTLY AFTER each product block, so what a container is made
+    # of and what is inside it are read together rather than a page apart. The proportion clause
+    # is only meaningful when both a bottle and a jar are present.
+    forms = {PRODUCTS[k]["form"] for k in keys}
     prompt = "\n\n".join(
         [opening, SHARED_RULES, count]
-        + [product_block(k) for k in keys]
+        + [blk for k in keys for blk in (product_block(k), substance_block(k))]
+        + ([PROPORTION_CLAUSE] if {"bottle", "jar"} <= forms else [])
         + (extra or [])
         + ([sep_body] if sep_body else [])
         + [arrangement, scene, frame])
