@@ -250,9 +250,23 @@ def substance_block(key):
 
 
 def ref_files(keys):
+    """Reference image per product, preferring the rebuilt one where it exists.
+
+    `product_tight_norm.png` is written by `scripts/normalise-serum-ref.py` and is preferred
+    whenever present. On 2026-09-14 three of the five serum references were found to be teaching
+    the engines a TRUNCATED bottle - `build-refs-2026-08-19.py` cropped each product
+    independently - which is why the two serum bottles kept coming back different heights. The
+    rebuilt refs use the Drive renders uncropped on one shared frame.
+
+    Preferred, not forced: a product with no `_norm` simply keeps its original, so dropping a
+    corrected render in and re-running the normaliser is all that is needed to adopt it.
+    """
     out = []
     for k in keys:
-        r = REFS / PRODUCTS[k]["config"] / "product_tight.png"
+        d = REFS / PRODUCTS[k]["config"]
+        r = d / "product_tight_norm.png"
+        if not r.exists():
+            r = d / "product_tight.png"
         if not r.exists():
             raise SystemExit(f"missing reference for {k}: {r}")
         out.append(str(r.relative_to(ROOT)))

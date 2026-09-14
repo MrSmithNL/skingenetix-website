@@ -20,6 +20,7 @@ Author: Claude Code, 2026-09-14.
 """
 import argparse
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -39,7 +40,11 @@ def font(sz, bold=True):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("manifest")
+    ap.add_argument("manifest", help="selection manifest, OR a folder with --folder")
+    ap.add_argument("--folder", action="store_true",
+                    help="read the FOLDER rather than the manifest. Use this once Malcolm has "
+                         "worked in the folder himself - he adds and swaps files there, and a "
+                         "manifest-driven sheet would silently omit anything he put in.")
     ap.add_argument("--tile", type=int, default=420)
     ap.add_argument("--cols", type=int, default=5)
     ap.add_argument("--out")
@@ -47,9 +52,22 @@ def main():
 
     from PIL import Image, ImageDraw
 
-    man = json.loads(Path(a.manifest).read_text())
-    folder = ROOT / man["folder"]
-    picks = man["selected"]
+    if a.folder:
+        folder = Path(a.manifest)
+        man = {"wave": folder.name}
+        picks = []
+        for f in sorted(folder.iterdir()):
+            if f.suffix.lower() not in (".png", ".jpg", ".jpeg"):
+                continue
+            m = re.match(r"^([A-Z]+\d+)-(.+?)-([a-z0-9]+(?:_[a-z0-9]+)*_\d+)\.png$", f.name)
+            picks.append({"ref": m.group(1) if m else "ADDED",
+                          "slot": m.group(2) if m else f.stem,
+                          "supplier": m.group(3) if m else "supplied by Malcolm",
+                          "saved_as": f.name})
+    else:
+        man = json.loads(Path(a.manifest).read_text())
+        folder = ROOT / man["folder"]
+        picks = man["selected"]
     missing = [p["saved_as"] for p in picks if not (folder / p["saved_as"]).exists()]
     if missing:
         sys.exit("missing from the selection folder:\n  " + "\n  ".join(missing))
