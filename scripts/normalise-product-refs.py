@@ -62,12 +62,48 @@ SERUM_RENDERS = {
                                       (742, 356, 1279, 1654)),
     "copper-peptide-repair-serum":   ("Copper Peptide Repair Serum/Copper Peptide Repair Serum.png",
                                       (742, 356, 1279, 1654)),   # same camera as Glutathione
+    # BASE CORRECTED 2026-09-14. These read 1570 and cut ~80px off the bottom of the glass -
+    # Malcolm: "the Matrixyl and pdrn bottle bottoms are cut off. The whole bottle is not in
+    # view." Re-read off a 25px grid over the base region: all three bottles end at ~1654, so
+    # the base was never the difference between these renders and Glutathione's. The TOP is:
+    # these start at 326 against Glutathione's 356, and that extra 30px IS the exposed glass
+    # neck Malcolm wants gone. A neck cannot be cropped out of the middle of a bottle, so it
+    # stays until corrected renders exist.
     "matrixyl-3000-pro-collagen-serum": ("Matrixyl 3000 Pro Collagen Serum/Matrixyl Pro Collagen Serum.png",
-                                         (740, 326, 1286, 1570)),
+                                         (740, 326, 1286, 1654)),
     "pdrn-skin-repair-serum":        ("PDRN Skin Repair Serum/PDRN Skin Repair Serum.png",
-                                      (740, 326, 1286, 1570)),   # patterns with Matrixyl
+                                      (740, 326, 1286, 1654)),
 }
 ACETYL = ("acetyl-hexapeptide-8-serum", (353, 121, 669, 941))
+
+#: Acetyl's collar in ITS source, and the region of Glutathione's used to match it. Malcolm:
+#: "the acetyl top silver color should be the same as the glutathione and copper peptide
+#: serums." Measured rather than eyeballed - Glutathione's collar is mean 184 / sd 63, Acetyl's
+#: is mean 206 / sd 33, so Acetyl is both LIGHTER and much FLATTER, missing the brushed grain.
+#: A linear match (gain 1.914, offset -209) reproduces both. Feathered at the edges so the
+#: corrected patch does not leave a visible rectangle, and applied to the SOURCE before scaling.
+ACETYL_COLLAR = (430, 300, 595, 455)
+GLUT_COLLAR_SRC = (820, 620, 1200, 840)
+
+
+def match_collar(acetyl_im, glut_im):
+    """Bring Acetyl's photographed collar to the renders' tone and contrast."""
+    import numpy as np
+    a = np.asarray(acetyl_im).astype(float)
+    g = np.asarray(glut_im).astype(float)[GLUT_COLLAR_SRC[1]:GLUT_COLLAR_SRC[3],
+                                          GLUT_COLLAR_SRC[0]:GLUT_COLLAR_SRC[2]]
+    x0, y0, x1, y1 = ACETYL_COLLAR
+    patch = a[y0:y1, x0:x1]
+    gain = g.std() / patch.std()
+    off = g.mean() - patch.mean() * gain
+    fixed = np.clip(patch * gain + off, 0, 255)
+    # feather: 1 in the middle, falling to 0 over 12px at each edge, so no hard seam
+    h, w = patch.shape[:2]
+    fy = np.clip(np.minimum(np.arange(h), h - 1 - np.arange(h)) / 12.0, 0, 1)
+    fx = np.clip(np.minimum(np.arange(w), w - 1 - np.arange(w)) / 12.0, 0, 1)
+    m = (fy[:, None] * fx[None, :])[:, :, None]
+    a[y0:y1, x0:x1] = patch * (1 - m) + fixed * m
+    return Image.fromarray(np.clip(a, 0, 255).astype("uint8")), gain, off
 CREAMS = ["copper-peptide-day-repair-cream", "copper-peptide-night-repair-cream",
           "matrixyl-3000-pro-collagen-cream", "pdrn-collagen-repair-cream"]
 
@@ -115,6 +151,10 @@ def main():
 
     slug, box = ACETYL
     im = flatten(REFS / slug / "product_tight.png")
+    gsrc = DRIVE / SERUM_RENDERS["glutathione-brightening-serum"][0]
+    if gsrc.exists():
+        im, _gain, _off = match_collar(im, flatten(gsrc))
+        print(f"  acetyl collar matched to glutathione: gain {_gain:.3f} offset {_off:+.1f}")
     out, w = place(im, box, BOTTLE_H, im.getpixel((4, 4)), force_aspect=BOTTLE_ASPECT)
     nat = (box[2] - box[0]) / (box[3] - box[1])
     rows.append((slug, out, f"bottle {w}x{BOTTLE_H}  aspect {w/BOTTLE_H:.3f}  "
