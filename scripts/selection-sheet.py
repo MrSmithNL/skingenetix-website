@@ -48,6 +48,11 @@ def main():
     ap.add_argument("--tile", type=int, default=420)
     ap.add_argument("--cols", type=int, default=5)
     ap.add_argument("--out")
+    ap.add_argument("--number-files", action="store_true",
+                    help="rename the files in the folder with their sheet number as a zero-padded "
+                         "prefix, so Finder and Preview show them in the same order, numbered the "
+                         "same way. The ref and supplier stay in the name - they are what identify "
+                         "a file permanently, the number is only an index into one sheet.")
     a = ap.parse_args()
 
     from PIL import Image, ImageDraw
@@ -104,6 +109,23 @@ def main():
                 fill=(245, 235, 220), font=fr)
         short = p["slot"].split("-", 2)[-1] if p["slot"].count("-") >= 2 else p["slot"]
         dr.text((x, y + S + 27), short, fill=(150, 150, 150), font=fs)
+
+    if a.number_files:
+        # Rename BEFORE the index is written, then rebuild both from the new names, so the sheet,
+        # the index and the folder can never disagree. Prefixing preserves the existing order
+        # (the numbers came from it), so numbers stay stable across a re-run.
+        renamed = []
+        for i, pk in enumerate(picks):
+            src = folder / pk["saved_as"]
+            stem = pk["saved_as"]
+            if re.match(r"^\d{2}-", stem):
+                stem = stem[3:]
+            new_name = f"{i + 1:02d}-{stem}"
+            if src.name != new_name:
+                src.rename(folder / new_name)
+            pk["saved_as"] = new_name
+            renamed.append(new_name)
+        print(f"  renamed {len(renamed)} files with a number prefix\n")
 
     index = {str(i + 1): p["saved_as"] for i, p in enumerate(picks)}
     idx_path = folder / "_sheet-index.json"
