@@ -1,0 +1,87 @@
+{
+  "_comment": "Malcolm's gallery for the Fine Lines & Wrinkles Peptide Duo Set, 2026-09-15, picked by number off ~/Desktop/skingenetix-selected-wrinkles-duo-2026-09-12.png: 23 main, then 19, 21, 15, 6, with 18 as the FAQ image. CONTENTS VERIFIED against the live title and description: Acetyl Hexapeptide-8 Anti-Wrinkle Serum + Matrixyl 3000 Firming Serum. LABELS VERIFIED: 21, 15 and 6 passed verify-labels.py outright; 23, 19 and 18 were flagged by it and each was then opened at NATIVE PIXELS and found correct - the flags were OCR failing on rotated or turned bottles, not render faults. NOTE: this wave is from 2026-09-12 and predates both the reference rebuild and substance_block reaching the brief, so these frames carry the old Matrixyl render with the high collar seat and exposed neck. A re-run after a corrected Matrixyl render lands would be materially better; this is the best of what exists.",
+  "product_handle": "fine-lines-wrinkles-peptide-duo-set-matrixyl-3000-acetyl-hexapeptide-8-serums",
+  "product_gid": "gid://shopify/Product/15527323861377",
+  "product_label": "Skingenetix Fine Lines & Wrinkles Peptide Duo Set",
+  "selection_folder": "assets/selections/wrinkles-duo-2026-09-12",
+  "source_dir": "assets/publish-ready/fine-lines-wrinkles-duo",
+  "gallery": [
+    {
+      "n": 23,
+      "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-white-background.jpg",
+      "alt": "the acetyl hexapeptide-8 and matrixyl 3000 serums staggered on a plain white background",
+      "source_file": "23-Z426-wrinkles-duo-white-staggered-depth-nbp_pro_02.png",
+      "media_id": "gid://shopify/MediaImage/70952357331329"
+    },
+    {
+      "n": 19,
+      "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-water-ripple.jpg",
+      "alt": "both anti-wrinkle serums standing in shallow rippled water",
+      "source_file": "19-Z336-wrinkles-duo-water-ripple-scene-nbp_pro_02.png",
+      "media_id": "gid://shopify/MediaImage/70952357921153"
+    },
+    {
+      "n": 21,
+      "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-wet-slate.jpg",
+      "alt": "both serums on wet dark slate scattered with water droplets",
+      "source_file": "21-Z346-wrinkles-duo-wet-slate-droplets-nbp_pro_02.png",
+      "media_id": "gid://shopify/MediaImage/70952358248833"
+    },
+    {
+      "n": 15,
+      "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-silk-drape.jpg",
+      "alt": "both serums arranged on draped pale silk",
+      "source_file": "15-Z285-wrinkles-duo-silk-drape-cluster-nbp_pro_01.png",
+      "media_id": "gid://shopify/MediaImage/70952359100801"
+    },
+    {
+      "n": 6,
+      "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-hard-shadow.jpg",
+      "alt": "both serums under hard directional light with a sharp cast shadow",
+      "source_file": "06-J5-wrinkles-duo-hard-shadow-colour-block-nbp_pro_01.png",
+      "media_id": "gid://shopify/MediaImage/70952359231873"
+    }
+  ],
+  "files_only": [
+    {
+      "n": 18,
+      "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-tumbled-pile.jpg",
+      "alt": "the acetyl hexapeptide-8 and matrixyl 3000 serums lying tumbled together",
+      "earmarked": "FAQ section image",
+      "source_file": "18-Z314-wrinkles-duo-tumbled-pile-nbp_flash_02.png"
+    }
+  ],
+  "_published": {
+    "at": "20260915-145455",
+    "backup": "backups/product-gallery-20260915-145455.json",
+    "gallery": [
+      {
+        "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-white-background.jpg",
+        "media_id": "gid://shopify/MediaImage/70952357331329"
+      },
+      {
+        "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-water-ripple.jpg",
+        "media_id": "gid://shopify/MediaImage/70952357921153"
+      },
+      {
+        "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-wet-slate.jpg",
+        "media_id": "gid://shopify/MediaImage/70952358248833"
+      },
+      {
+        "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-silk-drape.jpg",
+        "media_id": "gid://shopify/MediaImage/70952359100801"
+      },
+      {
+        "file": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-hard-shadow.jpg",
+        "media_id": "gid://shopify/MediaImage/70952359231873"
+      }
+    ],
+    "files": [
+      {
+        "id": "gid://shopify/MediaImage/70952359854465",
+        "stored_name": "skingenetix-wrinkles-duo-acetyl-matrixyl-serums-tumbled-pile.jpg",
+        "handle": "shopify://shop_images/skingenetix-wrinkles-duo-acetyl-matrixyl-serums-tumbled-pile.jpg"
+      }
+    ]
+  }
+}
