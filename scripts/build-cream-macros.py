@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Build configs/banners/matrixyl-cream-macros.json.
+"""Build configs/banners/<product>-cream-macros.json for any of the four cream products.
+
+    python3 scripts/build-cream-macros.py --all
+    python3 scripts/build-cream-macros.py matrixyl-3000-pro-collagen-cream
 
 2026-09-15. Malcolm: "a batch of matrixyl cream shots that are very close up - and show the open
 pot with - variations of these shots: finger tip with a small swatch of white cream on it / a
@@ -35,18 +38,38 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-CFG = json.loads((ROOT / "configs/matrixyl-3000-pro-collagen-cream.json").read_text())
-OUT = ROOT / "configs/banners/matrixyl-cream-macros.json"
-REF = "assets/images/_refs-2026-08-19/matrixyl-3000-pro-collagen-cream/product_tight_norm.png"
+#: slug -> output stem. All four creams share the shot list; only the product changes.
+PRODUCTS = {
+    "matrixyl-3000-pro-collagen-cream": "matrixyl",
+    "copper-peptide-day-repair-cream": "copper-day",
+    "copper-peptide-night-repair-cream": "copper-night",
+    "pdrn-collagen-repair-cream": "pdrn",
+}
 
-F = CFG["formulation"]
-CREAM = (
-    f"THE CREAM IS {F['appearance'].upper()}, colour {F['hex']}. It is the same clean neutral "
-    f"white everywhere it appears in the frame - in the pot, on the fingertip, on the spatula - "
-    f"with no colour shift between them. Never {F['never']}."
+#: THE GROUND IS CHOSEN BY CONTRAST, NOT BY BRAND PALETTE - and this is not a stylistic call.
+#: Each product's `palette` is a SCENE colour, right for a lifestyle or hero shot. In a macro the
+#: substance IS the subject, and two of the four palettes make it disappear: the PDRN cream is
+#: #F3BFC2 and its palette ground is ALSO #F3BFC2, identical; the Copper DAY cream is a dark navy
+#: #2F4C9B against a clinical blue #014EB1. Measured relative luminance picks the ground instead,
+#: so a light cream gets graphite and a dark cream gets a pale ground. Every pairing clears
+#: 4.5:1 - white 15.6, night blue 9.6, pink 10.8, day navy 6.6.
+GRAPHITE = ("#1A1A1A", "a seamless deep graphite ground, colour #1A1A1A, falling to near-black "
+            "at the edges - graphite throughout, never warm brown and never pale grey")
+PALE = ("#E8EAEC", "a seamless pale cool grey ground, colour #E8EAEC, clean and even and "
+        "lifting slightly toward white at the edges - never warm, never cream, never beige")
+
+
+def _lum(h):
+    r, g, b = (int(h.lstrip("#")[i:i + 2], 16) / 255 for i in (0, 2, 4))
+    f = lambda c: c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b)
+CREAM_T = (
+    "THE CREAM IS {appearance_upper}, colour {hex}. It is exactly the same colour everywhere it "
+    "appears in the frame - in the pot, on the fingertip, on the spatula - with no colour shift "
+    "between them. Never {never}."
 )
 
-JAR = f"THE PRODUCT. {CFG['product_desc']}"
+
 
 OPEN_JAR = (
     "THE JAR IS OPEN. Its brushed silver lid is OFF and lies beside it, upturned so its inner "
@@ -63,10 +86,9 @@ SPATULA = (
     "and no text of any kind."
 )
 
-GROUND = (
-    "Behind it a seamless deep emerald-teal ground, colour #016569, falling darker at the edges. "
-    "One large soft key from the upper left, one dim cool fill on the shadow side, so the cream "
-    "keeps its form and the metal keeps its grain."
+GROUND_T = (
+    "Behind it {ground}. One large soft key from the upper left, one dim cool fill on the shadow "
+    "side, so the cream keeps its form and the metal keeps its grain."
 )
 
 CAMERA = (
@@ -149,54 +171,76 @@ SHOTS = [
 ]
 
 
-def build():
+def build(slug):
+    cfg = json.loads((ROOT / f"configs/{slug}.json").read_text())
+    f = cfg["formulation"]
+    ground_hex, ground_prose = GRAPHITE if _lum(f["hex"]) > 0.35 else PALE
+    cream = CREAM_T.format(appearance_upper=f["appearance"].upper(), hex=f["hex"],
+                           never=f["never"])
+    jar = f"THE PRODUCT. {cfg['product_desc']}"
+    ground = GROUND_T.format(ground=ground_prose)
+    ref = f"assets/images/_refs-2026-08-19/{slug}/product_tight_norm.png"
+    stem = PRODUCTS[slug]
+
     slots = []
     for slot_id, short, branded, framing in SHOTS:
         parts = [framing]
         if branded:
-            parts += [JAR, OPEN_JAR]
-        parts += [CREAM]
+            parts += [jar, OPEN_JAR]
+        parts += [cream]
         if "SPATULA" in slot_id:
             parts.append(SPATULA)
-        parts += [GROUND, CAMERA]
+        parts += [ground, CAMERA]
         neg = NEG_COMMON + ("" if branded else NEG_UNBRANDED)
         if "FINGER" in slot_id:
             neg += NEG_HAND
         slot = {
-            "id": f"MTX-CREAM-{slot_id}",
-            "title": f"Matrixyl cream macro - {short}",
+            "id": f"{stem.upper().replace('-', '')}-CREAM-{slot_id}",
+            "title": f"{stem} cream macro - {short}",
             "substance": "cream",
-            "substance_hex": F["hex"],
+            "substance_hex": f["hex"],
+            "ground_hex": ground_hex,
             "branding_in_frame": branded,
             "class": "B",
             "width": 2048,
             "height": 2048,
-            "target_slot": "matrixyl 3000 pro collagen cream - macro set",
+            "target_slot": f"{slug} - macro set",
             "prompt": " ".join(parts),
             "negative_extra": neg,
         }
         if branded:
-            slot["ref_files"] = [REF]
+            slot["ref_files"] = [ref]
         slots.append(slot)
+
     return {
-        "wave": "matrixyl-cream-macros",
+        "wave": f"{stem}-cream-macros",
         "created": "2026-09-15",
+        "product": slug,
         "note": ("Three families x three framings. Slots with the label legible carry the "
-                 "reference and the verbatim product_desc; the pure macros carry neither, and "
-                 "negate lettering instead. flux2 auto-skips the referenced slots."),
+                 "reference and the verbatim product_desc; the pure macros carry neither and "
+                 "negate lettering instead. flux2 auto-skips the referenced slots. The ground "
+                 "is picked by MEASURED contrast against the cream, not from the brand palette "
+                 "- two of the four palettes would have hidden the substance entirely."),
         "defaults": {"class": "B"},
         "slots": slots,
     }
 
 
 if __name__ == "__main__":
-    cfg = build()
-    OUT.write_text(json.dumps(cfg, indent=2) + "\n")
-    b = sum(1 for s in cfg["slots"] if s.get("ref_files"))
-    print(f"{OUT.relative_to(ROOT)}")
-    print(f"  slots      : {len(cfg['slots'])}  ({b} with the label + reference, "
-          f"{len(cfg['slots']) - b} reference-free macros)")
-    print(f"  prompt len : {min(len(s['prompt']) for s in cfg['slots'])}-"
-          f"{max(len(s['prompt']) for s in cfg['slots'])} chars")
-    for s in cfg["slots"]:
-        print(f"    {'REF ' if s.get('ref_files') else '    '} {s['id']:<22} {s['title']}")
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("product", nargs="?")
+    ap.add_argument("--all", action="store_true")
+    a = ap.parse_args()
+    todo = list(PRODUCTS) if a.all else [a.product]
+    for slug in todo:
+        if slug not in PRODUCTS:
+            raise SystemExit(f"unknown product {slug!r}; choose from {list(PRODUCTS)}")
+        cfg = build(slug)
+        out = ROOT / f"configs/banners/{PRODUCTS[slug]}-cream-macros.json"
+        out.write_text(json.dumps(cfg, indent=2) + "\n")
+        b = sum(1 for x in cfg["slots"] if x.get("ref_files"))
+        print(f"{out.relative_to(ROOT)}")
+        print(f"   cream {cfg['slots'][0]['substance_hex']} on ground "
+              f"{cfg['slots'][0]['ground_hex']}   {len(cfg['slots'])} slots "
+              f"({b} referenced, {len(cfg['slots']) - b} macro-only)")
