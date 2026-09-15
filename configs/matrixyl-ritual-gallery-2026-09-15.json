@@ -1,0 +1,36 @@
+{
+  "_comment": "RECORD, not a plan. The Full Matrixyl 3000 Ritual product was already ACTIVE with a gallery when this session began, so it was never built from a plan file the way the draft bundles were - the changes of 2026-09-15 were made with replace-product-image.py and insert-product-image.py directly. assets/ and backups/ are gitignored, so without this file the composition of a LIVE gallery would exist only inside Shopify. Recorded here so it can be rebuilt. Sources live in assets/selections/matrixyl-ritual-2026-09-12/.",
+  "product_handle": "full-matrixyl-3000-ritual-serum-cream",
+  "product_gid": "gid://shopify/Product/15527306625409",
+  "product_label": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream",
+  "status": "ACTIVE - live on the storefront",
+  "recorded": "2026-09-15",
+  "gallery": [
+    { "position": 1, "file": "skingenetix-matrixyl-3000-pro-collagen-serum-cream-set-overhead-water.jpg",
+      "origin": "pre-existing" },
+    { "position": 2, "file": "skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg",
+      "origin": "pre-existing" },
+    { "position": 3, "file": "skingenetix-matrixyl-3000-firming-serum-clear-drop-on-cheek-macro.jpg",
+      "origin": "supplied by Malcolm 2026-09-15",
+      "source": "assets/selections/matrixyl-ritual-2026-09-12/supplied-matrixyl-serum-model-1.2-square.png",
+      "note": "square re-export; the first 4020x3584 version was published then replaced the same day" },
+    { "position": 4, "file": "skingenetix-matrixyl-3000-pro-collagen-cream-model-holding-jar.jpg",
+      "origin": "supplied by Malcolm 2026-09-15",
+      "source": "assets/selections/matrixyl-ritual-2026-09-12/supplied-matrixyl-cream-model-2.png",
+      "note": "retired skingenetix-matrixyl-3000-serum-cream-set-teal-water-flat-lay.jpg from this slot" },
+    { "position": 5, "file": "skingenetix-matrixyl-3000-serum-cream-set-styled-bathroom-shelf.jpg",
+      "origin": "pre-existing", "note": "was position 3 until the macro was inserted" },
+    { "position": 6, "file": "skingenetix-matrixyl-3000-serum-cream-set-water-ripple-scene.jpg",
+      "origin": "pre-existing" },
+    { "position": 7, "file": "skingenetix-matrixyl-3000-pro-collagen-cream-applied-to-cheekbone.jpg",
+      "origin": "generated - cream-application-faces-r3 wave, ref D4",
+      "source": "assets/ai-generated/2026-08-22-multi-cream-application-faces-r3/CREAM-R3-04-MEDIUM-CHESTNUT-WHITE/CREAM-R3-04-MEDIUM-CHESTNUT-WHITE-nbp_pro_01.png",
+      "note": "the WHITE cream row, which is the correct substance for Matrixyl" }
+  ],
+  "retired": [
+    { "file": "skingenetix-matrixyl-3000-serum-cream-set-teal-water-flat-lay.jpg",
+      "recoverable": "assets/publish-ready/matrixyl-3000-ritual/ and still in Shopify Files" },
+    { "file": "skingenetix-matrixyl-3000-firming-serum-dropper-applying-to-cheek.jpg",
+      "recoverable": "assets/selections/matrixyl-ritual-2026-09-12/supplied-matrixyl-serum-model-1.png (the non-square original)" }
+  ]
+}
