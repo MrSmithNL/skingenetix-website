@@ -124,6 +124,57 @@ def jar_box(im, tol=60):
     return int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max())
 
 
+#: The PDRN serum's glass reads salmon, not pink. Malcolm, 2026-09-15: "the liquid inside is a
+#: TRANSPARENT pink color ... And the pink color of the liquid is pink - not salmon." Measured on
+#: the reference glass: hue 358.3deg at saturation 0.204 - that is a desaturated RED, which is
+#: exactly what reads as dusty salmon. A true pink sits near 336-340deg, so the correction is a
+#: hue rotation, not a repaint.
+#:
+#: It targets LOW-SATURATION pixels only (the glass wash sits near 0.20; the label's rose accent
+#: type is far more saturated), so the printed accent colour is left exactly as designed. Nothing
+#: neutral moves either - the collar, the white pipette and the black type have almost no
+#: saturation to rotate.
+#:
+#: WHAT THIS CANNOT DO: make the liquid look SEE-THROUGH. Transparency is read from seeing the
+#: fill level and the back of the bottle through the liquid, and that information is not in the
+#: picture to recover. The brief now asserts it (substance_block carries the new wording); the
+#: real fix is the corrected PDRN render already needed for the neck.
+#: A DELTA, not a target. The first attempt SNAPPED warm pixels to hue 337 and capped the effect
+#: at saturation 0.30 to protect the label's accent type. That banded badly: the glass core sits
+#: ABOVE 0.30, so it stayed at 358 while everything around it moved, leaving a hard-edged salmon
+#: stripe down the bottle. Caught by looking at the render, not by the code failing.
+#:
+#: Rotating every warm pixel by the SAME amount cannot band, because it preserves the relationships
+#: inside the region. The accent type rotates with the glass, which is right rather than merely
+#: tolerable - it is the same rose ink, and the product's identity is pink.
+PINK_DELTA = -21.0 / 360.0     # 358.3 measured -> ~337, a true pink
+PINK_SAT_GAIN = 1.30
+
+
+def repink(im):
+    """Rotate the salmon-leaning glass to a true pink. Returns (image, pixels changed)."""
+    import numpy as np
+    a = np.asarray(im).astype(float) / 255.0
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    mx, mn = a.max(2), a.min(2)
+    v = mx
+    s = np.where(mx > 0, (mx - mn) / np.maximum(mx, 1e-6), 0)
+    d = np.maximum(mx - mn, 1e-6)
+    h = np.select([mx == r, mx == g, mx == b],
+                  [((g - b) / d) % 6, ((b - r) / d) + 2, ((r - g) / d) + 4], default=0) / 6.0
+    m = ((h > 320 / 360.0) | (h < 25 / 360.0)) & (s > 0.03)
+    h2 = np.where(m, (h + PINK_DELTA) % 1.0, h)
+    s2 = np.where(m, np.clip(s * PINK_SAT_GAIN, 0, 1), s)
+    # vectorised HSV->RGB, so no per-pixel python and no banding from rounding
+    i = np.floor(h2 * 6).astype(int) % 6
+    f = h2 * 6 - np.floor(h2 * 6)
+    p_ = v * (1 - s2); q = v * (1 - f * s2); tt = v * (1 - (1 - f) * s2)
+    out = np.choose(i[..., None],
+                    [np.stack([v, tt, p_], -1), np.stack([q, v, p_], -1), np.stack([p_, v, tt], -1),
+                     np.stack([p_, q, v], -1), np.stack([tt, p_, v], -1), np.stack([v, p_, q], -1)])
+    return Image.fromarray(np.clip(out * 255, 0, 255).astype("uint8")), int(m.sum())
+
+
 def place(src, box, target_h, ground, force_aspect=None):
     x0, y0, x1, y1 = box
     sub = src.crop(box)
@@ -146,6 +197,9 @@ def main():
         if not src.exists():
             print(f"  SKIP {slug}: {src} missing"); continue
         im = flatten(src)
+        if slug == "pdrn-skin-repair-serum":
+            im, n = repink(im)
+            print(f"  pdrn glass re-pinked: {n:,} px rotated to hue 337deg")
         out, w = place(im, box, BOTTLE_H, im.getpixel((4, 4)))
         rows.append((slug, out, f"bottle {w}x{BOTTLE_H}  aspect {w/BOTTLE_H:.3f}"))
 
