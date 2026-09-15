@@ -48,6 +48,40 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 MACRO-001 — Cream macro sets + serum dropper faces (2026-09-15)
+
+**Priority:** 🟡 Configs built and verified; held on the Gemini daily quota
+**Owner:** Claude (generation, QA) + Malcolm (every image choice)
+
+**Held for the next day's quota — run these first, at the FULL roster**
+(`--suppliers seedream,gpt_image,nbp_pro,nbp_flash --candidates 2`; add `flux2` for the cream
+macros, where it auto-skips the six referenced slots and runs only on the three macro-only ones):
+
+| config | what |
+|---|---|
+| `configs/banners/copper-day-cream-macros.json` | dark navy cream, **pale** ground |
+| `configs/banners/copper-night-cream-macros.json` | light blue cream, graphite ground |
+| `configs/banners/pdrn-cream-macros.json` | blush pink cream, graphite ground |
+| `configs/banners/serum-dropper-faces.json` | 10 faces, clear serum from a pipette, macro |
+
+**Why they are held.** `_gemini` makes one HTTP request PER CANDIDATE, so a 9-slot wave at 2
+candidates costs 36 of the 250 daily requests that nbp_pro and nbp_flash SHARE. On 2026-09-15
+pdrn-ritual spent 188 and the Matrixyl macros took it to 224; one more wave would have crossed
+the cap, and past it both Gemini engines fail **silently** while the run still exits 0.
+
+**Two decisions already taken, do not re-litigate:**
+
+- **The macro ground is chosen by measured contrast, never from the brand palette.** The palette
+  is a scene colour. Two of the four would have destroyed the shot: the PDRN cream is `#F3BFC2`
+  and its palette ground is *also* `#F3BFC2`; the Copper Day cream is navy on clinical blue.
+  Rule: cream luminance > 0.35 → graphite `#1A1A1A`, else pale `#E8EAEC`. All four clear 4.5:1.
+- **`serum-dropper-faces` is a sibling of r3, not a re-run of it.** r3's negative list forbids
+  "raised bead of liquid, droplet sitting alone on the cheek, drop about to fall" — in this wave
+  the droplet IS the subject.
+
+Malcolm chose the full roster over running today without Gemini (2026-09-15): nbp accounted for
+the majority of picks across every bundle this week.
+
 ### 🔄 SET-002 — Bundle set imagery for the 9 remaining bundle products (2026-09-11)
 
 > **🛑 BLOCKED 2026-09-14 — the Matrixyl and PDRN product renders are geometrically wrong.**
