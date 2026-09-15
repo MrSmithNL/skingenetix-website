@@ -23,6 +23,7 @@ present, and a lost supplier (a 422, a refusal) silently shifts every column aft
 Author: Claude Code, 2026-09-11.
 """
 import argparse
+import json
 import glob
 import os
 import re
@@ -69,6 +70,11 @@ def main():
                     help="candidates per slot when complete (suppliers x candidates); "
                          "without it, the largest row seen is assumed complete")
     ap.add_argument("--open", dest="do_open", action="store_true", default=True)
+    ap.add_argument("--stable-labels", metavar="CONFIG",
+                    help="take row letters from the CONFIG's full slot list rather than from the "
+                         "rows that happen to exist. Lets a sheet be built mid-run with refs that "
+                         "stay correct once the remaining slots land - normally the letters shift, "
+                         "because they are assigned across the rows present at draw time.")
     a = ap.parse_args()
 
     if a.list or not a.wave:
@@ -107,6 +113,20 @@ def main():
     if not kept:
         sys.exit("every row is partial; nothing stable to sheet yet")
 
+    # Row letters normally come from the position in `kept`, which moves as a run fills. With a
+    # config to hand they can come from the FULL slot list instead, so a ref given off a partial
+    # sheet still resolves after the wave completes.
+    fixed = None
+    if a.stable_labels:
+        ids = sorted(s["id"] for s in json.loads(Path(a.stable_labels).read_text())["slots"])
+        fixed = {sid: (chr(ord("A") + i) if i < 26 else "A" + chr(ord("A") + (i - 26)))
+                 for i, sid in enumerate(ids)}
+        missing = [n for n, _ in kept if n not in fixed]
+        if missing:
+            sys.exit("config does not contain: " + ", ".join(missing[:4]))
+        print(f"stable labels from {a.stable_labels}: {len(ids)} slots, "
+              f"{len(kept)} drawn ({ids[0]}=A .. {ids[-1]}={fixed[ids[-1]]})")
+
     S, PAD, CAP, HDR = a.tile, 11, 28, 32
     W = PAD + full * (S + PAD)
     H = len(kept) * (HDR + S + CAP + PAD) + PAD
@@ -126,7 +146,8 @@ def main():
         # A..Z then AA, AB, AC ... Row 26 used to be labelled "Z26", which made a tile read
         # "Z264" for row Z26 column 4 - parseable only because a column is always one digit,
         # and horrible to read back. Two-letter rows are unambiguous.
-        letter = chr(ord("A") + i) if i < 26 else "A" + chr(ord("A") + (i - 26))
+        letter = fixed[name] if fixed else (
+            chr(ord("A") + i) if i < 26 else "A" + chr(ord("A") + (i - 26)))
         short = re.sub(r"^[a-z0-9-]*?-(?=[a-z])", "", name, count=1) or name
         tag = "" if len(files) >= full else f"   STILL FILLING {len(files)}/{full}"
         dr.text((PAD, y + 4), f"{letter}   {short}   ({len(files)}){tag}",
