@@ -42,7 +42,9 @@ def main():
         if len(hits) != 1:
             sys.exit(f"{'no' if not hits else 'ambiguous'} wave for {a.wave!r}")
         wave = hits[0]
-    files = sorted(wave.glob("*/*.png"))
+    # a WAVE nests tiles in per-slot directories; a SELECTION folder is flat. Accept both, so
+    # the same check can be run over Malcolm's picks rather than only over a whole run.
+    files = sorted(wave.glob("*/*.png")) or sorted(wave.glob("*.png"))
     if not files:
         sys.exit(f"no images under {wave}")
     print(f"{wave.name}\n{len(files)} tiles, reading labels ...\n")
