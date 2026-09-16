@@ -128,7 +128,14 @@ def main():
               f"{len(kept)} drawn ({ids[0]}=A .. {ids[-1]}={fixed[ids[-1]]})")
 
     S, PAD, CAP, HDR = a.tile, 11, 28, 32
-    W = PAD + full * (S + PAD)
+    # The canvas is sized by the WIDEST ROW ACTUALLY DRAWN, not by `full`. They are not the same
+    # number, because FLUX.2 returns 1 candidate per call however many are asked for: on a wave
+    # where it is barred from the referenced slots and runs on the macro-only ones, a referenced
+    # row holds 4x2=8 tiles and a macro-only row holds 4x2+1=9. Sizing on --expect 8 put the 9th
+    # tile at x == W, entirely off the canvas, and PIL clips a paste past the edge in silence -
+    # so the one FLUX.2 candidate vanished from the sheet and could never be picked.
+    widest = max(full, max(len(f) for _, f in kept))
+    W = PAD + widest * (S + PAD)
     H = len(kept) * (HDR + S + CAP + PAD) + PAD
     sheet = Image.new("RGB", (W, H), (18, 18, 18))
     dr = ImageDraw.Draw(sheet)
