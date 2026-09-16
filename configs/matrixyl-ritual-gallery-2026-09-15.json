@@ -6,31 +6,63 @@
   "status": "ACTIVE - live on the storefront",
   "recorded": "2026-09-15",
   "gallery": [
-    { "position": 1, "file": "skingenetix-matrixyl-3000-pro-collagen-serum-cream-set-overhead-water.jpg",
-      "origin": "pre-existing" },
-    { "position": 2, "file": "skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg",
-      "origin": "pre-existing" },
-    { "position": 3, "file": "skingenetix-matrixyl-3000-firming-serum-clear-drop-on-cheek-macro.jpg",
+    {
+      "position": 1,
+      "file": "skingenetix-matrixyl-3000-pro-collagen-serum-cream-set-overhead-water.jpg",
+      "origin": "pre-existing"
+    },
+    {
+      "position": 2,
+      "file": "skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg",
+      "origin": "pre-existing"
+    },
+    {
+      "position": 3,
+      "file": "skingenetix-matrixyl-3000-firming-serum-clear-drop-on-cheek-macro.jpg",
       "origin": "supplied by Malcolm 2026-09-15",
       "source": "assets/selections/matrixyl-ritual-2026-09-12/supplied-matrixyl-serum-model-1.2-square.png",
-      "note": "square re-export; the first 4020x3584 version was published then replaced the same day" },
-    { "position": 4, "file": "skingenetix-matrixyl-3000-pro-collagen-cream-model-holding-jar.jpg",
+      "note": "square re-export; the first 4020x3584 version was published then replaced the same day"
+    },
+    {
+      "position": 4,
+      "file": "skingenetix-matrixyl-3000-pro-collagen-cream-model-holding-jar.jpg",
       "origin": "supplied by Malcolm 2026-09-15",
       "source": "assets/selections/matrixyl-ritual-2026-09-12/supplied-matrixyl-cream-model-2.png",
-      "note": "retired skingenetix-matrixyl-3000-serum-cream-set-teal-water-flat-lay.jpg from this slot" },
-    { "position": 5, "file": "skingenetix-matrixyl-3000-serum-cream-set-styled-bathroom-shelf.jpg",
-      "origin": "pre-existing", "note": "was position 3 until the macro was inserted" },
-    { "position": 6, "file": "skingenetix-matrixyl-3000-serum-cream-set-water-ripple-scene.jpg",
-      "origin": "pre-existing" },
-    { "position": 7, "file": "skingenetix-matrixyl-3000-pro-collagen-cream-applied-to-cheekbone.jpg",
-      "origin": "generated - cream-application-faces-r3 wave, ref D4",
+      "note": "retired skingenetix-matrixyl-3000-serum-cream-set-teal-water-flat-lay.jpg from this slot"
+    },
+    {
+      "position": 5,
+      "file": "skingenetix-matrixyl-3000-serum-cream-set-styled-bathroom-shelf.jpg",
+      "origin": "pre-existing",
+      "note": "was position 3 until the macro was inserted"
+    },
+    {
+      "position": 6,
+      "file": "skingenetix-matrixyl-3000-serum-cream-set-water-ripple-scene.jpg",
+      "origin": "pre-existing"
+    },
+    {
+      "position": 7,
+      "file": "skingenetix-matrixyl-3000-pro-collagen-cream-fingertip-swatch-cheekbone.jpg",
+      "origin": "generated - cream-application-faces-r3 wave, ref D4, cropped 2026-09-16",
       "source": "assets/ai-generated/2026-08-22-multi-cream-application-faces-r3/CREAM-R3-04-MEDIUM-CHESTNUT-WHITE/CREAM-R3-04-MEDIUM-CHESTNUT-WHITE-nbp_pro_01.png",
-      "note": "the WHITE cream row, which is the correct substance for Matrixyl" }
+      "note": "the WHITE cream row, which is the correct substance for Matrixyl. REPLACED 2026-09-16: the published version carried a baked-in black bar 24px wide down the LEFT edge of the 4096px source (18px as delivered at 3000px) - a hard step from luminance 5 to 26, not a vignette. 27px was cropped off the left (the 24px bar plus its 3px antialiased ramp) and the balance taken off top and bottom to keep the frame square, because trimming the right instead would slide the subject sideways. Verified by read-back off the CDN: 0px on all four edges."
+    }
   ],
   "retired": [
-    { "file": "skingenetix-matrixyl-3000-serum-cream-set-teal-water-flat-lay.jpg",
-      "recoverable": "assets/publish-ready/matrixyl-3000-ritual/ and still in Shopify Files" },
-    { "file": "skingenetix-matrixyl-3000-firming-serum-dropper-applying-to-cheek.jpg",
-      "recoverable": "assets/selections/matrixyl-ritual-2026-09-12/supplied-matrixyl-serum-model-1.png (the non-square original)" }
+    {
+      "file": "skingenetix-matrixyl-3000-serum-cream-set-teal-water-flat-lay.jpg",
+      "recoverable": "assets/publish-ready/matrixyl-3000-ritual/ and still in Shopify Files"
+    },
+    {
+      "file": "skingenetix-matrixyl-3000-firming-serum-dropper-applying-to-cheek.jpg",
+      "recoverable": "assets/selections/matrixyl-ritual-2026-09-12/supplied-matrixyl-serum-model-1.png (the non-square original)"
+    },
+    {
+      "file": "skingenetix-matrixyl-3000-pro-collagen-cream-applied-to-cheekbone.jpg",
+      "retired": "2026-09-16",
+      "reason": "baked-in 18px black bar on the left edge",
+      "recoverable": "backups/retired-media-2026-09-16/ and backups/image-replace-20260916-095240.json"
+    }
   ]
 }
