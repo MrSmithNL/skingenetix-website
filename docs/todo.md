@@ -50,7 +50,7 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ### 🔄 MACRO-001 — Cream macro sets + serum dropper faces (2026-09-15)
 
-**Priority:** 🟡 Configs built and verified; held on the Gemini daily quota
+**Priority:** 🟢 RUNNING since 2026-09-16 09:03 — all five waves launched sequentially
 **Owner:** Claude (generation, QA) + Malcolm (every image choice)
 
 **Held for the next day's quota — run these first, at the FULL roster**
@@ -64,7 +64,19 @@ macros, where it auto-skips the six referenced slots and runs only on the three 
 | `configs/banners/pdrn-cream-macros.json` | blush pink cream, graphite ground |
 | `configs/banners/serum-dropper-faces.json` | 10 faces, clear serum from a pipette, macro |
 
-**Why they are held.** `_gemini` makes one HTTP request PER CANDIDATE, so a 9-slot wave at 2
+**Status 2026-09-16.** All five waves are running via `scripts/run-held-waves.sh`, sequentially in
+one process: matrixyl → copper-day → copper-night → pdrn → serum-dropper-faces. 184 Gemini requests of
+the 250 daily cap, so both nbp engines survive the whole sequence. Log: `/tmp/all-waves.log`.
+
+⚠️ **They did not run overnight, and the cause is worth knowing.** Two chained watchers were armed with
+`while pgrep -f "generate-multi.py"; do sleep 20; done` — and `pgrep -f` matches the *watcher's own
+command line*, which contains that string. Each waited on itself for 20 hours. Both logs were zero
+bytes, which reads as "not started" rather than "deadlocked". **The full-wave leak scan promised on
+2026-09-15 never ran**; the label check over Malcolm's picks was covered only because it was also run
+by hand. Do not chain on `pgrep`; run sequentially, or key on `manifest.json`, which
+`generate-multi` writes once at the very end.
+
+**Why they were held.** `_gemini` makes one HTTP request PER CANDIDATE, so a 9-slot wave at 2
 candidates costs 36 of the 250 daily requests that nbp_pro and nbp_flash SHARE. On 2026-09-15
 pdrn-ritual spent 188 and the Matrixyl macros took it to 224; one more wave would have crossed
 the cap, and past it both Gemini engines fail **silently** while the run still exits 0.
@@ -82,7 +94,29 @@ the cap, and past it both Gemini engines fail **silently** while the run still e
 Malcolm chose the full roster over running today without Gemini (2026-09-15): nbp accounted for
 the majority of picks across every bundle this week.
 
-### 🔄 SET-002 — Bundle set imagery for the 9 remaining bundle products (2026-09-11)
+### ✅ SET-002 — Bundle set imagery, ALL 11 BUNDLES NOW CARRY A GALLERY (2026-09-11 → 2026-09-15)
+
+> **Completed 2026-09-15.** Every bundle has a gallery; 8 of 11 have an FAQ image. Ten of the eleven
+> are ACTIVE — Malcolm published five of them himself at 12:19–12:20 on 2026-09-15, in a 50-second
+> batch through the Shopify admin. `fine-lines-wrinkles-peptide-duo-set` is the only one still DRAFT.
+>
+> **Still missing an FAQ image:** `complete-fine-lines-wrinkles-routine` (live), and both
+> microneedling stamp sets.
+>
+> **Carried faults, published knowingly rather than fixed:**
+> - `wrinkles-duo` and `wrinkles-routine` were selected from the 2026-09-12 wave, which predates both
+>   the reference rebuild and `substance_block` reaching the brief. Those frames carry the old Matrixyl
+>   render (high collar, exposed neck) and nothing in their brief described the liquid. **A re-run after
+>   a corrected Matrixyl render would be materially better.**
+> - `pdrn-ritual` carries the corrected TRUE PINK serum (hue 337, was salmon at 358) but still the
+>   uncorrected PDRN render, and its cream stays at hue 350.8 by Malcolm's explicit decision, so cream
+>   and serum read as different pinks in every frame. Intended.
+>
+> **Two frames were caught before publishing and must not be revived:** `U6` of pdrn-ritual (jar reads
+> `PDRN NIGHT CREAM JAR`, fine print `PORN | COLLAGEN | COPPEP PEPTIDIE`) and `V5` (`PK … PDFIN`,
+> `FORN … COTRER`). Both were picked by Malcolm and both were one step from a live page.
+
+### 🔄 SET-002 original entry — reference faults, kept for the record
 
 > **🛑 BLOCKED 2026-09-14 — the Matrixyl and PDRN product renders are geometrically wrong.**
 > Malcolm rejected all eight white/light-grey compositions of `wrinkles-routine`: the two serum
