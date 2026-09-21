@@ -65,14 +65,36 @@ product parameters explain **82.4%** of AI recommendation variance, brand explai
 brand with no distinguishing information breaks through **4.6%** of the time, but with one concrete signal
 **64–80%** (reviews 79.7%). The hub is planned as a slower second track.
 
-**🛑 Three blockers, all needing Malcolm:**
-1. **`skingenetix.com` is not in Google Search Console.** The service account at
-   `~/.config/ga4/service-account.json` sees only `hairgenetix.com` and `loveoverexile.com`. **Zero ranking
-   data exists for this site.** Everything downstream is unmeasurable until this is granted.
-2. **No keyword volume tool.** No DataForSEO / Semrush / Ahrefs credentials in either repo. This is the
-   same blocker already recorded at `todo.md` for product renaming.
-3. **Inventory and selling timeline.** The highest-value track (reviews, ratings, availability — availability
-   is extracted from PDPs in 79% of cases) is gated on having stock and customers.
+**Status 2026-09-21 (afternoon) — foundation partly connected:**
+
+| Piece | Status |
+|---|---|
+| Search Console | ✅ `sc-domain:skingenetix.com` shared with the service account |
+| GA4 property access | ✅ `properties/552893424` (`G-WWKPPYR5F9`), created 2026-09-07 |
+| **GA4 ecommerce tracking** | 🛑 **NOT CONFIGURED — zero commerce events ever recorded** |
+| DataForSEO | ✅ working — `seo-toolkit/.env`, $473.94, 1,000/day |
+| Klaviyo Reviews API key | ⏳ placeholder in `.env`, awaiting paste |
+
+**🛑 The one real blocker now: GA4 records no ecommerce events.**
+Since property creation only `user_engagement`, `scroll`, `click`, `form_start`, `form_submit`,
+`session_start`, `first_visit` have fired. Missing entirely: `view_item`, `add_to_cart`, `begin_checkout`,
+`view_cart`, `add_payment_info`, `purchase`, `select_item`, `view_item_list`. **Two real Online Store
+orders produced no `purchase` event.** `G-WWKPPYR5F9` appears 0 times on the site; only the Google tag
+container `GT-WBLSHZCM` is present, routing pageviews but not commerce. The **Google & YouTube sales
+channel IS installed** (a channel, not an app — missed on the first pass). Fix is inside that channel's
+settings. Until then there is no conversion data to optimise against.
+
+**✅ CORRECTED — the store is live and selling.** `todo.md` previously said zero inventory. Actual:
+**1,677 units** (89/product, all 21 ACTIVE), prices €49–€89 / €107–€180, and **7 orders, €1,652.63 since
+2026-09-07** — 3 Kaufland, 1 Bol, **2 Online Store (€200.60)**, 1 unattributed. ⚠️ Marketplace orders never
+reach GA4, so GA4 shows the website slice only.
+
+**✅ Reviews exist — and are invisible to machines.** Klaviyo Reviews is installed and working: **4.8/5
+from 10 reviews** on each of the 9 singles, rendering correctly for shoppers. But the rating is painted
+**client-side by JavaScript**, so the ~69% of AI crawlers that do not run JS (GPTBot, ClaudeBot,
+PerplexityBot, OAI-SearchBot, CCBot) see no rating; `reviews.rating`/`reviews.rating_count` are empty on
+**0 of 21** products despite the definitions existing; and the Product JSON-LD has **no `aggregateRating`**.
+The 2 stamp sets and all 10 bundles have **zero** reviews. Dead Okendo/Loox code also remains in the theme.
 
 **Verified live on the store, 2026-09-21:**
 - ✅ robots.txt blocks no AI crawlers — correct as-is, do not change

@@ -110,11 +110,15 @@ and a working plan-file → `patch-template.py` → backup → publish pipeline.
 | **No meta titles/descriptions** | BUILD-005 genuinely not started. No pattern documented |
 | **Zero cross-family linking** | A solution page never links to the relevant research page, or vice versa |
 
-**⚠️ And the constraint that gates everything in §3: zero inventory, not yet selling.** Online availability
-is extracted from PDPs in **79%** of cases and is a live AI-shopping gatekeeper. There are also no genuine
-customer reviews — and reviews are the single strongest breakthrough signal in §1.1. **The highest-value
-track cannot fully fire until there is stock to sell and customers to review it.** That is a business
-sequencing question, not an SEO one, and it belongs in §10.
+**✅ CORRECTED 2026-09-21 — the store is live, stocked and selling.** An earlier draft said "zero inventory,
+not yet selling", copied from a stale `todo.md` line. Verified against Shopify:
+
+- **1,677 units in stock**, 89 per product, all 21 products ACTIVE, `inventoryPolicy: DENY`
+- Prices €49–€89 singles, €107–€180 bundles (not the €49.95 the docs claimed)
+- **7 orders, €1,652.63 since 2026-09-07** — 3 Kaufland, 1 Bol, **2 Online Store (€200.60)**, 1 unattributed
+- **Reviews already exist**: 4.8/5 from 10 reviews on each of the 9 single products, via Klaviyo Reviews
+
+**So the highest-value track is NOT blocked.** It can start now.
 
 **Two things already fine — do not "fix" them:**
 
@@ -154,17 +158,42 @@ actually found** — and unusually, we can supply all of them honestly.
 ⚠️ **Google removed FAQ rich results entirely on 7 May 2026.** FAQ *content* still lifts PDP citation
 (+188%); FAQ *rich snippets* are gone. Keep the content, expect no snippet.
 
-### 3.2 Reviews infrastructure
+### 3.2 Reviews — they exist, and they are invisible to machines
 
 **79.7% breakthrough with reviews vs 4.6% without** — the strongest single signal in the skincare study.
-Reviews are also product-page *main content* by Google's own rater definition.
 
-We already have a route: **Klaviyo Reviews is on this account** (the sister brand's app, currently
-onsite-script only). This is an install, not a purchase.
+**Verified live 2026-09-21. Klaviyo Reviews is installed and working:**
 
-⚠️ **Honesty constraint.** The existing review quotes are real customers under changed names — that was
-closed as acceptable on 2026-09-10 and stays closed. But a *ratings* programme must be genuine. Given zero
-inventory, there are no new customers to review. **This track is gated on selling.**
+| Component | Status |
+|---|---|
+| App `fulfilled-1` (by Klaviyo) | ✅ Scopes incl. `read/write_product_reviews`, `write_products`, `write_themes` |
+| Onsite JS `klaviyo.js`, company `WYH5Jg` | ✅ Loading |
+| Star-rating + full-reviews theme blocks | ✅ Installed, rendering on PDPs |
+| Review content | ✅ **4.8/5 from 10 reviews** on each of the 9 singles |
+| Metafield *definitions* `reviews.rating` / `reviews.rating_count` | ✅ Exist, storefront `PUBLIC_READ` |
+
+**⚠️ Three linked gaps mean none of it reaches Google or AI:**
+
+1. **The rating is painted client-side by JavaScript.** The `<span class="klaviyo-star-rating-widget">` is
+   empty in the served HTML. **GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot and CCBot do not execute
+   JavaScript** — roughly 69% of AI crawlers see a product with no rating at all.
+2. **`reviews.rating` / `reviews.rating_count` are empty on 0 of 21 products.** Definitions exist, values
+   don't. That is the field Google Merchant Center reads for Shopping star ratings.
+3. **Product JSON-LD carries no `aggregateRating` and no `review`.** Verified keys: `brand, category,
+   description, gtin, image, name, offers, sku, url`. Offers is healthy (€59.00, InStock). Rating: absent.
+
+**Coverage:** 9 singles have 10 reviews each; **the 2 stamp sets and all 10 bundles have zero.**
+
+**Fix, in order:** enable Klaviyo's Shopify metafield sync (the app already holds `write_products` for
+exactly this) → add `aggregateRating` to the Product JSON-LD from those metafields, additively → collect
+reviews for the 12 products that have none.
+
+⚠️ Also present: **dead Okendo and Loox code** in the theme from review apps that are not installed. It is
+the only `reviewCount` string in the served HTML, which actively misleads a crawler.
+
+⚠️ **Honesty constraint.** Existing quotes are real customers under changed names (closed 2026-09-10).
+Ratings must be what those customers actually gave. Bundle reviews must be genuine, not inherited silently
+from component products.
 
 ### 3.3 Merchant Center feed + conversational attributes — the neglected lever
 
@@ -469,22 +498,40 @@ I am flagging this, not planning it. It needs a scope decision.
 
 ---
 
-## 10. Decisions needed from Malcolm
+## 10. Open items
 
-1. **GSC access** — verify `skingenetix.com`, grant the service account. *Blocking for all measurement.*
-2. **Keyword data source** — we have none. DataForSEO? Google Ads Keyword Planner? Something already paid
-   for? *Blocking for Phase 3.*
-3. **⭐ Inventory and selling timeline.** The highest-value track (reviews, ratings, availability) is gated
-   on having stock and customers. **When does the store go live?** This changes the whole sequence.
-4. **Track order** — I am recommending product/feed before hub, against the brief. Confirm or override.
-5. **Is the off-site track in scope?** It is where the AI-visibility evidence points, and retailer
-   distribution may matter more than anything on-site.
-6. **Do the thin concern collections earn their place?** With 9 products, one holds 2–3. Four collide with
-   a page on the same handle.
-7. **Scope check:** 5 hubs × 4–6 spokes ≈ 20–30 articles, English first, then 6 locales. Right size?
-8. **Blog handle** — `learn`? `science`? Free to change now, costly after the first article.
+**Resolved 2026-09-21:**
 
----
+- ✅ **Search Console** — `sc-domain:skingenetix.com` shared with the service account
+- ✅ **GA4 property access** — `properties/552893424` visible
+- ✅ **Keyword data source** — DataForSEO confirmed working (`seo-toolkit/.env`, $473.94, 1,000/day).
+  It also exposes an `ai_optimization` family (`llm_responses`, `llm_mentions`, AI keyword volume), which
+  makes the ≥7-runs-per-prompt AI-visibility measurement in §6 affordable.
+- ✅ **Selling timeline** — moot. The store is live, stocked and taking orders (see §2).
+
+**🛑 Still blocking:**
+
+1. **GA4 ecommerce tracking is not configured.** Since the property was created 2026-09-07 it has recorded
+   **zero** `view_item`, `add_to_cart`, `begin_checkout` or `purchase` events — only enhanced measurement
+   (scroll, click, form). Two real Online Store orders produced no `purchase` event. The GA4 measurement ID
+   `G-WWKPPYR5F9` appears **0 times** on the site; only a Google tag container `GT-WBLSHZCM` is present,
+   routing pageviews but not commerce events. **The Google & YouTube sales channel IS installed** (it is a
+   channel, not an app, which is why it was missed earlier) — the conversion tracking inside it needs
+   connecting to `G-WWKPPYR5F9`. **Until this is fixed there is no conversion data to optimise against.**
+2. **Klaviyo private API key** — placeholder added to `.env` as
+   `KLAVIYO_SKINGENETIX_PRIVATE_API_KEY`, read-only scopes (Reviews, Catalogs, Metrics). Needed to verify
+   the metafield-sync configuration and read review data directly.
+
+**Still open, non-blocking:**
+
+3. **Track order** — product/feed before hub, against the brief. Confirm or override.
+4. **Is the off-site track in scope?** (§8)
+5. **Do the thin concern collections earn their place?** Four collide with a page on the same handle.
+6. **Scope check:** 5 hubs × 4–6 spokes ≈ 20–30 articles.
+7. **Blog handle** — free to rename while the blog has 0 articles.
+
+⚠️ **Note on measurement scope:** five of seven orders came from **Kaufland and Bol**, which never touch the
+website or GA4. GA4 will only ever show the website slice — do not read it as total revenue.
 
 ## 11. Honest uncertainties
 
