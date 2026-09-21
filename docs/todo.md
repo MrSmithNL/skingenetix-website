@@ -89,12 +89,41 @@ settings. Until then there is no conversion data to optimise against.
 2026-09-07** — 3 Kaufland, 1 Bol, **2 Online Store (€200.60)**, 1 unattributed. ⚠️ Marketplace orders never
 reach GA4, so GA4 shows the website slice only.
 
-**✅ Reviews exist — and are invisible to machines.** Klaviyo Reviews is installed and working: **4.8/5
-from 10 reviews** on each of the 9 singles, rendering correctly for shoppers. But the rating is painted
-**client-side by JavaScript**, so the ~69% of AI crawlers that do not run JS (GPTBot, ClaudeBot,
-PerplexityBot, OAI-SearchBot, CCBot) see no rating; `reviews.rating`/`reviews.rating_count` are empty on
-**0 of 21** products despite the definitions existing; and the Product JSON-LD has **no `aggregateRating`**.
-The 2 stamp sets and all 10 bundles have **zero** reviews. Dead Okendo/Loox code also remains in the theme.
+**✅ REVIEWS — audited in full 2026-09-21 via the Klaviyo API, and 100 were unpublished.**
+
+Klaviyo holds **193 reviews**. They split cleanly into two groups:
+
+| Group | Count | Email domains | Profiles | Verdict |
+|---|---|---|---|---|
+| **9 single products** (+1 orphan) | **93** | 90 gmail, 2 live.nl, 1 outlook | ✅ exist | **Real.** Dutch, typos, personal detail. Malcolm's closed 2026-09-10 decision stands |
+| **10 bundle products** | **100** | **100/100 `@example.com`** | ❌ none | **Synthetic.** All created 2026-08-19, uniform marketing prose, no titles, **83 author names reused from the real reviewers** |
+
+**Action taken (Malcolm approved 2026-09-21):** all **100 example.com reviews unpublished** via
+`PATCH /api/reviews/{id}` with `{"status":{"value":"unpublished"}}`. Verified live — bundle pages now show
+"0 reviews"; singles unaffected at 10 and 12. Full backup at
+`backups/klaviyo-reviews-full-20260921-171220.json` (all 193) and
+`backups/klaviyo-reviews-to-unpublish-20260921-171220.json` (the 100). ⚠️ `backups/` is gitignored, so those files are local-only — but the reviews themselves are still in Klaviyo as `unpublished`, so the change is reversible from there regardless.
+
+⚠️ **Why it mattered:** the store sells EUR across six EU locales. The EU Omnibus Directive bans displaying
+consumer reviews without reasonable steps to verify they come from actual purchasers; the Dutch ACM
+enforces it, with penalties up to 4% of turnover.
+
+**The technical gap remains and is now the highest-value fix:**
+
+- Stars are painted **client-side only** — empty `<span>` in served HTML. The ~69% of AI crawlers that
+  cannot run JS (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, CCBot) see no rating
+- `reviews.rating` / `reviews.rating_count` empty on **0 of 21** products (definitions exist, values never
+  written — the app holds `write_products` for exactly this)
+- Product JSON-LD has **no `aggregateRating`**
+- **Both microneedling stamp sets have no reviews AND no Klaviyo blocks on their template**
+- Dead **Okendo** and **Loox** code still in the theme — the only `reviewCount` string a crawler can find
+
+**Agreed build (Malcolm, 2026-09-21) — option (b)+(c):** set up the order-triggered review-request flow so
+new reviews land `verified: true`, then wire `aggregateRating` **gated on `verified: true`** so the markup
+ships now and activates only when genuine verified reviews exist. `verified: true` count today: **0**.
+Klaviyo can only verify reviews **it collected itself** — imported or hand-created reviews can never be
+verified retroactively.
+
 
 **Verified live on the store, 2026-09-21:**
 - ✅ robots.txt blocks no AI crawlers — correct as-is, do not change
