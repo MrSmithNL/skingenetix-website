@@ -48,6 +48,48 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 HUB-001 — Content hubs for Google + AI findability (2026-09-21)
+
+**Priority:** 🔴 Research and design COMPLETE; blocked on three decisions
+**Owner:** Claude (research, build) + Malcolm (decisions, keyword source, selling timeline)
+
+**Deliverables written 2026-09-21:**
+- `docs/research-2026-ai-search-and-content-hubs.md` — the evidence base, graded, with a blacklist of
+  fabricated statistics found in circulation
+- `docs/content-hub-strategy-2026.md` — the strategy, architecture and 7-phase implementation plan
+
+**The recommendation changed during the research.** The brief assumed the content hub is the lever. The
+2026 evidence — including Chu & Hou (arXiv:2606.17443v2, Aug 2026), which used **skincare** as its test
+category — says the lever for a brand at this stage is the **product and feed layer**. Their finding:
+product parameters explain **82.4%** of AI recommendation variance, brand explains **1.2%**; an unknown
+brand with no distinguishing information breaks through **4.6%** of the time, but with one concrete signal
+**64–80%** (reviews 79.7%). The hub is planned as a slower second track.
+
+**🛑 Three blockers, all needing Malcolm:**
+1. **`skingenetix.com` is not in Google Search Console.** The service account at
+   `~/.config/ga4/service-account.json` sees only `hairgenetix.com` and `loveoverexile.com`. **Zero ranking
+   data exists for this site.** Everything downstream is unmeasurable until this is granted.
+2. **No keyword volume tool.** No DataForSEO / Semrush / Ahrefs credentials in either repo. This is the
+   same blocker already recorded at `todo.md` for product renaming.
+3. **Inventory and selling timeline.** The highest-value track (reviews, ratings, availability — availability
+   is extracted from PDPs in 79% of cases) is gated on having stock and customers.
+
+**Verified live on the store, 2026-09-21:**
+- ✅ robots.txt blocks no AI crawlers — correct as-is, do not change
+- ✅ `/llms.txt`, `/llms-full.txt`, `/agents.md` all 200 (Shopify May 2026 defaults) — leave them, frontier
+  crawlers fetched llms.txt **0 times in 1,227 requests** across a 7-month log study
+- ⚠️ **4 live title collisions** — `/pages/` and `/collections/` both 200, both self-canonical, both leading
+  with the identical phrase on `fine-lines-wrinkles`, `firming-skin-density`, `skin-repair-renewal`,
+  `brightening-glow`. `collagen-skin-plumping` is page-only (collection 404s)
+- ⚠️ No meta titles or descriptions anywhere; zero research↔solution cross-linking
+
+**Cheap lever that expires:** the blog handle (`news` → `learn`) is free to rename while the blog has 0
+articles, and costly afterwards.
+
+**Do NOT do** (each would look productive and waste money): build llms.txt · run a schema-first AISO push ·
+write 3,000-word guides · build FAQ-format articles · scale formulaic comparison pages · translate before
+measuring English. Full list with evidence in the strategy doc §9.
+
 ### 🔄 MACRO-001 — Cream macro sets + serum dropper faces (2026-09-15)
 
 **Priority:** 🟢 RUNNING since 2026-09-16 09:03 — all five waves launched sequentially
