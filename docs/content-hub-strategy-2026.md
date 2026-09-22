@@ -237,6 +237,14 @@ hidden JSON-LD.
 
 Still worth building. Slower, and secondary to Track A.
 
+> **▶ The buildable version of this track now lives in `docs/content-plan-2026.md`** — the hero map with
+> measured volumes, the 18 named articles, and the phase order. The demand data behind it is in
+> `docs/keyword-research-2026-09-22.md`. What follows here is the architecture; that doc is the build list.
+>
+> Two things the data changed: **PDRN is the flagship hub, not copper peptide** (`what is pdrn` 14,800 at
+> KD 7, `pdrn skincare` 12,100 at KD 0, thin DE SERP), and **the first phase is retitling, not writing** —
+> `/pages/acetyl-hexapeptide-8-research` already earns 1,014 of the site's 2,065 impressions for **1 click**.
+
 ### 4.1 Hub on the ingredient, not the concern
 
 **Five ingredient hubs.** Because: the products are ingredient-branded and those are the winnable technical
@@ -326,16 +334,13 @@ Three things only:
 Sequential. **Do not bundle phases** — Hairgenetix confounded three changes at once in August 2026 and
 destroyed attribution for the quarter.
 
-### Phase 0 — Instrumentation · **BLOCKING, needs Malcolm**
+### Phase 0 — Instrumentation · ✅ **DONE 2026-09-22, except GA4 ecommerce**
 
-1. **Verify `skingenetix.com` in Google Search Console**, grant the existing service account
-   (`~/.config/ga4/service-account.json`) read access. It already works for hairgenetix.com — this is an
-   access grant, not a build.
-2. Confirm the cross-brand rule holds: separate GSC properties, no keyword competition with Hairgenetix.
-3. Port `gsc-inspect.py` and `rescue-baseline.py` from hairgenetix, retargeted.
-4. Pre-change baseline snapshot.
-
-**Exit:** GSC returns data for skingenetix.com.
+1. ✅ Search Console shared with the service account.
+2. ✅ GA4 property shared (`properties/552893424`).
+3. ✅ Tooling built rather than ported: `scripts/gsc-baseline.py`, `scripts/keyword-research.py`.
+4. ✅ Baseline captured: `configs/keyword-data/gsc-baseline-2026-09-22.json` + 7,280 keywords across US/DE/NL.
+5. 🛑 **GA4 still records zero ecommerce events** — see §10. Traffic data works; conversion data does not.
 
 ### Phase 1 — Fix what is already live · *cheap, parallel to Phase 0*
 
@@ -509,6 +514,11 @@ I am flagging this, not planning it. It needs a scope decision.
   makes the ≥7-runs-per-prompt AI-visibility measurement in §6 affordable.
 - ✅ **Selling timeline** — moot. The store is live, stocked and taking orders (see §2).
 
+**Resolved 2026-09-22:**
+
+- ✅ **Keyword study complete.** 7,280 keywords, two reusable scripts, hero map built. Was Phase 3; now done.
+- ✅ **GSC baseline captured** — and it immediately surfaced the site's central problem (see §4 note).
+
 **🛑 Still blocking:**
 
 1. **GA4 ecommerce tracking is not configured.** Since the property was created 2026-09-07 it has recorded
@@ -535,9 +545,13 @@ website or GA4. GA4 will only ever show the website slice — do not read it as 
 
 ## 11. Honest uncertainties
 
-- **No competitor teardown exists.** The web-search budget was exhausted. Who ranks for "copper peptide
-  serum" or "PDRN skincare" is unresearched — and it could change the hub map.
-- **No volume data.** Every candidate head term is a guess until Phase 3.
+- ✅ **Resolved 2026-09-22 — volume data now exists.** 7,280 keywords across US/DE/NL, plus live SERP
+  checks on `what is pdrn` (US) and `pdrn serum` (DE). See `docs/keyword-research-2026-09-22.md`.
+- **Still only three markets.** FR, ES and IT volumes are not pulled. Do that before translating into them.
+- **No clickstream pulled.** DataForSEO's clickstream endpoints give *observed* rather than modelled
+  volume and settled the naming question on Hairgenetix. Worth running before any product renaming.
+- **`l argireline` shows 74,000 (US) and is unverified** — likely a bucket artefact. Not in the hero map.
+- **KD scores are uniformly low (0–28)** across every family. Verified against a real SERP for PDRN only.
 - **Merchant Center AI insights are not available in the UK/EU** — we can submit conversational attributes
   but cannot yet measure their effect from a European account.
 - **The /pages/ vs /collections/ resolution is reasoned practice, not measured fact.** No 2026 study tests it.

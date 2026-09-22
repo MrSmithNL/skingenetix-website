@@ -48,6 +48,40 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔄 CONTENT-001 — Content structure & build plan (2026-09-22)
+
+**Priority:** 🔴 Plan complete and evidence-based; Phase 1 ready to start
+**Owner:** Claude (build) + Malcolm (2 decisions)
+
+**Documents:** `docs/content-plan-2026.md` (what to build) · `docs/keyword-research-2026-09-22.md`
+(demand) · `docs/content-hub-strategy-2026.md` (why) · `docs/research-2026-ai-search-and-content-hubs.md`
+(evidence base, incl. a blacklist of fabricated stats found in circulation)
+**Tools built:** `scripts/keyword-research.py` · `scripts/gsc-baseline.py`
+**Data captured:** `configs/keyword-data/` — 7,280 keywords (US/DE/NL) + GSC baseline
+
+**The finding that sets the build order came from GSC, not the keyword tool.**
+`/pages/acetyl-hexapeptide-8-research` carries **1,014 of the site's 2,065 impressions** at position 8.4
+and earns **1 click** — a 0.10% CTR. That is Hairgenetix's impression-rich/click-poor pattern, already
+live here on the only page with traction. Lifting it to a normal 3% would roughly triple total site
+clicks with no new content. **Phase 1 is retitling, not writing.**
+
+**PDRN is the flagship hub, not copper peptide:** `what is pdrn` 14,800 at KD 7, `pdrn skincare` 12,100
+at **KD 0**, and the live DE SERP for `pdrn serum` is small affiliate blogs and marketplaces. Brand
+ingredient explainers demonstrably rank — **SkinCeuticals #2** and **The INKEY List #11** on
+`what is pdrn`, doing exactly what our research pages already do.
+
+**Market split:** the US searches informationally, Germany commercially — the entire German keyword set
+holds **two** question terms. DE priority is product and collection pages; articles serve US/UK.
+
+**Plan:** Phase 1 fix what already earns impressions (retitles, the 4 concern-handle collisions, meta
+everywhere, cross-family linking) → Phase 2 upgrade the 5 research pages into hubs, PDRN first →
+Phase 3 18 spokes in a renamed blog, 800–1,500 words, each carrying a measured target term.
+
+**🛑 Two decisions needed from Malcolm:** blog handle (`learn`?) and whether the four thin concern
+collections earn their place.
+
+**⚠️ Still blocking measurement: GA4 records no ecommerce events.** Reviews moved to a separate thread.
+
 ### 🔄 HUB-001 — Content hubs for Google + AI findability (2026-09-21)
 
 **Priority:** 🔴 Research and design COMPLETE; blocked on three decisions
