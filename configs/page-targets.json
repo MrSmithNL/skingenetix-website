@@ -1,0 +1,145 @@
+{
+  "_about": "Target keywords per page from docs/keyword-strategy-2026.md \u00a74 (hero map). Used by scripts/page-audit.py to check that the page's title, H1 and first 30% of text carry the terms the page is meant to own. primary = the head term; secondary = terms folded into the page as sections.",
+  "/pages/pdrn-research": {
+    "primary": "pdrn",
+    "secondary": [
+      "what is pdrn",
+      "salmon dna",
+      "pdrn benefits",
+      "sodium dna"
+    ],
+    "type": "hub"
+  },
+  "/pages/acetyl-hexapeptide-8-research": {
+    "primary": "argireline",
+    "secondary": [
+      "acetyl hexapeptide-8",
+      "expression lines"
+    ],
+    "type": "hub"
+  },
+  "/pages/copper-peptide-research": {
+    "primary": "copper peptide",
+    "secondary": [
+      "ghk-cu",
+      "copper peptide benefits"
+    ],
+    "type": "hub"
+  },
+  "/pages/matrixyl-3000-research": {
+    "primary": "matrixyl 3000",
+    "secondary": [
+      "palmitoyl tripeptide-1",
+      "tetrapeptide-7"
+    ],
+    "type": "hub"
+  },
+  "/pages/glutathione-research": {
+    "primary": "glutathione",
+    "secondary": [
+      "glutathione for skin",
+      "brightening"
+    ],
+    "type": "hub"
+  },
+  "/pages/the-science": {
+    "primary": "peptide skincare",
+    "secondary": [
+      "research"
+    ],
+    "type": "index"
+  },
+  "/": {
+    "primary": "peptide skincare",
+    "secondary": [
+      "copper peptide",
+      "pdrn",
+      "matrixyl 3000"
+    ],
+    "type": "home"
+  },
+  "/pages/fine-lines-wrinkles": {
+    "primary": "fine lines",
+    "secondary": [
+      "wrinkles",
+      "acetyl hexapeptide-8",
+      "matrixyl 3000"
+    ],
+    "type": "concern"
+  },
+  "/pages/firming-skin-density": {
+    "primary": "firming",
+    "secondary": [
+      "skin density",
+      "matrixyl 3000",
+      "copper peptide"
+    ],
+    "type": "concern"
+  },
+  "/pages/skin-repair-renewal": {
+    "primary": "skin repair",
+    "secondary": [
+      "renewal",
+      "pdrn",
+      "copper peptide"
+    ],
+    "type": "concern"
+  },
+  "/pages/brightening-glow": {
+    "primary": "brightening",
+    "secondary": [
+      "glow",
+      "glutathione",
+      "vitamin c"
+    ],
+    "type": "concern"
+  },
+  "/collections/pdrn": {
+    "primary": "pdrn skincare",
+    "secondary": [
+      "pdrn serum",
+      "pdrn cream",
+      "salmon dna"
+    ],
+    "type": "collection"
+  },
+  "/collections/serums": {
+    "primary": "peptide serum",
+    "secondary": [
+      "copper peptide",
+      "pdrn"
+    ],
+    "type": "collection"
+  },
+  "/products/pdrn-renewal-serum": {
+    "primary": "pdrn serum",
+    "secondary": [
+      "salmon dna",
+      "1%"
+    ],
+    "type": "product"
+  },
+  "/products/copper-peptide-ghk-cu-renewal-serum": {
+    "primary": "copper peptide serum",
+    "secondary": [
+      "ghk-cu",
+      "2%"
+    ],
+    "type": "product"
+  },
+  "/products/matrixyl-3000-firming-serum": {
+    "primary": "matrixyl 3000",
+    "secondary": [
+      "serum"
+    ],
+    "type": "product"
+  },
+  "/products/acetyl-hexapeptide-8-anti-wrinkle-serum": {
+    "primary": "argireline",
+    "secondary": [
+      "acetyl hexapeptide-8",
+      "10%"
+    ],
+    "type": "product"
+  }
+}

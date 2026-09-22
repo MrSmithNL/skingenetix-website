@@ -1,0 +1,101 @@
+# Page audit — `/products/copper-peptide-ghk-cu-renewal-serum`
+
+**Date:** 2026-09-22 · **Tool:** `scripts/page-audit.py` · **Live:** https://www.skingenetix.com/products/copper-peptide-ghk-cu-renewal-serum
+
+| Area | Score |
+|---|---|
+| SEO | **90/100** |
+| GEO | **40/100** |
+| DESIGN | **84/100** |
+
+## SEO
+
+| | Check | Detail |
+|---|---|---|
+| ✅ | HTTP 200, no redirect | 200 → https://www.skingenetix.com/products/copper-peptide-ghk-cu-renewal-serum |
+| ✅ | Clean URL (lowercase, hyphens, no params, ≤ 60 chars) | /products/copper-peptide-ghk-cu-renewal-serum |
+| ✅ | URL carries the head term | head term 'copper peptide serum' |
+| ✅ | Title present, 30–60 chars | 46c: Copper Peptide Serum 2% (GHK-Cu) / Skingenetix |
+| ✅ | Title contains head term | 'copper peptide serum' |
+| 🟠 | Meta description 70–160 chars | 166c |
+| 🟡 | Meta description contains head term |  |
+| ✅ | Indexable (no noindex) | no robots meta |
+| ✅ | Self-referencing absolute canonical | https://www.skingenetix.com/products/copper-peptide-ghk-cu-renewal-serum |
+| ✅ | hreflang for all 6 locales + x-default | 7 alternates |
+| ✅ | Open Graph title/description/image/url | complete |
+| 🟡 | og:title matches the page title | Copper Peptide (GHK-Cu) 2% Renewal Serum |
+| ✅ | Exactly one <h1> | Copper Peptide (GHK-Cu) 2% Renewal Serum |
+| 🟠 | <h1> contains head term |  |
+| ✅ | Topic headings are real <h2> (≥ 3) | 5 <h2>: ['Before and after', 'Frequently Asked Questions', '3 Simple Steps', 'The Skingenetix Standard', 'Complete Your Routine'] |
+| ✅ | Visual-only headings (styled <p>/<span>) | 0 that look like headings but are not: [] |
+| ✅ | No skipped heading levels | clean |
+| ✅ | Content images have alt text | 27/27 |
+| ✅ | Images declare width/height (CLS) | 0 without |
+| ✅ | Internal links in content ≥ 5 | 20 unique |
+| ✅ | All JSON-LD parses | 0 invalid block(s) |
+| ✅ | No duplicate schema types | types ['Product', 'BreadcrumbList', 'FAQPage'] |
+| ✅ | BreadcrumbList present |  |
+| ✅ | FAQ schema matches visible questions | 6 Qs; not visible: [] |
+| ✅ | Page listed in XML sitemap |  |
+
+## GEO
+
+| | Check | Detail |
+|---|---|---|
+| ✅ | No links inside tables (AI extraction drops the table) | 0 found |
+| 🟠 | Page entity schema (WebPage/Article) with dateModified | none |
+| 🟡 | Schema cites sources (citation[]) |  |
+| ℹ️ | Reviewer/author in schema (reviewedBy/author) |  |
+| 🔴 | A10 · head term in first 30% of text | 'copper peptide serum' |
+| 🔴 | A1 · definition sentence early ('X is a …') |  |
+| ✅ | A8 · secondary intents covered on the page | ['ghk-cu', '2%'] / ['ghk-cu', '2%'] |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 17 paragraphs, 0 too long |
+| 🟡 | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 2 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 12 figures |
+| 🟠 | A3 · cited sources ≥ 3 | 0 citation markers |
+| ✅ | E3 · cites recent research (2024+) | latest 2026 |
+| 🟠 | E1 · visible last-reviewed/updated date | pending reviewer sign-off |
+| ✅ | A6 · structured list or table present |  |
+| 🟡 | A4 · headings mirror search questions | 0 question-form H2 |
+| 🔴 | D7 · extractable text without JavaScript ≥ 600 words | 392 words extracted (main text 1361) |
+| ✅ | Head term survives extraction |  |
+| 🟠 | H2 sections survive extraction | lost: ['The Skingenetix Standard', 'Complete Your Routine'] |
+| ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
+| ✅ | llms.txt present (evidence: fetched 0× by frontier crawlers — not scored) |  |
+
+## DESIGN
+
+| | Check | Detail |
+|---|---|---|
+| ✅ | No blank band between header and first section | 0px |
+| ✅ | No empty-but-tall sections | none |
+| 🟠 | Section backgrounds alternate | 17734177083a768a84+related-products (Bone) |
+| 🟡 | Backgrounds on the brand palette | off-palette ['rgb(247, 245, 242)', 'rgb(247, 247, 247)'] |
+| ✅ | No horizontal overflow (desktop) | 0px |
+| ✅ | No broken images (desktop) | none |
+| ✅ | Headings never break mid-word (desktop) | none |
+| ✅ | No horizontal overflow (mobile) | 0px |
+| ✅ | No broken images (mobile) | none |
+| ✅ | Headings never break mid-word (mobile) | none |
+
+## Outline as served
+
+- **H1:** ['Copper Peptide (GHK-Cu) 2% Renewal Serum']
+- **H2:** ['Before and after', 'Frequently Asked Questions', '3 Simple Steps', 'The Skingenetix Standard', 'Complete Your Routine']
+- **Visual-only headings:** []
+- **Schema types:** ['Product', 'BreadcrumbList', 'FAQPage']
+- **Extracted words (no JS):** 392 of 1361
+
+## Section map (desktop)
+
+| Top | Height | Section | Type | Background |
+|---|---|---|---|---|
+| 126 | 2651 | main | main-product | Bone |
+| 2777 | 1098 | before_after | product-reviews-before-after | rgb(247, 245, 242) |
+| 3875 | 913 | product_faq | faq | Bone |
+| 4788 | 896 | how_to_use | multi-column | White |
+| 5684 | 558 | reasons_why | text-with-icons | rgb(247, 247, 247) |
+| 6242 | 1343 | 17734177083a768a84 | apps | Bone |
+| 7585 | 626 | related-products | product-recommendations | Bone |
+| 8211 | 516 | footer | footer | Bone |
+| 8727 | 0 | brand_layout_css | custom-html | Bone |

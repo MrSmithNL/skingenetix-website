@@ -1,0 +1,772 @@
+{
+ "path": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+ "scores": {
+  "SEO": 82,
+  "GEO": 58,
+  "DESIGN": 84
+ },
+ "items": [
+  {
+   "area": "SEO",
+   "check": "HTTP 200, no redirect",
+   "ok": true,
+   "detail": "200 \u2192 https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
+   "ok": true,
+   "detail": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "URL carries the head term",
+   "ok": false,
+   "detail": "head term 'argireline'",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Title present, 30\u201360 chars",
+   "ok": true,
+   "detail": "47c: Acetyl Hexapeptide-8 Serum for Expression Lines",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Title contains head term",
+   "ok": false,
+   "detail": "'argireline'",
+   "severity": "high",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description 70\u2013160 chars",
+   "ok": false,
+   "detail": "161c",
+   "severity": "med",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description contains head term",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Indexable (no noindex)",
+   "ok": true,
+   "detail": "no robots meta",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Self-referencing absolute canonical",
+   "ok": true,
+   "detail": "https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "hreflang for all 6 locales + x-default",
+   "ok": true,
+   "detail": "7 alternates",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Open Graph title/description/image/url",
+   "ok": true,
+   "detail": "complete",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "og:title matches the page title",
+   "ok": false,
+   "detail": "Acetyl Hexapeptide-8 Anti-Wrinkle Serum",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Exactly one <h1>",
+   "ok": true,
+   "detail": "Acetyl Hexapeptide-8 Anti-Wrinkle Serum",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "<h1> contains head term",
+   "ok": false,
+   "detail": "",
+   "severity": "med",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Topic headings are real <h2> (\u2265 3)",
+   "ok": true,
+   "detail": "5 <h2>: ['Before and after', 'Frequently Asked Questions', '3 Simple Steps', 'The Skingenetix Standard', 'Complete Your Routine']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Visual-only headings (styled <p>/<span>)",
+   "ok": true,
+   "detail": "0 that look like headings but are not: []",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "No skipped heading levels",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Content images have alt text",
+   "ok": true,
+   "detail": "24/24",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Images declare width/height (CLS)",
+   "ok": true,
+   "detail": "0 without",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Internal links in content \u2265 5",
+   "ok": true,
+   "detail": "20 unique",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "No links inside tables (AI extraction drops the table)",
+   "ok": true,
+   "detail": "0 found",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "All JSON-LD parses",
+   "ok": true,
+   "detail": "0 invalid block(s)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "No duplicate schema types",
+   "ok": true,
+   "detail": "types ['Product', 'BreadcrumbList', 'FAQPage']",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Page entity schema (WebPage/Article) with dateModified",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "Schema cites sources (citation[])",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Reviewer/author in schema (reviewedBy/author)",
+   "ok": false,
+   "detail": "",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "BreadcrumbList present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "FAQ schema matches visible questions",
+   "ok": true,
+   "detail": "6 Qs; not visible: []",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A10 \u00b7 head term in first 30% of text",
+   "ok": true,
+   "detail": "'argireline'",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
+   "ok": true,
+   "detail": "is the",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "A8 \u00b7 secondary intents covered on the page",
+   "ok": true,
+   "detail": "['acetyl hexapeptide-8', '10%'] / ['acetyl hexapeptide-8', '10%']",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
+   "ok": true,
+   "detail": "17 paragraphs, 0 too long",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
+   "ok": false,
+   "detail": "1",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
+   "ok": true,
+   "detail": "5 figures",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 cited sources \u2265 3",
+   "ok": false,
+   "detail": "0 citation markers",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "E3 \u00b7 cites recent research (2024+)",
+   "ok": true,
+   "detail": "latest 2026",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "E1 \u00b7 visible last-reviewed/updated date",
+   "ok": false,
+   "detail": "pending reviewer sign-off",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A6 \u00b7 structured list or table present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A4 \u00b7 headings mirror search questions",
+   "ok": false,
+   "detail": "0 question-form H2",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
+   "ok": false,
+   "detail": "385 words extracted (main text 1265)",
+   "severity": "high",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "Head term survives extraction",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "H2 sections survive extraction",
+   "ok": false,
+   "detail": "lost: ['The Skingenetix Standard', 'Complete Your Routine']",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "D1 \u00b7 robots.txt allows the major AI crawlers",
+   "ok": true,
+   "detail": "all allowed",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Page listed in XML sitemap",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "llms.txt present (evidence: fetched 0\u00d7 by frontier crawlers \u2014 not scored)",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No blank band between header and first section",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "No empty-but-tall sections",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "Section backgrounds alternate",
+   "ok": false,
+   "detail": "17734177083a768a84+related-products (Bone)",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Backgrounds on the brand palette",
+   "ok": false,
+   "detail": "off-palette ['rgb(247, 245, 242)', 'rgb(247, 247, 247)']",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (desktop)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (mobile)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  }
+ ],
+ "data": {
+  "title": "Acetyl Hexapeptide-8 Serum for Expression Lines",
+  "h1": [
+   "Acetyl Hexapeptide-8 Anti-Wrinkle Serum"
+  ],
+  "h2": [
+   "Before and after",
+   "Frequently Asked Questions",
+   "3 Simple Steps",
+   "The Skingenetix Standard",
+   "Complete Your Routine"
+  ],
+  "pseudo_headings": [],
+  "internal_links": [
+   "/collections/all",
+   "/collections/creams-moisturizers",
+   "/collections/serums",
+   "/pages/acetyl-hexapeptide-8-research",
+   "/pages/contact",
+   "/pages/faq",
+   "/pages/ingredients",
+   "/pages/ingredients#argireline",
+   "/pages/our-philosophy",
+   "/pages/shipping-returns",
+   "/pages/the-science",
+   "/policies/contact-information",
+   "/policies/legal-notice",
+   "/policies/privacy-policy",
+   "/policies/refund-policy",
+   "/policies/shipping-policy",
+   "/policies/terms-of-service",
+   "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+   "/products/copper-peptide-ghk-cu-day-gel-cream",
+   "/products/matrixyl-3000-pro-collagen-firming-cream"
+  ],
+  "external_links": [],
+  "schema_types": [
+   "Product",
+   "BreadcrumbList",
+   "FAQPage"
+  ],
+  "extracted_words": 385,
+  "main_words": 1265,
+  "images": [
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg?v=1787310462&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - bottle beside its silver carton on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_model_face_dropper_closeup_4_skingenetix.jpg?v=1787310466&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - a model holding the bottle beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_pedestal_edge_hero_4_skingenetix.jpg?v=1787310469&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - bottle on a stone plinth against a cool grey ground"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_macro_dropper_tip_gel_2_skingenetix.jpg?v=1787310470&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - macro of the pipette tip with a clear drop of the serum"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_model_face_dropper_closeup_2_skingenetix.jpg?v=1787310467&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - a model applying the serum with the glass dropper"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_overhead_ripple_colourblock_1_skingenetix.jpg?v=1787310475&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - overhead view of the bottle on a rippled silver-grey surface"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_water_ripple_scene_3_skingenetix.jpg?v=1787310477&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - bottle standing on a still water surface with soft ripples"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_range_stacked_angled_2_skingenetix.jpg?v=1787310478&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - several bottles of the serum arranged in an angled group"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg?v=1787310462&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - bottle beside its silver carton on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg?v=1787310462&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - bottle beside its silver carton on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-general-fenna-s.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing improved skin condition and texture"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-kelly-e.jpg?v=1787996145&width=2048",
+    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-corinne-j.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-general-june-k.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing improved skin condition and texture"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-meredith-h.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-sophie-h.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-nicole-t.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-fiona-c.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-general-nola-s.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing improved skin condition and texture"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-faq-acetyl-hexapeptide-8-anti-wrinkle-serum-hands-only-dropper.jpg?v=1788078963&width=2048",
+    "alt": "Skingenetix acetyl hexapeptide 8 anti wrinkle serum"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-howto-step1-cleanse.jpg?v=1774456364&width=600",
+    "alt": "skingenetix howto step1 cleanse"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-serum-dropper-applying-to-cheekbone.jpg?v=1787834387&width=600",
+    "alt": "Close-up of a glass dropper laying a trail of clear Skingenetix Acetyl Hexapeptide-8 serum along a cheekbone, beneath the eye"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-daily-spf-sunscreen-cream-application-face.jpg?v=1787834341&width=600",
+    "alt": "Close-up of a woman smoothing a swatch of cream into her cheek with her fingertips"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
+    "alt": "Skingenetix logo (black)"
+   }
+  ]
+ },
+ "design": {
+  "desktop": {
+   "headerBottom": 126,
+   "rows": [
+    {
+     "id": "main",
+     "type": "main-product",
+     "top": 126,
+     "h": 2282,
+     "bg": "rgb(240, 240, 240)",
+     "text": 998,
+     "media": 12
+    },
+    {
+     "id": "before_after",
+     "type": "product-reviews-before-after",
+     "top": 2408,
+     "h": 1075,
+     "bg": "rgb(247, 245, 242)",
+     "text": 2712,
+     "media": 9
+    },
+    {
+     "id": "product_faq",
+     "type": "faq",
+     "top": 3483,
+     "h": 913,
+     "bg": "rgb(240, 240, 240)",
+     "text": 343,
+     "media": 1
+    },
+    {
+     "id": "how_to_use",
+     "type": "multi-column",
+     "top": 4397,
+     "h": 896,
+     "bg": "rgb(255, 255, 255)",
+     "text": 307,
+     "media": 3
+    },
+    {
+     "id": "reasons_why",
+     "type": "text-with-icons",
+     "top": 5293,
+     "h": 558,
+     "bg": "rgb(247, 247, 247)",
+     "text": 628,
+     "media": 0
+    },
+    {
+     "id": "17734177083a768a84",
+     "type": "apps",
+     "top": 5851,
+     "h": 1343,
+     "bg": "rgb(240, 240, 240)",
+     "text": 825,
+     "media": 0
+    },
+    {
+     "id": "related-products",
+     "type": "product-recommendations",
+     "top": 7194,
+     "h": 626,
+     "bg": "rgb(240, 240, 240)",
+     "text": 201,
+     "media": 8
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 7820,
+     "h": 516,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 8336,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  },
+  "mobile": {
+   "headerBottom": 85,
+   "rows": [
+    {
+     "id": "main",
+     "type": "main-product",
+     "top": 85,
+     "h": 2119,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1009,
+     "media": 12
+    },
+    {
+     "id": "before_after",
+     "type": "product-reviews-before-after",
+     "top": 2203,
+     "h": 871,
+     "bg": "rgb(247, 245, 242)",
+     "text": 2698,
+     "media": 9
+    },
+    {
+     "id": "product_faq",
+     "type": "faq",
+     "top": 3074,
+     "h": 621,
+     "bg": "rgb(240, 240, 240)",
+     "text": 252,
+     "media": 1
+    },
+    {
+     "id": "how_to_use",
+     "type": "multi-column",
+     "top": 3695,
+     "h": 635,
+     "bg": "rgb(255, 255, 255)",
+     "text": 307,
+     "media": 3
+    },
+    {
+     "id": "reasons_why",
+     "type": "text-with-icons",
+     "top": 4330,
+     "h": 1169,
+     "bg": "rgb(247, 247, 247)",
+     "text": 628,
+     "media": 0
+    },
+    {
+     "id": "17734177083a768a84",
+     "type": "apps",
+     "top": 5499,
+     "h": 1663,
+     "bg": "rgb(240, 240, 240)",
+     "text": 825,
+     "media": 0
+    },
+    {
+     "id": "related-products",
+     "type": "product-recommendations",
+     "top": 7161,
+     "h": 720,
+     "bg": "rgb(240, 240, 240)",
+     "text": 201,
+     "media": 8
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 7881,
+     "h": 1039,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 8921,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  }
+ }
+}

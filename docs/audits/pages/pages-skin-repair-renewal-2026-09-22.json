@@ -1,0 +1,730 @@
+{
+ "path": "/pages/skin-repair-renewal",
+ "scores": {
+  "SEO": 88,
+  "GEO": 74,
+  "DESIGN": 81
+ },
+ "items": [
+  {
+   "area": "SEO",
+   "check": "HTTP 200, no redirect",
+   "ok": true,
+   "detail": "200 \u2192 https://www.skingenetix.com/pages/skin-repair-renewal",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
+   "ok": true,
+   "detail": "/pages/skin-repair-renewal",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "URL carries the head term",
+   "ok": true,
+   "detail": "head term 'skin repair'",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Title present, 30\u201360 chars",
+   "ok": true,
+   "detail": "59c: Skin Repair and Renewal: PDRN, Copper Peptide and a Routine",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Title contains head term",
+   "ok": true,
+   "detail": "'skin repair'",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description 70\u2013160 chars",
+   "ok": true,
+   "detail": "142c",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description contains head term",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Indexable (no noindex)",
+   "ok": true,
+   "detail": "no robots meta",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Self-referencing absolute canonical",
+   "ok": true,
+   "detail": "https://www.skingenetix.com/pages/skin-repair-renewal",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "hreflang for all 6 locales + x-default",
+   "ok": true,
+   "detail": "7 alternates",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Open Graph title/description/image/url",
+   "ok": true,
+   "detail": "complete",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "og:title matches the page title",
+   "ok": true,
+   "detail": "Skin Repair and Renewal: PDRN, Copper Peptide and a Routine",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Exactly one <h1>",
+   "ok": false,
+   "detail": "none",
+   "severity": "high",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "<h1> contains head term",
+   "ok": false,
+   "detail": "",
+   "severity": "med",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Topic headings are real <h2> (\u2265 3)",
+   "ok": true,
+   "detail": "3 <h2>: ['Your Routine: Daily Repair & Renewal', 'Common Questions About Skin Repair', 'Related Skin Solutions']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Visual-only headings (styled <p>/<span>)",
+   "ok": false,
+   "detail": "15 that look like headings but are not: ['Skin Repair & Renewal', 'Understanding Skin Repair & Renewal', 'What Slows Skin Repair?', 'The Renewal Approach', 'PDRN Serum - For Revitalised-Looking Skin', 'PDRN 1% Collagen Night Cream', 'Copper Peptide (GHK-Cu) Serum - Versatile Support', '1. Cleanse']",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "No skipped heading levels",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Content images have alt text",
+   "ok": true,
+   "detail": "16/16",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Images declare width/height (CLS)",
+   "ok": true,
+   "detail": "0 without",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Internal links in content \u2265 5",
+   "ok": true,
+   "detail": "24 unique",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "No links inside tables (AI extraction drops the table)",
+   "ok": true,
+   "detail": "0 found",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "All JSON-LD parses",
+   "ok": true,
+   "detail": "0 invalid block(s)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "No duplicate schema types",
+   "ok": true,
+   "detail": "types ['BreadcrumbList']",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Page entity schema (WebPage/Article) with dateModified",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "Schema cites sources (citation[])",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Reviewer/author in schema (reviewedBy/author)",
+   "ok": false,
+   "detail": "",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "BreadcrumbList present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A10 \u00b7 head term in first 30% of text",
+   "ok": true,
+   "detail": "'skin repair'",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
+   "ok": false,
+   "detail": "",
+   "severity": "high",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "A8 \u00b7 secondary intents covered on the page",
+   "ok": true,
+   "detail": "['renewal', 'pdrn', 'copper peptide'] / ['renewal', 'pdrn', 'copper peptide']",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
+   "ok": true,
+   "detail": "22 paragraphs, 0 too long",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
+   "ok": true,
+   "detail": "7",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
+   "ok": true,
+   "detail": "7 figures",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 cited sources \u2265 3",
+   "ok": false,
+   "detail": "0 citation markers",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "E3 \u00b7 cites recent research (2024+)",
+   "ok": true,
+   "detail": "latest 2026",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "E1 \u00b7 visible last-reviewed/updated date",
+   "ok": false,
+   "detail": "pending reviewer sign-off",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A6 \u00b7 structured list or table present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A4 \u00b7 headings mirror search questions",
+   "ok": true,
+   "detail": "0 question-form H2",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
+   "ok": true,
+   "detail": "777 words extracted (main text 902)",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "Head term survives extraction",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "H2 sections survive extraction",
+   "ok": true,
+   "detail": "3 kept",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "D1 \u00b7 robots.txt allows the major AI crawlers",
+   "ok": true,
+   "detail": "all allowed",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Page listed in XML sitemap",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "llms.txt present (evidence: fetched 0\u00d7 by frontier crawlers \u2014 not scored)",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No blank band between header and first section",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "No empty-but-tall sections",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "Section backgrounds alternate",
+   "ok": false,
+   "detail": "content+routine (Bone); routine+faq (Bone); faq+related (Bone)",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Backgrounds on the brand palette",
+   "ok": true,
+   "detail": "Bone / White / Graphite",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (desktop)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (mobile)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (mobile)",
+   "ok": false,
+   "detail": "Revitalised-Looking",
+   "severity": "med",
+   "weight": 1.5
+  }
+ ],
+ "data": {
+  "title": "Skin Repair and Renewal: PDRN, Copper Peptide and a Routine",
+  "h1": [],
+  "h2": [
+   "Your Routine: Daily Repair & Renewal",
+   "Common Questions About Skin Repair",
+   "Related Skin Solutions"
+  ],
+  "pseudo_headings": [
+   "Skin Repair & Renewal",
+   "Understanding Skin Repair & Renewal",
+   "What Slows Skin Repair?",
+   "The Renewal Approach",
+   "PDRN Serum - For Revitalised-Looking Skin",
+   "PDRN 1% Collagen Night Cream",
+   "Copper Peptide (GHK-Cu) Serum - Versatile Support",
+   "1. Cleanse",
+   "2. PDRN Serum",
+   "3. Copper Peptide Serum",
+   "4. Night Cream",
+   "Fine Lines & Wrinkles",
+   "Firming & Skin Density",
+   "Brightening & Glow",
+   "Collagen & Skin Plumping"
+  ],
+  "internal_links": [
+   "/collections/all",
+   "/collections/creams-moisturizers",
+   "/collections/serums",
+   "/pages/brightening-glow",
+   "/pages/collagen-skin-plumping",
+   "/pages/contact",
+   "/pages/copper-peptide-research",
+   "/pages/faq",
+   "/pages/fine-lines-wrinkles",
+   "/pages/firming-skin-density",
+   "/pages/ingredients",
+   "/pages/our-philosophy",
+   "/pages/pdrn-research",
+   "/pages/shipping-returns",
+   "/pages/the-science",
+   "/policies/contact-information",
+   "/policies/legal-notice",
+   "/policies/privacy-policy",
+   "/policies/refund-policy",
+   "/policies/shipping-policy",
+   "/policies/terms-of-service",
+   "/products/copper-peptide-ghk-cu-renewal-serum",
+   "/products/pdrn-collagen-night-cream",
+   "/products/pdrn-renewal-serum"
+  ],
+  "external_links": [],
+  "schema_types": [
+   "BreadcrumbList"
+  ],
+  "extracted_words": 777,
+  "main_words": 902,
+  "images": [
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-repair-cream-skin-renewal-treatment.jpg?v=1787587149&width=3000",
+    "alt": "Woman with her eyes closed resting her head against a jar of Skingenetix PDRN 1% Collagen Night Cream"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-repair-renewal-mature-skin-uneven-tone-face.jpg?v=1787673573&width=2048",
+    "alt": "Close-up of a woman with her eyes closed resting the back of her fingers against her jaw, her cheek showing uneven tone and sun spots as the skin's natural renewal cycle slows with age"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-repair-renewal-ageing-skin-wrinkle-collagen-diagram.jpg?v=1787748990&width=3000",
+    "alt": "Medical explainer cross-section of ageing skin showing one deep wrinkle, with the dermal junction flattened and the pink collagen fibres broken and slumped directly beneath it, and firmer ordered fibres further along the same block"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-repair-renewal-pdrn-copper-peptide-ghk-cu-diagram.jpg?v=1787748990&width=3000",
+    "alt": "Medical explainer cross-section of skin showing PDRN polynucleotide ladders and copper peptide GHK-Cu tripeptides delivered in droplets, reaching the renewal cell layer and the pink collagen fibres below, with the surface layer left whole"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-skin-repair-deep-renewal-serum-applying-dropper.jpg?v=1787755594&width=2048",
+    "alt": "Close-up of a woman with her eyes closed applying Skingenetix PDRN 1% Renewal Serum to her cheek with a glass dropper, holding the 30ml frosted pink bottle"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-overnight-repair-cream-open-jar-lid.jpg?v=1787755984&width=2048",
+    "alt": "Open frosted pink glass jar of Skingenetix PDRN 1% Collagen Night Cream cream, 50ml, with the brushed silver lid leaning against it on a pale surface"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-repair-serum-model-holding-near-face.jpg?v=1787756218&width=2048",
+    "alt": "Woman holding a deep blue frosted glass bottle of Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml, up beside her cheek and jawline"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-howto-step1-cleanse.jpg?v=1774456364&width=1024",
+    "alt": "skingenetix howto step1 cleanse"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-skin-repair-serum-model-applying-with-dropper.jpg?v=1787836539&width=2048",
+    "alt": "A model applying Skingenetix PDRN 1% Renewal Serum to her cheek with the glass dropper, holding the pink bottle in her other hand"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hands_only_dropper_4_skingenetix.jpg?v=1787296633&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - hands holding the bottle and dropper, a blue drop on a fingertip"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-repair-cream-applying-to-cheek-close-up.jpg?v=1787836538&width=1254",
+    "alt": "Close-up of a model smoothing a pale pink repair cream along her cheekbone with two fingertips"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg?v=1787310462&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - bottle beside its silver carton on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-pro-collagen-firming-serum-and-carton.jpg?v=1787822934&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - frosted glass dropper bottle beside its teal carton on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg?v=1787233764&width=2048",
+    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - bottle beside its gold carton on white"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_product_and_box_hero_2_skingenetix.jpg?v=1787580697&width=2048",
+    "alt": "Skingenetix Copper Peptide GHK-Cu 2% Renewal Serum met verpakking"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
+    "alt": "Skingenetix logo (black)"
+   }
+  ]
+ },
+ "design": {
+  "desktop": {
+   "headerBottom": 126,
+   "rows": [
+    {
+     "id": "hero",
+     "type": "image-with-text-overlay",
+     "top": 126,
+     "h": 440,
+     "bg": "rgb(240, 240, 240)",
+     "text": 140,
+     "media": 1
+    },
+    {
+     "id": "content",
+     "type": "media-with-text",
+     "top": 566,
+     "h": 4487,
+     "bg": "rgb(240, 240, 240)",
+     "text": 3551,
+     "media": 6
+    },
+    {
+     "id": "routine",
+     "type": "multi-column",
+     "top": 5053,
+     "h": 764,
+     "bg": "rgb(240, 240, 240)",
+     "text": 409,
+     "media": 4
+    },
+    {
+     "id": "faq",
+     "type": "accordion-content",
+     "top": 5817,
+     "h": 444,
+     "bg": "rgb(240, 240, 240)",
+     "text": 214,
+     "media": 0
+    },
+    {
+     "id": "related",
+     "type": "multi-column",
+     "top": 6261,
+     "h": 631,
+     "bg": "rgb(240, 240, 240)",
+     "text": 127,
+     "media": 4
+    },
+    {
+     "id": "banner_text_width",
+     "type": "custom-html",
+     "top": 6892,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 6892,
+     "h": 516,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 7408,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  },
+  "mobile": {
+   "headerBottom": 85,
+   "rows": [
+    {
+     "id": "hero",
+     "type": "image-with-text-overlay",
+     "top": 85,
+     "h": 375,
+     "bg": "rgb(240, 240, 240)",
+     "text": 140,
+     "media": 1
+    },
+    {
+     "id": "content",
+     "type": "media-with-text",
+     "top": 460,
+     "h": 5944,
+     "bg": "rgb(240, 240, 240)",
+     "text": 3551,
+     "media": 6
+    },
+    {
+     "id": "routine",
+     "type": "multi-column",
+     "top": 6403,
+     "h": 605,
+     "bg": "rgb(240, 240, 240)",
+     "text": 409,
+     "media": 4
+    },
+    {
+     "id": "faq",
+     "type": "accordion-content",
+     "top": 7009,
+     "h": 516,
+     "bg": "rgb(240, 240, 240)",
+     "text": 214,
+     "media": 0
+    },
+    {
+     "id": "related",
+     "type": "multi-column",
+     "top": 7525,
+     "h": 483,
+     "bg": "rgb(240, 240, 240)",
+     "text": 127,
+     "media": 4
+    },
+    {
+     "id": "banner_text_width",
+     "type": "custom-html",
+     "top": 8008,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 8008,
+     "h": 1039,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 9047,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [
+    "Revitalised-Looking"
+   ],
+   "overflow": 0
+  }
+ }
+}

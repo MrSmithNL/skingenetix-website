@@ -1,0 +1,1082 @@
+{
+ "path": "/",
+ "scores": {
+  "SEO": 84,
+  "GEO": 61,
+  "DESIGN": 84
+ },
+ "items": [
+  {
+   "area": "SEO",
+   "check": "HTTP 200, no redirect",
+   "ok": true,
+   "detail": "200 \u2192 https://www.skingenetix.com/",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
+   "ok": true,
+   "detail": "/",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "URL carries the head term",
+   "ok": false,
+   "detail": "head term 'peptide skincare'",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Title present, 30\u201360 chars",
+   "ok": true,
+   "detail": "49c: Skingenetix | Clinically Studied Peptide Skincare",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Title contains head term",
+   "ok": true,
+   "detail": "'peptide skincare'",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description 70\u2013160 chars",
+   "ok": false,
+   "detail": "167c",
+   "severity": "med",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description contains head term",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Indexable (no noindex)",
+   "ok": true,
+   "detail": "no robots meta",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Self-referencing absolute canonical",
+   "ok": true,
+   "detail": "https://www.skingenetix.com/",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "hreflang for all 6 locales + x-default",
+   "ok": true,
+   "detail": "7 alternates",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Open Graph title/description/image/url",
+   "ok": true,
+   "detail": "complete",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "og:title matches the page title",
+   "ok": true,
+   "detail": "Skingenetix | Clinically Studied Peptide Skincare",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Exactly one <h1>",
+   "ok": true,
+   "detail": "Skingenetix",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "<h1> contains head term",
+   "ok": false,
+   "detail": "",
+   "severity": "med",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Topic headings are real <h2> (\u2265 3)",
+   "ok": true,
+   "detail": "10 <h2>: ['Our Peptide Bestsellers', 'Targeted Solutions for Every Skin', '48.9%', '~20%', '100%', 'Our Bestselling Bundles', 'Find Your Perfect Product', 'The Skingenetix Standard', 'Frequently Asked Questions', 'Join the Skingenetix Community']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Visual-only headings (styled <p>/<span>)",
+   "ok": false,
+   "detail": "11 that look like headings but are not: ['Premium Peptides. Visible Results.', 'Peptide Science, Made Visible.', 'Polynucleotides, Precisely Dosed.', 'The Science of Peptides', 'Clinically studied actives. Never trace amounts.', '\"The Copper Peptide serum is incredible. My skin feels firmer and more radiant after just 3 weeks.\"', '\"I have reactive skin and expected to react to this too. Three weeks in and it is the calmest it has been in years.\"', '\"I bought it for the concentration, not the packaging. Two months on and the difference along my jaw is the first thing anyone noticed.\"']",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "No skipped heading levels",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Content images have alt text",
+   "ok": true,
+   "detail": "43/43",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Images declare width/height (CLS)",
+   "ok": true,
+   "detail": "0 without",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Internal links in content \u2265 5",
+   "ok": true,
+   "detail": "37 unique",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "No links inside tables (AI extraction drops the table)",
+   "ok": true,
+   "detail": "0 found",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "All JSON-LD parses",
+   "ok": true,
+   "detail": "0 invalid block(s)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "No duplicate schema types",
+   "ok": false,
+   "detail": "duplicates ['FAQPage']",
+   "severity": "med",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Page entity schema (WebPage/Article) with dateModified",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "Schema cites sources (citation[])",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Reviewer/author in schema (reviewedBy/author)",
+   "ok": false,
+   "detail": "",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "BreadcrumbList present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "FAQ schema matches visible questions",
+   "ok": true,
+   "detail": "9 Qs; not visible: []",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A10 \u00b7 head term in first 30% of text",
+   "ok": false,
+   "detail": "'peptide skincare'",
+   "severity": "high",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
+   "ok": true,
+   "detail": "are the",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "A8 \u00b7 secondary intents covered on the page",
+   "ok": true,
+   "detail": "['copper peptide', 'pdrn', 'matrixyl 3000'] / ['copper peptide', 'pdrn', 'matrixyl 3000']",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
+   "ok": true,
+   "detail": "24 paragraphs, 0 too long",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
+   "ok": true,
+   "detail": "10",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
+   "ok": true,
+   "detail": "14 figures",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 cited sources \u2265 3",
+   "ok": false,
+   "detail": "0 citation markers",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "E3 \u00b7 cites recent research (2024+)",
+   "ok": true,
+   "detail": "latest 2026",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "E1 \u00b7 visible last-reviewed/updated date",
+   "ok": false,
+   "detail": "pending reviewer sign-off",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A6 \u00b7 structured list or table present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A4 \u00b7 headings mirror search questions",
+   "ok": false,
+   "detail": "0 question-form H2",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
+   "ok": true,
+   "detail": "766 words extracted (main text 1343)",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "Head term survives extraction",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "H2 sections survive extraction",
+   "ok": false,
+   "detail": "lost: ['The Skingenetix Standard', 'Join the Skingenetix Community']",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "D1 \u00b7 robots.txt allows the major AI crawlers",
+   "ok": true,
+   "detail": "all allowed",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Page listed in XML sitemap",
+   "ok": false,
+   "detail": "",
+   "severity": "med",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "llms.txt present (evidence: fetched 0\u00d7 by frontier crawlers \u2014 not scored)",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No blank band between header and first section",
+   "ok": true,
+   "detail": "-79px",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "No empty-but-tall sections",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "Section backgrounds alternate",
+   "ok": false,
+   "detail": "serums_collection+skin_concerns (Bone); skin_concerns+peptide_science (Bone); reviews+bundles_collection (Bone); bundles_collection+find_serum (Bone)",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Backgrounds on the brand palette",
+   "ok": false,
+   "detail": "off-palette ['rgb(247, 247, 247)']",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (desktop)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (mobile)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  }
+ ],
+ "data": {
+  "title": "Skingenetix | Clinically Studied Peptide Skincare",
+  "h1": [
+   "Skingenetix"
+  ],
+  "h2": [
+   "Our Peptide Bestsellers",
+   "Targeted Solutions for Every Skin",
+   "48.9%",
+   "~20%",
+   "100%",
+   "Our Bestselling Bundles",
+   "Find Your Perfect Product",
+   "The Skingenetix Standard",
+   "Frequently Asked Questions",
+   "Join the Skingenetix Community"
+  ],
+  "pseudo_headings": [
+   "Premium Peptides. Visible Results.",
+   "Peptide Science, Made Visible.",
+   "Polynucleotides, Precisely Dosed.",
+   "The Science of Peptides",
+   "Clinically studied actives. Never trace amounts.",
+   "\"The Copper Peptide serum is incredible. My skin feels firmer and more radiant after just 3 weeks.\"",
+   "\"I have reactive skin and expected to react to this too. Three weeks in and it is the calmest it has been in years.\"",
+   "\"I bought it for the concentration, not the packaging. Two months on and the difference along my jaw is the first thing anyone noticed.\"",
+   "\"The uneven patches on my cheeks have faded more than with anything else I have tried, and it has not irritated my skin once.\"",
+   "\"I am fifty and sceptical of night creams. This one I have repurchased twice. My skin looks rested even when I am not.\"",
+   "\"The lines at the outer corner of my eyes are visibly softer. It is subtle, it is real, and that is exactly what I wanted.\""
+  ],
+  "internal_links": [
+   "/collections/all",
+   "/collections/brightening-glow",
+   "/collections/bundles",
+   "/collections/creams-moisturizers",
+   "/collections/fine-lines-wrinkles",
+   "/collections/firming-skin-density",
+   "/collections/serums",
+   "/collections/skin-repair-renewal",
+   "/pages/brightening-glow",
+   "/pages/contact",
+   "/pages/faq",
+   "/pages/fine-lines-wrinkles",
+   "/pages/firming-skin-density",
+   "/pages/ingredients",
+   "/pages/our-philosophy",
+   "/pages/shipping-returns",
+   "/pages/skin-repair-renewal",
+   "/pages/the-science",
+   "/policies/contact-information",
+   "/policies/legal-notice",
+   "/policies/privacy-policy",
+   "/policies/refund-policy",
+   "/policies/shipping-policy",
+   "/policies/terms-of-service",
+   "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+   "/products/complete-copper-peptide-ghk-cu-day-night-skincare-routine",
+   "/products/complete-fine-lines-wrinkles-routine-acetyl-hexapeptide-8-matrixyl-3000-serum-copper-peptide-ghk-cu-day-gel-cream",
+   "/products/copper-peptide-ghk-cu-night-cream",
+   "/products/copper-peptide-ghk-cu-renewal-serum",
+   "/products/full-matrixyl-3000-ritual-serum-cream",
+   "/products/glutathione-brightening-serum",
+   "/products/matrixyl-3000-firming-serum",
+   "/products/matrixyl-3000-pro-collagen-firming-cream",
+   "/products/pdrn-1-serum-cream-full-set",
+   "/products/pdrn-collagen-night-cream",
+   "/products/pdrn-renewal-serum",
+   "/products/skin-repair-renewal-serum-duo-set-pdrn-1-copper-peptide-ghk-cu-2"
+  ],
+  "external_links": [],
+  "schema_types": [
+   "BreadcrumbList",
+   "WebSite",
+   "Organization",
+   "FAQPage",
+   "FAQPage"
+  ],
+  "extracted_words": 766,
+  "main_words": 1343,
+  "images": [
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-advanced-repair-serum.jpg?v=1787580840&width=3000",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum held beside a model's face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-hero-laboratory-glass-peptide-2026.jpg?v=1787332567&width=3072",
+    "alt": "Two stacked laboratory glass dishes holding clear serum and a blue peptide solution with a copper rod resting across them, lit against a graphite background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-skin-repair-deep-renewal-serum.jpg?v=1787580841&width=3000",
+    "alt": "Skingenetix PDRN 1% Renewal Serum held beside a model's face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg?v=1787296390&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - frosted blue glass dropper bottle on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_model_holding_near_face_1_skingenetix.jpg?v=1787296391&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - a model holding the bottle beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_night_repair_skin_cream_hero_whitebg_1_skingenetix_604f3b41-ff68-45ba-baaa-65a4747ce8c6.jpg?v=1787253638&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Night Cream, 50ml - jar on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_night_repair_skin_cream_model_face_1_skingenetix_7a1c508b-ec63-4d7f-8686-185edc98b4ee.jpg?v=1787253640&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Night Cream, 50ml - a model holding the jar beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_colourblock_soft_pastel_2_skingenetix.jpg?v=1787300902&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - frosted glass dropper bottle on a pale grey ground"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_model_holding_near_face_5_skingenetix.jpg?v=1787300904&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - a model holding the bottle beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg?v=1787228104&width=2048",
+    "alt": "Skingenetix PDRN 1% Collagen Night Cream, 50ml - jar on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_open_jar_swatch_2_skingenetix.jpg?v=1787228106&width=2048",
+    "alt": "Skingenetix PDRN 1% Collagen Night Cream, 50ml - open jar with a swatch of the pink cream"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg?v=1787233764&width=2048",
+    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - bottle beside its gold carton on white"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_hands_only_dropper_2_skingenetix.jpg?v=1787233766&width=2048",
+    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - hands lifting the glass dropper from the bottle"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-fine-lines-wrinkles-2026.jpg?v=1787324955&width=2048",
+    "alt": "Close view of the eye area showing fine expression lines - Skingenetix fine lines and wrinkles peptide range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-firming-density-peptide-treatment.jpg?v=1787580841&width=2048",
+    "alt": "Defined jawline and neck in profile - Skingenetix peptide treatment for skin firming and density"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-skin-repair-renewal-2026.jpg?v=1787324956&width=2048",
+    "alt": "A hand resting against the cheek against a clinical blue background - Skingenetix skin repair and renewal peptide range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-brightening-glow-2026.jpg?v=1787324956&width=2048",
+    "alt": "Luminous cheekbone lit against a warm champagne background - Skingenetix brightening and glow peptide range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-peptide-chain-science-2026.jpg?v=1787326208&width=2048",
+    "alt": "A chain of linked clear spheres lit against graphite, representing a peptide chain - the science behind Skingenetix formulations"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-band-peptide-helix-2026.jpg?v=1787328765&width=3072",
+    "alt": "Close-up scientific visualisation of coiled peptide helices in clinical blue and copper against a dark ground - the science behind Skingenetix peptide formulations"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-model-copper-peptide-serum-2026-v4.jpg?v=1787339439&width=2048",
+    "alt": "A model with a swatch of blue Copper Peptide serum on her cheek - Skingenetix customer review"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-renewal-serum-woman-applying-pink-cream-cheek.jpg?v=1788167963&width=3000",
+    "alt": "Woman applying a small dab of pale pink cream to her cheekbone with her fingertips"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-model-matrixyl-cream-2026-v4.jpg?v=1787339440&width=2048",
+    "alt": "A model with a swatch of white Matrixyl 3000 Pro-Collagen cream on her cheek - Skingenetix customer review"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-serum-woman-applying-cream-cheek.jpg?v=1788167963&width=3000",
+    "alt": "Woman applying a small dab of pale blue cream to her cheekbone with her fingertips"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-model-copper-peptide-night-cream-2026-v5.jpg?v=1787340175&width=2048",
+    "alt": "A model applying pale blue Copper Peptide Night Cream to her cheek - Skingenetix customer review"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-woman-applying.jpg?v=1788167963&width=3000",
+    "alt": "Woman applying a small amount of clear serum to her cheekbone with her fingertips"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-day-night-routine-set-white-background.jpg?v=1789148422&width=3000",
+    "alt": "Skingenetix Complete Copper Peptide (GHK-Cu) Day & Night Skincare Routine - all three products of the routine on a white background with a soft reflection"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-day-cream-open-jar-texture-swatch.jpg?v=1789148423&width=3000",
+    "alt": "Skingenetix Complete Copper Peptide (GHK-Cu) Day & Night Skincare Routine - the day cream jar open beside the serum and night cream, with a cream swatch"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-ritual-serum-collagen-cream-white-background.jpg?v=1789475146&width=3000",
+    "alt": "Skingenetix Full PDRN 1% Ritual - Serum & Cream - the PDRN renewal serum and collagen night cream on a plain white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-ritual-serum-collagen-cream-hard-shadow.jpg?v=1789474613&width=3000",
+    "alt": "Skingenetix Full PDRN 1% Ritual - Serum & Cream - the serum and collagen night cream on a rose ground under hard directional light"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-repair-renewal-duo-pdrn-serum-day-cream-white-background.jpg?v=1789397528&width=3000",
+    "alt": "Skingenetix Skin Repair & Renewal Duo Set - the PDRN renewal serum beside the copper peptide day gel-cream on a plain white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-repair-renewal-duo-pdrn-copper-peptide-hard-shadow.jpg?v=1789397529&width=3000",
+    "alt": "Skingenetix Skin Repair & Renewal Duo Set - the serum and day gel-cream on a rose ground under hard directional light"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-pro-collagen-serum-cream-set-overhead-water.jpg?v=1789387470&width=2048",
+    "alt": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream - the firming serum and cream photographed from above in shallow teal water"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg?v=1789387474&width=3000",
+    "alt": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream - the firming serum and cream on a teal background with long shadows"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-wrinkles-routine-acetyl-matrixyl-copper-peptide-white-background.jpg?v=1789394465&width=1254",
+    "alt": "Skingenetix Complete Fine Lines & Wrinkles Routine - both anti-wrinkle serums beside the copper peptide day cream on a plain white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-wrinkles-routine-acetyl-matrixyl-serums-basin-rim-droplets.jpg?v=1789394468&width=3000",
+    "alt": "Skingenetix Complete Fine Lines & Wrinkles Routine - the two serums and the day cream on a stone basin rim scattered with water droplets"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-find-anti-wrinkle-2026.jpg?v=1787326207&width=2048",
+    "alt": "A ribbon of clear peptide gel on a pearl grey background - Skingenetix anti-wrinkle range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-find-firming-collagen-2026.jpg?v=1787326207&width=2048",
+    "alt": "A peak of white firming cream on a deep teal background - Skingenetix firming and collagen range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-find-repair-renewal-2026.jpg?v=1787326207&width=2048",
+    "alt": "A single blue serum droplet on a clinical blue background - Skingenetix repair and renewal range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-find-brightening-glow-2026.jpg?v=1787326207&width=2048",
+    "alt": "A golden drop of brightening oil on a champagne background - Skingenetix brightening and glow range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model-face.jpg?v=1787832166&width=2048",
+    "alt": "A model holding a 30ml frosted glass bottle of Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum and releasing a drop from the glass dropper beside her cheek"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model-face.jpg?v=1787832166&width=2048",
+    "alt": "A model holding a 30ml frosted glass bottle of Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum and releasing a drop from the glass dropper beside her cheek"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-band-skin-art-2026-v2.jpg?v=1787395145&width=3072",
+    "alt": "Fine-art beauty photograph of a woman lying with her head tipped back in profile, soft light tracing the line of her throat, jaw and cheek - Skingenetix peptide skincare"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
+    "alt": "Skingenetix logo (black)"
+   }
+  ]
+ },
+ "design": {
+  "desktop": {
+   "headerBottom": 126,
+   "rows": [
+    {
+     "id": "hero",
+     "type": "slideshow",
+     "top": 47,
+     "h": 640,
+     "bg": "rgb(240, 240, 240)",
+     "text": 147,
+     "media": 3
+    },
+    {
+     "id": "trust_option_a",
+     "type": "text-with-icons",
+     "top": 687,
+     "h": 184,
+     "bg": "rgb(247, 247, 247)",
+     "text": 271,
+     "media": 0
+    },
+    {
+     "id": "serums_collection",
+     "type": "featured-collection",
+     "top": 871,
+     "h": 637,
+     "bg": "rgb(240, 240, 240)",
+     "text": 277,
+     "media": 10
+    },
+    {
+     "id": "skin_concerns",
+     "type": "image-link-blocks",
+     "top": 1508,
+     "h": 579,
+     "bg": "rgb(240, 240, 240)",
+     "text": 245,
+     "media": 4
+    },
+    {
+     "id": "peptide_science",
+     "type": "media-with-text",
+     "top": 2087,
+     "h": 490,
+     "bg": "rgb(240, 240, 240)",
+     "text": 342,
+     "media": 1
+    },
+    {
+     "id": "peptide_standard_band",
+     "type": "image-with-text-overlay",
+     "top": 2577,
+     "h": 500,
+     "bg": "rgb(240, 240, 240)",
+     "text": 216,
+     "media": 1
+    },
+    {
+     "id": "impact_numbers",
+     "type": "impact-text",
+     "top": 3077,
+     "h": 330,
+     "bg": "rgb(255, 255, 255)",
+     "text": 130,
+     "media": 0
+    },
+    {
+     "id": "reviews",
+     "type": "media-with-text",
+     "top": 3406,
+     "h": 828,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1086,
+     "media": 6
+    },
+    {
+     "id": "bundles_collection",
+     "type": "featured-collection",
+     "top": 4234,
+     "h": 647,
+     "bg": "rgb(240, 240, 240)",
+     "text": 631,
+     "media": 10
+    },
+    {
+     "id": "find_serum",
+     "type": "image-link-blocks",
+     "top": 4882,
+     "h": 555,
+     "bg": "rgb(240, 240, 240)",
+     "text": 110,
+     "media": 4
+    },
+    {
+     "id": "why_skingenetix",
+     "type": "text-with-icons",
+     "top": 5436,
+     "h": 534,
+     "bg": "rgb(247, 247, 247)",
+     "text": 645,
+     "media": 0
+    },
+    {
+     "id": "faq_section",
+     "type": "faq",
+     "top": 5971,
+     "h": 1109,
+     "bg": "rgb(240, 240, 240)",
+     "text": 559,
+     "media": 2
+    },
+    {
+     "id": "home_faq_schema",
+     "type": "custom-html",
+     "top": 7080,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "newsletter_section",
+     "type": "newsletter",
+     "top": 7080,
+     "h": 361,
+     "bg": "rgb(26, 26, 26)",
+     "text": 143,
+     "media": 0
+    },
+    {
+     "id": "brand_story_band",
+     "type": "image-with-text-overlay",
+     "top": 7440,
+     "h": 640,
+     "bg": "rgb(240, 240, 240)",
+     "text": 19,
+     "media": 1
+    },
+    {
+     "id": "concern_tile_scrim",
+     "type": "custom-html",
+     "top": 8080,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "peptide_band_title_width",
+     "type": "custom-html",
+     "top": 8080,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "hero_line_breaks",
+     "type": "custom-html",
+     "top": 8080,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 8080,
+     "h": 516,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 8597,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  },
+  "mobile": {
+   "headerBottom": 85,
+   "rows": [
+    {
+     "id": "hero",
+     "type": "slideshow",
+     "top": 39,
+     "h": 560,
+     "bg": "rgb(240, 240, 240)",
+     "text": 147,
+     "media": 3
+    },
+    {
+     "id": "trust_option_a",
+     "type": "text-with-icons",
+     "top": 599,
+     "h": 205,
+     "bg": "rgb(247, 247, 247)",
+     "text": 324,
+     "media": 0
+    },
+    {
+     "id": "serums_collection",
+     "type": "featured-collection",
+     "top": 804,
+     "h": 574,
+     "bg": "rgb(240, 240, 240)",
+     "text": 277,
+     "media": 10
+    },
+    {
+     "id": "skin_concerns",
+     "type": "image-link-blocks",
+     "top": 1378,
+     "h": 439,
+     "bg": "rgb(240, 240, 240)",
+     "text": 245,
+     "media": 4
+    },
+    {
+     "id": "peptide_science",
+     "type": "media-with-text",
+     "top": 1817,
+     "h": 857,
+     "bg": "rgb(240, 240, 240)",
+     "text": 342,
+     "media": 1
+    },
+    {
+     "id": "peptide_standard_band",
+     "type": "image-with-text-overlay",
+     "top": 2674,
+     "h": 480,
+     "bg": "rgb(240, 240, 240)",
+     "text": 216,
+     "media": 1
+    },
+    {
+     "id": "impact_numbers",
+     "type": "impact-text",
+     "top": 3154,
+     "h": 508,
+     "bg": "rgb(255, 255, 255)",
+     "text": 130,
+     "media": 0
+    },
+    {
+     "id": "reviews",
+     "type": "media-with-text",
+     "top": 3663,
+     "h": 951,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1086,
+     "media": 6
+    },
+    {
+     "id": "bundles_collection",
+     "type": "featured-collection",
+     "top": 4613,
+     "h": 576,
+     "bg": "rgb(240, 240, 240)",
+     "text": 631,
+     "media": 10
+    },
+    {
+     "id": "find_serum",
+     "type": "image-link-blocks",
+     "top": 5190,
+     "h": 372,
+     "bg": "rgb(240, 240, 240)",
+     "text": 110,
+     "media": 4
+    },
+    {
+     "id": "why_skingenetix",
+     "type": "text-with-icons",
+     "top": 5561,
+     "h": 383,
+     "bg": "rgb(247, 247, 247)",
+     "text": 711,
+     "media": 0
+    },
+    {
+     "id": "faq_section",
+     "type": "faq",
+     "top": 5945,
+     "h": 1387,
+     "bg": "rgb(240, 240, 240)",
+     "text": 559,
+     "media": 2
+    },
+    {
+     "id": "home_faq_schema",
+     "type": "custom-html",
+     "top": 7332,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "newsletter_section",
+     "type": "newsletter",
+     "top": 7332,
+     "h": 362,
+     "bg": "rgb(26, 26, 26)",
+     "text": 143,
+     "media": 0
+    },
+    {
+     "id": "brand_story_band",
+     "type": "image-with-text-overlay",
+     "top": 7694,
+     "h": 560,
+     "bg": "rgb(240, 240, 240)",
+     "text": 19,
+     "media": 1
+    },
+    {
+     "id": "concern_tile_scrim",
+     "type": "custom-html",
+     "top": 8254,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "peptide_band_title_width",
+     "type": "custom-html",
+     "top": 8254,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "hero_line_breaks",
+     "type": "custom-html",
+     "top": 8254,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 8254,
+     "h": 1039,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 9293,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  }
+ }
+}

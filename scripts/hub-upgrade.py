@@ -14,8 +14,13 @@ Spec keys:
   remove_blocks   ["section/block"]
   insert_sections [{"id", "after", "type", "settings", "block", "values": {"en": ..., ...}}]
                   — a stock section (e.g. rich-text) with one richtext block
-  jsonld          an object, emitted as a custom-html section named schema_markup
-                  (the pattern /pages/the-science already uses)
+  remove_sections ["section_id"]
+  section_settings {"section_id": {"setting": value}} — e.g. backgrounds, for alternation
+  jsonld          an object, emitted as <script id="sgx-webpage-jsonld"> INSIDE the existing
+                  custom-html section named by `jsonld_host` (default "references").
+                  ⚠️ Never as its own section: a custom-html section with no visible content
+                  still renders a padded .section wrapper — at the top of /pages/pdrn-research
+                  it left a 160px blank band above the hero (2026-09-22).
 
 Why each rule exists:
   * Semantic <h2> lives INSIDE the richtext: Impact renders section headings as
@@ -78,8 +83,9 @@ def check_values(label, values):
         for href in re.findall(r'href="(/[^"]*)"', values[l]):
             if not href.startswith(f"/{l}/"):
                 sys.exit(f"  ✗ {label} [{l}]: link {href} lacks the /{l}/ prefix")
-        if values[l].count("<h2>") != values["en"].count("<h2>"):
-            sys.exit(f"  ✗ {label} [{l}]: heading count differs from English")
+        for tag in ("<h1>", "<h2>"):
+            if values[l].count(tag) != values["en"].count(tag):
+                sys.exit(f"  ✗ {label} [{l}]: {tag} count differs from English")
 
 
 def build(spec, j):
@@ -105,11 +111,20 @@ def build(spec, j):
                                    "block_order": [ins["block"]]}
         j["order"].insert(j["order"].index(ins["after"]) + 1, ins["id"])
         to_translate.append((f"{ins['id']}.{ins['block']}.content", ins["values"]))
+    for sid in spec.get("remove_sections", []):
+        j["sections"].pop(sid, None)
+        j["order"] = [x for x in j["order"] if x != sid]
+    for sid, settings in spec.get("section_settings", {}).items():
+        j["sections"][sid].setdefault("settings", {}).update(settings)
     if spec.get("jsonld"):
-        html_ = '<script type="application/ld+json">\n' + json.dumps(spec["jsonld"], indent=2, ensure_ascii=False) + "\n</script>"
-        j["sections"]["schema_markup"] = {"type": "custom-html", "settings": {"html": html_}}
-        if "schema_markup" not in j["order"]:
-            j["order"].insert(0, "schema_markup")
+        host = spec.get("jsonld_host", "references")
+        tag = '<script type="application/ld+json" id="sgx-webpage-jsonld">'
+        block = tag + "\n" + json.dumps(spec["jsonld"], indent=2, ensure_ascii=False) + "\n</script>"
+        h = j["sections"][host]["settings"]["html"]
+        h = re.sub(re.escape(tag) + r".*?</script>", "", h, flags=re.S).rstrip()
+        j["sections"][host]["settings"]["html"] = h + "\n" + block
+        j["sections"].pop("schema_markup", None)          # retire the old padded host
+        j["order"] = [x for x in j["order"] if x != "schema_markup"]
     return to_translate
 
 
@@ -156,6 +171,9 @@ def verify(spec):
         live_h2 = [re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", "", x))).strip() for x in re.findall(r"<h2[^>]*>(.*?)</h2>", page, re.S)]
         want = [re.sub(r"<[^>]+>", "", h) for t in texts for h in re.findall(r"<h2>(.*?)</h2>", t[loc])]
         missing = [w for w in want if H.unescape(w) not in live_h2]
+        live_h1 = [re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", "", x))).strip() for x in re.findall(r"<h1[^>]*>(.*?)</h1>", page, re.S)]
+        want_h1 = [H.unescape(re.sub(r"<[^>]+>", "", h)) for t in texts for h in re.findall(r"<h1>(.*?)</h1>", t[loc])]
+        h1_problem = f"expected one <h1> {want_h1[0]!r}, found {live_h1}" if want_h1 and live_h1 != want_h1[:1] else ""
         links = sorted(set(h for t in texts for h in re.findall(r'href="(/[^"]*)"', t[loc])))
         dead = []
         for href in links:
@@ -172,11 +190,12 @@ def verify(spec):
                 ld_ok = "WebPage" in types
             except Exception:
                 ld_ok = False
-        ok = not missing and not dead and ld_ok
+        ok = not missing and not dead and ld_ok and not h1_problem
         bad += not ok
         print(f"  {'✓' if ok else '✗'} {loc}: {len(want) - len(missing)}/{len(want)} headings live as <h2>, "
               f"{len(links) - len(dead)}/{len(links)} links resolve{', JSON-LD WebPage ok' if loc == 'en' and ld_ok and spec.get('jsonld') else ''}")
         for m in missing: print(f"      missing heading: {m}")
+        if h1_problem: print(f"      {h1_problem}")
         for d_ in dead: print(f"      dead link: {d_}")
         if loc == "en" and not ld_ok: print("      JSON-LD WebPage missing or invalid")
         time.sleep(1.5)

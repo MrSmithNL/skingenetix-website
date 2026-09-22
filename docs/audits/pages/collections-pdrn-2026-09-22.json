@@ -1,0 +1,681 @@
+{
+ "path": "/collections/pdrn",
+ "scores": {
+  "SEO": 93,
+  "GEO": 28,
+  "DESIGN": 90
+ },
+ "items": [
+  {
+   "area": "SEO",
+   "check": "HTTP 200, no redirect",
+   "ok": true,
+   "detail": "200 \u2192 https://www.skingenetix.com/collections/pdrn",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
+   "ok": true,
+   "detail": "/collections/pdrn",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "URL carries the head term",
+   "ok": true,
+   "detail": "head term 'pdrn skincare'",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Title present, 30\u201360 chars",
+   "ok": true,
+   "detail": "47c: PDRN Skincare: Salmon DNA Serum and Night Cream",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Title contains head term",
+   "ok": true,
+   "detail": "'pdrn skincare'",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description 70\u2013160 chars",
+   "ok": true,
+   "detail": "142c",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description contains head term",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Indexable (no noindex)",
+   "ok": true,
+   "detail": "no robots meta",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Self-referencing absolute canonical",
+   "ok": true,
+   "detail": "https://www.skingenetix.com/collections/pdrn",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "hreflang for all 6 locales + x-default",
+   "ok": true,
+   "detail": "7 alternates",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Open Graph title/description/image/url",
+   "ok": true,
+   "detail": "complete",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "og:title matches the page title",
+   "ok": false,
+   "detail": "PDRN",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Exactly one <h1>",
+   "ok": true,
+   "detail": "PDRN",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "<h1> contains head term",
+   "ok": false,
+   "detail": "",
+   "severity": "med",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Topic headings are real <h2> (\u2265 3)",
+   "ok": true,
+   "detail": "4 <h2>: ['5', '100%', '10+', 'Continue Exploring']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Visual-only headings (styled <p>/<span>)",
+   "ok": true,
+   "detail": "0 that look like headings but are not: []",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "No skipped heading levels",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Content images have alt text",
+   "ok": true,
+   "detail": "12/12",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Images declare width/height (CLS)",
+   "ok": true,
+   "detail": "0 without",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Internal links in content \u2265 5",
+   "ok": true,
+   "detail": "24 unique",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "No links inside tables (AI extraction drops the table)",
+   "ok": true,
+   "detail": "0 found",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "All JSON-LD parses",
+   "ok": true,
+   "detail": "0 invalid block(s)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "No duplicate schema types",
+   "ok": true,
+   "detail": "types ['BreadcrumbList']",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Page entity schema (WebPage/Article) with dateModified",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "Schema cites sources (citation[])",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Reviewer/author in schema (reviewedBy/author)",
+   "ok": false,
+   "detail": "",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "BreadcrumbList present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A10 \u00b7 head term in first 30% of text",
+   "ok": false,
+   "detail": "'pdrn skincare'",
+   "severity": "high",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
+   "ok": false,
+   "detail": "",
+   "severity": "high",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "A8 \u00b7 secondary intents covered on the page",
+   "ok": true,
+   "detail": "['pdrn serum', 'pdrn cream', 'salmon dna'] / ['pdrn serum', 'pdrn cream', 'salmon dna']",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
+   "ok": true,
+   "detail": "1 paragraphs, 0 too long",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
+   "ok": false,
+   "detail": "0",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
+   "ok": false,
+   "detail": "4 figures",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 cited sources \u2265 3",
+   "ok": false,
+   "detail": "0 citation markers",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "E3 \u00b7 cites recent research (2024+)",
+   "ok": true,
+   "detail": "latest 2026",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "E1 \u00b7 visible last-reviewed/updated date",
+   "ok": false,
+   "detail": "pending reviewer sign-off",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A6 \u00b7 structured list or table present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A4 \u00b7 headings mirror search questions",
+   "ok": false,
+   "detail": "0 question-form H2",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
+   "ok": false,
+   "detail": "70 words extracted (main text 223)",
+   "severity": "high",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "Head term survives extraction",
+   "ok": false,
+   "detail": "",
+   "severity": "high",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "H2 sections survive extraction",
+   "ok": false,
+   "detail": "lost: ['100%', '10+', 'Continue Exploring']",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "D1 \u00b7 robots.txt allows the major AI crawlers",
+   "ok": true,
+   "detail": "all allowed",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Page listed in XML sitemap",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "llms.txt present (evidence: fetched 0\u00d7 by frontier crawlers \u2014 not scored)",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No blank band between header and first section",
+   "ok": true,
+   "detail": "-79px",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "No empty-but-tall sections",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "Section backgrounds alternate",
+   "ok": false,
+   "detail": "banner+main (Bone)",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Backgrounds on the brand palette",
+   "ok": true,
+   "detail": "Bone / White / Graphite",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (desktop)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (mobile)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  }
+ ],
+ "data": {
+  "title": "PDRN Skincare: Salmon DNA Serum and Night Cream",
+  "h1": [
+   "PDRN"
+  ],
+  "h2": [
+   "5",
+   "100%",
+   "10+",
+   "Continue Exploring"
+  ],
+  "pseudo_headings": [],
+  "internal_links": [
+   "/collections",
+   "/collections/all",
+   "/collections/brightening-glow",
+   "/collections/creams-moisturizers",
+   "/collections/fine-lines-wrinkles",
+   "/collections/firming-skin-density",
+   "/collections/serums",
+   "/collections/skin-repair-renewal",
+   "/pages/contact",
+   "/pages/faq",
+   "/pages/ingredients",
+   "/pages/our-philosophy",
+   "/pages/pdrn-research",
+   "/pages/shipping-returns",
+   "/pages/the-science",
+   "/policies/contact-information",
+   "/policies/legal-notice",
+   "/policies/privacy-policy",
+   "/policies/refund-policy",
+   "/policies/shipping-policy",
+   "/policies/terms-of-service",
+   "/products/pdrn-1-serum-cream-full-set",
+   "/products/pdrn-collagen-night-cream",
+   "/products/pdrn-renewal-serum"
+  ],
+  "external_links": [],
+  "schema_types": [
+   "BreadcrumbList"
+  ],
+  "extracted_words": 70,
+  "main_words": 223,
+  "images": [
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-repair-deep-renewal-cream.jpg?v=1787582509&width=3000",
+    "alt": "Woman resting her cheek against a jar of Skingenetix PDRN Collagen Repair deep renewal cream on a dark studio backdrop"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg?v=1787228104&width=2048",
+    "alt": "Skingenetix PDRN 1% Collagen Night Cream, 50ml - jar on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_open_jar_swatch_2_skingenetix.jpg?v=1787228106&width=2048",
+    "alt": "Skingenetix PDRN 1% Collagen Night Cream, 50ml - open jar with a swatch of the pink cream"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg?v=1787314050&width=2048",
+    "alt": "Skingenetix PDRN 1% Renewal Serum, 30ml - pink frosted glass dropper bottle on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_skin_repair_deep_renewal_face_serum_model_holding_near_face_2_skingenetix.jpg?v=1787314052&width=2048",
+    "alt": "Skingenetix PDRN 1% Renewal Serum, 30ml - a model holding the bottle beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-ritual-serum-collagen-cream-white-background.jpg?v=1789475146&width=3000",
+    "alt": "Skingenetix Full PDRN 1% Ritual - Serum & Cream - the PDRN renewal serum and collagen night cream on a plain white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-ritual-serum-collagen-cream-hard-shadow.jpg?v=1789474613&width=3000",
+    "alt": "Skingenetix Full PDRN 1% Ritual - Serum & Cream - the serum and collagen night cream on a rose ground under hard directional light"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-fine-lines-wrinkles-2026.jpg?v=1787324955&width=2048",
+    "alt": "Close view of the eye area showing fine expression lines - Skingenetix fine lines and wrinkles peptide range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-firming-density-peptide-treatment.jpg?v=1787580841&width=2048",
+    "alt": "Defined jawline and neck in profile - Skingenetix peptide treatment for skin firming and density"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-skin-repair-renewal-2026.jpg?v=1787324956&width=2048",
+    "alt": "A hand resting against the cheek against a clinical blue background - Skingenetix skin repair and renewal peptide range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-brightening-glow-2026.jpg?v=1787324956&width=2048",
+    "alt": "Luminous cheekbone lit against a warm champagne background - Skingenetix brightening and glow peptide range"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
+    "alt": "Skingenetix logo (black)"
+   }
+  ]
+ },
+ "design": {
+  "desktop": {
+   "headerBottom": 126,
+   "rows": [
+    {
+     "id": "banner",
+     "type": "collection-banner",
+     "top": 47,
+     "h": 440,
+     "bg": "rgb(240, 240, 240)",
+     "text": 147,
+     "media": 1
+    },
+    {
+     "id": "main",
+     "type": "main-collection",
+     "top": 487,
+     "h": 721,
+     "bg": "rgb(240, 240, 240)",
+     "text": 201,
+     "media": 6
+    },
+    {
+     "id": "impact_numbers",
+     "type": "impact-text",
+     "top": 1207,
+     "h": 288,
+     "bg": "rgb(255, 255, 255)",
+     "text": 87,
+     "media": 0
+    },
+    {
+     "id": "related_collections",
+     "type": "image-link-blocks",
+     "top": 1495,
+     "h": 579,
+     "bg": "rgb(240, 240, 240)",
+     "text": 106,
+     "media": 4
+    },
+    {
+     "id": "banner_text_width",
+     "type": "custom-html",
+     "top": 2074,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 2074,
+     "h": 516,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 2590,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  },
+  "mobile": {
+   "headerBottom": 85,
+   "rows": [
+    {
+     "id": "banner",
+     "type": "collection-banner",
+     "top": 39,
+     "h": 375,
+     "bg": "rgb(240, 240, 240)",
+     "text": 147,
+     "media": 1
+    },
+    {
+     "id": "main",
+     "type": "main-collection",
+     "top": 414,
+     "h": 665,
+     "bg": "rgb(240, 240, 240)",
+     "text": 204,
+     "media": 6
+    },
+    {
+     "id": "impact_numbers",
+     "type": "impact-text",
+     "top": 1079,
+     "h": 480,
+     "bg": "rgb(255, 255, 255)",
+     "text": 87,
+     "media": 0
+    },
+    {
+     "id": "related_collections",
+     "type": "image-link-blocks",
+     "top": 1559,
+     "h": 374,
+     "bg": "rgb(240, 240, 240)",
+     "text": 106,
+     "media": 4
+    },
+    {
+     "id": "banner_text_width",
+     "type": "custom-html",
+     "top": 1933,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 1933,
+     "h": 1039,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 2972,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  }
+ }
+}

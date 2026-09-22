@@ -1,0 +1,801 @@
+{
+ "path": "/pages/acetyl-hexapeptide-8-research",
+ "scores": {
+  "SEO": 98,
+  "GEO": 100,
+  "DESIGN": 100
+ },
+ "items": [
+  {
+   "area": "SEO",
+   "check": "HTTP 200, no redirect",
+   "ok": true,
+   "detail": "200 \u2192 https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
+   "ok": true,
+   "detail": "/pages/acetyl-hexapeptide-8-research",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "URL carries the head term",
+   "ok": false,
+   "detail": "head term 'argireline'",
+   "severity": "low",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Title present, 30\u201360 chars",
+   "ok": true,
+   "detail": "58c: Argireline\u00ae (Acetyl Hexapeptide-8): What It Does for Lines",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Title contains head term",
+   "ok": true,
+   "detail": "'argireline'",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description 70\u2013160 chars",
+   "ok": true,
+   "detail": "146c",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description contains head term",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Indexable (no noindex)",
+   "ok": true,
+   "detail": "no robots meta",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Self-referencing absolute canonical",
+   "ok": true,
+   "detail": "https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "hreflang for all 6 locales + x-default",
+   "ok": true,
+   "detail": "7 alternates",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Open Graph title/description/image/url",
+   "ok": true,
+   "detail": "complete",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "og:title matches the page title",
+   "ok": true,
+   "detail": "Argireline\u00ae (Acetyl Hexapeptide-8): What It Does for Lines",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Exactly one <h1>",
+   "ok": true,
+   "detail": "Argireline\u00ae (Acetyl Hexapeptide-8)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "<h1> contains head term",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Topic headings are real <h2> (\u2265 3)",
+   "ok": true,
+   "detail": "8 <h2>: ['What Is Argireline?', 'What Does Argireline Do for Expression Lines?', 'What 10% Argireline\u00ae Means', 'How to Use Argireline', 'Published References', 'Frequently Asked Questions', 'Shop Acetyl Hexapeptide-8 Products', 'Explore More Research']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Visual-only headings (styled <p>/<span>)",
+   "ok": false,
+   "detail": "5 that look like headings but are not: ['Copper Peptide (GHK-Cu)', 'Matrixyl 3000', 'PDRN', 'Glutathione', 'Try Acetyl Hexapeptide-8']",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "No skipped heading levels",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Content images have alt text",
+   "ok": true,
+   "detail": "13/13",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Images declare width/height (CLS)",
+   "ok": true,
+   "detail": "0 without",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Internal links in content \u2265 5",
+   "ok": true,
+   "detail": "22 unique",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "No links inside tables (AI extraction drops the table)",
+   "ok": true,
+   "detail": "0 found",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "All JSON-LD parses",
+   "ok": true,
+   "detail": "0 invalid block(s)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "No duplicate schema types",
+   "ok": true,
+   "detail": "types ['BreadcrumbList', 'WebPage', 'FAQPage']",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Page entity schema (WebPage/Article) with dateModified",
+   "ok": true,
+   "detail": "WebPage modified 2026-09-22",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "Schema cites sources (citation[])",
+   "ok": true,
+   "detail": "6 citations",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Reviewer/author in schema (reviewedBy/author)",
+   "ok": false,
+   "detail": "pending Dr Bodde's review",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "BreadcrumbList present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "FAQ schema matches visible questions",
+   "ok": true,
+   "detail": "5 Qs; not visible: []",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A10 \u00b7 head term in first 30% of text",
+   "ok": true,
+   "detail": "'argireline'",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
+   "ok": true,
+   "detail": "is the",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "A8 \u00b7 secondary intents covered on the page",
+   "ok": true,
+   "detail": "['acetyl hexapeptide-8', 'expression lines'] / ['acetyl hexapeptide-8', 'expression lines']",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
+   "ok": true,
+   "detail": "29 paragraphs, 0 too long",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
+   "ok": true,
+   "detail": "11",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
+   "ok": true,
+   "detail": "38 figures",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 cited sources \u2265 3",
+   "ok": true,
+   "detail": "28 citation markers",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "E3 \u00b7 cites recent research (2024+)",
+   "ok": true,
+   "detail": "latest 2026",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "E1 \u00b7 visible last-reviewed/updated date",
+   "ok": true,
+   "detail": "Last updated",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A6 \u00b7 structured list or table present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A4 \u00b7 headings mirror search questions",
+   "ok": true,
+   "detail": "2 question-form H2",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
+   "ok": true,
+   "detail": "1148 words extracted (main text 1305)",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "Head term survives extraction",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "H2 sections survive extraction",
+   "ok": true,
+   "detail": "8 kept",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "D1 \u00b7 robots.txt allows the major AI crawlers",
+   "ok": true,
+   "detail": "all allowed",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Page listed in XML sitemap",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "llms.txt present (evidence: fetched 0\u00d7 by frontier crawlers \u2014 not scored)",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No blank band between header and first section",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "No empty-but-tall sections",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "Section backgrounds alternate",
+   "ok": true,
+   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Backgrounds on the brand palette",
+   "ok": true,
+   "detail": "Bone / White / Graphite",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (desktop)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (mobile)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  }
+ ],
+ "data": {
+  "title": "Argireline\u00ae (Acetyl Hexapeptide-8): What It Does for Lines",
+  "h1": [
+   "Argireline\u00ae (Acetyl Hexapeptide-8)"
+  ],
+  "h2": [
+   "What Is Argireline?",
+   "What Does Argireline Do for Expression Lines?",
+   "What 10% Argireline\u00ae Means",
+   "How to Use Argireline",
+   "Published References",
+   "Frequently Asked Questions",
+   "Shop Acetyl Hexapeptide-8 Products",
+   "Explore More Research"
+  ],
+  "pseudo_headings": [
+   "Copper Peptide (GHK-Cu)",
+   "Matrixyl 3000",
+   "PDRN",
+   "Glutathione",
+   "Try Acetyl Hexapeptide-8"
+  ],
+  "internal_links": [
+   "/collections/acetyl-hexapeptide-8",
+   "/collections/all",
+   "/collections/creams-moisturizers",
+   "/collections/serums",
+   "/pages/contact",
+   "/pages/copper-peptide-research",
+   "/pages/faq",
+   "/pages/fine-lines-wrinkles",
+   "/pages/glutathione-research",
+   "/pages/ingredients",
+   "/pages/matrixyl-3000-research",
+   "/pages/our-philosophy",
+   "/pages/pdrn-research",
+   "/pages/shipping-returns",
+   "/pages/the-science",
+   "/policies/contact-information",
+   "/policies/legal-notice",
+   "/policies/privacy-policy",
+   "/policies/refund-policy",
+   "/policies/shipping-policy",
+   "/policies/terms-of-service",
+   "/products/acetyl-hexapeptide-8-anti-wrinkle-serum"
+  ],
+  "external_links": [
+   "https://anndermatol.org/DOIx.php?id=10.5021/ad.2019.31.3.263",
+   "https://doi.org/10.1590/S1984-82502015000400016",
+   "https://pubmed.ncbi.nlm.nih.gov/18498523/",
+   "https://pubmed.ncbi.nlm.nih.gov/23417317/",
+   "https://pubmed.ncbi.nlm.nih.gov/28150423/",
+   "https://pubmed.ncbi.nlm.nih.gov/33911590/",
+   "https://pubmed.ncbi.nlm.nih.gov/40565185/"
+  ],
+  "schema_types": [
+   "BreadcrumbList",
+   "WebPage",
+   "FAQPage"
+  ],
+  "extracted_words": 1148,
+  "main_words": 1305,
+  "images": [
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg?v=1787664404&width=3000",
+    "alt": "A single clear droplet resting on a plain glass slide, refracting a bright caustic across a dark graphite surface"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg?v=1787811412&width=3000",
+    "alt": "Close-up comparison of the skin at the outer corner of one eye, the fan of expression lines less deeply etched in the second image than the first. Illustration accompanying the Acetyl Hexapeptide-8 research summary."
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-wrinkle-depth-before-after-eye-close-up.jpg?v=1787812161&width=2048",
+    "alt": "Close-up comparison of the freckled skin at the outer corner of one eye, the crow's-feet lines holding a shallower shadow in the second image. Illustration accompanying the Acetyl Hexapeptide-8 research summary."
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg?v=1787812161&width=3000",
+    "alt": "Close-up comparison of the fine lines at the outer corner of one eye, slightly softened in the second image while the deeper creases are unchanged. Illustration accompanying the Acetyl Hexapeptide-8 research summary."
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg?v=1787832939&width=2048",
+    "alt": "Woman holding a dropper of Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum beside her cheek, the bottle in her other hand"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg?v=1787832939&width=2048",
+    "alt": "Woman holding a dropper of Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum beside her cheek, the bottle in her other hand"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg?v=1787310462&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - bottle beside its silver carton on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_model_face_dropper_closeup_4_skingenetix.jpg?v=1787310466&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - a model holding the bottle beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-fibroblast-collagen-matrix.jpg?v=1787656745&width=1400",
+    "alt": "Spindle-shaped fibroblast cell embedded in a fine collagen matrix network, imaged in clinical blue, representing how the copper peptide GHK-Cu supports the skin's collagen structure"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg?v=1787650938&width=2048",
+    "alt": "Translucent open cellular matrix structure lit against a deep emerald-teal background, representing the Matrixyl 3000 peptide's role in the skin's collagen network"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?v=1787656228&width=2048",
+    "alt": "Polynucleotide double helix rendered in soft blush pink, representing PDRN skin repair and renewal research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
+    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
+    "alt": "Skingenetix logo (black)"
+   }
+  ]
+ },
+ "design": {
+  "desktop": {
+   "headerBottom": 126,
+   "rows": [
+    {
+     "id": "hero",
+     "type": "image-with-text-overlay",
+     "top": 126,
+     "h": 440,
+     "bg": "rgb(240, 240, 240)",
+     "text": 183,
+     "media": 1
+    },
+    {
+     "id": "overview",
+     "type": "rich-text",
+     "top": 566,
+     "h": 634,
+     "bg": "rgb(240, 240, 240)",
+     "text": 892,
+     "media": 0
+    },
+    {
+     "id": "evidence",
+     "type": "rich-text",
+     "top": 1199,
+     "h": 778,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1390,
+     "media": 0
+    },
+    {
+     "id": "key_findings_ba",
+     "type": "research-before-after",
+     "top": 1977,
+     "h": 2299,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1849,
+     "media": 3
+    },
+    {
+     "id": "usage",
+     "type": "rich-text",
+     "top": 4276,
+     "h": 522,
+     "bg": "rgb(255, 255, 255)",
+     "text": 681,
+     "media": 0
+    },
+    {
+     "id": "references",
+     "type": "custom-html",
+     "top": 4797,
+     "h": 866,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1126,
+     "media": 0
+    },
+    {
+     "id": "faq",
+     "type": "faq",
+     "top": 5663,
+     "h": 1117,
+     "bg": "rgb(255, 255, 255)",
+     "text": 383,
+     "media": 2
+    },
+    {
+     "id": "shop_ingredient",
+     "type": "featured-collection",
+     "top": 6780,
+     "h": 850,
+     "bg": "rgb(240, 240, 240)",
+     "text": 66,
+     "media": 2
+    },
+    {
+     "id": "related",
+     "type": "multi-column",
+     "top": 7630,
+     "h": 775,
+     "bg": "rgb(255, 255, 255)",
+     "text": 306,
+     "media": 4
+    },
+    {
+     "id": "cta",
+     "type": "rich-text",
+     "top": 8405,
+     "h": 353,
+     "bg": "rgb(26, 26, 26)",
+     "text": 142,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 8758,
+     "h": 516,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 9274,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  },
+  "mobile": {
+   "headerBottom": 85,
+   "rows": [
+    {
+     "id": "hero",
+     "type": "image-with-text-overlay",
+     "top": 85,
+     "h": 375,
+     "bg": "rgb(240, 240, 240)",
+     "text": 183,
+     "media": 1
+    },
+    {
+     "id": "overview",
+     "type": "rich-text",
+     "top": 460,
+     "h": 660,
+     "bg": "rgb(240, 240, 240)",
+     "text": 892,
+     "media": 0
+    },
+    {
+     "id": "evidence",
+     "type": "rich-text",
+     "top": 1119,
+     "h": 893,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1390,
+     "media": 0
+    },
+    {
+     "id": "key_findings_ba",
+     "type": "research-before-after",
+     "top": 2012,
+     "h": 3041,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1849,
+     "media": 3
+    },
+    {
+     "id": "usage",
+     "type": "rich-text",
+     "top": 5053,
+     "h": 533,
+     "bg": "rgb(255, 255, 255)",
+     "text": 681,
+     "media": 0
+    },
+    {
+     "id": "references",
+     "type": "custom-html",
+     "top": 5586,
+     "h": 1244,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1126,
+     "media": 0
+    },
+    {
+     "id": "faq",
+     "type": "faq",
+     "top": 6830,
+     "h": 1107,
+     "bg": "rgb(255, 255, 255)",
+     "text": 383,
+     "media": 2
+    },
+    {
+     "id": "shop_ingredient",
+     "type": "featured-collection",
+     "top": 7937,
+     "h": 645,
+     "bg": "rgb(240, 240, 240)",
+     "text": 66,
+     "media": 2
+    },
+    {
+     "id": "related",
+     "type": "multi-column",
+     "top": 8582,
+     "h": 580,
+     "bg": "rgb(255, 255, 255)",
+     "text": 306,
+     "media": 4
+    },
+    {
+     "id": "cta",
+     "type": "rich-text",
+     "top": 9162,
+     "h": 288,
+     "bg": "rgb(26, 26, 26)",
+     "text": 142,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 9449,
+     "h": 1039,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 10488,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  }
+ }
+}
