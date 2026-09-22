@@ -88,7 +88,7 @@ def audit(locales):
                                 and re.match(r"/(pages|products|collections|blogs)/", h)})
             text = H.unescape(re.sub(r"<[^>]+>", " ", body))
             cites = len({(a.lower(), y) for a, y in CITE.findall(text)})   # distinct studies; repeats stay plain by design
-            linked = len(re.findall(r"<a\b[^>]*>\s*[A-Z][A-Za-zÀ-ſ\-]+ et al\.,? \d{4}\s*</a>", body))
+            linked = len({(m[0].lower(), m[1]) for m in re.findall(r"<a\b[^>]*>\s*([A-Z][A-Za-z\u00C0-\u017F\-]+) et al\.,? (\d{4})\s*</a>", body)})
             pages[f"{loc}:{p}"] = {"status": status, "internal": len(internal), "external": len(external),
                                    "external_domains": sorted({re.sub(r"https?://([^/]+).*", r"\1", h) for h, _ in external}),
                                    "citations": cites, "citations_linked": linked, "no_locale_prefix": no_prefix}
