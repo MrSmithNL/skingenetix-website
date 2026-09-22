@@ -164,6 +164,18 @@ They already exist, already carry PubMed citations, and already rank. They need 
 
 **Order: PDRN first, then copper peptide, then argireline, then matrixyl, then glutathione.**
 
+> **▶ Status 2026-09-22: 4 of 5 hubs done** (PDRN, Argireline®, copper, Matrixyl 3000). Glutathione is next.
+
+**Research-page standard (Malcolm, 2026-09-22). Every scientific research page we make must:**
+
+1. **Pass the external SEO/GEO/AISO audit.** Use `scripts/aiso-audit-page.py` (ChatGPT + Gemini, 20 criteria, pass mark 9.0) alongside `scripts/page-audit.py`. Triage every finding before fixing.
+2. **Use stock Impact sections first.** Examples: `impact-text` for headline figures, `specification-table` for an evidence table, `media-with-text` for image rows, `rich-text` for prose with real `<h2>`s. Custom code only where no stock section can do the job; so far that means charts.
+3. **Carry multiple images, taken from existing files first.**
+4. **Show the key data as charts.** Use `scripts/hub_charts.py`, with a real `<table>` of the same numbers beneath each chart, because AI extraction keeps tables and drops div rows.
+5. **Check every internal and external link.** Internal: `--verify-live` in six languages plus `scripts/link-audit.py`. External: each URL fetched, bot-blocked publishers opened in a real browser, and each DOI's title confirmed at Crossref.
+
+The Matrixyl 3000 hub (`configs/hub-upgrades/matrixyl-3000-research.json`) is the reference build. PDRN, Argireline® and copper were built before this standard and are due a retrofit (charts, external audit, localised references block).
+
 ---
 
 ## 5. Phase 3 — the spokes

@@ -134,11 +134,54 @@ AI-generated illustrations and must not be presented as results. Record:
 - ✅ **Copper peptide hub upgraded** (`configs/hub-upgrades/copper-peptide-research.json`, 2026-09-22): H1 "Copper Peptide (GHK-Cu)", front-loaded definition (1973, 200 → 80 ng/mL), "Copper Peptide Benefits: What the Evidence Shows" graded lab → small human → controlled trials, "What 2% GHK-Cu Means" + how to use, alternating backgrounds, WebPage JSON-LD with 7 citations, local term (Kupferpeptid / koperpeptide / peptide de cuivre / péptido de cobre / peptide di rame) in each locale's definition; all six languages. Audit **90/77/84 → 100/100/100**. **Re-verifying at source found four unsupported or misleading claims that were already live** — the Miller 2006 card (a 13-patient post-laser study with a null objective result, presented as a general satisfaction trial), the FAQ "0.5–2% clinically studied range" (no source), "well-tolerated by sensitive skin" (no source) and "one of the most-studied peptides" (contradicted by the 2024 review). All corrected in six languages. Details: `docs/audits/pages/README.md`.
   - ⚠️ **The same unsupported "at a high published strength" wording is on all three copper product pages** (description) — not changed (product copy, outside the hub spec). Needs the same fix.
   - ⚠️ **Expect the same on Matrixyl and glutathione:** their findings cards were written in the same batch. Verify every card at source, not only the new copy.
+- ✅ **Matrixyl 3000 hub upgraded — hub 4 of 5, and the first built to Malcolm's research-page standard** (`configs/hub-upgrades/matrixyl-3000-research.json`, 2026-09-22). Every figure in it comes from `docs/claims/matrixyl-3000.md`, re-checked against the source this session (Sederma brochure PDF, both patents, PubMed, and the Aruan 2023 full text in PMC). All six languages.
+  - **What the page now has:**
+    - an H1 of "Matrixyl 3000", a front-loaded definition, an "at a glance" list, and a visible "By Skingenetix… last reviewed" line
+    - evidence graded A–D with the sponsor named: manufacturer data labelled as manufacturer data, and the pentapeptide-4 trial credited to Procter & Gamble
+    - three key figures (stock `impact-text`)
+    - **two bar charts with data tables** (`scripts/hub_charts.py`, custom-html, because no stock section draws a chart)
+    - a 7-row graded evidence table (stock `specification-table`) that includes the null Aruan 2023 result
+    - 5 images, all existing files
+    - 9 references, with the references block translated for the first time (heading, link labels and JSON-LD `inLanguage`)
+    - a new "Is Matrixyl 3000 safe?" FAQ
+    - SEO title and description in six languages
+  - **Removed from the hub:** "+117% / +327% collagen", "independent RCT", "suitable for sensitive skin", "does not cause photosensitivity", "Collagen Boosting Serum", the in-vitro heading "Signals Skin Cells to Build Collagen", and the vague concentration answer, which the FAQ "Is Matrixyl 3000 the same as Matrixyl?" replaces.
+  - **Found at source:** the placebo side **did** change significantly on wrinkle volume (−8.7%, p<0.05). "No significant change on the placebo side" now names only area, depth and roughness.
+  - **Scores:**
+    - In-house audit: SEO/GEO/DESIGN 100/100/100, MARKETING 93.
+    - **External dual-model audit (ChatGPT + Gemini, `scripts/aiso-audit-page.py`): 8.12 → 9.45 → 9.20 → 9.60**, a qualified pass.
+    - Below 9 still: named author (Gem 7) and expert review (Gem 8), both Malcolm's call (see below). Heading hierarchy (GPT 8): `impact-text` renders the bare number as an `<h2>`, which only a Liquid edit could change.
+    - `--verify-live` ✓ in six languages. No English leaks in the extracted text of any locale.
+    - External links: 9/9 correct. The three DOI links redirect to the right article; the publishers show bot pages to scripts.
+    - Renders: `~/Desktop/skingenetix-renders.png`.
+- ✅ **Unsupported Matrixyl claims removed from the products** (2026-09-22, six languages):
+  - **Clinical Research block rebuilt on 6 products:** serum, cream, ritual, firming routine, fine-lines routine and duo set (`configs/copy/clinical-research-matrixyl-2026-09-22.json`; new `kits_from` reuses the Argireline and copper kits).
+  - **The old block said:**
+    - "+117% / +327% collagen"
+    - "independent RCT"
+    - "The hero peptide (Palmitoyl Pentapeptide-4)…", **also on the cream, which does not contain it**
+    - "Well tolerated"
+  - **Now ingredient-level only:** lab +256% collagen I, the independent CIR safety finding, and the study timings. The pentapeptide-4 trial appears only where the serum is in the product.
+  - **"What to expect" on 4 products and FAQ answers 5 and 6** (ritual and firming routine): "within days" / "quickly" / "well tolerated" replaced (`configs/claim-fixes/matrixyl-2026-09-22.json`).
+  - **Serum:** the "Best for" line and the SEO description no longer claim tolerance.
+  - **Store-wide re-survey:** 0 Matrixyl-specific unsupported phrases left.
+  - **Deliberately NOT on products:** the manufacturer's −39% and +15% figures. They attach to a product only once the formula confirms ≥3% Matrixyl 3000 (parked), so they stay on the hub.
+- 📌 **Research-page standard (Malcolm, 2026-09-22) — applies to every scientific research page we make:**
+  1. audited and optimised with the external SEO/GEO/AISO capability (dual-model ChatGPT + Gemini, `scripts/aiso-audit-page.py`) as well as `scripts/page-audit.py`
+  2. layout from standard Shopify/Impact sections first, custom code only where no stock section can do it
+  3. multiple images, reusing existing files before generating new ones
+  4. charts or graphics of the key data
+  5. internal and external links checked fully correct
+  - Matrixyl is the reference build.
+  - ⏭ **Retrofit PDRN, Argireline® and copper to the same standard:** charts plus tables, an external dual-model audit, and a references block translated per locale. Their references heading still serves English everywhere.
+- 🛑 **For Malcolm — named author and expert reviewer on the hubs.** Both external auditors mark the research pages down only for this (Gemini 7–8/10). The planned reviewer is Dr Esther Bodde, but her byline waits until she has read the pages. The site has no individual author to name either.
+- ⏭ **Product-page GEO is a template gap, not a copy gap.** The Matrixyl serum and cream score GEO 51/54: no definition sentence early, ~340 words extractable without JavaScript, no page-level JSON-LD with `dateModified`. This affects every product, so it needs one template-level fix.
+- ⏭ **Centralise `scripts/aiso-audit-page.py`.** Hairgenetix and Skingenetix now hold separate copies. It belongs in the seo-aiso-validator skill, per Rule 12.
 - ✅ **Study citations linked** (2026-09-22): 12 in-text citations on PDRN, Argireline® and copper now link to PubMed (first mention per section, new tab), in all six languages. Tool `scripts/link-citations.py`; run it on every future hub spec before `--apply`.
 - ✅ **Unsupported copper claims removed site-wide** (2026-09-22): "high published strength", "most-studied peptide" and "over 50 published studies", from product descriptions, the clinical-research block (10 products), a product FAQ and 4 content pages, in six languages. Tool `scripts/fix-claims.py`, specs in `configs/claim-fixes/`.
 - ✅ **Main menu: "Learn" → "Science"** (Malcolm, 2026-09-22), label only, in six languages (Wissenschaft / Wetenschap / Science / Ciencia / Scienza). The menu structure is unchanged: the five ingredient pages as image tiles, and Discover kept. A column split (Peptides / Beyond peptides / Our approach) plus folding Discover in was applied and **reverted within the hour at Malcolm's instruction: "do not split the main menu"**. Both mega-menus were verified open in all six languages.
 - 🛑 **Decision for Malcolm: internal-link programme.** Varied anchors on ~20 product pages, head-term anchors from the-science, the collections and ingredients, and targets per hub (same doc §4). Argireline® has 0 exact-match anchors site-wide.
-- ⏳ **"Well-tolerated" / "gentle" claims** (7 FAQs + 5 pages) and the Matrixyl "+117% / +327%" copy: verify at source during the Matrixyl and glutathione passes.
+- ⏳ **"Well-tolerated" / "gentle" claims** (7 FAQs + 5 pages): verify at source during the glutathione pass. ✅ The Matrixyl "+117% / +327%" copy and the Matrixyl "well tolerated" lines were removed on 2026-09-22 (entry above).
 - ✅ **Evidence Library PILOT live** (Malcolm approved, 2026-09-22). A `study` metaobject (web pages at `/pages/study/<handle>`, translatable, publishable), rendered by `templates/metaobject/study.json` from stock rich-text sections only. JSON-LD comes from a `jsonld` field via a liquid block: WebPage → Article, `isBasedOn` → ScholarlyArticle with PMID/DOI. **All three pilot criteria passed:** the fields are translatable (a German translation rendered at /de), the HTML is server-side, and the pages appear in `sitemap_metaobject_pages_1.xml`. Two pages, in all six languages, published with `scripts/study-pages.py` from `configs/studies/*.json`:
   - `/pages/study/argireline-crows-feet-trial-wang-2013`, 770 words. Discloses the McEit-supplied product, the "48.9% = share of people" misreading, and the independent null result (Henseler 2023).
   - `/pages/study/pdrn-vs-retinol-split-face-trial-ye-2026`, 894 words. Discloses no placebo arm, the slow 0.1% retinol comparator, four authors' undeclared commercial affiliations, and 0.1% vs our 1% stated neutrally (no "10× the dose" claim).

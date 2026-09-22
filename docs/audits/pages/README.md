@@ -26,7 +26,7 @@ desktop (1440) and mobile (390) full-page screenshots in `/tmp/audit-<slug>/`.
 | `/` | SEO 84 · GEO 61 · Design 84 | — |
 | `/pages/the-science` | SEO 79 · GEO 53 · Design 94 | — |
 | `/pages/copper-peptide-research` | SEO 90 · GEO 77 · Design 84 | **SEO 100 · GEO 100 · Design 100** |
-| `/pages/matrixyl-3000-research` | SEO 90 · GEO 86 · Design 84 | — |
+| `/pages/matrixyl-3000-research` | SEO 90 · GEO 86 · Design 84 | **SEO 100 · GEO 100 · Design 100 · Marketing 93**. External dual-model 8.12 → **9.60** (see below) |
 | `/pages/glutathione-research` | SEO 90 · GEO 86 · Design 84 | — |
 | `/pages/fine-lines-wrinkles` | SEO 90 · GEO 81 · Design 90 | — |
 | `/pages/firming-skin-density` | SEO 88 · GEO 81 · Design 90 | — |
@@ -36,7 +36,7 @@ desktop (1440) and mobile (390) full-page screenshots in `/tmp/audit-<slug>/`.
 | `/collections/serums` | SEO 92 · **GEO 39** · Design 90 | — |
 | `/products/pdrn-renewal-serum` | SEO 94 · **GEO 47** · Design 84 | — |
 | `/products/copper-peptide-ghk-cu-renewal-serum` | SEO 90 · **GEO 40** · Design 84 | — |
-| `/products/matrixyl-3000-firming-serum` | SEO 98 · **GEO 51** · Design 84 | — |
+| `/products/matrixyl-3000-firming-serum` | SEO 98 · **GEO 51** · Design 84 | Marketing 93 after the claims fix. GEO unchanged (template pattern 4) |
 | `/products/acetyl-hexapeptide-8-anti-wrinkle-serum` | SEO 82 · GEO 58 · Design 84 | title now carries Argireline® 10% |
 
 Remaining on the Argireline page: the URL does not carry "argireline". **Deliberately not changed** — URL
@@ -44,6 +44,21 @@ structure is "a very, very lightweight ranking factor" (Google) and this page ho
 impressions; a redirect would risk that for almost nothing.
 
 ---
+
+## External dual-model audit (ChatGPT + Gemini) — `scripts/aiso-audit-page.py`
+
+The seo-aiso-validator protocol: 20 criteria scored on the Trafilatura extraction of the page, which is what AI crawlers keep. Meta tags and today's date are injected into the prompt. Pass mark 9.0 on the average; the stricter bar is ≥ 9 from both models on every criterion. Reports: `docs/audits/pages/aiso-*.md`.
+
+| Page | Round | GPT | Gemini | Combined | Changes between rounds |
+|---|---|---|---|---|---|
+| `/pages/matrixyl-3000-research` | 0 (old page) | 8.30 | 7.95 | 8.12 | — |
+| | 1 | 9.10 | 9.80 | 9.45 | hub upgrade |
+| | 2 | 8.80 | 9.60 | 9.20 | + a real `<table>` under each chart (GPT's dip on unchanged sections is model variance) |
+| | 3 | 9.60 | 9.60 | **9.60** | + "at a glance" list after the definition |
+
+**Qualified pass.** Three criteria stay below 9 on one model:
+- Author (Gem 7) and expert review (Gem 8): these need a named, credentialed person. That is Malcolm's decision, and Dr Bodde's byline waits until she has reviewed the page.
+- Heading hierarchy (GPT 8, Gem 9): the stock `impact-text` renders "−39%" as an `<h2>`, and changing that needs a Liquid edit.
 
 ## Site-wide patterns — fix once, not page by page
 

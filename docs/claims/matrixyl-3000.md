@@ -210,3 +210,13 @@ Found on the serum page, cream page and hub, 2026-09-22. The Clinical Research b
 8. **Trademark use.** Matrixyl® and Matrixyl® 3000 are Sederma (Croda) trademarks. Confirm with the supplier that our product names and the ® usage are permitted. Sederma runs a co-branding programme ("matrixylinside.com" is printed on the 2013 brochure).
 9. **Gorouhi & Maibach 2009** (the only systematic review of controlled topical-peptide studies): full text not accessed. It may hold a critical appraisal worth quoting on the hub page.
 10. **Newer trials, 2018–2026:** none found for Matrixyl 3000 alone. The only newer items are multi-ingredient (Yang 2024, Cayce 2026 10-peptide serum, open-label) and cannot be attributed to the peptides.
+
+---
+
+## 7. Applied on the store (2026-09-22)
+
+- **Hub `/pages/matrixyl-3000-research`, six languages.** Uses claims 1–6 at ingredient level: claim 1 (manufacturer split-face), claim 2 (pentapeptide-4 RCT, sponsor named), claim 3 (forearm ultrasound, "not the face" stated), claim 4 (lab, "in lab tests on skin cells"), claim 5 (CIR) and claim 6 (timing). Every §2 hub verdict is actioned. #12, the concentration answer, is replaced by "Is Matrixyl 3000 the same as Matrixyl?", because the formula % is parked. Spec: `configs/hub-upgrades/matrixyl-3000-research.json`.
+- **Products, six languages.** The Clinical Research block was rebuilt on six products, using claims 4 and 5, claim 6 as timing, and claim 2 only where the serum is in the product. §2 #1–#8 are actioned on the products. Configs: `configs/copy/clinical-research-matrixyl-2026-09-22.json` and `configs/claim-fixes/matrixyl-2026-09-22.json`.
+- **Not applied, by design:** claims 1, 3 and 7 on products (formula facts parked, §6 gap 1). Also out of this pass: §2 #18 ("no parabens") and #19 (vegan contradiction, parked with the formula facts).
+
+**Correction to claim 1, condition (b), found while re-reading the brochure at source:** the placebo side was *not* flat on every measure. Main-wrinkle average volume fell **−8.7% (p<0.05)** on placebo, as the table in claim 1 shows, but the condition's wording "the placebo side showed no significant change" overstated it. The live copy says "no significant change **in wrinkle area, depth or roughness**" (hub, products) and shows the volume exception in the chart caption. Use that wording from now on.

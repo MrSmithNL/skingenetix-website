@@ -1,11 +1,11 @@
-# Page audit — `/products/matrixyl-3000-firming-serum`
+# Page audit — `/products/matrixyl-3000-pro-collagen-firming-cream`
 
-**Date:** 2026-09-22 · **Tool:** `scripts/page-audit.py` · **Live:** https://www.skingenetix.com/products/matrixyl-3000-firming-serum
+**Date:** 2026-09-22 · **Tool:** `scripts/page-audit.py` · **Live:** https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream
 
 | Area | Score |
 |---|---|
 | SEO | **98/100** |
-| GEO | **51/100** |
+| GEO | **54/100** |
 | DESIGN | **84/100** |
 | MARKETING | **93/100** |
 
@@ -13,19 +13,19 @@
 
 | | Check | Detail |
 |---|---|---|
-| ✅ | HTTP 200, no redirect | 200 → https://www.skingenetix.com/products/matrixyl-3000-firming-serum |
-| ✅ | Clean URL (lowercase, hyphens, no params, ≤ 60 chars) | /products/matrixyl-3000-firming-serum |
-| ✅ | URL carries the head term | head term 'matrixyl 3000' |
-| ✅ | Title present, 30–60 chars | 57c: Matrixyl 3000 Serum for Firmer-Looking Skin / Skingenetix |
-| ✅ | Title contains head term | 'matrixyl 3000' |
-| ✅ | Meta description 70–160 chars | 151c |
+| ✅ | HTTP 200, no redirect | 200 → https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream |
+| ✅ | Clean URL (lowercase, hyphens, no params, ≤ 60 chars) | /products/matrixyl-3000-pro-collagen-firming-cream |
+| ✅ | URL carries the head term | head term '' |
+| ✅ | Title present, 30–60 chars | 54c: Matrixyl 3000 Pro-Collagen Firming Cream / Skingenetix |
+| ✅ | Title contains head term | '' |
+| ✅ | Meta description 70–160 chars | 157c |
 | ✅ | Meta description contains head term |  |
 | ✅ | Indexable (no noindex) | no robots meta |
-| ✅ | Self-referencing absolute canonical | https://www.skingenetix.com/products/matrixyl-3000-firming-serum |
+| ✅ | Self-referencing absolute canonical | https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream |
 | ✅ | hreflang for all 6 locales + x-default | 7 alternates |
 | ✅ | Open Graph title/description/image/url | complete |
-| 🟡 | og:title matches the page title | Matrixyl 3000 Firming Serum |
-| ✅ | Exactly one <h1> | Matrixyl 3000 Firming Serum |
+| 🟡 | og:title matches the page title | Matrixyl 3000 Pro-Collagen Firming Cream |
+| ✅ | Exactly one <h1> | Matrixyl 3000 Pro-Collagen Firming Cream |
 | ✅ | <h1> contains head term |  |
 | ✅ | Topic headings are real <h2> (≥ 3) | 5 <h2>: ['Before and after', 'Frequently Asked Questions', '3 Simple Steps', 'The Skingenetix Standard', 'Complete Your Routine'] |
 | ✅ | Visual-only headings (styled <p>/<span>) | 0 that look like headings but are not: [] |
@@ -47,18 +47,18 @@
 | 🟠 | Page entity schema (WebPage/Article) with dateModified | none |
 | 🟡 | Schema cites sources (citation[]) |  |
 | ℹ️ | Reviewer/author in schema (reviewedBy/author) |  |
-| ✅ | A10 · head term in first 30% of text | 'matrixyl 3000' |
+| ✅ | A10 · head term in first 30% of text | '' |
 | 🔴 | A1 · definition sentence early ('X is a …') |  |
-| ✅ | A8 · secondary intents covered on the page | ['serum'] / ['serum'] |
+| ✅ | A8 · secondary intents covered on the page | [] / [] |
 | ✅ | A2 · atomic paragraphs (none > 120 words) | 18 paragraphs, 0 too long |
-| 🟡 | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 2 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 6 figures |
-| 🟠 | A3 · cited sources ≥ 3 | 1 citation markers |
+| 🟡 | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 0 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 5 figures |
+| 🟠 | A3 · cited sources ≥ 3 | 0 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | 🟠 | E1 · visible last-reviewed/updated date | pending reviewer sign-off |
 | ✅ | A6 · structured list or table present |  |
-| 🟡 | A4 · headings mirror search questions | 0 question-form H2 |
-| 🔴 | D7 · extractable text without JavaScript ≥ 600 words | 349 words extracted (main text 1301) |
+| ✅ | A4 · headings mirror search questions | 0 question-form H2 |
+| 🔴 | D7 · extractable text without JavaScript ≥ 600 words | 334 words extracted (main text 1349) |
 | ✅ | Head term survives extraction |  |
 | 🟠 | H2 sections survive extraction | lost: ['The Skingenetix Standard', 'Complete Your Routine'] |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -83,32 +83,32 @@
 
 | | Check | Detail |
 |---|---|---|
-| ✅ | Opening states a concrete skin outcome | matrixyl 3000 firming serum sale price 49 00 a collagen-support serum pairing matrixyl 3000 peptides with hyaluronic acid for firmer smoothe |
+| ✅ | Opening states a concrete skin outcome | matrixyl 3000 pro-collagen firming cream sale price 69 00 a firming cream with a triple collagen complex and matrixyl 3000 peptides for smoo |
 | ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 3 days |
 | ✅ | Hedging ≤ 1.0 per 100 words (sales copy) | 0.0/100 words: [] |
 | ✅ | No claim known to be unsupported (docs/claims/) | clean |
 | ✅ | No medicinal wording (EU cosmetic-claims rules) | clean |
 | ✅ | Add-to-cart present |  |
-| 🟡 | Every result figure sits next to its source | 2 unsourced: ["Matrixyl® 3000's two peptides raised collagen I by 256% in lab tests on skin cells.", 'Collagen I +256% in lab tests, nearly 4× the stronger peptide alone'] |
+| 🟡 | Every result figure sits next to its source | 3 unsourced: ["Matrixyl® 3000's two peptides raised collagen I by 256% in lab tests on skin cells.", 'Collagen I +256% in lab tests, nearly 4× the stronger peptide alone'] |
 
 ## Outline as served
 
-- **H1:** ['Matrixyl 3000 Firming Serum']
+- **H1:** ['Matrixyl 3000 Pro-Collagen Firming Cream']
 - **H2:** ['Before and after', 'Frequently Asked Questions', '3 Simple Steps', 'The Skingenetix Standard', 'Complete Your Routine']
 - **Visual-only headings:** []
 - **Schema types:** ['Product', 'BreadcrumbList', 'FAQPage']
-- **Extracted words (no JS):** 349 of 1301
+- **Extracted words (no JS):** 334 of 1349
 
 ## Section map (desktop)
 
 | Top | Height | Section | Type | Background |
 |---|---|---|---|---|
 | 126 | 2282 | main | main-product | Bone |
-| 2408 | 1075 | before_after | product-reviews-before-after | rgb(247, 245, 242) |
-| 3483 | 913 | product_faq | faq | Bone |
-| 4397 | 896 | how_to_use | multi-column | White |
-| 5293 | 558 | reasons_why | text-with-icons | rgb(247, 247, 247) |
-| 5851 | 1343 | 17734177083a768a84 | apps | Bone |
-| 7194 | 626 | related-products | product-recommendations | Bone |
-| 7820 | 516 | footer | footer | Bone |
-| 8336 | 0 | brand_layout_css | custom-html | Bone |
+| 2408 | 1144 | before_after | product-reviews-before-after | rgb(247, 245, 242) |
+| 3553 | 913 | product_faq | faq | Bone |
+| 4466 | 854 | how_to_use | multi-column | White |
+| 5320 | 558 | reasons_why | text-with-icons | rgb(247, 247, 247) |
+| 5879 | 1343 | 17734177083a768a84 | apps | Bone |
+| 7221 | 626 | related-products | product-recommendations | Bone |
+| 7847 | 516 | footer | footer | Bone |
+| 8363 | 0 | brand_layout_css | custom-html | Bone |

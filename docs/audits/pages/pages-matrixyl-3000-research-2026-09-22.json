@@ -1,9 +1,10 @@
 {
  "path": "/pages/matrixyl-3000-research",
  "scores": {
-  "SEO": 90,
-  "GEO": 86,
-  "DESIGN": 84
+  "SEO": 100,
+  "GEO": 100,
+  "DESIGN": 100,
+  "MARKETING": 93
  },
  "items": [
   {
@@ -34,7 +35,7 @@
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "60c: Matrixyl 3000: What This Peptide Does for Firmness and Lines",
+   "detail": "50c: Matrixyl 3000: Benefits, Studies and How to Use It",
    "severity": "pass",
    "weight": 2
   },
@@ -50,7 +51,7 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": true,
-   "detail": "150c",
+   "detail": "135c",
    "severity": "pass",
    "weight": 1.0
   },
@@ -98,31 +99,87 @@
    "area": "SEO",
    "check": "og:title matches the page title",
    "ok": true,
-   "detail": "Matrixyl 3000: What This Peptide Does for Firmness and Lines",
+   "detail": "Matrixyl 3000: Benefits, Studies and How to Use It",
    "severity": "pass",
    "weight": 0.5
   },
   {
    "area": "SEO",
    "check": "Exactly one <h1>",
-   "ok": false,
-   "detail": "none",
-   "severity": "high",
+   "ok": true,
+   "detail": "Matrixyl 3000 (Palmitoyl Tripeptide-1 and Tetrapeptide-7)",
+   "severity": "pass",
    "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "matrixyl 3000 palmitoyl tripeptide-1 and tetrapeptide-7 a two-peptide complex that reduced the area of deep wrinkles by 39 in its manufactur",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": true,
+   "detail": "23 women",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 2.0 per 100 words (science page)",
+   "ok": true,
+   "detail": "0.0/100 words: []",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Path to purchase: links to at least one product",
+   "ok": true,
+   "detail": "5 products linked",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": false,
+   "detail": "7 unsourced: ['Area taken up by deep wrinkles: \u221239%', 'Main-wrinkle depth: \u221220%, volume \u221223%']",
+   "severity": "low",
+   "weight": 1
   },
   {
    "area": "SEO",
    "check": "<h1> contains head term",
-   "ok": false,
+   "ok": true,
    "detail": "",
-   "severity": "med",
+   "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "4 <h2>: ['Published References', 'Frequently Asked Questions', 'Shop Matrixyl 3000 Products', 'Explore More Research']",
+   "detail": "13 <h2>: ['What Is Matrixyl 3000?', 'Matrixyl 3000 Benefits: What the Evidence Shows', '\u221239%', '+15%', '+256%', 'Matrixyl 3000 Before and After: What the Measurements Show', 'Matrixyl 3000 Evidence at a Glance', 'How to Use Matrixyl 3000', 'What Does a Matrixyl 3000 Percentage Mean?', 'Published References', 'Frequently Asked Questions', 'Shop Matrixyl 3000 Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -130,7 +187,7 @@
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
    "ok": false,
-   "detail": "10 that look like headings but are not: ['Matrixyl 3000 (Palmitoyl Tripeptide-1 and Tetrapeptide-7)', 'What Is Matrixyl 3000?', 'Significant Wrinkle Improvement in 93 Women (independent RCT)', 'Associated with Collagen Synthesis in Laboratory Tests', 'How It Works: Signals Skin Cells to Build Collagen', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'PDRN']",
+   "detail": "8 that look like headings but are not: ['Deep Wrinkles: \u221239% in 2 Months (Manufacturer Split-Face Study)', 'Two Peptides Together: Collagen I +256% in Lab Tests', 'How It Works: The Collagen-Signal Idea, from the Lab', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'PDRN', 'Glutathione', 'Try Matrixyl 3000']",
    "severity": "info",
    "weight": 0
   },
@@ -146,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "17/17",
+   "detail": "19/19",
    "severity": "pass",
    "weight": 1.0
   },
@@ -186,32 +243,32 @@
    "area": "SEO",
    "check": "No duplicate schema types",
    "ok": true,
-   "detail": "types ['BreadcrumbList', 'FAQPage']",
+   "detail": "types ['BreadcrumbList', 'WebPage', 'FAQPage']",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "Page entity schema (WebPage/Article) with dateModified",
-   "ok": false,
-   "detail": "none",
-   "severity": "med",
+   "ok": true,
+   "detail": "WebPage modified 2026-09-22",
+   "severity": "pass",
    "weight": 1.5
   },
   {
    "area": "GEO",
    "check": "Schema cites sources (citation[])",
-   "ok": false,
-   "detail": "",
-   "severity": "low",
+   "ok": true,
+   "detail": "9 citations",
+   "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "Reviewer/author in schema (reviewedBy/author)",
-   "ok": false,
-   "detail": "",
-   "severity": "info",
+   "ok": true,
+   "detail": "pending Dr Bodde's review",
+   "severity": "pass",
    "weight": 0
   },
   {
@@ -226,7 +283,7 @@
    "area": "SEO",
    "check": "FAQ schema matches visible questions",
    "ok": true,
-   "detail": "5 Qs; not visible: []",
+   "detail": "6 Qs; not visible: []",
    "severity": "pass",
    "weight": 1.5
   },
@@ -258,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "19 paragraphs, 0 too long",
+   "detail": "53 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -266,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "3",
+   "detail": "23",
    "severity": "pass",
    "weight": 1.0
   },
@@ -274,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "5 figures",
+   "detail": "97 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -282,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "14 citation markers",
+   "detail": "28 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -297,9 +354,9 @@
   {
    "area": "GEO",
    "check": "E1 \u00b7 visible last-reviewed/updated date",
-   "ok": false,
-   "detail": "pending reviewer sign-off",
-   "severity": "med",
+   "ok": true,
+   "detail": "Last reviewed",
+   "severity": "pass",
    "weight": 1.5
   },
   {
@@ -314,7 +371,7 @@
    "area": "GEO",
    "check": "A4 \u00b7 headings mirror search questions",
    "ok": true,
-   "detail": "0 question-form H2",
+   "detail": "2 question-form H2",
    "severity": "pass",
    "weight": 1.0
   },
@@ -322,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "621 words extracted (main text 824)",
+   "detail": "2019 words extracted (main text 2412)",
    "severity": "pass",
    "weight": 3
   },
@@ -338,7 +395,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "4 kept",
+   "detail": "13 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -385,17 +442,17 @@
   {
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
-   "ok": false,
-   "detail": "faq+shop_ingredient (Bone); shop_ingredient+related (Bone)",
-   "severity": "med",
+   "ok": true,
+   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 Graphite",
+   "severity": "pass",
    "weight": 1.5
   },
   {
    "area": "DESIGN",
    "check": "Backgrounds on the brand palette",
-   "ok": false,
-   "detail": "off-palette ['rgb(247, 247, 247)']",
-   "severity": "low",
+   "ok": true,
+   "detail": "Bone / White / Graphite",
+   "severity": "pass",
    "weight": 1.0
   },
   {
@@ -448,20 +505,29 @@
   }
  ],
  "data": {
-  "title": "Matrixyl 3000: What This Peptide Does for Firmness and Lines",
-  "h1": [],
+  "title": "Matrixyl 3000: Benefits, Studies and How to Use It",
+  "h1": [
+   "Matrixyl 3000 (Palmitoyl Tripeptide-1 and Tetrapeptide-7)"
+  ],
   "h2": [
+   "What Is Matrixyl 3000?",
+   "Matrixyl 3000 Benefits: What the Evidence Shows",
+   "\u221239%",
+   "+15%",
+   "+256%",
+   "Matrixyl 3000 Before and After: What the Measurements Show",
+   "Matrixyl 3000 Evidence at a Glance",
+   "How to Use Matrixyl 3000",
+   "What Does a Matrixyl 3000 Percentage Mean?",
    "Published References",
    "Frequently Asked Questions",
    "Shop Matrixyl 3000 Products",
    "Explore More Research"
   ],
   "pseudo_headings": [
-   "Matrixyl 3000 (Palmitoyl Tripeptide-1 and Tetrapeptide-7)",
-   "What Is Matrixyl 3000?",
-   "Significant Wrinkle Improvement in 93 Women (independent RCT)",
-   "Associated with Collagen Synthesis in Laboratory Tests",
-   "How It Works: Signals Skin Cells to Build Collagen",
+   "Deep Wrinkles: \u221239% in 2 Months (Manufacturer Split-Face Study)",
+   "Two Peptides Together: Collagen I +256% in Lab Tests",
+   "How It Works: The Collagen-Signal Idea, from the Lab",
    "Copper Peptide (GHK-Cu)",
    "Acetyl Hexapeptide-8",
    "PDRN",
@@ -471,7 +537,7 @@
   "internal_links": [
    "/collections/all",
    "/collections/creams-moisturizers",
-   "/collections/matrixyl-3000-3000",
+   "/collections/matrixyl-3000",
    "/collections/serums",
    "/pages/acetyl-hexapeptide-8-research",
    "/pages/contact",
@@ -496,16 +562,22 @@
   ],
   "external_links": [
    "https://doi.org/10.1046/j.1467-2494.2000.00010.x",
+   "https://doi.org/10.1177/1091581818807863",
    "https://doi.org/10.3390/cosmetics4020016",
+   "https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf",
+   "https://patents.google.com/patent/US6974799B2/en",
+   "https://patents.google.com/patent/WO2012164488A2/en",
    "https://pubmed.ncbi.nlm.nih.gov/18492182/",
+   "https://pubmed.ncbi.nlm.nih.gov/36909866/",
    "https://pubmed.ncbi.nlm.nih.gov/8486721/"
   ],
   "schema_types": [
    "BreadcrumbList",
+   "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 621,
-  "main_words": 824,
+  "extracted_words": 2019,
+  "main_words": 2412,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-collagen-peptide-research.jpg?v=1787657248&width=3000",
@@ -522,6 +594,14 @@
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-peptide-signalling-fibroblast-collagen-synthesis.jpg?v=1787667430&width=3000",
     "alt": "3D illustration of a peptide chain docking into a skin cell that streams out new teal collagen fibres - Skingenetix Matrixyl 3000 peptide signalling research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-firming-serum-clear-drop-on-cheek-macro.jpg?v=1789470462&width=3000",
+    "alt": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream - a dropper releasing a clear drop of the firming serum onto a cheek"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg?v=1789387474&width=3000",
+    "alt": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream - the firming serum and cream on a teal background with long shadows"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-pro-collagen-serum-model-holding-near-face.jpg?v=1787832227&width=2048",
@@ -585,61 +665,106 @@
      "id": "hero",
      "type": "image-with-text-overlay",
      "top": 126,
-     "h": 496,
+     "h": 504,
      "bg": "rgb(240, 240, 240)",
-     "text": 172,
+     "text": 241,
      "media": 1
     },
     {
      "id": "overview",
      "type": "rich-text",
-     "top": 622,
-     "h": 586,
+     "top": 630,
+     "h": 809,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1104,
+     "media": 0
+    },
+    {
+     "id": "evidence",
+     "type": "rich-text",
+     "top": 1438,
+     "h": 826,
      "bg": "rgb(255, 255, 255)",
-     "text": 672,
+     "text": 1605,
+     "media": 0
+    },
+    {
+     "id": "stats",
+     "type": "impact-text",
+     "top": 2264,
+     "h": 358,
+     "bg": "rgb(240, 240, 240)",
+     "text": 482,
+     "media": 0
+    },
+    {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 2622,
+     "h": 1422,
+     "bg": "rgb(255, 255, 255)",
+     "text": 2062,
      "media": 0
     },
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 1207,
-     "h": 2292,
+     "top": 4044,
+     "h": 2389,
      "bg": "rgb(240, 240, 240)",
-     "text": 1477,
+     "text": 1812,
      "media": 3
+    },
+    {
+     "id": "evidence_table",
+     "type": "specification-table",
+     "top": 6433,
+     "h": 1560,
+     "bg": "rgb(255, 255, 255)",
+     "text": 2020,
+     "media": 0
+    },
+    {
+     "id": "usage",
+     "type": "media-with-text",
+     "top": 7993,
+     "h": 1504,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1047,
+     "media": 2
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 3499,
-     "h": 672,
-     "bg": "rgb(247, 247, 247)",
-     "text": 716,
+     "top": 9497,
+     "h": 1118,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1619,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 4171,
-     "h": 1049,
+     "top": 10614,
+     "h": 1117,
      "bg": "rgb(240, 240, 240)",
-     "text": 371,
+     "text": 397,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 5221,
-     "h": 717,
-     "bg": "rgb(240, 240, 240)",
+     "top": 11731,
+     "h": 765,
+     "bg": "rgb(255, 255, 255)",
      "text": 208,
      "media": 6
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 5938,
-     "h": 695,
+     "top": 12496,
+     "h": 775,
      "bg": "rgb(240, 240, 240)",
      "text": 331,
      "media": 4
@@ -647,16 +772,16 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 6633,
+     "top": 13271,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
-     "text": 114,
+     "text": 134,
      "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 6986,
+     "top": 13624,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -665,7 +790,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 7502,
+     "top": 14140,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -685,59 +810,104 @@
      "top": 85,
      "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 172,
+     "text": 241,
      "media": 1
     },
     {
      "id": "overview",
      "type": "rich-text",
      "top": 460,
-     "h": 525,
+     "h": 854,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1104,
+     "media": 0
+    },
+    {
+     "id": "evidence",
+     "type": "rich-text",
+     "top": 1314,
+     "h": 992,
      "bg": "rgb(255, 255, 255)",
-     "text": 672,
+     "text": 1605,
+     "media": 0
+    },
+    {
+     "id": "stats",
+     "type": "impact-text",
+     "top": 2306,
+     "h": 649,
+     "bg": "rgb(240, 240, 240)",
+     "text": 482,
+     "media": 0
+    },
+    {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 2955,
+     "h": 2586,
+     "bg": "rgb(255, 255, 255)",
+     "text": 2062,
      "media": 0
     },
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 985,
-     "h": 2892,
+     "top": 5541,
+     "h": 3108,
      "bg": "rgb(240, 240, 240)",
-     "text": 1477,
+     "text": 1812,
      "media": 3
+    },
+    {
+     "id": "evidence_table",
+     "type": "specification-table",
+     "top": 8649,
+     "h": 1423,
+     "bg": "rgb(255, 255, 255)",
+     "text": 2020,
+     "media": 0
+    },
+    {
+     "id": "usage",
+     "type": "media-with-text",
+     "top": 10073,
+     "h": 1812,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1047,
+     "media": 2
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 3877,
-     "h": 848,
-     "bg": "rgb(247, 247, 247)",
-     "text": 716,
+     "top": 11884,
+     "h": 1732,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1619,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 4725,
-     "h": 1084,
+     "top": 13617,
+     "h": 1149,
      "bg": "rgb(240, 240, 240)",
-     "text": 371,
+     "text": 397,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 5809,
-     "h": 569,
-     "bg": "rgb(240, 240, 240)",
+     "top": 14766,
+     "h": 572,
+     "bg": "rgb(255, 255, 255)",
      "text": 208,
      "media": 6
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 6379,
-     "h": 540,
+     "top": 15338,
+     "h": 580,
      "bg": "rgb(240, 240, 240)",
      "text": 331,
      "media": 4
@@ -745,16 +915,16 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 6919,
+     "top": 15918,
      "h": 252,
      "bg": "rgb(26, 26, 26)",
-     "text": 114,
+     "text": 134,
      "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 7171,
+     "top": 16171,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -763,7 +933,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8210,
+     "top": 17210,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

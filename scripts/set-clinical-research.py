@@ -93,6 +93,9 @@ def main():
     ap.add_argument("--rollback", action="store_true")
     a = ap.parse_args()
     cfg = json.loads(pathlib.Path(a.config).read_text())
+    for src in cfg.get("kits_from", []):          # reuse kits from another config — one source per kit (2026-09-22)
+        for k, v in json.loads((ROOT / src).read_text())["kits"].items():
+            cfg["kits"].setdefault(k, v)
     tag = pathlib.Path(a.config).stem
     ps = products(cfg["products"])
     if a.rollback:

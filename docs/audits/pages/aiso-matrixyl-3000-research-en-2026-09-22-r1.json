@@ -1,0 +1,305 @@
+{
+ "gpt": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "The page does present the answer and key information at the top, but does not explicitly state the conclusion upfront.",
+    "fix": "Add a clear answer or conclusion at the start of the main content, summarizing the findings."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "The page defines Matrixyl 3000 clearly and concisely in the first paragraph.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 8,
+    "note": "The extraction shows a clear hierarchy, but some headings could be better structured for clarity (e.g., H2, H3 sequence).",
+    "fix": "Review and adjust heading structure to ensure proper nesting under main topics."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "Paragraphs are concise and meet the criterion of being 2-5 sentences each.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 9,
+    "note": "Content includes a high density of relevant facts, but some sections could be more concise.",
+    "fix": "Summarize detailed explanations where possible without losing essential details."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 9,
+    "note": "There is some comparison with other peptides and treatments, but could include more direct comparisons.",
+    "fix": "Add more detailed comparisons between Matrixyl 3000 and other popular ingredients like retinol."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 7,
+    "note": "There are list formats and some tabular data, but they could be organized better for clearer comparison.",
+    "fix": "Introduce more structured tables for at-a-glance comparisons."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "The content goes into significant depth about the ingredient and its studies.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 9,
+    "note": "Important information is presented early, but some content could benefit from reordering.",
+    "fix": "Reorder content so that the most essential info is even more prominently placed earlier."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 8,
+    "note": "Some images are included, but there could be more diverse multimedia elements such as videos.",
+    "fix": "Add videos or interactive graphics to enhance multimodal engagement."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 9,
+    "note": "Schemas are present and well-implemented but could include more specific properties.",
+    "fix": "Add more detailed schema properties, especially around reviews and product data."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "A comprehensive FAQ section is present and covers common questions.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 10,
+    "note": "Citations are robust and include references to respected journals and patents.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 9,
+    "note": "Sufficient internal links are present, but their placement could be more strategic for better navigation.",
+    "fix": "Optimize internal link placement to guide users through related content sections."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Meta tags are well-optimized and concise, fitting ideal length without truncation.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 8,
+    "note": "The content does not explicitly list an author, only the brand.",
+    "fix": "Include specific author information or contributions for further credibility."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 9,
+    "note": "Content mentions that all figures were checked against original sources.",
+    "fix": "Add explicit mention of expert reviewers or dermatologists for higher trust."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "The page has a 'Last reviewed' date very close to the present day.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 9,
+    "note": "Brand mentions are present, but could be made more prominent outside the main text.",
+    "fix": "Highlight Skingenetix branding more prominently in visual elements."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 9,
+    "note": "AI citation readiness is high, given the structured presentation and citation presence, but linking could be enhanced.",
+    "fix": "Ensure citations remain linked to their specific in-text claims for maximum clarity."
+   }
+  ],
+  "overall": 9.2,
+  "top_fixes": [
+   "Add a clear answer or conclusion at the start of the main content.",
+   "Introduce more structured tables for at-a-glance comparisons.",
+   "Add videos or interactive graphics to enhance multimodal engagement."
+  ],
+  "assessment": "The content provides comprehensive information about Matrixyl 3000 with well-structured data and citations, but there are opportunities to improve clarity, comparisons, and multimedia engagement."
+ },
+ "gemini": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 10,
+    "note": "The page immediately defines Matrixyl 3000 and highlights its key benefit (39% reduction in deep wrinkles) in the opening paragraphs.",
+    "fix": "N/A"
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "The first paragraph of the extracted content provides a clear, concise definition of Matrixyl 3000, its components, and function.",
+    "fix": "N/A"
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 10,
+    "note": "The raw HTML heading outline demonstrates a logical H1 > H2 > H3 structure, effectively organizing content for readability and search engines.",
+    "fix": "N/A"
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "Almost all paragraphs consist of 2-5 sentences, promoting easy digestibility and scannability of information.",
+    "fix": "N/A"
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The content is exceptionally rich in quantitative data, including percentages, study durations, participant counts, and grades of evidence, making it highly factual.",
+    "fix": "N/A"
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "The page effectively compares manufacturer vs. independent data, lab vs. human studies, Matrixyl 3000 vs. original Matrixyl, and briefly touches upon retinol comparisons in the FAQ.",
+    "fix": "N/A"
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 9,
+    "note": "The content uses bullet points effectively for 'Evidence at a Glance' and 'Published References,' and the FAQ is well-structured. While not true HTML tables, the 'Before and After' charts are clearly presented.",
+    "fix": "Implement true HTML tables for structured data like 'Evidence at a Glance' or detailed study results for better machine readability and data extraction."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "The page covers a comprehensive range of topics from definition and benefits to evidence, usage, and related products, demonstrating excellent depth.",
+    "fix": "N/A"
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 10,
+    "note": "Key information, including the ingredient's definition and primary benefit, is presented immediately at the beginning of the page.",
+    "fix": "N/A"
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 10,
+    "note": "The page includes multiple high-quality 3D illustrations and product images with descriptive alt text, enhancing engagement and comprehension.",
+    "fix": "N/A"
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "The page utilizes a rich set of JSON-LD schemas, including `FAQPage`, `ScholarlyArticle`, `Answer`, and `Question`, which is excellent for AI search optimization.",
+    "fix": "N/A"
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "A clearly defined 'Frequently Asked Questions' section with concise Q&A is present, addressing common user queries.",
+    "fix": "N/A"
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 10,
+    "note": "Citations are extensive, linking to peer-reviewed journals, patents, manufacturer data, and independent safety reviews. Evidence is honestly graded and attributed.",
+    "fix": "N/A"
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "The article body contains 18 in-content internal links, providing excellent navigation and reinforcing site structure.",
+    "fix": "N/A"
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Both the meta title (50 chars) and meta description (139 chars) are well-crafted, include primary keywords, benefits, and a compelling hook, optimizing for both users and search engines.",
+    "fix": "N/A"
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 9,
+    "note": "The content is attributed 'By Skingenetix,' which is good for brand authority, but for scientific YMYL, a named individual expert would provide stronger E-E-A-T signals.",
+    "fix": "Augment 'By Skingenetix' with a named individual author (e.g., staff scientist) or an editorial board for enhanced E-E-A-T."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 8,
+    "note": "The page states 'Last reviewed 22 September 2026' by Skingenetix and that figures were checked against original sources. However, for a scientific YMYL page, an explicit statement of independent medical or scientific review by a named, qualified expert is missing.",
+    "fix": "Add an explicit statement of medical/scientific review by a named, qualified expert (e.g., 'Medically reviewed by Dr. [Name, Credentials]') to boost E-E-A-T."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "The 'Last reviewed' date (22 September 2026) matches today's date, indicating the content is perfectly up-to-date.",
+    "fix": "N/A"
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "The highly factual, quantitative, and well-structured content, coupled with honest evidence grading, makes it an ideal source for AI models to accurately summarize and attribute.",
+    "fix": "N/A"
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "The explicit grading of evidence (A-D), clear distinction between data sources (manufacturer vs. independent), and direct references make it exceptionally easy for AI to extract and cite specific facts with their provenance.",
+    "fix": "N/A"
+   }
+  ],
+  "overall": 9.8,
+  "top_fixes": [
+   "Add an explicit statement of medical/scientific review by a named, qualified expert (e.g., 'Medically reviewed by Dr. [Name, Credentials]') to boost E-E-A-T.",
+   "Implement true HTML tables for structured data like 'Evidence at a Glance' or detailed study results for better machine readability and data extraction.",
+   "Augment 'By Skingenetix' with a named individual author (e.g., staff scientist) or an editorial board for enhanced E-E-A-T."
+  ],
+  "assessment": "This Matrixyl 3000 research hub is an exceptionally well-optimized page for both traditional SEO and AI search optimization. Its scientific rigor, quantitative data presentation, comprehensive content, and robust citation practices set a high standard. Key strengths include its fact density, transparent evidence grading, rich schema markup, and excellent recency. The primary area for improvement, especially for a YMYL topic, is to explicitly state independent medical or expert review to further strengthen its E-E-A-T."
+ },
+ "combined": 9.45
+}

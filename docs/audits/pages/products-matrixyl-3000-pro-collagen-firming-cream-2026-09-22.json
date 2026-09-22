@@ -1,8 +1,8 @@
 {
- "path": "/products/matrixyl-3000-firming-serum",
+ "path": "/products/matrixyl-3000-pro-collagen-firming-cream",
  "scores": {
   "SEO": 98,
-  "GEO": 51,
+  "GEO": 54,
   "DESIGN": 84,
   "MARKETING": 93
  },
@@ -11,7 +11,7 @@
    "area": "SEO",
    "check": "HTTP 200, no redirect",
    "ok": true,
-   "detail": "200 \u2192 https://www.skingenetix.com/products/matrixyl-3000-firming-serum",
+   "detail": "200 \u2192 https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream",
    "severity": "pass",
    "weight": 2
   },
@@ -19,7 +19,7 @@
    "area": "SEO",
    "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
    "ok": true,
-   "detail": "/products/matrixyl-3000-firming-serum",
+   "detail": "/products/matrixyl-3000-pro-collagen-firming-cream",
    "severity": "pass",
    "weight": 1.0
   },
@@ -27,7 +27,7 @@
    "area": "SEO",
    "check": "URL carries the head term",
    "ok": true,
-   "detail": "head term 'matrixyl 3000'",
+   "detail": "head term ''",
    "severity": "pass",
    "weight": 0.5
   },
@@ -35,7 +35,7 @@
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "57c: Matrixyl 3000 Serum for Firmer-Looking Skin | Skingenetix",
+   "detail": "54c: Matrixyl 3000 Pro-Collagen Firming Cream | Skingenetix",
    "severity": "pass",
    "weight": 2
   },
@@ -43,7 +43,7 @@
    "area": "SEO",
    "check": "Title contains head term",
    "ok": true,
-   "detail": "'matrixyl 3000'",
+   "detail": "''",
    "severity": "pass",
    "weight": 2
   },
@@ -51,7 +51,7 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": true,
-   "detail": "151c",
+   "detail": "157c",
    "severity": "pass",
    "weight": 1.0
   },
@@ -75,7 +75,7 @@
    "area": "SEO",
    "check": "Self-referencing absolute canonical",
    "ok": true,
-   "detail": "https://www.skingenetix.com/products/matrixyl-3000-firming-serum",
+   "detail": "https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream",
    "severity": "pass",
    "weight": 2
   },
@@ -99,7 +99,7 @@
    "area": "SEO",
    "check": "og:title matches the page title",
    "ok": false,
-   "detail": "Matrixyl 3000 Firming Serum",
+   "detail": "Matrixyl 3000 Pro-Collagen Firming Cream",
    "severity": "low",
    "weight": 0.5
   },
@@ -107,7 +107,7 @@
    "area": "SEO",
    "check": "Exactly one <h1>",
    "ok": true,
-   "detail": "Matrixyl 3000 Firming Serum",
+   "detail": "Matrixyl 3000 Pro-Collagen Firming Cream",
    "severity": "pass",
    "weight": 2
   },
@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "matrixyl 3000 firming serum sale price 49 00 a collagen-support serum pairing matrixyl 3000 peptides with hyaluronic acid for firmer smoothe",
+   "detail": "matrixyl 3000 pro-collagen firming cream sale price 69 00 a firming cream with a triple collagen complex and matrixyl 3000 peptides for smoo",
    "severity": "pass",
    "weight": 2
   },
@@ -163,7 +163,7 @@
    "area": "MARKETING",
    "check": "Every result figure sits next to its source",
    "ok": false,
-   "detail": "2 unsourced: [\"Matrixyl\u00ae 3000's two peptides raised collagen I by 256% in lab tests on skin cells.\", 'Collagen I +256% in lab tests, nearly 4\u00d7 the stronger peptide alone']",
+   "detail": "3 unsourced: [\"Matrixyl\u00ae 3000's two peptides raised collagen I by 256% in lab tests on skin cells.\", 'Collagen I +256% in lab tests, nearly 4\u00d7 the stronger peptide alone']",
    "severity": "low",
    "weight": 1
   },
@@ -291,7 +291,7 @@
    "area": "GEO",
    "check": "A10 \u00b7 head term in first 30% of text",
    "ok": true,
-   "detail": "'matrixyl 3000'",
+   "detail": "''",
    "severity": "pass",
    "weight": 3
   },
@@ -307,7 +307,7 @@
    "area": "GEO",
    "check": "A8 \u00b7 secondary intents covered on the page",
    "ok": true,
-   "detail": "['serum'] / ['serum']",
+   "detail": "[] / []",
    "severity": "pass",
    "weight": 1.5
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": false,
-   "detail": "2",
+   "detail": "0",
    "severity": "low",
    "weight": 1.0
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "6 figures",
+   "detail": "5 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": false,
-   "detail": "1 citation markers",
+   "detail": "0 citation markers",
    "severity": "med",
    "weight": 1.5
   },
@@ -370,16 +370,16 @@
   {
    "area": "GEO",
    "check": "A4 \u00b7 headings mirror search questions",
-   "ok": false,
+   "ok": true,
    "detail": "0 question-form H2",
-   "severity": "low",
+   "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": false,
-   "detail": "349 words extracted (main text 1301)",
+   "detail": "334 words extracted (main text 1349)",
    "severity": "high",
    "weight": 3
   },
@@ -505,9 +505,9 @@
   }
  ],
  "data": {
-  "title": "Matrixyl 3000 Serum for Firmer-Looking Skin | Skingenetix",
+  "title": "Matrixyl 3000 Pro-Collagen Firming Cream | Skingenetix",
   "h1": [
-   "Matrixyl 3000 Firming Serum"
+   "Matrixyl 3000 Pro-Collagen Firming Cream"
   ],
   "h2": [
    "Before and after",
@@ -524,7 +524,7 @@
    "/pages/contact",
    "/pages/faq",
    "/pages/ingredients",
-   "/pages/ingredients#matrixyl",
+   "/pages/ingredients#pro-collagen-cream",
    "/pages/matrixyl-3000-research",
    "/pages/our-philosophy",
    "/pages/shipping-returns",
@@ -544,92 +544,92 @@
    "BreadcrumbList",
    "FAQPage"
   ],
-  "extracted_words": 349,
-  "main_words": 1301,
+  "extracted_words": 334,
+  "main_words": 1349,
   "images": [
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_colourblock_soft_pastel_2_skingenetix.jpg?v=1787300902&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - frosted glass dropper bottle on a pale grey ground"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_lid_off_product_only_2_skingenetix.jpg?v=1787304309&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - open jar with the lid beside it on a white background"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_model_holding_near_face_5_skingenetix.jpg?v=1787300904&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - a model holding the bottle beside their face"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_model_shoulder_2_skingenetix.jpg?v=1787304311&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - a model holding the jar beside their face"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_colourblock_soft_pastel_8_skingenetix.jpg?v=1787300905&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - bottle on a pale teal ground with a soft shadow"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_silver_jar_dramatic_shadow_3_skingenetix.jpg?v=1787304312&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - jar on a pale plinth with a hard directional shadow"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_hands_only_dropper_5_skingenetix.jpg?v=1787300906&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - hands lifting the glass dropper from the open bottle"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_open_jar_swatch_3_skingenetix.jpg?v=1787304313&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - open jar with a swatch of the white cream beside it"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_model_blurred_behind_dropper_1_skingenetix.jpg?v=1787300908&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - bottle and its teal carton held up, the model soft behind"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_hands_opening_jar_2_skingenetix.jpg?v=1787304315&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - hands lifting the lid from the open jar"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_macro_dropper_tip_gel_2_skingenetix.jpg?v=1787300909&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - macro of the pipette tip with a clear drop of the serum"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_applying_cheekbone_3_skingenetix.jpg?v=1787304316&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - the white cream smoothed onto a cheekbone"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_applying_to_cheekbone_2_skingenetix.jpg?v=1787300910&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - the clear serum applied along a cheekbone"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_water_ripple_3_skingenetix.jpg?v=1787304318&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - jar standing on a still water surface with soft ripples"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_water_ripple_scene_2_skingenetix.jpg?v=1787300913&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - bottle standing on a still water surface with soft ripples"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_jar_in_water_splash_6_skingenetix.jpg?v=1787304319&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - jar in a burst of water against a deep teal ground"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_range_stacked_angled_1_skingenetix.jpg?v=1787300915&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - several bottles of the serum arranged on a deep teal ground"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_range_stacked_jars_4_skingenetix.jpg?v=1787304320&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - several jars of the cream arranged in a group"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_colourblock_soft_pastel_2_skingenetix.jpg?v=1787300902&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - frosted glass dropper bottle on a pale grey ground"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_lid_off_product_only_2_skingenetix.jpg?v=1787304309&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - open jar with the lid beside it on a white background"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_colourblock_soft_pastel_2_skingenetix.jpg?v=1787300902&width=2048",
-    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - frosted glass dropper bottle on a pale grey ground"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_lid_off_product_only_2_skingenetix.jpg?v=1787304309&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - open jar with the lid beside it on a white background"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-francine-s.jpg?v=1787996142&width=2048",
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-alexandra-b.jpg?v=1788010641&width=2048",
+    "alt": "Before and after photographs from a Skingenetix customer, showing jawline and neck laxity tightening"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-emma-h.jpg?v=1787996143&width=2048",
     "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-adriana-a.jpg?v=1788010641&width=1725",
-    "alt": "Before and after photographs from a Skingenetix customer, showing forehead and glabellar lines in macro"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-beth-h.jpg?v=1788010641&width=3000",
+    "alt": "Before and after photographs from a Skingenetix customer, showing nasolabial and under-eye smoothing"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-michelle-r.jpg?v=1787996144&width=2048",
-    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-fine-lines-janine-l.jpg?v=1788019624&width=2048",
-    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-mallory-b.jpg?v=1787996142&width=2048",
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-simone-k.jpg?v=1787996144&width=2048",
     "alt": "Before and after skin comparison showing firmer, better supported skin along the jaw and cheek"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-evelyn-l.jpg?v=1788010641&width=2048",
-    "alt": "Before and after photographs from a Skingenetix customer, showing nasolabial and cheek firmness"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-amy-t.jpg?v=1787996142&width=2048",
+    "alt": "Before and after skin comparison showing a more even, brighter skin tone"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-caroline-d.jpg?v=1788010640&width=3000",
-    "alt": "Before and after photographs from a Skingenetix customer, showing jowls firming across the lower face"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-elena-s.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing firmer, better supported skin along the jaw and cheek"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-fine-lines-petra-j.jpg?v=1788019425&width=3000",
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-blythe-v.jpg?v=1787996142&width=2048",
+    "alt": "Before and after skin comparison showing firmer, better supported skin along the jaw and cheek"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-lorelei-d.jpg?v=1787996144&width=2048",
+    "alt": "Before and after skin comparison showing firmer, better supported skin along the jaw and cheek"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-deirdre-o.jpg?v=1787996145&width=3000",
     "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-tabitha-j.jpg?v=1787996142&width=2048",
-    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-faq-matrixyl-3000-pro-collagen-firming-serum-holding-near-face.jpg?v=1788078964&width=2048",
-    "alt": "Skingenetix matrixyl 3000 pro collagen firming serum"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-faq-matrixyl-3000-pro-collagen-firming-cream-cream-silk-wrap.jpg?v=1788078963&width=2048",
+    "alt": "Skingenetix matrixyl 3000 pro collagen firming cream"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-howto-step1-cleanse.jpg?v=1774456364&width=600",
@@ -659,40 +659,40 @@
      "top": 126,
      "h": 2282,
      "bg": "rgb(240, 240, 240)",
-     "text": 920,
+     "text": 906,
      "media": 13
     },
     {
      "id": "before_after",
      "type": "product-reviews-before-after",
      "top": 2408,
-     "h": 1075,
+     "h": 1144,
      "bg": "rgb(247, 245, 242)",
-     "text": 2595,
+     "text": 3421,
      "media": 9
     },
     {
      "id": "product_faq",
      "type": "faq",
-     "top": 3483,
+     "top": 3553,
      "h": 913,
      "bg": "rgb(240, 240, 240)",
-     "text": 327,
+     "text": 333,
      "media": 1
     },
     {
      "id": "how_to_use",
      "type": "multi-column",
-     "top": 4397,
-     "h": 896,
+     "top": 4466,
+     "h": 854,
      "bg": "rgb(255, 255, 255)",
-     "text": 268,
+     "text": 280,
      "media": 3
     },
     {
      "id": "reasons_why",
      "type": "text-with-icons",
-     "top": 5293,
+     "top": 5320,
      "h": 558,
      "bg": "rgb(247, 247, 247)",
      "text": 628,
@@ -701,25 +701,25 @@
     {
      "id": "17734177083a768a84",
      "type": "apps",
-     "top": 5851,
+     "top": 5879,
      "h": 1343,
      "bg": "rgb(240, 240, 240)",
-     "text": 867,
+     "text": 779,
      "media": 0
     },
     {
      "id": "related-products",
      "type": "product-recommendations",
-     "top": 7194,
+     "top": 7221,
      "h": 626,
      "bg": "rgb(240, 240, 240)",
-     "text": 232,
+     "text": 208,
      "media": 8
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 7820,
+     "top": 7847,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -728,7 +728,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8336,
+     "top": 8363,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -746,42 +746,42 @@
      "id": "main",
      "type": "main-product",
      "top": 85,
-     "h": 2032,
+     "h": 2037,
      "bg": "rgb(240, 240, 240)",
-     "text": 951,
+     "text": 924,
      "media": 13
     },
     {
      "id": "before_after",
      "type": "product-reviews-before-after",
-     "top": 2117,
-     "h": 871,
+     "top": 2122,
+     "h": 986,
      "bg": "rgb(247, 245, 242)",
-     "text": 2581,
+     "text": 3407,
      "media": 9
     },
     {
      "id": "product_faq",
      "type": "faq",
-     "top": 2988,
+     "top": 3108,
      "h": 621,
      "bg": "rgb(240, 240, 240)",
-     "text": 236,
+     "text": 242,
      "media": 1
     },
     {
      "id": "how_to_use",
      "type": "multi-column",
-     "top": 3609,
-     "h": 612,
+     "top": 3729,
+     "h": 606,
      "bg": "rgb(255, 255, 255)",
-     "text": 268,
+     "text": 280,
      "media": 3
     },
     {
      "id": "reasons_why",
      "type": "text-with-icons",
-     "top": 4221,
+     "top": 4335,
      "h": 1169,
      "bg": "rgb(247, 247, 247)",
      "text": 628,
@@ -790,25 +790,25 @@
     {
      "id": "17734177083a768a84",
      "type": "apps",
-     "top": 5390,
-     "h": 1663,
+     "top": 5504,
+     "h": 1627,
      "bg": "rgb(240, 240, 240)",
-     "text": 867,
+     "text": 779,
      "media": 0
     },
     {
      "id": "related-products",
      "type": "product-recommendations",
-     "top": 7053,
-     "h": 720,
+     "top": 7130,
+     "h": 699,
      "bg": "rgb(240, 240, 240)",
-     "text": 232,
+     "text": 208,
      "media": 8
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 7772,
+     "top": 7829,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -817,7 +817,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8812,
+     "top": 8868,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

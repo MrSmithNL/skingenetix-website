@@ -40,6 +40,8 @@ BASE = "https://www.skingenetix.com"
 THEME = "gid://shopify/OnlineStoreTheme/184835965313"
 LOCALES = ["de", "nl", "fr", "es", "it"]
 
+_c = importlib.util.spec_from_file_location("hub_charts", ROOT / "scripts/hub_charts.py")
+_charts = importlib.util.module_from_spec(_c); _c.loader.exec_module(_charts)
 _s = importlib.util.spec_from_file_location("uti", ROOT / "scripts/upload-theme-images.py")
 _uti = importlib.util.module_from_spec(_s); _s.loader.exec_module(_uti)
 _env = _uti.env(); STORE = _env["SHOPIFY_SKINGENETIX_STORE"]; TOKEN = _uti.token(_env)
@@ -88,19 +90,83 @@ def check_values(label, values):
                 sys.exit(f"  ✗ {label} [{l}]: {tag} count differs from English")
 
 
+def expand_charts(node, charts):
+    """Replace every {"$chart": [...]} placeholder with a six-locale dict of rendered HTML."""
+    if isinstance(node, dict):
+        if "$chart" in node:
+            return {l: _charts.render_group(node, charts, l) for l in ["en"] + LOCALES}
+        return {k: expand_charts(v, charts) for k, v in node.items()}
+    if isinstance(node, list):
+        return [expand_charts(v, charts) for v in node]
+    return node
+
+
+def lift_translatables(settings, key_prefix, to_translate):
+    """A setting whose value is {"en": ..., "de": ...} is translatable: keep English, queue the rest."""
+    for k, v in list(settings.items()):
+        if isinstance(v, dict) and "en" in v:
+            check_values(f"{key_prefix}.{k}", v)
+            settings[k] = v["en"]
+            to_translate.append((f"{key_prefix}.{k}", v))
+
+
+def ref_row(r):
+    return ('<div class="sgref__r">' + REF_ICON + f'<div><p class="sgref__ti">{r["title"]}</p>'
+            f'<p class="sgref__me">{r["meta"]}</p></div><a class="sgref__lk" href="{r["url"]}" target="_blank" '
+            f'rel="noopener">{r["link"]}</a></div>')
+
+
+REF_ICON = ('<svg class="sgref__ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2.75h7.5L18.5 7.75V21.25H6z" '
+            'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13.25 2.75V8h5.25" fill="none" '
+            'stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.75 12.5h6.5M8.75 15.75h6.5M8.75 19h4" '
+            'stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>')
+
+
+def localise_jsonld(ld, loc, i18n):
+    ld = json.loads(json.dumps(ld))
+    ld["inLanguage"] = loc
+    if loc != "en":
+        ld.update(i18n.get(loc, {}))
+        for k in ("url", "@id"):
+            if k in ld:
+                ld[k] = ld[k].replace(f"{BASE}/pages/", f"{BASE}/{loc}/pages/")
+    return ld
+
+
 def build(spec, j):
     """Apply the spec's English values to the template JSON. Returns [(key_suffix, values)] to translate."""
     to_translate = []
+    spec = expand_charts(spec, spec.get("charts", {}))
     for rb in spec.get("remove_blocks", []):
         sec, blk = rb.split("/")
         s = j["sections"][sec]
         s["blocks"].pop(blk, None)
         s["block_order"] = [b for b in s.get("block_order", []) if b != blk]
     for item in spec.get("set", []):
-        sec, blk, key = item["at"].split("/")
+        parts = item["at"].split("/")
         check_values(item["at"], item["values"])
-        j["sections"][sec]["blocks"][blk]["settings"][key] = item["values"]["en"]
-        to_translate.append((f"{sec}.{blk}.{key}", item["values"]))
+        if len(parts) == 2:                       # section-level setting, e.g. "faq/title"
+            j["sections"][parts[0]].setdefault("settings", {})[parts[1]] = item["values"]["en"]
+        else:
+            sec, blk, key = parts
+            j["sections"][sec]["blocks"][blk]["settings"][key] = item["values"]["en"]
+        to_translate.append((".".join(parts), item["values"]))
+    for ab in spec.get("add_blocks", []):
+        s = j["sections"][ab["section"]]
+        blk = json.loads(json.dumps(ab["block"]))
+        lift_translatables(blk.setdefault("settings", {}), f"{ab['section']}.{ab['id']}", to_translate)
+        s["blocks"][ab["id"]] = blk
+        s["block_order"] = [b for b in s.get("block_order", []) if b != ab["id"]]
+        s["block_order"].insert(s["block_order"].index(ab["after"]) + 1 if ab.get("after") else len(s["block_order"]), ab["id"])
+    for add in spec.get("add_sections", []):
+        sec = json.loads(json.dumps(add["section"]))
+        lift_translatables(sec.setdefault("settings", {}), add["id"], to_translate)
+        for bid, blk in sec.get("blocks", {}).items():
+            lift_translatables(blk.setdefault("settings", {}), f"{add['id']}.{bid}", to_translate)
+        if add["id"] in j["order"]:
+            j["order"].remove(add["id"])
+        j["sections"][add["id"]] = sec
+        j["order"].insert(j["order"].index(add["after"]) + 1, add["id"])
     for ins in spec.get("insert_sections", []):
         check_values(ins["id"], ins["values"])
         if ins["id"] in j["sections"]:
@@ -116,15 +182,37 @@ def build(spec, j):
         j["order"] = [x for x in j["order"] if x != sid]
     for sid, settings in spec.get("section_settings", {}).items():
         j["sections"][sid].setdefault("settings", {}).update(settings)
+    host = spec.get("jsonld_host", "references")
+    tag = '<script type="application/ld+json" id="sgx-webpage-jsonld">'
+    if spec.get("references_add"):
+        h = j["sections"][host]["settings"]["html"]
+        body_end = h.find("<script") if "<script" in h else len(h)
+        new = "".join(ref_row(r) for r in spec["references_add"] if r["url"] not in h[:body_end])
+        close = h.rfind("</div></div>", 0, body_end)       # end of .sgref__list, then .sgref
+        j["sections"][host]["settings"]["html"] = h[:close] + new + h[close:]
     if spec.get("jsonld"):
-        host = spec.get("jsonld_host", "references")
-        tag = '<script type="application/ld+json" id="sgx-webpage-jsonld">'
-        block = tag + "\n" + json.dumps(spec["jsonld"], indent=2, ensure_ascii=False) + "\n</script>"
         h = j["sections"][host]["settings"]["html"]
         h = re.sub(re.escape(tag) + r".*?</script>", "", h, flags=re.S).rstrip()
-        j["sections"][host]["settings"]["html"] = h + "\n" + block
+        ld = localise_jsonld(spec["jsonld"], "en", {})
+        j["sections"][host]["settings"]["html"] = h + "\n" + tag + "\n" + json.dumps(ld, indent=2, ensure_ascii=False) + "\n</script>"
         j["sections"].pop("schema_markup", None)          # retire the old padded host
         j["order"] = [x for x in j["order"] if x != "schema_markup"]
+    if "references_i18n" in spec:
+        # The references block (heading, link labels, JSON-LD) had NO translations on any hub until
+        # 2026-09-22: every locale served the English block. Paper titles stay in English — they are
+        # the published titles — but the page's own words and the JSON-LD are localised.
+        en = j["sections"][host]["settings"]["html"]
+        values = {"en": en}
+        for l in LOCALES:
+            v = en
+            for a, b in spec["references_i18n"].get(l, {}).items():
+                v = v.replace(a, b)
+            if spec.get("jsonld"):
+                ld = localise_jsonld(spec["jsonld"], l, spec.get("jsonld_i18n", {}))
+                v = re.sub(re.escape(tag) + r".*?</script>",
+                           lambda _m: tag + "\n" + json.dumps(ld, indent=2, ensure_ascii=False) + "\n</script>", v, flags=re.S)
+            values[l] = v
+        to_translate.append((f"{host}.html", values))
     return to_translate
 
 
@@ -163,8 +251,20 @@ def fetch(url):
             time.sleep(10 * (attempt + 1))
 
 
+def locale_texts(node):
+    """Every six-locale value in the spec (charts expanded), for the live checks."""
+    if isinstance(node, dict):
+        if "en" in node and all(l in node for l in LOCALES) and isinstance(node["en"], str):
+            return [node]
+        return [t for v in node.values() for t in locale_texts(v)]
+    if isinstance(node, list):
+        return [t for v in node for t in locale_texts(v)]
+    return []
+
+
 def verify(spec):
-    texts = [v["values"] for v in spec.get("set", []) if "content" in v["at"]] + [i["values"] for i in spec.get("insert_sections", [])]
+    texts = locale_texts({k: v for k, v in expand_charts(spec, spec.get("charts", {})).items()
+                          if k not in ("charts", "references_i18n", "jsonld_i18n")})
     bad = 0
     for loc in ["en"] + LOCALES:
         page = fetch(f"{BASE}{'' if loc == 'en' else '/' + loc}/pages/{spec['page']}?hub={int(time.time())}")

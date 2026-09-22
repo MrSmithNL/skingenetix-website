@@ -117,8 +117,11 @@ def audit_marketing(path, rep, raw, main, main_text, tgt, h1=None):
     else:
         buy = len(set(re.findall(r'href="(?:/[a-z]{2})?/products/([^"?#]+)', raw)))
         rep.add("MARKETING", "Path to purchase: links to at least one product", buy >= 1, f"{buy} products linked", "med", 1)
-    paras = [p_.text_content() for p_ in main.xpath(".//p|.//li")]
-    unsourced = [p_[:90] for p_ in paras if re.search(r"\d+(\.\d+)? ?%", p_)
+    # A paragraph that links out to its source (patent, brochure, DOI) is sourced even when it names none of
+    # the words below — the Matrixyl chart captions cite a Sederma patent and brochure (2026-09-22).
+    paras = [(p_.text_content(), bool(p_.xpath(".//a[starts-with(@href,'http')]"))) for p_ in main.xpath(".//p|.//li")]
+    unsourced = [p_[:90] for p_, linked in paras if re.search(r"\d+(\.\d+)? ?%", p_)
+                 and not linked
                  and not re.search(MKT["own_concentrations"], p_, re.I)
                  and not re.search(r"et al|study|trial|studies|PubMed|research", p_, re.I)]
     rep.add("MARKETING", "Every result figure sits next to its source", not unsourced,

@@ -48,6 +48,21 @@ def link_text(html, cmap):
     return "".join(out), len(done)
 
 
+def locale_values(node, label):
+    """Yield (label, {en:..., de:...}) for every six-locale text inside add_sections / add_blocks (2026-09-22).
+    The dicts are yielded by reference, so linking them edits the spec in place."""
+    if isinstance(node, dict):
+        if "en" in node and isinstance(node["en"], str):
+            if "<p>" in node["en"]:           # richtext only: a plain text setting would print the <a> tag
+                yield label, node
+            return
+        for k, v in node.items():
+            yield from locale_values(v, f"{label}.{k}")
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            yield from locale_values(v, f"{label}[{v.get('id', i) if isinstance(v, dict) else i}]")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec")
@@ -57,7 +72,9 @@ def main():
     spec = json.loads(p.read_text())
     cmap = cite_map(spec)
     blocks = [(s["at"], s["values"]) for s in spec.get("set", [])] + \
-             [(s["id"], s["values"]) for s in spec.get("insert_sections", [])]
+             [(s["id"], s["values"]) for s in spec.get("insert_sections", [])] + \
+             list(locale_values(spec.get("add_sections", []), "add_sections")) + \
+             list(locale_values(spec.get("add_blocks", []), "add_blocks"))
     total = 0
     for label, values in blocks:
         counts = {}

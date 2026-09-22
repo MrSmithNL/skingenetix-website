@@ -1,0 +1,89 @@
+{
+  "_about": "Matrixyl 3000 product claims that fail docs/claims/matrixyl-3000.md §2, fixed in all six languages, 2026-09-22 (the Clinical Research block itself was rebuilt separately: configs/copy/clinical-research-matrixyl-2026-09-22.json). (1) 'What to expect' timelines: 'more hydrated skin within days' has no data for the product (§2 #7) and 'quickly' is unsupported (§2 #8); replaced with a sensory first-use line plus the measured study timing (claim 6: Matrixyl 3000 studies at 2 months). (2) Ritual FAQ q5: same timing fix; the ritual contains the serum, so the pentapeptide-4 timing (weeks 8 and 12, Robinson 2005 per CIR) is allowed. (3) Ritual FAQ q6 and the serum's 'Best for' line: 'well tolerated' is a product-level tolerance claim with no product data (§2 #5-6); replaced with the ingredient-level CIR safety finding (claim 5) and a patch-test line. (2) also covers faq_item/bundle-firming-complete-q5, same English sentence, differently worded translations; the firming routine contains the serum too.",
+  "fixes": [
+    {
+      "where": [
+        "metafield:custom.key_benefits"
+      ],
+      "patterns": {
+        "en": "smoother, more (?:hydrated skin within days|supple skin quickly)[^\"]*",
+        "de": "(?:die Haut fühlt sich (?:innerhalb weniger Tage|schnell)|glattere, geschmeidigere Haut schnell)[^\"]*",
+        "nl": "(?:een )?gladdere, (?:beter gehydrateerde huid binnen enkele dagen|soepelere huid snel)[^\"]*",
+        "fr": "une peau plus lisse et plus (?:hydratée dès les premiers jours|souple rapidement)[^\"]*",
+        "es": "(?:una )?piel más (?:lisa e hidratada en pocos días|lisa y suave rápidamente|suave y tersa rápidamente)[^\"]*",
+        "it": "(?:pelle più (?:levigata e idratata già nei primi giorni|levigata e morbida in poco tempo|morbida e levigata in poco tempo)|la pelle appare subito più morbida e levigata)[^\"]*"
+      },
+      "replace": {
+        "en": "skin feels smoother and softer from the first use; in the Matrixyl® 3000 studies, firmer, smoother-looking results were measured at 2 months.",
+        "de": "die Haut fühlt sich ab der ersten Anwendung glatter und weicher an; in den Matrixyl®-3000-Studien wurden straffere, glattere Ergebnisse nach 2 Monaten gemessen.",
+        "nl": "de huid voelt vanaf het eerste gebruik gladder en zachter aan; in de Matrixyl® 3000-studies werden stevigere, gladdere resultaten na 2 maanden gemeten.",
+        "fr": "la peau paraît plus lisse et plus douce dès la première utilisation ; dans les études sur le Matrixyl® 3000, des résultats plus fermes et plus lisses ont été mesurés à 2 mois.",
+        "es": "la piel se siente más lisa y suave desde el primer uso; en los estudios de Matrixyl® 3000 se midieron resultados más firmes y lisos a los 2 meses.",
+        "it": "la pelle risulta più liscia e morbida fin dal primo utilizzo; negli studi su Matrixyl® 3000 sono stati misurati risultati più compatti e levigati a 2 mesi."
+      }
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "patterns": {
+        "en": "^Skin feels smoother and more supple quickly.*$",
+        "de": "^Die Haut fühlt sich schnell glatter.*$",
+        "nl": "^De huid voelt snel gladder.*$",
+        "fr": "^La peau paraît plus (?:douce et plus souple|lisse et plus souple) rapidement.*$",
+        "es": "^La piel se siente más suave y (?:tersa|flexible) rápidamente.*$",
+        "it": "^La pelle (?:appare più morbida e distesa rapidamente|si sente subito più levigata e morbida).*$"
+      },
+      "replace": {
+        "en": "Skin feels smoother and softer from the first use. In the Matrixyl® 3000 studies, firmer, smoother-looking results were measured at 2 months, and in the pentapeptide-4 trial they were significant at weeks 8 and 12.",
+        "de": "Die Haut fühlt sich ab der ersten Anwendung glatter und weicher an. In den Matrixyl®-3000-Studien wurden straffere, glattere Ergebnisse nach 2 Monaten gemessen, in der Pentapeptide-4-Studie waren sie in Woche 8 und 12 signifikant.",
+        "nl": "De huid voelt vanaf het eerste gebruik gladder en zachter aan. In de Matrixyl® 3000-studies werden stevigere, gladdere resultaten na 2 maanden gemeten, en in de pentapeptide-4-studie waren ze significant in week 8 en 12.",
+        "fr": "La peau paraît plus lisse et plus douce dès la première utilisation. Dans les études sur le Matrixyl® 3000, des résultats plus fermes et plus lisses ont été mesurés à 2 mois, et dans l'essai sur le pentapeptide-4 ils étaient significatifs aux semaines 8 et 12.",
+        "es": "La piel se siente más lisa y suave desde el primer uso. En los estudios de Matrixyl® 3000 se midieron resultados más firmes y lisos a los 2 meses, y en el ensayo con pentapeptide-4 fueron significativos en las semanas 8 y 12.",
+        "it": "La pelle risulta più liscia e morbida fin dal primo utilizzo. Negli studi su Matrixyl® 3000 sono stati misurati risultati più compatti e levigati a 2 mesi, e nello studio sul pentapeptide-4 erano significativi alle settimane 8 e 12."
+      }
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "patterns": {
+        "en": "^Yes, Matrixyl peptides are well tolerated.*$",
+        "de": "^Ja, Matrixyl-Peptide sind gut verträglich.*$",
+        "nl": "^Ja, Matrixyl peptiden zijn goed verdraagbaar.*$",
+        "fr": "^Oui, les peptides Matrixyl sont bien tolérés.*$",
+        "es": "^Sí, los péptidos Matrixyl son bien tolerados.*$",
+        "it": "^Sì, i peptidi Matrixyl sono ben tollerati.*$"
+      },
+      "replace": {
+        "en": "Yes, Matrixyl peptides layer easily with most skincare. Keep pure L-ascorbic vitamin C, strong acids (AHA/BHA) and high-strength retinol to a different time of day. Both Matrixyl® 3000 peptides are assessed safe in cosmetics by an independent expert panel; patch-test any new product first.",
+        "de": "Ja, Matrixyl-Peptide lassen sich mit den meisten Pflegeprodukten leicht kombinieren. Reines L-Ascorbinsäure-Vitamin C, starke Säuren (AHA/BHA) und hochdosiertes Retinol lieber zu einer anderen Tageszeit anwenden. Beide Peptide von Matrixyl® 3000 wurden von einem unabhängigen Expertengremium als sicher in Kosmetika bewertet; machen Sie bei jedem neuen Produkt zuerst einen Verträglichkeitstest.",
+        "nl": "Ja, Matrixyl peptiden combineren eenvoudig met de meeste huidverzorging. Gebruik pure L-ascorbic vitamine C, sterke zuren (AHA/BHA) en hooggedoseerde retinol op een ander moment van de dag. Beide peptiden van Matrixyl® 3000 zijn door een onafhankelijk panel van deskundigen als veilig in cosmetica beoordeeld; doe bij elk nieuw product eerst een patchtest.",
+        "fr": "Oui, les peptides Matrixyl s'associent facilement à la plupart des soins. Réservez la vitamine C L-ascorbique pure, les acides forts (AHA/BHA) et le rétinol haute concentration à un autre moment de la journée. Les deux peptides du Matrixyl® 3000 sont jugés sûrs dans les cosmétiques par un panel d'experts indépendant ; faites d'abord un test cutané avec tout nouveau produit.",
+        "es": "Sí, los péptidos Matrixyl se combinan fácilmente con la mayoría de los productos. Reserva la vitamina C L-ascórbica pura, los ácidos fuertes (AHA/BHA) y el retinol de alta concentración para otro momento del día. Ambos péptidos de Matrixyl® 3000 han sido considerados seguros en cosméticos por un panel de expertos independiente; haz primero una prueba en una pequeña zona con cualquier producto nuevo.",
+        "it": "Sì, i peptidi Matrixyl si abbinano facilmente alla maggior parte dei prodotti. Tieni la vitamina C pura L-ascorbica, gli acidi forti (AHA/BHA) e il retinolo ad alta concentrazione in un momento diverso della giornata. Entrambi i peptidi di Matrixyl® 3000 sono stati giudicati sicuri nei cosmetici da un gruppo di esperti indipendente; con ogni nuovo prodotto fai prima un test su una piccola zona."
+      }
+    },
+    {
+      "where": [
+        "body_html"
+      ],
+      "patterns": {
+        "en": "a lightweight, well-tolerated daily firming step",
+        "de": "einen leichten, gut verträglichen täglichen Straffungsschritt",
+        "nl": "een lichte, goed verdraagbare dagelijkse verstevigingsstap",
+        "fr": "une étape quotidienne légère et bien tolérée",
+        "es": "un paso reafirmante diario ligero y de buena tolerancia",
+        "it": "un passaggio rassodante quotidiano leggero e ben tollerato"
+      },
+      "replace": {
+        "en": "a lightweight, twice-daily firming step",
+        "de": "einen leichten Straffungsschritt für morgens und abends",
+        "nl": "een lichte verstevigingsstap voor ochtend en avond",
+        "fr": "une étape raffermissante légère, matin et soir",
+        "es": "un paso reafirmante ligero, mañana y noche",
+        "it": "un passaggio rassodante leggero, mattina e sera"
+      }
+    }
+  ]
+}
