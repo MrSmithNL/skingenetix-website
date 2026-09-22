@@ -1,0 +1,279 @@
+{
+  "_about": "Phase 2 hub upgrade for /pages/copper-peptide-research, same standard as pdrn-research.json and acetyl-hexapeptide-8-research.json: real <h1> in the hero richtext, front-loaded definition, <h2> inside richtext, alternating Bone/White backgrounds, JSON-LD inside the references section, all six languages in the same change. Figures verified at source 2026-09-22: 1973 isolation from human plasma = Pickart PhD thesis, UCSF 1973 (cited in Pickart 2015 PMC4508379 and 2018 PMC6073405); plasma GHK ~200 ng/mL at age 20 -> 80 ng/mL by 60 (both Pickart reviews; authors are Skin Biology, a GHK-Cu product company); Kang 2009 (PMID 19319546) = keratinocyte proliferation, integrin a6/b1, p63, PCNA in skin-equivalent models, lab only; Jiang 2023 (PMID 37062921) = GHK-Cu + LMW HA 1:9, collagen IV x2.03 ex vivo, authors from Bloomage/Peptites (ingredient makers); Abdulghani 1998 = thigh biopsies, 20 people, 10 per group, ONE MONTH (Mortazavi 2024 and Pickart 2015; Pickart 2018 says 12 weeks - majority used), procollagen up in 70% GHK-Cu / 50% vit C / 40% retinoic acid; Leyden et al. 2002 = 71-woman facial and 41-woman eye-cream 12-week studies, AAD 2002 meeting proceedings only, never a full paper; Miller 2006 (PMID 16847171) = 13 patients after CO2 laser, NO objective difference in erythema, wrinkles or skin quality, questionnaire only p=.04 - the old findings card presented this as a general 12-week trial showing satisfaction and has been corrected; Mortazavi 2024 (PMID 39963574) = 'a surprising absence of clinical studies' on GHK-Cu/Pal-GHK. REMOVED as unsupported: FAQ 'clinically studied range (0.5-2%)' (no source in any of the three reviews) and FAQ 'well-tolerated including by sensitive skin' (no source). ALSO corrected 2026-09-22 after the live review: findings card f1 and FAQ q1 called GHK-Cu 'one of the most-studied peptides in skin science' (contradicted by Mortazavi 2024) and f1 claimed 'skin-barrier support' (not in Pickart 2018); f1 now says the evidence is mostly cell/animal and that the authors work for a copper peptide company.",
+  "template": "templates/page.research-copper-peptide.json",
+  "page": "copper-peptide-research",
+  "remove_blocks": [
+    "hero/h1",
+    "overview/oh"
+  ],
+  "set": [
+    {
+      "at": "hero/p1/content",
+      "values": {
+        "en": "<h1>Copper Peptide (GHK-Cu)</h1><p>A copper-binding peptide found naturally in the body, studied for its role in the skin's own collagen and repair processes.</p>",
+        "de": "<h1>Copper Peptide (GHK-Cu)</h1><p>Ein kupferbindendes Peptid, das natürlich im Körper vorkommt und für seine Rolle bei der hauteigenen Kollagenbildung und Regeneration untersucht wird.</p>",
+        "nl": "<h1>Copper Peptide (GHK-Cu)</h1><p>Een koperbindend peptide dat van nature in het lichaam voorkomt en wordt onderzocht om zijn rol in de eigen collageenaanmaak en het herstel van de huid.</p>",
+        "fr": "<h1>Copper Peptide (GHK-Cu)</h1><p>Un peptide qui fixe le cuivre, présent naturellement dans l'organisme, étudié pour son rôle dans la production de collagène et la réparation propres à la peau.</p>",
+        "es": "<h1>Copper Peptide (GHK-Cu)</h1><p>Un péptido que se une al cobre, presente de forma natural en el cuerpo, estudiado por su papel en la producción de colágeno y la reparación propias de la piel.</p>",
+        "it": "<h1>Copper Peptide (GHK-Cu)</h1><p>Un peptide che lega il rame, presente naturalmente nell'organismo, studiato per il suo ruolo nella produzione di collagene e nei processi di riparazione della pelle.</p>"
+      }
+    },
+    {
+      "at": "overview/op/content",
+      "values": {
+        "en": "<h2>What Is Copper Peptide?</h2><p><strong>Copper peptide, or GHK-Cu, is a small peptide of three amino acids (glycine, histidine and lysine) bound to a copper ion. It occurs naturally in human blood, where it was first isolated in 1973, and its level falls with age: from about 200 ng/mL at 20 to 80 ng/mL by 60.</strong> In skincare it is used to support the look of firmer, smoother skin.</p><p>In laboratory studies it increases the collagen, elastin and glycosaminoglycans that skin cells make. The evidence from people is thinner: a 2024 review found a surprising absence of clinical studies on the copper peptide products now sold. This page separates what has been measured in skin from what has been shown in cells.</p><p>Copper peptide features in our routines for <a href=\"/pages/firming-skin-density\">firmer, denser-looking skin</a> and <a href=\"/pages/skin-repair-renewal\">skin repair and renewal</a>.</p><p><em>Last updated 22 September 2026. Sources: seven published studies, listed below.</em></p>",
+        "de": "<h2>Was ist Copper Peptide (Kupferpeptid)?</h2><p><strong>Copper Peptide, auch GHK-Cu oder Kupferpeptid, ist ein kleines Peptid aus drei Aminosäuren (Glycin, Histidin und Lysin), das an ein Kupferion gebunden ist. Es kommt natürlich im menschlichen Blut vor, wo es 1973 erstmals isoliert wurde, und sein Spiegel sinkt mit dem Alter: von etwa 200 ng/ml mit 20 auf 80 ng/ml mit 60 Jahren.</strong> In der Hautpflege wird es eingesetzt, um ein strafferes, glatteres Hautbild zu unterstützen.</p><p>In Laborstudien steigert es die Bildung von Kollagen, Elastin und Glykosaminoglykanen durch Hautzellen. Die Belege am Menschen sind dünner: Eine Übersichtsarbeit von 2024 stellte fest, dass klinische Studien zu den heute verkauften Copper-Peptide-Produkten überraschend fehlen. Diese Seite trennt, was an der Haut gemessen wurde, von dem, was in Zellen gezeigt wurde.</p><p>Copper Peptide ist Teil unserer Routinen für <a href=\"/de/pages/firming-skin-density\">straffer und dichter wirkende Haut</a> und für <a href=\"/de/pages/skin-repair-renewal\">Hautreparatur und Erneuerung</a>.</p><p><em>Zuletzt aktualisiert am 22. September 2026. Quellen: sieben veröffentlichte Studien, unten aufgeführt.</em></p>",
+        "nl": "<h2>Wat is copper peptide (koperpeptide)?</h2><p><strong>Copper peptide, ook GHK-Cu of koperpeptide, is een klein peptide van drie aminozuren (glycine, histidine en lysine) gebonden aan een koperion. Het komt van nature voor in menselijk bloed, waar het in 1973 voor het eerst werd geïsoleerd, en het niveau daalt met de leeftijd: van ongeveer 200 ng/ml op je 20e tot 80 ng/ml op je 60e.</strong> In huidverzorging wordt het gebruikt om een steviger, gladder ogende huid te ondersteunen.</p><p>In laboratoriumstudies verhoogt het de aanmaak van collageen, elastine en glycosaminoglycanen door huidcellen. Het bewijs bij mensen is dunner: een overzichtsstudie uit 2024 constateerde een opvallend gebrek aan klinische studies naar de copper-peptideproducten die nu verkocht worden. Deze pagina scheidt wat in de huid is gemeten van wat in cellen is aangetoond.</p><p>Copper peptide zit in onze routines voor <a href=\"/nl/pages/firming-skin-density\">een steviger, voller ogende huid</a> en <a href=\"/nl/pages/skin-repair-renewal\">huidherstel en vernieuwing</a>.</p><p><em>Laatst bijgewerkt op 22 september 2026. Bronnen: zeven gepubliceerde studies, hieronder vermeld.</em></p>",
+        "fr": "<h2>Qu'est-ce que le copper peptide (peptide de cuivre) ?</h2><p><strong>Le copper peptide, ou GHK-Cu, est un petit peptide de trois acides aminés (glycine, histidine et lysine) lié à un ion cuivre. Il est présent naturellement dans le sang humain, où il a été isolé pour la première fois en 1973, et son taux baisse avec l'âge : d'environ 200 ng/ml à 20 ans à 80 ng/ml à 60 ans.</strong> En soin de la peau, il est utilisé pour favoriser une peau d'apparence plus ferme et plus lisse.</p><p>En laboratoire, il augmente la production de collagène, d'élastine et de glycosaminoglycanes par les cellules de la peau. Les preuves chez l'humain sont plus minces : une revue de 2024 relève une absence surprenante d'études cliniques sur les produits au copper peptide vendus aujourd'hui. Cette page distingue ce qui a été mesuré sur la peau de ce qui a été montré sur des cellules.</p><p>Le copper peptide fait partie de nos routines pour <a href=\"/fr/pages/firming-skin-density\">une peau d'apparence plus ferme et plus dense</a> et pour <a href=\"/fr/pages/skin-repair-renewal\">la réparation et le renouvellement de la peau</a>.</p><p><em>Dernière mise à jour le 22 septembre 2026. Sources : sept études publiées, citées plus bas.</em></p>",
+        "es": "<h2>¿Qué es el copper peptide (péptido de cobre)?</h2><p><strong>El copper peptide, o GHK-Cu, es un pequeño péptido de tres aminoácidos (glicina, histidina y lisina) unido a un ion de cobre. Está presente de forma natural en la sangre humana, donde se aisló por primera vez en 1973, y su nivel disminuye con la edad: de unos 200 ng/ml a los 20 años a 80 ng/ml a los 60.</strong> En el cuidado de la piel se utiliza para favorecer un aspecto más firme y liso.</p><p>En estudios de laboratorio aumenta la producción de colágeno, elastina y glicosaminoglicanos por parte de las células de la piel. La evidencia en personas es más escasa: una revisión de 2024 señaló una sorprendente falta de estudios clínicos sobre los productos con copper peptide que se venden hoy. Esta página separa lo que se ha medido en la piel de lo que se ha demostrado en células.</p><p>El copper peptide forma parte de nuestras rutinas para <a href=\"/es/pages/firming-skin-density\">una piel de aspecto más firme y denso</a> y para <a href=\"/es/pages/skin-repair-renewal\">la reparación y renovación de la piel</a>.</p><p><em>Última actualización: 22 de septiembre de 2026. Fuentes: siete estudios publicados, citados más abajo.</em></p>",
+        "it": "<h2>Cos'è il copper peptide (peptide di rame)?</h2><p><strong>Il copper peptide, o GHK-Cu, è un piccolo peptide di tre amminoacidi (glicina, istidina e lisina) legato a uno ione rame. È presente naturalmente nel sangue umano, dove fu isolato per la prima volta nel 1973, e il suo livello cala con l'età: da circa 200 ng/ml a 20 anni a 80 ng/ml a 60.</strong> Nella cura della pelle si usa per favorire un aspetto più tonico e levigato.</p><p>Negli studi di laboratorio aumenta la produzione di collagene, elastina e glicosaminoglicani da parte delle cellule della pelle. Le prove sulle persone sono più scarse: una revisione del 2024 ha rilevato una sorprendente mancanza di studi clinici sui prodotti al copper peptide oggi in commercio. Questa pagina distingue ciò che è stato misurato sulla pelle da ciò che è stato dimostrato sulle cellule.</p><p>Il copper peptide fa parte delle nostre routine per <a href=\"/it/pages/firming-skin-density\">una pelle dall'aspetto più tonico e compatto</a> e per <a href=\"/it/pages/skin-repair-renewal\">la riparazione e il rinnovamento della pelle</a>.</p><p><em>Ultimo aggiornamento: 22 settembre 2026. Fonti: sette studi pubblicati, citati più in basso.</em></p>"
+      }
+    },
+    {
+      "at": "overview/ob/text",
+      "values": {
+        "en": "Back to Learn",
+        "de": "Zurück zu Wissen",
+        "nl": "Terug naar Kennis",
+        "fr": "Retour à Apprendre",
+        "es": "Volver a Aprende",
+        "it": "Torna a Impara"
+      }
+    },
+    {
+      "at": "key_findings/f3/title",
+      "values": {
+        "en": "Higher patient satisfaction after laser treatment (small controlled trial)",
+        "de": "Höhere Zufriedenheit nach Laserbehandlung (kleine kontrollierte Studie)",
+        "nl": "Hogere tevredenheid na laserbehandeling (kleine gecontroleerde studie)",
+        "fr": "Satisfaction plus élevée après un traitement laser (petit essai contrôlé)",
+        "es": "Mayor satisfacción tras un tratamiento láser (pequeño ensayo controlado)",
+        "it": "Maggiore soddisfazione dopo un trattamento laser (piccolo studio controllato)"
+      }
+    },
+    {
+      "at": "key_findings/f3/content",
+      "values": {
+        "en": "<p>A small randomised trial tested copper peptide skincare on skin recovering from CO2 laser resurfacing.</p><p><strong>Study:</strong> 13 patients, randomised to an aftercare regimen with or without GHK-Cu, followed for 12 weeks.</p><p><strong>Key results:</strong></p><ul><li><strong>Patients using GHK-Cu rated the improvement in their skin quality higher</strong> than the control group</li><li><strong>Blinded measurements found no difference</strong> between the groups in redness, wrinkles or overall skin quality</li></ul><p><em>Miller TR et al. (2006). Archives of Facial Plastic Surgery, 8(4):252-259. <a href='https://pubmed.ncbi.nlm.nih.gov/16847171/' target='_blank' rel='noopener'>View on PubMed</a></em></p>",
+        "de": "<p>Eine kleine randomisierte Studie testete Copper-Peptide-Pflege an Haut, die sich von einer CO2-Laserbehandlung erholte.</p><p><strong>Studie:</strong> 13 Patienten, zufällig einer Nachpflege mit oder ohne GHK-Cu zugeteilt, 12 Wochen lang begleitet.</p><p><strong>Wichtigste Ergebnisse:</strong></p><ul><li><strong>Patienten mit GHK-Cu bewerteten die Verbesserung ihrer Hautqualität höher</strong> als die Kontrollgruppe</li><li><strong>Verblindete Messungen fanden keinen Unterschied</strong> zwischen den Gruppen bei Rötung, Falten oder Hautqualität insgesamt</li></ul><p><em>Miller TR et al. (2006). Archives of Facial Plastic Surgery, 8(4):252-259. <a href='https://pubmed.ncbi.nlm.nih.gov/16847171/' target='_blank' rel='noopener'>Auf PubMed ansehen</a></em></p>",
+        "nl": "<p>Een kleine gerandomiseerde studie testte copper-peptideverzorging op huid die herstelde van een CO2-laserbehandeling.</p><p><strong>Studie:</strong> 13 patiënten, willekeurig ingedeeld in nazorg met of zonder GHK-Cu, 12 weken gevolgd.</p><p><strong>Belangrijkste resultaten:</strong></p><ul><li><strong>Patiënten met GHK-Cu beoordeelden de verbetering van hun huidkwaliteit hoger</strong> dan de controlegroep</li><li><strong>Geblindeerde metingen vonden geen verschil</strong> tussen de groepen in roodheid, rimpels of algehele huidkwaliteit</li></ul><p><em>Miller TR et al. (2006). Archives of Facial Plastic Surgery, 8(4):252-259. <a href='https://pubmed.ncbi.nlm.nih.gov/16847171/' target='_blank' rel='noopener'>Bekijk op PubMed</a></em></p>",
+        "fr": "<p>Un petit essai randomisé a testé des soins au copper peptide sur une peau en récupération après un resurfaçage au laser CO2.</p><p><strong>Étude :</strong> 13 patients, répartis au hasard entre des soins post-traitement avec ou sans GHK-Cu, suivis pendant 12 semaines.</p><p><strong>Principaux résultats :</strong></p><ul><li><strong>Les patients sous GHK-Cu ont jugé l'amélioration de la qualité de leur peau plus élevée</strong> que le groupe témoin</li><li><strong>Les mesures en aveugle n'ont trouvé aucune différence</strong> entre les groupes pour les rougeurs, les rides ou la qualité globale de la peau</li></ul><p><em>Miller TR et al. (2006). Archives of Facial Plastic Surgery, 8(4):252-259. <a href='https://pubmed.ncbi.nlm.nih.gov/16847171/' target='_blank' rel='noopener'>Voir sur PubMed</a></em></p>",
+        "es": "<p>Un pequeño ensayo aleatorizado probó cuidados con copper peptide en piel que se recuperaba de un rejuvenecimiento con láser de CO2.</p><p><strong>Estudio:</strong> 13 pacientes, asignados al azar a un cuidado posterior con o sin GHK-Cu, seguidos durante 12 semanas.</p><p><strong>Resultados principales:</strong></p><ul><li><strong>Los pacientes con GHK-Cu valoraron más la mejora de la calidad de su piel</strong> que el grupo de control</li><li><strong>Las mediciones a ciegas no encontraron diferencias</strong> entre los grupos en enrojecimiento, arrugas o calidad general de la piel</li></ul><p><em>Miller TR et al. (2006). Archives of Facial Plastic Surgery, 8(4):252-259. <a href='https://pubmed.ncbi.nlm.nih.gov/16847171/' target='_blank' rel='noopener'>Ver en PubMed</a></em></p>",
+        "it": "<p>Un piccolo studio randomizzato ha testato trattamenti al copper peptide su pelle in recupero da un resurfacing con laser CO2.</p><p><strong>Studio:</strong> 13 pazienti, assegnati a caso a un trattamento post-laser con o senza GHK-Cu, seguiti per 12 settimane.</p><p><strong>Risultati principali:</strong></p><ul><li><strong>I pazienti con GHK-Cu hanno giudicato più alto il miglioramento della qualità della pelle</strong> rispetto al gruppo di controllo</li><li><strong>Le misurazioni in cieco non hanno trovato differenze</strong> tra i gruppi per rossore, rughe o qualità generale della pelle</li></ul><p><em>Miller TR et al. (2006). Archives of Facial Plastic Surgery, 8(4):252-259. <a href='https://pubmed.ncbi.nlm.nih.gov/16847171/' target='_blank' rel='noopener'>Vedi su PubMed</a></em></p>"
+      }
+    },
+    {
+      "at": "faq/q3/content",
+      "values": {
+        "en": "<p>Our copper peptide serum, day gel-cream and night cream each contain 2% GHK-Cu. Most published studies do not state the concentration they tested, so no percentage has been proven best. We give ours so you can compare products like for like.</p>",
+        "de": "<p>Unser Copper Peptide Serum, die Day Gel-Cream und die Night Cream enthalten jeweils 2 % GHK-Cu. Die meisten veröffentlichten Studien nennen die getestete Konzentration nicht, daher ist kein Prozentsatz als der beste belegt. Wir nennen unseren, damit Sie Produkte direkt vergleichen können.</p>",
+        "nl": "<p>Ons copper peptide serum, de day gel-cream en de night cream bevatten elk 2% GHK-Cu. De meeste gepubliceerde studies vermelden niet welke concentratie ze testten, dus geen enkel percentage is als beste bewezen. Wij noemen het onze, zodat je producten eerlijk kunt vergelijken.</p>",
+        "fr": "<p>Notre sérum, notre gel-crème de jour et notre crème de nuit au copper peptide contiennent chacun 2 % de GHK-Cu. La plupart des études publiées n'indiquent pas la concentration testée : aucun pourcentage n'a donc été prouvé comme le meilleur. Nous indiquons le nôtre pour que vous puissiez comparer les produits à armes égales.</p>",
+        "es": "<p>Nuestro sérum, gel-crema de día y crema de noche con copper peptide contienen cada uno un 2 % de GHK-Cu. La mayoría de los estudios publicados no indican la concentración que probaron, así que ningún porcentaje ha demostrado ser el mejor. Indicamos el nuestro para que puedas comparar productos en igualdad de condiciones.</p>",
+        "it": "<p>Il nostro siero, il gel-crema giorno e la crema notte al copper peptide contengono ciascuno il 2% di GHK-Cu. La maggior parte degli studi pubblicati non indica la concentrazione testata, quindi nessuna percentuale è dimostrata come la migliore. Indichiamo la nostra perché tu possa confrontare i prodotti alla pari.</p>"
+      }
+    },
+    {
+      "at": "faq/q4/content",
+      "values": {
+        "en": "<p>There are no published studies of copper peptide in sensitive skin specifically, so we cannot promise it will suit yours. Patch-test any new product on a small area, such as behind the ear, for 24 to 48 hours before using it on your face.</p>",
+        "de": "<p>Es gibt keine veröffentlichten Studien zu Copper Peptide speziell bei empfindlicher Haut, daher können wir nicht versprechen, dass es Ihrer Haut zusagt. Testen Sie jedes neue Produkt 24 bis 48 Stunden lang an einer kleinen Stelle, etwa hinter dem Ohr, bevor Sie es im Gesicht verwenden.</p>",
+        "nl": "<p>Er zijn geen gepubliceerde studies naar copper peptide specifiek bij een gevoelige huid, dus we kunnen niet beloven dat het bij jouw huid past. Test elk nieuw product 24 tot 48 uur op een klein plekje, bijvoorbeeld achter het oor, voordat je het op je gezicht gebruikt.</p>",
+        "fr": "<p>Il n'existe pas d'études publiées sur le copper peptide spécifiquement chez les peaux sensibles : nous ne pouvons donc pas promettre qu'il conviendra à la vôtre. Testez tout nouveau produit sur une petite zone, par exemple derrière l'oreille, pendant 24 à 48 heures avant de l'utiliser sur le visage.</p>",
+        "es": "<p>No hay estudios publicados sobre el copper peptide específicamente en piel sensible, así que no podemos prometer que le siente bien a la tuya. Prueba cualquier producto nuevo en una zona pequeña, como detrás de la oreja, durante 24 a 48 horas antes de usarlo en la cara.</p>",
+        "it": "<p>Non esistono studi pubblicati sul copper peptide specificamente sulla pelle sensibile, quindi non possiamo promettere che sia adatto alla tua. Prova ogni nuovo prodotto su una piccola zona, ad esempio dietro l'orecchio, per 24-48 ore prima di usarlo sul viso.</p>"
+      }
+    },
+    {
+      "at": "key_findings/f1/content",
+      "values": {
+        "en": "<p>A review by the scientist who first isolated GHK summarises its role in the skin's natural production of collagen, elastin and glycosaminoglycans. Most of the evidence it draws on comes from cell and animal studies, and the authors work for a company that makes copper peptide products.</p><p><strong>What the research shows:</strong></p><ul><li><strong>Linked to the skin's collagen, elastin and repair pathways</strong> in laboratory studies</li><li><strong>Anti-inflammatory and cell-protective actions</strong> in cell and gene-expression studies</li></ul><p><em>Pickart L &amp; Margolina A (2018). International Journal of Molecular Sciences, 19(7):1987. <a href='https://pubmed.ncbi.nlm.nih.gov/29986520/' target='_blank' rel='noopener'>View on PubMed</a></em></p>",
+        "de": "<p>Eine Übersichtsarbeit des Wissenschaftlers, der GHK erstmals isolierte, fasst seine Rolle bei der natürlichen Bildung von Kollagen, Elastin und Glykosaminoglykanen in der Haut zusammen. Die meisten Belege stammen aus Zell- und Tierstudien, und die Autoren arbeiten für ein Unternehmen, das Copper-Peptide-Produkte herstellt.</p><p><strong>Was die Forschung zeigt:</strong></p><ul><li><strong>Verbunden mit den Kollagen-, Elastin- und Reparaturprozessen der Haut</strong> in Laborstudien</li><li><strong>Entzündungshemmende und zellschützende Wirkungen</strong> in Zell- und Genexpressionsstudien</li></ul><p><em>Pickart L &amp; Margolina A (2018). International Journal of Molecular Sciences, 19(7):1987. <a href='https://pubmed.ncbi.nlm.nih.gov/29986520/' target='_blank' rel='noopener'>Auf PubMed ansehen</a></em></p>",
+        "nl": "<p>Een overzichtsstudie van de wetenschapper die GHK voor het eerst isoleerde, vat de rol samen in de natuurlijke aanmaak van collageen, elastine en glycosaminoglycanen in de huid. Het meeste bewijs komt uit cel- en dierstudies, en de auteurs werken voor een bedrijf dat copper-peptideproducten maakt.</p><p><strong>Wat het onderzoek laat zien:</strong></p><ul><li><strong>Verbonden met de collageen-, elastine- en herstelprocessen van de huid</strong> in laboratoriumstudies</li><li><strong>Ontstekingsremmende en celbeschermende werking</strong> in cel- en genexpressiestudies</li></ul><p><em>Pickart L &amp; Margolina A (2018). International Journal of Molecular Sciences, 19(7):1987. <a href='https://pubmed.ncbi.nlm.nih.gov/29986520/' target='_blank' rel='noopener'>Bekijk op PubMed</a></em></p>",
+        "fr": "<p>Une revue signée par le scientifique qui a isolé le GHK pour la première fois résume son rôle dans la production naturelle de collagène, d'élastine et de glycosaminoglycanes par la peau. La plupart des preuves proviennent d'études sur cellules et sur animaux, et les auteurs travaillent pour une entreprise qui fabrique des produits au copper peptide.</p><p><strong>Ce que montre la recherche :</strong></p><ul><li><strong>Lié aux processus de collagène, d'élastine et de réparation de la peau</strong> dans des études en laboratoire</li><li><strong>Effets anti-inflammatoires et protecteurs des cellules</strong> dans des études cellulaires et d'expression génique</li></ul><p><em>Pickart L &amp; Margolina A (2018). International Journal of Molecular Sciences, 19(7):1987. <a href='https://pubmed.ncbi.nlm.nih.gov/29986520/' target='_blank' rel='noopener'>Voir sur PubMed</a></em></p>",
+        "es": "<p>Una revisión del científico que aisló por primera vez el GHK resume su papel en la producción natural de colágeno, elastina y glicosaminoglicanos en la piel. La mayor parte de la evidencia procede de estudios con células y animales, y los autores trabajan para una empresa que fabrica productos con copper peptide.</p><p><strong>Lo que muestra la investigación:</strong></p><ul><li><strong>Vinculado a los procesos de colágeno, elastina y reparación de la piel</strong> en estudios de laboratorio</li><li><strong>Acciones antiinflamatorias y protectoras de las células</strong> en estudios celulares y de expresión génica</li></ul><p><em>Pickart L &amp; Margolina A (2018). International Journal of Molecular Sciences, 19(7):1987. <a href='https://pubmed.ncbi.nlm.nih.gov/29986520/' target='_blank' rel='noopener'>Ver en PubMed</a></em></p>",
+        "it": "<p>Una revisione dello scienziato che per primo isolò il GHK ne riassume il ruolo nella produzione naturale di collagene, elastina e glicosaminoglicani della pelle. La maggior parte delle prove proviene da studi su cellule e animali, e gli autori lavorano per un'azienda che produce prodotti al copper peptide.</p><p><strong>Cosa mostra la ricerca:</strong></p><ul><li><strong>Collegato ai processi di collagene, elastina e riparazione della pelle</strong> negli studi di laboratorio</li><li><strong>Azioni antinfiammatorie e protettive per le cellule</strong> in studi cellulari e di espressione genica</li></ul><p><em>Pickart L &amp; Margolina A (2018). International Journal of Molecular Sciences, 19(7):1987. <a href='https://pubmed.ncbi.nlm.nih.gov/29986520/' target='_blank' rel='noopener'>Vedi su PubMed</a></em></p>"
+      }
+    },
+    {
+      "at": "faq/q1/content",
+      "values": {
+        "en": "<p>GHK-Cu is a tripeptide (glycyl-L-histidyl-L-lysine) bound to a copper ion. It occurs naturally in human blood plasma, where it was first isolated in 1973, and its level falls with age. In skincare it is used to support the look of firmer, smoother skin.</p>",
+        "de": "<p>GHK-Cu ist ein Tripeptid (Glycyl-L-Histidyl-L-Lysin), das an ein Kupferion gebunden ist. Es kommt natürlich im menschlichen Blutplasma vor, wo es 1973 erstmals isoliert wurde, und sein Spiegel sinkt mit dem Alter. In der Hautpflege wird es eingesetzt, um ein strafferes, glatteres Hautbild zu unterstützen.</p>",
+        "nl": "<p>GHK-Cu is een tripeptide (glycyl-L-histidyl-L-lysine) gebonden aan een koperion. Het komt van nature voor in menselijk bloedplasma, waar het in 1973 voor het eerst werd geïsoleerd, en het niveau daalt met de leeftijd. In huidverzorging wordt het gebruikt om een steviger, gladder ogende huid te ondersteunen.</p>",
+        "fr": "<p>Le GHK-Cu est un tripeptide (glycyl-L-histidyl-L-lysine) lié à un ion cuivre. Il est présent naturellement dans le plasma sanguin humain, où il a été isolé pour la première fois en 1973, et son taux baisse avec l'âge. En soin de la peau, il est utilisé pour favoriser une peau d'apparence plus ferme et plus lisse.</p>",
+        "es": "<p>El GHK-Cu es un tripéptido (glicil-L-histidil-L-lisina) unido a un ion de cobre. Está presente de forma natural en el plasma sanguíneo humano, donde se aisló por primera vez en 1973, y su nivel disminuye con la edad. En el cuidado de la piel se utiliza para favorecer un aspecto más firme y liso.</p>",
+        "it": "<p>Il GHK-Cu è un tripeptide (glicil-L-istidil-L-lisina) legato a uno ione rame. È presente naturalmente nel plasma sanguigno umano, dove fu isolato per la prima volta nel 1973, e il suo livello cala con l'età. Nella cura della pelle si usa per favorire un aspetto più tonico e levigato.</p>"
+      }
+    }
+  ],
+  "insert_sections": [
+    {
+      "id": "evidence",
+      "after": "overview",
+      "type": "rich-text",
+      "block": "body",
+      "settings": {
+        "full_width": true,
+        "content_width": "medium",
+        "text_position": "center",
+        "background": "#ffffff"
+      },
+      "values": {
+        "en": "<h2>Copper Peptide Benefits: What the Evidence Shows</h2><p>Copper peptide acts as a repair signal. In cell and animal studies it increases the collagen, elastin and glycosaminoglycans that give skin its firmness and bounce, and it speeds wound healing (Pickart et al., 2015 and 2018). The evidence for it on skin comes in three strengths:</p><p><strong>Laboratory and skin-model studies.</strong> The most consistent evidence. In lab-grown skin, copper peptide increased the growth of the basal cells that renew the skin's surface (Kang et al., 2009). In skin samples, combined with hyaluronic acid, it doubled collagen IV, part of the layer that joins the outer skin to the dermis (Jiang et al., 2023).</p><p><strong>Small studies in people.</strong> In a one-month pilot with ten people per cream, biopsies showed more new collagen in 7 of 10 using a copper peptide cream, against 5 of 10 with vitamin C and 4 of 10 with retinoic acid (Abdulghani et al., 1998). Twelve-week face and eye-cream studies in 71 and 41 women reported firmer, denser-looking skin and fewer fine lines than placebo, but were presented at a dermatology meeting in 2002 and never published as full papers (both summarised in Pickart et al., 2015).</p><p><strong>Controlled trials with blinded measurements.</strong> Few, and mixed. After laser resurfacing, 13 patients using copper peptide products rated their skin better than the control group did, but blinded measurements found no difference in redness, wrinkles or skin quality (Miller et al., 2006).</p><p>A 2024 review concludes that copper peptide clearly acts on skin cells, that clinical studies of the products on sale are surprisingly scarce, and that getting it through the skin barrier is the main challenge (Mortazavi et al., 2024).</p>",
+        "de": "<h2>Wirkung von Copper Peptide: Was die Studien zeigen</h2><p>Copper Peptide wirkt als Reparatursignal. In Zell- und Tierstudien steigert es die Bildung von Kollagen, Elastin und Glykosaminoglykanen, die der Haut Festigkeit und Spannkraft geben, und beschleunigt die Wundheilung (Pickart et al., 2015 und 2018). Die Belege für die Wirkung auf der Haut gibt es in drei Stärken:</p><p><strong>Labor- und Hautmodellstudien.</strong> Die beständigsten Belege. In im Labor gezüchteter Haut förderte Copper Peptide das Wachstum der Basalzellen, die die Hautoberfläche erneuern (Kang et al., 2009). In Hautproben verdoppelte es zusammen mit Hyaluronsäure das Kollagen IV, einen Bestandteil der Schicht, die die Oberhaut mit der Dermis verbindet (Jiang et al., 2023).</p><p><strong>Kleine Studien am Menschen.</strong> In einer einmonatigen Pilotstudie mit zehn Personen pro Creme zeigten Biopsien bei 7 von 10 Personen mit einer Copper-Peptide-Creme mehr neues Kollagen, gegenüber 5 von 10 mit Vitamin C und 4 von 10 mit Retinsäure (Abdulghani et al., 1998). Zwölfwöchige Gesichts- und Augencreme-Studien mit 71 und 41 Frauen berichteten über straffer und dichter wirkende Haut und weniger feine Linien als Placebo, wurden aber 2002 auf einem Dermatologiekongress vorgestellt und nie als vollständige Artikel veröffentlicht (beide zusammengefasst in Pickart et al., 2015).</p><p><strong>Kontrollierte Studien mit verblindeten Messungen.</strong> Wenige, mit gemischten Ergebnissen. Nach einer Laserbehandlung bewerteten 13 Patienten mit Copper-Peptide-Produkten ihre Haut besser als die Kontrollgruppe, doch verblindete Messungen fanden keinen Unterschied bei Rötung, Falten oder Hautqualität (Miller et al., 2006).</p><p>Eine Übersichtsarbeit von 2024 kommt zu dem Schluss, dass Copper Peptide eindeutig auf Hautzellen wirkt, dass klinische Studien zu den erhältlichen Produkten überraschend selten sind und dass das Durchdringen der Hautbarriere die größte Hürde ist (Mortazavi et al., 2024).</p>",
+        "nl": "<h2>Voordelen van copper peptide: wat het onderzoek laat zien</h2><p>Copper peptide werkt als herstelsignaal. In cel- en dierstudies verhoogt het de aanmaak van collageen, elastine en glycosaminoglycanen, die de huid stevigheid en veerkracht geven, en versnelt het wondgenezing (Pickart et al., 2015 en 2018). Het bewijs voor de werking op de huid komt in drie sterktes:</p><p><strong>Laboratorium- en huidmodelstudies.</strong> Het meest consistente bewijs. In in het lab gekweekte huid verhoogde copper peptide de groei van de basale cellen die het huidoppervlak vernieuwen (Kang et al., 2009). In huidmonsters verdubbelde het, samen met hyaluronzuur, collageen IV, een onderdeel van de laag die de opperhuid met de lederhuid verbindt (Jiang et al., 2023).</p><p><strong>Kleine studies bij mensen.</strong> In een pilotstudie van een maand met tien mensen per crème lieten biopten meer nieuw collageen zien bij 7 van de 10 met een copper-peptidecrème, tegenover 5 van de 10 met vitamine C en 4 van de 10 met retinoïnezuur (Abdulghani et al., 1998). Studies van twaalf weken met een gezichts- en oogcrème bij 71 en 41 vrouwen meldden een steviger, voller ogende huid en minder fijne lijntjes dan placebo, maar werden in 2002 op een dermatologiecongres gepresenteerd en nooit als volledig artikel gepubliceerd (beide samengevat in Pickart et al., 2015).</p><p><strong>Gecontroleerde studies met geblindeerde metingen.</strong> Weinig, en met wisselende uitkomsten. Na een laserbehandeling beoordeelden 13 patiënten met copper-peptideproducten hun huid beter dan de controlegroep, maar geblindeerde metingen vonden geen verschil in roodheid, rimpels of huidkwaliteit (Miller et al., 2006).</p><p>Een overzichtsstudie uit 2024 concludeert dat copper peptide duidelijk op huidcellen werkt, dat klinische studies naar de verkrijgbare producten opvallend schaars zijn en dat het doordringen van de huidbarrière de grootste uitdaging is (Mortazavi et al., 2024).</p>",
+        "fr": "<h2>Bienfaits du copper peptide : ce que montrent les études</h2><p>Le copper peptide agit comme un signal de réparation. Dans des études sur cellules et sur animaux, il augmente la production de collagène, d'élastine et de glycosaminoglycanes, qui donnent à la peau sa fermeté et son rebond, et accélère la cicatrisation (Pickart et al., 2015 et 2018). Les preuves de son effet sur la peau se répartissent en trois niveaux :</p><p><strong>Études en laboratoire et sur modèles de peau.</strong> Les preuves les plus constantes. Sur de la peau cultivée en laboratoire, le copper peptide a augmenté la croissance des cellules basales qui renouvellent la surface de la peau (Kang et al., 2009). Sur des échantillons de peau, associé à l'acide hyaluronique, il a doublé le collagène IV, un composant de la couche qui relie l'épiderme au derme (Jiang et al., 2023).</p><p><strong>Petites études chez l'humain.</strong> Dans une étude pilote d'un mois avec dix personnes par crème, des biopsies ont montré davantage de nouveau collagène chez 7 personnes sur 10 avec une crème au copper peptide, contre 5 sur 10 avec la vitamine C et 4 sur 10 avec l'acide rétinoïque (Abdulghani et al., 1998). Des études de douze semaines avec une crème visage et une crème contour des yeux, chez 71 et 41 femmes, ont rapporté une peau d'apparence plus ferme et plus dense et moins de ridules qu'avec un placebo, mais elles ont été présentées lors d'un congrès de dermatologie en 2002 et jamais publiées sous forme d'articles complets (toutes deux résumées dans Pickart et al., 2015).</p><p><strong>Essais contrôlés avec mesures en aveugle.</strong> Peu nombreux, et aux résultats mitigés. Après un resurfaçage au laser, 13 patients utilisant des produits au copper peptide ont mieux noté leur peau que le groupe témoin, mais les mesures en aveugle n'ont trouvé aucune différence pour les rougeurs, les rides ou la qualité de la peau (Miller et al., 2006).</p><p>Une revue de 2024 conclut que le copper peptide agit clairement sur les cellules de la peau, que les études cliniques sur les produits vendus sont étonnamment rares et que franchir la barrière cutanée reste le principal défi (Mortazavi et al., 2024).</p>",
+        "es": "<h2>Beneficios del copper peptide: lo que muestran los estudios</h2><p>El copper peptide actúa como una señal de reparación. En estudios con células y animales aumenta la producción de colágeno, elastina y glicosaminoglicanos, que dan a la piel su firmeza y elasticidad, y acelera la cicatrización (Pickart et al., 2015 y 2018). La evidencia de su efecto en la piel se divide en tres niveles:</p><p><strong>Estudios de laboratorio y en modelos de piel.</strong> La evidencia más constante. En piel cultivada en laboratorio, el copper peptide aumentó el crecimiento de las células basales que renuevan la superficie de la piel (Kang et al., 2009). En muestras de piel, combinado con ácido hialurónico, duplicó el colágeno IV, parte de la capa que une la epidermis con la dermis (Jiang et al., 2023).</p><p><strong>Estudios pequeños en personas.</strong> En un estudio piloto de un mes con diez personas por crema, las biopsias mostraron más colágeno nuevo en 7 de cada 10 con una crema de copper peptide, frente a 5 de 10 con vitamina C y 4 de 10 con ácido retinoico (Abdulghani et al., 1998). Estudios de doce semanas con una crema facial y una de contorno de ojos en 71 y 41 mujeres describieron una piel de aspecto más firme y denso y menos líneas finas que con placebo, pero se presentaron en un congreso de dermatología en 2002 y nunca se publicaron como artículos completos (ambos resumidos en Pickart et al., 2015).</p><p><strong>Ensayos controlados con mediciones a ciegas.</strong> Pocos, y con resultados dispares. Tras un rejuvenecimiento con láser, 13 pacientes que usaron productos con copper peptide valoraron mejor su piel que el grupo de control, pero las mediciones a ciegas no encontraron diferencias en enrojecimiento, arrugas ni calidad de la piel (Miller et al., 2006).</p><p>Una revisión de 2024 concluye que el copper peptide actúa claramente sobre las células de la piel, que los estudios clínicos sobre los productos a la venta son sorprendentemente escasos y que atravesar la barrera cutánea es el principal reto (Mortazavi et al., 2024).</p>",
+        "it": "<h2>Benefici del copper peptide: cosa mostrano gli studi</h2><p>Il copper peptide agisce come un segnale di riparazione. In studi su cellule e animali aumenta la produzione di collagene, elastina e glicosaminoglicani, che danno alla pelle compattezza ed elasticità, e accelera la guarigione delle ferite (Pickart et al., 2015 e 2018). Le prove del suo effetto sulla pelle si dividono in tre livelli:</p><p><strong>Studi di laboratorio e su modelli di pelle.</strong> Le prove più costanti. Su pelle coltivata in laboratorio, il copper peptide ha aumentato la crescita delle cellule basali che rinnovano la superficie della pelle (Kang et al., 2009). Su campioni di pelle, insieme all'acido ialuronico, ha raddoppiato il collagene IV, parte dello strato che unisce l'epidermide al derma (Jiang et al., 2023).</p><p><strong>Piccoli studi sulle persone.</strong> In uno studio pilota di un mese con dieci persone per crema, le biopsie hanno mostrato più collagene nuovo in 7 persone su 10 con una crema al copper peptide, contro 5 su 10 con la vitamina C e 4 su 10 con l'acido retinoico (Abdulghani et al., 1998). Studi di dodici settimane con una crema viso e una contorno occhi su 71 e 41 donne hanno riportato una pelle dall'aspetto più tonico e compatto e meno linee sottili rispetto al placebo, ma sono stati presentati a un congresso di dermatologia nel 2002 e mai pubblicati come articoli completi (entrambi riassunti in Pickart et al., 2015).</p><p><strong>Studi controllati con misurazioni in cieco.</strong> Pochi, e con risultati contrastanti. Dopo un resurfacing laser, 13 pazienti che usavano prodotti al copper peptide hanno giudicato la propria pelle migliore rispetto al gruppo di controllo, ma le misurazioni in cieco non hanno trovato differenze per rossore, rughe o qualità della pelle (Miller et al., 2006).</p><p>Una revisione del 2024 conclude che il copper peptide agisce chiaramente sulle cellule della pelle, che gli studi clinici sui prodotti in commercio sono sorprendentemente pochi e che superare la barriera cutanea è la sfida principale (Mortazavi et al., 2024).</p>"
+      }
+    },
+    {
+      "id": "usage",
+      "after": "key_findings",
+      "type": "rich-text",
+      "block": "body",
+      "settings": {
+        "full_width": true,
+        "content_width": "medium",
+        "text_position": "center",
+        "background": "#ffffff"
+      },
+      "values": {
+        "en": "<h2>What 2% GHK-Cu Means</h2><p>Our <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide Renewal Serum</a>, <a href=\"/products/copper-peptide-ghk-cu-day-gel-cream\">Day Gel-Cream</a> and <a href=\"/products/copper-peptide-ghk-cu-night-cream\">Night Cream</a> each contain 2% GHK-Cu, and we state it on the pack. Most published studies do not say what concentration they tested, so there is no proven best percentage. Stating ours lets you compare like with like.</p><h2>How to Use Copper Peptide</h2><p>Use the serum morning and evening. After cleansing, press three to four drops onto slightly damp skin across the face and neck, let it absorb for about a minute, then follow with a moisturiser. In the morning, always finish with SPF. Copper peptide sits well alongside other peptides such as <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000</a> and <a href=\"/pages/pdrn-research\">PDRN</a>.</p>",
+        "de": "<h2>Was 2 % GHK-Cu bedeutet</h2><p>Unser <a href=\"/de/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide Renewal Serum</a>, die <a href=\"/de/products/copper-peptide-ghk-cu-day-gel-cream\">Day Gel-Cream</a> und die <a href=\"/de/products/copper-peptide-ghk-cu-night-cream\">Night Cream</a> enthalten jeweils 2 % GHK-Cu, und wir geben das auf der Verpackung an. Die meisten veröffentlichten Studien nennen die getestete Konzentration nicht, daher gibt es keinen belegten besten Prozentsatz. Mit unserer Angabe können Sie direkt vergleichen.</p><h2>So wenden Sie Copper Peptide an</h2><p>Verwenden Sie das Serum morgens und abends. Geben Sie nach der Reinigung drei bis vier Tropfen auf die leicht feuchte Haut von Gesicht und Hals, lassen Sie es etwa eine Minute einziehen und tragen Sie dann eine Feuchtigkeitspflege auf. Morgens immer mit LSF abschließen. Copper Peptide lässt sich gut mit anderen Peptiden kombinieren, etwa <a href=\"/de/pages/matrixyl-3000-research\">Matrixyl 3000</a> und <a href=\"/de/pages/pdrn-research\">PDRN</a>.</p>",
+        "nl": "<h2>Wat 2% GHK-Cu betekent</h2><p>Ons <a href=\"/nl/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide Renewal Serum</a>, de <a href=\"/nl/products/copper-peptide-ghk-cu-day-gel-cream\">Day Gel-Cream</a> en de <a href=\"/nl/products/copper-peptide-ghk-cu-night-cream\">Night Cream</a> bevatten elk 2% GHK-Cu, en dat staat op de verpakking. De meeste gepubliceerde studies vermelden niet welke concentratie ze testten, dus er is geen bewezen beste percentage. Doordat wij het onze noemen, kun je eerlijk vergelijken.</p><h2>Zo gebruik je copper peptide</h2><p>Gebruik het serum 's ochtends en 's avonds. Druk na het reinigen drie tot vier druppels op de licht vochtige huid van gezicht en hals, laat het ongeveer een minuut intrekken en breng daarna een moisturiser aan. Sluit 's ochtends altijd af met SPF. Copper peptide combineert goed met andere peptiden, zoals <a href=\"/nl/pages/matrixyl-3000-research\">Matrixyl 3000</a> en <a href=\"/nl/pages/pdrn-research\">PDRN</a>.</p>",
+        "fr": "<h2>Ce que signifie 2 % de GHK-Cu</h2><p>Notre <a href=\"/fr/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide Renewal Serum</a>, notre <a href=\"/fr/products/copper-peptide-ghk-cu-day-gel-cream\">Day Gel-Cream</a> et notre <a href=\"/fr/products/copper-peptide-ghk-cu-night-cream\">Night Cream</a> contiennent chacun 2 % de GHK-Cu, et nous l'indiquons sur l'emballage. La plupart des études publiées ne précisent pas la concentration testée : il n'existe donc pas de pourcentage idéal prouvé. Indiquer le nôtre vous permet de comparer à armes égales.</p><h2>Comment utiliser le copper peptide</h2><p>Utilisez le sérum matin et soir. Après le nettoyage, appliquez trois à quatre gouttes en pressant sur la peau légèrement humide du visage et du cou, laissez pénétrer environ une minute, puis appliquez une crème hydratante. Le matin, terminez toujours par un SPF. Le copper peptide s'associe bien à d'autres peptides comme le <a href=\"/fr/pages/matrixyl-3000-research\">Matrixyl 3000</a> et le <a href=\"/fr/pages/pdrn-research\">PDRN</a>.</p>",
+        "es": "<h2>Qué significa un 2 % de GHK-Cu</h2><p>Nuestro <a href=\"/es/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide Renewal Serum</a>, el <a href=\"/es/products/copper-peptide-ghk-cu-day-gel-cream\">Day Gel-Cream</a> y la <a href=\"/es/products/copper-peptide-ghk-cu-night-cream\">Night Cream</a> contienen cada uno un 2 % de GHK-Cu, y lo indicamos en el envase. La mayoría de los estudios publicados no indican la concentración que probaron, así que no hay un porcentaje ideal demostrado. Indicar el nuestro te permite comparar en igualdad de condiciones.</p><h2>Cómo usar el copper peptide</h2><p>Usa el sérum por la mañana y por la noche. Después de limpiar, presiona de tres a cuatro gotas sobre la piel ligeramente húmeda del rostro y el cuello, deja que se absorba durante un minuto y aplica después una crema hidratante. Por la mañana, termina siempre con SPF. El copper peptide combina bien con otros péptidos como el <a href=\"/es/pages/matrixyl-3000-research\">Matrixyl 3000</a> y el <a href=\"/es/pages/pdrn-research\">PDRN</a>.</p>",
+        "it": "<h2>Cosa significa il 2% di GHK-Cu</h2><p>Il nostro <a href=\"/it/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide Renewal Serum</a>, il <a href=\"/it/products/copper-peptide-ghk-cu-day-gel-cream\">Day Gel-Cream</a> e la <a href=\"/it/products/copper-peptide-ghk-cu-night-cream\">Night Cream</a> contengono ciascuno il 2% di GHK-Cu, e lo indichiamo sulla confezione. La maggior parte degli studi pubblicati non indica la concentrazione testata, quindi non esiste una percentuale ideale dimostrata. Indicare la nostra ti permette di confrontare alla pari.</p><h2>Come usare il copper peptide</h2><p>Usa il siero mattina e sera. Dopo la detersione, premi da tre a quattro gocce sulla pelle leggermente umida di viso e collo, lascia assorbire per circa un minuto, poi applica una crema idratante. Al mattino, termina sempre con SPF. Il copper peptide si abbina bene ad altri peptidi come il <a href=\"/it/pages/matrixyl-3000-research\">Matrixyl 3000</a> e il <a href=\"/it/pages/pdrn-research\">PDRN</a>.</p>"
+      }
+    }
+  ],
+  "section_settings": {
+    "overview": {
+      "background": "#F0F0F0"
+    },
+    "references": {
+      "background": "#F0F0F0"
+    },
+    "faq": {
+      "background": "#ffffff",
+      "accordion_background": "#F0F0F0"
+    },
+    "shop_ingredient": {
+      "background": "#F0F0F0"
+    },
+    "related": {
+      "background": "#ffffff"
+    }
+  },
+  "_design": "overview Bone → evidence White → findings (media-with-text, no section background) → usage White → references Bone → FAQ White → shop Bone → related White → CTA Graphite. Same sequence as the Argireline hub.",
+  "jsonld_host": "references",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.skingenetix.com/pages/copper-peptide-research#webpage",
+    "url": "https://www.skingenetix.com/pages/copper-peptide-research",
+    "name": "Copper Peptides (GHK-Cu) for Skin: Benefits and Research",
+    "description": "Copper peptide (GHK-Cu) is a copper-binding peptide found naturally in the body. What it does for skin, what the studies measured, and how to use it.",
+    "datePublished": "2026-03-10",
+    "dateModified": "2026-09-22",
+    "isPartOf": {
+      "@id": "https://www.skingenetix.com/#website"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.skingenetix.com/#organization",
+      "name": "Skingenetix",
+      "url": "https://www.skingenetix.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "GHK-Cu",
+      "alternateName": [
+        "Copper peptide",
+        "Copper tripeptide-1",
+        "Glycyl-L-histidyl-L-lysine copper"
+      ]
+    },
+    "citation": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data",
+        "author": "Pickart L, Margolina A",
+        "datePublished": "2018",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "International Journal of Molecular Sciences"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29986520/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration",
+        "author": "Pickart L, Vasquez-Soltero JM, Margolina A",
+        "datePublished": "2015",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "BioMed Research International"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26236730/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Copper-GHK increases integrin expression and p63 positivity by keratinocytes",
+        "author": "Kang YA et al.",
+        "datePublished": "2009",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Archives of Dermatological Research"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19319546/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Effects of topical copper tripeptide complex on CO2 laser-resurfaced skin",
+        "author": "Miller TR et al.",
+        "datePublished": "2006",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Archives of Facial Plastic Surgery"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16847171/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Augmented Skin Beneficial Effects of Thermus Thermophilus and Bacillus Subtilis Mixed-Culture Ferment Extract by Tripeptide GHK-Cu",
+        "author": "Wang J et al.",
+        "datePublished": "2026",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Skin Research and Technology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42573538/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Topically applied GHK as an anti-wrinkle peptide: Advantages, problems and prospective",
+        "author": "Mortazavi SM et al.",
+        "datePublished": "2024",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "BioImpacts"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39963574/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Synergy of GHK-Cu and hyaluronic acid on collagen IV upregulation via fibroblast and ex-vivo skin tests",
+        "author": "Jiang F et al.",
+        "datePublished": "2023",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Journal of Cosmetic Dermatology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37062921/"
+      }
+    ]
+  }
+}

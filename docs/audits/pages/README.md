@@ -25,7 +25,7 @@ desktop (1440) and mobile (390) full-page screenshots in `/tmp/audit-<slug>/`.
 | `/pages/acetyl-hexapeptide-8-research` | SEO 81 · GEO 65 · Design 84 | **SEO 98 · GEO 100 · Design 100** |
 | `/` | SEO 84 · GEO 61 · Design 84 | — |
 | `/pages/the-science` | SEO 79 · GEO 53 · Design 94 | — |
-| `/pages/copper-peptide-research` | SEO 90 · GEO 77 · Design 84 | — |
+| `/pages/copper-peptide-research` | SEO 90 · GEO 77 · Design 84 | **SEO 100 · GEO 100 · Design 100** |
 | `/pages/matrixyl-3000-research` | SEO 90 · GEO 86 · Design 84 | — |
 | `/pages/glutathione-research` | SEO 90 · GEO 86 · Design 84 | — |
 | `/pages/fine-lines-wrinkles` | SEO 90 · GEO 81 · Design 90 | — |
@@ -82,3 +82,13 @@ impressions; a redirect would risk that for almost nothing.
 | AH-8: up to ~30% wrinkle depth in 30 days | Blanes-Mira et al. 2002, PMID 18498523 | ✅ Accurate — developers' study, **10% hexapeptide emulsion** |
 | AH-8: 14.6% improvement in 5 days | An et al. 2019, PMC7992733 — full text | ✅ Accurate — day 5, fine wrinkles, **microneedle patch** (card already says so) |
 | AH-8: delivery limits results | Zdrada-Nowak et al. 2025, PMID 40565185 | ✅ Accurate, and stronger: reaching the nerve–muscle junction topically "remains uncertain" — now on the page |
+| Copper: first isolated from human plasma in 1973 | Pickart PhD thesis, UCSF 1973 — cited in Pickart 2015 (PMC4508379) and 2018 (PMC6073405) | ✅ Accurate |
+| Copper: plasma GHK ~200 ng/mL at 20 → 80 ng/mL by 60 | Pickart 2015 and 2018 — full text | ✅ Accurate. **Both reviews are by Skin Biology, a GHK-Cu product company** — now stated on findings card 1 |
+| Copper: findings card 3 — "controlled trial, 12 weeks, greater satisfaction vs control" | Miller et al. 2006, PMID 16847171 | ❌ **Misleading.** 13 patients **after CO2 laser resurfacing**; blinded measurements found **no difference** in redness, wrinkles or skin quality; only the questionnaire differed (p = .04). Card rewritten to say all of that |
+| Copper: FAQ "2% is at the upper end of the clinically studied range (0.5–2%)" | Searched Pickart 2015, 2018, Mortazavi 2024 full texts | ❌ **No source.** Removed; the answer now says most studies do not state a concentration |
+| Copper: FAQ "well-tolerated, including by sensitive skin" | No source found | ❌ Removed; replaced with an honest patch-test answer |
+| Copper: "one of the most-studied peptides in skin science" (card 1, FAQ 1) | Mortazavi et al. 2024, PMID 39963574 | ❌ Contradicted — the review finds "a surprising absence of clinical studies". Removed; the page now grades evidence by strength |
+| Copper: collagen in 70% vs 50% vitamin C vs 40% retinoic acid | Abdulghani 1998, via Mortazavi 2024 and Pickart 2015 | ✅ Accurate — **thigh biopsies, 10 people per group, one month** (Pickart 2018 says 12 weeks; two of three sources say one month) |
+| Copper: 12-week face (71 women) and eye (41 women) studies | Leyden et al. 2002, via Pickart 2015 | ✅ Reported — but **AAD 2002 meeting proceedings, never published as full papers**; stated on the page |
+| Copper: collagen IV doubled with hyaluronic acid | Jiang et al. 2023, PMID 37062921 | ✅ Accurate — ×2.03 **ex vivo** (×25.4 in cells); authors from ingredient makers |
+| Copper: keratinocyte growth, integrin, p63 | Kang et al. 2009, PMID 19319546 | ✅ Accurate — lab skin models only |

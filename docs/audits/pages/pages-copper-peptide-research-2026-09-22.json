@@ -1,9 +1,9 @@
 {
  "path": "/pages/copper-peptide-research",
  "scores": {
-  "SEO": 90,
-  "GEO": 77,
-  "DESIGN": 84
+  "SEO": 100,
+  "GEO": 100,
+  "DESIGN": 100
  },
  "items": [
   {
@@ -105,24 +105,24 @@
   {
    "area": "SEO",
    "check": "Exactly one <h1>",
-   "ok": false,
-   "detail": "none",
-   "severity": "high",
+   "ok": true,
+   "detail": "Copper Peptide (GHK-Cu)",
+   "severity": "pass",
    "weight": 2
   },
   {
    "area": "SEO",
    "check": "<h1> contains head term",
-   "ok": false,
+   "ok": true,
    "detail": "",
-   "severity": "med",
+   "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "4 <h2>: ['Published References', 'Frequently Asked Questions', 'Shop Copper Peptide Products', 'Explore More Research']",
+   "detail": "8 <h2>: ['What Is Copper Peptide?', 'Copper Peptide Benefits: What the Evidence Shows', 'What 2% GHK-Cu Means', 'How to Use Copper Peptide', 'Published References', 'Frequently Asked Questions', 'Shop Copper Peptide Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -130,7 +130,7 @@
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
    "ok": false,
-   "detail": "10 that look like headings but are not: ['Copper Peptide GHK-Cu', 'What Is Copper Peptide GHK-Cu?', \"Supports the skin's own collagen & renewal pathways\", 'Supports skin-renewal cell activity (independent lab study)', 'Greater satisfaction with skin appearance (independent trial)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN']",
+   "detail": "8 that look like headings but are not: [\"Supports the skin's own collagen & renewal pathways\", 'Supports skin-renewal cell activity (independent lab study)', 'Higher patient satisfaction after laser treatment (small controlled trial)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Glutathione', 'Try Copper Peptide GHK-Cu']",
    "severity": "info",
    "weight": 0
   },
@@ -186,31 +186,31 @@
    "area": "SEO",
    "check": "No duplicate schema types",
    "ok": true,
-   "detail": "types ['BreadcrumbList', 'FAQPage']",
+   "detail": "types ['BreadcrumbList', 'WebPage', 'FAQPage']",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "Page entity schema (WebPage/Article) with dateModified",
-   "ok": false,
-   "detail": "none",
-   "severity": "med",
+   "ok": true,
+   "detail": "WebPage modified 2026-09-22",
+   "severity": "pass",
    "weight": 1.5
   },
   {
    "area": "GEO",
    "check": "Schema cites sources (citation[])",
-   "ok": false,
-   "detail": "",
-   "severity": "low",
+   "ok": true,
+   "detail": "7 citations",
+   "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "Reviewer/author in schema (reviewedBy/author)",
    "ok": false,
-   "detail": "",
+   "detail": "pending Dr Bodde's review",
    "severity": "info",
    "weight": 0
   },
@@ -249,32 +249,32 @@
   {
    "area": "GEO",
    "check": "A8 \u00b7 secondary intents covered on the page",
-   "ok": false,
-   "detail": "['ghk-cu'] / ['ghk-cu', 'copper peptide benefits']",
-   "severity": "med",
+   "ok": true,
+   "detail": "['ghk-cu', 'copper peptide benefits'] / ['ghk-cu', 'copper peptide benefits']",
+   "severity": "pass",
    "weight": 1.5
   },
   {
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "25 paragraphs, 0 too long",
+   "detail": "32 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
-   "ok": false,
-   "detail": "2",
-   "severity": "low",
+   "ok": true,
+   "detail": "12",
+   "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "6 figures",
+   "detail": "8 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -282,7 +282,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "28 citation markers",
+   "detail": "35 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -297,9 +297,9 @@
   {
    "area": "GEO",
    "check": "E1 \u00b7 visible last-reviewed/updated date",
-   "ok": false,
-   "detail": "pending reviewer sign-off",
-   "severity": "med",
+   "ok": true,
+   "detail": "Last updated",
+   "severity": "pass",
    "weight": 1.5
   },
   {
@@ -314,7 +314,7 @@
    "area": "GEO",
    "check": "A4 \u00b7 headings mirror search questions",
    "ok": true,
-   "detail": "0 question-form H2",
+   "detail": "1 question-form H2",
    "severity": "pass",
    "weight": 1.0
   },
@@ -322,7 +322,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "687 words extracted (main text 924)",
+   "detail": "1174 words extracted (main text 1403)",
    "severity": "pass",
    "weight": 3
   },
@@ -338,7 +338,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "4 kept",
+   "detail": "8 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -385,17 +385,17 @@
   {
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
-   "ok": false,
-   "detail": "faq+shop_ingredient (Bone); shop_ingredient+related (Bone)",
-   "severity": "med",
+   "ok": true,
+   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
+   "severity": "pass",
    "weight": 1.5
   },
   {
    "area": "DESIGN",
    "check": "Backgrounds on the brand palette",
-   "ok": false,
-   "detail": "off-palette ['rgb(247, 247, 247)']",
-   "severity": "low",
+   "ok": true,
+   "detail": "Bone / White / Graphite",
+   "severity": "pass",
    "weight": 1.0
   },
   {
@@ -449,19 +449,23 @@
  ],
  "data": {
   "title": "Copper Peptides (GHK-Cu) for Skin: Benefits and Research",
-  "h1": [],
+  "h1": [
+   "Copper Peptide (GHK-Cu)"
+  ],
   "h2": [
+   "What Is Copper Peptide?",
+   "Copper Peptide Benefits: What the Evidence Shows",
+   "What 2% GHK-Cu Means",
+   "How to Use Copper Peptide",
    "Published References",
    "Frequently Asked Questions",
    "Shop Copper Peptide Products",
    "Explore More Research"
   ],
   "pseudo_headings": [
-   "Copper Peptide GHK-Cu",
-   "What Is Copper Peptide GHK-Cu?",
    "Supports the skin's own collagen & renewal pathways",
    "Supports skin-renewal cell activity (independent lab study)",
-   "Greater satisfaction with skin appearance (independent trial)",
+   "Higher patient satisfaction after laser treatment (small controlled trial)",
    "Acetyl Hexapeptide-8",
    "Matrixyl 3000",
    "PDRN",
@@ -508,10 +512,11 @@
   ],
   "schema_types": [
    "BreadcrumbList",
+   "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 687,
-  "main_words": 924,
+  "extracted_words": 1174,
+  "main_words": 1403,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg?v=1787645156&width=3000",
@@ -609,7 +614,7 @@
      "top": 126,
      "h": 440,
      "bg": "rgb(240, 240, 240)",
-     "text": 174,
+     "text": 169,
      "media": 1
     },
     {
@@ -625,43 +630,61 @@
      "id": "overview",
      "type": "rich-text",
      "top": 566,
-     "h": 586,
+     "h": 610,
+     "bg": "rgb(240, 240, 240)",
+     "text": 890,
+     "media": 0
+    },
+    {
+     "id": "evidence",
+     "type": "rich-text",
+     "top": 1175,
+     "h": 802,
      "bg": "rgb(255, 255, 255)",
-     "text": 781,
+     "text": 1693,
      "media": 0
     },
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 1151,
-     "h": 2235,
+     "top": 1977,
+     "h": 2391,
      "bg": "rgb(240, 240, 240)",
-     "text": 1446,
+     "text": 1717,
      "media": 3
+    },
+    {
+     "id": "usage",
+     "type": "rich-text",
+     "top": 4368,
+     "h": 498,
+     "bg": "rgb(255, 255, 255)",
+     "text": 633,
+     "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 3386,
+     "top": 4865,
      "h": 942,
-     "bg": "rgb(247, 247, 247)",
+     "bg": "rgb(240, 240, 240)",
      "text": 1279,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 4328,
-     "h": 1049,
-     "bg": "rgb(240, 240, 240)",
+     "top": 5807,
+     "h": 1117,
+     "bg": "rgb(255, 255, 255)",
      "text": 334,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 5378,
-     "h": 740,
+     "top": 6924,
+     "h": 820,
      "bg": "rgb(240, 240, 240)",
      "text": 395,
      "media": 10
@@ -669,16 +692,16 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 6118,
-     "h": 671,
-     "bg": "rgb(240, 240, 240)",
+     "top": 7744,
+     "h": 751,
+     "bg": "rgb(255, 255, 255)",
      "text": 326,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 6789,
+     "top": 8495,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
      "text": 130,
@@ -687,7 +710,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 7142,
+     "top": 8848,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -696,7 +719,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 7658,
+     "top": 9364,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -716,7 +739,7 @@
      "top": 85,
      "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 174,
+     "text": 169,
      "media": 1
     },
     {
@@ -732,43 +755,61 @@
      "id": "overview",
      "type": "rich-text",
      "top": 460,
-     "h": 605,
+     "h": 673,
+     "bg": "rgb(240, 240, 240)",
+     "text": 890,
+     "media": 0
+    },
+    {
+     "id": "evidence",
+     "type": "rich-text",
+     "top": 1132,
+     "h": 1015,
      "bg": "rgb(255, 255, 255)",
-     "text": 781,
+     "text": 1693,
      "media": 0
     },
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 1065,
-     "h": 2908,
+     "top": 2147,
+     "h": 3109,
      "bg": "rgb(240, 240, 240)",
-     "text": 1446,
+     "text": 1717,
      "media": 3
+    },
+    {
+     "id": "usage",
+     "type": "rich-text",
+     "top": 5256,
+     "h": 568,
+     "bg": "rgb(255, 255, 255)",
+     "text": 633,
+     "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 3973,
+     "top": 5824,
      "h": 1392,
-     "bg": "rgb(247, 247, 247)",
+     "bg": "rgb(240, 240, 240)",
      "text": 1279,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 5365,
+     "top": 7215,
      "h": 1021,
-     "bg": "rgb(240, 240, 240)",
+     "bg": "rgb(255, 255, 255)",
      "text": 334,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 6386,
-     "h": 569,
+     "top": 8236,
+     "h": 609,
      "bg": "rgb(240, 240, 240)",
      "text": 395,
      "media": 10
@@ -776,16 +817,16 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 6955,
-     "h": 540,
-     "bg": "rgb(240, 240, 240)",
+     "top": 8845,
+     "h": 580,
+     "bg": "rgb(255, 255, 255)",
      "text": 326,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 7495,
+     "top": 9425,
      "h": 288,
      "bg": "rgb(26, 26, 26)",
      "text": 130,
@@ -794,7 +835,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 7783,
+     "top": 9713,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -803,7 +844,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8822,
+     "top": 10752,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
