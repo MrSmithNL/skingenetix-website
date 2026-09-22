@@ -1,0 +1,27 @@
+{
+  "_about": "Rules for the MARKETING area of scripts/page-audit.py (Malcolm, 2026-09-22: copy must carry the strongest claim the evidence supports, worded for conversion; when this audit is 'not happy' (score < threshold), run deeper claims research — docs/claims/). 'unsupported' grows from the claims registers in docs/claims/ and docs/audits/pages/README.md; every entry names why.",
+  "threshold": 85,
+  "outcome_words": ["firm", "smooth", "line", "wrinkle", "crow", "plump", "bright", "radian", "glow", "even", "renew", "elastic", "dense", "density", "texture", "tone", "hydrat", "youthful", "lift", "tight", "collagen", "resilien"],
+  "hedges": ["may help", "can help", "may support", "can support", "might", "suggests that", "is valued for", "are valued for", "valued in skincare", "supports the appearance of", "support the appearance of", "is thought to", "believed to", "most of the evidence comes from laboratory", "trials in people are small", "published trials in people are small", "some research", "early research", "in theory"],
+  "unsupported": [
+    {"re": "most[- ](studied|researched) (peptide|hero|active)", "why": "contradicted by Mortazavi 2024 (copper)"},
+    {"re": "published strength", "why": "no source for a studied concentration range"},
+    {"re": "clinically[- ]studied range", "why": "no source"},
+    {"re": "well[- ]documented safety", "why": "PDRN: that record belongs to the injectable drug, not topical skincare (docs/claims/pdrn.md)"},
+    {"re": "structural similarity", "why": "PDRN: salmon-DNA/human-DNA similarity claim has no source (docs/claims/pdrn.md)"},
+    {"re": "removes all", "why": "PDRN: 'removes all allergens' has no source (docs/claims/pdrn.md)"},
+    {"re": "8[–-]12 weeks", "why": "PDRN/serum timeline has no source (docs/claims/pdrn.md)"},
+    {"re": "well[- ]studied (skin[- ]conditioning )?ingredient", "why": "PDRN: Ye 2026 calls topical PDRN 'insufficiently defined' (docs/claims/pdrn.md)"},
+    {"re": "over 50 published studies", "why": "PubMed: 54 papers mention skin, 1 indexed clinical trial — papers, not studies"},
+    {"re": "47% fewer", "why": "fabricated PDRN statistic (research blacklist §9)"},
+    {"re": "78% of injectable", "why": "fabricated PDRN statistic (research blacklist §9)"}
+  ],
+  "medicinal": [
+    {"re": "\\b(treats?|heals?|cures?)\\b", "why": "medicinal verb (Reg. 655/2013)"},
+    {"re": "\\b(rosacea|eczema|psoriasis|dermatitis|melasma)\\b", "why": "names a skin disease"},
+    {"re": "acne scars?", "why": "names a medical condition"},
+    {"re": "\\bwhiten(ing|s)?\\b", "why": "whitening is a restricted/medicinal framing in the EU; use 'brighter, more even-looking'"},
+    {"re": "repairs? (your )?dna", "why": "medicinal mechanism claim"}
+  ],
+  "own_concentrations": "\\d+(\\.\\d+)? ?% ?(GHK-Cu|copper peptide|PDRN|Argireline|GSSG|glutathione|Matrixyl|acetyl hexapeptide|sodium DNA|polynucleotide)"
+}

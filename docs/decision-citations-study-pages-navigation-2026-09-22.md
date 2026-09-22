@@ -1,7 +1,6 @@
 # Decision — menu label, study citations, study pages and internal linking
 
-**Date:** 2026-09-22 · **Asked by:** Malcolm · **Status:** citations linked and claims fixed (done);
-menu label and the internal-link programme await Malcolm's go-ahead
+**Date:** 2026-09-22 · **Asked by:** Malcolm · **Status:** citations linked and claims fixed (done). **Menu: Malcolm chose the label only — "Science" — with no structural change** (a split was applied and reverted, 2026-09-22). Internal-link programme approved 2026-09-22.
 
 Malcolm raised four questions:
 

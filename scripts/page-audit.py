@@ -73,6 +73,54 @@ class Report:
 
 
 # ------------------------------------------------------------------ SEO + GEO (raw HTML)
+
+MKT = json.loads((ROOT / "configs/marketing-rules.json").read_text())
+
+
+def audit_marketing(path, rep, raw, main, main_text, tgt):
+    """MARKETING — the strongest supported claim, worded to sell (Malcolm, 2026-09-22).
+
+    Deterministic checks only; every rule lives in configs/marketing-rules.json with its reason.
+    A score under MKT['threshold'] means: run deeper claims research (docs/claims/), don't soften.
+    """
+    kind = tgt.get("type") or ("product" if path.startswith("/products/") else "collection" if path.startswith("/collections/")
+                              else "home" if path == "/" else "page")
+    txt = main_text
+    wl = words(txt)
+    hero = " ".join(wl[:80]).lower()
+    first30 = " ".join(wl[: max(60, len(wl) * 3 // 10)])
+    rep.add("MARKETING", "Opening states a concrete skin outcome", any(w in hero for w in MKT["outcome_words"]),
+            hero[:140], "high", 2)
+    proof = re.search(r"\d+(\.\d+)? ?%(?! ?(?:GHK|PDRN|Argireline|GSSG|glutathione|Matrixyl|copper))|\b\d+ (?:days|weeks|women|people|participants|volunteers)\b",
+                      first30, re.I)
+    rep.add("MARKETING", "A proof point (result %, time frame or trial size) in the first 30% of text",
+            bool(proof), proof.group(0) if proof else "none", "med", 2)
+    low = txt.lower()
+    hedges = [h for h in MKT["hedges"] if h in low]
+    n_hedge = sum(low.count(h) for h in MKT["hedges"])
+    per100 = 100 * n_hedge / max(len(wl), 1)
+    limit = 2.0 if kind == "hub" else 1.0
+    rep.add("MARKETING", f"Hedging ≤ {limit} per 100 words ({'science page' if kind == 'hub' else 'sales copy'})",
+            per100 <= limit, f"{per100:.1f}/100 words: {hedges[:6]}", "med", 2)
+    bad = [(m.group(0), r["why"]) for r in MKT["unsupported"] for m in re.finditer(r["re"], raw, re.I)]
+    rep.add("MARKETING", "No claim known to be unsupported (docs/claims/)", not bad,
+            "; ".join(f"'{b}' — {w}" for b, w in dict(bad).items()) or "clean", "high", 3)
+    med = [(m.group(0), r["why"]) for r in MKT["medicinal"] for m in re.finditer(r["re"], txt, re.I)]
+    rep.add("MARKETING", "No medicinal wording (EU cosmetic-claims rules)", not med,
+            "; ".join(f"'{b}' — {w}" for b, w in dict(med).items()) or "clean", "high", 3)
+    if kind == "product":
+        buy = bool(re.search(r'action="[^"]*/cart/add', raw))
+        rep.add("MARKETING", "Add-to-cart present", buy, "", "high", 1)
+    else:
+        buy = len(set(re.findall(r'href="(?:/[a-z]{2})?/products/([^"?#]+)', raw)))
+        rep.add("MARKETING", "Path to purchase: links to at least one product", buy >= 1, f"{buy} products linked", "med", 1)
+    paras = [p_.text_content() for p_ in main.xpath(".//p|.//li")]
+    unsourced = [p_[:90] for p_ in paras if re.search(r"\d+(\.\d+)? ?%", p_)
+                 and not re.search(MKT["own_concentrations"], p_, re.I)
+                 and not re.search(r"et al|study|trial|studies|PubMed|research", p_, re.I)]
+    rep.add("MARKETING", "Every result figure sits next to its source", not unsourced,
+            f"{len(unsourced)} unsourced: {unsourced[:2]}", "low", 1)
+
 def audit_html(path, rep, site):
     url = BASE + path
     status, final, raw = fetch(url)
@@ -128,6 +176,7 @@ def audit_html(path, rep, site):
 
     h1 = [re.sub(r"\s+", " ", e.text_content()).strip() for e in doc.xpath("//h1")]
     rep.add("SEO", "Exactly one <h1>", len(h1) == 1, " | ".join(h1) or "none", "high", 2)
+    audit_marketing(path, rep, raw, main, main_text, tgt)
     rep.add("SEO", "<h1> contains head term", any(primary.lower() in x.lower() for x in h1), "", "med")
     h2 = [re.sub(r"\s+", " ", e.text_content()).strip() for e in main.xpath(".//h2")]
     pseudo = [re.sub(r"\s+", " ", e.text_content()).strip() for e in main.xpath('.//*[not(self::h1 or self::h2 or self::h3 or self::h4) and (contains(concat(" ",@class," ")," h1 ") or contains(concat(" ",@class," ")," h2 ") or contains(concat(" ",@class," ")," h3 "))]')]
@@ -322,10 +371,10 @@ def write(path, rep, data, design, out_dir):
     slug = path.strip("/").replace("/", "-")
     day = dt.date.today().isoformat()
     out_dir.mkdir(parents=True, exist_ok=True)
-    scores = {a: rep.score(a) for a in ("SEO", "GEO", "DESIGN")}
+    scores = {a: rep.score(a) for a in ("SEO", "GEO", "DESIGN", "MARKETING")}
     lines = [f"# Page audit — `{path}`", "", f"**Date:** {day} · **Tool:** `scripts/page-audit.py` · **Live:** {BASE}{path}", "",
              "| Area | Score |", "|---|---|"] + [f"| {a} | **{s}/100** |" for a, s in scores.items()] + [""]
-    for area in ("SEO", "GEO", "DESIGN"):
+    for area in ("SEO", "GEO", "DESIGN", "MARKETING"):
         lines += [f"## {area}", "", "| | Check | Detail |", "|---|---|---|"]
         for i in rep.items:
             if i["area"] != area:
@@ -359,9 +408,11 @@ def main():
         design = asyncio.run(audit_design(path, rep, shots))
         scores = write(path, rep, data, design, ROOT / a.out)
         fails = [i for i in rep.items if not i["ok"] and i["severity"] != "info"]
-        print(f"\n  {path}   SEO {scores['SEO']} · GEO {scores['GEO']} · DESIGN {scores['DESIGN']}   ({len(fails)} findings)")
+        print(f"\n  {path}   SEO {scores['SEO']} · GEO {scores['GEO']} · DESIGN {scores['DESIGN']} · MARKETING {scores['MARKETING']}   ({len(fails)} findings)")
+        if scores["MARKETING"] is not None and scores["MARKETING"] < MKT["threshold"]:
+            print(f"    ⚠ MARKETING below {MKT['threshold']}: strengthen the claims — run the claims research (docs/claims/) before rewording")
         for i in sorted(fails, key=lambda x: {"high": 0, "med": 1, "low": 2}[x["severity"]]):
-            print(f"    {i['severity']:<4} {i['area']:<6} {i['check']} — {str(i['detail'])[:110]}")
+            print(f"    {i['severity']:<4} {i['area']:<9} {i['check']} — {str(i['detail'])[:110]}")
         print(f"    screenshots: {shots}/desktop.png, mobile.png")
     return 0
 

@@ -447,6 +447,12 @@ account. The transferable lessons:
   five-document context, where the winning tactics were permitted to invent statistics. **No replication
   exists.** Every 2026 "+41% for statistics" claim recycles it without saying so.
 
+**Ingredient claims (added 2026-09-22 from `docs/claims/`) — do not use:**
+- **PDRN "47% fewer fine lines" (attributed to J Cosmet Dermatol 2023)** — no such result in that journal. Believed fabricated.
+- **PDRN "78% of injectable efficacy"** — untraceable.
+- **PDRN "0.5–1% effective range"** — no source; the only controlled topical study used 0.1%.
+- **GHK-Cu "0.5–2% clinically studied range"** — no source in any review (was live on our copper FAQ until 2026-09-22).
+
 **A general warning:** a large share of what ranks for these queries in 2026 is AI-generated SEO spam
 carrying invented statistics with fabricated attributions. Two were caught during this research by
 fetching the cited primary source and finding it said something else entirely.

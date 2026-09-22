@@ -4,38 +4,107 @@
   "replace": {
     "match_title": "Learn",
     "with": {
-      "title": {"en": "Science", "de": "Wissenschaft", "nl": "Wetenschap", "fr": "Science", "es": "Ciencia", "it": "Scienza"},
+      "title": {
+        "en": "Science",
+        "de": "Wissenschaft",
+        "nl": "Wetenschap",
+        "fr": "Science",
+        "es": "Ciencia",
+        "it": "Scienza"
+      },
       "url": "/pages/the-science",
       "children": [
-        {"title": {"en": "Peptides", "de": "Peptide", "nl": "Peptiden", "fr": "Peptides", "es": "Péptidos", "it": "Peptidi"},
-         "url": "#",
-         "children": [
-           {"match_url": "/pages/copper-peptide-research"},
-           {"match_url": "/pages/acetyl-hexapeptide-8-research",
-            "title": {"en": "Argireline®", "de": "Argireline®", "nl": "Argireline®", "fr": "Argireline®", "es": "Argireline®", "it": "Argireline®"}},
-           {"match_url": "/pages/matrixyl-3000-research"}
-         ]},
-        {"title": {"en": "Beyond peptides", "de": "Mehr als Peptide", "nl": "Meer dan peptiden", "fr": "Au-delà des peptides", "es": "Más allá de los péptidos", "it": "Oltre i peptidi"},
-         "url": "#",
-         "children": [
-           {"match_url": "/pages/pdrn-research"},
-           {"match_url": "/pages/glutathione-research"}
-         ]},
-        {"title": {"en": "Our approach", "de": "Unser Ansatz", "nl": "Onze aanpak", "fr": "Notre approche", "es": "Nuestro enfoque", "it": "Il nostro approccio"},
-         "url": "#",
-         "children": [
-           {"match_url": "/pages/the-science"},
-           {"match_url": "/pages/ingredients"},
-           {"match_url": "/pages/our-philosophy"}
-         ]}
+        {
+          "title": {
+            "en": "Peptides",
+            "de": "Peptide",
+            "nl": "Peptiden",
+            "fr": "Peptides",
+            "es": "Péptidos",
+            "it": "Peptidi"
+          },
+          "url": "#",
+          "children": [
+            {
+              "match_url": "/pages/copper-peptide-research"
+            },
+            {
+              "match_url": "/pages/acetyl-hexapeptide-8-research",
+              "title": {
+                "en": "Argireline®",
+                "de": "Argireline®",
+                "nl": "Argireline®",
+                "fr": "Argireline®",
+                "es": "Argireline®",
+                "it": "Argireline®"
+              }
+            },
+            {
+              "match_url": "/pages/matrixyl-3000-research"
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Beyond peptides",
+            "de": "Mehr als Peptide",
+            "nl": "Meer dan peptiden",
+            "fr": "Au-delà des peptides",
+            "es": "Más allá de los péptidos",
+            "it": "Oltre i peptidi"
+          },
+          "url": "#",
+          "children": [
+            {
+              "match_url": "/pages/pdrn-research"
+            },
+            {
+              "match_url": "/pages/glutathione-research"
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Our approach",
+            "de": "Unser Ansatz",
+            "nl": "Onze aanpak",
+            "fr": "Notre approche",
+            "es": "Nuestro enfoque",
+            "it": "Il nostro approccio"
+          },
+          "url": "#",
+          "children": [
+            {
+              "match_url": "/pages/the-science"
+            },
+            {
+              "match_url": "/pages/ingredients"
+            },
+            {
+              "match_url": "/pages/our-philosophy"
+            }
+          ]
+        }
       ]
     }
   },
-  "remove": ["Discover"],
+  "remove": [
+    "Discover"
+  ],
   "header": {
     "section": "header",
     "block": "mega_menu_research",
-    "menu_item": {"en": "Science", "de": "Wissenschaft", "nl": "Wetenschap", "fr": "Science", "es": "Ciencia", "it": "Scienza"},
-    "remove_blocks": ["mega_menu_discover"]
-  }
+    "menu_item": {
+      "en": "Science",
+      "de": "Wissenschaft",
+      "nl": "Wetenschap",
+      "fr": "Science",
+      "es": "Ciencia",
+      "it": "Scienza"
+    },
+    "remove_blocks": [
+      "mega_menu_discover"
+    ]
+  },
+  "_status": "REVERTED 2026-09-22 on Malcolm's instruction ('do not split the main menu'). Live state = the original menu with only Learn → Science (scripts/menu-restore-science-label.py). Kept as a record; do not re-apply."
 }
