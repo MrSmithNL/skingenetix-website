@@ -1,0 +1,99 @@
+{
+  "_about": "Phase 1 metadata pass, 2026-09-22. English source only; the other five locales keep their current (accurate) translations until the German pass. Applied by scripts/seo-apply.py. Rollback source: configs/seo-snapshots/seo-before-phase1-2026-09-22.json. Rationale: docs/content-plan-2026.md §3, docs/keyword-strategy-2026.md §4, docs/decision-learning-centre-2026-09-22.md.",
+  "pages": {
+    "pdrn-research": {
+      "title": "What Is PDRN? Salmon DNA Skincare Benefits and Research",
+      "description": "PDRN (Sodium DNA) is made of salmon-derived DNA fragments, used in skincare for hydration and a plumper, revitalised look. What the studies show."
+    },
+    "acetyl-hexapeptide-8-research": {
+      "title": "Acetyl Hexapeptide-8 for Expression Lines: What It Does",
+      "description": "Acetyl Hexapeptide-8 is a peptide studied for softening the look of expression lines. How it works, how long it takes and what the trials found."
+    },
+    "copper-peptide-research": {
+      "title": "Copper Peptides (GHK-Cu) for Skin: Benefits and Research",
+      "description": "What copper peptide (GHK-Cu) does for skin: firmer, smoother and more radiant-looking results in published studies. How it works, explained with sources."
+    },
+    "matrixyl-3000-research": {
+      "title": "Matrixyl 3000: What This Peptide Does for Firmness and Lines",
+      "description": "Matrixyl 3000 combines palmitoyl tripeptide-1 and tetrapeptide-7. What studies show about firmer, smoother-looking skin and softer-looking fine lines."
+    },
+    "glutathione-research": {
+      "title": "Glutathione for Skin: Brightening Benefits and Research",
+      "description": "Topical glutathione for a brighter, more even-looking tone and a softer look of dark spots. What the studies show, what they don't, and how it is used."
+    },
+    "the-science": {
+      "title": "Learn About Peptide Skincare and the Research | Skingenetix",
+      "description": "PDRN, copper peptide, Acetyl Hexapeptide-8, Matrixyl 3000 and glutathione explained: how each works, what the research shows, and how we dose them."
+    },
+    "fine-lines-wrinkles": {
+      "title": "Fine Lines and Wrinkles: Which Peptides Help, and a Routine"
+    },
+    "firming-skin-density": {
+      "title": "Firming and Skin Density: Which Peptides Help, and a Routine"
+    },
+    "skin-repair-renewal": {
+      "title": "Skin Repair and Renewal: PDRN, Copper Peptide and a Routine"
+    },
+    "brightening-glow": {
+      "title": "Brightening and Glow: Glutathione, Vitamin C and a Routine"
+    }
+  },
+  "collections": {
+    "fine-lines-wrinkles": {
+      "title": "Shop Serums and Creams for Fine Lines and Wrinkles",
+      "description": "Shop peptide serums and creams for fine lines and expression lines: Acetyl Hexapeptide-8, Matrixyl 3000 and copper peptide, singly or as a routine."
+    },
+    "firming-skin-density": {
+      "title": "Shop Firming Serums and Creams for Skin Density",
+      "description": "Shop serums and creams for firmer, denser-looking skin: Matrixyl 3000, collagen and copper peptide, singly or as a firming routine."
+    },
+    "skin-repair-renewal": {
+      "title": "Shop PDRN and Copper Peptide Skincare for Renewal",
+      "description": "Shop PDRN (Sodium DNA) and copper peptide serums and night creams for dull, tired-looking skin and a refreshed, revitalised look."
+    },
+    "brightening-glow": {
+      "title": "Shop Glutathione Brightening Skincare for Glow",
+      "description": "Shop glutathione and vitamin C skincare for a brighter, more even-looking, radiant complexion, singly or as a brightening routine."
+    },
+    "pdrn": {
+      "title": "PDRN Skincare: Salmon DNA Serum and Night Cream",
+      "description": "1% PDRN (salmon DNA) serum and collagen night cream for deep hydration and plumper, revitalised-looking skin. Shop singly or as a full ritual."
+    },
+    "copper-peptide": {
+      "title": "Copper Peptide Skincare: GHK-Cu Serum, Day and Night Cream"
+    },
+    "serums": {
+      "title": "Peptide Serums: Copper Peptide, PDRN, Matrixyl and More"
+    },
+    "matrixyl-3000": {
+      "title": "Matrixyl 3000 Skincare: Serum and Pro-Collagen Cream"
+    },
+    "acetyl-hexapeptide-8": {
+      "title": "Acetyl Hexapeptide-8 Skincare for Expression Lines"
+    },
+    "glutathione": {
+      "title": "Glutathione Skincare for Brightening"
+    }
+  },
+  "products": {
+    "pdrn-renewal-serum": {"title": "PDRN Serum 1% with Salmon DNA | Skingenetix"},
+    "pdrn-collagen-night-cream": {"title": "PDRN Cream 1% with Salmon DNA: Collagen Night Cream"},
+    "copper-peptide-ghk-cu-renewal-serum": {"title": "Copper Peptide Serum 2% (GHK-Cu) | Skingenetix"},
+    "copper-peptide-ghk-cu-day-gel-cream": {"title": "Copper Peptide Day Cream 2% (GHK-Cu) Gel-Cream"},
+    "copper-peptide-ghk-cu-night-cream": {"title": "Copper Peptide Night Cream 2% (GHK-Cu) | Skingenetix"},
+    "matrixyl-3000-firming-serum": {"title": "Matrixyl 3000 Serum for Firmer-Looking Skin | Skingenetix"},
+    "matrixyl-3000-pro-collagen-firming-cream": {"title": "Matrixyl 3000 Pro-Collagen Firming Cream | Skingenetix"},
+    "acetyl-hexapeptide-8-anti-wrinkle-serum": {"title": "Acetyl Hexapeptide-8 Serum for Expression Lines"},
+    "glutathione-brightening-serum": {"title": "Glutathione Serum 2% with Vitamin C | Skingenetix"},
+    "complete-copper-peptide-ghk-cu-day-night-skincare-routine": {"title": "Copper Peptide 3-Product Day and Night Set"},
+    "day-night-copper-peptide-ghk-cu-duo-set": {"title": "Copper Peptide Day and Night Cream Duo (GHK-Cu 2%)"},
+    "pdrn-1-serum-cream-full-set": {"title": "PDRN Serum and Night Cream Set (1% Salmon DNA)"},
+    "full-matrixyl-3000-ritual-serum-cream": {"title": "Matrixyl 3000 Serum and Cream Set"},
+    "brightening-glow-duo-set-glutathione-serum-copper-peptide-gh": {"title": "Glutathione Serum and Copper Peptide Day Cream Duo"},
+    "skin-repair-renewal-serum-duo-set-pdrn-1-copper-peptide-ghk-": {"title": "PDRN Serum and Copper Peptide Day Cream Duo"},
+    "complete-skin-repair-renewal-routine-pdrn-1-serum-copper-pep": {"title": "PDRN and Copper Peptide 3-Product Day and Night Set"},
+    "complete-fine-lines-wrinkles-routine-acetyl-hexapeptide-8-ma": {"title": "Fine Lines and Wrinkles 3-Product Peptide Set"},
+    "complete-firming-skin-density-day-night-routine-matrixyl-300": {"title": "Firming and Skin Density 3-Product Peptide Set"},
+    "fine-lines-wrinkles-peptide-duo-set-matrixyl-3000-acetyl-hex": {"title": "Matrixyl 3000 and Acetyl Hexapeptide-8 Serum Duo"}
+  }
+}

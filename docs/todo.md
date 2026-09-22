@@ -102,7 +102,20 @@ list is now **15**. **"Before and after" searches excluded** — the store's bef
 AI-generated illustrations and must not be presented as results. Record:
 `docs/decision-learning-centre-2026-09-22.md`.
 
-**🛑 One decision left:** whether the four thin concern collections earn their place.
+**✅ All decisions taken (Malcolm, 2026-09-22):**
+1. Concern collections — **keep both, differentiate by intent** (collection = shop, page = guidance), as the evidence recommended. Concern search demand is near zero and every concern URL gets single-digit impressions, so the cheapest safe fix wins.
+2. Hub reviewer — **Dr. Esther Bodde, Cosmetic & Medical Physician**, for now; other dermatologists to follow. ⚠️ The sister brand credits her three different ways, including "Cosmetic & Plastic Surgeon" — one of those is inaccurate and should be reconciled there.
+3. PDRN source — **salmon DNA**. Now used in PDRN titles.
+4. Markets — **English first, German second.**
+5. Off-site — **in scope**, delivered through the authority and backlink outreach function being built in the AISOGEN platform project.
+6. PDRN range extension — **yes, parked** until products are sourced.
+
+**▶ PHASE 1 — in progress (started 2026-09-22).** Done and verified live:
+- ✅ **39 SEO titles/descriptions** — 5 research hubs, the-science, 4 concern pages, 10 collections, 19 products. 39/39 verified on the live site. Tool: `scripts/seo-apply.py`, spec `configs/seo-changes/phase1-2026-09-22.json`, rollback snapshot in `configs/seo-snapshots/`.
+- ✅ **95 product-title translations** (19 × de/nl/fr/es/it) — needed at once, because the products had no SEO title before and every locale fell back to the new English one. 95/95 verified live.
+- ✅ **Blog renamed `news` → `learn`**, title translated in 5 locales, `/blogs/news` 301s to `/blogs/learn`.
+- ✅ **Menu "Scientific Research" → "Learn"** (Wissen / Kennis / Apprendre / Aprende / Impara), menu item and mega-menu setting changed together. **This also fixed a live defect: the research mega-menu was broken in DE, FR, ES and IT** because the menu label and the mega-menu setting had been translated differently. Verified by opening the menu in a browser in all six languages.
+
 
 **⚠️ Still blocking measurement: GA4 records no ecommerce events.** Reviews moved to a separate thread.
 

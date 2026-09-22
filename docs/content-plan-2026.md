@@ -122,7 +122,7 @@ content and no new links.
 | 1b | **Rename the blog `news` → `learn`**, title *Learn*. Zero articles, so no redirects | Decided 2026-09-22 — `docs/decision-learning-centre-2026-09-22.md` |
 | 1c | **Make `/pages/the-science` the Learn front door** — index of the 5 hubs, latest articles, INCI reference; menu label *Learn*; keep the handle | It ranks for nothing today (13 impressions, p29.6) and has no citations |
 | 2 | **Resolve the 4 concern-handle collisions.** `/pages/` and `/collections/` both 200, both self-canonical, near-identical titles | Live cannibalisation on `fine-lines-wrinkles`, `firming-skin-density`, `skin-repair-renewal`, `brightening-glow` |
-| 3 | **Meta titles + descriptions everywhere.** None exist on any page or product | ⚠️ `ProductInput.seo` replaces the whole object — always send title *and* description |
+| 3 | **Meta titles + descriptions everywhere.** ⚠️ *Corrected 2026-09-22:* they already existed on all pages and most collections; only product titles were unset (2 of 21). Rewritten to the hero map rather than created | ⚠️ `ProductInput.seo` replaces the whole object — always send title *and* description |
 | 4 | **Cross-link research ↔ solution pages, in prose** | Currently zero cross-family links. Zyppy: 0–4 inbound → ~2 clicks, 40–44 → ~8. Anchor variety was the strongest effect in that study |
 | 5 | **Even out hub depth** — glutathione has 1 key finding, copper peptide has 3 | |
 | 6 | Fix logged defects: `/pages/skin-concerns` lists 4 of 5 concerns; `/pages/brightening-glow` has a dead CSS block; `/pages/the-science` JSON-LD has a hardcoded 2026-03-11 date | |
@@ -238,7 +238,7 @@ hers: ***"Could a competitor publish a near-identical version of this page tomor
 prompt?"***
 
 **Ours pass only if they are grounded in things only we have:** our stated concentrations (GHK-Cu 2%,
-PDRN 1%, AH-8 10%, glutathione 2%), our full INCI lists, and the PubMed-cited trials already assembled on
+PDRN 1%, glutathione 2% — ⚠️ *no concentration is stated for the Acetyl Hexapeptide-8 serum; the earlier "AH-8 10%" was unverified and is removed*), our full INCI lists, and the PubMed-cited trials already assembled on
 the hubs. A generic "Copper Peptides vs Retinol" explainer fails the test and must not be written.
 
 ⚠️ **Corrected 2026-09-22:** this list previously included *"our own before/after photography"*. The
