@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "ingredient researchargireline acetyl hexapeptide-8 a synthetic hexapeptide shown in clinical studies to visibly soften the look of expressio",
+   "detail": "argireline acetyl hexapeptide-8 a synthetic hexapeptide shown in clinical studies to visibly soften the look of expression lines around the ",
    "severity": "pass",
    "weight": 2
   },
@@ -131,7 +131,7 @@
    "area": "MARKETING",
    "check": "Hedging \u2264 2.0 per 100 words (science page)",
    "ok": true,
-   "detail": "0.2/100 words: ['is valued for', 'valued in skincare']",
+   "detail": "0.1/100 words: ['is valued for', 'valued in skincare']",
    "severity": "pass",
    "weight": 2
   },
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "8 <h2>: ['What Is Argireline?', 'What Does Argireline Do for Expression Lines?', 'What 10% Argireline\u00ae Means', 'How to Use Argireline', 'Published References', 'Frequently Asked Questions', 'Shop Acetyl Hexapeptide-8 Products', 'Explore More Research']",
+   "detail": "9 <h2>: ['What Is Argireline?', 'What Does Argireline Do for Expression Lines?', 'Argireline\u00ae vs Placebo: What the Trials Measured', 'What 10% Argireline\u00ae Means', 'How to Use Argireline', 'Published References', 'Frequently Asked Questions', 'Shop Acetyl Hexapeptide-8 Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "22 unique",
+   "detail": "23 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -266,9 +266,9 @@
   {
    "area": "GEO",
    "check": "Reviewer/author in schema (reviewedBy/author)",
-   "ok": false,
+   "ok": true,
    "detail": "pending Dr Bodde's review",
-   "severity": "info",
+   "severity": "pass",
    "weight": 0
   },
   {
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "30 paragraphs, 0 too long",
+   "detail": "36 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "9",
+   "detail": "11",
    "severity": "pass",
    "weight": 1.0
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "43 figures",
+   "detail": "72 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "32 citation markers",
+   "detail": "36 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "1136 words extracted (main text 1293)",
+   "detail": "1287 words extracted (main text 1569)",
    "severity": "pass",
    "weight": 3
   },
@@ -395,7 +395,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "8 kept",
+   "detail": "9 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -443,7 +443,7 @@
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
    "ok": true,
-   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
+   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 Graphite",
    "severity": "pass",
    "weight": 1.5
   },
@@ -512,6 +512,7 @@
   "h2": [
    "What Is Argireline?",
    "What Does Argireline Do for Expression Lines?",
+   "Argireline\u00ae vs Placebo: What the Trials Measured",
    "What 10% Argireline\u00ae Means",
    "How to Use Argireline",
    "Published References",
@@ -541,6 +542,7 @@
    "/pages/our-philosophy",
    "/pages/pdrn-research",
    "/pages/shipping-returns",
+   "/pages/study/argireline-crows-feet-trial-wang-2013",
    "/pages/the-science",
    "/policies/contact-information",
    "/policies/legal-notice",
@@ -564,8 +566,8 @@
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 1136,
-  "main_words": 1293,
+  "extracted_words": 1287,
+  "main_words": 1569,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg?v=1787664404&width=3000",
@@ -640,76 +642,85 @@
      "top": 566,
      "h": 586,
      "bg": "rgb(240, 240, 240)",
-     "text": 740,
+     "text": 825,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
      "top": 1151,
-     "h": 778,
+     "h": 802,
      "bg": "rgb(255, 255, 255)",
-     "text": 1447,
+     "text": 1509,
      "media": 0
     },
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 1929,
+     "top": 1953,
      "h": 2299,
      "bg": "rgb(240, 240, 240)",
      "text": 1849,
      "media": 3
     },
     {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 4252,
+     "h": 914,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1494,
+     "media": 0
+    },
+    {
      "id": "usage",
      "type": "rich-text",
-     "top": 4228,
+     "top": 5166,
      "h": 522,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 681,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 4749,
+     "top": 5687,
      "h": 866,
-     "bg": "rgb(240, 240, 240)",
+     "bg": "rgb(255, 255, 255)",
      "text": 1126,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 5615,
+     "top": 6553,
      "h": 1117,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 383,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 6732,
-     "h": 850,
-     "bg": "rgb(240, 240, 240)",
+     "top": 7670,
+     "h": 818,
+     "bg": "rgb(255, 255, 255)",
      "text": 66,
      "media": 2
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 7582,
+     "top": 8488,
      "h": 775,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 306,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 8357,
+     "top": 9263,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
      "text": 142,
@@ -718,7 +729,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 8710,
+     "top": 9616,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -727,7 +738,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9226,
+     "top": 10132,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -754,78 +765,87 @@
      "id": "overview",
      "type": "rich-text",
      "top": 460,
-     "h": 593,
+     "h": 637,
      "bg": "rgb(240, 240, 240)",
-     "text": 740,
+     "text": 825,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1052,
-     "h": 915,
+     "top": 1097,
+     "h": 937,
      "bg": "rgb(255, 255, 255)",
-     "text": 1447,
+     "text": 1509,
      "media": 0
     },
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 1967,
+     "top": 2034,
      "h": 3041,
      "bg": "rgb(240, 240, 240)",
      "text": 1849,
      "media": 3
     },
     {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 5076,
+     "h": 1854,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1494,
+     "media": 0
+    },
+    {
      "id": "usage",
      "type": "rich-text",
-     "top": 5009,
+     "top": 6929,
      "h": 533,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 681,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 5541,
+     "top": 7462,
      "h": 1244,
-     "bg": "rgb(240, 240, 240)",
+     "bg": "rgb(255, 255, 255)",
      "text": 1126,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 6786,
+     "top": 8706,
      "h": 1107,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 383,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 7892,
-     "h": 609,
-     "bg": "rgb(240, 240, 240)",
+     "top": 9813,
+     "h": 572,
+     "bg": "rgb(255, 255, 255)",
      "text": 66,
      "media": 2
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 8502,
+     "top": 10385,
      "h": 580,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 306,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 9082,
+     "top": 10965,
      "h": 288,
      "bg": "rgb(26, 26, 26)",
      "text": 142,
@@ -834,7 +854,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 9369,
+     "top": 11253,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -843,7 +863,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 10408,
+     "top": 12292,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

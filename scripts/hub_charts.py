@@ -42,13 +42,13 @@ CSS = (".sgfig{max-width:1120px;margin:0 auto;padding:8px 20px 8px;color:#1A1A1A
        ".sgfig-key{width:14px;height:14px;border-radius:3px;display:inline-block;}"
        ".sgfig-row{padding:9px 0;border-top:1px solid #F0F0F0;}"
        ".sgfig-label{font-size:14px;font-weight:600;margin:0 0 6px;line-height:1.35;}"
-       ".sgfig-line{display:grid;grid-template-columns:1fr 70px;align-items:center;gap:10px;margin:3px 0;}"
+       ".sgfig-line{display:grid;grid-template-columns:1fr var(--valw,70px);align-items:center;gap:10px;margin:3px 0;}"
        ".sgfig-track{position:relative;height:14px;}"
        ".sgfig-zero{position:absolute;top:-4px;bottom:-4px;width:1px;background:#C9C9C9;}"
        ".sgfig-bar{position:absolute;top:0;height:14px;min-width:2px;}"
        ".sgfig-val{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;}"
        ".sgfig-val.sgfig-quiet{font-weight:500;color:#5A5A5A;}"
-       ".sgfig-axis{display:grid;grid-template-columns:1fr 70px;gap:10px;font-size:12px;color:#5A5A5A;margin-top:6px;}"
+       ".sgfig-axis{display:grid;grid-template-columns:1fr var(--valw,70px);gap:10px;font-size:12px;color:#5A5A5A;margin-top:6px;}"
        ".sgfig-axis div{position:relative;height:14px;}"
        ".sgfig-axis span{position:absolute;transform:translateX(-50%);white-space:nowrap;}"
        ".sgfig-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:13px;font-variant-numeric:tabular-nums;}"
@@ -74,10 +74,46 @@ def _pos(v, a, b):
     return (v - a) / (b - a) * 100
 
 
+RANGE_WORD = {"en": "to", "de": "bis", "nl": "tot", "fr": "à", "es": "a", "it": "a"}
+
+
+def value_label(c, r, s, loc):
+    """The text shown for one bar and its table cell. Ranges read '−20 to −23%'; a row may override the text
+    ('7 of 10'); a series may carry a prefix ('≈') for figures the source gives only approximately."""
+    over = r.get("labels", {}).get(s["key"], {}).get(loc)
+    if over:
+        return over
+    v, unit, signed = r["values"][s["key"]], c.get("unit", "%"), c.get("signed", True)
+    if isinstance(v, list):
+        near, far = sorted(v, key=abs)
+        text = (fmt(near, loc, "", signed, c.get("decimals")) + " " + RANGE_WORD[loc] + " "
+                + fmt(far, loc, unit, signed, c.get("decimals")))
+    else:
+        text = fmt(v, loc, unit, signed, c.get("decimals"))
+    return s.get("prefix", "") + text
+
+
+def bars(v, a, b, z, color):
+    """One bar from the zero line; a range [near, far] gets a solid bar to `near` and a lighter band to `far`,
+    because the source gives only an interval ('approximately −20% to −23%')."""
+    near, far = (sorted(v, key=abs) if isinstance(v, list) else (v, v))
+    out = []
+    for lo_v, hi_v, style in ((0, near, ""), (near, far, "opacity:.38;")):
+        if lo_v == hi_v:
+            continue
+        p1, p2 = sorted((_pos(lo_v, a, b), _pos(hi_v, a, b)))
+        outer = hi_v == far                                   # the end away from zero gets the rounded corner
+        radius = ("4px 0 0 4px" if hi_v < 0 else "0 4px 4px 0") if outer else "0"
+        out.append(f'<span class="sgfig-bar" style="left:{p1:.2f}%;width:{p2 - p1:.2f}%;background:{color};'
+                   f'border-radius:{radius};{style}"></span>')
+    return "".join(out)
+
+
 def render_chart(c, loc):
     a, b = c["domain"]
     z = _pos(0, a, b)
-    out = [f'<div class="sgfig-card"><p class="sgfig-title">{c["title"][loc]}</p>']
+    # value_width: the value column is fixed so bars and axis share one scale; ranges ("−20 to −23%") need more room
+    out = [f'<div class="sgfig-card" style="--valw:{c.get("value_width", 70)}px"><p class="sgfig-title">{c["title"][loc]}</p>']
     if c.get("subtitle"):
         out.append(f'<p class="sgfig-sub">{c["subtitle"][loc]}</p>')
     if len(c["series"]) > 1:
@@ -90,27 +126,24 @@ def render_chart(c, loc):
                 continue
             v = r["values"][s["key"]]
             color = r.get("colors", {}).get(s["key"], s["color"])
-            left, width = (_pos(v, a, b), z - _pos(v, a, b)) if v < 0 else (z, _pos(v, a, b) - z)
-            radius = "4px 0 0 4px" if v < 0 else "0 4px 4px 0"
             quiet = " sgfig-quiet" if s.get("quiet") else ""
-            val = fmt(v, loc, c.get("unit", "%"), decimals=c.get("decimals"))
+            val = value_label(c, r, s, loc)
             tip = H.escape(f'{H.unescape(s["label"][loc])}: {val}', quote=True)
             out.append(f'<div class="sgfig-line" title="{tip}"><div class="sgfig-track">'
-                       f'<span class="sgfig-zero" style="left:{z:.2f}%"></span>'
-                       f'<span class="sgfig-bar" style="left:{left:.2f}%;width:{width:.2f}%;background:{color};border-radius:{radius}"></span>'
+                       f'<span class="sgfig-zero" style="left:{z:.2f}%"></span>{bars(v, a, b, z, color)}'
                        f'</div><span class="sgfig-val{quiet}">{val}</span></div>')
         out.append("</div>")
     ticks = c.get("ticks")
     if ticks:
         out.append('<div class="sgfig-axis" aria-hidden="true"><div>' + "".join(
-            f'<span style="left:{_pos(t, a, b):.2f}%">{fmt(t, loc, c.get("unit", "%"), signed=t != 0)}</span>' for t in ticks) + "</div><span></span></div>")
+            f'<span style="left:{_pos(t, a, b):.2f}%">{fmt(t, loc, c.get("unit", "%"), signed=c.get("signed", True) and t != 0)}</span>' for t in ticks) + "</div><span></span></div>")
     if c.get("table_head"):
         # The table view the dataviz skill asks for, and the one element AI extraction reliably keeps
         # (seo-aiso-validator: <table> survives, div rows do not). One line, no links (a link inside a
         # table makes extractors drop it). Round-1 external audit, 2026-09-22: "use true HTML tables".
         head = "".join(f"<th>{h}</th>" for h in [c["table_head"][loc]] + [s["label"][loc] for s in c["series"]])
         body = "".join("<tr><td>" + r["label"][loc] + "</td>" + "".join(
-            f'<td>{fmt(r["values"][s["key"]], loc, c.get("unit", "%"), decimals=c.get("decimals"))}</td>'
+            f'<td>{value_label(c, r, s, loc)}</td>'
             for s in c["series"] if s["key"] in r["values"]) + "</tr>" for r in c["rows"])
         out.append(f'<table class="sgfig-table"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>')
     out.append(f'<div class="sgfig-caption">{c["caption"][loc]}</div></div>')

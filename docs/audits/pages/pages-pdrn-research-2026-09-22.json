@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "ingredient researchpdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna valued in modern skincare for supporting a firmer",
+   "detail": "pdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna valued in modern skincare for supporting a firmer smoother and more ",
    "severity": "pass",
    "weight": 2
   },
@@ -131,7 +131,7 @@
    "area": "MARKETING",
    "check": "Hedging \u2264 2.0 per 100 words (science page)",
    "ok": true,
-   "detail": "0.2/100 words: ['is valued for']",
+   "detail": "0.1/100 words: ['is valued for']",
    "severity": "pass",
    "weight": 2
   },
@@ -163,7 +163,7 @@
    "area": "MARKETING",
    "check": "Every result figure sits next to its source",
    "ok": false,
-   "detail": "2 unsourced: [\"~20% softer-looking crow's feet\", \"~20% reduction in the appearance of crow's feet, outperforming the retinol cream\"]",
+   "detail": "3 unsourced: [\"~20% softer-looking crow's feet\", \"~20% reduction in the appearance of crow's feet, outperforming the retinol cream\"]",
    "severity": "low",
    "weight": 1
   },
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "8 <h2>: ['What Is PDRN?', 'What Does PDRN Do for Skin?', 'Salmon DNA: Where PDRN Comes From', 'What 1% PDRN Means', 'Published References', 'Frequently Asked Questions', 'Shop PDRN Products', 'Explore More Research']",
+   "detail": "9 <h2>: ['What Is PDRN?', 'What Does PDRN Do for Skin?', 'PDRN vs Retinol: What the Measurements Show', 'Salmon DNA: Where PDRN Comes From', 'What 1% PDRN Means', 'Published References', 'Frequently Asked Questions', 'Shop PDRN Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "24 unique",
+   "detail": "25 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -266,9 +266,9 @@
   {
    "area": "GEO",
    "check": "Reviewer/author in schema (reviewedBy/author)",
-   "ok": false,
+   "ok": true,
    "detail": "pending Dr Bodde's review",
-   "severity": "info",
+   "severity": "pass",
    "weight": 0
   },
   {
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "22 paragraphs, 0 too long",
+   "detail": "29 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "5",
+   "detail": "8",
    "severity": "pass",
    "weight": 1.0
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "29 figures",
+   "detail": "53 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "23 citation markers",
+   "detail": "27 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "960 words extracted (main text 1156)",
+   "detail": "1163 words extracted (main text 1509)",
    "severity": "pass",
    "weight": 3
   },
@@ -395,7 +395,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "8 kept",
+   "detail": "9 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -443,7 +443,7 @@
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
    "ok": true,
-   "detail": "Bone \u2192 White \u2192 Bone \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
+   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
    "severity": "pass",
    "weight": 1.5
   },
@@ -512,6 +512,7 @@
   "h2": [
    "What Is PDRN?",
    "What Does PDRN Do for Skin?",
+   "PDRN vs Retinol: What the Measurements Show",
    "Salmon DNA: Where PDRN Comes From",
    "What 1% PDRN Means",
    "Published References",
@@ -543,6 +544,7 @@
    "/pages/our-philosophy",
    "/pages/shipping-returns",
    "/pages/skin-repair-renewal",
+   "/pages/study/pdrn-vs-retinol-split-face-trial-ye-2026",
    "/pages/the-science",
    "/policies/contact-information",
    "/policies/legal-notice",
@@ -559,15 +561,16 @@
    "https://doi.org/10.1371/journal.pone.0350905",
    "https://pubmed.ncbi.nlm.nih.gov/28491036/",
    "https://pubmed.ncbi.nlm.nih.gov/34067499/",
-   "https://pubmed.ncbi.nlm.nih.gov/39645667/"
+   "https://pubmed.ncbi.nlm.nih.gov/39645667/",
+   "https://pubmed.ncbi.nlm.nih.gov/42430369/"
   ],
   "schema_types": [
    "BreadcrumbList",
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 960,
-  "main_words": 1156,
+  "extracted_words": 1163,
+  "main_words": 1509,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg?v=1787661986&width=3000",
@@ -656,34 +659,43 @@
      "id": "overview",
      "type": "rich-text",
      "top": 566,
-     "h": 658,
+     "h": 682,
      "bg": "rgb(240, 240, 240)",
-     "text": 979,
+     "text": 1064,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1223,
+     "top": 1247,
      "h": 677,
      "bg": "rgb(255, 255, 255)",
-     "text": 1182,
+     "text": 1235,
      "media": 0
     },
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 1900,
-     "h": 752,
+     "top": 1924,
+     "h": 820,
      "bg": "rgb(240, 240, 240)",
      "text": 540,
      "media": 1
     },
     {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 2744,
+     "h": 1266,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1920,
+     "media": 0
+    },
+    {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 2652,
-     "h": 1436,
+     "top": 4010,
+     "h": 1504,
      "bg": "rgb(240, 240, 240)",
      "text": 642,
      "media": 2
@@ -691,7 +703,7 @@
     {
      "id": "salmon_dna",
      "type": "rich-text",
-     "top": 4088,
+     "top": 5514,
      "h": 646,
      "bg": "rgb(255, 255, 255)",
      "text": 803,
@@ -700,7 +712,7 @@
     {
      "id": "references",
      "type": "custom-html",
-     "top": 4734,
+     "top": 6160,
      "h": 707,
      "bg": "rgb(240, 240, 240)",
      "text": 743,
@@ -709,7 +721,7 @@
     {
      "id": "faq",
      "type": "faq",
-     "top": 5441,
+     "top": 6867,
      "h": 1117,
      "bg": "rgb(255, 255, 255)",
      "text": 280,
@@ -718,7 +730,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 6558,
+     "top": 7984,
      "h": 797,
      "bg": "rgb(240, 240, 240)",
      "text": 184,
@@ -727,7 +739,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 7355,
+     "top": 8781,
      "h": 775,
      "bg": "rgb(255, 255, 255)",
      "text": 327,
@@ -736,7 +748,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 8130,
+     "top": 9556,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
      "text": 159,
@@ -745,7 +757,7 @@
     {
      "id": "findings_spacing_fix",
      "type": "custom-html",
-     "top": 8483,
+     "top": 9909,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -754,7 +766,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 8483,
+     "top": 9909,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -763,7 +775,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8999,
+     "top": 10425,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -790,34 +802,43 @@
      "id": "overview",
      "type": "rich-text",
      "top": 460,
-     "h": 705,
+     "h": 749,
      "bg": "rgb(240, 240, 240)",
-     "text": 979,
+     "text": 1064,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1164,
-     "h": 801,
+     "top": 1209,
+     "h": 823,
      "bg": "rgb(255, 255, 255)",
-     "text": 1182,
+     "text": 1235,
      "media": 0
     },
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 1965,
-     "h": 1008,
+     "top": 2032,
+     "h": 1038,
      "bg": "rgb(240, 240, 240)",
      "text": 540,
      "media": 1
     },
     {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 3070,
+     "h": 2309,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1920,
+     "media": 0
+    },
+    {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 2973,
-     "h": 1659,
+     "top": 5379,
+     "h": 1689,
      "bg": "rgb(240, 240, 240)",
      "text": 642,
      "media": 2
@@ -825,7 +846,7 @@
     {
      "id": "salmon_dna",
      "type": "rich-text",
-     "top": 4632,
+     "top": 7068,
      "h": 634,
      "bg": "rgb(255, 255, 255)",
      "text": 803,
@@ -834,7 +855,7 @@
     {
      "id": "references",
      "type": "custom-html",
-     "top": 5266,
+     "top": 7702,
      "h": 994,
      "bg": "rgb(240, 240, 240)",
      "text": 743,
@@ -843,7 +864,7 @@
     {
      "id": "faq",
      "type": "faq",
-     "top": 6260,
+     "top": 8696,
      "h": 979,
      "bg": "rgb(255, 255, 255)",
      "text": 280,
@@ -852,7 +873,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 7239,
+     "top": 9675,
      "h": 553,
      "bg": "rgb(240, 240, 240)",
      "text": 184,
@@ -861,7 +882,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 7792,
+     "top": 10228,
      "h": 580,
      "bg": "rgb(255, 255, 255)",
      "text": 327,
@@ -870,7 +891,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 8372,
+     "top": 10808,
      "h": 310,
      "bg": "rgb(26, 26, 26)",
      "text": 159,
@@ -879,7 +900,7 @@
     {
      "id": "findings_spacing_fix",
      "type": "custom-html",
-     "top": 8682,
+     "top": 11118,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -888,7 +909,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 8682,
+     "top": 11118,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -897,7 +918,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9721,
+     "top": 12157,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

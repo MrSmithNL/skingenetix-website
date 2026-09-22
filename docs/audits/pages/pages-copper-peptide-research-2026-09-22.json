@@ -51,7 +51,7 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": true,
-   "detail": "153c",
+   "detail": "156c",
    "severity": "pass",
    "weight": 1.0
   },
@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "ingredient researchcopper peptide ghk-cu a copper-binding peptide found naturally in the body studied for its role in the skin's own collage",
+   "detail": "copper peptide ghk-cu a copper-binding peptide found naturally in the body studied for its role in the skin's own collagen and repair proces",
    "severity": "pass",
    "weight": 2
   },
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "8 <h2>: ['What Is Copper Peptide?', 'Copper Peptide Benefits: What the Evidence Shows', 'What 2% GHK-Cu Means', 'How to Use Copper Peptide', 'Published References', 'Frequently Asked Questions', 'Shop Copper Peptide Products', 'Explore More Research']",
+   "detail": "9 <h2>: ['What Is Copper Peptide?', 'Copper Peptide Benefits: What the Evidence Shows', 'GHK-Cu in Head-to-Head Studies: What Was Measured', 'What 2% GHK-Cu Means', 'How to Use Copper Peptide', 'Published References', 'Frequently Asked Questions', 'Shop Copper Peptide Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -266,9 +266,9 @@
   {
    "area": "GEO",
    "check": "Reviewer/author in schema (reviewedBy/author)",
-   "ok": false,
+   "ok": true,
    "detail": "pending Dr Bodde's review",
-   "severity": "info",
+   "severity": "pass",
    "weight": 0
   },
   {
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "34 paragraphs, 0 too long",
+   "detail": "41 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "11",
+   "detail": "13",
    "severity": "pass",
    "weight": 1.0
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "15 figures",
+   "detail": "34 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "49 citation markers",
+   "detail": "52 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "1325 words extracted (main text 1555)",
+   "detail": "1494 words extracted (main text 1850)",
    "severity": "pass",
    "weight": 3
   },
@@ -395,7 +395,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "8 kept",
+   "detail": "9 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -443,7 +443,7 @@
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
    "ok": true,
-   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
+   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 Graphite",
    "severity": "pass",
    "weight": 1.5
   },
@@ -512,6 +512,7 @@
   "h2": [
    "What Is Copper Peptide?",
    "Copper Peptide Benefits: What the Evidence Shows",
+   "GHK-Cu in Head-to-Head Studies: What Was Measured",
    "What 2% GHK-Cu Means",
    "How to Use Copper Peptide",
    "Published References",
@@ -574,8 +575,8 @@
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 1325,
-  "main_words": 1555,
+  "extracted_words": 1494,
+  "main_words": 1850,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg?v=1787645156&width=3000",
@@ -689,15 +690,15 @@
      "id": "overview",
      "type": "rich-text",
      "top": 566,
-     "h": 658,
+     "h": 682,
      "bg": "rgb(240, 240, 240)",
-     "text": 1027,
+     "text": 1112,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1223,
+     "top": 1247,
      "h": 898,
      "bg": "rgb(255, 255, 255)",
      "text": 2128,
@@ -706,61 +707,70 @@
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 2121,
+     "top": 2145,
      "h": 2391,
      "bg": "rgb(240, 240, 240)",
      "text": 1717,
      "media": 3
     },
     {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 4536,
+     "h": 1157,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1758,
+     "media": 0
+    },
+    {
      "id": "usage",
      "type": "rich-text",
-     "top": 4512,
+     "top": 5693,
      "h": 498,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 633,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 5009,
+     "top": 6190,
      "h": 1116,
-     "bg": "rgb(240, 240, 240)",
+     "bg": "rgb(255, 255, 255)",
      "text": 1598,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 6125,
+     "top": 7306,
      "h": 1117,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 334,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 7242,
-     "h": 820,
-     "bg": "rgb(240, 240, 240)",
+     "top": 8423,
+     "h": 788,
+     "bg": "rgb(255, 255, 255)",
      "text": 395,
      "media": 10
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 8062,
+     "top": 9211,
      "h": 751,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 326,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 8813,
+     "top": 9962,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
      "text": 130,
@@ -769,7 +779,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 9166,
+     "top": 10315,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -778,7 +788,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9682,
+     "top": 10831,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -814,15 +824,15 @@
      "id": "overview",
      "type": "rich-text",
      "top": 460,
-     "h": 740,
+     "h": 785,
      "bg": "rgb(240, 240, 240)",
-     "text": 1027,
+     "text": 1112,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1199,
+     "top": 1244,
      "h": 1216,
      "bg": "rgb(255, 255, 255)",
      "text": 2128,
@@ -831,61 +841,70 @@
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 2416,
+     "top": 2461,
      "h": 3109,
      "bg": "rgb(240, 240, 240)",
      "text": 1717,
      "media": 3
     },
     {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 5569,
+     "h": 2243,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1758,
+     "media": 0
+    },
+    {
      "id": "usage",
      "type": "rich-text",
-     "top": 5524,
+     "top": 7812,
      "h": 568,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 633,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 6092,
+     "top": 8380,
      "h": 1728,
-     "bg": "rgb(240, 240, 240)",
+     "bg": "rgb(255, 255, 255)",
      "text": 1598,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 7820,
+     "top": 10108,
      "h": 1021,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 334,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 8841,
-     "h": 609,
-     "bg": "rgb(240, 240, 240)",
+     "top": 11129,
+     "h": 593,
+     "bg": "rgb(255, 255, 255)",
      "text": 395,
      "media": 10
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 9450,
+     "top": 11723,
      "h": 580,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 326,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 10030,
+     "top": 12302,
      "h": 288,
      "bg": "rgb(26, 26, 26)",
      "text": 130,
@@ -894,7 +913,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 10318,
+     "top": 12590,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -903,7 +922,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 11357,
+     "top": 13629,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

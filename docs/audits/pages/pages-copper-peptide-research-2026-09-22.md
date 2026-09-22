@@ -18,7 +18,7 @@
 | ✅ | URL carries the head term | head term 'copper peptide' |
 | ✅ | Title present, 30–60 chars | 56c: Copper Peptides (GHK-Cu) for Skin: Benefits and Research |
 | ✅ | Title contains head term | 'copper peptide' |
-| ✅ | Meta description 70–160 chars | 153c |
+| ✅ | Meta description 70–160 chars | 156c |
 | ✅ | Meta description contains head term |  |
 | ✅ | Indexable (no noindex) | no robots meta |
 | ✅ | Self-referencing absolute canonical | https://www.skingenetix.com/pages/copper-peptide-research |
@@ -27,7 +27,7 @@
 | ✅ | og:title matches the page title | Copper Peptides (GHK-Cu) for Skin: Benefits and Research |
 | ✅ | Exactly one <h1> | Copper Peptide (GHK-Cu) |
 | ✅ | <h1> contains head term |  |
-| ✅ | Topic headings are real <h2> (≥ 3) | 8 <h2>: ['What Is Copper Peptide?', 'Copper Peptide Benefits: What the Evidence Shows', 'What 2% GHK-Cu Means', 'How to Use Copper Peptide', 'Published References', 'Frequently Asked Questions', 'Shop Copper Peptide Prod |
+| ✅ | Topic headings are real <h2> (≥ 3) | 9 <h2>: ['What Is Copper Peptide?', 'Copper Peptide Benefits: What the Evidence Shows', 'GHK-Cu in Head-to-Head Studies: What Was Measured', 'What 2% GHK-Cu Means', 'How to Use Copper Peptide', 'Published References', 'F |
 | ℹ️ | Visual-only headings (styled <p>/<span>) | 8 that look like headings but are not: ["Supports the skin's own collagen & renewal pathways", 'Supports skin-renewal cell activity (independent lab study)', 'Higher patient satisfaction after laser treatment (small cont |
 | ✅ | No skipped heading levels | clean |
 | ✅ | Content images have alt text | 21/21 |
@@ -46,21 +46,21 @@
 | ✅ | No links inside tables (AI extraction drops the table) | 0 found |
 | ✅ | Page entity schema (WebPage/Article) with dateModified | WebPage modified 2026-09-22 |
 | ✅ | Schema cites sources (citation[]) | 9 citations |
-| ℹ️ | Reviewer/author in schema (reviewedBy/author) | pending Dr Bodde's review |
+| ✅ | Reviewer/author in schema (reviewedBy/author) | pending Dr Bodde's review |
 | ✅ | A10 · head term in first 30% of text | 'copper peptide' |
 | ✅ | A1 · definition sentence early ('X is a …') | is a |
 | ✅ | A8 · secondary intents covered on the page | ['ghk-cu', 'copper peptide benefits'] / ['ghk-cu', 'copper peptide benefits'] |
-| ✅ | A2 · atomic paragraphs (none > 120 words) | 34 paragraphs, 0 too long |
-| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 11 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 15 figures |
-| ✅ | A3 · cited sources ≥ 3 | 49 citation markers |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 41 paragraphs, 0 too long |
+| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 13 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 34 figures |
+| ✅ | A3 · cited sources ≥ 3 | 52 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | ✅ | E1 · visible last-reviewed/updated date | Last updated |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 1 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 1325 words extracted (main text 1555) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 1494 words extracted (main text 1850) |
 | ✅ | Head term survives extraction |  |
-| ✅ | H2 sections survive extraction | 8 kept |
+| ✅ | H2 sections survive extraction | 9 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
 | ✅ | llms.txt present (evidence: fetched 0× by frontier crawlers — not scored) |  |
 
@@ -70,7 +70,7 @@
 |---|---|---|
 | ✅ | No blank band between header and first section | 0px |
 | ✅ | No empty-but-tall sections | none |
-| ✅ | Section backgrounds alternate | Bone → White → Bone → White → Bone → White → Bone → White → Graphite |
+| ✅ | Section backgrounds alternate | Bone → White → Bone → White → Bone → White → Bone → White → Bone → Graphite |
 | ✅ | Backgrounds on the brand palette | Bone / White / Graphite |
 | ✅ | No horizontal overflow (desktop) | 0px |
 | ✅ | No broken images (desktop) | none |
@@ -83,7 +83,7 @@
 
 | | Check | Detail |
 |---|---|---|
-| ✅ | Opening states a concrete skin outcome | ingredient researchcopper peptide ghk-cu a copper-binding peptide found naturally in the body studied for its role in the skin's own collage |
+| ✅ | Opening states a concrete skin outcome | copper peptide ghk-cu a copper-binding peptide found naturally in the body studied for its role in the skin's own collagen and repair proces |
 | ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 41 women |
 | ✅ | Hedging ≤ 2.0 per 100 words (science page) | 0.0/100 words: [] |
 | ✅ | No claim known to be unsupported (docs/claims/) | clean |
@@ -94,10 +94,10 @@
 ## Outline as served
 
 - **H1:** ['Copper Peptide (GHK-Cu)']
-- **H2:** ['What Is Copper Peptide?', 'Copper Peptide Benefits: What the Evidence Shows', 'What 2% GHK-Cu Means', 'How to Use Copper Peptide', 'Published References', 'Frequently Asked Questions', 'Shop Copper Peptide Products', 'Explore More Research']
+- **H2:** ['What Is Copper Peptide?', 'Copper Peptide Benefits: What the Evidence Shows', 'GHK-Cu in Head-to-Head Studies: What Was Measured', 'What 2% GHK-Cu Means', 'How to Use Copper Peptide', 'Published References', 'Frequently Asked Questions', 'Shop Copper Peptide Products', 'Explore More Research']
 - **Visual-only headings:** ["Supports the skin's own collagen & renewal pathways", 'Supports skin-renewal cell activity (independent lab study)', 'Higher patient satisfaction after laser treatment (small controlled trial)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Glutathione', 'Try Copper Peptide GHK-Cu']
 - **Schema types:** ['BreadcrumbList', 'WebPage', 'FAQPage']
-- **Extracted words (no JS):** 1325 of 1555
+- **Extracted words (no JS):** 1494 of 1850
 
 ## Section map (desktop)
 
@@ -105,14 +105,15 @@
 |---|---|---|---|---|
 | 126 | 440 | hero | image-with-text-overlay | Bone |
 | 566 | 0 | hero_banner_css | custom-html | Bone |
-| 566 | 658 | overview | rich-text | Bone |
-| 1223 | 898 | evidence | rich-text | White |
-| 2121 | 2391 | key_findings | media-with-text | Bone |
-| 4512 | 498 | usage | rich-text | White |
-| 5009 | 1116 | references | custom-html | Bone |
-| 6125 | 1117 | faq | faq | White |
-| 7242 | 820 | shop_ingredient | featured-collection | Bone |
-| 8062 | 751 | related | multi-column | White |
-| 8813 | 353 | cta | rich-text | Graphite |
-| 9166 | 516 | footer | footer | Bone |
-| 9682 | 0 | brand_layout_css | custom-html | Bone |
+| 566 | 682 | overview | rich-text | Bone |
+| 1247 | 898 | evidence | rich-text | White |
+| 2145 | 2391 | key_findings | media-with-text | Bone |
+| 4536 | 1157 | charts | custom-html | White |
+| 5693 | 498 | usage | rich-text | Bone |
+| 6190 | 1116 | references | custom-html | White |
+| 7306 | 1117 | faq | faq | Bone |
+| 8423 | 788 | shop_ingredient | featured-collection | White |
+| 9211 | 751 | related | multi-column | Bone |
+| 9962 | 353 | cta | rich-text | Graphite |
+| 10315 | 516 | footer | footer | Bone |
+| 10831 | 0 | brand_layout_css | custom-html | Bone |

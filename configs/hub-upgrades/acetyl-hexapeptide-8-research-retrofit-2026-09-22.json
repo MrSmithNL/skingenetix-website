@@ -1,0 +1,429 @@
+{
+  "_about": "Research-page-standard retrofit, 2026-09-22 (docs/content-plan-2026.md §4). ADDITIVE ONLY: a charts section with data tables, the references block translated per locale (it served English everywhere, and in nl an outdated older copy), and per-locale WebPage JSON-LD taken from the LIVE page (with reviewedBy). The original hub spec is stale — do not re-apply it. Figures from docs/claims/. Wang 2013 responders (22/45 vs 0/15); Raikou 2017 forehead cR2 (day 20 significant, day 60 not). Charts sit after the before/after row (its wrapper is Bone) so the Bone/White alternation holds; the sections below flip where needed (page-audit DESIGN finding, first apply).",
+  "template": "templates/page.research-argireline.json",
+  "page": "acetyl-hexapeptide-8-research",
+  "add_sections": [
+    {
+      "id": "charts",
+      "after": "key_findings_ba",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": false,
+          "remove_horizontal_spacing": false,
+          "background": "#ffffff",
+          "html": {
+            "$chart": [
+              "responders",
+              "forehead"
+            ],
+            "heading": {
+              "en": "Argireline® vs Placebo: What the Trials Measured",
+              "de": "Argireline® vs. Placebo: Was die Studien gemessen haben",
+              "nl": "Argireline® vs placebo: wat de studies maten",
+              "fr": "Argireline® ou placebo : ce qu'ont mesuré les essais",
+              "es": "Argireline® frente a placebo: lo que midieron los ensayos",
+              "it": "Argireline® contro placebo: cosa hanno misurato gli studi"
+            },
+            "intro": {
+              "en": "<p>Two placebo-controlled trials of creams with 10% Argireline®: one around the eyes, one on the forehead.</p>",
+              "de": "<p>Zwei placebokontrollierte Studien mit Cremes mit 10 % Argireline®: eine rund um die Augen, eine auf der Stirn.</p>",
+              "nl": "<p>Twee placebogecontroleerde studies met crèmes met 10% Argireline®: één rond de ogen, één op het voorhoofd.</p>",
+              "fr": "<p>Deux essais contrôlés contre placebo de crèmes à 10 % d'Argireline® : l'un autour des yeux, l'autre sur le front.</p>",
+              "es": "<p>Dos ensayos controlados con placebo de cremas con un 10 % de Argireline®: uno en el contorno de ojos y otro en la frente.</p>",
+              "it": "<p>Due studi controllati con placebo di creme con il 10% di Argireline®: uno sul contorno occhi, uno sulla fronte.</p>"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "charts": {
+    "responders": {
+      "title": {
+        "en": "Crow's feet clearly improved after 4 weeks",
+        "de": "Deutlich verbesserte Krähenfüße nach 4 Wochen",
+        "nl": "Duidelijk verbeterde kraaienpootjes na 4 weken",
+        "fr": "Pattes d'oie nettement améliorées après 4 semaines",
+        "es": "Patas de gallo claramente mejoradas tras 4 semanas",
+        "it": "Zampe di gallina nettamente migliorate dopo 4 settimane"
+      },
+      "subtitle": {
+        "en": "Share of people a clinician graded 3 or 4 on a 0–4 improvement scale. Double-blind trial, 60 adults, cream twice a day.",
+        "de": "Anteil der Personen, die ein Arzt auf einer Verbesserungsskala von 0–4 mit 3 oder 4 bewertete. Doppelblindstudie, 60 Erwachsene, Creme zweimal täglich.",
+        "nl": "Aandeel mensen dat een arts een 3 of 4 gaf op een verbeteringsschaal van 0–4. Dubbelblinde studie, 60 volwassenen, crème twee keer per dag.",
+        "fr": "Part des personnes notées 3 ou 4 par un clinicien sur une échelle d'amélioration de 0 à 4. Essai en double aveugle, 60 adultes, crème deux fois par jour.",
+        "es": "Porcentaje de personas a las que un clínico dio un 3 o un 4 en una escala de mejora de 0 a 4. Ensayo doble ciego, 60 adultos, crema dos veces al día.",
+        "it": "Quota di persone a cui un medico ha assegnato 3 o 4 su una scala di miglioramento da 0 a 4. Studio in doppio cieco, 60 adulti, crema due volte al giorno."
+      },
+      "unit": "%",
+      "signed": false,
+      "domain": [
+        0,
+        60
+      ],
+      "ticks": [
+        0,
+        25,
+        50
+      ],
+      "value_width": 132,
+      "series": [
+        {
+          "key": "a",
+          "color": "#3E4A52",
+          "label": {
+            "en": "Share clearly improved",
+            "de": "Anteil deutlich verbessert",
+            "nl": "Aandeel duidelijk verbeterd",
+            "fr": "Part nettement améliorée",
+            "es": "Porcentaje claramente mejorado",
+            "it": "Quota nettamente migliorata"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "a": 48.9
+          },
+          "label": {
+            "en": "10% Argireline® (45 people)",
+            "de": "10 % Argireline® (45 Personen)",
+            "nl": "10% Argireline® (45 personen)",
+            "fr": "Argireline® 10 % (45 personnes)",
+            "es": "Argireline® al 10 % (45 personas)",
+            "it": "Argireline® al 10% (45 persone)"
+          },
+          "labels": {
+            "a": {
+              "en": "22 of 45 (48.9%)",
+              "de": "22 von 45 (48,9 %)",
+              "nl": "22 van 45 (48,9%)",
+              "fr": "22 sur 45 (48,9 %)",
+              "es": "22 de 45 (48,9 %)",
+              "it": "22 su 45 (48,9%)"
+            }
+          }
+        },
+        {
+          "values": {
+            "a": 0
+          },
+          "colors": {
+            "a": "#9AA3A4"
+          },
+          "label": {
+            "en": "Placebo (15 people)",
+            "de": "Placebo (15 Personen)",
+            "nl": "Placebo (15 personen)",
+            "fr": "Placebo (15 personnes)",
+            "es": "Placebo (15 personas)",
+            "it": "Placebo (15 persone)"
+          },
+          "labels": {
+            "a": {
+              "en": "0 of 15",
+              "de": "0 von 15",
+              "nl": "0 van 15",
+              "fr": "0 sur 15",
+              "es": "0 de 15",
+              "it": "0 su 15"
+            }
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Group",
+        "de": "Gruppe",
+        "nl": "Groep",
+        "fr": "Groupe",
+        "es": "Grupo",
+        "it": "Gruppo"
+      },
+      "caption": {
+        "en": "<p>Nearly half of the Argireline® group (22 of 45) was graded clearly improved after 4 weeks, and no one on placebo (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>). 48.9% is the share of people improved, not the size of the change in each wrinkle.</p><p>Silicone replicas of the skin confirmed smoother skin in the Argireline® group (p&lt;0.01) and no significant change on placebo.</p>",
+        "de": "<p>Fast die Hälfte der Argireline®-Gruppe (22 von 45) wurde nach 4 Wochen als deutlich verbessert bewertet, in der Placebo-Gruppe niemand (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>). 48,9 % ist der Anteil der Personen mit Verbesserung, nicht das Ausmaß der Veränderung jeder Falte.</p><p>Silikonabdrücke der Haut bestätigten in der Argireline®-Gruppe eine glattere Haut (p&lt;0,01), unter Placebo keine signifikante Veränderung.</p>",
+        "nl": "<p>Bijna de helft van de Argireline®-groep (22 van 45) werd na 4 weken als duidelijk verbeterd beoordeeld, in de placebogroep niemand (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>). 48,9% is het aandeel mensen dat verbeterde, niet de grootte van de verandering per rimpel.</p><p>Siliconenafdrukken van de huid bevestigden een gladdere huid in de Argireline®-groep (p&lt;0,01) en geen significante verandering bij placebo.</p>",
+        "fr": "<p>Près de la moitié du groupe Argireline® (22 sur 45) a été jugée nettement améliorée après 4 semaines, et personne sous placebo (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>). 48,9 % est la part des personnes améliorées, pas l'ampleur du changement de chaque ride.</p><p>Des répliques de la peau en silicone ont confirmé une peau plus lisse dans le groupe Argireline® (p&lt;0,01) et aucun changement significatif sous placebo.</p>",
+        "es": "<p>Casi la mitad del grupo con Argireline® (22 de 45) fue valorada como claramente mejorada tras 4 semanas, y nadie con placebo (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>). El 48,9 % es el porcentaje de personas que mejoraron, no el tamaño del cambio en cada arruga.</p><p>Las réplicas de silicona de la piel confirmaron una piel más lisa en el grupo con Argireline® (p&lt;0,01) y ningún cambio significativo con placebo.</p>",
+        "it": "<p>Quasi metà del gruppo Argireline® (22 su 45) è stata giudicata nettamente migliorata dopo 4 settimane, e nessuno nel gruppo placebo (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>). Il 48,9% è la quota di persone migliorate, non l'entità del cambiamento di ogni ruga.</p><p>Le repliche in silicone della pelle hanno confermato una pelle più liscia nel gruppo Argireline® (p&lt;0,01) e nessuna variazione significativa con il placebo.</p>"
+      }
+    },
+    "forehead": {
+      "title": {
+        "en": "Forehead roughness",
+        "de": "Rauheit der Stirn",
+        "nl": "Ruwheid van het voorhoofd",
+        "fr": "Rugosité du front",
+        "es": "Rugosidad de la frente",
+        "it": "Ruvidità della fronte"
+      },
+      "subtitle": {
+        "en": "Change in skin roughness (cR2, Visioscan). Placebo-controlled trial, 24 women, cream with 10% Argireline® twice a day.",
+        "de": "Veränderung der Hautrauheit (cR2, Visioscan). Placebokontrollierte Studie, 24 Frauen, Creme mit 10 % Argireline® zweimal täglich.",
+        "nl": "Verandering in ruwheid van de huid (cR2, Visioscan). Placebogecontroleerde studie, 24 vrouwen, crème met 10% Argireline® twee keer per dag.",
+        "fr": "Évolution de la rugosité de la peau (cR2, Visioscan). Essai contrôlé contre placebo, 24 femmes, crème à 10 % d'Argireline® deux fois par jour.",
+        "es": "Cambio en la rugosidad de la piel (cR2, Visioscan). Ensayo controlado con placebo, 24 mujeres, crema con un 10 % de Argireline® dos veces al día.",
+        "it": "Variazione della ruvidità della pelle (cR2, Visioscan). Studio controllato con placebo, 24 donne, crema con il 10% di Argireline® due volte al giorno."
+      },
+      "unit": "%",
+      "decimals": 1,
+      "domain": [
+        -14,
+        6
+      ],
+      "ticks": [
+        -10,
+        -5,
+        0,
+        5
+      ],
+      "value_width": 70,
+      "series": [
+        {
+          "key": "a",
+          "color": "#3E4A52",
+          "label": {
+            "en": "10% Argireline®",
+            "de": "10 % Argireline®",
+            "nl": "10% Argireline®",
+            "fr": "Argireline® 10 %",
+            "es": "Argireline® al 10 %",
+            "it": "Argireline® al 10%"
+          }
+        },
+        {
+          "key": "p",
+          "color": "#9AA3A4",
+          "quiet": true,
+          "label": {
+            "en": "Placebo",
+            "de": "Placebo",
+            "nl": "Placebo",
+            "fr": "Placebo",
+            "es": "Placebo",
+            "it": "Placebo"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "a": -7.4,
+            "p": 4.3
+          },
+          "label": {
+            "en": "Day 20 (significant)",
+            "de": "Tag 20 (signifikant)",
+            "nl": "Dag 20 (significant)",
+            "fr": "Jour 20 (significatif)",
+            "es": "Día 20 (significativo)",
+            "it": "Giorno 20 (significativo)"
+          }
+        },
+        {
+          "values": {
+            "a": -11.7,
+            "p": 2.7
+          },
+          "label": {
+            "en": "Day 60 (not significant)",
+            "de": "Tag 60 (nicht signifikant)",
+            "nl": "Dag 60 (niet significant)",
+            "fr": "Jour 60 (non significatif)",
+            "es": "Día 60 (no significativo)",
+            "it": "Giorno 60 (non significativo)"
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Day",
+        "de": "Tag",
+        "nl": "Dag",
+        "fr": "Jour",
+        "es": "Día",
+        "it": "Giorno"
+      },
+      "caption": {
+        "en": "<p>Left of zero is smoother. At day 20, roughness fell 7.4% with Argireline® and rose 4.3% on placebo, a significant difference (p = 0.022). At day 60 the gap was larger, −11.7% against +2.7%, but with about six women per group it was not statistically significant (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>).</p>",
+        "de": "<p>Links von null ist glatter. An Tag 20 sank die Rauheit mit Argireline® um 7,4 % und stieg unter Placebo um 4,3 %, ein signifikanter Unterschied (p = 0,022). An Tag 60 war der Abstand größer, −11,7 % gegenüber +2,7 %, bei etwa sechs Frauen pro Gruppe aber nicht statistisch signifikant (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>).</p>",
+        "nl": "<p>Links van nul is gladder. Op dag 20 daalde de ruwheid met 7,4% met Argireline® en steeg ze met 4,3% bij placebo, een significant verschil (p = 0,022). Op dag 60 was het verschil groter, −11,7% tegenover +2,7%, maar met ongeveer zes vrouwen per groep niet statistisch significant (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>).</p>",
+        "fr": "<p>À gauche de zéro, la peau est plus lisse. Au jour 20, la rugosité a baissé de 7,4 % avec l'Argireline® et augmenté de 4,3 % sous placebo, une différence significative (p = 0,022). Au jour 60, l'écart était plus grand, −11,7 % contre +2,7 %, mais avec environ six femmes par groupe il n'était pas statistiquement significatif (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>).</p>",
+        "es": "<p>A la izquierda del cero, la piel es más lisa. El día 20, la rugosidad bajó un 7,4 % con Argireline® y subió un 4,3 % con placebo, una diferencia significativa (p = 0,022). El día 60 la diferencia era mayor, −11,7 % frente a +2,7 %, pero con unas seis mujeres por grupo no fue estadísticamente significativa (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>).</p>",
+        "it": "<p>A sinistra dello zero la pelle è più liscia. Al giorno 20 la ruvidità è diminuita del 7,4% con Argireline® ed è aumentata del 4,3% con il placebo, una differenza significativa (p = 0,022). Al giorno 60 il divario era maggiore, −11,7% contro +2,7%, ma con circa sei donne per gruppo non era statisticamente significativo (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>).</p>"
+      }
+    }
+  },
+  "references_i18n": {
+    "de": {
+      "Published References": "Veröffentlichte Quellen",
+      "View on PubMed &rarr;": "Auf PubMed ansehen &rarr;",
+      "View study &rarr;": "Studie ansehen &rarr;"
+    },
+    "nl": {
+      "Published References": "Gepubliceerde bronnen",
+      "View on PubMed &rarr;": "Bekijk op PubMed &rarr;",
+      "View study &rarr;": "Bekijk studie &rarr;"
+    },
+    "fr": {
+      "Published References": "Références publiées",
+      "View on PubMed &rarr;": "Voir sur PubMed &rarr;",
+      "View study &rarr;": "Voir l'étude &rarr;"
+    },
+    "es": {
+      "Published References": "Referencias publicadas",
+      "View on PubMed &rarr;": "Ver en PubMed &rarr;",
+      "View study &rarr;": "Ver estudio &rarr;"
+    },
+    "it": {
+      "Published References": "Riferimenti pubblicati",
+      "View on PubMed &rarr;": "Vedi su PubMed &rarr;",
+      "View study &rarr;": "Vedi lo studio &rarr;"
+    }
+  },
+  "jsonld_host": "references",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research#webpage",
+    "url": "https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research",
+    "name": "Argireline® (Acetyl Hexapeptide-8): What It Does for Lines",
+    "description": "Argireline® (acetyl hexapeptide-8) is a peptide that softens the look of expression lines. How it works, what the trials found, and how to use it.",
+    "datePublished": "2026-03-10",
+    "dateModified": "2026-09-22",
+    "isPartOf": {
+      "@id": "https://www.skingenetix.com/#website"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.skingenetix.com/#organization",
+      "name": "Skingenetix",
+      "url": "https://www.skingenetix.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Acetyl hexapeptide-8",
+      "alternateName": [
+        "Argireline",
+        "Acetyl hexapeptide-3"
+      ]
+    },
+    "citation": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "A synthetic hexapeptide (Argireline) with antiwrinkle activity",
+        "author": "Blanes-Mira C et al.",
+        "datePublished": "2002",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "International Journal of Cosmetic Science"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18498523/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study",
+        "author": "Wang Y et al.",
+        "datePublished": "2013",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "American Journal of Clinical Dermatology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23417317/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Anti-Wrinkle Efficacy of Cross-Linked Hyaluronic Acid-Based Microneedle Patch with Acetyl Hexapeptide-8 and Epidermal Growth Factor on Korean Skin",
+        "author": "An JH et al.",
+        "datePublished": "2019",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Annals of Dermatology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33911590/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Acetyl hexapeptide-3 in a cosmetic formulation acts on skin mechanical properties",
+        "author": "Tadini KA et al.",
+        "datePublished": "2015",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Brazilian Journal of Pharmaceutical Sciences"
+        },
+        "url": "https://doi.org/10.1590/S1984-82502015000400016"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The efficacy study of the combination of tripeptide-10-citrulline and acetyl hexapeptide-3",
+        "author": "Raikou V et al.",
+        "datePublished": "2017",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Journal of Cosmetic Dermatology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28150423/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Acetyl Hexapeptide-8 in Cosmeceuticals: A Review of Skin Permeability and Efficacy",
+        "author": "Zdrada-Nowak J et al.",
+        "datePublished": "2025",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "International Journal of Molecular Sciences"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40565185/"
+      }
+    ],
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Esther Bodde",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Cosmetic & Medical Physician"
+    },
+    "lastReviewed": "2026-09-22"
+  },
+  "jsonld_i18n": {
+    "de": {
+      "name": "Acetyl Hexapeptide-8 Forschung und Studien",
+      "description": "Veröffentlichte Studien zu Acetyl Hexapeptide-8 und Mimikfalten: was die Forschung zeigt, Zeitrahmen und Ergebnisse, mit zitierten Quellen."
+    },
+    "nl": {
+      "name": "Acetyl Hexapeptide-8 Onderzoek en Studies",
+      "description": "Gepubliceerd onderzoek naar Acetyl Hexapeptide-8 voor zichtbaar minder mimieklijntjes: wat studies vonden, tijdlijnen en resultaten, met geciteerde bronnen."
+    },
+    "fr": {
+      "name": "Recherche et Études sur l'Acetyl Hexapeptide-8",
+      "description": "Recherches publiées sur Acetyl Hexapeptide-8 pour atténuer visiblement les rides d'expression : résultats des études, délais et sources citées."
+    },
+    "es": {
+      "name": "Investigación y Estudios sobre Acetyl Hexapeptide-8",
+      "description": "Investigación publicada sobre Acetyl Hexapeptide-8 para las líneas de expresión: lo que los estudios encontraron, plazos y resultados, con fuentes citadas."
+    },
+    "it": {
+      "name": "Ricerca e Studi su Acetyl Hexapeptide-8",
+      "description": "Ricerca pubblicata su Acetyl Hexapeptide-8 per le rughe d'espressione: cosa hanno rilevato gli studi, tempi e risultati, con fonti citate."
+    }
+  },
+  "section_settings": {
+    "usage": {
+      "background": "#F0F0F0"
+    },
+    "references": {
+      "background": "#ffffff"
+    },
+    "faq": {
+      "background": "#F0F0F0",
+      "accordion_background": "#ffffff"
+    },
+    "shop_ingredient": {
+      "background": "#ffffff"
+    },
+    "related": {
+      "background": "#F0F0F0"
+    }
+  }
+}

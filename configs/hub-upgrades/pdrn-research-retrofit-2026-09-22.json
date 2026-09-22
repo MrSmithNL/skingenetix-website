@@ -1,0 +1,412 @@
+{
+  "_about": "Research-page-standard retrofit, 2026-09-22 (docs/content-plan-2026.md §4). ADDITIVE ONLY: a charts section with data tables, the references block translated per locale (it served English everywhere, and in nl an outdated older copy), and per-locale WebPage JSON-LD taken from the LIVE page (with reviewedBy). The original hub spec is stale — do not re-apply it. Figures from docs/claims/. Ye et al. 2026 gives crow's-feet results only as approximate ranges (−20 to −23% vs −6 to −7%), so they are drawn as ranges; the ratios are the authors' 'approximately two-fold' / '1.8-fold'. Charts sit after the before/after row (its wrapper is Bone) so the Bone/White alternation holds; the sections below flip where needed (page-audit DESIGN finding, first apply).",
+  "template": "templates/page.pdrn-research.json",
+  "page": "pdrn-research",
+  "add_sections": [
+    {
+      "id": "charts",
+      "after": "key_findings_ba",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": false,
+          "remove_horizontal_spacing": false,
+          "background": "#ffffff",
+          "html": {
+            "$chart": [
+              "crowsfeet",
+              "ratio"
+            ],
+            "heading": {
+              "en": "PDRN vs Retinol: What the Measurements Show",
+              "de": "PDRN vs. Retinol: Was die Messungen zeigen",
+              "nl": "PDRN vs retinol: wat de metingen laten zien",
+              "fr": "PDRN ou rétinol : ce que montrent les mesures",
+              "es": "PDRN frente a retinol: lo que muestran las mediciones",
+              "it": "PDRN contro retinolo: cosa mostrano le misurazioni"
+            },
+            "intro": {
+              "en": "<p>Both charts come from one randomised, double-blind split-face study: 31 women with sensitive skin applied a 0.1% PDRN eye cream to one side of the face and a 0.1% retinol eye cream to the other, twice a day for 28 days.</p>",
+              "de": "<p>Beide Diagramme stammen aus einer randomisierten, doppelblinden Halbseitenstudie: 31 Frauen mit empfindlicher Haut trugen 28 Tage lang zweimal täglich eine Augencreme mit 0,1 % PDRN auf eine Gesichtshälfte und eine Augencreme mit 0,1 % Retinol auf die andere auf.</p>",
+              "nl": "<p>Beide grafieken komen uit één gerandomiseerde, dubbelblinde halfgelaatsstudie: 31 vrouwen met een gevoelige huid brachten 28 dagen lang twee keer per dag een oogcrème met 0,1% PDRN aan op de ene gezichtshelft en een oogcrème met 0,1% retinol op de andere.</p>",
+              "fr": "<p>Les deux graphiques proviennent d'une même étude randomisée en double aveugle, en hémi-visage : 31 femmes à la peau sensible ont appliqué une crème contour des yeux à 0,1 % de PDRN sur une moitié du visage et une crème à 0,1 % de rétinol sur l'autre, deux fois par jour pendant 28 jours.</p>",
+              "es": "<p>Ambos gráficos proceden de un único estudio aleatorizado, doble ciego y de hemicara: 31 mujeres con piel sensible aplicaron un contorno de ojos con un 0,1 % de PDRN en una mitad de la cara y otro con un 0,1 % de retinol en la otra, dos veces al día durante 28 días.</p>",
+              "it": "<p>Entrambi i grafici provengono da un unico studio randomizzato in doppio cieco, split-face: 31 donne con pelle sensibile hanno applicato una crema contorno occhi allo 0,1% di PDRN su metà del viso e una allo 0,1% di retinolo sull'altra, due volte al giorno per 28 giorni.</p>"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "charts": {
+    "crowsfeet": {
+      "title": {
+        "en": "Crow's feet after 28 days",
+        "de": "Krähenfüße nach 28 Tagen",
+        "nl": "Kraaienpootjes na 28 dagen",
+        "fr": "Pattes d'oie après 28 jours",
+        "es": "Patas de gallo tras 28 días",
+        "it": "Zampe di gallina dopo 28 giorni"
+      },
+      "subtitle": {
+        "en": "Change in crow's-feet wrinkle area and number, measured by VISIA image analysis. The paper reports ranges, so the chart shows ranges.",
+        "de": "Veränderung von Fläche und Anzahl der Krähenfüße, gemessen mit VISIA-Bildanalyse. Die Studie nennt Spannen, daher zeigt das Diagramm Spannen.",
+        "nl": "Verandering in oppervlak en aantal kraaienpootjes, gemeten met VISIA-beeldanalyse. De studie geeft bereiken, dus de grafiek toont bereiken.",
+        "fr": "Évolution de la surface et du nombre de rides de la patte d'oie, mesurée par analyse d'image VISIA. L'étude donne des fourchettes, le graphique aussi.",
+        "es": "Cambio en la superficie y el número de arrugas de las patas de gallo, medido con análisis de imagen VISIA. El estudio da intervalos, así que el gráfico muestra intervalos.",
+        "it": "Variazione di superficie e numero delle rughe a zampa di gallina, misurata con analisi d'immagine VISIA. Lo studio riporta intervalli, quindi il grafico mostra intervalli."
+      },
+      "unit": "%",
+      "domain": [
+        -25,
+        2
+      ],
+      "ticks": [
+        -20,
+        -10,
+        0
+      ],
+      "value_width": 118,
+      "series": [
+        {
+          "key": "p",
+          "color": "#9E4F5C",
+          "label": {
+            "en": "0.1% PDRN side",
+            "de": "Seite mit 0,1 % PDRN",
+            "nl": "Kant met 0,1% PDRN",
+            "fr": "Côté PDRN 0,1 %",
+            "es": "Lado con PDRN al 0,1 %",
+            "it": "Lato con PDRN allo 0,1%"
+          }
+        },
+        {
+          "key": "r",
+          "color": "#9AA3A4",
+          "quiet": true,
+          "label": {
+            "en": "0.1% retinol side",
+            "de": "Seite mit 0,1 % Retinol",
+            "nl": "Kant met 0,1% retinol",
+            "fr": "Côté rétinol 0,1 %",
+            "es": "Lado con retinol al 0,1 %",
+            "it": "Lato con retinolo allo 0,1%"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "p": [
+              -20,
+              -23
+            ],
+            "r": [
+              -6,
+              -7
+            ]
+          },
+          "label": {
+            "en": "Crow's-feet wrinkle area and number",
+            "de": "Fläche und Anzahl der Krähenfüße",
+            "nl": "Oppervlak en aantal kraaienpootjes",
+            "fr": "Surface et nombre de rides de la patte d'oie",
+            "es": "Superficie y número de arrugas de las patas de gallo",
+            "it": "Superficie e numero delle rughe a zampa di gallina"
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Measure at day 28",
+        "de": "Messwert an Tag 28",
+        "nl": "Meting op dag 28",
+        "fr": "Mesure au jour 28",
+        "es": "Medida el día 28",
+        "it": "Misura al giorno 28"
+      },
+      "caption": {
+        "en": "<p>Both sides improved: the PDRN side by roughly −20% to −23% in crow's-feet wrinkle area and number, the retinol side by roughly −6% to −7% (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). For several wrinkle measures, the PDRN side had improved more by day 14 than the retinol side had by day 28.</p><p>The solid bar reaches the lower figure and the pale band the upper one. The study tested a 0.1% PDRN eye cream, not our products.</p>",
+        "de": "<p>Beide Seiten verbesserten sich: die PDRN-Seite um etwa −20 % bis −23 % bei Fläche und Anzahl der Krähenfüße, die Retinol-Seite um etwa −6 % bis −7 % (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Bei mehreren Faltenmesswerten hatte sich die PDRN-Seite an Tag 14 stärker verbessert als die Retinol-Seite an Tag 28.</p><p>Der volle Balken reicht bis zum unteren Wert, das helle Band bis zum oberen. Getestet wurde eine Augencreme mit 0,1 % PDRN, nicht unsere Produkte.</p>",
+        "nl": "<p>Beide kanten verbeterden: de PDRN-kant met ongeveer −20% tot −23% in oppervlak en aantal kraaienpootjes, de retinolkant met ongeveer −6% tot −7% (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Bij meerdere rimpelmetingen was de PDRN-kant op dag 14 al meer verbeterd dan de retinolkant op dag 28.</p><p>De volle balk loopt tot het laagste getal, de lichte band tot het hoogste. Getest werd een oogcrème met 0,1% PDRN, niet onze producten.</p>",
+        "fr": "<p>Les deux côtés se sont améliorés : le côté PDRN d'environ −20 % à −23 % pour la surface et le nombre de rides de la patte d'oie, le côté rétinol d'environ −6 % à −7 % (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Pour plusieurs mesures des rides, le côté PDRN s'était davantage amélioré au jour 14 que le côté rétinol au jour 28.</p><p>La barre pleine va jusqu'à la valeur basse, la bande claire jusqu'à la valeur haute. L'étude a testé une crème contour des yeux à 0,1 % de PDRN, pas nos produits.</p>",
+        "es": "<p>Ambos lados mejoraron: el lado con PDRN alrededor de un −20 % a −23 % en superficie y número de arrugas de las patas de gallo, el lado con retinol alrededor de un −6 % a −7 % (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). En varias medidas de arrugas, el lado con PDRN había mejorado más el día 14 que el lado con retinol el día 28.</p><p>La barra sólida llega a la cifra menor y la franja clara a la mayor. Se probó un contorno de ojos con un 0,1 % de PDRN, no nuestros productos.</p>",
+        "it": "<p>Entrambi i lati sono migliorati: il lato con PDRN tra circa il −20% e il −23% per superficie e numero delle rughe a zampa di gallina, il lato con retinolo tra circa il −6% e il −7% (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Per diverse misure delle rughe, il lato con PDRN era migliorato di più al giorno 14 del lato con retinolo al giorno 28.</p><p>La barra piena arriva al valore minore, la fascia chiara a quello maggiore. È stata testata una crema contorno occhi allo 0,1% di PDRN, non i nostri prodotti.</p>"
+      }
+    },
+    "ratio": {
+      "title": {
+        "en": "Improvement with PDRN, compared with retinol",
+        "de": "Verbesserung mit PDRN im Vergleich zu Retinol",
+        "nl": "Verbetering met PDRN, vergeleken met retinol",
+        "fr": "Amélioration avec le PDRN, comparée au rétinol",
+        "es": "Mejora con PDRN, comparada con el retinol",
+        "it": "Miglioramento con il PDRN, rispetto al retinolo"
+      },
+      "subtitle": {
+        "en": "Retinol's improvement = 1×. The paper reports these ratios as approximate.",
+        "de": "Verbesserung mit Retinol = 1×. Die Studie gibt diese Verhältnisse als Näherungswerte an.",
+        "nl": "Verbetering met retinol = 1×. De studie geeft deze verhoudingen bij benadering.",
+        "fr": "Amélioration avec le rétinol = 1×. L'étude donne ces rapports de façon approximative.",
+        "es": "Mejora con retinol = 1×. El estudio da estas proporciones de forma aproximada.",
+        "it": "Miglioramento con il retinolo = 1×. Lo studio riporta questi rapporti in modo approssimativo."
+      },
+      "unit": "×",
+      "signed": false,
+      "domain": [
+        0,
+        2.3
+      ],
+      "ticks": [
+        0,
+        1,
+        2
+      ],
+      "value_width": 64,
+      "series": [
+        {
+          "key": "p",
+          "color": "#9E4F5C",
+          "prefix": "≈",
+          "label": {
+            "en": "PDRN side",
+            "de": "PDRN-Seite",
+            "nl": "PDRN-kant",
+            "fr": "Côté PDRN",
+            "es": "Lado con PDRN",
+            "it": "Lato con PDRN"
+          }
+        },
+        {
+          "key": "r",
+          "color": "#9AA3A4",
+          "quiet": true,
+          "label": {
+            "en": "Retinol side",
+            "de": "Retinol-Seite",
+            "nl": "Retinolkant",
+            "fr": "Côté rétinol",
+            "es": "Lado con retinol",
+            "it": "Lato con retinolo"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "p": 2,
+            "r": 1
+          },
+          "label": {
+            "en": "Wrinkles around the eyes",
+            "de": "Falten rund um die Augen",
+            "nl": "Rimpels rond de ogen",
+            "fr": "Rides du contour des yeux",
+            "es": "Arrugas del contorno de ojos",
+            "it": "Rughe del contorno occhi"
+          }
+        },
+        {
+          "values": {
+            "p": 2,
+            "r": 1
+          },
+          "label": {
+            "en": "Dermal thickness and density (ultrasound)",
+            "de": "Hautdicke und -dichte (Ultraschall)",
+            "nl": "Dikte en dichtheid van de lederhuid (echografie)",
+            "fr": "Épaisseur et densité du derme (échographie)",
+            "es": "Grosor y densidad de la dermis (ecografía)",
+            "it": "Spessore e densità del derma (ecografia)"
+          }
+        },
+        {
+          "values": {
+            "p": 2,
+            "r": 1
+          },
+          "label": {
+            "en": "Eye bags and tear troughs",
+            "de": "Tränensäcke und Tränenrinne",
+            "nl": "Wallen en traangoot",
+            "fr": "Poches et creux de cernes",
+            "es": "Bolsas y surco lagrimal",
+            "it": "Borse e solco lacrimale"
+          }
+        },
+        {
+          "values": {
+            "p": 1.8,
+            "r": 1
+          },
+          "label": {
+            "en": "Firmness and elasticity",
+            "de": "Festigkeit und Elastizität",
+            "nl": "Stevigheid en elasticiteit",
+            "fr": "Fermeté et élasticité",
+            "es": "Firmeza y elasticidad",
+            "it": "Compattezza ed elasticità"
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Measure",
+        "de": "Messwert",
+        "nl": "Meting",
+        "fr": "Mesure",
+        "es": "Medida",
+        "it": "Misura"
+      },
+      "caption": {
+        "en": "<p>The authors report the PDRN side improving about twice as much as the retinol side on wrinkles, dermal thickness and density, and eye bags, and about 1.8 times as much on firmness and elasticity (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Both creams were well tolerated, with no reactions reported in the 31 women with sensitive skin.</p><p>The retinol side improved too: 0.1% retinol over 28 days is a slow comparator.</p>",
+        "de": "<p>Laut den Autoren verbesserte sich die PDRN-Seite bei Falten, Hautdicke und -dichte sowie Tränensäcken etwa doppelt so stark wie die Retinol-Seite und bei Festigkeit und Elastizität etwa 1,8-mal so stark (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Beide Cremes wurden gut vertragen; bei den 31 Frauen mit empfindlicher Haut wurden keine Reaktionen berichtet.</p><p>Auch die Retinol-Seite verbesserte sich: 0,1 % Retinol über 28 Tage ist ein langsamer Vergleich.</p>",
+        "nl": "<p>Volgens de auteurs verbeterde de PDRN-kant ongeveer twee keer zoveel als de retinolkant bij rimpels, dikte en dichtheid van de lederhuid en wallen, en ongeveer 1,8 keer zoveel bij stevigheid en elasticiteit (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Beide crèmes werden goed verdragen; bij de 31 vrouwen met een gevoelige huid werden geen reacties gemeld.</p><p>Ook de retinolkant verbeterde: 0,1% retinol gedurende 28 dagen is een trage vergelijking.</p>",
+        "fr": "<p>Selon les auteurs, le côté PDRN s'est amélioré environ deux fois plus que le côté rétinol pour les rides, l'épaisseur et la densité du derme et les poches, et environ 1,8 fois plus pour la fermeté et l'élasticité (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Les deux crèmes ont été bien tolérées ; aucune réaction n'a été signalée chez les 31 femmes à la peau sensible.</p><p>Le côté rétinol s'est aussi amélioré : 0,1 % de rétinol sur 28 jours est un comparateur lent.</p>",
+        "es": "<p>Según los autores, el lado con PDRN mejoró aproximadamente el doble que el lado con retinol en arrugas, grosor y densidad de la dermis y bolsas, y unas 1,8 veces más en firmeza y elasticidad (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Ambas cremas se toleraron bien; no se notificaron reacciones en las 31 mujeres con piel sensible.</p><p>El lado con retinol también mejoró: un 0,1 % de retinol durante 28 días es un comparador lento.</p>",
+        "it": "<p>Secondo gli autori, il lato con PDRN è migliorato circa il doppio del lato con retinolo per rughe, spessore e densità del derma e borse, e circa 1,8 volte tanto per compattezza ed elasticità (<a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ye et al., 2026</a>). Entrambe le creme sono state ben tollerate; nelle 31 donne con pelle sensibile non sono state segnalate reazioni.</p><p>Anche il lato con retinolo è migliorato: lo 0,1% di retinolo per 28 giorni è un termine di paragone lento.</p>"
+      }
+    }
+  },
+  "references_i18n": {
+    "de": {
+      "Published References": "Veröffentlichte Quellen",
+      "View on PubMed &rarr;": "Auf PubMed ansehen &rarr;",
+      "View study &rarr;": "Studie ansehen &rarr;"
+    },
+    "nl": {
+      "Published References": "Gepubliceerde bronnen",
+      "View on PubMed &rarr;": "Bekijk op PubMed &rarr;",
+      "View study &rarr;": "Bekijk studie &rarr;"
+    },
+    "fr": {
+      "Published References": "Références publiées",
+      "View on PubMed &rarr;": "Voir sur PubMed &rarr;",
+      "View study &rarr;": "Voir l'étude &rarr;"
+    },
+    "es": {
+      "Published References": "Referencias publicadas",
+      "View on PubMed &rarr;": "Ver en PubMed &rarr;",
+      "View study &rarr;": "Ver estudio &rarr;"
+    },
+    "it": {
+      "Published References": "Riferimenti pubblicati",
+      "View on PubMed &rarr;": "Vedi su PubMed &rarr;",
+      "View study &rarr;": "Vedi lo studio &rarr;"
+    }
+  },
+  "jsonld_host": "references",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.skingenetix.com/pages/pdrn-research#webpage",
+    "url": "https://www.skingenetix.com/pages/pdrn-research",
+    "name": "What Is PDRN? Salmon DNA Skincare Benefits and Research",
+    "description": "PDRN (Sodium DNA) is made of salmon-derived DNA fragments, used in skincare for hydration and a plumper, revitalised look. What the studies show.",
+    "datePublished": "2026-03-25",
+    "dateModified": "2026-09-22",
+    "isPartOf": {
+      "@id": "https://www.skingenetix.com/#website"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.skingenetix.com/#organization",
+      "name": "Skingenetix",
+      "url": "https://www.skingenetix.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "PDRN (polydeoxyribonucleotide)",
+      "alternateName": [
+        "Polydeoxyribonucleotide",
+        "Sodium DNA",
+        "Salmon DNA"
+      ]
+    },
+    "citation": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Topical medium-length PDRN enhances dermal extracellular matrix repair in photodamaged skin via PI3K–Akt/TGF-β–regulated pathways",
+        "author": "Ye R et al.",
+        "datePublished": "2026",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "PLOS ONE"
+        },
+        "url": "https://doi.org/10.1371/journal.pone.0350905"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Pharmacological Activity and Clinical Use of PDRN",
+        "author": "Squadrito F et al.",
+        "datePublished": "2017",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Frontiers in Pharmacology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28491036/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Polydeoxyribonucleotide: A promising skin anti-aging agent",
+        "author": "Khan A et al.",
+        "datePublished": "2022",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Chinese Journal of Plastic and Reconstructive Surgery"
+        },
+        "url": "https://doi.org/10.1016/j.cjprs.2022.09.015"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Applications of Marine Organism-Derived Polydeoxyribonucleotide",
+        "author": "Kim TH et al.",
+        "datePublished": "2021",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Marine Drugs"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34067499/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Effectiveness of Polynucleotides in Esthetic Medicine: A Systematic Review",
+        "author": "Lampridou S et al.",
+        "datePublished": "2024",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Journal of Cosmetic Dermatology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39645667/"
+      }
+    ],
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Esther Bodde",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Cosmetic & Medical Physician"
+    },
+    "lastReviewed": "2026-09-22"
+  },
+  "jsonld_i18n": {
+    "de": {
+      "name": "PDRN (Sodium DNA) Forschung und Studien",
+      "description": "Was die Forschung über PDRN (Sodium DNA) in der Hautpflege sagt: Feuchtigkeit, Prallheit und ein frisches Hautbild. Studien zitiert und verständlich erklärt."
+    },
+    "nl": {
+      "name": "PDRN (Sodium DNA) Onderzoek en Studies",
+      "description": "Wat onderzoek zegt over PDRN (Sodium DNA) in skincare: hydratatie, volume en een frissere huid. Studies geciteerd en in begrijpelijke taal toegelicht."
+    },
+    "fr": {
+      "name": "Recherche et Études sur le PDRN (Sodium DNA)",
+      "description": "Ce que la recherche dit du PDRN (Sodium DNA) en soin de la peau : hydratation, repulpage et teint revitalisé. Études citées et expliquées simplement."
+    },
+    "es": {
+      "name": "Investigación y Estudios sobre PDRN (Sodium DNA)",
+      "description": "Lo que dice la investigación sobre PDRN (Sodium DNA) en skincare: hidratación, volumen y aspecto revitalizado. Estudios explicados en lenguaje claro."
+    },
+    "it": {
+      "name": "Ricerca e Studi su PDRN (Sodium DNA)",
+      "description": "Cosa dice la ricerca su PDRN (Sodium DNA) nella skincare: idratazione, rimpolpamento e un aspetto più fresco. Studi citati e spiegati in modo chiaro."
+    }
+  }
+}

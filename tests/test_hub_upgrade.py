@@ -126,3 +126,35 @@ def test_chart_placeholder_expands_to_six_locales():
     assert "+256%" in vals["en"] and "[de] Collagen I" in vals["de"]
     for d in ("{{", "}}", "{%", "%}"):                        # custom-html rejects all four (422)
         assert all(d not in v for v in vals.values()), d
+
+
+_c = importlib.util.spec_from_file_location("hc", ROOT / "scripts/hub_charts.py")
+hc = importlib.util.module_from_spec(_c)
+_c.loader.exec_module(hc)
+
+
+def _chart(rows, **kw):
+    base = {"title": six("T"), "caption": six("<p>c</p>"), "unit": "%", "domain": [-30, 5],
+            "series": [{"key": "a", "label": six("A"), "color": "#016569"}], "rows": rows}
+    base.update(kw)
+    return base
+
+
+def test_range_value_draws_a_band_and_labels_it_per_locale():
+    c = _chart([{"label": six("Crow's feet area"), "values": {"a": [-20, -23]}}], table_head=six("Measure"))
+    en, de = hc.render_chart(c, "en"), hc.render_chart(c, "de")
+    assert "−20 to −23%" in en and "−20 bis −23" in de
+    assert en.count('class="sgfig-bar') == 2          # solid part + lighter band
+    assert "<td>−20 to −23%</td>" in en               # the table view carries the same label
+
+
+def test_label_override_replaces_the_number():
+    c = _chart([{"label": six("Copper peptide"), "values": {"a": 70},
+                 "labels": {"a": {l: ("7 of 10" if l == "en" else f"7/10 [{l}]") for l in L6}}}], domain=[0, 100])
+    assert "7 of 10" in hc.render_chart(c, "en") and "7/10 [it]" in hc.render_chart(c, "it")
+
+
+def test_unsigned_ratio_with_prefix():
+    c = _chart([{"label": six("Wrinkles"), "values": {"a": 2}}], unit="×", signed=False, domain=[0, 2.4],
+               series=[{"key": "a", "label": six("PDRN"), "color": "#016569", "prefix": "≈"}])
+    assert "≈2×" in hc.render_chart(c, "en") and "+2" not in hc.render_chart(c, "en")

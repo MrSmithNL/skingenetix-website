@@ -1,0 +1,514 @@
+{
+  "_about": "Research-page-standard retrofit, 2026-09-22 (docs/content-plan-2026.md §4). ADDITIVE ONLY: a charts section with data tables, the references block translated per locale (it served English everywhere, and in nl an outdated older copy), and per-locale WebPage JSON-LD taken from the LIVE page (with reviewedBy). The original hub spec is stale — do not re-apply it. Figures from docs/claims/. Badenhorst 2016 group 2 change from baseline (vs the same serum without GHK-Cu); Abdulghani 1998 responder counts, no between-cream test. Charts sit after the findings row (its wrapper is Bone), so the sections below flip to keep Bone/White alternation.",
+  "template": "templates/page.research-copper-peptide.json",
+  "page": "copper-peptide-research",
+  "add_sections": [
+    {
+      "id": "charts",
+      "after": "key_findings",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": false,
+          "remove_horizontal_spacing": false,
+          "background": "#ffffff",
+          "html": {
+            "$chart": [
+              "vehicle",
+              "biopsy"
+            ],
+            "heading": {
+              "en": "GHK-Cu in Head-to-Head Studies: What Was Measured",
+              "de": "GHK-Cu im direkten Vergleich: Was gemessen wurde",
+              "nl": "GHK-Cu in vergelijkende studies: wat er gemeten werd",
+              "fr": "Le GHK-Cu en comparaison directe : ce qui a été mesuré",
+              "es": "GHK-Cu en estudios comparativos: lo que se midió",
+              "it": "GHK-Cu nei confronti diretti: cosa è stato misurato"
+            },
+            "intro": {
+              "en": "<p>Two studies that compared copper peptide with something else: the same serum without it, and three other creams.</p>",
+              "de": "<p>Zwei Studien, die Kupferpeptid mit etwas anderem verglichen: mit demselben Serum ohne GHK-Cu und mit drei anderen Cremes.</p>",
+              "nl": "<p>Twee studies die koperpeptide met iets anders vergeleken: met hetzelfde serum zonder GHK-Cu en met drie andere crèmes.</p>",
+              "fr": "<p>Deux études qui ont comparé le peptide de cuivre à autre chose : au même sérum sans GHK-Cu, et à trois autres crèmes.</p>",
+              "es": "<p>Dos estudios que compararon el péptido de cobre con otra cosa: con el mismo sérum sin GHK-Cu y con otras tres cremas.</p>",
+              "it": "<p>Due studi che hanno confrontato il peptide di rame con qualcos'altro: con lo stesso siero senza GHK-Cu e con altre tre creme.</p>"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "section_settings": {
+    "usage": {
+      "background": "#F0F0F0"
+    },
+    "references": {
+      "background": "#ffffff"
+    },
+    "faq": {
+      "background": "#F0F0F0",
+      "accordion_background": "#ffffff"
+    },
+    "shop_ingredient": {
+      "background": "#ffffff"
+    },
+    "related": {
+      "background": "#F0F0F0"
+    }
+  },
+  "charts": {
+    "vehicle": {
+      "title": {
+        "en": "Crow's-feet wrinkles after 8 weeks",
+        "de": "Krähenfüße nach 8 Wochen",
+        "nl": "Kraaienpootjes na 8 weken",
+        "fr": "Rides de la patte d'oie après 8 semaines",
+        "es": "Patas de gallo tras 8 semanas",
+        "it": "Zampe di gallina dopo 8 settimane"
+      },
+      "subtitle": {
+        "en": "Double-blind split-face trial: GHK-Cu serum on one side, the same serum without GHK-Cu on the other, twice a day. Change from the start, PRIMOS 3D (20 women).",
+        "de": "Doppelblinde Halbseitenstudie: GHK-Cu-Serum auf einer Seite, dasselbe Serum ohne GHK-Cu auf der anderen, zweimal täglich. Veränderung gegenüber dem Beginn, PRIMOS 3D (20 Frauen).",
+        "nl": "Dubbelblinde halfgelaatsstudie: GHK-Cu-serum op de ene kant, hetzelfde serum zonder GHK-Cu op de andere, twee keer per dag. Verandering ten opzichte van de start, PRIMOS 3D (20 vrouwen).",
+        "fr": "Essai en double aveugle en hémi-visage : sérum au GHK-Cu d'un côté, le même sérum sans GHK-Cu de l'autre, deux fois par jour. Évolution depuis le début, PRIMOS 3D (20 femmes).",
+        "es": "Ensayo doble ciego de hemicara: sérum con GHK-Cu en un lado y el mismo sérum sin GHK-Cu en el otro, dos veces al día. Cambio respecto al inicio, PRIMOS 3D (20 mujeres).",
+        "it": "Studio split-face in doppio cieco: siero con GHK-Cu su un lato, lo stesso siero senza GHK-Cu sull'altro, due volte al giorno. Variazione rispetto all'inizio, PRIMOS 3D (20 donne)."
+      },
+      "unit": "%",
+      "decimals": 1,
+      "domain": [
+        -28,
+        2
+      ],
+      "ticks": [
+        -20,
+        -10,
+        0
+      ],
+      "value_width": 70,
+      "series": [
+        {
+          "key": "c",
+          "color": "#014EB1",
+          "label": {
+            "en": "GHK-Cu serum",
+            "de": "GHK-Cu-Serum",
+            "nl": "GHK-Cu-serum",
+            "fr": "Sérum au GHK-Cu",
+            "es": "Sérum con GHK-Cu",
+            "it": "Siero con GHK-Cu"
+          }
+        },
+        {
+          "key": "v",
+          "color": "#9AA3A4",
+          "quiet": true,
+          "label": {
+            "en": "Same serum without GHK-Cu",
+            "de": "Dasselbe Serum ohne GHK-Cu",
+            "nl": "Hetzelfde serum zonder GHK-Cu",
+            "fr": "Même sérum sans GHK-Cu",
+            "es": "Mismo sérum sin GHK-Cu",
+            "it": "Stesso siero senza GHK-Cu"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "c": -24.1,
+            "v": -15.0
+          },
+          "label": {
+            "en": "Wrinkle volume",
+            "de": "Faltenvolumen",
+            "nl": "Rimpelvolume",
+            "fr": "Volume des rides",
+            "es": "Volumen de las arrugas",
+            "it": "Volume delle rughe"
+          }
+        },
+        {
+          "values": {
+            "c": -20.3,
+            "v": -15.3
+          },
+          "label": {
+            "en": "Wrinkle depth",
+            "de": "Faltentiefe",
+            "nl": "Rimpeldiepte",
+            "fr": "Profondeur des rides",
+            "es": "Profundidad de las arrugas",
+            "it": "Profondità delle rughe"
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Measure",
+        "de": "Messwert",
+        "nl": "Meting",
+        "fr": "Mesure",
+        "es": "Medida",
+        "it": "Misura"
+      },
+      "caption": {
+        "en": "<p>Both sides improved, and the GHK-Cu side more: wrinkle volume −24.1% against −15.0%, depth −20.3% against −15.3% (<a href='https://doi.org/10.4172/2329-8847.1000166' target='_blank' rel='noopener'>Badenhorst et al., 2016</a>). Relative to the serum without it, that is 55.8% more volume reduction (p&lt;0.0001) and 32.8% more depth reduction (p = 0.0123).</p><p>The tested serum delivered GHK-Cu in a nano-carrier, and the trial was funded by its maker.</p>",
+        "de": "<p>Beide Seiten verbesserten sich, die GHK-Cu-Seite stärker: Faltenvolumen −24,1 % gegenüber −15,0 %, Faltentiefe −20,3 % gegenüber −15,3 % (<a href='https://doi.org/10.4172/2329-8847.1000166' target='_blank' rel='noopener'>Badenhorst et al., 2016</a>). Im Vergleich zum Serum ohne GHK-Cu sind das 55,8 % mehr Volumenreduktion (p&lt;0,0001) und 32,8 % mehr Tiefenreduktion (p = 0,0123).</p><p>Das getestete Serum enthielt GHK-Cu in einem Nano-Träger, und die Studie wurde von seinem Hersteller finanziert.</p>",
+        "nl": "<p>Beide kanten verbeterden, de GHK-Cu-kant meer: rimpelvolume −24,1% tegenover −15,0%, diepte −20,3% tegenover −15,3% (<a href='https://doi.org/10.4172/2329-8847.1000166' target='_blank' rel='noopener'>Badenhorst et al., 2016</a>). Vergeleken met het serum zonder GHK-Cu is dat 55,8% meer volumevermindering (p&lt;0,0001) en 32,8% meer dieptevermindering (p = 0,0123).</p><p>Het geteste serum bevatte GHK-Cu in een nanodrager, en de studie werd gefinancierd door de maker ervan.</p>",
+        "fr": "<p>Les deux côtés se sont améliorés, davantage du côté GHK-Cu : volume des rides −24,1 % contre −15,0 %, profondeur −20,3 % contre −15,3 % (<a href='https://doi.org/10.4172/2329-8847.1000166' target='_blank' rel='noopener'>Badenhorst et al., 2016</a>). Par rapport au sérum sans GHK-Cu, cela représente 55,8 % de réduction de volume en plus (p&lt;0,0001) et 32,8 % de réduction de profondeur en plus (p = 0,0123).</p><p>Le sérum testé contenait du GHK-Cu dans un nanovecteur, et l'essai a été financé par son fabricant.</p>",
+        "es": "<p>Ambos lados mejoraron, más el lado con GHK-Cu: volumen de las arrugas −24,1 % frente a −15,0 %, profundidad −20,3 % frente a −15,3 % (<a href='https://doi.org/10.4172/2329-8847.1000166' target='_blank' rel='noopener'>Badenhorst et al., 2016</a>). Frente al sérum sin GHK-Cu, eso supone un 55,8 % más de reducción de volumen (p&lt;0,0001) y un 32,8 % más de reducción de profundidad (p = 0,0123).</p><p>El sérum probado contenía GHK-Cu en un nanotransportador, y el ensayo lo financió su fabricante.</p>",
+        "it": "<p>Entrambi i lati sono migliorati, di più quello con GHK-Cu: volume delle rughe −24,1% contro −15,0%, profondità −20,3% contro −15,3% (<a href='https://doi.org/10.4172/2329-8847.1000166' target='_blank' rel='noopener'>Badenhorst et al., 2016</a>). Rispetto al siero senza GHK-Cu, significa il 55,8% di riduzione del volume in più (p&lt;0,0001) e il 32,8% di riduzione della profondità in più (p = 0,0123).</p><p>Il siero testato conteneva GHK-Cu in un nanovettore, e lo studio è stato finanziato dal suo produttore.</p>"
+      }
+    },
+    "biopsy": {
+      "title": {
+        "en": "New collagen in skin biopsies after one month",
+        "de": "Neues Kollagen in Hautbiopsien nach einem Monat",
+        "nl": "Nieuw collageen in huidbiopten na één maand",
+        "fr": "Nouveau collagène dans des biopsies cutanées après un mois",
+        "es": "Colágeno nuevo en biopsias de piel tras un mes",
+        "it": "Nuovo collagene nelle biopsie cutanee dopo un mese"
+      },
+      "subtitle": {
+        "en": "People out of 10 per cream whose biopsy showed new collagen production (procollagen). Creams applied to the thigh; no statistical test between creams.",
+        "de": "Personen von 10 pro Creme, deren Biopsie neue Kollagenbildung (Prokollagen) zeigte. Cremes am Oberschenkel aufgetragen; kein statistischer Test zwischen den Cremes.",
+        "nl": "Aantal mensen van de 10 per crème bij wie het biopt nieuwe collageenaanmaak (procollageen) liet zien. Crèmes aangebracht op de dij; geen statistische test tussen de crèmes.",
+        "fr": "Personnes sur 10 par crème dont la biopsie montrait une nouvelle production de collagène (procollagène). Crèmes appliquées sur la cuisse ; aucun test statistique entre les crèmes.",
+        "es": "Personas de cada 10 por crema cuya biopsia mostró nueva producción de colágeno (procolágeno). Cremas aplicadas en el muslo; sin prueba estadística entre cremas.",
+        "it": "Persone su 10 per crema la cui biopsia mostrava nuova produzione di collagene (procollagene). Creme applicate sulla coscia; nessun test statistico tra le creme."
+      },
+      "unit": "",
+      "signed": false,
+      "domain": [
+        0,
+        10
+      ],
+      "ticks": [
+        0,
+        5,
+        10
+      ],
+      "value_width": 76,
+      "series": [
+        {
+          "key": "c",
+          "color": "#014EB1",
+          "label": {
+            "en": "People with new collagen",
+            "de": "Personen mit neuem Kollagen",
+            "nl": "Mensen met nieuw collageen",
+            "fr": "Personnes avec nouveau collagène",
+            "es": "Personas con colágeno nuevo",
+            "it": "Persone con nuovo collagene"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "c": 7
+          },
+          "label": {
+            "en": "Copper peptide cream",
+            "de": "Kupferpeptid-Creme",
+            "nl": "Koperpeptidecrème",
+            "fr": "Crème au peptide de cuivre",
+            "es": "Crema de péptido de cobre",
+            "it": "Crema al peptide di rame"
+          },
+          "labels": {
+            "c": {
+              "en": "7 of 10",
+              "de": "7 von 10",
+              "nl": "7 van 10",
+              "fr": "7 sur 10",
+              "es": "7 de 10",
+              "it": "7 su 10"
+            }
+          }
+        },
+        {
+          "values": {
+            "c": 5
+          },
+          "colors": {
+            "c": "#9AA3A4"
+          },
+          "label": {
+            "en": "Vitamin C cream",
+            "de": "Vitamin-C-Creme",
+            "nl": "Vitamine C-crème",
+            "fr": "Crème à la vitamine C",
+            "es": "Crema de vitamina C",
+            "it": "Crema alla vitamina C"
+          },
+          "labels": {
+            "c": {
+              "en": "5 of 10",
+              "de": "5 von 10",
+              "nl": "5 van 10",
+              "fr": "5 sur 10",
+              "es": "5 de 10",
+              "it": "5 su 10"
+            }
+          }
+        },
+        {
+          "values": {
+            "c": 5
+          },
+          "colors": {
+            "c": "#9AA3A4"
+          },
+          "label": {
+            "en": "Melatonin cream",
+            "de": "Melatonin-Creme",
+            "nl": "Melatoninecrème",
+            "fr": "Crème à la mélatonine",
+            "es": "Crema de melatonina",
+            "it": "Crema alla melatonina"
+          },
+          "labels": {
+            "c": {
+              "en": "5 of 10",
+              "de": "5 von 10",
+              "nl": "5 van 10",
+              "fr": "5 sur 10",
+              "es": "5 de 10",
+              "it": "5 su 10"
+            }
+          }
+        },
+        {
+          "values": {
+            "c": 4
+          },
+          "colors": {
+            "c": "#9AA3A4"
+          },
+          "label": {
+            "en": "Tretinoin cream",
+            "de": "Tretinoin-Creme",
+            "nl": "Tretinoïnecrème",
+            "fr": "Crème à la trétinoïne",
+            "es": "Crema de tretinoína",
+            "it": "Crema alla tretinoina"
+          },
+          "labels": {
+            "c": {
+              "en": "4 of 10",
+              "de": "4 von 10",
+              "nl": "4 van 10",
+              "fr": "4 sur 10",
+              "es": "4 de 10",
+              "it": "4 su 10"
+            }
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Cream",
+        "de": "Creme",
+        "nl": "Crème",
+        "fr": "Crème",
+        "es": "Crema",
+        "it": "Crema"
+      },
+      "caption": {
+        "en": "<p>7 in 10 people showed new collagen production with the copper peptide cream after one month, against 5 in 10 with vitamin C or melatonin and 4 in 10 with tretinoin (Abdulghani et al., 1998). The study counted responders and did not test whether the creams differed, so it shows a pattern, not a proven ranking.</p><p>Human skin biopsies, but thigh skin and 10 people per cream.</p>",
+        "de": "<p>7 von 10 Personen zeigten nach einem Monat mit der Kupferpeptid-Creme neue Kollagenbildung, gegenüber 5 von 10 mit Vitamin C oder Melatonin und 4 von 10 mit Tretinoin (Abdulghani et al., 1998). Die Studie zählte Responder und prüfte nicht, ob sich die Cremes unterschieden; sie zeigt also ein Muster, keine belegte Rangfolge.</p><p>Menschliche Hautbiopsien, aber Oberschenkelhaut und 10 Personen pro Creme.</p>",
+        "nl": "<p>7 van de 10 mensen lieten na één maand met de koperpeptidecrème nieuwe collageenaanmaak zien, tegenover 5 van de 10 met vitamine C of melatonine en 4 van de 10 met tretinoïne (Abdulghani et al., 1998). De studie telde responders en toetste niet of de crèmes verschilden; ze toont dus een patroon, geen bewezen rangorde.</p><p>Menselijke huidbiopten, maar huid van de dij en 10 mensen per crème.</p>",
+        "fr": "<p>7 personnes sur 10 présentaient une nouvelle production de collagène après un mois avec la crème au peptide de cuivre, contre 5 sur 10 avec la vitamine C ou la mélatonine et 4 sur 10 avec la trétinoïne (Abdulghani et al., 1998). L'étude a compté les répondeurs sans tester si les crèmes différaient : elle montre une tendance, pas un classement prouvé.</p><p>Biopsies de peau humaine, mais peau de la cuisse et 10 personnes par crème.</p>",
+        "es": "<p>7 de cada 10 personas mostraron nueva producción de colágeno tras un mes con la crema de péptido de cobre, frente a 5 de cada 10 con vitamina C o melatonina y 4 de cada 10 con tretinoína (Abdulghani et al., 1998). El estudio contó respondedores y no comprobó si las cremas diferían, así que muestra una tendencia, no una clasificación demostrada.</p><p>Biopsias de piel humana, pero de piel del muslo y con 10 personas por crema.</p>",
+        "it": "<p>7 persone su 10 hanno mostrato nuova produzione di collagene dopo un mese con la crema al peptide di rame, contro 5 su 10 con vitamina C o melatonina e 4 su 10 con tretinoina (Abdulghani et al., 1998). Lo studio ha contato i responder senza verificare se le creme differissero: mostra una tendenza, non una classifica dimostrata.</p><p>Biopsie di pelle umana, ma della coscia e con 10 persone per crema.</p>"
+      }
+    }
+  },
+  "references_i18n": {
+    "de": {
+      "Published References": "Veröffentlichte Quellen",
+      "View on PubMed &rarr;": "Auf PubMed ansehen &rarr;",
+      "View study &rarr;": "Studie ansehen &rarr;"
+    },
+    "nl": {
+      "Published References": "Gepubliceerde bronnen",
+      "View on PubMed &rarr;": "Bekijk op PubMed &rarr;",
+      "View study &rarr;": "Bekijk studie &rarr;"
+    },
+    "fr": {
+      "Published References": "Références publiées",
+      "View on PubMed &rarr;": "Voir sur PubMed &rarr;",
+      "View study &rarr;": "Voir l'étude &rarr;"
+    },
+    "es": {
+      "Published References": "Referencias publicadas",
+      "View on PubMed &rarr;": "Ver en PubMed &rarr;",
+      "View study &rarr;": "Ver estudio &rarr;"
+    },
+    "it": {
+      "Published References": "Riferimenti pubblicati",
+      "View on PubMed &rarr;": "Vedi su PubMed &rarr;",
+      "View study &rarr;": "Vedi lo studio &rarr;"
+    }
+  },
+  "jsonld_host": "references",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.skingenetix.com/pages/copper-peptide-research#webpage",
+    "url": "https://www.skingenetix.com/pages/copper-peptide-research",
+    "name": "Copper Peptides (GHK-Cu) for Skin: Benefits and Research",
+    "description": "Copper peptide (GHK-Cu) is a copper-binding peptide found naturally in the body. What it does for skin, what the studies measured, and how to use it.",
+    "datePublished": "2026-03-10",
+    "dateModified": "2026-09-22",
+    "isPartOf": {
+      "@id": "https://www.skingenetix.com/#website"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.skingenetix.com/#organization",
+      "name": "Skingenetix",
+      "url": "https://www.skingenetix.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "GHK-Cu",
+      "alternateName": [
+        "Copper peptide",
+        "Copper tripeptide-1",
+        "Glycyl-L-histidyl-L-lysine copper"
+      ]
+    },
+    "citation": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Effects of GHK-Cu on MMP and TIMP Expression, Collagen and Elastin Production, and Facial Wrinkle Parameters",
+        "author": "Badenhorst T et al.",
+        "datePublished": "2016",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Journal of Aging Science"
+        },
+        "url": "https://doi.org/10.4172/2329-8847.1000166"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Regenerative Potential of GHK-Cu in Aesthetic Medicine",
+        "author": "Mokhtar J et al.",
+        "datePublished": "2026",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Aesthetic Surgery Journal"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42619529/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data",
+        "author": "Pickart L, Margolina A",
+        "datePublished": "2018",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "International Journal of Molecular Sciences"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29986520/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration",
+        "author": "Pickart L, Vasquez-Soltero JM, Margolina A",
+        "datePublished": "2015",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "BioMed Research International"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26236730/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Copper-GHK increases integrin expression and p63 positivity by keratinocytes",
+        "author": "Kang YA et al.",
+        "datePublished": "2009",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Archives of Dermatological Research"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19319546/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Effects of topical copper tripeptide complex on CO2 laser-resurfaced skin",
+        "author": "Miller TR et al.",
+        "datePublished": "2006",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Archives of Facial Plastic Surgery"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16847171/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Augmented Skin Beneficial Effects of Thermus Thermophilus and Bacillus Subtilis Mixed-Culture Ferment Extract by Tripeptide GHK-Cu",
+        "author": "Wang J et al.",
+        "datePublished": "2026",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Skin Research and Technology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42573538/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Topically applied GHK as an anti-wrinkle peptide: Advantages, problems and prospective",
+        "author": "Mortazavi SM et al.",
+        "datePublished": "2024",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "BioImpacts"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39963574/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Synergy of GHK-Cu and hyaluronic acid on collagen IV upregulation via fibroblast and ex-vivo skin tests",
+        "author": "Jiang F et al.",
+        "datePublished": "2023",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Journal of Cosmetic Dermatology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37062921/"
+      }
+    ],
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Esther Bodde",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Cosmetic & Medical Physician"
+    },
+    "lastReviewed": "2026-09-22"
+  },
+  "jsonld_i18n": {
+    "de": {
+      "name": "Copper Peptide (GHK-Cu) Forschung und Studien",
+      "description": "Copper Peptide (GHK-Cu) bildet Ihr Körper selbst. Doppelblind getestet: 55,8 % mehr Reduktion des Faltenvolumens als ohne. Jede Studie erklärt."
+    },
+    "nl": {
+      "name": "Copper Peptide (GHK-Cu) Onderzoek en Studies",
+      "description": "Copper peptide (GHK-Cu) maakt je lichaam zelf aan. Dubbelblind getest: 55,8% meer vermindering van het rimpelvolume dan zonder. Elke studie uitgelegd."
+    },
+    "fr": {
+      "name": "Recherche et Études sur le Copper Peptide (GHK-Cu)",
+      "description": "Le copper peptide (GHK-Cu), un peptide produit par le corps. Testé en double aveugle : 55,8 % de volume de rides en moins de plus. Chaque étude expliquée."
+    },
+    "es": {
+      "name": "Investigación y Estudios sobre Copper Peptide (GHK-Cu)",
+      "description": "El copper peptide (GHK-Cu) lo produce tu cuerpo. Probado en doble ciego: un 55,8 % más de reducción del volumen de arrugas. Cada estudio explicado."
+    },
+    "it": {
+      "name": "Ricerca e Studi su Copper Peptide (GHK-Cu)",
+      "description": "Il copper peptide (GHK-Cu) è prodotto dal corpo. Testato in doppio cieco: il 55,8% in più di riduzione del volume delle rughe. Ogni studio spiegato."
+    }
+  }
+}
