@@ -52,7 +52,7 @@
 | ✅ | A2 · atomic paragraphs (none > 120 words) | 29 paragraphs, 0 too long |
 | ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 11 |
 | ✅ | A3 · fact density (measured figures ≥ 5) | 38 figures |
-| ✅ | A3 · cited sources ≥ 3 | 28 citation markers |
+| ✅ | A3 · cited sources ≥ 3 | 32 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | ✅ | E1 · visible last-reviewed/updated date | Last updated |
 | ✅ | A6 · structured list or table present |  |

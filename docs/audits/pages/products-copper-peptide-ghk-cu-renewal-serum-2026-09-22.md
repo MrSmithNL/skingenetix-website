@@ -49,7 +49,7 @@
 | 🔴 | A10 · head term in first 30% of text | 'copper peptide serum' |
 | 🔴 | A1 · definition sentence early ('X is a …') |  |
 | ✅ | A8 · secondary intents covered on the page | ['ghk-cu', '2%'] / ['ghk-cu', '2%'] |
-| ✅ | A2 · atomic paragraphs (none > 120 words) | 17 paragraphs, 0 too long |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 18 paragraphs, 0 too long |
 | 🟡 | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 2 |
 | ✅ | A3 · fact density (measured figures ≥ 5) | 12 figures |
 | 🟠 | A3 · cited sources ≥ 3 | 0 citation markers |
@@ -57,7 +57,7 @@
 | 🟠 | E1 · visible last-reviewed/updated date | pending reviewer sign-off |
 | ✅ | A6 · structured list or table present |  |
 | 🟡 | A4 · headings mirror search questions | 0 question-form H2 |
-| 🔴 | D7 · extractable text without JavaScript ≥ 600 words | 392 words extracted (main text 1361) |
+| 🔴 | D7 · extractable text without JavaScript ≥ 600 words | 400 words extracted (main text 1375) |
 | ✅ | Head term survives extraction |  |
 | 🟠 | H2 sections survive extraction | lost: ['The Skingenetix Standard', 'Complete Your Routine'] |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -84,7 +84,7 @@
 - **H2:** ['Before and after', 'Frequently Asked Questions', '3 Simple Steps', 'The Skingenetix Standard', 'Complete Your Routine']
 - **Visual-only headings:** []
 - **Schema types:** ['Product', 'BreadcrumbList', 'FAQPage']
-- **Extracted words (no JS):** 392 of 1361
+- **Extracted words (no JS):** 400 of 1375
 
 ## Section map (desktop)
 

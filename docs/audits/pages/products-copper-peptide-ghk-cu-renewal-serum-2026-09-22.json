@@ -258,7 +258,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "17 paragraphs, 0 too long",
+   "detail": "18 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -322,7 +322,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": false,
-   "detail": "392 words extracted (main text 1361)",
+   "detail": "400 words extracted (main text 1375)",
    "severity": "high",
    "weight": 3
   },
@@ -488,8 +488,8 @@
    "BreadcrumbList",
    "FAQPage"
   ],
-  "extracted_words": 392,
-  "main_words": 1361,
+  "extracted_words": 400,
+  "main_words": 1375,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg?v=1787296390&width=2048",
@@ -611,7 +611,7 @@
      "top": 126,
      "h": 2651,
      "bg": "rgb(240, 240, 240)",
-     "text": 911,
+     "text": 921,
      "media": 15
     },
     {
@@ -700,7 +700,7 @@
      "top": 85,
      "h": 2061,
      "bg": "rgb(240, 240, 240)",
-     "text": 947,
+     "text": 957,
      "media": 15
     },
     {

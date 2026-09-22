@@ -1,0 +1,69 @@
+{
+  "_about": "Copper peptide product claims found unsupported while re-verifying the copper hub at source, 2026-09-22 (docs/audits/pages/README.md, 'Claims verified at source'). 'At a high published strength' has no source: no cited study or review states a studied concentration range. 'One of the most-studied peptides in skin science' is contradicted by Mortazavi et al. 2024 (PMID 39963574): 'a surprising absence of clinical studies'. Replacement wording is what the evidence supports.",
+  "fixes": [
+    {
+      "patterns": {
+        "en": "at a high published strength",
+        "de": "in einer hohen, publizierten Konzentration",
+        "nl": "in een hoge, gepubliceerde concentratie",
+        "fr": "à une concentration élevée",
+        "es": "a una concentración publicada elevada",
+        "it": "all'alta concentrazione pubblicata"
+      },
+      "replace": {
+        "en": "with the percentage stated on the pack",
+        "de": "mit dem Prozentsatz auf der Verpackung angegeben",
+        "nl": "met het percentage vermeld op de verpakking",
+        "fr": "avec le pourcentage indiqué sur l'emballage",
+        "es": "con el porcentaje indicado en el envase",
+        "it": "con la percentuale indicata sulla confezione"
+      },
+      "where": [
+        "body_html"
+      ]
+    },
+    {
+      "patterns": {
+        "en": "our most-studied hero active, at the same high strength in every step",
+        "de": "unserem meistuntersuchten Wirkstoff, in jedem Schritt in derselben hohen Konzentration",
+        "nl": "onze meest onderzochte hero-actieve stof, in dezelfde hoge concentratie in elke stap",
+        "fr": "notre actif phare le plus étudié, à la même concentration élevée à chaque étape",
+        "es": "nuestro activo estrella más estudiado, a la misma alta concentración en cada paso",
+        "it": "il nostro attivo più studiato, alla stessa alta concentrazione in ogni step"
+      },
+      "replace": {
+        "en": "our hero active, at the same 2% in every step",
+        "de": "unserem Hauptwirkstoff, in jedem Schritt mit denselben 2 %",
+        "nl": "onze belangrijkste actieve stof, in elke stap met dezelfde 2%",
+        "fr": "notre actif phare, avec les mêmes 2 % à chaque étape",
+        "es": "nuestro activo estrella, con el mismo 2 % en cada paso",
+        "it": "il nostro attivo principale, con lo stesso 2% in ogni step"
+      },
+      "where": [
+        "body_html"
+      ]
+    },
+    {
+      "patterns": {
+        "en": "GHK-Cu is one of the most-studied peptides in skin science\\.",
+        "de": "GHK-Cu (gehört zu den|ist eines der) am (intensivsten|besten) (erforschten|untersuchten) Peptide[n]? in der Haut[A-Za-zäöü-]*\\.",
+        "nl": "GHK-Cu is een van de meest onderzochte peptiden in de [a-z]+\\.",
+        "fr": "GHK-Cu est l'un des peptides les plus étudiés en science [a-zé ]+\\.",
+        "es": "GHK-Cu es uno de los péptidos más estudiados en (la )?ciencia [a-zé ]+\\.",
+        "it": "GHK-Cu è uno dei peptidi più studiati nella scienza [a-z ]+\\."
+      },
+      "replace": {
+        "en": "For GHK-Cu, most of the evidence comes from laboratory studies; published trials in people are small.",
+        "de": "Bei GHK-Cu stammen die meisten Belege aus Laborstudien; veröffentlichte Studien am Menschen sind klein.",
+        "nl": "Voor GHK-Cu komt het meeste bewijs uit laboratoriumstudies; gepubliceerde studies bij mensen zijn klein.",
+        "fr": "Pour le GHK-Cu, la plupart des preuves proviennent d'études en laboratoire ; les essais publiés chez l'humain sont de petite taille.",
+        "es": "En el caso del GHK-Cu, la mayor parte de la evidencia procede de estudios de laboratorio; los ensayos publicados en personas son pequeños.",
+        "it": "Per il GHK-Cu, la maggior parte delle prove proviene da studi di laboratorio; gli studi pubblicati sulle persone sono piccoli."
+      },
+      "where": [
+        "metafield:custom.clinical_research"
+      ]
+    }
+  ],
+  "_tool": "scripts/fix-claims.py (applied 2026-09-22 13:37 with its product-only predecessor; backup backups/claim-fix-copper-2026-09-22-20260922-133711.json)"
+}

@@ -1,0 +1,90 @@
+{
+  "_about": "Copper 'one of the most-studied peptides' — contradicted by Mortazavi et al. 2024 (PMID 39963574, 'a surprising absence of clinical studies'). 'Over 50 published studies' checked on PubMed 2026-09-22: 174 GHK-Cu papers in total, 54 mention skin/topical/cosmetic use, 1 indexed clinical trial — so it is rewritten as a count of papers, mostly laboratory. Companion to copper-2026-09-22.json (product descriptions + clinical-research metafield). Tool: scripts/fix-claims.py.",
+  "fixes": [
+    {
+      "where": [
+        "templates"
+      ],
+      "patterns": {
+        "en": "is one of the most-studied peptides in skin science, with over 50 published studies",
+        "de": "gehört zu den am besten untersuchten Peptiden in der Hautwissenschaft, mit über 50 veröffentlichten Studien",
+        "nl": "is een van de meest onderzochte peptiden in de huidwetenschap, met meer dan 50 gepubliceerde studies",
+        "fr": "est l'un des peptides les plus étudiés en science de la peau, avec plus de 50 études publiées",
+        "es": "es uno de los péptidos más estudiados en ciencia de la piel, con más de 50 estudios publicados",
+        "it": "è uno dei peptidi più studiati nella scienza della pelle, con oltre 50 studi pubblicati"
+      },
+      "replace": {
+        "en": "has been the subject of more than 50 published papers on skin, most of them laboratory studies",
+        "de": "war Gegenstand von mehr als 50 veröffentlichten Arbeiten zur Haut, überwiegend Laborstudien",
+        "nl": "is onderwerp van meer dan 50 gepubliceerde artikelen over de huid, de meeste laboratoriumstudies",
+        "fr": "a fait l'objet de plus de 50 publications sur la peau, pour la plupart des études en laboratoire",
+        "es": "ha sido objeto de más de 50 publicaciones sobre la piel, la mayoría estudios de laboratorio",
+        "it": "è stato oggetto di oltre 50 pubblicazioni sulla pelle, per lo più studi di laboratorio"
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "patterns": {
+        "en": "One of the most-studied peptides in skin science, with over 50 published studies\\.",
+        "de": "Eines der am besten untersuchten Peptide in der Hautwissenschaft, mit über 50 veröffentlichten Studien\\.",
+        "nl": "Een van de meest onderzochte peptiden in de huidwetenschap, met meer dan 50 gepubliceerde studies\\.",
+        "fr": "L'un des peptides les plus étudiés en science de la peau, avec plus de 50 études publiées\\.",
+        "es": "Uno de los péptidos más estudiados en ciencia de la piel, con más de 50 estudios publicados\\.",
+        "it": "Uno dei peptidi più studiati nella scienza della pelle, con oltre 50 studi pubblicati\\."
+      },
+      "replace": {
+        "en": "More than 50 published papers on skin, most of them laboratory studies.",
+        "de": "Mehr als 50 veröffentlichte Arbeiten zur Haut, überwiegend Laborstudien.",
+        "nl": "Meer dan 50 gepubliceerde artikelen over de huid, de meeste laboratoriumstudies.",
+        "fr": "Plus de 50 publications sur la peau, pour la plupart des études en laboratoire.",
+        "es": "Más de 50 publicaciones sobre la piel, la mayoría estudios de laboratorio.",
+        "it": "Oltre 50 pubblicazioni sulla pelle, per lo più studi di laboratorio."
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "patterns": {
+        "en": "is one of the most-studied peptides in skin science and is valued",
+        "de": "gehört zu den am besten untersuchten Peptiden in der Hautforschung und wird",
+        "nl": "is een van de meest onderzochte peptiden in de huidwetenschap en staat",
+        "fr": "est l'un des peptides les plus étudiés en science de la peau et est reconnu",
+        "es": "es uno de los péptidos más estudiados en ciencia de la piel y se valora",
+        "it": "è uno dei peptidi più studiati nella scienza della pelle, apprezzato"
+      },
+      "replace": {
+        "en": "is valued",
+        "de": "wird",
+        "nl": "staat",
+        "fr": "est reconnu",
+        "es": "se valora",
+        "it": "è apprezzato"
+      }
+    },
+    {
+      "where": [
+        "templates",
+        "metaobject:faq_item.answer"
+      ],
+      "patterns": {
+        "en": "GHK-Cu is one of the most[- ](studied|researched) peptides in (skin science|skincare)\\.",
+        "de": "GHK-Cu (gehört zu den|ist eines der) am (besten|intensivsten) (erforschten|untersuchten) Peptide[n]? in der [A-Za-zäöü-]+\\.",
+        "nl": "GHK-Cu is een van de meest onderzochte peptiden in (de huidwetenschap|skincare)\\.",
+        "fr": "(Le )?GHK-Cu est l'un des peptides les plus étudiés en (science de la peau|skincare)\\.",
+        "es": "(El )?GHK-Cu es uno de los péptidos más estudiados en (la )?(ciencia de la piel|skincare)\\.",
+        "it": "GHK-Cu è uno dei peptidi più studiati nella (scienza della pelle|skincare)\\."
+      },
+      "replace": {
+        "en": "For GHK-Cu, most of the evidence comes from laboratory studies; published trials in people are small.",
+        "de": "Bei GHK-Cu stammen die meisten Belege aus Laborstudien; veröffentlichte Studien am Menschen sind klein.",
+        "nl": "Voor GHK-Cu komt het meeste bewijs uit laboratoriumstudies; gepubliceerde studies bij mensen zijn klein.",
+        "fr": "Pour le GHK-Cu, la plupart des preuves proviennent d'études en laboratoire ; les essais publiés chez l'humain sont de petite taille.",
+        "es": "En el caso del GHK-Cu, la mayor parte de la evidencia procede de estudios de laboratorio; los ensayos publicados en personas son pequeños.",
+        "it": "Per il GHK-Cu, la maggior parte delle prove proviene da studi di laboratorio; gli studi pubblicati sulle persone sono piccoli."
+      }
+    }
+  ]
+}
