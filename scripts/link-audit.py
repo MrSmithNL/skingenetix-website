@@ -87,7 +87,7 @@ def audit(locales):
             no_prefix = sorted({h for h, _ in internal if loc != "en" and not h.startswith(f"/{loc}/") and h != f"/{loc}"
                                 and re.match(r"/(pages|products|collections|blogs)/", h)})
             text = H.unescape(re.sub(r"<[^>]+>", " ", body))
-            cites = len(CITE.findall(text))
+            cites = len({(a.lower(), y) for a, y in CITE.findall(text)})   # distinct studies; repeats stay plain by design
             linked = len(re.findall(r"<a\b[^>]*>\s*[A-Z][A-Za-zÀ-ſ\-]+ et al\.,? \d{4}\s*</a>", body))
             pages[f"{loc}:{p}"] = {"status": status, "internal": len(internal), "external": len(external),
                                    "external_domains": sorted({re.sub(r"https?://([^/]+).*", r"\1", h) for h, _ in external}),

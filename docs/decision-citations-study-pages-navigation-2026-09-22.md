@@ -65,7 +65,14 @@ list at the foot of the page and on the findings cards.
 
 ---
 
-## 3. One article per study: not adopted. Hairgenetix measured it and stopped
+## 3. One article per study — ⚠️ SUPERSEDED the same day: build a modified version
+
+> **Reversed 2026-09-22 after Malcolm's challenge** (the criterion is the whole site's credibility for Google and AI,
+> not per-page conversion). Re-researched in `docs/research-2026-study-hubs-credibility.md`. Verdict: build an
+> **Evidence Library + one appraisal page per qualifying human study (~12–18)**. The reasoning below is kept as
+> the record of why the first answer was wrong: it judged study pages on clicks.
+
+### Original (superseded) reasoning
 
 The current Skingenetix strategy does **not** include per-study pages, and the evidence supports leaving it
 out:
