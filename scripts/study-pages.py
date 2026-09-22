@@ -148,7 +148,7 @@ def verify(cfg):
         url = f"{BASE}{'' if loc == 'en' else '/' + loc}/pages/study/{cfg['handle']}"
         html = _get(url + f"?v={time.time()}")
         h1 = [H.unescape(re.sub(r"<[^>]+>", "", x)).strip() for x in re.findall(r"<h1[^>]*>(.*?)</h1>", html, re.S)]
-        page = re.sub(r"<style\b.*?</style>", "", html, flags=re.S)   # CSS attribute selectors are not links
+        page = re.sub(r"<(style|script)\b.*?</\1>", "", html, flags=re.S)   # CSS/JS selectors are not links
         want = next(c for k, c in cfg["fields"]["intro"][loc] if k == "h1")
         ld = all(json.loads(b) for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S))
         dead = [h for h in set(re.findall(r'href="(/[a-z]{2}/(?:pages|products|collections)/[^"#?]+|/(?:pages|products|collections)/[^"#?]+)"', page))
