@@ -53,7 +53,8 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 **Priority:** 🔴 Plan complete and evidence-based; Phase 1 ready to start
 **Owner:** Claude (build) + Malcolm (2 decisions)
 
-**Documents:** `docs/content-plan-2026.md` (what to build) · `docs/keyword-research-2026-09-22.md`
+**Documents:** `docs/keyword-strategy-2026.md` (the hero map — authoritative on demand) ·
+`docs/content-plan-2026.md` (what to build) · `docs/keyword-research-2026-09-22.md`
 (demand) · `docs/content-hub-strategy-2026.md` (why) · `docs/research-2026-ai-search-and-content-hubs.md`
 (evidence base, incl. a blacklist of fabricated stats found in circulation)
 **Tools built:** `scripts/keyword-research.py` · `scripts/gsc-baseline.py`
@@ -65,10 +66,24 @@ and earns **1 click** — a 0.10% CTR. That is Hairgenetix's impression-rich/cli
 live here on the only page with traction. Lifting it to a normal 3% would roughly triple total site
 clicks with no new content. **Phase 1 is retitling, not writing.**
 
-**PDRN is the flagship hub, not copper peptide:** `what is pdrn` 14,800 at KD 7, `pdrn skincare` 12,100
-at **KD 0**, and the live DE SERP for `pdrn serum` is small affiliate blogs and marketplaces. Brand
-ingredient explainers demonstrably rank — **SkinCeuticals #2** and **The INKEY List #11** on
-`what is pdrn`, doing exactly what our research pages already do.
+**PDRN is the flagship hub — confirmed on observed data 2026-09-22.** Full 7-market study
+(20,357 keywords, $4.13): **PDRN is 76,717 of ~113,000 qualified opportunity — 68%, and 8× the next
+family.** Brand ingredient explainers demonstrably rank: **SkinCeuticals #2**, **INKEY List #11** on
+`what is pdrn`; **Lancôme #2** on FR `pdrn`; **Boots #1** in GB for `pdrn serum` with a *collection*
+page — a direct template for `/collections/pdrn`.
+
+⚠️ **Google Ads volume is not demand.** `ghk copper peptide` reads 135,000 in Ads and **757** in observed
+clickstream — **178× inflated**. Copper peptide had been named "the volume hub" on that number; it is
+actually the third family. All scoring now runs on clickstream.
+
+⚠️ **`best peptide serum` cut from the plan** — Forbes #2, Reddit #3, Ulta #5, Marie Claire #6 own it.
+Getting *into* those lists is an off-site job, not a content one.
+
+⚠️ **AI Overviews reach the commercial terms in this category** — `pdrn serum`, `copper peptide serum`
+and `matrixyl 3000` all carry one in the US. The "commercial intent is safe" rule does not hold for PDRN.
+
+**Product gap found in the data:** ~3,100 qualified opportunity on PDRN formats we do not sell —
+`pdrn toner`, `pdrn essence`, `pdrn mask`. A range decision, not a content one.
 
 **Market split:** the US searches informationally, Germany commercially — the entire German keyword set
 holds **two** question terms. DE priority is product and collection pages; articles serve US/UK.

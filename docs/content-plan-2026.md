@@ -1,11 +1,19 @@
 # Content Structure & Build Plan — Skingenetix, 2026
 
 **Date:** 2026-09-22 · **Status:** Ready to build, pending the two decisions in §8
-**Built on:** `keyword-research-2026-09-22.md` (demand) · `research-2026-ai-search-and-content-hubs.md`
-(evidence) · `content-hub-strategy-2026.md` (architecture)
+**Built on:** `keyword-strategy-2026.md` (the hero map and scoring — authoritative on demand) ·
+`keyword-research-2026-09-22.md` (first-pass demand) ·
+`research-2026-ai-search-and-content-hubs.md` (evidence) · `content-hub-strategy-2026.md` (architecture)
 
 This is the *what to build* document. The strategy doc says why; this says which pages, which terms,
 in which order.
+
+> **▶ Updated 2026-09-22 by `docs/keyword-strategy-2026.md`.** A full 7-market study with *observed
+> clickstream* replaced the Google Ads volumes this document was first written on, and the change is not
+> cosmetic: **`ghk copper peptide` reads as 135,000 in Ads and 757 in observed search — 178× inflated.**
+> Copper peptide was named "the volume hub" below on the strength of that number. It is not.
+> **PDRN is 68% of all qualified opportunity, 8× the next family.** The hero map in the keyword strategy
+> supersedes §2 here where the two differ.
 
 ---
 
@@ -13,9 +21,11 @@ in which order.
 
 Six things decide every choice below. All measured, not assumed.
 
-1. **PDRN is the biggest opportunity and it is not close.** `pdrn` 49,500 · `pdrn serum` 22,200 ·
-   `what is pdrn` 14,800 at **KD 7** · `pdrn skincare` 12,100 at **KD 0**. The live DE SERP for
-   `pdrn serum` is small affiliate blogs and marketplaces — genuinely winnable.
+1. **PDRN is the biggest opportunity and it is not close.** On *observed* search: `pdrn` **19,734** ·
+   `what is pdrn` **5,602** · `pdrn serum` **3,936** · `pdrn cream` **2,321**. Across seven markets PDRN
+   is **76,717 of ~113,000 total opportunity — 68%, and 8× the next family.** The live DE SERP for
+   `pdrn serum` is small affiliate blogs and marketplaces; the GB SERP is led by a Boots *collection*
+   page. Genuinely winnable.
 2. **Brand-owned ingredient explainers do rank.** On `what is pdrn` (US), **SkinCeuticals sits at #2**
    and **The INKEY List at #11** — doing exactly what our five research pages already do.
 3. **We already have the impression-rich, click-poor problem.**
@@ -26,8 +36,10 @@ Six things decide every choice below. All measured, not assumed.
    `peptide serum`. This splits the plan cleanly by market.
 5. **Competitors own branded product terms, never the category.** The Ordinary owns
    *"multi-peptide serum"*; Medicube owns *"PDRN Pink Peptide Serum"*. Nobody owns *"what is PDRN"*.
-6. **Informational pages are the AI-exposed layer.** `what is pdrn` triggers an AI Overview;
-   `pdrn serum` (DE) does not. Hub pages compete for citation; product pages are comparatively safe.
+6. **⚠️ In this category, AI Overviews reach the commercial terms too.** `pdrn`, `what is pdrn`,
+   `pdrn serum`, `pdrn skincare`, `argireline`, `copper peptide serum` and `matrixyl 3000` **all** carry
+   an AI Overview in the US. `peptide serum` and GB `pdrn serum` do not. PDRN is a trend term and Google
+   is treating it as explanatory, so the "commercial intent is safe" rule does **not** hold here.
 
 ---
 
@@ -40,45 +52,59 @@ The rule that Hairgenetix proved the hard way: differentiating two pages by *for
 
 | Term | Vol (US/DE/NL) | KD | Owner | Intent |
 |---|---|---|---|---|
-| `pdrn serum` | 22,200 / 2,900 / 1,000 | 1 | **`/products/pdrn-renewal-serum`** | transactional |
-| `pdrn cream` | 5,400 / 1,600 / 590 | 2 | **`/products/pdrn-collagen-night-cream`** | transactional |
-| `pdrn skincare` | 12,100 | **0** | **`/collections/pdrn`** | commercial browse |
-| **`what is pdrn`** | **14,800** | **7** | **`/pages/pdrn-research`** | **informational head** |
-| `pdrn meaning` · `what is pdrn in skincare` | 5,400 · 4,400 | 15 · 10 | same hub, same page | informational |
-| `what is salmon pdrn` | 1,000 | **0** | spoke | informational |
-| `best pdrn serum` | 1,600 | 3 | commercial guide spoke | commercial |
-| `how to use pdrn serum` | ~520 combined variants | 0 | spoke | how-to |
-| `can you use pdrn with retinol` / `with vitamin c` | 210 · 140 | 0 | one layering spoke | how-to |
+| `pdrn serum` | **3,936** / 2,049 / 845 obs | 1 | **`/products/pdrn-renewal-serum`** | transactional |
+| `pdrn cream` | **2,321** / 1,024 / 634 obs | 2 | **`/products/pdrn-collagen-night-cream`** | transactional |
+| `pdrn skincare` | **1,817** / 1,182 obs | **0** | **`/collections/pdrn`** — Boots ranks #1 in GB with exactly this page type | commercial browse |
+| **`pdrn`** | **19,734** / 6,462 / 4,650 obs | 6 | **`/pages/pdrn-research`** | **informational head** |
+| **`what is pdrn`** | **5,602** / 2,285 obs | **7** | same hub page | informational |
+| `pdrn meaning` | 1,665 obs · 2,116 opp | 15 | same hub page | informational |
+| `salmon dna pdrn` · `salmon pdrn` | 1,368 opp | **0** | same hub page | informational |
+| `pdrn benefits` · `what does pdrn do` | 1,177 opp | 9–11 | same hub page | informational |
+| `best pdrn serum` | 656 obs · 1,042 opp | **3** | commercial guide spoke | commercial |
+| `how to use pdrn serum` | low but KD 0 | 0 | spoke | how-to |
+| `can you use pdrn with retinol` / `with vitamin c` | low but KD 0 | 0 | one layering spoke | how-to |
 
-### Copper peptide — the volume hub
+⚠️ **`what is pdrn in skincare` (1,425 opp) and `what does pdrn do for skin` (629) do not get their own
+articles.** Same intent as the hub — separate pages would cannibalise it. They become **H2 sections
+inside the PDRN hub**.
 
-| Term | Vol (US/DE/NL) | KD | Owner |
-|---|---|---|---|
-| `ghk copper peptide` | **135,000** / 8,100 / 3,600 | 14 | `/pages/copper-peptide-research` |
-| `copper peptide` | 33,100 / 1,300 / 720 | 9 | `/collections/copper-peptide` |
-| `copper peptide serum` | 8,100 / 720 / 320 | 3 | `/products/copper-peptide-ghk-cu-renewal-serum` |
-| `what is copper peptide` · `copper peptide benefits` | 1,300 · 1,300 | 22 · 14 | hub page |
-| `best copper peptide serum` | 1,600 | 5 | commercial guide spoke |
-| `copper peptide with vitamin c` | 390 | **0** | layering spoke |
+### Copper peptide — third, not second ⚠️ **corrected**
+
+⚠️ **This family was sized on a phantom.** `ghk copper peptide` shows **135,000** in Google Ads and
+**757** in observed clickstream — a **178× bucket artefact**. `copper peptide` is 33,100 Ads against
+**1,362** observed. Copper peptide is the **third** family by real demand, not the first.
+
+| Term | Observed (US/GB/DE) | Opportunity | KD | Owner |
+|---|---|---|---|---|
+| `copper peptide serum` | 2,977 / 1,339 / 634 | **5,496** | 3 | `/products/copper-peptide-ghk-cu-renewal-serum` |
+| `copper peptide` | 1,362 / 394 / 105 | 2,204 | 9 | `/pages/copper-peptide-research` |
+| `best copper peptide serum` | 403 / 78 / — | 532 | 5 | commercial guide spoke |
+| ~~`ghk copper peptide`~~ | **757 observed, not 135,000** | — | 14 | not a target in its own right |
 
 ### The remaining three — sized to their demand
 
-| Hub | Head term | US / DE / NL | Owner | Investment |
-|---|---|---|---|---|
-| **Argireline / AH-8** | `argireline` | 9,900 / 1,600 / 390 | `/pages/acetyl-hexapeptide-8-research` | **Medium — but see §3, it needs fixing first** |
-| | `argireline serum` | 3,600 / 590 / 110 | `/products/acetyl-hexapeptide-8-anti-wrinkle-serum` | |
-| **Matrixyl 3000** | `matrixyl 3000` | 6,600 / 1,000 / 210 | `/pages/matrixyl-3000-research` | Low–medium |
-| **Glutathione** | `glutathione serum` | 1,600 / 260 / 140 | `/products/glutathione-brightening-serum` | **Lowest — do not over-invest** |
+| Hub | Head term | Observed US/GB/DE | Opp | Owner | Investment |
+|---|---|---|---|---|---|
+| **Argireline / AH-8** | `argireline` | 3,734 / 1,103 / 845 | **7,149** | `/pages/acetyl-hexapeptide-8-research` | **Medium — and see §3, this page needs fixing first** |
+| | `argireline serum` | 605 / — / 211 | 991 | `/products/acetyl-hexapeptide-8-anti-wrinkle-serum` | |
+| **Matrixyl 3000** | `matrixyl 3000` | 2,725 / 1,339 / 211 | **5,127** | `/products/matrixyl-3000-firming-serum` — transactional, not the hub | Low–medium |
+| **Glutathione** | `glutathione for skin` | 1,211 / 472 / 422 | 1,631 | `/pages/glutathione-research` | **Lowest — do not over-invest** |
+| | `glutathione serum` | 555 / 236 / — | 953 | `/products/glutathione-brightening-serum` | |
 
 ### Cross-family
 
-| Term | US / DE / NL | KD | Owner |
-|---|---|---|---|
-| `peptide serum` | 9,900 / **3,600** / **1,300** | 0 | **`/collections/serums`** — the EU money term |
-| `best peptide serum` | 3,600 | 10 | one commercial guide |
+| Term | Observed US/GB/DE | Opp | KD | Owner |
+|---|---|---|---|---|
+| `peptide serum` | 3,129 / 1,418 / 1,056 | **4,016** | 0 | **`/collections/serums`** — a category SERP (Forbes #1, Amazon, Timeless), so a collection, never a single product |
+| `peptide cream` | 504 / 472 / — | 627 | 4 | `/products/matrixyl-3000-pro-collagen-firming-cream` |
+| `peptide skincare` | 100 / 157 / 211 | 312 | 9 | a peptide collection |
 
-⚠️ **`l argireline` shows 74,000 (US). Unverified — almost certainly a bucket artefact. Not in the map
-until a live SERP confirms it.**
+✅ **`l argireline` resolved.** It showed 74,000 in Ads and does not survive de-bucketing or clickstream
+enrichment — it was the artefact it looked like. Not a target.
+
+**A product gap the keyword data found:** ~3,100 of qualified opportunity sits on PDRN formats we do not
+sell — `pdrn toner` (1,157), `pdrn essence` (1,168), `pdrn mask` (811). That is a range decision for
+Malcolm, not a content one, but it is the clearest product-development signal in the data.
 
 ---
 
@@ -155,7 +181,14 @@ Argireline (3): what it does to expression lines · argireline vs botox, honestl
 matrixyl together (`argireline matrixyl` 720).
 Matrixyl (2): what Matrixyl 3000 is · **"matrixyl 3000 schädlich"** — a German safety query worth
 answering directly.
-Cross-family (2): **`best peptide serum`** (3,600, KD 10) · peptide serum with vitamin C (480).
+Cross-family (1): peptide serum with vitamin C (480).
+
+⚠️ **`best peptide serum` is cut from the plan.** It looked like the strongest cross-family article
+(1,287 opportunity, KD 10) until the live SERP showed Forbes #2, Reddit #3, Ulta #5, Marie Claire #6 and
+YouTube #8. Publishers own it, which matches the finding that commercial "best X" queries send **40.86%**
+of citations to third-party listicles. **The play is to get into Forbes' and Marie Claire's lists — an
+off-site job, not a content one.** `best pdrn serum` (KD 3) and `best copper peptide serum` (KD 5) stay,
+because their SERPs are not publisher-locked.
 
 ### ⚠️ The constraint on comparison articles
 

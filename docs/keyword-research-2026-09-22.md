@@ -1,6 +1,9 @@
 # Keyword Research — Skingenetix, 2026-09-22
 
-**Status:** First real demand data for this store. Unblocks the hero map in `content-plan-2026.md`.
+**Status:** ⚠️ **Superseded on volumes by `docs/keyword-strategy-2026.md` (same day).** This was the
+first pass and used **Google Ads volume**. The full study added *observed clickstream* and found Ads
+inflated by up to **178×** on this catalogue (`ghk copper peptide`: 135,000 Ads → 757 observed). The
+method notes, SERP findings and GSC baseline here remain valid; **the volume figures do not.**
 **Source:** DataForSEO Labs `keyword_suggestions` (terms *containing* the seed) + live SERP pulls, plus
 Google Search Console. **7,280 keywords** captured across three markets.
 
