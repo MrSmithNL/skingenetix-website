@@ -12,7 +12,10 @@ so setting the value to an empty string removes the `<p class="rba__label rba__l
 outright rather than leaving an empty pill. Verified against sections/research-before-after.liquid
 before writing this.
 
-⚠️ THE DISCLOSURE IS NOW MISSING FROM THESE PAGES AND HAS TO COME BACK IN THE COPY.
+⛔ SUPERSEDED 2026-09-22 — Malcolm: "No AI disclosure please." The text disclosure described below
+is NOT an outstanding task any more; it was added and reverted on his instruction. Do not re-add it.
+
+(Original note:) THE DISCLOSURE IS NOW MISSING FROM THESE PAGES AND HAS TO COME BACK IN THE COPY.
 
 `note_label: "Illustration"` was the device marking these before/after diptychs as illustrations
 of a published finding rather than photographs of trial subjects. Every one is AI-generated and
