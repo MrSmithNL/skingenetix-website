@@ -92,8 +92,17 @@ holds **two** question terms. DE priority is product and collection pages; artic
 everywhere, cross-family linking) → Phase 2 upgrade the 5 research pages into hubs, PDRN first →
 Phase 3 18 spokes in a renamed blog, 800–1,500 words, each carrying a measured target term.
 
-**🛑 Two decisions needed from Malcolm:** blog handle (`learn`?) and whether the four thin concern
-collections earn their place.
+**✅ Decided 2026-09-22 — the learning centre.** Blog handle **`learn`**. The five research pages
+**stay at `/pages/*-research` and are the hubs**; `/blogs/learn/` holds practical articles; the two are
+linked both ways and `/pages/the-science` becomes the *Learn* front door. Evidence: URL folder is "a very,
+very lightweight ranking factor" (Google), SERP winners use every structure, and The INKEY List runs
+exactly this on Shopify. Our own GSC showed the science layer's problem is its **titles** (56% of
+impressions, 2 of 21 clicks), not its location. Six planned articles folded into their hubs as H2s; the
+list is now **15**. **"Before and after" searches excluded** — the store's before/after images are
+AI-generated illustrations and must not be presented as results. Record:
+`docs/decision-learning-centre-2026-09-22.md`.
+
+**🛑 One decision left:** whether the four thin concern collections earn their place.
 
 **⚠️ Still blocking measurement: GA4 records no ecommerce events.** Reviews moved to a separate thread.
 

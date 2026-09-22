@@ -719,3 +719,13 @@ Added to §9 above. All verified by re-fetching the alleged primary source:
 
 **A search engine's own AI summary fabricated Orbit Media statistics during this research.** Two further
 claims were caught by fetching the cited primary source and finding it said something else entirely.
+
+### Added 2026-09-22 (learning-centre research)
+
+| Claim in circulation | Status |
+|---|---|
+| "Ahrefs deleted 266 posts, traffic up 89% in 3 months" | Not on Ahrefs' site; an undated Medium self-report, about deletion not merging, pre-2025 |
+| "Content consolidation: up to +92% impressions / +70% clicks" | Untraceable |
+| "Topic clusters drive 30% more traffic / 3.2× AI citations" | Untraceable |
+| "Dec 2025 Helpful Content Update: +23% / −18%" | No such Google publication exists |
+| "Authority Hacker: internal linking +40%" | Untraceable |
