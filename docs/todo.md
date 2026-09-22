@@ -115,6 +115,18 @@ AI-generated illustrations and must not be presented as results. Record:
 - ✅ **95 product-title translations** (19 × de/nl/fr/es/it) — needed at once, because the products had no SEO title before and every locale fell back to the new English one. 95/95 verified live.
 - ✅ **Blog renamed `news` → `learn`**, title translated in 5 locales, `/blogs/news` 301s to `/blogs/learn`.
 - ✅ **Menu "Scientific Research" → "Learn"** (Wissen / Kennis / Apprendre / Aprende / Impara), menu item and mega-menu setting changed together. **This also fixed a live defect: the research mega-menu was broken in DE, FR, ES and IT** because the menu label and the mega-menu setting had been translated differently. Verified by opening the menu in a browser in all six languages.
+- ✅ **15 in-prose cross-links** between the concern pages and the research hubs (previously two closed loops, zero links between them), appended to existing rich-text blocks in standard sections — no new code. Tool `scripts/add-prose-links.py`, spec `configs/link-changes/phase1-links-2026-09-22.json`, backups in `backups/`. 15/15 verified live; German page confirmed undisturbed.
+- ✅ **5 ingredient collections now link to their research hub** (description field). Matrixyl collection copy softened from "collagen stimulation" (a functional claim) to "firmer, smoother-looking skin". 5/5 live.
+- ✅ **Research-hub inbound in-content links:** PDRN 7→9, AH-8 7→9, copper 6→11, Matrixyl 6→10, glutathione 6→8. PDRN, the flagship, still needs its Phase 2/3 links to pass 10.
+- ✅ **`/pages/the-science` JSON-LD** — frozen `2026-03-11` replaced with the honest dates (published 2026-03-10, modified 2026-09-05 = last template content change; today's SEO-only change deliberately not counted). Name/description aligned with the new title. Valid live; FAQPage intact.
+- ❎ **"Dead CSS block" on brightening-glow — not reproducible.** All 17 style blocks target elements present on the page. Closed.
+- ⚠️ **`/pages/collagen-skin-plumping` is probably a duplicate, not a missing concern.** Same two ingredients (Matrixyl 3000 + copper peptide) and near-identical promise to firming-skin-density; not in the menu or on skin-concerns. Consolidation candidate for Phase 2 — not added to navigation.
+- ⏭ **Learn front-door content** (hubs + latest articles on `/pages/the-science`) waits for the first articles; menu and title already done. The hub pages' "Back to The Science" buttons can switch to "Learn" at the same time.
+- ⚠️ **Other locales** keep their previous (accurate) titles and body text until the German pass; product titles were translated immediately because they had no prior translation.
+
+**Open questions raised by Phase 1:**
+1. **Argireline® trade name.** The AH-8 research page says the peptide was "developed by Lipotec (now Lubrizol)". If our Acetyl Hexapeptide-8 is Lubrizol's Argireline®, the product and hub can use the name (7,149 opportunity on `argireline`); if not, only nominative educational use on the hub. Needs the supplier spec.
+2. **AH-8 concentration.** The bottle label artwork reads "10% ACETYL HEXAPEPTIDE-8"; the product title and description state no percentage. Confirm before it is used in copy.
 
 
 **⚠️ Still blocking measurement: GA4 records no ecommerce events.** Reviews moved to a separate thread.

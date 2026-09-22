@@ -1,0 +1,40 @@
+{
+  "_about": "Phase 1 item 4 — in-prose cross-links between the concern (solution) pages and the ingredient research hubs, which were two closed loops with zero links between them. Each entry appends one sentence to an EXISTING rich-text setting in a standard theme section; no new sections, no custom code. Anchors vary deliberately (anchor variety was the strongest effect in the Zyppy internal-link study). English source only: the other locales keep their current text until the German pass, which is harmless because nothing is being removed. Applied by scripts/add-prose-links.py.",
+  "links": [
+    {"file": "templates/page.fine-lines-wrinkles.json", "at": "content/argireline/content", "href": "/pages/acetyl-hexapeptide-8-research",
+     "html": "<p>Read <a href=\"/pages/acetyl-hexapeptide-8-research\">what the Acetyl Hexapeptide-8 trials found</a>.</p>"},
+    {"file": "templates/page.fine-lines-wrinkles.json", "at": "content/matrixyl/content", "href": "/pages/matrixyl-3000-research",
+     "html": "<p>The <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000 research</a> explains how this peptide pair is thought to work.</p>"},
+    {"file": "templates/page.fine-lines-wrinkles.json", "at": "content/daycream/content", "href": "/pages/copper-peptide-research",
+     "html": "<p>See <a href=\"/pages/copper-peptide-research\">how copper peptides work on skin</a> in our research summary.</p>"},
+
+    {"file": "templates/page.firming-skin-density.json", "at": "content/matrixyl/content", "href": "/pages/matrixyl-3000-research",
+     "html": "<p>More on <a href=\"/pages/matrixyl-3000-research\">what Matrixyl 3000 does for firmness</a>, with the studies behind it.</p>"},
+    {"file": "templates/page.firming-skin-density.json", "at": "content/nightcream/content", "href": "/pages/copper-peptide-research",
+     "html": "<p>Read the <a href=\"/pages/copper-peptide-research\">copper peptide (GHK-Cu) research</a> behind this formula.</p>"},
+
+    {"file": "templates/page.skin-repair-renewal.json", "at": "content/pdrn_serum/content", "href": "/pages/pdrn-research",
+     "html": "<p>Learn <a href=\"/pages/pdrn-research\">what PDRN is and what the studies show</a>.</p>"},
+    {"file": "templates/page.skin-repair-renewal.json", "at": "content/copper/content", "href": "/pages/copper-peptide-research",
+     "html": "<p>See <a href=\"/pages/copper-peptide-research\">the evidence on GHK-Cu</a>, explained with sources.</p>"},
+
+    {"file": "templates/page.brightening-glow.json", "at": "content/glutathione/content", "href": "/pages/glutathione-research",
+     "html": "<p>Read <a href=\"/pages/glutathione-research\">the glutathione research</a>, including what it does not show.</p>"},
+
+    {"file": "templates/page.collagen-skin-plumping.json", "at": "content/matrixyl/content", "href": "/pages/matrixyl-3000-research",
+     "html": "<p>See <a href=\"/pages/matrixyl-3000-research\">the Matrixyl 3000 studies</a> and what they measured.</p>"},
+    {"file": "templates/page.collagen-skin-plumping.json", "at": "content/copper/content", "href": "/pages/copper-peptide-research",
+     "html": "<p>More on <a href=\"/pages/copper-peptide-research\">copper peptides for skin</a> in our research summary.</p>"},
+
+    {"file": "templates/page.pdrn-research.json", "at": "overview/op/content", "href": "/pages/skin-repair-renewal",
+     "html": "<p>For a routine built around PDRN, see <a href=\"/pages/skin-repair-renewal\">skin repair and renewal</a>.</p>"},
+    {"file": "templates/page.research-argireline.json", "at": "overview/op/content", "href": "/pages/fine-lines-wrinkles",
+     "html": "<p>To use it in a routine, see our guide to <a href=\"/pages/fine-lines-wrinkles\">fine lines and wrinkles</a>.</p>"},
+    {"file": "templates/page.research-copper-peptide.json", "at": "overview/op/content", "href": "/pages/firming-skin-density",
+     "html": "<p>Copper peptide features in our routines for <a href=\"/pages/firming-skin-density\">firmer, denser-looking skin</a> and <a href=\"/pages/skin-repair-renewal\">skin repair and renewal</a>.</p>"},
+    {"file": "templates/page.research-matrixyl.json", "at": "overview/op/content", "href": "/pages/firming-skin-density",
+     "html": "<p>See how it fits into a <a href=\"/pages/firming-skin-density\">firming and skin density</a> routine.</p>"},
+    {"file": "templates/page.glutathione-research.json", "at": "overview/op/content", "href": "/pages/brightening-glow",
+     "html": "<p>For a routine, see <a href=\"/pages/brightening-glow\">brightening and glow</a>.</p>"}
+  ]
+}

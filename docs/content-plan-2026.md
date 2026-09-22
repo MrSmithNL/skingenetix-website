@@ -110,6 +110,8 @@ Malcolm, not a content one, but it is the clearest product-development signal in
 
 ## 3. Phase 1 — fix what already earns impressions *(before writing anything new)*
 
+> **▶ Status 2026-09-22: items 1, 1b, 2, 3, 4 and 6 done and verified live; 1c partly (menu + title; front-door content waits for articles); 5 moves into Phase 2.** Detail in `docs/todo.md` → CONTENT-001.
+
 This is the highest-ROI work on the site and it creates no new pages.
 
 **The acetyl research page is the whole case.** 1,014 impressions, position 8.4, **one click**. Getting
@@ -238,7 +240,7 @@ hers: ***"Could a competitor publish a near-identical version of this page tomor
 prompt?"***
 
 **Ours pass only if they are grounded in things only we have:** our stated concentrations (GHK-Cu 2%,
-PDRN 1%, glutathione 2% — ⚠️ *no concentration is stated for the Acetyl Hexapeptide-8 serum; the earlier "AH-8 10%" was unverified and is removed*), our full INCI lists, and the PubMed-cited trials already assembled on
+PDRN 1%, glutathione 2% — ⚠️ *Acetyl Hexapeptide-8: the bottle label artwork reads 10%, but the product title and description state no percentage — confirm with Malcolm before using it in copy*), our full INCI lists, and the PubMed-cited trials already assembled on
 the hubs. A generic "Copper Peptides vs Retinol" explainer fails the test and must not be written.
 
 ⚠️ **Corrected 2026-09-22:** this list previously included *"our own before/after photography"*. The
