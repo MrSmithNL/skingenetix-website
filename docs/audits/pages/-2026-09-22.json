@@ -3,7 +3,8 @@
  "scores": {
   "SEO": 84,
   "GEO": 61,
-  "DESIGN": 84
+  "DESIGN": 84,
+  "MARKETING": 93
  },
  "items": [
   {
@@ -109,6 +110,62 @@
    "detail": "Skingenetix",
    "severity": "pass",
    "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "high-purity peptides at clinically effective concentrations never trace amounts premium peptides visible results shop copper peptide serum n",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": true,
+   "detail": "3 weeks",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
+   "ok": true,
+   "detail": "0.0/100 words: []",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Path to purchase: links to at least one product",
+   "ok": true,
+   "detail": "13 products linked",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": false,
+   "detail": "1 unsourced: ['Get 5% off your first order, plus exclusive access to skincare tips and new product launch']",
+   "severity": "low",
+   "weight": 1
   },
   {
    "area": "SEO",
@@ -274,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "14 figures",
+   "detail": "15 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -322,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "766 words extracted (main text 1343)",
+   "detail": "779 words extracted (main text 1356)",
    "severity": "pass",
    "weight": 3
   },
@@ -524,8 +581,8 @@
    "FAQPage",
    "FAQPage"
   ],
-  "extracted_words": 766,
-  "main_words": 1343,
+  "extracted_words": 779,
+  "main_words": 1356,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-advanced-repair-serum.jpg?v=1787580840&width=3000",

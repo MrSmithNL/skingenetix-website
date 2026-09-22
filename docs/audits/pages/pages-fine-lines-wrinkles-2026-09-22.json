@@ -3,7 +3,8 @@
  "scores": {
   "SEO": 90,
   "GEO": 81,
-  "DESIGN": 90
+  "DESIGN": 90,
+  "MARKETING": 79
  },
  "items": [
   {
@@ -109,6 +110,62 @@
    "detail": "none",
    "severity": "high",
    "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "skin concernfine lines wrinklesunderstand what causes wrinkles and how clinically studied peptides can visibly reduce them understanding fin",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
+   "ok": true,
+   "detail": "0.2/100 words: ['is valued for']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Path to purchase: links to at least one product",
+   "ok": true,
+   "detail": "5 products linked",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": false,
+   "detail": "3 unsourced: ['Collagen and Elastin BreakdownStarting around age 25, your body produces approximately 1% ', 'UV Radiation (Photoaging)UV exposure is responsible for up to 80% of visible facial aging.']",
+   "severity": "low",
+   "weight": 1
   },
   {
    "area": "SEO",
@@ -258,7 +315,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "6",
+   "detail": "7",
    "severity": "pass",
    "weight": 1.0
   },
@@ -266,7 +323,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "10 figures",
+   "detail": "11 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -314,7 +371,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "831 words extracted (main text 951)",
+   "detail": "844 words extracted (main text 964)",
    "severity": "pass",
    "weight": 3
   },
@@ -495,8 +552,8 @@
   "schema_types": [
    "BreadcrumbList"
   ],
-  "extracted_words": 831,
-  "main_words": 951,
+  "extracted_words": 844,
+  "main_words": 964,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-fine-lines.jpg?v=1787587931&width=3000",
@@ -583,7 +640,7 @@
      "top": 566,
      "h": 4828,
      "bg": "rgb(240, 240, 240)",
-     "text": 4101,
+     "text": 4100,
      "media": 6
     },
     {
@@ -652,15 +709,15 @@
      "id": "content",
      "type": "media-with-text",
      "top": 460,
-     "h": 6365,
+     "h": 6343,
      "bg": "rgb(240, 240, 240)",
-     "text": 4101,
+     "text": 4100,
      "media": 6
     },
     {
      "id": "routine",
      "type": "multi-column",
-     "top": 6825,
+     "top": 6802,
      "h": 634,
      "bg": "rgb(240, 240, 240)",
      "text": 440,
@@ -669,7 +726,7 @@
     {
      "id": "faq",
      "type": "accordion-content",
-     "top": 7459,
+     "top": 7437,
      "h": 551,
      "bg": "rgb(240, 240, 240)",
      "text": 250,
@@ -678,7 +735,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 8010,
+     "top": 7988,
      "h": 483,
      "bg": "rgb(240, 240, 240)",
      "text": 127,
@@ -687,7 +744,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 8493,
+     "top": 8471,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -696,7 +753,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9532,
+     "top": 9510,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

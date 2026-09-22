@@ -5,8 +5,9 @@
 | Area | Score |
 |---|---|
 | SEO | **90/100** |
-| GEO | **40/100** |
+| GEO | **56/100** |
 | DESIGN | **84/100** |
+| MARKETING | **93/100** |
 
 ## SEO
 
@@ -47,17 +48,17 @@
 | 🟡 | Schema cites sources (citation[]) |  |
 | ℹ️ | Reviewer/author in schema (reviewedBy/author) |  |
 | 🔴 | A10 · head term in first 30% of text | 'copper peptide serum' |
-| 🔴 | A1 · definition sentence early ('X is a …') |  |
+| ✅ | A1 · definition sentence early ('X is a …') | is a |
 | ✅ | A8 · secondary intents covered on the page | ['ghk-cu', '2%'] / ['ghk-cu', '2%'] |
-| ✅ | A2 · atomic paragraphs (none > 120 words) | 18 paragraphs, 0 too long |
-| 🟡 | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 2 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 12 figures |
-| 🟠 | A3 · cited sources ≥ 3 | 0 citation markers |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 19 paragraphs, 0 too long |
+| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 3 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 18 figures |
+| ✅ | A3 · cited sources ≥ 3 | 3 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | 🟠 | E1 · visible last-reviewed/updated date | pending reviewer sign-off |
 | ✅ | A6 · structured list or table present |  |
 | 🟡 | A4 · headings mirror search questions | 0 question-form H2 |
-| 🔴 | D7 · extractable text without JavaScript ≥ 600 words | 400 words extracted (main text 1375) |
+| 🔴 | D7 · extractable text without JavaScript ≥ 600 words | 418 words extracted (main text 1482) |
 | ✅ | Head term survives extraction |  |
 | 🟠 | H2 sections survive extraction | lost: ['The Skingenetix Standard', 'Complete Your Routine'] |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -78,13 +79,25 @@
 | ✅ | No broken images (mobile) | none |
 | ✅ | Headings never break mid-word (mobile) | none |
 
+## MARKETING
+
+| | Check | Detail |
+|---|---|---|
+| ✅ | Opening states a concrete skin outcome | zoom zoom zoom zoom zoom zoom zoom zoom zoom zoom zoom zoom go to item 1 go to item 2 go to item 3 go to item 4 go to item 5 go to item 6 go |
+| ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 8 weeks |
+| ✅ | Hedging ≤ 1.0 per 100 words (sales copy) | 0.1/100 words: ['supports the appearance of'] |
+| ✅ | No claim known to be unsupported (docs/claims/) | clean |
+| ✅ | No medicinal wording (EU cosmetic-claims rules) | clean |
+| ✅ | Add-to-cart present |  |
+| 🟡 | Every result figure sits next to its source | 4 unsourced: ['Copper Peptide GHK-Cu (2%)', 'GHK-Cu, double-blind tested: 55.8% more wrinkle-volume reduction than the same serum witho'] |
+
 ## Outline as served
 
 - **H1:** ['Copper Peptide (GHK-Cu) 2% Renewal Serum']
 - **H2:** ['Before and after', 'Frequently Asked Questions', '3 Simple Steps', 'The Skingenetix Standard', 'Complete Your Routine']
 - **Visual-only headings:** []
 - **Schema types:** ['Product', 'BreadcrumbList', 'FAQPage']
-- **Extracted words (no JS):** 400 of 1375
+- **Extracted words (no JS):** 418 of 1482
 
 ## Section map (desktop)
 

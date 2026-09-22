@@ -144,6 +144,32 @@ AI-generated illustrations and must not be presented as results. Record:
 - ✅ **Claims registers** for all five ingredients in `docs/claims/`: the strongest verified claims, evidence tables, claims to avoid, safety. **Next: rewrite hub, product, collection and concern copy to the strongest claims, in six languages.** Blocked for glutathione and Matrixyl on formula confirmation (below).
 - 🛑 **For Malcolm — formula facts the strongest claims depend on** (supplier certificate of analysis): glutathione serum = 2% GSSG w/w? Matrixyl serum/cream Matrixyl 3000 % (the manufacturer's data is at 3%; the serum carton says "10% MATRIXYL")? Argireline grade (Argireline vs Argireline Amplified)? Are the Matrixyl cream and PDRN cream ingredient lists swapped? Vegan: the Ingredients page says all formulas are vegan, but the Matrixyl cream FAQ says not.
 - 🛑 **For Malcolm — two displayed reviews make medical claims** ("fades my acne scars", "rosacea"). EU rules hold the brand responsible for claims in testimonials it displays.
+- ✅ **Strongest-claims copy rewrite: PDRN, Argireline® and copper** (2026-09-22, all six languages). Every figure comes from `docs/claims/`.
+  - **Clinical Research block on 13 products:** a bold headline naming the ingredient, proof bullets and a study footnote (`scripts/set-clinical-research.py`, `configs/copy/clinical-research-2026-09-22.json`).
+  - **"What to expect" timelines on 11 products:** unsourced 1–2 / 4–8 / 8–12 weeks replaced with the measured timelines (PDRN visible from day 14, measured at 28 days; GHK-Cu at 8 weeks; Argireline at 4 weeks).
+  - **Description bullets:** "most talked-about" becomes "outperformed retinol head to head"; the Argireline bullet becomes "10% Argireline®, the level used in the clinical trials"; the trademark line is added.
+  - **10 FAQ answers** rewritten.
+  - **PDRN, Argireline and copper hubs strengthened.** PDRN: up to 23%, more than twice retinol, day 14, 1.8× firmness, no reactions in sensitive skin. Argireline: 22 of 45 vs 0 of 15; forehead roughness −7.4% vs +4.3% on placebo. Copper: Badenhorst 2016 (55.8% / 31.6%) and the Mokhtar 2026 systematic review added, 9 references.
+  - **Removed as unsupported:** well-documented safety, similarity to human DNA, "removes all allergens", "without irritation" vs retinol, the botulinum comparison and "10% of the peptide".
+  - **Concern pages, homepage FAQ (plus its FAQ JSON-LD), FAQ page and the copper collection** updated.
+  - **7 search snippets** now lead with a proof point (`scripts/seo-translate.py` for their translations).
+  - Unsupported-phrase hits site-wide: **75 → 27**. The remainder is Matrixyl/glutathione (waiting on formula facts), stamp-set usage frequency, and 3 generic lines.
+  - **MARKETING score:**
+
+    | Page | Before → after |
+    |---|---|
+    | PDRN serum | 50 → 71 |
+    | PDRN night cream | 43 → 71 |
+    | Copper serum | 71 → 93 |
+    | Copper day gel-cream | 79 → 93 |
+    | Copper night cream | 64 → 93 |
+    | PDRN hub | 71 → 93 |
+    | Skin-repair page | 71 → 93 |
+    | Homepage | 71 → 93 |
+    | Copper collection | 64 → 86 |
+
+  - The two PDRN products stay below 85 **only because of two customer reviews with medical wording ("rosacea", "acne scars") — the decision is Malcolm's.**
+- ⏳ **Next in the rewrite:** Matrixyl 3000 and glutathione (blocked on formula facts), then the generic "gentle"/"radiant" snippets on the serums/creams collections and the "without irritation" lines on /pages/fine-lines-wrinkles and /pages/skin-concerns.
 - ⏳ **MARKETING audit** added to `scripts/page-audit.py` (rules in `configs/marketing-rules.json`, threshold 85 → triggers claims research).
 - ✅ **Audit tooling:** `scripts/page-audit.py` (SEO + GEO/AISO + live-browser design, desktop and mobile) and `configs/page-targets.json`. **Baseline of 17 pages** + site-wide patterns + image to-dos in `docs/audits/pages/README.md`.
 - ✅ **GA4 ecommerce now working** (Malcolm fixed the channel, 2026-09-22). Live-browser test: `view_item` and `add_to_cart` arrive at G-WWKPPYR5F9. `purchase` can only be confirmed with a real order — check on the next sale.

@@ -77,7 +77,7 @@ class Report:
 MKT = json.loads((ROOT / "configs/marketing-rules.json").read_text())
 
 
-def audit_marketing(path, rep, raw, main, main_text, tgt):
+def audit_marketing(path, rep, raw, main, main_text, tgt, h1=None):
     """MARKETING — the strongest supported claim, worded to sell (Malcolm, 2026-09-22).
 
     Deterministic checks only; every rule lives in configs/marketing-rules.json with its reason.
@@ -87,7 +87,10 @@ def audit_marketing(path, rep, raw, main, main_text, tgt):
                               else "home" if path == "/" else "page")
     txt = main_text
     wl = words(txt)
-    hero = " ".join(wl[:80]).lower()
+    # The opening is read from the page title on: product galleries put "zoom / go to item N"
+    # control text first in <main>, which is not copy (found on the copper night cream, 2026-09-22).
+    start = txt.find(h1[0]) if h1 and h1[0] and h1[0] in txt else 0
+    hero = " ".join(words(txt[start:])[:80]).lower()
     first30 = " ".join(wl[: max(60, len(wl) * 3 // 10)])
     rep.add("MARKETING", "Opening states a concrete skin outcome", any(w in hero for w in MKT["outcome_words"]),
             hero[:140], "high", 2)
@@ -176,7 +179,7 @@ def audit_html(path, rep, site):
 
     h1 = [re.sub(r"\s+", " ", e.text_content()).strip() for e in doc.xpath("//h1")]
     rep.add("SEO", "Exactly one <h1>", len(h1) == 1, " | ".join(h1) or "none", "high", 2)
-    audit_marketing(path, rep, raw, main, main_text, tgt)
+    audit_marketing(path, rep, raw, main, main_text, tgt, h1)
     rep.add("SEO", "<h1> contains head term", any(primary.lower() in x.lower() for x in h1), "", "med")
     h2 = [re.sub(r"\s+", " ", e.text_content()).strip() for e in main.xpath(".//h2")]
     pseudo = [re.sub(r"\s+", " ", e.text_content()).strip() for e in main.xpath('.//*[not(self::h1 or self::h2 or self::h3 or self::h4) and (contains(concat(" ",@class," ")," h1 ") or contains(concat(" ",@class," ")," h2 ") or contains(concat(" ",@class," ")," h3 "))]')]

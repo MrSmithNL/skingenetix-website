@@ -1,9 +1,10 @@
 {
  "path": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
  "scores": {
-  "SEO": 82,
+  "SEO": 89,
   "GEO": 58,
-  "DESIGN": 84
+  "DESIGN": 84,
+  "MARKETING": 93
  },
  "items": [
   {
@@ -34,16 +35,16 @@
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "47c: Acetyl Hexapeptide-8 Serum for Expression Lines",
+   "detail": "58c: Argireline\u00ae Serum 10% (Acetyl Hexapeptide-8) | Skingenetix",
    "severity": "pass",
    "weight": 2
   },
   {
    "area": "SEO",
    "check": "Title contains head term",
-   "ok": false,
+   "ok": true,
    "detail": "'argireline'",
-   "severity": "high",
+   "severity": "pass",
    "weight": 2
   },
   {
@@ -109,6 +110,62 @@
    "detail": "Acetyl Hexapeptide-8 Anti-Wrinkle Serum",
    "severity": "pass",
    "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "zoom zoom zoom zoom zoom zoom zoom zoom zoom go to item 1 go to item 2 go to item 3 go to item 4 go to item 5 go to item 6 go to item 7 go t",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": true,
+   "detail": "2 people",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
+   "ok": true,
+   "detail": "0.0/100 words: []",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Add-to-cart present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": false,
+   "detail": "1 unsourced: ['Forehead roughness down 7.4% by day 20, while it rose on placebo']",
+   "severity": "low",
+   "weight": 1
   },
   {
    "area": "SEO",
@@ -242,7 +299,7 @@
    "area": "GEO",
    "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
    "ok": true,
-   "detail": "is the",
+   "detail": "is a",
    "severity": "pass",
    "weight": 2
   },
@@ -258,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "17 paragraphs, 0 too long",
+   "detail": "18 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -266,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": false,
-   "detail": "1",
+   "detail": "2",
    "severity": "low",
    "weight": 1.0
   },
@@ -274,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "5 figures",
+   "detail": "11 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -282,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": false,
-   "detail": "0 citation markers",
+   "detail": "2 citation markers",
    "severity": "med",
    "weight": 1.5
   },
@@ -322,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": false,
-   "detail": "385 words extracted (main text 1265)",
+   "detail": "381 words extracted (main text 1335)",
    "severity": "high",
    "weight": 3
   },
@@ -448,7 +505,7 @@
   }
  ],
  "data": {
-  "title": "Acetyl Hexapeptide-8 Serum for Expression Lines",
+  "title": "Argireline\u00ae Serum 10% (Acetyl Hexapeptide-8) | Skingenetix",
   "h1": [
    "Acetyl Hexapeptide-8 Anti-Wrinkle Serum"
   ],
@@ -488,8 +545,8 @@
    "BreadcrumbList",
    "FAQPage"
   ],
-  "extracted_words": 385,
-  "main_words": 1265,
+  "extracted_words": 381,
+  "main_words": 1335,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg?v=1787310462&width=2048",
@@ -599,7 +656,7 @@
      "top": 126,
      "h": 2282,
      "bg": "rgb(240, 240, 240)",
-     "text": 998,
+     "text": 972,
      "media": 12
     },
     {
@@ -686,15 +743,15 @@
      "id": "main",
      "type": "main-product",
      "top": 85,
-     "h": 2119,
+     "h": 2096,
      "bg": "rgb(240, 240, 240)",
-     "text": 1009,
+     "text": 983,
      "media": 12
     },
     {
      "id": "before_after",
      "type": "product-reviews-before-after",
-     "top": 2203,
+     "top": 2181,
      "h": 871,
      "bg": "rgb(247, 245, 242)",
      "text": 2698,
@@ -703,7 +760,7 @@
     {
      "id": "product_faq",
      "type": "faq",
-     "top": 3074,
+     "top": 3052,
      "h": 621,
      "bg": "rgb(240, 240, 240)",
      "text": 252,
@@ -712,7 +769,7 @@
     {
      "id": "how_to_use",
      "type": "multi-column",
-     "top": 3695,
+     "top": 3673,
      "h": 635,
      "bg": "rgb(255, 255, 255)",
      "text": 307,
@@ -721,7 +778,7 @@
     {
      "id": "reasons_why",
      "type": "text-with-icons",
-     "top": 4330,
+     "top": 4308,
      "h": 1169,
      "bg": "rgb(247, 247, 247)",
      "text": 628,
@@ -730,7 +787,7 @@
     {
      "id": "17734177083a768a84",
      "type": "apps",
-     "top": 5499,
+     "top": 5477,
      "h": 1663,
      "bg": "rgb(240, 240, 240)",
      "text": 825,
@@ -739,7 +796,7 @@
     {
      "id": "related-products",
      "type": "product-recommendations",
-     "top": 7161,
+     "top": 7139,
      "h": 720,
      "bg": "rgb(240, 240, 240)",
      "text": 201,
@@ -748,7 +805,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 7881,
+     "top": 7859,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -757,7 +814,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8921,
+     "top": 8898,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

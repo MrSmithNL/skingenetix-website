@@ -1,8 +1,8 @@
 {
- "path": "/products/copper-peptide-ghk-cu-renewal-serum",
+ "path": "/products/copper-peptide-ghk-cu-day-gel-cream",
  "scores": {
-  "SEO": 90,
-  "GEO": 56,
+  "SEO": 95,
+  "GEO": 70,
   "DESIGN": 84,
   "MARKETING": 93
  },
@@ -11,7 +11,7 @@
    "area": "SEO",
    "check": "HTTP 200, no redirect",
    "ok": true,
-   "detail": "200 \u2192 https://www.skingenetix.com/products/copper-peptide-ghk-cu-renewal-serum",
+   "detail": "200 \u2192 https://www.skingenetix.com/products/copper-peptide-ghk-cu-day-gel-cream",
    "severity": "pass",
    "weight": 2
   },
@@ -19,7 +19,7 @@
    "area": "SEO",
    "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
    "ok": true,
-   "detail": "/products/copper-peptide-ghk-cu-renewal-serum",
+   "detail": "/products/copper-peptide-ghk-cu-day-gel-cream",
    "severity": "pass",
    "weight": 1.0
   },
@@ -27,7 +27,7 @@
    "area": "SEO",
    "check": "URL carries the head term",
    "ok": true,
-   "detail": "head term 'copper peptide serum'",
+   "detail": "head term ''",
    "severity": "pass",
    "weight": 0.5
   },
@@ -35,7 +35,7 @@
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "46c: Copper Peptide Serum 2% (GHK-Cu) | Skingenetix",
+   "detail": "46c: Copper Peptide Day Cream 2% (GHK-Cu) Gel-Cream",
    "severity": "pass",
    "weight": 2
   },
@@ -43,7 +43,7 @@
    "area": "SEO",
    "check": "Title contains head term",
    "ok": true,
-   "detail": "'copper peptide serum'",
+   "detail": "''",
    "severity": "pass",
    "weight": 2
   },
@@ -51,16 +51,16 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": false,
-   "detail": "166c",
+   "detail": "162c",
    "severity": "med",
    "weight": 1.0
   },
   {
    "area": "SEO",
    "check": "Meta description contains head term",
-   "ok": false,
+   "ok": true,
    "detail": "",
-   "severity": "low",
+   "severity": "pass",
    "weight": 0.5
   },
   {
@@ -75,7 +75,7 @@
    "area": "SEO",
    "check": "Self-referencing absolute canonical",
    "ok": true,
-   "detail": "https://www.skingenetix.com/products/copper-peptide-ghk-cu-renewal-serum",
+   "detail": "https://www.skingenetix.com/products/copper-peptide-ghk-cu-day-gel-cream",
    "severity": "pass",
    "weight": 2
   },
@@ -99,7 +99,7 @@
    "area": "SEO",
    "check": "og:title matches the page title",
    "ok": false,
-   "detail": "Copper Peptide (GHK-Cu) 2% Renewal Serum",
+   "detail": "Copper Peptide (GHK-Cu) 2% Day Gel-Cream",
    "severity": "low",
    "weight": 0.5
   },
@@ -107,7 +107,7 @@
    "area": "SEO",
    "check": "Exactly one <h1>",
    "ok": true,
-   "detail": "Copper Peptide (GHK-Cu) 2% Renewal Serum",
+   "detail": "Copper Peptide (GHK-Cu) 2% Day Gel-Cream",
    "severity": "pass",
    "weight": 2
   },
@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "zoom zoom zoom zoom zoom zoom zoom zoom zoom zoom zoom zoom go to item 1 go to item 2 go to item 3 go to item 4 go to item 5 go to item 6 go",
+   "detail": "zoom zoom zoom zoom zoom zoom zoom zoom zoom zoom go to item 1 go to item 2 go to item 3 go to item 4 go to item 5 go to item 6 go to item 7",
    "severity": "pass",
    "weight": 2
   },
@@ -123,7 +123,7 @@
    "area": "MARKETING",
    "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
    "ok": true,
-   "detail": "8 weeks",
+   "detail": "40 women",
    "severity": "pass",
    "weight": 2
   },
@@ -131,7 +131,7 @@
    "area": "MARKETING",
    "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
    "ok": true,
-   "detail": "0.1/100 words: ['supports the appearance of']",
+   "detail": "0.0/100 words: []",
    "severity": "pass",
    "weight": 2
   },
@@ -170,9 +170,9 @@
   {
    "area": "SEO",
    "check": "<h1> contains head term",
-   "ok": false,
+   "ok": true,
    "detail": "",
-   "severity": "med",
+   "severity": "pass",
    "weight": 1.0
   },
   {
@@ -203,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "27/27",
+   "detail": "25/25",
    "severity": "pass",
    "weight": 1.0
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "20 unique",
+   "detail": "19 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -290,9 +290,9 @@
   {
    "area": "GEO",
    "check": "A10 \u00b7 head term in first 30% of text",
-   "ok": false,
-   "detail": "'copper peptide serum'",
-   "severity": "high",
+   "ok": true,
+   "detail": "''",
+   "severity": "pass",
    "weight": 3
   },
   {
@@ -307,7 +307,7 @@
    "area": "GEO",
    "check": "A8 \u00b7 secondary intents covered on the page",
    "ok": true,
-   "detail": "['ghk-cu', '2%'] / ['ghk-cu', '2%']",
+   "detail": "[] / []",
    "severity": "pass",
    "weight": 1.5
   },
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "19 paragraphs, 0 too long",
+   "detail": "18 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "18 figures",
+   "detail": "15 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -370,16 +370,16 @@
   {
    "area": "GEO",
    "check": "A4 \u00b7 headings mirror search questions",
-   "ok": false,
+   "ok": true,
    "detail": "0 question-form H2",
-   "severity": "low",
+   "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": false,
-   "detail": "418 words extracted (main text 1482)",
+   "detail": "352 words extracted (main text 1400)",
    "severity": "high",
    "weight": 3
   },
@@ -505,9 +505,9 @@
   }
  ],
  "data": {
-  "title": "Copper Peptide Serum 2% (GHK-Cu) | Skingenetix",
+  "title": "Copper Peptide Day Cream 2% (GHK-Cu) Gel-Cream",
   "h1": [
-   "Copper Peptide (GHK-Cu) 2% Renewal Serum"
+   "Copper Peptide (GHK-Cu) 2% Day Gel-Cream"
   ],
   "h2": [
    "Before and after",
@@ -525,7 +525,7 @@
    "/pages/copper-peptide-research",
    "/pages/faq",
    "/pages/ingredients",
-   "/pages/ingredients#copper-peptide",
+   "/pages/ingredients#copper-day-gel-cream",
    "/pages/our-philosophy",
    "/pages/shipping-returns",
    "/pages/the-science",
@@ -536,7 +536,6 @@
    "/policies/shipping-policy",
    "/policies/terms-of-service",
    "/products/copper-peptide-ghk-cu-day-gel-cream",
-   "/products/copper-peptide-ghk-cu-night-cream",
    "/products/copper-peptide-ghk-cu-renewal-serum"
   ],
   "external_links": [],
@@ -545,100 +544,92 @@
    "BreadcrumbList",
    "FAQPage"
   ],
-  "extracted_words": 418,
-  "main_words": 1482,
+  "extracted_words": 352,
+  "main_words": 1400,
   "images": [
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg?v=1787296390&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - frosted blue glass dropper bottle on a white background"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_silver_jar_dramatic_shadow_5_skingenetix_e2760725-1fe3-4119-8f22-99258f059d86.jpg?v=1787261889&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - jar on a white background with a soft shadow"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_model_holding_near_face_1_skingenetix.jpg?v=1787296391&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - a model holding the bottle beside their face"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_bathroom_shelf_lifestyle_6_skingenetix.jpg?v=1787261891&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - open jar on a bathroom counter with a swatch of the blue cream"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_product_and_box_angled_2_skingenetix.jpg?v=1787296392&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - bottle beside its carton with a jade roller and eucalyptus"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_model_face_2_skingenetix_c567af33-bf0a-4ff7-be9b-bf0b03693c92.jpg?v=1787261893&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - a model holding the jar beside their face"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_label_texture_2_skingenetix.jpg?v=1787296395&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - macro of the bottle base and its fine print"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_product_and_box_open_jar_1_skingenetix_a2dea5a6-b6a9-4ced-b40c-8545277aeb83.jpg?v=1787261894&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - open jar beside its blue and silver cartons"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-serum-cap.jpg?v=1774530354&width=994",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - extreme close-up of the bottle shoulder and pipette collar"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_dramatic_closeup_2_skingenetix_db7364ab-a611-4145-9d7e-74c9467d8cc3.jpg?v=1787261894&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - close-up of the jar with the label in sharp focus"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_macro_dropper_tip_gel_1_skingenetix.jpg?v=1787296396&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - macro of the pipette tip with a drop of the blue serum"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_ingredient_hero_1_skingenetix_7a747ae8-2938-4e33-9221-3d7445567ee4.jpg?v=1787261897&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - jar on dark stone with raw copper ore"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_water_ripple_scene_3_skingenetix.jpg?v=1787296397&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - bottle standing on a rippling blue water surface"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_applying_to_cheek_closeup_1_skingenetix_0d1a1d87-c622-496a-93e2-7536ffcbac25.jpg?v=1787261897&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - a model with the blue cream smoothed onto one cheek"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_range_stacked_angled_1_skingenetix.jpg?v=1787296399&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - several bottles of the serum arranged in an angled group"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_bathroom_shelf_lifestyle_2_skingenetix_3797cb11-8814-4038-a3ec-a813f4759a2b.jpg?v=1787261900&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - jar on a bathroom shelf beside a reed diffuser"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hands_only_dropper_4_skingenetix.jpg?v=1787296633&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - hands holding the bottle and dropper, a blue drop on a fingertip"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_range_stacked_jars_3_skingenetix_d9411e4a-7e79-425d-bf89-5f5f5b91f204.jpg?v=1787261901&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - several jars arranged in a group"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-serum-drop.jpg?v=1774530356&width=1013",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - dropper poised over the open bottle of blue serum"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_silver_jar_dramatic_shadow_5_skingenetix_e2760725-1fe3-4119-8f22-99258f059d86.jpg?v=1787261889&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - jar on a white background with a soft shadow"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-applying-cheekbone.jpg?v=1777902200&width=1200",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - dropper releasing a blue drop onto a cheek"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_silver_jar_dramatic_shadow_5_skingenetix_e2760725-1fe3-4119-8f22-99258f059d86.jpg?v=1787261889&width=2048",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - jar on a white background with a soft shadow"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg?v=1787296390&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - frosted blue glass dropper bottle on a white background"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-isabella-e.jpg?v=1788010641&width=1717",
+    "alt": "Before and after photographs from a Skingenetix customer, showing mid-face brightness and clarity"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg?v=1787296390&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - frosted blue glass dropper bottle on a white background"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-rowena-g.jpg?v=1787996142&width=2048",
+    "alt": "Before and after skin comparison showing a more even, brighter skin tone"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-bianca-p.jpg?v=1788010642&width=3000",
-    "alt": "Before and after photographs from a Skingenetix customer, showing mid-face lines and overall smoothness"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-helen-s.jpg?v=1788010641&width=2048",
+    "alt": "Before and after photographs from a Skingenetix customer, showing under-eye tone and brightness"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-skin-repair-shannon-p.jpg?v=1788022361&width=2048",
-    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-catalina-b.jpg?v=1788010642&width=2048",
+    "alt": "Before and after photographs from a Skingenetix customer, showing overall brightness, forehead softening"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-ashley-h.jpg?v=1788010643&width=2048",
-    "alt": "Before and after photographs from a Skingenetix customer, showing blemishes and redness on the cheek clearing"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-kimberly-n.jpg?v=1788010641&width=2048",
+    "alt": "Before and after photographs from a Skingenetix customer, showing cheek redness calming to an even tone"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-rachel-r.jpg?v=1787996144&width=2048",
-    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-tabitha-s.jpg?v=1787996143&width=3000",
+    "alt": "Before and after skin comparison showing a more even, brighter skin tone"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-firming-anja-g.jpg?v=1787996144&width=2048",
-    "alt": "Before and after skin comparison showing firmer, better supported skin along the jaw and cheek"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-sofia-p.jpg?v=1788078916&width=2048",
+    "alt": "Before and after skin comparison showing a more even, brighter skin tone"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-celeste-n.jpg?v=1787996142&width=2048",
-    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-melissa-m.jpg?v=1787996142&width=2048",
+    "alt": "Before and after skin comparison showing a more even, brighter skin tone"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-samantha-f.jpg?v=1788010641&width=2048",
-    "alt": "Before and after photographs from a Skingenetix customer, showing overall texture on mature skin"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-brightening-sage-d.jpg?v=1788010641&width=2048",
+    "alt": "Before and after photographs from a Skingenetix customer, showing uneven freckled tone becoming more even"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-sarah-e.jpg?v=1787996144&width=2048",
-    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-review-before-after-wrinkles-beatriz-b.jpg?v=1787996142&width=2048",
-    "alt": "Before and after skin comparison showing softer fine lines and wrinkles"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-faq-copper-peptide-ghk-cu-renewal-serum-natural-surface-lifestyle.jpg?v=1788078963&width=2048",
-    "alt": "Skingenetix copper peptide ghk cu renewal serum"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-faq-copper-peptide-ghk-cu-day-gel-cream-bathroom-shelf-lifestyle.jpg?v=1788078963&width=2048",
+    "alt": "Skingenetix copper peptide ghk cu day gel cream"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-howto-step1-cleanse.jpg?v=1774456364&width=600",
@@ -649,8 +640,8 @@
     "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - hands holding the bottle and dropper, a blue drop on a fingertip"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-daily-spf-sunscreen-cream-application-face.jpg?v=1787834341&width=600",
-    "alt": "Close-up of a woman smoothing a swatch of cream into her cheek with her fingertips"
+    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_advanced_day_repair_face_cream_applying_to_cheek_closeup_1_skingenetix_0d1a1d87-c622-496a-93e2-7536ffcbac25.jpg?v=1787261897&width=600",
+    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Day Gel-Cream, 50ml - a model with the blue cream smoothed onto one cheek"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
@@ -666,42 +657,42 @@
      "id": "main",
      "type": "main-product",
      "top": 126,
-     "h": 2651,
+     "h": 2282,
      "bg": "rgb(240, 240, 240)",
-     "text": 921,
-     "media": 15
+     "text": 928,
+     "media": 13
     },
     {
      "id": "before_after",
      "type": "product-reviews-before-after",
-     "top": 2777,
+     "top": 2408,
      "h": 1098,
      "bg": "rgb(247, 245, 242)",
-     "text": 3010,
+     "text": 3329,
      "media": 9
     },
     {
      "id": "product_faq",
      "type": "faq",
-     "top": 3875,
+     "top": 3506,
      "h": 913,
      "bg": "rgb(240, 240, 240)",
-     "text": 357,
+     "text": 365,
      "media": 1
     },
     {
      "id": "how_to_use",
      "type": "multi-column",
-     "top": 4788,
+     "top": 4420,
      "h": 896,
      "bg": "rgb(255, 255, 255)",
-     "text": 263,
+     "text": 256,
      "media": 3
     },
     {
      "id": "reasons_why",
      "type": "text-with-icons",
-     "top": 5684,
+     "top": 5316,
      "h": 558,
      "bg": "rgb(247, 247, 247)",
      "text": 628,
@@ -710,25 +701,25 @@
     {
      "id": "17734177083a768a84",
      "type": "apps",
-     "top": 6242,
+     "top": 5874,
      "h": 1343,
      "bg": "rgb(240, 240, 240)",
-     "text": 875,
+     "text": 772,
      "media": 0
     },
     {
      "id": "related-products",
      "type": "product-recommendations",
-     "top": 7585,
+     "top": 7217,
      "h": 626,
      "bg": "rgb(240, 240, 240)",
-     "text": 232,
+     "text": 208,
      "media": 8
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 8211,
+     "top": 7843,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -737,7 +728,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8727,
+     "top": 8359,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -755,42 +746,42 @@
      "id": "main",
      "type": "main-product",
      "top": 85,
-     "h": 2061,
+     "h": 2085,
      "bg": "rgb(240, 240, 240)",
-     "text": 957,
-     "media": 15
+     "text": 946,
+     "media": 13
     },
     {
      "id": "before_after",
      "type": "product-reviews-before-after",
-     "top": 2146,
-     "h": 894,
+     "top": 2169,
+     "h": 917,
      "bg": "rgb(247, 245, 242)",
-     "text": 2996,
+     "text": 3315,
      "media": 9
     },
     {
      "id": "product_faq",
      "type": "faq",
-     "top": 3040,
-     "h": 621,
+     "top": 3086,
+     "h": 642,
      "bg": "rgb(240, 240, 240)",
-     "text": 266,
+     "text": 274,
      "media": 1
     },
     {
      "id": "how_to_use",
      "type": "multi-column",
-     "top": 3661,
+     "top": 3728,
      "h": 612,
      "bg": "rgb(255, 255, 255)",
-     "text": 263,
+     "text": 256,
      "media": 3
     },
     {
      "id": "reasons_why",
      "type": "text-with-icons",
-     "top": 4273,
+     "top": 4340,
      "h": 1169,
      "bg": "rgb(247, 247, 247)",
      "text": 628,
@@ -799,25 +790,25 @@
     {
      "id": "17734177083a768a84",
      "type": "apps",
-     "top": 5442,
-     "h": 1681,
+     "top": 5509,
+     "h": 1609,
      "bg": "rgb(240, 240, 240)",
-     "text": 875,
+     "text": 772,
      "media": 0
     },
     {
      "id": "related-products",
      "type": "product-recommendations",
-     "top": 7122,
-     "h": 720,
+     "top": 7118,
+     "h": 699,
      "bg": "rgb(240, 240, 240)",
-     "text": 232,
+     "text": 208,
      "media": 8
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 7842,
+     "top": 7817,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -826,7 +817,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8882,
+     "top": 8856,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

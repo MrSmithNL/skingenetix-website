@@ -7,6 +7,7 @@
 | SEO | **88/100** |
 | GEO | **81/100** |
 | DESIGN | **90/100** |
+| MARKETING | **79/100** |
 
 ## SEO
 
@@ -49,14 +50,14 @@
 | ✅ | A1 · definition sentence early ('X is a …') | is a |
 | ✅ | A8 · secondary intents covered on the page | ['skin density', 'matrixyl 3000', 'copper peptide'] / ['skin density', 'matrixyl 3000', 'copper peptide'] |
 | ✅ | A2 · atomic paragraphs (none > 120 words) | 24 paragraphs, 0 too long |
-| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 5 |
+| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 4 |
 | ✅ | A3 · fact density (measured figures ≥ 5) | 5 figures |
 | 🟠 | A3 · cited sources ≥ 3 | 0 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | 🟠 | E1 · visible last-reviewed/updated date | pending reviewer sign-off |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 0 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 741 words extracted (main text 864) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 731 words extracted (main text 854) |
 | ✅ | Head term survives extraction |  |
 | ✅ | H2 sections survive extraction | 3 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -77,13 +78,25 @@
 | ✅ | No broken images (mobile) | none |
 | ✅ | Headings never break mid-word (mobile) | none |
 
+## MARKETING
+
+| | Check | Detail |
+|---|---|---|
+| ✅ | Opening states a concrete skin outcome | skin concernfirming skin densityhow collagen proteins elastin and peptide science support the look of firmer denser skin as it changes with  |
+| 🟠 | A proof point (result %, time frame or trial size) in the first 30% of text | none |
+| ✅ | Hedging ≤ 1.0 per 100 words (sales copy) | 0.2/100 words: ['suggests that', 'is valued for'] |
+| ✅ | No claim known to be unsupported (docs/claims/) | clean |
+| ✅ | No medicinal wording (EU cosmetic-claims rules) | clean |
+| ✅ | Path to purchase: links to at least one product | 5 products linked |
+| 🟡 | Every result figure sits next to its source | 2 unsourced: ['After age 30, collagen production declines 1-1.5% per year while existing collagen degrade', 'Hormonal ChangesDuring menopause, estrogen decline causes a 30% loss of skin collagen in t'] |
+
 ## Outline as served
 
 - **H1:** []
 - **H2:** ['Your Routine: Daily Firming & Density', 'Common Questions About Skin Firming', 'Related Skin Solutions']
 - **Visual-only headings:** ['Firming & Skin Density', 'Understanding Skin Firmness & Density', 'What Causes Loss of Firmness?', 'The Collagen-Peptide Approach to Firming', 'Pro-Collagen Firming Cream', 'Matrixyl 3000 - Support Collagen From Within', 'Copper Peptide (GHK-Cu) Night Cream - Overnight Structural Repair', '1. Cleanse', '2. Matrixyl 3000 Serum', '3. Firming Cream', '4. Protect', 'Fine Lines & Wrinkles', 'Skin Repair & Renewal', 'Brightening & Glow', 'Collagen & Skin Plumping']
 - **Schema types:** ['BreadcrumbList']
-- **Extracted words (no JS):** 741 of 864
+- **Extracted words (no JS):** 731 of 854
 
 ## Section map (desktop)
 

@@ -1,9 +1,10 @@
 {
  "path": "/collections/pdrn",
  "scores": {
-  "SEO": 93,
+  "SEO": 95,
   "GEO": 28,
-  "DESIGN": 90
+  "DESIGN": 90,
+  "MARKETING": 86
  },
  "items": [
   {
@@ -50,16 +51,16 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": true,
-   "detail": "142c",
+   "detail": "155c",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "SEO",
    "check": "Meta description contains head term",
-   "ok": false,
+   "ok": true,
    "detail": "",
-   "severity": "low",
+   "severity": "pass",
    "weight": 0.5
   },
   {
@@ -109,6 +110,62 @@
    "detail": "PDRN",
    "severity": "pass",
    "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "pdrnpdrn formulations for a hydrated refreshed and smoother-looking complexion new to it read what pdrn is and what the salmon dna research ",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
+   "ok": true,
+   "detail": "0.0/100 words: []",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Path to purchase: links to at least one product",
+   "ok": true,
+   "detail": "4 products linked",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": true,
+   "detail": "0 unsourced: []",
+   "severity": "pass",
+   "weight": 1
   },
   {
    "area": "SEO",

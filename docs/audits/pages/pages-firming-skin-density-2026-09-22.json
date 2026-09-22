@@ -3,7 +3,8 @@
  "scores": {
   "SEO": 88,
   "GEO": 81,
-  "DESIGN": 90
+  "DESIGN": 90,
+  "MARKETING": 79
  },
  "items": [
   {
@@ -109,6 +110,62 @@
    "detail": "none",
    "severity": "high",
    "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "skin concernfirming skin densityhow collagen proteins elastin and peptide science support the look of firmer denser skin as it changes with ",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
+   "ok": true,
+   "detail": "0.2/100 words: ['suggests that', 'is valued for']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Path to purchase: links to at least one product",
+   "ok": true,
+   "detail": "5 products linked",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": false,
+   "detail": "2 unsourced: ['After age 30, collagen production declines 1-1.5% per year while existing collagen degrade', 'Hormonal ChangesDuring menopause, estrogen decline causes a 30% loss of skin collagen in t']",
+   "severity": "low",
+   "weight": 1
   },
   {
    "area": "SEO",
@@ -258,7 +315,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "5",
+   "detail": "4",
    "severity": "pass",
    "weight": 1.0
   },
@@ -314,7 +371,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "741 words extracted (main text 864)",
+   "detail": "731 words extracted (main text 854)",
    "severity": "pass",
    "weight": 3
   },
@@ -494,8 +551,8 @@
   "schema_types": [
    "BreadcrumbList"
   ],
-  "extracted_words": 741,
-  "main_words": 864,
+  "extracted_words": 731,
+  "main_words": 854,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-pro-collagen-firming-cream-skin-density.jpg?v=1787585445&width=3000",
@@ -582,7 +639,7 @@
      "top": 566,
      "h": 4756,
      "bg": "rgb(240, 240, 240)",
-     "text": 3807,
+     "text": 3751,
      "media": 6
     },
     {
@@ -669,15 +726,15 @@
      "id": "content",
      "type": "media-with-text",
      "top": 460,
-     "h": 6148,
+     "h": 6126,
      "bg": "rgb(240, 240, 240)",
-     "text": 3807,
+     "text": 3751,
      "media": 6
     },
     {
      "id": "routine",
      "type": "multi-column",
-     "top": 6608,
+     "top": 6586,
      "h": 605,
      "bg": "rgb(240, 240, 240)",
      "text": 396,
@@ -686,7 +743,7 @@
     {
      "id": "faq",
      "type": "accordion-content",
-     "top": 7214,
+     "top": 7191,
      "h": 474,
      "bg": "rgb(240, 240, 240)",
      "text": 217,
@@ -695,7 +752,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 7688,
+     "top": 7666,
      "h": 483,
      "bg": "rgb(240, 240, 240)",
      "text": 126,
@@ -704,7 +761,7 @@
     {
      "id": "banner_text_width",
      "type": "custom-html",
-     "top": 8171,
+     "top": 8149,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -713,7 +770,7 @@
     {
      "id": "intro_image_position",
      "type": "custom-html",
-     "top": 8171,
+     "top": 8149,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -722,7 +779,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 8171,
+     "top": 8149,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -731,7 +788,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9210,
+     "top": 9188,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

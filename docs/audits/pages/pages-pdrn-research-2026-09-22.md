@@ -7,6 +7,7 @@
 | SEO | **100/100** |
 | GEO | **100/100** |
 | DESIGN | **100/100** |
+| MARKETING | **93/100** |
 
 ## SEO
 
@@ -49,15 +50,15 @@
 | ✅ | A10 · head term in first 30% of text | 'pdrn' |
 | ✅ | A1 · definition sentence early ('X is a …') | is a |
 | ✅ | A8 · secondary intents covered on the page | ['what is pdrn', 'salmon dna', 'pdrn benefits', 'sodium dna'] / ['what is pdrn', 'salmon dna', 'pdrn benefits', 'sodium dna'] |
-| ✅ | A2 · atomic paragraphs (none > 120 words) | 23 paragraphs, 0 too long |
-| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 8 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 24 figures |
-| ✅ | A3 · cited sources ≥ 3 | 26 citation markers |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 22 paragraphs, 0 too long |
+| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 5 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 29 figures |
+| ✅ | A3 · cited sources ≥ 3 | 23 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | ✅ | E1 · visible last-reviewed/updated date | Last updated |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 2 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 975 words extracted (main text 1167) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 960 words extracted (main text 1156) |
 | ✅ | Head term survives extraction |  |
 | ✅ | H2 sections survive extraction | 8 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -78,29 +79,41 @@
 | ✅ | No broken images (mobile) | none |
 | ✅ | Headings never break mid-word (mobile) | none |
 
+## MARKETING
+
+| | Check | Detail |
+|---|---|---|
+| ✅ | Opening states a concrete skin outcome | ingredient researchpdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna valued in modern skincare for supporting a firmer |
+| ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 28 days |
+| ✅ | Hedging ≤ 2.0 per 100 words (science page) | 0.2/100 words: ['is valued for'] |
+| ✅ | No claim known to be unsupported (docs/claims/) | clean |
+| ✅ | No medicinal wording (EU cosmetic-claims rules) | clean |
+| ✅ | Path to purchase: links to at least one product | 4 products linked |
+| 🟡 | Every result figure sits next to its source | 2 unsourced: ["~20% softer-looking crow's feet", "~20% reduction in the appearance of crow's feet, outperforming the retinol cream"] |
+
 ## Outline as served
 
 - **H1:** ['PDRN: Salmon DNA Skincare']
 - **H2:** ['What Is PDRN?', 'What Does PDRN Do for Skin?', 'Salmon DNA: Where PDRN Comes From', 'What 1% PDRN Means', 'Published References', 'Frequently Asked Questions', 'Shop PDRN Products', 'Explore More Research']
 - **Visual-only headings:** ['How PDRN Works: Nucleotide Skin Support', 'Reviewed as a Promising Skin Anti-Aging Ingredient', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'Glutathione', 'Explore Our PDRN Formulations']
 - **Schema types:** ['BreadcrumbList', 'WebPage', 'FAQPage']
-- **Extracted words (no JS):** 975 of 1167
+- **Extracted words (no JS):** 960 of 1156
 
 ## Section map (desktop)
 
 | Top | Height | Section | Type | Background |
 |---|---|---|---|---|
 | 126 | 440 | hero | image-with-text-overlay | Bone |
-| 566 | 634 | overview | rich-text | Bone |
-| 1199 | 629 | evidence | rich-text | White |
-| 1828 | 752 | key_findings_ba | research-before-after | Bone |
-| 2580 | 1436 | key_findings | media-with-text | Bone |
-| 4016 | 646 | salmon_dna | rich-text | White |
-| 4662 | 707 | references | custom-html | Bone |
-| 5369 | 1117 | faq | faq | White |
-| 6486 | 797 | shop_ingredient | featured-collection | Bone |
-| 7283 | 775 | related | multi-column | White |
-| 8058 | 353 | cta | rich-text | Graphite |
-| 8411 | 0 | findings_spacing_fix | custom-html | Bone |
-| 8411 | 516 | footer | footer | Bone |
-| 8927 | 0 | brand_layout_css | custom-html | Bone |
+| 566 | 658 | overview | rich-text | Bone |
+| 1223 | 677 | evidence | rich-text | White |
+| 1900 | 752 | key_findings_ba | research-before-after | Bone |
+| 2652 | 1436 | key_findings | media-with-text | Bone |
+| 4088 | 646 | salmon_dna | rich-text | White |
+| 4734 | 707 | references | custom-html | Bone |
+| 5441 | 1117 | faq | faq | White |
+| 6558 | 797 | shop_ingredient | featured-collection | Bone |
+| 7355 | 775 | related | multi-column | White |
+| 8130 | 353 | cta | rich-text | Graphite |
+| 8483 | 0 | findings_spacing_fix | custom-html | Bone |
+| 8483 | 516 | footer | footer | Bone |
+| 8999 | 0 | brand_layout_css | custom-html | Bone |

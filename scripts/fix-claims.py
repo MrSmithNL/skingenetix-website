@@ -14,6 +14,7 @@ Spec: {"fixes": [{"where": [...], "patterns": {"en": regex, "de": ..., ...}, "re
   where — any of: "body_html"                 product descriptions
                   "metafield:custom.<key>"    a product rich-text metafield
                   "metaobject:<type>.<field>" e.g. "metaobject:faq_item.answer"
+                  "collection_body"           collection descriptions
                   "templates"                 every string setting in templates/*.json of the live theme
 Every English value matching `patterns.en` is changed. The dry run FAILS if any existing translation of a
 changed value does not match its locale pattern — no language may be left serving the old claim.
@@ -60,6 +61,10 @@ def targets(where):
             if v:
                 yield {"kind": "metaobject", "label": f"{typ}/{m['handle']}", "rid": m["id"], "key": field,
                        "owner": m["id"], "en": v}
+    elif where == "collection_body":
+        for c in gql('{ collections(first:100){ nodes{ id handle descriptionHtml } } }')["collections"]["nodes"]:
+            yield {"kind": "collection", "label": f"collection/{c['handle']}", "rid": c["id"], "key": "body_html",
+                   "owner": c["id"], "en": c["descriptionHtml"]}
     elif where == "templates":
         tid = THEME.rsplit("/", 1)[1]
         files = gql('query($id:ID!){ theme(id:$id){ files(first:250, filenames:["templates/*.json"]){ nodes{ filename } } } }',
@@ -95,6 +100,8 @@ def plan(spec):
             for t in targets(where):
                 if not t["en"] or not re.search(fx["patterns"]["en"], t["en"]):
                     continue
+                if fx.get("only") and not any(o in t["label"] for o in fx["only"]):
+                    continue   # "only": restrict a fix to labels containing one of these strings
                 uid = (t["rid"], t["key"])
                 it = items.get(uid)
                 if not it:
@@ -143,6 +150,9 @@ def write_en(it):
         r = gql('mutation($m:[MetafieldsSetInput!]!){ metafieldsSet(metafields:$m){ userErrors{ field message } } }',
                 {"m": [{"ownerId": it["owner"], "namespace": it["ns"], "key": it["mkey"], "type": it["type"],
                         "value": v}]})["metafieldsSet"]
+    elif it["kind"] == "collection":
+        r = gql('mutation($c:CollectionInput!){ collectionUpdate(input:$c){ userErrors{ field message } } }',
+                {"c": {"id": it["owner"], "descriptionHtml": v}})["collectionUpdate"]
     elif it["kind"] == "metaobject":
         r = gql('mutation($id:ID!,$m:MetaobjectUpdateInput!){ metaobjectUpdate(id:$id, metaobject:$m){ userErrors{ field message } } }',
                 {"id": it["owner"], "m": {"fields": [{"key": it["key"], "value": v}]}})["metaobjectUpdate"]
@@ -229,8 +239,10 @@ def main():
     (ROOT / f"backups/claim-fix-{tag}-{stamp}.json").write_text(json.dumps(items, ensure_ascii=False, indent=1))
     apply(items, "new")
 
-    # read back: English everywhere, and every translation of every changed value
-    left = [f"{i['label']} en" for i in plan(spec)]
+    # read back: English everywhere, and every translation of every changed value. Whole-value
+    # replacements ("readback": false) are skipped — a catch-all pattern matches any text by design.
+    spec = {**spec, "fixes": [f for f in spec["fixes"] if f.get("readback", True)]}
+    left = [f"{i['label']} en" for i in plan(spec)] if spec["fixes"] else []
     for it in items:
         now = gql('query($id:ID!){ translatableResource(resourceId:$id){ translatableContent{ key value } } }',
                   {"id": it["rid"]})["translatableResource"]["translatableContent"]

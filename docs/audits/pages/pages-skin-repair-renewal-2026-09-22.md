@@ -7,6 +7,7 @@
 | SEO | **88/100** |
 | GEO | **74/100** |
 | DESIGN | **81/100** |
+| MARKETING | **93/100** |
 
 ## SEO
 
@@ -49,14 +50,14 @@
 | 🔴 | A1 · definition sentence early ('X is a …') |  |
 | ✅ | A8 · secondary intents covered on the page | ['renewal', 'pdrn', 'copper peptide'] / ['renewal', 'pdrn', 'copper peptide'] |
 | ✅ | A2 · atomic paragraphs (none > 120 words) | 22 paragraphs, 0 too long |
-| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 7 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 7 figures |
+| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 9 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 13 figures |
 | 🟠 | A3 · cited sources ≥ 3 | 0 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | 🟠 | E1 · visible last-reviewed/updated date | pending reviewer sign-off |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 0 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 777 words extracted (main text 902) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 827 words extracted (main text 952) |
 | ✅ | Head term survives extraction |  |
 | ✅ | H2 sections survive extraction | 3 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -77,23 +78,35 @@
 | ✅ | No broken images (mobile) | none |
 | 🟠 | Headings never break mid-word (mobile) | Revitalised-Looking |
 
+## MARKETING
+
+| | Check | Detail |
+|---|---|---|
+| ✅ | Opening states a concrete skin outcome | skin concernskin repair renewalhow pdrn and copper peptide support the skin's natural renewal for a firmer smoother and more revitalised-loo |
+| ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 28 days |
+| ✅ | Hedging ≤ 1.0 per 100 words (sales copy) | 0.2/100 words: ['is valued for'] |
+| ✅ | No claim known to be unsupported (docs/claims/) | clean |
+| ✅ | No medicinal wording (EU cosmetic-claims rules) | clean |
+| ✅ | Path to purchase: links to at least one product | 3 products linked |
+| 🟡 | Every result figure sits next to its source | 1 unsourced: ['PDRN 1% Collagen Night Cream'] |
+
 ## Outline as served
 
 - **H1:** []
 - **H2:** ['Your Routine: Daily Repair & Renewal', 'Common Questions About Skin Repair', 'Related Skin Solutions']
 - **Visual-only headings:** ['Skin Repair & Renewal', 'Understanding Skin Repair & Renewal', 'What Slows Skin Repair?', 'The Renewal Approach', 'PDRN Serum - For Revitalised-Looking Skin', 'PDRN 1% Collagen Night Cream', 'Copper Peptide (GHK-Cu) Serum - Versatile Support', '1. Cleanse', '2. PDRN Serum', '3. Copper Peptide Serum', '4. Night Cream', 'Fine Lines & Wrinkles', 'Firming & Skin Density', 'Brightening & Glow', 'Collagen & Skin Plumping']
 - **Schema types:** ['BreadcrumbList']
-- **Extracted words (no JS):** 777 of 902
+- **Extracted words (no JS):** 827 of 952
 
 ## Section map (desktop)
 
 | Top | Height | Section | Type | Background |
 |---|---|---|---|---|
 | 126 | 440 | hero | image-with-text-overlay | Bone |
-| 566 | 4487 | content | media-with-text | Bone |
-| 5053 | 764 | routine | multi-column | Bone |
-| 5817 | 444 | faq | accordion-content | Bone |
-| 6261 | 631 | related | multi-column | Bone |
-| 6892 | 0 | banner_text_width | custom-html | Bone |
-| 6892 | 516 | footer | footer | Bone |
-| 7408 | 0 | brand_layout_css | custom-html | Bone |
+| 566 | 4535 | content | media-with-text | Bone |
+| 5101 | 764 | routine | multi-column | Bone |
+| 5865 | 444 | faq | accordion-content | Bone |
+| 6309 | 631 | related | multi-column | Bone |
+| 6940 | 0 | banner_text_width | custom-html | Bone |
+| 6940 | 516 | footer | footer | Bone |
+| 7456 | 0 | brand_layout_css | custom-html | Bone |

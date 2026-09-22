@@ -3,7 +3,8 @@
  "scores": {
   "SEO": 100,
   "GEO": 100,
-  "DESIGN": 100
+  "DESIGN": 100,
+  "MARKETING": 93
  },
  "items": [
   {
@@ -109,6 +110,62 @@
    "detail": "PDRN: Salmon DNA Skincare",
    "severity": "pass",
    "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "ingredient researchpdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna valued in modern skincare for supporting a firmer",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": true,
+   "detail": "28 days",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 2.0 per 100 words (science page)",
+   "ok": true,
+   "detail": "0.2/100 words: ['is valued for']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Path to purchase: links to at least one product",
+   "ok": true,
+   "detail": "4 products linked",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": false,
+   "detail": "2 unsourced: [\"~20% softer-looking crow's feet\", \"~20% reduction in the appearance of crow's feet, outperforming the retinol cream\"]",
+   "severity": "low",
+   "weight": 1
   },
   {
    "area": "SEO",
@@ -258,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "23 paragraphs, 0 too long",
+   "detail": "22 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -266,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "8",
+   "detail": "5",
    "severity": "pass",
    "weight": 1.0
   },
@@ -274,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "24 figures",
+   "detail": "29 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -282,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "26 citation markers",
+   "detail": "23 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -322,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "975 words extracted (main text 1167)",
+   "detail": "960 words extracted (main text 1156)",
    "severity": "pass",
    "weight": 3
   },
@@ -509,8 +566,8 @@
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 975,
-  "main_words": 1167,
+  "extracted_words": 960,
+  "main_words": 1156,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg?v=1787661986&width=3000",
@@ -599,24 +656,24 @@
      "id": "overview",
      "type": "rich-text",
      "top": 566,
-     "h": 634,
+     "h": 658,
      "bg": "rgb(240, 240, 240)",
-     "text": 903,
+     "text": 979,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1199,
-     "h": 629,
+     "top": 1223,
+     "h": 677,
      "bg": "rgb(255, 255, 255)",
-     "text": 1022,
+     "text": 1182,
      "media": 0
     },
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 1828,
+     "top": 1900,
      "h": 752,
      "bg": "rgb(240, 240, 240)",
      "text": 540,
@@ -625,16 +682,16 @@
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 2580,
+     "top": 2652,
      "h": 1436,
      "bg": "rgb(240, 240, 240)",
-     "text": 910,
+     "text": 642,
      "media": 2
     },
     {
      "id": "salmon_dna",
      "type": "rich-text",
-     "top": 4016,
+     "top": 4088,
      "h": 646,
      "bg": "rgb(255, 255, 255)",
      "text": 803,
@@ -643,7 +700,7 @@
     {
      "id": "references",
      "type": "custom-html",
-     "top": 4662,
+     "top": 4734,
      "h": 707,
      "bg": "rgb(240, 240, 240)",
      "text": 743,
@@ -652,7 +709,7 @@
     {
      "id": "faq",
      "type": "faq",
-     "top": 5369,
+     "top": 5441,
      "h": 1117,
      "bg": "rgb(255, 255, 255)",
      "text": 280,
@@ -661,7 +718,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 6486,
+     "top": 6558,
      "h": 797,
      "bg": "rgb(240, 240, 240)",
      "text": 184,
@@ -670,7 +727,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 7283,
+     "top": 7355,
      "h": 775,
      "bg": "rgb(255, 255, 255)",
      "text": 327,
@@ -679,7 +736,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 8058,
+     "top": 8130,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
      "text": 159,
@@ -688,7 +745,7 @@
     {
      "id": "findings_spacing_fix",
      "type": "custom-html",
-     "top": 8411,
+     "top": 8483,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -697,7 +754,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 8411,
+     "top": 8483,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -706,7 +763,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8927,
+     "top": 8999,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -733,24 +790,24 @@
      "id": "overview",
      "type": "rich-text",
      "top": 460,
-     "h": 682,
+     "h": 705,
      "bg": "rgb(240, 240, 240)",
-     "text": 903,
+     "text": 979,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1142,
-     "h": 711,
+     "top": 1164,
+     "h": 801,
      "bg": "rgb(255, 255, 255)",
-     "text": 1022,
+     "text": 1182,
      "media": 0
     },
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 1853,
+     "top": 1965,
      "h": 1008,
      "bg": "rgb(240, 240, 240)",
      "text": 540,
@@ -759,16 +816,16 @@
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 2861,
-     "h": 1882,
+     "top": 2973,
+     "h": 1659,
      "bg": "rgb(240, 240, 240)",
-     "text": 910,
+     "text": 642,
      "media": 2
     },
     {
      "id": "salmon_dna",
      "type": "rich-text",
-     "top": 4744,
+     "top": 4632,
      "h": 634,
      "bg": "rgb(255, 255, 255)",
      "text": 803,
@@ -777,7 +834,7 @@
     {
      "id": "references",
      "type": "custom-html",
-     "top": 5378,
+     "top": 5266,
      "h": 994,
      "bg": "rgb(240, 240, 240)",
      "text": 743,
@@ -786,7 +843,7 @@
     {
      "id": "faq",
      "type": "faq",
-     "top": 6371,
+     "top": 6260,
      "h": 979,
      "bg": "rgb(255, 255, 255)",
      "text": 280,
@@ -795,7 +852,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 7351,
+     "top": 7239,
      "h": 553,
      "bg": "rgb(240, 240, 240)",
      "text": 184,
@@ -804,7 +861,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 7904,
+     "top": 7792,
      "h": 580,
      "bg": "rgb(255, 255, 255)",
      "text": 327,
@@ -813,7 +870,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 8484,
+     "top": 8372,
      "h": 310,
      "bg": "rgb(26, 26, 26)",
      "text": 159,
@@ -822,7 +879,7 @@
     {
      "id": "findings_spacing_fix",
      "type": "custom-html",
-     "top": 8794,
+     "top": 8682,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -831,7 +888,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 8794,
+     "top": 8682,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -840,7 +897,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9833,
+     "top": 9721,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

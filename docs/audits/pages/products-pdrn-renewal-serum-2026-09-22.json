@@ -2,8 +2,9 @@
  "path": "/products/pdrn-renewal-serum",
  "scores": {
   "SEO": 94,
-  "GEO": 47,
-  "DESIGN": 84
+  "GEO": 40,
+  "DESIGN": 84,
+  "MARKETING": 71
  },
  "items": [
   {
@@ -109,6 +110,62 @@
    "detail": "PDRN 1% Renewal Serum",
    "severity": "pass",
    "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "zoom zoom zoom zoom zoom zoom zoom zoom zoom zoom go to item 1 go to item 2 go to item 3 go to item 4 go to item 5 go to item 6 go to item 7",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": true,
+   "detail": "28 days",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
+   "ok": true,
+   "detail": "0.1/100 words: ['is valued for']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": false,
+   "detail": "'acne scars' \u2014 names a medical condition",
+   "severity": "high",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Add-to-cart present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": false,
+   "detail": "3 unsourced: [\"PDRN is clinically shown to soften the look of crow's feet by up to 23% in 28 days.\", \"Up to 23% less crow's-feet wrinkle area in 28 days, vs 6\u20137% with retinol\"]",
+   "severity": "low",
+   "weight": 1
   },
   {
    "area": "SEO",
@@ -241,9 +298,9 @@
   {
    "area": "GEO",
    "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
-   "ok": true,
-   "detail": "is a",
-   "severity": "pass",
+   "ok": false,
+   "detail": "",
+   "severity": "high",
    "weight": 2
   },
   {
@@ -258,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "17 paragraphs, 0 too long",
+   "detail": "18 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -274,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "13 figures",
+   "detail": "21 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -282,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": false,
-   "detail": "0 citation markers",
+   "detail": "1 citation markers",
    "severity": "med",
    "weight": 1.5
   },
@@ -322,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": false,
-   "detail": "363 words extracted (main text 1134)",
+   "detail": "367 words extracted (main text 1180)",
    "severity": "high",
    "weight": 3
   },
@@ -487,8 +544,8 @@
    "BreadcrumbList",
    "FAQPage"
   ],
-  "extracted_words": 363,
-  "main_words": 1134,
+  "extracted_words": 367,
+  "main_words": 1180,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg?v=1787314050&width=2048",
@@ -602,7 +659,7 @@
      "top": 126,
      "h": 2282,
      "bg": "rgb(240, 240, 240)",
-     "text": 904,
+     "text": 929,
      "media": 13
     },
     {
@@ -689,15 +746,15 @@
      "id": "main",
      "type": "main-product",
      "top": 85,
-     "h": 2044,
+     "h": 2067,
      "bg": "rgb(240, 240, 240)",
-     "text": 941,
+     "text": 966,
      "media": 13
     },
     {
      "id": "before_after",
      "type": "product-reviews-before-after",
-     "top": 2129,
+     "top": 2151,
      "h": 821,
      "bg": "rgb(247, 245, 242)",
      "text": 2227,
@@ -706,7 +763,7 @@
     {
      "id": "product_faq",
      "type": "faq",
-     "top": 2950,
+     "top": 2972,
      "h": 621,
      "bg": "rgb(240, 240, 240)",
      "text": 217,
@@ -715,7 +772,7 @@
     {
      "id": "how_to_use",
      "type": "multi-column",
-     "top": 3570,
+     "top": 3593,
      "h": 584,
      "bg": "rgb(255, 255, 255)",
      "text": 271,
@@ -724,7 +781,7 @@
     {
      "id": "reasons_why",
      "type": "text-with-icons",
-     "top": 4154,
+     "top": 4176,
      "h": 1169,
      "bg": "rgb(247, 247, 247)",
      "text": 628,
@@ -733,7 +790,7 @@
     {
      "id": "17734177083a768a84",
      "type": "apps",
-     "top": 5323,
+     "top": 5346,
      "h": 1645,
      "bg": "rgb(240, 240, 240)",
      "text": 844,
@@ -742,7 +799,7 @@
     {
      "id": "related-products",
      "type": "product-recommendations",
-     "top": 6968,
+     "top": 6990,
      "h": 699,
      "bg": "rgb(240, 240, 240)",
      "text": 202,
@@ -751,7 +808,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 7667,
+     "top": 7689,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -760,7 +817,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8706,
+     "top": 8728,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

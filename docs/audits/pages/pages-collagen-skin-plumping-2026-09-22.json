@@ -1,17 +1,17 @@
 {
- "path": "/pages/skin-repair-renewal",
+ "path": "/pages/collagen-skin-plumping",
  "scores": {
-  "SEO": 88,
-  "GEO": 74,
-  "DESIGN": 81,
-  "MARKETING": 93
+  "SEO": 90,
+  "GEO": 81,
+  "DESIGN": 90,
+  "MARKETING": 79
  },
  "items": [
   {
    "area": "SEO",
    "check": "HTTP 200, no redirect",
    "ok": true,
-   "detail": "200 \u2192 https://www.skingenetix.com/pages/skin-repair-renewal",
+   "detail": "200 \u2192 https://www.skingenetix.com/pages/collagen-skin-plumping",
    "severity": "pass",
    "weight": 2
   },
@@ -19,7 +19,7 @@
    "area": "SEO",
    "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
    "ok": true,
-   "detail": "/pages/skin-repair-renewal",
+   "detail": "/pages/collagen-skin-plumping",
    "severity": "pass",
    "weight": 1.0
   },
@@ -27,7 +27,7 @@
    "area": "SEO",
    "check": "URL carries the head term",
    "ok": true,
-   "detail": "head term 'skin repair'",
+   "detail": "head term ''",
    "severity": "pass",
    "weight": 0.5
   },
@@ -35,7 +35,7 @@
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "59c: Skin Repair and Renewal: PDRN, Copper Peptide and a Routine",
+   "detail": "45c: Collagen Support and Skin Plumping - Peptides",
    "severity": "pass",
    "weight": 2
   },
@@ -43,7 +43,7 @@
    "area": "SEO",
    "check": "Title contains head term",
    "ok": true,
-   "detail": "'skin repair'",
+   "detail": "''",
    "severity": "pass",
    "weight": 2
   },
@@ -51,16 +51,16 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": true,
-   "detail": "142c",
+   "detail": "149c",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "SEO",
    "check": "Meta description contains head term",
-   "ok": false,
+   "ok": true,
    "detail": "",
-   "severity": "low",
+   "severity": "pass",
    "weight": 0.5
   },
   {
@@ -75,7 +75,7 @@
    "area": "SEO",
    "check": "Self-referencing absolute canonical",
    "ok": true,
-   "detail": "https://www.skingenetix.com/pages/skin-repair-renewal",
+   "detail": "https://www.skingenetix.com/pages/collagen-skin-plumping",
    "severity": "pass",
    "weight": 2
   },
@@ -99,7 +99,7 @@
    "area": "SEO",
    "check": "og:title matches the page title",
    "ok": true,
-   "detail": "Skin Repair and Renewal: PDRN, Copper Peptide and a Routine",
+   "detail": "Collagen Support and Skin Plumping - Peptides",
    "severity": "pass",
    "weight": 0.5
   },
@@ -115,23 +115,23 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "skin concernskin repair renewalhow pdrn and copper peptide support the skin's natural renewal for a firmer smoother and more revitalised-loo",
+   "detail": "skin concerncollagen skin plumpingunderstand why collagen declines and how peptides support the look of firmer plumper skin understanding co",
    "severity": "pass",
    "weight": 2
   },
   {
    "area": "MARKETING",
    "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
-   "ok": true,
-   "detail": "28 days",
-   "severity": "pass",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
    "weight": 2
   },
   {
    "area": "MARKETING",
    "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
    "ok": true,
-   "detail": "0.2/100 words: ['is valued for']",
+   "detail": "0.1/100 words: ['is valued for']",
    "severity": "pass",
    "weight": 2
   },
@@ -163,7 +163,7 @@
    "area": "MARKETING",
    "check": "Every result figure sits next to its source",
    "ok": false,
-   "detail": "1 unsourced: ['PDRN 1% Collagen Night Cream']",
+   "detail": "2 unsourced: ['Age-Related DeclineCollagen production decreases by 1-1.5% per year from your mid-20s. By ', 'Inflammation and HA LossChronic inflammation upregulates collagen-destroying MMPs. Meanwhi']",
    "severity": "low",
    "weight": 1
   },
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "3 <h2>: ['Your Routine: Daily Repair & Renewal', 'Common Questions About Skin Repair', 'Related Skin Solutions']",
+   "detail": "3 <h2>: ['Your Routine: Daily Collagen Boosting', 'Common Questions About Collagen & Skin Plumping', 'Related Skin Solutions']",
    "severity": "pass",
    "weight": 2
   },
@@ -187,7 +187,7 @@
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
    "ok": false,
-   "detail": "15 that look like headings but are not: ['Skin Repair & Renewal', 'Understanding Skin Repair & Renewal', 'What Slows Skin Repair?', 'The Renewal Approach', 'PDRN Serum - For Revitalised-Looking Skin', 'PDRN 1% Collagen Night Cream', 'Copper Peptide (GHK-Cu) Serum - Versatile Support', '1. Cleanse']",
+   "detail": "15 that look like headings but are not: ['Collagen & Skin Plumping', 'Understanding Collagen & Skin Plumping', 'Why Does Collagen Decline?', 'The Peptide Approach to Firmer-Looking Skin', 'Matrixyl 3000 - Signal Peptide Collagen Therapy', 'Copper Peptide GHK-Cu - Deep Support for Firmness', 'Topical Peptides vs. Other Approaches', '1. Cleanse']",
    "severity": "info",
    "weight": 0
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "24 unique",
+   "detail": "23 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -283,23 +283,23 @@
    "area": "GEO",
    "check": "A10 \u00b7 head term in first 30% of text",
    "ok": true,
-   "detail": "'skin repair'",
+   "detail": "''",
    "severity": "pass",
    "weight": 3
   },
   {
    "area": "GEO",
    "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
-   "ok": false,
-   "detail": "",
-   "severity": "high",
+   "ok": true,
+   "detail": "is the",
+   "severity": "pass",
    "weight": 2
   },
   {
    "area": "GEO",
    "check": "A8 \u00b7 secondary intents covered on the page",
    "ok": true,
-   "detail": "['renewal', 'pdrn', 'copper peptide'] / ['renewal', 'pdrn', 'copper peptide']",
+   "detail": "[] / []",
    "severity": "pass",
    "weight": 1.5
   },
@@ -307,7 +307,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "22 paragraphs, 0 too long",
+   "detail": "28 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "9",
+   "detail": "4",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "13 figures",
+   "detail": "8 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -371,7 +371,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "827 words extracted (main text 952)",
+   "detail": "903 words extracted (main text 1030)",
    "severity": "pass",
    "weight": 3
   },
@@ -490,52 +490,52 @@
   {
    "area": "DESIGN",
    "check": "Headings never break mid-word (mobile)",
-   "ok": false,
-   "detail": "Revitalised-Looking",
-   "severity": "med",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
    "weight": 1.5
   }
  ],
  "data": {
-  "title": "Skin Repair and Renewal: PDRN, Copper Peptide and a Routine",
+  "title": "Collagen Support and Skin Plumping - Peptides",
   "h1": [],
   "h2": [
-   "Your Routine: Daily Repair & Renewal",
-   "Common Questions About Skin Repair",
+   "Your Routine: Daily Collagen Boosting",
+   "Common Questions About Collagen & Skin Plumping",
    "Related Skin Solutions"
   ],
   "pseudo_headings": [
-   "Skin Repair & Renewal",
-   "Understanding Skin Repair & Renewal",
-   "What Slows Skin Repair?",
-   "The Renewal Approach",
-   "PDRN Serum - For Revitalised-Looking Skin",
-   "PDRN 1% Collagen Night Cream",
-   "Copper Peptide (GHK-Cu) Serum - Versatile Support",
+   "Collagen & Skin Plumping",
+   "Understanding Collagen & Skin Plumping",
+   "Why Does Collagen Decline?",
+   "The Peptide Approach to Firmer-Looking Skin",
+   "Matrixyl 3000 - Signal Peptide Collagen Therapy",
+   "Copper Peptide GHK-Cu - Deep Support for Firmness",
+   "Topical Peptides vs. Other Approaches",
    "1. Cleanse",
-   "2. PDRN Serum",
+   "2. Matrixyl 3000 Serum",
    "3. Copper Peptide Serum",
-   "4. Night Cream",
+   "4. Moisturise + SPF",
    "Fine Lines & Wrinkles",
    "Firming & Skin Density",
-   "Brightening & Glow",
-   "Collagen & Skin Plumping"
+   "Skin Repair & Renewal",
+   "Brightening & Glow"
   ],
   "internal_links": [
    "/collections/all",
    "/collections/creams-moisturizers",
    "/collections/serums",
    "/pages/brightening-glow",
-   "/pages/collagen-skin-plumping",
    "/pages/contact",
    "/pages/copper-peptide-research",
    "/pages/faq",
    "/pages/fine-lines-wrinkles",
    "/pages/firming-skin-density",
    "/pages/ingredients",
+   "/pages/matrixyl-3000-research",
    "/pages/our-philosophy",
-   "/pages/pdrn-research",
    "/pages/shipping-returns",
+   "/pages/skin-repair-renewal",
    "/pages/the-science",
    "/policies/contact-information",
    "/policies/legal-notice",
@@ -544,59 +544,58 @@
    "/policies/shipping-policy",
    "/policies/terms-of-service",
    "/products/copper-peptide-ghk-cu-renewal-serum",
-   "/products/pdrn-collagen-night-cream",
-   "/products/pdrn-renewal-serum"
+   "/products/matrixyl-3000-firming-serum"
   ],
   "external_links": [],
   "schema_types": [
    "BreadcrumbList"
   ],
-  "extracted_words": 827,
-  "main_words": 952,
+  "extracted_words": 903,
+  "main_words": 1030,
   "images": [
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-repair-cream-skin-renewal-treatment.jpg?v=1787587149&width=3000",
-    "alt": "Woman with her eyes closed resting her head against a jar of Skingenetix PDRN 1% Collagen Night Cream"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-collagen-plumping.jpg?v=1773269335&width=1200",
+    "alt": "Skingenetix Concern Collagen Plumping"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-repair-renewal-mature-skin-uneven-tone-face.jpg?v=1787673573&width=2048",
-    "alt": "Close-up of a woman with her eyes closed resting the back of her fingers against her jaw, her cheek showing uneven tone and sun spots as the skin's natural renewal cycle slows with age"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-serum-texture-closeup.jpg?v=1773218097&width=2048",
+    "alt": "matrixyl serum texture closeup"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-repair-renewal-ageing-skin-wrinkle-collagen-diagram.jpg?v=1787748990&width=3000",
-    "alt": "Medical explainer cross-section of ageing skin showing one deep wrinkle, with the dermal junction flattened and the pink collagen fibres broken and slumped directly beneath it, and firmer ordered fibres further along the same block"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-serum-texture-closeup.jpg?v=1773218083&width=2048",
+    "alt": "copper peptide serum texture closeup"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-repair-renewal-pdrn-copper-peptide-ghk-cu-diagram.jpg?v=1787748990&width=3000",
-    "alt": "Medical explainer cross-section of skin showing PDRN polynucleotide ladders and copper peptide GHK-Cu tripeptides delivered in droplets, reaching the renewal cell layer and the pink collagen fibres below, with the surface layer left whole"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-serum-dropper-detail.jpg?v=1773218099&width=2048",
+    "alt": "matrixyl serum dropper detail"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-skin-repair-deep-renewal-serum-applying-dropper.jpg?v=1787755594&width=2048",
-    "alt": "Close-up of a woman with her eyes closed applying Skingenetix PDRN 1% Renewal Serum to her cheek with a glass dropper, holding the 30ml frosted pink bottle"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-10-hyaluronic-acid-collagen-boosting-serum.jpg?v=1773171755&width=2048",
+    "alt": "Matrixyl 10% + Hyaluronic Acid Collagen-Boosting Serum by Skingenetix - premium peptide skincare"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-overnight-repair-cream-open-jar-lid.jpg?v=1787755984&width=2048",
-    "alt": "Open frosted pink glass jar of Skingenetix PDRN 1% Collagen Night Cream cream, 50ml, with the brushed silver lid leaning against it on a pale surface"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-firming-repair-serum.jpg?v=1773171729&width=2048",
+    "alt": "Copper Peptide (GHK-Cu) 2% Renewal Serum by Skingenetix - premium peptide skincare"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-repair-serum-model-holding-near-face.jpg?v=1787756218&width=2048",
-    "alt": "Woman holding a deep blue frosted glass bottle of Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml, up beside her cheek and jawline"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-ingredients-matrixyl-serum.jpg?v=1773222575&width=900",
+    "alt": "Matrixyl Serum - golden amber dropper bottle"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-howto-step1-cleanse.jpg?v=1774456364&width=1024",
     "alt": "skingenetix howto step1 cleanse"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-skin-repair-serum-model-applying-with-dropper.jpg?v=1787836539&width=2048",
-    "alt": "A model applying Skingenetix PDRN 1% Renewal Serum to her cheek with the glass dropper, holding the pink bottle in her other hand"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-howto-step2-serum.jpg?v=1774456365&width=1024",
+    "alt": "skingenetix howto step2 serum"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hands_only_dropper_4_skingenetix.jpg?v=1787296633&width=2048",
-    "alt": "Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 30ml - hands holding the bottle and dropper, a blue drop on a fingertip"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-howto-step2-serum.jpg?v=1774456365&width=1024",
+    "alt": "skingenetix howto step2 serum"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-repair-cream-applying-to-cheek-close-up.jpg?v=1787836538&width=1254",
-    "alt": "Close-up of a model smoothing a pale pink repair cream along her cheekbone with two fingertips"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-howto-step4-spf.jpg?v=1774456369&width=1024",
+    "alt": "skingenetix howto step4 spf"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg?v=1787310462&width=2048",
@@ -607,12 +606,12 @@
     "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - frosted glass dropper bottle beside its teal carton on a white background"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg?v=1787233764&width=2048",
-    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - bottle beside its gold carton on white"
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_skin_repair_deep_renewal_face_serum_product_and_box_angled_6_skingenetix.jpg?v=1787314054&width=2048",
+    "alt": "Skingenetix PDRN 1% Renewal Serum, 30ml - bottle beside its pink and silver cartons"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_product_and_box_hero_2_skingenetix.jpg?v=1787580697&width=2048",
-    "alt": "Skingenetix Copper Peptide GHK-Cu 2% Renewal Serum met verpakking"
+    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg?v=1787233764&width=2048",
+    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - bottle beside its gold carton on white"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
@@ -630,58 +629,49 @@
      "top": 126,
      "h": 440,
      "bg": "rgb(240, 240, 240)",
-     "text": 140,
+     "text": 105,
      "media": 1
     },
     {
      "id": "content",
      "type": "media-with-text",
      "top": 566,
-     "h": 4535,
+     "h": 4682,
      "bg": "rgb(240, 240, 240)",
-     "text": 3621,
+     "text": 4441,
      "media": 6
     },
     {
      "id": "routine",
      "type": "multi-column",
-     "top": 5101,
+     "top": 5248,
      "h": 764,
      "bg": "rgb(240, 240, 240)",
-     "text": 409,
+     "text": 416,
      "media": 4
     },
     {
      "id": "faq",
      "type": "accordion-content",
-     "top": 5865,
-     "h": 444,
+     "top": 6012,
+     "h": 509,
      "bg": "rgb(240, 240, 240)",
-     "text": 214,
+     "text": 459,
      "media": 0
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 6309,
+     "top": 6521,
      "h": 631,
      "bg": "rgb(240, 240, 240)",
-     "text": 127,
+     "text": 124,
      "media": 4
-    },
-    {
-     "id": "banner_text_width",
-     "type": "custom-html",
-     "top": 6940,
-     "h": 0,
-     "bg": "rgb(240, 240, 240)",
-     "text": 0,
-     "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 6940,
+     "top": 7152,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -690,7 +680,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 7456,
+     "top": 7668,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -710,58 +700,49 @@
      "top": 85,
      "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 140,
+     "text": 105,
      "media": 1
     },
     {
      "id": "content",
      "type": "media-with-text",
      "top": 460,
-     "h": 5966,
+     "h": 6500,
      "bg": "rgb(240, 240, 240)",
-     "text": 3621,
+     "text": 4441,
      "media": 6
     },
     {
      "id": "routine",
      "type": "multi-column",
-     "top": 6426,
+     "top": 6960,
      "h": 605,
      "bg": "rgb(240, 240, 240)",
-     "text": 409,
+     "text": 416,
      "media": 4
     },
     {
      "id": "faq",
      "type": "accordion-content",
-     "top": 7031,
-     "h": 516,
+     "top": 7565,
+     "h": 745,
      "bg": "rgb(240, 240, 240)",
-     "text": 214,
+     "text": 459,
      "media": 0
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 7547,
+     "top": 8310,
      "h": 483,
      "bg": "rgb(240, 240, 240)",
-     "text": 127,
+     "text": 124,
      "media": 4
-    },
-    {
-     "id": "banner_text_width",
-     "type": "custom-html",
-     "top": 8030,
-     "h": 0,
-     "bg": "rgb(240, 240, 240)",
-     "text": 0,
-     "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 8030,
+     "top": 8793,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -770,7 +751,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9069,
+     "top": 9833,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -778,9 +759,7 @@
     }
    ],
    "broken": [],
-   "wordBreaks": [
-    "Revitalised-Looking"
-   ],
+   "wordBreaks": [],
    "overflow": 0
   }
  }

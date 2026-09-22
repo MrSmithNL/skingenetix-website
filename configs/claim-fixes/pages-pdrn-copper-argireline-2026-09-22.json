@@ -1,0 +1,299 @@
+{
+  "_about": "Concern pages, homepage FAQ, FAQ page and copper collection for PDRN, copper and Argireline — 2026-09-22, strongest verified claims (docs/claims/). Unsourced timelines replaced with the measured ones; 'well-documented safety', 'without irritation' (vs retinol), 'most talked-about', 'studied as extensively', 'most researched' and the flat copper line replaced with verified results. Tool: scripts/fix-claims.py.",
+  "fixes": [
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/index.json faq_section.faq_6.content"
+      ],
+      "readback": false,
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "<p>Skin feels more hydrated and smoother within days. In the clinical studies behind our key ingredients, results were measured at 4 weeks for Argireline®, from day 14 for PDRN and at 8 weeks for copper peptide. For the full effect, use your routine twice daily for at least 8 weeks.</p>",
+        "de": "<p>Die Haut fühlt sich innerhalb weniger Tage besser hydratisiert und glatter an. In den klinischen Studien zu unseren wichtigsten Wirkstoffen wurden die Ergebnisse bei Argireline® nach 4 Wochen, bei PDRN ab Tag 14 und bei Copper Peptide nach 8 Wochen gemessen. Für die volle Wirkung wenden Sie Ihre Routine mindestens 8 Wochen lang zweimal täglich an.</p>",
+        "nl": "<p>De huid voelt binnen enkele dagen beter gehydrateerd en gladder aan. In de klinische studies achter onze belangrijkste ingrediënten werden resultaten gemeten na 4 weken voor Argireline®, vanaf dag 14 voor PDRN en na 8 weken voor copper peptide. Gebruik je routine voor het volledige effect minstens 8 weken twee keer per dag.</p>",
+        "fr": "<p>La peau est plus hydratée et plus lisse en quelques jours. Dans les études cliniques qui fondent nos actifs clés, les résultats ont été mesurés à 4 semaines pour l'Argireline®, dès le 14e jour pour le PDRN et à 8 semaines pour le copper peptide. Pour un effet complet, suivez votre routine deux fois par jour pendant au moins 8 semaines.</p>",
+        "es": "<p>La piel se nota más hidratada y lisa en pocos días. En los estudios clínicos de nuestros ingredientes clave, los resultados se midieron a las 4 semanas con la Argireline®, desde el día 14 con el PDRN y a las 8 semanas con el copper peptide. Para el efecto completo, usa tu rutina dos veces al día durante al menos 8 semanas.</p>",
+        "it": "<p>La pelle risulta più idratata e levigata in pochi giorni. Negli studi clinici alla base dei nostri ingredienti chiave, i risultati sono stati misurati a 4 settimane per l'Argireline®, dal 14° giorno per il PDRN e a 8 settimane per il copper peptide. Per l'effetto completo, usa la tua routine due volte al giorno per almeno 8 settimane.</p>"
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.faq.json faq_products.p5.content"
+      ],
+      "readback": false,
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "<p>Skin feels more hydrated and smoother within days. In the clinical studies behind our key ingredients, results were measured at 4 weeks for Argireline®, from day 14 for PDRN and at 8 weeks for copper peptide. For the full effect, use your routine twice daily for at least 8 weeks.</p>",
+        "de": "<p>Die Haut fühlt sich innerhalb weniger Tage besser hydratisiert und glatter an. In den klinischen Studien zu unseren wichtigsten Wirkstoffen wurden die Ergebnisse bei Argireline® nach 4 Wochen, bei PDRN ab Tag 14 und bei Copper Peptide nach 8 Wochen gemessen. Für die volle Wirkung wenden Sie Ihre Routine mindestens 8 Wochen lang zweimal täglich an.</p>",
+        "nl": "<p>De huid voelt binnen enkele dagen beter gehydrateerd en gladder aan. In de klinische studies achter onze belangrijkste ingrediënten werden resultaten gemeten na 4 weken voor Argireline®, vanaf dag 14 voor PDRN en na 8 weken voor copper peptide. Gebruik je routine voor het volledige effect minstens 8 weken twee keer per dag.</p>",
+        "fr": "<p>La peau est plus hydratée et plus lisse en quelques jours. Dans les études cliniques qui fondent nos actifs clés, les résultats ont été mesurés à 4 semaines pour l'Argireline®, dès le 14e jour pour le PDRN et à 8 semaines pour le copper peptide. Pour un effet complet, suivez votre routine deux fois par jour pendant au moins 8 semaines.</p>",
+        "es": "<p>La piel se nota más hidratada y lisa en pocos días. En los estudios clínicos de nuestros ingredientes clave, los resultados se midieron a las 4 semanas con la Argireline®, desde el día 14 con el PDRN y a las 8 semanas con el copper peptide. Para el efecto completo, usa tu rutina dos veces al día durante al menos 8 semanas.</p>",
+        "it": "<p>La pelle risulta più idratata e levigata in pochi giorni. Negli studi clinici alla base dei nostri ingredienti chiave, i risultati sono stati misurati a 4 settimane per l'Argireline®, dal 14° giorno per il PDRN e a 8 settimane per il copper peptide. Per l'effetto completo, usa la tua routine due volte al giorno per almeno 8 settimane.</p>"
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/index.json home_faq_schema.html"
+      ],
+      "patterns": {
+        "en": "Hydration and a smoother texture are often visible within days\\. Improvements[^\\\"]*?daily use\\.",
+        "de": "Feuchtigkeit und eine glattere Textur[^\\\"]*?Anwendung\\.",
+        "nl": "Hydratatie en een gladdere textuur[^\\\"]*?gebruik\\.",
+        "fr": "L'hydratation et un grain de peau plus lisse[^\\\"]*?régulière\\.",
+        "es": "La hidratación y una textura más lisa[^\\\"]*?constante\\.",
+        "it": "L'idratazione e una texture più levigata[^\\\"]*?costante\\."
+      },
+      "replace": {
+        "en": "Skin feels more hydrated and smoother within days. In the clinical studies behind our key ingredients, results were measured at 4 weeks for Argireline®, from day 14 for PDRN and at 8 weeks for copper peptide. For the full effect, use your routine twice daily for at least 8 weeks.",
+        "de": "Die Haut fühlt sich innerhalb weniger Tage besser hydratisiert und glatter an. In den klinischen Studien zu unseren wichtigsten Wirkstoffen wurden die Ergebnisse bei Argireline® nach 4 Wochen, bei PDRN ab Tag 14 und bei Copper Peptide nach 8 Wochen gemessen. Für die volle Wirkung wenden Sie Ihre Routine mindestens 8 Wochen lang zweimal täglich an.",
+        "nl": "De huid voelt binnen enkele dagen beter gehydrateerd en gladder aan. In de klinische studies achter onze belangrijkste ingrediënten werden resultaten gemeten na 4 weken voor Argireline®, vanaf dag 14 voor PDRN en na 8 weken voor copper peptide. Gebruik je routine voor het volledige effect minstens 8 weken twee keer per dag.",
+        "fr": "La peau est plus hydratée et plus lisse en quelques jours. Dans les études cliniques qui fondent nos actifs clés, les résultats ont été mesurés à 4 semaines pour l'Argireline®, dès le 14e jour pour le PDRN et à 8 semaines pour le copper peptide. Pour un effet complet, suivez votre routine deux fois par jour pendant au moins 8 semaines.",
+        "es": "La piel se nota más hidratada y lisa en pocos días. En los estudios clínicos de nuestros ingredientes clave, los resultados se midieron a las 4 semanas con la Argireline®, desde el día 14 con el PDRN y a las 8 semanas con el copper peptide. Para el efecto completo, usa tu rutina dos veces al día durante al menos 8 semanas.",
+        "it": "La pelle risulta più idratata e levigata in pochi giorni. Negli studi clinici alla base dei nostri ingredienti chiave, i risultati sono stati misurati a 4 settimane per l'Argireline®, dal 14° giorno per il PDRN e a 8 settimane per il copper peptide. Per l'effetto completo, usa la tua routine due volte al giorno per almeno 8 settimane."
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.skin-repair-renewal.json faq.f1.content"
+      ],
+      "readback": false,
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "<p>PDRN (polydeoxyribonucleotide) is extracted from purified salmon DNA (INCI: Sodium DNA). In the only controlled clinical study of topical PDRN, 31 women with sensitive skin used it twice daily for 28 days with no reported reactions. As with any new product, patch-test first.</p>",
+        "de": "<p>PDRN (Polydesoxyribonukleotid) wird aus gereinigter Lachs-DNA gewonnen (INCI: Sodium DNA). In der einzigen kontrollierten klinischen Studie zu PDRN auf der Haut verwendeten 31 Frauen mit empfindlicher Haut es 28 Tage lang zweimal täglich, ohne dass Reaktionen berichtet wurden. Wie bei jedem neuen Produkt empfehlen wir zuerst einen Verträglichkeitstest.</p>",
+        "nl": "<p>PDRN (polydeoxyribonucleotide) wordt gewonnen uit gezuiverd zalm-DNA (INCI: Sodium DNA). In de enige gecontroleerde klinische studie naar PDRN op de huid gebruikten 31 vrouwen met een gevoelige huid het 28 dagen lang twee keer per dag, zonder gemelde reacties. Doe zoals bij elk nieuw product eerst een test op een klein plekje.</p>",
+        "fr": "<p>Le PDRN (polydésoxyribonucléotide) est extrait d'ADN de saumon purifié (INCI : Sodium DNA). Dans la seule étude clinique contrôlée sur le PDRN appliqué sur la peau, 31 femmes à la peau sensible l'ont utilisé deux fois par jour pendant 28 jours, sans aucune réaction signalée. Comme pour tout nouveau produit, faites d'abord un test de tolérance.</p>",
+        "es": "<p>El PDRN (polidesoxirribonucleótido) se obtiene de ADN de salmón purificado (INCI: Sodium DNA). En el único estudio clínico controlado del PDRN aplicado sobre la piel, 31 mujeres con piel sensible lo usaron dos veces al día durante 28 días sin reacciones notificadas. Como con cualquier producto nuevo, haz primero una prueba de tolerancia.</p>",
+        "it": "<p>Il PDRN (polidesossiribonucleotide) è ottenuto da DNA di salmone purificato (INCI: Sodium DNA). Nell'unico studio clinico controllato sul PDRN applicato sulla pelle, 31 donne con pelle sensibile lo hanno usato due volte al giorno per 28 giorni senza reazioni segnalate. Come per ogni nuovo prodotto, fai prima un test di tolleranza.</p>"
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.skin-repair-renewal.json faq.f2.content"
+      ],
+      "readback": false,
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "<p>Retinol speeds up skin turnover from the outside, which can cause irritation, flaking and sun sensitivity. PDRN and GHK-Cu work differently, supporting the look of renewed, revitalised skin. In the one head-to-head study, PDRN gave more than twice the wrinkle improvement of retinol over 28 days. Both can be combined with retinol if you wish.</p>",
+        "de": "<p>Retinol beschleunigt die Hauterneuerung von außen, was zu Reizungen, Schuppung und Lichtempfindlichkeit führen kann. PDRN und GHK-Cu wirken anders und unterstützen ein erneuertes, vitaleres Hautbild. In der einzigen direkten Vergleichsstudie brachte PDRN in 28 Tagen mehr als doppelt so viel Faltenverbesserung wie Retinol. Beide lassen sich auf Wunsch mit Retinol kombinieren.</p>",
+        "nl": "<p>Retinol versnelt de celvernieuwing van buitenaf, wat irritatie, schilfering en zongevoeligheid kan veroorzaken. PDRN en GHK-Cu werken anders en ondersteunen een vernieuwde, frissere uitstraling. In de enige directe vergelijkingsstudie gaf PDRN in 28 dagen meer dan twee keer zoveel rimpelverbetering als retinol. Beide kun je desgewenst combineren met retinol.</p>",
+        "fr": "<p>Le rétinol accélère le renouvellement de la peau de l'extérieur, ce qui peut provoquer irritations, desquamation et sensibilité au soleil. Le PDRN et le GHK-Cu agissent différemment et favorisent l'apparence d'une peau renouvelée et revitalisée. Dans la seule étude comparative directe, le PDRN a apporté plus de deux fois l'amélioration des rides du rétinol en 28 jours. Tous deux peuvent être associés au rétinol si vous le souhaitez.</p>",
+        "es": "<p>El retinol acelera la renovación de la piel desde fuera, lo que puede causar irritación, descamación y sensibilidad al sol. El PDRN y el GHK-Cu actúan de otra forma y favorecen el aspecto de una piel renovada y revitalizada. En el único estudio comparativo directo, el PDRN aportó más del doble de mejora en las arrugas que el retinol en 28 días. Ambos pueden combinarse con retinol si lo deseas.</p>",
+        "it": "<p>Il retinolo accelera il rinnovamento della pelle dall'esterno, il che può causare irritazione, desquamazione e sensibilità al sole. PDRN e GHK-Cu agiscono diversamente e favoriscono l'aspetto di una pelle rinnovata e rivitalizzata. Nell'unico studio di confronto diretto, il PDRN ha dato più del doppio del miglioramento delle rughe rispetto al retinolo in 28 giorni. Entrambi si possono abbinare al retinolo, se lo desideri.</p>"
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.skin-repair-renewal.json faq.f4.content"
+      ],
+      "readback": false,
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "<p>In clinical testing, PDRN visibly smoothed crow's feet from day 14 (measured at 28 days), and GHK-Cu's wrinkle-volume reduction was measured after 8 weeks. Use the routine twice daily for at least 8 weeks to see the full picture.</p>",
+        "de": "<p>In klinischen Tests glättete PDRN Krähenfüße sichtbar ab Tag 14 (gemessen nach 28 Tagen), und die Reduktion des Faltenvolumens durch GHK-Cu wurde nach 8 Wochen gemessen. Wenden Sie die Routine mindestens 8 Wochen lang zweimal täglich an, um das volle Ergebnis zu sehen.</p>",
+        "nl": "<p>In klinische tests maakte PDRN kraaienpootjes zichtbaar gladder vanaf dag 14 (gemeten na 28 dagen), en de vermindering van het rimpelvolume door GHK-Cu werd na 8 weken gemeten. Gebruik de routine minstens 8 weken twee keer per dag om het volledige resultaat te zien.</p>",
+        "fr": "<p>En tests cliniques, le PDRN a visiblement lissé les pattes d'oie dès le 14e jour (mesure à 28 jours), et la réduction du volume des rides par le GHK-Cu a été mesurée après 8 semaines. Suivez la routine deux fois par jour pendant au moins 8 semaines pour voir le résultat complet.</p>",
+        "es": "<p>En pruebas clínicas, el PDRN alisó visiblemente las patas de gallo desde el día 14 (medido a los 28 días), y la reducción del volumen de las arrugas con GHK-Cu se midió tras 8 semanas. Usa la rutina dos veces al día durante al menos 8 semanas para ver el resultado completo.</p>",
+        "it": "<p>Nei test clinici, il PDRN ha levigato visibilmente le zampe di gallina dal 14° giorno (misurato a 28 giorni) e la riduzione del volume delle rughe con il GHK-Cu è stata misurata dopo 8 settimane. Usa la routine due volte al giorno per almeno 8 settimane per vedere il risultato completo.</p>"
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.skin-repair-renewal.json content.pdrn_serum.content"
+      ],
+      "patterns": {
+        "en": "PDRN\\ is\\ one\\ of\\ the\\ most\\ talked\\-about\\ actives\\ in\\ premium\\ skincare\\ for\\ a\\ revitalised,\\ glowing\\ appearance\\ and\\ a\\ smoother\\-looking\\ texture\\.",
+        "de": "PDRN\\ gehört\\ zu\\ den\\ meistdiskutierten\\ Wirkstoffen\\ in\\ der\\ Premium\\-Hautpflege\\ \\-\\ für\\ ein\\ vitales,\\ strahlendes\\ Erscheinungsbild\\ und\\ eine\\ glattere\\ Textur\\.",
+        "nl": "PDRN\\ is\\ een\\ van\\ de\\ meest\\ besproken\\ actieve\\ ingrediënten\\ in\\ premium\\ skincare\\ voor\\ een\\ frissere,\\ stralende\\ huid\\ en\\ een\\ gladdere\\ textuur\\.",
+        "fr": "Le\\ PDRN\\ est\\ l'un\\ des\\ actifs\\ les\\ plus\\ plébiscités\\ dans\\ les\\ soins\\ premium\\ pour\\ un\\ teint\\ revitalisé\\ et\\ lumineux,\\ et\\ une\\ texture\\ visiblement\\ plus\\ lisse\\.",
+        "es": "PDRN\\ es\\ uno\\ de\\ los\\ activos\\ más\\ comentados\\ en\\ el\\ skincare\\ premium\\ por\\ su\\ capacidad\\ de\\ aportar\\ un\\ aspecto\\ revitalizado\\ y\\ luminoso\\ y\\ una\\ textura\\ visiblemente\\ más\\ suave\\.",
+        "it": "PDRN\\ è\\ uno\\ degli\\ attivi\\ più\\ discussi\\ nella\\ skincare\\ premium\\ per\\ un\\ aspetto\\ rivitalizzato\\ e\\ luminoso\\ e\\ una\\ texture\\ visibilmente\\ più\\ levigata\\."
+      },
+      "replace": {
+        "en": "In a clinical study, PDRN softened the look of crow's feet by up to 23% in 28 days, more than twice as much as retinol.",
+        "de": "In einer klinischen Studie milderte PDRN das Erscheinungsbild von Krähenfüßen in 28 Tagen um bis zu 23 % – mehr als doppelt so stark wie Retinol.",
+        "nl": "In een klinische studie liet PDRN kraaienpootjes in 28 dagen tot 23% zachter ogen – meer dan twee keer zoveel als retinol.",
+        "fr": "Dans une étude clinique, le PDRN a atténué l'apparence des pattes d'oie jusqu'à 23 % en 28 jours, soit plus de deux fois plus que le rétinol.",
+        "es": "En un estudio clínico, el PDRN suavizó el aspecto de las patas de gallo hasta un 23 % en 28 días, más del doble que el retinol.",
+        "it": "In uno studio clinico, il PDRN ha attenuato l'aspetto delle zampe di gallina fino al 23% in 28 giorni, più del doppio rispetto al retinolo."
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.skin-repair-renewal.json content.copper.content"
+      ],
+      "patterns": {
+        "en": "For\\ GHK\\-Cu,\\ most\\ of\\ the\\ evidence\\ comes\\ from\\ laboratory\\ studies;\\ published\\ trials\\ in\\ people\\ are\\ small\\.",
+        "de": "Bei\\ GHK\\-Cu\\ stammen\\ die\\ meisten\\ Belege\\ aus\\ Laborstudien;\\ veröffentlichte\\ Studien\\ am\\ Menschen\\ sind\\ klein\\.",
+        "nl": "Voor\\ GHK\\-Cu\\ komt\\ het\\ meeste\\ bewijs\\ uit\\ laboratoriumstudies;\\ gepubliceerde\\ studies\\ bij\\ mensen\\ zijn\\ klein\\.",
+        "fr": "Pour\\ le\\ GHK\\-Cu,\\ la\\ plupart\\ des\\ preuves\\ proviennent\\ d'études\\ en\\ laboratoire\\ ;\\ les\\ essais\\ publiés\\ chez\\ l'humain\\ sont\\ de\\ petite\\ taille\\.",
+        "es": "En\\ el\\ caso\\ del\\ GHK\\-Cu,\\ la\\ mayor\\ parte\\ de\\ la\\ evidencia\\ procede\\ de\\ estudios\\ de\\ laboratorio;\\ los\\ ensayos\\ publicados\\ en\\ personas\\ son\\ pequeños\\.",
+        "it": "Per\\ il\\ GHK\\-Cu,\\ la\\ maggior\\ parte\\ delle\\ prove\\ proviene\\ da\\ studi\\ di\\ laboratorio;\\ gli\\ studi\\ pubblicati\\ sulle\\ persone\\ sono\\ piccoli\\."
+      },
+      "replace": {
+        "en": "GHK-Cu is a copper peptide your own body makes, and in a double-blind trial it reduced wrinkle volume 55.8% more than the same serum without it.",
+        "de": "GHK-Cu ist ein Kupferpeptid, das Ihr Körper selbst bildet, und in einer Doppelblindstudie verringerte es das Faltenvolumen um 55,8 % mehr als dasselbe Serum ohne GHK-Cu.",
+        "nl": "GHK-Cu is een koperpeptide dat je lichaam zelf aanmaakt, en in een dubbelblinde studie verminderde het het rimpelvolume 55,8% meer dan hetzelfde serum zonder GHK-Cu.",
+        "fr": "Le GHK-Cu est un peptide de cuivre que votre corps produit lui-même ; dans un essai en double aveugle, il a réduit le volume des rides de 55,8 % de plus que le même sérum sans GHK-Cu.",
+        "es": "El GHK-Cu es un péptido de cobre que tu propio cuerpo produce, y en un ensayo doble ciego redujo el volumen de las arrugas un 55,8 % más que el mismo sérum sin GHK-Cu.",
+        "it": "Il GHK-Cu è un peptide di rame che il tuo corpo produce da sé e, in uno studio in doppio cieco, ha ridotto il volume delle rughe del 55,8% in più rispetto allo stesso siero senza GHK-Cu."
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.collagen-skin-plumping.json content.copper.content"
+      ],
+      "patterns": {
+        "en": "For\\ GHK\\-Cu,\\ most\\ of\\ the\\ evidence\\ comes\\ from\\ laboratory\\ studies;\\ published\\ trials\\ in\\ people\\ are\\ small\\.",
+        "de": "Bei\\ GHK\\-Cu\\ stammen\\ die\\ meisten\\ Belege\\ aus\\ Laborstudien;\\ veröffentlichte\\ Studien\\ am\\ Menschen\\ sind\\ klein\\.",
+        "nl": "Voor\\ GHK\\-Cu\\ komt\\ het\\ meeste\\ bewijs\\ uit\\ laboratoriumstudies;\\ gepubliceerde\\ studies\\ bij\\ mensen\\ zijn\\ klein\\.",
+        "fr": "Pour\\ le\\ GHK\\-Cu,\\ la\\ plupart\\ des\\ preuves\\ proviennent\\ d'études\\ en\\ laboratoire\\ ;\\ les\\ essais\\ publiés\\ chez\\ l'humain\\ sont\\ de\\ petite\\ taille\\.",
+        "es": "En\\ el\\ caso\\ del\\ GHK\\-Cu,\\ la\\ mayor\\ parte\\ de\\ la\\ evidencia\\ procede\\ de\\ estudios\\ de\\ laboratorio;\\ los\\ ensayos\\ publicados\\ en\\ personas\\ son\\ pequeños\\.",
+        "it": "Per\\ il\\ GHK\\-Cu,\\ la\\ maggior\\ parte\\ delle\\ prove\\ proviene\\ da\\ studi\\ di\\ laboratorio;\\ gli\\ studi\\ pubblicati\\ sulle\\ persone\\ sono\\ piccoli\\."
+      },
+      "replace": {
+        "en": "GHK-Cu is a copper peptide your own body makes, and in a double-blind trial it reduced wrinkle volume 55.8% more than the same serum without it.",
+        "de": "GHK-Cu ist ein Kupferpeptid, das Ihr Körper selbst bildet, und in einer Doppelblindstudie verringerte es das Faltenvolumen um 55,8 % mehr als dasselbe Serum ohne GHK-Cu.",
+        "nl": "GHK-Cu is een koperpeptide dat je lichaam zelf aanmaakt, en in een dubbelblinde studie verminderde het het rimpelvolume 55,8% meer dan hetzelfde serum zonder GHK-Cu.",
+        "fr": "Le GHK-Cu est un peptide de cuivre que votre corps produit lui-même ; dans un essai en double aveugle, il a réduit le volume des rides de 55,8 % de plus que le même sérum sans GHK-Cu.",
+        "es": "El GHK-Cu es un péptido de cobre que tu propio cuerpo produce, y en un ensayo doble ciego redujo el volumen de las arrugas un 55,8 % más que el mismo sérum sin GHK-Cu.",
+        "it": "Il GHK-Cu è un peptide di rame che il tuo corpo produce da sé e, in uno studio in doppio cieco, ha ridotto il volume delle rughe del 55,8% in più rispetto allo stesso siero senza GHK-Cu."
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.collagen-skin-plumping.json content.copper.content"
+      ],
+      "patterns": {
+        "en": "Few\\ other\\ peptides\\ have\\ been\\ studied\\ as\\ extensively\\.",
+        "de": "Kaum\\ ein\\ anderes\\ Peptid\\ wurde\\ so\\ umfassend\\ untersucht\\.",
+        "nl": "Weinig\\ andere\\ peptiden\\ zijn\\ zo\\ uitgebreid\\ onderzocht\\.",
+        "fr": "Peu\\ d'autres\\ peptides\\ ont\\ fait\\ l'objet\\ d'autant\\ d'études\\.",
+        "es": "Pocos\\ péptidos\\ han\\ sido\\ investigados\\ con\\ tanta\\ profundidad\\.",
+        "it": "Pochi\\ altri\\ peptidi\\ sono\\ stati\\ studiati\\ con\\ la\\ stessa\\ profondità\\."
+      },
+      "replace": {
+        "en": "A 2026 systematic review found it significantly reduced wrinkle volume and depth compared with controls.",
+        "de": "Eine systematische Übersichtsarbeit von 2026 fand, dass es Faltenvolumen und -tiefe im Vergleich zu Kontrollen deutlich verringerte.",
+        "nl": "Een systematische review uit 2026 vond dat het rimpelvolume en de rimpeldiepte duidelijk afnamen ten opzichte van controles.",
+        "fr": "Une revue systématique de 2026 a conclu qu'il réduisait nettement le volume et la profondeur des rides par rapport aux témoins.",
+        "es": "Una revisión sistemática de 2026 concluyó que redujo claramente el volumen y la profundidad de las arrugas frente a los controles.",
+        "it": "Una revisione sistematica del 2026 ha rilevato che ha ridotto nettamente volume e profondità delle rughe rispetto ai controlli."
+      }
+    },
+    {
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "templates/page.fine-lines-wrinkles.json faq.f1.content"
+      ],
+      "patterns": {
+        "en": "Acetyl\\ Hexapeptide\\-8\\ shows\\ visible\\ improvement\\ within\\ 2\\-4\\ weeks\\.",
+        "de": "Acetyl\\ Hexapeptide\\-8\\ zeigt\\ sichtbare\\ Verbesserungen\\ innerhalb\\ von\\ 2\\-4\\ Wochen\\.",
+        "nl": "Acetyl\\ Hexapeptide\\-8\\ laat\\ zichtbare\\ verbetering\\ zien\\ binnen\\ 2\\-4\\ weken\\.",
+        "fr": "Acetyl\\ Hexapeptide\\-8\\ montre\\ une\\ amélioration\\ visible\\ en\\ 2\\ à\\ 4\\ semaines\\.",
+        "es": "Acetyl\\ Hexapeptide\\-8\\ muestra\\ una\\ mejora\\ visible\\ en\\ 2\\-4\\ semanas\\.",
+        "it": "Acetyl\\ Hexapeptide\\-8\\ mostra\\ miglioramenti\\ visibili\\ entro\\ 2\\-4\\ settimane\\."
+      },
+      "replace": {
+        "en": "In the clinical trial, nearly 1 in 2 people using 10% Argireline® were graded clearly smoother around the eyes after 4 weeks.",
+        "de": "In der klinischen Studie wurde fast jede zweite Person mit 10 % Argireline® nach 4 Wochen rund um die Augen als deutlich glatter eingestuft.",
+        "nl": "In de klinische studie werd bijna 1 op de 2 mensen met 10% Argireline® na 4 weken rond de ogen als duidelijk gladder beoordeeld.",
+        "fr": "Dans l'essai clinique, près d'une personne sur deux utilisant 10 % d'Argireline® a été jugée nettement plus lisse autour des yeux après 4 semaines.",
+        "es": "En el ensayo clínico, casi 1 de cada 2 personas que usaron un 10 % de Argireline® fue valorada con la zona de los ojos claramente más lisa tras 4 semanas.",
+        "it": "Nello studio clinico, quasi 1 persona su 2 che usava il 10% di Argireline® è stata giudicata con il contorno occhi nettamente più levigato dopo 4 settimane."
+      }
+    },
+    {
+      "where": [
+        "collection_body"
+      ],
+      "only": [
+        "collection/copper-peptide"
+      ],
+      "readback": false,
+      "patterns": {
+        "en": "^<p>[^<]*</p>",
+        "de": "^<p>[^<]*</p>",
+        "nl": "^<p>[^<]*</p>",
+        "fr": "^<p>[^<]*</p>",
+        "es": "^<p>[^<]*</p>",
+        "it": "^<p>[^<]*</p>"
+      },
+      "replace": {
+        "en": "<p>Copper peptide (GHK-Cu) is a peptide your own body makes. In a double-blind trial, it reduced wrinkle volume 55.8% more than the same serum without it. Our serum and creams each carry 2%.</p>",
+        "de": "<p>Copper Peptide (GHK-Cu) ist ein Peptid, das Ihr Körper selbst bildet. In einer Doppelblindstudie verringerte es das Faltenvolumen um 55,8 % mehr als dasselbe Serum ohne GHK-Cu. Unser Serum und unsere Cremes enthalten jeweils 2 %.</p>",
+        "nl": "<p>Copper peptide (GHK-Cu) is een peptide dat je lichaam zelf aanmaakt. In een dubbelblinde studie verminderde het het rimpelvolume 55,8% meer dan hetzelfde serum zonder GHK-Cu. Ons serum en onze crèmes bevatten elk 2%.</p>",
+        "fr": "<p>Le copper peptide (GHK-Cu) est un peptide que votre corps produit lui-même. Dans un essai en double aveugle, il a réduit le volume des rides de 55,8 % de plus que le même sérum sans GHK-Cu. Notre sérum et nos crèmes en contiennent chacun 2 %.</p>",
+        "es": "<p>El copper peptide (GHK-Cu) es un péptido que tu propio cuerpo produce. En un ensayo doble ciego, redujo el volumen de las arrugas un 55,8 % más que el mismo sérum sin GHK-Cu. Nuestro sérum y nuestras cremas contienen un 2 % cada uno.</p>",
+        "it": "<p>Il copper peptide (GHK-Cu) è un peptide che il tuo corpo produce da sé. In uno studio in doppio cieco, ha ridotto il volume delle rughe del 55,8% in più rispetto allo stesso siero senza GHK-Cu. Il nostro siero e le nostre creme ne contengono ciascuno il 2%.</p>"
+      }
+    }
+  ]
+}

@@ -1,17 +1,17 @@
 {
- "path": "/pages/copper-peptide-research",
+ "path": "/collections/copper-peptide",
  "scores": {
-  "SEO": 100,
-  "GEO": 100,
-  "DESIGN": 100,
-  "MARKETING": 100
+  "SEO": 98,
+  "GEO": 61,
+  "DESIGN": 90,
+  "MARKETING": 86
  },
  "items": [
   {
    "area": "SEO",
    "check": "HTTP 200, no redirect",
    "ok": true,
-   "detail": "200 \u2192 https://www.skingenetix.com/pages/copper-peptide-research",
+   "detail": "200 \u2192 https://www.skingenetix.com/collections/copper-peptide",
    "severity": "pass",
    "weight": 2
   },
@@ -19,7 +19,7 @@
    "area": "SEO",
    "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
    "ok": true,
-   "detail": "/pages/copper-peptide-research",
+   "detail": "/collections/copper-peptide",
    "severity": "pass",
    "weight": 1.0
   },
@@ -27,7 +27,7 @@
    "area": "SEO",
    "check": "URL carries the head term",
    "ok": true,
-   "detail": "head term 'copper peptide'",
+   "detail": "head term ''",
    "severity": "pass",
    "weight": 0.5
   },
@@ -35,7 +35,7 @@
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "56c: Copper Peptides (GHK-Cu) for Skin: Benefits and Research",
+   "detail": "58c: Copper Peptide Skincare: GHK-Cu Serum, Day and Night Cream",
    "severity": "pass",
    "weight": 2
   },
@@ -43,7 +43,7 @@
    "area": "SEO",
    "check": "Title contains head term",
    "ok": true,
-   "detail": "'copper peptide'",
+   "detail": "''",
    "severity": "pass",
    "weight": 2
   },
@@ -75,7 +75,7 @@
    "area": "SEO",
    "check": "Self-referencing absolute canonical",
    "ok": true,
-   "detail": "https://www.skingenetix.com/pages/copper-peptide-research",
+   "detail": "https://www.skingenetix.com/collections/copper-peptide",
    "severity": "pass",
    "weight": 2
   },
@@ -98,9 +98,9 @@
   {
    "area": "SEO",
    "check": "og:title matches the page title",
-   "ok": true,
-   "detail": "Copper Peptides (GHK-Cu) for Skin: Benefits and Research",
-   "severity": "pass",
+   "ok": false,
+   "detail": "Copper Peptide (GHK-Cu)",
+   "severity": "low",
    "weight": 0.5
   },
   {
@@ -115,21 +115,21 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "ingredient researchcopper peptide ghk-cu a copper-binding peptide found naturally in the body studied for its role in the skin's own collage",
+   "detail": "copper peptide ghk-cu copper peptide ghk-cu is a peptide your own body makes in a double-blind trial it reduced wrinkle volume 55 8 more tha",
    "severity": "pass",
    "weight": 2
   },
   {
    "area": "MARKETING",
    "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
-   "ok": true,
-   "detail": "41 women",
-   "severity": "pass",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
    "weight": 2
   },
   {
    "area": "MARKETING",
-   "check": "Hedging \u2264 2.0 per 100 words (science page)",
+   "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
    "ok": true,
    "detail": "0.0/100 words: []",
    "severity": "pass",
@@ -179,16 +179,16 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "8 <h2>: ['What Is Copper Peptide?', 'Copper Peptide Benefits: What the Evidence Shows', 'What 2% GHK-Cu Means', 'How to Use Copper Peptide', 'Published References', 'Frequently Asked Questions', 'Shop Copper Peptide Products', 'Explore More Research']",
+   "detail": "4 <h2>: ['5', '100%', '10+', 'Continue Exploring']",
    "severity": "pass",
    "weight": 2
   },
   {
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
-   "ok": false,
-   "detail": "8 that look like headings but are not: [\"Supports the skin's own collagen & renewal pathways\", 'Supports skin-renewal cell activity (independent lab study)', 'Higher patient satisfaction after laser treatment (small controlled trial)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Glutathione', 'Try Copper Peptide GHK-Cu']",
-   "severity": "info",
+   "ok": true,
+   "detail": "0 that look like headings but are not: []",
+   "severity": "pass",
    "weight": 0
   },
   {
@@ -203,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "21/21",
+   "detail": "16/16",
    "severity": "pass",
    "weight": 1.0
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "27 unique",
+   "detail": "26 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -243,31 +243,31 @@
    "area": "SEO",
    "check": "No duplicate schema types",
    "ok": true,
-   "detail": "types ['BreadcrumbList', 'WebPage', 'FAQPage']",
+   "detail": "types ['BreadcrumbList']",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "Page entity schema (WebPage/Article) with dateModified",
-   "ok": true,
-   "detail": "WebPage modified 2026-09-22",
-   "severity": "pass",
+   "ok": false,
+   "detail": "none",
+   "severity": "med",
    "weight": 1.5
   },
   {
    "area": "GEO",
    "check": "Schema cites sources (citation[])",
-   "ok": true,
-   "detail": "9 citations",
-   "severity": "pass",
+   "ok": false,
+   "detail": "",
+   "severity": "low",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "Reviewer/author in schema (reviewedBy/author)",
    "ok": false,
-   "detail": "pending Dr Bodde's review",
+   "detail": "",
    "severity": "info",
    "weight": 0
   },
@@ -280,18 +280,10 @@
    "weight": 0.5
   },
   {
-   "area": "SEO",
-   "check": "FAQ schema matches visible questions",
-   "ok": true,
-   "detail": "4 Qs; not visible: []",
-   "severity": "pass",
-   "weight": 1.5
-  },
-  {
    "area": "GEO",
    "check": "A10 \u00b7 head term in first 30% of text",
    "ok": true,
-   "detail": "'copper peptide'",
+   "detail": "''",
    "severity": "pass",
    "weight": 3
   },
@@ -307,7 +299,7 @@
    "area": "GEO",
    "check": "A8 \u00b7 secondary intents covered on the page",
    "ok": true,
-   "detail": "['ghk-cu', 'copper peptide benefits'] / ['ghk-cu', 'copper peptide benefits']",
+   "detail": "[] / []",
    "severity": "pass",
    "weight": 1.5
   },
@@ -315,32 +307,32 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "34 paragraphs, 0 too long",
+   "detail": "1 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
-   "ok": true,
-   "detail": "11",
-   "severity": "pass",
+   "ok": false,
+   "detail": "0",
+   "severity": "low",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "15 figures",
+   "detail": "6 figures",
    "severity": "pass",
    "weight": 1.5
   },
   {
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
-   "ok": true,
-   "detail": "49 citation markers",
-   "severity": "pass",
+   "ok": false,
+   "detail": "0 citation markers",
+   "severity": "med",
    "weight": 1.5
   },
   {
@@ -354,9 +346,9 @@
   {
    "area": "GEO",
    "check": "E1 \u00b7 visible last-reviewed/updated date",
-   "ok": true,
-   "detail": "Last updated",
-   "severity": "pass",
+   "ok": false,
+   "detail": "pending reviewer sign-off",
+   "severity": "med",
    "weight": 1.5
   },
   {
@@ -371,16 +363,16 @@
    "area": "GEO",
    "check": "A4 \u00b7 headings mirror search questions",
    "ok": true,
-   "detail": "1 question-form H2",
+   "detail": "0 question-form H2",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
-   "ok": true,
-   "detail": "1325 words extracted (main text 1555)",
-   "severity": "pass",
+   "ok": false,
+   "detail": "64 words extracted (main text 280)",
+   "severity": "high",
    "weight": 3
   },
   {
@@ -394,9 +386,9 @@
   {
    "area": "GEO",
    "check": "H2 sections survive extraction",
-   "ok": true,
-   "detail": "8 kept",
-   "severity": "pass",
+   "ok": false,
+   "detail": "lost: ['100%', '10+', 'Continue Exploring']",
+   "severity": "med",
    "weight": 1.5
   },
   {
@@ -427,7 +419,7 @@
    "area": "DESIGN",
    "check": "No blank band between header and first section",
    "ok": true,
-   "detail": "0px",
+   "detail": "-79px",
    "severity": "pass",
    "weight": 2
   },
@@ -442,9 +434,9 @@
   {
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
-   "ok": true,
-   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
-   "severity": "pass",
+   "ok": false,
+   "detail": "banner+main (Bone)",
+   "severity": "med",
    "weight": 1.5
   },
   {
@@ -505,46 +497,32 @@
   }
  ],
  "data": {
-  "title": "Copper Peptides (GHK-Cu) for Skin: Benefits and Research",
+  "title": "Copper Peptide Skincare: GHK-Cu Serum, Day and Night Cream",
   "h1": [
    "Copper Peptide (GHK-Cu)"
   ],
   "h2": [
-   "What Is Copper Peptide?",
-   "Copper Peptide Benefits: What the Evidence Shows",
-   "What 2% GHK-Cu Means",
-   "How to Use Copper Peptide",
-   "Published References",
-   "Frequently Asked Questions",
-   "Shop Copper Peptide Products",
-   "Explore More Research"
+   "5",
+   "100%",
+   "10+",
+   "Continue Exploring"
   ],
-  "pseudo_headings": [
-   "Supports the skin's own collagen & renewal pathways",
-   "Supports skin-renewal cell activity (independent lab study)",
-   "Higher patient satisfaction after laser treatment (small controlled trial)",
-   "Acetyl Hexapeptide-8",
-   "Matrixyl 3000",
-   "PDRN",
-   "Glutathione",
-   "Try Copper Peptide GHK-Cu"
-  ],
+  "pseudo_headings": [],
   "internal_links": [
+   "/collections",
    "/collections/all",
-   "/collections/copper-peptide",
+   "/collections/brightening-glow",
    "/collections/creams-moisturizers",
+   "/collections/fine-lines-wrinkles",
+   "/collections/firming-skin-density",
    "/collections/serums",
-   "/pages/acetyl-hexapeptide-8-research",
+   "/collections/skin-repair-renewal",
    "/pages/contact",
+   "/pages/copper-peptide-research",
    "/pages/faq",
-   "/pages/firming-skin-density",
-   "/pages/glutathione-research",
    "/pages/ingredients",
-   "/pages/matrixyl-3000-research",
    "/pages/our-philosophy",
-   "/pages/pdrn-research",
    "/pages/shipping-returns",
-   "/pages/skin-repair-renewal",
    "/pages/the-science",
    "/policies/contact-information",
    "/policies/legal-notice",
@@ -558,48 +536,16 @@
    "/products/copper-peptide-ghk-cu-renewal-serum",
    "/products/day-night-copper-peptide-ghk-cu-duo-set"
   ],
-  "external_links": [
-   "https://doi.org/10.4172/2329-8847.1000166",
-   "https://pubmed.ncbi.nlm.nih.gov/16847171/",
-   "https://pubmed.ncbi.nlm.nih.gov/19319546/",
-   "https://pubmed.ncbi.nlm.nih.gov/26236730/",
-   "https://pubmed.ncbi.nlm.nih.gov/29986520/",
-   "https://pubmed.ncbi.nlm.nih.gov/37062921/",
-   "https://pubmed.ncbi.nlm.nih.gov/39963574/",
-   "https://pubmed.ncbi.nlm.nih.gov/42573538/",
-   "https://pubmed.ncbi.nlm.nih.gov/42619529/"
-  ],
+  "external_links": [],
   "schema_types": [
-   "BreadcrumbList",
-   "WebPage",
-   "FAQPage"
+   "BreadcrumbList"
   ],
-  "extracted_words": 1325,
-  "main_words": 1555,
+  "extracted_words": 64,
+  "main_words": 280,
   "images": [
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg?v=1787645156&width=3000",
-    "alt": "Blue copper peptide crystals in a glass dish beside a conical flask and beaker of blue solution and a laboratory microscope, representing GHK-Cu clinical research"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg?v=1787663139&width=3000",
-    "alt": "A single copper node radiating fine filaments through a blue collagen-fibre network - Skingenetix copper peptide GHK-Cu research"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-collagen-lattice-density-research.jpg?v=1787663644&width=3000",
-    "alt": "A blue collagen-fibre lattice thickening from loose strands into a dense copper-studded matrix - Skingenetix copper peptide skin renewal research"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-radiant-skin-appearance.jpg?v=1787666106&width=2048",
-    "alt": "A smiling woman in her thirties resting her hand against her cheek on a deep blue background - Skingenetix copper peptide GHK-Cu skin appearance research"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-day-repair-cream-model.jpg?v=1787832420&width=2048",
-    "alt": "Woman holding a jar of Skingenetix Copper Peptide Advanced Day Repair cream beside her face in natural light"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-day-repair-cream-model.jpg?v=1787832420&width=2048",
-    "alt": "Woman holding a jar of Skingenetix Copper Peptide Advanced Day Repair cream beside her face in natural light"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-advanced-day-repair-cream.jpg?v=1787583656&width=3000",
+    "alt": "Woman resting her head on one side holding a jar of Skingenetix Copper Peptide Advanced Day Repair cream against a dark studio backdrop"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_hero_white_bg_4_skingenetix.jpg?v=1787296390&width=2048",
@@ -642,20 +588,20 @@
     "alt": "Skingenetix Day & Night Copper Peptide (GHK-Cu) Duo Set - the day and night creams in front of a backlit fluted glass panel"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
-    "alt": "Electron-microscope style view of a single skin cell in cool pearl grey, representing Acetyl Hexapeptide-8 expression-line research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-fine-lines-wrinkles-2026.jpg?v=1787324955&width=2048",
+    "alt": "Close view of the eye area showing fine expression lines - Skingenetix fine lines and wrinkles peptide range"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg?v=1787650938&width=2048",
-    "alt": "Translucent open cellular matrix structure lit against a deep emerald-teal background, representing the Matrixyl 3000 peptide's role in the skin's collagen network"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-skin-firming-density-peptide-treatment.jpg?v=1787580841&width=2048",
+    "alt": "Defined jawline and neck in profile - Skingenetix peptide treatment for skin firming and density"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?v=1787656228&width=2048",
-    "alt": "Polynucleotide double helix rendered in soft blush pink, representing PDRN skin repair and renewal research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-skin-repair-renewal-2026.jpg?v=1787324956&width=2048",
+    "alt": "A hand resting against the cheek against a clinical blue background - Skingenetix skin repair and renewal peptide range"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
-    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-concern-brightening-glow-2026.jpg?v=1787324956&width=2048",
+    "alt": "Luminous cheekbone lit against a warm champagne background - Skingenetix brightening and glow peptide range"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
@@ -668,108 +614,54 @@
    "headerBottom": 126,
    "rows": [
     {
-     "id": "hero",
-     "type": "image-with-text-overlay",
-     "top": 126,
+     "id": "banner",
+     "type": "collection-banner",
+     "top": 47,
      "h": 440,
      "bg": "rgb(240, 240, 240)",
-     "text": 169,
+     "text": 252,
      "media": 1
     },
     {
-     "id": "hero_banner_css",
+     "id": "main",
+     "type": "main-collection",
+     "top": 487,
+     "h": 1328,
+     "bg": "rgb(240, 240, 240)",
+     "text": 412,
+     "media": 10
+    },
+    {
+     "id": "impact_numbers",
+     "type": "impact-text",
+     "top": 1814,
+     "h": 288,
+     "bg": "rgb(255, 255, 255)",
+     "text": 87,
+     "media": 0
+    },
+    {
+     "id": "related_collections",
+     "type": "image-link-blocks",
+     "top": 2102,
+     "h": 579,
+     "bg": "rgb(240, 240, 240)",
+     "text": 106,
+     "media": 4
+    },
+    {
+     "id": "banner_text_width",
      "type": "custom-html",
-     "top": 566,
+     "top": 2681,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
      "media": 0
     },
     {
-     "id": "overview",
-     "type": "rich-text",
-     "top": 566,
-     "h": 658,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1027,
-     "media": 0
-    },
-    {
-     "id": "evidence",
-     "type": "rich-text",
-     "top": 1223,
-     "h": 898,
-     "bg": "rgb(255, 255, 255)",
-     "text": 2128,
-     "media": 0
-    },
-    {
-     "id": "key_findings",
-     "type": "media-with-text",
-     "top": 2121,
-     "h": 2391,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1717,
-     "media": 3
-    },
-    {
-     "id": "usage",
-     "type": "rich-text",
-     "top": 4512,
-     "h": 498,
-     "bg": "rgb(255, 255, 255)",
-     "text": 633,
-     "media": 0
-    },
-    {
-     "id": "references",
-     "type": "custom-html",
-     "top": 5009,
-     "h": 1116,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1598,
-     "media": 0
-    },
-    {
-     "id": "faq",
-     "type": "faq",
-     "top": 6125,
-     "h": 1117,
-     "bg": "rgb(255, 255, 255)",
-     "text": 334,
-     "media": 2
-    },
-    {
-     "id": "shop_ingredient",
-     "type": "featured-collection",
-     "top": 7242,
-     "h": 820,
-     "bg": "rgb(240, 240, 240)",
-     "text": 395,
-     "media": 10
-    },
-    {
-     "id": "related",
-     "type": "multi-column",
-     "top": 8062,
-     "h": 751,
-     "bg": "rgb(255, 255, 255)",
-     "text": 326,
-     "media": 4
-    },
-    {
-     "id": "cta",
-     "type": "rich-text",
-     "top": 8813,
-     "h": 353,
-     "bg": "rgb(26, 26, 26)",
-     "text": 130,
-     "media": 0
-    },
-    {
      "id": "footer",
      "type": "footer",
-     "top": 9166,
+     "top": 2681,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -778,7 +670,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9682,
+     "top": 3197,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -793,108 +685,54 @@
    "headerBottom": 85,
    "rows": [
     {
-     "id": "hero",
-     "type": "image-with-text-overlay",
-     "top": 85,
+     "id": "banner",
+     "type": "collection-banner",
+     "top": 39,
      "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 169,
+     "text": 252,
      "media": 1
     },
     {
-     "id": "hero_banner_css",
+     "id": "main",
+     "type": "main-collection",
+     "top": 414,
+     "h": 1027,
+     "bg": "rgb(240, 240, 240)",
+     "text": 415,
+     "media": 10
+    },
+    {
+     "id": "impact_numbers",
+     "type": "impact-text",
+     "top": 1440,
+     "h": 480,
+     "bg": "rgb(255, 255, 255)",
+     "text": 87,
+     "media": 0
+    },
+    {
+     "id": "related_collections",
+     "type": "image-link-blocks",
+     "top": 1920,
+     "h": 374,
+     "bg": "rgb(240, 240, 240)",
+     "text": 106,
+     "media": 4
+    },
+    {
+     "id": "banner_text_width",
      "type": "custom-html",
-     "top": 460,
+     "top": 2294,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
      "media": 0
     },
     {
-     "id": "overview",
-     "type": "rich-text",
-     "top": 460,
-     "h": 740,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1027,
-     "media": 0
-    },
-    {
-     "id": "evidence",
-     "type": "rich-text",
-     "top": 1199,
-     "h": 1216,
-     "bg": "rgb(255, 255, 255)",
-     "text": 2128,
-     "media": 0
-    },
-    {
-     "id": "key_findings",
-     "type": "media-with-text",
-     "top": 2416,
-     "h": 3109,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1717,
-     "media": 3
-    },
-    {
-     "id": "usage",
-     "type": "rich-text",
-     "top": 5524,
-     "h": 568,
-     "bg": "rgb(255, 255, 255)",
-     "text": 633,
-     "media": 0
-    },
-    {
-     "id": "references",
-     "type": "custom-html",
-     "top": 6092,
-     "h": 1728,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1598,
-     "media": 0
-    },
-    {
-     "id": "faq",
-     "type": "faq",
-     "top": 7820,
-     "h": 1021,
-     "bg": "rgb(255, 255, 255)",
-     "text": 334,
-     "media": 2
-    },
-    {
-     "id": "shop_ingredient",
-     "type": "featured-collection",
-     "top": 8841,
-     "h": 609,
-     "bg": "rgb(240, 240, 240)",
-     "text": 395,
-     "media": 10
-    },
-    {
-     "id": "related",
-     "type": "multi-column",
-     "top": 9450,
-     "h": 580,
-     "bg": "rgb(255, 255, 255)",
-     "text": 326,
-     "media": 4
-    },
-    {
-     "id": "cta",
-     "type": "rich-text",
-     "top": 10030,
-     "h": 288,
-     "bg": "rgb(26, 26, 26)",
-     "text": 130,
-     "media": 0
-    },
-    {
      "id": "footer",
      "type": "footer",
-     "top": 10318,
+     "top": 2294,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -903,7 +741,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 11357,
+     "top": 3334,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

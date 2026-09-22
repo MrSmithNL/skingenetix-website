@@ -7,6 +7,7 @@
 | SEO | **98/100** |
 | GEO | **100/100** |
 | DESIGN | **100/100** |
+| MARKETING | **93/100** |
 
 ## SEO
 
@@ -49,15 +50,15 @@
 | ✅ | A10 · head term in first 30% of text | 'argireline' |
 | ✅ | A1 · definition sentence early ('X is a …') | is the |
 | ✅ | A8 · secondary intents covered on the page | ['acetyl hexapeptide-8', 'expression lines'] / ['acetyl hexapeptide-8', 'expression lines'] |
-| ✅ | A2 · atomic paragraphs (none > 120 words) | 29 paragraphs, 0 too long |
-| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 11 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 38 figures |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 30 paragraphs, 0 too long |
+| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 9 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 43 figures |
 | ✅ | A3 · cited sources ≥ 3 | 32 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | ✅ | E1 · visible last-reviewed/updated date | Last updated |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 2 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 1148 words extracted (main text 1305) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 1136 words extracted (main text 1293) |
 | ✅ | Head term survives extraction |  |
 | ✅ | H2 sections survive extraction | 8 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -78,27 +79,39 @@
 | ✅ | No broken images (mobile) | none |
 | ✅ | Headings never break mid-word (mobile) | none |
 
+## MARKETING
+
+| | Check | Detail |
+|---|---|---|
+| ✅ | Opening states a concrete skin outcome | ingredient researchargireline acetyl hexapeptide-8 a synthetic hexapeptide shown in clinical studies to visibly soften the look of expressio |
+| ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 2 people |
+| ✅ | Hedging ≤ 2.0 per 100 words (science page) | 0.2/100 words: ['is valued for', 'valued in skincare'] |
+| ✅ | No claim known to be unsupported (docs/claims/) | clean |
+| ✅ | No medicinal wording (EU cosmetic-claims rules) | clean |
+| ✅ | Path to purchase: links to at least one product | 3 products linked |
+| 🟡 | Every result figure sits next to its source | 7 unsourced: ['48.9% overall anti-wrinkle efficacy vs placebo', '48.9% total anti-wrinkle efficacy in the Acetyl Hexapeptide-8 group vs 0% in placebo'] |
+
 ## Outline as served
 
 - **H1:** ['Argireline® (Acetyl Hexapeptide-8)']
 - **H2:** ['What Is Argireline?', 'What Does Argireline Do for Expression Lines?', 'What 10% Argireline® Means', 'How to Use Argireline', 'Published References', 'Frequently Asked Questions', 'Shop Acetyl Hexapeptide-8 Products', 'Explore More Research']
 - **Visual-only headings:** ['Copper Peptide (GHK-Cu)', 'Matrixyl 3000', 'PDRN', 'Glutathione', 'Try Acetyl Hexapeptide-8']
 - **Schema types:** ['BreadcrumbList', 'WebPage', 'FAQPage']
-- **Extracted words (no JS):** 1148 of 1305
+- **Extracted words (no JS):** 1136 of 1293
 
 ## Section map (desktop)
 
 | Top | Height | Section | Type | Background |
 |---|---|---|---|---|
 | 126 | 440 | hero | image-with-text-overlay | Bone |
-| 566 | 634 | overview | rich-text | Bone |
-| 1199 | 778 | evidence | rich-text | White |
-| 1977 | 2299 | key_findings_ba | research-before-after | Bone |
-| 4276 | 522 | usage | rich-text | White |
-| 4797 | 866 | references | custom-html | Bone |
-| 5663 | 1117 | faq | faq | White |
-| 6780 | 850 | shop_ingredient | featured-collection | Bone |
-| 7630 | 775 | related | multi-column | White |
-| 8405 | 353 | cta | rich-text | Graphite |
-| 8758 | 516 | footer | footer | Bone |
-| 9274 | 0 | brand_layout_css | custom-html | Bone |
+| 566 | 586 | overview | rich-text | Bone |
+| 1151 | 778 | evidence | rich-text | White |
+| 1929 | 2299 | key_findings_ba | research-before-after | Bone |
+| 4228 | 522 | usage | rich-text | White |
+| 4749 | 866 | references | custom-html | Bone |
+| 5615 | 1117 | faq | faq | White |
+| 6732 | 850 | shop_ingredient | featured-collection | Bone |
+| 7582 | 775 | related | multi-column | White |
+| 8357 | 353 | cta | rich-text | Graphite |
+| 8710 | 516 | footer | footer | Bone |
+| 9226 | 0 | brand_layout_css | custom-html | Bone |

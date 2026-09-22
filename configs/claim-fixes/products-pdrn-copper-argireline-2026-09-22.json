@@ -1,0 +1,169 @@
+{
+  "_about": "Product copy for PDRN, Argireline and copper, rewritten 2026-09-22 to the strongest verified claims (docs/claims/). The 'What to expect' timelines had no source (8–12 weeks, 1–2 weeks, 4–8 weeks); they are replaced with the timelines the studies actually measured: PDRN visible from day 14, measured at 28 days (Ye 2026); GHK-Cu measured at 8 weeks (Badenhorst 2016); Argireline graded at 4 weeks (Wang 2013). Tool: scripts/fix-claims.py.",
+  "fixes": [
+    {
+      "where": [
+        "metafield:custom.key_benefits"
+      ],
+      "only": [
+        "pdrn-renewal-serum custom",
+        "pdrn-1-serum-cream-full-set custom"
+      ],
+      "patterns": {
+        "en": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "de": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "nl": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "fr": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "es": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "it": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\""
+      },
+      "replace": {
+        "en": "\"value\":\"in clinical testing, PDRN's smoothing effect was visible from day 14 and measured at 28 days — use morning and evening for the best results.\"",
+        "de": "\"value\":\"in klinischen Tests war die glättende Wirkung von PDRN ab Tag 14 sichtbar und wurde nach 28 Tagen gemessen – für beste Ergebnisse morgens und abends anwenden.\"",
+        "nl": "\"value\":\"in klinische tests was het gladmakende effect van PDRN zichtbaar vanaf dag 14 en gemeten na 28 dagen – gebruik 's ochtends en 's avonds voor het beste resultaat.\"",
+        "fr": "\"value\":\"en tests cliniques, l'effet lissant du PDRN était visible dès le 14e jour et mesuré à 28 jours – à utiliser matin et soir pour de meilleurs résultats.\"",
+        "es": "\"value\":\"en pruebas clínicas, el efecto alisador del PDRN fue visible desde el día 14 y se midió a los 28 días; úsalo mañana y noche para obtener los mejores resultados.\"",
+        "it": "\"value\":\"nei test clinici, l'effetto levigante del PDRN era visibile dal 14° giorno e misurato a 28 giorni: usalo mattina e sera per risultati ottimali.\""
+      }
+    },
+    {
+      "where": [
+        "metafield:custom.key_benefits"
+      ],
+      "only": [
+        "skin-repair-renewal-serum-duo",
+        "complete-skin-repair-renewal-routine"
+      ],
+      "patterns": {
+        "en": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "de": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "nl": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "fr": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "es": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "it": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\""
+      },
+      "replace": {
+        "en": "\"value\":\"in clinical testing, PDRN visibly smoothed crow's feet from day 14, and GHK-Cu's wrinkle-volume result was measured after 8 weeks — use both morning and evening.\"",
+        "de": "\"value\":\"in klinischen Tests glättete PDRN Krähenfüße sichtbar ab Tag 14, und das Ergebnis von GHK-Cu beim Faltenvolumen wurde nach 8 Wochen gemessen – beide morgens und abends anwenden.\"",
+        "nl": "\"value\":\"in klinische tests maakte PDRN kraaienpootjes zichtbaar gladder vanaf dag 14, en het resultaat van GHK-Cu op het rimpelvolume werd na 8 weken gemeten – gebruik beide 's ochtends en 's avonds.\"",
+        "fr": "\"value\":\"en tests cliniques, le PDRN a visiblement lissé les pattes d'oie dès le 14e jour, et le résultat du GHK-Cu sur le volume des rides a été mesuré après 8 semaines – à utiliser matin et soir.\"",
+        "es": "\"value\":\"en pruebas clínicas, el PDRN alisó visiblemente las patas de gallo desde el día 14, y el resultado del GHK-Cu en el volumen de las arrugas se midió tras 8 semanas; usa ambos mañana y noche.\"",
+        "it": "\"value\":\"nei test clinici, il PDRN ha levigato visibilmente le zampe di gallina dal 14° giorno e il risultato del GHK-Cu sul volume delle rughe è stato misurato dopo 8 settimane: usali entrambi mattina e sera.\""
+      }
+    },
+    {
+      "where": [
+        "metafield:custom.key_benefits"
+      ],
+      "only": [
+        "copper-peptide-ghk-cu-renewal-serum custom",
+        "complete-copper-peptide-ghk-cu-day-night"
+      ],
+      "patterns": {
+        "en": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "de": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "nl": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "fr": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "es": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "it": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\""
+      },
+      "replace": {
+        "en": "\"value\":\"smoother, more hydrated-feeling skin within days; in the double-blind trial, GHK-Cu's wrinkle-volume result was measured after 8 weeks of twice-daily use.\"",
+        "de": "\"value\":\"glattere, spürbar besser hydratisierte Haut innerhalb weniger Tage; in der Doppelblindstudie wurde das Ergebnis von GHK-Cu beim Faltenvolumen nach 8 Wochen zweimal täglicher Anwendung gemessen.\"",
+        "nl": "\"value\":\"een gladdere, voelbaar beter gehydrateerde huid binnen enkele dagen; in de dubbelblinde studie werd het resultaat van GHK-Cu op het rimpelvolume gemeten na 8 weken twee keer per dag gebruik.\"",
+        "fr": "\"value\":\"une peau plus lisse et mieux hydratée en quelques jours ; dans l'essai en double aveugle, le résultat du GHK-Cu sur le volume des rides a été mesuré après 8 semaines d'application deux fois par jour.\"",
+        "es": "\"value\":\"una piel más lisa y con sensación de mayor hidratación en pocos días; en el ensayo doble ciego, el resultado del GHK-Cu en el volumen de las arrugas se midió tras 8 semanas de uso dos veces al día.\"",
+        "it": "\"value\":\"pelle più levigata e con una sensazione di maggiore idratazione in pochi giorni; nello studio in doppio cieco, il risultato del GHK-Cu sul volume delle rughe è stato misurato dopo 8 settimane di uso due volte al giorno.\""
+      }
+    },
+    {
+      "where": [
+        "metafield:custom.key_benefits"
+      ],
+      "only": [
+        "acetyl-hexapeptide-8-anti",
+        "complete-fine-lines-wrinkles-routine",
+        "fine-lines-wrinkles-peptide-duo"
+      ],
+      "patterns": {
+        "en": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "de": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "nl": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "fr": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "es": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\"",
+        "it": "\"value\":\"[^\"]*\\d+(?:[–-]| à | a )\\d+ (?:weeks|Wochen|weken|semaines|semanas|settimane)[^\"]*\""
+      },
+      "replace": {
+        "en": "\"value\":\"in the clinical trial, nearly 1 in 2 people were graded clearly smoother around the eyes after 4 weeks of twice-daily use of 10% Argireline®.\"",
+        "de": "\"value\":\"in der klinischen Studie wurde fast jede zweite Person nach 4 Wochen zweimal täglicher Anwendung von 10 % Argireline® rund um die Augen als deutlich glatter eingestuft.\"",
+        "nl": "\"value\":\"in de klinische studie werd bijna 1 op de 2 mensen na 4 weken twee keer per dag gebruik van 10% Argireline® rond de ogen als duidelijk gladder beoordeeld.\"",
+        "fr": "\"value\":\"dans l'essai clinique, près d'une personne sur deux a été jugée nettement plus lisse autour des yeux après 4 semaines d'application de 10 % d'Argireline® deux fois par jour.\"",
+        "es": "\"value\":\"en el ensayo clínico, casi 1 de cada 2 personas fue valorada con la zona de los ojos claramente más lisa tras 4 semanas de uso de 10 % de Argireline® dos veces al día.\"",
+        "it": "\"value\":\"nello studio clinico, quasi 1 persona su 2 è stata giudicata con il contorno occhi nettamente più levigato dopo 4 settimane di uso del 10% di Argireline® due volte al giorno.\""
+      }
+    },
+    {
+      "where": [
+        "body_html"
+      ],
+      "patterns": {
+        "en": " - one of the most talked-about actives in modern skincare",
+        "de": " - einer der meistdiskutierten Wirkstoffe in der modernen Hautpflege",
+        "nl": " - een van de meest besproken ingrediënten in de huidverzorging van dit moment",
+        "fr": " - l'un des actifs les plus plébiscités du skincare moderne",
+        "es": " - uno de los activos más comentados del skincare moderno",
+        "it": " - uno degli attivi più discussi nella skincare moderna"
+      },
+      "replace": {
+        "en": " - the salmon-DNA active that outperformed retinol head to head in a clinical study",
+        "de": " - der Lachs-DNA-Wirkstoff, der Retinol in einer klinischen Studie im direkten Vergleich übertraf",
+        "nl": " - het actieve ingrediënt uit zalm-DNA dat retinol in een klinische studie in een directe vergelijking versloeg",
+        "fr": " - l'actif issu de l'ADN de saumon qui a surpassé le rétinol en comparaison directe dans une étude clinique",
+        "es": " - el activo de ADN de salmón que superó al retinol en comparación directa en un estudio clínico",
+        "it": " - l'attivo da DNA di salmone che ha superato il retinolo nel confronto diretto in uno studio clinico"
+      }
+    },
+    {
+      "where": [
+        "body_html"
+      ],
+      "patterns": {
+        "en": " - a topical peptide for the look of expression lines",
+        "de": " - ein topisches Peptid gegen Mimikfalten",
+        "nl": " - een topicaal peptide gericht op mimiekrimpels",
+        "fr": " - un peptide topique pour les rides d'expression",
+        "es": " - un péptido tópico para las líneas de expresión",
+        "it": " - un peptide topico per le rughe d'espressione"
+      },
+      "replace": {
+        "en": " - 10% Argireline®, the level used in the clinical trials",
+        "de": " - 10 % Argireline®, die Menge aus den klinischen Studien",
+        "nl": " - 10% Argireline®, de hoeveelheid uit de klinische studies",
+        "fr": " - 10 % d'Argireline®, la dose utilisée dans les essais cliniques",
+        "es": " - 10 % de Argireline®, la dosis usada en los ensayos clínicos",
+        "it": " - 10% di Argireline®, la dose usata negli studi clinici"
+      }
+    },
+    {
+      "where": [
+        "body_html"
+      ],
+      "patterns": {
+        "en": "Acetyl Hexapeptide-8 is the active behind the well-known trade name Argireline®\\.",
+        "de": "Acetyl Hexapeptide-8 ist der Wirkstoff hinter dem bekannten Handelsnamen Argireline®\\.",
+        "nl": "Acetyl Hexapeptide-8 is de werkzame stof achter de bekende handelsnaam Argireline®\\.",
+        "fr": "Acetyl Hexapeptide-8 est l'actif derrière le nom commercial bien connu Argireline®\\.",
+        "es": "Acetyl Hexapeptide-8 es el activo detrás del conocido nombre comercial Argireline®\\.",
+        "it": "Acetyl Hexapeptide-8 è il principio attivo dietro il noto nome commerciale Argireline®\\."
+      },
+      "replace": {
+        "en": "Argireline® is a registered trademark of Lubrizol.",
+        "de": "Argireline® ist eine eingetragene Marke von Lubrizol.",
+        "nl": "Argireline® is een gedeponeerd handelsmerk van Lubrizol.",
+        "fr": "Argireline® est une marque déposée de Lubrizol.",
+        "es": "Argireline® es una marca registrada de Lubrizol.",
+        "it": "Argireline® è un marchio registrato di Lubrizol."
+      }
+    }
+  ]
+}

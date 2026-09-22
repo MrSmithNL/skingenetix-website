@@ -1,0 +1,255 @@
+{
+  "_about": "Product FAQ answers for PDRN, copper and Argireline, rewritten 2026-09-22 around the timelines and evidence the studies measured (docs/claims/). Unsourced '1-2 / 4-8 / 8-12 weeks' timelines and unsupported 'gentle, well-tolerated' answers replaced. Whole-answer replacement per metaobject, six languages. Tool: scripts/fix-claims.py.",
+  "fixes": [
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/faq-item-xbjwcrgf"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "A copper peptide your own body makes, first isolated from human plasma in 1973. In a double-blind trial, a GHK-Cu serum reduced wrinkle volume 55.8% more than the same serum without it, and a 2026 systematic review found GHK-Cu significantly reduced wrinkle volume and depth compared with controls. This serum contains 2% copper peptide (GHK-Cu), or 20,000 ppm.",
+        "de": "Ein Kupferpeptid, das Ihr Körper selbst bildet, 1973 erstmals aus menschlichem Blutplasma isoliert. In einer Doppelblindstudie verringerte ein GHK-Cu-Serum das Faltenvolumen um 55,8 % mehr als dasselbe Serum ohne GHK-Cu, und eine systematische Übersichtsarbeit von 2026 fand, dass GHK-Cu Faltenvolumen und -tiefe im Vergleich zu Kontrollen deutlich verringerte. Dieses Serum enthält 2 % Copper Peptide (GHK-Cu), also 20.000 ppm.",
+        "nl": "Een koperpeptide dat je lichaam zelf aanmaakt, in 1973 voor het eerst geïsoleerd uit menselijk bloedplasma. In een dubbelblinde studie verminderde een GHK-Cu-serum het rimpelvolume 55,8% meer dan hetzelfde serum zonder GHK-Cu, en een systematische review uit 2026 vond dat GHK-Cu het rimpelvolume en de rimpeldiepte duidelijk verminderde ten opzichte van controles. Dit serum bevat 2% copper peptide (GHK-Cu), oftewel 20.000 ppm.",
+        "fr": "Un peptide de cuivre que votre corps produit lui-même, isolé pour la première fois du plasma humain en 1973. Dans un essai en double aveugle, un sérum au GHK-Cu a réduit le volume des rides de 55,8 % de plus que le même sérum sans GHK-Cu, et une revue systématique de 2026 a conclu que le GHK-Cu réduisait nettement le volume et la profondeur des rides par rapport aux témoins. Ce sérum contient 2 % de copper peptide (GHK-Cu), soit 20 000 ppm.",
+        "es": "Un péptido de cobre que tu propio cuerpo produce, aislado por primera vez del plasma humano en 1973. En un ensayo doble ciego, un sérum con GHK-Cu redujo el volumen de las arrugas un 55,8 % más que el mismo sérum sin GHK-Cu, y una revisión sistemática de 2026 concluyó que el GHK-Cu redujo claramente el volumen y la profundidad de las arrugas frente a los controles. Este sérum contiene un 2 % de copper peptide (GHK-Cu), es decir, 20.000 ppm.",
+        "it": "Un peptide di rame che il tuo corpo produce da sé, isolato per la prima volta dal plasma umano nel 1973. In uno studio in doppio cieco, un siero al GHK-Cu ha ridotto il volume delle rughe del 55,8% in più rispetto allo stesso siero senza GHK-Cu, e una revisione sistematica del 2026 ha rilevato che il GHK-Cu ha ridotto nettamente volume e profondità delle rughe rispetto ai controlli. Questo siero contiene il 2% di copper peptide (GHK-Cu), pari a 20.000 ppm."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-cp-complete-q3"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "No. The three products are designed to be layered: the serum treats, the creams hydrate and seal, and each states its 2% on the pack. If your skin is new to peptides, start once daily, build up to twice, and patch-test first.",
+        "de": "Nein. Die drei Produkte sind zum Schichten gemacht: Das Serum pflegt gezielt, die Cremes spenden Feuchtigkeit und schließen ab, und jedes nennt seine 2 % auf der Verpackung. Wenn Ihre Haut Peptide noch nicht gewohnt ist, beginnen Sie einmal täglich, steigern Sie auf zweimal und machen Sie zuerst einen Verträglichkeitstest.",
+        "nl": "Nee. De drie producten zijn gemaakt om te combineren: het serum verzorgt gericht, de crèmes hydrateren en sluiten af, en elk vermeldt zijn 2% op de verpakking. Is je huid nog niet gewend aan peptiden, begin dan één keer per dag, bouw op naar twee keer en doe eerst een test op een klein plekje.",
+        "fr": "Non. Les trois produits sont conçus pour être superposés : le sérum traite, les crèmes hydratent et scellent, et chacun indique ses 2 % sur l'emballage. Si votre peau n'est pas habituée aux peptides, commencez une fois par jour, passez à deux fois et faites d'abord un test de tolérance.",
+        "es": "No. Los tres productos están pensados para aplicarse en capas: el sérum trata, las cremas hidratan y sellan, y cada uno indica su 2 % en el envase. Si tu piel no está acostumbrada a los péptidos, empieza una vez al día, aumenta a dos y haz primero una prueba de tolerancia.",
+        "it": "No. I tre prodotti sono pensati per essere stratificati: il siero tratta, le creme idratano e sigillano, e ognuno indica il suo 2% sulla confezione. Se la tua pelle non è abituata ai peptidi, inizia una volta al giorno, passa a due e fai prima un test di tolleranza."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-cp-complete-q5"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "Skin feels smoother and more hydrated within days. For the wrinkle results, follow the clinical evidence: in the double-blind trial, GHK-Cu's wrinkle-volume reduction was measured after 8 weeks of twice-daily use, so give it at least 8 weeks.",
+        "de": "Die Haut fühlt sich innerhalb weniger Tage glatter und besser hydratisiert an. Für die Faltenergebnisse gilt die klinische Evidenz: In der Doppelblindstudie wurde die Reduktion des Faltenvolumens durch GHK-Cu nach 8 Wochen zweimal täglicher Anwendung gemessen – geben Sie der Pflege also mindestens 8 Wochen.",
+        "nl": "De huid voelt binnen enkele dagen gladder en beter gehydrateerd aan. Voor de rimpelresultaten geldt het klinische bewijs: in de dubbelblinde studie werd de vermindering van het rimpelvolume door GHK-Cu gemeten na 8 weken twee keer per dag gebruik, dus geef het minstens 8 weken.",
+        "fr": "La peau est plus lisse et mieux hydratée en quelques jours. Pour les rides, fiez-vous aux données cliniques : dans l'essai en double aveugle, la réduction du volume des rides par le GHK-Cu a été mesurée après 8 semaines d'application deux fois par jour – comptez donc au moins 8 semaines.",
+        "es": "La piel se nota más lisa e hidratada en pocos días. Para los resultados en las arrugas, guíate por la evidencia clínica: en el ensayo doble ciego, la reducción del volumen de las arrugas con GHK-Cu se midió tras 8 semanas de uso dos veces al día, así que dale al menos 8 semanas.",
+        "it": "La pelle risulta più levigata e idratata in pochi giorni. Per i risultati sulle rughe, segui le prove cliniche: nello studio in doppio cieco, la riduzione del volume delle rughe con il GHK-Cu è stata misurata dopo 8 settimane di uso due volte al giorno, quindi concedigli almeno 8 settimane."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-cp-duo-q6"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "Skin feels smoother and more hydrated within days. For the wrinkle results, follow the clinical evidence: in the double-blind trial, GHK-Cu's wrinkle-volume reduction was measured after 8 weeks of twice-daily use, so give it at least 8 weeks.",
+        "de": "Die Haut fühlt sich innerhalb weniger Tage glatter und besser hydratisiert an. Für die Faltenergebnisse gilt die klinische Evidenz: In der Doppelblindstudie wurde die Reduktion des Faltenvolumens durch GHK-Cu nach 8 Wochen zweimal täglicher Anwendung gemessen – geben Sie der Pflege also mindestens 8 Wochen.",
+        "nl": "De huid voelt binnen enkele dagen gladder en beter gehydrateerd aan. Voor de rimpelresultaten geldt het klinische bewijs: in de dubbelblinde studie werd de vermindering van het rimpelvolume door GHK-Cu gemeten na 8 weken twee keer per dag gebruik, dus geef het minstens 8 weken.",
+        "fr": "La peau est plus lisse et mieux hydratée en quelques jours. Pour les rides, fiez-vous aux données cliniques : dans l'essai en double aveugle, la réduction du volume des rides par le GHK-Cu a été mesurée après 8 semaines d'application deux fois par jour – comptez donc au moins 8 semaines.",
+        "es": "La piel se nota más lisa e hidratada en pocos días. Para los resultados en las arrugas, guíate por la evidencia clínica: en el ensayo doble ciego, la reducción del volumen de las arrugas con GHK-Cu se midió tras 8 semanas de uso dos veces al día, así que dale al menos 8 semanas.",
+        "it": "La pelle risulta più levigata e idratata in pochi giorni. Per i risultati sulle rughe, segui le prove cliniche: nello studio in doppio cieco, la riduzione del volume delle rughe con il GHK-Cu è stata misurata dopo 8 settimane di uso due volte al giorno, quindi concedigli almeno 8 settimane."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-pdrn-ritual-q5"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "In clinical testing, PDRN's smoothing effect on crow's feet was visible from day 14 and measured at 28 days, with up to 23% less wrinkle area. Use the serum morning and evening and the cream at night for at least 4 weeks.",
+        "de": "In klinischen Tests war die glättende Wirkung von PDRN auf Krähenfüße ab Tag 14 sichtbar und wurde nach 28 Tagen gemessen – mit bis zu 23 % weniger Faltenfläche. Verwenden Sie das Serum morgens und abends und die Creme nachts, mindestens 4 Wochen lang.",
+        "nl": "In klinische tests was het gladmakende effect van PDRN op kraaienpootjes zichtbaar vanaf dag 14 en gemeten na 28 dagen, met tot 23% minder rimpeloppervlak. Gebruik het serum 's ochtends en 's avonds en de crème 's nachts, minstens 4 weken lang.",
+        "fr": "En tests cliniques, l'effet lissant du PDRN sur les pattes d'oie était visible dès le 14e jour et mesuré à 28 jours, avec jusqu'à 23 % de surface de rides en moins. Utilisez le sérum matin et soir et la crème la nuit, pendant au moins 4 semaines.",
+        "es": "En pruebas clínicas, el efecto alisador del PDRN en las patas de gallo fue visible desde el día 14 y se midió a los 28 días, con hasta un 23 % menos de superficie de arrugas. Usa el sérum mañana y noche y la crema por la noche durante al menos 4 semanas.",
+        "it": "Nei test clinici, l'effetto levigante del PDRN sulle zampe di gallina era visibile dal 14° giorno e misurato a 28 giorni, con fino al 23% di superficie delle rughe in meno. Usa il siero mattina e sera e la crema di notte per almeno 4 settimane."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-repair-duo-q5"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "In clinical testing, PDRN visibly smoothed crow's feet from day 14 (measured at 28 days), and GHK-Cu's wrinkle-volume reduction was measured after 8 weeks. Use the routine twice daily for at least 8 weeks to see the full picture.",
+        "de": "In klinischen Tests glättete PDRN Krähenfüße sichtbar ab Tag 14 (gemessen nach 28 Tagen), und die Reduktion des Faltenvolumens durch GHK-Cu wurde nach 8 Wochen gemessen. Wenden Sie die Routine mindestens 8 Wochen lang zweimal täglich an, um das volle Ergebnis zu sehen.",
+        "nl": "In klinische tests maakte PDRN kraaienpootjes zichtbaar gladder vanaf dag 14 (gemeten na 28 dagen), en de vermindering van het rimpelvolume door GHK-Cu werd na 8 weken gemeten. Gebruik de routine minstens 8 weken twee keer per dag om het volledige resultaat te zien.",
+        "fr": "En tests cliniques, le PDRN a visiblement lissé les pattes d'oie dès le 14e jour (mesure à 28 jours), et la réduction du volume des rides par le GHK-Cu a été mesurée après 8 semaines. Suivez la routine deux fois par jour pendant au moins 8 semaines pour voir le résultat complet.",
+        "es": "En pruebas clínicas, el PDRN alisó visiblemente las patas de gallo desde el día 14 (medido a los 28 días), y la reducción del volumen de las arrugas con GHK-Cu se midió tras 8 semanas. Usa la rutina dos veces al día durante al menos 8 semanas para ver el resultado completo.",
+        "it": "Nei test clinici, il PDRN ha levigato visibilmente le zampe di gallina dal 14° giorno (misurato a 28 giorni) e la riduzione del volume delle rughe con il GHK-Cu è stata misurata dopo 8 settimane. Usa la routine due volte al giorno per almeno 8 settimane per vedere il risultato completo."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-repair-complete-q5"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "In clinical testing, PDRN visibly smoothed crow's feet from day 14 (measured at 28 days), and GHK-Cu's wrinkle-volume reduction was measured after 8 weeks. Use the routine twice daily for at least 8 weeks to see the full picture.",
+        "de": "In klinischen Tests glättete PDRN Krähenfüße sichtbar ab Tag 14 (gemessen nach 28 Tagen), und die Reduktion des Faltenvolumens durch GHK-Cu wurde nach 8 Wochen gemessen. Wenden Sie die Routine mindestens 8 Wochen lang zweimal täglich an, um das volle Ergebnis zu sehen.",
+        "nl": "In klinische tests maakte PDRN kraaienpootjes zichtbaar gladder vanaf dag 14 (gemeten na 28 dagen), en de vermindering van het rimpelvolume door GHK-Cu werd na 8 weken gemeten. Gebruik de routine minstens 8 weken twee keer per dag om het volledige resultaat te zien.",
+        "fr": "En tests cliniques, le PDRN a visiblement lissé les pattes d'oie dès le 14e jour (mesure à 28 jours), et la réduction du volume des rides par le GHK-Cu a été mesurée après 8 semaines. Suivez la routine deux fois par jour pendant au moins 8 semaines pour voir le résultat complet.",
+        "es": "En pruebas clínicas, el PDRN alisó visiblemente las patas de gallo desde el día 14 (medido a los 28 días), y la reducción del volumen de las arrugas con GHK-Cu se midió tras 8 semanas. Usa la rutina dos veces al día durante al menos 8 semanas para ver el resultado completo.",
+        "it": "Nei test clinici, il PDRN ha levigato visibilmente le zampe di gallina dal 14° giorno (misurato a 28 giorni) e la riduzione del volume delle rughe con il GHK-Cu è stata misurata dopo 8 settimane. Usa la routine due volte al giorno per almeno 8 settimane per vedere il risultato completo."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-repair-complete-q4"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "No. PDRN and copper peptide work in different ways and are designed to be layered in this routine, twice daily. In clinical testing, PDRN caused no reactions in 31 women with sensitive skin. If your skin is new to actives, start once daily and patch-test first.",
+        "de": "Nein. PDRN und Copper Peptide wirken auf unterschiedliche Weise und sind dafür gemacht, in dieser Routine zweimal täglich kombiniert zu werden. In klinischen Tests verursachte PDRN bei 31 Frauen mit empfindlicher Haut keine Reaktionen. Wenn Ihre Haut Wirkstoffe noch nicht gewohnt ist, beginnen Sie einmal täglich und machen Sie zuerst einen Verträglichkeitstest.",
+        "nl": "Nee. PDRN en copper peptide werken op verschillende manieren en zijn gemaakt om in deze routine twee keer per dag te combineren. In klinische tests veroorzaakte PDRN geen reacties bij 31 vrouwen met een gevoelige huid. Is je huid nog niet gewend aan actieve stoffen, begin dan één keer per dag en doe eerst een test op een klein plekje.",
+        "fr": "Non. Le PDRN et le copper peptide agissent différemment et sont conçus pour être associés dans cette routine, deux fois par jour. En tests cliniques, le PDRN n'a provoqué aucune réaction chez 31 femmes à la peau sensible. Si votre peau n'est pas habituée aux actifs, commencez une fois par jour et faites d'abord un test de tolérance.",
+        "es": "No. El PDRN y el copper peptide actúan de forma distinta y están pensados para combinarse en esta rutina dos veces al día. En pruebas clínicas, el PDRN no causó ninguna reacción en 31 mujeres con piel sensible. Si tu piel no está acostumbrada a los activos, empieza una vez al día y haz primero una prueba de tolerancia.",
+        "it": "No. PDRN e copper peptide agiscono in modo diverso e sono pensati per essere abbinati in questa routine due volte al giorno. Nei test clinici, il PDRN non ha causato reazioni in 31 donne con pelle sensibile. Se la tua pelle non è abituata agli attivi, inizia una volta al giorno e fai prima un test di tolleranza."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-finelines-complete-q5"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "In the clinical trial of 10% Argireline®, nearly 1 in 2 people were graded clearly smoother around the eyes after 4 weeks of twice-daily use. Use the routine morning and evening for at least 4 weeks.",
+        "de": "In der klinischen Studie mit 10 % Argireline® wurde fast jede zweite Person nach 4 Wochen zweimal täglicher Anwendung rund um die Augen als deutlich glatter eingestuft. Wenden Sie die Routine mindestens 4 Wochen lang morgens und abends an.",
+        "nl": "In de klinische studie met 10% Argireline® werd bijna 1 op de 2 mensen na 4 weken twee keer per dag gebruik rond de ogen als duidelijk gladder beoordeeld. Gebruik de routine minstens 4 weken 's ochtends en 's avonds.",
+        "fr": "Dans l'essai clinique à 10 % d'Argireline®, près d'une personne sur deux a été jugée nettement plus lisse autour des yeux après 4 semaines d'application deux fois par jour. Suivez la routine matin et soir pendant au moins 4 semaines.",
+        "es": "En el ensayo clínico con un 10 % de Argireline®, casi 1 de cada 2 personas fue valorada con la zona de los ojos claramente más lisa tras 4 semanas de uso dos veces al día. Usa la rutina mañana y noche durante al menos 4 semanas.",
+        "it": "Nello studio clinico con il 10% di Argireline®, quasi 1 persona su 2 è stata giudicata con il contorno occhi nettamente più levigato dopo 4 settimane di uso due volte al giorno. Usa la routine mattina e sera per almeno 4 settimane."
+      },
+      "readback": false
+    },
+    {
+      "where": [
+        "metaobject:faq_item.answer"
+      ],
+      "only": [
+        "faq_item/bundle-finelines-duo-q5"
+      ],
+      "patterns": {
+        "en": "(?s)^.+$",
+        "de": "(?s)^.+$",
+        "nl": "(?s)^.+$",
+        "fr": "(?s)^.+$",
+        "es": "(?s)^.+$",
+        "it": "(?s)^.+$"
+      },
+      "replace": {
+        "en": "In the clinical trial of 10% Argireline®, nearly 1 in 2 people were graded clearly smoother around the eyes after 4 weeks of twice-daily use. Use the routine morning and evening for at least 4 weeks.",
+        "de": "In der klinischen Studie mit 10 % Argireline® wurde fast jede zweite Person nach 4 Wochen zweimal täglicher Anwendung rund um die Augen als deutlich glatter eingestuft. Wenden Sie die Routine mindestens 4 Wochen lang morgens und abends an.",
+        "nl": "In de klinische studie met 10% Argireline® werd bijna 1 op de 2 mensen na 4 weken twee keer per dag gebruik rond de ogen als duidelijk gladder beoordeeld. Gebruik de routine minstens 4 weken 's ochtends en 's avonds.",
+        "fr": "Dans l'essai clinique à 10 % d'Argireline®, près d'une personne sur deux a été jugée nettement plus lisse autour des yeux après 4 semaines d'application deux fois par jour. Suivez la routine matin et soir pendant au moins 4 semaines.",
+        "es": "En el ensayo clínico con un 10 % de Argireline®, casi 1 de cada 2 personas fue valorada con la zona de los ojos claramente más lisa tras 4 semanas de uso dos veces al día. Usa la rutina mañana y noche durante al menos 4 semanas.",
+        "it": "Nello studio clinico con il 10% di Argireline®, quasi 1 persona su 2 è stata giudicata con il contorno occhi nettamente più levigato dopo 4 settimane di uso due volte al giorno. Usa la routine mattina e sera per almeno 4 settimane."
+      },
+      "readback": false
+    }
+  ]
+}
