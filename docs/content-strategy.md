@@ -1,5 +1,11 @@
 # Content Strategy — Skingenetix (CLIENT-003)
 
+> ⚠️ **SUPERSEDED 2026-09-22 by `docs/content-plan-2026.md` + `docs/keyword-strategy-2026.md`.**
+> This was a pre-launch draft and is factually wrong in ways that matter: it claims 9 published
+> languages (there are 6), and `seo-strategy.md` credits Langify for hreflang (never installed —
+> the store runs Translate & Adapt). Kept only as a record of the original intent.
+
+
 **Status:** Draft — to be developed based on product range
 
 ---
