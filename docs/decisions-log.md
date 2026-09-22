@@ -167,3 +167,14 @@ so whatever section physically precedes another becomes its "previous section" f
 - **Audited all 32 JSON templates for the same pattern.** `/pages/the-science` was the only instance. Every other injected style section (`banner_text_width` on ten collection templates, `concern_tile_scrim` on the homepage, `hero_image_position`, `faq_image_layout`, `banner_crop_anchor`, `intro_image_position`, `concern_overlay_css`) is **last in its section order** or followed only by another `custom-html`, so none of them collapses anything visible. `page.research-copper-peptide.json` has `hero_banner_css` mid-order but the section after it carries a background, so its hash differs and it never collapsed.
 - **A `liquid` block brings its own 8px cost, which must be paid back.** The theme renders the block as `<div {{ block.shopify_attributes }}>…</div>` inside `.prose`, and that empty div takes a gap in the text stack — enough to push a vertically-centred hero heading up by 8px (301 → 293 on the-science; 334 → 326 on the acetyl page). Add `#shopify-section-{{ section.id }} .prose > div:has(> style) { display: none; }` to the block's own CSS. The `<style>` inside still applies: `display` does not affect the CSSOM.
 - Verified by full-page pixel diff at 390 and 1440. Above the gap the only changed rows are the rotating announcement bar; below it, once shifted by the 80px (40px on mobile) that was added, the page is identical to the pixel.
+
+---
+
+## ADR-2026-09-22-R: Medical reviewer credited before her review
+
+**Date:** 2026-09-22
+**Status:** Accepted (Malcolm), pending Dr Bodde's confirmation
+**Context:** The science pages had no named expert reviewer, and both external AI auditors (ChatGPT, Gemini) marked the Matrixyl hub down only on author and expert review (7–8/10). The standing rule was to add Dr Esther Bodde's byline only after she had read the pages.
+**Decision:** Malcolm: "Lets already add Esther Bodde as verified. I will check with her." The credit went live on 2026-09-22 on the four rebuilt hubs and both study pages, in six languages, in two places: the visible byline and `reviewedBy` in the JSON-LD. The glutathione hub is excluded until it has been rebuilt against its claims register.
+**Wording:** "Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician". This is Malcolm's decided credential. Hairgenetix's "Cosmetic & Plastic Surgeon" is flagged as possibly inaccurate and is not used. The credential stays in English in every locale, because a translation can read as a protected professional title.
+**Consequences:** The pages state a review that has not happened yet. If she declines or asks for changes, run `python3 scripts/set-reviewer.py configs/reviewers/esther-bodde.json --remove --apply`. It removes the credit everywhere in one step and keeps the author line and our own `lastReviewed` date.

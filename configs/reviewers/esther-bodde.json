@@ -1,0 +1,40 @@
+{
+  "_about": "Medical reviewer credit for the Skingenetix science pages. Added 2026-09-22 on Malcolm's instruction ('Lets already add Esther Bodde as verified. I will check with her'), BEFORE Dr Bodde has read the pages. Malcolm is confirming with her. If she declines or asks for changes, take it off everywhere with: python3 scripts/set-reviewer.py configs/reviewers/esther-bodde.json --remove --apply. Credential wording is Malcolm's decision of 2026-09-22 (docs/todo.md CONTENT-001: 'Dr. Esther Bodde, Cosmetic & Medical Physician'). The sister brand's 'Cosmetic & Plastic Surgeon' is flagged there as possibly inaccurate, so it is not used. The credential stays in English in every locale: a translated title can read as a protected professional title (e.g. German Facharzt titles). No profile URL: hairgenetix.com/pages/esther-bodde 404s (found 2026-09-22), so the JSON-LD Person carries no url/sameAs.",
+  "reviewed": "2026-09-22",
+  "person": {"@type": "Person", "name": "Esther Bodde", "honorificPrefix": "Dr", "jobTitle": "Cosmetic & Medical Physician"},
+  "marker": "Esther Bodde",
+  "sentence": {
+    "en": "Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician.",
+    "de": "Medizinisch geprüft von Dr. Esther Bodde (Cosmetic & Medical Physician).",
+    "nl": "Medisch beoordeeld door dr. Esther Bodde (Cosmetic & Medical Physician).",
+    "fr": "Vérifié sur le plan médical par le Dr Esther Bodde (Cosmetic & Medical Physician).",
+    "es": "Revisado médicamente por la Dra. Esther Bodde (Cosmetic & Medical Physician).",
+    "it": "Revisione medica della dott.ssa Esther Bodde (Cosmetic & Medical Physician)."
+  },
+  "author": {
+    "en": "By Skingenetix.",
+    "de": "Von Skingenetix.",
+    "nl": "Door Skingenetix.",
+    "fr": "Par Skingenetix.",
+    "es": "Por Skingenetix.",
+    "it": "A cura di Skingenetix."
+  },
+  "date_marker": {
+    "en": "Last (?:updated|reviewed)",
+    "de": "Zuletzt (?:aktualisiert|geprüft)",
+    "nl": "Laatst (?:bijgewerkt|gecontroleerd)",
+    "fr": "Dernière (?:mise à jour|vérification|révision)",
+    "es": "Última (?:actualización|revisión)",
+    "it": "Ultim[oa] (?:aggiornamento|revisione)"
+  },
+  "hubs": [
+    {"spec": "configs/hub-upgrades/pdrn-research.json", "byline": "overview.op.content", "jsonld_host": "references"},
+    {"spec": "configs/hub-upgrades/acetyl-hexapeptide-8-research.json", "byline": "overview.op.content", "jsonld_host": "references"},
+    {"spec": "configs/hub-upgrades/copper-peptide-research.json", "byline": "overview.op.content", "jsonld_host": "references"},
+    {"spec": "configs/hub-upgrades/matrixyl-3000-research.json", "byline": "overview.op.content", "jsonld_host": "references"}
+  ],
+  "studies": [
+    "configs/studies/argireline-crows-feet-trial-wang-2013.json",
+    "configs/studies/pdrn-vs-retinol-split-face-trial-ye-2026.json"
+  ]
+}
