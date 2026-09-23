@@ -1,64 +1,8 @@
 {
-  "_about": "Argireline hub, English template pass (Malcolm, 2026-09-23): overview gets the transparent product+box cut-out on the right; the 'three strengths' prose and the summary box merge into one anchored list; two new findings cards give every summary line an image to land on; usage gets its two images; Published References is absorbed into a 10-row Evidence & Sources table (Kraeling and Hoppel split — they were one row with Kraeling's title and Hoppel's link) and removed. English only on purpose; translations follow once the copy is settled.",
+  "_about": "Argireline hub, English template pass (Malcolm, 2026-09-23): overview gets the transparent product+box cut-out on the right; the 'three strengths' prose and the summary box merge into one anchored list; two new findings cards give every summary line an image to land on; usage gets its two images; Published References is absorbed into a 10-row Evidence & Sources table (Kraeling and Hoppel split — they were one row with Kraeling's title and Hoppel's link) and removed. English only on purpose; translations follow once the copy is settled. Images swapped 2026-09-23 on Malcolm's instruction: the usage rows now use our own pedestal hero (the 10% line on the label is legible, which is that section's point) and the F5 nbp_flash_02 application shot from the serum-dropper-faces wave. This also retires the clear-glass/copper-cap 'ARGIRELINE 10%' bottle, which was a different artwork from the frosted silver bottle used everywhere else on the page. ⚠ 2026-09-23: `overview` and `evidence` REMOVED from this spec. They are owned by acetyl-hexapeptide-8-layout-2026-09-23.json; keeping copies here meant re-applying this spec reverted the layout pass (it did, once). One section, one owning spec.",
   "template": "templates/page.research-argireline.json",
   "page": "acetyl-hexapeptide-8-research",
   "add_sections": [
-    {
-      "id": "overview",
-      "after": "stats",
-      "section": {
-        "type": "media-with-text",
-        "settings": {
-          "full_width": false,
-          "alternate_media_position": false,
-          "spacing": "small"
-        },
-        "blocks": {
-          "ov1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/skingenetix-argireline-product-box-cutout-2026.png",
-              "media_width": 40,
-              "media_position": "end",
-              "text_position": "place-self-center-start text-start",
-              "icon": "none",
-              "icon_width": 48,
-              "title": "",
-              "background": "#F0F0F0",
-              "text_color": "#1a1a1a",
-              "content": "<h2>What Is Argireline?</h2><p><strong>Argireline® is the trade name of acetyl hexapeptide-8 (also listed as acetyl hexapeptide-3), a synthetic peptide developed by Lipotec, now part of Lubrizol.</strong> It softens the look of expression lines around the eyes and forehead. In a double-blind, placebo-controlled trial, nearly 1 in 2 people using 10% Argireline were graded clearly smoother around the eyes after 4 weeks. On placebo, no one was.</p><p>Its results have been measured with silicone skin replicas and skin-surface imaging, not only judged by eye.</p><h3>At a glance</h3><ul><li><strong>What it is:</strong> Argireline®, the trade name of acetyl hexapeptide-8, a synthetic peptide modelled on part of a protein involved in facial expression, used to soften the look of expression lines.</li><li><strong>Best evidence:</strong> 22 of 45 people using 10% Argireline were graded clearly smoother around the eyes after 4 weeks, against 0 of 15 on placebo, with roughness down on silicone skin replicas, in a double-blind trial (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</li><li><strong>Independent evidence:</strong> the only independent imaging test found no difference between a serum with Argireline and the same serum without it in 19 women (Henseler, 2023). A 24-woman trial found forehead roughness down at day 20 but not at day 60 (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>).</li><li><strong>Not shown:</strong> that it reaches the muscle. A regulator's lab study found none of it in the dermis; any effect is at the skin surface. It is not a needle-free alternative to injections.</li><li><strong>Safety:</strong> no adverse effects reported in the controlled trials. Patch-test first.</li><li><strong>How to use:</strong> twice a day around the eyes and forehead, for 4 weeks, with SPF in the morning.</li></ul><p>To use it in a routine, see our guide to <a href=\"/pages/fine-lines-wrinkles\">fine lines and wrinkles</a>, or go back to <a href=\"/pages/the-science\">Science</a>.</p><p><em>By Skingenetix. Medically reviewed by Dr Esther Bodde, Cosmetic &amp; Medical Physician. Every figure on this page was checked against its original source: the published paper or its PubMed record. Last reviewed 23 September 2026.</em></p>"
-            }
-          }
-        },
-        "block_order": [
-          "ov1"
-        ]
-      }
-    },
-    {
-      "id": "evidence",
-      "after": "overview",
-      "section": {
-        "type": "rich-text",
-        "settings": {
-          "full_width": true,
-          "content_width": "medium",
-          "text_position": "start",
-          "background": "#ffffff"
-        },
-        "blocks": {
-          "body": {
-            "type": "richtext",
-            "settings": {
-              "content": "<h2>What Does Argireline Do for Expression Lines?</h2><p>Expression lines form where facial muscles repeatedly contract, such as crow's feet and forehead lines. Argireline is modelled on part of the SNAP-25 protein. In laboratory studies it interferes with the SNARE complex that nerve endings use to release the signal for a muscle to contract (<a href='https://pubmed.ncbi.nlm.nih.gov/18498523/' target='_blank' rel='noopener'>Blanes-Mira et al., 2002</a>).</p><p><strong>What the evidence shows, in short.</strong> Each line below opens the study that supports it.</p><ul><li><a href=\"#rba-f1\">Nearly 1 in 2 were graded clearly smoother after 4 weeks</a> — 22 of 45 people using 10% Argireline, against 0 of 15 on placebo, in a double-blind trial.</li><li><a href=\"#rba-f2\">Wrinkle depth down up to 30% in 30 days</a> — the developers' own small study, so indicative only.</li><li><a href=\"#rba-f3\">Forehead roughness fell 7.4% by day 20 while placebo rose 4.3%</a> — a second placebo-controlled trial; the difference was gone by day 60.</li><li><a href=\"#rba-f4\">No side effects were reported in any of the controlled trials</a> — 45 people, 4 weeks, around the eyes.</li><li><a href=\"#rba-f5\">The one independent imaging test found no difference</a> — reported here rather than left out.</li></ul><p>The trials above all used 10% Argireline, the level in our serum, and results were graded after four weeks of twice-daily use. Read <a href=\"/pages/study/argireline-crows-feet-trial-wang-2013\">our appraisal of the 60-person placebo-controlled trial</a>.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "body"
-        ]
-      }
-    },
     {
       "id": "key_findings_ba",
       "after": "evidence",
@@ -165,7 +109,7 @@
           "u1": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-argireline-10-anti-wrinkle-peptide-serum.jpg",
+              "image": "shopify://shop_images/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_pedestal_edge_hero_3_skingenetix.jpg",
               "media_width": 50,
               "media_position": "end",
               "text_position": "place-self-center-start text-start",
@@ -180,7 +124,7 @@
           "u2": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-serum-dropper-applying-to-cheekbone.jpg",
+              "image": "shopify://shop_images/skingenetix-argireline-serum-dropper-cheek-application-2026.jpg",
               "media_width": 50,
               "media_position": "start",
               "text_position": "place-self-center-start text-start",
