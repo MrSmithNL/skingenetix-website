@@ -89,3 +89,23 @@ def test_a_hub_can_carry_its_own_review_date():
     html = '<script type="application/ld+json" id="sgx-webpage-jsonld">{"@type": "WebPage"}</script>'
     out = sr.jsonld_edit(html, sr.hub_cfg(CFG, hub), True)
     assert '"lastReviewed": "2026-09-23"' in out
+
+
+# A hub whose byline lives in a section-level custom-html setting (the Argireline hub after
+# its 2026-09-23 layout pass) must still resolve, or --remove cannot take the credit off it.
+TPL = {"sections": {
+    "overview_rt": {"blocks": {"op": {"settings": {"content": MX_EN}}}},
+    "overview_html": {"settings": {"html": MX_EN}},
+}}
+
+
+def test_three_part_byline_path_resolves_a_block_setting():
+    settings, key = sr.byline_settings(TPL, "overview_rt.op.content")
+    assert key == "content"
+    assert settings[key] == MX_EN
+
+
+def test_two_part_byline_path_resolves_a_section_setting():
+    settings, key = sr.byline_settings(TPL, "overview_html.html")
+    assert key == "html"
+    assert settings[key] == MX_EN

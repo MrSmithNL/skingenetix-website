@@ -61,6 +61,24 @@ def remove_from_byline(value, loc, cfg):
     return value
 
 
+def byline_settings(j, path):
+    """Locate the byline's settings dict and key from a spec path.
+
+    "overview.op.content" is a block setting (rich-text hubs); "overview.html" is a
+    section-level setting, which is where the byline sits once a hub's overview has been
+    rebuilt as custom-html (Argireline, 2026-09-23). Without the two-part form, --remove
+    cannot take the reviewer credit off such a page.
+    """
+    parts = path.split(".")
+    if len(parts) == 3:
+        sec, blk, key = parts
+        return j["sections"][sec]["blocks"][blk]["settings"], key
+    if len(parts) == 2:
+        sec, key = parts
+        return j["sections"][sec]["settings"], key
+    raise ValueError(f"byline path must be 'section.block.setting' or 'section.setting', got {path!r}")
+
+
 def jsonld_edit(html, cfg, add=True):
     """Add (or remove) reviewedBy/lastReviewed on the WebPage JSON-LD inside a custom-html value. None if absent."""
     m = re.search(re.escape(TAG) + r"(.*?)</script>", html, re.S)
@@ -190,16 +208,21 @@ def main():
         spec = json.loads(spec_path.read_text())
         template = spec["template"]
         hdr, j = hu.split(hu.read_file(template))
-        sec, blk, key = h["byline"].split(".")
         hcfg = hub_cfg(cfg, h)
-        settings = j["sections"][sec]["blocks"][blk]["settings"]
+        settings, key = byline_settings(j, h["byline"])
         tr, stale = translations(hu, template)
         if stale:
             print(f"  ⚠ {spec['page']}: outdated translations left untouched (still served, need a fresh translation): {stale}")
         values = {"en": edit(settings[key], "en", cfg)}
         for loc in LOCALES:
             old = tr[loc].get(h["byline"])
-            values[loc] = edit(old, loc, cfg) if old else None
+            if old is None:
+                # No translation registered for this setting at all, so Shopify serves the
+                # English value in every locale and editing English covers all six. Only a
+                # translation that EXISTS but does not match is a real failure (2026-09-23,
+                # the Argireline overview, which is English-only custom-html).
+                continue
+            values[loc] = edit(old, loc, cfg)
         bad = [l for l, v in values.items() if v is None]
         host = h["jsonld_host"]
         host_html = j["sections"][host]["settings"]["html"]
