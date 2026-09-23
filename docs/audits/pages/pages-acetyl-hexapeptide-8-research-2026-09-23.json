@@ -2,7 +2,7 @@
  "path": "/pages/acetyl-hexapeptide-8-research",
  "scores": {
   "SEO": 98,
-  "GEO": 100,
+  "GEO": 96,
   "DESIGN": 100,
   "MARKETING": 93
  },
@@ -163,7 +163,7 @@
    "area": "MARKETING",
    "check": "Every result figure sits next to its source",
    "ok": false,
-   "detail": "5 unsourced: ['Up to ~30% softer-looking wrinkle depth', 'Up to ~30% reduction in measured wrinkle depth after 30 days (early proof-of-concept by th']",
+   "detail": "6 unsourced: ['Up to ~30% softer-looking wrinkle depth', 'Up to ~30% reduction in measured wrinkle depth after 30 days (early proof-of-concept by th']",
    "severity": "low",
    "weight": 1
   },
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "12 <h2>: ['48.9%', '\u22127.4%', '4 weeks', 'What Is Argireline?', 'What Does Argireline Do for Expression Lines?', 'Argireline\u00ae vs Placebo: What the Trials Measured', 'What 10% Argireline\u00ae Means', 'How to Use Argireline', 'Published References', 'Frequently Asked Questions', 'Shop Acetyl Hexapeptide-8 Products', 'Explore More Research']",
+   "detail": "13 <h2>: ['48.9%', '\u22127.4%', '4 weeks', 'What Is Argireline?', 'At a glance', 'What Does Argireline Do for Expression Lines?', 'Argireline\u00ae vs Placebo: What the Trials Measured', 'What 10% Argireline\u00ae Means', 'How to Use Argireline', 'Argireline Evidence & Sources', 'Frequently Asked Questions', 'Shop Acetyl Hexapeptide-8 Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -203,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "13/13",
+   "detail": "18/18",
    "severity": "pass",
    "weight": 1.0
   },
@@ -226,9 +226,9 @@
   {
    "area": "GEO",
    "check": "No links inside tables (AI extraction drops the table)",
-   "ok": true,
-   "detail": "0 found",
-   "severity": "pass",
+   "ok": false,
+   "detail": "9 found",
+   "severity": "med",
    "weight": 1.0
   },
   {
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "85 figures",
+   "detail": "110 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "54 citation markers",
+   "detail": "57 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "1661 words extracted (main text 1935)",
+   "detail": "2405 words extracted (main text 2760)",
    "severity": "pass",
    "weight": 3
   },
@@ -395,7 +395,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "12 kept",
+   "detail": "13 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -514,11 +514,12 @@
    "\u22127.4%",
    "4 weeks",
    "What Is Argireline?",
+   "At a glance",
    "What Does Argireline Do for Expression Lines?",
    "Argireline\u00ae vs Placebo: What the Trials Measured",
    "What 10% Argireline\u00ae Means",
    "How to Use Argireline",
-   "Published References",
+   "Argireline Evidence & Sources",
    "Frequently Asked Questions",
    "Shop Acetyl Hexapeptide-8 Products",
    "Explore More Research"
@@ -561,6 +562,7 @@
    "https://pubmed.ncbi.nlm.nih.gov/18498523/",
    "https://pubmed.ncbi.nlm.nih.gov/23417317/",
    "https://pubmed.ncbi.nlm.nih.gov/24754410/",
+   "https://pubmed.ncbi.nlm.nih.gov/25497319/",
    "https://pubmed.ncbi.nlm.nih.gov/28150423/",
    "https://pubmed.ncbi.nlm.nih.gov/33911590/",
    "https://pubmed.ncbi.nlm.nih.gov/38024099/",
@@ -571,12 +573,16 @@
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 1661,
-  "main_words": 1935,
+  "extracted_words": 2405,
+  "main_words": 2760,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg?v=1787664404&width=3000",
     "alt": "A single clear droplet resting on a plain glass slide, refracting a bright caustic across a dark graphite surface"
+   },
+   {
+    "src": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-serum-cutout-v3-2026.png?width=700",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 10% Argireline, 30ml"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg?v=1787811412&width=3000",
@@ -589,6 +595,22 @@
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg?v=1787812161&width=3000",
     "alt": "Close-up comparison of the fine lines at the outer corner of one eye, slightly softened in the second image while the deeper creases are unchanged. Illustration accompanying the Acetyl Hexapeptide-8 research summary."
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-serum-pipette-drop-forming.jpg?v=1787645419&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - pipette lifted clear with a drop forming"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
+    "alt": "Electron-microscope style view of a single skin cell in cool pearl grey, representing Acetyl Hexapeptide-8 expression-line research"
+   },
+   {
+    "src": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_pedestal_edge_hero_3_skingenetix.jpg?width=1200",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 10% Argireline, on a stone plinth"
+   },
+   {
+    "src": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-serum-dropper-cheek-application-2026.jpg?width=1200",
+    "alt": "Applying Skingenetix Acetyl Hexapeptide-8 serum to the cheek with the dropper"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg?v=1787832939&width=2048",
@@ -652,35 +674,35 @@
     },
     {
      "id": "overview",
-     "type": "rich-text",
+     "type": "custom-html",
      "top": 989,
-     "h": 1034,
+     "h": 1263,
      "bg": "rgb(240, 240, 240)",
-     "text": 1893,
-     "media": 0
+     "text": 1835,
+     "media": 1
     },
     {
      "id": "evidence",
-     "type": "rich-text",
-     "top": 2023,
-     "h": 802,
+     "type": "custom-html",
+     "top": 2253,
+     "h": 1088,
      "bg": "rgb(255, 255, 255)",
-     "text": 1509,
+     "text": 1262,
      "media": 0
     },
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 2825,
-     "h": 2299,
+     "top": 3341,
+     "h": 3891,
      "bg": "rgb(240, 240, 240)",
-     "text": 1849,
-     "media": 3
+     "text": 3502,
+     "media": 5
     },
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 5124,
+     "top": 7232,
      "h": 914,
      "bg": "rgb(255, 255, 255)",
      "text": 1494,
@@ -688,26 +710,26 @@
     },
     {
      "id": "usage",
-     "type": "rich-text",
-     "top": 6037,
-     "h": 522,
+     "type": "custom-html",
+     "top": 8146,
+     "h": 1300,
      "bg": "rgb(240, 240, 240)",
-     "text": 681,
-     "media": 0
+     "text": 725,
+     "media": 2
     },
     {
-     "id": "references",
+     "id": "evidence_sources",
      "type": "custom-html",
-     "top": 6559,
-     "h": 1080,
+     "top": 9446,
+     "h": 1972,
      "bg": "rgb(255, 255, 255)",
-     "text": 1597,
+     "text": 5094,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 7639,
+     "top": 11418,
      "h": 1117,
      "bg": "rgb(240, 240, 240)",
      "text": 383,
@@ -716,7 +738,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 8756,
+     "top": 12535,
      "h": 818,
      "bg": "rgb(255, 255, 255)",
      "text": 66,
@@ -725,7 +747,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 9574,
+     "top": 13353,
      "h": 775,
      "bg": "rgb(240, 240, 240)",
      "text": 306,
@@ -734,7 +756,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 10349,
+     "top": 14128,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
      "text": 142,
@@ -743,7 +765,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 10702,
+     "top": 14481,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -752,7 +774,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 11218,
+     "top": 14997,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -786,35 +808,35 @@
     },
     {
      "id": "overview",
-     "type": "rich-text",
+     "type": "custom-html",
      "top": 1198,
-     "h": 1255,
+     "h": 2279,
      "bg": "rgb(240, 240, 240)",
-     "text": 1893,
-     "media": 0
+     "text": 1835,
+     "media": 1
     },
     {
      "id": "evidence",
-     "type": "rich-text",
-     "top": 2453,
-     "h": 937,
+     "type": "custom-html",
+     "top": 3477,
+     "h": 1546,
      "bg": "rgb(255, 255, 255)",
-     "text": 1509,
+     "text": 1262,
      "media": 0
     },
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 3390,
-     "h": 3041,
+     "top": 5022,
+     "h": 5382,
      "bg": "rgb(240, 240, 240)",
-     "text": 1849,
-     "media": 3
+     "text": 3502,
+     "media": 5
     },
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 6432,
+     "top": 10405,
      "h": 1854,
      "bg": "rgb(255, 255, 255)",
      "text": 1494,
@@ -822,26 +844,26 @@
     },
     {
      "id": "usage",
-     "type": "rich-text",
-     "top": 8285,
-     "h": 533,
+     "type": "custom-html",
+     "top": 12259,
+     "h": 1600,
      "bg": "rgb(240, 240, 240)",
-     "text": 681,
-     "media": 0
+     "text": 725,
+     "media": 2
     },
     {
-     "id": "references",
+     "id": "evidence_sources",
      "type": "custom-html",
-     "top": 8818,
-     "h": 1663,
+     "top": 13859,
+     "h": 4571,
      "bg": "rgb(255, 255, 255)",
-     "text": 1597,
+     "text": 5030,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 10481,
+     "top": 18429,
      "h": 1107,
      "bg": "rgb(240, 240, 240)",
      "text": 383,
@@ -850,7 +872,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 11588,
+     "top": 19536,
      "h": 572,
      "bg": "rgb(255, 255, 255)",
      "text": 66,
@@ -859,7 +881,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 12160,
+     "top": 20108,
      "h": 580,
      "bg": "rgb(240, 240, 240)",
      "text": 306,
@@ -868,7 +890,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 12740,
+     "top": 20688,
      "h": 288,
      "bg": "rgb(26, 26, 26)",
      "text": 142,
@@ -877,7 +899,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 13028,
+     "top": 20976,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -886,7 +908,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 14067,
+     "top": 22015,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
