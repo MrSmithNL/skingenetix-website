@@ -50,15 +50,15 @@
 | ✅ | A10 · head term in first 30% of text | 'argireline' |
 | ✅ | A1 · definition sentence early ('X is a …') | is the |
 | ✅ | A8 · secondary intents covered on the page | ['acetyl hexapeptide-8', 'expression lines'] / ['acetyl hexapeptide-8', 'expression lines'] |
-| ✅ | A2 · atomic paragraphs (none > 120 words) | 42 paragraphs, 0 too long |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 43 paragraphs, 0 too long |
 | ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 12 |
 | ✅ | A3 · fact density (measured figures ≥ 5) | 110 figures |
-| ✅ | A3 · cited sources ≥ 3 | 57 citation markers |
+| ✅ | A3 · cited sources ≥ 3 | 58 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | ✅ | E1 · visible last-reviewed/updated date | Last reviewed |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 2 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 2405 words extracted (main text 2760) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 2405 words extracted (main text 2781) |
 | ✅ | Head term survives extraction |  |
 | ✅ | H2 sections survive extraction | 13 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -97,7 +97,7 @@
 - **H2:** ['48.9%', '−7.4%', '4 weeks', 'What Is Argireline?', 'At a glance', 'What Does Argireline Do for Expression Lines?', 'Argireline® vs Placebo: What the Trials Measured', 'What 10% Argireline® Means', 'How to Use Argireline', 'Argireline Evidence & Sources', 'Frequently Asked Questions', 'Shop Acetyl Hexapeptide-8 Products', 'Explore More Research']
 - **Visual-only headings:** ['Copper Peptide (GHK-Cu)', 'Matrixyl 3000', 'PDRN', 'Glutathione', 'Try Acetyl Hexapeptide-8']
 - **Schema types:** ['BreadcrumbList', 'WebPage', 'FAQPage']
-- **Extracted words (no JS):** 2405 of 2760
+- **Extracted words (no JS):** 2405 of 2781
 
 ## Section map (desktop)
 
@@ -105,15 +105,15 @@
 |---|---|---|---|---|
 | 126 | 440 | hero | image-with-text-overlay | Bone |
 | 566 | 424 | stats | impact-text | White |
-| 989 | 1263 | overview | custom-html | Bone |
-| 2253 | 1088 | evidence | custom-html | White |
-| 3341 | 3891 | key_findings_ba | research-before-after | Bone |
-| 7232 | 914 | charts | custom-html | White |
-| 8146 | 1300 | usage | custom-html | Bone |
-| 9446 | 1972 | evidence_sources | custom-html | White |
-| 11418 | 1117 | faq | faq | Bone |
-| 12535 | 818 | shop_ingredient | featured-collection | White |
-| 13353 | 775 | related | multi-column | Bone |
-| 14128 | 353 | cta | rich-text | Graphite |
-| 14481 | 516 | footer | footer | Bone |
-| 14997 | 0 | brand_layout_css | custom-html | Bone |
+| 989 | 1345 | overview | custom-html | Bone |
+| 2334 | 1088 | evidence | custom-html | White |
+| 3422 | 3891 | key_findings_ba | research-before-after | Bone |
+| 7313 | 914 | charts | custom-html | White |
+| 8227 | 1300 | usage | custom-html | Bone |
+| 9527 | 1972 | evidence_sources | custom-html | White |
+| 11499 | 1117 | faq | faq | Bone |
+| 12616 | 818 | shop_ingredient | featured-collection | White |
+| 13434 | 775 | related | multi-column | Bone |
+| 14209 | 353 | cta | rich-text | Graphite |
+| 14562 | 516 | footer | footer | Bone |
+| 15078 | 0 | brand_layout_css | custom-html | Bone |

@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "42 paragraphs, 0 too long",
+   "detail": "43 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "57 citation markers",
+   "detail": "58 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "2405 words extracted (main text 2760)",
+   "detail": "2405 words extracted (main text 2781)",
    "severity": "pass",
    "weight": 3
   },
@@ -574,7 +574,7 @@
    "FAQPage"
   ],
   "extracted_words": 2405,
-  "main_words": 2760,
+  "main_words": 2781,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg?v=1787664404&width=3000",
@@ -676,15 +676,15 @@
      "id": "overview",
      "type": "custom-html",
      "top": 989,
-     "h": 1263,
+     "h": 1345,
      "bg": "rgb(240, 240, 240)",
-     "text": 1835,
+     "text": 1979,
      "media": 1
     },
     {
      "id": "evidence",
      "type": "custom-html",
-     "top": 2253,
+     "top": 2334,
      "h": 1088,
      "bg": "rgb(255, 255, 255)",
      "text": 1262,
@@ -693,7 +693,7 @@
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 3341,
+     "top": 3422,
      "h": 3891,
      "bg": "rgb(240, 240, 240)",
      "text": 3502,
@@ -702,7 +702,7 @@
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 7232,
+     "top": 7313,
      "h": 914,
      "bg": "rgb(255, 255, 255)",
      "text": 1494,
@@ -711,7 +711,7 @@
     {
      "id": "usage",
      "type": "custom-html",
-     "top": 8146,
+     "top": 8227,
      "h": 1300,
      "bg": "rgb(240, 240, 240)",
      "text": 725,
@@ -720,7 +720,7 @@
     {
      "id": "evidence_sources",
      "type": "custom-html",
-     "top": 9446,
+     "top": 9527,
      "h": 1972,
      "bg": "rgb(255, 255, 255)",
      "text": 5094,
@@ -729,7 +729,7 @@
     {
      "id": "faq",
      "type": "faq",
-     "top": 11418,
+     "top": 11499,
      "h": 1117,
      "bg": "rgb(240, 240, 240)",
      "text": 383,
@@ -738,7 +738,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 12535,
+     "top": 12616,
      "h": 818,
      "bg": "rgb(255, 255, 255)",
      "text": 66,
@@ -747,7 +747,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 13353,
+     "top": 13434,
      "h": 775,
      "bg": "rgb(240, 240, 240)",
      "text": 306,
@@ -756,7 +756,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 14128,
+     "top": 14209,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
      "text": 142,
@@ -765,7 +765,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 14481,
+     "top": 14562,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -774,7 +774,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 14997,
+     "top": 15078,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -810,15 +810,15 @@
      "id": "overview",
      "type": "custom-html",
      "top": 1198,
-     "h": 2279,
+     "h": 2393,
      "bg": "rgb(240, 240, 240)",
-     "text": 1835,
+     "text": 1979,
      "media": 1
     },
     {
      "id": "evidence",
      "type": "custom-html",
-     "top": 3477,
+     "top": 3591,
      "h": 1546,
      "bg": "rgb(255, 255, 255)",
      "text": 1262,
@@ -827,7 +827,7 @@
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 5022,
+     "top": 5137,
      "h": 5382,
      "bg": "rgb(240, 240, 240)",
      "text": 3502,
@@ -836,7 +836,7 @@
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 10405,
+     "top": 10519,
      "h": 1854,
      "bg": "rgb(255, 255, 255)",
      "text": 1494,
@@ -845,7 +845,7 @@
     {
      "id": "usage",
      "type": "custom-html",
-     "top": 12259,
+     "top": 12373,
      "h": 1600,
      "bg": "rgb(240, 240, 240)",
      "text": 725,
@@ -854,7 +854,7 @@
     {
      "id": "evidence_sources",
      "type": "custom-html",
-     "top": 13859,
+     "top": 13973,
      "h": 4571,
      "bg": "rgb(255, 255, 255)",
      "text": 5030,
@@ -863,7 +863,7 @@
     {
      "id": "faq",
      "type": "faq",
-     "top": 18429,
+     "top": 18544,
      "h": 1107,
      "bg": "rgb(240, 240, 240)",
      "text": 383,
@@ -872,7 +872,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 19536,
+     "top": 19650,
      "h": 572,
      "bg": "rgb(255, 255, 255)",
      "text": 66,
@@ -881,7 +881,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 20108,
+     "top": 20223,
      "h": 580,
      "bg": "rgb(240, 240, 240)",
      "text": 306,
@@ -890,7 +890,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 20688,
+     "top": 20803,
      "h": 288,
      "bg": "rgb(26, 26, 26)",
      "text": 142,
@@ -899,7 +899,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 20976,
+     "top": 21090,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -908,7 +908,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 22015,
+     "top": 22129,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
