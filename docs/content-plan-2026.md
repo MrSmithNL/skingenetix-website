@@ -164,7 +164,7 @@ They already exist, already carry PubMed citations, and already rank. They need 
 
 **Order: PDRN first, then copper peptide, then argireline, then matrixyl, then glutathione.**
 
-> **▶ Status 2026-09-23: 5 of 5 hubs done** (PDRN, Argireline®, copper, Matrixyl 3000, glutathione). Phase 2 is complete. Every hub meets the research-page standard below; the glutathione hub (`configs/hub-upgrades/glutathione-research.json`) is the second full build on the Matrixyl pattern and audits 100/100/100/100 with an external score of 9.65. Remaining Phase 2 loose end: the "at a glance" front-loading lift on the PDRN and copper hubs.
+> **▶ Status 2026-09-23: 5 of 5 hubs done** (PDRN, Argireline®, copper, Matrixyl 3000, glutathione). Phase 2 is complete. Every hub meets the research-page standard below; the glutathione hub (`configs/hub-upgrades/glutathione-research.json`) is the second full build on the Matrixyl pattern and audits 100/100/100/100 with an external score of 9.65. Later that day the PDRN and copper hubs were brought level with those two builds (at-a-glance, key figures, evidence table, image rows, FAQs) and, on Malcolm's instruction, the three key figures moved to the top of all five pages (ADR-2026-09-23-T). One Phase 2 loose end: Argireline's evidence table and image rows.
 
 **Research-page standard (Malcolm, 2026-09-22). Every scientific research page we make must:**
 
@@ -173,6 +173,8 @@ They already exist, already carry PubMed citations, and already rank. They need 
 3. **Carry multiple images, taken from existing files first.**
 4. **Show the key data as charts.** Use `scripts/hub_charts.py`, with a real `<table>` of the same numbers beneath each chart, because AI extraction keeps tables and drops div rows.
 5. **Check every internal and external link.** Internal: `--verify-live` in six languages plus `scripts/link-audit.py`. External: each URL fetched, bot-blocked publishers opened in a real browser, and each DOI's title confirmed at Crossref.
+
+6. **Lead with the key figures.** The three-figure `impact-text` band sits directly under the hero on every science page, before the definition (Malcolm, 2026-09-23: the main claims bar belongs at the top; ADR-2026-09-23-T). Then: definition and at-a-glance, evidence prose, findings cards, charts, usage rows, evidence table, references, FAQ.
 
 The Matrixyl 3000 hub (`configs/hub-upgrades/matrixyl-3000-research.json`) is the reference build. PDRN, Argireline® and copper were built before this standard and are due a retrofit (charts, external audit, localised references block).
 

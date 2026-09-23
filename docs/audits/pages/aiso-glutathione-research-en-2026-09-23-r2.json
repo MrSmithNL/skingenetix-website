@@ -1,0 +1,305 @@
+{
+ "gpt": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 10,
+    "note": "The page begins with a clear summary of the effectiveness of topical glutathione.",
+    "fix": "None required."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "The definition is clearly presented under 'What Is Glutathione?' with detailed explanation.",
+    "fix": "None required."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "Headings are mostly hierarchical but some H2s are numerical values which may confuse logical structure.",
+    "fix": "Consider renaming these headings for clarity."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "All paragraphs are short and concise.",
+    "fix": "None required."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The content is densely packed with facts, including studies and statistics.",
+    "fix": "None required."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "Provides comparison between topical and oral glutathione and compares alongside placebo.",
+    "fix": "None required."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "Numerous lists and tables present data clearly.",
+    "fix": "None required."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "Content is deeply informative covering multiple trials and systematic reviews.",
+    "fix": "None required."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 9,
+    "note": "Crucial information is mostly front-loaded, though some may want all main findings in the opening.",
+    "fix": "Consider a brief initial summary covering all key data points."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 10,
+    "note": "Incorporates images, tables, and bullet lists, enhancing comprehension.",
+    "fix": "None required."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 9,
+    "note": "Adequate use of schema types, though Product schema could be beneficial.",
+    "fix": "Add Product schema for completeness."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "FAQ section is present and addresses common inquiries comprehensively.",
+    "fix": "None required."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 9,
+    "note": "Citations are high quality from reputable journals, though most trials are less recent.",
+    "fix": "Incorporate more recent studies if available."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "Contains 16 in-content internal links, ensuring robust site navigation.",
+    "fix": "None required."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Meta title and description are well optimized, concise and clearly summarizing page content.",
+    "fix": "None required."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 10,
+    "note": "Author and reviewer are well-attributed, enhancing credibility.",
+    "fix": "None required."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "Medically reviewed by a professional, ensuring reliability.",
+    "fix": "None required."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "Last updated within a month of the current date.",
+    "fix": "None required."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "Ready for brand mentions with seamless integration of product line.",
+    "fix": "None required."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "Extensive citations with links allow for robust AI training and citation.",
+    "fix": "None required."
+   }
+  ],
+  "overall": 9.85,
+  "top_fixes": [
+   "Consider renaming numerical value headings for clarity.",
+   "Add Product schema for completeness.",
+   "Incorporate more recent studies if available."
+  ],
+  "assessment": "The page excels in offering deep, well-cited content with high usability and credibility, though minor structural and schema enhancements are possible."
+ },
+ "gemini": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "The page effectively front-loads key information with an 'At a glance' section and quantitative summaries, addressing user intent early.",
+    "fix": "Ensure all main questions are summarized in 'At a glance' or the initial sections to further optimize for direct answers."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "The ingredient, glutathione, is clearly and concisely defined upfront in a dedicated bolded paragraph under 'What Is Glutathione?'.",
+    "fix": "N/A"
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "The heading outline (H1, H2, H3) is generally logical, guiding the reader through definition, benefits, usage, and evidence. The initial H2/H3s serve as impactful data highlights.",
+    "fix": "Re-evaluate the initial H2/H3 for specific data points to see if they can be integrated more smoothly into the main narrative while retaining their impact."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 9,
+    "note": "Most paragraphs adhere to the atomic structure (2-5 sentences), enhancing readability and scannability. One paragraph under 'What is missing.' is 6 sentences.",
+    "fix": "Break down the slightly longer paragraphs (e.g., 'What is missing.') into two shorter ones to maintain optimal atomic paragraph length."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The content is exceptionally rich in data, statistics, percentages, and specific study findings (e.g., p-values, participant numbers, durations), providing highly quantitative insights.",
+    "fix": "N/A"
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "The page excels in providing clear comparisons, such as topical vs. oral glutathione and different forms (GSH vs. GSSG), aiding user understanding of nuances.",
+    "fix": "N/A"
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "Effective use of tables and bulleted lists (e.g., 'Glutathione Before and After,' 'Glutathione Evidence at a Glance') significantly enhances data presentation and scannability.",
+    "fix": "N/A"
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "The article provides excellent depth, discussing study methodologies, limitations, different ingredient forms, and systematic review conclusions, meeting scientific YMYL requirements.",
+    "fix": "N/A"
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 9,
+    "note": "Key findings, benefits, and usage instructions are presented early, allowing users to grasp essential information quickly, especially with the 'At a glance' section.",
+    "fix": "Consider adding a concise summary of the main benefits or key takeaways right after the H1 or initial definition to further front-load critical information."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 10,
+    "note": "The content effectively uses multiple images, including clinical trial results (before/after), product shots, and explanatory diagrams, to engage users and illustrate concepts.",
+    "fix": "N/A"
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "The page utilizes a comprehensive set of JSON-LD schemas, including `ScholarlyArticle`, `FAQPage`, and `WebPage`, significantly enhancing its machine readability and search visibility.",
+    "fix": "N/A"
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "A well-structured 'Frequently Asked Questions' section directly addresses common user queries, providing quick and concise answers.",
+    "fix": "N/A"
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 10,
+    "note": "High-quality, transparent citations are provided, including inline referencing, a comprehensive bibliography, and 'View on PubMed' links, enhancing authority and verifiability. Evidence is also graded.",
+    "fix": "N/A"
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 9,
+    "note": "The content includes a good number (16) of in-content internal links, guiding users to related products and sibling research hubs.",
+    "fix": "Review if any additional opportunities exist to link to relevant supporting content or product categories to maximize internal link value and user journey."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Both the meta title (57 chars) and description (155 chars) are optimally crafted, highly descriptive, keyword-rich, and include compelling quantitative data, making them highly effective for CTR.",
+    "fix": "N/A"
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 10,
+    "note": "Clear author attribution ('By Skingenetix') is provided, establishing the content's origin and brand ownership.",
+    "fix": "N/A"
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "The content explicitly states medical review by 'Dr Esther Bodde, Cosmetic & Medical Physician,' which is crucial for a scientific YMYL topic, enhancing trust and authority.",
+    "fix": "N/A"
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "The content was last reviewed on today's date (2026-09-23), indicating exceptional recency and a strong commitment to up-to-date, accurate information.",
+    "fix": "N/A"
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "The brand (Skingenetix) and specific products are naturally integrated into the content, facilitating brand recognition and direct product discovery.",
+    "fix": "N/A"
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "The content is highly factual, quantitative, transparently cites sources, grades evidence, and directly answers specific questions, making it ideal for AI model consumption and citation.",
+    "fix": "N/A"
+   }
+  ],
+  "overall": 9.7,
+  "top_fixes": [
+   "Break down slightly longer paragraphs (e.g., 'What is missing.') into two shorter ones to maintain optimal atomic paragraph length.",
+   "Re-evaluate the initial H2/H3 for specific data points to see if they can be integrated more smoothly into the main narrative while retaining their impact.",
+   "Review if any additional opportunities exist to link to relevant supporting content or product categories to maximize internal link value and user journey."
+  ],
+  "assessment": "This page is an exemplary ingredient research hub, demonstrating exceptional quality across almost all SEO and AISO criteria. Its strength lies in its precision, quantitative data, transparent evidence grading, and robust authority signals (expert review, comprehensive citations, recency). The content is highly optimized for both human readability and AI comprehension, making it a powerful asset for brand credibility and organic search performance. Minor refinements in paragraph structure and heading flow, as well as a final check on internal linking, could bring it to near perfection."
+ },
+ "combined": 9.775
+}

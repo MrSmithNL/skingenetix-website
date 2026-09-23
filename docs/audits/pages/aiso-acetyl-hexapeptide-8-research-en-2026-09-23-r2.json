@@ -1,0 +1,305 @@
+{
+ "gpt": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "The page begins with quantified results, like 48.9%, followed by trial details. The start could more clearly state the benefit or result.",
+    "fix": "Add a succinct benefit statement at the very beginning before the stats."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "The definition of Argireline is clear and present early in the content.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "Headings are mostly clear but some, like '48.9%', lack context.",
+    "fix": "Clarify ambiguous headings directly to their content meaning."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 9,
+    "note": "Most paragraphs follow the 2-5 sentence rule, maintaining clarity and conciseness.",
+    "fix": "Ensure 100% adherence by checking any 1-sentence paragraphs."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "Highly informative, includes study results and citations throughout.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 9,
+    "note": "There’s a comparison of Argireline with placebo; a few more explicit comparisons with other ingredients would be beneficial.",
+    "fix": "Add comparisons to other ingredients within the product line or competing treatments."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "Use of tables and lists effectively presents trial data and comparisons.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "In-depth trial data and explanation of mechanisms provide robust content.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 9,
+    "note": "Important info like trial results are presented early, but initial clarity diminished by some unclear headings.",
+    "fix": "Move explicit benefit statements above numerical data when introducing topics."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 9,
+    "note": "Includes images and typical 'before and after' visuals, though image context in the text could improve.",
+    "fix": "Improve image descriptions/alt text to maximize accessibility and context delivery."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "Extensive use of schema markups like 'ScholarlyArticle' and 'FAQPage' detected.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "Contains a comprehensive FAQ section addressing common queries.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 9,
+    "note": "Citations are present from credible journals, though the Henseler (2023) lacks publishing details.",
+    "fix": "Ensure all citations are fully detailed including lesser-documented ones."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "17 in-content internal links ensure extensive internal linking.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Solid meta tags with a strong focus on Argireline's effects and practical guide.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 10,
+    "note": "Page clearly attributed to Skingenetix and medically reviewed by a physician.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "Clear expert review is noted along with review date.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "Last reviewed within days of today's date, maintaining high recency.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "Frequent contextual mentions of brand specifics enhance mention readiness.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 9,
+    "note": "AI-ready structure and use of third-party citations make it generally suitable.",
+    "fix": "Ensure all sections fully cite from available external sources where possible."
+   }
+  ],
+  "overall": 9.6,
+  "top_fixes": [
+   "Clarify ambiguous headings directly to their content meaning.",
+   "Add comparisons to other ingredients within the product line or competing treatments.",
+   "Ensure all citations are fully detailed including lesser-documented ones."
+  ],
+  "assessment": "The page provides comprehensive, well-cited information on Argireline with opportunities to refine unclear headings and enhance competitive comparison."
+ },
+ "gemini": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "The page immediately opens with strong quantitative results and an \"At a glance\" summary before deeper explanations, effectively front-loading key information.",
+    "fix": "While very strong, explicitly starting with the ingredient's core function in the first sentence before diving into metrics could slightly enhance immediate comprehension for some users and models."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "A clear, concise definition of the ingredient (trade name and INCI name) is provided immediately under the \"What Is Argireline?\" heading early in the content.",
+    "fix": "No fixes needed; the definition is perfectly placed and articulated."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "The heading structure uses H1 for the main topic and logical H2/H3 for sub-sections, including effective use of H2/H3 to highlight initial quantitative results and structure detailed evidence.",
+    "fix": "The current structure is effective for both user experience and AI parsing. No significant fixes are required as the hierarchy is logical and supports content comprehension."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "All paragraphs are concise, typically ranging from 1 to 4 sentences, which makes the content highly scannable and easy to digest for both users and AI.",
+    "fix": "No fixes needed; the content perfectly adheres to atomic paragraph principles."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The content is exceptionally fact-dense, packed with specific quantitative data, trial results, percentages, and study details, consistently backed by citations.",
+    "fix": "No fixes needed; the page demonstrates outstanding fact density."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "The content consistently provides direct comparisons of Argireline's effects against placebo or control groups, often presented in clear tables and using specific data.",
+    "fix": "No fixes needed; the comparison content is comprehensive and well-presented."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "Excellent use of bulleted lists for summaries ('At a glance', 'Key results') and well-formatted tables for clear comparative data presentation ('Argireline® vs Placebo: What the Trials Measured').",
+    "fix": "No fixes needed; the use of lists and tables is exemplary."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "The page offers comprehensive depth, covering definition, mechanism, various study types (developer, independent, placebo-controlled), limitations, usage instructions, safety, and formulation nuances, all well-cited.",
+    "fix": "No fixes needed; the content provides exceptional depth for an ingredient research hub."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 10,
+    "note": "Critical information, including quantifiable results, an 'At a glance' summary, and the ingredient's definition, is presented prominently at the beginning of the page.",
+    "fix": "No fixes needed; the front-loading strategy is highly effective."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 9,
+    "note": "The page incorporates several relevant images, including 'before/after' efficacy comparisons and product shots with descriptive alt text, enhancing visual communication.",
+    "fix": "To achieve a perfect score, consider integrating additional media types such as short explanatory videos or interactive diagrams to further enrich the user experience and AI comprehension."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "A rich and highly relevant set of JSON-LD schemas is present, including `ScholarlyArticle`, `FAQPage`, `Person`, and `Organization`, which is ideal for scientific YMYL content.",
+    "fix": "No fixes needed; the schema markup is comprehensive and appropriate."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "A dedicated and well-structured 'Frequently Asked Questions' section is present, addressing common user queries about the ingredient's properties, efficacy, and usage.",
+    "fix": "No fixes needed; the FAQ section is excellent and well-implemented."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 10,
+    "note": "Exceptional citation quality, with all claims backed by in-text citations, a comprehensive 'Published References' list (with PubMed links), and critical evaluation of evidence sources (e.g., developer vs. independent data).",
+    "fix": "No fixes needed; the citation quality is outstanding."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "With 17 in-content internal links identified, the page demonstrates excellent internal linking, effectively guiding users and crawlers to related content and product pages.",
+    "fix": "No fixes needed; the internal linking strategy is very strong."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "The meta title (58 chars) and description (146 chars) are well-crafted, include both trade and INCI names, are benefit-oriented, and remain within optimal length limits for search engines.",
+    "fix": "No fixes needed; the meta optimization is perfectly executed."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 9,
+    "note": "The content clearly attributes authorship to 'Skingenetix,' establishing brand authority for the research, which is important for YMYL content.",
+    "fix": "For enhanced E-E-A-T on a scientific YMYL page, consider adding an individual author's name and credentials (even if a brand employee) in addition to the brand attribution."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "The page explicitly states 'Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician,' clearly demonstrating expert authority and trustworthiness for YMYL content.",
+    "fix": "No fixes needed; the medical review is clearly stated and credible."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "The content was 'Last reviewed 23 September 2026,' which is today's date, indicating maximum recency and up-to-dateness.",
+    "fix": "No fixes needed; the content is perfectly current."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "The content consistently and contextually mentions 'Skingenetix' in relation to its products and the ingredient, making it highly suitable for brand-related AI queries and mentions.",
+    "fix": "No fixes needed; brand mentions are integrated effectively and naturally."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "Outstanding AI citation readiness, featuring a fact-dense, quantitative, answer-first format, explicit source verification, critical evidence evaluation, and expert review, making it highly reliable for AI to extract and cite.",
+    "fix": "No fixes needed; the page is exceptionally prepared for AI citation."
+   }
+  ],
+  "overall": 9.8,
+  "top_fixes": [
+   "To achieve a perfect score for multi-modal content, integrate additional media types like short explanatory videos or interactive diagrams.",
+   "For enhanced E-E-A-T on this scientific YMYL page, consider adding an individual author's name and credentials in addition to the brand attribution.",
+   "While already strong, refine the very first sentence to explicitly state the ingredient's primary function before immediately presenting quantitative results."
+  ],
+  "assessment": "This page is an exceptionally high-quality example of a scientific YMYL ingredient research hub, demonstrating expert-level SEO and AISO optimization. It excels in fact density, citation quality, content depth, and structured data, making it highly trustworthy and easily digestible for both human readers and AI models. The transparent and critical evaluation of scientific evidence, coupled with robust schema markup and expert review, positions this page as a definitive authority on Acetyl Hexapeptide-8. Only minor enhancements in multi-modal variety and individual author attribution could further elevate its already near-perfect standing."
+ },
+ "combined": 9.7
+}

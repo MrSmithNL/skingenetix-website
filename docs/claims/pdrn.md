@@ -1,5 +1,7 @@
 # Claims register: PDRN (polydeoxyribonucleotide, INCI Sodium DNA, salmon-derived)
 
+> **Status 2026-09-23:** the hub was brought level with the Matrixyl and glutathione builds (`configs/hub-upgrades/pdrn-research-parity-2026-09-23.json`): key figures at the top, at-a-glance list, ten-row evidence table with the injected, procedure-assisted and non-salmon studies graded X, and the findings card rewritten to the verified figures. Every figure re-read in the Ye 2026 full text that day (verification log at the end). The product-page items in the last section below are still open.
+
 **Compiled:** 2026-09-22 · **Scope:** Skingenetix PDRN 1% Renewal Serum (30 ml) and PDRN 1% Collagen Night Cream (50 ml). The live product pages say both contain **1% PDRN (10,000 ppm)**. The cream's FAQ confirms 1%. Checked live on 2026-09-22.
 **Rule:** every number below was read at source: the abstract, plus the full text wherever PMC has one. If only the abstract was read, the table says so. Anything I could not open is marked **not verified**.
 **Legal frame:** Regulation (EU) 655/2013 common criteria (legal compliance, truthfulness, evidential support, honesty, fairness, informed decision-making). Cosmetic, not medicinal: "visibly", "the look of" and "skin feels" are cosmetic wording. "Repairs DNA", "heals", "treats" and "anti-inflammatory" are medicinal wording.
@@ -143,3 +145,17 @@ Grades: A = controlled human with an instrumental measure · B = uncontrolled or
 | /pages/pdrn-research reference list | Khan et al. 2022 | Could not be opened or verified beyond its title | Keep only if someone reads it. It supports only "promising", so it is low value |
 | Product pages "What to expect" | Serum: "fresher, more radiant look within 1–2 weeks; firmer, smoother results build over 8–12 weeks". Night cream: "firmer, smoother-looking skin with nightly use" | No source for the 8–12-week timeline | Either source it from our own study (gap 2/3) or reword as "Clinical research on PDRN saw visible smoothing within 2 weeks" |
 | Customer reviews on the product pages | "repairs my damaged barrier and fades my acne scars" (serum); "perfect for … sensitive skin with rosacea" (cream) | Brand-displayed testimonials count as brand claims under 655/2013 and are medicinal here | Flag for Malcolm. Consider not featuring these two in curated carousels |
+
+---
+
+## Verification log — 2026-09-23 (hub parity build)
+
+| What | Where read | Result |
+|---|---|---|
+| Ye 2026: crow's-feet area and number, both sides | PMC13353946 full-text XML (E-utilities) | "approximately −20% to −23%" (PDRN-850K) vs "approximately −6% to −7%" (retinol) at Day 28; "Similar superiority was observed for infraorbital wrinkle parameters" |
+| Ye 2026: ratios | same | "approximately two-fold greater improvements in periocular wrinkles, dermal thickness, density, and eye bag parameters"; elasticity (R2) and firmness (F4) "approximately 1.8-fold higher" |
+| Ye 2026: timing, tolerability, population | same | "evident by Day 14 and exceeded retinol-induced changes measured at Day 28 for multiple wrinkle endpoints"; "no reported adverse reactions"; 31 women aged 35–55 (mean 47.5 ± 5.7), Huaxi 18–33 sensitive skin |
+| Ye 2026: formulation and disclosures | same | 0.1% (w/w) PDRN-850K as the sole active, water-in-silicone eye cream; PDRN from Ruijiming; "no specific funding", "no conflicts", affiliations at Inertia Shanghai Biotechnology (UNISKIN) and DermaHealth Shanghai Biotechnology; caution that early ultrasound changes "may partly reflect transient hydration" |
+| Yogya 2022, Gulfan 2022, Thellung 1999, Belletti 2007, Alhussain 2026, Lampridou 2025, Squadrito 2014 and 2017, Kim 2023, Lee 2022, Havas 2026, Bak 2025 | PubMed `esummary` (titles, journals, years) and `efetch` abstracts for Yogya, Gulfan, Alhussain, Lampridou | As in §2. Alhussain: "seven randomized trials involving 183 participants… limited by small sample sizes"; Lampridou: "nine studies, of low and moderate quality… 219 patients" |
+
+No figure in this register was contradicted. Applied in `configs/hub-upgrades/pdrn-research-parity-2026-09-23.json` (six languages); audit trail in `docs/audits/pages/README.md`.

@@ -1,17 +1,17 @@
 {
- "path": "/pages/glutathione-research",
+ "path": "/pages/matrixyl-3000-research",
  "scores": {
   "SEO": 100,
   "GEO": 100,
   "DESIGN": 100,
-  "MARKETING": 100
+  "MARKETING": 93
  },
  "items": [
   {
    "area": "SEO",
    "check": "HTTP 200, no redirect",
    "ok": true,
-   "detail": "200 \u2192 https://www.skingenetix.com/pages/glutathione-research",
+   "detail": "200 \u2192 https://www.skingenetix.com/pages/matrixyl-3000-research",
    "severity": "pass",
    "weight": 2
   },
@@ -19,7 +19,7 @@
    "area": "SEO",
    "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
    "ok": true,
-   "detail": "/pages/glutathione-research",
+   "detail": "/pages/matrixyl-3000-research",
    "severity": "pass",
    "weight": 1.0
   },
@@ -27,7 +27,7 @@
    "area": "SEO",
    "check": "URL carries the head term",
    "ok": true,
-   "detail": "head term 'glutathione'",
+   "detail": "head term 'matrixyl 3000'",
    "severity": "pass",
    "weight": 0.5
   },
@@ -35,7 +35,7 @@
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "57c: Glutathione for Skin: Benefits, Studies and How to Use It",
+   "detail": "50c: Matrixyl 3000: Benefits, Studies and How to Use It",
    "severity": "pass",
    "weight": 2
   },
@@ -43,7 +43,7 @@
    "area": "SEO",
    "check": "Title contains head term",
    "ok": true,
-   "detail": "'glutathione'",
+   "detail": "'matrixyl 3000'",
    "severity": "pass",
    "weight": 2
   },
@@ -51,7 +51,7 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": true,
-   "detail": "155c",
+   "detail": "135c",
    "severity": "pass",
    "weight": 1.0
   },
@@ -75,7 +75,7 @@
    "area": "SEO",
    "check": "Self-referencing absolute canonical",
    "ok": true,
-   "detail": "https://www.skingenetix.com/pages/glutathione-research",
+   "detail": "https://www.skingenetix.com/pages/matrixyl-3000-research",
    "severity": "pass",
    "weight": 2
   },
@@ -99,7 +99,7 @@
    "area": "SEO",
    "check": "og:title matches the page title",
    "ok": true,
-   "detail": "Glutathione for Skin: Benefits, Studies and How to Use It",
+   "detail": "Matrixyl 3000: Benefits, Studies and How to Use It",
    "severity": "pass",
    "weight": 0.5
   },
@@ -107,7 +107,7 @@
    "area": "SEO",
    "check": "Exactly one <h1>",
    "ok": true,
-   "detail": "Glutathione for Skin (GSH and GSSG)",
+   "detail": "Matrixyl 3000 (Palmitoyl Tripeptide-1 and Tetrapeptide-7)",
    "severity": "pass",
    "weight": 2
   },
@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "glutathione for skin gsh and gssg the antioxidant tripeptide the body makes itself in its one controlled topical trial 2 oxidised glutathion",
+   "detail": "matrixyl 3000 palmitoyl tripeptide-1 and tetrapeptide-7 a two-peptide complex that reduced the area of deep wrinkles by 39 in its manufactur",
    "severity": "pass",
    "weight": 2
   },
@@ -123,7 +123,7 @@
    "area": "MARKETING",
    "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
    "ok": true,
-   "detail": "10 weeks",
+   "detail": "23 women",
    "severity": "pass",
    "weight": 2
   },
@@ -155,16 +155,16 @@
    "area": "MARKETING",
    "check": "Path to purchase: links to at least one product",
    "ok": true,
-   "detail": "3 products linked",
+   "detail": "5 products linked",
    "severity": "pass",
    "weight": 1
   },
   {
    "area": "MARKETING",
    "check": "Every result figure sits next to its source",
-   "ok": true,
-   "detail": "0 unsourced: []",
-   "severity": "pass",
+   "ok": false,
+   "detail": "7 unsourced: ['Area taken up by deep wrinkles: \u221239%', 'Main-wrinkle depth: \u221220%, volume \u221223%']",
+   "severity": "low",
    "weight": 1
   },
   {
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "13 <h2>: ['\u221210.7%', '77%', 'Week 1', 'What Is Glutathione?', 'Glutathione Skin Benefits: What the Evidence Shows', 'Glutathione Before and After: What the Trial Measured', 'How to Use Topical Glutathione', 'Topical vs Oral Glutathione: Two Different Questions', 'Glutathione Evidence at a Glance', 'Published References', 'Frequently Asked Questions', 'Shop Glutathione Products', 'Explore More Research']",
+   "detail": "13 <h2>: ['\u221239%', '+15%', '+256%', 'What Is Matrixyl 3000?', 'Matrixyl 3000 Benefits: What the Evidence Shows', 'Matrixyl 3000 Before and After: What the Measurements Show', 'How to Use Matrixyl 3000', 'What Does a Matrixyl 3000 Percentage Mean?', 'Matrixyl 3000 Evidence at a Glance', 'Published References', 'Frequently Asked Questions', 'Shop Matrixyl 3000 Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -187,7 +187,7 @@
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
    "ok": false,
-   "detail": "6 that look like headings but are not: ['UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Explore Our Glutathione Formulations']",
+   "detail": "8 that look like headings but are not: ['Deep Wrinkles: \u221239% in 2 Months (Manufacturer Split-Face Study)', 'Two Peptides Together: Collagen I +256% in Lab Tests', 'How It Works: The Collagen-Signal Idea, from the Lab', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'PDRN', 'Glutathione', 'Try Matrixyl 3000']",
    "severity": "info",
    "weight": 0
   },
@@ -203,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "15/15",
+   "detail": "19/19",
    "severity": "pass",
    "weight": 1.0
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "22 unique",
+   "detail": "24 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -251,7 +251,7 @@
    "area": "GEO",
    "check": "Page entity schema (WebPage/Article) with dateModified",
    "ok": true,
-   "detail": "WebPage modified 2026-09-23",
+   "detail": "WebPage modified 2026-09-22",
    "severity": "pass",
    "weight": 1.5
   },
@@ -259,7 +259,7 @@
    "area": "GEO",
    "check": "Schema cites sources (citation[])",
    "ok": true,
-   "detail": "14 citations",
+   "detail": "9 citations",
    "severity": "pass",
    "weight": 1.0
   },
@@ -291,7 +291,7 @@
    "area": "GEO",
    "check": "A10 \u00b7 head term in first 30% of text",
    "ok": true,
-   "detail": "'glutathione'",
+   "detail": "'matrixyl 3000'",
    "severity": "pass",
    "weight": 3
   },
@@ -307,7 +307,7 @@
    "area": "GEO",
    "check": "A8 \u00b7 secondary intents covered on the page",
    "ok": true,
-   "detail": "['glutathione for skin', 'brightening'] / ['glutathione for skin', 'brightening']",
+   "detail": "['palmitoyl tripeptide-1', 'tetrapeptide-7'] / ['palmitoyl tripeptide-1', 'tetrapeptide-7']",
    "severity": "pass",
    "weight": 1.5
   },
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "80 paragraphs, 0 too long",
+   "detail": "53 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "26",
+   "detail": "23",
    "severity": "pass",
    "weight": 1.0
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "121 figures",
+   "detail": "97 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "105 citation markers",
+   "detail": "28 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -371,7 +371,7 @@
    "area": "GEO",
    "check": "A4 \u00b7 headings mirror search questions",
    "ok": true,
-   "detail": "1 question-form H2",
+   "detail": "2 question-form H2",
    "severity": "pass",
    "weight": 1.0
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "3423 words extracted (main text 3811)",
+   "detail": "2028 words extracted (main text 2421)",
    "severity": "pass",
    "weight": 3
   },
@@ -443,7 +443,7 @@
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
    "ok": true,
-   "detail": "White \u2192 Bone \u2192 White \u2192 Bone \u2192 Bone \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
+   "detail": "White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
    "severity": "pass",
    "weight": 1.5
   },
@@ -505,45 +505,47 @@
   }
  ],
  "data": {
-  "title": "Glutathione for Skin: Benefits, Studies and How to Use It",
+  "title": "Matrixyl 3000: Benefits, Studies and How to Use It",
   "h1": [
-   "Glutathione for Skin (GSH and GSSG)"
+   "Matrixyl 3000 (Palmitoyl Tripeptide-1 and Tetrapeptide-7)"
   ],
   "h2": [
-   "\u221210.7%",
-   "77%",
-   "Week 1",
-   "What Is Glutathione?",
-   "Glutathione Skin Benefits: What the Evidence Shows",
-   "Glutathione Before and After: What the Trial Measured",
-   "How to Use Topical Glutathione",
-   "Topical vs Oral Glutathione: Two Different Questions",
-   "Glutathione Evidence at a Glance",
+   "\u221239%",
+   "+15%",
+   "+256%",
+   "What Is Matrixyl 3000?",
+   "Matrixyl 3000 Benefits: What the Evidence Shows",
+   "Matrixyl 3000 Before and After: What the Measurements Show",
+   "How to Use Matrixyl 3000",
+   "What Does a Matrixyl 3000 Percentage Mean?",
+   "Matrixyl 3000 Evidence at a Glance",
    "Published References",
    "Frequently Asked Questions",
-   "Shop Glutathione Products",
+   "Shop Matrixyl 3000 Products",
    "Explore More Research"
   ],
   "pseudo_headings": [
-   "UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)",
+   "Deep Wrinkles: \u221239% in 2 Months (Manufacturer Split-Face Study)",
+   "Two Peptides Together: Collagen I +256% in Lab Tests",
+   "How It Works: The Collagen-Signal Idea, from the Lab",
    "Copper Peptide (GHK-Cu)",
    "Acetyl Hexapeptide-8",
-   "Matrixyl 3000",
    "PDRN",
-   "Explore Our Glutathione Formulations"
+   "Glutathione",
+   "Try Matrixyl 3000"
   ],
   "internal_links": [
    "/collections/all",
    "/collections/creams-moisturizers",
-   "/collections/glutathione",
+   "/collections/matrixyl-3000",
    "/collections/serums",
    "/pages/acetyl-hexapeptide-8-research",
-   "/pages/brightening-glow",
    "/pages/contact",
    "/pages/copper-peptide-research",
    "/pages/faq",
+   "/pages/firming-skin-density",
+   "/pages/glutathione-research",
    "/pages/ingredients",
-   "/pages/matrixyl-3000-research",
    "/pages/our-philosophy",
    "/pages/pdrn-research",
    "/pages/shipping-returns",
@@ -554,71 +556,84 @@
    "/policies/refund-policy",
    "/policies/shipping-policy",
    "/policies/terms-of-service",
-   "/products/glutathione-brightening-serum"
+   "/products/full-matrixyl-3000-ritual-serum-cream",
+   "/products/matrixyl-3000-firming-serum",
+   "/products/matrixyl-3000-pro-collagen-firming-cream"
   ],
   "external_links": [
-   "https://doi.org/10.4081/dr.2019.8013",
-   "https://pubmed.ncbi.nlm.nih.gov/11710935/",
-   "https://pubmed.ncbi.nlm.nih.gov/20524875/",
-   "https://pubmed.ncbi.nlm.nih.gov/25378941/",
-   "https://pubmed.ncbi.nlm.nih.gov/26148180/",
-   "https://pubmed.ncbi.nlm.nih.gov/28399620/",
-   "https://pubmed.ncbi.nlm.nih.gov/28490897/",
-   "https://pubmed.ncbi.nlm.nih.gov/28512843/",
-   "https://pubmed.ncbi.nlm.nih.gov/29445569/",
-   "https://pubmed.ncbi.nlm.nih.gov/30895708/",
-   "https://pubmed.ncbi.nlm.nih.gov/33871071/",
-   "https://pubmed.ncbi.nlm.nih.gov/39326871/",
-   "https://pubmed.ncbi.nlm.nih.gov/39444151/",
-   "https://pubmed.ncbi.nlm.nih.gov/41416233/"
+   "https://doi.org/10.1046/j.1467-2494.2000.00010.x",
+   "https://doi.org/10.1177/1091581818807863",
+   "https://doi.org/10.3390/cosmetics4020016",
+   "https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf",
+   "https://patents.google.com/patent/US6974799B2/en",
+   "https://patents.google.com/patent/WO2012164488A2/en",
+   "https://pubmed.ncbi.nlm.nih.gov/18492182/",
+   "https://pubmed.ncbi.nlm.nih.gov/36909866/",
+   "https://pubmed.ncbi.nlm.nih.gov/8486721/"
   ],
   "schema_types": [
    "BreadcrumbList",
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 3423,
-  "main_words": 3811,
+  "extracted_words": 2028,
+  "main_words": 2421,
   "images": [
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-master-antioxidant-brightening-research.jpg?v=1787662690&width=2048",
-    "alt": "A shallow dish of champagne-coloured glutathione solution glowing on a graphite surface - glutathione antioxidant research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-collagen-peptide-research.jpg?v=1787657248&width=3000",
+    "alt": "Macro study of a collagen fibre network lit in teal against graphite - Matrixyl 3000 peptide research"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-gssg-glutathione-skin-tone-clinical-trial-before-after.jpg?v=1787831286&width=2048",
-    "alt": "Illustration: two close photographs of the same woman's face taken weeks apart side by side, the later one showing more even-looking skin tone across the nose and cheeks while her freckles and cheek mole remain unchanged"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-peptide-collagen-network-supports-skin-surface.jpg?v=1787667431&width=3000",
+    "alt": "3D illustration of a skin cross-section, the surface line softer where the teal collagen network beneath is denser - Skingenetix Matrixyl 3000 peptide wrinkle research"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-defence-uv-oxidative-stress-diagram.jpg?v=1787821441&width=3000",
-    "alt": "Illustrated cross-section of skin with a continuous layer of clear spheres resting on the surface, each holding a three-bead glutathione molecule, turning away shafts of daylight and dark airborne particles"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-peptide-fibroblasts-building-collagen-matrix.jpg?v=1787667429&width=3000",
+    "alt": "3D illustration of a laboratory skin specimen with lit cells extruding new teal collagen fibres - Skingenetix Matrixyl 3000 peptide in-vitro collagen research"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-radiance-uneven-skin-tone-before-after.jpg?v=1787830671&width=2048",
-    "alt": "Illustration: two close photographs of the same woman's freckled cheek taken weeks apart side by side, the later one showing clearer, more even-looking skin between the freckles, which remain unchanged"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-peptide-signalling-fibroblast-collagen-synthesis.jpg?v=1787667430&width=3000",
+    "alt": "3D illustration of a peptide chain docking into a skin cell that streams out new teal collagen fibres - Skingenetix Matrixyl 3000 peptide signalling research"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg?v=1787833359&width=1254",
-    "alt": "Woman applying Skingenetix Glutathione Radiant Glow Serum to her cheek with a dropper, holding the bottle in her other hand"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-firming-serum-clear-drop-on-cheek-macro.jpg?v=1789470462&width=3000",
+    "alt": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream - a dropper releasing a clear drop of the firming serum onto a cheek"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
-    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg?v=1789387474&width=3000",
+    "alt": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream - the firming serum and cream on a teal background with long shadows"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg?v=1787832493&width=2048",
-    "alt": "A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-pro-collagen-serum-model-holding-near-face.jpg?v=1787832227&width=2048",
+    "alt": "A model holding the Skingenetix Matrixyl 3000 Firming Serum, 30ml, up beside her cheek in close-up"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg?v=1787832493&width=2048",
-    "alt": "A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-pro-collagen-serum-model-holding-near-face.jpg?v=1787832227&width=2048",
+    "alt": "A model holding the Skingenetix Matrixyl 3000 Firming Serum, 30ml, up beside her cheek in close-up"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg?v=1787233764&width=2048",
-    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - bottle beside its gold carton on white"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_lid_off_product_only_2_skingenetix.jpg?v=1787304309&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - open jar with the lid beside it on a white background"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_hands_only_dropper_2_skingenetix.jpg?v=1787233766&width=2048",
-    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - hands lifting the glass dropper from the bottle"
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_model_shoulder_2_skingenetix.jpg?v=1787304311&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Pro-Collagen Firming Cream, 50ml - a model holding the jar beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_colourblock_soft_pastel_2_skingenetix.jpg?v=1787300902&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - frosted glass dropper bottle on a pale grey ground"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_model_holding_near_face_5_skingenetix.jpg?v=1787300904&width=2048",
+    "alt": "Skingenetix Matrixyl 3000 Firming Serum, 30ml - a model holding the bottle beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-pro-collagen-serum-cream-set-overhead-water.jpg?v=1789387470&width=2048",
+    "alt": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream - the firming serum and cream photographed from above in shallow teal water"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg?v=1789387474&width=3000",
+    "alt": "Skingenetix Full Matrixyl 3000 Ritual - Serum & Cream - the firming serum and cream on a teal background with long shadows"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-fibroblast-collagen-matrix.jpg?v=1787656745&width=1400",
@@ -629,12 +644,12 @@
     "alt": "Electron-microscope style view of a single skin cell in cool pearl grey, representing Acetyl Hexapeptide-8 expression-line research"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg?v=1787650938&width=2048",
-    "alt": "Translucent open cellular matrix structure lit against a deep emerald-teal background, representing the Matrixyl 3000 peptide's role in the skin's collagen network"
-   },
-   {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?v=1787656228&width=2048",
     "alt": "Polynucleotide double helix rendered in soft blush pink, representing PDRN skin repair and renewal research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
+    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
@@ -650,150 +665,123 @@
      "id": "hero",
      "type": "image-with-text-overlay",
      "top": 126,
-     "h": 440,
+     "h": 504,
      "bg": "rgb(240, 240, 240)",
-     "text": 264,
+     "text": 241,
      "media": 1
     },
     {
      "id": "stats",
      "type": "impact-text",
-     "top": 566,
-     "h": 382,
+     "top": 630,
+     "h": 358,
      "bg": "rgb(255, 255, 255)",
-     "text": 609,
+     "text": 482,
      "media": 0
     },
     {
      "id": "overview",
      "type": "rich-text",
-     "top": 948,
-     "h": 1010,
+     "top": 988,
+     "h": 833,
      "bg": "rgb(240, 240, 240)",
-     "text": 1767,
+     "text": 1173,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1958,
-     "h": 1378,
+     "top": 1821,
+     "h": 826,
      "bg": "rgb(255, 255, 255)",
-     "text": 3791,
+     "text": 1605,
      "media": 0
-    },
-    {
-     "id": "key_findings_ba1",
-     "type": "research-before-after",
-     "top": 3335,
-     "h": 1034,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1133,
-     "media": 1
     },
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 4369,
-     "h": 884,
+     "top": 2646,
+     "h": 2389,
      "bg": "rgb(240, 240, 240)",
-     "text": 843,
-     "media": 1
-    },
-    {
-     "id": "key_findings_ba3",
-     "type": "research-before-after",
-     "top": 5254,
-     "h": 766,
-     "bg": "rgb(240, 240, 240)",
-     "text": 912,
-     "media": 1
+     "text": 1812,
+     "media": 3
     },
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 6019,
-     "h": 1293,
+     "top": 5035,
+     "h": 1422,
      "bg": "rgb(255, 255, 255)",
-     "text": 1982,
+     "text": 2062,
      "media": 0
     },
     {
      "id": "usage",
      "type": "media-with-text",
-     "top": 7312,
-     "h": 1602,
+     "top": 6457,
+     "h": 1504,
      "bg": "rgb(240, 240, 240)",
-     "text": 1817,
+     "text": 1047,
      "media": 2
     },
     {
      "id": "evidence_table",
      "type": "specification-table",
-     "top": 8915,
-     "h": 2139,
+     "top": 7961,
+     "h": 1560,
      "bg": "rgb(255, 255, 255)",
-     "text": 3147,
+     "text": 2020,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 11053,
-     "h": 1685,
+     "top": 9521,
+     "h": 1118,
      "bg": "rgb(240, 240, 240)",
-     "text": 3017,
+     "text": 1619,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 12738,
+     "top": 10638,
      "h": 1117,
      "bg": "rgb(255, 255, 255)",
-     "text": 413,
+     "text": 397,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 13855,
+     "top": 11755,
      "h": 797,
      "bg": "rgb(240, 240, 240)",
-     "text": 59,
-     "media": 2
+     "text": 208,
+     "media": 6
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 14652,
+     "top": 12552,
      "h": 775,
      "bg": "rgb(255, 255, 255)",
-     "text": 345,
+     "text": 331,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 15427,
-     "h": 430,
+     "top": 13327,
+     "h": 353,
      "bg": "rgb(26, 26, 26)",
-     "text": 231,
-     "media": 0
-    },
-    {
-     "id": "findings_spacing_fix",
-     "type": "custom-html",
-     "top": 15857,
-     "h": 0,
-     "bg": "rgb(240, 240, 240)",
-     "text": 0,
+     "text": 134,
      "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 15857,
+     "top": 13680,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -802,7 +790,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 16373,
+     "top": 14196,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -822,148 +810,121 @@
      "top": 85,
      "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 264,
+     "text": 241,
      "media": 1
     },
     {
      "id": "stats",
      "type": "impact-text",
      "top": 460,
-     "h": 738,
+     "h": 649,
      "bg": "rgb(255, 255, 255)",
-     "text": 609,
+     "text": 482,
      "media": 0
     },
     {
      "id": "overview",
      "type": "rich-text",
-     "top": 1198,
-     "h": 1188,
+     "top": 1108,
+     "h": 877,
      "bg": "rgb(240, 240, 240)",
-     "text": 1767,
+     "text": 1173,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 2386,
-     "h": 1969,
+     "top": 1985,
+     "h": 992,
      "bg": "rgb(255, 255, 255)",
-     "text": 3791,
+     "text": 1605,
      "media": 0
-    },
-    {
-     "id": "key_findings_ba1",
-     "type": "research-before-after",
-     "top": 4355,
-     "h": 1374,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1133,
-     "media": 1
     },
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 5728,
-     "h": 1227,
+     "top": 2977,
+     "h": 3108,
      "bg": "rgb(240, 240, 240)",
-     "text": 843,
-     "media": 1
-    },
-    {
-     "id": "key_findings_ba3",
-     "type": "research-before-after",
-     "top": 6955,
-     "h": 1132,
-     "bg": "rgb(240, 240, 240)",
-     "text": 912,
-     "media": 1
+     "text": 1812,
+     "media": 3
     },
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 8087,
-     "h": 2327,
+     "top": 6086,
+     "h": 2586,
      "bg": "rgb(255, 255, 255)",
-     "text": 1982,
+     "text": 2062,
      "media": 0
     },
     {
      "id": "usage",
      "type": "media-with-text",
-     "top": 10415,
-     "h": 2227,
+     "top": 8672,
+     "h": 1812,
      "bg": "rgb(240, 240, 240)",
-     "text": 1817,
+     "text": 1047,
      "media": 2
     },
     {
      "id": "evidence_table",
      "type": "specification-table",
-     "top": 12641,
-     "h": 2116,
+     "top": 10484,
+     "h": 1423,
      "bg": "rgb(255, 255, 255)",
-     "text": 3147,
+     "text": 2020,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 14758,
-     "h": 2855,
+     "top": 11907,
+     "h": 1732,
      "bg": "rgb(240, 240, 240)",
-     "text": 3017,
+     "text": 1619,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 17613,
-     "h": 1192,
+     "top": 13639,
+     "h": 1149,
      "bg": "rgb(255, 255, 255)",
-     "text": 413,
+     "text": 397,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 18805,
-     "h": 588,
+     "top": 14789,
+     "h": 609,
      "bg": "rgb(240, 240, 240)",
-     "text": 59,
-     "media": 2
+     "text": 208,
+     "media": 6
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 19394,
+     "top": 15398,
      "h": 580,
      "bg": "rgb(255, 255, 255)",
-     "text": 345,
+     "text": 331,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 19974,
-     "h": 332,
+     "top": 15978,
+     "h": 252,
      "bg": "rgb(26, 26, 26)",
-     "text": 231,
-     "media": 0
-    },
-    {
-     "id": "findings_spacing_fix",
-     "type": "custom-html",
-     "top": 20306,
-     "h": 0,
-     "bg": "rgb(240, 240, 240)",
-     "text": 0,
+     "text": 134,
      "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 20306,
+     "top": 16230,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -972,7 +933,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 21345,
+     "top": 17269,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

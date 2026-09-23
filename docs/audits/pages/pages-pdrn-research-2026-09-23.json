@@ -1,17 +1,17 @@
 {
- "path": "/pages/glutathione-research",
+ "path": "/pages/pdrn-research",
  "scores": {
   "SEO": 100,
   "GEO": 100,
   "DESIGN": 100,
-  "MARKETING": 100
+  "MARKETING": 93
  },
  "items": [
   {
    "area": "SEO",
    "check": "HTTP 200, no redirect",
    "ok": true,
-   "detail": "200 \u2192 https://www.skingenetix.com/pages/glutathione-research",
+   "detail": "200 \u2192 https://www.skingenetix.com/pages/pdrn-research",
    "severity": "pass",
    "weight": 2
   },
@@ -19,7 +19,7 @@
    "area": "SEO",
    "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
    "ok": true,
-   "detail": "/pages/glutathione-research",
+   "detail": "/pages/pdrn-research",
    "severity": "pass",
    "weight": 1.0
   },
@@ -27,7 +27,7 @@
    "area": "SEO",
    "check": "URL carries the head term",
    "ok": true,
-   "detail": "head term 'glutathione'",
+   "detail": "head term 'pdrn'",
    "severity": "pass",
    "weight": 0.5
   },
@@ -35,7 +35,7 @@
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "57c: Glutathione for Skin: Benefits, Studies and How to Use It",
+   "detail": "55c: What Is PDRN? Salmon DNA Skincare Benefits and Research",
    "severity": "pass",
    "weight": 2
   },
@@ -43,7 +43,7 @@
    "area": "SEO",
    "check": "Title contains head term",
    "ok": true,
-   "detail": "'glutathione'",
+   "detail": "'pdrn'",
    "severity": "pass",
    "weight": 2
   },
@@ -51,7 +51,7 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": true,
-   "detail": "155c",
+   "detail": "145c",
    "severity": "pass",
    "weight": 1.0
   },
@@ -75,7 +75,7 @@
    "area": "SEO",
    "check": "Self-referencing absolute canonical",
    "ok": true,
-   "detail": "https://www.skingenetix.com/pages/glutathione-research",
+   "detail": "https://www.skingenetix.com/pages/pdrn-research",
    "severity": "pass",
    "weight": 2
   },
@@ -99,7 +99,7 @@
    "area": "SEO",
    "check": "og:title matches the page title",
    "ok": true,
-   "detail": "Glutathione for Skin: Benefits, Studies and How to Use It",
+   "detail": "What Is PDRN? Salmon DNA Skincare Benefits and Research",
    "severity": "pass",
    "weight": 0.5
   },
@@ -107,7 +107,7 @@
    "area": "SEO",
    "check": "Exactly one <h1>",
    "ok": true,
-   "detail": "Glutathione for Skin (GSH and GSSG)",
+   "detail": "PDRN: Salmon DNA Skincare",
    "severity": "pass",
    "weight": 2
   },
@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "glutathione for skin gsh and gssg the antioxidant tripeptide the body makes itself in its one controlled topical trial 2 oxidised glutathion",
+   "detail": "pdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna in its one controlled trial a 0 1 pdrn eye cream reduced crow's-feet",
    "severity": "pass",
    "weight": 2
   },
@@ -123,7 +123,7 @@
    "area": "MARKETING",
    "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
    "ok": true,
-   "detail": "10 weeks",
+   "detail": "28 days",
    "severity": "pass",
    "weight": 2
   },
@@ -131,7 +131,7 @@
    "area": "MARKETING",
    "check": "Hedging \u2264 2.0 per 100 words (science page)",
    "ok": true,
-   "detail": "0.0/100 words: []",
+   "detail": "0.1/100 words: ['can support', 'is valued for']",
    "severity": "pass",
    "weight": 2
   },
@@ -155,16 +155,16 @@
    "area": "MARKETING",
    "check": "Path to purchase: links to at least one product",
    "ok": true,
-   "detail": "3 products linked",
+   "detail": "4 products linked",
    "severity": "pass",
    "weight": 1
   },
   {
    "area": "MARKETING",
    "check": "Every result figure sits next to its source",
-   "ok": true,
-   "detail": "0 unsourced: []",
-   "severity": "pass",
+   "ok": false,
+   "detail": "1 unsourced: ['The retinol side improved too: 0.1% retinol over 28 days is a slow comparator.']",
+   "severity": "low",
    "weight": 1
   },
   {
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "13 <h2>: ['\u221210.7%', '77%', 'Week 1', 'What Is Glutathione?', 'Glutathione Skin Benefits: What the Evidence Shows', 'Glutathione Before and After: What the Trial Measured', 'How to Use Topical Glutathione', 'Topical vs Oral Glutathione: Two Different Questions', 'Glutathione Evidence at a Glance', 'Published References', 'Frequently Asked Questions', 'Shop Glutathione Products', 'Explore More Research']",
+   "detail": "13 <h2>: ['\u221220 to \u221223%', '2\u00d7', 'Day 14', 'What Is PDRN?', 'What Does PDRN Do for Skin?', 'PDRN vs Retinol: What the Measurements Show', 'Salmon DNA: Where PDRN Comes From', 'What 1% PDRN Means', 'PDRN Evidence at a Glance', 'Published References', 'Frequently Asked Questions', 'Shop PDRN Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -187,7 +187,7 @@
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
    "ok": false,
-   "detail": "6 that look like headings but are not: ['UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Explore Our Glutathione Formulations']",
+   "detail": "7 that look like headings but are not: ['How PDRN Works: Nucleotide Skin Support', 'Reviewed as a Promising Skin Anti-Aging Ingredient', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'Glutathione', 'Explore Our PDRN Formulations']",
    "severity": "info",
    "weight": 0
   },
@@ -203,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "15/15",
+   "detail": "19/19",
    "severity": "pass",
    "weight": 1.0
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "22 unique",
+   "detail": "25 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -259,7 +259,7 @@
    "area": "GEO",
    "check": "Schema cites sources (citation[])",
    "ok": true,
-   "detail": "14 citations",
+   "detail": "15 citations",
    "severity": "pass",
    "weight": 1.0
   },
@@ -291,7 +291,7 @@
    "area": "GEO",
    "check": "A10 \u00b7 head term in first 30% of text",
    "ok": true,
-   "detail": "'glutathione'",
+   "detail": "'pdrn'",
    "severity": "pass",
    "weight": 3
   },
@@ -307,7 +307,7 @@
    "area": "GEO",
    "check": "A8 \u00b7 secondary intents covered on the page",
    "ok": true,
-   "detail": "['glutathione for skin', 'brightening'] / ['glutathione for skin', 'brightening']",
+   "detail": "['what is pdrn', 'salmon dna', 'pdrn benefits', 'sodium dna'] / ['what is pdrn', 'salmon dna', 'pdrn benefits', 'sodium dna']",
    "severity": "pass",
    "weight": 1.5
   },
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "80 paragraphs, 0 too long",
+   "detail": "63 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "26",
+   "detail": "21",
    "severity": "pass",
    "weight": 1.0
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "121 figures",
+   "detail": "93 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "105 citation markers",
+   "detail": "85 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -371,7 +371,7 @@
    "area": "GEO",
    "check": "A4 \u00b7 headings mirror search questions",
    "ok": true,
-   "detail": "1 question-form H2",
+   "detail": "2 question-form H2",
    "severity": "pass",
    "weight": 1.0
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "3423 words extracted (main text 3811)",
+   "detail": "2602 words extracted (main text 3041)",
    "severity": "pass",
    "weight": 3
   },
@@ -443,7 +443,7 @@
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
    "ok": true,
-   "detail": "White \u2192 Bone \u2192 White \u2192 Bone \u2192 Bone \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
+   "detail": "White \u2192 Bone \u2192 White \u2192 Bone \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
    "severity": "pass",
    "weight": 1.5
   },
@@ -505,48 +505,50 @@
   }
  ],
  "data": {
-  "title": "Glutathione for Skin: Benefits, Studies and How to Use It",
+  "title": "What Is PDRN? Salmon DNA Skincare Benefits and Research",
   "h1": [
-   "Glutathione for Skin (GSH and GSSG)"
+   "PDRN: Salmon DNA Skincare"
   ],
   "h2": [
-   "\u221210.7%",
-   "77%",
-   "Week 1",
-   "What Is Glutathione?",
-   "Glutathione Skin Benefits: What the Evidence Shows",
-   "Glutathione Before and After: What the Trial Measured",
-   "How to Use Topical Glutathione",
-   "Topical vs Oral Glutathione: Two Different Questions",
-   "Glutathione Evidence at a Glance",
+   "\u221220 to \u221223%",
+   "2\u00d7",
+   "Day 14",
+   "What Is PDRN?",
+   "What Does PDRN Do for Skin?",
+   "PDRN vs Retinol: What the Measurements Show",
+   "Salmon DNA: Where PDRN Comes From",
+   "What 1% PDRN Means",
+   "PDRN Evidence at a Glance",
    "Published References",
    "Frequently Asked Questions",
-   "Shop Glutathione Products",
+   "Shop PDRN Products",
    "Explore More Research"
   ],
   "pseudo_headings": [
-   "UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)",
+   "How PDRN Works: Nucleotide Skin Support",
+   "Reviewed as a Promising Skin Anti-Aging Ingredient",
    "Copper Peptide (GHK-Cu)",
    "Acetyl Hexapeptide-8",
    "Matrixyl 3000",
-   "PDRN",
-   "Explore Our Glutathione Formulations"
+   "Glutathione",
+   "Explore Our PDRN Formulations"
   ],
   "internal_links": [
    "/collections/all",
    "/collections/creams-moisturizers",
-   "/collections/glutathione",
+   "/collections/pdrn",
    "/collections/serums",
    "/pages/acetyl-hexapeptide-8-research",
-   "/pages/brightening-glow",
    "/pages/contact",
    "/pages/copper-peptide-research",
    "/pages/faq",
+   "/pages/glutathione-research",
    "/pages/ingredients",
    "/pages/matrixyl-3000-research",
    "/pages/our-philosophy",
-   "/pages/pdrn-research",
    "/pages/shipping-returns",
+   "/pages/skin-repair-renewal",
+   "/pages/study/pdrn-vs-retinol-split-face-trial-ye-2026",
    "/pages/the-science",
    "/policies/contact-information",
    "/policies/legal-notice",
@@ -554,71 +556,91 @@
    "/policies/refund-policy",
    "/policies/shipping-policy",
    "/policies/terms-of-service",
-   "/products/glutathione-brightening-serum"
+   "/products/pdrn-1-serum-cream-full-set",
+   "/products/pdrn-collagen-night-cream",
+   "/products/pdrn-renewal-serum"
   ],
   "external_links": [
-   "https://doi.org/10.4081/dr.2019.8013",
-   "https://pubmed.ncbi.nlm.nih.gov/11710935/",
-   "https://pubmed.ncbi.nlm.nih.gov/20524875/",
-   "https://pubmed.ncbi.nlm.nih.gov/25378941/",
-   "https://pubmed.ncbi.nlm.nih.gov/26148180/",
-   "https://pubmed.ncbi.nlm.nih.gov/28399620/",
-   "https://pubmed.ncbi.nlm.nih.gov/28490897/",
-   "https://pubmed.ncbi.nlm.nih.gov/28512843/",
-   "https://pubmed.ncbi.nlm.nih.gov/29445569/",
-   "https://pubmed.ncbi.nlm.nih.gov/30895708/",
-   "https://pubmed.ncbi.nlm.nih.gov/33871071/",
-   "https://pubmed.ncbi.nlm.nih.gov/39326871/",
-   "https://pubmed.ncbi.nlm.nih.gov/39444151/",
-   "https://pubmed.ncbi.nlm.nih.gov/41416233/"
+   "https://doi.org/10.1016/j.cjprs.2022.09.015",
+   "https://doi.org/10.1371/journal.pone.0350905",
+   "https://pubmed.ncbi.nlm.nih.gov/10328526/",
+   "https://pubmed.ncbi.nlm.nih.gov/17986061/",
+   "https://pubmed.ncbi.nlm.nih.gov/24483158/",
+   "https://pubmed.ncbi.nlm.nih.gov/28491036/",
+   "https://pubmed.ncbi.nlm.nih.gov/32248707/",
+   "https://pubmed.ncbi.nlm.nih.gov/34067499/",
+   "https://pubmed.ncbi.nlm.nih.gov/35501660/",
+   "https://pubmed.ncbi.nlm.nih.gov/35538360/",
+   "https://pubmed.ncbi.nlm.nih.gov/35713247/",
+   "https://pubmed.ncbi.nlm.nih.gov/39645667/",
+   "https://pubmed.ncbi.nlm.nih.gov/41516097/",
+   "https://pubmed.ncbi.nlm.nih.gov/41892958/",
+   "https://pubmed.ncbi.nlm.nih.gov/42430369/",
+   "https://pubmed.ncbi.nlm.nih.gov/42572627/"
   ],
   "schema_types": [
    "BreadcrumbList",
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 3423,
-  "main_words": 3811,
+  "extracted_words": 2602,
+  "main_words": 3041,
   "images": [
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-master-antioxidant-brightening-research.jpg?v=1787662690&width=2048",
-    "alt": "A shallow dish of champagne-coloured glutathione solution glowing on a graphite surface - glutathione antioxidant research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg?v=1787661986&width=3000",
+    "alt": "Banks of DNA double helices lit in blush pink at either side of a dark graphite field, representing the salmon-derived polynucleotides (INCI Sodium DNA) in PDRN"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-gssg-glutathione-skin-tone-clinical-trial-before-after.jpg?v=1787831286&width=2048",
-    "alt": "Illustration: two close photographs of the same woman's face taken weeks apart side by side, the later one showing more even-looking skin tone across the nose and cheeks while her freckles and cheek mole remain unchanged"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-crows-feet-periorbital-wrinkles-before-after.jpg?v=1787821843&width=3000",
+    "alt": "Two close-up photographs of the same woman's eye taken four weeks apart, side by side, the fan of lines at the outer corner less deeply etched in the later image. Illustration accompanying the PDRN research summary."
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-defence-uv-oxidative-stress-diagram.jpg?v=1787821441&width=3000",
-    "alt": "Illustrated cross-section of skin with a continuous layer of clear spheres resting on the surface, each holding a three-bead glutathione molecule, turning away shafts of daylight and dark airborne particles"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-sodium-dna-nucleotide-skin-renewal-diagram.jpg?v=1787815735&width=3000",
+    "alt": "Cross-section diagram of skin showing PDRN polynucleotide ladders held in clear spheres above the surface, with light reaching the cell layer where the granules enlarge and glow, and the deeper collagen fibres thickened and lit from within"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-radiance-uneven-skin-tone-before-after.jpg?v=1787830671&width=2048",
-    "alt": "Illustration: two close photographs of the same woman's freckled cheek taken weeks apart side by side, the later one showing clearer, more even-looking skin between the freckles, which remain unchanged"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-skin-renewal-cream-applying-to-cheekbone.jpg?v=1787823393&width=3000",
+    "alt": "Two fingertips smoothing a soft pink cream onto the cheekbone in close-up, illustrating the skin renewal PDRN is studied for"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg?v=1787833359&width=1254",
-    "alt": "Woman applying Skingenetix Glutathione Radiant Glow Serum to her cheek with a dropper, holding the bottle in her other hand"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?v=1787656228&width=2048",
+    "alt": "Polynucleotide double helix rendered in soft blush pink, representing PDRN skin repair and renewal research"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
-    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-skin-repair-serum-model-applying-with-dropper.jpg?v=1787836539&width=2048",
+    "alt": "A model applying Skingenetix PDRN 1% Renewal Serum to her cheek with the glass dropper, holding the pink bottle in her other hand"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg?v=1787832493&width=2048",
-    "alt": "A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-repair-cream-model-holding-jar-close-up.jpg?v=1787831761&width=2048",
+    "alt": "A model holding the Skingenetix PDRN 1% Collagen Night Cream jar, 50ml, in both hands beside her chin, in close-up"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg?v=1787832493&width=2048",
-    "alt": "A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-collagen-repair-cream-model-holding-jar-close-up.jpg?v=1787831761&width=2048",
+    "alt": "A model holding the Skingenetix PDRN 1% Collagen Night Cream jar, 50ml, in both hands beside her chin, in close-up"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg?v=1787233764&width=2048",
-    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - bottle beside its gold carton on white"
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_hero_whitebg_2_skingenetix.jpg?v=1787228104&width=2048",
+    "alt": "Skingenetix PDRN 1% Collagen Night Cream, 50ml - jar on a white background"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_hands_only_dropper_2_skingenetix.jpg?v=1787233766&width=2048",
-    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - hands lifting the glass dropper from the bottle"
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_open_jar_swatch_2_skingenetix.jpg?v=1787228106&width=2048",
+    "alt": "Skingenetix PDRN 1% Collagen Night Cream, 50ml - open jar with a swatch of the pink cream"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_skin_repair_deep_renewal_face_serum_hero_white_bg_8_skingenetix.jpg?v=1787314050&width=2048",
+    "alt": "Skingenetix PDRN 1% Renewal Serum, 30ml - pink frosted glass dropper bottle on a white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_skin_repair_deep_renewal_face_serum_model_holding_near_face_2_skingenetix.jpg?v=1787314052&width=2048",
+    "alt": "Skingenetix PDRN 1% Renewal Serum, 30ml - a model holding the bottle beside their face"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-ritual-serum-collagen-cream-white-background.jpg?v=1789475146&width=3000",
+    "alt": "Skingenetix Full PDRN 1% Ritual - Serum & Cream - the PDRN renewal serum and collagen night cream on a plain white background"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-ritual-serum-collagen-cream-hard-shadow.jpg?v=1789474613&width=3000",
+    "alt": "Skingenetix Full PDRN 1% Ritual - Serum & Cream - the serum and collagen night cream on a rose ground under hard directional light"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-fibroblast-collagen-matrix.jpg?v=1787656745&width=1400",
@@ -633,8 +655,8 @@
     "alt": "Translucent open cellular matrix structure lit against a deep emerald-teal background, representing the Matrixyl 3000 peptide's role in the skin's collagen network"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?v=1787656228&width=2048",
-    "alt": "Polynucleotide double helix rendered in soft blush pink, representing PDRN skin repair and renewal research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
+    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
@@ -652,139 +674,130 @@
      "top": 126,
      "h": 440,
      "bg": "rgb(240, 240, 240)",
-     "text": 264,
+     "text": 234,
      "media": 1
     },
     {
      "id": "stats",
      "type": "impact-text",
      "top": 566,
-     "h": 382,
+     "h": 400,
      "bg": "rgb(255, 255, 255)",
-     "text": 609,
+     "text": 641,
      "media": 0
     },
     {
      "id": "overview",
      "type": "rich-text",
-     "top": 948,
-     "h": 1010,
+     "top": 965,
+     "h": 1106,
      "bg": "rgb(240, 240, 240)",
-     "text": 1767,
+     "text": 2028,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1958,
-     "h": 1378,
+     "top": 2071,
+     "h": 677,
      "bg": "rgb(255, 255, 255)",
-     "text": 3791,
+     "text": 1235,
      "media": 0
     },
     {
-     "id": "key_findings_ba1",
+     "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 3335,
-     "h": 1034,
+     "top": 2748,
+     "h": 986,
      "bg": "rgb(240, 240, 240)",
-     "text": 1133,
+     "text": 1057,
      "media": 1
     },
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 4369,
-     "h": 884,
+     "top": 3734,
+     "h": 1436,
      "bg": "rgb(240, 240, 240)",
-     "text": 843,
-     "media": 1
-    },
-    {
-     "id": "key_findings_ba3",
-     "type": "research-before-after",
-     "top": 5254,
-     "h": 766,
-     "bg": "rgb(240, 240, 240)",
-     "text": 912,
-     "media": 1
+     "text": 642,
+     "media": 2
     },
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 6019,
-     "h": 1293,
+     "top": 5170,
+     "h": 1266,
      "bg": "rgb(255, 255, 255)",
-     "text": 1982,
+     "text": 1920,
      "media": 0
     },
     {
      "id": "usage",
      "type": "media-with-text",
-     "top": 7312,
-     "h": 1602,
+     "top": 6436,
+     "h": 1504,
      "bg": "rgb(240, 240, 240)",
-     "text": 1817,
+     "text": 1160,
      "media": 2
     },
     {
      "id": "evidence_table",
      "type": "specification-table",
-     "top": 8915,
-     "h": 2139,
+     "top": 7940,
+     "h": 2398,
      "bg": "rgb(255, 255, 255)",
-     "text": 3147,
+     "text": 3963,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 11053,
-     "h": 1685,
+     "top": 10338,
+     "h": 1745,
      "bg": "rgb(240, 240, 240)",
-     "text": 3017,
+     "text": 2985,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 12738,
+     "top": 12082,
      "h": 1117,
      "bg": "rgb(255, 255, 255)",
-     "text": 413,
+     "text": 358,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 13855,
+     "top": 13199,
      "h": 797,
      "bg": "rgb(240, 240, 240)",
-     "text": 59,
-     "media": 2
+     "text": 184,
+     "media": 6
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 14652,
+     "top": 13996,
      "h": 775,
      "bg": "rgb(255, 255, 255)",
-     "text": 345,
+     "text": 327,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 15427,
-     "h": 430,
+     "top": 14772,
+     "h": 353,
      "bg": "rgb(26, 26, 26)",
-     "text": 231,
+     "text": 159,
      "media": 0
     },
     {
      "id": "findings_spacing_fix",
      "type": "custom-html",
-     "top": 15857,
+     "top": 15124,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -793,7 +806,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 15857,
+     "top": 15124,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -802,7 +815,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 16373,
+     "top": 15641,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -822,7 +835,7 @@
      "top": 85,
      "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 264,
+     "text": 234,
      "media": 1
     },
     {
@@ -831,130 +844,121 @@
      "top": 460,
      "h": 738,
      "bg": "rgb(255, 255, 255)",
-     "text": 609,
+     "text": 641,
      "media": 0
     },
     {
      "id": "overview",
      "type": "rich-text",
      "top": 1198,
-     "h": 1188,
+     "h": 1322,
      "bg": "rgb(240, 240, 240)",
-     "text": 1767,
+     "text": 2028,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 2386,
-     "h": 1969,
+     "top": 2520,
+     "h": 823,
      "bg": "rgb(255, 255, 255)",
-     "text": 3791,
+     "text": 1235,
      "media": 0
     },
     {
-     "id": "key_findings_ba1",
+     "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 4355,
-     "h": 1374,
+     "top": 3343,
+     "h": 1329,
      "bg": "rgb(240, 240, 240)",
-     "text": 1133,
+     "text": 1057,
      "media": 1
     },
     {
      "id": "key_findings",
      "type": "media-with-text",
-     "top": 5728,
-     "h": 1227,
+     "top": 4672,
+     "h": 1659,
      "bg": "rgb(240, 240, 240)",
-     "text": 843,
-     "media": 1
-    },
-    {
-     "id": "key_findings_ba3",
-     "type": "research-before-after",
-     "top": 6955,
-     "h": 1132,
-     "bg": "rgb(240, 240, 240)",
-     "text": 912,
-     "media": 1
+     "text": 642,
+     "media": 2
     },
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 8087,
-     "h": 2327,
+     "top": 6331,
+     "h": 2309,
      "bg": "rgb(255, 255, 255)",
-     "text": 1982,
+     "text": 1920,
      "media": 0
     },
     {
      "id": "usage",
      "type": "media-with-text",
-     "top": 10415,
-     "h": 2227,
+     "top": 8640,
+     "h": 1889,
      "bg": "rgb(240, 240, 240)",
-     "text": 1817,
+     "text": 1160,
      "media": 2
     },
     {
      "id": "evidence_table",
      "type": "specification-table",
-     "top": 12641,
-     "h": 2116,
+     "top": 10529,
+     "h": 2475,
      "bg": "rgb(255, 255, 255)",
-     "text": 3147,
+     "text": 3963,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 14758,
-     "h": 2855,
+     "top": 13003,
+     "h": 3052,
      "bg": "rgb(240, 240, 240)",
-     "text": 3017,
+     "text": 2985,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 17613,
-     "h": 1192,
+     "top": 16056,
+     "h": 1130,
      "bg": "rgb(255, 255, 255)",
-     "text": 413,
+     "text": 358,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 18805,
-     "h": 588,
+     "top": 17186,
+     "h": 553,
      "bg": "rgb(240, 240, 240)",
-     "text": 59,
-     "media": 2
+     "text": 184,
+     "media": 6
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 19394,
+     "top": 17739,
      "h": 580,
      "bg": "rgb(255, 255, 255)",
-     "text": 345,
+     "text": 327,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 19974,
-     "h": 332,
+     "top": 18319,
+     "h": 310,
      "bg": "rgb(26, 26, 26)",
-     "text": 231,
+     "text": 159,
      "media": 0
     },
     {
      "id": "findings_spacing_fix",
      "type": "custom-html",
-     "top": 20306,
+     "top": 18629,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -963,7 +967,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 20306,
+     "top": 18629,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -972,7 +976,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 21345,
+     "top": 19668,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

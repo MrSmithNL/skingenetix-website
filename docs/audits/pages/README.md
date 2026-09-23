@@ -21,11 +21,11 @@ desktop (1440) and mobile (390) full-page screenshots in `/tmp/audit-<slug>/`.
 
 | Page | Before | After |
 |---|---|---|
-| `/pages/pdrn-research` | *(upgraded before the tool existed)* | **SEO 100 · GEO 100 · Design 100** |
+| `/pages/pdrn-research` | *(upgraded before the tool existed)* | **SEO 100 · GEO 100 · Design 100**; after the 2026-09-23 parity build **Marketing 71 → 93** (two of the new evidence-table rows had named a disease and quoted a mechanism phrase; reworded) and external **9.82** |
 | `/pages/acetyl-hexapeptide-8-research` | SEO 81 · GEO 65 · Design 84 | **SEO 98 · GEO 100 · Design 100** |
 | `/` | SEO 84 · GEO 61 · Design 84 | — |
 | `/pages/the-science` | SEO 79 · GEO 53 · Design 94 | — |
-| `/pages/copper-peptide-research` | SEO 90 · GEO 77 · Design 84 | **SEO 100 · GEO 100 · Design 100** |
+| `/pages/copper-peptide-research` | SEO 90 · GEO 77 · Design 84 | **SEO 100 · GEO 100 · Design 100 · Marketing 100** after the 2026-09-23 parity build; external **9.75** |
 | `/pages/matrixyl-3000-research` | SEO 90 · GEO 86 · Design 84 | **SEO 100 · GEO 100 · Design 100 · Marketing 93**. External dual-model 8.12 → **9.60** (see below) |
 | `/pages/glutathione-research` | SEO 90 · GEO 86 · Design 84 | **SEO 100 · GEO 100 · Design 100 · Marketing 100** (2026-09-23, hub 5 of 5, full rebuild to the standard). External dual-model **9.65** on round 1 (see below) |
 | `/pages/fine-lines-wrinkles` | SEO 90 · GEO 81 · Design 90 | — |
@@ -56,6 +56,13 @@ The seo-aiso-validator protocol: 20 criteria scored on the Trafilatura extractio
 | | 2 | 8.80 | 9.60 | 9.20 | + a real `<table>` under each chart (GPT's dip on unchanged sections is model variance) |
 | | 3 | 9.60 | 9.60 | **9.60** | + "at a glance" list after the definition |
 | `/pages/glutathione-research` | 1 | 9.75 | 9.55 | **9.65** | full rebuild on the Matrixyl pattern, 2026-09-23: 17 of 20 criteria at 10/10 on both models. Below 9 on one model: heading hierarchy (Gem 6, the stock `impact-text` figures render as `<h2>` — the same accepted trade-off as Matrixyl) and author attribution (Gem 7, the open named-author question). No round 2: neither is a change we would make |
+| `/pages/pdrn-research` | 2 | 9.80 | 9.85 | **9.82** | parity build + key figures at the top, 2026-09-23 (round 1 was 9.60 after the 09-22 retrofit). Only heading hierarchy below 9 (Gem 8: the `impact-text` `<h2>` figures) |
+| `/pages/copper-peptide-research` | 2 | 9.55 | 9.95 | **9.75** | parity build + key figures at the top, 2026-09-23 (round 1 was 9.55). GPT asks for more independent data and citation balance; the page now names the funder and the journal's peer review beside the key trial |
+| `/pages/acetyl-hexapeptide-8-research` | 2 | 9.60 | 9.80 | **9.70** | key figures at the top + at-a-glance, 2026-09-23 (round 1 was 9.72): no criterion below 9 on either model |
+| `/pages/matrixyl-3000-research` | 4 | 9.50 | 9.70 | **9.60** | key figures moved to the top, 2026-09-23: unchanged score; author attribution (Gem 7) is the only criterion under 9 |
+| `/pages/glutathione-research` | 2 | 9.80 | 9.75 | **9.78** | key figures moved to the top, 2026-09-23: up from 9.65; no criterion below 9 on either model |
+
+**All five hubs pass on 2026-09-23** (9.60–9.82) with the key figures directly under the hero. Page audit the same day: PDRN 100/100/100/93, copper 100/100/100/100, Argireline 98/100/100/93 (URL without the head term, seven pre-existing unsourced figures on its cards), Matrixyl 100/100/100/93 (seven pre-existing card figures without a source word), glutathione 100/100/100/100.
 
 **Qualified pass.** Three criteria stay below 9 on one model:
 - Author (Gem 7) and expert review (Gem 8): these need a named, credentialed person. That is Malcolm's decision, and Dr Bodde's byline waits until she has reviewed the page.
@@ -115,3 +122,10 @@ The seo-aiso-validator protocol: 20 criteria scored on the Trafilatura extractio
 | Glutathione: Khanna 2025 "favourable safety and tolerability" | Khanna et al. 2025, PMC12710870 — full text | ❌ Contradicted — "Safety data is limited"; "tolerability was varied". Removed |
 | Glutathione: "a fresher glow within 1–2 weeks", "even tone builds over 8–12 weeks", "suitable for all skin types and tones", "excellent safety profile", "well suited to long-term daily use", "isolated dark spots respond faster", "15 minutes of sun" | No source; Watanabe 2014 studied types III–IV only, 10 weeks, and says long-term safety needs more studies | ❌ Removed from the product, the Duo, their FAQ items and `/pages/brightening-glow` in six languages (`configs/claim-fixes/glutathione-2026-09-23.json`) |
 | Glutathione: Sonthalia 2018, Etnawati 2019, Dilokthornsakul 2019, Rhie 2001 records | PMC/PubMed esummary and Crossref, 2026-09-23 | ✅ Titles, journals, volumes and years as cited |
+| PDRN: crow's feet −20 to −23% vs −6 to −7%, "two-fold", "1.8-fold", day 14, no adverse reactions, 31 women with sensitive skin, 0.1% PDRN-850K, commercial affiliations | Ye et al. 2026, PMC13353946 — full text, 2026-09-23 | ✅ Accurate. **Four authors at Inertia Shanghai and DermaHealth Shanghai** (declared "no conflicts") — now on the findings card and in the at-a-glance |
+| PDRN: old findings card "~20% reduction… outperforming the retinol cream" and result label "~20% softer-looking crow's feet" | same | ⚠️ Under-stated and unsourced beside the figure (MARKETING 93). Rewritten to the verified range with the source line |
+| PDRN: the ten studies added to the References (Yogya, Gulfan, Thellung, Belletti, Alhussain, Lampridou, Squadrito 2014, Kim 2023, Lee 2022, Havas, Bak) | PubMed esummary + abstracts, 2026-09-23 | ✅ Records as cited; graded X or "different ingredient" on the page where they are injected, procedure-assisted or non-salmon |
+| Copper: 55.8% / 31.6% / 32.8% relative figures | Pickart & Margolina 2018, PMC6073405 — full text | ✅ As on the page. **Badenhorst's own PDF is image-only** (no text layer); the baseline changes (−24.1% / −15.0%) rest on the register's 09-22 full read |
+| Copper: 7 of 10 / 5 of 10 / 4 of 10, one month; 1973; 200 → 80 ng/mL uncited | Pickart et al. 2015, PMC4508379 — full text | ✅ Accurate; the table row says the decline figure is given without a citation |
+| Copper: Mokhtar 2026 "2 RCTs", the wrinkle sentence, the "limited number" caveat | PubMed 42619529 abstract | ✅ Both sentences are on the page |
+| Argireline: 48.9% vs 0%; forehead cR2 P = .022; Henseler null p = 0.829; no peptide in the dermis | PubMed 23417317, 28150423, 38024099, 24754410 abstracts, 2026-09-23 | ✅ As on the new band and at-a-glance; Henseler and Kraeling were cited without being in the References — added |

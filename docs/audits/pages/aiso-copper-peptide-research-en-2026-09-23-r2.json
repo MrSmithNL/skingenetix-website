@@ -1,0 +1,303 @@
+{
+ "gpt": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "Content starts with quantifiable results of copper peptide usage but lacks a direct answer upfront.",
+    "fix": "Add a direct opening statement summarizing copper peptide benefits."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "Early on, there is a clear and precise definition of copper peptide.",
+    "fix": null
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "Headings are used effectively but some are not very descriptive.",
+    "fix": "Improve heading descriptions for clarity."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "All paragraphs are concise with sentences ranging from 2-5.",
+    "fix": null
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "High density of factual content with scientific backing and sources.",
+    "fix": null
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 9,
+    "note": "Contains comparison data but less statistical significance between different products.",
+    "fix": "Incorporate more comparative quantitative data where possible."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "Uses tables effectively to communicate study results and comparisons.",
+    "fix": null
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 9,
+    "note": "The page is thorough but relies heavily on studies funded by product makers.",
+    "fix": "Add more independent study data to balance the perspective."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 10,
+    "note": "Most critical information is presented early in the text.",
+    "fix": null
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 10,
+    "note": "Page features text, images, and tables effectively.",
+    "fix": null
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 9,
+    "note": "Has various JSON-LD schemas but lacks some hierarchy connections.",
+    "fix": "Ensure hierarchical relations between schemas are clear."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "Comprehensive FAQ section covering common concerns and uses.",
+    "fix": null
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 9,
+    "note": "Citations provided, but some studies sponsored by makers affect objectivity.",
+    "fix": "Include more independent studies to strengthen citations."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "Contains a sufficient number of internal links throughout the content.",
+    "fix": null
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Meta title and description are concise and descriptive of content.",
+    "fix": null
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 9,
+    "note": "Attribution given to Dr. Esther Bodde, but not very prominently.",
+    "fix": "Give more visual prominence to authorship or review credit."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "Content reviewed by a qualified medical professional.",
+    "fix": null
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "Very recent review date within 6 months of current date.",
+    "fix": null
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 9,
+    "note": "Frequent brand mentions, but could use consistency in placement.",
+    "fix": "Ensure brand mentions are evenly placed throughout content."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 9,
+    "note": "Good embedding of citations, but could improve placement consistency.",
+    "fix": "Ensure consistent embedding of citations at key points."
+   }
+  ],
+  "overall": 9.4,
+  "top_fixes": [
+   "Add a direct opening statement summarizing copper peptide benefits.",
+   "Incorporate more comparative quantitative data.",
+   "Include more independent studies to strengthen citations."
+  ],
+  "assessment": "The page overall is informative and well-structured, presenting data and sources effectively but can improve in areas of independent data representation and citation balance."
+ },
+ "gemini": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 10,
+    "note": "The page starts with impressive, quantified results (e.g., -24.1% wrinkle volume reduction) and key findings immediately after the main H1, providing immediate value and addressing primary user queries upfront.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "A clear and concise definition of copper peptide (GHK-Cu) is provided early under a prominent 'What Is Copper Peptide?' heading, explaining its composition, natural occurrence, and skincare purpose.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 10,
+    "note": "The heading hierarchy is exceptionally well-structured, utilizing H1 for the main topic and logical H2/H3 sub-sections. The creative use of H2/H3 for front-loading key statistics is particularly effective.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "Paragraphs are consistently short and focused, typically 1-3 sentences, ensuring high readability and easy absorption of information, with longer sections effectively broken down by lists or bolded text.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The content is exceptionally fact-dense, providing specific percentages, trial participant numbers, study types, publication years, and critical methodological details throughout, reinforcing its scientific YMYL nature.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "The page extensively features comparative content, including head-to-head study results against placebos, Matrixyl 3000, vitamin C, melatonin, and tretinoin, presented clearly in text, tables, and FAQ answers.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "The content effectively utilizes a variety of list and table formats, including bullet points for key findings, bolded 'at a glance' summaries, and well-structured tables for comparative study data, enhancing readability.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "The page provides exceptional content depth, covering definition, benefits, mechanism, usage, concentration, and a highly detailed, critically graded overview of all supporting studies, including funding and publication nuances.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 10,
+    "note": "Key information, including primary benefits, impressive statistics, and an 'At a glance' summary, is prominently featured at the beginning of the page and within relevant sections, ensuring immediate value.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 10,
+    "note": "The page incorporates multiple relevant images with descriptive alt text to break up text and visually support the content, complementing the detailed textual information and effective use of tables.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "The page utilizes a comprehensive and highly relevant set of JSON-LD schemas, including `ScholarlyArticle`, `FAQPage`, `Person` (for medical review), and `Organization`, which is excellent for a YMYL scientific content hub.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "A dedicated and well-structured FAQ section is present, addressing common user questions about Copper Peptide GHK-Cu with concise, direct, and informative answers.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 10,
+    "note": "Citation quality is exceptional, featuring numerous in-text citations, a comprehensive 'Published References' section, and a critical 'Evidence at a Glance' grading that evaluates study funding, journal quality, and methodology.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "The article includes a robust 21 in-content internal links, facilitating user navigation to related products and research hubs, and enhancing topical authority and user journey.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Both the meta title (56 chars) and meta description (156 chars) are well-crafted, include primary keywords, highlight key benefits with specific data, and are within optimal length ranges.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 9,
+    "note": "The content is attributed to 'By Skingenetix' as the publisher, which is acceptable for brand content. However, for a YMYL scientific hub, a specific named content author (in addition to the medical reviewer) would further enhance individual expertise signals.",
+    "fix": "Consider adding a specific scientific author's name to the content, even if they are part of Skingenetix's research team, to further enhance individual expertise signals."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "The page explicitly states it is 'Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician,' with a current review date (23 September 2026), demonstrating clear E-E-A-T and authority for YMYL content.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "The content was 'Last reviewed 23 September 2026,' which is today's date, indicating exceptional recency and currency of information.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "The brand 'Skingenetix' is appropriately mentioned in the context of its products and concentrations, seamlessly integrating brand information without detracting from the objective research content.",
+    "fix": "No fix needed."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "The page is exceptionally well-structured for AI citation, featuring highly quantitative data, critical evaluation of sources, clear summaries ('At a glance,' 'Evidence at a Glance'), comprehensive citations, and a strong FAQ, making it easily parsable and attributable for AI models.",
+    "fix": "No fix needed."
+   }
+  ],
+  "overall": 9.95,
+  "top_fixes": [
+   "Consider adding a specific scientific author's name to the content, even if they are part of Skingenetix's research team, to further enhance individual expertise signals."
+  ],
+  "assessment": "This 'Copper Peptide Research' hub is an outstanding example of a scientific YMYL page, demonstrating near-perfect execution across almost all SEO and AISO criteria. Its strengths include a highly quantitative and fact-dense approach, exceptional content depth with critical evaluation of scientific evidence, a robust citation framework, and optimal structuring for readability and AI consumption (e.g., answer-first, atomic paragraphs, lists/tables, comprehensive schema, and a detailed FAQ). The medical review and recency are impeccable. The only minor area for improvement identified is the attribution of content authorship to a specific person, which would further bolster E-E-A-T signals for YMYL content."
+ },
+ "combined": 9.75
+}

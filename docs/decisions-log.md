@@ -192,3 +192,14 @@ so whatever section physically precedes another becomes its "previous section" f
 - The audit's alternation check exempts a findings run of `research-before-after` and `media-with-text` in either order. Neither section has a background setting, so a run of them always sits on the page's Bone; the rule already exempted one order.
 - The stock `impact-text` big figures render as `<h2>` and cost the glutathione hub a 6/10 on Gemini's heading-hierarchy criterion (7.5 average, the page's only failing criterion besides the open named-author question). Kept, as on Matrixyl: the research-page standard names `impact-text` for headline figures, and the alternative is custom code.
 **Consequences:** Four new tests in `tests/test_page_audit.py`, one in `tests/test_set_reviewer.py`. The glutathione hub audits 100/100/100/100 and 9.65 on the external dual-model audit with the published titles on the page.
+
+---
+
+## ADR-2026-09-23-T: The three key figures sit at the top of every science page
+
+**Date:** 2026-09-23
+**Status:** Accepted (Malcolm: "shouldn't the 3 main USPs/claims bar be at the top of each of the science main pages? This is better for marketing right?")
+**Context:** The Matrixyl and glutathione builds placed the stock `impact-text` band with the three key figures after the definition and the evidence prose, a third of the way down the page. Proof points high on the page lift conversion, and `page-audit.py`'s own marketing rule rewards a proof point in the first 30% of the text.
+**Decision:** On all five hubs the band sits directly under the hero: hero → key figures (White) → definition and at-a-glance (Bone) → evidence prose (White) → findings cards → charts → usage rows → evidence table → references → FAQ → shop → related → CTA. The charts moved below the findings cards and the evidence table below the usage rows so the Bone/White alternation holds; the four sections from References down flipped colour. Argireline, which had no band, got one from its register (48.9% vs 0%; −7.4% vs +4.3% at day 20; 4 weeks).
+**Also this day:** the PDRN and copper hubs were brought level with the two reference builds (at-a-glance list, key figures, ten-row evidence table, image rows with a how-to, two FAQs each, references and JSON-LD extended, PDRN's findings card rewritten to the verified figures), and the copper hub now names the trial funder and the journal's weaker peer review beside the 55.8% figure.
+**Trade-offs:** The definition paragraph now starts about 60 words later, still inside the answer-first window that both external auditors score. The `impact-text` figures still render as `<h2>` (ADR-2026-09-22 and -G); that cost is unchanged by the move. The Argireline evidence table and image rows remain a follow-up.

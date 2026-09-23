@@ -1,0 +1,668 @@
+{
+  "_about": "Malcolm, 2026-09-23: 'the 3 main USPs/claims bar' belongs at the top of every science page. Moves the stats band directly under the hero on matrixyl-3000-research, moves the charts below the findings cards and the evidence table below the usage rows, and flips the four backgrounds below so the page still alternates Bone/White. Sections are re-supplied verbatim from configs/hub-upgrades/matrixyl-3000-research.json (the current spec), so every six-locale value is re-registered unchanged. Additive; nothing else on the page is touched.",
+  "template": "templates/page.research-matrixyl.json",
+  "page": "matrixyl-3000-research",
+  "_design": "hero → stats White → overview Bone → evidence White → findings (Bone wrapper, White cards) → charts White → usage (Bone wrapper) → evidence_table White → references Bone → FAQ White (accordion Bone) → shop Bone → related White → CTA Graphite.",
+  "add_sections": [
+    {
+      "id": "stats",
+      "after": "hero",
+      "section": {
+        "type": "impact-text",
+        "settings": {
+          "full_width": true,
+          "stack_mobile": true,
+          "text_alignment": "center",
+          "impact_text_style": "fill",
+          "text_divider": "none",
+          "impact_text_size_ratio": 0.7,
+          "background": "#ffffff",
+          "heading_text_color": "#016569",
+          "text_color": "#1A1A1A"
+        },
+        "blocks": {
+          "s1": {
+            "type": "item",
+            "settings": {
+              "animate_impact_text": false,
+              "title": {
+                "en": "−39%",
+                "de": "−39 %",
+                "nl": "−39%",
+                "fr": "−39 %",
+                "es": "−39 %",
+                "it": "−39%"
+              },
+              "subheading": {
+                "en": "Deep-wrinkle area",
+                "de": "Fläche tiefer Falten",
+                "nl": "Oppervlak diepe rimpels",
+                "fr": "Surface des rides profondes",
+                "es": "Superficie de arrugas profundas",
+                "it": "Superficie delle rughe profonde"
+              },
+              "content": {
+                "en": "<p>After 2 months on the Matrixyl 3000 side of the face, in Sederma's split-face study of 23 women. No significant change on the placebo side.</p>",
+                "de": "<p>Nach 2 Monaten auf der Matrixyl-3000-Gesichtshälfte, in Sedermas Halbseitenstudie mit 23 Frauen. Keine signifikante Veränderung auf der Placebo-Seite.</p>",
+                "nl": "<p>Na 2 maanden aan de Matrixyl 3000-kant van het gezicht, in de halfgelaatsstudie van Sederma bij 23 vrouwen. Geen significante verandering aan de placebokant.</p>",
+                "fr": "<p>Après 2 mois du côté Matrixyl 3000 du visage, dans l'étude en hémi-visage de Sederma sur 23 femmes. Aucun changement significatif du côté placebo.</p>",
+                "es": "<p>Tras 2 meses en el lado de la cara con Matrixyl 3000, en el estudio de hemicara de Sederma con 23 mujeres. Sin cambios significativos en el lado placebo.</p>",
+                "it": "<p>Dopo 2 mesi sul lato del viso trattato con Matrixyl 3000, nello studio split-face di Sederma su 23 donne. Nessuna variazione significativa sul lato placebo.</p>"
+              }
+            }
+          },
+          "s2": {
+            "type": "item",
+            "settings": {
+              "animate_impact_text": false,
+              "title": {
+                "en": "+15%",
+                "de": "+15 %",
+                "nl": "+15%",
+                "fr": "+15 %",
+                "es": "+15 %",
+                "it": "+15%"
+              },
+              "subheading": {
+                "en": "Denser upper skin layer",
+                "de": "Dichtere obere Hautschicht",
+                "nl": "Dichtere bovenste huidlaag",
+                "fr": "Couche supérieure de la peau plus dense",
+                "es": "Capa superior de la piel más densa",
+                "it": "Strato superiore della pelle più denso"
+              },
+              "content": {
+                "en": "<p>On forearm ultrasound after 2 months, compared with the placebo side, in Sederma's study of 28 women.</p>",
+                "de": "<p>Im Ultraschall am Unterarm nach 2 Monaten, verglichen mit der Placebo-Seite, in Sedermas Studie mit 28 Frauen.</p>",
+                "nl": "<p>Bij echografie van de onderarm na 2 maanden, vergeleken met de placebokant, in de studie van Sederma bij 28 vrouwen.</p>",
+                "fr": "<p>À l'échographie de l'avant-bras après 2 mois, par rapport au côté placebo, dans l'étude de Sederma sur 28 femmes.</p>",
+                "es": "<p>En la ecografía del antebrazo tras 2 meses, frente al lado placebo, en el estudio de Sederma con 28 mujeres.</p>",
+                "it": "<p>All'ecografia dell'avambraccio dopo 2 mesi, rispetto al lato placebo, nello studio di Sederma su 28 donne.</p>"
+              }
+            }
+          },
+          "s3": {
+            "type": "item",
+            "settings": {
+              "animate_impact_text": false,
+              "title": {
+                "en": "+256%",
+                "de": "+256 %",
+                "nl": "+256%",
+                "fr": "+256 %",
+                "es": "+256 %",
+                "it": "+256%"
+              },
+              "subheading": {
+                "en": "Collagen I in lab tests",
+                "de": "Kollagen I im Labortest",
+                "nl": "Collageen I in labtests",
+                "fr": "Collagène I en laboratoire",
+                "es": "Colágeno I en pruebas de laboratorio",
+                "it": "Collagene I nei test di laboratorio"
+              },
+              "content": {
+                "en": "<p>In human skin cells given both Matrixyl 3000 peptides together, compared with untreated cells (Sederma patent). A cell result, not a measurement in skin.</p>",
+                "de": "<p>In menschlichen Hautzellen, die beide Matrixyl-3000-Peptide zusammen erhielten, verglichen mit unbehandelten Zellen (Sederma-Patent). Ein Zellergebnis, keine Messung in der Haut.</p>",
+                "nl": "<p>In menselijke huidcellen die beide Matrixyl 3000-peptiden samen kregen, vergeleken met onbehandelde cellen (Sederma-octrooi). Een celresultaat, geen meting in de huid.</p>",
+                "fr": "<p>Dans des cellules de peau humaine exposées aux deux peptides du Matrixyl 3000, par rapport à des cellules non traitées (brevet Sederma). Un résultat cellulaire, pas une mesure dans la peau.</p>",
+                "es": "<p>En células de piel humana tratadas con los dos péptidos de Matrixyl 3000 juntos, frente a células sin tratar (patente de Sederma). Un resultado celular, no una medición en la piel.</p>",
+                "it": "<p>In cellule della pelle umana trattate con entrambi i peptidi di Matrixyl 3000, rispetto a cellule non trattate (brevetto Sederma). Un risultato cellulare, non una misura nella pelle.</p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      }
+    },
+    {
+      "id": "charts",
+      "after": "key_findings",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": false,
+          "remove_horizontal_spacing": false,
+          "background": "#ffffff",
+          "html": {
+            "$chart": [
+              "wrinkles",
+              "collagen"
+            ],
+            "heading": {
+              "en": "Matrixyl 3000 Before and After: What the Measurements Show",
+              "de": "Matrixyl 3000 vorher und nachher: Was die Messungen zeigen",
+              "nl": "Matrixyl 3000 voor en na: wat de metingen laten zien",
+              "fr": "Matrixyl 3000 avant et après : ce que montrent les mesures",
+              "es": "Matrixyl 3000 antes y después: lo que muestran las mediciones",
+              "it": "Matrixyl 3000 prima e dopo: cosa mostrano le misurazioni"
+            },
+            "intro": {
+              "en": "<p>Two charts drawn from the manufacturer's own data: what changed on the skin in the clinical study, and what happened in skin cells in the lab.</p>",
+              "de": "<p>Zwei Diagramme aus den eigenen Daten des Herstellers: was sich in der klinischen Studie an der Haut veränderte und was im Labor in Hautzellen geschah.</p>",
+              "nl": "<p>Twee grafieken op basis van de eigen gegevens van de fabrikant: wat er in de klinische studie op de huid veranderde, en wat er in het lab in huidcellen gebeurde.</p>",
+              "fr": "<p>Deux graphiques établis à partir des données du fabricant : ce qui a changé sur la peau dans l'étude clinique, et ce qui s'est passé dans les cellules de la peau en laboratoire.</p>",
+              "es": "<p>Dos gráficos elaborados con los datos del propio fabricante: lo que cambió en la piel en el estudio clínico y lo que ocurrió en las células de la piel en el laboratorio.</p>",
+              "it": "<p>Due grafici tratti dai dati del produttore: cosa è cambiato sulla pelle nello studio clinico e cosa è successo alle cellule della pelle in laboratorio.</p>"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "usage",
+      "after": "charts",
+      "section": {
+        "type": "media-with-text",
+        "settings": {
+          "full_width": false,
+          "alternate_media_position": true,
+          "spacing": "small"
+        },
+        "blocks": {
+          "u1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-matrixyl-3000-firming-serum-clear-drop-on-cheek-macro.jpg",
+              "media_width": 50,
+              "media_position": "end",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a",
+              "content": {
+                "en": "<h2>How to Use Matrixyl 3000</h2><p>Apply it to clean skin morning and evening, before your moisturiser. That matches the studies, which applied the peptides twice a day. In the morning, finish with SPF.</p><p>Give it at least 8 weeks. The Matrixyl 3000 studies measured their results at 2 months, and the pentapeptide-4 trial found significant results at weeks 8 and 12.</p><p>Peptides are not acids or exfoliants, so they are easy to layer with vitamin C, niacinamide and hyaluronic acid. Matrixyl 3000 is often paired with <a href=\"/pages/copper-peptide-research\">copper peptide (GHK-Cu)</a>, another collagen-signal peptide, or with <a href=\"/pages/acetyl-hexapeptide-8-research\">Argireline®</a> for expression lines. Patch-test any new product first.</p>",
+                "de": "<h2>So wenden Sie Matrixyl 3000 an</h2><p>Tragen Sie es morgens und abends auf die gereinigte Haut auf, vor Ihrer Feuchtigkeitspflege. Das entspricht den Studien, in denen die Peptide zweimal täglich aufgetragen wurden. Morgens schließen Sie mit SPF ab.</p><p>Geben Sie ihm mindestens 8 Wochen. Die Matrixyl-3000-Studien maßen ihre Ergebnisse nach 2 Monaten, und die Pentapeptide-4-Studie fand signifikante Ergebnisse in Woche 8 und 12.</p><p>Peptide sind weder Säuren noch Peelings und lassen sich daher leicht mit Vitamin C, Niacinamid und Hyaluronsäure kombinieren. Matrixyl 3000 wird oft mit <a href=\"/de/pages/copper-peptide-research\">Kupferpeptid (GHK-Cu)</a> kombiniert, einem weiteren Kollagen-Signalpeptid, oder mit <a href=\"/de/pages/acetyl-hexapeptide-8-research\">Argireline®</a> für Mimikfalten. Machen Sie bei jedem neuen Produkt zuerst einen Verträglichkeitstest.</p>",
+                "nl": "<h2>Zo gebruik je Matrixyl 3000</h2><p>Breng het 's ochtends en 's avonds aan op een gereinigde huid, vóór je moisturiser. Dat komt overeen met de studies, waarin de peptiden twee keer per dag werden aangebracht. Sluit 's ochtends af met SPF.</p><p>Geef het minstens 8 weken. De Matrixyl 3000-studies maten hun resultaten na 2 maanden, en de pentapeptide-4-studie vond significante resultaten in week 8 en 12.</p><p>Peptiden zijn geen zuren of exfolianten, dus je combineert ze makkelijk met vitamine C, niacinamide en hyaluronzuur. Matrixyl 3000 wordt vaak gecombineerd met <a href=\"/nl/pages/copper-peptide-research\">koperpeptide (GHK-Cu)</a>, een ander collageensignaalpeptide, of met <a href=\"/nl/pages/acetyl-hexapeptide-8-research\">Argireline®</a> voor expressielijntjes. Doe bij elk nieuw product eerst een patchtest.</p>",
+                "fr": "<h2>Comment utiliser le Matrixyl 3000</h2><p>Appliquez-le matin et soir sur une peau propre, avant votre crème hydratante. C'est ce que prévoyaient les études, où les peptides étaient appliqués deux fois par jour. Le matin, terminez par un SPF.</p><p>Comptez au moins 8 semaines. Les études sur le Matrixyl 3000 ont mesuré leurs résultats à 2 mois, et l'essai sur le pentapeptide-4 a obtenu des résultats significatifs aux semaines 8 et 12.</p><p>Les peptides ne sont ni des acides ni des exfoliants : ils s'associent facilement à la vitamine C, au niacinamide et à l'acide hyaluronique. Le Matrixyl 3000 est souvent associé au <a href=\"/fr/pages/copper-peptide-research\">peptide de cuivre (GHK-Cu)</a>, un autre peptide signal du collagène, ou à l'<a href=\"/fr/pages/acetyl-hexapeptide-8-research\">Argireline®</a> pour les rides d'expression. Faites d'abord un test cutané avec tout nouveau produit.</p>",
+                "es": "<h2>Cómo usar Matrixyl 3000</h2><p>Aplícalo por la mañana y por la noche sobre la piel limpia, antes de tu hidratante. Así se hizo en los estudios, en los que los péptidos se aplicaban dos veces al día. Por la mañana, termina con SPF.</p><p>Dale al menos 8 semanas. Los estudios de Matrixyl 3000 midieron sus resultados a los 2 meses, y el ensayo con pentapeptide-4 encontró resultados significativos en las semanas 8 y 12.</p><p>Los péptidos no son ácidos ni exfoliantes, así que se combinan fácilmente con vitamina C, niacinamida y ácido hialurónico. Matrixyl 3000 se combina a menudo con el <a href=\"/es/pages/copper-peptide-research\">péptido de cobre (GHK-Cu)</a>, otro péptido señal del colágeno, o con <a href=\"/es/pages/acetyl-hexapeptide-8-research\">Argireline®</a> para las líneas de expresión. Haz primero una prueba en una pequeña zona con cualquier producto nuevo.</p>",
+                "it": "<h2>Come usare Matrixyl 3000</h2><p>Applicalo mattina e sera sulla pelle detersa, prima della tua crema idratante. È quanto previsto negli studi, in cui i peptidi venivano applicati due volte al giorno. Al mattino, termina con SPF.</p><p>Concedigli almeno 8 settimane. Gli studi su Matrixyl 3000 hanno misurato i risultati a 2 mesi, e lo studio sul pentapeptide-4 ha trovato risultati significativi alle settimane 8 e 12.</p><p>I peptidi non sono acidi né esfolianti, quindi si abbinano facilmente a vitamina C, niacinamide e acido ialuronico. Matrixyl 3000 viene spesso abbinato al <a href=\"/it/pages/copper-peptide-research\">peptide di rame (GHK-Cu)</a>, un altro peptide segnale del collagene, o ad <a href=\"/it/pages/acetyl-hexapeptide-8-research\">Argireline®</a> per le rughe d'espressione. Con ogni nuovo prodotto fai prima un test su una piccola zona.</p>"
+              }
+            }
+          },
+          "u2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-matrixyl-3000-firming-serum-cream-set-teal-background.jpg",
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a",
+              "content": {
+                "en": "<h2>What Does a Matrixyl 3000 Percentage Mean?</h2><p>Matrixyl 3000 is supplied as a solution in which the two peptides make up only a few parts per million. So a percentage on a label is a share of that solution, not of pure peptide. The manufacturer recommends 3% of the solution, the level used in its clinical studies.</p><p>You will find the complex in our <a href=\"/products/matrixyl-3000-firming-serum\">Matrixyl 3000 Firming Serum</a> and <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Pro-Collagen Firming Cream</a>.</p>",
+                "de": "<h2>Was bedeutet ein Prozentwert bei Matrixyl 3000?</h2><p>Matrixyl 3000 wird als Lösung geliefert, in der die beiden Peptide nur wenige Teile pro Million ausmachen. Ein Prozentwert auf dem Etikett bezieht sich daher auf diese Lösung, nicht auf reines Peptid. Der Hersteller empfiehlt 3 % der Lösung, die Menge aus seinen klinischen Studien.</p><p>Sie finden den Komplex in unserem <a href=\"/de/products/matrixyl-3000-firming-serum\">Matrixyl 3000 Serum</a> und unserer <a href=\"/de/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Creme</a>.</p>",
+                "nl": "<h2>Wat betekent een percentage Matrixyl 3000?</h2><p>Matrixyl 3000 wordt geleverd als oplossing waarin de twee peptiden maar een paar delen per miljoen uitmaken. Een percentage op het etiket is dus een aandeel van die oplossing, niet van puur peptide. De fabrikant adviseert 3% van de oplossing, de hoeveelheid uit zijn klinische studies.</p><p>Je vindt het complex in ons <a href=\"/nl/products/matrixyl-3000-firming-serum\">Matrixyl 3000 serum</a> en onze <a href=\"/nl/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 crème</a>.</p>",
+                "fr": "<h2>Que signifie un pourcentage de Matrixyl 3000 ?</h2><p>Le Matrixyl 3000 est fourni sous forme de solution dans laquelle les deux peptides ne représentent que quelques parties par million. Un pourcentage sur l'étiquette correspond donc à une part de cette solution, et non de peptide pur. Le fabricant recommande 3 % de solution, le niveau utilisé dans ses études cliniques.</p><p>Vous trouverez ce complexe dans notre <a href=\"/fr/products/matrixyl-3000-firming-serum\">sérum Matrixyl 3000</a> et notre <a href=\"/fr/products/matrixyl-3000-pro-collagen-firming-cream\">crème Matrixyl 3000</a>.</p>",
+                "es": "<h2>¿Qué significa un porcentaje de Matrixyl 3000?</h2><p>Matrixyl 3000 se suministra como una solución en la que los dos péptidos suponen solo unas pocas partes por millón. Por eso, un porcentaje en la etiqueta es una parte de esa solución, no de péptido puro. El fabricante recomienda un 3 % de la solución, el nivel que usó en sus estudios clínicos.</p><p>Encontrarás el complejo en nuestro <a href=\"/es/products/matrixyl-3000-firming-serum\">sérum Matrixyl 3000</a> y en nuestra <a href=\"/es/products/matrixyl-3000-pro-collagen-firming-cream\">crema Matrixyl 3000</a>.</p>",
+                "it": "<h2>Che cosa significa una percentuale di Matrixyl 3000?</h2><p>Matrixyl 3000 è fornito come soluzione in cui i due peptidi rappresentano solo poche parti per milione. Una percentuale in etichetta indica quindi una quota di quella soluzione, non di peptide puro. Il produttore raccomanda il 3% della soluzione, il livello usato nei suoi studi clinici.</p><p>Trovi il complesso nel nostro <a href=\"/it/products/matrixyl-3000-firming-serum\">siero Matrixyl 3000</a> e nella nostra <a href=\"/it/products/matrixyl-3000-pro-collagen-firming-cream\">crema Matrixyl 3000</a>.</p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "u1",
+          "u2"
+        ]
+      }
+    },
+    {
+      "id": "evidence_table",
+      "after": "usage",
+      "section": {
+        "type": "specification-table",
+        "settings": {
+          "full_width": true,
+          "subheading": "",
+          "title": "",
+          "text_position": "center",
+          "max_rows": 10,
+          "background": "#ffffff",
+          "chart_background": "#F0F0F0",
+          "content": {
+            "en": "<h2>Matrixyl 3000 Evidence at a Glance</h2><p>Every study this page relies on, graded. A: controlled human trial, measured by instrument. B: manufacturer human data, or a small or uncontrolled trial. C: tests on donated human skin. D: lab or animal study.</p>",
+            "de": "<h2>Matrixyl 3000: Die Studienlage auf einen Blick</h2><p>Jede Studie, auf die sich diese Seite stützt, mit Bewertung. A: kontrollierte Studie am Menschen, mit Messgeräten ausgewertet. B: Humandaten des Herstellers oder eine kleine bzw. unkontrollierte Studie. C: Tests an gespendeter menschlicher Haut. D: Labor- oder Tierstudie.</p>",
+            "nl": "<h2>Matrixyl 3000: het bewijs in één oogopslag</h2><p>Elke studie waarop deze pagina steunt, met beoordeling. A: gecontroleerde studie bij mensen, gemeten met instrumenten. B: gegevens van de fabrikant bij mensen, of een kleine of ongecontroleerde studie. C: tests op gedoneerde menselijke huid. D: lab- of dierstudie.</p>",
+            "fr": "<h2>Matrixyl 3000 : les preuves en un coup d'œil</h2><p>Chaque étude sur laquelle s'appuie cette page, avec son niveau. A : essai contrôlé chez l'humain, mesuré par instrument. B : données humaines du fabricant, ou essai de petite taille ou non contrôlé. C : tests sur de la peau humaine donnée. D : étude en laboratoire ou sur l'animal.</p>",
+            "es": "<h2>Matrixyl 3000: la evidencia de un vistazo</h2><p>Cada estudio en el que se basa esta página, con su calificación. A: ensayo controlado en personas, medido con instrumentos. B: datos en personas del fabricante, o un ensayo pequeño o no controlado. C: pruebas en piel humana donada. D: estudio de laboratorio o en animales.</p>",
+            "it": "<h2>Matrixyl 3000: le prove in sintesi</h2><p>Ogni studio su cui si basa questa pagina, con il suo grado. A: studio controllato sull'uomo, misurato con strumenti. B: dati sull'uomo del produttore, oppure studio piccolo o non controllato. C: test su pelle umana donata. D: studio di laboratorio o su animali.</p>"
+          }
+        },
+        "blocks": {
+          "t1": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Sederma split-face study (2013)",
+                "de": "Sederma-Halbseitenstudie (2013)",
+                "nl": "Halfgelaatsstudie Sederma (2013)",
+                "fr": "Étude Sederma en hémi-visage (2013)",
+                "es": "Estudio de hemicara de Sederma (2013)",
+                "it": "Studio split-face Sederma (2013)"
+              },
+              "value": {
+                "en": "<p><strong>Grade B.</strong> 23 women, 2 months, 3% Matrixyl 3000 vs placebo on opposite halves of the face. Deep-wrinkle area −39.4%, depth −19.9%, roughness −16.0%; placebo side not significant on these. Manufacturer data. <a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad B.</strong> 23 Frauen, 2 Monate, 3 % Matrixyl 3000 gegen Placebo auf gegenüberliegenden Gesichtshälften. Fläche tiefer Falten −39,4 %, Tiefe −19,9 %, Rauheit −16,0 %; Placebo-Seite hierbei nicht signifikant. Herstellerdaten. <a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad B.</strong> 23 vrouwen, 2 maanden, 3% Matrixyl 3000 tegenover placebo op de twee gezichtshelften. Oppervlak diepe rimpels −39,4%, diepte −19,9%, ruwheid −16,0%; placebokant hierop niet significant. Gegevens van de fabrikant. <a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Niveau B.</strong> 23 femmes, 2 mois, 3 % de Matrixyl 3000 contre placebo sur les deux moitiés du visage. Surface des rides profondes −39,4 %, profondeur −19,9 %, rugosité −16,0 % ; côté placebo non significatif sur ces mesures. Données du fabricant. <a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado B.</strong> 23 mujeres, 2 meses, 3 % de Matrixyl 3000 frente a placebo en mitades opuestas de la cara. Superficie de arrugas profundas −39,4 %, profundidad −19,9 %, rugosidad −16,0 %; lado placebo no significativo en estas medidas. Datos del fabricante. <a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado B.</strong> 23 donne, 2 mesi, 3% di Matrixyl 3000 contro placebo sulle due metà del viso. Superficie delle rughe profonde −39,4%, profondità −19,9%, ruvidità −16,0%; lato placebo non significativo su queste misure. Dati del produttore. <a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t2": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Sederma ultrasound study (patent, 2012)",
+                "de": "Sederma-Ultraschallstudie (Patent, 2012)",
+                "nl": "Echografiestudie Sederma (octrooi, 2012)",
+                "fr": "Étude échographique Sederma (brevet, 2012)",
+                "es": "Estudio ecográfico de Sederma (patente, 2012)",
+                "it": "Studio ecografico Sederma (brevetto, 2012)"
+              },
+              "value": {
+                "en": "<p><strong>Grade B.</strong> 28 women aged 51–72, 2 months, 3% vs placebo. Upper skin layer 15.2% denser than placebo on forearm ultrasound, and 7.8% denser after 1 month. Manufacturer data. <a href='https://patents.google.com/patent/WO2012164488A2/en' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad B.</strong> 28 Frauen von 51–72 Jahren, 2 Monate, 3 % gegen Placebo. Obere Hautschicht im Ultraschall am Unterarm 15,2 % dichter als bei Placebo, nach 1 Monat bereits 7,8 % dichter. Herstellerdaten. <a href='https://patents.google.com/patent/WO2012164488A2/en' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad B.</strong> 28 vrouwen van 51–72 jaar, 2 maanden, 3% tegenover placebo. Bovenste huidlaag bij echografie van de onderarm 15,2% dichter dan placebo, en na 1 maand al 7,8% dichter. Gegevens van de fabrikant. <a href='https://patents.google.com/patent/WO2012164488A2/en' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Niveau B.</strong> 28 femmes de 51 à 72 ans, 2 mois, 3 % contre placebo. Couche supérieure de la peau 15,2 % plus dense que le placebo à l'échographie de l'avant-bras, et 7,8 % plus dense dès 1 mois. Données du fabricant. <a href='https://patents.google.com/patent/WO2012164488A2/en' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado B.</strong> 28 mujeres de 51 a 72 años, 2 meses, 3 % frente a placebo. Capa superior de la piel un 15,2 % más densa que con placebo en la ecografía del antebrazo, y un 7,8 % más densa al mes. Datos del fabricante. <a href='https://patents.google.com/patent/WO2012164488A2/en' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado B.</strong> 28 donne tra 51 e 72 anni, 2 mesi, 3% contro placebo. Strato superiore della pelle più denso del 15,2% rispetto al placebo all'ecografia dell'avambraccio, e del 7,8% già dopo 1 mese. Dati del produttore. <a href='https://patents.google.com/patent/WO2012164488A2/en' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t3": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Robinson et al., 2005 (palmitoyl pentapeptide-4)",
+                "de": "Robinson et al., 2005 (Palmitoyl Pentapeptide-4)",
+                "nl": "Robinson et al., 2005 (palmitoyl pentapeptide-4)",
+                "fr": "Robinson et al., 2005 (palmitoyl pentapeptide-4)",
+                "es": "Robinson et al., 2005 (palmitoyl pentapeptide-4)",
+                "it": "Robinson et al., 2005 (palmitoyl pentapeptide-4)"
+              },
+              "value": {
+                "en": "<p><strong>Grade A.</strong> 93 women aged 35–55, 12 weeks, double-blind, placebo-controlled, split-face. Wrinkles and fine lines reduced significantly more than placebo, by instrument and by expert graders. Run by Procter &amp; Gamble scientists. Tests the original Matrixyl®, not Matrixyl 3000. <a href='https://pubmed.ncbi.nlm.nih.gov/18492182/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad A.</strong> 93 Frauen von 35–55 Jahren, 12 Wochen, doppelblind, placebokontrolliert, Halbseitendesign. Falten und feine Linien verringerten sich signifikant stärker als unter Placebo, gemessen mit Geräten und von Fachgutachtern. Durchgeführt von Wissenschaftlern bei Procter &amp; Gamble. Getestet wurde das ursprüngliche Matrixyl®, nicht Matrixyl 3000. <a href='https://pubmed.ncbi.nlm.nih.gov/18492182/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad A.</strong> 93 vrouwen van 35–55 jaar, 12 weken, dubbelblind, placebogecontroleerd, halfgelaatsopzet. Rimpels en fijne lijntjes namen significant meer af dan bij placebo, gemeten met instrumenten en door deskundige beoordelaars. Uitgevoerd door wetenschappers van Procter &amp; Gamble. Getest werd de oorspronkelijke Matrixyl®, niet Matrixyl 3000. <a href='https://pubmed.ncbi.nlm.nih.gov/18492182/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Niveau A.</strong> 93 femmes de 35 à 55 ans, 12 semaines, double aveugle, contrôlé contre placebo, en hémi-visage. Rides et ridules réduites significativement plus qu'avec le placebo, par instrument et par des évaluateurs experts. Mené par des scientifiques de Procter &amp; Gamble. Teste le Matrixyl® d'origine, pas le Matrixyl 3000. <a href='https://pubmed.ncbi.nlm.nih.gov/18492182/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado A.</strong> 93 mujeres de 35 a 55 años, 12 semanas, doble ciego, controlado con placebo, en hemicara. Arrugas y líneas finas reducidas significativamente más que con placebo, según instrumentos y evaluadores expertos. Realizado por científicos de Procter &amp; Gamble. Prueba el Matrixyl® original, no Matrixyl 3000. <a href='https://pubmed.ncbi.nlm.nih.gov/18492182/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado A.</strong> 93 donne tra 35 e 55 anni, 12 settimane, doppio cieco, controllato con placebo, split-face. Rughe e linee sottili ridotte in modo significativamente maggiore rispetto al placebo, secondo strumenti e valutatori esperti. Condotto da ricercatori di Procter &amp; Gamble. Testa il Matrixyl® originale, non Matrixyl 3000. <a href='https://pubmed.ncbi.nlm.nih.gov/18492182/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t4": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Aruan et al., 2023 (palmitoyl pentapeptide-4)",
+                "de": "Aruan et al., 2023 (Palmitoyl Pentapeptide-4)",
+                "nl": "Aruan et al., 2023 (palmitoyl pentapeptide-4)",
+                "fr": "Aruan et al., 2023 (palmitoyl pentapeptide-4)",
+                "es": "Aruan et al., 2023 (palmitoyl pentapeptide-4)",
+                "it": "Aruan et al., 2023 (palmitoyl pentapeptide-4)"
+              },
+              "value": {
+                "en": "<p><strong>Grade B.</strong> 21 women, 8 weeks, double-blind, three groups of 7. No significant difference from placebo on the skin instruments. Too small to rule an effect in or out; listed because null results count. <a href='https://pubmed.ncbi.nlm.nih.gov/36909866/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad B.</strong> 21 Frauen, 8 Wochen, doppelblind, drei Gruppen zu je 7. Auf den Hautmessgeräten kein signifikanter Unterschied zu Placebo. Zu klein, um eine Wirkung zu belegen oder auszuschließen; aufgeführt, weil auch Nullergebnisse zählen. <a href='https://pubmed.ncbi.nlm.nih.gov/36909866/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad B.</strong> 21 vrouwen, 8 weken, dubbelblind, drie groepen van 7. Geen significant verschil met placebo op de huidmeters. Te klein om een effect aan te tonen of uit te sluiten; vermeld omdat ook nulresultaten tellen. <a href='https://pubmed.ncbi.nlm.nih.gov/36909866/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Niveau B.</strong> 21 femmes, 8 semaines, double aveugle, trois groupes de 7. Aucune différence significative avec le placebo sur les instruments de mesure de la peau. Trop petit pour confirmer ou exclure un effet ; cité parce que les résultats nuls comptent aussi. <a href='https://pubmed.ncbi.nlm.nih.gov/36909866/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado B.</strong> 21 mujeres, 8 semanas, doble ciego, tres grupos de 7. Sin diferencia significativa frente al placebo en los instrumentos de medición de la piel. Demasiado pequeño para confirmar o descartar un efecto; se incluye porque los resultados nulos también cuentan. <a href='https://pubmed.ncbi.nlm.nih.gov/36909866/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado B.</strong> 21 donne, 8 settimane, doppio cieco, tre gruppi da 7. Nessuna differenza significativa rispetto al placebo sugli strumenti di misura della pelle. Troppo piccolo per confermare o escludere un effetto; incluso perché anche i risultati nulli contano. <a href='https://pubmed.ncbi.nlm.nih.gov/36909866/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t5": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Sederma patent US 6,974,799 (lab, 2005)",
+                "de": "Sederma-Patent US 6,974,799 (Labor, 2005)",
+                "nl": "Sederma-octrooi US 6,974,799 (lab, 2005)",
+                "fr": "Brevet Sederma US 6,974,799 (laboratoire, 2005)",
+                "es": "Patente de Sederma US 6,974,799 (laboratorio, 2005)",
+                "it": "Brevetto Sederma US 6,974,799 (laboratorio, 2005)"
+              },
+              "value": {
+                "en": "<p><strong>Grade D.</strong> Human skin cells, 3 days. Both peptides together: collagen I +256%, fibronectin +147%, hyaluronic acid +92%. Tetrapeptide-7 alone: collagen I +65%; tripeptide-1 alone: −9%. <a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad D.</strong> Menschliche Hautzellen, 3 Tage. Beide Peptide zusammen: Kollagen I +256 %, Fibronektin +147 %, Hyaluronsäure +92 %. Tetrapeptide-7 allein: Kollagen I +65 %; Tripeptide-1 allein: −9 %. <a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad D.</strong> Menselijke huidcellen, 3 dagen. Beide peptiden samen: collageen I +256%, fibronectine +147%, hyaluronzuur +92%. Tetrapeptide-7 alleen: collageen I +65%; tripeptide-1 alleen: −9%. <a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Niveau D.</strong> Cellules de peau humaine, 3 jours. Les deux peptides ensemble : collagène I +256 %, fibronectine +147 %, acide hyaluronique +92 %. Tetrapeptide-7 seul : collagène I +65 % ; tripeptide-1 seul : −9 %. <a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado D.</strong> Células de piel humana, 3 días. Los dos péptidos juntos: colágeno I +256 %, fibronectina +147 %, ácido hialurónico +92 %. Tetrapeptide-7 solo: colágeno I +65 %; tripeptide-1 solo: −9 %. <a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado D.</strong> Cellule della pelle umana, 3 giorni. Entrambi i peptidi insieme: collagene I +256%, fibronectina +147%, acido ialuronico +92%. Tetrapeptide-7 da solo: collagene I +65%; tripeptide-1 da solo: −9%. <a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t6": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Katayama et al., 1993 (lab)",
+                "de": "Katayama et al., 1993 (Labor)",
+                "nl": "Katayama et al., 1993 (lab)",
+                "fr": "Katayama et al., 1993 (laboratoire)",
+                "es": "Katayama et al., 1993 (laboratorio)",
+                "it": "Katayama et al., 1993 (laboratorio)"
+              },
+              "value": {
+                "en": "<p><strong>Grade D.</strong> Cell culture. Identified KTTKS, a five-amino-acid fragment of type I procollagen, as the shortest sequence that strongly stimulates collagen and fibronectin production. The starting point of the Matrixyl peptide family. <a href='https://pubmed.ncbi.nlm.nih.gov/8486721/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad D.</strong> Zellkultur. Identifizierte KTTKS, ein Fragment aus fünf Aminosäuren von Typ-I-Prokollagen, als kürzeste Sequenz, die die Bildung von Kollagen und Fibronektin stark anregt. Der Ausgangspunkt der Matrixyl-Peptidfamilie. <a href='https://pubmed.ncbi.nlm.nih.gov/8486721/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad D.</strong> Celkweek. Identificeerde KTTKS, een fragment van vijf aminozuren uit type I-procollageen, als de kortste reeks die de aanmaak van collageen en fibronectine sterk stimuleert. Het startpunt van de Matrixyl-peptidefamilie. <a href='https://pubmed.ncbi.nlm.nih.gov/8486721/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Niveau D.</strong> Culture cellulaire. A identifié le KTTKS, un fragment de cinq acides aminés du procollagène de type I, comme la plus courte séquence qui stimule fortement la production de collagène et de fibronectine. Le point de départ de la famille de peptides Matrixyl. <a href='https://pubmed.ncbi.nlm.nih.gov/8486721/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado D.</strong> Cultivo celular. Identificó KTTKS, un fragmento de cinco aminoácidos del procolágeno de tipo I, como la secuencia más corta que estimula con fuerza la producción de colágeno y fibronectina. El punto de partida de la familia de péptidos Matrixyl. <a href='https://pubmed.ncbi.nlm.nih.gov/8486721/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado D.</strong> Coltura cellulare. Ha identificato KTTKS, un frammento di cinque amminoacidi del procollagene di tipo I, come la sequenza più breve che stimola fortemente la produzione di collagene e fibronectina. Il punto di partenza della famiglia di peptidi Matrixyl. <a href='https://pubmed.ncbi.nlm.nih.gov/8486721/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t7": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Cosmetic Ingredient Review, 2018 (safety)",
+                "de": "Cosmetic Ingredient Review, 2018 (Sicherheit)",
+                "nl": "Cosmetic Ingredient Review, 2018 (veiligheid)",
+                "fr": "Cosmetic Ingredient Review, 2018 (sécurité)",
+                "es": "Cosmetic Ingredient Review, 2018 (seguridad)",
+                "it": "Cosmetic Ingredient Review, 2018 (sicurezza)"
+              },
+              "value": {
+                "en": "<p><strong>Safety review.</strong> Independent expert panel. Palmitoyl tripeptide-1 and palmitoyl tetrapeptide-7 are safe in cosmetics at current use levels, typically below 10 parts per million. <a href='https://doi.org/10.1177/1091581818807863' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Sicherheitsbewertung.</strong> Unabhängiges Expertengremium. Palmitoyl Tripeptide-1 und Palmitoyl Tetrapeptide-7 sind in Kosmetika bei den üblichen Einsatzmengen sicher, meist unter 10 Teilen pro Million. <a href='https://doi.org/10.1177/1091581818807863' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Veiligheidsbeoordeling.</strong> Onafhankelijk panel van deskundigen. Palmitoyl tripeptide-1 en palmitoyl tetrapeptide-7 zijn veilig in cosmetica bij de huidige gebruiksniveaus, meestal onder 10 delen per miljoen. <a href='https://doi.org/10.1177/1091581818807863' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Évaluation de sécurité.</strong> Panel d'experts indépendant. Le palmitoyl tripeptide-1 et le palmitoyl tetrapeptide-7 sont sûrs dans les cosmétiques aux niveaux d'utilisation actuels, généralement moins de 10 parties par million. <a href='https://doi.org/10.1177/1091581818807863' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Evaluación de seguridad.</strong> Panel de expertos independiente. Palmitoyl tripeptide-1 y palmitoyl tetrapeptide-7 son seguros en cosméticos a los niveles de uso actuales, normalmente por debajo de 10 partes por millón. <a href='https://doi.org/10.1177/1091581818807863' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Valutazione di sicurezza.</strong> Gruppo di esperti indipendente. Palmitoyl tripeptide-1 e palmitoyl tetrapeptide-7 sono sicuri nei cosmetici ai livelli d'uso attuali, di solito sotto 10 parti per milione. <a href='https://doi.org/10.1177/1091581818807863' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6",
+          "t7"
+        ]
+      }
+    }
+  ],
+  "section_settings": {
+    "references": {
+      "background": "#F0F0F0"
+    },
+    "faq": {
+      "background": "#ffffff",
+      "accordion_background": "#F0F0F0"
+    },
+    "shop_ingredient": {
+      "background": "#F0F0F0"
+    },
+    "related": {
+      "background": "#ffffff"
+    }
+  },
+  "charts": {
+    "wrinkles": {
+      "title": {
+        "en": "Wrinkle changes after 2 months",
+        "de": "Veränderung der Falten nach 2 Monaten",
+        "nl": "Verandering van rimpels na 2 maanden",
+        "fr": "Évolution des rides après 2 mois",
+        "es": "Cambios en las arrugas tras 2 meses",
+        "it": "Variazione delle rughe dopo 2 mesi"
+      },
+      "subtitle": {
+        "en": "Sederma split-face study: 23 women aged 42–67. Cream with 3% Matrixyl 3000 on one half of the face, placebo cream on the other, twice a day. Change from the start.",
+        "de": "Sederma-Halbseitenstudie: 23 Frauen im Alter von 42–67 Jahren. Creme mit 3 % Matrixyl 3000 auf einer Gesichtshälfte, Placebo-Creme auf der anderen, zweimal täglich. Veränderung gegenüber dem Studienbeginn.",
+        "nl": "Halfgelaatsstudie van Sederma: 23 vrouwen van 42–67 jaar. Crème met 3% Matrixyl 3000 op de ene gezichtshelft, placebocrème op de andere, twee keer per dag. Verandering ten opzichte van de start.",
+        "fr": "Étude en hémi-visage de Sederma : 23 femmes de 42 à 67 ans. Crème à 3 % de Matrixyl 3000 sur une moitié du visage, crème placebo sur l'autre, deux fois par jour. Évolution par rapport au début.",
+        "es": "Estudio de hemicara de Sederma: 23 mujeres de 42 a 67 años. Crema con un 3 % de Matrixyl 3000 en una mitad de la cara y crema placebo en la otra, dos veces al día. Cambio respecto al inicio.",
+        "it": "Studio split-face di Sederma: 23 donne tra 42 e 67 anni. Crema con il 3% di Matrixyl 3000 su metà del viso, crema placebo sull'altra, due volte al giorno. Variazione rispetto all'inizio."
+      },
+      "unit": "%",
+      "domain": [
+        -45,
+        10
+      ],
+      "ticks": [
+        -40,
+        -20,
+        0
+      ],
+      "series": [
+        {
+          "key": "mx",
+          "color": "#016569",
+          "label": {
+            "en": "Matrixyl 3000 side",
+            "de": "Matrixyl-3000-Seite",
+            "nl": "Matrixyl 3000-kant",
+            "fr": "Côté Matrixyl 3000",
+            "es": "Lado Matrixyl 3000",
+            "it": "Lato Matrixyl 3000"
+          }
+        },
+        {
+          "key": "pl",
+          "color": "#9AA3A4",
+          "quiet": true,
+          "label": {
+            "en": "Placebo side",
+            "de": "Placebo-Seite",
+            "nl": "Placebokant",
+            "fr": "Côté placebo",
+            "es": "Lado placebo",
+            "it": "Lato placebo"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "mx": -39.4,
+            "pl": 4.3
+          },
+          "label": {
+            "en": "Area taken up by deep wrinkles",
+            "de": "Fläche tiefer Falten",
+            "nl": "Oppervlak van diepe rimpels",
+            "fr": "Surface occupée par les rides profondes",
+            "es": "Superficie ocupada por arrugas profundas",
+            "it": "Superficie occupata dalle rughe profonde"
+          }
+        },
+        {
+          "values": {
+            "mx": -32.9,
+            "pl": -9.9
+          },
+          "label": {
+            "en": "Main-wrinkle density",
+            "de": "Dichte der Hauptfalten",
+            "nl": "Dichtheid van de hoofdrimpels",
+            "fr": "Densité des rides principales",
+            "es": "Densidad de las arrugas principales",
+            "it": "Densità delle rughe principali"
+          }
+        },
+        {
+          "values": {
+            "mx": -23.3,
+            "pl": -8.7
+          },
+          "label": {
+            "en": "Main-wrinkle volume",
+            "de": "Volumen der Hauptfalten",
+            "nl": "Volume van de hoofdrimpels",
+            "fr": "Volume des rides principales",
+            "es": "Volumen de las arrugas principales",
+            "it": "Volume delle rughe principali"
+          }
+        },
+        {
+          "values": {
+            "mx": -19.9,
+            "pl": -3.2
+          },
+          "label": {
+            "en": "Main-wrinkle depth",
+            "de": "Tiefe der Hauptfalten",
+            "nl": "Diepte van de hoofdrimpels",
+            "fr": "Profondeur des rides principales",
+            "es": "Profundidad de las arrugas principales",
+            "it": "Profondità delle rughe principali"
+          }
+        },
+        {
+          "values": {
+            "mx": -16.0,
+            "pl": -1.4
+          },
+          "label": {
+            "en": "Skin roughness",
+            "de": "Rauheit der Haut",
+            "nl": "Ruwheid van de huid",
+            "fr": "Rugosité de la peau",
+            "es": "Rugosidad de la piel",
+            "it": "Ruvidità della pelle"
+          }
+        }
+      ],
+      "caption": {
+        "en": "<p>Left of zero is better: those bars are reductions. On the Matrixyl 3000 side, all five measures fell significantly (p&lt;0.01). On the placebo side, only wrinkle volume changed significantly (−8.7%, p&lt;0.05). Each side was compared with its own starting point; Sederma did not report a direct test between the two sides (<a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Sederma, Matrixyl® 3000 brochure, 2013</a>).</p><p>Manufacturer data, not peer-reviewed (grade B).</p>",
+        "de": "<p>Links von null ist besser: Diese Balken sind Verringerungen. Auf der Matrixyl-3000-Seite sanken alle fünf Werte signifikant (p&lt;0,01). Auf der Placebo-Seite änderte sich nur das Faltenvolumen signifikant (−8,7 %, p&lt;0,05). Jede Seite wurde mit ihrem eigenen Ausgangswert verglichen; einen direkten Test zwischen beiden Seiten hat Sederma nicht berichtet (<a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Sederma, Matrixyl® 3000 Broschüre, 2013</a>).</p><p>Herstellerdaten, nicht begutachtet (Grad B).</p>",
+        "nl": "<p>Links van nul is beter: die balken zijn afnames. Aan de Matrixyl 3000-kant daalden alle vijf metingen significant (p&lt;0,01). Aan de placebokant veranderde alleen het rimpelvolume significant (−8,7%, p&lt;0,05). Elke kant werd vergeleken met zijn eigen beginwaarde; Sederma rapporteerde geen directe test tussen de twee kanten (<a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Sederma, brochure Matrixyl® 3000, 2013</a>).</p><p>Gegevens van de fabrikant, niet peer-reviewed (graad B).</p>",
+        "fr": "<p>À gauche de zéro, c'est mieux : ces barres sont des diminutions. Du côté Matrixyl 3000, les cinq mesures ont baissé de façon significative (p&lt;0,01). Du côté placebo, seul le volume des rides a changé de façon significative (−8,7 %, p&lt;0,05). Chaque côté a été comparé à sa propre valeur de départ ; Sederma n'a pas publié de test direct entre les deux côtés (<a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Sederma, brochure Matrixyl® 3000, 2013</a>).</p><p>Données du fabricant, non évaluées par des pairs (niveau B).</p>",
+        "es": "<p>A la izquierda del cero es mejor: esas barras son reducciones. En el lado de Matrixyl 3000, las cinco medidas bajaron de forma significativa (p&lt;0,01). En el lado placebo, solo el volumen de las arrugas cambió de forma significativa (−8,7 %, p&lt;0,05). Cada lado se comparó con su propio punto de partida; Sederma no publicó una prueba directa entre ambos lados (<a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Sederma, folleto de Matrixyl® 3000, 2013</a>).</p><p>Datos del fabricante, sin revisión por pares (grado B).</p>",
+        "it": "<p>A sinistra dello zero è meglio: quelle barre sono riduzioni. Sul lato Matrixyl 3000 tutte e cinque le misure sono diminuite in modo significativo (p&lt;0,01). Sul lato placebo è cambiato in modo significativo solo il volume delle rughe (−8,7%, p&lt;0,05). Ogni lato è stato confrontato con il proprio valore iniziale; Sederma non ha riportato un test diretto tra i due lati (<a href='https://irp-cdn.multiscreensite.com/2d058be6/files/uploaded/POD-Matrixyl%203000-%20Brochure%20%281%29%20%281%29.pdf' target='_blank' rel='noopener'>Sederma, brochure Matrixyl® 3000, 2013</a>).</p><p>Dati del produttore, non sottoposti a revisione paritaria (grado B).</p>"
+      },
+      "decimals": 1,
+      "table_head": {
+        "en": "Measure",
+        "de": "Messwert",
+        "nl": "Meting",
+        "fr": "Mesure",
+        "es": "Medida",
+        "it": "Misura"
+      }
+    },
+    "collagen": {
+      "title": {
+        "en": "Collagen I made by skin cells in the lab",
+        "de": "Von Hautzellen gebildetes Kollagen I im Labor",
+        "nl": "Collageen I aangemaakt door huidcellen in het lab",
+        "fr": "Collagène I produit par les cellules de la peau en laboratoire",
+        "es": "Colágeno I producido por células de la piel en el laboratorio",
+        "it": "Collagene I prodotto dalle cellule della pelle in laboratorio"
+      },
+      "subtitle": {
+        "en": "Human skin cells (fibroblasts), 3 days, compared with untreated cells.",
+        "de": "Menschliche Hautzellen (Fibroblasten), 3 Tage, verglichen mit unbehandelten Zellen.",
+        "nl": "Menselijke huidcellen (fibroblasten), 3 dagen, vergeleken met onbehandelde cellen.",
+        "fr": "Cellules de peau humaine (fibroblastes), 3 jours, par rapport à des cellules non traitées.",
+        "es": "Células de piel humana (fibroblastos), 3 días, frente a células sin tratar.",
+        "it": "Cellule della pelle umana (fibroblasti), 3 giorni, rispetto a cellule non trattate."
+      },
+      "unit": "%",
+      "domain": [
+        -20,
+        270
+      ],
+      "ticks": [
+        0,
+        100,
+        200
+      ],
+      "series": [
+        {
+          "key": "c",
+          "color": "#016569",
+          "label": {
+            "en": "Change in collagen I",
+            "de": "Veränderung von Kollagen I",
+            "nl": "Verandering in collageen I",
+            "fr": "Variation du collagène I",
+            "es": "Cambio en el colágeno I",
+            "it": "Variazione del collagene I"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "c": -9
+          },
+          "colors": {
+            "c": "#9AA3A4"
+          },
+          "label": {
+            "en": "Palmitoyl tripeptide-1 alone",
+            "de": "Palmitoyl Tripeptide-1 allein",
+            "nl": "Palmitoyl tripeptide-1 alleen",
+            "fr": "Palmitoyl tripeptide-1 seul",
+            "es": "Palmitoyl tripeptide-1 solo",
+            "it": "Palmitoyl tripeptide-1 da solo"
+          }
+        },
+        {
+          "values": {
+            "c": 65
+          },
+          "colors": {
+            "c": "#9AA3A4"
+          },
+          "label": {
+            "en": "Palmitoyl tetrapeptide-7 alone",
+            "de": "Palmitoyl Tetrapeptide-7 allein",
+            "nl": "Palmitoyl tetrapeptide-7 alleen",
+            "fr": "Palmitoyl tetrapeptide-7 seul",
+            "es": "Palmitoyl tetrapeptide-7 solo",
+            "it": "Palmitoyl tetrapeptide-7 da solo"
+          }
+        },
+        {
+          "values": {
+            "c": 256
+          },
+          "label": {
+            "en": "Both together (Matrixyl 3000)",
+            "de": "Beide zusammen (Matrixyl 3000)",
+            "nl": "Beide samen (Matrixyl 3000)",
+            "fr": "Les deux ensemble (Matrixyl 3000)",
+            "es": "Ambos juntos (Matrixyl 3000)",
+            "it": "Entrambi insieme (Matrixyl 3000)"
+          }
+        }
+      ],
+      "caption": {
+        "en": "<p>Together, the two peptides raised collagen I by 256%, nearly four times the 65% that tetrapeptide-7 achieved alone. Tripeptide-1 alone lowered it slightly (−9%). The same combination raised fibronectin by 147% and hyaluronic acid by 92% (<a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Sederma patent US 6,974,799</a>).</p><p>These are results in cell culture, not in skin (grade D). They explain why the two peptides are sold together, but they do not show what happens in your skin.</p>",
+        "de": "<p>Zusammen steigerten die beiden Peptide Kollagen I um 256 %, fast das Vierfache der 65 %, die Tetrapeptide-7 allein erreichte. Tripeptide-1 allein senkte es leicht (−9 %). Dieselbe Kombination steigerte Fibronektin um 147 % und Hyaluronsäure um 92 % (<a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Sederma-Patent US 6,974,799</a>).</p><p>Das sind Ergebnisse in der Zellkultur, nicht in der Haut (Grad D). Sie erklären, warum die beiden Peptide zusammen angeboten werden, zeigen aber nicht, was in Ihrer Haut geschieht.</p>",
+        "nl": "<p>Samen verhoogden de twee peptiden collageen I met 256%, bijna vier keer de 65% die tetrapeptide-7 alleen bereikte. Tripeptide-1 alleen verlaagde het licht (−9%). Dezelfde combinatie verhoogde fibronectine met 147% en hyaluronzuur met 92% (<a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>Sederma-octrooi US 6,974,799</a>).</p><p>Dit zijn resultaten in celkweek, niet in de huid (graad D). Ze verklaren waarom de twee peptiden samen worden verkocht, maar laten niet zien wat er in je huid gebeurt.</p>",
+        "fr": "<p>Ensemble, les deux peptides ont augmenté le collagène I de 256 %, près de quatre fois les 65 % obtenus par le tetrapeptide-7 seul. Le tripeptide-1 seul l'a légèrement diminué (−9 %). La même association a augmenté la fibronectine de 147 % et l'acide hyaluronique de 92 % (<a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>brevet Sederma US 6,974,799</a>).</p><p>Ce sont des résultats en culture cellulaire, pas dans la peau (niveau D). Ils expliquent pourquoi les deux peptides sont vendus ensemble, mais ne montrent pas ce qui se passe dans votre peau.</p>",
+        "es": "<p>Juntos, los dos péptidos aumentaron el colágeno I un 256 %, casi cuatro veces el 65 % que logró el tetrapeptide-7 solo. El tripeptide-1 solo lo redujo ligeramente (−9 %). La misma combinación aumentó la fibronectina un 147 % y el ácido hialurónico un 92 % (<a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>patente de Sederma US 6,974,799</a>).</p><p>Son resultados en cultivo celular, no en la piel (grado D). Explican por qué los dos péptidos se venden juntos, pero no muestran lo que ocurre en tu piel.</p>",
+        "it": "<p>Insieme, i due peptidi hanno aumentato il collagene I del 256%, quasi quattro volte il 65% ottenuto dal tetrapeptide-7 da solo. Il tripeptide-1 da solo lo ha ridotto leggermente (−9%). La stessa combinazione ha aumentato la fibronectina del 147% e l'acido ialuronico del 92% (<a href='https://patents.google.com/patent/US6974799B2/en' target='_blank' rel='noopener'>brevetto Sederma US 6,974,799</a>).</p><p>Sono risultati in coltura cellulare, non nella pelle (grado D). Spiegano perché i due peptidi sono venduti insieme, ma non mostrano cosa accade nella tua pelle.</p>"
+      },
+      "table_head": {
+        "en": "Applied to skin cells",
+        "de": "Auf Hautzellen gegeben",
+        "nl": "Toegediend aan huidcellen",
+        "fr": "Appliqué aux cellules",
+        "es": "Aplicado a las células",
+        "it": "Applicato alle cellule"
+      }
+    }
+  }
+}

@@ -1,0 +1,305 @@
+{
+ "gpt": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "Begins with quantified effects of Matrixyl 3000 but not immediate definition.",
+    "fix": "Start with a direct answer or definition."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "Provides a clear definition and details of Matrixyl 3000 upfront.",
+    "fix": "None needed."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "Headings are well-structured but some nested meaning loss.",
+    "fix": "Align heading hierarchy more clearly with H1, H2, H3 levels."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 9,
+    "note": "Most paragraphs are concise; few slightly longer.",
+    "fix": "Ensure short, concise paragraphs throughout."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "Content is fact-rich with precise data and claims.",
+    "fix": "None needed."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 8,
+    "note": "Some comparisons to other studies but lacks broader context.",
+    "fix": "Include more direct comparisons with other skin treatments."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "Effective use of lists and tables for study results.",
+    "fix": "None needed."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 9,
+    "note": "Deep coverage of Matrixyl 3000, slightly lacking independent study details.",
+    "fix": "Expand on independent evaluations for more rounded depth."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 8,
+    "note": "Main points are stated early but not exhaustive.",
+    "fix": "Include key claims and findings earlier in sections."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 10,
+    "note": "Incorporates text, images, and diagrams effectively.",
+    "fix": "None needed."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "Comprehensive schema usage including 'ScholarlyArticle', 'FAQPage'.",
+    "fix": "None needed."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "FAQs cover key consumer questions about Matrixyl 3000.",
+    "fix": "None needed."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 9,
+    "note": "Citations from original manufacturer data and some external sources.",
+    "fix": "Include more independent study citations where possible."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "18 internal links support site navigation well.",
+    "fix": "None needed."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 9,
+    "note": "Meta title and description are succinct and informative.",
+    "fix": "Slightly optimize for additional search terms."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 10,
+    "note": "Clear author and medical review attribution.",
+    "fix": "None needed."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "Medically reviewed by a cosmetic & medical physician.",
+    "fix": "None needed."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "Content last reviewed just days before the current date.",
+    "fix": "None needed."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "Content is ready for brand mentions citing Matrixyl 3000.",
+    "fix": "None needed."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "Highly structured for AI citation with detailed references.",
+    "fix": "None needed."
+   }
+  ],
+  "overall": 9.4,
+  "top_fixes": [
+   "Start with a direct answer or definition.",
+   "Align heading hierarchy more clearly with H1, H2, H3 levels.",
+   "Include more direct comparisons with other skin treatments."
+  ],
+  "assessment": "The page is nearly excellent regarding SEO and AISO, well-structured with robust data, but could improve front-loading key definitions and adding broader comparative insights."
+ },
+ "gemini": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "The page effectively front-loads key statistics and a concise 'At a glance' summary, followed immediately by a clear 'What Is Matrixyl 3000?' section.",
+    "fix": "While strong, ensuring the very first semantic content is the primary definition for ultimate clarity could marginally improve directness for ultra-fast consumption."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "The content provides a concise and clear definition of Matrixyl 3000, including its components, origin, and purpose, immediately under the dedicated heading.",
+    "fix": "None."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "The heading outline generally follows a logical H1 > H2 > H3 structure, with clear thematic breaks. The initial H2/H3 summary statistics are impactful but precede the main definition heading.",
+    "fix": "Consider reordering the initial H2/H3 summary statistics to appear just after the main H1/H2 definition, to ensure the primary definition is the absolute first semantic heading."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "The vast majority of paragraphs are 2-5 sentences long, with many being 2-3, enhancing readability and scannability for both human readers and AI models.",
+    "fix": "None."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The content is exceptionally rich in specific, quantitative data, including percentages, study details (e.g., '23 women,' '2 months'), and scientific terminology, throughout the entire page.",
+    "fix": "None."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "The page thoroughly compares Matrixyl 3000 to its predecessor (Matrixyl original), its individual peptide components, placebo effects in studies, and briefly to retinol, providing comprehensive context.",
+    "fix": "None."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "The effective use of bulleted lists ('At a glance,' benefits summary, evidence overview) and detailed data tables significantly improves content scannability and presentation of quantitative results.",
+    "fix": "None."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "The page offers a comprehensive exploration of Matrixyl 3000, covering its definition, benefits, scientific mechanism, usage instructions, safety, various study results, and frequently asked questions.",
+    "fix": "None."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 10,
+    "note": "Key benefits, a concise definition, and an 'At a glance' summary are all presented prominently at the beginning of the content, prioritizing crucial information for quick consumption.",
+    "fix": "None."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 9,
+    "note": "The inclusion of several descriptive images with clear alt text enhances engagement and visually supports the scientific explanations.",
+    "fix": "Explore integrating short, explanatory videos or interactive graphics to further enrich the multi-modal experience for complex scientific concepts."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "The page utilizes a wide array of relevant JSON-LD schemas, including 'FAQPage', 'ScholarlyArticle', 'Organization', and 'Person', which significantly aids AI understanding and rich result potential.",
+    "fix": "None."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "A clearly defined 'Frequently Asked Questions' section provides direct, concise answers to common queries, improving user experience and AI comprehension.",
+    "fix": "None."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 10,
+    "note": "The content demonstrates exceptional citation quality, referencing peer-reviewed journals, patents, manufacturer data, and independent reviews, with clear grading of evidence (A-D) and source attribution.",
+    "fix": "None."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "The article includes 18 in-content internal links, providing excellent navigational support to related products and research pages within the site.",
+    "fix": "None."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Both the meta title (50 chars) and meta description (139 chars) are optimally crafted, featuring keywords, compelling statistics, and clear value propositions within recommended length limits.",
+    "fix": "None."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 7,
+    "note": "The page attributes authorship to 'Skingenetix' and includes a medical reviewer. While a reviewer is present, an individual author with a linked bio for the primary content would strengthen expertise and trust signals (E-E-A-T).",
+    "fix": "Add an individual author (e.g., a staff writer with demonstrated expertise in skincare science) and link to their bio page to enhance E-E-A-T."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "The content is clearly identified as 'Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician,' with a note about verification against original sources, establishing high authority and trustworthiness.",
+    "fix": "None."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "The page was 'Last reviewed 22 September 2026,' which is exceptionally recent (yesterday), indicating a strong commitment to up-to-date and accurate information.",
+    "fix": "None."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "The content's factual accuracy, structured presentation, and explicit sourcing make it highly suitable for AI models to confidently identify and extract accurate brand mentions (e.g., Matrixyl 3000, Sederma, Skingenetix).",
+    "fix": "None."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "With its clear structure, answer-first approach, robust evidence grading, and detailed citations, the content is ideally formatted for AI systems to accurately summarize and generate reliable citations.",
+    "fix": "None."
+   }
+  ],
+  "overall": 9.7,
+  "top_fixes": [
+   "Add an individual author (e.g., a staff writer with demonstrated expertise in skincare science) and link to their bio page to enhance E-E-A-T.",
+   "Consider reordering the initial H2/H3 summary statistics to appear just after the main H1/H2 definition, to ensure the primary definition is the absolute first semantic heading.",
+   "Explore integrating short, explanatory videos or interactive graphics to further enrich the multi-modal experience for complex scientific concepts."
+  ],
+  "assessment": "This page is an exceptionally strong example of an ingredient research hub, demonstrating outstanding expertise, authoritativeness, and trustworthiness. Its meticulous factual density, transparent evidence grading, and robust citation practices make it highly optimized for both human users and advanced AI search algorithms. The content effectively addresses user intent with an answer-first approach and comprehensive detail. Implementing the suggested minor improvements for individual author attribution, heading flow, and multi-modal elements would elevate an already stellar piece of scientific YMYL content to near perfection."
+ },
+ "combined": 9.6
+}

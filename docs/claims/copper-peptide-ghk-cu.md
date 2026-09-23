@@ -1,5 +1,7 @@
 # Claims register: Copper peptide GHK-Cu (copper tripeptide-1)
 
+> **Status 2026-09-23:** the hub was brought level with the Matrixyl and glutathione builds (`configs/hub-upgrades/copper-peptide-research-parity-2026-09-23.json`): key figures at the top (−24.1% vs −15.0%; 7 in 10; the 2026 review), at-a-glance list, ten-row evidence table naming the funder and the journal's weaker peer review beside Badenhorst, image rows, two FAQs. Verification log at the end. Gaps 1–3 (no stated concentration, no tolerability data at 2%, the unread Leyden abstracts) are unchanged.
+
 **Built:** 2026-09-22 · **Scope:** Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 2% Day Gel-Cream, 2% Night Cream, the microneedling stamp set, and bundles.
 **Standing rule:** use the strongest claim the best evidence supports. It has to be true, sourced, and within EU Regulation 655/2013 (the common criteria: legal compliance, truthfulness, evidential support, honesty, fairness, informed decision-making).
 **Verification standard:** I checked every number below against the primary text (full text or abstract) on 2026-09-22, unless the row says otherwise. Where I could not open the primary source, the row says so and the grade is lowered.
@@ -178,3 +180,19 @@ Current line: *"For GHK-Cu, most of the evidence comes from laboratory studies; 
 6. **Journal quality of the key trial:** the best controlled result appeared in an OMICS-group journal. If a competitor or regulator challenges it, the Mokhtar 2026 systematic review is the independent peer-reviewed support.
 7. **Check against our INCI list:** if the "multi-peptide complex" contains Matrixyl 3000, move claim 2 to the hub rather than the product page.
 8. **Hairgenetix follow-up:** its verified-stats register shows "collagen synthesis up to +70%" against Pickart 2015/2018. That is the LED + GHK cell-culture figure and should be corrected there. Its claims register dates Li as 2016; PubMed says 2015.
+
+---
+
+## 7. Verification log — 2026-09-23 (hub parity build)
+
+| What | Where read | Result |
+|---|---|---|
+| Badenhorst 2016 relative figures | Pickart & Margolina 2018, PMC6073405 full text (secondary) | "Compared to Matrixyl® 3000, GHK-Cu produced a 31.6% reduction of wrinkle volume. Compared to control serum, GHK-Cu reduced wrinkle volume 55.8% and wrinkle depth 32.8%" |
+| Badenhorst 2016 baseline changes (−24.1% / −15.0% volume; −20.3% / −15.3% depth), n, tolerability | The paper's PDF (Walsh Medical Media) downloaded 2026-09-23 is image-only and could not be text-extracted here; these rest on the register's full-PDF read of 2026-09-22 (§3 row 1) and were already live on the hub's charts | Unchanged; re-read the PDF with OCR next time the figures are touched |
+| Abdulghani 1998 counts and duration; 1973 isolation; 200 → 80 ng/mL | Pickart 2015, PMC4508379 full text | "after applying creams to the thighs for one month… Increases were found in 70% of the women treated with GHK-Cu, in contrast to 50%… vitamin C… and 40%… retinoic acid"; "isolated in 1973 by Pickart"; plasma "about 200 ng/mL… at age 20, but declines to 80 ng/mL by age 60" (no citation given) |
+| Leyden 2002 (71 and 41 women, 12 weeks) | Pickart 2015 and 2018 full texts | As in §1 claim 5; primary abstracts still unread |
+| Mokhtar 2026 | PubMed 42619529 abstract | "20 studies (18 preclinical; 2 RCTs)"; "significantly reduced wrinkle volume and depth compared with controls"; "constrained by… a limited number of well-designed clinical trials" |
+| Mortazavi 2024 | PMC11830136 full text | "Based on cellular studies, undoubtedly, GHK can be considered as an anti-wrinkle ingredient"; "a surprising absence of clinical studies" |
+| Miller 2006, Li 2015, Jiang 2023, Kang 2009 | PubMed abstracts | As in §3: no difference on blinded measures, questionnaire P = .04; 134 ± 12 nmol through microneedled skin, "almost no peptide" through intact skin; collagen IV ×25.4 cells / ×2.03 ex vivo at 1:9; integrin, p63, PCNA up in skin equivalents |
+
+No figure in this register was contradicted. Applied in `configs/hub-upgrades/copper-peptide-research-parity-2026-09-23.json` (six languages); audit trail in `docs/audits/pages/README.md`.

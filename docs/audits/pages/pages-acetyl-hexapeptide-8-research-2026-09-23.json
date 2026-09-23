@@ -1,17 +1,17 @@
 {
- "path": "/pages/glutathione-research",
+ "path": "/pages/acetyl-hexapeptide-8-research",
  "scores": {
-  "SEO": 100,
+  "SEO": 98,
   "GEO": 100,
   "DESIGN": 100,
-  "MARKETING": 100
+  "MARKETING": 93
  },
  "items": [
   {
    "area": "SEO",
    "check": "HTTP 200, no redirect",
    "ok": true,
-   "detail": "200 \u2192 https://www.skingenetix.com/pages/glutathione-research",
+   "detail": "200 \u2192 https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research",
    "severity": "pass",
    "weight": 2
   },
@@ -19,23 +19,23 @@
    "area": "SEO",
    "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
    "ok": true,
-   "detail": "/pages/glutathione-research",
+   "detail": "/pages/acetyl-hexapeptide-8-research",
    "severity": "pass",
    "weight": 1.0
   },
   {
    "area": "SEO",
    "check": "URL carries the head term",
-   "ok": true,
-   "detail": "head term 'glutathione'",
-   "severity": "pass",
+   "ok": false,
+   "detail": "head term 'argireline'",
+   "severity": "low",
    "weight": 0.5
   },
   {
    "area": "SEO",
    "check": "Title present, 30\u201360 chars",
    "ok": true,
-   "detail": "57c: Glutathione for Skin: Benefits, Studies and How to Use It",
+   "detail": "58c: Argireline\u00ae (Acetyl Hexapeptide-8): What It Does for Lines",
    "severity": "pass",
    "weight": 2
   },
@@ -43,7 +43,7 @@
    "area": "SEO",
    "check": "Title contains head term",
    "ok": true,
-   "detail": "'glutathione'",
+   "detail": "'argireline'",
    "severity": "pass",
    "weight": 2
   },
@@ -51,7 +51,7 @@
    "area": "SEO",
    "check": "Meta description 70\u2013160 chars",
    "ok": true,
-   "detail": "155c",
+   "detail": "146c",
    "severity": "pass",
    "weight": 1.0
   },
@@ -75,7 +75,7 @@
    "area": "SEO",
    "check": "Self-referencing absolute canonical",
    "ok": true,
-   "detail": "https://www.skingenetix.com/pages/glutathione-research",
+   "detail": "https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research",
    "severity": "pass",
    "weight": 2
   },
@@ -99,7 +99,7 @@
    "area": "SEO",
    "check": "og:title matches the page title",
    "ok": true,
-   "detail": "Glutathione for Skin: Benefits, Studies and How to Use It",
+   "detail": "Argireline\u00ae (Acetyl Hexapeptide-8): What It Does for Lines",
    "severity": "pass",
    "weight": 0.5
   },
@@ -107,7 +107,7 @@
    "area": "SEO",
    "check": "Exactly one <h1>",
    "ok": true,
-   "detail": "Glutathione for Skin (GSH and GSSG)",
+   "detail": "Argireline\u00ae (Acetyl Hexapeptide-8)",
    "severity": "pass",
    "weight": 2
   },
@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "glutathione for skin gsh and gssg the antioxidant tripeptide the body makes itself in its one controlled topical trial 2 oxidised glutathion",
+   "detail": "argireline acetyl hexapeptide-8 a synthetic hexapeptide shown in clinical studies to visibly soften the look of expression lines around the ",
    "severity": "pass",
    "weight": 2
   },
@@ -123,7 +123,7 @@
    "area": "MARKETING",
    "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
    "ok": true,
-   "detail": "10 weeks",
+   "detail": "45 people",
    "severity": "pass",
    "weight": 2
   },
@@ -131,7 +131,7 @@
    "area": "MARKETING",
    "check": "Hedging \u2264 2.0 per 100 words (science page)",
    "ok": true,
-   "detail": "0.0/100 words: []",
+   "detail": "0.1/100 words: ['is valued for', 'valued in skincare']",
    "severity": "pass",
    "weight": 2
   },
@@ -162,9 +162,9 @@
   {
    "area": "MARKETING",
    "check": "Every result figure sits next to its source",
-   "ok": true,
-   "detail": "0 unsourced: []",
-   "severity": "pass",
+   "ok": false,
+   "detail": "5 unsourced: ['Up to ~30% softer-looking wrinkle depth', 'Up to ~30% reduction in measured wrinkle depth after 30 days (early proof-of-concept by th']",
+   "severity": "low",
    "weight": 1
   },
   {
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "13 <h2>: ['\u221210.7%', '77%', 'Week 1', 'What Is Glutathione?', 'Glutathione Skin Benefits: What the Evidence Shows', 'Glutathione Before and After: What the Trial Measured', 'How to Use Topical Glutathione', 'Topical vs Oral Glutathione: Two Different Questions', 'Glutathione Evidence at a Glance', 'Published References', 'Frequently Asked Questions', 'Shop Glutathione Products', 'Explore More Research']",
+   "detail": "12 <h2>: ['48.9%', '\u22127.4%', '4 weeks', 'What Is Argireline?', 'What Does Argireline Do for Expression Lines?', 'Argireline\u00ae vs Placebo: What the Trials Measured', 'What 10% Argireline\u00ae Means', 'How to Use Argireline', 'Published References', 'Frequently Asked Questions', 'Shop Acetyl Hexapeptide-8 Products', 'Explore More Research']",
    "severity": "pass",
    "weight": 2
   },
@@ -187,7 +187,7 @@
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
    "ok": false,
-   "detail": "6 that look like headings but are not: ['UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Explore Our Glutathione Formulations']",
+   "detail": "5 that look like headings but are not: ['Copper Peptide (GHK-Cu)', 'Matrixyl 3000', 'PDRN', 'Glutathione', 'Try Acetyl Hexapeptide-8']",
    "severity": "info",
    "weight": 0
   },
@@ -203,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "15/15",
+   "detail": "13/13",
    "severity": "pass",
    "weight": 1.0
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "22 unique",
+   "detail": "23 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -259,7 +259,7 @@
    "area": "GEO",
    "check": "Schema cites sources (citation[])",
    "ok": true,
-   "detail": "14 citations",
+   "detail": "8 citations",
    "severity": "pass",
    "weight": 1.0
   },
@@ -283,7 +283,7 @@
    "area": "SEO",
    "check": "FAQ schema matches visible questions",
    "ok": true,
-   "detail": "6 Qs; not visible: []",
+   "detail": "5 Qs; not visible: []",
    "severity": "pass",
    "weight": 1.5
   },
@@ -291,7 +291,7 @@
    "area": "GEO",
    "check": "A10 \u00b7 head term in first 30% of text",
    "ok": true,
-   "detail": "'glutathione'",
+   "detail": "'argireline'",
    "severity": "pass",
    "weight": 3
   },
@@ -299,7 +299,7 @@
    "area": "GEO",
    "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
    "ok": true,
-   "detail": "is a",
+   "detail": "is the",
    "severity": "pass",
    "weight": 2
   },
@@ -307,7 +307,7 @@
    "area": "GEO",
    "check": "A8 \u00b7 secondary intents covered on the page",
    "ok": true,
-   "detail": "['glutathione for skin', 'brightening'] / ['glutathione for skin', 'brightening']",
+   "detail": "['acetyl hexapeptide-8', 'expression lines'] / ['acetyl hexapeptide-8', 'expression lines']",
    "severity": "pass",
    "weight": 1.5
   },
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "80 paragraphs, 0 too long",
+   "detail": "42 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "26",
+   "detail": "12",
    "severity": "pass",
    "weight": 1.0
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "121 figures",
+   "detail": "85 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "105 citation markers",
+   "detail": "54 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -371,7 +371,7 @@
    "area": "GEO",
    "check": "A4 \u00b7 headings mirror search questions",
    "ok": true,
-   "detail": "1 question-form H2",
+   "detail": "2 question-form H2",
    "severity": "pass",
    "weight": 1.0
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "3423 words extracted (main text 3811)",
+   "detail": "1661 words extracted (main text 1935)",
    "severity": "pass",
    "weight": 3
   },
@@ -395,7 +395,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "13 kept",
+   "detail": "12 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -443,7 +443,7 @@
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
    "ok": true,
-   "detail": "White \u2192 Bone \u2192 White \u2192 Bone \u2192 Bone \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Graphite",
+   "detail": "White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 Graphite",
    "severity": "pass",
    "weight": 1.5
   },
@@ -505,48 +505,47 @@
   }
  ],
  "data": {
-  "title": "Glutathione for Skin: Benefits, Studies and How to Use It",
+  "title": "Argireline\u00ae (Acetyl Hexapeptide-8): What It Does for Lines",
   "h1": [
-   "Glutathione for Skin (GSH and GSSG)"
+   "Argireline\u00ae (Acetyl Hexapeptide-8)"
   ],
   "h2": [
-   "\u221210.7%",
-   "77%",
-   "Week 1",
-   "What Is Glutathione?",
-   "Glutathione Skin Benefits: What the Evidence Shows",
-   "Glutathione Before and After: What the Trial Measured",
-   "How to Use Topical Glutathione",
-   "Topical vs Oral Glutathione: Two Different Questions",
-   "Glutathione Evidence at a Glance",
+   "48.9%",
+   "\u22127.4%",
+   "4 weeks",
+   "What Is Argireline?",
+   "What Does Argireline Do for Expression Lines?",
+   "Argireline\u00ae vs Placebo: What the Trials Measured",
+   "What 10% Argireline\u00ae Means",
+   "How to Use Argireline",
    "Published References",
    "Frequently Asked Questions",
-   "Shop Glutathione Products",
+   "Shop Acetyl Hexapeptide-8 Products",
    "Explore More Research"
   ],
   "pseudo_headings": [
-   "UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)",
    "Copper Peptide (GHK-Cu)",
-   "Acetyl Hexapeptide-8",
    "Matrixyl 3000",
    "PDRN",
-   "Explore Our Glutathione Formulations"
+   "Glutathione",
+   "Try Acetyl Hexapeptide-8"
   ],
   "internal_links": [
+   "/collections/acetyl-hexapeptide-8",
    "/collections/all",
    "/collections/creams-moisturizers",
-   "/collections/glutathione",
    "/collections/serums",
-   "/pages/acetyl-hexapeptide-8-research",
-   "/pages/brightening-glow",
    "/pages/contact",
    "/pages/copper-peptide-research",
    "/pages/faq",
+   "/pages/fine-lines-wrinkles",
+   "/pages/glutathione-research",
    "/pages/ingredients",
    "/pages/matrixyl-3000-research",
    "/pages/our-philosophy",
    "/pages/pdrn-research",
    "/pages/shipping-returns",
+   "/pages/study/argireline-crows-feet-trial-wang-2013",
    "/pages/the-science",
    "/policies/contact-information",
    "/policies/legal-notice",
@@ -554,79 +553,62 @@
    "/policies/refund-policy",
    "/policies/shipping-policy",
    "/policies/terms-of-service",
-   "/products/glutathione-brightening-serum"
+   "/products/acetyl-hexapeptide-8-anti-wrinkle-serum"
   ],
   "external_links": [
-   "https://doi.org/10.4081/dr.2019.8013",
-   "https://pubmed.ncbi.nlm.nih.gov/11710935/",
-   "https://pubmed.ncbi.nlm.nih.gov/20524875/",
-   "https://pubmed.ncbi.nlm.nih.gov/25378941/",
-   "https://pubmed.ncbi.nlm.nih.gov/26148180/",
-   "https://pubmed.ncbi.nlm.nih.gov/28399620/",
-   "https://pubmed.ncbi.nlm.nih.gov/28490897/",
-   "https://pubmed.ncbi.nlm.nih.gov/28512843/",
-   "https://pubmed.ncbi.nlm.nih.gov/29445569/",
-   "https://pubmed.ncbi.nlm.nih.gov/30895708/",
-   "https://pubmed.ncbi.nlm.nih.gov/33871071/",
-   "https://pubmed.ncbi.nlm.nih.gov/39326871/",
-   "https://pubmed.ncbi.nlm.nih.gov/39444151/",
-   "https://pubmed.ncbi.nlm.nih.gov/41416233/"
+   "https://anndermatol.org/DOIx.php?id=10.5021/ad.2019.31.3.263",
+   "https://doi.org/10.1590/S1984-82502015000400016",
+   "https://pubmed.ncbi.nlm.nih.gov/18498523/",
+   "https://pubmed.ncbi.nlm.nih.gov/23417317/",
+   "https://pubmed.ncbi.nlm.nih.gov/24754410/",
+   "https://pubmed.ncbi.nlm.nih.gov/28150423/",
+   "https://pubmed.ncbi.nlm.nih.gov/33911590/",
+   "https://pubmed.ncbi.nlm.nih.gov/38024099/",
+   "https://pubmed.ncbi.nlm.nih.gov/40565185/"
   ],
   "schema_types": [
    "BreadcrumbList",
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 3423,
-  "main_words": 3811,
+  "extracted_words": 1661,
+  "main_words": 1935,
   "images": [
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-master-antioxidant-brightening-research.jpg?v=1787662690&width=2048",
-    "alt": "A shallow dish of champagne-coloured glutathione solution glowing on a graphite surface - glutathione antioxidant research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner.jpg?v=1787664404&width=3000",
+    "alt": "A single clear droplet resting on a plain glass slide, refracting a bright caustic across a dark graphite surface"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-gssg-glutathione-skin-tone-clinical-trial-before-after.jpg?v=1787831286&width=2048",
-    "alt": "Illustration: two close photographs of the same woman's face taken weeks apart side by side, the later one showing more even-looking skin tone across the nose and cheeks while her freckles and cheek mole remain unchanged"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg?v=1787811412&width=3000",
+    "alt": "Close-up comparison of the skin at the outer corner of one eye, the fan of expression lines less deeply etched in the second image than the first. Illustration accompanying the Acetyl Hexapeptide-8 research summary."
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-defence-uv-oxidative-stress-diagram.jpg?v=1787821441&width=3000",
-    "alt": "Illustrated cross-section of skin with a continuous layer of clear spheres resting on the surface, each holding a three-bead glutathione molecule, turning away shafts of daylight and dark airborne particles"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-wrinkle-depth-before-after-eye-close-up.jpg?v=1787812161&width=2048",
+    "alt": "Close-up comparison of the freckled skin at the outer corner of one eye, the crow's-feet lines holding a shallower shadow in the second image. Illustration accompanying the Acetyl Hexapeptide-8 research summary."
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-radiance-uneven-skin-tone-before-after.jpg?v=1787830671&width=2048",
-    "alt": "Illustration: two close photographs of the same woman's freckled cheek taken weeks apart side by side, the later one showing clearer, more even-looking skin between the freckles, which remain unchanged"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg?v=1787812161&width=3000",
+    "alt": "Close-up comparison of the fine lines at the outer corner of one eye, slightly softened in the second image while the deeper creases are unchanged. Illustration accompanying the Acetyl Hexapeptide-8 research summary."
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg?v=1787833359&width=1254",
-    "alt": "Woman applying Skingenetix Glutathione Radiant Glow Serum to her cheek with a dropper, holding the bottle in her other hand"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg?v=1787832939&width=2048",
+    "alt": "Woman holding a dropper of Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum beside her cheek, the bottle in her other hand"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
-    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-anti-wrinkle-serum-dropper-model.jpg?v=1787832939&width=2048",
+    "alt": "Woman holding a dropper of Skingenetix Acetyl Hexapeptide-8 anti-wrinkle serum beside her cheek, the bottle in her other hand"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg?v=1787832493&width=2048",
-    "alt": "A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up"
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg?v=1787310462&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - bottle beside its silver carton on a white background"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg?v=1787832493&width=2048",
-    "alt": "A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg?v=1787233764&width=2048",
-    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - bottle beside its gold carton on white"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_hands_only_dropper_2_skingenetix.jpg?v=1787233766&width=2048",
-    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - hands lifting the glass dropper from the bottle"
+    "src": "//www.skingenetix.com/cdn/shop/files/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_model_face_dropper_closeup_4_skingenetix.jpg?v=1787310466&width=2048",
+    "alt": "Skingenetix Acetyl Hexapeptide-8 Anti-Wrinkle Serum, 30ml - a model holding the bottle beside their face"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-fibroblast-collagen-matrix.jpg?v=1787656745&width=1400",
     "alt": "Spindle-shaped fibroblast cell embedded in a fine collagen matrix network, imaged in clinical blue, representing how the copper peptide GHK-Cu supports the skin's collagen structure"
-   },
-   {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
-    "alt": "Electron-microscope style view of a single skin cell in cool pearl grey, representing Acetyl Hexapeptide-8 expression-line research"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg?v=1787650938&width=2048",
@@ -635,6 +617,10 @@
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?v=1787656228&width=2048",
     "alt": "Polynucleotide double helix rendered in soft blush pink, representing PDRN skin repair and renewal research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
+    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
@@ -652,148 +638,112 @@
      "top": 126,
      "h": 440,
      "bg": "rgb(240, 240, 240)",
-     "text": 264,
+     "text": 183,
      "media": 1
     },
     {
      "id": "stats",
      "type": "impact-text",
      "top": 566,
-     "h": 382,
+     "h": 424,
      "bg": "rgb(255, 255, 255)",
-     "text": 609,
+     "text": 668,
      "media": 0
     },
     {
      "id": "overview",
      "type": "rich-text",
-     "top": 948,
-     "h": 1010,
+     "top": 989,
+     "h": 1034,
      "bg": "rgb(240, 240, 240)",
-     "text": 1767,
+     "text": 1893,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 1958,
-     "h": 1378,
+     "top": 2023,
+     "h": 802,
      "bg": "rgb(255, 255, 255)",
-     "text": 3791,
+     "text": 1509,
      "media": 0
     },
     {
-     "id": "key_findings_ba1",
+     "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 3335,
-     "h": 1034,
+     "top": 2825,
+     "h": 2299,
      "bg": "rgb(240, 240, 240)",
-     "text": 1133,
-     "media": 1
-    },
-    {
-     "id": "key_findings",
-     "type": "media-with-text",
-     "top": 4369,
-     "h": 884,
-     "bg": "rgb(240, 240, 240)",
-     "text": 843,
-     "media": 1
-    },
-    {
-     "id": "key_findings_ba3",
-     "type": "research-before-after",
-     "top": 5254,
-     "h": 766,
-     "bg": "rgb(240, 240, 240)",
-     "text": 912,
-     "media": 1
+     "text": 1849,
+     "media": 3
     },
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 6019,
-     "h": 1293,
+     "top": 5124,
+     "h": 914,
      "bg": "rgb(255, 255, 255)",
-     "text": 1982,
+     "text": 1494,
      "media": 0
     },
     {
      "id": "usage",
-     "type": "media-with-text",
-     "top": 7312,
-     "h": 1602,
+     "type": "rich-text",
+     "top": 6037,
+     "h": 522,
      "bg": "rgb(240, 240, 240)",
-     "text": 1817,
-     "media": 2
-    },
-    {
-     "id": "evidence_table",
-     "type": "specification-table",
-     "top": 8915,
-     "h": 2139,
-     "bg": "rgb(255, 255, 255)",
-     "text": 3147,
+     "text": 681,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 11053,
-     "h": 1685,
-     "bg": "rgb(240, 240, 240)",
-     "text": 3017,
+     "top": 6559,
+     "h": 1080,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1597,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 12738,
+     "top": 7639,
      "h": 1117,
-     "bg": "rgb(255, 255, 255)",
-     "text": 413,
+     "bg": "rgb(240, 240, 240)",
+     "text": 383,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 13855,
-     "h": 797,
-     "bg": "rgb(240, 240, 240)",
-     "text": 59,
+     "top": 8756,
+     "h": 818,
+     "bg": "rgb(255, 255, 255)",
+     "text": 66,
      "media": 2
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 14652,
+     "top": 9574,
      "h": 775,
-     "bg": "rgb(255, 255, 255)",
-     "text": 345,
+     "bg": "rgb(240, 240, 240)",
+     "text": 306,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 15427,
-     "h": 430,
+     "top": 10349,
+     "h": 353,
      "bg": "rgb(26, 26, 26)",
-     "text": 231,
-     "media": 0
-    },
-    {
-     "id": "findings_spacing_fix",
-     "type": "custom-html",
-     "top": 15857,
-     "h": 0,
-     "bg": "rgb(240, 240, 240)",
-     "text": 0,
+     "text": 142,
      "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 15857,
+     "top": 10702,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -802,7 +752,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 16373,
+     "top": 11218,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -822,7 +772,7 @@
      "top": 85,
      "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 264,
+     "text": 183,
      "media": 1
     },
     {
@@ -831,139 +781,103 @@
      "top": 460,
      "h": 738,
      "bg": "rgb(255, 255, 255)",
-     "text": 609,
+     "text": 668,
      "media": 0
     },
     {
      "id": "overview",
      "type": "rich-text",
      "top": 1198,
-     "h": 1188,
+     "h": 1255,
      "bg": "rgb(240, 240, 240)",
-     "text": 1767,
+     "text": 1893,
      "media": 0
     },
     {
      "id": "evidence",
      "type": "rich-text",
-     "top": 2386,
-     "h": 1969,
+     "top": 2453,
+     "h": 937,
      "bg": "rgb(255, 255, 255)",
-     "text": 3791,
+     "text": 1509,
      "media": 0
     },
     {
-     "id": "key_findings_ba1",
+     "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 4355,
-     "h": 1374,
+     "top": 3390,
+     "h": 3041,
      "bg": "rgb(240, 240, 240)",
-     "text": 1133,
-     "media": 1
-    },
-    {
-     "id": "key_findings",
-     "type": "media-with-text",
-     "top": 5728,
-     "h": 1227,
-     "bg": "rgb(240, 240, 240)",
-     "text": 843,
-     "media": 1
-    },
-    {
-     "id": "key_findings_ba3",
-     "type": "research-before-after",
-     "top": 6955,
-     "h": 1132,
-     "bg": "rgb(240, 240, 240)",
-     "text": 912,
-     "media": 1
+     "text": 1849,
+     "media": 3
     },
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 8087,
-     "h": 2327,
+     "top": 6432,
+     "h": 1854,
      "bg": "rgb(255, 255, 255)",
-     "text": 1982,
+     "text": 1494,
      "media": 0
     },
     {
      "id": "usage",
-     "type": "media-with-text",
-     "top": 10415,
-     "h": 2227,
+     "type": "rich-text",
+     "top": 8285,
+     "h": 533,
      "bg": "rgb(240, 240, 240)",
-     "text": 1817,
-     "media": 2
-    },
-    {
-     "id": "evidence_table",
-     "type": "specification-table",
-     "top": 12641,
-     "h": 2116,
-     "bg": "rgb(255, 255, 255)",
-     "text": 3147,
+     "text": 681,
      "media": 0
     },
     {
      "id": "references",
      "type": "custom-html",
-     "top": 14758,
-     "h": 2855,
-     "bg": "rgb(240, 240, 240)",
-     "text": 3017,
+     "top": 8818,
+     "h": 1663,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1597,
      "media": 0
     },
     {
      "id": "faq",
      "type": "faq",
-     "top": 17613,
-     "h": 1192,
-     "bg": "rgb(255, 255, 255)",
-     "text": 413,
+     "top": 10481,
+     "h": 1107,
+     "bg": "rgb(240, 240, 240)",
+     "text": 383,
      "media": 2
     },
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 18805,
-     "h": 588,
-     "bg": "rgb(240, 240, 240)",
-     "text": 59,
+     "top": 11588,
+     "h": 572,
+     "bg": "rgb(255, 255, 255)",
+     "text": 66,
      "media": 2
     },
     {
      "id": "related",
      "type": "multi-column",
-     "top": 19394,
+     "top": 12160,
      "h": 580,
-     "bg": "rgb(255, 255, 255)",
-     "text": 345,
+     "bg": "rgb(240, 240, 240)",
+     "text": 306,
      "media": 4
     },
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 19974,
-     "h": 332,
+     "top": 12740,
+     "h": 288,
      "bg": "rgb(26, 26, 26)",
-     "text": 231,
-     "media": 0
-    },
-    {
-     "id": "findings_spacing_fix",
-     "type": "custom-html",
-     "top": 20306,
-     "h": 0,
-     "bg": "rgb(240, 240, 240)",
-     "text": 0,
+     "text": 142,
      "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 20306,
+     "top": 13028,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -972,7 +886,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 21345,
+     "top": 14067,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

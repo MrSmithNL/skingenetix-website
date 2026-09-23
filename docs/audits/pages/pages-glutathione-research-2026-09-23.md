@@ -27,7 +27,7 @@
 | ✅ | og:title matches the page title | Glutathione for Skin: Benefits, Studies and How to Use It |
 | ✅ | Exactly one <h1> | Glutathione for Skin (GSH and GSSG) |
 | ✅ | <h1> contains head term |  |
-| ✅ | Topic headings are real <h2> (≥ 3) | 13 <h2>: ['What Is Glutathione?', 'Glutathione Skin Benefits: What the Evidence Shows', '−10.7%', '77%', 'Week 1', 'Glutathione Before and After: What the Trial Measured', 'Glutathione Evidence at a Glance', 'How to Use  |
+| ✅ | Topic headings are real <h2> (≥ 3) | 13 <h2>: ['−10.7%', '77%', 'Week 1', 'What Is Glutathione?', 'Glutathione Skin Benefits: What the Evidence Shows', 'Glutathione Before and After: What the Trial Measured', 'How to Use Topical Glutathione', 'Topical vs Or |
 | ℹ️ | Visual-only headings (styled <p>/<span>) | 6 that look like headings but are not: ['UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Explore Our Glutathione Form |
 | ✅ | No skipped heading levels | clean |
 | ✅ | Content images have alt text | 15/15 |
@@ -70,7 +70,7 @@
 |---|---|---|
 | ✅ | No blank band between header and first section | 0px |
 | ✅ | No empty-but-tall sections | none |
-| ✅ | Section backgrounds alternate | Bone → White → Bone → White → Bone → Bone → Bone → White → Bone → White → Bone → White → Bone → Graphite |
+| ✅ | Section backgrounds alternate | White → Bone → White → Bone → Bone → Bone → White → Bone → White → Bone → White → Bone → White → Graphite |
 | ✅ | Backgrounds on the brand palette | Bone / White / Graphite |
 | ✅ | No horizontal overflow (desktop) | 0px |
 | ✅ | No broken images (desktop) | none |
@@ -94,7 +94,7 @@
 ## Outline as served
 
 - **H1:** ['Glutathione for Skin (GSH and GSSG)']
-- **H2:** ['What Is Glutathione?', 'Glutathione Skin Benefits: What the Evidence Shows', '−10.7%', '77%', 'Week 1', 'Glutathione Before and After: What the Trial Measured', 'Glutathione Evidence at a Glance', 'How to Use Topical Glutathione', 'Topical vs Oral Glutathione: Two Different Questions', 'Published References', 'Frequently Asked Questions', 'Shop Glutathione Products', 'Explore More Research']
+- **H2:** ['−10.7%', '77%', 'Week 1', 'What Is Glutathione?', 'Glutathione Skin Benefits: What the Evidence Shows', 'Glutathione Before and After: What the Trial Measured', 'How to Use Topical Glutathione', 'Topical vs Oral Glutathione: Two Different Questions', 'Glutathione Evidence at a Glance', 'Published References', 'Frequently Asked Questions', 'Shop Glutathione Products', 'Explore More Research']
 - **Visual-only headings:** ['UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Explore Our Glutathione Formulations']
 - **Schema types:** ['BreadcrumbList', 'WebPage', 'FAQPage']
 - **Extracted words (no JS):** 3423 of 3811
@@ -104,20 +104,20 @@
 | Top | Height | Section | Type | Background |
 |---|---|---|---|---|
 | 126 | 440 | hero | image-with-text-overlay | Bone |
-| 566 | 1010 | overview | rich-text | Bone |
-| 1575 | 1378 | evidence | rich-text | White |
-| 2953 | 382 | stats | impact-text | Bone |
-| 3335 | 1293 | charts | custom-html | White |
-| 4629 | 1034 | key_findings_ba1 | research-before-after | Bone |
-| 5663 | 884 | key_findings | media-with-text | Bone |
-| 6547 | 766 | key_findings_ba3 | research-before-after | Bone |
-| 7312 | 2139 | evidence_table | specification-table | White |
-| 9451 | 1602 | usage | media-with-text | Bone |
-| 11053 | 1685 | references | custom-html | White |
-| 12738 | 1117 | faq | faq | Bone |
-| 13855 | 765 | shop_ingredient | featured-collection | White |
-| 14620 | 775 | related | multi-column | Bone |
-| 15395 | 430 | cta | rich-text | Graphite |
-| 15825 | 0 | findings_spacing_fix | custom-html | Bone |
-| 15825 | 516 | footer | footer | Bone |
-| 16341 | 0 | brand_layout_css | custom-html | Bone |
+| 566 | 382 | stats | impact-text | White |
+| 948 | 1010 | overview | rich-text | Bone |
+| 1958 | 1378 | evidence | rich-text | White |
+| 3335 | 1034 | key_findings_ba1 | research-before-after | Bone |
+| 4369 | 884 | key_findings | media-with-text | Bone |
+| 5254 | 766 | key_findings_ba3 | research-before-after | Bone |
+| 6019 | 1293 | charts | custom-html | White |
+| 7312 | 1602 | usage | media-with-text | Bone |
+| 8915 | 2139 | evidence_table | specification-table | White |
+| 11053 | 1685 | references | custom-html | Bone |
+| 12738 | 1117 | faq | faq | White |
+| 13855 | 797 | shop_ingredient | featured-collection | Bone |
+| 14652 | 775 | related | multi-column | White |
+| 15427 | 430 | cta | rich-text | Graphite |
+| 15857 | 0 | findings_spacing_fix | custom-html | Bone |
+| 15857 | 516 | footer | footer | Bone |
+| 16373 | 0 | brand_layout_css | custom-html | Bone |

@@ -1,0 +1,732 @@
+{
+  "_about": "Malcolm, 2026-09-23: 'the 3 main USPs/claims bar' belongs at the top of every science page. Moves the stats band directly under the hero on glutathione-research, moves the charts below the findings cards and the evidence table below the usage rows, and flips the four backgrounds below so the page still alternates Bone/White. Sections are re-supplied verbatim from configs/hub-upgrades/glutathione-research.json (the current spec), so every six-locale value is re-registered unchanged. Additive; nothing else on the page is touched.",
+  "template": "templates/page.glutathione-research.json",
+  "page": "glutathione-research",
+  "_design": "hero → stats White → overview Bone → evidence White → findings (Bone wrapper, White cards) → charts White → usage (Bone wrapper) → evidence_table White → references Bone → FAQ White (accordion Bone) → shop Bone → related White → CTA Graphite.",
+  "add_sections": [
+    {
+      "id": "stats",
+      "after": "hero",
+      "section": {
+        "type": "impact-text",
+        "settings": {
+          "full_width": true,
+          "stack_mobile": true,
+          "text_alignment": "center",
+          "impact_text_style": "fill",
+          "text_divider": "none",
+          "impact_text_size_ratio": 0.7,
+          "background": "#ffffff",
+          "heading_text_color": "#8A6914",
+          "text_color": "#1A1A1A"
+        },
+        "blocks": {
+          "s1": {
+            "type": "item",
+            "settings": {
+              "animate_impact_text": false,
+              "title": {
+                "en": "−10.7%",
+                "de": "−10,7 %",
+                "nl": "−10,7%",
+                "fr": "−10,7 %",
+                "es": "−10,7 %",
+                "it": "−10,7%"
+              },
+              "subheading": {
+                "en": "Skin pigment in 10 weeks",
+                "de": "Hautpigment in 10 Wochen",
+                "nl": "Huidpigment in 10 weken",
+                "fr": "Pigment de la peau en 10 semaines",
+                "es": "Pigmento de la piel en 10 semanas",
+                "it": "Pigmento della pelle in 10 settimane"
+              },
+              "content": {
+                "en": "<p>Melanin index on the 2% GSSG side of the face, against −3.1% on the placebo side (p &lt; 0.001). <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>: 30 women, run by the GSSG manufacturer.</p>",
+                "de": "<p>Melaninindex auf der Gesichtshälfte mit 2 % GSSG, gegenüber −3,1 % auf der Placebo-Seite (p &lt; 0,001). <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>: 30 Frauen, durchgeführt vom GSSG-Hersteller.</p>",
+                "nl": "<p>Melanine-index aan de gezichtshelft met 2% GSSG, tegen −3,1% aan de placebokant (p &lt; 0,001). <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>: 30 vrouwen, uitgevoerd door de GSSG-fabrikant.</p>",
+                "fr": "<p>Indice de mélanine du côté du visage traité au GSSG à 2 %, contre −3,1 % du côté placebo (p &lt; 0,001). <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a> : 30 femmes, essai mené par le fabricant du GSSG.</p>",
+                "es": "<p>Índice de melanina en el lado de la cara con GSSG al 2 %, frente a −3,1 % en el lado con placebo (p &lt; 0,001). <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>: 30 mujeres, realizado por el fabricante del GSSG.</p>",
+                "it": "<p>Indice di melanina sul lato del viso con GSSG al 2%, contro −3,1% sul lato placebo (p &lt; 0,001). <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>: 30 donne, condotto dal produttore del GSSG.</p>"
+              }
+            }
+          },
+          "s2": {
+            "type": "item",
+            "settings": {
+              "animate_impact_text": false,
+              "title": {
+                "en": "77%",
+                "de": "77 %",
+                "nl": "77%",
+                "fr": "77 %",
+                "es": "77 %",
+                "it": "77%"
+              },
+              "subheading": {
+                "en": "Saw brighter skin",
+                "de": "Sahen hellere Haut",
+                "nl": "Zagen een helderdere huid",
+                "fr": "Ont vu une peau plus lumineuse",
+                "es": "Vieron una piel más luminosa",
+                "it": "Hanno visto una pelle più luminosa"
+              },
+              "content": {
+                "en": "<p>Of the women rated the GSSG side moderately brighter at week 10, against 23% for the placebo side. The investigator's ratings: 67% against 3% (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "de": "<p>Der Frauen bewerteten die GSSG-Seite in Woche 10 als deutlich heller, gegenüber 23 % für die Placebo-Seite. Bewertung der Prüfärztin: 67 % gegenüber 3 % (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "nl": "<p>Van de vrouwen beoordeelde de GSSG-kant in week 10 als duidelijk helderder, tegen 23% voor de placebokant. Beoordeling van de onderzoeker: 67% tegen 3% (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "fr": "<p>Des femmes ont jugé le côté GSSG nettement plus lumineux à la semaine 10, contre 23 % pour le côté placebo. Notes de l'investigatrice : 67 % contre 3 % (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "es": "<p>De las mujeres calificó el lado con GSSG como claramente más luminoso en la semana 10, frente al 23 % para el lado con placebo. Valoración de la investigadora: 67 % frente al 3 % (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "it": "<p>Delle donne ha giudicato il lato GSSG nettamente più luminoso alla settimana 10, contro il 23% per il lato placebo. Valutazione della sperimentatrice: 67% contro 3% (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>"
+              }
+            }
+          },
+          "s3": {
+            "type": "item",
+            "settings": {
+              "animate_impact_text": false,
+              "title": {
+                "en": "Week 1",
+                "de": "Woche 1",
+                "nl": "Week 1",
+                "fr": "Semaine 1",
+                "es": "Semana 1",
+                "it": "Settimana 1"
+              },
+              "subheading": {
+                "en": "First measurable change",
+                "de": "Erste messbare Veränderung",
+                "nl": "Eerste meetbare verandering",
+                "fr": "Premier changement mesurable",
+                "es": "Primer cambio medible",
+                "it": "Primo cambiamento misurabile"
+              },
+              "content": {
+                "en": "<p>The melanin index was already significantly lower on the GSSG side at week 1. By week 4, 1 in 4 women could see a slight difference; by week 10, 3 in 4 saw a moderate one (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "de": "<p>Der Melaninindex war auf der GSSG-Seite schon in Woche 1 signifikant niedriger. In Woche 4 sah 1 von 4 Frauen einen leichten Unterschied; in Woche 10 sahen 3 von 4 einen deutlichen (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "nl": "<p>De melanine-index was aan de GSSG-kant al in week 1 significant lager. In week 4 zag 1 op de 4 vrouwen een licht verschil; in week 10 zagen 3 op de 4 een duidelijk verschil (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "fr": "<p>L'indice de mélanine était déjà significativement plus bas du côté GSSG à la semaine 1. À la semaine 4, 1 femme sur 4 voyait une légère différence ; à la semaine 10, 3 sur 4 en voyaient une nette (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "es": "<p>El índice de melanina ya era significativamente más bajo en el lado con GSSG en la semana 1. En la semana 4, 1 de cada 4 mujeres veía una ligera diferencia; en la semana 10, 3 de cada 4 veían una diferencia clara (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>",
+                "it": "<p>L'indice di melanina era già significativamente più basso sul lato GSSG alla settimana 1. Alla settimana 4, 1 donna su 4 vedeva una leggera differenza; alla settimana 10, 3 su 4 ne vedevano una netta (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      }
+    },
+    {
+      "id": "charts",
+      "after": "key_findings_ba3",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "full_width": true,
+          "remove_vertical_spacing": false,
+          "remove_horizontal_spacing": false,
+          "background": "#ffffff",
+          "html": {
+            "$chart": [
+              "pigment",
+              "ratings"
+            ],
+            "heading": {
+              "en": "Glutathione Before and After: What the Trial Measured",
+              "de": "Glutathion vorher und nachher: Was die Studie gemessen hat",
+              "nl": "Glutathion voor en na: wat de studie heeft gemeten",
+              "fr": "Glutathion avant et après : ce que l'essai a mesuré",
+              "es": "Glutatión antes y después: lo que midió el ensayo",
+              "it": "Glutatione prima e dopo: cosa ha misurato lo studio"
+            },
+            "intro": {
+              "en": "<p>Two charts from the only controlled trial of topical glutathione on its own (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>): what the instrument recorded, and how many women and investigators saw a difference.</p>",
+              "de": "<p>Zwei Diagramme aus der einzigen kontrollierten Studie zu äußerlich angewendetem Glutathion allein (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>): was das Messgerät erfasst hat, und wie viele Frauen und Prüfärzte einen Unterschied sahen.</p>",
+              "nl": "<p>Twee grafieken uit de enige gecontroleerde studie naar glutathion op de huid alleen (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>): wat het instrument registreerde, en hoeveel vrouwen en onderzoekers een verschil zagen.</p>",
+              "fr": "<p>Deux graphiques tirés du seul essai contrôlé du glutathion en application cutanée seul (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>) : ce que l'instrument a enregistré, et combien de femmes et d'investigateurs ont vu une différence.</p>",
+              "es": "<p>Dos gráficos del único ensayo controlado del glutatión tópico por sí solo (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>): lo que registró el instrumento, y cuántas mujeres e investigadores vieron una diferencia.</p>",
+              "it": "<p>Due grafici dall'unico studio controllato sul glutatione topico da solo (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>): cosa ha registrato lo strumento, e quante donne e sperimentatori hanno visto una differenza.</p>"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "usage",
+      "after": "charts",
+      "section": {
+        "type": "media-with-text",
+        "settings": {
+          "full_width": false,
+          "alternate_media_position": true,
+          "spacing": "small"
+        },
+        "blocks": {
+          "u1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg",
+              "media_width": 50,
+              "media_position": "end",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a",
+              "content": {
+                "en": "<h2>How to Use Topical Glutathione</h2><p>Apply it to clean skin morning and evening, before your moisturiser. That matches the trial, which applied the lotion twice a day. In the morning, finish with SPF: the trial volunteers were asked to avoid the sun, and the reviews describe the brightening as temporary.</p><p>Give it 10 weeks. The pigment reading was lower from week 1, 1 in 4 women noticed a slight change by week 4, and 3 in 4 saw a moderate change at week 10, so the effect builds slowly and needs to be kept up.</p><p>Glutathione is not an acid or an exfoliant, so it layers easily with niacinamide, vitamin C and hyaluronic acid. For a daytime routine, follow it with a light cream such as our <a href=\"/pages/copper-peptide-research\">copper peptide (GHK-Cu)</a> gel-cream, and patch-test any new product first.</p>",
+                "de": "<h2>So wendet man Glutathion äußerlich an</h2><p>Morgens und abends auf die gereinigte Haut auftragen, vor der Feuchtigkeitspflege. Das entspricht der Studie, in der die Lotion zweimal täglich aufgetragen wurde. Morgens mit Sonnenschutz abschließen: Die Teilnehmerinnen der Studie sollten die Sonne meiden, und die Übersichtsarbeiten beschreiben die Aufhellung als vorübergehend.</p><p>10 Wochen Zeit geben. Der Pigmentwert war ab Woche 1 niedriger, 1 von 4 Frauen bemerkte bis Woche 4 eine leichte Veränderung, und 3 von 4 sahen in Woche 10 eine deutliche; der Effekt baut sich also langsam auf und muss aufrechterhalten werden.</p><p>Glutathion ist keine Säure und kein Peeling, daher lässt es sich leicht mit Niacinamid, Vitamin C und Hyaluronsäure kombinieren. Für die Tagesroutine anschließend eine leichte Creme wie unsere Gel-Creme mit <a href=\"/de/pages/copper-peptide-research\">Kupferpeptid (GHK-Cu)</a> auftragen, und jedes neue Produkt zuerst mit einem Patch-Test prüfen.</p>",
+                "nl": "<h2>Zo gebruik je glutathion op de huid</h2><p>Breng het 's ochtends en 's avonds aan op een schone huid, vóór je moisturizer. Dat komt overeen met de studie, waarin de lotion tweemaal daags werd aangebracht. Sluit 's ochtends af met SPF: de deelneemsters aan de studie moesten de zon vermijden, en de reviews beschrijven de verheldering als tijdelijk.</p><p>Geef het 10 weken. De pigmentmeting was vanaf week 1 lager, 1 op de 4 vrouwen merkte tegen week 4 een lichte verandering, en 3 op de 4 zagen in week 10 een duidelijke verandering; het effect bouwt dus langzaam op en moet worden volgehouden.</p><p>Glutathion is geen zuur en geen exfoliant, dus het combineert makkelijk met niacinamide, vitamine C en hyaluronzuur. Volg het overdag met een lichte crème zoals onze gel-crème met <a href=\"/nl/pages/copper-peptide-research\">koperpeptide (GHK-Cu)</a>, en test elk nieuw product eerst op een klein stukje huid.</p>",
+                "fr": "<h2>Comment utiliser le glutathion en application cutanée</h2><p>Appliquez-le sur peau propre matin et soir, avant votre crème hydratante. C'est ce que faisait l'essai, où la lotion était appliquée deux fois par jour. Le matin, terminez par un SPF : les volontaires de l'essai devaient éviter le soleil, et les revues décrivent l'effet éclat comme temporaire.</p><p>Accordez-lui 10 semaines. La mesure du pigment était plus basse dès la semaine 1, 1 femme sur 4 a remarqué un léger changement vers la semaine 4, et 3 sur 4 ont vu un changement net à la semaine 10 ; l'effet se construit donc lentement et doit être entretenu.</p><p>Le glutathion n'est ni un acide ni un exfoliant, il se superpose donc facilement au niacinamide, à la vitamine C et à l'acide hyaluronique. Pour la journée, faites-le suivre d'une crème légère comme notre gel-crème au <a href=\"/fr/pages/copper-peptide-research\">peptide de cuivre (GHK-Cu)</a>, et testez tout nouveau produit sur une petite zone d'abord.</p>",
+                "es": "<h2>Cómo usar el glutatión tópico</h2><p>Aplícalo sobre la piel limpia por la mañana y por la noche, antes de la crema hidratante. Es lo que hizo el ensayo, que aplicaba la loción dos veces al día. Por la mañana, termina con SPF: a las voluntarias del ensayo se les pidió evitar el sol, y las revisiones describen la luminosidad como temporal.</p><p>Dale 10 semanas. La lectura del pigmento fue más baja desde la semana 1, 1 de cada 4 mujeres notó un ligero cambio hacia la semana 4, y 3 de cada 4 vieron un cambio claro en la semana 10; el efecto se construye despacio y hay que mantenerlo.</p><p>El glutatión no es un ácido ni un exfoliante, así que se combina fácilmente con niacinamida, vitamina C y ácido hialurónico. Para el día, sigue con una crema ligera como nuestra gel-crema con <a href=\"/es/pages/copper-peptide-research\">péptido de cobre (GHK-Cu)</a>, y prueba antes cualquier producto nuevo en una zona pequeña.</p>",
+                "it": "<h2>Come usare il glutatione topico</h2><p>Applicalo sulla pelle pulita mattina e sera, prima della crema idratante. È quello che faceva lo studio, che applicava la lozione due volte al giorno. Al mattino concludi con un SPF: alle volontarie dello studio è stato chiesto di evitare il sole, e le revisioni descrivono la luminosità come temporanea.</p><p>Dagli 10 settimane. La lettura del pigmento era più bassa dalla settimana 1, 1 donna su 4 ha notato un leggero cambiamento verso la settimana 4, e 3 su 4 hanno visto un cambiamento netto alla settimana 10; l'effetto si costruisce lentamente e va mantenuto.</p><p>Il glutatione non è un acido né un esfoliante, quindi si abbina facilmente a niacinamide, vitamina C e acido ialuronico. Di giorno, fallo seguire da una crema leggera come la nostra gel-crema al <a href=\"/it/pages/copper-peptide-research\">peptide di rame (GHK-Cu)</a>, e prova prima ogni nuovo prodotto su una piccola area.</p>"
+              }
+            }
+          },
+          "u2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg",
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a",
+              "content": {
+                "en": "<h2>Topical vs Oral Glutathione: Two Different Questions</h2><p>Most glutathione studies are about swallowing it. Oral glutathione has lowered the melanin index in some trials and not in others, and a 2025 review of every route rates the results \"moderately efficacious\" but \"unsustainable\" (<a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Sarkar et al., 2025</a>). Intravenous glutathione, offered in some clinics, carries liver, kidney and allergy warnings in the reviews, and the same review calls it \"contraindicated\".</p><p>None of that transfers to a serum. A product applied to the skin can only rest on topical trials, and there is one controlled trial of topical glutathione on its own. That is why this page keeps the two apart, and why our copy never borrows an oral result.</p><p><strong>GSH or GSSG?</strong> The trial used oxidised glutathione, GSSG, because reduced glutathione breaks down quickly in water, which is why there had been no topical trials of GSH before it. How much GSSG passes through the skin, and what it does once there, has not been established: the trial authors call the mechanism \"no more than speculation\".</p>",
+                "de": "<h2>Äußerlich oder oral: zwei verschiedene Fragen</h2><p>Die meisten Glutathion-Studien handeln vom Schlucken. Orales Glutathion hat in einigen Studien den Melaninindex gesenkt, in anderen nicht, und eine Übersichtsarbeit von 2025 über alle Anwendungswege bewertet die Ergebnisse als „mäßig wirksam“, aber „nicht anhaltend“ (<a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Sarkar et al., 2025</a>). Intravenöses Glutathion, das manche Kliniken anbieten, ist in den Übersichtsarbeiten mit Warnungen zu Leber, Nieren und Allergien verbunden, und dieselbe Übersicht nennt es „kontraindiziert“.</p><p>Nichts davon lässt sich auf ein Serum übertragen. Ein Produkt, das auf die Haut aufgetragen wird, kann sich nur auf Studien zur äußerlichen Anwendung stützen, und davon gibt es eine einzige kontrollierte zu Glutathion allein. Deshalb trennt diese Seite die beiden Wege, und deshalb übernimmt unser Text nie ein orales Ergebnis.</p><p><strong>GSH oder GSSG?</strong> Die Studie verwendete oxidiertes Glutathion, GSSG, weil reduziertes Glutathion in Wasser schnell zerfällt; deshalb gab es vorher keine Studien zur äußerlichen Anwendung von GSH. Wie viel GSSG durch die Haut gelangt und was es dort bewirkt, ist nicht geklärt: Die Autorinnen der Studie nennen den Mechanismus „nicht mehr als Spekulation“.</p>",
+                "nl": "<h2>Glutathion op de huid of oraal: twee verschillende vragen</h2><p>De meeste glutathionstudies gaan over slikken. Oraal glutathion heeft in sommige studies de melanine-index verlaagd en in andere niet, en een review uit 2025 van alle toedieningswegen beoordeelt de resultaten als \"matig werkzaam\" maar \"niet blijvend\" (<a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Sarkar et al., 2025</a>). Intraveneus glutathion, dat sommige klinieken aanbieden, gaat in de reviews gepaard met waarschuwingen voor lever, nieren en allergie, en dezelfde review noemt het \"gecontra-indiceerd\".</p><p>Niets daarvan is over te zetten op een serum. Een product dat je op de huid aanbrengt kan alleen steunen op studies op de huid, en daarvan is er één gecontroleerde naar glutathion alleen. Daarom houdt deze pagina de twee gescheiden, en daarom leent onze tekst nooit een oraal resultaat.</p><p><strong>GSH of GSSG?</strong> De studie gebruikte geoxideerd glutathion, GSSG, omdat gereduceerd glutathion in water snel afbreekt; daarom waren er daarvóór geen huidstudies met GSH. Hoeveel GSSG door de huid dringt, en wat het daar doet, is niet vastgesteld: de auteurs van de studie noemen het mechanisme \"niet meer dan speculatie\".</p>",
+                "fr": "<h2>Glutathion cutané ou oral : deux questions différentes</h2><p>La plupart des études sur le glutathion concernent sa prise par la bouche. Le glutathion oral a abaissé l'indice de mélanine dans certains essais et pas dans d'autres, et une revue de 2025 portant sur toutes les voies juge les résultats « modérément efficaces » mais « non durables » (<a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Sarkar et al., 2025</a>). Le glutathion intraveineux, proposé dans certaines cliniques, s'accompagne dans les revues de mises en garde concernant le foie, les reins et les allergies, et la même revue le qualifie de « contre-indiqué ».</p><p>Rien de tout cela ne se transpose à un sérum. Un produit appliqué sur la peau ne peut s'appuyer que sur des essais cutanés, et il existe un seul essai contrôlé du glutathion cutané seul. C'est pourquoi cette page sépare les deux, et pourquoi nos textes n'empruntent jamais un résultat oral.</p><p><strong>GSH ou GSSG ?</strong> L'essai a utilisé le glutathion oxydé, le GSSG, parce que le glutathion réduit se dégrade vite dans l'eau ; c'est pour cela qu'il n'y avait eu aucun essai cutané du GSH auparavant. La quantité de GSSG qui traverse la peau, et ce qu'il y fait, n'est pas établie : les auteures de l'essai qualifient le mécanisme de « pure spéculation ».</p>",
+                "es": "<h2>Glutatión tópico u oral: dos preguntas distintas</h2><p>La mayoría de los estudios sobre el glutatión tratan de ingerirlo. El glutatión oral ha reducido el índice de melanina en algunos ensayos y en otros no, y una revisión de 2025 de todas las vías califica los resultados de \"moderadamente eficaces\" pero \"no sostenibles\" (<a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Sarkar et al., 2025</a>). El glutatión intravenoso, que ofrecen algunas clínicas, va acompañado en las revisiones de advertencias sobre el hígado, los riñones y las alergias, y la misma revisión lo considera \"contraindicado\".</p><p>Nada de eso se traslada a un sérum. Un producto aplicado sobre la piel solo puede apoyarse en ensayos tópicos, y hay un único ensayo controlado del glutatión tópico por sí solo. Por eso esta página mantiene separadas las dos vías, y por eso nuestros textos nunca toman prestado un resultado oral.</p><p><strong>¿GSH o GSSG?</strong> El ensayo usó glutatión oxidado, GSSG, porque el glutatión reducido se degrada rápido en agua; por eso no había habido antes ensayos tópicos con GSH. Cuánto GSSG atraviesa la piel, y qué hace una vez allí, no se ha establecido: las autoras del ensayo califican el mecanismo de \"mera especulación\".</p>",
+                "it": "<h2>Glutatione topico o orale: due domande diverse</h2><p>La maggior parte degli studi sul glutatione riguarda l'assunzione per bocca. Il glutatione orale ha abbassato l'indice di melanina in alcuni studi e non in altri, e una revisione del 2025 su tutte le vie di somministrazione giudica i risultati \"moderatamente efficaci\" ma \"non duraturi\" (<a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Sarkar et al., 2025</a>). Il glutatione endovenoso, offerto in alcune cliniche, è accompagnato nelle revisioni da avvertenze su fegato, reni e allergie, e la stessa revisione lo definisce \"controindicato\".</p><p>Nulla di tutto ciò si trasferisce a un siero. Un prodotto applicato sulla pelle può basarsi solo su studi topici, e di studi controllati sul glutatione topico da solo ce n'è uno. Ecco perché questa pagina tiene separate le due vie, e perché i nostri testi non prendono mai in prestito un risultato orale.</p><p><strong>GSH o GSSG?</strong> Lo studio ha usato il glutatione ossidato, GSSG, perché il glutatione ridotto si degrada in fretta in acqua; per questo prima non c'erano stati studi topici sul GSH. Quanto GSSG attraversi la pelle, e cosa faccia una volta lì, non è stato stabilito: le autrici dello studio definiscono il meccanismo \"nulla più che una speculazione\".</p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "u1",
+          "u2"
+        ]
+      }
+    },
+    {
+      "id": "evidence_table",
+      "after": "usage",
+      "section": {
+        "type": "specification-table",
+        "settings": {
+          "full_width": true,
+          "subheading": "",
+          "title": "",
+          "text_position": "center",
+          "max_rows": 10,
+          "background": "#ffffff",
+          "chart_background": "#F0F0F0",
+          "content": {
+            "en": "<h2>Glutathione Evidence at a Glance</h2><p>Every study this page relies on, graded. A: controlled human trial, measured by instrument. B: a smaller, uncontrolled or abstract-only human trial. X: swallowed or injected glutathione, which cannot support a product applied to the skin.</p>",
+            "de": "<h2>Die Belege zu Glutathion auf einen Blick</h2><p>Jede Studie, auf die sich diese Seite stützt, mit Bewertung. A: kontrollierte Studie am Menschen, mit Messgeräten. B: kleinere, unkontrollierte oder nur als Zusammenfassung veröffentlichte Studie am Menschen. X: geschlucktes oder gespritztes Glutathion, das ein auf die Haut aufgetragenes Produkt nicht belegen kann.</p>",
+            "nl": "<h2>Het bewijs voor glutathion in één oogopslag</h2><p>Elke studie waarop deze pagina steunt, beoordeeld. A: gecontroleerde studie bij mensen, gemeten met instrumenten. B: een kleinere, ongecontroleerde of alleen als samenvatting gepubliceerde studie bij mensen. X: geslikt of geïnjecteerd glutathion, dat een product op de huid niet kan onderbouwen.</p>",
+            "fr": "<h2>Les preuves sur le glutathion en un coup d'œil</h2><p>Chaque étude sur laquelle repose cette page, notée. A : essai contrôlé chez l'humain, mesuré par instrument. B : essai chez l'humain plus petit, non contrôlé ou publié uniquement sous forme de résumé. X : glutathion avalé ou injecté, qui ne peut pas étayer un produit appliqué sur la peau.</p>",
+            "es": "<h2>La evidencia sobre el glutatión de un vistazo</h2><p>Todos los estudios en los que se apoya esta página, calificados. A: ensayo controlado en personas, medido con instrumentos. B: ensayo en personas más pequeño, no controlado o publicado solo como resumen. X: glutatión ingerido o inyectado, que no puede respaldar un producto aplicado sobre la piel.</p>",
+            "it": "<h2>Le prove sul glutatione in sintesi</h2><p>Ogni studio su cui si basa questa pagina, con valutazione. A: studio controllato sull'uomo, misurato con strumenti. B: studio sull'uomo più piccolo, non controllato o pubblicato solo come abstract. X: glutatione ingerito o iniettato, che non può sostenere un prodotto applicato sulla pelle.</p>"
+          }
+        },
+        "blocks": {
+          "t1": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Watanabe et al., 2014 (2% GSSG)",
+                "de": "Watanabe et al., 2014 (2 % GSSG)",
+                "nl": "Watanabe et al., 2014 (2% GSSG)",
+                "fr": "Watanabe et al., 2014 (GSSG à 2 %)",
+                "es": "Watanabe et al., 2014 (GSSG al 2 %)",
+                "it": "Watanabe et al., 2014 (GSSG al 2%)"
+              },
+              "value": {
+                "en": "<p><strong>Grade A.</strong> 30 women aged 30–50, 10 weeks, double-blind, placebo-controlled, split-face. Melanin index −10.7% vs −3.1% on placebo (p &lt; 0.001); 77% vs 23% rated moderately brighter. Three of four authors from Kyowa Hakko Bio, the GSSG manufacturer. The only controlled trial of topical glutathione alone. <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad A.</strong> 30 Frauen von 30–50 Jahren, 10 Wochen, doppelblind, placebokontrolliert, Halbseitenvergleich. Melaninindex −10,7 % vs. −3,1 % unter Placebo (p &lt; 0,001); 77 % vs. 23 % als deutlich heller bewertet. Drei von vier Autorinnen von Kyowa Hakko Bio, dem GSSG-Hersteller. Die einzige kontrollierte Studie zu äußerlich angewendetem Glutathion allein. <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad A.</strong> 30 vrouwen van 30–50 jaar, 10 weken, dubbelblind, placebogecontroleerd, split-face. Melanine-index −10,7% vs −3,1% met placebo (p &lt; 0,001); 77% vs 23% beoordeeld als duidelijk helderder. Drie van de vier auteurs van Kyowa Hakko Bio, de GSSG-fabrikant. De enige gecontroleerde studie naar glutathion op de huid alleen. <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Grade A.</strong> 30 femmes de 30 à 50 ans, 10 semaines, double aveugle, contre placebo, demi-visage. Indice de mélanine −10,7 % vs −3,1 % sous placebo (p &lt; 0,001) ; 77 % vs 23 % jugées nettement plus lumineuses. Trois des quatre auteures de Kyowa Hakko Bio, le fabricant du GSSG. Le seul essai contrôlé du glutathion cutané seul. <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado A.</strong> 30 mujeres de 30–50 años, 10 semanas, doble ciego, controlado con placebo, media cara. Índice de melanina −10,7 % vs −3,1 % con placebo (p &lt; 0,001); 77 % vs 23 % calificadas como claramente más luminosas. Tres de las cuatro autoras de Kyowa Hakko Bio, el fabricante del GSSG. El único ensayo controlado del glutatión tópico por sí solo. <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado A.</strong> 30 donne di 30–50 anni, 10 settimane, doppio cieco, controllato con placebo, mezzo viso. Indice di melanina −10,7% vs −3,1% con placebo (p &lt; 0,001); 77% vs 23% giudicate nettamente più luminose. Tre delle quattro autrici di Kyowa Hakko Bio, il produttore del GSSG. L'unico studio controllato sul glutatione topico da solo. <a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t2": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Etnawati et al., 2019 (0.1–0.5% GSH)",
+                "de": "Etnawati et al., 2019 (0,1–0,5 % GSH)",
+                "nl": "Etnawati et al., 2019 (0,1–0,5% GSH)",
+                "fr": "Etnawati et al., 2019 (GSH à 0,1–0,5 %)",
+                "es": "Etnawati et al., 2019 (GSH al 0,1–0,5 %)",
+                "it": "Etnawati et al., 2019 (GSH allo 0,1–0,5%)"
+              },
+              "value": {
+                "en": "<p><strong>Grade B.</strong> 74 women, 8 weeks, double-blind, three groups. Reduced glutathione in a wash, day cream and night cream improved hyperpigmented patches versus the same products without it. Conference supplement, abstract only; two authors from KOHJIN Life Sciences, a GSH manufacturer. <a href='https://doi.org/10.4081/dr.2019.8013' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad B.</strong> 74 Frauen, 8 Wochen, doppelblind, drei Gruppen. Reduziertes Glutathion in Reinigung, Tages- und Nachtcreme verbesserte hyperpigmentierte Stellen gegenüber denselben Produkten ohne GSH. Kongressband, nur Zusammenfassung; zwei Autoren von KOHJIN Life Sciences, einem GSH-Hersteller. <a href='https://doi.org/10.4081/dr.2019.8013' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad B.</strong> 74 vrouwen, 8 weken, dubbelblind, drie groepen. Gereduceerd glutathion in een reiniger, dagcrème en nachtcrème verbeterde gehyperpigmenteerde plekken vergeleken met dezelfde producten zonder GSH. Congresbundel, alleen samenvatting; twee auteurs van KOHJIN Life Sciences, een GSH-fabrikant. <a href='https://doi.org/10.4081/dr.2019.8013' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Grade B.</strong> 74 femmes, 8 semaines, double aveugle, trois groupes. Le glutathion réduit dans un nettoyant, une crème de jour et une crème de nuit a amélioré les zones hyperpigmentées par rapport aux mêmes produits sans GSH. Supplément de congrès, résumé seulement ; deux auteurs de KOHJIN Life Sciences, un fabricant de GSH. <a href='https://doi.org/10.4081/dr.2019.8013' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado B.</strong> 74 mujeres, 8 semanas, doble ciego, tres grupos. El glutatión reducido en un limpiador, una crema de día y una crema de noche mejoró las zonas hiperpigmentadas frente a los mismos productos sin GSH. Suplemento de congreso, solo resumen; dos autores de KOHJIN Life Sciences, un fabricante de GSH. <a href='https://doi.org/10.4081/dr.2019.8013' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado B.</strong> 74 donne, 8 settimane, doppio cieco, tre gruppi. Il glutatione ridotto in un detergente, una crema giorno e una crema notte ha migliorato le aree iperpigmentate rispetto agli stessi prodotti senza GSH. Supplemento congressuale, solo abstract; due autori di KOHJIN Life Sciences, un produttore di GSH. <a href='https://doi.org/10.4081/dr.2019.8013' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t3": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Grandi et al., 2019 (2% S-acyl glutathione)",
+                "de": "Grandi et al., 2019 (2 % S-Acyl-Glutathion)",
+                "nl": "Grandi et al., 2019 (2% S-acyl-glutathion)",
+                "fr": "Grandi et al., 2019 (S-acyl glutathion à 2 %)",
+                "es": "Grandi et al., 2019 (S-acil glutatión al 2 %)",
+                "it": "Grandi et al., 2019 (S-acil glutatione al 2%)"
+              },
+              "value": {
+                "en": "<p><strong>Grade A, different molecule.</strong> 10 volunteers, one application before UVB, randomised, double-blind, placebo-controlled. The UV dose needed to redden the skin rose from 105 to 135 mJ/cm² (p = 0.0003). Linolenoyl glutathione, not GSSG. <a href='https://pubmed.ncbi.nlm.nih.gov/28399620/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad A, anderes Molekül.</strong> 10 Freiwillige, eine Anwendung vor UVB, randomisiert, doppelblind, placebokontrolliert. Die zur Rötung der Haut nötige UV-Dosis stieg von 105 auf 135 mJ/cm² (p = 0,0003). Linolenoyl-Glutathion, nicht GSSG. <a href='https://pubmed.ncbi.nlm.nih.gov/28399620/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad A, ander molecuul.</strong> 10 vrijwilligers, één toepassing vóór uvb, gerandomiseerd, dubbelblind, placebogecontroleerd. De uv-dosis die nodig was om de huid rood te maken steeg van 105 naar 135 mJ/cm² (p = 0,0003). Linolenoyl-glutathion, geen GSSG. <a href='https://pubmed.ncbi.nlm.nih.gov/28399620/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Grade A, molécule différente.</strong> 10 volontaires, une application avant UVB, randomisé, double aveugle, contre placebo. La dose d'UV nécessaire pour rougir la peau est passée de 105 à 135 mJ/cm² (p = 0,0003). Linolénoyl glutathion, pas du GSSG. <a href='https://pubmed.ncbi.nlm.nih.gov/28399620/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado A, molécula distinta.</strong> 10 voluntarios, una aplicación antes de UVB, aleatorizado, doble ciego, controlado con placebo. La dosis de UV necesaria para enrojecer la piel subió de 105 a 135 mJ/cm² (p = 0,0003). Linolenoil glutatión, no GSSG. <a href='https://pubmed.ncbi.nlm.nih.gov/28399620/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado A, molecola diversa.</strong> 10 volontari, una applicazione prima degli UVB, randomizzato, doppio cieco, controllato con placebo. La dose di UV necessaria ad arrossare la pelle è salita da 105 a 135 mJ/cm² (p = 0,0003). Linolenoil glutatione, non GSSG. <a href='https://pubmed.ncbi.nlm.nih.gov/28399620/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t4": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Wahab et al., 2021 (topical + oral GSH)",
+                "de": "Wahab et al., 2021 (äußerlich + oral GSH)",
+                "nl": "Wahab et al., 2021 (op de huid + oraal GSH)",
+                "fr": "Wahab et al., 2021 (GSH cutané + oral)",
+                "es": "Wahab et al., 2021 (GSH tópico + oral)",
+                "it": "Wahab et al., 2021 (GSH topico + orale)"
+              },
+              "value": {
+                "en": "<p><strong>Grade A for the combination only.</strong> 46 people, 8 weeks, double-blind. Topical plus oral glutathione lowered the melanin index versus placebo (p &lt; 0.05); the abstract reports no significant effect for the topical arm alone. <a href='https://pubmed.ncbi.nlm.nih.gov/33871071/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad A nur für die Kombination.</strong> 46 Personen, 8 Wochen, doppelblind. Äußerliches plus orales Glutathion senkte den Melaninindex gegenüber Placebo (p &lt; 0,05); für die rein äußerliche Anwendung nennt die Zusammenfassung keinen signifikanten Effekt. <a href='https://pubmed.ncbi.nlm.nih.gov/33871071/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad A alleen voor de combinatie.</strong> 46 mensen, 8 weken, dubbelblind. Glutathion op de huid plus oraal verlaagde de melanine-index ten opzichte van placebo (p &lt; 0,05); voor de huidtoepassing alleen meldt de samenvatting geen significant effect. <a href='https://pubmed.ncbi.nlm.nih.gov/33871071/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Grade A pour l'association seulement.</strong> 46 personnes, 8 semaines, double aveugle. Le glutathion cutané plus oral a abaissé l'indice de mélanine par rapport au placebo (p &lt; 0,05) ; le résumé ne rapporte aucun effet significatif pour la voie cutanée seule. <a href='https://pubmed.ncbi.nlm.nih.gov/33871071/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado A solo para la combinación.</strong> 46 personas, 8 semanas, doble ciego. El glutatión tópico más oral redujo el índice de melanina frente al placebo (p &lt; 0,05); el resumen no informa de ningún efecto significativo para la vía tópica sola. <a href='https://pubmed.ncbi.nlm.nih.gov/33871071/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado A solo per la combinazione.</strong> 46 persone, 8 settimane, doppio cieco. Il glutatione topico più orale ha abbassato l'indice di melanina rispetto al placebo (p &lt; 0,05); l'abstract non riporta alcun effetto significativo per la sola via topica. <a href='https://pubmed.ncbi.nlm.nih.gov/33871071/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t5": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Yi et al., 2024 (topical GSH + hyaluronic acid)",
+                "de": "Yi et al., 2024 (äußerlich GSH + Hyaluronsäure)",
+                "nl": "Yi et al., 2024 (GSH op de huid + hyaluronzuur)",
+                "fr": "Yi et al., 2024 (GSH cutané + acide hyaluronique)",
+                "es": "Yi et al., 2024 (GSH tópico + ácido hialurónico)",
+                "it": "Yi et al., 2024 (GSH topico + acido ialuronico)"
+              },
+              "value": {
+                "en": "<p><strong>Grade B.</strong> 20 women, two sessions, not randomised. Topical glutathione on its own produced \"minimal, non-significant changes\" (p &gt; 0.05); only combined with an ultrasound device did brightness change significantly. A co-author works for the device maker. <a href='https://pubmed.ncbi.nlm.nih.gov/39326871/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad B.</strong> 20 Frauen, zwei Sitzungen, nicht randomisiert. Äußerlich angewendetes Glutathion allein bewirkte „minimale, nicht signifikante Veränderungen“ (p &gt; 0,05); nur in Kombination mit einem Ultraschallgerät änderte sich die Helligkeit signifikant. Ein Mitautor arbeitet für den Gerätehersteller. <a href='https://pubmed.ncbi.nlm.nih.gov/39326871/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad B.</strong> 20 vrouwen, twee sessies, niet gerandomiseerd. Glutathion op de huid alleen gaf \"minimale, niet-significante veranderingen\" (p &gt; 0,05); alleen in combinatie met een ultrasoonapparaat veranderde de helderheid significant. Een medeauteur werkt voor de fabrikant van het apparaat. <a href='https://pubmed.ncbi.nlm.nih.gov/39326871/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Grade B.</strong> 20 femmes, deux séances, non randomisé. Le glutathion cutané seul a produit des « changements minimes, non significatifs » (p &gt; 0,05) ; ce n'est qu'associé à un appareil à ultrasons que la luminosité a changé significativement. Un co-auteur travaille pour le fabricant de l'appareil. <a href='https://pubmed.ncbi.nlm.nih.gov/39326871/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado B.</strong> 20 mujeres, dos sesiones, sin aleatorización. El glutatión tópico por sí solo produjo \"cambios mínimos, no significativos\" (p &gt; 0,05); solo combinado con un dispositivo de ultrasonidos cambió la luminosidad de forma significativa. Un coautor trabaja para el fabricante del dispositivo. <a href='https://pubmed.ncbi.nlm.nih.gov/39326871/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado B.</strong> 20 donne, due sessioni, non randomizzato. Il glutatione topico da solo ha prodotto \"cambiamenti minimi, non significativi\" (p &gt; 0,05); solo in combinazione con un dispositivo a ultrasuoni la luminosità è cambiata in modo significativo. Un coautore lavora per il produttore del dispositivo. <a href='https://pubmed.ncbi.nlm.nih.gov/39326871/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t6": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Jung et al., 2017 (combination cream)",
+                "de": "Jung et al., 2017 (Kombinationscreme)",
+                "nl": "Jung et al., 2017 (combinatiecrème)",
+                "fr": "Jung et al., 2017 (crème combinée)",
+                "es": "Jung et al., 2017 (crema combinada)",
+                "it": "Jung et al., 2017 (crema combinata)"
+              },
+              "value": {
+                "en": "<p><strong>Grade B.</strong> 26 women, 12 weeks, no control group. A cream combining niacinamide, tranexamic acid, oxyresveratrol and glutathione disulfide lowered the melanin index (p &lt; 0.001 at week 12). The result cannot be attributed to glutathione. <a href='https://pubmed.ncbi.nlm.nih.gov/28512843/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad B.</strong> 26 Frauen, 12 Wochen, keine Kontrollgruppe. Eine Creme aus Niacinamid, Tranexamsäure, Oxyresveratrol und Glutathiondisulfid senkte den Melaninindex (p &lt; 0,001 in Woche 12). Das Ergebnis lässt sich nicht dem Glutathion zuschreiben. <a href='https://pubmed.ncbi.nlm.nih.gov/28512843/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad B.</strong> 26 vrouwen, 12 weken, geen controlegroep. Een crème met niacinamide, tranexaminezuur, oxyresveratrol en glutathiondisulfide verlaagde de melanine-index (p &lt; 0,001 in week 12). Het resultaat kan niet aan glutathion worden toegeschreven. <a href='https://pubmed.ncbi.nlm.nih.gov/28512843/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Grade B.</strong> 26 femmes, 12 semaines, sans groupe témoin. Une crème associant niacinamide, acide tranexamique, oxyresvératrol et disulfure de glutathion a abaissé l'indice de mélanine (p &lt; 0,001 à la semaine 12). Le résultat ne peut pas être attribué au glutathion. <a href='https://pubmed.ncbi.nlm.nih.gov/28512843/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado B.</strong> 26 mujeres, 12 semanas, sin grupo de control. Una crema que combina niacinamida, ácido tranexámico, oxiresveratrol y disulfuro de glutatión redujo el índice de melanina (p &lt; 0,001 en la semana 12). El resultado no puede atribuirse al glutatión. <a href='https://pubmed.ncbi.nlm.nih.gov/28512843/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado B.</strong> 26 donne, 12 settimane, senza gruppo di controllo. Una crema che combina niacinamide, acido tranexamico, ossiresveratrolo e glutatione disolfuro ha abbassato l'indice di melanina (p &lt; 0,001 alla settimana 12). Il risultato non può essere attribuito al glutatione. <a href='https://pubmed.ncbi.nlm.nih.gov/28512843/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t7": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Oral glutathione: Arjinpathana 2012, Handog 2016, Weschawalit 2017",
+                "de": "Orales Glutathion: Arjinpathana 2012, Handog 2016, Weschawalit 2017",
+                "nl": "Oraal glutathion: Arjinpathana 2012, Handog 2016, Weschawalit 2017",
+                "fr": "Glutathion oral : Arjinpathana 2012, Handog 2016, Weschawalit 2017",
+                "es": "Glutatión oral: Arjinpathana 2012, Handog 2016, Weschawalit 2017",
+                "it": "Glutatione orale: Arjinpathana 2012, Handog 2016, Weschawalit 2017"
+              },
+              "value": {
+                "en": "<p><strong>Grade X.</strong> Glutathione swallowed or dissolved in the mouth, 4 to 12 weeks. The melanin index was lower at some skin sites in two trials and \"tended to be lower\" in the third, which was funded by Kyowa Hakko Bio. Oral results cannot support a serum. <a href='https://pubmed.ncbi.nlm.nih.gov/20524875/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Grad X.</strong> Glutathion geschluckt oder im Mund gelöst, 4 bis 12 Wochen. Der Melaninindex war in zwei Studien an einigen Hautstellen niedriger und „tendierte“ in der dritten, von Kyowa Hakko Bio finanzierten, „nach unten“. Orale Ergebnisse können ein Serum nicht belegen. <a href='https://pubmed.ncbi.nlm.nih.gov/20524875/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Graad X.</strong> Glutathion geslikt of in de mond opgelost, 4 tot 12 weken. De melanine-index was in twee studies op sommige huidplekken lager en \"neigde lager\" in de derde, die door Kyowa Hakko Bio werd gefinancierd. Orale resultaten kunnen een serum niet onderbouwen. <a href='https://pubmed.ncbi.nlm.nih.gov/20524875/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Grade X.</strong> Glutathion avalé ou dissous dans la bouche, 4 à 12 semaines. L'indice de mélanine était plus bas sur certaines zones de peau dans deux essais et « tendait à être plus bas » dans le troisième, financé par Kyowa Hakko Bio. Des résultats oraux ne peuvent pas étayer un sérum. <a href='https://pubmed.ncbi.nlm.nih.gov/20524875/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Grado X.</strong> Glutatión ingerido o disuelto en la boca, de 4 a 12 semanas. El índice de melanina fue más bajo en algunas zonas de la piel en dos ensayos y \"tendió a ser más bajo\" en el tercero, financiado por Kyowa Hakko Bio. Los resultados orales no pueden respaldar un sérum. <a href='https://pubmed.ncbi.nlm.nih.gov/20524875/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Grado X.</strong> Glutatione ingerito o sciolto in bocca, da 4 a 12 settimane. L'indice di melanina era più basso in alcune aree di pelle in due studi e \"tendeva a essere più basso\" nel terzo, finanziato da Kyowa Hakko Bio. I risultati orali non possono sostenere un siero. <a href='https://pubmed.ncbi.nlm.nih.gov/20524875/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t8": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Khanna, Rambhia and Chapas, 2025 (systematic review)",
+                "de": "Khanna, Rambhia und Chapas, 2025 (systematische Übersicht)",
+                "nl": "Khanna, Rambhia en Chapas, 2025 (systematische review)",
+                "fr": "Khanna, Rambhia et Chapas, 2025 (revue systématique)",
+                "es": "Khanna, Rambhia y Chapas, 2025 (revisión sistemática)",
+                "it": "Khanna, Rambhia e Chapas, 2025 (revisione sistematica)"
+              },
+              "value": {
+                "en": "<p><strong>Independent review</strong> of five topical trials. Topical glutathione \"shows promise\"; \"safety data is limited\". No conflicts of interest declared. <a href='https://pubmed.ncbi.nlm.nih.gov/41416233/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Unabhängige Übersicht</strong> über fünf Studien zur äußerlichen Anwendung. Äußerlich angewendetes Glutathion „ist vielversprechend“; „die Sicherheitsdaten sind begrenzt“. Keine Interessenkonflikte angegeben. <a href='https://pubmed.ncbi.nlm.nih.gov/41416233/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Onafhankelijke review</strong> van vijf studies op de huid. Glutathion op de huid \"is veelbelovend\"; \"de veiligheidsgegevens zijn beperkt\". Geen belangenconflicten gemeld. <a href='https://pubmed.ncbi.nlm.nih.gov/41416233/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Revue indépendante</strong> de cinq essais cutanés. Le glutathion cutané « est prometteur » ; « les données de sécurité sont limitées ». Aucun conflit d'intérêts déclaré. <a href='https://pubmed.ncbi.nlm.nih.gov/41416233/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Revisión independiente</strong> de cinco ensayos tópicos. El glutatión tópico \"resulta prometedor\"; \"los datos de seguridad son limitados\". Sin conflictos de interés declarados. <a href='https://pubmed.ncbi.nlm.nih.gov/41416233/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Revisione indipendente</strong> di cinque studi topici. Il glutatione topico \"è promettente\"; \"i dati sulla sicurezza sono limitati\". Nessun conflitto di interesse dichiarato. <a href='https://pubmed.ncbi.nlm.nih.gov/41416233/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t9": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Dilokthornsakul et al., 2019 (systematic review)",
+                "de": "Dilokthornsakul et al., 2019 (systematische Übersicht)",
+                "nl": "Dilokthornsakul et al., 2019 (systematische review)",
+                "fr": "Dilokthornsakul et al., 2019 (revue systématique)",
+                "es": "Dilokthornsakul et al., 2019 (revisión sistemática)",
+                "it": "Dilokthornsakul et al., 2019 (revisione sistematica)"
+              },
+              "value": {
+                "en": "<p><strong>Independent review</strong> of four studies, one topical. Topical 2% GSSG \"could brighten skin color in sun-exposed area\"; the evidence overall is \"inconclusive\". Academic authors. <a href='https://pubmed.ncbi.nlm.nih.gov/30895708/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Unabhängige Übersicht</strong> über vier Studien, eine zur äußerlichen Anwendung. Äußerlich angewendetes 2%iges GSSG „könnte die Hautfarbe in sonnenexponierten Bereichen aufhellen“; die Belege insgesamt sind „nicht schlüssig“. Akademische Autoren. <a href='https://pubmed.ncbi.nlm.nih.gov/30895708/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Onafhankelijke review</strong> van vier studies, één op de huid. 2% GSSG op de huid \"zou de huidskleur op aan zon blootgestelde plekken kunnen verhelderen\"; het bewijs als geheel is \"niet doorslaggevend\". Academische auteurs. <a href='https://pubmed.ncbi.nlm.nih.gov/30895708/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Revue indépendante</strong> de quatre études, dont une cutanée. Le GSSG à 2 % en application cutanée « pourrait éclaircir la couleur de la peau sur les zones exposées au soleil » ; les preuves dans leur ensemble sont « non concluantes ». Auteurs universitaires. <a href='https://pubmed.ncbi.nlm.nih.gov/30895708/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Revisión independiente</strong> de cuatro estudios, uno tópico. El GSSG tópico al 2 % \"podría aclarar el color de la piel en zonas expuestas al sol\"; la evidencia en conjunto es \"no concluyente\". Autores académicos. <a href='https://pubmed.ncbi.nlm.nih.gov/30895708/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Revisione indipendente</strong> di quattro studi, uno topico. Il GSSG topico al 2% \"potrebbe schiarire il colore della pelle nelle zone esposte al sole\"; le prove nel complesso sono \"inconcludenti\". Autori accademici. <a href='https://pubmed.ncbi.nlm.nih.gov/30895708/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          },
+          "t10": {
+            "type": "row",
+            "settings": {
+              "heading": {
+                "en": "Sarkar et al., 2025 and Sonthalia et al., 2018 (reviews)",
+                "de": "Sarkar et al., 2025 und Sonthalia et al., 2018 (Übersichten)",
+                "nl": "Sarkar et al., 2025 en Sonthalia et al., 2018 (reviews)",
+                "fr": "Sarkar et al., 2025 et Sonthalia et al., 2018 (revues)",
+                "es": "Sarkar et al., 2025 y Sonthalia et al., 2018 (revisiones)",
+                "it": "Sarkar et al., 2025 e Sonthalia et al., 2018 (revisioni)"
+              },
+              "value": {
+                "en": "<p><strong>Reviews.</strong> Sarkar: topical and oral glutathione give \"moderately efficacious\" but \"unsustainable\" results, and intravenous use is \"contraindicated\". Sonthalia: the Watanabe trial is \"the singular\" topical trial, showing a \"temporary\" effect. <a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Source</a></p>",
+                "de": "<p><strong>Übersichten.</strong> Sarkar: äußerliches und orales Glutathion liefern „mäßig wirksame“, aber „nicht anhaltende“ Ergebnisse, und die intravenöse Anwendung ist „kontraindiziert“. Sonthalia: die Watanabe-Studie ist „die einzige“ Studie zur äußerlichen Anwendung und zeigt einen „vorübergehenden“ Effekt. <a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Quelle</a></p>",
+                "nl": "<p><strong>Reviews.</strong> Sarkar: glutathion op de huid en oraal geeft \"matig werkzame\" maar \"niet blijvende\" resultaten, en intraveneus gebruik is \"gecontra-indiceerd\". Sonthalia: de Watanabe-studie is \"de enige\" studie op de huid en laat een \"tijdelijk\" effect zien. <a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Bron</a></p>",
+                "fr": "<p><strong>Revues.</strong> Sarkar : le glutathion cutané et oral donne des résultats « modérément efficaces » mais « non durables », et l'usage intraveineux est « contre-indiqué ». Sonthalia : l'essai Watanabe est « l'unique » essai cutané, montrant un effet « temporaire ». <a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Source</a></p>",
+                "es": "<p><strong>Revisiones.</strong> Sarkar: el glutatión tópico y oral da resultados \"moderadamente eficaces\" pero \"no sostenibles\", y el uso intravenoso está \"contraindicado\". Sonthalia: el ensayo de Watanabe es \"el único\" ensayo tópico, y muestra un efecto \"temporal\". <a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Fuente</a></p>",
+                "it": "<p><strong>Revisioni.</strong> Sarkar: il glutatione topico e orale dà risultati \"moderatamente efficaci\" ma \"non duraturi\", e l'uso endovenoso è \"controindicato\". Sonthalia: lo studio di Watanabe è \"l'unico\" studio topico, e mostra un effetto \"temporaneo\". <a href='https://pubmed.ncbi.nlm.nih.gov/39444151/' target='_blank' rel='noopener'>Fonte</a></p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6",
+          "t7",
+          "t8",
+          "t9",
+          "t10"
+        ]
+      }
+    }
+  ],
+  "section_settings": {
+    "references": {
+      "background": "#F0F0F0"
+    },
+    "faq": {
+      "background": "#ffffff",
+      "accordion_background": "#F0F0F0"
+    },
+    "shop_ingredient": {
+      "background": "#F0F0F0"
+    },
+    "related": {
+      "background": "#ffffff"
+    }
+  },
+  "charts": {
+    "pigment": {
+      "title": {
+        "en": "Skin pigment after 10 weeks",
+        "de": "Hautpigment nach 10 Wochen",
+        "nl": "Huidpigment na 10 weken",
+        "fr": "Pigment de la peau après 10 semaines",
+        "es": "Pigmento de la piel tras 10 semanas",
+        "it": "Pigmento della pelle dopo 10 settimane"
+      },
+      "subtitle": {
+        "en": "Melanin index on the cheekbone, change from the start. 30 women, 2% GSSG lotion on one half of the face and placebo on the other, twice a day.",
+        "de": "Melaninindex am Wangenknochen, Veränderung gegenüber dem Start. 30 Frauen, 2 % GSSG-Lotion auf einer Gesichtshälfte und Placebo auf der anderen, zweimal täglich.",
+        "nl": "Melanine-index op het jukbeen, verandering ten opzichte van de start. 30 vrouwen, 2% GSSG-lotion op de ene gezichtshelft en placebo op de andere, tweemaal daags.",
+        "fr": "Indice de mélanine sur la pommette, variation par rapport au départ. 30 femmes, lotion au GSSG à 2 % sur une moitié du visage et placebo sur l'autre, deux fois par jour.",
+        "es": "Índice de melanina en el pómulo, cambio respecto al inicio. 30 mujeres, loción con GSSG al 2 % en una mitad de la cara y placebo en la otra, dos veces al día.",
+        "it": "Indice di melanina sullo zigomo, variazione rispetto all'inizio. 30 donne, lozione al 2% di GSSG su una metà del viso e placebo sull'altra, due volte al giorno."
+      },
+      "unit": "%",
+      "signed": true,
+      "decimals": 1,
+      "domain": [
+        -14,
+        2
+      ],
+      "ticks": [
+        -12,
+        -8,
+        -4,
+        0
+      ],
+      "value_width": 70,
+      "series": [
+        {
+          "key": "chg",
+          "color": "#8A6914",
+          "label": {
+            "en": "Change in melanin index",
+            "de": "Veränderung des Melaninindex",
+            "nl": "Verandering van de melanine-index",
+            "fr": "Variation de l'indice de mélanine",
+            "es": "Cambio del índice de melanina",
+            "it": "Variazione dell'indice di melanina"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "label": {
+            "en": "2% GSSG side",
+            "de": "Seite mit 2 % GSSG",
+            "nl": "Kant met 2% GSSG",
+            "fr": "Côté GSSG à 2 %",
+            "es": "Lado con GSSG al 2 %",
+            "it": "Lato con GSSG al 2%"
+          },
+          "values": {
+            "chg": -10.7
+          }
+        },
+        {
+          "label": {
+            "en": "Placebo side",
+            "de": "Placebo-Seite",
+            "nl": "Placebokant",
+            "fr": "Côté placebo",
+            "es": "Lado con placebo",
+            "it": "Lato placebo"
+          },
+          "values": {
+            "chg": -3.1
+          },
+          "colors": {
+            "chg": "#9AA3A4"
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Side of face",
+        "de": "Gesichtshälfte",
+        "nl": "Gezichtshelft",
+        "fr": "Côté du visage",
+        "es": "Lado de la cara",
+        "it": "Lato del viso"
+      },
+      "caption": {
+        "en": "<p>Left of zero is a reduction in pigment, so further left is brighter. The means: GSSG side 272.8 to 243.5, placebo side 274.1 to 265.5. The GSSG side was significantly lower than the placebo side from week 1 to week 10 (p&lt;0.001 at week 10). Percentages are calculated from the paper's reported means (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p><p>Run by the GSSG manufacturer (grade A).</p>",
+        "de": "<p>Links von null bedeutet weniger Pigment, also heller. Die Mittelwerte: GSSG-Seite 272,8 auf 243,5, Placebo-Seite 274,1 auf 265,5. Die GSSG-Seite lag von Woche 1 bis Woche 10 signifikant unter der Placebo-Seite (p&lt;0,001 in Woche 10). Die Prozentwerte sind aus den in der Studie genannten Mittelwerten berechnet (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p><p>Durchgeführt vom GSSG-Hersteller (Grad A).</p>",
+        "nl": "<p>Links van nul betekent minder pigment, dus verder naar links is helderder. De gemiddelden: GSSG-kant van 272,8 naar 243,5, placebokant van 274,1 naar 265,5. De GSSG-kant lag van week 1 tot week 10 significant lager dan de placebokant (p&lt;0,001 in week 10). De percentages zijn berekend uit de gemiddelden in het artikel (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p><p>Uitgevoerd door de GSSG-fabrikant (graad A).</p>",
+        "fr": "<p>À gauche de zéro, le pigment diminue : plus à gauche, plus lumineux. Les moyennes : côté GSSG de 272,8 à 243,5, côté placebo de 274,1 à 265,5. Le côté GSSG était significativement plus bas que le côté placebo de la semaine 1 à la semaine 10 (p&lt;0,001 à la semaine 10). Les pourcentages sont calculés à partir des moyennes publiées (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p><p>Essai mené par le fabricant du GSSG (grade A).</p>",
+        "es": "<p>A la izquierda de cero el pigmento disminuye, así que más a la izquierda es más luminoso. Las medias: lado con GSSG de 272,8 a 243,5, lado con placebo de 274,1 a 265,5. El lado con GSSG fue significativamente más bajo que el lado con placebo desde la semana 1 hasta la semana 10 (p&lt;0,001 en la semana 10). Los porcentajes se calculan a partir de las medias publicadas (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p><p>Realizado por el fabricante del GSSG (grado A).</p>",
+        "it": "<p>A sinistra dello zero il pigmento diminuisce, quindi più a sinistra è più luminoso. Le medie: lato GSSG da 272,8 a 243,5, lato placebo da 274,1 a 265,5. Il lato GSSG è stato significativamente più basso del lato placebo dalla settimana 1 alla settimana 10 (p&lt;0,001 alla settimana 10). Le percentuali sono calcolate dalle medie pubblicate (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>).</p><p>Condotto dal produttore del GSSG (grado A).</p>"
+      }
+    },
+    "ratings": {
+      "title": {
+        "en": "Who saw a moderate improvement at week 10",
+        "de": "Wer in Woche 10 eine deutliche Verbesserung sah",
+        "nl": "Wie in week 10 een duidelijke verbetering zag",
+        "fr": "Qui a vu une amélioration nette à la semaine 10",
+        "es": "Quién vio una mejora clara en la semana 10",
+        "it": "Chi ha visto un miglioramento netto alla settimana 10"
+      },
+      "subtitle": {
+        "en": "Share of the 30 women given a score of 2 (\"moderate change or improvement\") on each side of the face, by the women themselves and by the blinded investigator.",
+        "de": "Anteil der 30 Frauen mit der Bewertung 2 („mäßige Veränderung oder Verbesserung“) auf jeder Gesichtshälfte, durch die Frauen selbst und durch die verblindete Prüfärztin.",
+        "nl": "Aandeel van de 30 vrouwen met score 2 (\"matige verandering of verbetering\") aan elke gezichtshelft, door de vrouwen zelf en door de geblindeerde onderzoeker.",
+        "fr": "Part des 30 femmes ayant reçu le score 2 (« changement ou amélioration modérés ») pour chaque côté du visage, selon les femmes elles-mêmes et selon l'investigatrice en aveugle.",
+        "es": "Proporción de las 30 mujeres con puntuación 2 (\"cambio o mejora moderados\") en cada lado de la cara, según las propias mujeres y según la investigadora ciega.",
+        "it": "Quota delle 30 donne con punteggio 2 (\"cambiamento o miglioramento moderato\") su ciascun lato del viso, secondo le donne stesse e secondo la sperimentatrice in cieco."
+      },
+      "unit": "%",
+      "signed": false,
+      "decimals": 1,
+      "domain": [
+        0,
+        100
+      ],
+      "ticks": [
+        0,
+        25,
+        50,
+        75,
+        100
+      ],
+      "value_width": 62,
+      "series": [
+        {
+          "key": "gs",
+          "color": "#8A6914",
+          "label": {
+            "en": "2% GSSG side",
+            "de": "Seite mit 2 % GSSG",
+            "nl": "Kant met 2% GSSG",
+            "fr": "Côté GSSG à 2 %",
+            "es": "Lado con GSSG al 2 %",
+            "it": "Lato con GSSG al 2%"
+          }
+        },
+        {
+          "key": "pl",
+          "color": "#9AA3A4",
+          "quiet": true,
+          "label": {
+            "en": "Placebo side",
+            "de": "Placebo-Seite",
+            "nl": "Placebokant",
+            "fr": "Côté placebo",
+            "es": "Lado con placebo",
+            "it": "Lato placebo"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "label": {
+            "en": "Brighter skin, rated by the women",
+            "de": "Hellere Haut, Bewertung der Frauen",
+            "nl": "Helderdere huid, beoordeeld door de vrouwen",
+            "fr": "Peau plus lumineuse, selon les femmes",
+            "es": "Piel más luminosa, según las mujeres",
+            "it": "Pelle più luminosa, secondo le donne"
+          },
+          "values": {
+            "gs": 76.7,
+            "pl": 23.3
+          }
+        },
+        {
+          "label": {
+            "en": "Brighter skin, rated by the investigator",
+            "de": "Hellere Haut, Bewertung der Prüfärztin",
+            "nl": "Helderdere huid, beoordeeld door de onderzoeker",
+            "fr": "Peau plus lumineuse, selon l'investigatrice",
+            "es": "Piel más luminosa, según la investigadora",
+            "it": "Pelle più luminosa, secondo la sperimentatrice"
+          },
+          "values": {
+            "gs": 66.7,
+            "pl": 3.3
+          }
+        },
+        {
+          "label": {
+            "en": "Softer crow's feet, rated by the women",
+            "de": "Weichere Krähenfüße, Bewertung der Frauen",
+            "nl": "Zachtere kraaienpootjes, beoordeeld door de vrouwen",
+            "fr": "Pattes-d'oie atténuées, selon les femmes",
+            "es": "Patas de gallo más suaves, según las mujeres",
+            "it": "Zampe di gallina attenuate, secondo le donne"
+          },
+          "values": {
+            "gs": 30.0,
+            "pl": 0
+          },
+          "labels": {
+            "pl": {
+              "en": "0%",
+              "de": "0 %",
+              "nl": "0%",
+              "fr": "0 %",
+              "es": "0 %",
+              "it": "0%"
+            }
+          }
+        },
+        {
+          "label": {
+            "en": "Softer crow's feet, rated by the investigator",
+            "de": "Weichere Krähenfüße, Bewertung der Prüfärztin",
+            "nl": "Zachtere kraaienpootjes, beoordeeld door de onderzoeker",
+            "fr": "Pattes-d'oie atténuées, selon l'investigatrice",
+            "es": "Patas de gallo más suaves, según la investigadora",
+            "it": "Zampe di gallina attenuate, secondo la sperimentatrice"
+          },
+          "values": {
+            "gs": 33.3,
+            "pl": 0
+          },
+          "labels": {
+            "pl": {
+              "en": "0%",
+              "de": "0 %",
+              "nl": "0%",
+              "fr": "0 %",
+              "es": "0 %",
+              "it": "0%"
+            }
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Rating at week 10",
+        "de": "Bewertung in Woche 10",
+        "nl": "Beoordeling in week 10",
+        "fr": "Évaluation à la semaine 10",
+        "es": "Valoración en la semana 10",
+        "it": "Valutazione alla settimana 10"
+      },
+      "caption": {
+        "en": "<p>The trial's scale runs from 0 (no change) to 2 (moderate change). The paper labels this scale with an older lightening term; this page calls the same result brighter-looking skin. Smoothness ratings showed no difference between the two sides, so they are not charted (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>, Table 3).</p><p>Blinded ratings inside a placebo-controlled trial (grade A).</p>",
+        "de": "<p>Die Skala der Studie reicht von 0 (keine Veränderung) bis 2 (mäßige Veränderung). Die Veröffentlichung bezeichnet diese Skala mit einem älteren Begriff für Aufhellung; diese Seite nennt dasselbe Ergebnis heller wirkende Haut. Die Bewertungen der Glätte zeigten keinen Unterschied zwischen den Seiten und sind deshalb nicht dargestellt (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>, Tabelle 3).</p><p>Verblindete Bewertungen innerhalb einer placebokontrollierten Studie (Grad A).</p>",
+        "nl": "<p>De schaal van de studie loopt van 0 (geen verandering) tot 2 (matige verandering). Het artikel geeft deze schaal een oudere term voor het lichter maken van de huid; deze pagina noemt hetzelfde resultaat een helderder ogende huid. De beoordelingen van de gladheid lieten geen verschil zien tussen de twee kanten en zijn daarom niet weergegeven (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>, tabel 3).</p><p>Geblindeerde beoordelingen binnen een placebogecontroleerde studie (graad A).</p>",
+        "fr": "<p>L'échelle de l'essai va de 0 (aucun changement) à 2 (changement modéré). L'article désigne cette échelle par un terme ancien d'éclaircissement ; cette page appelle le même résultat une peau d'apparence plus lumineuse. Les évaluations de la douceur n'ont montré aucune différence entre les deux côtés et ne sont donc pas représentées (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>, tableau 3).</p><p>Évaluations en aveugle au sein d'un essai contrôlé contre placebo (grade A).</p>",
+        "es": "<p>La escala del ensayo va de 0 (sin cambio) a 2 (cambio moderado). El artículo designa esta escala con un término antiguo de aclarado; esta página llama al mismo resultado piel de aspecto más luminoso. Las valoraciones de la suavidad no mostraron diferencia entre los dos lados, por lo que no se representan (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>, tabla 3).</p><p>Valoraciones ciegas dentro de un ensayo controlado con placebo (grado A).</p>",
+        "it": "<p>La scala dello studio va da 0 (nessun cambiamento) a 2 (cambiamento moderato). L'articolo indica questa scala con un termine più vecchio di schiarimento; questa pagina chiama lo stesso risultato pelle dall'aspetto più luminoso. Le valutazioni della levigatezza non hanno mostrato differenze tra i due lati, quindi non sono rappresentate (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>, tabella 3).</p><p>Valutazioni in cieco all'interno di uno studio controllato con placebo (grado A).</p>"
+      }
+    }
+  }
+}
