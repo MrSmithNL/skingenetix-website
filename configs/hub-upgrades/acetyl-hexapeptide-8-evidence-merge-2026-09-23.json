@@ -1,20 +1,202 @@
 {
-  "_about": "Additive: adds the bullet summary and the merged Evidence & Sources table to /pages/acetyl-hexapeptide-8-research. ENGLISH ONLY on purpose (plain-string settings, so no translation is registered). The existing `references` and `usage` sections are deliberately left in place — replacing them would drop their five translations. Malcolm asked for this live on 2026-09-23 to iterate on.",
+  "_about": "Argireline hub, English template pass (Malcolm, 2026-09-23): overview gets the transparent product+box cut-out on the right; the 'three strengths' prose and the summary box merge into one anchored list; two new findings cards give every summary line an image to land on; usage gets its two images; Published References is absorbed into a 10-row Evidence & Sources table (Kraeling and Hoppel split — they were one row with Kraeling's title and Hoppel's link) and removed. English only on purpose; translations follow once the copy is settled.",
   "template": "templates/page.research-argireline.json",
   "page": "acetyl-hexapeptide-8-research",
   "add_sections": [
     {
-      "id": "evidence_summary",
-      "after": "evidence",
+      "id": "overview",
+      "after": "stats",
       "section": {
-        "type": "custom-html",
+        "type": "media-with-text",
+        "settings": {
+          "full_width": false,
+          "alternate_media_position": false,
+          "spacing": "small"
+        },
+        "blocks": {
+          "ov1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-argireline-product-box-cutout-2026.png",
+              "media_width": 40,
+              "media_position": "end",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#F0F0F0",
+              "text_color": "#1a1a1a",
+              "content": "<h2>What Is Argireline?</h2><p><strong>Argireline® is the trade name of acetyl hexapeptide-8 (also listed as acetyl hexapeptide-3), a synthetic peptide developed by Lipotec, now part of Lubrizol.</strong> It softens the look of expression lines around the eyes and forehead. In a double-blind, placebo-controlled trial, nearly 1 in 2 people using 10% Argireline were graded clearly smoother around the eyes after 4 weeks. On placebo, no one was.</p><p>Its results have been measured with silicone skin replicas and skin-surface imaging, not only judged by eye.</p><h3>At a glance</h3><ul><li><strong>What it is:</strong> Argireline®, the trade name of acetyl hexapeptide-8, a synthetic peptide modelled on part of a protein involved in facial expression, used to soften the look of expression lines.</li><li><strong>Best evidence:</strong> 22 of 45 people using 10% Argireline were graded clearly smoother around the eyes after 4 weeks, against 0 of 15 on placebo, with roughness down on silicone skin replicas, in a double-blind trial (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</li><li><strong>Independent evidence:</strong> the only independent imaging test found no difference between a serum with Argireline and the same serum without it in 19 women (Henseler, 2023). A 24-woman trial found forehead roughness down at day 20 but not at day 60 (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>).</li><li><strong>Not shown:</strong> that it reaches the muscle. A regulator's lab study found none of it in the dermis; any effect is at the skin surface. It is not a needle-free alternative to injections.</li><li><strong>Safety:</strong> no adverse effects reported in the controlled trials. Patch-test first.</li><li><strong>How to use:</strong> twice a day around the eyes and forehead, for 4 weeks, with SPF in the morning.</li></ul><p>To use it in a routine, see our guide to <a href=\"/pages/fine-lines-wrinkles\">fine lines and wrinkles</a>, or go back to <a href=\"/pages/the-science\">Science</a>.</p><p><em>By Skingenetix. Medically reviewed by Dr Esther Bodde, Cosmetic &amp; Medical Physician. Every figure on this page was checked against its original source: the published paper or its PubMed record. Last reviewed 23 September 2026.</em></p>"
+            }
+          }
+        },
+        "block_order": [
+          "ov1"
+        ]
+      }
+    },
+    {
+      "id": "evidence",
+      "after": "overview",
+      "section": {
+        "type": "rich-text",
         "settings": {
           "full_width": true,
-          "remove_vertical_spacing": false,
-          "remove_horizontal_spacing": false,
-          "background": "#F0F0F0",
-          "html": "<style>\n.esum{max-width:820px;margin:0 auto;padding:26px 30px;background:#fff;border:1px solid #dfe2e3;border-radius:12px;text-align:left}\n.esum__h{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:#6b7173;margin:0 0 14px;font-weight:600;text-align:left}\n.esum ul{margin:0;padding:0;list-style:none}\n.esum li{margin:0 0 12px;padding:0 0 0 26px;position:relative;font-size:16px;line-height:1.55;color:#1A1A1A;text-align:left}\n.esum li:last-child{margin-bottom:0}\n.esum li:before{content:\"\";position:absolute;left:4px;top:9px;width:7px;height:7px;border-radius:50%;background:#014EB1}\n.esum a{color:#014EB1;text-decoration:none;font-weight:600;border-bottom:1px solid rgba(1,78,177,.3)}\n.esum__g{color:#6b7173;font-weight:400}\n@media(max-width:749px){\n.esum{padding:20px;margin:0 16px}\n.esum li{font-size:15px}\n}\n</style>\n<div class=\"esum\">\n<p class=\"esum__h\">What the evidence shows, in short</p>\n<ul>\n<li><a href=\"#rba-f1\">Nearly 1 in 2 were graded clearly smoother after 4 weeks</a> &mdash; 22 of 45 people, against none on placebo <span class=\"esum__g\">(controlled trial, 10% Argireline)</span></li>\n<li><a href=\"#rba-f2\">Wrinkle depth down up to 30% in 30 days</a> <span class=\"esum__g\">(the developers' own small study &mdash; indicative only)</span></li>\n<li><a href=\"#rba-f3\">Forehead roughness fell while placebo rose</a> <span class=\"esum__g\">(second controlled trial, day 20)</span></li>\n<li>No side effects were reported in any of the controlled trials <span class=\"esum__g\">(45 people, 4 weeks, around the eyes)</span></li>\n<li>The one independent imaging test found no difference <span class=\"esum__g\">&mdash; it is in the table below rather than left out</span></li>\n</ul>\n</div>"
-        }
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#ffffff"
+        },
+        "blocks": {
+          "body": {
+            "type": "richtext",
+            "settings": {
+              "content": "<h2>What Does Argireline Do for Expression Lines?</h2><p>Expression lines form where facial muscles repeatedly contract, such as crow's feet and forehead lines. Argireline is modelled on part of the SNAP-25 protein. In laboratory studies it interferes with the SNARE complex that nerve endings use to release the signal for a muscle to contract (<a href='https://pubmed.ncbi.nlm.nih.gov/18498523/' target='_blank' rel='noopener'>Blanes-Mira et al., 2002</a>).</p><p><strong>What the evidence shows, in short.</strong> Each line below opens the study that supports it.</p><ul><li><a href=\"#rba-f1\">Nearly 1 in 2 were graded clearly smoother after 4 weeks</a> — 22 of 45 people using 10% Argireline, against 0 of 15 on placebo, in a double-blind trial.</li><li><a href=\"#rba-f2\">Wrinkle depth down up to 30% in 30 days</a> — the developers' own small study, so indicative only.</li><li><a href=\"#rba-f3\">Forehead roughness fell 7.4% by day 20 while placebo rose 4.3%</a> — a second placebo-controlled trial; the difference was gone by day 60.</li><li><a href=\"#rba-f4\">No side effects were reported in any of the controlled trials</a> — 45 people, 4 weeks, around the eyes.</li><li><a href=\"#rba-f5\">The one independent imaging test found no difference</a> — reported here rather than left out.</li></ul><p>The trials above all used 10% Argireline, the level in our serum, and results were graded after four weeks of twice-daily use. Read <a href=\"/pages/study/argireline-crows-feet-trial-wang-2013\">our appraisal of the 60-person placebo-controlled trial</a>.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "body"
+        ]
+      }
+    },
+    {
+      "id": "key_findings_ba",
+      "after": "evidence",
+      "section": {
+        "type": "research-before-after",
+        "settings": {},
+        "blocks": {
+          "f1": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg",
+              "media_position": "start",
+              "before_label": "Before",
+              "after_label": "After 4 weeks",
+              "result_label": "22 of 45 graded clearly improved vs 0 of 15 on placebo",
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "title": "22 of 45 Graded Clearly Improved — None on Placebo",
+              "content": "<p>A randomized, placebo-controlled trial examined the anti-wrinkle effects of topical Acetyl Hexapeptide-8 applied twice daily to the periorbital region (crow's feet area).</p><p><strong>Study design:</strong> RCT, placebo-controlled, 60 subjects (3:1 ratio), 4 weeks, twice daily application</p><p><strong>Key results:</strong></p><ul><li><strong>22 of 45 people (48.9%) were graded clearly improved</strong> by clinicians, against 0 of 15 on placebo. This is the share of people who improved, not a 48.9% reduction in wrinkles.</li><li>All objective roughness parameters decreased significantly (p < 0.01)</li></ul><p><em>Wang Y et al. (2013). American Journal of Clinical Dermatology. <a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>View on PubMed</a></em></p>"
+            }
+          },
+          "f2": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-wrinkle-depth-before-after-eye-close-up.jpg",
+              "media_position": "end",
+              "before_label": "Before",
+              "after_label": "After 30 days",
+              "result_label": "Up to ~30% softer-looking wrinkle depth",
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "title": "Up to ~30% Softer-Looking Wrinkle Depth in 30 Days",
+              "content": "<p>An early study by the peptide's developers combined laboratory (in-vitro) mechanism data with a small in-use test of an Acetyl Hexapeptide-8 emulsion.</p><p><strong>Study design:</strong> Combined in-vitro + in-use proof-of-concept, healthy female volunteers, 30 days.</p><p><strong>Key results:</strong></p><ul><li><strong>Up to ~30% reduction in measured wrinkle depth</strong> after 30 days (early proof-of-concept by the developers)</li><li>Supported the appearance of smoother skin around the eyes over 30 days</li></ul><p><em>Blanes-Mira C et al. (2002). International Journal of Cosmetic Science. <a href='https://pubmed.ncbi.nlm.nih.gov/18498523/' target='_blank' rel='noopener'>View on PubMed</a></em></p>"
+            }
+          },
+          "f3": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-fine-lines-before-after-eye-detail.jpg",
+              "media_position": "start",
+              "before_label": "Before",
+              "after_label": "After 5 days",
+              "result_label": "14.6% vs 5.9% — dissolving microneedle patch",
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "title": "14.6% Finer Lines — From a Microneedle Patch, Not a Serum",
+              "content": "<p><strong>Read this first:</strong> this study tested a dissolving microneedle patch, not a leave-on serum. A needle that carries peptide through the skin surface cannot stand in for a serum, so the result is listed for completeness rather than as evidence for ours.</p><p>A double-blind, randomized trial tested microneedle patches containing Acetyl Hexapeptide-8 against patches alone on 52 Korean female subjects using a split-face design.</p><p><strong>Study design:</strong> Double-blind RCT, split-face, 52 subjects, 29 days</p><p><strong>Key results:</strong></p><ul><li><strong>14.6% fine wrinkle improvement</strong> vs 5.9% for patch alone (p < 0.05)</li><li><strong>13.6% deep wrinkle improvement</strong> vs 3.5% for patch alone</li><li>Statistically significant results within just 5 days</li></ul><p><em>An JH et al. (2019). Annals of Dermatology. <a href='https://anndermatol.org/DOIx.php?id=10.5021/ad.2019.31.3.263' target='_blank' rel='noopener'>View study</a></em></p>"
+            }
+          },
+          "f4": {
+            "type": "finding",
+            "settings": {
+              "before_label": "",
+              "after_label": "",
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-serum-pipette-drop-forming.jpg",
+              "media_position": "end",
+              "result_label": "",
+              "title": "No Side Effects Reported in the Controlled Trials",
+              "content": "<p>Across the controlled topical studies, no participant reported an adverse effect.</p><p><strong>What was reported:</strong></p><ul><li>45 people using 10% Argireline around the eyes twice daily for 4 weeks: no adverse effects, and nobody stopped the study (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>)</li><li>No warmth, stinging, redness, peeling, itching or eye irritation in the peptide arms of a 60-day trial (<a href='https://pubmed.ncbi.nlm.nih.gov/28150423/' target='_blank' rel='noopener'>Raikou et al., 2017</a>)</li><li>No significant adverse events or skin irritation in an independent split-face study (<a href='https://pubmed.ncbi.nlm.nih.gov/38024099/' target='_blank' rel='noopener'>Henseler, 2023</a>)</li></ul><p>These are small studies, and none of them tested our finished serum. Patch-test any new product on a small area for 24 to 48 hours first.</p>"
+            }
+          },
+          "f5": {
+            "type": "finding",
+            "settings": {
+              "before_label": "",
+              "after_label": "",
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg",
+              "media_position": "start",
+              "result_label": "",
+              "title": "The One Independent Imaging Test Found No Difference",
+              "content": "<p>The only independent study to measure Argireline with objective imaging found no benefit, and we report it here rather than leave it out.</p><p><strong>Study design:</strong> double-blind, split-face, 19 women aged 24 to 68. The same hyaluronic-acid serum with Argireline on one side and without it on the other, twice daily for 4 weeks, measured with Visia imaging.</p><p><strong>Key results:</strong></p><ul><li>No significant difference in wrinkle score between the two sides (p = 0.829)</li><li>No significant difference in skin age (p = 0.804)</li><li>The Argireline concentration was not stated, so it may not match the 10% used elsewhere</li></ul><p>Henseler, 2023 — <a href='https://pubmed.ncbi.nlm.nih.gov/38024099/' target='_blank' rel='noopener'>View on PubMed</a></p>"
+            }
+          }
+        },
+        "block_order": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ]
+      }
+    },
+    {
+      "id": "usage",
+      "after": "charts",
+      "section": {
+        "type": "media-with-text",
+        "settings": {
+          "full_width": false,
+          "alternate_media_position": true,
+          "spacing": "small"
+        },
+        "blocks": {
+          "u1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-argireline-10-anti-wrinkle-peptide-serum.jpg",
+              "media_width": 50,
+              "media_position": "end",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#F0F0F0",
+              "text_color": "#1a1a1a",
+              "content": "<h2>What 10% Argireline® Means</h2><p>The <a href=\"/products/acetyl-hexapeptide-8-anti-wrinkle-serum\">Skingenetix Acetyl Hexapeptide-8 Serum</a> contains 10% Argireline®, and we state the percentage on the bottle so you can compare like with like. Concentration is not the whole story: the 2025 review found that how a formula carries the peptide into the skin matters as much.</p>"
+            }
+          },
+          "u2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-serum-dropper-applying-to-cheekbone.jpg",
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#F0F0F0",
+              "text_color": "#1a1a1a",
+              "content": "<h2>How to Use Argireline</h2><p>Apply three to four drops to clean skin twice a day, concentrating on the areas where expression lines form: the forehead, between the brows and around the eyes. Follow with a moisturiser, and with SPF in the morning. It layers well with other peptides such as <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000</a>, which supports the look of firmer skin rather than relaxing expression lines.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "u1",
+          "u2"
+        ]
       }
     },
     {
@@ -27,9 +209,13 @@
           "remove_vertical_spacing": false,
           "remove_horizontal_spacing": false,
           "background": "#ffffff",
-          "html": "<style>\n.est{max-width:1180px;margin:0 auto;padding:0 24px;text-align:left}\n.est__h{font-size:36px;line-height:1.15;margin:0 0 12px;font-weight:600;letter-spacing:-.015em;text-align:left}\n.est__lead{font-size:17px;line-height:1.6;color:#3b3f40;margin:0 0 32px;max-width:78ch;text-align:left}\n.est__wrap{overflow-x:auto}\n.est table{width:100%;border-collapse:collapse;font-size:15px}\n.est thead th{text-align:left;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#6b7173;padding:0 16px 12px;border-bottom:2px solid #1A1A1A;font-weight:600}\n.est td{padding:20px 16px;border-bottom:1px solid #e3e5e6;vertical-align:top;text-align:left}\n.est tr:last-child td{border-bottom:none}\n.est__study{width:32%;}\n.est__ti{font-size:15px;line-height:1.4;margin:0 0 6px;font-weight:600;color:#1A1A1A}\n.est__me{font-size:13px;line-height:1.45;color:#6b7173;margin:0 0 8px}\n.est__lk{font-size:13px;color:#014EB1;text-decoration:none;font-weight:600}\n.est__nolk{font-size:13px;color:#9aa3a4}\n.est__grade{width:12%;}\n.est__pill{display:inline-block;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap;line-height:1.5}\n.est__pill--a{background:#E4EDFA;color:#014EB1}\n.est__pill--b{background:#F1EDE3;color:#7a6524}\n.est__pill--c{background:#EDEFEF;color:#5b6264}\n.est__pill--r{background:#F0F0F0;color:#6b7173}\n.est__ap{font-size:15px;line-height:1.6;color:#3b3f40}\n.est__key{margin:28px 0 0;font-size:13px;line-height:1.6;color:#6b7173;max-width:80ch}\n@media(max-width:749px){\n.est__h{font-size:27px}\n.est thead{display:none}\n.est table,.est tbody,.est tr,.est td{display:block;width:100%;}\n.est tr{border-bottom:1px solid #e3e5e6;padding:20px 0}\n.est tr:last-child{border-bottom:none}\n.est td{padding:0 0 10px;border:none}\n.est__study,.est__grade{width:100%;}\n}\n</style>\n<div class=\"est\">\n<h2 class=\"est__h\">Argireline Evidence &amp; Sources</h2>\n<p class=\"est__lead\">Every study this page relies on, with its published title, our reading of it and a link to the source. Graded <strong>A</strong> controlled human trial measured by instrument &middot; <strong>B</strong> smaller, uncontrolled or manufacturer data &middot; <strong>C</strong> tests on skin samples &middot; <strong>Review</strong> a summary of other work.</p>\n<div class=\"est__wrap\">\n<table>\n<thead><tr><th>Study</th><th>Grade</th><th>What it found, and what it does not show</th></tr></thead>\n<tbody><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">The anti-wrinkle efficacy of a synthetic hexapeptide in Chinese subjects: a randomized, placebo-controlled study</p><p class=\"est__me\">Wang et al., 2013 &middot; Am J Clin Dermatol &middot; 14:147&ndash;53</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/23417317/\" target=\"_blank\" rel=\"noopener\">PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A</span></td><td class=\"est__ap\">60 adults (45 active, 15 placebo), 10% Argireline twice daily around the eyes for 4 weeks, double-blind and placebo-controlled. <strong>22 of 45 (48.9%) were graded clearly improved</strong> against 0 of 15 on placebo &mdash; a count of people, not a wrinkle measurement. Silicone replicas showed roughness down (p &lt; 0.01). Product supplied by the Argireline marketer in China.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">The efficacy study of the combination of tripeptide-10-citrulline and acetyl hexapeptide-3</p><p class=\"est__me\">Raikou et al., 2017 &middot; J Cosmet Dermatol &middot; 16:271&ndash;8</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/28150423/\" target=\"_blank\" rel=\"noopener\">PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A</span></td><td class=\"est__ap\">24 women, about 6 per arm, 10% Argireline twice daily for 60 days. Forehead roughness &minus;7.4% at day 20 against +4.3% on placebo (P = .022); the day-60 difference was not significant. Skin held moisture better at days 20 and 40. Very small; actives supplied by the maker's distributor.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Acetyl hexapeptide-3 in a cosmetic formulation acts on skin mechanical properties</p><p class=\"est__me\">Tadini et al., 2015 &middot; Braz J Pharm Sci &middot; 51(4)</p><span class=\"est__nolk\">no PubMed record</span></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A</span></td><td class=\"est__ap\">40 women, 10% Argireline for 2 and 4 weeks against the vehicle. Skin became more uniform in how it resists stretching (p &lt; 0.05). Elasticity did not change, and hydration rose with every formulation including the vehicle &mdash; so it does not support a hydration claim.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Investigating the effects of Argireline in a skin serum containing hyaluronic acids on skin surface wrinkles</p><p class=\"est__me\">Henseler, 2023 &middot; GMS Interdiscip Plast Reconstr Surg</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/38024099/\" target=\"_blank\" rel=\"noopener\">PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A &mdash; negative</span></td><td class=\"est__ap\"><strong>The only independent objective-imaging test, and it found nothing.</strong> 19 women, split-face, the same serum with and without Argireline for 4 weeks. No significant difference (wrinkles p = 0.829). Concentration not stated. Reported here because leaving it out would misrepresent the evidence.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">A synthetic hexapeptide with antiwrinkle activity</p><p class=\"est__me\">Blanes-Mira et al., 2002 &middot; Int J Cosmet Sci &middot; 24:303&ndash;10</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/18498523/\" target=\"_blank\" rel=\"noopener\">PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--b\">B</span></td><td class=\"est__ap\">The developers' own study. An emulsion with 10% Argireline reduced measured wrinkle depth <strong>up to 30%</strong> in 30 days. Small, and the full text is paywalled and has not been read by us, so the number of participants and the vehicle result stay unverified. Always quote it as &ldquo;up to&rdquo;.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Manufacturer in-vivo study, reported in trade press (not peer-reviewed)</p><p class=\"est__me\">Lipotec, 2013 &middot; Personal Care Magazine</p><span class=\"est__nolk\">no PubMed record</span></td><td class=\"est__grade\"><span class=\"est__pill est__pill--b\">B</span></td><td class=\"est__ap\">24 women, split-face, a cream with 2% Argireline solution twice daily for 7 days. Wrinkle volume &minus;20.6% and length &minus;15.9%. The ingredient maker's own unpublished study, at a fifth of our concentration, and it is not stated whether the figure is against baseline or against the placebo side.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Anti-Wrinkle Efficacy of a Microneedle Patch with Acetyl Hexapeptide-8 and EGF</p><p class=\"est__me\">An et al., 2019 &middot; Ann Dermatol</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/33911590/\" target=\"_blank\" rel=\"noopener\">PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A &mdash; other delivery</span></td><td class=\"est__ap\"><strong>A dissolving microneedle patch, not a serum.</strong> 52 women, once weekly for 29 days: fine periorbital wrinkles &minus;14.6% against &minus;5.9% for the patch alone. Listed for completeness; a needle that delivers peptide through the skin surface cannot stand in for a leave-on serum.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">In vitro skin penetration of acetyl hexapeptide-8 from a cosmetic formulation</p><p class=\"est__me\">Hoppel et al., 2015 &middot; Eur J Pharm Sci</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/25497319/\" target=\"_blank\" rel=\"noopener\">PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--c\">C</span></td><td class=\"est__ap\">Franz cells on pig-ear skin. Water-rich emulsions delivered clearly more peptide than oil-rich ones. Formulation science, not an efficacy result: it says how a vehicle behaves, not what it does to a face.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Acetyl Hexapeptide-8 in Cosmeceuticals &mdash; A Review of Skin Permeability and Efficacy</p><p class=\"est__me\">Zdrada-Nowak et al., 2025 &middot; Int J Mol Sci</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/40565185/\" target=\"_blank\" rel=\"noopener\">PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--r\">Review</span></td><td class=\"est__ap\">Concludes that low penetration limits how much peptide is available and that reaching the neuromuscular junction &ldquo;remains uncertain&rdquo;, so any effect is likely to be in the upper skin. <strong>Misquotes Wang 2013</strong> as a &ldquo;49% reduction in wrinkle depth&rdquo;; we cite Wang directly instead.</td></tr></tbody>\n</table>\n</div>\n<p class=\"est__key\">Published titles are quoted exactly as they appear in the journal. Where a study measured something we cannot claim for a leave-on serum &mdash; an injection, a microneedle patch, or a different concentration &mdash; it is listed and labelled rather than left out.</p>\n</div>"
+          "html": "<style>\n.est{max-width:1180px;margin:0 auto;padding:0 24px;text-align:left}\n.est__h{font-size:36px;line-height:1.15;margin:0 0 12px;font-weight:600;letter-spacing:-.015em;text-align:left}\n.est__lead{font-size:17px;line-height:1.6;color:#3b3f40;margin:0 0 32px;max-width:78ch;text-align:left}\n.est__wrap{overflow-x:auto}\n.est table{width:100%;border-collapse:collapse;font-size:15px}\n.est thead th{text-align:left;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#6b7173;padding:0 16px 12px;border-bottom:2px solid #1A1A1A;font-weight:600}\n.est td{padding:20px 16px;border-bottom:1px solid #e3e5e6;vertical-align:top;text-align:left}\n.est tr:last-child td{border-bottom:none}\n.est__study{width:31%;}\n.est__ti{font-size:15px;line-height:1.4;margin:0 0 6px;font-weight:600;color:#1A1A1A}\n.est__me{font-size:13px;line-height:1.45;color:#6b7173;margin:0 0 8px}\n.est__lk{font-size:13px;color:#014EB1;text-decoration:none;font-weight:600}\n.est__nolk{font-size:13px;color:#9aa3a4}\n.est__grade{width:13%;}\n.est__pill{display:inline-block;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap;line-height:1.5}\n.est__pill--a{background:#E4EDFA;color:#014EB1}\n.est__pill--b{background:#F1EDE3;color:#7a6524}\n.est__pill--c{background:#EDEFEF;color:#5b6264}\n.est__pill--r{background:#F0F0F0;color:#6b7173}\n.est__ap{font-size:15px;line-height:1.6;color:#3b3f40}\n.est__key{margin:28px 0 0;font-size:13px;line-height:1.6;color:#6b7173;max-width:80ch}\n@media(max-width:749px){\n.est__h{font-size:27px}\n.est thead{display:none}\n.est table,.est tbody,.est tr,.est td{display:block;width:100%;}\n.est tr{border-bottom:1px solid #e3e5e6;padding:20px 0}\n.est tr:last-child{border-bottom:none}\n.est td{padding:0 0 10px;border:none}\n.est__study,.est__grade{width:100%;}\n}\n\n#shopify-section-template--26327072244097__overview .media-with-text__media{align-self:center;background:transparent}\n#shopify-section-template--26327072244097__overview .media-with-text__media img{object-fit:contain;object-position:center;max-height:640px;background:transparent}\n@media(max-width:749px){\n#shopify-section-template--26327072244097__overview .media-with-text__media img{max-height:400px}\n}\n</style>\n<div class=\"est\">\n<h2 class=\"est__h\">Argireline Evidence &amp; Sources</h2>\n<p class=\"est__lead\">Every study this page relies on, with its published title, our reading of it and a link to the source. Graded <strong>A</strong> controlled human trial measured by instrument &middot; <strong>B</strong> smaller, uncontrolled or manufacturer data &middot; <strong>C</strong> tests on skin samples &middot; <strong>Review</strong> a summary of other work.</p>\n<div class=\"est__wrap\">\n<table>\n<thead><tr><th>Study</th><th>Grade</th><th>What it found, and what it does not show</th></tr></thead>\n<tbody><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">The anti-wrinkle efficacy of a synthetic hexapeptide in Chinese subjects: a randomized, placebo-controlled study</p><p class=\"est__me\">Wang et al., 2013 &middot; Am J Clin Dermatol &middot; 14(2):147&ndash;53</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/23417317/\" target=\"_blank\" rel=\"noopener\">View on PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A</span></td><td class=\"est__ap\">60 adults (45 active, 15 placebo), 10% Argireline twice daily around the eyes for 4 weeks, double-blind and placebo-controlled. <strong>22 of 45 (48.9%) were graded clearly improved</strong> against 0 of 15 on placebo &mdash; a count of people, not a wrinkle measurement. Silicone replicas showed roughness down (p &lt; 0.01). Product supplied by the Argireline marketer in China.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">The efficacy study of the combination of tripeptide-10-citrulline and acetyl hexapeptide-3</p><p class=\"est__me\">Raikou et al., 2017 &middot; J Cosmet Dermatol &middot; 16(2):271&ndash;8</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/28150423/\" target=\"_blank\" rel=\"noopener\">View on PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A</span></td><td class=\"est__ap\">24 women, about 6 per arm, 10% Argireline twice daily for 60 days. Forehead roughness &minus;7.4% at day 20 against +4.3% on placebo (P = .022); the day-60 difference was not significant. Skin held moisture better at days 20 and 40. Very small; actives supplied by the maker's distributor.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Acetyl hexapeptide-3 in a cosmetic formulation acts on skin mechanical properties</p><p class=\"est__me\">Tadini, Mercurio &amp; Campos, 2015 &middot; Braz J Pharm Sci &middot; 51(4)</p><a class=\"est__lk\" href=\"https://doi.org/10.1590/S1984-82502015000400016\" target=\"_blank\" rel=\"noopener\">View study &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A</span></td><td class=\"est__ap\">40 women, 10% Argireline for 2 and 4 weeks against the vehicle. Skin became more uniform in how it resists stretching (p &lt; 0.05). Elasticity did not change, and hydration rose with every formulation including the vehicle &mdash; so it does not support a hydration claim.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Investigating the effects of Argireline in a skin serum containing hyaluronic acids on skin surface wrinkles</p><p class=\"est__me\">Henseler, 2023 &middot; GMS Interdiscip Plast Reconstr Surg</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/38024099/\" target=\"_blank\" rel=\"noopener\">View on PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A &mdash; negative</span></td><td class=\"est__ap\"><strong>The only independent objective-imaging test, and it found nothing.</strong> 19 women, split-face, the same serum with and without Argireline for 4 weeks. No significant difference (wrinkles p = 0.829; skin age p = 0.804). Concentration not stated. Reported here because leaving it out would misrepresent the evidence.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">A synthetic hexapeptide with antiwrinkle activity</p><p class=\"est__me\">Blanes-Mira et al., 2002 &middot; Int J Cosmet Sci &middot; 24:303&ndash;10</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/18498523/\" target=\"_blank\" rel=\"noopener\">View on PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--b\">B</span></td><td class=\"est__ap\">The developers' own study. An emulsion with 10% Argireline reduced measured wrinkle depth <strong>up to 30%</strong> in 30 days. Small, and the full text is paywalled and has not been read by us, so the number of participants and the vehicle result stay unverified. Always quote it as &ldquo;up to&rdquo;.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Manufacturer in-vivo study, reported in trade press (not peer-reviewed)</p><p class=\"est__me\">Lipotec, 2013 &middot; Personal Care Magazine</p><span class=\"est__nolk\">no PubMed record</span></td><td class=\"est__grade\"><span class=\"est__pill est__pill--b\">B</span></td><td class=\"est__ap\">24 women, split-face, a cream with 2% Argireline solution twice daily for 7 days. Wrinkle volume &minus;20.6% and length &minus;15.9%. The ingredient maker's own unpublished study, at a fifth of our concentration, and it is not stated whether the figure is against baseline or against the placebo side.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Anti-Wrinkle Efficacy of a Microneedle Patch with Acetyl Hexapeptide-8 and EGF</p><p class=\"est__me\">An et al., 2019 &middot; Ann Dermatol &middot; 31(3):263&ndash;71</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/33911590/\" target=\"_blank\" rel=\"noopener\">View on PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--a\">A &mdash; other delivery</span></td><td class=\"est__ap\"><strong>A dissolving microneedle patch, not a serum.</strong> 52 women, once weekly for 29 days: fine periorbital wrinkles &minus;14.6% against &minus;5.9% for the patch alone. Listed for completeness; a needle that delivers peptide through the skin surface cannot stand in for a leave-on serum.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">In vitro skin penetration of acetyl hexapeptide-8 from a cosmetic formulation</p><p class=\"est__me\">Kraeling et al., 2015 &middot; Cutan Ocul Toxicol &middot; 34(1):46&ndash;52</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/24754410/\" target=\"_blank\" rel=\"noopener\">View on PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--c\">C</span></td><td class=\"est__ap\">A US regulator's laboratory study on human and guinea-pig skin. Most of the dose washed off; 0.22% stayed in the outermost layer and 0.01% reached the epidermis, with <strong>none detected in the dermis</strong>. This is the basis for saying the peptide does not reach the muscle, and that any effect is at the skin surface.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Topical delivery of acetyl hexapeptide-8 from different emulsions: influence of emulsion composition and internal structure</p><p class=\"est__me\">Hoppel et al., 2015 &middot; Eur J Pharm Sci &middot; 68:27&ndash;35</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/25497319/\" target=\"_blank\" rel=\"noopener\">View on PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--c\">C</span></td><td class=\"est__ap\">Franz cells on pig-ear skin. Water-rich emulsions delivered clearly more peptide than oil-rich ones. Formulation science rather than an efficacy result: it says how a vehicle behaves, not what it does to a face.</td></tr><tr><td class=\"est__study\"><p class=\"sgref__ti est__ti\">Acetyl Hexapeptide-8 in Cosmeceuticals - A Review of Skin Permeability and Efficacy</p><p class=\"est__me\">Zdrada-Nowak et al., 2025 &middot; Int J Mol Sci</p><a class=\"est__lk\" href=\"https://pubmed.ncbi.nlm.nih.gov/40565185/\" target=\"_blank\" rel=\"noopener\">View on PubMed &rarr;</a></td><td class=\"est__grade\"><span class=\"est__pill est__pill--r\">Review</span></td><td class=\"est__ap\">Concludes that low penetration limits how much peptide is available and that reaching the neuromuscular junction &ldquo;remains uncertain&rdquo;, so any effect is likely to be in the upper skin. <strong>Misquotes Wang 2013</strong> as a &ldquo;49% reduction in wrinkle depth&rdquo;; we cite Wang directly instead.</td></tr></tbody>\n</table>\n</div>\n<p class=\"est__key\">Published titles are quoted exactly as they appear in the journal. Where a study measured something we cannot claim for a leave-on serum &mdash; an injection, a microneedle patch, or a different concentration &mdash; it is listed and labelled rather than left out.</p>\n</div>\n<script type=\"application/ld+json\" id=\"sgx-webpage-jsonld\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"@id\": \"https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research#webpage\",\n  \"url\": \"https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research\",\n  \"name\": \"Argireline® (Acetyl Hexapeptide-8): What It Does for Lines\",\n  \"description\": \"Argireline® (acetyl hexapeptide-8) is a peptide that softens the look of expression lines. How it works, what the trials found, and how to use it.\",\n  \"datePublished\": \"2026-03-10\",\n  \"dateModified\": \"2026-09-23\",\n  \"isPartOf\": {\n    \"@id\": \"https://www.skingenetix.com/#website\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"@id\": \"https://www.skingenetix.com/#organization\",\n    \"name\": \"Skingenetix\",\n    \"url\": \"https://www.skingenetix.com\"\n  },\n  \"about\": {\n    \"@type\": \"Thing\",\n    \"name\": \"Acetyl hexapeptide-8\",\n    \"alternateName\": [\n      \"Argireline\",\n      \"Acetyl hexapeptide-3\"\n    ]\n  },\n  \"citation\": [\n    {\n      \"@type\": \"ScholarlyArticle\",\n      \"name\": \"A synthetic hexapeptide (Argireline) with antiwrinkle activity\",\n      \"author\": \"Blanes-Mira C et al.\",\n      \"datePublished\": \"2002\",\n      \"isPartOf\": {\n        \"@type\": \"Periodical\",\n        \"name\": \"International Journal of Cosmetic Science\"\n      },\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/18498523/\"\n    },\n    {\n      \"@type\": \"ScholarlyArticle\",\n      \"name\": \"The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study\",\n      \"author\": \"Wang Y et al.\",\n      \"datePublished\": \"2013\",\n      \"isPartOf\": {\n        \"@type\": \"Periodical\",\n        \"name\": \"American Journal of Clinical Dermatology\"\n      },\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/23417317/\"\n    },\n    {\n      \"@type\": \"ScholarlyArticle\",\n      \"name\": \"Anti-Wrinkle Efficacy of Cross-Linked Hyaluronic Acid-Based Microneedle Patch with Acetyl Hexapeptide-8 and Epidermal Growth Factor on Korean Skin\",\n      \"author\": \"An JH et al.\",\n      \"datePublished\": \"2019\",\n      \"isPartOf\": {\n        \"@type\": \"Periodical\",\n        \"name\": \"Annals of Dermatology\"\n      },\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/33911590/\"\n    },\n    {\n      \"@type\": \"ScholarlyArticle\",\n      \"name\": \"Acetyl hexapeptide-3 in a cosmetic formulation acts on skin mechanical properties\",\n      \"author\": \"Tadini KA et al.\",\n      \"datePublished\": \"2015\",\n      \"isPartOf\": {\n        \"@type\": \"Periodical\",\n        \"name\": \"Brazilian Journal of Pharmaceutical Sciences\"\n      },\n      \"url\": \"https://doi.org/10.1590/S1984-82502015000400016\"\n    },\n    {\n      \"@type\": \"ScholarlyArticle\",\n      \"name\": \"The efficacy study of the combination of tripeptide-10-citrulline and acetyl hexapeptide-3\",\n      \"author\": \"Raikou V et al.\",\n      \"datePublished\": \"2017\",\n      \"isPartOf\": {\n        \"@type\": \"Periodical\",\n        \"name\": \"Journal of Cosmetic Dermatology\"\n      },\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/28150423/\"\n    },\n    {\n      \"@type\": \"ScholarlyArticle\",\n      \"name\": \"Acetyl Hexapeptide-8 in Cosmeceuticals: A Review of Skin Permeability and Efficacy\",\n      \"author\": \"Zdrada-Nowak J et al.\",\n      \"datePublished\": \"2025\",\n      \"isPartOf\": {\n        \"@type\": \"Periodical\",\n        \"name\": \"International Journal of Molecular Sciences\"\n      },\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/40565185/\"\n    },\n    {\n      \"@type\": \"ScholarlyArticle\",\n      \"name\": \"Investigating the effects of Argireline in a skin serum containing hyaluronic acids on skin surface wrinkles using the Visia® Complexion Analysis camera system for objective skin analysis\",\n      \"author\": \"Henseler H\",\n      \"datePublished\": \"2023\",\n      \"isPartOf\": {\n        \"@type\": \"Periodical\",\n        \"name\": \"GMS Interdisciplinary Plastic and Reconstructive Surgery DGPW\"\n      },\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/38024099/\"\n    },\n    {\n      \"@type\": \"ScholarlyArticle\",\n      \"name\": \"In vitro skin penetration of acetyl hexapeptide-8 from a cosmetic formulation\",\n      \"author\": \"Kraeling ME et al.\",\n      \"datePublished\": \"2015\",\n      \"isPartOf\": {\n        \"@type\": \"Periodical\",\n        \"name\": \"Cutaneous and Ocular Toxicology\"\n      },\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/24754410/\"\n    }\n  ],\n  \"reviewedBy\": {\n    \"@type\": \"Person\",\n    \"name\": \"Esther Bodde\",\n    \"honorificPrefix\": \"Dr\",\n    \"jobTitle\": \"Cosmetic & Medical Physician\"\n  },\n  \"lastReviewed\": \"2026-09-23\",\n  \"inLanguage\": \"en\"\n}\n</script>"
         }
       }
     }
+  ],
+  "remove_sections": [
+    "evidence_summary",
+    "references"
   ]
 }
