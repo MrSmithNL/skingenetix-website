@@ -1,0 +1,18 @@
+{
+  "_about": "Claims correctness in all six languages. The English fix earlier today left the five translations marked outdated, and an outdated translation is still served — so de/nl/fr/es/it were still showing the forbidden '48.9% overall anti-wrinkle efficacy'. This also fixes the same defect in ENGLISH faq.q2, which was missed when the card was corrected.",
+  "template": "templates/page.research-argireline.json",
+  "page": "acetyl-hexapeptide-8-research",
+  "set": [
+    {
+      "at": "faq/q2/content",
+      "values": {
+        "en": "<p>In a randomized, placebo-controlled trial, <strong>22 of 45 people (48.9%) were graded clearly improved</strong> by clinicians after 4 weeks, against 0 of 15 on placebo (Wang 2013). That is the share of people who improved, not a 48.9% reduction in wrinkles. Argireline is used for the look of dynamic expression lines: crow's feet, forehead lines and frown lines.</p>",
+        "de": "<p>In einer randomisierten, placebokontrollierten Studie wurden <strong>22 von 45 Personen (48,9 %) von Ärzten als deutlich verbessert bewertet</strong>, nach 4 Wochen, gegenüber 0 von 15 unter Placebo (Wang 2013). Das ist der Anteil der Personen mit sichtbarer Verbesserung, keine Faltenreduktion von 48,9 %. Argireline wird für das Erscheinungsbild dynamischer Mimikfalten verwendet: Krähenfüße, Stirnfalten und Zornesfalten.</p>",
+        "nl": "<p>In een gerandomiseerde, placebogecontroleerde studie werden <strong>22 van de 45 deelnemers (48,9%) door artsen als duidelijk verbeterd beoordeeld</strong> na 4 weken, tegenover 0 van de 15 met placebo (Wang 2013). Dat is het aandeel mensen dat verbeterde, geen vermindering van rimpels met 48,9%. Argireline wordt gebruikt voor het uiterlijk van dynamische expressielijnen: kraaienpootjes, voorhoofdrimpels en fronsrimpels.</p>",
+        "fr": "<p>Dans un essai randomisé contrôlé contre placebo, <strong>22 personnes sur 45 (48,9 %) ont été jugées nettement améliorées</strong> par des médecins après 4 semaines, contre 0 sur 15 sous placebo (Wang 2013). Il s'agit de la proportion de personnes améliorées, et non d'une réduction des rides de 48,9 %. L'Argireline est utilisé pour l'aspect des rides d'expression dynamiques : pattes d'oie, rides du front et rides du lion.</p>",
+        "es": "<p>En un ensayo aleatorizado y controlado con placebo, <strong>22 de 45 personas (48,9 %) fueron evaluadas como claramente mejoradas</strong> por médicos tras 4 semanas, frente a 0 de 15 con placebo (Wang 2013). Es la proporción de personas que mejoraron, no una reducción de las arrugas del 48,9 %. El Argireline se usa para el aspecto de las líneas de expresión dinámicas: patas de gallo, líneas de la frente y del entrecejo.</p>",
+        "it": "<p>In uno studio randomizzato e controllato con placebo, <strong>22 persone su 45 (48,9%) sono state valutate come chiaramente migliorate</strong> dai medici dopo 4 settimane, contro 0 su 15 con placebo (Wang 2013). È la quota di persone migliorate, non una riduzione delle rughe del 48,9%. L'Argireline è usato per l'aspetto delle rughe d'espressione dinamiche: zampe di gallina, rughe della fronte e rughe glabellari.</p>"
+      }
+    }
+  ]
+}
