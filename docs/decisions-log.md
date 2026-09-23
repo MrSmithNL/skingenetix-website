@@ -178,3 +178,17 @@ so whatever section physically precedes another becomes its "previous section" f
 **Decision:** Malcolm: "Lets already add Esther Bodde as verified. I will check with her." The credit went live on 2026-09-22 on the four rebuilt hubs and both study pages, in six languages, in two places: the visible byline and `reviewedBy` in the JSON-LD. The glutathione hub is excluded until it has been rebuilt against its claims register.
 **Wording:** "Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician". This is Malcolm's decided credential. Hairgenetix's "Cosmetic & Plastic Surgeon" is flagged as possibly inaccurate and is not used. The credential stays in English in every locale, because a translation can read as a protected professional title.
 **Consequences:** The pages state a review that has not happened yet. If she declines or asks for changes, run `python3 scripts/set-reviewer.py configs/reviewers/esther-bodde.json --remove --apply`. It removes the credit everywhere in one step and keeps the author line and our own `lastReviewed` date.
+
+---
+
+## ADR-2026-09-23-G: Published citation titles are quoted verbatim, and the audit knows the difference
+
+**Date:** 2026-09-23
+**Status:** Accepted
+**Context:** The glutathione hub cited five papers and had rewritten four of their titles, replacing "skin-whitening" with "even-tone" or "more even complexion". A citation title is a bibliographic fact: changing it misrepresents the source and breaks the title match AI crawlers use to connect the page to the paper (docs/claims/glutathione.md, fact 4). Restoring the published titles put "whitening" and "melasma" back on the page, and `scripts/page-audit.py`'s EU-wording scan flagged them as our claims, dropping MARKETING from 93 to 71.
+**Decision:** Titles are always quoted as published. The audit exempts only the References list's title element (`.sgref__ti`) from the medicinal-wording scan; a quoted title in prose still counts, and so does every other word on the page. The chart caption that had quoted the paper's "skin whitening" label was reworded rather than exempted.
+**Also decided the same day:**
+- `set-reviewer.py` takes a per-hub `reviewed` date (`hub_cfg`). Schema.org `lastReviewed` is the date the page's content was last checked, so a hub rebuilt on a later day carries its own date; one config-wide date had left the glutathione byline (23 September) and its JSON-LD (22 September) disagreeing.
+- The audit's alternation check exempts a findings run of `research-before-after` and `media-with-text` in either order. Neither section has a background setting, so a run of them always sits on the page's Bone; the rule already exempted one order.
+- The stock `impact-text` big figures render as `<h2>` and cost the glutathione hub a 6/10 on Gemini's heading-hierarchy criterion (7.5 average, the page's only failing criterion besides the open named-author question). Kept, as on Matrixyl: the research-page standard names `impact-text` for headline figures, and the alternative is custom code.
+**Consequences:** Four new tests in `tests/test_page_audit.py`, one in `tests/test_set_reviewer.py`. The glutathione hub audits 100/100/100/100 and 9.65 on the external dual-model audit with the published titles on the page.

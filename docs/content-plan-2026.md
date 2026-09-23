@@ -126,7 +126,7 @@ content and no new links.
 | 2 | **Resolve the 4 concern-handle collisions.** `/pages/` and `/collections/` both 200, both self-canonical, near-identical titles | Live cannibalisation on `fine-lines-wrinkles`, `firming-skin-density`, `skin-repair-renewal`, `brightening-glow` |
 | 3 | **Meta titles + descriptions everywhere.** ⚠️ *Corrected 2026-09-22:* they already existed on all pages and most collections; only product titles were unset (2 of 21). Rewritten to the hero map rather than created | ⚠️ `ProductInput.seo` replaces the whole object — always send title *and* description |
 | 4 | **Cross-link research ↔ solution pages, in prose** | Currently zero cross-family links. Zyppy: 0–4 inbound → ~2 clicks, 40–44 → ~8. Anchor variety was the strongest effect in that study |
-| 5 | **Even out hub depth** — glutathione has 1 key finding, copper peptide has 3 | |
+| 5 | **Even out hub depth** — glutathione has 1 key finding, copper peptide has 3 | ✅ 2026-09-23: the glutathione hub now carries three key figures, two charts with data tables, three graded study cards and a ten-row evidence table |
 | 6 | Fix logged defects: `/pages/skin-concerns` lists 4 of 5 concerns; `/pages/brightening-glow` has a dead CSS block; `/pages/the-science` JSON-LD has a hardcoded 2026-03-11 date | |
 
 **Exit:** every page has a meta title and description; no duplicate-intent titles; every research page
@@ -164,7 +164,7 @@ They already exist, already carry PubMed citations, and already rank. They need 
 
 **Order: PDRN first, then copper peptide, then argireline, then matrixyl, then glutathione.**
 
-> **▶ Status 2026-09-22: 4 of 5 hubs done** (PDRN, Argireline®, copper, Matrixyl 3000). Glutathione is next.
+> **▶ Status 2026-09-23: 5 of 5 hubs done** (PDRN, Argireline®, copper, Matrixyl 3000, glutathione). Phase 2 is complete. Every hub meets the research-page standard below; the glutathione hub (`configs/hub-upgrades/glutathione-research.json`) is the second full build on the Matrixyl pattern and audits 100/100/100/100 with an external score of 9.65. Remaining Phase 2 loose end: the "at a glance" front-loading lift on the PDRN and copper hubs.
 
 **Research-page standard (Malcolm, 2026-09-22). Every scientific research page we make must:**
 

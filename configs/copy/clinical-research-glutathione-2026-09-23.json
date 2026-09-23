@@ -1,0 +1,85 @@
+{
+  "_about": "Product 'Clinical Research' block for the two products carrying glutathione, 2026-09-23. Replaces the old block that was live on both with three claims that fail docs/claims/glutathione.md §2: 'A significantly more even-looking skin tone versus placebo (p<0.001)' (evenness was never measured; every volunteer had even skin at baseline), 'Improved radiance and smoothness' (radiance not measured; blinded smoothness ratings showed no difference) and 'Antioxidant defence against environmental stress' presented as a clinical result (not measured in humans for GSSG), plus 'Our serum uses 2% oxidized glutathione (GSSG) - the exact active studied' (a product formula fact parked until the supplier certificate confirms it). INGREDIENT-LEVEL ONLY, on the Matrixyl precedent: the trial's in-vivo magnitudes (-10.7% pigment, 77% vs 23%) attach to a product only once the formula sheet confirms 2% GSSG, so they stay on the hub; the block states the trial's design, direction, timing and tolerability and links to the hub for the figures. The copper kit for the Duo comes unchanged from clinical-research-2026-09-22.json (kits_from). Applied by scripts/set-clinical-research.py.",
+  "kits_from": ["configs/copy/clinical-research-2026-09-22.json"],
+  "kits": {
+    "glutathione": {
+      "hub": "/pages/glutathione-research",
+      "en": {
+        "headline": "Topical glutathione is a brightening active with a double-blind, placebo-controlled trial behind it.",
+        "intro": "The Glutathione Brightening Serum is built around glutathione, with a stable form of vitamin C and niacinamide. In that trial:",
+        "bullets": [
+          "2% oxidised glutathione (GSSG) gave brighter-looking skin than placebo over 10 weeks, measured by instrument and rated by the women themselves (p < 0.001)",
+          "Measurable from week 1, and visible to 1 in 4 women by week 4",
+          "Softer-looking crow's feet and measurably smoother skin texture as secondary results",
+          "Well tolerated: all 30 women completed 10 weeks of twice-daily use, with no reactions attributed to glutathione"
+        ],
+        "footnote": "Watanabe et al. 2014, Clin Cosmet Investig Dermatol: 30 women, split-face, 2% GSSG lotion, run by the GSSG manufacturer (Kyowa Hakko Bio). The results describe the ingredient as studied, not this product; the full figures are on the research page.",
+        "link": "See all the glutathione research"
+      },
+      "de": {
+        "headline": "Äußerlich angewendetes Glutathion ist ein aufhellender Wirkstoff mit einer doppelblinden, placebokontrollierten Studie im Rücken.",
+        "intro": "Das Glutathion Brightening Serum baut auf Glutathion auf, mit einer stabilen Form von Vitamin C und Niacinamid. In dieser Studie:",
+        "bullets": [
+          "2 % oxidiertes Glutathion (GSSG) ließ die Haut über 10 Wochen heller wirken als Placebo, per Messgerät gemessen und von den Frauen selbst bewertet (p < 0,001)",
+          "Messbar ab Woche 1 und bis Woche 4 für 1 von 4 Frauen sichtbar",
+          "Weicher wirkende Krähenfüße und messbar glattere Hauttextur als Nebenergebnisse",
+          "Gut verträglich: Alle 30 Frauen schlossen 10 Wochen zweimal tägliche Anwendung ab, ohne dass eine Reaktion dem Glutathion zugeschrieben wurde"
+        ],
+        "footnote": "Watanabe et al. 2014, Clin Cosmet Investig Dermatol: 30 Frauen, Halbseitenvergleich, 2 % GSSG-Lotion, durchgeführt vom GSSG-Hersteller (Kyowa Hakko Bio). Die Ergebnisse beschreiben den Wirkstoff, wie er untersucht wurde, nicht dieses Produkt; die vollständigen Zahlen stehen auf der Forschungsseite.",
+        "link": "Die gesamte Glutathion-Forschung ansehen"
+      },
+      "nl": {
+        "headline": "Glutathion op de huid is een verhelderend actief ingrediënt met een dubbelblinde, placebogecontroleerde studie erachter.",
+        "intro": "Het Glutathion Brightening Serum is opgebouwd rond glutathion, met een stabiele vorm van vitamine C en niacinamide. In die studie:",
+        "bullets": [
+          "2% geoxideerd glutathion (GSSG) gaf in 10 weken een helderder ogende huid dan placebo, gemeten met een instrument en beoordeeld door de vrouwen zelf (p < 0,001)",
+          "Meetbaar vanaf week 1, en tegen week 4 zichtbaar voor 1 op de 4 vrouwen",
+          "Zachter ogende kraaienpootjes en een meetbaar gladdere huidtextuur als secundaire resultaten",
+          "Goed verdragen: alle 30 vrouwen voltooiden 10 weken van tweemaal daags gebruik, zonder dat een reactie aan glutathion werd toegeschreven"
+        ],
+        "footnote": "Watanabe et al. 2014, Clin Cosmet Investig Dermatol: 30 vrouwen, split-face, lotion met 2% GSSG, uitgevoerd door de GSSG-fabrikant (Kyowa Hakko Bio). De resultaten beschrijven het ingrediënt zoals het is onderzocht, niet dit product; de volledige cijfers staan op de onderzoekspagina.",
+        "link": "Bekijk al het glutathiononderzoek"
+      },
+      "fr": {
+        "headline": "Le glutathion en application cutanée est un actif éclat étayé par un essai en double aveugle contre placebo.",
+        "intro": "Le sérum au glutathion est construit autour du glutathion, avec une forme stable de vitamine C et du niacinamide. Dans cet essai :",
+        "bullets": [
+          "Le glutathion oxydé (GSSG) à 2 % a rendu la peau plus lumineuse que le placebo en 10 semaines, mesuré par instrument et évalué par les femmes elles-mêmes (p < 0,001)",
+          "Mesurable dès la semaine 1, et visible pour 1 femme sur 4 à la semaine 4",
+          "Des pattes-d'oie d'apparence plus douce et un grain de peau mesurablement plus lisse en résultats secondaires",
+          "Bien toléré : les 30 femmes ont terminé 10 semaines d'application biquotidienne, sans qu'aucune réaction ne soit attribuée au glutathion"
+        ],
+        "footnote": "Watanabe et al. 2014, Clin Cosmet Investig Dermatol : 30 femmes, demi-visage, lotion au GSSG à 2 %, essai mené par le fabricant du GSSG (Kyowa Hakko Bio). Les résultats décrivent l'ingrédient tel qu'il a été étudié, pas ce produit ; les chiffres complets sont sur la page de recherche.",
+        "link": "Voir toute la recherche sur le glutathion"
+      },
+      "es": {
+        "headline": "El glutatión tópico es un activo iluminador con un ensayo doble ciego controlado con placebo detrás.",
+        "intro": "El sérum de glutatión se construye en torno al glutatión, con una forma estable de vitamina C y niacinamida. En ese ensayo:",
+        "bullets": [
+          "El glutatión oxidado (GSSG) al 2 % dio una piel más luminosa que el placebo en 10 semanas, medida con un instrumento y valorada por las propias mujeres (p < 0,001)",
+          "Medible desde la semana 1, y visible para 1 de cada 4 mujeres en la semana 4",
+          "Patas de gallo de aspecto más suave y una textura de la piel medible más lisa como resultados secundarios",
+          "Bien tolerado: las 30 mujeres completaron 10 semanas de uso dos veces al día, sin que ninguna reacción se atribuyera al glutatión"
+        ],
+        "footnote": "Watanabe et al. 2014, Clin Cosmet Investig Dermatol: 30 mujeres, media cara, loción con GSSG al 2 %, realizado por el fabricante del GSSG (Kyowa Hakko Bio). Los resultados describen el ingrediente tal como se estudió, no este producto; las cifras completas están en la página de investigación.",
+        "link": "Ver toda la investigación sobre el glutatión"
+      },
+      "it": {
+        "headline": "Il glutatione topico è un attivo illuminante con alle spalle uno studio in doppio cieco controllato con placebo.",
+        "intro": "Il siero al glutatione è costruito intorno al glutatione, con una forma stabile di vitamina C e niacinamide. In quello studio:",
+        "bullets": [
+          "Il glutatione ossidato (GSSG) al 2% ha dato una pelle più luminosa del placebo in 10 settimane, misurata con uno strumento e valutata dalle donne stesse (p < 0,001)",
+          "Misurabile dalla settimana 1, e visibile a 1 donna su 4 alla settimana 4",
+          "Zampe di gallina dall'aspetto più morbido e una grana della pelle misurabilmente più liscia come risultati secondari",
+          "Ben tollerato: tutte le 30 donne hanno completato 10 settimane di uso due volte al giorno, senza che alcuna reazione fosse attribuita al glutatione"
+        ],
+        "footnote": "Watanabe et al. 2014, Clin Cosmet Investig Dermatol: 30 donne, mezzo viso, lozione al 2% di GSSG, condotto dal produttore del GSSG (Kyowa Hakko Bio). I risultati descrivono l'ingrediente così come è stato studiato, non questo prodotto; le cifre complete sono nella pagina di ricerca.",
+        "link": "Vedi tutta la ricerca sul glutatione"
+      }
+    }
+  },
+  "products": {
+    "glutathione-brightening-serum": ["glutathione"],
+    "brightening-glow-duo-set-glutathione-serum-copper-peptide-ghk-cu-day-gel-cream": ["glutathione", "copper"]
+  }
+}

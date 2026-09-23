@@ -108,7 +108,14 @@ def audit_marketing(path, rep, raw, main, main_text, tgt, h1=None):
     bad = [(m.group(0), r["why"]) for r in MKT["unsupported"] for m in re.finditer(r["re"], raw, re.I)]
     rep.add("MARKETING", "No claim known to be unsupported (docs/claims/)", not bad,
             "; ".join(f"'{b}' — {w}" for b, w in dict(bad).items()) or "clean", "high", 3)
-    med = [(m.group(0), r["why"]) for r in MKT["medicinal"] for m in re.finditer(r["re"], txt, re.I)]
+    # A published paper's title is a bibliographic fact, not our claim: the glutathione hub cites
+    # "Skin-whitening and skin-condition-improving effects…" and "…in melasma: a systematic review", and
+    # rewriting those titles to dodge the scan is what the old page did (docs/claims/glutathione.md, fact 4).
+    # Only the References list's title element is exempt; a quoted title in prose still counts.
+    own = txt
+    for t in main.xpath('.//*[contains(concat(" ",@class," ")," sgref__ti ")]'):
+        own = own.replace(re.sub(r"\s+", " ", t.text_content()).strip(), " ")
+    med = [(m.group(0), r["why"]) for r in MKT["medicinal"] for m in re.finditer(r["re"], own, re.I)]
     rep.add("MARKETING", "No medicinal wording (EU cosmetic-claims rules)", not med,
             "; ".join(f"'{b}' — {w}" for b, w in dict(med).items()) or "clean", "high", 3)
     if kind == "product":
@@ -123,7 +130,7 @@ def audit_marketing(path, rep, raw, main, main_text, tgt, h1=None):
     unsourced = [p_[:90] for p_, linked in paras if re.search(r"\d+(\.\d+)? ?%", p_)
                  and not linked
                  and not re.search(MKT["own_concentrations"], p_, re.I)
-                 and not re.search(r"et al|study|trial|studies|PubMed|research", p_, re.I)]
+                 and not re.search(r"et al|study|trial|studies|PubMed|research|placebo", p_, re.I)]   # "vs placebo" names a trial
     rep.add("MARKETING", "Every result figure sits next to its source", not unsourced,
             f"{len(unsourced)} unsourced: {unsourced[:2]}", "low", 1)
 
@@ -358,8 +365,11 @@ async def audit_design(path, rep, shots_dir):
     empty = [f"{r['id']} ({r['h']}px)" for r in d["rows"] if r["text"] < 2 and r["media"] == 0 and r["h"] > 4]
     rep.add("DESIGN", "No empty-but-tall sections", not empty, ", ".join(empty) or "none", "high", 2)
     seq = [r for r in content if r["type"] != "image-with-text-overlay"]
+    # research-before-after and media-with-text have no section background, so a findings run of them always
+    # sits on the page's Bone: exempt in both orders (the glutathione hub is rba → mwt → rba, 2026-09-23).
+    findings = {"research-before-after", "media-with-text"}
     same = [f"{a['id']}+{b['id']} ({PALETTE.get(a['bg'], a['bg'])})" for a, b in zip(seq, seq[1:])
-            if a["bg"] == b["bg"] and not (a["type"] == "research-before-after" and b["type"] == "media-with-text")]
+            if a["bg"] == b["bg"] and not (a["type"] in findings and b["type"] in findings and a["type"] != b["type"])]
     rep.add("DESIGN", "Section backgrounds alternate", not same, "; ".join(same) or
             " → ".join(PALETTE.get(r["bg"], r["bg"]) for r in seq), "med", 1.5)
     off = sorted({r["bg"] for r in content if r["bg"] not in PALETTE})

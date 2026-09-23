@@ -1,0 +1,435 @@
+{
+  "_about": "Glutathione claims that fail docs/claims/glutathione.md §2, fixed in all six languages, 2026-09-23, on the product, the Brightening & Glow Duo, their FAQ metaobjects and /pages/brightening-glow (the Clinical Research block itself is rebuilt separately: configs/copy/clinical-research-glutathione-2026-09-23.json). INGREDIENT-LEVEL ONLY: the trial's measured magnitudes (−10.7% pigment, 77% of women) stay on the hub until the supplier certificate confirms 2% GSSG in the serum (parked formula fact, handover §10); timing (measurable from week 1, visible to 1 in 4 by week 4) is used because the register recommends it for the product page. What is removed and why: 'more even-looking tone' and 'the look of dark spots' (evenness and spots were never measured for GSSG; every trial volunteer had even skin at baseline, register facts 2 and 4); 'radiance/radiant' (not measured); 'a fresher glow within 1–2 weeks' and 'builds over 8–12 weeks' (no source; the page contradicted itself, 8–12 vs 4–8); 'focusing on dark spots and uneven areas' (usage advice built on the unmeasured claim); 'suitable for all skin types and tones' and 'excellent safety profile' (one trial, n = 30, types III–IV only); 'well suited to long-term daily use' (10 weeks studied; the authors say long-term safety needs more studies); 'isolated dark spots often respond faster' and 'even 15 minutes of unprotected sun' (no source); 'Unlike some harsh brightening approaches' (comparative framing, EU fairness criterion). Applied by scripts/fix-claims.py; every English match is changed and the dry run fails if any locale's translation does not match its pattern.",
+  "fixes": [
+    {
+      "where": ["body_html"],
+      "patterns": {
+        "en": "for a brighter, more even-looking complexion\\.",
+        "de": "für einen strahlenden, ebenmäßigeren Teint\\.",
+        "nl": "voor een stralende en egale teint\\.",
+        "fr": "pour un teint visiblement plus lumineux et plus uniforme\\.",
+        "es": "para un cutis visiblemente más luminoso y más uniforme\\.",
+        "it": "per un incarnato visibilmente più luminoso e uniforme\\."
+      },
+      "replace": {
+        "en": "for a brighter-looking complexion.",
+        "de": "für einen heller wirkenden Teint.",
+        "nl": "voor een helderder ogende teint.",
+        "fr": "pour un teint d'apparence plus lumineuse.",
+        "es": "para un cutis de aspecto más luminoso.",
+        "it": "per un incarnato dall'aspetto più luminoso."
+      }
+    },
+    {
+      "where": ["body_html"],
+      "patterns": {
+        "en": "Supports a brighter, more even-looking skin tone and radiance",
+        "de": "Der Teint wirkt strahlender und ebenmäßiger",
+        "nl": "Voor een stralende, egale teint",
+        "fr": "Le teint paraît plus lumineux et plus uniforme",
+        "es": "Favorece un tono de piel visiblemente más luminoso y más uniforme",
+        "it": "L'incarnato appare più luminoso, uniforme e radioso"
+      },
+      "replace": {
+        "en": "For brighter-looking skin, with a placebo-controlled trial behind the active",
+        "de": "Für heller wirkende Haut, mit einer placebokontrollierten Studie hinter dem Wirkstoff",
+        "nl": "Voor een helderder ogende huid, met een placebogecontroleerde studie achter het actieve ingrediënt",
+        "fr": "Pour une peau d'apparence plus lumineuse, avec un essai contrôlé contre placebo derrière l'actif",
+        "es": "Para una piel de aspecto más luminoso, con un ensayo controlado con placebo detrás del activo",
+        "it": "Per una pelle dall'aspetto più luminoso, con uno studio controllato con placebo alle spalle dell'attivo"
+      }
+    },
+    {
+      "where": ["body_html"],
+      "patterns": {
+        "en": "dull, uneven-looking skin that wants a brighter, more even-looking tone and a healthy glow\\.",
+        "de": "fahle, unebenmäßig wirkende Haut, die einen strahlenden, ebenmäßigeren Teint und einen gesunden Glow anstrebt\\.",
+        "nl": "doffe, ongelijkmatige huid die er stralender en egaler wil uitzien met een gezonde glow\\.",
+        "fr": "les peaux ternes et irrégulières qui souhaitent un teint visiblement plus lumineux et plus uniforme, avec un éclat naturel\\.",
+        "es": "pieles apagadas y con tono irregular que buscan un tono visiblemente más luminoso y uniforme, y un glow saludable\\.",
+        "it": "pelle spenta e dall'incarnato irregolare che desidera un tono più luminoso e uniforme con un glow sano\\."
+      },
+      "replace": {
+        "en": "dull-looking skin that wants a brighter-looking tone and a healthy glow.",
+        "de": "fahl wirkende Haut, die einen heller wirkenden Teint und einen gesunden Glow anstrebt.",
+        "nl": "een dof ogende huid die er helderder wil uitzien, met een gezonde glow.",
+        "fr": "les peaux ternes qui souhaitent un teint d'apparence plus lumineuse, avec un éclat naturel.",
+        "es": "pieles apagadas que buscan un tono de aspecto más luminoso y un glow saludable.",
+        "it": "pelle spenta che desidera un tono dall'aspetto più luminoso con un glow sano."
+      }
+    },
+    {
+      "where": ["body_html"],
+      "patterns": {
+        "en": "for a brighter, more even-looking tone and softer-looking dark spots",
+        "de": "für einen strahlender und ebenmäßiger wirkenden Teint sowie weicher wirkende dunkle Flecken",
+        "nl": "voor een stralendere en egelere teint en minder zichtbare donkere vlekken",
+        "fr": "pour un teint plus lumineux, plus uniforme et des taches sombres visiblement atténuées",
+        "es": "para un tono visiblemente más luminoso y uniforme y unas manchas oscuras de aspecto más suavizado",
+        "it": "per un incarnato più luminoso, uniforme e con macchie scure visibilmente attenuate"
+      },
+      "replace": {
+        "en": "for a brighter-looking tone",
+        "de": "für einen heller wirkenden Teint",
+        "nl": "voor een helderder ogende teint",
+        "fr": "pour un teint d'apparence plus lumineuse",
+        "es": "para un tono de aspecto más luminoso",
+        "it": "per un incarnato dall'aspetto più luminoso"
+      }
+    },
+    {
+      "where": ["body_html"],
+      "patterns": {
+        "en": "dull, uneven-looking skin that wants a brighter, more radiant complexion",
+        "de": "fahle, unebenmäßig wirkende Haut, die einen strahlenden Teint möchte",
+        "nl": "een doffe, ongelijkmatige huid die er stralender en egaler wil uitzien",
+        "fr": "les peaux ternes et irrégulières qui souhaitent un teint plus lumineux et plus uniforme",
+        "es": "pieles apagadas y con tono irregular que quieren un cutis más luminoso y radiante",
+        "it": "la pelle spenta e dall'incarnato irregolare che vuole più luminosità"
+      },
+      "replace": {
+        "en": "dull-looking skin that wants a brighter-looking complexion",
+        "de": "fahl wirkende Haut, die einen heller wirkenden Teint möchte",
+        "nl": "een dof ogende huid die er helderder wil uitzien",
+        "fr": "les peaux ternes qui souhaitent un teint d'apparence plus lumineuse",
+        "es": "pieles apagadas que quieren un cutis de aspecto más luminoso",
+        "it": "la pelle spenta che vuole un incarnato dall'aspetto più luminoso"
+      }
+    },
+    {
+      "where": ["metafield:custom.key_benefits"],
+      "patterns": {
+        "en": " - supports a brighter, more radiant-looking complexion",
+        "de": " - (?:für einen helleren, strahlenderen Teint|unterstützt einen strahlender und frischer wirkenden Teint)",
+        "nl": " - (?:voor een helderdere, stralende teint|voor een stralende teint)",
+        "fr": " - (?:pour un teint visiblement plus lumineux et plus éclatant|contribue à un teint plus lumineux et plus éclatant)",
+        "es": " - favorece un cutis (?:con aspecto|visiblemente) más luminoso y radiante",
+        "it": " - per un incarnato (?:visibilmente )?più luminoso e radioso"
+      },
+      "replace": {
+        "en": " - for a brighter-looking complexion, shown in a placebo-controlled trial of the active",
+        "de": " - für einen heller wirkenden Teint, gezeigt in einer placebokontrollierten Studie des Wirkstoffs",
+        "nl": " - voor een helderder ogende teint, aangetoond in een placebogecontroleerde studie van het actieve ingrediënt",
+        "fr": " - pour un teint d'apparence plus lumineuse, démontré dans un essai contrôlé contre placebo de l'actif",
+        "es": " - para un cutis de aspecto más luminoso, demostrado en un ensayo controlado con placebo del activo",
+        "it": " - per un incarnato dall'aspetto più luminoso, dimostrato in uno studio controllato con placebo dell'attivo"
+      }
+    },
+    {
+      "where": ["metafield:custom.key_benefits"],
+      "patterns": {
+        "en": "Evens tone",
+        "de": "(?:Egalisiert den Teint|Ebenmäßiger Teint)",
+        "nl": "(?:Egaliseer de teint|Egale teint)",
+        "fr": "Unifie le teint",
+        "es": "Unifica el tono",
+        "it": "Uniforma il tono"
+      },
+      "replace": {
+        "en": "Softer-looking crow's feet",
+        "de": "Weicher wirkende Krähenfüße",
+        "nl": "Zachter ogende kraaienpootjes",
+        "fr": "Pattes-d'oie atténuées",
+        "es": "Patas de gallo más suaves",
+        "it": "Zampe di gallina attenuate"
+      }
+    },
+    {
+      "where": ["metafield:custom.key_benefits"],
+      "patterns": {
+        "en": " - for a more even-looking skin tone and the look of dark spots",
+        "de": " - (?:für ein gleichmäßigeres Hautbild und weniger sichtbare dunkle Flecken|für einen gleichmäßiger wirkenden Hautton und gegen dunkle Flecken)",
+        "nl": " - voor een egale huidtint en minder zichtbare donkere vlekken",
+        "fr": " - pour un teint (?:visiblement )?plus uniforme et des taches (?:moins visibles|brunes visiblement atténuées)",
+        "es": " - para un tono de piel (?:más uniforme y manchas visiblemente menos marcadas|visiblemente más uniforme y atenuar visiblemente las manchas oscuras)",
+        "it": " - per un incarnato più uniforme e macchie scure (?:meno visibili|visibilmente attenuate)"
+      },
+      "replace": {
+        "en": " - a secondary result of the same trial, alongside measurably smoother skin texture",
+        "de": " - ein Nebenergebnis derselben Studie, zusammen mit messbar glatterer Hauttextur",
+        "nl": " - een secundair resultaat van dezelfde studie, naast een meetbaar gladdere huidtextuur",
+        "fr": " - un résultat secondaire du même essai, avec un grain de peau mesurablement plus lisse",
+        "es": " - un resultado secundario del mismo ensayo, junto con una textura de la piel medible más lisa",
+        "it": " - un risultato secondario dello stesso studio, insieme a una grana della pelle misurabilmente più liscia"
+      }
+    },
+    {
+      "where": ["metafield:custom.key_benefits"],
+      "patterns": {
+        "en": "a fresher glow within 1[–-]2 weeks; a more even-looking tone builds over 8[–-]12 weeks",
+        "de": "ein frischer(?:er)? Glow (?:nach|innerhalb von) 1-2 Wochen; ein (?:gleichmäßigerer|ebenmäßigerer) Teint entwickelt sich über 8-12 Wochen",
+        "nl": "een frissere glow binnen 1-2 weken; een egale teint bouwt (?:zich op in|op over) 8-12 weken",
+        "fr": "un éclat plus frais (?:dès|en) 1 à 2 semaines ; un teint visiblement plus uniforme après 8 à 12 semaines",
+        "es": "un glow más fresco en 1-2 semanas; (?:el tono se ve más uniforme con el uso continuado durante|un tono visiblemente más uniforme que se consolida en) 8-12 semanas",
+        "it": "un glow più fresco (?:già nelle prime|entro) 1-2 settimane; un incarnato più uniforme (?:si costruisce nel corso di|che si consolida in) 8-12 settimane"
+      },
+      "replace": {
+        "en": "in the trial of the active, the change was measurable from week 1 and visible to 1 in 4 women by week 4; give it the full 10 weeks",
+        "de": "in der Studie zum Wirkstoff war die Veränderung ab Woche 1 messbar und bis Woche 4 für 1 von 4 Frauen sichtbar; geben Sie ihm die vollen 10 Wochen",
+        "nl": "in de studie naar het actieve ingrediënt was de verandering vanaf week 1 meetbaar en tegen week 4 voor 1 op de 4 vrouwen zichtbaar; geef het de volle 10 weken",
+        "fr": "dans l'essai de l'actif, le changement était mesurable dès la semaine 1 et visible pour 1 femme sur 4 à la semaine 4 ; accordez-lui les 10 semaines complètes",
+        "es": "en el ensayo del activo, el cambio fue medible desde la semana 1 y visible para 1 de cada 4 mujeres en la semana 4; dale las 10 semanas completas",
+        "it": "nello studio sull'attivo, il cambiamento era misurabile dalla settimana 1 e visibile a 1 donna su 4 alla settimana 4; dagli le 10 settimane complete"
+      }
+    },
+    {
+      "where": ["metaobject:faq_item.answer"],
+      "patterns": {
+        "en": "It supports a more even-looking tone and a radiant, refreshed complexion\\.",
+        "de": "Der Teint wirkt ebenmäßiger, strahlender und frischer\\.",
+        "nl": "De teint ziet er egaler uit en de huid oogt stralend en fris\\.",
+        "fr": "Il aide à obtenir un teint plus uniforme et visiblement plus lumineux\\.",
+        "es": "Ayuda a que el tono se vea más uniforme y el cutis más luminoso y descansado\\.",
+        "it": "Favorisce un incarnato più uniforme, luminoso e fresco\\."
+      },
+      "replace": {
+        "en": "It is made for a brighter-looking complexion; the active has a placebo-controlled trial behind it.",
+        "de": "Es ist für einen heller wirkenden Teint gemacht; hinter dem Wirkstoff steht eine placebokontrollierte Studie.",
+        "nl": "Het is gemaakt voor een helderder ogende teint; achter het actieve ingrediënt staat een placebogecontroleerde studie.",
+        "fr": "Il est conçu pour un teint d'apparence plus lumineuse ; l'actif a un essai contrôlé contre placebo derrière lui.",
+        "es": "Está pensado para un cutis de aspecto más luminoso; el activo tiene un ensayo controlado con placebo detrás.",
+        "it": "È pensato per un incarnato dall'aspetto più luminoso; l'attivo ha uno studio controllato con placebo alle spalle."
+      }
+    },
+    {
+      "where": ["metaobject:faq_item.answer"],
+      "patterns": {
+        "en": "to support a brighter, more even-looking complexion and to help defend the look of skin against everyday environmental stress",
+        "de": "um das Hautbild strahlender und ebenmäßiger wirken zu lassen und die Haut optisch vor alltäglichem Umweltstress zu schützen",
+        "nl": "om de teint er egaler en stralender uit te laten zien en de huid te helpen beschermen tegen de zichtbare effecten van dagelijkse omgevingsstress",
+        "fr": "pour aider à obtenir un teint plus lumineux et plus uniforme, et pour aider à préserver l.éclat de la peau face aux agressions environnementales du quotidien",
+        "es": "para ayudar a que el cutis se vea más luminoso y con un tono más uniforme, y para defender visiblemente la piel del estrés ambiental cotidiano",
+        "it": "per favorire un incarnato più luminoso e uniforme e per aiutare la pelle ad apparire protetta dallo stress ambientale quotidiano"
+      },
+      "replace": {
+        "en": "for a brighter-looking complexion; in its one controlled topical trial it brightened skin over 10 weeks",
+        "de": "für einen heller wirkenden Teint; in seiner einzigen kontrollierten Studie zur äußerlichen Anwendung hellte es die Haut über 10 Wochen auf",
+        "nl": "voor een helderder ogende teint; in zijn enige gecontroleerde studie op de huid maakte het de huid in 10 weken helderder",
+        "fr": "pour un teint d'apparence plus lumineuse ; dans son unique essai contrôlé en application cutanée, il a rendu la peau plus lumineuse en 10 semaines",
+        "es": "para un cutis de aspecto más luminoso; en su único ensayo controlado de uso tópico dio más luminosidad a la piel en 10 semanas",
+        "it": "per un incarnato dall'aspetto più luminoso; nel suo unico studio controllato per uso topico ha reso la pelle più luminosa in 10 settimane"
+      }
+    },
+    {
+      "where": ["metaobject:faq_item.answer"],
+      "patterns": {
+        "en": "supports a brighter, more even-looking tone",
+        "de": "das für einen strahlenderen und ebenmäßigeren Teint sorgt",
+        "nl": "die zorgt voor een stralende, egale teint",
+        "fr": "qui aide à obtenir un teint plus lumineux et plus uniforme",
+        "es": "que favorece un tono más luminoso y uniforme",
+        "it": "che favorisce un incarnato visibilmente più luminoso e uniforme"
+      },
+      "replace": {
+        "en": "supports a brighter-looking tone",
+        "de": "das für einen heller wirkenden Teint sorgt",
+        "nl": "die zorgt voor een helderder ogende teint",
+        "fr": "qui aide à obtenir un teint d'apparence plus lumineuse",
+        "es": "que favorece un tono de aspecto más luminoso",
+        "it": "che favorisce un incarnato dall'aspetto più luminoso"
+      }
+    },
+    {
+      "where": ["metaobject:faq_item.answer"],
+      "patterns": {
+        "en": "onto clean skin, focusing on dark spots and uneven areas\\.",
+        "de": "auf die saubere Haut drücken und dabei auf dunkle Stellen und unebenmäßige Bereiche konzentrieren\\.",
+        "nl": "op schone huid, met aandacht voor donkere vlekken en ongelijke plekken\\.",
+        "fr": "sur une peau propre, en insistant sur les taches et les zones irrégulières\\.",
+        "es": "sobre la piel limpia, concentrándote en manchas oscuras y zonas de tono irregular\\.",
+        "it": "sulla pelle pulita, concentrandoti su macchie scure e zone irregolari\\."
+      },
+      "replace": {
+        "en": "onto clean skin.",
+        "de": "auf die saubere Haut drücken.",
+        "nl": "op schone huid.",
+        "fr": "sur une peau propre.",
+        "es": "sobre la piel limpia.",
+        "it": "sulla pelle pulita."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "is a powerful antioxidant that helps support a brighter, more even-looking skin tone\\.",
+        "de": "ist ein wirkungsvolles Antioxidans, das einen strahlenderen, ebenmäßigeren Teint unterstützt\\.",
+        "nl": "is een krachtige antioxidant die de teint zichtbaar egaler en stralender maakt\\.",
+        "fr": "est un puissant antioxydant qui aide à soutenir un teint plus lumineux et plus uniforme\\.",
+        "es": "es un potente antioxidante que ayuda a conseguir un tono de piel visiblemente más luminoso y uniforme\\.",
+        "it": "è un potente antiossidante che aiuta a sostenere un incarnato più luminoso e uniforme\\."
+      },
+      "replace": {
+        "en": "is an antioxidant used for brighter-looking skin.",
+        "de": "ist ein Antioxidans, das für heller wirkende Haut eingesetzt wird.",
+        "nl": "is een antioxidant die wordt gebruikt voor een helderder ogende huid.",
+        "fr": "est un antioxydant utilisé pour une peau d'apparence plus lumineuse.",
+        "es": "es un antioxidante que se usa para una piel de aspecto más luminoso.",
+        "it": "è un antiossidante usato per una pelle dall'aspetto più luminoso."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "produced a significantly more even-looking skin tone versus placebo \\(Watanabe 2014\\)\\.",
+        "de": "einen deutlich ebenmäßigeren Teint im Vergleich zu Placebo \\(Watanabe 2014\\)\\.",
+        "nl": "voor een significant meer egaal ogende huidtint ten opzichte van placebo \\(Watanabe 2014\\)\\.",
+        "fr": "a produit un teint visiblement plus uniforme par rapport au placebo \\(Watanabe 2014\\)\\.",
+        "es": "produjo un tono de piel visiblemente más uniforme frente al placebo \\(Watanabe 2014\\)\\.",
+        "it": "ha prodotto un incarnato visibilmente più uniforme rispetto al placebo \\(Watanabe 2014\\)\\."
+      },
+      "replace": {
+        "en": "produced significantly brighter-looking skin than placebo, measured as a lower melanin index; the trial was run by the ingredient's manufacturer (Watanabe 2014).",
+        "de": "deutlich heller wirkende Haut als Placebo, gemessen als niedrigerer Melaninindex; die Studie wurde vom Hersteller des Wirkstoffs durchgeführt (Watanabe 2014).",
+        "nl": "voor een significant helderder ogende huid dan placebo, gemeten als een lagere melanine-index; de studie werd uitgevoerd door de fabrikant van het ingrediënt (Watanabe 2014).",
+        "fr": "a produit une peau nettement plus lumineuse que le placebo, mesurée par un indice de mélanine plus bas ; l'essai a été mené par le fabricant de l'ingrédient (Watanabe 2014).",
+        "es": "produjo una piel significativamente más luminosa que el placebo, medida como un índice de melanina más bajo; el ensayo lo realizó el fabricante del ingrediente (Watanabe 2014).",
+        "it": "ha prodotto una pelle significativamente più luminosa del placebo, misurata come un indice di melanina più basso; lo studio è stato condotto dal produttore dell'ingrediente (Watanabe 2014)."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "The look of dark spots, uneven tone, dullness and a lacklustre complexion\\.",
+        "de": "dunkle Flecken, ungleichmäßigen Teint, Mattigkeit und fahle Haut\\.",
+        "nl": "Donkere vlekken, ongelijkmatige tint, doffe teint en een vale huid die zichtbaar minder worden\\.",
+        "fr": "Les taches brunes visibles, le teint irrégulier, la peau terne et le manque d.éclat\\.",
+        "es": "manchas oscuras visibles, tono irregular, piel apagada y falta de luminosidad\\.",
+        "it": "L.aspetto delle macchie scure, il tono irregolare, la pelle spenta e l.incarnato privo di luminosità\\."
+      },
+      "replace": {
+        "en": "Dullness and a lacklustre complexion that wants a brighter look.",
+        "de": "Mattigkeit und fahle Haut, die heller wirken soll.",
+        "nl": "Een doffe, vale teint die er helderder wil uitzien.",
+        "fr": "La peau terne et le manque d'éclat, pour un teint d'apparence plus lumineuse.",
+        "es": "Piel apagada y falta de luminosidad, para un aspecto más luminoso.",
+        "it": "La pelle spenta e l'incarnato privo di luminosità, per un aspetto più luminoso."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "Yes\\. Unlike some harsh brightening approaches that can irritate the skin, glutathione is a gentle antioxidant that supports a brighter, more even-looking tone without stressing the skin\\. It.s well suited to long-term daily use\\.",
+        "de": "Ja\\. Anders als manche aggressiven Brightening-Ansätze, die die Haut reizen können, ist Glutathion ein sanftes Antioxidans, das einen strahlenderen, ebenmäßigeren Teint unterstützt, ohne die Haut zu belasten\\. Es eignet sich gut für die langfristige tägliche Anwendung\\.",
+        "nl": "Ja\\. In tegenstelling tot sommige agressieve brightening-methoden die de huid kunnen irriteren, is glutathione een milde antioxidant die de teint zichtbaar stralender en egaler maakt zonder de huid te belasten\\. Het is goed geschikt voor dagelijks gebruik op de lange termijn\\.",
+        "fr": "Oui\\. Contrairement à certaines approches agressives qui peuvent irriter la peau, le glutathion est un antioxydant doux qui favorise un teint plus lumineux et plus uniforme sans stresser la peau\\. Il convient parfaitement à une utilisation quotidienne sur le long terme\\.",
+        "es": "Sí\\. A diferencia de algunos métodos agresivos que pueden irritar la piel, el glutatión es un antioxidante suave que favorece un tono más luminoso y uniforme sin estresar la piel\\. Es muy adecuado para el uso diario a largo plazo\\.",
+        "it": "Sì\\. A differenza di alcuni approcci aggressivi che possono irritare la pelle, il glutatione è un antiossidante delicato che favorisce un incarnato più luminoso e uniforme senza stressare la pelle\\. È adatto all.uso quotidiano a lungo termine\\."
+      },
+      "replace": {
+        "en": "In its 10-week clinical trial, twice-daily use was well tolerated: all 30 women completed the study and no reactions were attributed to glutathione. Use beyond 10 weeks has not been studied. If it is new to you, patch-test first.",
+        "de": "In seiner klinischen 10-Wochen-Studie wurde die zweimal tägliche Anwendung gut vertragen: Alle 30 Frauen schlossen die Studie ab, und keine Reaktion wurde dem Glutathion zugeschrieben. Eine Anwendung über 10 Wochen hinaus wurde nicht untersucht. Wenn es neu für Sie ist, machen Sie zuerst einen Patch-Test.",
+        "nl": "In zijn klinische studie van 10 weken werd tweemaal daags gebruik goed verdragen: alle 30 vrouwen voltooiden de studie en geen enkele reactie werd aan glutathion toegeschreven. Gebruik langer dan 10 weken is niet onderzocht. Is het nieuw voor je, test dan eerst op een klein stukje huid.",
+        "fr": "Dans son essai clinique de 10 semaines, l'application biquotidienne a été bien tolérée : les 30 femmes ont terminé l'étude et aucune réaction n'a été attribuée au glutathion. L'usage au-delà de 10 semaines n'a pas été étudié. Si c'est nouveau pour vous, faites d'abord un test cutané.",
+        "es": "En su ensayo clínico de 10 semanas, el uso dos veces al día se toleró bien: las 30 mujeres completaron el estudio y ninguna reacción se atribuyó al glutatión. El uso más allá de 10 semanas no se ha estudiado. Si es nuevo para ti, haz antes una prueba en una zona pequeña.",
+        "it": "Nel suo studio clinico di 10 settimane, l'uso due volte al giorno è stato ben tollerato: tutte le 30 donne hanno completato lo studio e nessuna reazione è stata attribuita al glutatione. L'uso oltre le 10 settimane non è stato studiato. Se è nuovo per te, fai prima un patch test."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "Glutathione supports a brighter, more even-looking complexion, which can help with the look of both sun-related dark spots and general unevenness\\. Results vary - isolated dark spots often respond faster than widespread unevenness\\.",
+        "de": "Glutathion unterstützt einen strahlenderen, ebenmäßigeren Teint und kann sichtbar gegen sonnenbedingte dunkle Flecken und allgemeine Ungleichmäßigkeiten wirken\\. Die Ergebnisse variieren - einzelne dunkle Flecken sprechen oft schneller an als weit verbreitete Ungleichmäßigkeiten\\.",
+        "nl": "Glutathione helpt de teint zichtbaar helderder en egaler te maken, wat zowel bij zongerelateerde donkere vlekken als bij algemene ongelijkmatigheid merkbaar kan zijn\\. Resultaten variëren - afzonderlijke donkere vlekken reageren vaak sneller dan wijdverspreide ongelijkmatigheid\\.",
+        "fr": "Le glutathion favorise un teint plus lumineux et plus uniforme, ce qui peut aider à atténuer visiblement les taches liées au soleil comme les irrégularités générales\\. Les résultats varient - les taches isolées répondent souvent plus rapidement qu.une irrégularité généralisée\\.",
+        "es": "El glutatión favorece un tono más luminoso y uniforme, lo que puede mejorar el aspecto tanto de las manchas solares como de la irregularidad general\\. Los resultados varían: las manchas localizadas suelen responder más rápido que la irregularidad generalizada\\.",
+        "it": "Il glutatione favorisce un incarnato più luminoso e uniforme, il che può aiutare con l.aspetto sia delle macchie solari sia dell.irregolarità diffusa\\. I risultati variano - le macchie isolate spesso rispondono più rapidamente rispetto all.irregolarità generalizzata\\."
+      },
+      "replace": {
+        "en": "Glutathione is used for a brighter-looking complexion. Its controlled trial measured overall skin pigment, not dark spots or evenness, so we do not claim that it fades them.",
+        "de": "Glutathion wird für einen heller wirkenden Teint eingesetzt. Seine kontrollierte Studie hat das Hautpigment insgesamt gemessen, nicht dunkle Flecken oder die Gleichmäßigkeit; deshalb behaupten wir nicht, dass es sie verblassen lässt.",
+        "nl": "Glutathion wordt gebruikt voor een helderder ogende teint. Zijn gecontroleerde studie mat het huidpigment als geheel, niet donkere vlekken of egaliteit, dus we beweren niet dat het die vervaagt.",
+        "fr": "Le glutathion est utilisé pour un teint d'apparence plus lumineuse. Son essai contrôlé a mesuré le pigment global de la peau, pas les taches ni l'uniformité ; nous n'affirmons donc pas qu'il les atténue.",
+        "es": "El glutatión se usa para un cutis de aspecto más luminoso. Su ensayo controlado midió el pigmento general de la piel, no las manchas ni la uniformidad, así que no afirmamos que las atenúe.",
+        "it": "Il glutatione si usa per un incarnato dall'aspetto più luminoso. Il suo studio controllato ha misurato il pigmento complessivo della pelle, non le macchie né l'uniformità, quindi non affermiamo che le attenui."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "Improved glow from hydration and antioxidant protection: 1-2 weeks\\. A visibly more even-looking tone: 4-6 weeks\\. A noticeably more even complexion: 10-12 weeks\\. Clinical studies used 10-week protocols\\.",
+        "de": "Verbesserter Glow durch Feuchtigkeit und antioxidativen Schutz: 1-2 Wochen\\. Ein sichtbar ebenmäßigerer Teint: 4-6 Wochen\\. Ein merklich gleichmäßigerer Teint: 10-12 Wochen\\. Klinische Studien verwendeten 10-Wochen-Protokolle\\.",
+        "nl": "Meer glow door hydratatie en antioxidantbescherming: 1-2 weken\\. Een zichtbaar egaler teint: 4-6 weken\\. Een merkbaar egaler teint: 10-12 weken\\. Klinische studies gebruikten protocollen van 10 weken\\.",
+        "fr": "Éclat amélioré grâce à l.hydratation et à la protection antioxydante : 1 à 2 semaines\\. Un teint visiblement plus uniforme : 4 à 6 semaines\\. Un teint nettement plus homogène : 10 à 12 semaines\\. Les études cliniques utilisaient des protocoles de 10 semaines\\.",
+        "es": "Mayor luminosidad gracias a la hidratación y la protección antioxidante: 1-2 semanas\\. Un tono visiblemente más uniforme: 4-6 semanas\\. Un tono notablemente más uniforme: 10-12 semanas\\. Los estudios clínicos utilizaron protocolos de 10 semanas\\.",
+        "it": "Glow migliorato grazie all.idratazione e alla protezione antiossidante: 1-2 settimane\\. Un tono visibilmente più uniforme: 4-6 settimane\\. Un incarnato notevolmente più uniforme: 10-12 settimane\\. Gli studi clinici hanno utilizzato protocolli di 10 settimane\\."
+      },
+      "replace": {
+        "en": "The key trial of topical glutathione ran 10 weeks: the pigment reading was lower from week 1, and 1 in 4 women could see a slight change by week 4. Give it the full 10 weeks, twice a day, and keep it up, because reviews describe the brightening as temporary.",
+        "de": "Die wichtigste Studie zu äußerlich angewendetem Glutathion lief 10 Wochen: Der Pigmentwert war ab Woche 1 niedriger, und 1 von 4 Frauen sah bis Woche 4 eine leichte Veränderung. Geben Sie ihm die vollen 10 Wochen, zweimal täglich, und bleiben Sie dabei, denn Übersichtsarbeiten beschreiben die Aufhellung als vorübergehend.",
+        "nl": "De belangrijkste studie naar glutathion op de huid duurde 10 weken: de pigmentmeting was vanaf week 1 lager, en 1 op de 4 vrouwen zag tegen week 4 een lichte verandering. Geef het de volle 10 weken, tweemaal daags, en houd het vol, want reviews beschrijven de verheldering als tijdelijk.",
+        "fr": "L'essai clé du glutathion cutané a duré 10 semaines : la mesure du pigment était plus basse dès la semaine 1, et 1 femme sur 4 voyait un léger changement à la semaine 4. Accordez-lui les 10 semaines complètes, deux fois par jour, et poursuivez, car les revues décrivent l'effet éclat comme temporaire.",
+        "es": "El ensayo clave del glutatión tópico duró 10 semanas: la lectura del pigmento fue más baja desde la semana 1, y 1 de cada 4 mujeres veía un ligero cambio en la semana 4. Dale las 10 semanas completas, dos veces al día, y mantenlo, porque las revisiones describen la luminosidad como temporal.",
+        "it": "Lo studio chiave sul glutatione topico è durato 10 settimane: la lettura del pigmento era più bassa dalla settimana 1, e 1 donna su 4 vedeva un leggero cambiamento alla settimana 4. Dagli le 10 settimane complete, due volte al giorno, e continua, perché le revisioni descrivono la luminosità come temporanea."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "Yes\\. Glutathione is naturally produced by every cell in the body\\. It supports a brighter, more even-looking tone gently, making it suitable for all skin types and tones\\. It has an excellent safety profile with no significant adverse effects reported in clinical studies\\.",
+        "de": "Ja\\. Glutathion wird von jeder Körperzelle natürlich produziert\\. Es unterstützt sanft einen strahlenderen, ebenmäßigeren Teint und ist für alle Hauttypen und Hauttöne geeignet\\. Es hat ein ausgezeichnetes Sicherheitsprofil - in klinischen Studien wurden keine nennenswerten unerwünschten Wirkungen berichtet\\.",
+        "nl": "Ja\\. Glutathione wordt van nature aangemaakt door elke cel in het lichaam\\. Het maakt de teint op milde wijze zichtbaar helderder en egaler, waardoor het geschikt is voor alle huidtypen en -tinten\\. Het heeft een uitstekend veiligheidsprofiel zonder significante bijwerkingen die zijn gemeld in klinische studies\\.",
+        "fr": "Oui\\. Le glutathion est naturellement produit par chaque cellule de l.organisme\\. Il favorise un teint plus lumineux et plus uniforme en douceur, ce qui le rend adapté à tous les types et carnations de peau\\. Son profil de tolérance est excellent, sans effets indésirables significatifs rapportés dans les études cliniques\\.",
+        "es": "Sí\\. El glutatión lo produce de forma natural cada célula del organismo\\. Favorece un tono más luminoso y uniforme de manera suave, lo que lo hace adecuado para todo tipo de pieles y tonos\\. Tiene un excelente perfil de seguridad y no se han notificado efectos adversos significativos en estudios clínicos\\.",
+        "it": "Sì\\. Il glutatione è prodotto naturalmente da ogni cellula dell.organismo\\. Favorisce un incarnato più luminoso e uniforme in modo delicato, rendendolo adatto a tutti i tipi e toni di pelle\\. Ha un ottimo profilo di sicurezza, senza effetti avversi significativi riportati negli studi clinici\\."
+      },
+      "replace": {
+        "en": "Its clinical trial studied 30 women with medium skin tones (types III and IV), all of whom completed 10 weeks of twice-daily use with no reactions attributed to glutathione. Lighter and darker skin tones have not been studied, and a 2025 review calls the safety data across topical trials limited. As with any new product, patch-test first.",
+        "de": "Die klinische Studie untersuchte 30 Frauen mit mittleren Hauttönen (Hauttypen III und IV), die alle 10 Wochen zweimal tägliche Anwendung abschlossen, ohne dass eine Reaktion dem Glutathion zugeschrieben wurde. Hellere und dunklere Hauttöne wurden nicht untersucht, und eine Übersichtsarbeit von 2025 nennt die Sicherheitsdaten der Studien zur äußerlichen Anwendung begrenzt. Wie bei jedem neuen Produkt: zuerst einen Patch-Test machen.",
+        "nl": "De klinische studie onderzocht 30 vrouwen met een middelgetinte huid (huidtype III en IV), die allemaal 10 weken van tweemaal daags gebruik voltooiden zonder dat een reactie aan glutathion werd toegeschreven. Lichtere en donkerdere huidtinten zijn niet onderzocht, en een review uit 2025 noemt de veiligheidsgegevens van de studies op de huid beperkt. Zoals bij elk nieuw product: test eerst op een klein stukje huid.",
+        "fr": "Son essai clinique a porté sur 30 femmes aux carnations moyennes (phototypes III et IV), qui ont toutes terminé 10 semaines d'application biquotidienne sans qu'aucune réaction ne soit attribuée au glutathion. Les carnations plus claires et plus foncées n'ont pas été étudiées, et une revue de 2025 juge limitées les données de sécurité des essais cutanés. Comme pour tout nouveau produit, faites d'abord un test cutané.",
+        "es": "Su ensayo clínico estudió a 30 mujeres con tonos de piel medios (fototipos III y IV), que completaron 10 semanas de uso dos veces al día sin que ninguna reacción se atribuyera al glutatión. Los tonos de piel más claros y más oscuros no se han estudiado, y una revisión de 2025 considera limitados los datos de seguridad de los ensayos tópicos. Como con cualquier producto nuevo, haz antes una prueba en una zona pequeña.",
+        "it": "Il suo studio clinico ha coinvolto 30 donne con toni di pelle medi (fototipi III e IV), che hanno completato tutte 10 settimane di uso due volte al giorno senza che alcuna reazione fosse attribuita al glutatione. I toni di pelle più chiari e più scuri non sono stati studiati, e una revisione del 2025 giudica limitati i dati sulla sicurezza degli studi topici. Come per ogni nuovo prodotto, fai prima un patch test."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": " Even 15 minutes of unprotected sun can undo weeks of progress toward a brighter complexion\\.",
+        "de": " Schon 15 Minuten ungeschützter Sonne können wochenlangen Fortschritt auf dem Weg zu einem strahlenderen Teint zunichtemachen\\.",
+        "nl": " Zelfs 15 minuten onbeschermd in de zon kan weken van vooruitgang naar een helderdere teint tenietdoen\\.",
+        "fr": " Même 15 minutes de soleil sans protection peuvent annuler des semaines de progrès vers un teint plus lumineux\\.",
+        "es": " Incluso 15 minutos de sol sin protección pueden echar por tierra semanas de progreso hacia un tono más luminoso\\.",
+        "it": " Anche soli 15 minuti di sole senza protezione possono vanificare settimane di progressi verso un incarnato più luminoso\\."
+      },
+      "replace": {"en": "", "de": "", "nl": "", "fr": "", "es": "", "it": ""}
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "support luminosity, a more even-looking skin tone, and protection against oxidative dullness\\.",
+        "de": "Leuchtkraft, einen ebenmäßigeren Teint und Schutz vor oxidativer Mattigkeit unterstützen\\.",
+        "nl": "zorgen voor glow, een egale teint en bescherming tegen een doffe huid\\.",
+        "fr": "soutiennent la luminosité, un teint plus uniforme et la protection contre la ternissement oxydatif\\.",
+        "es": "favorecen la luminosidad, un tono de piel visiblemente más uniforme y la protección frente al apagamiento oxidativo\\.",
+        "it": "supportano la luminosità, un incarnato visibilmente più uniforme e la protezione contro l.opacità da stress ossidativo\\."
+      },
+      "replace": {
+        "en": "support luminosity and a brighter-looking skin tone, and help protect against oxidative dullness.",
+        "de": "Leuchtkraft und einen heller wirkenden Teint unterstützen und vor oxidativer Mattigkeit schützen helfen.",
+        "nl": "zorgen voor glow en een helderder ogende teint, en helpen beschermen tegen een doffe huid.",
+        "fr": "soutiennent la luminosité et un teint d'apparence plus lumineuse, et aident à protéger contre le ternissement oxydatif.",
+        "es": "favorecen la luminosidad y un tono de piel de aspecto más luminoso, y ayudan a proteger frente al apagamiento oxidativo.",
+        "it": "supportano la luminosità e un incarnato dall'aspetto più luminoso, e aiutano a proteggere dall'opacità da stress ossidativo."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "1\\. Even-Looking Tone</strong> - Glutathione, Nonapeptide-1 and Tetrapeptide-1 support a brighter, more even-looking complexion\\.",
+        "de": "1\\. Ebenmäßiger Teint</strong> - Glutathion, Nonapeptide-1 und Tetrapeptide-1 unterstützen einen strahlenderen, ebenmäßigeren Teint\\.",
+        "nl": "1\\. Egale teint</strong> - Glutathione, Nonapeptide-1 en Tetrapeptide-1 maken de teint zichtbaar egaler en stralender\\.",
+        "fr": "1\\. Teint uniforme</strong> - Le Glutathione, le Nonapeptide-1 et le Tetrapeptide-1 favorisent un teint plus lumineux et plus uniforme\\.",
+        "es": "1\\. Tono más uniforme</strong> - Glutathione, Nonapeptide-1 y Tetrapeptide-1 favorecen un tono más luminoso y uniforme\\.",
+        "it": "1\\. Tono più uniforme</strong> - Glutathione, Nonapeptide-1 e Tetrapeptide-1 favoriscono un incarnato più luminoso e uniforme\\."
+      },
+      "replace": {
+        "en": "1. Brighter-Looking Tone</strong> - Glutathione, Nonapeptide-1 and Tetrapeptide-1 are chosen for a brighter-looking complexion.",
+        "de": "1. Heller wirkender Teint</strong> - Glutathion, Nonapeptide-1 und Tetrapeptide-1 sind für einen heller wirkenden Teint ausgewählt.",
+        "nl": "1. Helderder ogende teint</strong> - Glutathione, Nonapeptide-1 en Tetrapeptide-1 zijn gekozen voor een helderder ogende teint.",
+        "fr": "1. Teint plus lumineux</strong> - Le Glutathione, le Nonapeptide-1 et le Tetrapeptide-1 sont choisis pour un teint d'apparence plus lumineuse.",
+        "es": "1. Tono más luminoso</strong> - Glutathione, Nonapeptide-1 y Tetrapeptide-1 se eligen para un cutis de aspecto más luminoso.",
+        "it": "1. Tono più luminoso</strong> - Glutathione, Nonapeptide-1 e Tetrapeptide-1 sono scelti per un incarnato dall'aspetto più luminoso."
+      }
+    }
+  ]
+}

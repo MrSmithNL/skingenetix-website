@@ -143,6 +143,14 @@ def register(hu, template, key, values):
     return locs
 
 
+def hub_cfg(cfg, hub):
+    """A hub rebuilt after the credit was first given carries its own review date (schema.org lastReviewed is
+    the date the page's content was last checked): the glutathione hub was rebuilt on 2026-09-23 while the
+    other four were reviewed on 2026-09-22, and one config-wide date left the visible byline and the JSON-LD
+    disagreeing on that page."""
+    return {**cfg, "reviewed": hub.get("reviewed", cfg["reviewed"])}
+
+
 def sync_spec(spec, byline_key, edit, cfg, add):
     """Keep the hub spec (source of truth) in step with the live page."""
     at = byline_key.replace(".", "/")
@@ -183,6 +191,7 @@ def main():
         template = spec["template"]
         hdr, j = hu.split(hu.read_file(template))
         sec, blk, key = h["byline"].split(".")
+        hcfg = hub_cfg(cfg, h)
         settings = j["sections"][sec]["blocks"][blk]["settings"]
         tr, stale = translations(hu, template)
         if stale:
@@ -194,10 +203,10 @@ def main():
         bad = [l for l, v in values.items() if v is None]
         host = h["jsonld_host"]
         host_html = j["sections"][host]["settings"]["html"]
-        host_values = {"en": jsonld_edit(host_html, cfg, add)}
+        host_values = {"en": jsonld_edit(host_html, hcfg, add)}
         for loc in LOCALES:
             if tr[loc].get(f"{host}.html"):
-                host_values[loc] = jsonld_edit(tr[loc][f"{host}.html"], cfg, add)
+                host_values[loc] = jsonld_edit(tr[loc][f"{host}.html"], hcfg, add)
         print(f"  {spec['page']:<34} byline {'✗ not found in ' + str(bad) if bad else '✓ 6 languages'}"
               f" · JSON-LD {'✓' if host_values['en'] else '✗ none'} (translated copies: {len(host_values) - 1})")
         if bad or not host_values["en"]:
@@ -213,7 +222,7 @@ def main():
         hu.upload(template, hdr, j)
         done = register(hu, template, h["byline"], values)
         extra = register(hu, template, f"{host}.html", host_values) if len(host_values) > 1 else []
-        state = sync_spec(spec, h["byline"], edit, cfg, add)
+        state = sync_spec(spec, h["byline"], edit, hcfg, add)
         spec_path.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n")
         print(f"      ✓ live: byline en + {len(done)} translations, JSON-LD en + {len(extra)} · spec {state}")
 

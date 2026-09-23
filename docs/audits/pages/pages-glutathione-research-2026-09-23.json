@@ -1,0 +1,987 @@
+{
+ "path": "/pages/glutathione-research",
+ "scores": {
+  "SEO": 100,
+  "GEO": 100,
+  "DESIGN": 100,
+  "MARKETING": 100
+ },
+ "items": [
+  {
+   "area": "SEO",
+   "check": "HTTP 200, no redirect",
+   "ok": true,
+   "detail": "200 \u2192 https://www.skingenetix.com/pages/glutathione-research",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
+   "ok": true,
+   "detail": "/pages/glutathione-research",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "URL carries the head term",
+   "ok": true,
+   "detail": "head term 'glutathione'",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Title present, 30\u201360 chars",
+   "ok": true,
+   "detail": "57c: Glutathione for Skin: Benefits, Studies and How to Use It",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Title contains head term",
+   "ok": true,
+   "detail": "'glutathione'",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description 70\u2013160 chars",
+   "ok": true,
+   "detail": "155c",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description contains head term",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Indexable (no noindex)",
+   "ok": true,
+   "detail": "no robots meta",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Self-referencing absolute canonical",
+   "ok": true,
+   "detail": "https://www.skingenetix.com/pages/glutathione-research",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "hreflang for all 6 locales + x-default",
+   "ok": true,
+   "detail": "7 alternates",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Open Graph title/description/image/url",
+   "ok": true,
+   "detail": "complete",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "og:title matches the page title",
+   "ok": true,
+   "detail": "Glutathione for Skin: Benefits, Studies and How to Use It",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Exactly one <h1>",
+   "ok": true,
+   "detail": "Glutathione for Skin (GSH and GSSG)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "glutathione for skin gsh and gssg the antioxidant tripeptide the body makes itself in its one controlled topical trial 2 oxidised glutathion",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": true,
+   "detail": "10 weeks",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 2.0 per 100 words (science page)",
+   "ok": true,
+   "detail": "0.0/100 words: []",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Path to purchase: links to at least one product",
+   "ok": true,
+   "detail": "3 products linked",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": true,
+   "detail": "0 unsourced: []",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "SEO",
+   "check": "<h1> contains head term",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Topic headings are real <h2> (\u2265 3)",
+   "ok": true,
+   "detail": "13 <h2>: ['What Is Glutathione?', 'Glutathione Skin Benefits: What the Evidence Shows', '\u221210.7%', '77%', 'Week 1', 'Glutathione Before and After: What the Trial Measured', 'Glutathione Evidence at a Glance', 'How to Use Topical Glutathione', 'Topical vs Oral Glutathione: Two Different Questions', 'Published References', 'Frequently Asked Questions', 'Shop Glutathione Products', 'Explore More Research']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Visual-only headings (styled <p>/<span>)",
+   "ok": false,
+   "detail": "6 that look like headings but are not: ['UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)', 'Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'PDRN', 'Explore Our Glutathione Formulations']",
+   "severity": "info",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "No skipped heading levels",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Content images have alt text",
+   "ok": true,
+   "detail": "15/15",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Images declare width/height (CLS)",
+   "ok": true,
+   "detail": "0 without",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Internal links in content \u2265 5",
+   "ok": true,
+   "detail": "22 unique",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "No links inside tables (AI extraction drops the table)",
+   "ok": true,
+   "detail": "0 found",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "All JSON-LD parses",
+   "ok": true,
+   "detail": "0 invalid block(s)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "No duplicate schema types",
+   "ok": true,
+   "detail": "types ['BreadcrumbList', 'WebPage', 'FAQPage']",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Page entity schema (WebPage/Article) with dateModified",
+   "ok": true,
+   "detail": "WebPage modified 2026-09-23",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "Schema cites sources (citation[])",
+   "ok": true,
+   "detail": "14 citations",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Reviewer/author in schema (reviewedBy/author)",
+   "ok": true,
+   "detail": "pending Dr Bodde's review",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "BreadcrumbList present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "FAQ schema matches visible questions",
+   "ok": true,
+   "detail": "6 Qs; not visible: []",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A10 \u00b7 head term in first 30% of text",
+   "ok": true,
+   "detail": "'glutathione'",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
+   "ok": true,
+   "detail": "is a",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "A8 \u00b7 secondary intents covered on the page",
+   "ok": true,
+   "detail": "['glutathione for skin', 'brightening'] / ['glutathione for skin', 'brightening']",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
+   "ok": true,
+   "detail": "80 paragraphs, 0 too long",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
+   "ok": true,
+   "detail": "26",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
+   "ok": true,
+   "detail": "121 figures",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 cited sources \u2265 3",
+   "ok": true,
+   "detail": "105 citation markers",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "E3 \u00b7 cites recent research (2024+)",
+   "ok": true,
+   "detail": "latest 2026",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "E1 \u00b7 visible last-reviewed/updated date",
+   "ok": true,
+   "detail": "Last reviewed",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A6 \u00b7 structured list or table present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A4 \u00b7 headings mirror search questions",
+   "ok": true,
+   "detail": "1 question-form H2",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
+   "ok": true,
+   "detail": "3423 words extracted (main text 3811)",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "Head term survives extraction",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "H2 sections survive extraction",
+   "ok": true,
+   "detail": "13 kept",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "D1 \u00b7 robots.txt allows the major AI crawlers",
+   "ok": true,
+   "detail": "all allowed",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Page listed in XML sitemap",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "llms.txt present (evidence: fetched 0\u00d7 by frontier crawlers \u2014 not scored)",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No blank band between header and first section",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "No empty-but-tall sections",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "Section backgrounds alternate",
+   "ok": true,
+   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 Bone \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 Graphite",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Backgrounds on the brand palette",
+   "ok": true,
+   "detail": "Bone / White / Graphite",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (desktop)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (mobile)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  }
+ ],
+ "data": {
+  "title": "Glutathione for Skin: Benefits, Studies and How to Use It",
+  "h1": [
+   "Glutathione for Skin (GSH and GSSG)"
+  ],
+  "h2": [
+   "What Is Glutathione?",
+   "Glutathione Skin Benefits: What the Evidence Shows",
+   "\u221210.7%",
+   "77%",
+   "Week 1",
+   "Glutathione Before and After: What the Trial Measured",
+   "Glutathione Evidence at a Glance",
+   "How to Use Topical Glutathione",
+   "Topical vs Oral Glutathione: Two Different Questions",
+   "Published References",
+   "Frequently Asked Questions",
+   "Shop Glutathione Products",
+   "Explore More Research"
+  ],
+  "pseudo_headings": [
+   "UV Redness: a Different, Fat-Linked Form of Glutathione (10 Volunteers)",
+   "Copper Peptide (GHK-Cu)",
+   "Acetyl Hexapeptide-8",
+   "Matrixyl 3000",
+   "PDRN",
+   "Explore Our Glutathione Formulations"
+  ],
+  "internal_links": [
+   "/collections/all",
+   "/collections/creams-moisturizers",
+   "/collections/glutathione",
+   "/collections/serums",
+   "/pages/acetyl-hexapeptide-8-research",
+   "/pages/brightening-glow",
+   "/pages/contact",
+   "/pages/copper-peptide-research",
+   "/pages/faq",
+   "/pages/ingredients",
+   "/pages/matrixyl-3000-research",
+   "/pages/our-philosophy",
+   "/pages/pdrn-research",
+   "/pages/shipping-returns",
+   "/pages/the-science",
+   "/policies/contact-information",
+   "/policies/legal-notice",
+   "/policies/privacy-policy",
+   "/policies/refund-policy",
+   "/policies/shipping-policy",
+   "/policies/terms-of-service",
+   "/products/glutathione-brightening-serum"
+  ],
+  "external_links": [
+   "https://doi.org/10.4081/dr.2019.8013",
+   "https://pubmed.ncbi.nlm.nih.gov/11710935/",
+   "https://pubmed.ncbi.nlm.nih.gov/20524875/",
+   "https://pubmed.ncbi.nlm.nih.gov/25378941/",
+   "https://pubmed.ncbi.nlm.nih.gov/26148180/",
+   "https://pubmed.ncbi.nlm.nih.gov/28399620/",
+   "https://pubmed.ncbi.nlm.nih.gov/28490897/",
+   "https://pubmed.ncbi.nlm.nih.gov/28512843/",
+   "https://pubmed.ncbi.nlm.nih.gov/29445569/",
+   "https://pubmed.ncbi.nlm.nih.gov/30895708/",
+   "https://pubmed.ncbi.nlm.nih.gov/33871071/",
+   "https://pubmed.ncbi.nlm.nih.gov/39326871/",
+   "https://pubmed.ncbi.nlm.nih.gov/39444151/",
+   "https://pubmed.ncbi.nlm.nih.gov/41416233/"
+  ],
+  "schema_types": [
+   "BreadcrumbList",
+   "WebPage",
+   "FAQPage"
+  ],
+  "extracted_words": 3423,
+  "main_words": 3811,
+  "images": [
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-master-antioxidant-brightening-research.jpg?v=1787662690&width=2048",
+    "alt": "A shallow dish of champagne-coloured glutathione solution glowing on a graphite surface - glutathione antioxidant research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-gssg-glutathione-skin-tone-clinical-trial-before-after.jpg?v=1787831286&width=2048",
+    "alt": "Illustration: two close photographs of the same woman's face taken weeks apart side by side, the later one showing more even-looking skin tone across the nose and cheeks while her freckles and cheek mole remain unchanged"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-defence-uv-oxidative-stress-diagram.jpg?v=1787821441&width=3000",
+    "alt": "Illustrated cross-section of skin with a continuous layer of clear spheres resting on the surface, each holding a three-bead glutathione molecule, turning away shafts of daylight and dark airborne particles"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-radiance-uneven-skin-tone-before-after.jpg?v=1787830671&width=2048",
+    "alt": "Illustration: two close photographs of the same woman's freckled cheek taken weeks apart side by side, the later one showing clearer, more even-looking skin between the freckles, which remain unchanged"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-radiant-glow-serum-dropper-application.jpg?v=1787833359&width=1254",
+    "alt": "Woman applying Skingenetix Glutathione Radiant Glow Serum to her cheek with a dropper, holding the bottle in her other hand"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-antioxidant-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
+    "alt": "Single skin cell glowing warm champagne gold under laboratory light, representing glutathione antioxidant and brightening research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg?v=1787832493&width=2048",
+    "alt": "A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg?v=1787832493&width=2048",
+    "alt": "A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg?v=1787233764&width=2048",
+    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - bottle beside its gold carton on white"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_hands_only_dropper_2_skingenetix.jpg?v=1787233766&width=2048",
+    "alt": "Skingenetix Glutathione Brightening Serum, 2% glutathione, 30ml - hands lifting the glass dropper from the bottle"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-fibroblast-collagen-matrix.jpg?v=1787656745&width=1400",
+    "alt": "Spindle-shaped fibroblast cell embedded in a fine collagen matrix network, imaged in clinical blue, representing how the copper peptide GHK-Cu supports the skin's collagen structure"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
+    "alt": "Electron-microscope style view of a single skin cell in cool pearl grey, representing Acetyl Hexapeptide-8 expression-line research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg?v=1787650938&width=2048",
+    "alt": "Translucent open cellular matrix structure lit against a deep emerald-teal background, representing the Matrixyl 3000 peptide's role in the skin's collagen network"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?v=1787656228&width=2048",
+    "alt": "Polynucleotide double helix rendered in soft blush pink, representing PDRN skin repair and renewal research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
+    "alt": "Skingenetix logo (black)"
+   }
+  ]
+ },
+ "design": {
+  "desktop": {
+   "headerBottom": 126,
+   "rows": [
+    {
+     "id": "hero",
+     "type": "image-with-text-overlay",
+     "top": 126,
+     "h": 440,
+     "bg": "rgb(240, 240, 240)",
+     "text": 264,
+     "media": 1
+    },
+    {
+     "id": "overview",
+     "type": "rich-text",
+     "top": 566,
+     "h": 1010,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1767,
+     "media": 0
+    },
+    {
+     "id": "evidence",
+     "type": "rich-text",
+     "top": 1575,
+     "h": 1378,
+     "bg": "rgb(255, 255, 255)",
+     "text": 3791,
+     "media": 0
+    },
+    {
+     "id": "stats",
+     "type": "impact-text",
+     "top": 2953,
+     "h": 382,
+     "bg": "rgb(240, 240, 240)",
+     "text": 609,
+     "media": 0
+    },
+    {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 3335,
+     "h": 1293,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1982,
+     "media": 0
+    },
+    {
+     "id": "key_findings_ba1",
+     "type": "research-before-after",
+     "top": 4629,
+     "h": 1034,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1133,
+     "media": 1
+    },
+    {
+     "id": "key_findings",
+     "type": "media-with-text",
+     "top": 5663,
+     "h": 884,
+     "bg": "rgb(240, 240, 240)",
+     "text": 843,
+     "media": 1
+    },
+    {
+     "id": "key_findings_ba3",
+     "type": "research-before-after",
+     "top": 6547,
+     "h": 766,
+     "bg": "rgb(240, 240, 240)",
+     "text": 912,
+     "media": 1
+    },
+    {
+     "id": "evidence_table",
+     "type": "specification-table",
+     "top": 7312,
+     "h": 2139,
+     "bg": "rgb(255, 255, 255)",
+     "text": 3147,
+     "media": 0
+    },
+    {
+     "id": "usage",
+     "type": "media-with-text",
+     "top": 9451,
+     "h": 1602,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1817,
+     "media": 2
+    },
+    {
+     "id": "references",
+     "type": "custom-html",
+     "top": 11053,
+     "h": 1685,
+     "bg": "rgb(255, 255, 255)",
+     "text": 3017,
+     "media": 0
+    },
+    {
+     "id": "faq",
+     "type": "faq",
+     "top": 12738,
+     "h": 1117,
+     "bg": "rgb(240, 240, 240)",
+     "text": 413,
+     "media": 2
+    },
+    {
+     "id": "shop_ingredient",
+     "type": "featured-collection",
+     "top": 13855,
+     "h": 765,
+     "bg": "rgb(255, 255, 255)",
+     "text": 59,
+     "media": 2
+    },
+    {
+     "id": "related",
+     "type": "multi-column",
+     "top": 14620,
+     "h": 775,
+     "bg": "rgb(240, 240, 240)",
+     "text": 345,
+     "media": 4
+    },
+    {
+     "id": "cta",
+     "type": "rich-text",
+     "top": 15395,
+     "h": 430,
+     "bg": "rgb(26, 26, 26)",
+     "text": 231,
+     "media": 0
+    },
+    {
+     "id": "findings_spacing_fix",
+     "type": "custom-html",
+     "top": 15825,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 15825,
+     "h": 516,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 16341,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  },
+  "mobile": {
+   "headerBottom": 85,
+   "rows": [
+    {
+     "id": "hero",
+     "type": "image-with-text-overlay",
+     "top": 85,
+     "h": 375,
+     "bg": "rgb(240, 240, 240)",
+     "text": 264,
+     "media": 1
+    },
+    {
+     "id": "overview",
+     "type": "rich-text",
+     "top": 460,
+     "h": 1188,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1767,
+     "media": 0
+    },
+    {
+     "id": "evidence",
+     "type": "rich-text",
+     "top": 1648,
+     "h": 1969,
+     "bg": "rgb(255, 255, 255)",
+     "text": 3791,
+     "media": 0
+    },
+    {
+     "id": "stats",
+     "type": "impact-text",
+     "top": 3617,
+     "h": 738,
+     "bg": "rgb(240, 240, 240)",
+     "text": 609,
+     "media": 0
+    },
+    {
+     "id": "charts",
+     "type": "custom-html",
+     "top": 4355,
+     "h": 2327,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1982,
+     "media": 0
+    },
+    {
+     "id": "key_findings_ba1",
+     "type": "research-before-after",
+     "top": 6682,
+     "h": 1374,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1133,
+     "media": 1
+    },
+    {
+     "id": "key_findings",
+     "type": "media-with-text",
+     "top": 8056,
+     "h": 1227,
+     "bg": "rgb(240, 240, 240)",
+     "text": 843,
+     "media": 1
+    },
+    {
+     "id": "key_findings_ba3",
+     "type": "research-before-after",
+     "top": 9283,
+     "h": 1132,
+     "bg": "rgb(240, 240, 240)",
+     "text": 912,
+     "media": 1
+    },
+    {
+     "id": "evidence_table",
+     "type": "specification-table",
+     "top": 10415,
+     "h": 2116,
+     "bg": "rgb(255, 255, 255)",
+     "text": 3147,
+     "media": 0
+    },
+    {
+     "id": "usage",
+     "type": "media-with-text",
+     "top": 12531,
+     "h": 2227,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1817,
+     "media": 2
+    },
+    {
+     "id": "references",
+     "type": "custom-html",
+     "top": 14758,
+     "h": 2855,
+     "bg": "rgb(255, 255, 255)",
+     "text": 3017,
+     "media": 0
+    },
+    {
+     "id": "faq",
+     "type": "faq",
+     "top": 17613,
+     "h": 1192,
+     "bg": "rgb(240, 240, 240)",
+     "text": 413,
+     "media": 2
+    },
+    {
+     "id": "shop_ingredient",
+     "type": "featured-collection",
+     "top": 18805,
+     "h": 572,
+     "bg": "rgb(255, 255, 255)",
+     "text": 59,
+     "media": 2
+    },
+    {
+     "id": "related",
+     "type": "multi-column",
+     "top": 19378,
+     "h": 580,
+     "bg": "rgb(240, 240, 240)",
+     "text": 345,
+     "media": 4
+    },
+    {
+     "id": "cta",
+     "type": "rich-text",
+     "top": 19958,
+     "h": 332,
+     "bg": "rgb(26, 26, 26)",
+     "text": 231,
+     "media": 0
+    },
+    {
+     "id": "findings_spacing_fix",
+     "type": "custom-html",
+     "top": 20290,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 20290,
+     "h": 1039,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 21329,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  }
+ }
+}

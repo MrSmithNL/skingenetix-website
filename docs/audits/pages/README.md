@@ -27,7 +27,7 @@ desktop (1440) and mobile (390) full-page screenshots in `/tmp/audit-<slug>/`.
 | `/pages/the-science` | SEO 79 · GEO 53 · Design 94 | — |
 | `/pages/copper-peptide-research` | SEO 90 · GEO 77 · Design 84 | **SEO 100 · GEO 100 · Design 100** |
 | `/pages/matrixyl-3000-research` | SEO 90 · GEO 86 · Design 84 | **SEO 100 · GEO 100 · Design 100 · Marketing 93**. External dual-model 8.12 → **9.60** (see below) |
-| `/pages/glutathione-research` | SEO 90 · GEO 86 · Design 84 | — |
+| `/pages/glutathione-research` | SEO 90 · GEO 86 · Design 84 | **SEO 100 · GEO 100 · Design 100 · Marketing 100** (2026-09-23, hub 5 of 5, full rebuild to the standard). External dual-model **9.65** on round 1 (see below) |
 | `/pages/fine-lines-wrinkles` | SEO 90 · GEO 81 · Design 90 | — |
 | `/pages/firming-skin-density` | SEO 88 · GEO 81 · Design 90 | — |
 | `/pages/skin-repair-renewal` | SEO 88 · GEO 74 · Design 81 | — |
@@ -55,6 +55,7 @@ The seo-aiso-validator protocol: 20 criteria scored on the Trafilatura extractio
 | | 1 | 9.10 | 9.80 | 9.45 | hub upgrade |
 | | 2 | 8.80 | 9.60 | 9.20 | + a real `<table>` under each chart (GPT's dip on unchanged sections is model variance) |
 | | 3 | 9.60 | 9.60 | **9.60** | + "at a glance" list after the definition |
+| `/pages/glutathione-research` | 1 | 9.75 | 9.55 | **9.65** | full rebuild on the Matrixyl pattern, 2026-09-23: 17 of 20 criteria at 10/10 on both models. Below 9 on one model: heading hierarchy (Gem 6, the stock `impact-text` figures render as `<h2>` — the same accepted trade-off as Matrixyl) and author attribution (Gem 7, the open named-author question). No round 2: neither is a change we would make |
 
 **Qualified pass.** Three criteria stay below 9 on one model:
 - Author (Gem 7) and expert review (Gem 8): these need a named, credentialed person. That is Malcolm's decision, and Dr Bodde's byline waits until she has reviewed the page.
@@ -107,3 +108,10 @@ The seo-aiso-validator protocol: 20 criteria scored on the Trafilatura extractio
 | Copper: 12-week face (71 women) and eye (41 women) studies | Leyden et al. 2002, via Pickart 2015 | ✅ Reported — but **AAD 2002 meeting proceedings, never published as full papers**; stated on the page |
 | Copper: collagen IV doubled with hyaluronic acid | Jiang et al. 2023, PMID 37062921 | ✅ Accurate — ×2.03 **ex vivo** (×25.4 in cells); authors from ingredient makers |
 | Copper: keratinocyte growth, integrin, p63 | Kang et al. 2009, PMID 19319546 | ✅ Accurate — lab skin models only |
+| Glutathione: 2% GSSG trial — 30 women, split-face, 10 weeks, melanin index 272.77 → 243.47 vs 274.13 → 265.50 (−10.7% vs −3.1%), p < 0.001; 76.7% vs 23.3% self-rated, 66.7% vs 3.3% investigator-rated; wrinkle score 33.3%/30.0% vs 0% | Watanabe et al. 2014, PMC4207440 — full text XML via E-utilities, Tables 1–3 and Results, 2026-09-23 | ✅ Accurate. **Three of four authors at Kyowa Hakko Bio (the GSSG maker)**; "no conflicts" declared — now stated wherever the trial is cited |
+| Glutathione: "more even-looking skin tone vs placebo (p < 0.001)" (hub card, product block, Duo, concern page) | Watanabe 2014, Table 2 — 100% of volunteers had "homogeneous" facial colour at baseline; outcome was the melanin index | ❌ **Outcome swapped.** Evenness was never measured. Rewritten as brighter-looking skin, in six languages, on all four pages |
+| Glutathione: "visibly smoother, more radiant-looking" / "improved radiance and smoothness" | Watanabe 2014, Results — subjective smoothness "did not differ"; radiance not measured | ❌ Removed; replaced with the measured crow's-feet and texture results |
+| Glutathione: four citation titles on the hub (Watanabe, Grandi, Wahab, Sarkar) | PubMed esummary, 2026-09-23 | ❌ **Titles had been rewritten** to remove "skin-whitening". Restored to the published titles; `page-audit.py` now exempts the References list's title element from the EU wording scan, because a citation is a bibliographic fact, not our claim |
+| Glutathione: Khanna 2025 "favourable safety and tolerability" | Khanna et al. 2025, PMC12710870 — full text | ❌ Contradicted — "Safety data is limited"; "tolerability was varied". Removed |
+| Glutathione: "a fresher glow within 1–2 weeks", "even tone builds over 8–12 weeks", "suitable for all skin types and tones", "excellent safety profile", "well suited to long-term daily use", "isolated dark spots respond faster", "15 minutes of sun" | No source; Watanabe 2014 studied types III–IV only, 10 weeks, and says long-term safety needs more studies | ❌ Removed from the product, the Duo, their FAQ items and `/pages/brightening-glow` in six languages (`configs/claim-fixes/glutathione-2026-09-23.json`) |
+| Glutathione: Sonthalia 2018, Etnawati 2019, Dilokthornsakul 2019, Rhie 2001 records | PMC/PubMed esummary and Crossref, 2026-09-23 | ✅ Titles, journals, volumes and years as cited |

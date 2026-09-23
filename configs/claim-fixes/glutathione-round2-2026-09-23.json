@@ -1,0 +1,176 @@
+{
+  "_about": "Round 2 of the glutathione claims pass, 2026-09-23: what a store-wide survey found after configs/claim-fixes/glutathione-2026-09-23.json — the brightening-glow collection description ('reducing hyperpigmentation', a condition), two Brightening & Glow Duo FAQ answers ('more even tone', 'radiance'), the science page FAQ and its FAQ JSON-LD, the skin-concerns tile ('dark spots', 'post-inflammatory marks' next to the glutathione serum), the ingredients page glutathione block and the concern page's approach paragraph. Same rule as round 1: brightening is cosmetic (how skin looks), evenness and dark spots were never measured for GSSG, radiance was not measured. Left alone on purpose: the niacinamide, vitamin C and peptide lines on the ingredients page and the 'Boosted with Vitamin C & Niacinamide' benefit (formula-level claims, not assessed in the glutathione register), 'Many traditional brightening approaches are harsh' (acceptable while no product is named) and the skin-concerns FAQ mapping 'Brightening: uneven tone and dullness (Glutathione)' (logged as a follow-up).",
+  "fixes": [
+    {
+      "where": ["collection_body"],
+      "patterns": {
+        "en": "Products for reducing hyperpigmentation, evening skin tone, and restoring radiance\\.",
+        "de": "Produkte für einen ebenmäßigeren Teint, weniger Hyperpigmentierung und mehr Strahlkraft\\.",
+        "nl": "Producten voor het verminderen van hyperpigmentatie, het egaliseren van de huidtint en het herstellen van de uitstraling\\.",
+        "fr": "Produits pour atténuer l.hyperpigmentation, unifier le teint et retrouver de l.éclat\\.",
+        "es": "Productos para atenuar la hiperpigmentación, unificar el tono y recuperar la luminosidad\\.",
+        "it": "Prodotti per attenuare l.iperpigmentazione, uniformare il tono e restituire luminosità\\."
+      },
+      "replace": {
+        "en": "Products for a brighter-looking complexion: an antioxidant serum with a placebo-controlled trial behind its active, and a light day cream to wear under SPF.",
+        "de": "Produkte für einen heller wirkenden Teint: ein antioxidatives Serum mit einer placebokontrollierten Studie hinter dem Wirkstoff und eine leichte Tagescreme für unter den Sonnenschutz.",
+        "nl": "Producten voor een helderder ogende teint: een antioxidant serum met een placebogecontroleerde studie achter het actieve ingrediënt en een lichte dagcrème om onder SPF te dragen.",
+        "fr": "Produits pour un teint d'apparence plus lumineuse : un sérum antioxydant dont l'actif est étayé par un essai contre placebo, et une crème de jour légère à porter sous le SPF.",
+        "es": "Productos para un cutis de aspecto más luminoso: un sérum antioxidante con un ensayo controlado con placebo detrás de su activo, y una crema de día ligera para llevar bajo el SPF.",
+        "it": "Prodotti per un incarnato dall'aspetto più luminoso: un siero antiossidante con uno studio controllato con placebo alle spalle del suo attivo, e una crema giorno leggera da portare sotto l'SPF."
+      }
+    },
+    {
+      "where": ["metaobject:faq_item.answer"],
+      "patterns": {
+        "en": "works against the more even tone you are building",
+        "de": "gegen den ebenmäßigeren Teint, den du aufbaust",
+        "nl": "werkt UV-blootstelling de egale teint die je opbouwt tegen",
+        "fr": "contrecarre le teint plus uniforme que vous construisez",
+        "es": "en contra del tono más uniforme que estás construyendo",
+        "it": "contro l.incarnato più uniforme che stai costruendo"
+      },
+      "replace": {
+        "en": "works against the brighter-looking tone you are building",
+        "de": "gegen den heller wirkenden Teint, den du aufbaust",
+        "nl": "werkt UV-blootstelling de helderder ogende teint die je opbouwt tegen",
+        "fr": "contrecarre le teint plus lumineux que vous construisez",
+        "es": "en contra del tono más luminoso que estás construyendo",
+        "it": "contro l'incarnato più luminoso che stai costruendo"
+      }
+    },
+    {
+      "where": ["metaobject:faq_item.answer"],
+      "patterns": {
+        "en": "works on the look of tone and radiance",
+        "de": "die auf Teint und Ausstrahlung wirkt",
+        "nl": "die werkt op het uiterlijk van de teint en de glow",
+        "fr": "qui agit sur l.apparence du teint et de l.éclat",
+        "es": "que actúa sobre el tono y la luminosidad de la piel",
+        "it": "che agisce sull.aspetto visivo del tono e della luminosità"
+      },
+      "replace": {
+        "en": "works on how bright the skin looks",
+        "de": "die darauf wirkt, wie hell die Haut aussieht",
+        "nl": "die werkt op hoe helder de huid oogt",
+        "fr": "qui agit sur l'apparence lumineuse de la peau",
+        "es": "que actúa sobre lo luminosa que se ve la piel",
+        "it": "che agisce su quanto luminosa appare la pelle"
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "and supporting a brighter, more even-looking skin tone\\.",
+        "de": "und unterstützt einen strahlenderen, ebenmäßigeren Teint\\.",
+        "nl": "en ondersteunt een helderdere, egaler ogende huidskleur\\.",
+        "fr": "et à soutenir un teint plus lumineux et plus uniforme\\.",
+        "es": "y favoreciendo un tono de piel más luminoso y uniforme\\.",
+        "it": "e a supportare un incarnato più luminoso e uniforme\\."
+      },
+      "replace": {
+        "en": "and supporting a brighter-looking skin tone.",
+        "de": "und unterstützt einen heller wirkenden Teint.",
+        "nl": "en ondersteunt een helderder ogende huidskleur.",
+        "fr": "et à soutenir un teint d'apparence plus lumineuse.",
+        "es": "y favoreciendo un tono de piel de aspecto más luminoso.",
+        "it": "e a supportare un incarnato dall'aspetto più luminoso."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "Glutathione supports a brighter, more even-looking skin tone and antioxidant defence\\.",
+        "de": "Glutathion unterstützt einen strahlenderen, ebenmäßigeren Teint und die antioxidative Abwehr\\.",
+        "nl": "Glutathione ondersteunt een helderdere, egaler ogende huidskleur en antioxidantbescherming\\.",
+        "fr": "Glutathione soutient un teint plus lumineux et plus uniforme ainsi que la défense antioxydante\\.",
+        "es": "Glutathione contribuye a un tono de piel más luminoso y uniforme y a la defensa antioxidante\\.",
+        "it": "Glutathione supporta un incarnato più luminoso e uniforme e la difesa antiossidante\\."
+      },
+      "replace": {
+        "en": "Glutathione supports a brighter-looking skin tone and antioxidant defence.",
+        "de": "Glutathion unterstützt einen heller wirkenden Teint und die antioxidative Abwehr.",
+        "nl": "Glutathione ondersteunt een helderder ogende huidskleur en antioxidantbescherming.",
+        "fr": "Glutathione soutient un teint d'apparence plus lumineuse ainsi que la défense antioxydante.",
+        "es": "Glutathione contribuye a un tono de piel de aspecto más luminoso y a la defensa antioxidante.",
+        "it": "Glutathione supporta un incarnato dall'aspetto più luminoso e la difesa antiossidante."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "you have dark spots, uneven skin tone, post-inflammatory marks, or your complexion lacks radiance\\.",
+        "de": "du dunkle Flecken, unebenmäßigen Teint, Rötungen nach Hautirritationen hast oder dein Teint an Strahlkraft vermissen lässt\\.",
+        "nl": "je last hebt van donkere vlekken, een ongelijkmatige huidskleur, vlekjes die achterblijven na puistjes, of als je teint weinig uitstraling heeft\\.",
+        "fr": "vous avez des taches brunes, un teint irrégulier, des marques post-inflammatoires, ou si votre teint manque d.éclat\\.",
+        "es": "tienes manchas oscuras, tono de piel irregular, marcas postinflamatorias, o tu cutis carece de luminosidad\\.",
+        "it": "hai macchie scure, incarnato disomogeneo, segni post-infiammatori, o una carnagione priva di luminosità\\."
+      },
+      "replace": {
+        "en": "your complexion looks dull or uneven, or lacks radiance.",
+        "de": "dein Teint fahl oder unebenmäßig wirkt oder an Strahlkraft vermissen lässt.",
+        "nl": "je teint dof of ongelijkmatig oogt, of weinig uitstraling heeft.",
+        "fr": "votre teint paraît terne ou irrégulier, ou manque d'éclat.",
+        "es": "tu cutis se ve apagado o irregular, o carece de luminosidad.",
+        "it": "il tuo incarnato appare spento o disomogeneo, o privo di luminosità."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "formulated to support a brighter, more even-looking complexion and antioxidant protection\\.",
+        "de": "formuliert für einen strahlenderen, ebenmäßigeren Teint und antioxidativen Schutz\\.",
+        "nl": "geformuleerd om een stralender en egaler ogende teint en antioxidantbescherming te ondersteunen\\.",
+        "fr": "formulé pour favoriser un teint visiblement plus éclatant et plus uniforme, tout en offrant une protection antioxydante\\.",
+        "es": "formulado para ayudar a conseguir un tono más luminoso y uniforme con protección antioxidante\\.",
+        "it": "formulato per favorire un incarnato più luminoso e uniforme e una protezione antiossidante\\."
+      },
+      "replace": {
+        "en": "formulated for a brighter-looking complexion and antioxidant protection.",
+        "de": "formuliert für einen heller wirkenden Teint und antioxidativen Schutz.",
+        "nl": "geformuleerd voor een helderder ogende teint en antioxidantbescherming.",
+        "fr": "formulé pour un teint d'apparence plus lumineuse et une protection antioxydante.",
+        "es": "formulado para un tono de aspecto más luminoso y protección antioxidante.",
+        "it": "formulato per un incarnato dall'aspetto più luminoso e una protezione antiossidante."
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "a powerful antioxidant that supports a brighter, more even-looking skin tone",
+        "de": "ein kraftvolles Antioxidans, das für einen strahlenderen, ebenmäßigeren Teint sorgt",
+        "nl": "een krachtig antioxidant dat een stralender en egaler ogende huidtint ondersteunt",
+        "fr": "un puissant antioxydant qui favorise un teint visiblement plus éclatant et plus uniforme",
+        "es": "un potente antioxidante que ayuda a que el tono de piel se vea más luminoso y uniforme",
+        "it": "un potente antiossidante che favorisce un incarnato più luminoso e uniforme"
+      },
+      "replace": {
+        "en": "an antioxidant used for brighter-looking skin, with a placebo-controlled trial behind it",
+        "de": "ein Antioxidans für heller wirkende Haut, mit einer placebokontrollierten Studie im Rücken",
+        "nl": "een antioxidant voor een helderder ogende huid, met een placebogecontroleerde studie erachter",
+        "fr": "un antioxydant utilisé pour une peau d'apparence plus lumineuse, étayé par un essai contre placebo",
+        "es": "un antioxidante para una piel de aspecto más luminoso, con un ensayo controlado con placebo detrás",
+        "it": "un antiossidante per una pelle dall'aspetto più luminoso, con uno studio controllato con placebo alle spalle"
+      }
+    },
+    {
+      "where": ["templates"],
+      "patterns": {
+        "en": "supporting a brighter, more even-looking tone over time\\.",
+        "de": "und unterstützt so einen strahlenderen, ebenmäßigeren Teint über Zeit\\.",
+        "nl": "voor een egale, stralende teint na verloop van tijd\\.",
+        "fr": "favorisant un teint plus lumineux et plus uniforme dans le temps\\.",
+        "es": "favoreciendo visiblemente un tono más luminoso y uniforme con el tiempo\\.",
+        "it": "favorendo nel tempo un tono più luminoso e uniforme\\."
+      },
+      "replace": {
+        "en": "supporting a brighter-looking tone over time.",
+        "de": "und unterstützt so einen heller wirkenden Teint über Zeit.",
+        "nl": "voor een helderder ogende teint na verloop van tijd.",
+        "fr": "favorisant un teint d'apparence plus lumineuse dans le temps.",
+        "es": "favoreciendo un tono de aspecto más luminoso con el tiempo.",
+        "it": "favorendo nel tempo un tono dall'aspetto più luminoso."
+      }
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Claims register: topical glutathione (GSSG / GSH)
 
+> **Status 2026-09-23: applied.** The hub was rebuilt to the research-page standard and every §2 verdict below was applied on the hub, the serum, the Duo, their FAQ items and `/pages/brightening-glow`, in six languages. Every figure was re-read at source that day before publishing (§7). The one open item is the parked formula fact (§6.1): the trial's magnitudes stay on the hub until the certificate confirms 2% GSSG in the serum.
+
 **Product:** Glutathione 2% Brightening Serum (30 ml, €44). The live copy says "2% Glutathione (GSSG)", i.e. oxidised glutathione. The serum also contains 3-O-ethyl ascorbic acid, niacinamide, nonapeptide-1, tetrapeptide-1 and hyaluronic acid. It is also sold in the Brightening & Glow Duo with the Copper Peptide Day Gel-Cream.
 **Pages audited, live, 2026-09-22:** `/products/glutathione-brightening-serum`, `/pages/glutathione-research`, `/pages/brightening-glow`, `/products/brightening-glow-duo-set-glutathione-serum-copper-peptide-ghk-cu-day-gel-cream`
 **Method:** every number below was read in the source itself. For Watanabe 2014 (PMC4207440), Khanna 2025 (PMC12710870), Sonthalia 2018 (PMC5808366), Weschawalit 2017 (PMC5413479) and three 2025–26 reviews that means the full text. For the other sources it means the PubMed or publisher abstract, and those rows are marked **(abstract only)**. PubMed E-utilities and Europe PMC were used, with web search as a fallback.
@@ -183,3 +185,25 @@ The standing condition for claims 1–6 is that **the supplier's certificate of 
 9. **Hub before/after image pair on the study card.** Whether the caption implies study photos is Malcolm's call (decision 2026-09-22, no AI disclosure). The label wording is the only thing flagged.
 
 *Register compiled 2026-09-22. Every figure was read at the source named. Percentages in claim 1 are calculated from the paper's reported means.*
+
+---
+
+## 7. Verification log — 2026-09-23 (hub rebuild)
+
+Re-read at source before anything was published, independently of the 2026-09-22 pass:
+
+| What | Where read | Result |
+|---|---|---|
+| Watanabe 2014: title, authors and affiliations | PMC4207440 full-text XML (E-utilities `efetch`) | Title as in §2. Authors Watanabe, Hashizume, Kamimura at Kyowa Hakko Bio (Healthcare Products Development Center, Tsukuba); Chan at Clinical Trial Management and Testing Associates, Philippines. Disclosure: "no conflicts of interest… no specific grant or funding from outside organizations." |
+| Formulation (Table 1) | same | GSSG 2.00% w/w; placebo identical without GSSG; both pH 6.46 |
+| Population (Table 2) | same | n = 30, mean age 36.1 ± 5.3; Fitzpatrick III 6 (20%) / IV 24 (80%); skin colour "tan" 100%; facial colour "homogeneous" 100% |
+| Melanin index | Results text | GSSG 272.77 ± 26.17 → 243.47 ± 26.31 (−10.7%); placebo 274.13 ± 25.82 → 265.50 ± 25.81 (−3.1%); "From Weeks 1 through 10… significantly lower" |
+| Moisture, curvature, keratin, elasticity | Results text | Moisture significant weeks 8 and 9 only; curvature weeks 6 and 10; keratin weeks 6–10; elasticity "did not differ significantly (data not shown)" |
+| Subjective scores (Table 3, week 10, score 2) | same | Whitening: investigator 66.7% vs 3.3%, subjects 76.7% vs 23.3%. Wrinkles: investigator 33.3% vs 0%, subjects 30.0% vs 0%. **Time course also in Table 3** (investigator whitening score 2: 13.3% wk 6, 36.7% wk 8, 66.7% wk 10; subjects 13.3 / 33.3 / 76.7). Week 4 score ≥ 1: 23.3% GSSG vs 0% placebo (both raters). Smoothing "did not differ" for both raters |
+| Safety | Results text | All completed; one whole-face mild erythema days 2–3, gone by day 4; "No adverse reactions related to GSSG"; Discussion: "more studies will need to be accumulated… to determine the safety of its long-term use" |
+| Mechanism and stability | Discussion / Introduction | Mechanism "no more than speculation"; GSH "highly unstable and easily decomposed" in aqueous solution, GSSG "less susceptible to decomposition" — the reason GSSG is used topically (now on the hub) |
+| Citation records: Grandi, Wahab, Khanna, Sarkar, Dilokthornsakul, Rhie, Yi, Jung, Arjinpathana, Weschawalit, Handog, Dall'Oglio, Mohamed, Assaf, Cui | PubMed `esummary` (16 PMIDs) | All titles, journals, volumes and years as in §2–3 |
+| Sonthalia 2018 | PMC5808366 `esummary` | "Glutathione for skin lightening: a regnant myth or evidence-based verity?", Dermatol Pract Concept 8(1):15–21, PMID 29445569 |
+| Etnawati 2019 | Crossref `10.4081/dr.2019.8013` | "The efficacy of skin care products containing glutathione in delivering skin lightening in Indonesian women", Dermatology Reports 11(s1), 2019 |
+
+No figure in this register was contradicted. What was applied, and where: hub spec `configs/hub-upgrades/glutathione-research.json`; product blocks `configs/copy/clinical-research-glutathione-2026-09-23.json`; sentence-level fixes `configs/claim-fixes/glutathione-2026-09-23.json`; SEO `configs/seo-changes/*glutathione*2026-09-23*.json`. Audit trail: `docs/audits/pages/README.md`.

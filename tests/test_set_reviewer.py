@@ -78,3 +78,14 @@ def test_study_markup_gets_the_sentence_after_the_first_sentence():
                    "Cosmetic & Medical Physician. Last reviewed 22 September 2026.*")
     assert sr.add_to_study_markup(out, "en", CFG) == out
     assert sr.remove_from_study_markup(out, "en", CFG) == p[1]
+
+
+def test_a_hub_can_carry_its_own_review_date():
+    """The glutathione hub was rebuilt on 2026-09-23; its JSON-LD lastReviewed must not be pulled back to the
+    config-wide date of the other four hubs (found live 2026-09-23: byline said 23 September, schema said 22)."""
+    hub = {"spec": "x.json", "byline": "overview.op.content", "jsonld_host": "references", "reviewed": "2026-09-23"}
+    assert sr.hub_cfg(CFG, hub)["reviewed"] == "2026-09-23"
+    assert sr.hub_cfg(CFG, {"spec": "y.json"})["reviewed"] == CFG["reviewed"]
+    html = '<script type="application/ld+json" id="sgx-webpage-jsonld">{"@type": "WebPage"}</script>'
+    out = sr.jsonld_edit(html, sr.hub_cfg(CFG, hub), True)
+    assert '"lastReviewed": "2026-09-23"' in out
