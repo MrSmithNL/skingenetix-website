@@ -342,7 +342,7 @@ def main():
     print("\nResolved handles:")
     for it in plan["images"]:
         if it.get("uploaded_handle"):
-            print(f"  {it['slot']:<26} {it['uploaded_handle']}")
+            print(f"  {it.get('slot', it['filename']):<26} {it['uploaded_handle']}")  # plans without slots (2026-09-24)
     print(f"\nWrote handles back into {sys.argv[1]}")
 
 

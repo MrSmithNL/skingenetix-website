@@ -156,6 +156,14 @@ AI-generated illustrations and must not be presented as results. Record:
   - key figure 2 now reads as PDRN's improvement;
   - the intro is cut to the template's shape: the "is valued for" hedge and the repeated lab sentences are out, with one sentence on how the results were measured;
   - card 2's citations are linked, card 1's label stays on one line, and reflow CSS handles 200% zoom.
+- ✅ **PDRN image and title edits** (Malcolm, 2026-09-24):
+  - card 4 = A6 `nbp_pro_02` from `~/Desktop/skingenetix-pdrn-cream-macros.png` (slot PDRN-CREAM-FINGER-01, label checked at full size);
+  - card 2 = the lab microscope image with its blue liquid recoloured to the serum's rose, done locally with nothing else touched;
+  - "What 1% PDRN Means" = the serum and night cream together on rippled water;
+  - titles: "Nine Collagens Raised in UV-Damaged Skin" and "Controlled Pigment Trial Found No Difference", in six languages;
+  - every content image now has a `skingenetix-pdrn-…` filename (upload plan `configs/banners/pdrn-research-card-images-2026-09-24.json`).
+
+  An unused blue-liquid copy (`skingenetix-pdrn-laboratory-skin-sample-microscope-petri-dish.jpg`) stays in Files.
 - 🛑 **For Malcolm: six template-level proposals from the critique.** They would change the approved Argireline design too, so they are not applied:
   1. Body text 15/14 px → 16–17 px, and the H1 larger than the key figures on mobile.
   2. One accent colour. Clinical blue drives all interactive elements, yet it is copper's colour, and it clashes with PDRN rose. Proposal: keep blue for links and the Shop button only; bullets and step discs in ink or the page colour.
