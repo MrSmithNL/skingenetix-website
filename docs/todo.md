@@ -164,6 +164,11 @@ AI-generated illustrations and must not be presented as results. Record:
   - every content image now has a `skingenetix-pdrn-…` filename (upload plan `configs/banners/pdrn-research-card-images-2026-09-24.json`).
 
   An unused blue-liquid copy (`skingenetix-pdrn-laboratory-skin-sample-microscope-petri-dish.jpg`) stays in Files.
+- ✅ **Positive results only** (Malcolm, 2026-09-24; ADR-2026-09-24-P). The PDRN null-result card and index row are replaced by the under-eye result: eye bags and tear troughs about 2× the retinol change, Ye 2026, register claim 5. It sits second so the cards run strongest first. Six languages; verified live. The template doc is updated.
+- ⏳ **For Malcolm:**
+  1. **Go-ahead for the under-eye before/after wave**, about $5–10 across all suppliers (mostly `nbp_pro`). You pick the winner. Until then card 2 carries the A6 cream macro.
+  2. **Apply the rule to Argireline?** Its card 5 and index row 05 are the null imaging test (Henseler 2023).
+  3. **How far "no negative info" reaches:** the null or non-transferable rows in Evidence & Sources on both pages, and the At-a-glance lines "Independent evidence: none yet" and "Not shown".
 - 🛑 **For Malcolm: six template-level proposals from the critique.** They would change the approved Argireline design too, so they are not applied:
   1. Body text 15/14 px → 16–17 px, and the H1 larger than the key figures on mobile.
   2. One accent colour. Clinical blue drives all interactive elements, yet it is copper's colour, and it clashes with PDRN rose. Proposal: keep blue for links and the Shop button only; bullets and step discs in ink or the page colour.

@@ -224,3 +224,14 @@ so whatever section physically precedes another becomes its "previous section" f
 - Malcolm is named as the author, as founder, not as a clinician: "you can use me as an author".
 - The byline stays in the prose flow, because wrapped in a `<div>` it was dropped by the crawlers' extractor (commit `df440a2`).
 - One section, one owning spec. Superseded specs carry `_retired`, and `hub-upgrade.py --apply` refuses them.
+
+---
+
+## ADR-2026-09-24-P: Science pages show positive results, and the null-result slot becomes a before/after USP
+
+**Date:** 2026-09-24
+**Status:** Accepted. Malcolm: "lets replace this section with something positive. lets use this content block to show a usp where we can show a before and after image showing the positive effects. lets also update the science page template here - so that we do not publish negative info about the ingredient - but that we use that space to show a USP that we can show a before and after for."
+**Context:** The template (ADR-2026-09-24-S) gave a finding card and an index row to the study that found nothing. On PDRN that was the controlled pigment trial after microneedling (Gulfan 2022); on Argireline it is the independent imaging test (Henseler 2023). The design critique and both external auditors had counted this transparency as a trust signal.
+**Decision:** No negative findings as finding cards or index rows. The slot shows a second positive, sourced USP illustrated with a before/after pair. On PDRN it is the under-eye result (Ye 2026: eye-bag volume and tear-trough depth about 2× the retinol change, Antera 3D; register headline claim 5), placed second so the cards run strongest first. Its before/after is to be generated and chosen by Malcolm; until then the card carries the A6 cream macro.
+**Trade-offs:** The page gives up the "reports the study that found nothing" signal that both auditors praised; the external score is re-measured after the before/after lands. Every claim that remains is still sourced and qualified (the register's rules on wording, comparators and "ingredient-level only" are unchanged).
+**Open:** (1) Argireline's card 5 and index row 05 (the null imaging test) should follow the rule; not changed without Malcolm's go-ahead. (2) Whether null or non-transferable studies stay in the Evidence & Sources table, and whether "Independent evidence: none yet" / "Not shown" stay in At a glance.

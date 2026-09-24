@@ -9,7 +9,7 @@
 
 ## 1. What the template is, in one paragraph
 
-A science page that answers the ingredient question in its first screen, shows the three strongest numbers straight away, then lets the reader go from a short, numbered list of what the evidence shows to the study behind each line, and ends with every source in one real table. **Its signature:** _every claim is one click from the study that supports it, and the page reports the study that found nothing._ That second half is what makes the first half credible.
+A science page that answers the ingredient question in its first screen, shows the three strongest numbers straight away, then lets the reader go from a short, numbered list of what the evidence shows to the study behind each line, and ends with every source in one real table. **Its signature:** _every claim is one click from the study that supports it._ Since 2026-09-24 every card is a positive, sourced result (ADR-2026-09-24-P): the page does not publish negative findings as cards or index rows.
 
 ---
 
@@ -55,7 +55,7 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 - Centred `<h2 class="evd__h">` phrased as the query: _What Does X Do for Y?_
 - A lead paragraph on the mechanism, with its citation linked.
 - Caption: _"Here is what the evidence shows, strongest first. Each line opens the study behind it."_
-- **Numbered rows `01`–`05`**, each an `<a class="evd__row" href="#rba-fN">`: a claim line and a one-line qualifier (who, how many, what design, and what it does not show). Order: strongest controlled result → developer data → second trial → safety → the null result.
+- **Numbered rows `01`–`05`**, each an `<a class="evd__row" href="#rba-fN">`: a claim line and a one-line qualifier (who, how many, what design, and what it does not show). Order: strongest controlled result first, then the next-strongest human result, then lab or mechanism, then safety. Every row is a positive result; no row reports a null finding (ADR-2026-09-24-P).
 - A foot line stating the concentration the trials used against ours, and a link to the study page if one exists.
 - Button to `#evidence-sources`: _See all N studies and how we graded them._
 
@@ -64,7 +64,7 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 - Our section `theme/sections/research-before-after.liquid`. Each card renders `id="rba-{{ block.id }}"`, so block ids **must** be `f1`…`fN` to match the index anchors.
 - `media_position` alternates start / end.
 - **The `result_label` is burned onto the image, so the number never travels without its qualifier** (e.g. _"14.6% vs 5.9% — dissolving microneedle patch"_). A result from a different delivery method or concentration says so in the label _and_ in the first bold line of the card.
-- A null result gets its own card. On Argireline that is card 5, _The One Independent Imaging Test Found No Difference_.
+- **The second card is a second positive USP shown as a before/after** (Malcolm, 2026-09-24): "we do not publish negative info about the ingredient… we use that space to show a USP that we can show a before and after for." Choose the strongest sourced result that a photograph can show and that differs from card 1. On PDRN that is the under-eye result (eye bags and tear troughs about 2× the retinol change; register claim 5). The pair is generated on the before/after pipeline and chosen by Malcolm, with its result label burned in like card 1's.
 
 ### 3.4 `usage` — two rows, and the how-to as a routine
 
@@ -88,7 +88,7 @@ These come from the claims registers and ADRs; the template simply gives each on
 
 1. **A number always travels with its qualifier.** "48.9%" is _22 of 45 people graded improved_, never a reduction in anything (Argireline register §3). The same fix had to be made in the FAQ answer after it was made on the card, so search the whole page, FAQ included, for every figure you change.
 2. **Different delivery or concentration → labelled, never implied.** Microneedle, injection and other concentrations are listed and labelled.
-3. **The null result is reported,** in the index, as a card, and in the table.
+3. **No negative findings as cards or index rows** (ADR-2026-09-24-P). That slot shows a positive USP with a before/after. Whether studies that found nothing, or that do not transfer, stay in the Evidence & Sources table is an open question for Malcolm (2026-09-24).
 4. **Our prose paraphrases disease names and mechanism phrases,** even when reporting a study (memory `reporting-a-study-is-still-our-prose`). Only the verbatim title is exempt.
 5. **Ingredient-level only on products** until the formula facts are confirmed; the trial magnitudes live on the science page.
 6. **Brightening is cosmetic** (glutathione): never "whitening", "even tone" or "dark spots" in our prose.
@@ -148,7 +148,7 @@ One page per go-ahead. Claims before layout, so nothing is translated that is ab
 - **`--verify-live` falls back to curl** when Cloudflare throttles Python (memory `cloudflare-throttles-python-not-curl`).
 - **Nested CSS braces must be written `} }`.** A `@media{...{...}}` rule puts `}}` in the html, Shopify reads it as Liquid, and the whole template upload is refused. `hub-i18n.py` checks for this since 2026-09-24.
 - **The hero's text follows the banner's quiet zone.** Argireline's banner is quiet on the left, so its text is left-aligned. PDRN's is quiet in the centre, so its text stays centred. Either way the subtitle is the template's **one-line promise with no number**, because the key figures sit directly below it. A long subtitle ran onto the busy helix at 2.85:1 contrast.
-- **Card images must not claim what the text does not.** A render of PDRN travelling into the dermis illustrated a lab result, and register §3 lists "reaches the dermis" as a claim to avoid. A null-result card showed our own serum. The null-result card now uses the same neutral micrograph on every page.
+- **Card images must not claim what the text does not.** A render of PDRN travelling into the dermis illustrated a lab result, and register §3 lists "reaches the dermis" as a claim to avoid. A null-result card showed our own serum. (Superseded the same day: there is no null-result card any more; see ADR-2026-09-24-P.)
 - **Every image in the page's own content carries the ingredient's name in its filename** (Malcolm, 2026-09-24: "all images used on this page must have names optimized for PDRN"). To use an image that lives under another name (another ingredient, the philosophy page), upload a copy under the ingredient's name. Never rename the original: translations and other pages key off its URL. The exception is the *Explore More Research* tiles, which show and link to the other ingredients and keep those names. PDRN audited clean on 2026-09-24: 11 content images, all `skingenetix-pdrn-…`.
 - **Run the design critic before calling a page done.** PDRN cycle 1 scored FIX 6.50 and caught all of the above. Its template-level proposals are with Malcolm (`docs/todo.md` CONTENT-001).
 
@@ -199,7 +199,7 @@ Any edit to the English of `evidence_sources`, `overview`, `evidence` or `usage`
 | Check            | How the template carries it                                                                                                                                                                                                                                                                                                                                |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **A** Design     | Fixed section rhythm with Bone/White alternation; no repeated treatment (numbered index ≠ step timeline ≠ table); buttons about 49px tall by construction (16px padding top and bottom, 15px text, 1px border; not yet measured live); every custom section has its own mobile layout. Still needs the measure + design-critic step per page (§6 step 11). |
-| **B** Content    | Every sentence from the claims register; null results kept; verbatim titles; paraphrased disease and mechanism wording.                                                                                                                                                                                                                                    |
+| **B** Content    | Every sentence from the claims register; positive results only on cards and index rows; verbatim titles; paraphrased disease and mechanism wording.                                                                                                                                                                                                                                    |
 | **C** SEO        | One H1 in the hero; query-shaped H2s (_What Is X?_, _What Does X Do for Y?_, _How to Use X_); links up to Science, across to the four siblings, down to the product.                                                                                                                                                                                       |
 | **D** Conversion | Proof first (key figures), one primary action (_Shop X_) beside the proof, repeated in the CTA; the quiet second step is the evidence table.                                                                                                                                                                                                               |
 | **E** GEO        | Answer-first bold definition; _At a glance_; a real `<table>`; author, reviewer and date in the extractable prose flow; WebPage JSON-LD with `citation[]`.                                                                                                                                                                                                 |
