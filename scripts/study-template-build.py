@@ -195,9 +195,9 @@ def build():
                 "settings": {"full_width": False},
             },
             # ---- what this study does not show ------------------------------------------------
-            # Same shape as "What the researchers did": copy one side, image the other. Kept on
-            # ink, because this is the band the page exists for. The image sits on the right so
-            # the three media rows alternate left / right / left down the page.
+            # Same shape and the same ground as the other two media rows — Malcolm, 2026-09-24:
+            # no black backgrounds, and these content blocks stay identical. The image sits on
+            # the right so the three rows alternate left / right / left down the page.
             "limits": {
                 "type": "media-with-text",
                 "blocks": {"m": {"type": "image", "settings": {
@@ -209,7 +209,7 @@ def build():
                     # <ol> is one of the top-level tags this setting accepts, so the field holds
                     # only the <li> items
                     "content": "<ol>" + val("limits") + "</ol>",
-                    "background": INK, "text_color": "#ffffff"}}},
+                    "background": WHITE, "text_color": INK}}},
                 "block_order": ["m"],
                 "settings": {"full_width": False, "background": WHITE},
             },
