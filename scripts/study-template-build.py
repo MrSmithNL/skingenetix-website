@@ -55,6 +55,16 @@ BONE, WHITE, INK = "#F0F0F0", "#ffffff", "#1A1A1A"
 
 # The nine rows of "At a glance". Identical on every study page by design — a reader comparing
 # two studies should find the same nine questions answered in the same order.
+# The same four questions on every study page. Fixed here rather than per study so a reader
+# comparing two trials finds the same questions answered in the same order — and so they
+# translate once, as template resources.
+FAQ_QUESTIONS = [
+    ("faq_a1", "Does this trial prove the ingredient works?"),
+    ("faq_a2", "What concentration did the study use?"),
+    ("faq_a3", "Is the trial independent?"),
+    ("faq_a4", "Do Skingenetix products reproduce this result?"),
+]
+
 GLANCE_ROWS = [
     ("g1", "Design"), ("g2", "Participants"), ("g3", "What was applied"),
     ("g4", "Compared with"), ("g5", "Duration"), ("g6", "How it was measured"),
@@ -184,36 +194,54 @@ def build():
                 "block_order": ["m"],
                 "settings": {"full_width": False},
             },
-            # ---- what this study does not show: the dark band --------------------------------
+            # ---- what this study does not show ------------------------------------------------
+            # Same shape as "What the researchers did": copy one side, image the other. Kept on
+            # ink, because this is the band the page exists for. The image sits on the right so
+            # the three media rows alternate left / right / left down the page.
             "limits": {
-                "type": "rich-text",
-                "blocks": {
-                    "b": {"type": "liquid", "settings": {"liquid": rt("limits")}},
-                },
-                "block_order": ["b"],
-                # left-aligned: a centred numbered list leaves the numerals ragged, and these
-                # six items are the page's argument, not a pull quote
-                "settings": {"full_width": True, "content_width": "medium",
-                             "text_position": "start", "background": INK,
-                             "text_color": "#ffffff"},
+                "type": "media-with-text",
+                "blocks": {"m": {"type": "image", "settings": {
+                    "image": "shopify://shop_images/"
+                             "skingenetix-philosophy-published-research-microscope-petri-dish.jpg",
+                    "media_width": 50, "media_position": "end",
+                    "text_position": "place-self-center-start text-start", "icon": "none",
+                    "icon_width": 48, "title": "What this study does not show",
+                    # <ol> is one of the top-level tags this setting accepts, so the field holds
+                    # only the <li> items
+                    "content": "<ol>" + val("limits") + "</ol>",
+                    "background": INK, "text_color": "#ffffff"}}},
+                "block_order": ["m"],
+                "settings": {"full_width": False, "background": WHITE},
             },
             # ---- background on the ingredient ------------------------------------------------
             # The auditors marked the page down for having no definition of GHK-Cu and for
             # depth: it appraised one trial with no account of what the ingredient is.
             "context": {
-                "type": "rich-text",
-                "blocks": {"c": {"type": "liquid", "settings": {"liquid": rt("context_html")}}},
-                "block_order": ["c"],
-                "settings": {"full_width": True, "content_width": "medium",
-                             "text_position": "center", "background": WHITE},
+                "type": "media-with-text",
+                "blocks": {"m": {"type": "image", "settings": {
+                    "image": "shopify://shop_images/skingenetix-menu-scientific-research-2026.jpg",
+                    "media_width": 50, "media_position": "start",
+                    "text_position": "place-self-center-start text-start", "icon": "none",
+                    "icon_width": 48, "title": "Where this trial sits in the evidence",
+                    "content": rtp("context_html"), "background": WHITE, "text_color": INK}}},
+                "block_order": ["m"],
+                "settings": {"full_width": False, "background": BONE},
             },
             # ---- common questions -------------------------------------------------------------
             "faq": {
-                "type": "rich-text",
-                "blocks": {"f": {"type": "liquid", "settings": {"liquid": rt("faq_html")}}},
-                "block_order": ["f"],
-                "settings": {"full_width": True, "content_width": "medium",
-                             "text_position": "center", "background": BONE},
+                "type": "faq",
+                "blocks": {
+                    key: {"type": "item", "settings": {"title": q, "content": rtp(key)}}
+                    for key, q in FAQ_QUESTIONS
+                },
+                "block_order": [k for k, _ in FAQ_QUESTIONS],
+                # the theme ships customer-support defaults in this section ("Our customer
+                # support is available Monday to Friday...") — blanked, they are not this page's job
+                "settings": {"full_width": False, "subheading": "", "text_position": "center",
+                             "title": "Common questions about this trial",
+                             "content": "", "background": WHITE,
+                             "team_avatar": "", "team_avatar_width": 50,
+                             "support_hours": "", "answer_time": "", "show_contact": False},
             },
             # ---- what it means for our products ----------------------------------------------
             "means": {
@@ -229,7 +257,7 @@ def build():
                 },
                 "block_order": ["b", "b1", "b2"],
                 "settings": {"full_width": True, "content_width": "medium",
-                             "text_position": "center", "background": WHITE},
+                             "text_position": "center", "background": BONE},
             },
             # ---- reference + schema -----------------------------------------------------------
             "reference": {
@@ -240,7 +268,7 @@ def build():
                 },
                 "block_order": ["r", "ld"],
                 "settings": {"full_width": True, "content_width": "medium",
-                             "text_position": "center", "background": BONE},
+                             "text_position": "center", "background": WHITE},
             },
         },
         "order": ["banner", "figures", "answer", "glance", "chart",

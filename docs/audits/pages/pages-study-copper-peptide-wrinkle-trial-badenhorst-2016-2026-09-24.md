@@ -6,7 +6,7 @@
 |---|---|
 | SEO | **100/100** |
 | GEO | **100/100** |
-| DESIGN | **100/100** |
+| DESIGN | **90/100** |
 | MARKETING | **100/100** |
 
 ## SEO
@@ -27,15 +27,16 @@
 | ✅ | og:title matches the page title | Badenhorst 2016: Does a Copper Peptide Serum Work? |
 | ✅ | Exactly one <h1> | Does a copper peptide serum reduce wrinkles? |
 | ✅ | <h1> contains head term |  |
-| ✅ | Topic headings are real <h2> (≥ 3) | 10 <h2>: ['−24.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'What this study does not show', 'What copper peptide is, and where this trial sits', 'Common questions about this trial', 'What it  |
-| ℹ️ | Visual-only headings (styled <p>/<span>) | 1 that look like headings but are not: ['What the researchers did'] |
+| ✅ | Topic headings are real <h2> (≥ 3) | 8 <h2>: ['−24.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'Common questions about this trial', 'What it means for our products', 'Reference'] |
+| ℹ️ | Visual-only headings (styled <p>/<span>) | 3 that look like headings but are not: ['What the researchers did', 'What this study does not show', 'Where this trial sits in the evidence'] |
 | ✅ | No skipped heading levels | clean |
-| ✅ | Content images have alt text | 3/3 |
+| ✅ | Content images have alt text | 5/5 |
 | ✅ | Images declare width/height (CLS) | 0 without |
 | ✅ | Internal links in content ≥ 5 | 15 unique |
 | ✅ | All JSON-LD parses | 0 invalid block(s) |
-| ✅ | No duplicate schema types | types ['BreadcrumbList', 'WebPage'] |
+| ✅ | No duplicate schema types | types ['BreadcrumbList', 'FAQPage', 'WebPage'] |
 | ✅ | BreadcrumbList present |  |
+| ✅ | FAQ schema matches visible questions | 4 Qs; not visible: [] |
 | ✅ | Page listed in XML sitemap |  |
 
 ## GEO
@@ -49,17 +50,17 @@
 | ✅ | A10 · head term in first 30% of text | '' |
 | ✅ | A1 · definition sentence early ('X is a …') | is a |
 | ✅ | A8 · secondary intents covered on the page | [] / [] |
-| ✅ | A2 · atomic paragraphs (none > 120 words) | 33 paragraphs, 0 too long |
-| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 14 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 42 figures |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 32 paragraphs, 0 too long |
+| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 12 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 41 figures |
 | ✅ | A3 · cited sources ≥ 3 | 13 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | ✅ | E1 · visible last-reviewed/updated date | Last reviewed |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 0 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 1422 words extracted (main text 1592) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 1384 words extracted (main text 1555) |
 | ✅ | Head term survives extraction |  |
-| ✅ | H2 sections survive extraction | 10 kept |
+| ✅ | H2 sections survive extraction | 8 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
 | ✅ | llms.txt present (evidence: fetched 0× by frontier crawlers — not scored) |  |
 
@@ -69,7 +70,7 @@
 |---|---|---|
 | ✅ | No blank band between header and first section | 0px |
 | ✅ | No empty-but-tall sections | none |
-| ✅ | Section backgrounds alternate | Bone → White → Bone → White → Bone → Graphite → White → Bone → White → Bone |
+| 🟠 | Section backgrounds alternate | story+limits (Bone); limits+context (Bone) |
 | ✅ | Backgrounds on the brand palette | Bone / White / Graphite |
 | ✅ | No horizontal overflow (desktop) | 0px |
 | ✅ | No broken images (desktop) | none |
@@ -93,10 +94,10 @@
 ## Outline as served
 
 - **H1:** ['Does a copper peptide serum reduce wrinkles?']
-- **H2:** ['−24.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'What this study does not show', 'What copper peptide is, and where this trial sits', 'Common questions about this trial', 'What it means for our products', 'Reference']
-- **Visual-only headings:** ['What the researchers did']
-- **Schema types:** ['BreadcrumbList', 'WebPage']
-- **Extracted words (no JS):** 1422 of 1592
+- **H2:** ['−24.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'Common questions about this trial', 'What it means for our products', 'Reference']
+- **Visual-only headings:** ['What the researchers did', 'What this study does not show', 'Where this trial sits in the evidence']
+- **Schema types:** ['BreadcrumbList', 'FAQPage', 'WebPage']
+- **Extracted words (no JS):** 1384 of 1555
 
 ## Section map (desktop)
 
@@ -108,10 +109,10 @@
 | 1461 | 1317 | glance | specification-table | Bone |
 | 2778 | 894 | chart | rich-text | White |
 | 3672 | 820 | story | media-with-text | Bone |
-| 4492 | 578 | limits | rich-text | Graphite |
-| 5070 | 586 | context | rich-text | White |
-| 5656 | 1147 | faq | rich-text | Bone |
-| 6803 | 518 | means | rich-text | White |
-| 7321 | 405 | reference | rich-text | Bone |
-| 7726 | 516 | footer | footer | Bone |
-| 8242 | 0 | brand_layout_css | custom-html | Bone |
+| 4492 | 855 | limits | media-with-text | Bone |
+| 5347 | 810 | context | media-with-text | Bone |
+| 6156 | 709 | faq | faq | White |
+| 6865 | 518 | means | rich-text | Bone |
+| 7383 | 405 | reference | rich-text | White |
+| 7788 | 516 | footer | footer | Bone |
+| 8304 | 0 | brand_layout_css | custom-html | Bone |

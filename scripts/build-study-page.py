@@ -141,10 +141,10 @@ def jsonld(cfg, loc):
             "isPartOf": {"@type": "WebSite", "url": BASE},
             # our page appraises the paper; it is never itself a ScholarlyArticle
             "hasPart": {"@type": "FAQPage", "mainEntity": [
-                {"@type": "Question", "name": t(q["q"], loc),
+                {"@type": "Question", "name": t(q, loc),
                  "acceptedAnswer": {"@type": "Answer",
-                                    "text": re.sub(r"<[^>]+>", "", html_to_md(t(q["a"], loc)))}}
-                for q in cfg["faq"]["items"]]},
+                                    "text": re.sub(r"<[^>]+>", "", html_to_md(t(a, loc)))}}
+                for q, a in zip(cfg["faq"]["questions"], cfg["faq"]["answers"])]},
             "mainEntity": {"@type": "Article", "headline": h1, "inLanguage": loc,
                            "isBasedOn": {**cite, "publication": {"@type": "Periodical",
                                                                  "name": s["journal"]}}}}
@@ -153,7 +153,6 @@ def jsonld(cfg, loc):
 def fields(cfg, loc):
     """Every translatable field, keyed as the template's section settings read them."""
     f = {
-        "h1": t(cfg["h1"], loc),
         "eyebrow": t(cfg["eyebrow"], loc),
         # the banner carries the question and a one-line deck; the byline sits below it
         "hero_text": f"<h1>{inline(cfg['h1'], loc)}</h1>" + ps([cfg["deck"]], loc),
@@ -165,21 +164,18 @@ def fields(cfg, loc):
         "seo_description": t(cfg["seo_description"], loc),
         "chart_html": hc.render_group({"$chart": ["c"]}, {"c": cfg["measurements"]["chart"]}, loc),
         "story": inline_ps(cfg["media"]["body"], loc),
-        "limits": (f"<h2>{inline(cfg['limits']['heading'], loc)}</h2><ol>"
-                   + "".join(f"<li>{inline(x, loc)}</li>" for x in cfg["limits"]["items"])
-                   + "</ol>"),
+        # the heading is the media block's own title and the <ol> is in the template
+        "limits": "".join(f"<li>{inline(x, loc)}</li>" for x in cfg["limits"]["items"]),
         "meaning": (f"<h2>{inline(cfg['meaning']['heading'], loc)}</h2>"
                     + ps(cfg["meaning"]["body"], loc)),
-        "context_html": (f"<h2>{inline(cfg['context']['heading'], loc)}</h2>"
-                         + ps(cfg["context"]["body"], loc)),
-        "faq_html": (f"<h2>{inline(cfg['faq']['heading'], loc)}</h2>"
-                     + "".join(f"<h3>{inline(q['q'], loc)}</h3><p>{inline(q['a'], loc)}</p>"
-                               for q in cfg["faq"]["items"])),
+        "context_html": inline_ps(cfg["context"]["body"], loc),
         "reference": f"<h2>{ {'en':'Reference','de':'Quelle','nl':'Bron','fr':'Référence','es':'Referencia','it':'Fonte'}[loc] }</h2>"
                      + ps([cfg["citation"], cfg["source_note"]], loc),
         "jsonld": '<script type="application/ld+json">'
                   + json.dumps(jsonld(cfg, loc), ensure_ascii=False) + "</script>",
     }
+    for i, ans in enumerate(cfg["faq"]["answers"], 1):
+        f[f"faq_a{i}"] = inline(ans, loc)
     for i, fig in enumerate(cfg["figures"], 1):
         f[f"fig{i}_value"] = html_to_md(t(fig["n"], loc))
         f[f"fig{i}_label"] = html_to_md(t(fig["label"], loc))
@@ -211,7 +207,7 @@ def check(cfg):
         words = len(t(cfg["answer"], loc).split())
         if not 35 <= words <= 75:
             errs.append(f"{loc}: answer paragraph {words} words (want 40-60)")
-        if loc == "en" and HEAD_TERM.match(v["h1"]):
+        if loc == "en" and HEAD_TERM.match(t(cfg["h1"], loc)):
             errs.append("H1 leads with the bare ingredient term (cannibalises the hub)")
         blob = json.dumps(v, ensure_ascii=False)
         missing = [p for p in cfg.get("checks", []) if p not in blob and html_to_md(p) not in blob]
@@ -235,8 +231,6 @@ def media_gid(stem):
 
 def apply(cfg):
     payload = [{"key": k, "value": v} for k, v in {**fields(cfg, "en"), **links(cfg, "en")}.items()]
-    payload.append({"key": "hub", "value": spg.hub_id(cfg["hub"])})
-    payload.append({"key": "pubmed_url", "value": cfg["source_url"]})
     for key, stem in (("banner", cfg["banner"]), ("banner_mobile", cfg["banner_mobile"]),
                       ("story_image", cfg["media"]["image"].rsplit(".", 1)[0])):
         payload.append({"key": key, "value": media_gid(stem)})

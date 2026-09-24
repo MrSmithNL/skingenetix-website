@@ -106,10 +106,49 @@ SIZE = 2048   # square: research-before-after takes the row height from the mast
 LUMA_CAP = 5700
 
 # --------------------------------------------------------------------------------------
-# SMOKE-TEST LOG. One slot per block (pdrn-undereye-b, argireline-forehead-d) was run across
-# all six suppliers BEFORE the other four slots. What it found, and what changed, is recorded
-# here after the run - see SMOKE_TEST_LOG at the bottom of the constants.
+# SMOKE-TEST LOG (r1 -> r2), 2026-09-24.
+# One slot per block - pdrn-undereye-b and argireline-forehead-d - ran across all six suppliers
+# before the other four slots were paid for. 11 of 12 returned. The r1 brief is preserved exactly
+# as run at configs/banners/before-after-undereye-forehead-r1-smoke.json; b and d are NOT re-run
+# (re-running-a-slot-destroys-the-chosen-candidate), so their candidates stay r1 and the other four
+# slots are r2. Five faults, four of them systematic:
+#
+#   1. THE CEILING DID NOT HOLD (gpt_image and nbp_pro on the under-eye, nbp_flash nearly; nbp_pro
+#      on the forehead). "About a fifth less full" was read as "gone": the bags all but vanished,
+#      and nbp_pro rejuvenated the whole face. r2 LEADS the right-panel paragraph with what STAYS,
+#      gives the size as a ratio of what remains (four-fifths of the bulge; lines nine-tenths as
+#      deep), and adds a single-panel test: look at the right panel alone and she still has bags /
+#      still has forehead lines. A FIVE rule - nothing outside the region changes - is hoisted.
+#   2. THE RIGHT PANEL WAS LIT MORE KINDLY (nbp_pro, nbp_flash, gpt_image): brighter, softer,
+#      warmer, and on the under-eye the skin itself went lighter. The guard sat in paragraph 15 and
+#      lost; it is now rule FOUR in paragraph 3 and restated at the point of change.
+#   3. THE SIDE-LOCK BROKE IN TWO WAYS. gpt_image MIRRORED the face between panels (the cheek marks
+#      jumped to the other cheek); nbp_pro held one side but the wrong one; flux2 on the forehead
+#      made the two panels the LEFT AND RIGHT HALVES OF ONE FACE. The side is now stated in picture
+#      terms (which edge of the panel her nose points to) instead of "her own left", every side
+#      carries "never mirror images", and paragraph 1 says each panel is a complete photograph and
+#      not half a face.
+#   4. SEEDREAM DREW THE FAULT AS AN INJURY on both cards - a red, inflamed, bruise-like lower lid
+#      that cleared in the right panel (a colour change the trial never measured), and a raw orange
+#      CRACK across the forehead. Each block now carries a `feature` sentence stating the fault is
+#      skin-coloured shape and shadow, never red, purple, a crack or a cut; "well cut" is gone from
+#      slot f. Negatives name the injury forms.
+#   5. LUMA REFUSED THE FOREHEAD BRIEF with `content_moderated` (read from the 422 body - NOT the
+#      length cap; the brief was 5,029 characters, and the under-eye brief passed). Three free
+#      probes - without "taut / frozen", then also with a neutral expression paragraph - were all
+#      refused, so it is the subject, not one word. "Taut / frozen" are kept out of every Luma
+#      text anyway; if e and f are refused too, Luma does not do this forehead brief.
+#
+# What held on r1 and is unchanged: no burnt-in text on any engine (nbp_pro included), no hand or
+# phone, same woman across panels on five of six engines (flux2 the exception, as recorded), the
+# forehead-band crop honoured by gpt_image and flux2. Every engine except flux2 pulled the
+# under-eye crops back to a half-face or head-and-shoulders portrait - the known behaviour in
+# engines-return-a-portrait-whatever-crop-you-ask-for; crop the winner in post.
 # --------------------------------------------------------------------------------------
+ROUND = "r2"
+#: The smoke-test slots. Generated from the r1 brief and never re-run, so the config records that
+#: their candidates came from configs/banners/before-after-undereye-forehead-r1-smoke.json.
+SMOKE_SLOTS = {"b", "d"}
 
 # --------------------------------------------------------------------------------------
 # Rooms. Twelve, so no two slots share a room and no pair repeats one. Wall colour + where the
@@ -260,22 +299,44 @@ BLOCKS = {
             "elderly: no heavy hanging bags, no deeply sunken eyes, no drooping upper lids, none of "
             "the slackness of a woman in her seventies."
         ),
+        # Luma's short form of `honesty` - the full clause pushed slot a's Luma brief to 6,251
+        # characters in r2. Same constraints, no reasoning.
+        luma_magnitude=("She STILL HAS under-eye bags and hollows - the same ones, plainly visible, only "
+                        "somewhat smaller: each bulge stands out about four-fifths as far as before and "
+                        "the groove is a little shallower. Visible when the panels are compared, but "
+                        "anyone seeing this panel alone would still say she has under-eye bags."),
+        luma_honesty=("Same eyes and eyelids. Every bulge and hollow under her eyes is still there, "
+                      "only less pronounced, and the skin under her eyes is the same colour - a change "
+                      "of shape, not of colour."),
+        # r2: seedream drew r1's "puffy bulge" as a red, inflamed, bruise-like swelling that then
+        # cleared in the right panel - an eye condition, and a colour change the trial never
+        # measured. Same class as describe-the-thing-dont-name-it: the colour is now stated.
+        feature=("THE PUFFINESS IS THE ORDINARY SOFT FULLNESS OF A TIRED, MIDDLE-AGED UNDER-EYE, THE "
+                 "SAME COLOUR AS THE REST OF HER SKIN - not red, not pink, not purple, not inflamed, "
+                 "and nothing like an allergy, an infection or a bruise. It shows by its SHAPE and by "
+                 "the soft shadow beneath it, never by a colour."),
+        nothing_else=("NOTHING OUTSIDE THE UNDER-EYE HAS CHANGED. Her forehead, her brows, the lines "
+                      "beside her nose and mouth, her cheeks and her jaw look exactly the same in both "
+                      "panels; only the area under her eye is different."),
         subject=("ON THE EARLIER DAY, IN THE LEFT PANEL, THE PUFFINESS AND THE HOLLOWS UNDER HER EYES "
                  "ARE THE SUBJECT OF THE PICTURE. "),
+        # r2: r1's "about a fifth less full" was read as "gone" by gpt_image and nbp_pro and
+        # overshot on nbp_flash - the bag all but vanished. The paragraph now LEADS with what stays,
+        # gives the size as a checkable ratio of what remains (measure-geometry-dont-describe-it),
+        # and ends on the single-panel test: glance at the right panel alone and she still has bags.
         magnitude=(
-            "THE UNDER-EYE IS SMOOTHER AND LESS HOLLOW, AND THE CHANGE IS MODEST AND BELIEVABLE. The "
-            "puffy bulge along the lower lid is somewhat flatter - about a fifth less full - so the "
-            "small curved shadow beneath it is shorter and lighter. The hollow groove running down "
-            "from the inner corner of the eye is somewhat shallower and holds a softer, lighter "
-            "shadow, so the under-eye reads less tired. The fine crinkled lines on the lower lid are "
-            "a little softer.\n\n"
-            "THE SIZE OF THE CHANGE IS NARROW AT BOTH ENDS. It must be VISIBLE: a viewer looking "
-            "from one panel to the other should see that the under-eye is smoother and less hollow "
-            "in the later one and be able to point to where. But it is NOT A TRANSFORMATION: the "
-            "bulge and the groove are both still plainly there, in the same place and the same "
-            "shape, just less pronounced. The under-eye has not been filled, tightened or made "
-            "young. A right panel with a flat, smooth, hollow-free under-eye is a failure, not a "
-            "success."
+            "SHE STILL HAS UNDER-EYE BAGS AND HOLLOWS IN THE RIGHT PANEL - THE SAME ONES, PLAINLY "
+            "VISIBLE, ONLY SOMEWHAT SMALLER. Most of each bulge is still there: it stands out from the "
+            "cheek about FOUR-FIFTHS as far as it did, so the small curved shadow beneath it is only "
+            "a little shorter and lighter. The hollow groove running down from the inner corner of "
+            "the eye is a little shallower and holds a slightly softer shadow. The fine crinkled lines "
+            "on the lower lid are a little softer.\n\n"
+            "THE SIZE OF THE CHANGE IS NARROW AT BOTH ENDS. It must be VISIBLE: a viewer comparing "
+            "the two panels should see that the under-eye is a little smoother and less hollow in the "
+            "later one and be able to point to where. But it is MODEST: anyone looking at the right "
+            "panel on its own would still say this woman has under-eye bags. The under-eye has not "
+            "been filled, tightened or made young. A right panel with a flat, smooth, hollow-free "
+            "under-eye is a failure, not a success."
         ),
         negatives=(
             "no smiling, no squinting, no closed eye, no wide staring eyes, no eye makeup, "
@@ -283,6 +344,9 @@ BLOCKS = {
             "no double eyelid appearing, no filler look, no smooth hollow-free under-eye in the right "
             "panel, no bag disappearing completely, no lighter under-eye skin in the right panel, "
             "no concealer, no dark circles appearing, no bruise under the eye, no swollen eyes, "
+            "no red eyelid, no inflamed eyelid, no pink under-eye, no purple under-eye, "
+            "no allergic reaction, no stye, no eye infection, no brighter under-eye in the right panel, "
+            "no smoother forehead in the right panel, "
             "no left eye beside right eye comparison, no one eye better than the other, "
             "no woman under thirty-five, no elderly woman, no heavy hanging eye bags"
         ),
@@ -303,13 +367,32 @@ BLOCKS = {
             "off her forehead on both days so none of it is covered - no fringe and no loose strands "
             "across it."
         ),
+        # r2: "taut or frozen-looking" removed from every text Luma sees (it answered the r1 forehead
+        # brief with content_moderated); "frozen" survives in the negative list, which Luma never
+        # receives. Probing showed the refusal was not those words alone - see SMOKE_TEST_LOG.
         honesty=(
             "EVERY LINE ON HER FOREHEAD IS STILL THERE IN THE RIGHT PANEL - the same number of lines, "
             "each the same length and in the same place, and each still clearly visible as a line. "
-            "None has disappeared, and the forehead has NOT become smooth, shiny, taut or "
-            "frozen-looking. What has changed is small: the fine texture of the skin surface between "
-            "and along the lines is a little finer and less rough, and the lines are a touch softer."
+            "None has disappeared, and the forehead has NOT become smooth or shiny. What has changed "
+            "is small: the fine texture of the skin surface between and along the lines is a little "
+            "finer and less rough, and the lines are a touch softer."
         ),
+        luma_magnitude=("Every line is still there and nearly as deep - about nine-tenths. Mostly the "
+                        "fine, dry, crosshatched surface texture is a little finer and calmer. Visible "
+                        "when the panels are compared, but anyone seeing this panel alone would still "
+                        "say she has forehead lines."),
+        luma_honesty=("Every forehead line is still there - same number, length and place, still "
+                      "clearly visible; only the fine surface texture is a little smoother and the "
+                      "lines a touch softer."),
+        # r2: seedream drew r1's deepest line as a raw ORANGE CRACK across the forehead, like a cut.
+        feature=("HER FOREHEAD LINES ARE ORDINARY SOFT CREASES IN THE SKIN, THE SAME COLOUR AS THE REST "
+                 "OF HER SKIN. They show as fine lines of shadow where the light grazes them - never as "
+                 "cracks, cuts, scars or red or orange marks."),
+        # r2: nbp_pro improved her whole face in r1 - under-eyes, the lines beside the nose - not
+        # just the forehead the finding is about.
+        nothing_else=("NOTHING OUTSIDE THE FOREHEAD HAS CHANGED. Her eyes, the skin under her eyes, "
+                      "her cheeks and the lines beside her nose and mouth look exactly the same in both "
+                      "panels; only her forehead is different."),
         age=(
             "SHE IS BETWEEN FORTY AND FIFTY-FIVE - MIDDLE-AGED, CLEARLY NOT YET SIXTY - AND THAT "
             "GOVERNS WHAT HER SKIN CAN HONESTLY LOOK LIKE. Her forehead lines are established and "
@@ -319,24 +402,31 @@ BLOCKS = {
         ),
         subject=("ON THE EARLIER DAY, IN THE LEFT PANEL, THE LINES AND THE ROUGH SURFACE TEXTURE OF "
                  "HER FOREHEAD ARE THE SUBJECT OF THE PICTURE. "),
+        # r2: leads with what stays, and gives the lines a ratio (nine-tenths as deep), because
+        # nbp_pro's r1 right panel read as a rested, younger face.
         magnitude=(
-            "HER FOREHEAD IS A LITTLE SMOOTHER, AND THE CHANGE IS SMALL. The fine, dry, crosshatched "
-            "texture between and along the lines is a little finer and calmer, so the surface catches "
-            "the grazing light more evenly and looks a little less rough and dry. Each horizontal "
-            "line is a touch softer, its shadow slightly lighter and slightly shorter.\n\n"
+            "EVERY LINE IS STILL THERE AND STILL CLEARLY VISIBLE IN THE RIGHT PANEL - the same number, "
+            "the same length, the same place, and nearly as deep: each holds a shadow about "
+            "NINE-TENTHS as dark and as long as before. What has changed is mostly the SURFACE: the "
+            "fine, dry, crosshatched texture between and along the lines is a little finer and calmer, "
+            "so the skin catches the grazing light a little more evenly and looks a little less rough "
+            "and dry.\n\n"
             "THE CEILING MATTERS AS MUCH AS THE FLOOR. It must be VISIBLE: someone looking from one "
-            "panel to the other should be able to see that the later forehead is smoother and point "
-            "to where the surface has calmed. But it is SUBTLE - a viewer has to compare to see it. "
-            "Every line is still there and still reads clearly as a forehead line; the deeper lines "
-            "are barely changed at all. The forehead does not read smooth, lifted, frozen, shiny or "
-            "younger. A right panel with a smooth, line-free forehead is a failure, not a success."
+            "panel to the other should be able to see that the later forehead surface is smoother and "
+            "point to where it has calmed. But it is SUBTLE - a viewer has to compare to see it, and "
+            "anyone looking at the right panel on its own would still say this woman has forehead "
+            "lines. The forehead does not read smooth, shiny, rested or younger. A right panel with "
+            "a smooth, line-free forehead is a failure, not a success."
         ),
         negatives=(
             "no raised eyebrows, no frowning, no surprised expression, no brows in different "
             "positions between the panels, no smooth line-free forehead in the right panel, "
             "no line disappearing between the panels, no shiny forehead, no frozen forehead, "
             "no taut stretched forehead, no fringe, no bangs, no hair across the forehead, no hat, "
-            "no headband, no woman under thirty-five, no elderly woman"
+            "no headband, no woman under thirty-five, no elderly woman, "
+            "no crack in the skin, no cut, no scar, no incision, no red line, no orange line, "
+            "no sunburn, no rested younger face in the right panel, no smaller eye bags in the right "
+            "panel"
         ),
     ),
 }
@@ -351,34 +441,44 @@ BLOCKS = {
 # higher. The picture can then never owe its improvement to the angle. Distance alternates in
 # both directions, bounded by the distance guard in paragraph 7.
 # --------------------------------------------------------------------------------------
+# r2: the side-lock is stated in PICTURE terms (which edge of the panel her nose points to), not
+# in anatomical ones. r1 said "her own left" and gpt_image mirrored the whole face between the
+# panels - the cheek marks jumped to the other cheek - while nbp_pro held one side but the wrong
+# one. "Her own left" is a mental rotation the engine does not do reliably; "her nose points to
+# the right-hand edge of the picture" is something it can see in its own output.
+NOT_MIRRORED = ("The two panels are NEVER mirror images of each other: every mole and mark sits on "
+                "the same side of her face in both")
 SIDE_FRONT = ("SHE IS FACING THE CAMERA MORE OR LESS SQUARE ON IN BOTH PANELS - the FRONT of her "
-              "face is what the camera sees on both days")
-SIDE_LEFT_EYE = ("IT IS THE SAME EYE IN BOTH PANELS: HER LEFT EYE. It is never her left eye in one "
-                 "panel and her right eye in the other - those are two different under-eyes, with "
-                 "different bulges, hollows and marks, and there would be nothing to compare")
-SIDE_RIGHT = ("THE SAME SIDE OF HER FACE IS TOWARDS THE CAMERA IN BOTH PANELS: HER RIGHT SIDE. On "
-              "both days her head is turned towards her own LEFT, so the camera sees the RIGHT side "
-              "of her face. It is never the right side in one panel and the left in the other")
-SIDE_LEFT = ("THE SAME SIDE OF HER FACE IS TOWARDS THE CAMERA IN BOTH PANELS: HER LEFT SIDE. On "
-             "both days her head is turned towards her own RIGHT, so the camera sees the LEFT side "
-             "of her forehead and her left temple. It is never the right side in one panel and the "
-             "left in the other")
+              "face is what the camera sees on both days. " + NOT_MIRRORED)
+SIDE_LEFT_EYE = ("IT IS THE SAME EYE IN BOTH PANELS: HER LEFT EYE, which in the picture has the bridge "
+                 "of her nose at the LEFT-HAND EDGE of the panel and her temple at the RIGHT-HAND EDGE "
+                 "- in BOTH panels. It is never one eye in one panel and her other eye in the other - "
+                 "those are two different under-eyes, with different bulges, hollows and marks, and "
+                 "there would be nothing to compare. " + NOT_MIRRORED)
+SIDE_RIGHT = ("IN BOTH PANELS HER FACE IS TURNED TOWARDS THE RIGHT-HAND EDGE OF THE PICTURE - her nose "
+              "points to the right - so the cheek nearest the camera, on the LEFT of the picture, is "
+              "her right cheek: the same cheek, with the same marks on it, on both days. Her face never "
+              "points right in one panel and left in the other. " + NOT_MIRRORED)
+SIDE_LEFT = ("IN BOTH PANELS HER FACE IS TURNED TOWARDS THE LEFT-HAND EDGE OF THE PICTURE - her nose "
+             "points to the left - so the side of her forehead and the temple nearest the camera, on "
+             "the RIGHT of the picture, are her left side, the same on both days. Her face never "
+             "points left in one panel and right in the other. " + NOT_MIRRORED)
 
 VIEWPOINTS = {
     # PDRN — later panel level or LOWER
     "a": dict(side=SIDE_LEFT_EYE,
-              a=dict(cam="held at her eye line, a little out to her left",
-                     turn="her head turned about ten degrees to her own right, level",
+              a=dict(cam="held at her eye line, a little off to the side of her left eye",
+                     turn="her face turned about ten degrees towards the left-hand edge of the picture, level",
                      dist="framed a little further back", place="the eye sits high and left of centre"),
               b=dict(cam="held just below her eye line and tilted up slightly",
-                     turn="her head turned about twenty degrees to her own right, level",
+                     turn="her face turned about twenty degrees towards the left-hand edge of the picture, level",
                      dist="framed a little closer in", place="the eye sits centred and a little low")),
     "b": dict(side=SIDE_RIGHT,
-              a=dict(cam="held a little above her eye line and out to her right, angled slightly down",
-                     turn="her head turned about twenty-five degrees to her own left, level",
+              a=dict(cam="held a little above her eye line and off to one side, angled slightly down",
+                     turn="her face turned about twenty-five degrees towards the right-hand edge of the picture, level",
                      dist="framed closer in", place="her eye sits high and right of centre"),
-              b=dict(cam="held at her eye line, out to her right",
-                     turn="her head turned about thirty-five degrees to her own left and tipped a little up",
+              b=dict(cam="held at her eye line, off to the same side",
+                     turn="her face turned about thirty-five degrees towards the right-hand edge of the picture and tipped a little up",
                      dist="framed a little further back", place="her eye sits centred")),
     "c": dict(side=SIDE_FRONT,
               a=dict(cam="held at her eye line, directly in front of her",
@@ -403,11 +503,11 @@ VIEWPOINTS = {
                      turn="her head square to the camera, level",
                      dist="framed a little closer in", place="her face sits left of centre")),
     "f": dict(side=SIDE_LEFT,
-              a=dict(cam="held at her eye line, out to her left",
-                     turn="her head turned about twenty-five degrees to her own right, level",
+              a=dict(cam="held at her eye line, off to one side",
+                     turn="her face turned about twenty-five degrees towards the left-hand edge of the picture, level",
                      dist="framed closer in", place="her forehead sits right of centre"),
-              b=dict(cam="held a little above her eye line and out to her left, angled down",
-                     turn="her head turned about thirty-five degrees to her own right, tipped very slightly down",
+              b=dict(cam="held a little above her eye line, off to the same side, angled down",
+                     turn="her face turned about thirty-five degrees towards the left-hand edge of the picture, tipped very slightly down",
                      dist="framed a little further back", place="her forehead sits high and centred")),
 }
 
@@ -483,7 +583,7 @@ WOMEN = [
               "temples and pulled back off her face, sun-weathered olive skin, brown eyes, thick "
               "natural brows, and a small mole just below her hairline on the left side of her "
               "forehead"),
-         before=("Four horizontal lines cross her forehead, the lower two long and well cut, the upper "
+         before=("Four horizontal lines cross her forehead, the lower two long and clear, the upper "
                  "two shorter and broken, curving slightly downwards towards her left temple. The "
                  "whole forehead has a weathered, slightly rough, finely crosshatched surface from "
                  "years of sun, with visible pores along the brow.")),
@@ -543,12 +643,16 @@ def build_prompt(w: dict) -> str:
         f"Two ordinary {kind} of THE SAME WOMAN, taken WEEKS APART at home, placed side by side to "
         "fill one square frame edge to edge: TWO PANELS OF EXACTLY EQUAL WIDTH meeting at one crisp "
         "vertical edge precisely at the centre, with no gap and no dividing line. Each panel is a tall "
-        "portrait. The left panel is the earlier one, the right panel is the later one.\n\n"
+        "portrait. The left panel is the earlier one, the right panel is the later one. EACH PANEL IS "
+        "A COMPLETE PHOTOGRAPH OF HER ON ITS OWN - the two panels are NOT the left and right halves of "
+        "one face.\n\n"
 
         # 2 — expression: the confound on this card
         + b["expression"] + "\n\n"
 
-        # 3 — honesty rules, hoisted
+        # 3 — honesty rules, hoisted. r2 adds FOUR and FIVE here rather than leaving them at
+        # paragraph 15: in r1 the light guard sat in the lighting paragraph and three engines lit
+        # the right panel more kindly anyway - the glutathione lesson again, position beats wording.
         "BEFORE ANYTHING ELSE, THE THINGS THAT MUST BE TRUE OF THE RIGHT-HAND PANEL, BECAUSE THEY ARE "
         "WHAT MAKE THIS PAIR HONEST RATHER THAN AN ADVERTISEMENT:\n\n"
         "ONE. EVERY MOLE, FRECKLE AND DISTINCT MARK SHE HAS IS STILL THERE IN THE RIGHT PANEL, in the "
@@ -558,6 +662,11 @@ def build_prompt(w: dict) -> str:
         "been made younger, slimmer, prettier, better groomed or lighter-skinned, and she wears no "
         "makeup on either day.\n\n"
         f"THREE. {b['honesty']}\n\n"
+        "FOUR. THE RIGHT PANEL IS NOT LIT MORE KINDLY. It is not brighter, softer, warmer or more "
+        "frontally lit than the left: in both, daylight grazes down across her from high on one side, "
+        "equally strongly. If the right panel were lit more kindly, the improvement would just be the "
+        "light.\n\n"
+        f"FIVE. {b['nothing_else']}\n\n"
 
         # 4 — two occasions
         "THESE ARE TWO SEPARATE OCCASIONS, NOT TWO COPIES OF ONE FRAME. Everything that identifies her "
@@ -631,16 +740,18 @@ def build_prompt(w: dict) -> str:
         # 16 — skin realism
         + SKIN + "\n\n"
 
-        # 17 — the left panel
-        + b["subject"] + w["before"] + "\n\n"
+        # 17 — the left panel. r2: `feature` says what the fault looks like in COLOUR terms, because
+        # seedream drew r1's faults as an inflamed lid and a raw crack.
+        + b["subject"] + w["before"] + " " + b["feature"] + "\n\n"
 
         # 18 — the right panel: floor and ceiling
         "ON THE LATER DAY, IN THE RIGHT PANEL: " + b["magnitude"] + "\n\n"
 
         # 19 — honesty restated at the point of change
-        "AND AT THE SAME TIME, IN THAT SAME RIGHT PANEL: " + b["honesty"] + " Every mole and mark is "
-        "still there in the same place. She has not been made younger, slimmer, prettier or better "
-        "groomed, and she is wearing no makeup in either panel.\n\n"
+        "AND AT THE SAME TIME, IN THAT SAME RIGHT PANEL: " + b["honesty"] + " " + b["nothing_else"] +
+        " Every mole and mark is still there in the same place, and the light is no kinder than on the "
+        "earlier day. She has not been made younger, slimmer, prettier or better groomed, and she is "
+        "wearing no makeup in either panel.\n\n"
 
         # 20 — the floor, last word
         "THERE MUST BE A VISIBLE DIFFERENCE BETWEEN THE TWO PANELS. This is the entire purpose of the "
@@ -664,34 +775,32 @@ def build_prompt_luma(w: dict) -> str:
     return (
         f"Two ordinary {kind} of THE SAME WOMAN taken weeks apart at home, side by side filling one "
         "square frame: two panels of exactly equal width meeting at one crisp vertical edge at the "
-        "centre. Left panel earlier, right panel later.\n\n"
+        "centre. Left panel earlier, right panel later. Each panel is a complete photograph of her, "
+        "not one half of a face.\n\n"
         + b["expression"] + "\n\n"
         "THE RIGHT PANEL, BEFORE ANYTHING ELSE: every mole and mark still there in the same place; the "
-        "same person, same age, same complexion, no makeup. " + b["honesty"] + "\n\n"
+        "same person, same age, same complexion, no makeup. " + b["luma_honesty"] + " It is not lit more "
+        "kindly - not brighter, softer or more frontal than the left. " + b["nothing_else"] + "\n\n"
         "Two separate occasions, not two copies of one frame. Same face, nose, eye shape and eyelids, "
         "eye colour, skin colour, brows, hair colour and cut.\n\n"
         f"Earlier: camera {v['a']['cam']}; she has {v['a']['turn']}; {g1}; {v['a']['dist']}. "
         f"Later: camera {v['b']['cam']}; she has {v['b']['turn']}; {g2}; {v['b']['dist']}. "
-        f"{v['side']}. The skin that matters is equally sharp and readable in both panels; the later "
-        "one is not further away, softer or shot from a kinder angle.\n\n"
+        f"{v['side']}. The skin that matters is equally sharp in both panels.\n\n"
         f"Different rooms: earlier, {r1[0]} with {r1[2]} out of focus at one edge, daylight from a "
         f"window {r1[1]}. Later, {r2[0]} with {r2[2]} out of focus at one edge, daylight from a "
-        f"window {r2[1]}. Bare painted walls otherwise. Different garment and hair arranged "
+        f"window {r2[1]}. Bare painted walls otherwise. Different garment, hair arranged "
         "differently.\n\n"
-        "Nothing of whoever held the camera is in shot: no hand, no fingers, no phone, no mirror.\n\n"
+        "No hand, no phone and no mirror in shot.\n\n"
         + crop["text"] + "\n\n"
-        "Amateur picture: a few degrees crooked, focus not perfect everywhere, a little shadow noise, "
-        "white balance slightly off. Bright and cleanly exposed.\n\n"
-        f"She is {w['who']}. No makeup at all, natural brows, unstyled hair. An ordinary person, not a "
+        "Amateur picture: a little crooked, focus not perfect, some shadow noise, white balance "
+        "slightly off, but bright.\n\n"
+        f"She is {w['who']}. No makeup, natural brows, unstyled hair. An ordinary person, not a "
         "model.\n\n"
         "Daylight from a window high up on one side grazes DOWN across her face on both days, so every "
-        "line, bulge and hollow casts its own small shadow. Directional, bright, eyes clearly visible. "
-        "The later day is NOT lit more softly or more frontally than the earlier one.\n\n"
-        "Real unflattered skin: visible pores varying by zone, vellus hair, asymmetric pigment. No "
-        "smoothing.\n\n"
-        + b["subject"] + w["before"] + "\n\n"
-        "IN THE RIGHT PANEL: " + b["magnitude"].split("\n\n")[0] + " Visible when the halves are "
-        "compared, but modest - never a transformation.\n\n"
+        "line, bulge and hollow casts its own small shadow. Bright, eyes clearly visible.\n\n"
+        "Real unflattered skin: visible pores, vellus hair, asymmetric pigment. No smoothing.\n\n"
+        + b["subject"] + w["before"] + " " + b["feature"] + "\n\n"
+        "IN THE RIGHT PANEL: " + b["luma_magnitude"] + "\n\n"
         "Two panels that look the same are a complete failure. Honest, unretouched, unfiltered."
     )
 
@@ -740,7 +849,12 @@ NEGATIVE_PAIR = (
     "no younger woman in the right panel, no makeup appearing in the right panel, no change of skin "
     "colour between the panels, no moles disappearing between the panels, no zero difference between "
     "the panels, no softer light in the right panel, no flatter light in the right panel, no flat "
-    "frontal lighting, no shadowless face, no blurrier right panel"
+    "frontal lighting, no shadowless face, no blurrier right panel, "
+    # r2: nbp_pro / nbp_flash / gpt_image lit the r1 right panel brighter and kinder; flux2 made
+    # the two panels the left and right halves of ONE face - the left-vs-right picture the side-lock
+    # exists to prevent.
+    "no brighter right panel, no warmer kinder light in the right panel, no split face composition, "
+    "no two halves of one face, no left half and right half of the same face"
 )
 
 
@@ -764,6 +878,8 @@ def main() -> None:
             "width": SIZE,
             "height": SIZE,
             "target_slot": f"{b['page']} key_findings_ba {b['block']} ({b['heading']})",
+            "generated_from": ("r1 - configs/banners/before-after-undereye-forehead-r1-smoke.json"
+                               if w["key"] in SMOKE_SLOTS else ROUND),
             "ref_files": [],
             "prompt": prompt,
             "prompt_luma": prompt_luma,
@@ -780,6 +896,7 @@ def main() -> None:
     cfg = {
         "wave": WAVE,
         "created": "2026-09-24",
+        "round": ROUND,
         "doc": ("docs/clinical-trial-before-after-images.md, .claude/rules/website-imagery.md, "
                 "built by scripts/build-under-eye-forehead-before-after-config.py"),
         "note": (
@@ -808,6 +925,13 @@ def main() -> None:
             "improving illustrates using the cream rather than depicting the trial. Slots a and b "
             "lock one under-eye, as the live crow's-feet card does. Both are briefed to look alike in "
             "each panel so the picture can never read as PDRN side against retinol side.\n\n"
+            "SMOKE TEST (r1 -> r2): slots pdrn-undereye-b and argireline-forehead-d were generated from "
+            "the r1 brief (preserved at configs/banners/before-after-undereye-forehead-r1-smoke.json) "
+            "and are not re-run; slots a, c, e, f use this r2 brief. r1 found: the ceiling did not hold "
+            "(bags all but gone on gpt_image and nbp_pro); the right panel lit more kindly on three "
+            "engines; gpt_image mirrored the face and flux2 made the panels two halves of one face; "
+            "seedream drew the faults as injuries (inflamed lid, orange crack); luma refused the "
+            "forehead brief with content_moderated. r2 fixes are logged in the builder.\n\n"
             "SUPPLIERS: all six (rule 1). Known risks from this brief family - check first: nbp_pro "
             "burns captions in; luma has returned HTTP 422 (prompt_luma is under the cap); flux2 went "
             "0/8 on glutathione and has drifted to a different, older woman."

@@ -330,49 +330,33 @@
     ]
   },
   "faq": {
-    "heading": {
-      "en": "Common questions about this trial"
-    },
-    "items": [
+    "_note": "Questions live in scripts/study-template-build.py (FAQ_QUESTIONS) — the same four on every study page. Keep these four answers in that order.",
+    "questions": [
       {
-        "q": {
-          "en": "Does this trial prove copper peptide reduces wrinkles?"
-        },
-        "a": {
-          "en": "It shows that a GHK-Cu serum outperformed a plain serum base on one wrinkle, measured by 3D imaging, in 39 women over 8 weeks. That is real evidence for the ingredient. It is one small trial, funded by the serum's maker, and the base it beat also lacked the nano-carrier — so it is not proof that copper peptide alone did the work."
-        }
+        "en": "Does this trial prove the ingredient works?"
       },
       {
-        "q": {
-          "en": "What concentration of GHK-Cu did the study use?"
-        },
-        "a": {
-          "en": "The paper never states one. That is why no claim on this site says a result was “clinically proven at 2%” — the trial cannot support a concentration claim, and our own products state 2% GHK-Cu on the pack independently of it."
-        }
+        "en": "What concentration did the study use?"
       },
       {
-        "q": {
-          "en": "Was it better than Matrixyl 3000?"
-        },
-        "a": {
-          "en": "On wrinkle volume only. Against a commercial Matrixyl 3000 product the GHK-Cu serum reduced volume 31.6% more (p = 0.0044), but the difference in wrinkle depth was 23.4% and **not statistically significant** (p = 0.0577). We use both peptides in our routines rather than ranking them ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
-        }
+        "en": "Is the trial independent?"
       },
       {
-        "q": {
-          "en": "Is the trial independent?"
-        },
-        "a": {
-          "en": "Partly. It was run at Dermatest GmbH, an independent cosmetic research institute, and the statistics were done at the University of Auckland. But it was funded by Snowberry New Zealand Ltd, which makes the serum that was tested, and it was published in a journal whose peer review is weaker than the major dermatology titles. We grade it A− for those reasons."
-        }
+        "en": "Do Skingenetix products reproduce this result?"
+      }
+    ],
+    "answers": [
+      {
+        "en": "It shows that a GHK-Cu serum outperformed a plain serum base on one wrinkle, measured by 3D imaging, in 39 women over 8 weeks. Against a commercial Matrixyl 3000 product it reduced wrinkle volume 31.6% more (p = 0.0044), though the difference in depth was **not statistically significant** (p = 0.0577). It is one small trial, funded by the serum's maker, and the base it beat also lacked the nano-carrier — so it is not proof that copper peptide alone did the work ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
       },
       {
-        "q": {
-          "en": "Do Skingenetix products reproduce this result?"
-        },
-        "a": {
-          "en": "No, and we do not claim they do. The serum tested here used a lipid nano-carrier that our formulas do not, and its concentration was never disclosed. We cite this trial as evidence for the ingredient, not as a result our products have repeated."
-        }
+        "en": "The paper never states one. That is why no claim on this site says a result was “clinically proven at 2%” — the trial cannot support a concentration claim, and our own products state 2% GHK-Cu on the pack independently of it."
+      },
+      {
+        "en": "Partly. It was run at Dermatest GmbH, an independent cosmetic research institute, and the statistics were done at the University of Auckland. But it was funded by Snowberry New Zealand Ltd, which makes the serum that was tested, and it was published in a journal whose peer review is weaker than the major dermatology titles. We grade it A− for those reasons."
+      },
+      {
+        "en": "No, and we do not claim they do. The serum tested here used a lipid nano-carrier that our formulas do not, and its concentration was never disclosed. We cite this trial as evidence for the ingredient, not as a result our products have repeated."
       }
     ]
   }

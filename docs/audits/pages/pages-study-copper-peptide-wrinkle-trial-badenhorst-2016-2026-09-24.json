@@ -3,7 +3,7 @@
  "scores": {
   "SEO": 100,
   "GEO": 100,
-  "DESIGN": 100,
+  "DESIGN": 90,
   "MARKETING": 100
  },
  "items": [
@@ -179,7 +179,7 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "10 <h2>: ['\u221224.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'What this study does not show', 'What copper peptide is, and where this trial sits', 'Common questions about this trial', 'What it means for our products', 'Reference']",
+   "detail": "8 <h2>: ['\u221224.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'Common questions about this trial', 'What it means for our products', 'Reference']",
    "severity": "pass",
    "weight": 2
   },
@@ -187,7 +187,7 @@
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
    "ok": false,
-   "detail": "1 that look like headings but are not: ['What the researchers did']",
+   "detail": "3 that look like headings but are not: ['What the researchers did', 'What this study does not show', 'Where this trial sits in the evidence']",
    "severity": "info",
    "weight": 0
   },
@@ -203,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "3/3",
+   "detail": "5/5",
    "severity": "pass",
    "weight": 1.0
   },
@@ -243,7 +243,7 @@
    "area": "SEO",
    "check": "No duplicate schema types",
    "ok": true,
-   "detail": "types ['BreadcrumbList', 'WebPage']",
+   "detail": "types ['BreadcrumbList', 'FAQPage', 'WebPage']",
    "severity": "pass",
    "weight": 1.0
   },
@@ -280,6 +280,14 @@
    "weight": 0.5
   },
   {
+   "area": "SEO",
+   "check": "FAQ schema matches visible questions",
+   "ok": true,
+   "detail": "4 Qs; not visible: []",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
    "area": "GEO",
    "check": "A10 \u00b7 head term in first 30% of text",
    "ok": true,
@@ -307,7 +315,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "33 paragraphs, 0 too long",
+   "detail": "32 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -315,7 +323,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "14",
+   "detail": "12",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "42 figures",
+   "detail": "41 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -371,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "1422 words extracted (main text 1592)",
+   "detail": "1384 words extracted (main text 1555)",
    "severity": "pass",
    "weight": 3
   },
@@ -387,7 +395,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "10 kept",
+   "detail": "8 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -434,9 +442,9 @@
   {
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
-   "ok": true,
-   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 Graphite \u2192 White \u2192 Bone \u2192 White \u2192 Bone",
-   "severity": "pass",
+   "ok": false,
+   "detail": "story+limits (Bone); limits+context (Bone)",
+   "severity": "med",
    "weight": 1.5
   },
   {
@@ -507,14 +515,14 @@
    "39 of 40",
    "At a glance",
    "What the measurements showed",
-   "What this study does not show",
-   "What copper peptide is, and where this trial sits",
    "Common questions about this trial",
    "What it means for our products",
    "Reference"
   ],
   "pseudo_headings": [
-   "What the researchers did"
+   "What the researchers did",
+   "What this study does not show",
+   "Where this trial sits in the evidence"
   ],
   "internal_links": [
    "/collections/all",
@@ -540,10 +548,11 @@
   ],
   "schema_types": [
    "BreadcrumbList",
+   "FAQPage",
    "WebPage"
   ],
-  "extracted_words": 1422,
-  "main_words": 1592,
+  "extracted_words": 1384,
+  "main_words": 1555,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg?v=1787645156&width=3000",
@@ -552,6 +561,14 @@
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg?v=1787663139&width=3000",
     "alt": "A single copper node radiating fine filaments through a blue collagen-fibre network - Skingenetix copper peptide GHK-Cu research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-philosophy-published-research-microscope-petri-dish.jpg?v=1787825659&width=2688",
+    "alt": "A laboratory microscope with a glass petri dish on its stage and a beaker of blue solution alongside, on a dark graphite bench"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-menu-scientific-research-2026.jpg?v=1787329159&width=2048",
+    "alt": "A research scientist examining a sample through a laboratory microscope - Skingenetix scientific research"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
@@ -619,53 +636,53 @@
     },
     {
      "id": "limits",
-     "type": "rich-text",
+     "type": "media-with-text",
      "top": 4492,
-     "h": 578,
-     "bg": "rgb(26, 26, 26)",
-     "text": 1065,
-     "media": 0
+     "h": 855,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1066,
+     "media": 1
     },
     {
      "id": "context",
-     "type": "rich-text",
-     "top": 5070,
-     "h": 586,
-     "bg": "rgb(255, 255, 255)",
-     "text": 1092,
-     "media": 0
+     "type": "media-with-text",
+     "top": 5347,
+     "h": 810,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1080,
+     "media": 1
     },
     {
      "id": "faq",
-     "type": "rich-text",
-     "top": 5656,
-     "h": 1147,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1722,
+     "type": "faq",
+     "top": 6156,
+     "h": 709,
+     "bg": "rgb(255, 255, 255)",
+     "text": 188,
      "media": 0
     },
     {
      "id": "means",
      "type": "rich-text",
-     "top": 6803,
+     "top": 6865,
      "h": 518,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 518,
      "media": 0
     },
     {
      "id": "reference",
      "type": "rich-text",
-     "top": 7321,
+     "top": 7383,
      "h": 405,
-     "bg": "rgb(240, 240, 240)",
+     "bg": "rgb(255, 255, 255)",
      "text": 371,
      "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 7726,
+     "top": 7788,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -674,7 +691,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 8242,
+     "top": 8304,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -744,53 +761,53 @@
     },
     {
      "id": "limits",
-     "type": "rich-text",
+     "type": "media-with-text",
      "top": 5043,
-     "h": 705,
-     "bg": "rgb(26, 26, 26)",
-     "text": 1065,
-     "media": 0
+     "h": 1227,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1066,
+     "media": 1
     },
     {
      "id": "context",
-     "type": "rich-text",
-     "top": 5748,
-     "h": 665,
-     "bg": "rgb(255, 255, 255)",
-     "text": 1092,
-     "media": 0
+     "type": "media-with-text",
+     "top": 6270,
+     "h": 1164,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1080,
+     "media": 1
     },
     {
      "id": "faq",
-     "type": "rich-text",
-     "top": 6412,
-     "h": 1294,
-     "bg": "rgb(240, 240, 240)",
-     "text": 1722,
+     "type": "faq",
+     "top": 7434,
+     "h": 523,
+     "bg": "rgb(255, 255, 255)",
+     "text": 188,
      "media": 0
     },
     {
      "id": "means",
      "type": "rich-text",
-     "top": 7706,
+     "top": 7957,
      "h": 533,
-     "bg": "rgb(255, 255, 255)",
+     "bg": "rgb(240, 240, 240)",
      "text": 518,
      "media": 0
     },
     {
      "id": "reference",
      "type": "rich-text",
-     "top": 8239,
+     "top": 8489,
      "h": 338,
-     "bg": "rgb(240, 240, 240)",
+     "bg": "rgb(255, 255, 255)",
      "text": 371,
      "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 8577,
+     "top": 8828,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -799,7 +816,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9616,
+     "top": 9867,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
