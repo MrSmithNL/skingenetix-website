@@ -1,5 +1,5 @@
 {
-  "_about": "PDRN science page onto the template, 2026-09-24. Owns `key_findings_ba` (f1 unchanged; f2 lab collagen, f3 safety, f4 the null pigment trial), `usage` (three rows: salmon origin, what 1% means, a 3-step how-to) and `evidence_sources` (14 studies, one real <table>, the WebPage JSON-LD host). Removes `key_findings`, `evidence_table`, `references` and `findings_spacing_fix` (its CSS targeted a media-with-text row that no longer exists). Khan 2022 dropped: never read beyond its title (docs/claims/pdrn.md), and the card it carried said only 'promising'. f1 title shortened 2026-09-24 (the comparison stays in its burned-in result label and the card text), as Malcolm asked for Argireline's f3. Critique fixes 2026-09-24: the charts stack (they left a 407px hole side by side); card 2 shows a lab microscope and dish, not a render implying the dermis; card 4 (the null result) shows the neutral micrograph Argireline's null card uses, not our own serum; card 2's citations linked; card 1's label keeps '28-day' on one line. Malcolm, 2026-09-24: card 4 = A6 nbp_pro_02 from the PDRN cream-macros sheet; card 2 = the lab image recoloured pink; both uploaded under PDRN filenames; card titles shortened ('Samples', 'The' removed); 'What 1% PDRN Means' now shows the serum and night cream together on water (both are 1% PDRN). Malcolm, 2026-09-24: 'replace this section with something positive… a USP where we can show a before and after'. Card f4 (the null pigment trial) is now the under-eye result (Ye 2026, register claim 5), second in order so the cards run strongest first; its before/after image follows once generated and chosen. Until then it keeps the A6 cream macro. Malcolm, 2026-09-24: null and non-transferable studies dropped from Evidence & Sources (after-a-procedure, negative, injected, non-salmon, and the reviews and disclaimers of those); the table keeps the four studies the page's claims rest on. 2026-09-24 (Malcolm): accent #9E4F5C for links, the Shop button, index rows, bullets, step discs and the A pill, via --sg-accent set in the overview style.",
+  "_about": "PDRN science page onto the template, 2026-09-24. Owns `key_findings_ba` (f1 unchanged; f2 lab collagen, f3 safety, f4 the null pigment trial), `usage` (three rows: salmon origin, what 1% means, a 3-step how-to) and `evidence_sources` (14 studies, one real <table>, the WebPage JSON-LD host). Removes `key_findings`, `evidence_table`, `references` and `findings_spacing_fix` (its CSS targeted a media-with-text row that no longer exists). Khan 2022 dropped: never read beyond its title (docs/claims/pdrn.md), and the card it carried said only 'promising'. f1 title shortened 2026-09-24 (the comparison stays in its burned-in result label and the card text), as Malcolm asked for Argireline's f3. Critique fixes 2026-09-24: the charts stack (they left a 407px hole side by side); card 2 shows a lab microscope and dish, not a render implying the dermis; card 4 (the null result) shows the neutral micrograph Argireline's null card uses, not our own serum; card 2's citations linked; card 1's label keeps '28-day' on one line. Malcolm, 2026-09-24: card 4 = A6 nbp_pro_02 from the PDRN cream-macros sheet; card 2 = the lab image recoloured pink; both uploaded under PDRN filenames; card titles shortened ('Samples', 'The' removed); 'What 1% PDRN Means' now shows the serum and night cream together on water (both are 1% PDRN). Malcolm, 2026-09-24: 'replace this section with something positive… a USP where we can show a before and after'. Card f4 (the null pigment trial) is now the under-eye result (Ye 2026, register claim 5), second in order so the cards run strongest first; its before/after image follows once generated and chosen. Until then it keeps the A6 cream macro. Malcolm, 2026-09-24: null and non-transferable studies dropped from Evidence & Sources (after-a-procedure, negative, injected, non-salmon, and the reviews and disclaimers of those); the table keeps the four studies the page's claims rest on. 2026-09-24 (Malcolm): accent #9E4F5C for links, the Shop button, index rows, bullets, step discs and the A pill, via --sg-accent set in the overview style. Card f4 before/after live 2026-09-24: Malcolm's pick F4 nbp_flash 01 (r3), labels as card f1.",
   "template": "templates/page.pdrn-research.json",
   "page": "pdrn-research",
   "add_sections": [
@@ -100,11 +100,32 @@
           "f4": {
             "type": "finding",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-pdrn-collagen-night-cream-fingertip-texture-macro.jpg",
+              "image": "shopify://shop_images/skingenetix-pdrn-under-eye-bags-before-after.jpg",
               "media_position": "end",
-              "before_label": "",
-              "after_label": "",
-              "result_label": "",
+              "before_label": {
+                "en": "Before",
+                "de": "Vorher",
+                "nl": "Voor",
+                "fr": "Avant",
+                "es": "Antes",
+                "it": "Prima"
+              },
+              "after_label": {
+                "en": "After 28 days",
+                "de": "Nach 28 Tagen",
+                "nl": "Na 28 dagen",
+                "fr": "Après 28 jours",
+                "es": "Después de 28 días",
+                "it": "Dopo 28 giorni"
+              },
+              "result_label": {
+                "en": "Eye bags about 2× the retinol change (28‑day trial)",
+                "de": "Tränensäcke etwa 2× die Veränderung mit Retinol (28‑Tage‑Studie)",
+                "nl": "Wallen ongeveer 2× de verandering met retinol (studie van 28 dagen)",
+                "fr": "Poches environ 2× le changement avec le rétinol (essai de 28 jours)",
+                "es": "Bolsas unas 2× el cambio con retinol (ensayo de 28 días)",
+                "it": "Borse circa 2× il cambiamento con il retinolo (studio di 28 giorni)"
+              },
               "note_label": "",
               "label_background": "#1a1a1a",
               "label_text_color": "#ffffff",
