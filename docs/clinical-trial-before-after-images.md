@@ -507,6 +507,66 @@ table before shortlisting any of them.**
 
 ---
 
+## 12. Under-eye (PDRN) and forehead (Argireline) cards — added 2026-09-24
+
+Two cards on the science pages, candidates only, nothing chosen or uploaded:
+
+| slots | card | study |
+|---|---|---|
+| `uef--pdrn-undereye-a/b/c` | `/pages/pdrn-research` `key_findings_ba` **f4**, "Under-Eye Bags: About 2× the Retinol Change" | Ye 2026, split-face, 31 Chinese women 35–55 |
+| `uef--argireline-forehead-d/e/f` | `/pages/acetyl-hexapeptide-8-research` `key_findings_ba` **f5**, "Forehead Roughness −7.4% by Day 20" | Raikou 2017, 24 women 30–60, run in Athens |
+
+Builder `scripts/build-under-eye-forehead-before-after-config.py` → `configs/banners/before-after-undereye-forehead.json`
+(r2). The r1 smoke brief is preserved as `configs/banners/before-after-undereye-forehead-r1-smoke.json`: slots **b and
+d** were generated from it and never re-run. Output: `assets/ai-generated/2026-08-22-multi-before-after-undereye-forehead/`,
+35 candidates. Contact sheet `~/Desktop/skingenetix-before-after-undereye-forehead.png` (stable labels: A–C forehead d–f,
+D–F under-eye a–c). Casting follows the trial: Chinese on the PDRN card, Greek on the Argireline card.
+
+### What this brief family added
+
+- **Horizontal features need light from ABOVE, not from the side.** Forehead lines, the bulge along the lower lid and
+  the tear-trough groove all run across the face, and a line only casts a shadow when light crosses it. Pure sidelight
+  runs along them. Every room's window is high on one side and the light grazes down.
+- **Every camera-height difference runs against the improvement.** Bags read more from below, and forehead lines read
+  more from above. So the later under-eye panel is shot from level or lower, and the later forehead panel from level or
+  higher.
+- **State the side-lock in picture terms.** r1 said "her own left": gpt_image mirrored the face between panels (the
+  marks jumped cheek), nbp_pro locked the wrong side, and flux2 drew the two panels as the two halves of one face. r2
+  says which edge of the panel her nose points to, adds "never mirror images" and "each panel is a complete photograph,
+  not half a face". In r2 the side held on every engine for the three-quarter slot.
+- **Seedream draws a fault as an injury.** "Puffy bulge" became a red, inflamed, bruise-like lid (in r1 and again in
+  r2); the deepest forehead line became a raw orange crack. A sentence saying the fault is skin-coloured shape and
+  shadow did not fully cure it on the under-eye.
+- **The ceiling needs a ratio of what REMAINS and a single-panel test.** "About a fifth less full" was read as "gone" by
+  gpt_image and nbp_pro. r2 leads with what stays: four-fifths of the bulge, and lines nine-tenths as deep. It adds that
+  anyone looking at the right panel alone would still say she has bags.
+- **The light guard belongs in paragraph 3**, as rule FOUR, and "nothing outside the region changes" as rule FIVE. In
+  r1 both sat lower in the brief, and three engines lit the right panel more kindly while nbp_pro rejuvenated the
+  whole face.
+
+### Supplier notes from this wave
+
+- **nbp_pro burnt captions onto 3 of its 4 r2 slots.** It produced "WEEK 1 / WEEK 6", "WEEKS EARLIER / WEEKS LATER" and
+  "EARLIER DAY / LATER DAY", lifted from the brief's own "weeks apart / earlier / later" wording. The prompts contain
+  no digits (asserted by the builder), so the number was invented as well. Its r1 slots were clean.
+- **Luma answered the r1 forehead brief with `content_moderated`.** The 422 body said "Prompt rejected by content policy",
+  so it was not the length cap: the brief was 5,029 characters, and the under-eye brief passed. Three free probes were
+  all refused, the last one without "taut/frozen" and with a neutral expression paragraph. It then accepted both r2
+  forehead slots. Read the 422 body before assuming length.
+- **flux2** again: near-identical framing, a much older woman on two slots, and a faint glyph in the hair on one.
+- **Crops:** as §10–11 predicted, no engine gave the one-eye crop and most returned half-face portraits. gpt_image and
+  flux2 honoured the forehead band. Crop winners in post.
+
+### Open for Malcolm
+
+- **Slot c (`F` row)** is a frontal band showing BOTH under-eyes. Ye 2026 was split-face (PDRN on one side, retinol on
+  the other), so this illustrates the cream rather than depicting the trial. Slots a and b lock one eye, as the live
+  crow's-feet card does.
+- **Roster drift (rule 2):** OpenAI now lists `gpt-image-2.5-flare` and `gpt-image-2.5-sunburst` (2026-09-08).
+  `generate-multi.py` still calls `gpt-image-2`. Not changed here.
+
+---
+
 *Related: `.claude/rules/website-imagery.md` (every image to every supplier; judge at 100% and at render
 size), `docs/visual-identity/03-art-direction-and-briefs.md`, and the project memory entries
 `before-after-pairs-need-two-sessions-not-two-frames`, `slot-letters-restart-per-wave`,
