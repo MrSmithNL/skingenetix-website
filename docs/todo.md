@@ -165,7 +165,9 @@ AI-generated illustrations and must not be presented as results. Record:
 
   An unused blue-liquid copy (`skingenetix-pdrn-laboratory-skin-sample-microscope-petri-dish.jpg`) stays in Files.
 - ✅ **Positive results only** (Malcolm, 2026-09-24; ADR-2026-09-24-P). The PDRN null-result card and index row are replaced by the under-eye result: eye bags and tear troughs about 2× the retinol change, Ye 2026, register claim 5. It sits second so the cards run strongest first. Six languages; verified live. The template doc is updated.
-- ⏳ **For Malcolm:**
+- ✅ **Argireline and both evidence tables brought under the rule** (2026-09-24; see ADR-2026-09-24-P "Resolved"). Card 5 is now the Raikou forehead result, card 3 (microneedle patch) is removed, and the index is relinked; it had pointed the Raikou claim at the wrong card. Null and non-transferable rows are dropped: PDRN 14 → 4, Argireline 10 → 8. Accent colour per page: PDRN rose, Argireline slate. Verified live in six languages.
+- ⏳ **Before/after waves (approved 2026-09-24):** the PDRN under-eye card and the Argireline forehead card. Malcolm picks the winners.
+- ~~For Malcolm:~~ answered 2026-09-24 (below kept for the record).
   1. **Go-ahead for the under-eye before/after wave**, about $5–10 across all suppliers (mostly `nbp_pro`). You pick the winner. Until then card 2 carries the A6 cream macro.
   2. **Apply the rule to Argireline?** Its card 5 and index row 05 are the null imaging test (Henseler 2023).
   3. **How far "no negative info" reaches:** the null or non-transferable rows in Evidence & Sources on both pages, and the At-a-glance lines "Independent evidence: none yet" and "Not shown".

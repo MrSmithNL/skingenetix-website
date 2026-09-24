@@ -77,10 +77,28 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 - `<div class="est" id="evidence-sources">`. The stable id is what the button in §3.2 targets. Never link to the template-generated section id, which changes if the template is recreated.
 - A real `<table>` with three columns: **Study** (verbatim published title in `<p class="sgref__ti est__ti">`, then author, year, journal, volume, then the PubMed/DOI link) · **Grade** (pill: A controlled human trial measured by instrument · B smaller, uncontrolled or manufacturer data · C skin samples · Review) · **What it found, and what it does not show**.
 - The class `sgref__ti` keeps the verbatim-title exemption in `page-audit.py` (ADR-2026-09-23-G). Titles are never paraphrased and never enter a translation table.
-- Every study the page cites is a row, including the ones we cannot claim (injection, microneedle, other concentration): "listed and labelled rather than left out".
+- Every study the page's claims rest on is a row. Since 2026-09-24, null and non-transferable studies are not listed (ADR-2026-09-24-P), and the key line is only "Published titles are quoted exactly as they appear in the journal."
 - The WebPage JSON-LD sits at the end of this section's HTML: `author` (Person: Malcolm Smith), `publisher`, `reviewedBy`, `lastReviewed`, `citation[]`, `inLanguage`. Set `jsonld_host: "evidence_sources"` in the spec and in the reviewer config's hub entry.
 
 ---
+
+## 3.6 The page accent (Malcolm, 2026-09-24)
+
+Every science page has one accent: the ingredient colour its key figures and charts already use. Links (underlined), the solid *Shop* button, the evidence-index claims, the at-a-glance bullets, the how-to step discs and the grade-A pill all use it. There is one variable, set once in the overview style:
+
+```css
+:root{--sg-accent:#9E4F5C;--sg-accent-tint:#F6E9EB}
+```
+
+| Page | `--sg-accent` | `--sg-accent-tint` |
+|---|---|---|
+| PDRN | `#9E4F5C` rose | `#F6E9EB` |
+| Argireline | `#3E4A52` slate | `#E9ECEE` |
+| Copper peptide | `#014EB1` clinical blue | `#E4EDFA` |
+| Matrixyl 3000 | `#016569` teal | `#E0EFEF` |
+| Glutathione | `#8A6914` deep champagne | `#F5EEDC` |
+
+These are the text-safe versions of the art-direction scene colours (`docs/visual-identity/03-art-direction-and-briefs.md`): white on each passes 4.5:1. Never hard-code a colour in the custom sections; use `var(--sg-accent)`. The theme's own buttons (shop grid, CTA) keep the theme style.
 
 ## 4. Claims rules the template enforces
 
@@ -88,7 +106,7 @@ These come from the claims registers and ADRs; the template simply gives each on
 
 1. **A number always travels with its qualifier.** "48.9%" is _22 of 45 people graded improved_, never a reduction in anything (Argireline register §3). The same fix had to be made in the FAQ answer after it was made on the card, so search the whole page, FAQ included, for every figure you change.
 2. **Different delivery or concentration → labelled, never implied.** Microneedle, injection and other concentrations are listed and labelled.
-3. **No negative findings as cards or index rows** (ADR-2026-09-24-P). That slot shows a positive USP with a before/after. Whether studies that found nothing, or that do not transfer, stay in the Evidence & Sources table is an open question for Malcolm (2026-09-24).
+3. **No negative findings as cards or index rows, and none in Evidence & Sources** (ADR-2026-09-24-P, Malcolm 2026-09-24). That slot shows a positive USP with a before/after. The table keeps only the studies the page's positive claims rest on: rows graded negative, after a procedure, other delivery, injected or "not this ingredient" are dropped, as are reviews and disclaimers of those. The At-a-glance "Independent evidence" and "Not shown" lines stay (Malcolm's choice).
 4. **Our prose paraphrases disease names and mechanism phrases,** even when reporting a study (memory `reporting-a-study-is-still-our-prose`). Only the verbatim title is exempt.
 5. **Ingredient-level only on products** until the formula facts are confirmed; the trial magnitudes live on the science page.
 6. **Brightening is cosmetic** (glutathione): never "whitening", "even tone" or "dark spots" in our prose.
