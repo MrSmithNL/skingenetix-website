@@ -159,3 +159,19 @@ Grades: A = controlled human with an instrumental measure · B = uncontrolled or
 | Yogya 2022, Gulfan 2022, Thellung 1999, Belletti 2007, Alhussain 2026, Lampridou 2025, Squadrito 2014 and 2017, Kim 2023, Lee 2022, Havas 2026, Bak 2025 | PubMed `esummary` (titles, journals, years) and `efetch` abstracts for Yogya, Gulfan, Alhussain, Lampridou | As in §2. Alhussain: "seven randomized trials involving 183 participants… limited by small sample sizes"; Lampridou: "nine studies, of low and moderate quality… 219 patients" |
 
 No figure in this register was contradicted. Applied in `configs/hub-upgrades/pdrn-research-parity-2026-09-23.json` (six languages); audit trail in `docs/audits/pages/README.md`.
+
+## Verification log — 2026-09-24 (science-page template build)
+
+The PDRN page moved onto the science-page template (`docs/science-page-template.md`; specs `configs/hub-upgrades/pdrn-research-{layout,evidence-merge}-2026-09-24.json`). Every figure the new sections state was checked again at source first.
+
+| What | Where read | Result |
+|---|---|---|
+| Ye 2026 ex vivo arm (new finding card 2) | PMC13353946 full-text XML | "Protein levels of collagen I, III, IV, V, VI, VII, XV, XVII, and XVIII, as well as elastin and fibrillin-1, were all significantly elevated compared with UV-damaged controls"; "increased viable epidermal thickness". The explants were treated with the **same 0.1% PDRN-850K eye cream** as the clinical arm (Table 2), so "the same cream" is accurate |
+| Gulfan 2022 (new finding card 4, table row) | PubMed abstract, PMID 35538360 | 30 women, three RF-microneedling sessions two weeks apart, PN vs saline per hemiface, 26 followed to 6 months; MI, roughness and mMASI improved on both sides "with no statistically significant differences between sides"; "not superior". **Correction:** the old table row also listed *redness*, which the abstract does not report. Dropped |
+| Thellung 1999 (card 2 mechanism, table row) | PubMed abstract, PMID 10328526 | Fibroblast growth increased; blocked by the A2 antagonist DMPX, not by the A1 antagonist |
+| Kim TH 2021 (table row; cited on the live page but absent from §2) | PubMed abstract, PMID 34067499 | Review: PDRNs are "DNA-derived drugs with a molecular weight ranging from 50 to 1500 kDa, which are mainly extracted from the sperm cells of salmon trout or chum salmon"; applications medical (wound healing). Row cites it for origin only |
+| Lampridou (table row) | PubMed esummary, PMID 39645667 | *J Cosmet Dermatol* 2025 Feb;24(2):e16721, epub 2024 Dec. The live reference list said 2024; corrected to 2025 |
+
+**Removed from the page:** Khan 2022 and the finding card built on it ("Reviewed as a Promising Skin Anti-Aging Ingredient"). §2 row 27 still stands: the paper has never been read beyond its title, and it supports only "promising". The page now cites the two independent reviews that were read (Alhussain 2026, Lampridou 2025).
+
+**Inherited, not re-read today:** Ye 2026 clinical figures (re-read 2026-09-23, log above); Yogya 2022, Belletti 2007, Squadrito 2014 and 2017, Kim BR 2023, Lee YJ 2022, Havas 2026, Bak 2025 (register §2 and the 2026-09-23 esummary pass). Their table rows reuse the approved 2026-09-23 wording; the injected and non-salmon rows are split one study per row, with no new figures.

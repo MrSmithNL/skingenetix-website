@@ -1,4 +1,5 @@
 {
+  "_retired": "2026-09-24 — its jsonld_host 'references' was removed by pdrn-research-evidence-merge-2026-09-24 (the JSON-LD now lives in evidence_sources). It last owned `charts`; a change to charts starts a new spec from the live value.",
   "_about": "Research-page-standard retrofit, 2026-09-22 (docs/content-plan-2026.md §4). ADDITIVE ONLY: a charts section with data tables, the references block translated per locale (it served English everywhere, and in nl an outdated older copy), and per-locale WebPage JSON-LD taken from the LIVE page (with reviewedBy). The original hub spec is stale — do not re-apply it. Figures from docs/claims/. Ye et al. 2026 gives crow's-feet results only as approximate ranges (−20 to −23% vs −6 to −7%), so they are drawn as ranges; the ratios are the authors' 'approximately two-fold' / '1.8-fold'. Charts sit after the before/after row (its wrapper is Bone) so the Bone/White alternation holds; the sections below flip where needed (page-audit DESIGN finding, first apply).",
   "template": "templates/page.pdrn-research.json",
   "page": "pdrn-research",

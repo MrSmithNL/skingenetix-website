@@ -34,7 +34,7 @@ Why each rule exists:
   * Translated hrefs must carry the locale prefix (/de/pages/...). Hardcoded
     links in richtext are not localised by Shopify.
 """
-import argparse, datetime as dt, glob, html as H, importlib.util, json, pathlib, re, sys, time, urllib.error, urllib.request
+import argparse, datetime as dt, glob, html as H, importlib.util, json, pathlib, re, subprocess, sys, time, urllib.error, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://www.skingenetix.com"
@@ -243,15 +243,40 @@ def register(spec, to_translate):
             raise RuntimeError(errs)
 
 
+def curl(url):
+    """(status, body) via curl. Cloudflare can throttle Python's client while curl still gets 200 (2026-09-24)."""
+    r = subprocess.run(["curl", "-s", "-L", "-A", "Mozilla/5.0", "-w", "\n%{http_code}", url],
+                       capture_output=True, timeout=60)
+    body, _, code = r.stdout.decode("utf-8", "ignore").rpartition("\n")
+    return int(code or 0), body
+
+
 def fetch(url):
-    for attempt in range(6):
+    for attempt in range(2):
         try:
             return urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}),
                                           timeout=40).read().decode("utf-8", "ignore")
         except urllib.error.HTTPError as e:
-            if e.code not in (429, 503) or attempt == 5:
+            if e.code not in (429, 503):
                 raise
             time.sleep(10 * (attempt + 1))
+    for attempt in range(4):                      # throttled: curl, spaced
+        code, body = curl(url)
+        if code == 200:
+            return body
+        time.sleep(8 * (attempt + 1))
+    raise RuntimeError(f"{url}: {code} from both urllib and curl")
+
+
+def status(url):
+    """HTTP status of an internal link, with the same curl fallback when Python is throttled."""
+    try:
+        return urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=30).status
+    except urllib.error.HTTPError as e:
+        if e.code not in (429, 503):
+            return e.code
+    time.sleep(2)
+    return curl(url)[0]
 
 
 def locale_texts(node):
@@ -300,10 +325,9 @@ def verify(spec):
         links = sorted(set(h for t in texts for h in re.findall(r'href="(/[^"]*)"', t[loc])))
         dead = []
         for href in links:
-            try:
-                urllib.request.urlopen(urllib.request.Request(BASE + href, headers={"User-Agent": "Mozilla/5.0"}), timeout=30)
-            except urllib.error.HTTPError as e:
-                dead.append(f"{href} {e.code}")
+            code = status(BASE + href)
+            if code >= 400:
+                dead.append(f"{href} {code}")
             time.sleep(0.5)
         ld_ok = True
         if loc == "en" and spec.get("jsonld"):

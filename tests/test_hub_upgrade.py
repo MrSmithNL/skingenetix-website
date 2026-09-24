@@ -190,3 +190,23 @@ def test_a_retired_spec_refuses_to_apply(tmp_path, monkeypatch):
     with pytest.raises(SystemExit) as e:
         hu.main()
     assert "retired" in str(e.value)
+
+
+def test_fetch_falls_back_to_curl_when_cloudflare_throttles_python(monkeypatch):
+    # 2026-09-24: Cloudflare answered every urllib request with 429 while curl got 200
+    import subprocess
+    import urllib.error
+
+    def throttled(*a, **k):
+        raise urllib.error.HTTPError("u", 429, "Too Many Requests", {}, None)
+    monkeypatch.setattr(hu.urllib.request, "urlopen", throttled)
+    monkeypatch.setattr(hu.time, "sleep", lambda s: None)
+    calls = []
+
+    def fake_run(cmd, **k):
+        calls.append(cmd)
+        return subprocess.CompletedProcess(cmd, 0, stdout=b"<html>ok</html>\n200", stderr=b"")
+    monkeypatch.setattr(hu.subprocess, "run", fake_run)
+    assert hu.fetch("https://www.skingenetix.com/pages/x") == "<html>ok</html>"
+    assert calls and calls[0][0] == "curl"
+    assert hu.status("https://www.skingenetix.com/pages/x") == 200

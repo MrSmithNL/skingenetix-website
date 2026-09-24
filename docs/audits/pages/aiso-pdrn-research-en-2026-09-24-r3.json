@@ -1,0 +1,305 @@
+{
+ "gpt": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 10,
+    "note": "The page starts with a definition and main results for PDRN.",
+    "fix": ""
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "Clear and immediate definition of PDRN (polydeoxyribonucleotide) is provided.",
+    "fix": ""
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "The heading hierarchy is logical but flat; some subheads could be more clearly organized under primary headings.",
+    "fix": "Introduce clearer subheadings structure under main topics."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "All paragraphs are short, concise, and 2-5 sentences.",
+    "fix": ""
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The content is dense with facts about PDRN's effects and studies.",
+    "fix": ""
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "Comparison with retinol effects is detailed and data-driven.",
+    "fix": ""
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "Effective use of lists and tables to summarize findings.",
+    "fix": ""
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 9,
+    "note": "In-depth information on studies and detailed evidence; lacks some broader context of PDRN's use outside the trials.",
+    "fix": "Include more about PDRN applications and potential future research directions."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 10,
+    "note": "Key information and findings are presented early in the text.",
+    "fix": ""
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 10,
+    "note": "Includes images and diagrams to support the textual content.",
+    "fix": ""
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "Comprehensive use of JSON-LD schema markup across various types.",
+    "fix": ""
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "Contains an extensive and thorough FAQ section.",
+    "fix": ""
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 9,
+    "note": "Cites academic studies but many are associated with manufacturers.",
+    "fix": "Incorporate more independent research citations."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "Contains a significant number of internal links to related content and products.",
+    "fix": ""
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "Meta tags are well-optimized for the main topic and search intent.",
+    "fix": ""
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 10,
+    "note": "Author is clearly named with credentials.",
+    "fix": ""
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "Medically reviewed by a named expert.",
+    "fix": ""
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "Content is last updated on the current date.",
+    "fix": ""
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "Multiple brand mentions are seamlessly integrated.",
+    "fix": ""
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 9,
+    "note": "Seamless structured data allows easy extraction, but less diversity in study sources.",
+    "fix": "Incorporate a broader variety of study sources to enhance citation robustness."
+   }
+  ],
+  "overall": 9.8,
+  "top_fixes": [
+   "Introduce clearer subheadings structure under main topics.",
+   "Include more about PDRN applications and potential future research directions.",
+   "Incorporate more independent research citations."
+  ],
+  "assessment": "The page is highly optimized for search and user intent with quality citations and structured data. Improvements can be made by diversifying research sources and enhancing heading structures."
+ },
+ "gemini": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "The page begins with prominent statistical summaries using H2/H3 blocks before the formal 'What Is PDRN?' definition. While the 'At a glance' section provides quick answers, the initial content flow could be slightly streamlined for immediate definitional clarity.",
+    "fix": "Reorder the initial content to place the 'What Is PDRN?' definition immediately after the H1, perhaps followed by the 'At a glance' summary, before delving into detailed statistical breakouts, to enhance immediate answer fulfillment."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "The definition of PDRN is presented clearly and concisely right after the main introductory text: 'PDRN (polydeoxyribonucleotide) is a skincare ingredient made from purified salmon DNA fragments, listed on ingredient labels as Sodium DNA.'",
+    "fix": "No fix needed; this is excellently done."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "While the main content sections use H2/H3 logically, the initial H2s like '−20 to −23%' are numerical and less semantically descriptive as standalone headings, even with their accompanying H3s. This could be slightly improved for clearer topic segmentation by AI.",
+    "fix": "Rephrase the initial numerical H2s (e.g., '−20 to −23%') to be more descriptive and less abrupt (e.g., 'Significant Reduction in Crow's-Feet Wrinkles: −20 to −23%') to improve semantic clarity for crawlers."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "The content consistently uses short, digestible paragraphs (mostly 2-5 sentences), effectively breaking down information. Bulleted lists and tables are also used to present information efficiently.",
+    "fix": "No fix needed; this is perfectly executed."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The page is exceptionally fact-dense, packed with specific numbers, percentages, study names, molecular weights, INCI names, authors, and dates. The 'At a glance' section and tables are particularly rich in data.",
+    "fix": "No fix needed; this is a strength of the content."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "Excellent comparative content, with a dedicated 'PDRN vs Retinol' section featuring a clear table. The content also explicitly differentiates topical PDRN from injected PDRN and other 'vegan PDRN' types, showing comprehensive understanding.",
+    "fix": "No fix needed; this aspect is thoroughly covered."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "The content makes extensive and highly effective use of lists ('At a glance', 'How to Use PDRN') and tables ('PDRN vs Retinol', 'PDRN Evidence & Sources'), which significantly aids readability and data comprehension.",
+    "fix": "No fix needed; the use of lists and tables is exemplary."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "The article demonstrates impressive depth, covering definition, mechanism of action, source, efficacy, safety, usage, detailed comparisons, and a critically appraised evidence base. It addresses nuances like concentration and types of evidence (lab vs. human, topical vs. injected).",
+    "fix": "No fix needed; the content is remarkably comprehensive."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 10,
+    "note": "Key information is expertly front-loaded, with an 'At a glance' summary and initial statistical highlights presenting core benefits and evidence immediately. The definition is also provided early, enabling quick understanding.",
+    "fix": "No fix needed; front-loading is effectively implemented."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 9,
+    "note": "The content includes relevant images (product shots, diagrams, before/after), and extensive use of tables and lists. While charts are described, the visual representation of these charts is not present in the extracted content, which could further enhance multi-modality.",
+    "fix": "Ensure that any described 'charts' for data comparison are rendered as actual image files in the raw HTML so that visual representation of data is present in the extracted content, complementing the tabular data."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "The page utilizes a comprehensive and highly relevant set of JSON-LD schemas, including 'ScholarlyArticle', 'FAQPage', 'Person', and 'Organization'. This is crucial for a YMYL scientific content hub, enhancing its discoverability and interpretation by search engines.",
+    "fix": "No fix needed; schema markup is excellent."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "A dedicated 'Frequently Asked Questions' section is present, addressing common user queries clearly and concisely. The questions are highly relevant to the ingredient, improving user experience and potentially appearing in SERP features.",
+    "fix": "No fix needed; the FAQ section is well-executed."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 10,
+    "note": "Citation quality is outstanding. Studies are cited throughout, and a dedicated 'PDRN Evidence & Sources' section provides full titles, author details, PubMed links, and crucially, a critical, graded appraisal of each study, including conflicts of interest and limitations.",
+    "fix": "No fix needed; the citation quality is exemplary for scientific YMYL content."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "With 19 in-content internal links to other pages on the site, plus 14 external reference links (as per the provided fact), the internal linking is robust, supporting navigation, SEO, and content hub structure.",
+    "fix": "No fix needed; internal linking is excellent."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "The meta title (55 chars) and description (145 chars) are both within optimal length limits, keyword-rich ('PDRN', 'Salmon DNA Skincare', 'Sodium DNA'), and accurately summarize the page content, indicating strong meta optimization.",
+    "fix": "No fix needed; meta optimization is very strong."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 10,
+    "note": "Clear author attribution is provided ('Written by Malcolm Smith, founder of Skingenetix'), along with relevant credentials, which is essential for establishing authority and trust on YMYL content.",
+    "fix": "No fix needed; author attribution is well-handled."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "The content explicitly states 'Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician,' which is crucial for a scientific YMYL page and signals high authority and trustworthiness.",
+    "fix": "No fix needed; expert review is clearly indicated."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "The content was 'Last reviewed 24 September 2026', matching today's date. This indicates continuous updating and ensures the information is maximally current and relevant.",
+    "fix": "No fix needed; recency is perfect."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "The brand 'Skingenetix' is appropriately mentioned throughout the content, especially in relation to product offerings and ingredient sourcing, without being overtly promotional within the scientific explanations. Calls to action for shopping products are present at the end.",
+    "fix": "No fix needed; brand mentions are well-integrated."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "The content is exceptionally well-structured for AI processing and citation, owing to its high fact density, clear definitions, transparent evidence grading, use of tables/lists, author/reviewer attribution, and explicit disclaimers regarding study limitations. This minimizes AI misinterpretation.",
+    "fix": "No fix needed; AI citation readiness is outstanding."
+   }
+  ],
+  "overall": 9.85,
+  "top_fixes": [
+   "Reorder initial content to present the core definition immediately after the H1, ahead of detailed statistical breakouts, for clearer answer-first indexing.",
+   "Rephrase numerical H2s (e.g., '−20 to −23%') to be more descriptive (e.g., 'Significant Reduction in Crow's-Feet Wrinkles') for improved semantic clarity.",
+   "Integrate visual chart representations for data comparisons, beyond just tabular data, to enhance multi-modal content understanding for AI crawlers."
+  ],
+  "assessment": "This page demonstrates exceptional quality for a scientific YMYL ingredient research hub. Its transparent and quantitative approach to evidence, coupled with robust authority signals (author, medical review, detailed citations with critical appraisal), makes it highly trustworthy and valuable for both human users and AI search systems. The meticulous content structure, fact density, and strong optimization across various criteria position it as a best-in-class example for AI Search Optimization (AISO)."
+ },
+ "combined": 9.825
+}

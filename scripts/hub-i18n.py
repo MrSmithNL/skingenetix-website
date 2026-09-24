@@ -17,17 +17,21 @@ Method, per locale:
   2. swap the byline for this locale's, COMPOSED from the reviewer config — set-reviewer.py removes the reviewer
      sentence as an exact substring, so a hand-typed variant would strand Dr Bodde's credit in that language
   3. locale-prefix internal hrefs (/pages/x -> /de/pages/x); anchors (#rba-f1) and external links stay as they are
+  4. localise the WebPage JSON-LD (inLanguage, /loc/ url and @id, name/description from the config's jsonld_i18n);
+     phrases never touch it
 
 The CSS, the JSON-LD and the verbatim published study titles never enter the phrase table, so they are untouched by
 construction (ADR-2026-09-23-G: titles are quoted exactly as the journal printed them).
 
 It REFUSES to write unless, for every locale: the <h2>, <table>, <tr>, <li> and <a> counts match English; every
 internal href carries the locale prefix; no English prose survives (bar the allowlist and the verbatim fragments);
-and no Cyrillic or Greek look-alike letter appears — the Italian "deterсa" of 2026-09-23 rendered identically.
+no Cyrillic or Greek look-alike letter appears — the Italian "deterсa" of 2026-09-23 rendered identically; and
+the WebPage JSON-LD parses and declares this locale.
 """
 import argparse, datetime as dt, json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+BASE = "https://www.skingenetix.com"
 LOCALES = ["de", "nl", "fr", "es", "it"]
 
 MONTHS = {
@@ -75,13 +79,45 @@ def text_nodes(html):
     return [p.strip() for p in re.split(r"<[^>]+>", body) if p.strip()]
 
 
-def localise(html, loc, phrases, byline):
-    out = html
-    for en in sorted(phrases, key=len, reverse=True):
-        out = out.replace(en, phrases[en][loc])
-    if byline:
-        out = out.replace(byline["en"], byline[loc])
-    return re.sub(r'href="(/(?!' + loc + r'/)[^"#][^"]*)"', lambda m: f'href="/{loc}{m.group(1)}"', out)
+LD_BLOCK = re.compile(r'(<script type="application/ld\+json"[^>]*>)(.*?)(</script>)', re.S)
+
+
+def localise_jsonld(block, loc, i18n):
+    """The WebPage JSON-LD for one locale: inLanguage, the /loc/ url and @id, and the translated name/description.
+
+    The 2026-09-23 recipe left this block in English on every locale (inLanguage "en", English URL on /de/),
+    undoing the per-locale JSON-LD the references blocks had carried since 2026-09-22. Fixed 2026-09-24.
+    """
+    def fix(m):
+        ld = json.loads(m.group(2))
+        if ld.get("@type") != "WebPage":
+            return m.group(0)
+        ld["inLanguage"] = loc
+        for k in ("url", "@id"):
+            if k in ld:
+                ld[k] = ld[k].replace(f"{BASE}/pages/", f"{BASE}/{loc}/pages/")
+        ld.update(i18n.get(loc, {}))
+        return m.group(1) + "\n" + json.dumps(ld, indent=2, ensure_ascii=False) + "\n" + m.group(3)
+    return LD_BLOCK.sub(fix, block)
+
+
+def localise(html, loc, phrases, byline, jsonld_i18n):
+    # the JSON-LD is set aside first, so no phrase can land inside it and break the JSON
+    parts = LD_BLOCK.split(html)
+    prose = [p for i, p in enumerate(parts) if i % 4 == 0]
+    for n, chunk in enumerate(prose):
+        for en in sorted(phrases, key=len, reverse=True):
+            chunk = chunk.replace(en, phrases[en][loc])
+        if byline:
+            chunk = chunk.replace(byline["en"], byline[loc])
+        prose[n] = re.sub(r'href="(/(?!' + loc + r'/)[^"#][^"]*)"', lambda m: f'href="/{loc}{m.group(1)}"', chunk)
+    out = []
+    for i, p in enumerate(parts):
+        if i % 4 == 0:
+            out.append(prose[i // 4])
+        elif i % 4 == 1:
+            out.append(localise_jsonld("".join(parts[i:i + 3]), loc, jsonld_i18n))
+    return "".join(out)
 
 
 def check(en, value, loc, keep, fragments):
@@ -98,6 +134,14 @@ def check(en, value, loc, keep, fragments):
             problems.append(f"[{loc}] English left behind: {node[:80]}")
         if LOOKALIKE.search(node) and not LOOKALIKE.search(en):
             problems.append(f"[{loc}] Cyrillic/Greek look-alike letters in: {node[:80]}")
+    for m in LD_BLOCK.finditer(value):
+        try:
+            ld = json.loads(m.group(2))
+        except ValueError:
+            problems.append(f"[{loc}] JSON-LD is not valid JSON")
+            continue
+        if ld.get("@type") == "WebPage" and (ld.get("inLanguage") != loc or f"/{loc}/pages/" not in ld.get("url", "")):
+            problems.append(f"[{loc}] JSON-LD WebPage says inLanguage {ld.get('inLanguage')!r}, url {ld.get('url')!r}")
     return problems
 
 
@@ -124,7 +168,7 @@ def build(cfg, root=ROOT):
         en = html["en"] if isinstance(html, dict) else html
         values[sid] = {"en": en}
         for loc in LOCALES:
-            values[sid][loc] = localise(en, loc, phrases, byline)
+            values[sid][loc] = localise(en, loc, phrases, byline, cfg.get("jsonld_i18n", {}))
             problems += [f"{sid}{p}" for p in check(en, values[sid][loc], loc, keep, fragments)]
     return values, list(dict.fromkeys(problems))
 

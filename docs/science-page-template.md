@@ -3,7 +3,7 @@
 **Status:** adopted 2026-09-23 (Malcolm: _"now lets save this as the template to follow for the other science pages. We will improve them accordingly one by one later."_). Written up 2026-09-24. ADR-2026-09-24-S.
 **Reference page:** [/pages/acetyl-hexapeptide-8-research](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research), live in six languages.
 **Replaces:** Matrixyl 3000 as the reference build. Amends items 2 and 6 of the research-page standard (`docs/content-plan-2026.md` §4).
-**Rollout:** PDRN, copper peptide, Matrixyl 3000 and glutathione, one page at a time, on Malcolm's go-ahead for each.
+**Rollout:** one page at a time, on Malcolm's go-ahead for each. **PDRN done 2026-09-24** (external 9.82, page audit 100/96/100/93). Next: copper peptide, Matrixyl 3000, glutathione.
 
 ---
 
@@ -136,13 +136,24 @@ One page per go-ahead. Claims before layout, so nothing is translated that is ab
 | 12  | Show it: desktop and mobile tiled to `~/Desktop/skingenetix-renders.png`, `open`.                                                                                                                                                             | capture recipe                                                                          | On screen                                         |
 | 13  | Record: todo, register log, audits README, decisions log if anything was decided.                                                                                                                                                             | —                                                                                       | Committed and pushed                              |
 
+### 6.1 Learned on the PDRN rollout (2026-09-24)
+
+- **Harvest by element where a paragraph holds links or short connectors.** Pair the live English with each translation by position. Use the whole `<p>`/`<li>` when it contains a link or a short joining phrase ("and the"), because a short phrase would be substituted everywhere it appears. Use text nodes (12+ characters) elsewhere. Then check that the numbers in each pair agree. On PDRN every mismatch was word order or `1,500` vs `1500`, but that is the check that would catch a wrong figure. Of the PDRN build's 92 phrases, 46 are the page's own approved translations, 11 are generic template phrases from Argireline and 35 are new.
+- **The FAQ's accordion colour flips with its background.** The old pages put Bone accordions on a White FAQ. The template's FAQ is Bone, so set `accordion_background: "#ffffff"` in the same `section_settings`, or the questions vanish into the band.
+- **The WebPage JSON-LD is localised per language** by `hub-i18n.py`: `inLanguage`, the `/de/` URL and `@id`, and the name and description from the config's `jsonld_i18n`. Copy those from the page's superseded spec. The Argireline build had shipped English JSON-LD on all six languages.
+- **A product cut-out from the white "selector" shot.** Background = near-white pixels (min channel ≥ 243) connected to the edge. Also clear the floor shadow: pale, colourless pixels beside or below the glass. Keep the largest component, feather the edge by 1.2 px, and judge the result on dark and at render size on Bone. Save as **WebP with alpha** (PDRN: 69 KB, against 668 KB as PNG). `upload-theme-images.py` forces JPEG, which would flatten the transparency, so upload the WebP through the Files API directly.
+- **Usage can carry a third row** when the page absorbs a definitional query. PDRN keeps *Salmon DNA: Where PDRN Comes From* (content plan §4 item 4) above *What 1% PDRN Means* and the how-to.
+- **Drop a citation nobody has read.** Khan 2022 and its card went, per the PDRN register §2 row 27. A table of "every study this page relies on" cannot include one we have not read.
+- **`set-reviewer.py --apply` is not needed after a rebuild.** The builder writes the credit and date into the byline and JSON-LD. A dry run proves `--remove` still resolves the page, whereas `--apply` rewrites all five hubs and republishes the study pages.
+- **`--verify-live` falls back to curl** when Cloudflare throttles Python (memory `cloudflare-throttles-python-not-curl`).
+
 ---
 
 ## 7. What each of the other four pages has today (read live, 2026-09-24)
 
 | Page           | Template file                  | Sections | Differs from the template                                                                                                                                                                                                                                             |
 | -------------- | ------------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PDRN           | `page.pdrn-research`           | 15       | rich-text `overview` and `evidence`; findings split across `key_findings_ba` (1 card) and `key_findings` (`media-with-text`, 2); `media-with-text` usage; `specification-table` (10 rows) + `references`; a `findings_spacing_fix` style section at the end (ADR-006) |
+| PDRN ✅ on the template 2026-09-24 | `page.pdrn-research`           | 15       | rich-text `overview` and `evidence`; findings split across `key_findings_ba` (1 card) and `key_findings` (`media-with-text`, 2); `media-with-text` usage; `specification-table` (10 rows) + `references`; a `findings_spacing_fix` style section at the end (ADR-006) |
 | Copper peptide | `page.research-copper-peptide` | 14       | a `hero_banner_css` style section after the hero; rich-text overview and evidence; `key_findings` as `media-with-text` (3); `media-with-text` usage; `specification-table` (10) + `references`                                                                        |
 | Matrixyl 3000  | `page.research-matrixyl`       | 13       | rich-text overview and evidence; `key_findings` as `media-with-text` (3); `media-with-text` usage; `specification-table` (7) + `references`                                                                                                                           |
 | Glutathione    | `page.glutathione-research`    | 16       | findings split across `key_findings_ba1`, `key_findings` and `key_findings_ba3`; `media-with-text` usage; `specification-table` (10) + `references`; `findings_spacing_fix`                                                                                           |
@@ -168,8 +179,9 @@ So the gate as written was **not met on two counts, both small**. Malcolm then a
 
 ## 9. Known loose ends on the reference page
 
-- `evidence_sources` CSS still carries three rules for `#shopify-section-template--26327072244097__overview .media-with-text__media`. The overview is custom-html now, so they target nothing. Remove at the next edit of that section.
-- The JSON-LD `citation[]` lists 8 works; the table has 10 rows. Align at the next edit of that section.
+- ~~Dead CSS for the old media-with-text overview in `evidence_sources`.~~ Removed 2026-09-24.
+- ~~JSON-LD `citation[]` 8 works against 10 table rows.~~ 2026-09-24: Hoppel 2015 added (9). The Lipotec trade-press study stays out of `citation[]` because it is not a scholarly article.
+- ~~JSON-LD `inLanguage: "en"` and the English URL on all five translated pages.~~ Fixed live 2026-09-24 (verified on /de/ and /it/ with curl).
 - FAQ q3 calls the peptide "gentle … generally well tolerated", and q5 claims "measurable improvements from day 15 … additional cumulative benefits beyond 28 days". Both belong to the open "gentle / well tolerated" sweep (`docs/todo.md` CONTENT-001) and need checking at source.
 - The three key figures render as standalone `<h2>`s, a theme behaviour accepted in ADR-2026-09-23-T.
 
