@@ -35,14 +35,14 @@ def test_date_sentence_matches_set_reviewers_date_marker_in_every_locale():
 def test_localise_substitutes_longest_phrase_first():
     phrases = {"Shop": {l: "S-" + l for l in LOCALES},
                "Shop Argireline": {l: "SA-" + l for l in LOCALES}}
-    out = hi.localise("<a>Shop Argireline</a><a>Shop</a>", "de", phrases, {})
+    out = hi.localise("<a>Shop Argireline</a><a>Shop</a>", "de", phrases, {}, {})
     assert out == "<a>SA-de</a><a>S-de</a>"
 
 
 def test_localise_prefixes_internal_links_only():
     html = ('<a href="/pages/x">a</a><a href="#rba-f1">b</a>'
             '<a href="https://pubmed.ncbi.nlm.nih.gov/1/">c</a><a href="/de/pages/y">d</a>')
-    out = hi.localise(html, "de", {}, {})
+    out = hi.localise(html, "de", {}, {}, {})
     assert 'href="/de/pages/x"' in out
     assert 'href="#rba-f1"' in out
     assert 'href="https://pubmed.ncbi.nlm.nih.gov/1/"' in out
@@ -77,7 +77,34 @@ def test_byline_keeps_set_reviewers_exact_sentence_so_remove_still_works():
         assert "Esther Bodde" not in sr.remove_from_byline(html, loc, RV), loc
 
 
+LD = ('<script type="application/ld+json" id="sgx-webpage-jsonld">\n'
+      '{"@type": "WebPage", "@id": "https://www.skingenetix.com/pages/x#webpage", '
+      '"url": "https://www.skingenetix.com/pages/x", "name": "Hello", "inLanguage": "en"}\n</script>')
+
+
+def test_jsonld_is_localised_and_never_phrase_substituted():
+    # 2026-09-24: the Argireline template served inLanguage "en" and the English URL on /de/ pages
+    phrases = {"Hello": {l: "Hallo-" + l for l in LOCALES}}
+    out = hi.localise("<p>Hello</p>" + LD, "de", phrases, {}, {"de": {"name": "Name DE"}})
+    ld = json.loads(re.search(r"<script[^>]*>(.*?)</script>", out, re.S).group(1))
+    assert "<p>Hallo-de</p>" in out
+    assert ld["inLanguage"] == "de" and ld["name"] == "Name DE"
+    assert ld["url"] == "https://www.skingenetix.com/de/pages/x"
+    assert ld["@id"] == "https://www.skingenetix.com/de/pages/x#webpage"
+    assert hi.localise("<p>Hello</p>" + LD, "fr", phrases, {}, {}).count('"name": "Hello"') == 1
+
+
+def test_check_flags_jsonld_in_the_wrong_language():
+    problems = hi.check("<p>x</p>" + LD, "<p>y</p>" + LD, "de", hi.keep_pattern([]), [])
+    assert any("JSON-LD" in p for p in problems)
+
+
+def _strip_ld(h):
+    return re.sub(r'<script type="application/ld\+json".*?</script>', "", h, flags=re.S)
+
+
 def test_rebuilds_the_live_argireline_translations_exactly():
+    # byte for byte outside the JSON-LD, which the 2026-09-23 recipe left in English on every locale
     cfg = json.loads((ROOT / "configs/hub-i18n/acetyl-hexapeptide-8-research.json").read_text())
     values, problems = hi.build(cfg, ROOT)
     assert problems == []
@@ -86,4 +113,7 @@ def test_rebuilds_the_live_argireline_translations_exactly():
         spec = json.loads((ROOT / spec_path).read_text())
         live = next(a for a in spec["add_sections"] if a["id"] == sid)["section"]["settings"]["html"]
         for loc in ["en"] + LOCALES:
-            assert values[sid][loc] == live[loc], (sid, loc)
+            assert _strip_ld(values[sid][loc]) == _strip_ld(live[loc]), (sid, loc)
+    assert values["evidence_sources"]["en"] == next(
+        a for a in json.loads((ROOT / cfg["sections"]["evidence_sources"]).read_text())["add_sections"]
+        if a["id"] == "evidence_sources")["section"]["settings"]["html"]["en"]
