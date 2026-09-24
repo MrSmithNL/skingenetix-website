@@ -24,24 +24,33 @@ Three theme sections. Everything designed lives in the middle one.
 
 | Section | Field | Carries |
 |---|---|---|
-| `study_head` | `intro` (rich text) | H1, the appraisal byline, the verdict paragraph |
-| `study_designed` | `sections_html` (multi-line text, raw HTML) | the six bands below |
-| `study_reference` | `reference` (rich text) + `jsonld` | citation, read-at-source note, schema |
+| `study_head` | `intro` (rich text) | H1, byline, the answer paragraph, the verdict |
+| `study_designed` | `sections_html` (raw HTML) + `jsonld` | the seven bands below, and the schema |
 
-The six bands inside `sections_html`, alternating White and Bone, each painting its own background:
+`study_reference` was removed on 2026-09-24. Empty of visible content it still rendered 80px of
+dead band, and it painted a second white section straight after the last bone one; the citation is
+band 7 now and the schema block moved into `study_designed`.
 
-1. **Key figures** — three numbers, same treatment as the hubs' band
-2. **At a glance** — a real `<table>`: design, participants, what was applied, comparators, duration,
-   measurement, concentration, funding, our grade
-3. **What the measurements showed** — the chart from `scripts/hub_charts.py`, with its real `<table>`
-   beneath, and a caption carrying the source link
-4. **What the researchers did** — prose beside an image
-5. **What this study does not show** — a bordered, tinted block; a numbered list of limitations
-6. **What it means for our products** — the honest linkage, then one solid CTA to the hub and one
-   ghost CTA to the product
+The seven bands inside `sections_html`, each painting its own background:
 
-Band 5 is the reason the page exists. A summary of an abstract is rated **Lowest** by Google's raters
+| # | Band | Ground | Padding |
+|---|---|---|---|
+| 1 | **Key figures** — three numbers, in Fraunces like the hubs' | white | 56 |
+| 2 | **At a glance** — a real `<table>`, nine rows | bone | 72 |
+| 3 | **What the measurements showed** — the chart + its `<table>` + a captioned source | white | 72 |
+| 4 | **What the researchers did** — prose beside a responsive image | bone | 88 |
+| 5 | **What this study does not show** — **on ink**, the largest body text on the page | **#1A1A1A** | 104 |
+| 6 | **What it means for our products** — one solid CTA, one ghost | white | 80 |
+| 7 | **Reference** — citation and the read-at-source note | bone | 40 |
+
+Padding carries rank. Six bands at one value is a colour stripe, not pacing: the first build measured
+`distinctSectionPaddings` 2 against a floor of 3, and now measures 7.
+
+**Band 5 is the reason the page exists.** A summary of an abstract is rated *Lowest* by Google's raters
 and is what any competitor can generate; an appraisal that states what the study cannot support is not.
+It shipped as a tinted, rounded box *narrower and less padded* than its neighbours — the standard aside
+component, i.e. the register of a footnote. The design critic's verdict was that if you hid the words
+you could not tell which band mattered. It is now the one break in the rhythm.
 
 ---
 
@@ -84,7 +93,11 @@ and is what any competitor can generate; an appraisal that states what the study
 | Empty rich-text sections still render their padding | The legacy `study_facts`/`study_body` sections left ~600px of dead band on a page that did not use them. `rich-text` has no `remove_vertical_spacing`, so the sections had to be removed — which meant porting the two pilot pages onto `sections_html` first. |
 | `hub_charts.render_chart` requires `caption` | `KeyError: 'caption'` with no guidance. |
 | `pageByHandle` does not exist in the Admin API | Use `study-pages.py`'s `hub_id()`, which queries `pages(query:"handle:…")`. |
-| `study-pages.py` requires all six locales for every field | It cannot publish an English-first page. The reference build writes the metaobject directly; the tool still owns the four original fields. |
+| `study-pages.py` requires all six locales for every field | It cannot publish an English-first page. `build-study-page.py` publishes English first and adds locales as the config carries them. |
+| **The theme's own rules beat CSS shipped in `sections_html`** | `.sty h2{font-size:32px}` and `main h1{font-size:…}` both silently did nothing. Use a selector specific enough to win (`.sty .sty__band h2`) or `!important`, and **verify on the live page** — computed style, not intent. |
+| **A viewport breakout renders the page blank** | `.sty{overflow-x:clip}` + `.sty__band{margin-inline:calc(50% - 50vw);width:100vw}` shipped a blank page. The theme gives `.sty` no width, so it shrink-to-fits; with every child pulled out by −50vw its width computed to **0** and the clip context cut the body away. The computed styles read correctly (`margin-left:-720px`, `width:1440px`) — **only the screenshot showed it**. Bands are therefore not full-bleed. |
+| **Clearing a field drops its translations** | Emptying English `reference` removed all five translations of it in the same call, so the two pilot pages lost their translated citations. Read and re-register the translations *before* clearing the source, or rebuild them from the config. |
+| `measure.py` measured the cookie dialog | `measureCh` takes the first paragraph over 200 characters **in document order**, which was the Shopify consent dialog — the same 85ch on every page of the site. Patched in the skill 2026-09-24 to prefer `main`. Real measure on this page: **61ch**. |
 
 ---
 

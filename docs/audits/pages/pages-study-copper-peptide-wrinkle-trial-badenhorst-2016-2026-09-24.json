@@ -2,8 +2,8 @@
  "path": "/pages/study/copper-peptide-wrinkle-trial-badenhorst-2016",
  "scores": {
   "SEO": 100,
-  "GEO": 79,
-  "DESIGN": 90,
+  "GEO": 100,
+  "DESIGN": 100,
   "MARKETING": 100
  },
  "items": [
@@ -107,7 +107,7 @@
    "area": "SEO",
    "check": "Exactly one <h1>",
    "ok": true,
-   "detail": "Does a copper peptide serum reduce wrinkles? The 2016 split-face trial (Badenhorst et al.)",
+   "detail": "Does a copper peptide serum reduce wrinkles?",
    "severity": "pass",
    "weight": 2
   },
@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "does a copper peptide serum reduce wrinkles the 2016 split-face trial badenhorst et al appraised by the skingenetix research team medically ",
+   "detail": "does a copper peptide serum reduce wrinkles appraised by the skingenetix research team medically reviewed by dr esther bodde cosmetic medica",
    "severity": "pass",
    "weight": 2
   },
@@ -123,7 +123,7 @@
    "area": "MARKETING",
    "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
    "ok": true,
-   "detail": "8 weeks",
+   "detail": "40 women",
    "severity": "pass",
    "weight": 2
   },
@@ -250,17 +250,17 @@
   {
    "area": "GEO",
    "check": "Page entity schema (WebPage/Article) with dateModified",
-   "ok": false,
-   "detail": "WebPage modified None",
-   "severity": "med",
+   "ok": true,
+   "detail": "WebPage modified 2026-09-24",
+   "severity": "pass",
    "weight": 1.5
   },
   {
    "area": "GEO",
    "check": "Schema cites sources (citation[])",
-   "ok": false,
-   "detail": "0 citations",
-   "severity": "low",
+   "ok": true,
+   "detail": "1 citations",
+   "severity": "pass",
    "weight": 1.0
   },
   {
@@ -290,9 +290,9 @@
   {
    "area": "GEO",
    "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
-   "ok": false,
-   "detail": "",
-   "severity": "high",
+   "ok": true,
+   "detail": "is a",
+   "severity": "pass",
    "weight": 2
   },
   {
@@ -307,7 +307,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "11 paragraphs, 0 too long",
+   "detail": "12 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "5",
+   "detail": "7",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "34 figures",
+   "detail": "35 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -371,7 +371,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "647 words extracted (main text 1011)",
+   "detail": "711 words extracted (main text 1041)",
    "severity": "pass",
    "weight": 3
   },
@@ -386,9 +386,9 @@
   {
    "area": "GEO",
    "check": "H2 sections survive extraction",
-   "ok": false,
-   "detail": "lost: ['Reference']",
-   "severity": "med",
+   "ok": true,
+   "detail": "6 kept",
+   "severity": "pass",
    "weight": 1.5
   },
   {
@@ -434,9 +434,9 @@
   {
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
-   "ok": false,
-   "detail": "study_designed+study_reference (White)",
-   "severity": "med",
+   "ok": true,
+   "detail": "Bone \u2192 White",
+   "severity": "pass",
    "weight": 1.5
   },
   {
@@ -499,7 +499,7 @@
  "data": {
   "title": "Badenhorst 2016: Does a Copper Peptide Serum Work?",
   "h1": [
-   "Does a copper peptide serum reduce wrinkles? The 2016 split-face trial (Badenhorst et al.)"
+   "Does a copper peptide serum reduce wrinkles?"
   ],
   "h2": [
    "At a glance",
@@ -536,8 +536,8 @@
    "BreadcrumbList",
    "WebPage"
   ],
-  "extracted_words": 647,
-  "main_words": 1011,
+  "extracted_words": 711,
+  "main_words": 1041,
   "images": [
    {
     "src": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg?width=1200",
@@ -557,33 +557,24 @@
      "id": "study_head",
      "type": "rich-text",
      "top": 126,
-     "h": 624,
+     "h": 865,
      "bg": "rgb(240, 240, 240)",
-     "text": 636,
+     "text": 800,
      "media": 0
     },
     {
      "id": "study_designed",
      "type": "rich-text",
-     "top": 750,
-     "h": 4142,
+     "top": 991,
+     "h": 4864,
      "bg": "rgb(255, 255, 255)",
-     "text": 4602,
+     "text": 4975,
      "media": 1
-    },
-    {
-     "id": "study_reference",
-     "type": "rich-text",
-     "top": 4891,
-     "h": 325,
-     "bg": "rgb(255, 255, 255)",
-     "text": 371,
-     "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 5216,
+     "top": 5854,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -592,7 +583,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 5732,
+     "top": 6370,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -610,33 +601,24 @@
      "id": "study_head",
      "type": "rich-text",
      "top": 85,
-     "h": 622,
+     "h": 804,
      "bg": "rgb(240, 240, 240)",
-     "text": 636,
+     "text": 800,
      "media": 0
     },
     {
      "id": "study_designed",
      "type": "rich-text",
-     "top": 707,
-     "h": 7002,
+     "top": 889,
+     "h": 7510,
      "bg": "rgb(255, 255, 255)",
-     "text": 4619,
+     "text": 4992,
      "media": 1
-    },
-    {
-     "id": "study_reference",
-     "type": "rich-text",
-     "top": 7709,
-     "h": 298,
-     "bg": "rgb(255, 255, 255)",
-     "text": 371,
-     "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 8007,
+     "top": 8398,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -645,7 +627,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9047,
+     "top": 9438,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
