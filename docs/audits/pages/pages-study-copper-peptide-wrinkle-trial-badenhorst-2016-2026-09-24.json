@@ -1,0 +1,660 @@
+{
+ "path": "/pages/study/copper-peptide-wrinkle-trial-badenhorst-2016",
+ "scores": {
+  "SEO": 100,
+  "GEO": 79,
+  "DESIGN": 90,
+  "MARKETING": 100
+ },
+ "items": [
+  {
+   "area": "SEO",
+   "check": "HTTP 200, no redirect",
+   "ok": true,
+   "detail": "200 \u2192 https://www.skingenetix.com/pages/study/copper-peptide-wrinkle-trial-badenhorst-2016",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Clean URL (lowercase, hyphens, no params, \u2264 60 chars)",
+   "ok": true,
+   "detail": "/pages/study/copper-peptide-wrinkle-trial-badenhorst-2016",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "URL carries the head term",
+   "ok": true,
+   "detail": "head term ''",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Title present, 30\u201360 chars",
+   "ok": true,
+   "detail": "50c: Badenhorst 2016: Does a Copper Peptide Serum Work?",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Title contains head term",
+   "ok": true,
+   "detail": "''",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description 70\u2013160 chars",
+   "ok": true,
+   "detail": "142c",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Meta description contains head term",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Indexable (no noindex)",
+   "ok": true,
+   "detail": "no robots meta",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Self-referencing absolute canonical",
+   "ok": true,
+   "detail": "https://www.skingenetix.com/pages/study/copper-peptide-wrinkle-trial-badenhorst-2016",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "hreflang for all 6 locales + x-default",
+   "ok": true,
+   "detail": "7 alternates",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Open Graph title/description/image/url",
+   "ok": true,
+   "detail": "complete",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "og:title matches the page title",
+   "ok": true,
+   "detail": "Badenhorst 2016: Does a Copper Peptide Serum Work?",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Exactly one <h1>",
+   "ok": true,
+   "detail": "Does a copper peptide serum reduce wrinkles? The 2016 split-face trial (Badenhorst et al.)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Opening states a concrete skin outcome",
+   "ok": true,
+   "detail": "does a copper peptide serum reduce wrinkles the 2016 split-face trial badenhorst et al appraised by the skingenetix research team medically ",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
+   "ok": true,
+   "detail": "8 weeks",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "Hedging \u2264 1.0 per 100 words (sales copy)",
+   "ok": true,
+   "detail": "0.0/100 words: []",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "MARKETING",
+   "check": "No claim known to be unsupported (docs/claims/)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "No medicinal wording (EU cosmetic-claims rules)",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "MARKETING",
+   "check": "Path to purchase: links to at least one product",
+   "ok": true,
+   "detail": "2 products linked",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "MARKETING",
+   "check": "Every result figure sits next to its source",
+   "ok": true,
+   "detail": "0 unsourced: []",
+   "severity": "pass",
+   "weight": 1
+  },
+  {
+   "area": "SEO",
+   "check": "<h1> contains head term",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Topic headings are real <h2> (\u2265 3)",
+   "ok": true,
+   "detail": "6 <h2>: ['At a glance', 'What the measurements showed', 'What the researchers did', 'What this study does not show', 'What it means for our products', 'Reference']",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "Visual-only headings (styled <p>/<span>)",
+   "ok": true,
+   "detail": "0 that look like headings but are not: []",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "No skipped heading levels",
+   "ok": true,
+   "detail": "clean",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Content images have alt text",
+   "ok": true,
+   "detail": "2/2",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "Images declare width/height (CLS)",
+   "ok": true,
+   "detail": "0 without",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "SEO",
+   "check": "Internal links in content \u2265 5",
+   "ok": true,
+   "detail": "17 unique",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "No links inside tables (AI extraction drops the table)",
+   "ok": true,
+   "detail": "0 found",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "SEO",
+   "check": "All JSON-LD parses",
+   "ok": true,
+   "detail": "0 invalid block(s)",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "SEO",
+   "check": "No duplicate schema types",
+   "ok": true,
+   "detail": "types ['BreadcrumbList', 'WebPage']",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Page entity schema (WebPage/Article) with dateModified",
+   "ok": false,
+   "detail": "WebPage modified None",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "Schema cites sources (citation[])",
+   "ok": false,
+   "detail": "0 citations",
+   "severity": "low",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "Reviewer/author in schema (reviewedBy/author)",
+   "ok": true,
+   "detail": "pending Dr Bodde's review",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "SEO",
+   "check": "BreadcrumbList present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A10 \u00b7 head term in first 30% of text",
+   "ok": true,
+   "detail": "''",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "A1 \u00b7 definition sentence early ('X is a \u2026')",
+   "ok": false,
+   "detail": "",
+   "severity": "high",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "A8 \u00b7 secondary intents covered on the page",
+   "ok": true,
+   "detail": "[] / []",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
+   "ok": true,
+   "detail": "11 paragraphs, 0 too long",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
+   "ok": true,
+   "detail": "5",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
+   "ok": true,
+   "detail": "34 figures",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A3 \u00b7 cited sources \u2265 3",
+   "ok": true,
+   "detail": "3 citation markers",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "E3 \u00b7 cites recent research (2024+)",
+   "ok": true,
+   "detail": "latest 2026",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "E1 \u00b7 visible last-reviewed/updated date",
+   "ok": true,
+   "detail": "Last reviewed",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "A6 \u00b7 structured list or table present",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0.5
+  },
+  {
+   "area": "GEO",
+   "check": "A4 \u00b7 headings mirror search questions",
+   "ok": true,
+   "detail": "0 question-form H2",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
+   "ok": true,
+   "detail": "647 words extracted (main text 1011)",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "GEO",
+   "check": "Head term survives extraction",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "GEO",
+   "check": "H2 sections survive extraction",
+   "ok": false,
+   "detail": "lost: ['Reference']",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "GEO",
+   "check": "D1 \u00b7 robots.txt allows the major AI crawlers",
+   "ok": true,
+   "detail": "all allowed",
+   "severity": "pass",
+   "weight": 3
+  },
+  {
+   "area": "SEO",
+   "check": "Page listed in XML sitemap",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "GEO",
+   "check": "llms.txt present (evidence: fetched 0\u00d7 by frontier crawlers \u2014 not scored)",
+   "ok": true,
+   "detail": "",
+   "severity": "pass",
+   "weight": 0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No blank band between header and first section",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "No empty-but-tall sections",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 2
+  },
+  {
+   "area": "DESIGN",
+   "check": "Section backgrounds alternate",
+   "ok": false,
+   "detail": "study_designed+study_reference (White)",
+   "severity": "med",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Backgrounds on the brand palette",
+   "ok": true,
+   "detail": "Bone / White / Graphite",
+   "severity": "pass",
+   "weight": 1.0
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (desktop)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (desktop)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No horizontal overflow (mobile)",
+   "ok": true,
+   "detail": "0px",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "No broken images (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  },
+  {
+   "area": "DESIGN",
+   "check": "Headings never break mid-word (mobile)",
+   "ok": true,
+   "detail": "none",
+   "severity": "pass",
+   "weight": 1.5
+  }
+ ],
+ "data": {
+  "title": "Badenhorst 2016: Does a Copper Peptide Serum Work?",
+  "h1": [
+   "Does a copper peptide serum reduce wrinkles? The 2016 split-face trial (Badenhorst et al.)"
+  ],
+  "h2": [
+   "At a glance",
+   "What the measurements showed",
+   "What the researchers did",
+   "What this study does not show",
+   "What it means for our products",
+   "Reference"
+  ],
+  "pseudo_headings": [],
+  "internal_links": [
+   "/collections/all",
+   "/collections/creams-moisturizers",
+   "/collections/serums",
+   "/pages/contact",
+   "/pages/copper-peptide-research",
+   "/pages/faq",
+   "/pages/ingredients",
+   "/pages/our-philosophy",
+   "/pages/shipping-returns",
+   "/pages/the-science",
+   "/policies/contact-information",
+   "/policies/legal-notice",
+   "/policies/privacy-policy",
+   "/policies/refund-policy",
+   "/policies/shipping-policy",
+   "/policies/terms-of-service",
+   "/products/copper-peptide-ghk-cu-renewal-serum"
+  ],
+  "external_links": [
+   "https://doi.org/10.4172/2329-8847.1000166"
+  ],
+  "schema_types": [
+   "BreadcrumbList",
+   "WebPage"
+  ],
+  "extracted_words": 647,
+  "main_words": 1011,
+  "images": [
+   {
+    "src": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg?width=1200",
+    "alt": "Laboratory imagery of a collagen network, illustrating the fibroblast arm of the study"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
+    "alt": "Skingenetix logo (black)"
+   }
+  ]
+ },
+ "design": {
+  "desktop": {
+   "headerBottom": 126,
+   "rows": [
+    {
+     "id": "study_head",
+     "type": "rich-text",
+     "top": 126,
+     "h": 624,
+     "bg": "rgb(240, 240, 240)",
+     "text": 636,
+     "media": 0
+    },
+    {
+     "id": "study_designed",
+     "type": "rich-text",
+     "top": 750,
+     "h": 4142,
+     "bg": "rgb(255, 255, 255)",
+     "text": 4602,
+     "media": 1
+    },
+    {
+     "id": "study_reference",
+     "type": "rich-text",
+     "top": 4891,
+     "h": 325,
+     "bg": "rgb(255, 255, 255)",
+     "text": 371,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 5216,
+     "h": 516,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 5732,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  },
+  "mobile": {
+   "headerBottom": 85,
+   "rows": [
+    {
+     "id": "study_head",
+     "type": "rich-text",
+     "top": 85,
+     "h": 622,
+     "bg": "rgb(240, 240, 240)",
+     "text": 636,
+     "media": 0
+    },
+    {
+     "id": "study_designed",
+     "type": "rich-text",
+     "top": 707,
+     "h": 7002,
+     "bg": "rgb(255, 255, 255)",
+     "text": 4619,
+     "media": 1
+    },
+    {
+     "id": "study_reference",
+     "type": "rich-text",
+     "top": 7709,
+     "h": 298,
+     "bg": "rgb(255, 255, 255)",
+     "text": 371,
+     "media": 0
+    },
+    {
+     "id": "footer",
+     "type": "footer",
+     "top": 8007,
+     "h": 1039,
+     "bg": "rgb(240, 240, 240)",
+     "text": 524,
+     "media": 1
+    },
+    {
+     "id": "brand_layout_css",
+     "type": "custom-html",
+     "top": 9047,
+     "h": 0,
+     "bg": "rgb(240, 240, 240)",
+     "text": 0,
+     "media": 0
+    }
+   ],
+   "broken": [],
+   "wordBreaks": [],
+   "overflow": 0
+  }
+ }
+}

@@ -1,11 +1,9 @@
 {
   "_note": "Every figure here was read from the full PDF on 2026-09-24 (J Aging Sci 4:166) — Tables 2 and 3 and the Methods, not the abstract. The abstract is where our earlier overstatement came from. Rendered by scripts/build-study-page.py; structure documented in docs/study-page-template.md.",
-
   "handle": "copper-peptide-wrinkle-trial-badenhorst-2016",
   "hub": "copper-peptide-research",
   "source_url": "https://doi.org/10.4172/2329-8847.1000166",
   "read_at_source": "2026-09-24",
-
   "h1": {
     "en": "Does a copper peptide serum reduce wrinkles? The 2016 split-face trial (Badenhorst et al.)"
   },
@@ -13,14 +11,14 @@
     "en": "Appraised by the Skingenetix research team. Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician. Last reviewed 24 September 2026."
   },
   "verdict": {
-    "en": "**Verdict:** the strongest controlled human trial we have for copper peptide. Over 8 weeks, 40 women applied a GHK-Cu serum to one side of the face; wrinkle volume fell 24.1% against 15.0% on the plain serum base. But the base lacked both the peptide **and** the nano-carrier that delivered it, and the concentration is never stated, so the result belongs to the serum that was tested rather than to ours."
+    "en": "**Our verdict:** this is the strongest controlled human trial we have for copper peptide, and it is why GHK-Cu is in our range. But the base it was measured against lacked the nano-carrier as well as the peptide, and the paper never states a concentration — so the result belongs to the serum that was tested, not to ours."
   },
-
-  "seo_title": { "en": "Badenhorst 2016: Does a Copper Peptide Serum Work?" },
+  "seo_title": {
+    "en": "Badenhorst 2016: Does a Copper Peptide Serum Work?"
+  },
   "seo_description": {
     "en": "Wrinkle volume fell 24.1% against 15.0% on the plain base, in an 8-week trial of 40 women. What this GHK-Cu study shows, and what it does not."
   },
-
   "citation": {
     "en": "Badenhorst T, Svirskis D, Merrilees M, Bolke L, Wu Z. Effects of GHK-Cu on MMP and TIMP expression, collagen and elastin production, and facial wrinkle parameters. *Journal of Aging Science* 2016;4(3):166. [doi:10.4172/2329-8847.1000166](https://doi.org/10.4172/2329-8847.1000166)"
   },
@@ -33,108 +31,287 @@
     "datePublished": "2016",
     "journal": "Journal of Aging Science"
   },
-
   "figures": [
     {
-      "n": { "en": "&minus;24.1%" },
-      "label": { "en": "Wrinkle volume, 8 weeks" },
-      "note": { "en": "With the GHK-Cu serum, against &minus;15.0% with the control serum. 20 women, measured by 3D imaging." }
+      "n": {
+        "en": "&minus;24.1%"
+      },
+      "label": {
+        "en": "Wrinkle volume, 8 weeks"
+      },
+      "note": {
+        "en": "With the GHK-Cu serum, against &minus;15.0% with the control serum. 20 women, measured by 3D imaging."
+      }
     },
     {
-      "n": { "en": "55.8%" },
-      "label": { "en": "Greater reduction than the control" },
-      "note": { "en": "For wrinkle volume (p &lt; 0.0001). The control serum contained neither GHK-Cu nor the nano-carrier that carried it." }
+      "n": {
+        "en": "55.8%"
+      },
+      "label": {
+        "en": "Greater reduction than the control"
+      },
+      "note": {
+        "en": "For wrinkle volume (p &lt; 0.0001). The control serum contained neither GHK-Cu nor the nano-carrier that carried it."
+      }
     },
     {
-      "n": { "en": "39 of 40" },
-      "label": { "en": "Tolerated the products" },
-      "note": { "en": "One participant had minor skin reactions &mdash; to the GHK-Cu serum and to the comparator alike." }
+      "n": {
+        "en": "39 of 40"
+      },
+      "label": {
+        "en": "Tolerated the products"
+      },
+      "note": {
+        "en": "One participant had minor skin reactions &mdash; to the GHK-Cu serum and to the comparator alike."
+      }
     }
   ],
-
   "glance": {
-    "heading": { "en": "At a glance" },
+    "heading": {
+      "en": "At a glance"
+    },
     "rows": [
-      { "k": { "en": "Design" },
-        "v": { "en": "Randomised, double-blind, split-face, run at Dermatest GmbH, an independent cosmetic research institute." } },
-      { "k": { "en": "Participants" },
-        "v": { "en": "40 women aged 40 to 65. Results are reported for the 39 who completed." } },
-      { "k": { "en": "What was applied" },
-        "v": { "en": "A serum containing GHK-Cu held in a lipid nano-carrier, twice a day, to the <strong>right</strong> side of the face." } },
-      { "k": { "en": "Compared with" },
-        "v": { "en": "Group 1 (19 women): Strivectin SD Advanced Concentrate, which contains Matrixyl 3000, on the left side. Group 2 (20 women): the plain serum vehicle &mdash; no GHK-Cu and no nano-carrier &mdash; on the left side." } },
-      { "k": { "en": "Duration" },
-        "v": { "en": "8 weeks, with measurements at 4 and 8 weeks." } },
-      { "k": { "en": "How it was measured" },
-        "v": { "en": "PRIMOS 3D skin imaging of a single large wrinkle near the corner of the eye, over a 30 &times; 40 mm area." } },
-      { "k": { "en": "Concentration" },
-        "v": { "en": "<strong>Never stated.</strong> The paper does not report how much GHK-Cu the serum contained." } },
-      { "k": { "en": "Funding" },
-        "v": { "en": "Funded by Snowberry New Zealand Ltd, which makes the serum, with a Callaghan Innovation grant. The statistical analysis was done independently at the University of Auckland." } },
-      { "k": { "en": "Our evidence grade" },
-        "v": { "en": "A&minus; &mdash; randomised and blinded, but small, maker-funded, and published in a journal with weaker peer review." } }
+      {
+        "k": {
+          "en": "Design"
+        },
+        "v": {
+          "en": "Randomised, double-blind, split-face, run at Dermatest GmbH, an independent cosmetic research institute."
+        }
+      },
+      {
+        "k": {
+          "en": "Participants"
+        },
+        "v": {
+          "en": "40 women aged 40 to 65. Results are reported for the 39 who completed."
+        }
+      },
+      {
+        "k": {
+          "en": "What was applied"
+        },
+        "v": {
+          "en": "A serum containing GHK-Cu held in a lipid nano-carrier, twice a day, to the <strong>right</strong> side of the face."
+        }
+      },
+      {
+        "k": {
+          "en": "Compared with"
+        },
+        "v": {
+          "en": "Group 1 (19 women): Strivectin SD Advanced Concentrate, which contains Matrixyl 3000, on the left side. Group 2 (20 women): the plain serum vehicle &mdash; no GHK-Cu and no nano-carrier &mdash; on the left side."
+        }
+      },
+      {
+        "k": {
+          "en": "Duration"
+        },
+        "v": {
+          "en": "8 weeks, with measurements at 4 and 8 weeks."
+        }
+      },
+      {
+        "k": {
+          "en": "How it was measured"
+        },
+        "v": {
+          "en": "PRIMOS 3D skin imaging of a single large wrinkle near the corner of the eye, over a 30 &times; 40 mm area."
+        }
+      },
+      {
+        "k": {
+          "en": "Concentration"
+        },
+        "v": {
+          "en": "<strong>Never stated.</strong> The paper does not report how much GHK-Cu the serum contained."
+        }
+      },
+      {
+        "k": {
+          "en": "Funding"
+        },
+        "v": {
+          "en": "Funded by Snowberry New Zealand Ltd, which makes the serum, with a Callaghan Innovation grant. The statistical analysis was done independently at the University of Auckland."
+        }
+      },
+      {
+        "k": {
+          "en": "Our evidence grade"
+        },
+        "v": {
+          "en": "A&minus; &mdash; randomised and blinded, but small, maker-funded, and published in a journal with weaker peer review."
+        }
+      }
     ]
   },
-
   "measurements": {
-    "heading": { "en": "What the measurements showed" },
+    "heading": {
+      "en": "What the measurements showed"
+    },
     "intro": [
-      { "en": "Both sides of every face improved over the eight weeks. The side treated with the GHK-Cu serum improved more, and the gap widened between weeks 4 and 8." }
+      {
+        "en": "Both sides of every face improved over the eight weeks. The side treated with the GHK-Cu serum improved more, and the gap widened between weeks 4 and 8."
+      }
     ],
     "chart": {
-      "title": { "en": "Change from the start, after 8 weeks" },
-      "subtitle": { "en": "Group 2 only (20 women): the GHK-Cu serum on the right side of the face, the plain serum vehicle on the left. PRIMOS 3D imaging of one wrinkle near the eye." },
+      "title": {
+        "en": "Change from the start, after 8 weeks"
+      },
+      "subtitle": {
+        "en": "Group 2 only (20 women): the GHK-Cu serum on the right side of the face, the plain serum vehicle on the left. PRIMOS 3D imaging of one wrinkle near the eye."
+      },
       "unit": "%",
       "decimals": 1,
-      "domain": [-28, 2],
-      "ticks": [-20, -10, 0],
+      "domain": [
+        -28,
+        2
+      ],
+      "ticks": [
+        -20,
+        -10,
+        0
+      ],
       "value_width": 70,
       "series": [
-        { "key": "c", "color": "#014EB1", "label": { "en": "GHK-Cu serum (nano-carrier)" } },
-        { "key": "v", "color": "#9AA3A4", "quiet": true, "label": { "en": "Control serum: no GHK-Cu, no nano-carrier" } }
+        {
+          "key": "c",
+          "color": "#014EB1",
+          "label": {
+            "en": "GHK-Cu serum (nano-carrier)"
+          }
+        },
+        {
+          "key": "v",
+          "color": "#9AA3A4",
+          "quiet": true,
+          "label": {
+            "en": "Control serum: no GHK-Cu, no nano-carrier"
+          }
+        }
       ],
       "rows": [
-        { "values": { "c": -24.1, "v": -15.0 }, "label": { "en": "Wrinkle volume" } },
-        { "values": { "c": -20.3, "v": -15.3 }, "label": { "en": "Wrinkle depth" } }
+        {
+          "values": {
+            "c": -24.1,
+            "v": -15.0
+          },
+          "label": {
+            "en": "Wrinkle volume"
+          }
+        },
+        {
+          "values": {
+            "c": -20.3,
+            "v": -15.3
+          },
+          "label": {
+            "en": "Wrinkle depth"
+          }
+        }
       ],
-      "table_head": { "en": "Measure" },
-      "caption": { "en": "<p>Both sides improved. Against the plain serum vehicle the GHK-Cu side fell further &mdash; volume &minus;24.1% against &minus;15.0%, depth &minus;20.3% against &minus;15.3% &mdash; which the paper reports as a 55.8% greater reduction in volume (p &lt; 0.0001) and 32.8% in depth (p = 0.0123). The vehicle carried neither the peptide nor the nano-carrier, so the gap covers both (<a href='https://doi.org/10.4172/2329-8847.1000166' target='_blank' rel='noopener'>Badenhorst et al., 2016</a>).</p>" }
+      "table_head": {
+        "en": "Measure"
+      },
+      "caption": {
+        "en": "<p>Both sides improved. Against the plain serum vehicle the GHK-Cu side fell further &mdash; volume &minus;24.1% against &minus;15.0%, depth &minus;20.3% against &minus;15.3% &mdash; which the paper reports as a 55.8% greater reduction in volume (p &lt; 0.0001) and 32.8% in depth (p = 0.0123). The vehicle carried neither the peptide nor the nano-carrier, so the gap covers both (<a href='https://doi.org/10.4172/2329-8847.1000166' target='_blank' rel='noopener'>Badenhorst et al., 2016</a>).</p>"
+      }
     }
   },
-
   "media": {
-    "heading": { "en": "What the researchers did" },
+    "heading": {
+      "en": "What the researchers did"
+    },
     "image": "skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg",
-    "alt": { "en": "Laboratory imagery of a collagen network, illustrating the fibroblast arm of the study" },
+    "alt": {
+      "en": "Laboratory imagery of a collagen network, illustrating the fibroblast arm of the study"
+    },
     "body": [
-      { "en": "Forty women applied a GHK-Cu serum to the right side of the face twice a day for eight weeks. On the left side, half of them used a product containing Matrixyl 3000 and half used the plain serum base. Neither the women nor the investigators knew which product was which." },
-      { "en": "A separate arm of the same paper grew human skin cells with GHK-Cu and measured collagen and elastin production, which is where the paper&rsquo;s laboratory findings come from." }
+      {
+        "en": "Forty women applied a GHK-Cu serum to the right side of the face twice a day for eight weeks. On the left side, half of them used a product containing Matrixyl 3000 and half used the plain serum base. Neither the women nor the investigators knew which product was which."
+      },
+      {
+        "en": "A separate arm of the same paper grew human skin cells with GHK-Cu and measured collagen and elastin production, which is where the paper&rsquo;s laboratory findings come from."
+      }
     ]
   },
-
   "limits": {
-    "heading": { "en": "What this study does not show" },
+    "heading": {
+      "en": "What this study does not show"
+    },
     "items": [
-      { "en": "<strong>It does not isolate the copper peptide.</strong> The control serum contained neither GHK-Cu <em>nor</em> the lipid nano-carrier that delivered it. The 55.8% therefore covers the peptide and its delivery system together. The authors describe the trial as the first to test GHK-Cu formulated into a nano-carrier." },
-      { "en": "<strong>Our products do not use that nano-carrier.</strong> This figure belongs to the serum that was tested, not to ours." },
-      { "en": "<strong>The concentration is never given.</strong> Without it, the result cannot be matched to the 2% GHK-Cu we state on our own products." },
-      { "en": "<strong>The sides were not randomised.</strong> Every participant received the GHK-Cu serum on the right and the comparator on the left, so any left-right difference in sun exposure or sleeping position sits inside the result." },
-      { "en": "<strong>Against the Matrixyl 3000 product, wrinkle depth was not significant</strong> (p = 0.0577). Only the volume difference reached significance there (p = 0.0044)." },
-      { "en": "<strong>It is one small trial.</strong> 39 people, one site, funded by the maker of the serum, in a journal whose peer review is weaker than the major dermatology titles." }
+      {
+        "en": "<strong>It does not isolate the copper peptide.</strong> The control serum contained neither GHK-Cu <em>nor</em> the lipid nano-carrier that delivered it. The 55.8% therefore covers the peptide and its delivery system together. The authors describe the trial as the first to test GHK-Cu formulated into a nano-carrier."
+      },
+      {
+        "en": "<strong>Our products do not use that nano-carrier.</strong> This figure belongs to the serum that was tested, not to ours."
+      },
+      {
+        "en": "<strong>The concentration is never given.</strong> Without it, the result cannot be matched to the 2% GHK-Cu we state on our own products."
+      },
+      {
+        "en": "<strong>The sides were not randomised.</strong> Every participant received the GHK-Cu serum on the right and the comparator on the left, so any left-right difference in sun exposure or sleeping position sits inside the result."
+      },
+      {
+        "en": "<strong>Against the Matrixyl 3000 product, wrinkle depth was not significant</strong> (p = 0.0577). Only the volume difference reached significance there (p = 0.0044)."
+      },
+      {
+        "en": "<strong>It is one small trial.</strong> 39 people, one site, funded by the maker of the serum, in a journal whose peer review is weaker than the major dermatology titles."
+      }
     ]
   },
-
   "meaning": {
-    "heading": { "en": "What it means for our products" },
+    "heading": {
+      "en": "What it means for our products"
+    },
     "body": [
-      { "en": "This is the strongest controlled human trial we have for copper peptide, and it is why GHK-Cu appears in our range at all. But the serum it tested is not ours: it used a lipid nano-carrier and never disclosed its concentration." },
-      { "en": "So we cite it as evidence for the ingredient, not as a result our products have reproduced. Our own serum, day gel-cream and night cream each state 2% GHK-Cu on the pack, which this trial cannot confirm or contradict." }
+      {
+        "en": "This is the strongest controlled human trial we have for copper peptide, and it is why GHK-Cu appears in our range at all. But the serum it tested is not ours: it used a lipid nano-carrier and never disclosed its concentration."
+      },
+      {
+        "en": "So we cite it as evidence for the ingredient, not as a result our products have reproduced. Our own serum, day gel-cream and night cream each state 2% GHK-Cu on the pack, which this trial cannot confirm or contradict."
+      }
     ],
     "ctas": [
-      { "label": { "en": "Read the copper peptide evidence" }, "href": "/pages/copper-peptide-research" },
-      { "label": { "en": "See the serum" }, "href": "/products/copper-peptide-ghk-cu-renewal-serum" }
+      {
+        "label": {
+          "en": "Read the copper peptide evidence"
+        },
+        "href": "/pages/copper-peptide-research"
+      },
+      {
+        "label": {
+          "en": "See the serum"
+        },
+        "href": "/products/copper-peptide-ghk-cu-renewal-serum"
+      }
     ]
   },
-
-  "checks": ["55.8", "24.1", "0.0577", "nano-carrier", "Never stated", "not randomised"]
+  "checks": [
+    "55.8",
+    "24.1",
+    "0.0577",
+    "nano-carrier",
+    "Never stated",
+    "not randomised",
+    "Badenhorst T, Svirskis D",
+    "Read at source"
+  ],
+  "published": "2026-09-24",
+  "answer": {
+    "en": "The Badenhorst 2016 trial is a randomised, double-blind, split-face study of a copper peptide (GHK-Cu) serum in 40 women aged 40 to 65. Over 8 weeks, wrinkle volume on the treated side fell 24.1%, against 15.0% on the plain serum base — a 55.8% greater reduction, measured by 3D imaging."
+  },
+  "reference_band": {
+    "heading": {
+      "en": "Reference"
+    },
+    "body": [
+      {
+        "en": "Badenhorst T, Svirskis D, Merrilees M, Bolke L, Wu Z. Effects of GHK-Cu on MMP and TIMP expression, collagen and elastin production, and facial wrinkle parameters. *Journal of Aging Science* 2016;4(3):166. [doi:10.4172/2329-8847.1000166](https://doi.org/10.4172/2329-8847.1000166)"
+      },
+      {
+        "en": "Read at source: full PDF, 24 September 2026. Figures on this page come from Tables 2 and 3 and the Methods, not the abstract."
+      }
+    ]
+  }
 }

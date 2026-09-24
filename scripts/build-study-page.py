@@ -61,6 +61,10 @@ def jsonld(cfg, loc):
     return {"@context": "https://schema.org", "@type": "WebPage", "@id": url + "#webpage", "url": url,
             "name": h1, "description": desc, "inLanguage": loc,
             "lastReviewed": cfg["read_at_source"],
+            "datePublished": cfg.get("published", cfg["read_at_source"]),
+            "dateModified": cfg["read_at_source"],
+            "citation": [{"@type": "ScholarlyArticle", "name": s["name"], "url": cfg["source_url"],
+                          "identifier": s["identifier"], "datePublished": s["datePublished"]}],
             "reviewedBy": {"@type": "Person", "name": "Esther Bodde", "honorificPrefix": "Dr",
                            "jobTitle": "Cosmetic & Medical Physician"},
             "author": {"@type": "Person", "name": "Malcolm Smith", "jobTitle": "Founder, Skingenetix"},
@@ -77,14 +81,11 @@ def jsonld(cfg, loc):
 def fields(cfg, loc):
     intro = [("h1", sx.t(cfg["h1"], loc)),
              ("p", "*" + sx.t(cfg["byline"], loc) + "*"),
+             ("p", sx.t(cfg["answer"], loc)),
              ("p", sx.t(cfg["verdict"], loc))]
-    ref = [("h2", {"en": "Reference", "de": "Quelle", "nl": "Bron", "fr": "Référence",
-                   "es": "Referencia", "it": "Fonte"}[loc]),
-           ("p", sx.t(cfg["citation"], loc)),
-           ("p", sx.t(cfg["source_note"], loc))]
     return {"h1": sx.t(cfg["h1"], loc),
             "intro": spg.rich(intro, loc),
-            "reference": spg.rich(ref, loc),
+            "reference": "",   # the citation is band 7 now; see study_sections.reference
             "sections_html": sx.render(cfg, loc),
             "seo_title": sx.t(cfg["seo_title"], loc),
             "seo_description": sx.t(cfg["seo_description"], loc),
@@ -100,6 +101,9 @@ def check(cfg):
             errs.append(f"{loc}: SEO title {len(v['seo_title'])} chars (max 60)")
         if len(v["seo_description"]) > 160:
             errs.append(f"{loc}: SEO description {len(v['seo_description'])} chars (max 160)")
+        words = len(sx.t(cfg["answer"], loc).split())
+        if not 35 <= words <= 75:
+            errs.append(f"{loc}: answer paragraph {words} words (want 40-60, hard 35-75)")
         if v["intro"].count('"level":1') != 1:
             errs.append(f"{loc}: expected exactly one h1")
         if loc == "en" and HEAD_TERM.match(v["h1"]):

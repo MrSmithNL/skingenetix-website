@@ -50,7 +50,9 @@ CSS = """
 .sty__band--bone{background:#F0F0F0}
 .sty__band--white{background:#fff}
 .sty__in{max-width:1080px;margin:0 auto;padding:0 24px;text-align:left}
-.sty h2{font-size:32px;line-height:1.18;margin:0 0 18px;font-weight:600;letter-spacing:-.015em;color:var(--ink)}
+/* No h2 font-size here: the theme's own rule wins, and its 48px/32px scale is the one the
+   hubs use, so the bands match the family. Verified on the live page 2026-09-24. */
+.sty h2{margin:0 0 18px;color:var(--ink)}
 .sty p{font-size:17px;line-height:1.65;color:#3b3f40;margin:0 0 16px}
 .sty p:last-child{margin-bottom:0}
 .sty a{color:var(--blue)}
@@ -77,7 +79,6 @@ CSS = """
 .sty__cta--ghost{background:transparent;color:var(--ink);border:1px solid #9aa3a4;margin-left:10px}
 @media(max-width:899px){
 .sty__band{padding:44px 0}
-.sty h2{font-size:25px}
 .sty__figs{grid-template-columns:1fr;gap:22px}
 .sty__media{grid-template-columns:1fr;gap:26px}
 .sty__warn{padding:24px 22px}
@@ -106,6 +107,26 @@ def _href(url, loc):
     if loc != "en" and url.startswith("/") and not url.startswith(f"/{loc}/"):
         return f"/{loc}{url}"
     return url
+
+
+_MD = __import__("re").compile(r"\*\*(.+?)\*\*|\*(.+?)\*|\[([^\]]+)\]\(([^)]+)\)")
+
+
+def md(text, loc):
+    """Inline markdown -> HTML, for values shared with the rich-text fields (the citation).
+
+    Those fields are written in the same **bold** / *italic* / [label](url) markup that
+    study-pages.py parses, so a value can be reused verbatim rather than kept twice.
+    """
+    def sub(m):
+        if m.group(1):
+            return f"<strong>{m.group(1)}</strong>"
+        if m.group(2):
+            return f"<em>{m.group(2)}</em>"
+        url, ext = m.group(4), m.group(4).startswith("http")
+        tgt = ' target="_blank" rel="noopener"' if ext else ""
+        return f'<a href="{url if ext else _href(url, loc)}"{tgt}>{m.group(3)}</a>'
+    return _MD.sub(sub, text)
 
 
 def band(cls, inner):
@@ -163,7 +184,19 @@ def meaning(cfg, loc):
     return band("bone", f"<h2>{t(m['heading'], loc)}</h2>{body}<p>{ctas}</p>")
 
 
-BANDS = [figures, glance, measurements, media, limits, meaning]
+def reference(cfg, loc):
+    """The citation, in the designed body rather than the theme's own section.
+
+    Two reasons: trafilatura drops the theme section, so the H2 that anchors our sourcing
+    never reached an AI crawler; and an extra theme section painted a second white band
+    straight after the bone one. Both found by scripts/page-audit.py on 2026-09-24.
+    """
+    r = cfg["reference_band"]
+    body = "".join(f"<p>{md(t(p, loc), loc)}</p>" for p in r["body"])
+    return band("white", f"<h2>{t(r['heading'], loc)}</h2>{body}")
+
+
+BANDS = [figures, glance, measurements, media, limits, meaning, reference]
 
 
 def render(cfg, loc):
