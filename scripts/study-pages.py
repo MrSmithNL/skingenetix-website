@@ -64,8 +64,8 @@ def rich(blocks, loc):
             nodes.append({"type": "heading", "level": int(kind[1]), "children": inline(content, loc)})
         elif kind == "p":
             nodes.append({"type": "paragraph", "children": inline(content, loc)})
-        elif kind == "ul":
-            nodes.append({"type": "list", "listType": "unordered",
+        elif kind in ("ul", "ol"):
+            nodes.append({"type": "list", "listType": "unordered" if kind == "ul" else "ordered",
                           "children": [{"type": "list-item", "children": inline(i, loc)} for i in content]})
     return json.dumps({"type": "root", "children": nodes}, ensure_ascii=False, separators=(",", ":"))
 

@@ -40,7 +40,7 @@
         "en": "Wrinkle volume, 8 weeks"
       },
       "note": {
-        "en": "With the GHK-Cu serum, against &minus;15.0% with the control serum. 20 women, measured by 3D imaging."
+        "en": "With the GHK-Cu serum, against &minus;15.0% with the control serum. 20 women, measured by 3D imaging ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
       }
     },
     {
@@ -62,7 +62,7 @@
         "en": "Tolerated the products"
       },
       "note": {
-        "en": "One participant had minor skin reactions &mdash; to the GHK-Cu serum and to the comparator alike."
+        "en": "One participant had minor skin reactions &mdash; to the GHK-Cu serum and to the comparator alike ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
       }
     }
   ],
@@ -301,16 +301,78 @@
   "answer": {
     "en": "The Badenhorst 2016 trial is a randomised, double-blind, split-face study of a copper peptide (GHK-Cu) serum in 40 women aged 40 to 65. Over 8 weeks, wrinkle volume on the treated side fell 24.1%, against 15.0% on the plain serum base — a 55.8% greater reduction, measured by 3D imaging."
   },
-  "reference_band": {
+  "eyebrow": {
+    "en": "Clinical Study · 2016"
+  },
+  "deck": {
+    "en": "A randomised, double-blind, split-face trial of a GHK-Cu serum in 40 women — read at source, appraised in full."
+  },
+  "banner": "skingenetix-copper-peptide-ghk-cu-clinical-research-banner",
+  "banner_mobile": "skingenetix-copper-peptide-ghk-cu-clinical-research-mobile",
+  "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page so a reader comparing two studies finds the same nine questions in the same order. Keep these nine values in that order.",
+  "definition": {
+    "en": "Copper peptide, or GHK-Cu, is a chain of three amino acids — glycine, histidine and lysine — bound to a copper ion. It occurs naturally in human blood, where it was first isolated in 1973, and its level falls with age: from about 200 ng/mL at 20 to 80 ng/mL by 60."
+  },
+  "context": {
     "heading": {
-      "en": "Reference"
+      "en": "What copper peptide is, and where this trial sits"
     },
     "body": [
       {
-        "en": "Badenhorst T, Svirskis D, Merrilees M, Bolke L, Wu Z. Effects of GHK-Cu on MMP and TIMP expression, collagen and elastin production, and facial wrinkle parameters. *Journal of Aging Science* 2016;4(3):166. [doi:10.4172/2329-8847.1000166](https://doi.org/10.4172/2329-8847.1000166)"
+        "en": "Copper peptide, or GHK-Cu, is a chain of three amino acids — glycine, histidine and lysine — bound to a copper ion. It occurs naturally in human blood, where it was first isolated in 1973, and its level falls with age: from about 200 ng/mL at 20 to roughly 80 ng/mL by 60. In skincare it is used to support the look of firmer, smoother skin."
       },
       {
-        "en": "Read at source: full PDF, 24 September 2026. Figures on this page come from Tables 2 and 3 and the Methods, not the abstract."
+        "en": "In laboratory work it raises the collagen, elastin and glycosaminoglycans that skin cells produce, and a review by the scientist who first isolated GHK sets out that role in detail ([Pickart et al., 2015](https://pubmed.ncbi.nlm.nih.gov/26236125/)). Evidence in actual skin is thinner: a 2026 systematic review in *Aesthetic Surgery Journal* found GHK-Cu significantly reduced wrinkle volume and depth against controls, but drew on only **two** controlled trials among twenty studies, and said its findings were limited by methodological variability ([Mokhtar et al., 2026](https://pubmed.ncbi.nlm.nih.gov/42619529/))."
+      },
+      {
+        "en": "This page appraises the stronger of those two trials. It is the reason GHK-Cu is in our range, and it is also the reason we do not claim more than an ingredient-level result."
+      }
+    ]
+  },
+  "faq": {
+    "heading": {
+      "en": "Common questions about this trial"
+    },
+    "items": [
+      {
+        "q": {
+          "en": "Does this trial prove copper peptide reduces wrinkles?"
+        },
+        "a": {
+          "en": "It shows that a GHK-Cu serum outperformed a plain serum base on one wrinkle, measured by 3D imaging, in 39 women over 8 weeks. That is real evidence for the ingredient. It is one small trial, funded by the serum's maker, and the base it beat also lacked the nano-carrier — so it is not proof that copper peptide alone did the work."
+        }
+      },
+      {
+        "q": {
+          "en": "What concentration of GHK-Cu did the study use?"
+        },
+        "a": {
+          "en": "The paper never states one. That is why no claim on this site says a result was “clinically proven at 2%” — the trial cannot support a concentration claim, and our own products state 2% GHK-Cu on the pack independently of it."
+        }
+      },
+      {
+        "q": {
+          "en": "Was it better than Matrixyl 3000?"
+        },
+        "a": {
+          "en": "On wrinkle volume only. Against a commercial Matrixyl 3000 product the GHK-Cu serum reduced volume 31.6% more (p = 0.0044), but the difference in wrinkle depth was 23.4% and **not statistically significant** (p = 0.0577). We use both peptides in our routines rather than ranking them ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
+        }
+      },
+      {
+        "q": {
+          "en": "Is the trial independent?"
+        },
+        "a": {
+          "en": "Partly. It was run at Dermatest GmbH, an independent cosmetic research institute, and the statistics were done at the University of Auckland. But it was funded by Snowberry New Zealand Ltd, which makes the serum that was tested, and it was published in a journal whose peer review is weaker than the major dermatology titles. We grade it A− for those reasons."
+        }
+      },
+      {
+        "q": {
+          "en": "Do Skingenetix products reproduce this result?"
+        },
+        "a": {
+          "en": "No, and we do not claim they do. The serum tested here used a lipid nano-carrier that our formulas do not, and its concentration was never disclosed. We cite this trial as evidence for the ingredient, not as a result our products have repeated."
+        }
       }
     ]
   }

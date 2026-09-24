@@ -27,12 +27,12 @@
 | ✅ | og:title matches the page title | Badenhorst 2016: Does a Copper Peptide Serum Work? |
 | ✅ | Exactly one <h1> | Does a copper peptide serum reduce wrinkles? |
 | ✅ | <h1> contains head term |  |
-| ✅ | Topic headings are real <h2> (≥ 3) | 6 <h2>: ['At a glance', 'What the measurements showed', 'What the researchers did', 'What this study does not show', 'What it means for our products', 'Reference'] |
-| ✅ | Visual-only headings (styled <p>/<span>) | 0 that look like headings but are not: [] |
+| ✅ | Topic headings are real <h2> (≥ 3) | 10 <h2>: ['−24.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'What this study does not show', 'What copper peptide is, and where this trial sits', 'Common questions about this trial', 'What it  |
+| ℹ️ | Visual-only headings (styled <p>/<span>) | 1 that look like headings but are not: ['What the researchers did'] |
 | ✅ | No skipped heading levels | clean |
-| ✅ | Content images have alt text | 2/2 |
+| ✅ | Content images have alt text | 3/3 |
 | ✅ | Images declare width/height (CLS) | 0 without |
-| ✅ | Internal links in content ≥ 5 | 17 unique |
+| ✅ | Internal links in content ≥ 5 | 15 unique |
 | ✅ | All JSON-LD parses | 0 invalid block(s) |
 | ✅ | No duplicate schema types | types ['BreadcrumbList', 'WebPage'] |
 | ✅ | BreadcrumbList present |  |
@@ -49,17 +49,17 @@
 | ✅ | A10 · head term in first 30% of text | '' |
 | ✅ | A1 · definition sentence early ('X is a …') | is a |
 | ✅ | A8 · secondary intents covered on the page | [] / [] |
-| ✅ | A2 · atomic paragraphs (none > 120 words) | 12 paragraphs, 0 too long |
-| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 7 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 35 figures |
-| ✅ | A3 · cited sources ≥ 3 | 3 citation markers |
+| ✅ | A2 · atomic paragraphs (none > 120 words) | 33 paragraphs, 0 too long |
+| ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 14 |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 42 figures |
+| ✅ | A3 · cited sources ≥ 3 | 13 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | ✅ | E1 · visible last-reviewed/updated date | Last reviewed |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 0 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 711 words extracted (main text 1041) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 1422 words extracted (main text 1592) |
 | ✅ | Head term survives extraction |  |
-| ✅ | H2 sections survive extraction | 6 kept |
+| ✅ | H2 sections survive extraction | 10 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
 | ✅ | llms.txt present (evidence: fetched 0× by frontier crawlers — not scored) |  |
 
@@ -69,7 +69,7 @@
 |---|---|---|
 | ✅ | No blank band between header and first section | 0px |
 | ✅ | No empty-but-tall sections | none |
-| ✅ | Section backgrounds alternate | Bone → White |
+| ✅ | Section backgrounds alternate | Bone → White → Bone → White → Bone → Graphite → White → Bone → White → Bone |
 | ✅ | Backgrounds on the brand palette | Bone / White / Graphite |
 | ✅ | No horizontal overflow (desktop) | 0px |
 | ✅ | No broken images (desktop) | none |
@@ -82,7 +82,7 @@
 
 | | Check | Detail |
 |---|---|---|
-| ✅ | Opening states a concrete skin outcome | does a copper peptide serum reduce wrinkles appraised by the skingenetix research team medically reviewed by dr esther bodde cosmetic medica |
+| ✅ | Opening states a concrete skin outcome | does a copper peptide serum reduce wrinkles a randomised double-blind split-face trial of a ghk-cu serum in 40 women read at source appraise |
 | ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 40 women |
 | ✅ | Hedging ≤ 1.0 per 100 words (sales copy) | 0.0/100 words: [] |
 | ✅ | No claim known to be unsupported (docs/claims/) | clean |
@@ -93,16 +93,25 @@
 ## Outline as served
 
 - **H1:** ['Does a copper peptide serum reduce wrinkles?']
-- **H2:** ['At a glance', 'What the measurements showed', 'What the researchers did', 'What this study does not show', 'What it means for our products', 'Reference']
-- **Visual-only headings:** []
+- **H2:** ['−24.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'What this study does not show', 'What copper peptide is, and where this trial sits', 'Common questions about this trial', 'What it means for our products', 'Reference']
+- **Visual-only headings:** ['What the researchers did']
 - **Schema types:** ['BreadcrumbList', 'WebPage']
-- **Extracted words (no JS):** 711 of 1041
+- **Extracted words (no JS):** 1422 of 1592
 
 ## Section map (desktop)
 
 | Top | Height | Section | Type | Background |
 |---|---|---|---|---|
-| 126 | 865 | study_head | rich-text | Bone |
-| 991 | 4864 | study_designed | rich-text | White |
-| 5854 | 516 | footer | footer | Bone |
-| 6370 | 0 | brand_layout_css | custom-html | Bone |
+| 126 | 440 | banner | image-with-text-overlay | Bone |
+| 566 | 400 | figures | impact-text | Bone |
+| 965 | 496 | answer | rich-text | White |
+| 1461 | 1317 | glance | specification-table | Bone |
+| 2778 | 894 | chart | rich-text | White |
+| 3672 | 820 | story | media-with-text | Bone |
+| 4492 | 578 | limits | rich-text | Graphite |
+| 5070 | 586 | context | rich-text | White |
+| 5656 | 1147 | faq | rich-text | Bone |
+| 6803 | 518 | means | rich-text | White |
+| 7321 | 405 | reference | rich-text | Bone |
+| 7726 | 516 | footer | footer | Bone |
+| 8242 | 0 | brand_layout_css | custom-html | Bone |

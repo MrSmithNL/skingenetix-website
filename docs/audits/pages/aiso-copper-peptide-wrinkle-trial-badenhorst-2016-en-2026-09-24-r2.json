@@ -1,0 +1,305 @@
+{
+ "gpt": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "Starts with result percentages and test details, but could benefit from a more direct opening statement.",
+    "fix": "Add a one-sentence summary upfront that states the main finding of the trial."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 9,
+    "note": "Provides a definition of copper peptide, but it is embedded in the middle of the content.",
+    "fix": "Move the definition of copper peptide to the beginning of the section."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 8,
+    "note": "Headings are present and hierarchical but could be clearer with more distinct levels.",
+    "fix": "Use a clearer hierarchy, especially between summary and detail sections."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "All paragraphs are concise, 2-5 sentences.",
+    "fix": "None needed."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 9,
+    "note": "Content is rich in facts, data, and figures.",
+    "fix": "Ensure a more balanced use of critical context for each fact presented, especially nuances and caveats."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "Compares different results against control and other products like Matrixyl 3000.",
+    "fix": "None needed."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 9,
+    "note": "Uses tables effectively to display results, but could be clearer in showing human vs lab results.",
+    "fix": "Clearly separate lab data from human trial results in tabular form."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 8,
+    "note": "Good depth on the trial with trial limitations but could add more studies for full context.",
+    "fix": "Include more comparative studies and meta-analyses to deepen the analysis."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 8,
+    "note": "Main findings are somewhat front-loaded, but could be more explicit in the opening.",
+    "fix": "Reorder content to place key findings in the immediate onset."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 7,
+    "note": "Text and tables are used but lacks visual aids like charts or graphs to better illustrate data.",
+    "fix": "Incorporate charts or infographics to better visualize the data."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "Wide range of schemas are used including 'Article', 'FAQPage', 'ScholarlyArticle'.",
+    "fix": "None needed."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "FAQ section is detailed and anticipates common reader questions.",
+    "fix": "None needed."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 9,
+    "note": "Citations are present and of good quality but could reference a broader range of studies.",
+    "fix": "Cite additional independent peer-reviewed studies for more comprehensive backing."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 10,
+    "note": "Contains 9 internal links to other site content.",
+    "fix": "None needed."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 9,
+    "note": "Meta title and description are concise, relevant but could be more CTA-oriented.",
+    "fix": "Introduce a call-to-action or benefit statement in the meta description."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 8,
+    "note": "Authors are referenced, but might benefit from more prominent detailing.",
+    "fix": "Provide fuller author biographies or credentials directly on the page."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "Content reviewed by a Cosmetic & Medical Physician.",
+    "fix": "None needed."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "Content was last reviewed within a month of today.",
+    "fix": "None needed."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "Mentions the brand cautiously and accurately links study findings to product claims.",
+    "fix": "None needed."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 8,
+    "note": "Good structural data for AI citation but needs more explicit mentions of study context.",
+    "fix": "Expand on how these findings alter or strengthen existing product claims within the AI referencing context."
+   }
+  ],
+  "overall": 8.9,
+  "top_fixes": [
+   "Add a direct opening statement to summarize the trial's main finding.",
+   "Include more comparative studies and meta-analyses to deepen the analysis.",
+   "Incorporate charts or infographics to better visualize the data."
+  ],
+  "assessment": "The page is strong in conveying detailed, scientifically-backed information but can improve by front-loading critical findings and enhancing visualization through infographics."
+ },
+ "gemini": {
+  "scores": [
+   {
+    "n": 1,
+    "criterion": "Answer-first format",
+    "score": 9,
+    "note": "The page immediately presents key quantitative findings and a clear 'Our verdict' after the H1, directly addressing the main question 'Does a copper peptide serum reduce wrinkles?'.",
+    "fix": "While strong, ensure the absolute core conclusion (e.g., 'Yes, a copper peptide serum reduced wrinkle volume by 24.1% in this trial...') is in the very first sentence of a short paragraph right under the H1, before diving into specific numbers."
+   },
+   {
+    "n": 2,
+    "criterion": "Definition paragraph",
+    "score": 10,
+    "note": "The page provides a clear, concise definition of 'Copper peptide, or GHK-Cu' early in the content, including its natural occurrence and isolation history.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 3,
+    "criterion": "Heading hierarchy",
+    "score": 9,
+    "note": "The heading structure uses H1, H2, and H3 effectively, breaking down complex information into scannable sections and sub-sections, particularly for the initial summary stats and the FAQ.",
+    "fix": "Consider adding H3s or H4s in sections like 'At a glance' to logically group related points under broader H2s, or for specific aspects within sections like 'What the measurements showed' for even finer granularity."
+   },
+   {
+    "n": 4,
+    "criterion": "Atomic paragraphs",
+    "score": 10,
+    "note": "All paragraphs are concise, ranging from 1 to 4 sentences, ensuring excellent readability and scannability, with no overly long blocks of text.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 5,
+    "criterion": "Fact density",
+    "score": 10,
+    "note": "The content is exceptionally rich in precise, quantitative facts, including percentages, dates, concentrations, subject numbers, and statistical significance values.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 6,
+    "criterion": "Comparison content",
+    "score": 10,
+    "note": "The page excels at providing comparative content, contrasting the GHK-Cu serum with a plain control, Matrixyl 3000, and explicitly detailing how the trial's findings relate (or don't) to the brand's own products.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 7,
+    "criterion": "List/table format",
+    "score": 10,
+    "note": "The page effectively uses a bulleted list for 'At a glance' points, a detailed table for comparative measurements, and a bulleted list for 'What this study does not show', enhancing readability and data presentation.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 8,
+    "criterion": "Content depth",
+    "score": 10,
+    "note": "The content demonstrates exceptional depth, covering ingredient definition, detailed trial methodology, comprehensive results, limitations, context within broader research, and implications for the brand's products.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 9,
+    "criterion": "Front-loading",
+    "score": 10,
+    "note": "Key findings, a summary verdict, and an 'At a glance' section are all presented very early in the article, ensuring users quickly grasp the most important information.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 10,
+    "criterion": "Multi-modal",
+    "score": 10,
+    "note": "The page incorporates text, numbers, a table, lists, and an image, providing a rich multi-modal experience that caters to diverse learning preferences.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 11,
+    "criterion": "Schema markup",
+    "score": 10,
+    "note": "The page uses a comprehensive suite of JSON-LD schemas, including 'Article', 'ScholarlyArticle', 'FAQPage', and 'WebPage', which is excellent for AI search optimization and rich result eligibility.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 12,
+    "criterion": "FAQ section",
+    "score": 10,
+    "note": "A dedicated 'Common questions about this trial' section with clearly demarcated questions (H3s) and direct answers is present, effectively addressing user queries.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 13,
+    "criterion": "Citation quality",
+    "score": 10,
+    "note": "Citations are provided in-line (e.g., Badenhorst et al., 2016) and a full reference with DOI is included at the end. The page also critically grades the evidence and links to the full PDF source.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 14,
+    "criterion": "Internal linking",
+    "score": 9,
+    "note": "The article body contains 9 in-content internal links, providing good navigation to related content within the site.",
+    "fix": "Strategically review the content for opportunities to add 2-3 more highly relevant internal links to sibling ingredient hubs, product pages, or educational resources to further enhance user journey and link equity distribution."
+   },
+   {
+    "n": 15,
+    "criterion": "Meta optimization",
+    "score": 10,
+    "note": "The meta title (50 chars) and meta description (142 chars) are optimally crafted, relevant, include key terms, and accurately summarize the content with critical data points.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 16,
+    "criterion": "Author attribution",
+    "score": 7,
+    "note": "The content explicitly states it was 'Appraised by the Skingenetix research team' and 'Medically reviewed by Dr Esther Bodde,' but it does not attribute an individual author to the primary content creation.",
+    "fix": "Implement clear individual author attribution, including the author's name, credentials, and a link to their bio page, to strengthen E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) signals for this YMYL content."
+   },
+   {
+    "n": 17,
+    "criterion": "Medical/expert review",
+    "score": 10,
+    "note": "The page clearly states it was 'Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician,' fulfilling a critical requirement for YMYL content.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 18,
+    "criterion": "Recency",
+    "score": 10,
+    "note": "The content was 'Last reviewed 24 September 2026', matching today's date, indicating it is perfectly up-to-date.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 19,
+    "criterion": "Brand mention readiness",
+    "score": 10,
+    "note": "The brand 'Skingenetix' is clearly and frequently mentioned, especially when discussing product implications and the brand's stance, making it highly AI-ready for brand mentions and comparisons.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   },
+   {
+    "n": 20,
+    "criterion": "AI citation readiness",
+    "score": 10,
+    "note": "The content's highly structured format, factual density, clear verdict, nuanced discussion of limitations, citations, and FAQ section make it exceptionally well-prepared for AI models to extract and cite information accurately.",
+    "fix": "No fix needed; this criterion is perfectly met."
+   }
+  ],
+  "overall": 9.75,
+  "top_fixes": [
+   "Implement clear individual author attribution, including the author's name, credentials, and a link to their bio page, to strengthen E-E-A-T signals for this YMYL content.",
+   "Consider adding H3s or H4s in sections like 'At a glance' to logically group related points under broader H2s, or for specific aspects within sections like 'What the measurements showed' for even finer granularity.",
+   "Strategically review the content for opportunities to add 2-3 more highly relevant internal links to sibling ingredient hubs, product pages, or educational resources to further enhance user journey and link equity distribution."
+  ],
+  "assessment": "This page is an exemplary piece of scientific YMYL content, demonstrating outstanding adherence to SEO and AISO best practices. It is highly quantitative, transparent about evidence quality, deeply nuanced, and superbly structured for both human and AI consumption. The only notable area for improvement is individual author attribution for content creation, which is crucial for maximizing E-E-A-T signals."
+ },
+ "combined": 9.375
+}

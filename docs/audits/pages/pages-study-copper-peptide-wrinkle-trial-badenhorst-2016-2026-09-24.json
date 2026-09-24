@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "does a copper peptide serum reduce wrinkles appraised by the skingenetix research team medically reviewed by dr esther bodde cosmetic medica",
+   "detail": "does a copper peptide serum reduce wrinkles a randomised double-blind split-face trial of a ghk-cu serum in 40 women read at source appraise",
    "severity": "pass",
    "weight": 2
   },
@@ -179,16 +179,16 @@
    "area": "SEO",
    "check": "Topic headings are real <h2> (\u2265 3)",
    "ok": true,
-   "detail": "6 <h2>: ['At a glance', 'What the measurements showed', 'What the researchers did', 'What this study does not show', 'What it means for our products', 'Reference']",
+   "detail": "10 <h2>: ['\u221224.1%', '55.8%', '39 of 40', 'At a glance', 'What the measurements showed', 'What this study does not show', 'What copper peptide is, and where this trial sits', 'Common questions about this trial', 'What it means for our products', 'Reference']",
    "severity": "pass",
    "weight": 2
   },
   {
    "area": "SEO",
    "check": "Visual-only headings (styled <p>/<span>)",
-   "ok": true,
-   "detail": "0 that look like headings but are not: []",
-   "severity": "pass",
+   "ok": false,
+   "detail": "1 that look like headings but are not: ['What the researchers did']",
+   "severity": "info",
    "weight": 0
   },
   {
@@ -203,7 +203,7 @@
    "area": "SEO",
    "check": "Content images have alt text",
    "ok": true,
-   "detail": "2/2",
+   "detail": "3/3",
    "severity": "pass",
    "weight": 1.0
   },
@@ -219,7 +219,7 @@
    "area": "SEO",
    "check": "Internal links in content \u2265 5",
    "ok": true,
-   "detail": "17 unique",
+   "detail": "15 unique",
    "severity": "pass",
    "weight": 1.0
   },
@@ -307,7 +307,7 @@
    "area": "GEO",
    "check": "A2 \u00b7 atomic paragraphs (none > 120 words)",
    "ok": true,
-   "detail": "12 paragraphs, 0 too long",
+   "detail": "33 paragraphs, 0 too long",
    "severity": "pass",
    "weight": 1.0
   },
@@ -315,7 +315,7 @@
    "area": "GEO",
    "check": "F2 \u00b7 snippet-sized answer blocks (35\u201370 words) \u2265 3",
    "ok": true,
-   "detail": "7",
+   "detail": "14",
    "severity": "pass",
    "weight": 1.0
   },
@@ -323,7 +323,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "35 figures",
+   "detail": "42 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "3 citation markers",
+   "detail": "13 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -371,7 +371,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "711 words extracted (main text 1041)",
+   "detail": "1422 words extracted (main text 1592)",
    "severity": "pass",
    "weight": 3
   },
@@ -387,7 +387,7 @@
    "area": "GEO",
    "check": "H2 sections survive extraction",
    "ok": true,
-   "detail": "6 kept",
+   "detail": "10 kept",
    "severity": "pass",
    "weight": 1.5
   },
@@ -435,7 +435,7 @@
    "area": "DESIGN",
    "check": "Section backgrounds alternate",
    "ok": true,
-   "detail": "Bone \u2192 White",
+   "detail": "Bone \u2192 White \u2192 Bone \u2192 White \u2192 Bone \u2192 Graphite \u2192 White \u2192 Bone \u2192 White \u2192 Bone",
    "severity": "pass",
    "weight": 1.5
   },
@@ -502,20 +502,25 @@
    "Does a copper peptide serum reduce wrinkles?"
   ],
   "h2": [
+   "\u221224.1%",
+   "55.8%",
+   "39 of 40",
    "At a glance",
    "What the measurements showed",
-   "What the researchers did",
    "What this study does not show",
+   "What copper peptide is, and where this trial sits",
+   "Common questions about this trial",
    "What it means for our products",
    "Reference"
   ],
-  "pseudo_headings": [],
+  "pseudo_headings": [
+   "What the researchers did"
+  ],
   "internal_links": [
    "/collections/all",
    "/collections/creams-moisturizers",
    "/collections/serums",
    "/pages/contact",
-   "/pages/copper-peptide-research",
    "/pages/faq",
    "/pages/ingredients",
    "/pages/our-philosophy",
@@ -526,22 +531,27 @@
    "/policies/privacy-policy",
    "/policies/refund-policy",
    "/policies/shipping-policy",
-   "/policies/terms-of-service",
-   "/products/copper-peptide-ghk-cu-renewal-serum"
+   "/policies/terms-of-service"
   ],
   "external_links": [
-   "https://doi.org/10.4172/2329-8847.1000166"
+   "https://doi.org/10.4172/2329-8847.1000166",
+   "https://pubmed.ncbi.nlm.nih.gov/26236125/",
+   "https://pubmed.ncbi.nlm.nih.gov/42619529/"
   ],
   "schema_types": [
    "BreadcrumbList",
    "WebPage"
   ],
-  "extracted_words": 711,
-  "main_words": 1041,
+  "extracted_words": 1422,
+  "main_words": 1592,
   "images": [
    {
-    "src": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg?width=1200",
-    "alt": "Laboratory imagery of a collagen network, illustrating the fibroblast arm of the study"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-clinical-research-banner.jpg?v=1787645156&width=3000",
+    "alt": "Blue copper peptide crystals in a glass dish beside a conical flask and beaker of blue solution and a laboratory microscope, representing GHK-Cu clinical research"
+   },
+   {
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-copper-peptide-ghk-cu-collagen-network-research.jpg?v=1787663139&width=3000",
+    "alt": "A single copper node radiating fine filaments through a blue collagen-fibre network - Skingenetix copper peptide GHK-Cu research"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/Skingenetix-logo-black.png?v=1774450310&width=1724",
@@ -554,27 +564,108 @@
    "headerBottom": 126,
    "rows": [
     {
-     "id": "study_head",
-     "type": "rich-text",
+     "id": "banner",
+     "type": "image-with-text-overlay",
      "top": 126,
-     "h": 865,
+     "h": 440,
      "bg": "rgb(240, 240, 240)",
-     "text": 800,
+     "text": 180,
+     "media": 1
+    },
+    {
+     "id": "figures",
+     "type": "impact-text",
+     "top": 566,
+     "h": 400,
+     "bg": "rgb(240, 240, 240)",
+     "text": 462,
      "media": 0
     },
     {
-     "id": "study_designed",
+     "id": "answer",
      "type": "rich-text",
-     "top": 991,
-     "h": 4864,
+     "top": 965,
+     "h": 496,
      "bg": "rgb(255, 255, 255)",
-     "text": 4975,
+     "text": 1020,
+     "media": 0
+    },
+    {
+     "id": "glance",
+     "type": "specification-table",
+     "top": 1461,
+     "h": 1317,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1200,
+     "media": 0
+    },
+    {
+     "id": "chart",
+     "type": "rich-text",
+     "top": 2778,
+     "h": 894,
+     "bg": "rgb(255, 255, 255)",
+     "text": 870,
+     "media": 0
+    },
+    {
+     "id": "story",
+     "type": "media-with-text",
+     "top": 3672,
+     "h": 820,
+     "bg": "rgb(240, 240, 240)",
+     "text": 468,
      "media": 1
+    },
+    {
+     "id": "limits",
+     "type": "rich-text",
+     "top": 4492,
+     "h": 578,
+     "bg": "rgb(26, 26, 26)",
+     "text": 1065,
+     "media": 0
+    },
+    {
+     "id": "context",
+     "type": "rich-text",
+     "top": 5070,
+     "h": 586,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1092,
+     "media": 0
+    },
+    {
+     "id": "faq",
+     "type": "rich-text",
+     "top": 5656,
+     "h": 1147,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1722,
+     "media": 0
+    },
+    {
+     "id": "means",
+     "type": "rich-text",
+     "top": 6803,
+     "h": 518,
+     "bg": "rgb(255, 255, 255)",
+     "text": 518,
+     "media": 0
+    },
+    {
+     "id": "reference",
+     "type": "rich-text",
+     "top": 7321,
+     "h": 405,
+     "bg": "rgb(240, 240, 240)",
+     "text": 371,
+     "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 5854,
+     "top": 7726,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -583,7 +674,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 6370,
+     "top": 8242,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -598,27 +689,108 @@
    "headerBottom": 85,
    "rows": [
     {
-     "id": "study_head",
-     "type": "rich-text",
+     "id": "banner",
+     "type": "image-with-text-overlay",
      "top": 85,
-     "h": 804,
+     "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 800,
+     "text": 180,
+     "media": 1
+    },
+    {
+     "id": "figures",
+     "type": "impact-text",
+     "top": 460,
+     "h": 671,
+     "bg": "rgb(240, 240, 240)",
+     "text": 462,
      "media": 0
     },
     {
-     "id": "study_designed",
+     "id": "answer",
      "type": "rich-text",
-     "top": 889,
-     "h": 7510,
+     "top": 1131,
+     "h": 586,
      "bg": "rgb(255, 255, 255)",
-     "text": 4992,
+     "text": 1020,
+     "media": 0
+    },
+    {
+     "id": "glance",
+     "type": "specification-table",
+     "top": 1717,
+     "h": 1260,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1200,
+     "media": 0
+    },
+    {
+     "id": "chart",
+     "type": "rich-text",
+     "top": 2977,
+     "h": 1164,
+     "bg": "rgb(255, 255, 255)",
+     "text": 870,
+     "media": 0
+    },
+    {
+     "id": "story",
+     "type": "media-with-text",
+     "top": 4142,
+     "h": 901,
+     "bg": "rgb(240, 240, 240)",
+     "text": 468,
      "media": 1
+    },
+    {
+     "id": "limits",
+     "type": "rich-text",
+     "top": 5043,
+     "h": 705,
+     "bg": "rgb(26, 26, 26)",
+     "text": 1065,
+     "media": 0
+    },
+    {
+     "id": "context",
+     "type": "rich-text",
+     "top": 5748,
+     "h": 665,
+     "bg": "rgb(255, 255, 255)",
+     "text": 1092,
+     "media": 0
+    },
+    {
+     "id": "faq",
+     "type": "rich-text",
+     "top": 6412,
+     "h": 1294,
+     "bg": "rgb(240, 240, 240)",
+     "text": 1722,
+     "media": 0
+    },
+    {
+     "id": "means",
+     "type": "rich-text",
+     "top": 7706,
+     "h": 533,
+     "bg": "rgb(255, 255, 255)",
+     "text": 518,
+     "media": 0
+    },
+    {
+     "id": "reference",
+     "type": "rich-text",
+     "top": 8239,
+     "h": 338,
+     "bg": "rgb(240, 240, 240)",
+     "text": 371,
+     "media": 0
     },
     {
      "id": "footer",
      "type": "footer",
-     "top": 8398,
+     "top": 8577,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -627,7 +799,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 9438,
+     "top": 9616,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
