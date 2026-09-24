@@ -1,0 +1,212 @@
+{
+  "_about": "The copper hub described Badenhorst 2016's comparator as 'the same serum without GHK-Cu'. Reading the full PDF on 2026-09-24 for the study page showed that is not what it was: the Group 2 control was the plain serum vehicle, carrying neither GHK-Cu nor the lipid nano-carrier that delivered it. 'The same serum without X' claims the only difference was X, so it attributes the whole 55.8% gap to the peptide. The paper cannot support that — the authors describe the trial as the first to test GHK-Cu formulated into a nano-carrier. Every locale carried the same overstatement, in 12 places across six settings.",
+  "_source": "Badenhorst et al., J Aging Sci 2016;4(3):166, Methods and Tables 2-3. doi:10.4172/2329-8847.1000166",
+  "_fix": "Say what the control was — a plain serum base — and state the confound where there is room to.",
+  "fixes": [
+    {
+      "_what": "comparative position: 'X% more than the same serum without it/GHK-Cu'",
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "research-copper-peptide.json hero.p1",
+        "research-copper-peptide.json overview.op",
+        "research-copper-peptide.json evidence.body",
+        "research-copper-peptide.json evidence_table.t1"
+      ],
+      "patterns": {
+        "en": "than the same serum without (?:it|GHK-Cu)",
+        "de": "als dasselbe Serum ohne GHK-Cu",
+        "nl": "dan hetzelfde serum zonder GHK-Cu",
+        "fr": "(qu'avec|que) le même sérum sans GHK-Cu",
+        "es": "que el mismo sérum sin GHK-Cu",
+        "it": "rispetto allo stesso siero senza GHK-Cu"
+      },
+      "replace": {
+        "en": "than the plain serum base",
+        "de": "als die reine Serumbasis",
+        "nl": "dan de neutrale serumbasis",
+        "fr": "\\1 la base de sérum neutre",
+        "es": "que la base de sérum neutra",
+        "it": "rispetto alla base di siero neutra"
+      }
+    },
+    {
+      "_what": "instrumental position: 'against -15.0% with the same serum without it'",
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "research-copper-peptide.json stats.s1",
+        "research-copper-peptide.json overview.op"
+      ],
+      "patterns": {
+        "en": "with the same serum without it",
+        "de": "mit demselben Serum ohne GHK-Cu",
+        "nl": "met hetzelfde serum zonder GHK-Cu",
+        "fr": "avec le même sérum sans GHK-Cu",
+        "es": "con el mismo sérum sin GHK-Cu",
+        "it": "con lo stesso siero senza GHK-Cu"
+      },
+      "replace": {
+        "en": "with the plain serum base",
+        "de": "mit der reinen Serumbasis",
+        "nl": "met de neutrale serumbasis",
+        "fr": "avec la base de sérum neutre",
+        "es": "con la base de sérum neutra",
+        "it": "con la base di siero neutra"
+      }
+    },
+    {
+      "_what": "chart intro: 'compared copper peptide with something else: the same serum without it'",
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "research-copper-peptide.json charts"
+      ],
+      "patterns": {
+        "en": "else: the same serum without it",
+        "de": "verglichen: mit demselben Serum ohne GHK-Cu",
+        "nl": "vergeleken: met hetzelfde serum zonder GHK-Cu",
+        "fr": "au même sérum sans GHK-Cu",
+        "es": "otra cosa: con el mismo sérum sin GHK-Cu",
+        "it": "qualcos'altro: con lo stesso siero senza GHK-Cu"
+      },
+      "replace": {
+        "en": "else: the plain serum base",
+        "de": "verglichen: mit der reinen Serumbasis",
+        "nl": "vergeleken: met de neutrale serumbasis",
+        "fr": "à la base de sérum neutre",
+        "es": "otra cosa: con la base de sérum neutra",
+        "it": "qualcos'altro: con la base di siero neutra"
+      }
+    },
+    {
+      "_what": "chart subtitle: 'GHK-Cu serum on one side, the same serum without GHK-Cu on the other'",
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "research-copper-peptide.json charts"
+      ],
+      "patterns": {
+        "en": "the same serum without GHK-Cu on the other",
+        "de": "dasselbe Serum ohne GHK-Cu auf der anderen",
+        "nl": "hetzelfde serum zonder GHK-Cu op de andere",
+        "fr": "le même sérum sans GHK-Cu de l'autre",
+        "es": "el mismo sérum sin GHK-Cu en el otro",
+        "it": "lo stesso siero senza GHK-Cu sull'altro"
+      },
+      "replace": {
+        "en": "the plain serum base on the other",
+        "de": "die reine Serumbasis auf der anderen",
+        "nl": "de neutrale serumbasis op de andere",
+        "fr": "la base de sérum neutre de l'autre",
+        "es": "la base de sérum neutra en el otro",
+        "it": "la base di siero neutra sull'altro"
+      }
+    },
+    {
+      "_what": "chart legend, bar titles and table header — the capitalised standalone label",
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "research-copper-peptide.json charts"
+      ],
+      "patterns": {
+        "en": "Same serum without GHK-Cu",
+        "de": "Dasselbe Serum ohne GHK-Cu",
+        "nl": "Hetzelfde serum zonder GHK-Cu",
+        "fr": "Même sérum sans GHK-Cu",
+        "es": "Mismo sérum sin GHK-Cu",
+        "it": "Stesso siero senza GHK-Cu"
+      },
+      "replace": {
+        "en": "Plain serum base",
+        "de": "Reine Serumbasis",
+        "nl": "Neutrale serumbasis",
+        "fr": "Base de sérum neutre",
+        "es": "Base de sérum neutra",
+        "it": "Base di siero neutra"
+      }
+    },
+    {
+      "_what": "chart caption, first paragraph: 'Relative to the serum without it'",
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "research-copper-peptide.json charts"
+      ],
+      "patterns": {
+        "en": "Relative to the serum without it",
+        "de": "Im Vergleich zum Serum ohne GHK-Cu",
+        "nl": "Vergeleken met het serum zonder GHK-Cu",
+        "fr": "Par rapport au sérum sans GHK-Cu",
+        "es": "Frente al sérum sin GHK-Cu",
+        "it": "Rispetto al siero senza GHK-Cu"
+      },
+      "replace": {
+        "en": "Relative to that plain base",
+        "de": "Im Vergleich zu dieser reinen Basis",
+        "nl": "Vergeleken met die neutrale basis",
+        "fr": "Par rapport à cette base neutre",
+        "es": "Frente a esa base neutra",
+        "it": "Rispetto a quella base neutra"
+      }
+    },
+    {
+      "_what": "chart caption, second paragraph — state the confound rather than only the nano-carrier",
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "research-copper-peptide.json charts"
+      ],
+      "patterns": {
+        "en": "The tested serum delivered GHK-Cu in a nano-carrier, and the trial was funded by its maker\\.",
+        "de": "Das getestete Serum enthielt GHK-Cu in einem Nano-Träger, und die Studie wurde von seinem Hersteller finanziert\\.",
+        "nl": "Het geteste serum bevatte GHK-Cu in een nanodrager, en de studie werd gefinancierd door de maker ervan\\.",
+        "fr": "Le sérum testé contenait du GHK-Cu dans un nanovecteur, et l'essai a été financé par son fabricant\\.",
+        "es": "El sérum probado contenía GHK-Cu en un nanotransportador, y el ensayo lo financió su fabricante\\.",
+        "it": "Il siero testato conteneva GHK-Cu in un nanovettore, e lo studio è stato finanziato dal suo produttore\\."
+      },
+      "replace": {
+        "en": "The plain base carried neither GHK-Cu nor the lipid nano-carrier that delivered it, so the gap covers both. The trial was funded by the serum's maker.",
+        "de": "Die reine Basis enthielt weder GHK-Cu noch den Lipid-Nanoträger, der es transportierte; der Unterschied umfasst also beides. Die Studie wurde vom Hersteller des Serums finanziert.",
+        "nl": "De neutrale basis bevatte noch GHK-Cu, noch de lipide-nanodrager die het vervoerde, dus het verschil omvat beide. De studie werd gefinancierd door de maker van het serum.",
+        "fr": "La base neutre ne contenait ni GHK-Cu ni le nanovecteur lipidique qui le transportait : l'écart couvre donc les deux. L'essai a été financé par le fabricant du sérum.",
+        "es": "La base neutra no contenía GHK-Cu ni el nanotransportador lipídico que lo vehiculaba, así que la diferencia abarca ambos. El ensayo lo financió el fabricante del sérum.",
+        "it": "La base neutra non conteneva né GHK-Cu né il nanovettore lipidico che lo trasportava, quindi la differenza copre entrambi. Lo studio è stato finanziato dal produttore del siero."
+      }
+    },
+    {
+      "_what": "evidence table, the Badenhorst row — the confound belongs in our own appraisal",
+      "where": [
+        "templates"
+      ],
+      "only": [
+        "research-copper-peptide.json evidence_table.t1"
+      ],
+      "patterns": {
+        "en": "vehicle\\. Concentration not stated\\.",
+        "de": "Basis\\. Konzentration nicht angegeben\\.",
+        "nl": "basis\\. Concentratie niet vermeld\\.",
+        "fr": "base\\. Concentration non indiquée\\.",
+        "es": "base\\. Concentración no indicada\\.",
+        "it": "base\\. Concentrazione non indicata\\."
+      },
+      "replace": {
+        "en": "vehicle. The comparator base carried neither the peptide nor the nano-carrier that delivered it, so the gap covers both. Concentration not stated.",
+        "de": "Basis. Die Vergleichsbasis enthielt weder das Peptid noch den Nanoträger, der es transportierte; der Unterschied umfasst also beides. Konzentration nicht angegeben.",
+        "nl": "basis. De vergelijkingsbasis bevatte noch het peptide, noch de nanodrager die het vervoerde, dus het verschil omvat beide. Concentratie niet vermeld.",
+        "fr": "base. La base de comparaison ne contenait ni le peptide ni le nanovecteur qui le transportait : l'écart couvre donc les deux. Concentration non indiquée.",
+        "es": "base. La base de comparación no contenía el péptido ni el nanotransportador que lo vehiculaba, así que la diferencia abarca ambos. Concentración no indicada.",
+        "it": "base. La base di confronto non conteneva né il peptide né il nanovettore che lo trasportava, quindi la differenza copre entrambi. Concentrazione non indicata."
+      },
+      "_readback_note": "Applied with the bare pattern 'Concentration not stated.', which the replacement keeps — the read-back flagged all six locales as unfixed. False positive: the live text was correct. Anchored on the preceding sentence so the spec is idempotent."
+    }
+  ]
+}

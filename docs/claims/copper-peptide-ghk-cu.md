@@ -2,6 +2,8 @@
 
 > **Status 2026-09-23:** the hub was brought level with the Matrixyl and glutathione builds (`configs/hub-upgrades/copper-peptide-research-parity-2026-09-23.json`): key figures at the top (−24.1% vs −15.0%; 7 in 10; the 2026 review), at-a-glance list, ten-row evidence table naming the funder and the journal's weaker peer review beside Badenhorst, image rows, two FAQs. Verification log at the end. Gaps 1–3 (no stated concentration, no tolerability data at 2%, the unread Leyden abstracts) are unchanged.
 
+> **Correction 2026-09-24:** the hub described the Group 2 comparator as *"the same serum without GHK-Cu"* — in the hero, the stats band, the overview, the evidence prose, the chart (legend, subtitle, bar titles, table header and caption) and the evidence table, in all six languages. The paper's control was the plain serum vehicle, carrying **neither GHK-Cu nor the lipid nano-carrier that delivered it**, so the 55.8% covers the peptide and its delivery system together. Fixed live by `configs/claim-fixes/copper-vehicle-2026-09-24.json`; the facts in this register were already right, only the ready-to-use claim wording was wrong. Found by reading the full PDF for the study page, `/pages/study/copper-peptide-wrinkle-trial-badenhorst-2016`.
+
 **Built:** 2026-09-22 · **Scope:** Skingenetix Copper Peptide (GHK-Cu) 2% Renewal Serum, 2% Day Gel-Cream, 2% Night Cream, the microneedling stamp set, and bundles.
 **Standing rule:** use the strongest claim the best evidence supports. It has to be true, sourced, and within EU Regulation 655/2013 (the common criteria: legal compliance, truthfulness, evidential support, honesty, fairness, informed decision-making).
 **Verification standard:** I checked every number below against the primary text (full text or abstract) on 2026-09-22, unless the row says otherwise. Where I could not open the primary source, the row says so and the grade is lowered.
@@ -15,14 +17,14 @@
 ## 1. Headline claims, ready to use (ranked)
 
 ### Claim 1 (hero). GHK-Cu beat the vehicle it was tested in, head to head
-**Claim:** *"In a double-blind trial, copper peptide GHK-Cu reduced wrinkle volume 55.8% more than the same serum without it."*
-Short form: *"Double-blind tested: 55.8% more wrinkle-volume reduction than the serum without GHK-Cu."*
+**Claim:** *"In a double-blind trial, copper peptide GHK-Cu reduced wrinkle volume 55.8% more than the plain serum base."*
+Short form: *"Double-blind tested: 55.8% more wrinkle-volume reduction than the plain serum base."*
 
 - **Fact:** Randomised, double-blind, split-face trial. 40 women aged 40–65 (39 analysed), 8 weeks, twice daily. The GHK-Cu serum (GHK-Cu in a lipid nano-carrier) went on one side of the face, and the vehicle serum (no GHK-Cu, no nano-carrier) went on the other side in group 2 (n=20). Measurement was PRIMOS 3D fringe projection on one crow's-feet wrinkle per subject. **Wrinkle volume: 55.8% greater improvement vs vehicle, p<0.0001. Wrinkle depth: 32.8% greater improvement vs vehicle, p=0.0123** (Table 3).
 - **What 55.8% is:** it is *relative* to the vehicle. It is **not** "wrinkle volume down 55.8%". Change from baseline at 8 weeks (Table 2): GHK-Cu serum volume −24.1% ±8.6 vs vehicle −15.0% ±5.2 (group 2). Depth −20.3% vs −15.3%.
 - **Source:** Badenhorst T, Svirskis D, Merrilees M, Bolke L, Wu Z. *J Aging Sci* 2016;4(3):166. DOI 10.4172/2329-8847.1000166. Full text: https://www.walshmedicalmedia.com/open-access/effects-of-ghkcu-on-mmp-and-timp-expression-collagen-and-elastin-production-and-facial-wrinkle-parameters-2329-8847-1000166.pdf
 - **Grade: A−.** It is controlled and instrumental. Four things lower it: it is a single study; it was funded by Snowberry NZ (maker of the test serum, which the paper says had no role in analysis, and independent statisticians were used); the trial was run at Dermatest GmbH; and the journal is published by the OMICS group (Walsh Medical Media), which has weaker peer review. A 2018 review cites it (Pickart & Margolina, PMC6073405), and so does the 2026 systematic review (claim 3).
-- **Attach to:** serum, day gel-cream, night cream, bundles, **as an ingredient claim only**. **Conditions:** (a) say "a GHK-Cu serum" or "GHK-Cu", never "this serum"; (b) the tested formula used a nano-carrier, so do not claim ours works through the same delivery system; (c) keep "vs the serum without it" in the claim, because the bare "55.8%" is misleading.
+- **Attach to:** serum, day gel-cream, night cream, bundles, **as an ingredient claim only**. **Conditions:** (a) say "a GHK-Cu serum" or "GHK-Cu", never "this serum"; (b) the tested formula used a nano-carrier, so do not claim ours works through the same delivery system; (c) keep "vs the plain serum base" in the claim, because the bare "55.8%" is misleading; (d) **never write "the same serum without GHK-Cu"** — the base lacked the nano-carrier as well as the peptide, so that wording credits the whole gap to GHK-Cu alone. It was live on the hub in six languages until 2026-09-24.
 
 ### Claim 2. It outperformed a Matrixyl 3000 product on wrinkle volume
 **Claim:** *"Head to head in a double-blind trial, GHK-Cu reduced wrinkle volume 31.6% more than a Matrixyl 3000 product."*
@@ -87,14 +89,14 @@ Optional add-on: *"Levels in the blood fall from about 200 ng/mL at age 20 to ab
 Current line: *"For GHK-Cu, most of the evidence comes from laboratory studies; published trials in people are small."*
 
 **Option A (recommended, leads with the best trial):**
-> "In a double-blind, split-face trial, 40 women used a GHK-Cu serum on one side of the face for 8 weeks. It reduced wrinkle volume 55.8% more than the same serum without GHK-Cu, and 31.6% more than a Matrixyl 3000 product, measured by 3D skin imaging. A 2026 systematic review found the same: GHK-Cu significantly reduced wrinkle volume and depth compared with controls. The human evidence is still only a handful of trials."
+> "In a double-blind, split-face trial, 40 women used a GHK-Cu serum on one side of the face for 8 weeks. It reduced wrinkle volume 55.8% more than the plain serum base — which carried neither the peptide nor the nano-carrier that delivered it — and 31.6% more than a Matrixyl 3000 product, measured by 3D skin imaging. A 2026 systematic review found the same: GHK-Cu significantly reduced wrinkle volume and depth compared with controls. The human evidence is still only a handful of trials."
 
 **Option B (breadth, "decades of science"):**
 > "GHK-Cu has been studied for more than 50 years, since it was first isolated from human plasma in 1973. The lab evidence is strong enough that an independent 2024 review concluded 'GHK can be considered as an anti-wrinkle ingredient.' Human studies back it up: a double-blind wrinkle trial (40 women, 8 weeks), a skin-biopsy study where 7 in 10 people produced more collagen, and 12-week facial studies in 71 and 41 women."
 > Quote source: Mortazavi 2024, PMC11830136: "Based on cellular studies, undoubtedly, GHK can be considered as an anti-wrinkle ingredient." These are independent authors (Shahid Beheshti University), with no conflicts declared. The quote is scoped to cellular studies, and "Human studies back it up" in the copy says that.
 
 **Option C (compact, for a small block):**
-> "Tested against Matrixyl 3000 in a double-blind trial, GHK-Cu reduced wrinkle volume 31.6% more, and 55.8% more than the serum without it (8 weeks, 40 women)."
+> "Tested against Matrixyl 3000 in a double-blind trial, GHK-Cu reduced wrinkle volume 31.6% more, and 55.8% more than the plain serum base (8 weeks, 40 women)."
 
 **Honesty note:** Mortazavi 2024 still says "a surprising absence of clinical studies". Options A and B are true and not misleading because they name the actual trials and their sizes. Do not add "one of the most-studied peptides". If a trailing caveat is wanted, "Human trials so far are few but consistent" is accurate. Miller 2006 is the only null result, and it was a post-laser setting, not everyday use.
 
