@@ -567,6 +567,56 @@ D–F under-eye a–c). Casting follows the trial: Chinese on the PDRN card, Gre
 
 ---
 
+## 13. Round 3 of the same two cards: Caucasian, close-up, plain wall (2026-09-24)
+
+Malcolm: *"Lets make a new batch - using caucasian women - and lets keep the face close up so not much
+background is shown - and lets keep the background a plain wall with no extra details"*.
+
+- **Builder:** `scripts/build-under-eye-forehead-before-after-config.py` now emits
+  `configs/banners/before-after-undereye-forehead-r3.json`.
+- **Smoke brief:** preserved as `…-r3-smoke.json`. Slots **a** and **d** ran from it and were not re-run.
+- **Output:** `assets/ai-generated/2026-08-22-multi-before-after-undereye-forehead-r3/`, **36 of 36** candidates.
+- **Contact sheet:** `~/Desktop/skingenetix-before-after-undereye-forehead-r3.png`. Rows A–C are the forehead
+  slots d–f and rows D–F the under-eye slots a–c.
+- **OpenAI model:** `gpt-image-2.5-sunburst`.
+
+**What changed from r2:**
+
+- **Casting:** six Caucasian women aged 43–54, with different hair and colouring.
+- **Crops:** close-ups only, and every under-eye slot shows one side of the face.
+- **Background:** the rooms became plain walls, a flat colour that differs between the two days and has
+  nothing on it.
+- **Caption bait removed:** the panels are named only LEFT and RIGHT, and nothing an engine reads contains
+  earlier / later / week / month / before / after. The builder checks this.
+
+**What the smoke test found, and the fixes:**
+
+- **Naming the light source drew it.** The first r3 brief said "daylight comes from a *window* high on her
+  left". Four of 12 smoke tiles drew a window or a doorframe (nbp_pro, luma on both slots, nbp_flash).
+  The word is now banned from every prompt, and the light is described only by where it falls from. The
+  named list of forbidden room objects moved to the negatives. In the revised slots, luma's slot f was the
+  only one with a non-plain background: a stone-block wall.
+- **"Close-up" alone did not hold on nbp.** nbp_pro and nbp_flash came back head-and-shoulders. The brief
+  now gives the closeness as geometry: her face spans nearly the whole panel width, the top of her head is
+  cut off, and no shoulders are in the picture. That fixed nbp_flash on the under-eye slots; nbp_pro still
+  pulls back.
+
+**Supplier notes from this round:**
+
+- **nbp_pro:** the caption rate fell from 3 of 4 slots in r2 to 1 of 6 here. The one was "DAY 1 / DAY 2"
+  on slot f, lifted from "two different days". It still frames the panels as white-bordered cards and
+  tends to head-and-shoulders.
+- **flux2:** a fabricated stock-photo watermark ("YOUPOSA") on slot c. The OCR tool did not catch it; eyes
+  did. flux2 also returned near-identical panels and older women again.
+- **seedream:** still draws the under-eye bag as a red or purple swelling. It mirrored slot a, and turned
+  the freckles on slot e into red, lesion-like spots.
+- **gpt_image (2.5-sunburst):** the cleanest engine across all six slots.
+
+**To check before Malcolm uses any tile:** backgrounds for stray objects, captions and watermarks at full
+size, and whether the right panel is lit more kindly.
+
+---
+
 *Related: `.claude/rules/website-imagery.md` (every image to every supplier; judge at 100% and at render
 size), `docs/visual-identity/03-art-direction-and-briefs.md`, and the project memory entries
 `before-after-pairs-need-two-sessions-not-two-frames`, `slot-letters-restart-per-wave`,
