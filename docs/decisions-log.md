@@ -203,3 +203,24 @@ so whatever section physically precedes another becomes its "previous section" f
 **Decision:** On all five hubs the band sits directly under the hero: hero → key figures (White) → definition and at-a-glance (Bone) → evidence prose (White) → findings cards → charts → usage rows → evidence table → references → FAQ → shop → related → CTA. The charts moved below the findings cards and the evidence table below the usage rows so the Bone/White alternation holds; the four sections from References down flipped colour. Argireline, which had no band, got one from its register (48.9% vs 0%; −7.4% vs +4.3% at day 20; 4 weeks).
 **Also this day:** the PDRN and copper hubs were brought level with the two reference builds (at-a-glance list, key figures, ten-row evidence table, image rows with a how-to, two FAQs each, references and JSON-LD extended, PDRN's findings card rewritten to the verified figures), and the copper hub now names the trial funder and the journal's weaker peer review beside the 55.8% figure.
 **Trade-offs:** The definition paragraph now starts about 60 words later, still inside the answer-first window that both external auditors score. The `impact-text` figures still render as `<h2>` (ADR-2026-09-22 and -G); that cost is unchanged by the move. The Argireline evidence table and image rows remain a follow-up.
+
+---
+
+## ADR-2026-09-24-S: The Argireline page is the science-page template
+
+**Date:** 2026-09-24 (the build 2026-09-23; Malcolm adopted it that afternoon)
+**Status:** Accepted. Malcolm: "now lets save this as the template to follow for the other science pages. We will improve them accordingly one by one later."
+**Context:** The evidence-sections merge (`docs/decision-evidence-sections-merge-2026-09-23.md`) was piloted on Argireline. Malcolm then redesigned the page section by section on the live site. The changes: a centred intro above the at-a-glance row, a numbered evidence index linking to each finding card, two new cards (the safety record and the null result), a 3-step how-to, a 10-row Evidence & Sources table replacing both the evidence table and the references, and himself named as author.
+**Decision:** The page is the template for all five science pages (`docs/science-page-template.md`). The sections run, in order: hero, key figures, overview, evidence index, findings cards, charts, usage, Evidence & Sources, FAQ, shop, related, CTA. It replaces Matrixyl 3000 as the reference build and amends standard items 2 and 6 in `docs/content-plan-2026.md` §4. The other four pages move to it one at a time, on Malcolm's go-ahead for each.
+**Trade-offs:**
+
+- **Four custom-html sections:** the overview, evidence index, usage and Evidence & Sources, on top of the charts. Each was forced, because Shopify richtext strips classes and `specification-table` emits `<div>` rows. The cost is translation: Shopify treats each section as one block of HTML per language. `scripts/hub-i18n.py` and a per-page phrase table (`configs/hub-i18n/`) carry that cost.
+- **The pilot's own rollout gate was missed on two small counts:**
+  - external audit 9.68 against a "not below 9.70" bar;
+  - `page-audit.py` GEO 100 → 96, for links inside the table.
+  Malcolm adopted the template on its merits after seeing the page. Both numbers are in the template doc §8 so each rollout knows the trade.
+**Also decided in the build:**
+
+- Malcolm is named as the author, as founder, not as a clinician: "you can use me as an author".
+- The byline stays in the prose flow, because wrapped in a `<div>` it was dropped by the crawlers' extractor (commit `df440a2`).
+- One section, one owning spec. Superseded specs carry `_retired`, and `hub-upgrade.py --apply` refuses them.

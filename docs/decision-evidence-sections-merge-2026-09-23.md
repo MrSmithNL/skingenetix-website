@@ -3,7 +3,8 @@
 **Date:** 2026-09-23
 **Raised by:** Malcolm — "the 'evidence at a glance' and 'published references' section on all the science pages are very similar. Can they be combined?" and "the 'What the evidence shows' section is also very similar to the content sections with images underneath."
 **Decision taken:** pilot the new pattern on the Argireline hub first; roll to the other four only if it holds its audit scores.
-**Status:** plan approved for writing; **nothing built yet**.
+**Status:** **built and live** on Argireline (2026-09-23), then adopted as the science-page template. See `docs/science-page-template.md` and ADR-2026-09-24-S. The rollout gate in §4 was missed on two small counts (external 9.68 against 9.70; `page-audit` GEO 100 → 96), and Malcolm adopted the page anyway. See template doc §8.
+**Superseded detail:** the built page went further than this plan: an evidence **index** of numbered rows rather than bullets, and the usage section as custom-html with a 3-step timeline rather than `media-with-text`.
 
 ---
 

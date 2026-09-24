@@ -59,6 +59,9 @@ The seo-aiso-validator protocol: 20 criteria scored on the Trafilatura extractio
 | `/pages/pdrn-research` | 2 | 9.80 | 9.85 | **9.82** | parity build + key figures at the top, 2026-09-23 (round 1 was 9.60 after the 09-22 retrofit). Only heading hierarchy below 9 (Gem 8: the `impact-text` `<h2>` figures) |
 | `/pages/copper-peptide-research` | 2 | 9.55 | 9.95 | **9.75** | parity build + key figures at the top, 2026-09-23 (round 1 was 9.55). GPT asks for more independent data and citation balance; the page now names the funder and the journal's peer review beside the key trial |
 | `/pages/acetyl-hexapeptide-8-research` | 2 | 9.60 | 9.80 | **9.70** | key figures at the top + at-a-glance, 2026-09-23 (round 1 was 9.72): no criterion below 9 on either model |
+| | 3 | 9.20 | 8.10 | 8.65 ✗ | template build, 2026-09-23 afternoon: Evidence & Sources table, evidence index, 3-step how-to. **Fail:** the byline had been shortened and wrapped in its own `<div>`; author 4.0, medical review 3.5, recency 5.0 |
+| | 4 | 8.50 | 8.90 | 8.70 ✗ | byline wording restored and Malcolm named as author: no change, because the extractor still never saw it |
+| | 5 | 9.65 | 9.70 | **9.68** | byline unwrapped into the prose flow (`df440a2`): Trafilatura had dropped all five trust signals. Author, review and recency back to 10. Only heading hierarchy (8.5, the key-figures `<h2>`s) under 9. This is the template (`docs/science-page-template.md`) |
 | `/pages/matrixyl-3000-research` | 4 | 9.50 | 9.70 | **9.60** | key figures moved to the top, 2026-09-23: unchanged score; author attribution (Gem 7) is the only criterion under 9 |
 | `/pages/glutathione-research` | 2 | 9.80 | 9.75 | **9.78** | key figures moved to the top, 2026-09-23: up from 9.65; no criterion below 9 on either model |
 

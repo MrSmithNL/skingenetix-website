@@ -1,12 +1,12 @@
 {%- comment -%}
 ------------------------------------------------------------------------------------------------------------------------
   research-before-after.liquid
-  Skingenetix / Claude Code — created 2026-08-27
+  Skingenetix / Claude Code - created 2026-08-27
 
   WHY THIS EXISTS
   The theme's `media-with-text` section has no caption, overlay, label or badge setting, so labels cannot be
   placed on an image inside it. The theme's own `before-after-image` section does have labels, but it takes two
-  separate images, renders a drag-to-compare slider, and offers only two labels — it cannot carry the third
+  separate images, renders a drag-to-compare slider, and offers only two labels - it cannot carry the third
   ("X% improvement of ...") that this page needs.
 
   This section keeps the side-by-side diptych the page already uses and overlays three (optionally four) labels
@@ -17,10 +17,10 @@
   ONLINE_STORE_THEME_JSON_TEMPLATE, keyed
       section.page.<template>.json.<section-id>.<block-id>.<setting-id>:<hash>
   So these labels appear in Translate & Adapt automatically, with no app configuration and no custom plumbing.
-  Nothing in this file carries the translation — the settings mechanism does.
+  Nothing in this file carries the translation - the settings mechanism does.
   (Note: the store runs Shopify's own Translate & Adapt. Langify is NOT installed, despite what older docs say.)
 
-  ADDITIVE ONLY — this is a new file. No core theme file is modified.
+  ADDITIVE ONLY - this is a new file. No core theme file is modified.
   CSS is scoped to #shopify-section-{{ section.id }}, the same pattern the theme's own sections use.
 ------------------------------------------------------------------------------------------------------------------------
 {%- endcomment -%}
@@ -135,7 +135,7 @@
         assign reverse = true
       endif
     -%}
-    <div class="rba__row {% if reverse %}rba__row--reverse{% endif %}" {{ block.shopify_attributes }}
+    <div id="rba-{{ block.id }}" class="rba__row {% if reverse %}rba__row--reverse{% endif %}" {{ block.shopify_attributes }}
          style="--rba-pill-bg: {{ block.settings.label_background }}; --rba-pill-fg: {{ block.settings.label_text_color }};">
       <div class="rba__media">
         {%- if img != blank -%}

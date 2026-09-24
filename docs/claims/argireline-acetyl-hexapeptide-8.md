@@ -117,4 +117,22 @@ Ranked from strongest to weakest. The wording is written to lead with the benefi
 
 ---
 
+## 6. Verification log — 2026-09-23 (science-page template build)
+
+What changed on `/pages/acetyl-hexapeptide-8-research`, and the source each change rests on.
+
+| Change | Basis | Checked |
+|---|---|---|
+| Card f1 and **FAQ q2**: "48.9% overall anti-wrinkle efficacy" → "22 of 45 graded clearly improved, 0 of 15 on placebo" | §3 "Claims to AVOID"; Wang 2013 | Wang 2013 re-checked at source 2026-09-23 morning (handover session log). The FAQ was missed when the card was fixed; it was live in six languages until 16:29 |
+| Card f3 now opens "From a dissolving microneedle patch, not a serum"; its result label carries the qualifier | §2 marks An 2019 "not transferable" | register row, 2026-09-22 |
+| New card f4: no adverse effects in the controlled trials | §4 (Wang, Raikou, Tadini, Henseler) | register, 2026-09-22 full-text reads |
+| New card f5: Henseler 2023 found no difference on imaging | §2, §5 gap 5 | Henseler re-checked at source 2026-09-23 morning (handover session log) |
+| Evidence & Sources table, 10 rows, verbatim titles | §2 | Kraeling 2015 and Hoppel 2015 split and both titles re-verified at PubMed 2026-09-23. They had been one row with Kraeling's title and Hoppel's link |
+| Index row 03 and key figure 2: forehead roughness −7.4% vs +4.3% at day 20 | Raikou 2017 | ⚠️ **inherited:** the values come from the 2026-09-22 full-text read. The 2026-09-23 PubMed abstract confirms only "G3 and G4… cR2 P=.022" |
+| "10% Argireline", the level in our serum | register header | ⚠️ inherited: "confirmed by Malcolm 2026-09-22", not re-asked. The grade (NP/C vs Amplified) is still a parked formula fact |
+
+**Open on this page:** FAQ q3 ("gentle … generally well tolerated") and q5 ("measurable improvements from day 15 … additional cumulative benefits beyond 28 days") have not been checked against this register. Part of the "gentle / well tolerated" sweep in `docs/todo.md` CONTENT-001.
+
+---
+
 *Method note: PubMed E-utilities searches ("argireline", "acetyl hexapeptide", "acetyl hexapeptide-3", "hexapeptide wrinkle"), then a Europe PMC sweep, then full texts from PMC, SciELO, the Raikou author PDF, and the Wang 2013 full text (PDF mirror). Lubrizol pages were read in a browser. Wiley full texts for Blanes-Mira and Raikou were paywalled; Raikou was obtained from the author institution's repository.*

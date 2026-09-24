@@ -15,6 +15,7 @@ Spec keys:
   insert_sections [{"id", "after", "type", "settings", "block", "values": {"en": ..., ...}}]
                   — a stock section (e.g. rich-text) with one richtext block
   remove_sections ["section_id"]
+  _retired        "why, and which spec replaced it" — --apply then refuses (2026-09-24)
   section_settings {"section_id": {"setting": value}} — e.g. backgrounds, for alternation
   jsonld          an object, emitted as <script id="sgx-webpage-jsonld"> INSIDE the existing
                   custom-html section named by `jsonld_host` (default "references").
@@ -85,9 +86,11 @@ def check_values(label, values):
         for href in re.findall(r'href="(/[^"]*)"', values[l]):
             if not href.startswith(f"/{l}/"):
                 sys.exit(f"  ✗ {label} [{l}]: link {href} lacks the /{l}/ prefix")
-        for tag in ("<h1>", "<h2>"):
-            if values[l].count(tag) != values["en"].count(tag):
-                sys.exit(f"  ✗ {label} [{l}]: {tag} count differs from English")
+        for tag in ("h1", "h2"):
+            # counts classed headings too — a bare "<h2>" count missed every <h2 class="…"> (fixed 2026-09-24)
+            count = lambda s: len(re.findall(rf"<{tag}[\s>]", s))
+            if count(values[l]) != count(values["en"]):
+                sys.exit(f"  ✗ {label} [{l}]: <{tag}> count differs from English")
 
 
 def expand_charts(node, charts):
@@ -262,6 +265,25 @@ def locale_texts(node):
     return []
 
 
+def wanted_headings(texts, loc, tag):
+    """Heading text in the spec's values for one locale — classed (<h2 class="evd__h">) as well as bare.
+
+    Until 2026-09-24 this matched bare <h2> only, so on the custom-html science-page template it expected
+    no headings at all and reported "0/0 headings live" as a pass.
+    """
+    return [re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", "", h))).strip()
+            for t in texts for h in re.findall(rf"<{tag}(?:\s[^>]*)?>(.*?)</{tag}>", t[loc], re.S)]
+
+
+def missing_anchors(texts, loc, page):
+    """#fragment links in the spec's values whose target id is not on the live page.
+
+    A broken in-page anchor still returns 200, so the link check alone can never catch one.
+    """
+    frags = dict.fromkeys(f for t in texts for f in re.findall(r'href="#([^"]+)"', t[loc]))
+    return [f"#{f}" for f in frags if not re.search(rf'id="{re.escape(f)}"', page)]
+
+
 def verify(spec):
     texts = locale_texts({k: v for k, v in expand_charts(spec, spec.get("charts", {})).items()
                           if k not in ("charts", "references_i18n", "jsonld_i18n")})
@@ -269,10 +291,11 @@ def verify(spec):
     for loc in ["en"] + LOCALES:
         page = fetch(f"{BASE}{'' if loc == 'en' else '/' + loc}/pages/{spec['page']}?hub={int(time.time())}")
         live_h2 = [re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", "", x))).strip() for x in re.findall(r"<h2[^>]*>(.*?)</h2>", page, re.S)]
-        want = [re.sub(r"<[^>]+>", "", h) for t in texts for h in re.findall(r"<h2>(.*?)</h2>", t[loc])]
-        missing = [w for w in want if H.unescape(w) not in live_h2]
+        want = wanted_headings(texts, loc, "h2")
+        missing = [w for w in want if w not in live_h2]
         live_h1 = [re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", "", x))).strip() for x in re.findall(r"<h1[^>]*>(.*?)</h1>", page, re.S)]
-        want_h1 = [H.unescape(re.sub(r"<[^>]+>", "", h)) for t in texts for h in re.findall(r"<h1>(.*?)</h1>", t[loc])]
+        want_h1 = wanted_headings(texts, loc, "h1")
+        no_target = missing_anchors(texts, loc, page)
         h1_problem = f"expected one <h1> {want_h1[0]!r}, found {live_h1}" if want_h1 and live_h1 != want_h1[:1] else ""
         links = sorted(set(h for t in texts for h in re.findall(r'href="(/[^"]*)"', t[loc])))
         dead = []
@@ -290,11 +313,14 @@ def verify(spec):
                 ld_ok = "WebPage" in types
             except Exception:
                 ld_ok = False
-        ok = not missing and not dead and ld_ok and not h1_problem
+        ok = not missing and not dead and ld_ok and not h1_problem and not no_target
         bad += not ok
+        anchors = len(set(re.findall(r'href="#([^"]+)"', " ".join(t[loc] for t in texts))))
         print(f"  {'✓' if ok else '✗'} {loc}: {len(want) - len(missing)}/{len(want)} headings live as <h2>, "
-              f"{len(links) - len(dead)}/{len(links)} links resolve{', JSON-LD WebPage ok' if loc == 'en' and ld_ok and spec.get('jsonld') else ''}")
+              f"{len(links) - len(dead)}/{len(links)} links resolve, {anchors - len(no_target)}/{anchors} anchors land"
+              f"{', JSON-LD WebPage ok' if loc == 'en' and ld_ok and spec.get('jsonld') else ''}")
         for m in missing: print(f"      missing heading: {m}")
+        for f in no_target: print(f"      anchor with no target on the page: {f}")
         if h1_problem: print(f"      {h1_problem}")
         for d_ in dead: print(f"      dead link: {d_}")
         if loc == "en" and not ld_ok: print("      JSON-LD WebPage missing or invalid")
@@ -310,6 +336,9 @@ def main():
     ap.add_argument("--rollback", action="store_true")
     a = ap.parse_args()
     spec = json.loads(pathlib.Path(a.spec).read_text())
+    if spec.get("_retired") and a.apply:
+        # a superseded spec rewrites sections a later spec now owns — one section, one owning spec
+        sys.exit(f"  ✗ this spec is retired and must never be re-applied: {spec['_retired']}")
     name = spec["template"]
     tag = name.replace("/", "__")
 

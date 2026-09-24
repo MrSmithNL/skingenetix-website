@@ -1,0 +1,678 @@
+{
+  "_about": "Translation memory for the Argireline science page's four custom-html sections. These 88 phrases produced the de/nl/fr/es/it values live since 2026-09-23 21:19 (commit 636c674). Any change to the English of overview, evidence, usage or evidence_sources MUST go through scripts/hub-i18n.py with this file, or the five translations are left stale and Shopify keeps serving the old text. Recovered from the 2026-09-23 session scratchpad on 2026-09-24 and verified: all 88 English keys still occur in the live English.",
+  "page": "acetyl-hexapeptide-8-research",
+  "reviewer": "configs/reviewers/esther-bodde.json",
+  "sections": {
+    "overview": "configs/hub-upgrades/acetyl-hexapeptide-8-layout-2026-09-23.json",
+    "evidence": "configs/hub-upgrades/acetyl-hexapeptide-8-layout-2026-09-23.json",
+    "usage": "configs/hub-upgrades/acetyl-hexapeptide-8-evidence-merge-2026-09-23.json",
+    "evidence_sources": "configs/hub-upgrades/acetyl-hexapeptide-8-evidence-merge-2026-09-23.json"
+  },
+  "process_sentence": {
+    "en": "Every figure checked against the published paper or its PubMed record.",
+    "de": "Jede Zahl wurde anhand der Originalpublikation oder ihres PubMed-Eintrags geprüft.",
+    "nl": "Elk cijfer is gecontroleerd aan de hand van de oorspronkelijke publicatie of het PubMed-record.",
+    "fr": "Chaque chiffre a été vérifié dans la publication d'origine ou sa fiche PubMed.",
+    "es": "Cada cifra se ha comprobado en la publicación original o en su registro de PubMed.",
+    "it": "Ogni dato è stato verificato sulla pubblicazione originale o sulla sua scheda PubMed."
+  },
+  "keep_english": [
+    "Argireline",
+    "Skingenetix",
+    "Matrixyl 3000",
+    "Malcolm Smith",
+    "Wang et al\\., 2013",
+    "Raikou et al\\., 2017",
+    "Blanes-Mira et al\\., 2002",
+    "Skingenetix Acetyl Hexapeptide-8 Serum"
+  ],
+  "verbatim_fragments": [
+    "The anti-wrinkle efficacy of a synthetic hexapeptide",
+    "The efficacy study of the combination",
+    "Acetyl hexapeptide-3 in a cosmetic formulation",
+    "Investigating the effects of Argireline",
+    "A synthetic hexapeptide with antiwrinkle activity",
+    "Anti-Wrinkle Efficacy of a Microneedle Patch",
+    "In vitro skin penetration of acetyl hexapeptide-8",
+    "Topical delivery of acetyl hexapeptide-8",
+    "Acetyl Hexapeptide-8 in Cosmeceuticals",
+    "Manufacturer in-vivo study",
+    "Am J Clin Dermatol",
+    "J Cosmet Dermatol",
+    "Braz J Pharm Sci",
+    "GMS Interdiscip",
+    "Int J Cosmet Sci",
+    "Personal Care Magazine",
+    "Ann Dermatol",
+    "Cutan Ocul Toxicol",
+    "Eur J Pharm Sci",
+    "Int J Mol Sci",
+    "Tadini",
+    "Henseler",
+    "Lipotec",
+    "An et al",
+    "Kraeling",
+    "Hoppel",
+    "Zdrada-Nowak",
+    "Esther Bodde",
+    "Cosmetic"
+  ],
+  "phrases": {
+    "What Is Argireline?": {
+      "de": "Was ist Argireline?",
+      "nl": "Wat is Argireline?",
+      "fr": "Qu'est-ce que l'Argireline ?",
+      "es": "¿Qué es el Argireline?",
+      "it": "Che cos'è l'Argireline?"
+    },
+    "Argireline® is the trade name of acetyl hexapeptide-8 (also listed as acetyl hexapeptide-3), a synthetic peptide developed by Lipotec, now part of Lubrizol.": {
+      "de": "Argireline® ist der Handelsname von Acetyl Hexapeptide-8 (auch als Acetyl Hexapeptide-3 geführt), einem synthetischen Peptid, das von Lipotec entwickelt wurde, heute Teil von Lubrizol.",
+      "nl": "Argireline® is de handelsnaam van acetyl hexapeptide-8 (ook vermeld als acetyl hexapeptide-3), een synthetisch peptide ontwikkeld door Lipotec, nu onderdeel van Lubrizol.",
+      "fr": "Argireline® est le nom commercial de l'acetyl hexapeptide-8 (aussi listé comme acetyl hexapeptide-3), un peptide de synthèse mis au point par Lipotec, aujourd'hui intégré à Lubrizol.",
+      "es": "Argireline® es el nombre comercial del acetyl hexapeptide-8 (también indicado como acetyl hexapeptide-3), un péptido sintético desarrollado por Lipotec, hoy parte de Lubrizol.",
+      "it": "Argireline® è il nome commerciale dell'acetyl hexapeptide-8 (indicato anche come acetyl hexapeptide-3), un peptide sintetico sviluppato da Lipotec, oggi parte di Lubrizol."
+    },
+    "It softens the look of expression lines around the eyes and forehead. In a double-blind, placebo-controlled trial, nearly 1 in 2 people using 10% Argireline were graded clearly smoother around the eyes after 4 weeks. On placebo, no one was.": {
+      "de": "Es mildert das Erscheinungsbild von Mimikfalten rund um Augen und Stirn. In einer doppelblinden, placebokontrollierten Studie wurde bei fast 1 von 2 Personen mit 10 % Argireline die Haut um die Augen nach 4 Wochen als deutlich glatter bewertet. Unter Placebo bei niemandem.",
+      "nl": "Het verzacht het uiterlijk van expressielijnen rond de ogen en het voorhoofd. In een dubbelblinde, placebogecontroleerde studie werd bij bijna 1 op de 2 mensen met 10% Argireline de huid rond de ogen na 4 weken als duidelijk gladder beoordeeld. Met placebo bij niemand.",
+      "fr": "Il atténue l'aspect des rides d'expression autour des yeux et du front. Dans un essai randomisé en double aveugle contre placebo, près d'une personne sur deux utilisant 10 % d'Argireline a été jugée nettement plus lisse autour des yeux après 4 semaines. Sous placebo, personne.",
+      "es": "Suaviza el aspecto de las líneas de expresión alrededor de los ojos y en la frente. En un ensayo doble ciego controlado con placebo, casi 1 de cada 2 personas con 10 % de Argireline fue evaluada como claramente más lisa alrededor de los ojos tras 4 semanas. Con placebo, nadie.",
+      "it": "Attenua l'aspetto delle rughe d'espressione intorno agli occhi e sulla fronte. In uno studio in doppio cieco controllato con placebo, quasi 1 persona su 2 con il 10% di Argireline è stata valutata come nettamente più liscia intorno agli occhi dopo 4 settimane. Con placebo, nessuno."
+    },
+    "Its results have been measured with silicone skin replicas and skin-surface imaging, not only judged by eye.": {
+      "de": "Die Ergebnisse wurden mit Silikon-Hautabdrücken und Hautoberflächen-Bildgebung gemessen, nicht nur mit bloßem Auge beurteilt.",
+      "nl": "De resultaten zijn gemeten met siliconen huidafdrukken en beeldvorming van het huidoppervlak, niet alleen met het blote oog beoordeeld.",
+      "fr": "Ses résultats ont été mesurés avec des répliques cutanées en silicone et de l'imagerie de surface, et pas seulement appréciés à l'œil.",
+      "es": "Sus resultados se han medido con réplicas cutáneas de silicona e imagen de la superficie de la piel, no solo valorados a simple vista.",
+      "it": "I risultati sono stati misurati con repliche cutanee in silicone e imaging della superficie cutanea, non soltanto valutati a occhio."
+    },
+    ">Written by <strong>": {
+      "de": ">Geschrieben von <strong>",
+      "nl": ">Geschreven door <strong>",
+      "fr": ">Rédigé par <strong>",
+      "es": ">Escrito por <strong>",
+      "it": ">Scritto da <strong>"
+    },
+    ", founder of Skingenetix, who compiles the claims registers behind these pages.": {
+      "de": ", Gründer von Skingenetix, der die Claim-Register hinter diesen Seiten zusammenstellt.",
+      "nl": ", oprichter van Skingenetix, die de claimregisters achter deze pagina's samenstelt.",
+      "fr": ", fondateur de Skingenetix, qui compile les registres de allégations derrière ces pages.",
+      "es": ", fundador de Skingenetix, que elabora los registros de afirmaciones que sustentan estas páginas.",
+      "it": ", fondatore di Skingenetix, che cura i registri delle affermazioni alla base di queste pagine."
+    },
+    "At a glance": {
+      "de": "Auf einen Blick",
+      "nl": "In het kort",
+      "fr": "En bref",
+      "es": "De un vistazo",
+      "it": "In sintesi"
+    },
+    "What it is:": {
+      "de": "Was es ist:",
+      "nl": "Wat het is:",
+      "fr": "Ce que c'est :",
+      "es": "Qué es:",
+      "it": "Che cos'è:"
+    },
+    "Argireline®, the trade name of acetyl hexapeptide-8, a synthetic peptide modelled on part of a protein involved in facial expression, used to soften the look of expression lines.": {
+      "de": "Argireline®, der Handelsname von Acetyl Hexapeptide-8, einem synthetischen Peptid nach dem Vorbild eines Teils eines Proteins, das an der Mimik beteiligt ist, zur Milderung des Erscheinungsbildes von Mimikfalten.",
+      "nl": "Argireline®, de handelsnaam van acetyl hexapeptide-8, een synthetisch peptide naar het model van een deel van een eiwit dat bij gezichtsuitdrukking betrokken is, om het uiterlijk van expressielijnen te verzachten.",
+      "fr": "Argireline®, nom commercial de l'acetyl hexapeptide-8, un peptide de synthèse calqué sur une partie d'une protéine impliquée dans l'expression du visage, utilisé pour atténuer l'aspect des rides d'expression.",
+      "es": "Argireline®, nombre comercial del acetyl hexapeptide-8, un péptido sintético inspirado en una parte de una proteína implicada en la expresión facial, usado para suavizar el aspecto de las líneas de expresión.",
+      "it": "Argireline®, nome commerciale dell'acetyl hexapeptide-8, un peptide sintetico modellato su una parte di una proteina coinvolta nell'espressione del viso, usato per attenuare l'aspetto delle rughe d'espressione."
+    },
+    "Best evidence:": {
+      "de": "Beste Evidenz:",
+      "nl": "Beste bewijs:",
+      "fr": "Meilleures données :",
+      "es": "Mejor evidencia:",
+      "it": "Prove migliori:"
+    },
+    "22 of 45 people using 10% Argireline were graded clearly smoother around the eyes after 4 weeks, against 0 of 15 on placebo, with roughness down on silicone skin replicas, in a double-blind trial (": {
+      "de": "22 von 45 Personen mit 10 % Argireline wurden nach 4 Wochen um die Augen als deutlich glatter bewertet, gegenüber 0 von 15 unter Placebo, mit geringerer Rauheit auf Silikon-Hautabdrücken, in einer doppelblinden Studie (",
+      "nl": "22 van de 45 mensen met 10% Argireline werden na 4 weken rond de ogen als duidelijk gladder beoordeeld, tegenover 0 van de 15 met placebo, met minder ruwheid op siliconen huidafdrukken, in een dubbelblinde studie (",
+      "fr": "22 personnes sur 45 utilisant 10 % d'Argireline ont été jugées nettement plus lisses autour des yeux après 4 semaines, contre 0 sur 15 sous placebo, avec une rugosité en baisse sur les répliques en silicone, dans un essai en double aveugle (",
+      "es": "22 de 45 personas con 10 % de Argireline fueron evaluadas como claramente más lisas alrededor de los ojos tras 4 semanas, frente a 0 de 15 con placebo, con menor rugosidad en réplicas de silicona, en un ensayo doble ciego (",
+      "it": "22 persone su 45 con il 10% di Argireline sono state valutate come nettamente più lisce intorno agli occhi dopo 4 settimane, contro 0 su 15 con placebo, con rugosità ridotta sulle repliche in silicone, in uno studio in doppio cieco ("
+    },
+    "Independent evidence:": {
+      "de": "Unabhängige Evidenz:",
+      "nl": "Onafhankelijk bewijs:",
+      "fr": "Données indépendantes :",
+      "es": "Evidencia independiente:",
+      "it": "Prove indipendenti:"
+    },
+    "the only independent imaging test found no difference between a serum with Argireline and the same serum without it in 19 women (Henseler, 2023). A 24-woman trial found forehead roughness down at day 20 but not at day 60 (": {
+      "de": "der einzige unabhängige Bildgebungstest fand bei 19 Frauen keinen Unterschied zwischen einem Serum mit Argireline und demselben Serum ohne (Henseler, 2023). Eine Studie mit 24 Frauen fand an Tag 20 eine geringere Stirnrauheit, an Tag 60 nicht mehr (",
+      "nl": "de enige onafhankelijke beeldvormingstest vond bij 19 vrouwen geen verschil tussen een serum met Argireline en hetzelfde serum zonder (Henseler, 2023). Een studie met 24 vrouwen vond op dag 20 minder voorhoofdruwheid, op dag 60 niet meer (",
+      "fr": "le seul test d'imagerie indépendant n'a trouvé aucune différence entre un sérum avec Argireline et le même sérum sans, chez 19 femmes (Henseler, 2023). Un essai sur 24 femmes a montré une rugosité du front en baisse à J20, mais plus à J60 (",
+      "es": "la única prueba de imagen independiente no halló diferencias entre un sérum con Argireline y el mismo sérum sin él en 19 mujeres (Henseler, 2023). Un ensayo con 24 mujeres halló menor rugosidad en la frente el día 20, pero no el día 60 (",
+      "it": "l'unico test di imaging indipendente non ha trovato differenze tra un siero con Argireline e lo stesso siero senza, in 19 donne (Henseler, 2023). Uno studio su 24 donne ha rilevato minore rugosità della fronte al giorno 20, ma non al giorno 60 ("
+    },
+    "Not shown:": {
+      "de": "Nicht gezeigt:",
+      "nl": "Niet aangetoond:",
+      "fr": "Non démontré :",
+      "es": "No demostrado:",
+      "it": "Non dimostrato:"
+    },
+    "that it reaches the muscle. A regulator's lab study found none of it in the dermis; any effect is at the skin surface. It is not a needle-free alternative to injections.": {
+      "de": "dass es den Muskel erreicht. Eine Laborstudie einer Behörde fand nichts davon in der Dermis; eine Wirkung findet an der Hautoberfläche statt. Es ist keine nadelfreie Alternative zu Injektionen.",
+      "nl": "dat het de spier bereikt. Een laboratoriumstudie van een toezichthouder vond er niets van in de dermis; een effect speelt zich af aan het huidoppervlak. Het is geen naaldvrij alternatief voor injecties.",
+      "fr": "qu'il atteigne le muscle. Une étude de laboratoire d'un régulateur n'en a retrouvé aucune trace dans le derme ; tout effet se situe à la surface de la peau. Ce n'est pas une alternative sans aiguille aux injections.",
+      "es": "que llegue al músculo. Un estudio de laboratorio de un regulador no encontró nada en la dermis; cualquier efecto está en la superficie de la piel. No es una alternativa sin agujas a las inyecciones.",
+      "it": "che raggiunga il muscolo. Uno studio di laboratorio di un ente regolatorio non ne ha trovato traccia nel derma; ogni effetto è sulla superficie cutanea. Non è un'alternativa senza aghi alle iniezioni."
+    },
+    "Safety:": {
+      "de": "Sicherheit:",
+      "nl": "Veiligheid:",
+      "fr": "Sécurité :",
+      "es": "Seguridad:",
+      "it": "Sicurezza:"
+    },
+    "no adverse effects reported in the controlled trials. Patch-test first.": {
+      "de": "in den kontrollierten Studien wurden keine unerwünschten Wirkungen berichtet. Vorher an einer kleinen Hautstelle testen.",
+      "nl": "in de gecontroleerde studies zijn geen ongewenste effecten gemeld. Test eerst op een klein stukje huid.",
+      "fr": "aucun effet indésirable rapporté dans les essais contrôlés. Faites un test sur une petite zone d'abord.",
+      "es": "no se notificaron efectos adversos en los ensayos controlados. Haga primero una prueba en una zona pequeña.",
+      "it": "negli studi controllati non sono stati riportati effetti indesiderati. Fate prima una prova su una piccola area."
+    },
+    "How to use:": {
+      "de": "Anwendung:",
+      "nl": "Gebruik:",
+      "fr": "Utilisation :",
+      "es": "Modo de uso:",
+      "it": "Come si usa:"
+    },
+    "twice a day around the eyes and forehead, for 4 weeks, with SPF in the morning.": {
+      "de": "zweimal täglich um die Augen und auf der Stirn, 4 Wochen lang, morgens mit LSF.",
+      "nl": "tweemaal daags rond de ogen en op het voorhoofd, 4 weken lang, 's ochtends met SPF.",
+      "fr": "deux fois par jour autour des yeux et sur le front, pendant 4 semaines, avec un SPF le matin.",
+      "es": "dos veces al día alrededor de los ojos y en la frente, durante 4 semanas, con SPF por la mañana.",
+      "it": "due volte al giorno intorno agli occhi e sulla fronte, per 4 settimane, con SPF al mattino."
+    },
+    "To use it in a routine, see our guide to ": {
+      "de": "Für die Anwendung in einer Routine siehe unseren Leitfaden zu ",
+      "nl": "Voor gebruik in een routine, zie onze gids over ",
+      "fr": "Pour l'intégrer à une routine, voir notre guide sur ",
+      "es": "Para usarlo en una rutina, consulte nuestra guía sobre ",
+      "it": "Per inserirlo in una routine, vedi la nostra guida su "
+    },
+    ">fine lines and wrinkles<": {
+      "de": ">feine Linien und Falten<",
+      "nl": ">fijne lijntjes en rimpels<",
+      "fr": ">ridules et rides<",
+      "es": ">líneas finas y arrugas<",
+      "it": ">linee sottili e rughe<"
+    },
+    ">Back to Science<": {
+      "de": ">Zurück zu Wissenschaft<",
+      "nl": ">Terug naar Wetenschap<",
+      "fr": ">Retour à Science<",
+      "es": ">Volver a Ciencia<",
+      "it": ">Torna a Scienza<"
+    },
+    ">Shop Argireline<": {
+      "de": ">Argireline kaufen<",
+      "nl": ">Argireline kopen<",
+      "fr": ">Acheter Argireline<",
+      "es": ">Comprar Argireline<",
+      "it": ">Acquista Argireline<"
+    },
+    "What Does Argireline Do for Expression Lines?": {
+      "de": "Was bewirkt Argireline bei Mimikfalten?",
+      "nl": "Wat doet Argireline bij expressielijnen?",
+      "fr": "Que fait l'Argireline sur les rides d'expression ?",
+      "es": "¿Qué hace el Argireline en las líneas de expresión?",
+      "it": "Che cosa fa l'Argireline sulle rughe d'espressione?"
+    },
+    "Expression lines form where facial muscles repeatedly contract, such as crow&rsquo;s feet and forehead lines. Argireline is modelled on part of the SNAP-25 protein, and in laboratory studies it interferes with the SNARE complex that nerve endings use to release the signal for a muscle to contract (": {
+      "de": "Mimikfalten entstehen dort, wo sich Gesichtsmuskeln wiederholt zusammenziehen, etwa Krähenfüße und Stirnfalten. Argireline ist einem Teil des SNAP-25-Proteins nachempfunden und stört in Laborstudien den SNARE-Komplex, über den Nervenenden das Signal zur Muskelkontraktion freisetzen (",
+      "nl": "Expressielijnen ontstaan waar gezichtsspieren zich herhaaldelijk samentrekken, zoals kraaienpootjes en voorhoofdrimpels. Argireline is gemodelleerd naar een deel van het SNAP-25-eiwit en verstoort in laboratoriumstudies het SNARE-complex waarmee zenuwuiteinden het signaal voor spiersamentrekking vrijgeven (",
+      "fr": "Les rides d'expression se forment là où les muscles du visage se contractent de façon répétée, comme les pattes d'oie et les rides du front. L'Argireline est calquée sur une partie de la protéine SNAP-25 et, en laboratoire, elle interfère avec le complexe SNARE que les terminaisons nerveuses utilisent pour libérer le signal de contraction (",
+      "es": "Las líneas de expresión se forman donde los músculos faciales se contraen de forma repetida, como las patas de gallo y las líneas de la frente. El Argireline está inspirado en una parte de la proteína SNAP-25 y, en estudios de laboratorio, interfiere con el complejo SNARE que las terminaciones nerviosas usan para liberar la señal de contracción (",
+      "it": "Le rughe d'espressione si formano dove i muscoli del viso si contraggono ripetutamente, come zampe di gallina e rughe della fronte. L'Argireline è modellato su una parte della proteina SNAP-25 e, in studi di laboratorio, interferisce con il complesso SNARE che le terminazioni nervose usano per rilasciare il segnale di contrazione ("
+    },
+    "Here is what the evidence shows, strongest first. Each line opens the study behind it.": {
+      "de": "Das zeigt die Evidenz, beginnend mit der stärksten. Jede Zeile öffnet die zugehörige Studie.",
+      "nl": "Dit laat het bewijs zien, het sterkste eerst. Elke regel opent de bijbehorende studie.",
+      "fr": "Voici ce que montrent les données, des plus solides aux moins solides. Chaque ligne ouvre l'étude correspondante.",
+      "es": "Esto es lo que muestra la evidencia, de la más sólida a la menos. Cada línea abre el estudio correspondiente.",
+      "it": "Ecco che cosa mostrano le prove, dalle più solide alle meno. Ogni riga apre lo studio corrispondente."
+    },
+    "Nearly 1 in 2 were graded clearly smoother after 4 weeks": {
+      "de": "Fast 1 von 2 wurde nach 4 Wochen als deutlich glatter bewertet",
+      "nl": "Bijna 1 op de 2 werd na 4 weken als duidelijk gladder beoordeeld",
+      "fr": "Près d'une personne sur deux jugée nettement plus lisse après 4 semaines",
+      "es": "Casi 1 de cada 2 evaluada como claramente más lisa tras 4 semanas",
+      "it": "Quasi 1 su 2 valutata come nettamente più liscia dopo 4 settimane"
+    },
+    "22 of 45 people using 10% Argireline, against 0 of 15 on placebo, in a double-blind trial.": {
+      "de": "22 von 45 Personen mit 10 % Argireline, gegenüber 0 von 15 unter Placebo, in einer doppelblinden Studie.",
+      "nl": "22 van de 45 mensen met 10% Argireline, tegenover 0 van de 15 met placebo, in een dubbelblinde studie.",
+      "fr": "22 personnes sur 45 avec 10 % d'Argireline, contre 0 sur 15 sous placebo, dans un essai en double aveugle.",
+      "es": "22 de 45 personas con 10 % de Argireline, frente a 0 de 15 con placebo, en un ensayo doble ciego.",
+      "it": "22 persone su 45 con il 10% di Argireline, contro 0 su 15 con placebo, in uno studio in doppio cieco."
+    },
+    "Wrinkle depth down up to 30% in 30 days": {
+      "de": "Faltentiefe in 30 Tagen um bis zu 30 % verringert",
+      "nl": "Rimpeldiepte tot 30% minder in 30 dagen",
+      "fr": "Profondeur des rides réduite jusqu'à 30 % en 30 jours",
+      "es": "Profundidad de las arrugas hasta un 30 % menos en 30 días",
+      "it": "Profondità delle rughe ridotta fino al 30% in 30 giorni"
+    },
+    "The developers&rsquo; own small study, so indicative only.": {
+      "de": "Die eigene kleine Studie der Entwickler, daher nur ein Anhaltspunkt.",
+      "nl": "De eigen kleine studie van de ontwikkelaars, dus alleen indicatief.",
+      "fr": "L'étude interne et de petite taille des concepteurs : indicative seulement.",
+      "es": "El propio estudio pequeño de los desarrolladores, solo indicativo.",
+      "it": "Il piccolo studio degli stessi sviluppatori, quindi solo indicativo."
+    },
+    "Forehead roughness fell 7.4% by day 20 while placebo rose 4.3%": {
+      "de": "Stirnrauheit sank bis Tag 20 um 7,4 %, unter Placebo stieg sie um 4,3 %",
+      "nl": "Voorhoofdruwheid daalde 7,4% op dag 20, met placebo steeg die 4,3%",
+      "fr": "La rugosité du front a baissé de 7,4 % à J20, alors qu'elle augmentait de 4,3 % sous placebo",
+      "es": "La rugosidad de la frente bajó un 7,4 % el día 20, mientras que con placebo subió un 4,3 %",
+      "it": "La rugosità della fronte è scesa del 7,4% al giorno 20, mentre con placebo è salita del 4,3%"
+    },
+    "A second placebo-controlled trial. The difference was gone by day 60.": {
+      "de": "Eine zweite placebokontrollierte Studie. An Tag 60 war der Unterschied verschwunden.",
+      "nl": "Een tweede placebogecontroleerde studie. Op dag 60 was het verschil verdwenen.",
+      "fr": "Un second essai contre placebo. La différence avait disparu à J60.",
+      "es": "Un segundo ensayo controlado con placebo. La diferencia había desaparecido el día 60.",
+      "it": "Un secondo studio controllato con placebo. Al giorno 60 la differenza era scomparsa."
+    },
+    "No side effects were reported in any of the controlled trials": {
+      "de": "In keiner der kontrollierten Studien wurden Nebenwirkungen berichtet",
+      "nl": "In geen van de gecontroleerde studies zijn bijwerkingen gemeld",
+      "fr": "Aucun effet indésirable rapporté dans les essais contrôlés",
+      "es": "No se notificó ningún efecto adverso en los ensayos controlados",
+      "it": "In nessuno studio controllato sono stati riportati effetti indesiderati"
+    },
+    "45 people, 4 weeks, around the eyes.": {
+      "de": "45 Personen, 4 Wochen, um die Augen.",
+      "nl": "45 mensen, 4 weken, rond de ogen.",
+      "fr": "45 personnes, 4 semaines, autour des yeux.",
+      "es": "45 personas, 4 semanas, alrededor de los ojos.",
+      "it": "45 persone, 4 settimane, intorno agli occhi."
+    },
+    "The one independent imaging test found no difference": {
+      "de": "Der einzige unabhängige Bildgebungstest fand keinen Unterschied",
+      "nl": "De enige onafhankelijke beeldvormingstest vond geen verschil",
+      "fr": "Le seul test d'imagerie indépendant n'a trouvé aucune différence",
+      "es": "La única prueba de imagen independiente no halló diferencias",
+      "it": "L'unico test di imaging indipendente non ha trovato differenze"
+    },
+    "Reported here rather than left out.": {
+      "de": "Hier berichtet, statt weggelassen.",
+      "nl": "Hier gemeld in plaats van weggelaten.",
+      "fr": "Rapporté ici plutôt qu'omis.",
+      "es": "Se recoge aquí en lugar de omitirlo.",
+      "it": "Riportato qui invece di essere omesso."
+    },
+    "Every trial above used 10% Argireline, the level in our serum, and results were graded after four weeks of twice-daily use. Read ": {
+      "de": "Alle Studien oben verwendeten 10 % Argireline, die Konzentration in unserem Serum, und die Ergebnisse wurden nach vier Wochen zweimal täglicher Anwendung bewertet. Lesen Sie ",
+      "nl": "Alle bovenstaande studies gebruikten 10% Argireline, de concentratie in ons serum, en de resultaten werden beoordeeld na vier weken tweemaal daags gebruik. Lees ",
+      "fr": "Tous les essais ci-dessus utilisaient 10 % d'Argireline, la concentration de notre sérum, et les résultats ont été évalués après quatre semaines d'usage biquotidien. Lisez ",
+      "es": "Todos los ensayos anteriores usaron 10 % de Argireline, la concentración de nuestro sérum, y los resultados se evaluaron tras cuatro semanas de uso dos veces al día. Lea ",
+      "it": "Tutti gli studi qui sopra hanno usato il 10% di Argireline, la concentrazione del nostro siero, e i risultati sono stati valutati dopo quattro settimane di uso due volte al giorno. Leggi "
+    },
+    ">our appraisal of the 60-person placebo-controlled trial<": {
+      "de": ">unsere Einschätzung der placebokontrollierten Studie mit 60 Personen<",
+      "nl": ">onze beoordeling van de placebogecontroleerde studie met 60 personen<",
+      "fr": ">notre analyse de l'essai contre placebo mené sur 60 personnes<",
+      "es": ">nuestra valoración del ensayo con placebo de 60 personas<",
+      "it": ">la nostra valutazione dello studio con placebo su 60 persone<"
+    },
+    ">See all 10 studies and how we graded them<": {
+      "de": ">Alle 10 Studien und ihre Bewertung ansehen<",
+      "nl": ">Bekijk alle 10 studies en hun beoordeling<",
+      "fr": ">Voir les 10 études et leur évaluation<",
+      "es": ">Ver los 10 estudios y su valoración<",
+      "it": ">Vedi tutti i 10 studi e la loro valutazione<"
+    },
+    "What 10% Argireline&reg; Means": {
+      "de": "Was 10 % Argireline&reg; bedeutet",
+      "nl": "Wat 10% Argireline&reg; betekent",
+      "fr": "Ce que signifie 10 % d'Argireline&reg;",
+      "es": "Qué significa un 10 % de Argireline&reg;",
+      "it": "Che cosa significa il 10% di Argireline&reg;"
+    },
+    ">The <a": {
+      "de": ">Das <a",
+      "nl": ">Het <a",
+      "fr": ">Le <a",
+      "es": ">El <a",
+      "it": ">Il <a"
+    },
+    "contains 10% Argireline&reg;, and we state the percentage on the bottle so you can compare like with like. Concentration is not the whole story: the 2025 review found that how a formula carries the peptide into the skin matters as much.": {
+      "de": "enthält 10 % Argireline&reg;, und wir geben den Prozentsatz auf der Flasche an, damit Sie Gleiches mit Gleichem vergleichen können. Die Konzentration ist nicht alles: Die Übersichtsarbeit von 2025 fand, dass es ebenso darauf ankommt, wie eine Formel das Peptid in die Haut bringt.",
+      "nl": "bevat 10% Argireline&reg;, en we vermelden het percentage op de fles zodat u gelijk met gelijk kunt vergelijken. De concentratie is niet het hele verhaal: het overzicht uit 2025 vond dat het net zo belangrijk is hoe een formule het peptide de huid in brengt.",
+      "fr": "contient 10 % d'Argireline&reg;, et nous indiquons le pourcentage sur le flacon pour que vous puissiez comparer ce qui est comparable. La concentration ne fait pas tout : la revue de 2025 a montré que la façon dont une formule achèmine le peptide dans la peau compte tout autant.",
+      "es": "contiene un 10 % de Argireline&reg;, e indicamos el porcentaje en el frasco para que pueda comparar cosas equivalentes. La concentración no lo es todo: la revisión de 2025 halló que importa igual cómo lleva la fórmula el péptido a la piel.",
+      "it": "contiene il 10% di Argireline&reg;, e indichiamo la percentuale sul flacone perché possiate confrontare cose equivalenti. La concentrazione non è tutto: la rassegna del 2025 ha rilevato che conta altrettanto il modo in cui una formula porta il peptide nella pelle."
+    },
+    "How to Use Argireline": {
+      "de": "Anwendung von Argireline",
+      "nl": "Argireline gebruiken",
+      "fr": "Comment utiliser l'Argireline",
+      "es": "Cómo usar el Argireline",
+      "it": "Come usare l'Argireline"
+    },
+    ">Start clean<": {
+      "de": ">Sauber starten<",
+      "nl": ">Begin schoon<",
+      "fr": ">Commencer sur peau nette<",
+      "es": ">Empiece con la piel limpia<",
+      "it": ">Parti dalla pelle pulita<"
+    },
+    "On freshly cleansed skin, before anything else goes on.": {
+      "de": "Auf frisch gereinigter Haut, bevor etwas anderes aufgetragen wird.",
+      "nl": "Op net gereinigde huid, voordat er iets anders op gaat.",
+      "fr": "Sur une peau fraîchement nettoyée, avant tout autre produit.",
+      "es": "Sobre la piel recién limpia, antes de aplicar cualquier otra cosa.",
+      "it": "Sulla pelle appena detersa, prima di qualsiasi altro prodotto."
+    },
+    ">Apply where the lines form<": {
+      "de": ">Dort auftragen, wo die Linien entstehen<",
+      "nl": ">Aanbrengen waar de lijntjes ontstaan<",
+      "fr": ">Appliquer là où les rides se forment<",
+      "es": ">Aplique donde se forman las líneas<",
+      "it": ">Applica dove si formano le linee<"
+    },
+    "Three to four drops, twice a day, across the forehead, between the brows and around the eyes.": {
+      "de": "Drei bis vier Tropfen, zweimal täglich, auf Stirn, Zwischenbrauenbereich und um die Augen.",
+      "nl": "Drie tot vier druppels, tweemaal daags, op het voorhoofd, tussen de wenkbrauwen en rond de ogen.",
+      "fr": "Trois à quatre gouttes, deux fois par jour, sur le front, entre les sourcils et autour des yeux.",
+      "es": "Tres o cuatro gotas, dos veces al día, en la frente, entre las cejas y alrededor de los ojos.",
+      "it": "Tre o quattro gocce, due volte al giorno, su fronte, zona tra le sopracciglia e contorno occhi."
+    },
+    ">Seal it in<": {
+      "de": ">Einschließen<",
+      "nl": ">Sluit het af<",
+      "fr": ">Sceller<",
+      "es": ">Séllelo<",
+      "it": ">Sigilla<"
+    },
+    "Follow with a moisturiser &mdash; and with SPF every morning.": {
+      "de": "Anschließend eine Feuchtigkeitspflege &mdash; und morgens immer LSF.",
+      "nl": "Daarna een moisturizer &mdash; en 's ochtends altijd SPF.",
+      "fr": "Ensuite une crème hydratante &mdash; et un SPF chaque matin.",
+      "es": "Después, una hidratante &mdash; y SPF cada mañana.",
+      "it": "Poi una crema idratante &mdash; e SPF ogni mattina."
+    },
+    "It layers well with other peptides such as ": {
+      "de": "Es lässt sich gut mit anderen Peptiden kombinieren, etwa ",
+      "nl": "Het combineert goed met andere peptiden zoals ",
+      "fr": "Il se superpose bien à d'autres peptides comme ",
+      "es": "Se combina bien con otros péptidos como ",
+      "it": "Si abbina bene ad altri peptidi come "
+    },
+    ", which supports the look of firmer skin rather than relaxing expression lines.": {
+      "de": ", das eher das Erscheinungsbild festerer Haut unterstützt, als Mimikfalten zu entspannen.",
+      "nl": ", dat eerder het uiterlijk van stevigere huid ondersteunt dan expressielijnen te ontspannen.",
+      "fr": ", qui soutient l'aspect d'une peau plus ferme plutôt que de détendre les rides d'expression.",
+      "es": ", que favorece el aspecto de una piel más firme en lugar de relajar las líneas de expresión.",
+      "it": ", che sostiene l'aspetto di una pelle più compatta anziché rilassare le rughe d'espressione."
+    },
+    "Argireline Evidence &amp; Sources": {
+      "de": "Argireline: Evidenz &amp; Quellen",
+      "nl": "Argireline: bewijs &amp; bronnen",
+      "fr": "Argireline : données &amp; sources",
+      "es": "Argireline: evidencia &amp; fuentes",
+      "it": "Argireline: prove &amp; fonti"
+    },
+    "Every study this page relies on, with its published title, our reading of it and a link to the source. Graded ": {
+      "de": "Jede Studie, auf die sich diese Seite stützt, mit ihrem veröffentlichten Titel, unserer Einschätzung und einem Link zur Quelle. Bewertet: ",
+      "nl": "Elke studie waarop deze pagina steunt, met de gepubliceerde titel, onze beoordeling en een link naar de bron. Beoordeeld: ",
+      "fr": "Chaque étude sur laquelle s'appuie cette page, avec son titre publié, notre lecture et un lien vers la source. Évaluation : ",
+      "es": "Cada estudio en el que se basa esta página, con su título publicado, nuestra lectura y un enlace a la fuente. Clasificación: ",
+      "it": "Ogni studio su cui si basa questa pagina, con il titolo pubblicato, la nostra lettura e un link alla fonte. Valutazione: "
+    },
+    "controlled human trial measured by instrument &middot;": {
+      "de": "kontrollierte Studie am Menschen, instrumentell gemessen &middot;",
+      "nl": "gecontroleerde studie bij mensen, instrumenteel gemeten &middot;",
+      "fr": "essai contrôlé chez l'humain, mesuré par instrument &middot;",
+      "es": "ensayo controlado en personas, medido con instrumentos &middot;",
+      "it": "studio controllato sull'uomo, misurato con strumenti &middot;"
+    },
+    "smaller, uncontrolled or manufacturer data &middot;": {
+      "de": "kleinere, unkontrollierte oder Herstellerdaten &middot;",
+      "nl": "kleinere, ongecontroleerde of fabrikantgegevens &middot;",
+      "fr": "données plus limitées, non contrôlées ou du fabricant &middot;",
+      "es": "datos menores, no controlados o del fabricante &middot;",
+      "it": "dati più limitati, non controllati o del produttore &middot;"
+    },
+    "tests on skin samples &middot;": {
+      "de": "Tests an Hautproben &middot;",
+      "nl": "tests op huidmonsters &middot;",
+      "fr": "tests sur échantillons de peau &middot;",
+      "es": "pruebas en muestras de piel &middot;",
+      "it": "test su campioni di pelle &middot;"
+    },
+    ">Review</strong> a summary of other work.": {
+      "de": ">Übersicht</strong> eine Zusammenfassung anderer Arbeiten.",
+      "nl": ">Overzicht</strong> een samenvatting van ander werk.",
+      "fr": ">Revue</strong> une synthèse d'autres travaux.",
+      "es": ">Revisión</strong> una síntesis de otros trabajos.",
+      "it": ">Rassegna</strong> una sintesi di altri lavori."
+    },
+    ">Study</th>": {
+      "de": ">Studie</th>",
+      "nl": ">Studie</th>",
+      "fr": ">Étude</th>",
+      "es": ">Estudio</th>",
+      "it": ">Studio</th>"
+    },
+    ">Grade</th>": {
+      "de": ">Bewertung</th>",
+      "nl": ">Beoordeling</th>",
+      "fr": ">Évaluation</th>",
+      "es": ">Clasificación</th>",
+      "it": ">Valutazione</th>"
+    },
+    ">What it found, and what it does not show</th>": {
+      "de": ">Was sie fand und was sie nicht zeigt</th>",
+      "nl": ">Wat het vond, en wat het niet aantoont</th>",
+      "fr": ">Ce qu'elle a trouvé, et ce qu'elle ne montre pas</th>",
+      "es": ">Qué halló y qué no demuestra</th>",
+      "it": ">Che cosa ha trovato e che cosa non dimostra</th>"
+    },
+    "View on PubMed &rarr;": {
+      "de": "Auf PubMed ansehen &rarr;",
+      "nl": "Bekijk op PubMed &rarr;",
+      "fr": "Voir sur PubMed &rarr;",
+      "es": "Ver en PubMed &rarr;",
+      "it": "Vedi su PubMed &rarr;"
+    },
+    "View study &rarr;": {
+      "de": "Studie ansehen &rarr;",
+      "nl": "Bekijk studie &rarr;",
+      "fr": "Voir l'étude &rarr;",
+      "es": "Ver estudio &rarr;",
+      "it": "Vedi lo studio &rarr;"
+    },
+    ">no PubMed record<": {
+      "de": ">kein PubMed-Eintrag<",
+      "nl": ">geen PubMed-record<",
+      "fr": ">pas de fiche PubMed<",
+      "es": ">sin registro en PubMed<",
+      "it": ">nessuna scheda PubMed<"
+    },
+    ">Review</span>": {
+      "de": ">Übersicht</span>",
+      "nl": ">Overzicht</span>",
+      "fr": ">Revue</span>",
+      "es": ">Revisión</span>",
+      "it": ">Rassegna</span>"
+    },
+    ">A &mdash; negative<": {
+      "de": ">A &mdash; negativ<",
+      "nl": ">A &mdash; negatief<",
+      "fr": ">A &mdash; négatif<",
+      "es": ">A &mdash; negativo<",
+      "it": ">A &mdash; negativo<"
+    },
+    ">A &mdash; other delivery<": {
+      "de": ">A &mdash; andere Applikation<",
+      "nl": ">A &mdash; andere toediening<",
+      "fr": ">A &mdash; autre mode d'administration<",
+      "es": ">A &mdash; otra vía de administración<",
+      "it": ">A &mdash; altra somministrazione<"
+    },
+    "60 adults (45 active, 15 placebo), 10% Argireline twice daily around the eyes for 4 weeks, double-blind and placebo-controlled. ": {
+      "de": "60 Erwachsene (45 aktiv, 15 Placebo), 10 % Argireline zweimal täglich um die Augen, 4 Wochen, doppelblind und placebokontrolliert. ",
+      "nl": "60 volwassenen (45 actief, 15 placebo), 10% Argireline tweemaal daags rond de ogen, 4 weken, dubbelblind en placebogecontroleerd. ",
+      "fr": "60 adultes (45 actifs, 15 placebo), 10 % d'Argireline deux fois par jour autour des yeux, 4 semaines, en double aveugle contre placebo. ",
+      "es": "60 adultos (45 activos, 15 placebo), 10 % de Argireline dos veces al día alrededor de los ojos, 4 semanas, doble ciego y con placebo. ",
+      "it": "60 adulti (45 attivi, 15 placebo), 10% di Argireline due volte al giorno intorno agli occhi, 4 settimane, in doppio cieco e con placebo. "
+    },
+    "22 of 45 (48.9%) were graded clearly improved": {
+      "de": "22 von 45 (48,9 %) wurden als deutlich verbessert bewertet",
+      "nl": "22 van de 45 (48,9%) werden als duidelijk verbeterd beoordeeld",
+      "fr": "22 sur 45 (48,9 %) ont été jugées nettement améliorées",
+      "es": "22 de 45 (48,9 %) fueron evaluadas como claramente mejoradas",
+      "it": "22 su 45 (48,9%) sono state valutate come chiaramente migliorate"
+    },
+    "against 0 of 15 on placebo &mdash; a count of people, not a wrinkle measurement. Silicone replicas showed roughness down (p &lt; 0.01). Product supplied by the Argireline marketer in China.": {
+      "de": "gegenüber 0 von 15 unter Placebo &mdash; eine Personenzahl, keine Faltenmessung. Silikonabdrücke zeigten geringere Rauheit (p &lt; 0,01). Das Produkt wurde vom Argireline-Vermarkter in China bereitgestellt.",
+      "nl": "tegenover 0 van de 15 met placebo &mdash; een aantal mensen, geen rimpelmeting. Siliconen afdrukken toonden minder ruwheid (p &lt; 0,01). Het product werd geleverd door de Argireline-distributeur in China.",
+      "fr": "contre 0 sur 15 sous placebo &mdash; un nombre de personnes, pas une mesure de rides. Les répliques en silicone ont montré une rugosité en baisse (p &lt; 0,01). Produit fourni par le distributeur d'Argireline en Chine.",
+      "es": "frente a 0 de 15 con placebo &mdash; un recuento de personas, no una medición de arrugas. Las réplicas de silicona mostraron menor rugosidad (p &lt; 0,01). Producto facilitado por el distribuidor de Argireline en China.",
+      "it": "contro 0 su 15 con placebo &mdash; un conteggio di persone, non una misura delle rughe. Le repliche in silicone hanno mostrato rugosità ridotta (p &lt; 0,01). Prodotto fornito dal distributore di Argireline in Cina."
+    },
+    "24 women, about 6 per arm, 10% Argireline twice daily for 60 days. Forehead roughness &minus;7.4% at day 20 against +4.3% on placebo (P = .022); the day-60 difference was not significant. Skin held moisture better at days 20 and 40. Very small; actives supplied by the maker's distributor.": {
+      "de": "24 Frauen, etwa 6 pro Gruppe, 10 % Argireline zweimal täglich über 60 Tage. Stirnrauheit &minus;7,4 % an Tag 20 gegenüber +4,3 % unter Placebo (P = 0,022); der Unterschied an Tag 60 war nicht signifikant. Die Haut hielt an Tag 20 und 40 mehr Feuchtigkeit. Sehr klein; Wirkstoffe vom Vertrieb des Herstellers.",
+      "nl": "24 vrouwen, ongeveer 6 per groep, 10% Argireline tweemaal daags gedurende 60 dagen. Voorhoofdruwheid &minus;7,4% op dag 20 tegenover +4,3% met placebo (P = 0,022); het verschil op dag 60 was niet significant. De huid hield op dag 20 en 40 beter vocht vast. Zeer klein; werkstoffen van de distributeur van de fabrikant.",
+      "fr": "24 femmes, environ 6 par groupe, 10 % d'Argireline deux fois par jour pendant 60 jours. Rugosité du front &minus;7,4 % à J20 contre +4,3 % sous placebo (P = 0,022) ; la différence à J60 n'était pas significative. La peau retenait mieux l'hydratation à J20 et J40. Très petit ; actifs fournis par le distributeur du fabricant.",
+      "es": "24 mujeres, unas 6 por grupo, 10 % de Argireline dos veces al día durante 60 días. Rugosidad de la frente &minus;7,4 % el día 20 frente a +4,3 % con placebo (P = 0,022); la diferencia el día 60 no fue significativa. La piel retenía mejor la hidratación los días 20 y 40. Muy pequeño; activos facilitados por el distribuidor del fabricante.",
+      "it": "24 donne, circa 6 per gruppo, 10% di Argireline due volte al giorno per 60 giorni. Rugosità della fronte &minus;7,4% al giorno 20 contro +4,3% con placebo (P = 0,022); la differenza al giorno 60 non era significativa. La pelle tratteneva meglio l'idratazione ai giorni 20 e 40. Molto piccolo; attivi forniti dal distributore del produttore."
+    },
+    "40 women, 10% Argireline for 2 and 4 weeks against the vehicle. Skin became more uniform in how it resists stretching (p &lt; 0.05). Elasticity did not change, and hydration rose with every formulation including the vehicle &mdash; so it does not support a hydration claim.": {
+      "de": "40 Frauen, 10 % Argireline über 2 und 4 Wochen gegen die Grundlage. Die Haut wurde gleichmäßiger darin, wie sie Dehnung widersteht (p &lt; 0,05). Die Elastizität änderte sich nicht, und die Feuchtigkeit stieg bei jeder Formulierung einschließlich der Grundlage &mdash; das stützt also keine Feuchtigkeitsaussage.",
+      "nl": "40 vrouwen, 10% Argireline gedurende 2 en 4 weken tegenover de basis. De huid werd gelijkmatiger in hoe zij rek weerstaat (p &lt; 0,05). De elasticiteit veranderde niet en de hydratatie steeg bij elke formulering inclusief de basis &mdash; dat ondersteunt dus geen hydratatieclaim.",
+      "fr": "40 femmes, 10 % d'Argireline pendant 2 et 4 semaines contre l'excipient. La peau est devenue plus uniforme dans sa résistance à l'étirement (p &lt; 0,05). L'élasticité n'a pas changé, et l'hydratation a augmenté avec toutes les formulations, excipient compris &mdash; cela n'appuie donc pas une allégation d'hydratation.",
+      "es": "40 mujeres, 10 % de Argireline durante 2 y 4 semanas frente al vehículo. La piel se volvió más uniforme en cómo resiste el estiramiento (p &lt; 0,05). La elasticidad no cambió, y la hidratación subió con todas las formulaciones incluido el vehículo &mdash; por lo que no respalda una afirmación de hidratación.",
+      "it": "40 donne, 10% di Argireline per 2 e 4 settimane rispetto al veicolo. La pelle è diventata più uniforme nel resistere allo stiramento (p &lt; 0,05). L'elasticità non è cambiata e l'idratazione è aumentata con ogni formulazione, veicolo compreso &mdash; quindi non sostiene un'affermazione di idratazione."
+    },
+    "The only independent objective-imaging test, and it found nothing.": {
+      "de": "Der einzige unabhängige objektive Bildgebungstest &mdash; und er fand nichts.",
+      "nl": "De enige onafhankelijke objectieve beeldvormingstest &mdash; en die vond niets.",
+      "fr": "Le seul test d'imagerie objective indépendant, et il n'a rien trouvé.",
+      "es": "La única prueba de imagen objetiva independiente, y no halló nada.",
+      "it": "L'unico test di imaging oggettivo indipendente, e non ha trovato nulla."
+    },
+    "19 women, split-face, the same serum with and without Argireline for 4 weeks. No significant difference (wrinkles p = 0.829; skin age p = 0.804). Concentration not stated. Reported here because leaving it out would misrepresent the evidence.": {
+      "de": "19 Frauen, Halbseitenvergleich, dasselbe Serum mit und ohne Argireline über 4 Wochen. Kein signifikanter Unterschied (Falten p = 0,829; Hautalter p = 0,804). Konzentration nicht angegeben. Hier berichtet, weil ein Weglassen die Evidenz verzerren würde.",
+      "nl": "19 vrouwen, halfgelaat, hetzelfde serum met en zonder Argireline gedurende 4 weken. Geen significant verschil (rimpels p = 0,829; huidleeftijd p = 0,804). Concentratie niet vermeld. Hier gemeld omdat weglaten het bewijs zou vertekenen.",
+      "fr": "19 femmes, hémi-visage, le même sérum avec et sans Argireline pendant 4 semaines. Aucune différence significative (rides p = 0,829 ; âge cutané p = 0,804). Concentration non indiquée. Rapporté ici car l'omettre fausserait les données.",
+      "es": "19 mujeres, hemicara, el mismo sérum con y sin Argireline durante 4 semanas. Ninguna diferencia significativa (arrugas p = 0,829; edad de la piel p = 0,804). No se indicó la concentración. Se recoge aquí porque omitirlo distorsionaría la evidencia.",
+      "it": "19 donne, split-face, lo stesso siero con e senza Argireline per 4 settimane. Nessuna differenza significativa (rughe p = 0,829; età cutanea p = 0,804). Concentrazione non indicata. Riportato qui perché ometterlo falserebbe le prove."
+    },
+    "The developers' own study. An emulsion with 10% Argireline reduced measured wrinkle depth ": {
+      "de": "Die eigene Studie der Entwickler. Eine Emulsion mit 10 % Argireline verringerte die gemessene Faltentiefe ",
+      "nl": "De eigen studie van de ontwikkelaars. Een emulsie met 10% Argireline verminderde de gemeten rimpeldiepte ",
+      "fr": "L'étude des concepteurs eux-mêmes. Une émulsion à 10 % d'Argireline a réduit la profondeur mesurée des rides ",
+      "es": "El propio estudio de los desarrolladores. Una emulsión con 10 % de Argireline redujo la profundidad medida de las arrugas ",
+      "it": "Lo studio degli stessi sviluppatori. Un'emulsione con il 10% di Argireline ha ridotto la profondità misurata delle rughe "
+    },
+    ">up to 30%<": {
+      "de": ">um bis zu 30 %<",
+      "nl": ">tot 30%<",
+      "fr": ">jusqu'à 30 %<",
+      "es": ">hasta un 30 %<",
+      "it": ">fino al 30%<"
+    },
+    "in 30 days. Small, and the full text is paywalled and has not been read by us, so the number of participants and the vehicle result stay unverified. Always quote it as &ldquo;up to&rdquo;.": {
+      "de": "in 30 Tagen. Klein, und der Volltext ist kostenpflichtig und wurde von uns nicht gelesen, daher bleiben Teilnehmerzahl und Ergebnis der Grundlage unbestätigt. Immer als &ldquo;bis zu&rdquo; zitieren.",
+      "nl": "in 30 dagen. Klein, en de volledige tekst zit achter een betaalmuur en is door ons niet gelezen, dus het aantal deelnemers en het resultaat van de basis blijven onbevestigd. Citeer het altijd als &ldquo;tot&rdquo;.",
+      "fr": "en 30 jours. Petite étude, et le texte intégral est payant et n'a pas été lu par nous : le nombre de participants et le résultat de l'excipient restent non vérifiés. À citer toujours comme &ldquo;jusqu'à&rdquo;.",
+      "es": "en 30 días. Pequeño, y el texto completo es de pago y no lo hemos leído, por lo que el número de participantes y el resultado del vehículo siguen sin verificar. Cítelo siempre como &ldquo;hasta&rdquo;.",
+      "it": "in 30 giorni. Piccolo, e il testo completo è a pagamento e non è stato letto da noi, quindi il numero di partecipanti e il risultato del veicolo restano non verificati. Citarlo sempre come &ldquo;fino a&rdquo;."
+    },
+    "Manufacturer in-vivo study, reported in trade press (not peer-reviewed)": {
+      "de": "In-vivo-Studie des Herstellers, in der Fachpresse berichtet (nicht peer-reviewed)",
+      "nl": "In-vivostudie van de fabrikant, gemeld in de vakpers (niet peer-reviewed)",
+      "fr": "Étude in vivo du fabricant, rapportée dans la presse professionnelle (non relue par des pairs)",
+      "es": "Estudio in vivo del fabricante, publicado en prensa sectorial (sin revisión por pares)",
+      "it": "Studio in vivo del produttore, riportato sulla stampa di settore (non sottoposto a revisione paritaria)"
+    },
+    "24 women, split-face, a cream with 2% Argireline solution twice daily for 7 days. Wrinkle volume &minus;20.6% and length &minus;15.9%. The ingredient maker's own unpublished study, at a fifth of our concentration, and it is not stated whether the figure is against baseline or against the placebo side.": {
+      "de": "24 Frauen, Halbseitenvergleich, eine Creme mit 2 % Argireline-Lösung zweimal täglich über 7 Tage. Faltenvolumen &minus;20,6 % und Länge &minus;15,9 %. Die eigene unveröffentlichte Studie des Rohstoffherstellers, bei einem Fünftel unserer Konzentration, und es ist nicht angegeben, ob sich der Wert auf den Ausgangswert oder die Placeboseite bezieht.",
+      "nl": "24 vrouwen, halfgelaat, een crème met 2% Argireline-oplossing tweemaal daags gedurende 7 dagen. Rimpelvolume &minus;20,6% en lengte &minus;15,9%. De eigen ongepubliceerde studie van de grondstoffabrikant, op een vijfde van onze concentratie, en er staat niet bij of het cijfer tegenover de uitgangswaarde of de placebozijde staat.",
+      "fr": "24 femmes, hémi-visage, une crème à 2 % de solution d'Argireline deux fois par jour pendant 7 jours. Volume des rides &minus;20,6 % et longueur &minus;15,9 %. Étude interne non publiée du fabricant de l'ingrédient, à un cinquième de notre concentration, et il n'est pas précisé si le chiffre est comparé à l'état initial ou au côté placebo.",
+      "es": "24 mujeres, hemicara, una crema con solución de Argireline al 2 % dos veces al día durante 7 días. Volumen de las arrugas &minus;20,6 % y longitud &minus;15,9 %. Estudio propio no publicado del fabricante del ingrediente, a una quinta parte de nuestra concentración, y no se indica si la cifra es frente al inicio o frente al lado con placebo.",
+      "it": "24 donne, split-face, una crema con soluzione di Argireline al 2% due volte al giorno per 7 giorni. Volume delle rughe &minus;20,6% e lunghezza &minus;15,9%. Studio interno non pubblicato del produttore dell'ingrediente, a un quinto della nostra concentrazione, e non è indicato se il dato sia rispetto al basale o al lato placebo."
+    },
+    "A dissolving microneedle patch, not a serum.": {
+      "de": "Ein auflösendes Mikronadel-Pflaster, kein Serum.",
+      "nl": "Een oplossende microneedle-patch, geen serum.",
+      "fr": "Un patch à micro-aiguilles solubles, pas un sérum.",
+      "es": "Un parche de microagujas solubles, no un sérum.",
+      "it": "Un cerotto a microaghi solubili, non un siero."
+    },
+    "52 women, once weekly for 29 days: fine periorbital wrinkles &minus;14.6% against &minus;5.9% for the patch alone. Listed for completeness; a needle that delivers peptide through the skin surface cannot stand in for a leave-on serum.": {
+      "de": "52 Frauen, einmal wöchentlich über 29 Tage: feine Fältchen um die Augen &minus;14,6 % gegenüber &minus;5,9 % beim Pflaster allein. Der Vollständigkeit halber aufgeführt; eine Nadel, die das Peptid durch die Hautoberfläche bringt, ersetzt kein Serum zum Auftragen.",
+      "nl": "52 vrouwen, eenmaal per week gedurende 29 dagen: fijne rimpeltjes rond de ogen &minus;14,6% tegenover &minus;5,9% met alleen de patch. Voor de volledigheid vermeld; een naald die peptide door het huidoppervlak brengt, vervangt geen serum dat je laat zitten.",
+      "fr": "52 femmes, une fois par semaine pendant 29 jours : ridules péri-orbitaires &minus;14,6 % contre &minus;5,9 % pour le patch seul. Mentionné par souci d'exhaustivité ; une aiguille qui fait passer le peptide à travers la surface de la peau ne remplace pas un sérum à laisser poser.",
+      "es": "52 mujeres, una vez por semana durante 29 días: líneas finas periorbitarias &minus;14,6 % frente a &minus;5,9 % con el parche solo. Se incluye por exhaustividad; una aguja que lleva el péptido a través de la superficie de la piel no sustituye a un sérum que se deja actuar.",
+      "it": "52 donne, una volta a settimana per 29 giorni: rughe sottili perioculari &minus;14,6% contro &minus;5,9% con il solo cerotto. Indicato per completezza; un ago che porta il peptide attraverso la superficie cutanea non sostituisce un siero da lasciare in posa."
+    },
+    "A US regulator's laboratory study on human and guinea-pig skin. Most of the dose washed off; 0.22% stayed in the outermost layer and 0.01% reached the epidermis, with ": {
+      "de": "Eine Laborstudie einer US-Behörde an menschlicher und Meerschweinchenhaut. Der größte Teil der Dosis wurde abgewaschen; 0,22 % blieben in der äußersten Schicht und 0,01 % erreichten die Epidermis, wobei ",
+      "nl": "Een laboratoriumstudie van een Amerikaanse toezichthouder op menselijke en cavia-huid. Het grootste deel van de dosis spoelde weg; 0,22% bleef in de buitenste laag en 0,01% bereikte de epidermis, waarbij ",
+      "fr": "Une étude de laboratoire d'un régulateur américain sur peau humaine et de cobaye. L'essentiel de la dose a été rincé ; 0,22 % est resté dans la couche la plus externe et 0,01 % a atteint l'épiderme, avec ",
+      "es": "Un estudio de laboratorio de un regulador de EE. UU. en piel humana y de cobaya. La mayor parte de la dosis se eliminó al lavar; un 0,22 % permaneció en la capa más externa y un 0,01 % llegó a la epidermis, con ",
+      "it": "Uno studio di laboratorio di un ente regolatorio statunitense su pelle umana e di cavia. La maggior parte della dose è stata lavata via; lo 0,22% è rimasto nello strato più esterno e lo 0,01% ha raggiunto l'epidermide, con "
+    },
+    ">none detected in the dermis<": {
+      "de": ">nichts in der Dermis nachweisbar<",
+      "nl": ">niets aantoonbaar in de dermis<",
+      "fr": ">rien de détecté dans le derme<",
+      "es": ">nada detectado en la dermis<",
+      "it": ">nulla rilevato nel derma<"
+    },
+    ". This is the basis for saying the peptide does not reach the muscle, and that any effect is at the skin surface.": {
+      "de": ". Darauf stützt sich die Aussage, dass das Peptid den Muskel nicht erreicht und eine Wirkung an der Hautoberfläche stattfindet.",
+      "nl": ". Daarop berust de uitspraak dat het peptide de spier niet bereikt en dat een effect zich aan het huidoppervlak afspeelt.",
+      "fr": ". C'est sur cette base que l'on dit que le peptide n'atteint pas le muscle et que tout effet se situe à la surface de la peau.",
+      "es": ". En esto se basa la afirmación de que el péptido no llega al músculo y de que cualquier efecto está en la superficie de la piel.",
+      "it": ". È su questo che si basa l'affermazione che il peptide non raggiunge il muscolo e che ogni effetto è sulla superficie cutanea."
+    },
+    "Franz cells on pig-ear skin. Water-rich emulsions delivered clearly more peptide than oil-rich ones. Formulation science rather than an efficacy result: it says how a vehicle behaves, not what it does to a face.": {
+      "de": "Franz-Zellen an Schweineohrhaut. Wasserreiche Emulsionen brachten deutlich mehr Peptid ein als ölreiche. Formulierungswissenschaft statt Wirksamkeitsergebnis: Sie sagt, wie sich eine Grundlage verhält, nicht was sie an einem Gesicht bewirkt.",
+      "nl": "Franz-cellen op varkensoorhuid. Waterrijke emulsies brachten duidelijk meer peptide in dan olierijke. Formuleringswetenschap in plaats van een werkzaamheidsresultaat: het zegt hoe een basis zich gedraagt, niet wat die met een gezicht doet.",
+      "fr": "Cellules de Franz sur peau d'oreille de porc. Les émulsions riches en eau délivraient nettement plus de peptide que celles riches en huile. Science de la formulation plutôt que résultat d'efficacité : cela dit comment se comporte un excipient, pas ce qu'il fait sur un visage.",
+      "es": "Celdas de Franz en piel de oreja de cerdo. Las emulsiones ricas en agua aportaron claramente más péptido que las ricas en aceite. Ciencia de formulación más que un resultado de eficacia: dice cómo se comporta un vehículo, no qué hace en un rostro.",
+      "it": "Celle di Franz su pelle di orecchio di maiale. Le emulsioni ricche d'acqua hanno veicolato nettamente più peptide di quelle ricche di olio. Scienza della formulazione più che un risultato di efficacia: dice come si comporta un veicolo, non che cosa fa su un viso."
+    },
+    "Concludes that low penetration limits how much peptide is available and that reaching the neuromuscular junction &ldquo;remains uncertain&rdquo;, so any effect is likely to be in the upper skin. ": {
+      "de": "Kommt zu dem Schluss, dass die geringe Penetration begrenzt, wie viel Peptid verfügbar ist, und dass das Erreichen der neuromuskulären Endplatte &ldquo;unsicher bleibt&rdquo;; eine Wirkung liegt daher wahrscheinlich in den oberen Hautschichten. ",
+      "nl": "Concludeert dat de lage penetratie beperkt hoeveel peptide beschikbaar is en dat het bereiken van de neuromusculaire overgang &ldquo;onzeker blijft&rdquo;; een effect ligt dus waarschijnlijk in de bovenste huidlagen. ",
+      "fr": "Conclut qu'une faible pénétration limite la quantité de peptide disponible et qu'atteindre la jonction neuromusculaire &ldquo;reste incertain&rdquo; ; tout effet se situe donc probablement dans les couches supérieures. ",
+      "es": "Concluye que la baja penetración limita cuánto péptido está disponible y que llegar a la unión neuromuscular &ldquo;sigue siendo incierto&rdquo;; cualquier efecto estará probablemente en las capas superiores. ",
+      "it": "Conclude che la scarsa penetrazione limita quanto peptide sia disponibile e che raggiungere la giunzione neuromuscolare &ldquo;resta incerto&rdquo;; ogni effetto è quindi probabilmente negli strati superiori. "
+    },
+    ">Misquotes Wang 2013<": {
+      "de": ">Zitiert Wang 2013 falsch<",
+      "nl": ">Citeert Wang 2013 verkeerd<",
+      "fr": ">Cite Wang 2013 de manière erronée<",
+      "es": ">Cita erróneamente a Wang 2013<",
+      "it": ">Cita erroneamente Wang 2013<"
+    },
+    "as a &ldquo;49% reduction in wrinkle depth&rdquo;; we cite Wang directly instead.": {
+      "de": "als &ldquo;49 % Verringerung der Faltentiefe&rdquo;; wir zitieren stattdessen Wang direkt.",
+      "nl": "als een &ldquo;vermindering van de rimpeldiepte met 49%&rdquo;; wij citeren in plaats daarvan Wang rechtstreeks.",
+      "fr": "comme une &ldquo;réduction de 49 % de la profondeur des rides&rdquo; ; nous citons Wang directement à la place.",
+      "es": "como una &ldquo;reducción del 49 % en la profundidad de las arrugas&rdquo;; nosotros citamos a Wang directamente.",
+      "it": "come una &ldquo;riduzione del 49% della profondità delle rughe&rdquo;; noi citiamo direttamente Wang."
+    },
+    "Published titles are quoted exactly as they appear in the journal. Where a study measured something we cannot claim for a leave-on serum &mdash; an injection, a microneedle patch, or a different concentration &mdash; it is listed and labelled rather than left out.": {
+      "de": "Veröffentlichte Titel werden genau so zitiert, wie sie in der Zeitschrift stehen. Wo eine Studie etwas gemessen hat, das wir für ein Serum zum Auftragen nicht beanspruchen können &mdash; eine Injektion, ein Mikronadel-Pflaster oder eine andere Konzentration &mdash; wird sie aufgeführt und gekennzeichnet, statt weggelassen.",
+      "nl": "Gepubliceerde titels worden exact geciteerd zoals ze in het tijdschrift staan. Waar een studie iets heeft gemeten dat wij voor een serum dat je laat zitten niet mogen claimen &mdash; een injectie, een microneedle-patch of een andere concentratie &mdash; wordt die vermeld en gelabeld in plaats van weggelaten.",
+      "fr": "Les titres publiés sont cités exactement tels qu'ils figurent dans la revue. Lorsqu'une étude a mesuré quelque chose que nous ne pouvons pas revendiquer pour un sérum à laisser poser &mdash; une injection, un patch à micro-aiguilles ou une autre concentration &mdash; elle est listée et signalée plutôt qu'omise.",
+      "es": "Los títulos publicados se citan exactamente como aparecen en la revista. Cuando un estudio midió algo que no podemos afirmar para un sérum que se deja actuar &mdash; una inyección, un parche de microagujas o una concentración distinta &mdash; se incluye y se señala en lugar de omitirse.",
+      "it": "I titoli pubblicati sono citati esattamente come compaiono sulla rivista. Quando uno studio ha misurato qualcosa che non possiamo affermare per un siero da lasciare in posa &mdash; un'iniezione, un cerotto a microaghi o una concentrazione diversa &mdash; viene elencato e segnalato anziché omesso."
+    }
+  }
+}

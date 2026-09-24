@@ -158,3 +158,35 @@ def test_unsigned_ratio_with_prefix():
     c = _chart([{"label": six("Wrinkles"), "values": {"a": 2}}], unit="×", signed=False, domain=[0, 2.4],
                series=[{"key": "a", "label": six("PDRN"), "color": "#016569", "prefix": "≈"}])
     assert "≈2×" in hc.render_chart(c, "en") and "+2" not in hc.render_chart(c, "en")
+
+
+# ---- 2026-09-24: the live checks were blind to classed headings and to #anchors ----
+
+def test_heading_count_check_sees_headings_that_carry_a_class():
+    # the science-page template's headings are <h2 class="evd__h">; a bare "<h2>" count saw none of them
+    vals = {l: '<h2 class="evd__h">Title</h2><p>x</p>' for l in L6}
+    vals["de"] = "<p>Titel</p><p>x</p>"
+    with pytest.raises(SystemExit):
+        hu.check_values("evidence.html", vals)
+
+
+def test_wanted_headings_include_classed_h2s():
+    texts = [{l: '<h2 class="ovw__ih">What Is Argireline?</h2><h2>At a glance</h2><h2x>no</h2x>' for l in L6}]
+    assert hu.wanted_headings(texts, "en", "h2") == ["What Is Argireline?", "At a glance"]
+
+
+def test_missing_anchors_reports_a_fragment_with_no_target():
+    texts = [{l: '<a href="#rba-f1">one</a><a href="#evidence-sources">all</a><a href="/pages/x">x</a>' for l in L6}]
+    page = '<div id="rba-f1"></div><div class="est"></div>'
+    assert hu.missing_anchors(texts, "de", page) == ["#evidence-sources"]
+
+
+def test_a_retired_spec_refuses_to_apply(tmp_path, monkeypatch):
+    # re-applying a superseded spec silently reverted a whole layout pass once (2026-09-23)
+    spec = tmp_path / "old.json"
+    spec.write_text(json.dumps({"_retired": "superseded by x.json", "template": "templates/page.t.json", "page": "t"}))
+    monkeypatch.setattr(hu, "read_file", lambda name: pytest.fail("must refuse before touching the store"))
+    monkeypatch.setattr("sys.argv", ["hub-upgrade.py", str(spec), "--apply"])
+    with pytest.raises(SystemExit) as e:
+        hu.main()
+    assert "retired" in str(e.value)
