@@ -146,6 +146,10 @@ One page per go-ahead. Claims before layout, so nothing is translated that is ab
 - **Drop a citation nobody has read.** Khan 2022 and its card went, per the PDRN register §2 row 27. A table of "every study this page relies on" cannot include one we have not read.
 - **`set-reviewer.py --apply` is not needed after a rebuild.** The builder writes the credit and date into the byline and JSON-LD. A dry run proves `--remove` still resolves the page, whereas `--apply` rewrites all five hubs and republishes the study pages.
 - **`--verify-live` falls back to curl** when Cloudflare throttles Python (memory `cloudflare-throttles-python-not-curl`).
+- **Nested CSS braces must be written `} }`.** A `@media{...{...}}` rule puts `}}` in the html, Shopify reads it as Liquid, and the whole template upload is refused. `hub-i18n.py` checks for this since 2026-09-24.
+- **The hero's text follows the banner's quiet zone.** Argireline's banner is quiet on the left, so its text is left-aligned. PDRN's is quiet in the centre, so its text stays centred. Either way the subtitle is the template's **one-line promise with no number**, because the key figures sit directly below it. A long subtitle ran onto the busy helix at 2.85:1 contrast.
+- **Card images must not claim what the text does not.** A render of PDRN travelling into the dermis illustrated a lab result, and register §3 lists "reaches the dermis" as a claim to avoid. A null-result card showed our own serum. The null-result card now uses the same neutral micrograph on every page.
+- **Run the design critic before calling a page done.** PDRN cycle 1 scored FIX 6.50 and caught all of the above. Its template-level proposals are with Malcolm (`docs/todo.md` CONTENT-001).
 
 ---
 

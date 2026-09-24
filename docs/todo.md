@@ -148,7 +148,22 @@ AI-generated illustrations and must not be presented as results. Record:
   - **The four cards:** the crow's-feet result, its title shortened as on Argireline; collagen raised in UV-damaged skin samples; no reactions in 31 women; the null microneedling pigment trial.
   - **Claims first:** re-read at source Ye 2026 ex vivo, Gulfan, Thellung, Kim TH and Lampridou (register log 2026-09-24). Removed "redness" from the Gulfan row, since the abstract does not report it. Corrected Lampridou to 2025. Dropped Khan 2022 and its card: never read beyond the title.
   - **Checks:** `--verify-live` ✓ in six languages (7/7 headings, 5/5 anchors, every link resolves), 0 outdated translations, page audit **SEO 100 · GEO 96 · DESIGN 100 · MARKETING 93**, external dual-model **9.82** with all 20 criteria ≥ 9 on both models. Contact sheet shown.
-- ⏭ **Next on the template:** copper peptide, Matrixyl 3000, glutathione, one per go-ahead (template doc §6, §6.1, §7).
+- ✅ **PDRN design critique, cycle 1** (2026-09-24, `design-critic` agent on the live page, fresh context): **FIX, 6.50** (Design 6.4 · Usability 6.6 · Creativity 5.8 · Content 8.0). Structure, claims and signature held. Fixed the same day:
+  - the charts stack, closing a 407 px hole at 1440;
+  - card 2 now shows a lab microscope and dish. The old render showed PDRN travelling into the dermis, which register §3 lists as a claim to avoid;
+  - card 4, the null result, now shows the neutral micrograph Argireline's null card uses, not our own serum. Its alt text is made generic;
+  - the hero subtitle is a one-line promise with no number: it repeated the figure below and ran onto the busy helix at 2.85:1. The banner overlay goes from 25 to 35%;
+  - key figure 2 now reads as PDRN's improvement;
+  - the intro is cut to the template's shape: the "is valued for" hedge and the repeated lab sentences are out, with one sentence on how the results were measured;
+  - card 2's citations are linked, card 1's label stays on one line, and reflow CSS handles 200% zoom.
+- 🛑 **For Malcolm: six template-level proposals from the critique.** They would change the approved Argireline design too, so they are not applied:
+  1. Body text 15/14 px → 16–17 px, and the H1 larger than the key figures on mobile.
+  2. One accent colour. Clinical blue drives all interactive elements, yet it is copper's colour, and it clashes with PDRN rose. Proposal: keep blue for links and the Shop button only; bullets and step discs in ink or the page colour.
+  3. A new PDRN hero banner, a reference-free Seedream brief at about 4.4:1. Costs image spend; you pick the winner.
+  4. Usage images: row 1 repeats the hero's pink helix, and the serum bottle appears three times in about 1,700 px.
+  5. One grading scale site-wide. Argireline uses A · B · C · Review; PDRN uses A · D · X · Not PDRN · Review.
+  6. On mobile, group the studies that do not apply (X and Not PDRN) in a `<details>`. The table is 6,145 px, about 7 screens.
+- ⏭ **Next on the template:** copper peptide, Matrixyl 3000, glutathione, one per go-ahead (template doc §6, §6.1, §7). Run the design critic on each before calling it done.
 - ✅ **Argireline loose ends closed** (2026-09-24): the JSON-LD is now localised per language (it had said `inLanguage: "en"` with the English URL on all five translations), Hoppel 2015 is added to `citation[]`, and the dead overview CSS is removed. Verified live with curl in en/de/it.
 - ⚠️ **Site-wide, theme:** the mobile header menu icon is a 22×22 px tap target (below 44). Measured on both template pages. It is theme chrome, so fixing it is a core-theme change: Malcolm's call.
 - ✅ ~~Argireline loose ends~~: closed 2026-09-24 (entry above).

@@ -115,7 +115,7 @@
    "area": "MARKETING",
    "check": "Opening states a concrete skin outcome",
    "ok": true,
-   "detail": "pdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna in its one controlled trial a 0 1 pdrn eye cream reduced crow's-feet",
+   "detail": "pdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna shown in a controlled trial to soften the look of crow's feet 20 to ",
    "severity": "pass",
    "weight": 2
   },
@@ -123,7 +123,7 @@
    "area": "MARKETING",
    "check": "A proof point (result %, time frame or trial size) in the first 30% of text",
    "ok": true,
-   "detail": "28 days",
+   "detail": "31 women",
    "severity": "pass",
    "weight": 2
   },
@@ -131,7 +131,7 @@
    "area": "MARKETING",
    "check": "Hedging \u2264 2.0 per 100 words (science page)",
    "ok": true,
-   "detail": "0.1/100 words: ['is valued for']",
+   "detail": "0.0/100 words: ['is valued for']",
    "severity": "pass",
    "weight": 2
   },
@@ -331,7 +331,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 fact density (measured figures \u2265 5)",
    "ok": true,
-   "detail": "94 figures",
+   "detail": "89 figures",
    "severity": "pass",
    "weight": 1.5
   },
@@ -339,7 +339,7 @@
    "area": "GEO",
    "check": "A3 \u00b7 cited sources \u2265 3",
    "ok": true,
-   "detail": "71 citation markers",
+   "detail": "73 citation markers",
    "severity": "pass",
    "weight": 1.5
   },
@@ -379,7 +379,7 @@
    "area": "GEO",
    "check": "D7 \u00b7 extractable text without JavaScript \u2265 600 words",
    "ok": true,
-   "detail": "2997 words extracted (main text 3389)",
+   "detail": "2937 words extracted (main text 3314)",
    "severity": "pass",
    "weight": 3
   },
@@ -581,8 +581,8 @@
    "WebPage",
    "FAQPage"
   ],
-  "extracted_words": 2997,
-  "main_words": 3389,
+  "extracted_words": 2937,
+  "main_words": 3314,
   "images": [
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg?v=1787661986&width=3000",
@@ -597,16 +597,16 @@
     "alt": "Two close-up photographs of the same woman's eye taken four weeks apart, side by side, the fan of lines at the outer corner less deeply etched in the later image. Illustration accompanying the PDRN research summary."
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-sodium-dna-nucleotide-skin-renewal-diagram.jpg?v=1787815735&width=3000",
-    "alt": "Cross-section diagram of skin showing PDRN polynucleotide ladders held in clear spheres above the surface, with light reaching the cell layer where the granules enlarge and glow, and the deeper collagen fibres thickened and lit from within"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-philosophy-published-research-microscope-petri-dish.jpg?v=1787825659&width=2688",
+    "alt": "A laboratory microscope with a glass petri dish on its stage and a beaker of blue solution alongside, on a dark graphite bench"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-pdrn-skin-renewal-cream-applying-to-cheekbone.jpg?v=1787823393&width=3000",
     "alt": "Two fingertips smoothing a soft pink cream onto the cheekbone in close-up, illustrating the skin renewal PDRN is studied for"
    },
    {
-    "src": "//www.skingenetix.com/cdn/shop/files/pdrn_skin_repair_deep_renewal_face_serum_macro_dropper_tip_gel_2_skingenetix.jpg?v=1787314060&width=2048",
-    "alt": "Skingenetix PDRN 1% Renewal Serum, 30ml - macro of the pipette tip with a drop of the serum"
+    "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
+    "alt": "Electron-microscope style view of skin cells in cool pearl grey, representing laboratory skin research"
    },
    {
     "src": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-polynucleotide-dna-helix-skin-research.jpg?width=1200",
@@ -658,7 +658,7 @@
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg?v=1787656228&width=2048",
-    "alt": "Electron-microscope style view of a single skin cell in cool pearl grey, representing Acetyl Hexapeptide-8 expression-line research"
+    "alt": "Electron-microscope style view of skin cells in cool pearl grey, representing laboratory skin research"
    },
    {
     "src": "//www.skingenetix.com/cdn/shop/files/skingenetix-matrixyl-3000-collagen-matrix-structure-laboratory.jpg?v=1787650938&width=2048",
@@ -684,31 +684,31 @@
      "top": 126,
      "h": 440,
      "bg": "rgb(240, 240, 240)",
-     "text": 234,
+     "text": 162,
      "media": 1
     },
     {
      "id": "stats",
      "type": "impact-text",
      "top": 566,
-     "h": 400,
+     "h": 424,
      "bg": "rgb(255, 255, 255)",
-     "text": 641,
+     "text": 644,
      "media": 0
     },
     {
      "id": "overview",
      "type": "custom-html",
-     "top": 965,
-     "h": 1422,
+     "top": 989,
+     "h": 1305,
      "bg": "rgb(240, 240, 240)",
-     "text": 2108,
+     "text": 1736,
      "media": 1
     },
     {
      "id": "evidence",
      "type": "custom-html",
-     "top": 2387,
+     "top": 2295,
      "h": 987,
      "bg": "rgb(255, 255, 255)",
      "text": 1265,
@@ -717,7 +717,7 @@
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 3374,
+     "top": 3282,
      "h": 3316,
      "bg": "rgb(240, 240, 240)",
      "text": 3408,
@@ -726,8 +726,8 @@
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 6690,
-     "h": 1266,
+     "top": 6598,
+     "h": 1701,
      "bg": "rgb(255, 255, 255)",
      "text": 1920,
      "media": 0
@@ -735,7 +735,7 @@
     {
      "id": "usage",
      "type": "custom-html",
-     "top": 7956,
+     "top": 8299,
      "h": 1906,
      "bg": "rgb(240, 240, 240)",
      "text": 1230,
@@ -744,7 +744,7 @@
     {
      "id": "evidence_sources",
      "type": "custom-html",
-     "top": 9862,
+     "top": 10205,
      "h": 3001,
      "bg": "rgb(255, 255, 255)",
      "text": 6943,
@@ -753,7 +753,7 @@
     {
      "id": "faq",
      "type": "faq",
-     "top": 12863,
+     "top": 13206,
      "h": 1117,
      "bg": "rgb(240, 240, 240)",
      "text": 358,
@@ -762,7 +762,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 13980,
+     "top": 14323,
      "h": 765,
      "bg": "rgb(255, 255, 255)",
      "text": 184,
@@ -771,7 +771,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 14745,
+     "top": 15088,
      "h": 775,
      "bg": "rgb(240, 240, 240)",
      "text": 327,
@@ -780,7 +780,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 15521,
+     "top": 15863,
      "h": 353,
      "bg": "rgb(26, 26, 26)",
      "text": 159,
@@ -789,7 +789,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 15873,
+     "top": 16216,
      "h": 516,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -798,7 +798,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 16390,
+     "top": 16732,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,
@@ -818,7 +818,7 @@
      "top": 85,
      "h": 375,
      "bg": "rgb(240, 240, 240)",
-     "text": 234,
+     "text": 162,
      "media": 1
     },
     {
@@ -827,22 +827,22 @@
      "top": 460,
      "h": 738,
      "bg": "rgb(255, 255, 255)",
-     "text": 641,
+     "text": 644,
      "media": 0
     },
     {
      "id": "overview",
      "type": "custom-html",
      "top": 1198,
-     "h": 2445,
+     "h": 2186,
      "bg": "rgb(240, 240, 240)",
-     "text": 2108,
+     "text": 1736,
      "media": 1
     },
     {
      "id": "evidence",
      "type": "custom-html",
-     "top": 3643,
+     "top": 3384,
      "h": 1449,
      "bg": "rgb(255, 255, 255)",
      "text": 1265,
@@ -851,7 +851,7 @@
     {
      "id": "key_findings_ba",
      "type": "research-before-after",
-     "top": 5092,
+     "top": 4833,
      "h": 4676,
      "bg": "rgb(240, 240, 240)",
      "text": 3408,
@@ -860,7 +860,7 @@
     {
      "id": "charts",
      "type": "custom-html",
-     "top": 9768,
+     "top": 9509,
      "h": 2309,
      "bg": "rgb(255, 255, 255)",
      "text": 1920,
@@ -869,7 +869,7 @@
     {
      "id": "usage",
      "type": "custom-html",
-     "top": 12077,
+     "top": 11818,
      "h": 2417,
      "bg": "rgb(240, 240, 240)",
      "text": 1230,
@@ -878,7 +878,7 @@
     {
      "id": "evidence_sources",
      "type": "custom-html",
-     "top": 14494,
+     "top": 14235,
      "h": 6145,
      "bg": "rgb(255, 255, 255)",
      "text": 6875,
@@ -887,7 +887,7 @@
     {
      "id": "faq",
      "type": "faq",
-     "top": 20639,
+     "top": 20380,
      "h": 1130,
      "bg": "rgb(240, 240, 240)",
      "text": 358,
@@ -896,7 +896,7 @@
     {
      "id": "shop_ingredient",
      "type": "featured-collection",
-     "top": 21769,
+     "top": 21510,
      "h": 537,
      "bg": "rgb(255, 255, 255)",
      "text": 184,
@@ -905,7 +905,7 @@
     {
      "id": "related",
      "type": "multi-column",
-     "top": 22306,
+     "top": 22047,
      "h": 580,
      "bg": "rgb(240, 240, 240)",
      "text": 327,
@@ -914,7 +914,7 @@
     {
      "id": "cta",
      "type": "rich-text",
-     "top": 22886,
+     "top": 22627,
      "h": 310,
      "bg": "rgb(26, 26, 26)",
      "text": 159,
@@ -923,7 +923,7 @@
     {
      "id": "footer",
      "type": "footer",
-     "top": 23196,
+     "top": 22937,
      "h": 1039,
      "bg": "rgb(240, 240, 240)",
      "text": 524,
@@ -932,7 +932,7 @@
     {
      "id": "brand_layout_css",
      "type": "custom-html",
-     "top": 24235,
+     "top": 23976,
      "h": 0,
      "bg": "rgb(240, 240, 240)",
      "text": 0,

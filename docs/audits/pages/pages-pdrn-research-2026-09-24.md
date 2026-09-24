@@ -52,13 +52,13 @@
 | ✅ | A8 · secondary intents covered on the page | ['what is pdrn', 'salmon dna', 'pdrn benefits', 'sodium dna'] / ['what is pdrn', 'salmon dna', 'pdrn benefits', 'sodium dna'] |
 | ✅ | A2 · atomic paragraphs (none > 120 words) | 60 paragraphs, 0 too long |
 | ✅ | F2 · snippet-sized answer blocks (35–70 words) ≥ 3 | 17 |
-| ✅ | A3 · fact density (measured figures ≥ 5) | 94 figures |
-| ✅ | A3 · cited sources ≥ 3 | 71 citation markers |
+| ✅ | A3 · fact density (measured figures ≥ 5) | 89 figures |
+| ✅ | A3 · cited sources ≥ 3 | 73 citation markers |
 | ✅ | E3 · cites recent research (2024+) | latest 2026 |
 | ✅ | E1 · visible last-reviewed/updated date | Last reviewed |
 | ✅ | A6 · structured list or table present |  |
 | ✅ | A4 · headings mirror search questions | 2 question-form H2 |
-| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 2997 words extracted (main text 3389) |
+| ✅ | D7 · extractable text without JavaScript ≥ 600 words | 2937 words extracted (main text 3314) |
 | ✅ | Head term survives extraction |  |
 | ✅ | H2 sections survive extraction | 14 kept |
 | ✅ | D1 · robots.txt allows the major AI crawlers | all allowed |
@@ -83,9 +83,9 @@
 
 | | Check | Detail |
 |---|---|---|
-| ✅ | Opening states a concrete skin outcome | pdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna in its one controlled trial a 0 1 pdrn eye cream reduced crow's-feet |
-| ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 28 days |
-| ✅ | Hedging ≤ 2.0 per 100 words (science page) | 0.1/100 words: ['is valued for'] |
+| ✅ | Opening states a concrete skin outcome | pdrn salmon dna skincarea salmon-derived polynucleotide inci sodium dna shown in a controlled trial to soften the look of crow's feet 20 to  |
+| ✅ | A proof point (result %, time frame or trial size) in the first 30% of text | 31 women |
+| ✅ | Hedging ≤ 2.0 per 100 words (science page) | 0.0/100 words: ['is valued for'] |
 | ✅ | No claim known to be unsupported (docs/claims/) | clean |
 | ✅ | No medicinal wording (EU cosmetic-claims rules) | clean |
 | ✅ | Path to purchase: links to at least one product | 4 products linked |
@@ -97,23 +97,23 @@
 - **H2:** ['−20 to −23%', '2×', 'Day 14', 'What Is PDRN?', 'At a glance', 'What Does PDRN Do for Skin?', 'PDRN vs Retinol: What the Measurements Show', 'Salmon DNA: Where PDRN Comes From', 'What 1% PDRN Means', 'How to Use PDRN', 'PDRN Evidence & Sources', 'Frequently Asked Questions', 'Shop PDRN Products', 'Explore More Research']
 - **Visual-only headings:** ['Copper Peptide (GHK-Cu)', 'Acetyl Hexapeptide-8', 'Matrixyl 3000', 'Glutathione', 'Explore Our PDRN Formulations']
 - **Schema types:** ['BreadcrumbList', 'WebPage', 'FAQPage']
-- **Extracted words (no JS):** 2997 of 3389
+- **Extracted words (no JS):** 2937 of 3314
 
 ## Section map (desktop)
 
 | Top | Height | Section | Type | Background |
 |---|---|---|---|---|
 | 126 | 440 | hero | image-with-text-overlay | Bone |
-| 566 | 400 | stats | impact-text | White |
-| 965 | 1422 | overview | custom-html | Bone |
-| 2387 | 987 | evidence | custom-html | White |
-| 3374 | 3316 | key_findings_ba | research-before-after | Bone |
-| 6690 | 1266 | charts | custom-html | White |
-| 7956 | 1906 | usage | custom-html | Bone |
-| 9862 | 3001 | evidence_sources | custom-html | White |
-| 12863 | 1117 | faq | faq | Bone |
-| 13980 | 765 | shop_ingredient | featured-collection | White |
-| 14745 | 775 | related | multi-column | Bone |
-| 15521 | 353 | cta | rich-text | Graphite |
-| 15873 | 516 | footer | footer | Bone |
-| 16390 | 0 | brand_layout_css | custom-html | Bone |
+| 566 | 424 | stats | impact-text | White |
+| 989 | 1305 | overview | custom-html | Bone |
+| 2295 | 987 | evidence | custom-html | White |
+| 3282 | 3316 | key_findings_ba | research-before-after | Bone |
+| 6598 | 1701 | charts | custom-html | White |
+| 8299 | 1906 | usage | custom-html | Bone |
+| 10205 | 3001 | evidence_sources | custom-html | White |
+| 13206 | 1117 | faq | faq | Bone |
+| 14323 | 765 | shop_ingredient | featured-collection | White |
+| 15088 | 775 | related | multi-column | Bone |
+| 15863 | 353 | cta | rich-text | Graphite |
+| 16216 | 516 | footer | footer | Bone |
+| 16732 | 0 | brand_layout_css | custom-html | Bone |

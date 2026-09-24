@@ -1,0 +1,34 @@
+{
+  "_about": "PDRN hero and key figures, 2026-09-24, from the design critique: the hero subtitle becomes the template's one-line promise with no number (it repeated the figure directly below it, and its length ran onto the busy helix at 2.85:1 contrast); key figure 2's subheading now reads as PDRN's improvement, not retinol's change; overlay 25 -> 50: measured at the 98th-percentile background pixel under each text line, 35% left the desktop subtitle at 3.56:1 and the mobile eyebrow at 3.33:1, 45% at 4.49 and 4.24 (small text needs 4.5:1). A stopgap until the banner is recomposed. Owns hero/p1/content and stats/s2/subheading.",
+  "template": "templates/page.pdrn-research.json",
+  "page": "pdrn-research",
+  "set": [
+    {
+      "at": "hero/p1/content",
+      "values": {
+        "en": "<h1>PDRN: Salmon DNA Skincare</h1><p>A salmon-derived polynucleotide (INCI: Sodium DNA), shown in a controlled trial to soften the look of crow's feet.</p>",
+        "de": "<h1>PDRN: Hautpflege mit Lachs-DNA</h1><p>Ein Polynukleotid aus Lachs-DNA (INCI: Sodium DNA), das in einer kontrollierten Studie das Erscheinungsbild von Krähenfüßen milderte.</p>",
+        "nl": "<h1>PDRN: huidverzorging met zalm-DNA</h1><p>Een polynucleotide uit zalm-DNA (INCI: Sodium DNA) dat in een gecontroleerde studie de aanblik van kraaienpootjes verzachtte.</p>",
+        "fr": "<h1>PDRN : les soins à l'ADN de saumon</h1><p>Un polynucléotide issu de l'ADN de saumon (INCI : Sodium DNA), qui a atténué l'apparence des pattes-d'oie dans un essai contrôlé.</p>",
+        "es": "<h1>PDRN: cuidado de la piel con ADN de salmón</h1><p>Un polinucleótido derivado del ADN de salmón (INCI: Sodium DNA) que suavizó el aspecto de las patas de gallo en un ensayo controlado.</p>",
+        "it": "<h1>PDRN: skincare al DNA di salmone</h1><p>Un polinucleotide derivato dal DNA di salmone (INCI: Sodium DNA) che ha attenuato l'aspetto delle zampe di gallina in uno studio controllato.</p>"
+      }
+    },
+    {
+      "at": "stats/s2/subheading",
+      "values": {
+        "en": "Improvement vs the retinol side",
+        "de": "Verbesserung gegenüber der Retinol-Seite",
+        "nl": "Verbetering ten opzichte van de retinolkant",
+        "fr": "Amélioration par rapport au côté rétinol",
+        "es": "Mejora frente al lado del retinol",
+        "it": "Miglioramento rispetto al lato retinolo"
+      }
+    }
+  ],
+  "section_settings": {
+    "hero": {
+      "overlay_opacity": 50
+    }
+  }
+}

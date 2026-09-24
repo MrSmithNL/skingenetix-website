@@ -117,3 +117,10 @@ def test_rebuilds_the_live_argireline_translations_exactly():
     assert values["evidence_sources"]["en"] == next(
         a for a in json.loads((ROOT / cfg["sections"]["evidence_sources"]).read_text())["add_sections"]
         if a["id"] == "evidence_sources")["section"]["settings"]["html"]["en"]
+
+
+def test_check_refuses_liquid_delimiters_that_shopify_rejects():
+    # 2026-09-24: "margin:0 auto}}" in a nested @media rule made themeFilesUpsert refuse the whole template
+    en = "<style>@media(min-width:9px){.a{b:c} }</style><p>x</p>"
+    v = "<style>@media(min-width:9px){.a{b:c}}</style><p>y</p>"
+    assert any("Liquid" in p for p in hi.check(en, v, "de", hi.keep_pattern([]), []))

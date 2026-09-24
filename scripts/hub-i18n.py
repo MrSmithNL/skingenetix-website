@@ -134,6 +134,10 @@ def check(en, value, loc, keep, fragments):
             problems.append(f"[{loc}] English left behind: {node[:80]}")
         if LOOKALIKE.search(node) and not LOOKALIKE.search(en):
             problems.append(f"[{loc}] Cyrillic/Greek look-alike letters in: {node[:80]}")
+    for token in ("{{", "}}", "{%", "%}"):
+        if token in value:
+            problems.append(f"[{loc}] contains {token!r}: Shopify reads it as Liquid and refuses the whole template "
+                            "(write nested CSS braces as '} }')")
     for m in LD_BLOCK.finditer(value):
         try:
             ld = json.loads(m.group(2))
