@@ -116,10 +116,50 @@ def flux2(prompt, negative, w, h, n, refs, out_dir, stem):
 
 # ------------------------------------------------------------------- gpt-image
 
-def gpt_image(prompt, negative, w, h, n, refs, out_dir, stem, model="gpt-image-2"):
+#: Malcolm, 2026-09-24: the OpenAI image generator "should always be the latest one". The id was
+#: hardcoded to gpt-image-2 while gpt-image-2.5 (flare and sunburst) had been live for weeks. It is
+#: now resolved from the account's model list on each run: the highest gpt-image VERSION, in its
+#: full-quality variant. An unsuffixed id wins; otherwise any named variant that is not a light one.
+#: Light variants are skipped because OpenAI ships them as the speed tier: gpt-image-2.5-flare is
+#: "the small model, optimized for speed", gpt-image-2.5-sunburst "the base model, optimized for
+#: quality". Dated snapshots are skipped so the alias follows OpenAI's own updates.
+#: Override with OPENAI_IMAGE_MODEL. Mirrored in ~/.claude/skills/product-photography/scripts/backends.py.
+OPENAI_IMAGE_FALLBACK = "gpt-image-2"
+_LIGHT_VARIANTS = {"mini", "flare", "lite", "nano", "fast"}
+_OPENAI_IMAGE_MODEL = None
+
+
+def pick_latest_image_model(ids):
+    import re
+    best = None
+    for mid in ids:
+        m = re.fullmatch(r"gpt-image-(\d+(?:\.\d+)*)(?:-([a-z]+))?", mid)
+        if not m or (m.group(2) or "") in _LIGHT_VARIANTS:
+            continue
+        key = (tuple(int(x) for x in m.group(1).split(".")), 1 if not m.group(2) else 0, mid)
+        best = max(best, key) if best else key
+    return best[2] if best else OPENAI_IMAGE_FALLBACK
+
+
+def latest_openai_image_model(client):
+    global _OPENAI_IMAGE_MODEL
+    if os.environ.get("OPENAI_IMAGE_MODEL"):
+        return os.environ["OPENAI_IMAGE_MODEL"]
+    if _OPENAI_IMAGE_MODEL is None:
+        try:
+            _OPENAI_IMAGE_MODEL = pick_latest_image_model([m.id for m in client.models.list()])
+        except Exception as e:                      # listing failed: never block a run on it
+            print(f"  gpt_image: model list unavailable ({e}); using {OPENAI_IMAGE_FALLBACK}")
+            _OPENAI_IMAGE_MODEL = OPENAI_IMAGE_FALLBACK
+        print(f"  gpt_image: using {_OPENAI_IMAGE_MODEL}")
+    return _OPENAI_IMAGE_MODEL
+
+
+def gpt_image(prompt, negative, w, h, n, refs, out_dir, stem, model=None):
     from openai import OpenAI
 
     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    model = model or latest_openai_image_model(client)
     # Rejects any dimension not divisible by 16 with a 400, and caps the long edge
     # at 2048 — a 1638x2048 once lost this backend on three plates in one run.
     cap = 2048
