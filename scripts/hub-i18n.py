@@ -12,6 +12,10 @@ translations byte for byte.
     python3 scripts/hub-i18n.py configs/hub-i18n/acetyl-hexapeptide-8-research.json --write   # six-locale values into the specs
     python3 scripts/hub-upgrade.py <each owning spec> --apply                                  # then upload + register
 
+Targets (the config's "sections"): a custom-html section id ("overview"), or since 2026-09-25 a block setting in an
+added section or a `set` item ("key_findings_ba/f1/content", "faq/q1/answer"), so cards and FAQ answers are translated
+from the same phrase table and pass the same checks.
+
 Method, per locale:
   1. substitute phrases, longest English key first, so a short key never eats part of a long one
   2. swap the byline for this locale's, COMPOSED from the reviewer config — set-reviewer.py removes the reviewer
@@ -153,6 +157,26 @@ def _section(spec, sid):
     return next(a for a in spec["add_sections"] if a["id"] == sid)["section"]["settings"]
 
 
+def _slot(spec, target):
+    """(container, key) holding a target's value in a spec.
+
+    "overview" is a custom-html section's html; "key_findings_ba/f1/content" is a block setting in an added section,
+    or a `set` item with that `at` (e.g. "faq/q1/answer"). Block targets were added 2026-09-25 so the finding cards and
+    FAQ answers come from the same phrase table, with the same checks, as the custom-html sections.
+    """
+    parts = target.split("/")
+    if len(parts) == 1:
+        return _section(spec, target), "html"
+    sid, bid, key = parts
+    for a in spec.get("add_sections", []):
+        if a["id"] == sid:
+            return a["section"]["blocks"][bid]["settings"], key
+    for item in spec.get("set", []):
+        if item["at"] == target:
+            return item, "values"
+    raise KeyError(f"{target} is neither an added section's block setting nor a set item in the spec")
+
+
 def review_date(cfg, rv):
     if cfg.get("reviewed"):
         return cfg["reviewed"]
@@ -168,7 +192,8 @@ def build(cfg, root=ROOT):
     keep, fragments, phrases = keep_pattern(cfg["keep_english"]), cfg["verbatim_fragments"], cfg["phrases"]
     values, problems = {}, []
     for sid, spec_path in cfg["sections"].items():
-        html = _section(json.loads((root / spec_path).read_text()), sid)["html"]
+        container, key = _slot(json.loads((root / spec_path).read_text()), sid)
+        html = container[key]
         en = html["en"] if isinstance(html, dict) else html
         values[sid] = {"en": en}
         for loc in LOCALES:
@@ -195,15 +220,21 @@ def main():
     if not a.write:
         print("  check only — nothing written. --write puts the values into the specs; then hub-upgrade.py --apply.")
         return 0
+    write_values(cfg, values)
+    return 0
+
+
+def write_values(cfg, values, root=ROOT):
+    """Put each target's six-locale dict into its owning spec (section html, block setting or set item)."""
     for spec_path in sorted(set(cfg["sections"].values())):
-        p = ROOT / spec_path
+        p = root / spec_path
         spec = json.loads(p.read_text())
         for sid, owner in cfg["sections"].items():
             if owner == spec_path:
-                _section(spec, sid)["html"] = values[sid]
+                container, key = _slot(spec, sid)
+                container[key] = values[sid]
         p.write_text(json.dumps(spec, indent=2, ensure_ascii=False))
         print(f"  wrote {spec_path}")
-    return 0
 
 
 if __name__ == "__main__":

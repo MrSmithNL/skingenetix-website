@@ -124,3 +124,53 @@ def test_check_refuses_liquid_delimiters_that_shopify_rejects():
     en = "<style>@media(min-width:9px){.a{b:c} }</style><p>x</p>"
     v = "<style>@media(min-width:9px){.a{b:c}}</style><p>y</p>"
     assert any("Liquid" in p for p in hi.check(en, v, "de", hi.keep_pattern([]), []))
+
+
+# ---- block targets (2026-09-25): card and FAQ settings translated from the same phrase table ----
+
+def _tmp_page(tmp_path):
+    spec = {"template": "templates/page.x.json", "page": "x",
+            "add_sections": [{"id": "key_findings_ba", "after": "evidence", "section": {
+                "type": "research-before-after", "settings": {}, "block_order": ["f1"],
+                "blocks": {"f1": {"type": "finding", "settings": {
+                    "title": "Wrinkles Down in 8 Weeks",
+                    "content": '<p>A trial in <a href="/pages/y">40 women</a>.</p>'}}}}}],
+            "set": [{"at": "faq/q1/answer", "values": {"en": "<p>Twice a day.</p>"}}]}
+    (tmp_path / "configs").mkdir()
+    (tmp_path / "configs/spec.json").write_text(json.dumps(spec))
+    (tmp_path / "configs/rv.json").write_text((ROOT / "configs/reviewers/esther-bodde.json").read_text())
+    phrases = {"Wrinkles Down in 8 Weeks": {l: f"Falten-{l}" for l in LOCALES},
+               "A trial in": {l: f"Studie-{l} mit" for l in LOCALES},
+               "40 women": {l: f"40 Frauen-{l}" for l in LOCALES},
+               "Twice a day.": {l: f"Zweimal-{l}." for l in LOCALES}}
+    return {"reviewer": "configs/rv.json", "reviewed": "2026-09-25", "process_sentence": {l: "" for l in ["en"] + LOCALES},
+            "keep_english": [], "verbatim_fragments": [], "phrases": phrases,
+            "sections": {"key_findings_ba/f1/title": "configs/spec.json",
+                         "key_findings_ba/f1/content": "configs/spec.json",
+                         "faq/q1/answer": "configs/spec.json"}}
+
+
+def test_block_setting_targets_are_translated_and_checked(tmp_path):
+    cfg = _tmp_page(tmp_path)
+    values, problems = hi.build(cfg, tmp_path)
+    assert problems == []
+    assert values["key_findings_ba/f1/title"]["it"] == "Falten-it"
+    assert values["key_findings_ba/f1/content"]["de"] == '<p>Studie-de mit <a href="/de/pages/y">40 Frauen-de</a>.</p>'
+    assert values["faq/q1/answer"]["fr"] == "<p>Zweimal-fr.</p>"
+
+
+def test_block_target_with_an_untranslated_phrase_is_refused(tmp_path):
+    cfg = _tmp_page(tmp_path)
+    del cfg["phrases"]["Wrinkles Down in 8 Weeks"]
+    _, problems = hi.build(cfg, tmp_path)
+    assert any("key_findings_ba/f1/title" in p and "English left behind" in p for p in problems)
+
+
+def test_write_puts_six_locale_values_into_block_settings_and_set_items(tmp_path):
+    cfg = _tmp_page(tmp_path)
+    values, _ = hi.build(cfg, tmp_path)
+    hi.write_values(cfg, values, tmp_path)
+    spec = json.loads((tmp_path / "configs/spec.json").read_text())
+    blk = spec["add_sections"][0]["section"]["blocks"]["f1"]["settings"]
+    assert blk["title"] == values["key_findings_ba/f1/title"] and set(blk["title"]) == {"en", *LOCALES}
+    assert spec["set"][0]["values"]["nl"] == "<p>Zweimal-nl.</p>"
