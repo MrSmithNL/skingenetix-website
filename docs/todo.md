@@ -237,7 +237,17 @@ AI-generated illustrations and must not be presented as results. Record:
   4. Usage images: row 1 repeats the hero's pink helix, and the serum bottle appears three times in about 1,700 px.
   5. One grading scale site-wide. Argireline uses A · B · C · Review; PDRN uses A · D · X · Not PDRN · Review.
   6. On mobile, group the studies that do not apply (X and Not PDRN) in a `<details>`. The table is 6,145 px, about 7 screens.
-- ⏭ **Next on the template:** copper peptide, Matrixyl 3000, glutathione, one per go-ahead (template doc §6, §6.1, §7). Run the design critic on each before calling it done.
+- 🔄 **Copper peptide on the template: built, previewed, NOT live** (go-ahead 2026-09-25).
+  - Claims re-read at source (register §8). The build fixes seven live defects: medicinal wording, a placebo claim, a shortened title, "known only through Skin Biology", Kang overstated, the collagen FAQ without qualifiers, and null or non-transferable rows.
+  - Specs: `configs/hub-upgrades/copper-peptide-research-{layout,evidence-merge}-2026-09-25.json`. Phrase table: `configs/hub-i18n/copper-peptide-research.json`, 83 phrases, all checks passed.
+  - Preview: `/pages/copper-peptide-research?view=copper-preview`, template `templates/page.copper-preview.json`. Delete it after go-live.
+  - Waiting on Malcolm: card 1 and card 2 before/after picks (`~/Desktop/skingenetix-copper-card-candidates.png`, or a new round-3 batch); the key figures; card 2's subject; the Mortazavi quote and dropping Pickart 2018.
+  - Then: apply both specs live, point the reviewer config's copper hub entry at the layout spec (`byline: overview.html`, `jsonld_host: evidence_sources`), verify six languages, capture, and delete the preview template.
+- ⏭ **Next on the template after copper:** Matrixyl 3000, glutathione, one per go-ahead (template doc §6, §6.1, §7). Run the design critic on each before calling it done.
+- ⚠️ **Wrong-strength image live** (found 2026-09-25): `/pages/collagen-skin-plumping` (`templates/page.collagen-skin-plumping.json`) shows
+  `skingenetix-copper-peptide-ghk-cu-firming-repair-serum.jpg`, an old off-brand copper serum labelled **1%**. Our copper products are 2%. Replace it with a
+  current 2% product image (Malcolm to choose, or approve the day gel-cream jar).
+- ⚠️ **Copper JSON-LD descriptions** in de/nl/fr/es/it said "55.8% more … than without" (de, nl) or gave the figure with no comparator. They are corrected in the new copper phrase table and go live with the rollout.
 - ✅ **Argireline loose ends closed** (2026-09-24): the JSON-LD is now localised per language (it had said `inLanguage: "en"` with the English URL on all five translations), Hoppel 2015 is added to `citation[]`, and the dead overview CSS is removed. Verified live with curl in en/de/it.
 - ⚠️ **Site-wide, theme:** the mobile header menu icon is a 22×22 px tap target (below 44). Measured on both template pages. It is theme chrome, so fixing it is a core-theme change: Malcolm's call.
 - ✅ ~~Argireline loose ends~~: closed 2026-09-24 (entry above).
