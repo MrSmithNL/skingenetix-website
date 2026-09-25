@@ -9,7 +9,10 @@
 
 ## 1. What the template is, in one paragraph
 
-A science page that answers the ingredient question in its first screen, shows the three strongest numbers straight away, then lets the reader go from a short, numbered list of what the evidence shows to the study behind each line, and ends with every source in one real table. **Its signature:** _every claim is one click from the study that supports it._ Since 2026-09-24 every card is a positive, sourced result (ADR-2026-09-24-P): the page does not publish negative findings as cards or index rows.
+A science page that answers the ingredient question in its first screen, shows the three strongest numbers straight away, then lets the reader go from a short,
+numbered list of what the evidence shows to the study behind each line, and ends with every source in one real table. **Its signature:** _every claim is one
+click from the study that supports it._ Since 2026-09-24 every card is a positive, sourced result (ADR-2026-09-24-P): the page does not publish negative
+findings as cards or index rows.
 
 ---
 
@@ -46,8 +49,12 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
   - `<p><em>` with **no class**: `scripts/set-reviewer.py` finds the byline by that literal shape.
   - The reviewer sentence is taken verbatim from `configs/reviewers/esther-bodde.json`: `--remove` deletes it as an exact substring, so any rewording strands Dr Bodde's credit.
   - "Last reviewed [date]" is scored by `page-audit.py` (GEO E1) and matched by set-reviewer's `date_marker`.
-  - ⚠️ **Both paragraphs stay direct children of `.ovw__intro`, in the prose flow.** Wrapped in their own `<div>` behind a hairline, the AI crawlers' extractor (Trafilatura) dropped all five trust signals, and the external audit fell from 9.70 to 8.65 on _author_, _medical review_ and _recency_. Unwrapped: 9.68 (commit `df440a2`). Style them with CSS; CSS does not affect extraction.
-- **Two-column row:** _At a glance_ list on the left, transparent product cut-out on the right. The list has six fixed labels, in this order: **What it is · Best evidence · Independent evidence · Not shown · Safety · How to use.** "Independent evidence" and "Not shown" are what separate this page from a brand page.
+  - ⚠️ **Both paragraphs stay direct children of `.ovw__intro`, in the prose flow.** Wrapped in their own `<div>` behind a hairline, the AI crawlers' extractor
+    (Trafilatura) dropped all five trust signals, and the external audit fell from 9.70 to 8.65 on _author_, _medical review_ and _recency_. Unwrapped: 9.68
+    (commit `df440a2`). Style them with CSS; CSS does not affect extraction.
+- **Two-column row:** _At a glance_ list on the left, transparent product cut-out on the right. The list has six fixed labels, in this order: **What it is ·
+  Best evidence · Independent evidence · Not shown · Safety · How to use.** "Independent evidence" and "Not shown" are what separate this page from a brand
+  page.
 - **Buttons:** ghost _Back to Science_ under the list, solid _Shop X_ under the image. A note line links to the matching concern page.
 
 ### 3.2 `evidence` — the index
@@ -55,7 +62,9 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 - Centred `<h2 class="evd__h">` phrased as the query: _What Does X Do for Y?_
 - A lead paragraph on the mechanism, with its citation linked.
 - Caption: _"Here is what the evidence shows, strongest first. Each line opens the study behind it."_
-- **Numbered rows `01`–`05`**, each an `<a class="evd__row" href="#rba-fN">`: a claim line and a one-line qualifier (who, how many, what design, and what it does not show). Order: strongest controlled result first, then the next-strongest human result, then lab or mechanism, then safety. Every row is a positive result; no row reports a null finding (ADR-2026-09-24-P).
+- **Numbered rows `01`–`05`**, each an `<a class="evd__row" href="#rba-fN">`: a claim line and a one-line qualifier (who, how many, what design, and what it
+  does not show). Order: strongest controlled result first, then the next-strongest human result, then lab or mechanism, then safety. Every row is a positive
+  result; no row reports a null finding (ADR-2026-09-24-P).
 - A foot line stating the concentration the trials used against ours, and a link to the study page if one exists.
 - Button to `#evidence-sources`: _See all N studies and how we graded them._
 
@@ -64,18 +73,24 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 - Our section `theme/sections/research-before-after.liquid`. Each card renders `id="rba-{{ block.id }}"`, so block ids **must** be `f1`…`fN` to match the index anchors.
 - `media_position` alternates start / end.
 - **The `result_label` is burned onto the image, so the number never travels without its qualifier** (e.g. _"14.6% vs 5.9% — dissolving microneedle patch"_). A result from a different delivery method or concentration says so in the label _and_ in the first bold line of the card.
-- **The second card is a second positive USP shown as a before/after** (Malcolm, 2026-09-24): "we do not publish negative info about the ingredient… we use that space to show a USP that we can show a before and after for." Choose the strongest sourced result that a photograph can show and that differs from card 1. On PDRN that is the under-eye result (eye bags and tear troughs about 2× the retinol change; register claim 5). The pair is generated on the before/after pipeline and chosen by Malcolm, with its result label burned in like card 1's.
+- **The second card is a second positive USP shown as a before/after** (Malcolm, 2026-09-24): "we do not publish negative info about the ingredient… we use that
+  space to show a USP that we can show a before and after for." Choose the strongest sourced result that a photograph can show and that differs from card 1. On
+  PDRN that is the under-eye result (eye bags and tear troughs about 2× the retinol change; register claim 5). The pair is generated on the before/after
+  pipeline and chosen by Malcolm, with its result label burned in like card 1's.
 
 ### 3.4 `usage` — two rows, and the how-to as a routine
 
 - Row 1, _What N% X Means_: our own product hero, chosen so the percentage on the label is legible.
-- Row 2, _How to Use X_: a connected vertical timeline, three numbered steps (_Start clean → Apply where it matters → Seal it in_), then a layering note linking a sibling science page. Every step is taken from copy that has already been checked against the claims register, so the timeline adds no new claim.
+- Row 2, _How to Use X_: a connected vertical timeline, three numbered steps (_Start clean → Apply where it matters → Seal it in_), then a layering note linking
+  a sibling science page. Every step is taken from copy that has already been checked against the claims register, so the timeline adds no new claim.
 - It is deliberately not the flat numbered rows of the evidence index: the design rules forbid repeating a treatment on one page.
 
 ### 3.5 `evidence_sources` — Evidence & Sources
 
 - `<div class="est" id="evidence-sources">`. The stable id is what the button in §3.2 targets. Never link to the template-generated section id, which changes if the template is recreated.
-- A real `<table>` with three columns: **Study** (verbatim published title in `<p class="sgref__ti est__ti">`, then author, year, journal, volume, then the PubMed/DOI link) · **Grade** (pill: A controlled human trial measured by instrument · B smaller, uncontrolled or manufacturer data · C skin samples · Review) · **What it found, and what it does not show**.
+- A real `<table>` with three columns: **Study** (verbatim published title in `<p class="sgref__ti est__ti">`, then author, year, journal, volume, then the
+  PubMed/DOI link) · **Grade** (pill: A controlled human trial measured by instrument · B smaller, uncontrolled or manufacturer data · C skin samples · Review)
+  · **What it found, and what it does not show**.
 - The class `sgref__ti` keeps the verbatim-title exemption in `page-audit.py` (ADR-2026-09-23-G). Titles are never paraphrased and never enter a translation table.
 - Every study the page's claims rest on is a row. Since 2026-09-24, null and non-transferable studies are not listed (ADR-2026-09-24-P), and the key line is only "Published titles are quoted exactly as they appear in the journal."
 - The WebPage JSON-LD sits at the end of this section's HTML: `author` (Person: Malcolm Smith), `publisher`, `reviewedBy`, `lastReviewed`, `citation[]`, `inLanguage`. Set `jsonld_host: "evidence_sources"` in the spec and in the reviewer config's hub entry.
@@ -84,19 +99,23 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 
 ## 3.6 The page accent (Malcolm, 2026-09-24)
 
-Every science page has one accent: the ingredient colour its key figures and charts already use. Links (underlined), the solid *Shop* button, the evidence-index claims, the at-a-glance bullets, the how-to step discs and the grade-A pill all use it. There is one variable, set once in the overview style:
+Every science page has one accent: the ingredient colour its key figures and charts already use. Links (underlined), the solid _Shop_ button, the evidence-index
+claims, the at-a-glance bullets, the how-to step discs and the grade-A pill all use it. There is one variable, set once in the overview style:
 
 ```css
-:root{--sg-accent:#9E4F5C;--sg-accent-tint:#F6E9EB}
+:root {
+  --sg-accent: #9e4f5c;
+  --sg-accent-tint: #f6e9eb;
+}
 ```
 
-| Page | `--sg-accent` | `--sg-accent-tint` |
-|---|---|---|
-| PDRN | `#9E4F5C` rose | `#F6E9EB` |
-| Argireline | `#3E4A52` slate | `#E9ECEE` |
-| Copper peptide | `#014EB1` clinical blue | `#E4EDFA` |
-| Matrixyl 3000 | `#016569` teal | `#E0EFEF` |
-| Glutathione | `#8A6914` deep champagne | `#F5EEDC` |
+| Page           | `--sg-accent`            | `--sg-accent-tint` |
+| -------------- | ------------------------ | ------------------ |
+| PDRN           | `#9E4F5C` rose           | `#F6E9EB`          |
+| Argireline     | `#3E4A52` slate          | `#E9ECEE`          |
+| Copper peptide | `#014EB1` clinical blue  | `#E4EDFA`          |
+| Matrixyl 3000  | `#016569` teal           | `#E0EFEF`          |
+| Glutathione    | `#8A6914` deep champagne | `#F5EEDC`          |
 
 These are the text-safe versions of the art-direction scene colours (`docs/visual-identity/03-art-direction-and-briefs.md`): white on each passes 4.5:1. Never hard-code a colour in the custom sections; use `var(--sg-accent)`. The theme's own buttons (shop grid, CTA) keep the theme style.
 
@@ -106,7 +125,9 @@ These come from the claims registers and ADRs; the template simply gives each on
 
 1. **A number always travels with its qualifier.** "48.9%" is _22 of 45 people graded improved_, never a reduction in anything (Argireline register §3). The same fix had to be made in the FAQ answer after it was made on the card, so search the whole page, FAQ included, for every figure you change.
 2. **Different delivery or concentration → labelled, never implied.** Microneedle, injection and other concentrations are listed and labelled.
-3. **No negative findings as cards or index rows, and none in Evidence & Sources** (ADR-2026-09-24-P, Malcolm 2026-09-24). That slot shows a positive USP with a before/after. The table keeps only the studies the page's positive claims rest on: rows graded negative, after a procedure, other delivery, injected or "not this ingredient" are dropped, as are reviews and disclaimers of those. The At-a-glance "Independent evidence" and "Not shown" lines stay (Malcolm's choice).
+3. **No negative findings as cards or index rows, and none in Evidence & Sources** (ADR-2026-09-24-P, Malcolm 2026-09-24). That slot shows a positive USP with a
+   before/after. The table keeps only the studies the page's positive claims rest on: rows graded negative, after a procedure, other delivery, injected or "not
+   this ingredient" are dropped, as are reviews and disclaimers of those. The At-a-glance "Independent evidence" and "Not shown" lines stay (Malcolm's choice).
 4. **Our prose paraphrases disease names and mechanism phrases,** even when reporting a study (memory `reporting-a-study-is-still-our-prose`). Only the verbatim title is exempt.
 5. **Ingredient-level only on products** until the formula facts are confirmed; the trial magnitudes live on the science page.
 6. **Brightening is cosmetic** (glutathione): never "whitening", "even tone" or "dark spots" in our prose.
@@ -123,6 +144,21 @@ Malcolm's rule is _standard sections before custom code_ (memory `standard-secti
 | `evidence`         | `rich-text`                                 | A numbered index whose rows are links needs classed markup; richtext strips it.                                                                                                                                                                                  |
 | `usage`            | `media-with-text` (what the other four use) | A visualised step timeline needs classes on `<ol>`/`<li>`; richtext strips them.                                                                                                                                                                                 |
 | `evidence_sources` | `specification-table` + `references`        | `specification-table` renders `<div>` rows, not a `<table>`, so there is no extraction gain; and its value field strips classes, so the verbatim titles would lose their `sgref__ti` exemption (`docs/decision-evidence-sections-merge-2026-09-23.md` §1.2–1.3). |
+
+**Tested live on 2026-09-25, not reasoned** (the study-page session had pointed out that "richtext strips classes" had never been tried). A throwaway template, `templates/page.sgx-probe.json`, was uploaded, rendered through `?view=` and deleted:
+
+| Stock route tried                                                                                | Shopify's answer                                                              |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| `class` on `<h2>`, `<p>`, `<a>`, `<span>` in a rich-text block                                   | upload **refused**: "Attribute 'class' is not permitted on tag"               |
+| `style` on `<p>`                                                                                 | refused: "Attribute 'style' is not permitted"                                 |
+| `<table>` or `<div>` in a rich-text block                                                        | refused: "All top level nodes must be `<p>`, `<ul>`, `<ol>` or `<h1>`–`<h6>`" |
+| Unclassed `<h2>` + `<ol>` of links, styled by the section's native **Custom CSS** (`custom_css`) | accepted; the CSS is scoped to the section and `@media` works                 |
+| Custom CSS of ~1,600 characters                                                                  | refused: "Custom CSS contains more than 500 characters"                       |
+| `content:` (counters, bullets, step discs via `::before`) in Custom CSS                          | refused: "Invalid property value: content"                                    |
+
+So the four custom sections stay forced for the approved design: Argireline's overview CSS alone is ~2,500 characters, and its numbered index, bullets and step
+discs all need `content`. The stock-plus-Custom-CSS route is still the right tool for **small** tweaks to stock sections (under 500 characters, no `content`),
+for example a hero's text position, and should be used there instead of a style-only custom-html section.
 
 **What this costs, and how the cost is handled:**
 
@@ -156,30 +192,44 @@ One page per go-ahead. Claims before layout, so nothing is translated that is ab
 
 ### 6.1 Learned on the PDRN rollout (2026-09-24)
 
-- **Harvest by element where a paragraph holds links or short connectors.** Pair the live English with each translation by position. Use the whole `<p>`/`<li>` when it contains a link or a short joining phrase ("and the"), because a short phrase would be substituted everywhere it appears. Use text nodes (12+ characters) elsewhere. Then check that the numbers in each pair agree. On PDRN every mismatch was word order or `1,500` vs `1500`, but that is the check that would catch a wrong figure. Of the PDRN build's 92 phrases, 46 are the page's own approved translations, 11 are generic template phrases from Argireline and 35 are new.
+- **Harvest by element where a paragraph holds links or short connectors.** Pair the live English with each translation by position. Use the whole `<p>`/`<li>`
+  when it contains a link or a short joining phrase ("and the"), because a short phrase would be substituted everywhere it appears. Use text nodes (12+
+  characters) elsewhere. Then check that the numbers in each pair agree. On PDRN every mismatch was word order or `1,500` vs `1500`, but that is the check that
+  would catch a wrong figure. Of the PDRN build's 92 phrases, 46 are the page's own approved translations, 11 are generic template phrases from Argireline and
+  35 are new.
 - **The FAQ's accordion colour flips with its background.** The old pages put Bone accordions on a White FAQ. The template's FAQ is Bone, so set `accordion_background: "#ffffff"` in the same `section_settings`, or the questions vanish into the band.
 - **The WebPage JSON-LD is localised per language** by `hub-i18n.py`: `inLanguage`, the `/de/` URL and `@id`, and the name and description from the config's `jsonld_i18n`. Copy those from the page's superseded spec. The Argireline build had shipped English JSON-LD on all six languages.
-- **A product cut-out from the white "selector" shot.** Background = near-white pixels (min channel ≥ 243) connected to the edge. Also clear the floor shadow: pale, colourless pixels beside or below the glass. Keep the largest component, feather the edge by 1.2 px, and judge the result on dark and at render size on Bone. Save as **WebP with alpha** (PDRN: 69 KB, against 668 KB as PNG). `upload-theme-images.py` forces JPEG, which would flatten the transparency, so upload the WebP through the Files API directly.
-- **Usage can carry a third row** when the page absorbs a definitional query. PDRN keeps *Salmon DNA: Where PDRN Comes From* (content plan §4 item 4) above *What 1% PDRN Means* and the how-to.
+- **A product cut-out from the white "selector" shot.** Background = near-white pixels (min channel ≥ 243) connected to the edge. Also clear the floor shadow:
+  pale, colourless pixels beside or below the glass. Keep the largest component, feather the edge by 1.2 px, and judge the result on dark and at render size on
+  Bone. Save as **WebP with alpha** (PDRN: 69 KB, against 668 KB as PNG). `upload-theme-images.py` forces JPEG, which would flatten the transparency, so upload
+  the WebP through the Files API directly.
+- **Usage can carry a third row** when the page absorbs a definitional query. PDRN keeps _Salmon DNA: Where PDRN Comes From_ (content plan §4 item 4) above _What 1% PDRN Means_ and the how-to.
 - **Drop a citation nobody has read.** Khan 2022 and its card went, per the PDRN register §2 row 27. A table of "every study this page relies on" cannot include one we have not read.
 - **`set-reviewer.py --apply` is not needed after a rebuild.** The builder writes the credit and date into the byline and JSON-LD. A dry run proves `--remove` still resolves the page, whereas `--apply` rewrites all five hubs and republishes the study pages.
 - **`--verify-live` falls back to curl** when Cloudflare throttles Python (memory `cloudflare-throttles-python-not-curl`).
 - **Nested CSS braces must be written `} }`.** A `@media{...{...}}` rule puts `}}` in the html, Shopify reads it as Liquid, and the whole template upload is refused. `hub-i18n.py` checks for this since 2026-09-24.
-- **The hero's text follows the banner's quiet zone.** Argireline's banner is quiet on the left, so its text is left-aligned. PDRN's is quiet in the centre, so its text stays centred. Either way the subtitle is the template's **one-line promise with no number**, because the key figures sit directly below it. A long subtitle ran onto the busy helix at 2.85:1 contrast.
-- **Card images must not claim what the text does not.** A render of PDRN travelling into the dermis illustrated a lab result, and register §3 lists "reaches the dermis" as a claim to avoid. A null-result card showed our own serum. (Superseded the same day: there is no null-result card any more; see ADR-2026-09-24-P.)
-- **Every image in the page's own content carries the ingredient's name in its filename** (Malcolm, 2026-09-24: "all images used on this page must have names optimized for PDRN"). To use an image that lives under another name (another ingredient, the philosophy page), upload a copy under the ingredient's name. Never rename the original: translations and other pages key off its URL. The exception is the *Explore More Research* tiles, which show and link to the other ingredients and keep those names. PDRN audited clean on 2026-09-24: 11 content images, all `skingenetix-pdrn-…`.
+- **The hero's text follows the banner's quiet zone.** Argireline's banner is quiet on the left, so its text is left-aligned. PDRN's is quiet in the centre, so
+  its text stays centred. Either way the subtitle is the template's **one-line promise with no number**, because the key figures sit directly below it. A long
+  subtitle ran onto the busy helix at 2.85:1 contrast.
+- **Card images must not claim what the text does not.** A render of PDRN travelling into the dermis illustrated a lab result, and register §3 lists "reaches
+  the dermis" as a claim to avoid. A null-result card showed our own serum. (Superseded the same day: there is no null-result card any more; see
+  ADR-2026-09-24-P.)
+- **Every image in the page's own content carries the ingredient's name in its filename** (Malcolm, 2026-09-24: "all images used on this page must have names
+  optimized for PDRN"). To use an image that lives under another name (another ingredient, the philosophy page), upload a copy under the ingredient's name.
+  Never rename the original: translations and other pages key off its URL. The exception is the _Explore More Research_ tiles, which show and link to the other
+  ingredients and keep those names. PDRN audited clean on 2026-09-24: 11 content images, all `skingenetix-pdrn-…`.
 - **Run the design critic before calling a page done.** PDRN cycle 1 scored FIX 6.50 and caught all of the above. Its template-level proposals are with Malcolm (`docs/todo.md` CONTENT-001).
 
 ---
 
 ## 7. What each of the other four pages has today (read live, 2026-09-24)
 
-| Page           | Template file                  | Sections | Differs from the template                                                                                                                                                                                                                                             |
-| -------------- | ------------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Page                               | Template file                  | Sections | Differs from the template                                                                                                                                                                                                                                             |
+| ---------------------------------- | ------------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | PDRN ✅ on the template 2026-09-24 | `page.pdrn-research`           | 15       | rich-text `overview` and `evidence`; findings split across `key_findings_ba` (1 card) and `key_findings` (`media-with-text`, 2); `media-with-text` usage; `specification-table` (10 rows) + `references`; a `findings_spacing_fix` style section at the end (ADR-006) |
-| Copper peptide | `page.research-copper-peptide` | 14       | a `hero_banner_css` style section after the hero; rich-text overview and evidence; `key_findings` as `media-with-text` (3); `media-with-text` usage; `specification-table` (10) + `references`                                                                        |
-| Matrixyl 3000  | `page.research-matrixyl`       | 13       | rich-text overview and evidence; `key_findings` as `media-with-text` (3); `media-with-text` usage; `specification-table` (7) + `references`                                                                                                                           |
-| Glutathione    | `page.glutathione-research`    | 16       | findings split across `key_findings_ba1`, `key_findings` and `key_findings_ba3`; `media-with-text` usage; `specification-table` (10) + `references`; `findings_spacing_fix`                                                                                           |
+| Copper peptide                     | `page.research-copper-peptide` | 14       | a `hero_banner_css` style section after the hero; rich-text overview and evidence; `key_findings` as `media-with-text` (3); `media-with-text` usage; `specification-table` (10) + `references`                                                                        |
+| Matrixyl 3000                      | `page.research-matrixyl`       | 13       | rich-text overview and evidence; `key_findings` as `media-with-text` (3); `media-with-text` usage; `specification-table` (7) + `references`                                                                                                                           |
+| Glutathione                        | `page.glutathione-research`    | 16       | findings split across `key_findings_ba1`, `key_findings` and `key_findings_ba3`; `media-with-text` usage; `specification-table` (10) + `references`; `findings_spacing_fix`                                                                                           |
 
 All four still credit the author as "By Skingenetix" only; the named author line arrives with the template. Each keeps its own chart palette (PDRN `#9E4F5C`, copper `#014EB1`, Argireline `#3E4A52`).
 
@@ -217,9 +267,10 @@ Any edit to the English of `evidence_sources`, `overview`, `evidence` or `usage`
 | Check            | How the template carries it                                                                                                                                                                                                                                                                                                                                |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **A** Design     | Fixed section rhythm with Bone/White alternation; no repeated treatment (numbered index ≠ step timeline ≠ table); buttons about 49px tall by construction (16px padding top and bottom, 15px text, 1px border; not yet measured live); every custom section has its own mobile layout. Still needs the measure + design-critic step per page (§6 step 11). |
-| **B** Content    | Every sentence from the claims register; positive results only on cards and index rows; verbatim titles; paraphrased disease and mechanism wording.                                                                                                                                                                                                                                    |
+| **B** Content    | Every sentence from the claims register; positive results only on cards and index rows; verbatim titles; paraphrased disease and mechanism wording.                                                                                                                                                                                                        |
 | **C** SEO        | One H1 in the hero; query-shaped H2s (_What Is X?_, _What Does X Do for Y?_, _How to Use X_); links up to Science, across to the four siblings, down to the product.                                                                                                                                                                                       |
 | **D** Conversion | Proof first (key figures), one primary action (_Shop X_) beside the proof, repeated in the CTA; the quiet second step is the evidence table.                                                                                                                                                                                                               |
 | **E** GEO        | Answer-first bold definition; _At a glance_; a real `<table>`; author, reviewer and date in the extractable prose flow; WebPage JSON-LD with `citation[]`.                                                                                                                                                                                                 |
 
-Related: `docs/content-plan-2026.md` §4 · `docs/decision-evidence-sections-merge-2026-09-23.md` · `docs/decisions-log.md` (ADR-2026-09-23-G, -T, -2026-09-24-S) · `docs/claims/` · `configs/hub-upgrades/acetyl-hexapeptide-8-{layout,evidence-merge}-2026-09-23.json` · `configs/hub-i18n/acetyl-hexapeptide-8-research.json`.
+Related: `docs/content-plan-2026.md` §4 · `docs/decision-evidence-sections-merge-2026-09-23.md` · `docs/decisions-log.md` (ADR-2026-09-23-G, -T, -2026-09-24-S)
+· `docs/claims/` · `configs/hub-upgrades/acetyl-hexapeptide-8-{layout,evidence-merge}-2026-09-23.json` · `configs/hub-i18n/acetyl-hexapeptide-8-research.json`.
