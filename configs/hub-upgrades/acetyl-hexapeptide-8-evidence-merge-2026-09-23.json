@@ -1,5 +1,5 @@
 {
-  "_about": "Argireline hub, English template pass (Malcolm, 2026-09-23): overview gets the transparent product+box cut-out on the right; the 'three strengths' prose and the summary box merge into one anchored list; two new findings cards give every summary line an image to land on; usage gets its two images; Published References is absorbed into a 10-row Evidence & Sources table (Kraeling and Hoppel split — they were one row with Kraeling's title and Hoppel's link) and removed. English only on purpose; translations follow once the copy is settled. Images swapped 2026-09-23 on Malcolm's instruction: the usage rows now use our own pedestal hero (the 10% line on the label is legible, which is that section's point) and the F5 nbp_flash_02 application shot from the serum-dropper-faces wave. This also retires the clear-glass/copper-cap 'ARGIRELINE 10%' bottle, which was a different artwork from the frosted silver bottle used everywhere else on the page. ⚠ 2026-09-23: `overview` and `evidence` REMOVED from this spec. They are owned by acetyl-hexapeptide-8-layout-2026-09-23.json; keeping copies here meant re-applying this spec reverted the layout pass (it did, once). One section, one owning spec. 2026-09-23: `usage` converted from media-with-text to custom-html so 'How to Use Argireline' could become a visualised 3-step routine; richtext strips the classes that needs. Steps are drawn from the existing approved copy, nothing new asserted. 2026-09-24: dead CSS for the old media-with-text overview removed; Hoppel 2015 added to the JSON-LD citations (the Lipotec trade-press study stays out: it is not a scholarly article); JSON-LD localised per language by scripts/hub-i18n.py (it had shipped inLanguage 'en' and the English URL on all five translations). Malcolm, 2026-09-24 (ADR-2026-09-24-P): card f5 (the null imaging test) is now the Raikou forehead result, second in order, its before/after to follow; card f3 (the An 2019 microneedle patch, non-transferable) removed on Malcolm's answer; Henseler 2023 and An 2019 dropped from Evidence & Sources and from citation[]. 2026-09-24 (Malcolm): accent #3E4A52 for links, the Shop button, index rows, bullets, step discs and the A pill, via --sg-accent set in the overview style.",
+  "_about": "Argireline hub, English template pass (Malcolm, 2026-09-23): overview gets the transparent product+box cut-out on the right; the 'three strengths' prose and the summary box merge into one anchored list; two new findings cards give every summary line an image to land on; usage gets its two images; Published References is absorbed into a 10-row Evidence & Sources table (Kraeling and Hoppel split — they were one row with Kraeling's title and Hoppel's link) and removed. English only on purpose; translations follow once the copy is settled. Images swapped 2026-09-23 on Malcolm's instruction: the usage rows now use our own pedestal hero (the 10% line on the label is legible, which is that section's point) and the F5 nbp_flash_02 application shot from the serum-dropper-faces wave. This also retires the clear-glass/copper-cap 'ARGIRELINE 10%' bottle, which was a different artwork from the frosted silver bottle used everywhere else on the page. ⚠ 2026-09-23: `overview` and `evidence` REMOVED from this spec. They are owned by acetyl-hexapeptide-8-layout-2026-09-23.json; keeping copies here meant re-applying this spec reverted the layout pass (it did, once). One section, one owning spec. 2026-09-23: `usage` converted from media-with-text to custom-html so 'How to Use Argireline' could become a visualised 3-step routine; richtext strips the classes that needs. Steps are drawn from the existing approved copy, nothing new asserted. 2026-09-24: dead CSS for the old media-with-text overview removed; Hoppel 2015 added to the JSON-LD citations (the Lipotec trade-press study stays out: it is not a scholarly article); JSON-LD localised per language by scripts/hub-i18n.py (it had shipped inLanguage 'en' and the English URL on all five translations). Malcolm, 2026-09-24 (ADR-2026-09-24-P): card f5 (the null imaging test) is now the Raikou forehead result, second in order, its before/after to follow; card f3 (the An 2019 microneedle patch, non-transferable) removed on Malcolm's answer; Henseler 2023 and An 2019 dropped from Evidence & Sources and from citation[]. 2026-09-24 (Malcolm): accent #3E4A52 for links, the Shop button, index rows, bullets, step discs and the A pill, via --sg-accent set in the overview style. Card f5 before/after live 2026-09-25: Malcolm's pick B4 nbp_flash 01 (r3, slot uef3--argireline-forehead-e), uploaded as skingenetix-acetyl-hexapeptide-8-forehead-lines-before-after.jpg; labels Before / After 20 days and a burned-in result line in six languages. Raikou's day-20 figures were re-checked at source first (docs/claims/argireline-acetyl-hexapeptide-8.md §6).",
   "template": "templates/page.research-argireline.json",
   "page": "acetyl-hexapeptide-8-research",
   "add_sections": [
@@ -93,14 +93,35 @@
           "f5": {
             "type": "finding",
             "settings": {
-              "before_label": "",
-              "after_label": "",
+              "before_label": {
+                "en": "Before",
+                "de": "Vorher",
+                "nl": "Voor",
+                "fr": "Avant",
+                "es": "Antes",
+                "it": "Prima"
+              },
+              "after_label": {
+                "en": "After 20 days",
+                "de": "Nach 20 Tagen",
+                "nl": "Na 20 dagen",
+                "fr": "Après 20 jours",
+                "es": "Después de 20 días",
+                "it": "Dopo 20 giorni"
+              },
               "note_label": "",
               "label_background": "#1a1a1a",
               "label_text_color": "#ffffff",
-              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg",
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-forehead-lines-before-after.jpg",
               "media_position": "end",
-              "result_label": "",
+              "result_label": {
+                "en": "Forehead roughness −7.4% vs +4.3% on placebo (day\u00a020)",
+                "de": "Stirnrauheit −7,4\u00a0% vs. +4,3\u00a0% unter Placebo (Tag\u00a020)",
+                "nl": "Voorhoofdruwheid −7,4% vs +4,3% met placebo (dag\u00a020)",
+                "fr": "Rugosité du front −7,4\u00a0% vs +4,3\u00a0% sous placebo (J20)",
+                "es": "Rugosidad de la frente −7,4\u00a0% frente a +4,3\u00a0% con placebo (día\u00a020)",
+                "it": "Rugosità della fronte −7,4% vs +4,3% con placebo (giorno\u00a020)"
+              },
               "title": {
                 "en": "Forehead Roughness −7.4% by Day 20",
                 "de": "Rauheit der Stirn −7,4 % bis Tag 20",
@@ -120,12 +141,7 @@
             }
           }
         },
-        "block_order": [
-          "f1",
-          "f5",
-          "f2",
-          "f4"
-        ]
+        "block_order": ["f1", "f5", "f2", "f4"]
       }
     },
     {
@@ -171,8 +187,5 @@
       }
     }
   ],
-  "remove_sections": [
-    "evidence_summary",
-    "references"
-  ]
+  "remove_sections": ["evidence_summary", "references"]
 }

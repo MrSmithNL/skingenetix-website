@@ -50,7 +50,9 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ### 🔄 CONTENT-001 — Content structure & build plan (2026-09-22)
 
-**Priority:** 🔴 Phase 1 done (2026-09-22), Phase 2 done (2026-09-23, all five hubs to the research-page standard). The Argireline page is now **the science-page template** (`docs/science-page-template.md`, 2026-09-24). Next: move the other four pages onto it one at a time on Malcolm's go-ahead, then Phase 3 (the spokes).
+**Priority:** 🔴 Phase 1 done (2026-09-22), Phase 2 done (2026-09-23, all five hubs to the research-page standard). The Argireline page is now **the science-page
+template** (`docs/science-page-template.md`, 2026-09-24). Next: move the other four pages onto it one at a time on Malcolm's go-ahead, then Phase 3 (the
+spokes).
 **Owner:** Claude (build) + Malcolm (2 decisions)
 
 **Documents:** `docs/keyword-strategy-2026.md` (the hero map — authoritative on demand) ·
@@ -69,7 +71,7 @@ clicks with no new content. **Phase 1 is retitling, not writing.**
 **PDRN is the flagship hub — confirmed on observed data 2026-09-22.** Full 7-market study
 (20,357 keywords, $4.13): **PDRN is 76,717 of ~113,000 qualified opportunity — 68%, and 8× the next
 family.** Brand ingredient explainers demonstrably rank: **SkinCeuticals #2**, **INKEY List #11** on
-`what is pdrn`; **Lancôme #2** on FR `pdrn`; **Boots #1** in GB for `pdrn serum` with a *collection*
+`what is pdrn`; **Lancôme #2** on FR `pdrn`; **Boots #1** in GB for `pdrn serum` with a _collection_
 page — a direct template for `/collections/pdrn`.
 
 ⚠️ **Google Ads volume is not demand.** `ghk copper peptide` reads 135,000 in Ads and **757** in observed
@@ -77,7 +79,7 @@ clickstream — **178× inflated**. Copper peptide had been named "the volume hu
 actually the third family. All scoring now runs on clickstream.
 
 ⚠️ **`best peptide serum` cut from the plan** — Forbes #2, Reddit #3, Ulta #5, Marie Claire #6 own it.
-Getting *into* those lists is an off-site job, not a content one.
+Getting _into_ those lists is an off-site job, not a content one.
 
 ⚠️ **AI Overviews reach the commercial terms in this category** — `pdrn serum`, `copper peptide serum`
 and `matrixyl 3000` all carry one in the US. The "commercial intent is safe" rule does not hold for PDRN.
@@ -94,7 +96,7 @@ Phase 3 18 spokes in a renamed blog, 800–1,500 words, each carrying a measured
 
 **✅ Decided 2026-09-22 — the learning centre.** Blog handle **`learn`**. The five research pages
 **stay at `/pages/*-research` and are the hubs**; `/blogs/learn/` holds practical articles; the two are
-linked both ways and `/pages/the-science` becomes the *Learn* front door. Evidence: URL folder is "a very,
+linked both ways and `/pages/the-science` becomes the _Learn_ front door. Evidence: URL folder is "a very,
 very lightweight ranking factor" (Google), SERP winners use every structure, and The INKEY List runs
 exactly this on Shopify. Our own GSC showed the science layer's problem is its **titles** (56% of
 impressions, 2 of 21 clicks), not its location. Six planned articles folded into their hubs as H2s; the
@@ -103,6 +105,7 @@ AI-generated illustrations and must not be presented as results. Record:
 `docs/decision-learning-centre-2026-09-22.md`.
 
 **✅ All decisions taken (Malcolm, 2026-09-22):**
+
 1. Concern collections — **keep both, differentiate by intent** (collection = shop, page = guidance), as the evidence recommended. Concern search demand is near zero and every concern URL gets single-digit impressions, so the cheapest safe fix wins.
 2. Hub reviewer — **Dr. Esther Bodde, Cosmetic & Medical Physician**, for now; other dermatologists to follow. ⚠️ The sister brand credits her three different ways, including "Cosmetic & Plastic Surgeon" — one of those is inaccurate and should be reconciled there.
 3. PDRN source — **salmon DNA**. Now used in PDRN titles.
@@ -111,11 +114,16 @@ AI-generated illustrations and must not be presented as results. Record:
 6. PDRN range extension — **yes, parked** until products are sourced.
 
 **▶ PHASE 1 — in progress (started 2026-09-22).** Done and verified live:
+
 - ✅ **39 SEO titles/descriptions** — 5 research hubs, the-science, 4 concern pages, 10 collections, 19 products. 39/39 verified on the live site. Tool: `scripts/seo-apply.py`, spec `configs/seo-changes/phase1-2026-09-22.json`, rollback snapshot in `configs/seo-snapshots/`.
 - ✅ **95 product-title translations** (19 × de/nl/fr/es/it) — needed at once, because the products had no SEO title before and every locale fell back to the new English one. 95/95 verified live.
 - ✅ **Blog renamed `news` → `learn`**, title translated in 5 locales, `/blogs/news` 301s to `/blogs/learn`.
-- ✅ **Menu "Scientific Research" → "Learn"** (Wissen / Kennis / Apprendre / Aprende / Impara), menu item and mega-menu setting changed together. **This also fixed a live defect: the research mega-menu was broken in DE, FR, ES and IT** because the menu label and the mega-menu setting had been translated differently. Verified by opening the menu in a browser in all six languages.
-- ✅ **15 in-prose cross-links** between the concern pages and the research hubs (previously two closed loops, zero links between them), appended to existing rich-text blocks in standard sections — no new code. Tool `scripts/add-prose-links.py`, spec `configs/link-changes/phase1-links-2026-09-22.json`, backups in `backups/`. 15/15 verified live; German page confirmed undisturbed.
+- ✅ **Menu "Scientific Research" → "Learn"** (Wissen / Kennis / Apprendre / Aprende / Impara), menu item and mega-menu setting changed together. **This also
+  fixed a live defect: the research mega-menu was broken in DE, FR, ES and IT** because the menu label and the mega-menu setting had been translated
+  differently. Verified by opening the menu in a browser in all six languages.
+- ✅ **15 in-prose cross-links** between the concern pages and the research hubs (previously two closed loops, zero links between them), appended to existing
+  rich-text blocks in standard sections — no new code. Tool `scripts/add-prose-links.py`, spec `configs/link-changes/phase1-links-2026-09-22.json`, backups in
+  `backups/`. 15/15 verified live; German page confirmed undisturbed.
 - ✅ **5 ingredient collections now link to their research hub** (description field). Matrixyl collection copy softened from "collagen stimulation" (a functional claim) to "firmer, smoother-looking skin". 5/5 live.
 - ✅ **Research-hub inbound in-content links:** PDRN 7→9, AH-8 7→9, copper 6→11, Matrixyl 6→10, glutathione 6→8. PDRN, the flagship, still needs its Phase 2/3 links to pass 10.
 - ✅ **`/pages/the-science` JSON-LD** — frozen `2026-03-11` replaced with the honest dates (published 2026-03-10, modified 2026-09-05 = last template content change; today's SEO-only change deliberately not counted). Name/description aligned with the new title. Valid live; FAQPage intact.
@@ -125,16 +133,53 @@ AI-generated illustrations and must not be presented as results. Record:
 - ⚠️ **Other locales** keep their previous (accurate) titles and body text until the German pass; product titles were translated immediately because they had no prior translation.
 
 **▶ PHASE 2 — complete (2026-09-23): all five research hubs built to the research-page standard.**
-- ✅ **Glutathione hub rebuilt — hub 5 of 5** (`configs/hub-upgrades/glutathione-research.json`, 2026-09-23, on the Matrixyl pattern). H1 "Glutathione for Skin (GSH and GSSG)", 56-word definition, "at a glance" list, byline with the reviewer credit and its own review date; evidence graded A–X with the funder named (three of the four Watanabe authors work for Kyowa Hakko Bio, the GSSG maker); three stock key figures; **two charts with data tables** (melanin index −10.7% vs −3.1%; who saw a moderate change at week 10, four rows from Table 3); the three study cards reworded to the register; a **ten-row stock evidence table**; two image rows (how to use; **topical vs oral kept apart**, grade X for oral/IV); the References list rebuilt with the **published titles restored** (four had been rewritten to hide "skin-whitening"); WebPage JSON-LD with 14 citations per locale; FAQ rewritten plus two new questions; SEO title and description in six languages. Every figure re-read in the Watanabe full text and every citation re-checked at PubMed/Crossref before publishing. **Audit 90/86/84 → 100/100/100 + Marketing 100; external dual-model 9.65 (pass 9.0).** Verified live in six languages: headings, links, charts, translated references, `inLanguage`, reviewer in JSON-LD, no English leaks. Contact sheet shown. Ingredient-level only: the trial's magnitudes stay off the products until the 2% GSSG formula fact is confirmed (parked, below).
-- ✅ **Glutathione product claims fixed** (same day, six languages): the Clinical Research block rebuilt on the serum and the Brightening & Glow Duo (`configs/copy/clinical-research-glutathione-2026-09-23.json`) — it claimed "more even-looking skin tone vs placebo (p<0.001)" (never measured), "improved radiance and smoothness" (radiance not measured; blinded smoothness ratings showed no difference) and "antioxidant defence" as a clinical result; 16 more values fixed with `configs/claim-fixes/glutathione-2026-09-23.json` on the two product descriptions, both `key_benefits`, four FAQ items and `/pages/brightening-glow` (evenness, dark spots, "glow in 1–2 weeks", "8–12 weeks", "all skin types and tones", "excellent safety profile", "long-term daily use", "isolated dark spots respond faster", "15 minutes of sun", "focusing on dark spots"); product and Duo SEO descriptions rewritten. Store survey afterwards: see the entry below for anything left.
-- ✅ **Tooling** (2026-09-23): `page-audit.py` exempts the References list's title element from the EU wording scan (a published title is not our claim) and counts "vs placebo" as a source word, and its alternation check exempts a findings run of `research-before-after` + `media-with-text` in either order; `set-reviewer.py` takes a per-hub `reviewed` date (`hub_cfg`), so a hub rebuilt later carries its own `lastReviewed`. Tests: 19 → 24 (`tests/test_page_audit.py` new).
-- ✅ **PDRN and copper hubs brought level with the two reference builds** (Malcolm, 2026-09-23: "make sure the Copper Peptide and PDRN pages are on par with the latest pages"; specs `configs/hub-upgrades/pdrn-research-parity-2026-09-23.json`, `copper-peptide-research-parity-2026-09-23.json`, additive on the live pages). Each gained: the at-a-glance list and a fresh byline with the reviewer and its own review date; a headline figure in the hero; three stock key figures; a ten-row graded evidence table; the usage text converted to two image rows (PDRN with a new how-to paragraph, copper with its existing two headings split); two FAQs; and references plus per-locale JSON-LD extended (PDRN +10 studies to 15, copper +2 to 11). PDRN's findings card was rewritten to the verified figures (its old "~20%" result label had no source beside it). All six languages, built from the live translated text so nothing already translated was re-translated by hand. Every figure re-read at source that day (registers §7; the Badenhorst PDF is image-only, so its baseline changes rest on the 09-22 full read plus Pickart 2018).
-- ✅ **The three key figures now sit at the top of all five science pages** (Malcolm, 2026-09-23; ADR-2026-09-23-T). Matrixyl and glutathione: `*-stats-top-2026-09-23.json` moved the band under the hero, the charts below the findings cards and the table below the usage rows, and flipped the four backgrounds from References down. Argireline had no band: `acetyl-hexapeptide-8-research-top-2026-09-23.json` adds one from its register (48.9% vs 0%; forehead −7.4% vs +4.3% at day 20; 4 weeks), the at-a-glance list, and two missing references (Henseler 2023, the null imaging test, and the FDA penetration study). The reviewer config now points PDRN, copper and Argireline at these specs with `reviewed: 2026-09-23`. Live check ✓ in six languages on all five. **Scores after the move:** page audit PDRN 100/100/100/93, copper 100/100/100/100, Argireline 98/100/100/93, Matrixyl 100/100/100/93, glutathione 100/100/100/100; external dual-model PDRN 9.82 (was 9.60), copper 9.75 (9.55), Argireline 9.70 (9.72), Matrixyl 9.60 (9.60), glutathione 9.78 (9.65). Five-page contact sheet shown (desktop and mobile).
+
+- ✅ **Glutathione hub rebuilt — hub 5 of 5** (`configs/hub-upgrades/glutathione-research.json`, 2026-09-23, on the Matrixyl pattern). H1 "Glutathione for Skin
+  (GSH and GSSG)", 56-word definition, "at a glance" list, byline with the reviewer credit and its own review date; evidence graded A–X with the funder named
+  (three of the four Watanabe authors work for Kyowa Hakko Bio, the GSSG maker); three stock key figures; **two charts with data tables** (melanin index −10.7%
+  vs −3.1%; who saw a moderate change at week 10, four rows from Table 3); the three study cards reworded to the register; a **ten-row stock evidence table**;
+  two image rows (how to use; **topical vs oral kept apart**, grade X for oral/IV); the References list rebuilt with the **published titles restored** (four had
+  been rewritten to hide "skin-whitening"); WebPage JSON-LD with 14 citations per locale; FAQ rewritten plus two new questions; SEO title and description in six
+  languages. Every figure re-read in the Watanabe full text and every citation re-checked at PubMed/Crossref before publishing. **Audit 90/86/84 → 100/100/100 +
+  Marketing 100; external dual-model 9.65 (pass 9.0).** Verified live in six languages: headings, links, charts, translated references, `inLanguage`, reviewer
+  in JSON-LD, no English leaks. Contact sheet shown. Ingredient-level only: the trial's magnitudes stay off the products until the 2% GSSG formula fact is
+  confirmed (parked, below).
+- ✅ **Glutathione product claims fixed** (same day, six languages): the Clinical Research block rebuilt on the serum and the Brightening & Glow Duo
+  (`configs/copy/clinical-research-glutathione-2026-09-23.json`) — it claimed "more even-looking skin tone vs placebo (p<0.001)" (never measured), "improved
+  radiance and smoothness" (radiance not measured; blinded smoothness ratings showed no difference) and "antioxidant defence" as a clinical result; 16 more
+  values fixed with `configs/claim-fixes/glutathione-2026-09-23.json` on the two product descriptions, both `key_benefits`, four FAQ items and
+  `/pages/brightening-glow` (evenness, dark spots, "glow in 1–2 weeks", "8–12 weeks", "all skin types and tones", "excellent safety profile", "long-term daily
+  use", "isolated dark spots respond faster", "15 minutes of sun", "focusing on dark spots"); product and Duo SEO descriptions rewritten. Store survey
+  afterwards: see the entry below for anything left.
+- ✅ **Tooling** (2026-09-23): `page-audit.py` exempts the References list's title element from the EU wording scan (a published title is not our claim) and
+  counts "vs placebo" as a source word, and its alternation check exempts a findings run of `research-before-after` + `media-with-text` in either order;
+  `set-reviewer.py` takes a per-hub `reviewed` date (`hub_cfg`), so a hub rebuilt later carries its own `lastReviewed`. Tests: 19 → 24
+  (`tests/test_page_audit.py` new).
+- ✅ **PDRN and copper hubs brought level with the two reference builds** (Malcolm, 2026-09-23: "make sure the Copper Peptide and PDRN pages are on par with the
+  latest pages"; specs `configs/hub-upgrades/pdrn-research-parity-2026-09-23.json`, `copper-peptide-research-parity-2026-09-23.json`, additive on the live
+  pages). Each gained: the at-a-glance list and a fresh byline with the reviewer and its own review date; a headline figure in the hero; three stock key
+  figures; a ten-row graded evidence table; the usage text converted to two image rows (PDRN with a new how-to paragraph, copper with its existing two headings
+  split); two FAQs; and references plus per-locale JSON-LD extended (PDRN +10 studies to 15, copper +2 to 11). PDRN's findings card was rewritten to the
+  verified figures (its old "~20%" result label had no source beside it). All six languages, built from the live translated text so nothing already translated
+  was re-translated by hand. Every figure re-read at source that day (registers §7; the Badenhorst PDF is image-only, so its baseline changes rest on the 09-22
+  full read plus Pickart 2018).
+- ✅ **The three key figures now sit at the top of all five science pages** (Malcolm, 2026-09-23; ADR-2026-09-23-T). Matrixyl and glutathione:
+  `*-stats-top-2026-09-23.json` moved the band under the hero, the charts below the findings cards and the table below the usage rows, and flipped the four
+  backgrounds from References down. Argireline had no band: `acetyl-hexapeptide-8-research-top-2026-09-23.json` adds one from its register (48.9% vs 0%;
+  forehead −7.4% vs +4.3% at day 20; 4 weeks), the at-a-glance list, and two missing references (Henseler 2023, the null imaging test, and the FDA penetration
+  study). The reviewer config now points PDRN, copper and Argireline at these specs with `reviewed: 2026-09-23`. Live check ✓ in six languages on all five.
+  **Scores after the move:** page audit PDRN 100/100/100/93, copper 100/100/100/100, Argireline 98/100/100/93, Matrixyl 100/100/100/93, glutathione
+  100/100/100/100; external dual-model PDRN 9.82 (was 9.60), copper 9.75 (9.55), Argireline 9.70 (9.72), Matrixyl 9.60 (9.60), glutathione 9.78 (9.65).
+  Five-page contact sheet shown (desktop and mobile).
 - ✅ **Argireline rebuilt into the science-page template** (2026-09-23 afternoon, Malcolm directing on the live page; written up 2026-09-24 in `docs/science-page-template.md`, ADR-2026-09-24-S). Specs `configs/hub-upgrades/acetyl-hexapeptide-8-{layout,evidence-merge,i18n-claims}-2026-09-23.json`.
-  - **Layout.** Centred "What Is Argireline?" intro above an At-a-glance + cut-out row, with Back to Science and Shop buttons. A numbered evidence index (01–05) links to each finding card. Two new cards: the safety record, and the independent imaging test that found nothing. "How to Use" became a 3-step timeline. Our own pedestal hero and the F5 application shot fill the usage rows.
+  - **Layout.** Centred "What Is Argireline?" intro above an At-a-glance + cut-out row, with Back to Science and Shop buttons. A numbered evidence index (01–05)
+    links to each finding card. Two new cards: the safety record, and the independent imaging test that found nothing. "How to Use" became a 3-step timeline.
+    Our own pedestal hero and the F5 application shot fill the usage rows.
   - **Evidence & Sources.** One real `<table>`, 10 studies, replacing both the evidence table and Published References. Kraeling 2015 and Hoppel 2015 are split (they had been one row with mixed title and link). Both titles re-verified at PubMed.
   - **Claims.** The "48.9% overall anti-wrinkle efficacy" wording was fixed on card f1 **and in FAQ q2**, where it had been missed; it was live in all six languages. The f3 card now states it tested a microneedle patch, not a serum.
-  - **Trust signals.** Malcolm is named as author ("you can use me as an author"), in the byline and as a Person in the JSON-LD. The byline was unwrapped from its own `<div>`, because the AI crawlers' extractor dropped all five trust signals. External audit: 9.70 → 8.65 ✗ (byline shrunk and wrapped) → 8.70 ✗ → **9.68** (round 5).
+  - **Trust signals.** Malcolm is named as author ("you can use me as an author"), in the byline and as a Person in the JSON-LD. The byline was unwrapped from
+    its own `<div>`, because the AI crawlers' extractor dropped all five trust signals. External audit: 9.70 → 8.65 ✗ (byline shrunk and wrapped) → 8.70 ✗ →
+    **9.68** (round 5).
   - **Six languages.** The four custom-html sections were translated by phrase substitution (88 phrases); the verbatim titles were left untouched. Verified: 0 English leaks, anchors 6/6, 271 links resolve, one Italian Cyrillic look-alike caught and fixed.
   - **Page audit:** SEO 98 · GEO 96 (links inside the table; accepted) · DESIGN 100 · MARKETING 93.
 - ✅ **Tooling for the rollout** (2026-09-24):
@@ -144,7 +189,9 @@ AI-generated illustrations and must not be presented as results. Record:
   - `theme/sections/research-before-after.liquid` synced with the live file: the `id="rba-{{ block.id }}"` anchor was missing from git.
   - Tests 26 → 38.
 - ✅ **PDRN moved onto the template** (2026-09-24, Malcolm: "proceed"). Specs `configs/hub-upgrades/pdrn-research-{layout,evidence-merge}-2026-09-24.json`; translation memory `configs/hub-i18n/pdrn-research.json` (92 phrases: 46 of the page's own approved translations, 11 template, 35 new).
-  - **Built:** centred definition, named author and byline, at-a-glance with a new transparent cut-out (`skingenetix-pdrn-serum-cutout-2026.webp`); a four-row evidence index linking to four cards; three usage rows ending in a 3-step how-to; a 14-study Evidence & Sources table replacing the evidence table and the references.
+  - **Built:** centred definition, named author and byline, at-a-glance with a new transparent cut-out (`skingenetix-pdrn-serum-cutout-2026.webp`); a four-row
+    evidence index linking to four cards; three usage rows ending in a 3-step how-to; a 14-study Evidence & Sources table replacing the evidence table and the
+    references.
   - **The four cards:** the crow's-feet result, its title shortened as on Argireline; collagen raised in UV-damaged skin samples; no reactions in 31 women; the null microneedling pigment trial.
   - **Claims first:** re-read at source Ye 2026 ex vivo, Gulfan, Thellung, Kim TH and Lampridou (register log 2026-09-24). Removed "redness" from the Gulfan row, since the abstract does not report it. Corrected Lampridou to 2025. Dropped Khan 2022 and its card: never read beyond the title.
   - **Checks:** `--verify-live` ✓ in six languages (7/7 headings, 5/5 anchors, every link resolves), 0 outdated translations, page audit **SEO 100 · GEO 96 · DESIGN 100 · MARKETING 93**, external dual-model **9.82** with all 20 criteria ≥ 9 on both models. Contact sheet shown.
@@ -164,10 +211,21 @@ AI-generated illustrations and must not be presented as results. Record:
   - every content image now has a `skingenetix-pdrn-…` filename (upload plan `configs/banners/pdrn-research-card-images-2026-09-24.json`).
 
   An unused blue-liquid copy (`skingenetix-pdrn-laboratory-skin-sample-microscope-petri-dish.jpg`) stays in Files.
-- ✅ **Positive results only** (Malcolm, 2026-09-24; ADR-2026-09-24-P). The PDRN null-result card and index row are replaced by the under-eye result: eye bags and tear troughs about 2× the retinol change, Ye 2026, register claim 5. It sits second so the cards run strongest first. Six languages; verified live. The template doc is updated.
-- ✅ **Argireline and both evidence tables brought under the rule** (2026-09-24; see ADR-2026-09-24-P "Resolved"). Card 5 is now the Raikou forehead result, card 3 (microneedle patch) is removed, and the index is relinked; it had pointed the Raikou claim at the wrong card. Null and non-transferable rows are dropped: PDRN 14 → 4, Argireline 10 → 8. Accent colour per page: PDRN rose, Argireline slate. Verified live in six languages.
-- ✅ **PDRN under-eye before/after live** (2026-09-24). This is Malcolm's pick, F4 `nbp_flash 01` from round 3 (Caucasian, close-up, plain wall); its file is `skingenetix-pdrn-under-eye-bags-before-after.jpg`, with the 15 px white frame trimmed. The labels match card 1 ("Before" / "After 28 days") plus a six-language result line. Verified in en and de at desktop and mobile width.
-- ⏳ **Argireline forehead before/after:** waiting for Malcolm's pick from rows A–C of `~/Desktop/skingenetix-before-after-undereye-forehead-r3.png`.
+
+- ✅ **Positive results only** (Malcolm, 2026-09-24; ADR-2026-09-24-P). The PDRN null-result card and index row are replaced by the under-eye result: eye bags
+  and tear troughs about 2× the retinol change, Ye 2026, register claim 5. It sits second so the cards run strongest first. Six languages; verified live. The
+  template doc is updated.
+- ✅ **Argireline and both evidence tables brought under the rule** (2026-09-24; see ADR-2026-09-24-P "Resolved"). Card 5 is now the Raikou forehead result, card
+  3 (microneedle patch) is removed, and the index is relinked; it had pointed the Raikou claim at the wrong card. Null and non-transferable rows are dropped:
+  PDRN 14 → 4, Argireline 10 → 8. Accent colour per page: PDRN rose, Argireline slate. Verified live in six languages.
+- ✅ **PDRN under-eye before/after live** (2026-09-24). This is Malcolm's pick, F4 `nbp_flash 01` from round 3 (Caucasian, close-up, plain wall); its file is
+  `skingenetix-pdrn-under-eye-bags-before-after.jpg`, with the 15 px white frame trimmed. The labels match card 1 ("Before" / "After 28 days") plus a
+  six-language result line. Verified in en and de at desktop and mobile width.
+- ✅ **Argireline forehead before/after live** (2026-09-25). This is Malcolm's pick, B4 `nbp_flash 01` from round 3 (slot `uef3--argireline-forehead-e`),
+  uploaded as `skingenetix-acetyl-hexapeptide-8-forehead-lines-before-after.jpg`; the file had no white frame to trim. Labels are "Before" / "After 20 days"
+  plus a result line in six languages: "Forehead roughness −7.4% vs +4.3% on placebo (day 20)". Non-breaking spaces keep "day 20" and "7,4 %" whole on phones.
+  Raikou's figures were re-checked at source first (register §6). Verified in six languages; captured at 1440 (en, de, fr) and 390 (en, de, it, es). Noted: her
+  eyelids sit lower in the before panel.
 - ~~For Malcolm:~~ answered 2026-09-24 (below kept for the record).
   1. **Go-ahead for the under-eye before/after wave**, about $5–10 across all suppliers (mostly `nbp_pro`). You pick the winner. Until then card 2 carries the A6 cream macro.
   2. **Apply the rule to Argireline?** Its card 5 and index row 05 are the null imaging test (Henseler 2023).
@@ -183,16 +241,44 @@ AI-generated illustrations and must not be presented as results. Record:
 - ✅ **Argireline loose ends closed** (2026-09-24): the JSON-LD is now localised per language (it had said `inLanguage: "en"` with the English URL on all five translations), Hoppel 2015 is added to `citation[]`, and the dead overview CSS is removed. Verified live with curl in en/de/it.
 - ⚠️ **Site-wide, theme:** the mobile header menu icon is a 22×22 px tap target (below 44). Measured on both template pages. It is theme chrome, so fixing it is a core-theme change: Malcolm's call.
 - ✅ ~~Argireline loose ends~~: closed 2026-09-24 (entry above).
-- ✅ **PDRN hub upgraded** (`configs/hub-upgrades/pdrn-research.json`, tool `scripts/hub-upgrade.py`): a front-loaded definition in the first 60 words; three new sections absorbing the planned "what is salmon PDRN / PDRN benefits / what 1% means" articles; **real `<h2>` headings** written inside the richtext because Impact renders section headings as `<p class="h2">`; page-level WebPage JSON-LD with all 5 citations; "Back to Learn" button. **All six languages shipped in the same change.** Verified live: 4/4 headings as `<h2>` in every locale, all links resolve, JSON-LD valid; layout checked visually (centred to match the page).
-- ✅ **Clinical figure verified at source** before it moved to the top of the page: Ye et al. 2026 (PLOS ONE) — 31 women 35–55 with sensitive skin, randomised double-blind split-face, 28 days, crow's-feet wrinkle area −20 to −23 % vs −6 to −7 % for retinol. **The study used a 0.1 % medium-length PDRN, not our 1 %** — the copy now says so.
+- ✅ **PDRN hub upgraded** (`configs/hub-upgrades/pdrn-research.json`, tool `scripts/hub-upgrade.py`): a front-loaded definition in the first 60 words; three new
+  sections absorbing the planned "what is salmon PDRN / PDRN benefits / what 1% means" articles; **real `<h2>` headings** written inside the richtext because
+  Impact renders section headings as `<p class="h2">`; page-level WebPage JSON-LD with all 5 citations; "Back to Learn" button. **All six languages shipped in
+  the same change.** Verified live: 4/4 headings as `<h2>` in every locale, all links resolve, JSON-LD valid; layout checked visually (centred to match the
+  page).
+- ✅ **Clinical figure verified at source** before it moved to the top of the page: Ye et al. 2026 (PLOS ONE) — 31 women 35–55 with sensitive skin, randomised
+  double-blind split-face, 28 days, crow's-feet wrinkle area −20 to −23 % vs −6 to −7 % for retinol. **The study used a 0.1 % medium-length PDRN, not our 1 %**
+  — the copy now says so.
 - ⛔ **No illustration/AI disclosure on the before/after images** — Malcolm, 2026-09-22: "No AI disclosure please." A text disclosure was added to the 6 blocks and reverted the same hour (EN + 30 translations). This supersedes the 2026-08-27 "fix it in the text later" note.
-- ✅ **Reviewer credit LIVE, before her review** (Malcolm, 2026-09-22: "Lets already add Esther Bodde as verified. I will check with her."). "Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician" is in the byline, with `reviewedBy` (Person) and `lastReviewed` in the WebPage JSON-LD, in six languages, on the PDRN, Argireline®, copper and Matrixyl hubs and both study pages. The credential stays in English in every locale, so it cannot read as a protected title such as a German *Facharzt*. Tool `scripts/set-reviewer.py`, config `configs/reviewers/esther-bodde.json`; the hub specs and study configs are synced so a re-apply keeps it. **⚠️ Not yet reviewed by her: Malcolm is confirming.** If she declines or wants changes, remove it everywhere with `python3 scripts/set-reviewer.py configs/reviewers/esther-bodde.json --remove --apply`. Glutathione got the credit on 2026-09-23, after its rebuild against the claims register, with its own `lastReviewed` of 2026-09-23 (`"reviewed"` on the hub entry in the config).
-- ✅ **PDRN layout fixed (Malcolm's review):** the 160 px blank band above the hero was the JSON-LD's own custom-html section (a padded wrapper with no content) — JSON-LD now lives inside the references block. Backgrounds now alternate Bone/White down the whole page. Salmon DNA + "What 1% means" merged. **Real `<h1>` added** ("PDRN: Salmon DNA Skincare") — the page had none, because Impact renders heading blocks as `<p class="h1">`; the old title also broke mid-word on mobile. Visible "Last updated" line. Audit: **SEO 100 · GEO 100 · Design 100**.
-- ✅ **Argireline® hub upgraded** (`configs/hub-upgrades/acetyl-hexapeptide-8-research.json`): H1 "Argireline® (Acetyl Hexapeptide-8)", front-loaded definition, mechanism + evidence-by-strength section, "What 10% Argireline® means" + how to use, FAQ concentration answer now "10% Argireline®", Lubrizol trademark line, alternating backgrounds, WebPage JSON-LD with 6 citations; all six languages. Page title + serum SEO title (all locales) now carry Argireline® / 10%. Audit **81/65/84 → 98/100/100**. Every figure re-checked at source — see `docs/audits/pages/README.md`.
-- ✅ **Copper peptide hub upgraded** (`configs/hub-upgrades/copper-peptide-research.json`, 2026-09-22): H1 "Copper Peptide (GHK-Cu)", front-loaded definition (1973, 200 → 80 ng/mL), "Copper Peptide Benefits: What the Evidence Shows" graded lab → small human → controlled trials, "What 2% GHK-Cu Means" + how to use, alternating backgrounds, WebPage JSON-LD with 7 citations, local term (Kupferpeptid / koperpeptide / peptide de cuivre / péptido de cobre / peptide di rame) in each locale's definition; all six languages. Audit **90/77/84 → 100/100/100**. **Re-verifying at source found four unsupported or misleading claims that were already live** — the Miller 2006 card (a 13-patient post-laser study with a null objective result, presented as a general satisfaction trial), the FAQ "0.5–2% clinically studied range" (no source), "well-tolerated by sensitive skin" (no source) and "one of the most-studied peptides" (contradicted by the 2024 review). All corrected in six languages. Details: `docs/audits/pages/README.md`.
+- ✅ **Reviewer credit LIVE, before her review** (Malcolm, 2026-09-22: "Lets already add Esther Bodde as verified. I will check with her."). "Medically reviewed
+  by Dr Esther Bodde, Cosmetic & Medical Physician" is in the byline, with `reviewedBy` (Person) and `lastReviewed` in the WebPage JSON-LD, in six languages, on
+  the PDRN, Argireline®, copper and Matrixyl hubs and both study pages. The credential stays in English in every locale, so it cannot read as a protected title
+  such as a German _Facharzt_. Tool `scripts/set-reviewer.py`, config `configs/reviewers/esther-bodde.json`; the hub specs and study configs are synced so a
+  re-apply keeps it. **⚠️ Not yet reviewed by her: Malcolm is confirming.** If she declines or wants changes, remove it everywhere with
+  `python3 scripts/set-reviewer.py configs/reviewers/esther-bodde.json --remove --apply`. Glutathione got the credit on 2026-09-23, after its rebuild against
+  the claims register, with its own `lastReviewed` of 2026-09-23 (`"reviewed"` on the hub entry in the config).
+- ✅ **PDRN layout fixed (Malcolm's review):** the 160 px blank band above the hero was the JSON-LD's own custom-html section (a padded wrapper with no content)
+  — JSON-LD now lives inside the references block. Backgrounds now alternate Bone/White down the whole page. Salmon DNA + "What 1% means" merged. **Real `<h1>`
+  added** ("PDRN: Salmon DNA Skincare") — the page had none, because Impact renders heading blocks as `<p class="h1">`; the old title also broke mid-word on
+  mobile. Visible "Last updated" line. Audit: **SEO 100 · GEO 100 · Design 100**.
+- ✅ **Argireline® hub upgraded** (`configs/hub-upgrades/acetyl-hexapeptide-8-research.json`): H1 "Argireline® (Acetyl Hexapeptide-8)", front-loaded definition,
+  mechanism + evidence-by-strength section, "What 10% Argireline® means" + how to use, FAQ concentration answer now "10% Argireline®", Lubrizol trademark line,
+  alternating backgrounds, WebPage JSON-LD with 6 citations; all six languages. Page title + serum SEO title (all locales) now carry Argireline® / 10%. Audit
+  **81/65/84 → 98/100/100**. Every figure re-checked at source — see `docs/audits/pages/README.md`.
+- ✅ **Copper peptide hub upgraded** (`configs/hub-upgrades/copper-peptide-research.json`, 2026-09-22): H1 "Copper Peptide (GHK-Cu)", front-loaded definition
+  (1973, 200 → 80 ng/mL), "Copper Peptide Benefits: What the Evidence Shows" graded lab → small human → controlled trials, "What 2% GHK-Cu Means" + how to use,
+  alternating backgrounds, WebPage JSON-LD with 7 citations, local term (Kupferpeptid / koperpeptide / peptide de cuivre / péptido de cobre / peptide di rame)
+  in each locale's definition; all six languages. Audit **90/77/84 → 100/100/100**. **Re-verifying at source found four unsupported or misleading claims that
+  were already live** — the Miller 2006 card (a 13-patient post-laser study with a null objective result, presented as a general satisfaction trial), the FAQ
+  "0.5–2% clinically studied range" (no source), "well-tolerated by sensitive skin" (no source) and "one of the most-studied peptides" (contradicted by the 2024
+  review). All corrected in six languages. Details: `docs/audits/pages/README.md`.
   - ⚠️ **The same unsupported "at a high published strength" wording is on all three copper product pages** (description) — not changed (product copy, outside the hub spec). Needs the same fix.
-  - ⚠️ **Expect the same on Matrixyl and glutathione:** their findings cards were written in the same batch. Verify every card at source, not only the new copy. ✅ Both done: Matrixyl 2026-09-22; glutathione 2026-09-23 — all three of its cards failed at source (a swapped outcome, an unmeasured "radiance", a contradicted safety line) and four citation titles had been rewritten.
-- ✅ **Matrixyl 3000 hub upgraded — hub 4 of 5, and the first built to Malcolm's research-page standard** (`configs/hub-upgrades/matrixyl-3000-research.json`, 2026-09-22). Every figure in it comes from `docs/claims/matrixyl-3000.md`, re-checked against the source this session (Sederma brochure PDF, both patents, PubMed, and the Aruan 2023 full text in PMC). All six languages.
+  - ⚠️ **Expect the same on Matrixyl and glutathione:** their findings cards were written in the same batch. Verify every card at source, not only the new copy.
+    ✅ Both done: Matrixyl 2026-09-22; glutathione 2026-09-23 — all three of its cards failed at source (a swapped outcome, an unmeasured "radiance", a
+    contradicted safety line) and four citation titles had been rewritten.
+- ✅ **Matrixyl 3000 hub upgraded — hub 4 of 5, and the first built to Malcolm's research-page standard** (`configs/hub-upgrades/matrixyl-3000-research.json`,
+  2026-09-22). Every figure in it comes from `docs/claims/matrixyl-3000.md`, re-checked against the source this session (Sederma brochure PDF, both patents,
+  PubMed, and the Aruan 2023 full text in PMC). All six languages.
   - **What the page now has:**
     - an H1 of "Matrixyl 3000", a front-loaded definition, an "at a glance" list, and a visible "By Skingenetix… last reviewed" line
     - evidence graded A–D with the sponsor named: manufacturer data labelled as manufacturer data, and the pentapeptide-4 trial credited to Procter & Gamble
@@ -203,7 +289,9 @@ AI-generated illustrations and must not be presented as results. Record:
     - 9 references, with the references block translated for the first time (heading, link labels and JSON-LD `inLanguage`)
     - a new "Is Matrixyl 3000 safe?" FAQ
     - SEO title and description in six languages
-  - **Removed from the hub:** "+117% / +327% collagen", "independent RCT", "suitable for sensitive skin", "does not cause photosensitivity", "Collagen Boosting Serum", the in-vitro heading "Signals Skin Cells to Build Collagen", and the vague concentration answer, which the FAQ "Is Matrixyl 3000 the same as Matrixyl?" replaces.
+  - **Removed from the hub:** "+117% / +327% collagen", "independent RCT", "suitable for sensitive skin", "does not cause photosensitivity", "Collagen Boosting
+    Serum", the in-vitro heading "Signals Skin Cells to Build Collagen", and the vague concentration answer, which the FAQ "Is Matrixyl 3000 the same as
+    Matrixyl?" replaces.
   - **Found at source:** the placebo side **did** change significantly on wrinkle volume (−8.7%, p<0.05). "No significant change on the placebo side" now names only area, depth and roughness.
   - **Scores:**
     - In-house audit: SEO/GEO/DESIGN 100/100/100, MARKETING 93.
@@ -225,9 +313,13 @@ AI-generated illustrations and must not be presented as results. Record:
   - **Store-wide re-survey:** 0 Matrixyl-specific unsupported phrases left.
   - **Deliberately NOT on products:** the manufacturer's −39% and +15% figures. They attach to a product only once the formula confirms ≥3% Matrixyl 3000 (parked), so they stay on the hub.
 - ✅ **PDRN, Argireline® and copper retrofitted to the research-page standard** (2026-09-22, additive specs `configs/hub-upgrades/*-retrofit-2026-09-22.json`; the original specs are stale and must not be re-applied).
-  - **Charts with data tables, six languages:** PDRN — crow's feet vs retinol (ranges, drawn as ranges because the paper gives ranges) and the authors' ≈2× / ≈1.8× ratios. Argireline® — Wang 2013 responders (22 of 45 vs 0 of 15) and Raikou 2017 forehead roughness (day 20 significant, day 60 not). Copper — Badenhorst 2016 against the same serum without GHK-Cu, and the biopsy counts (7 / 5 / 5 / 4 of 10), labelled as counts with no between-cream test.
+  - **Charts with data tables, six languages:** PDRN — crow's feet vs retinol (ranges, drawn as ranges because the paper gives ranges) and the authors' ≈2× /
+    ≈1.8× ratios. Argireline® — Wang 2013 responders (22 of 45 vs 0 of 15) and Raikou 2017 forehead roughness (day 20 significant, day 60 not). Copper —
+    Badenhorst 2016 against the same serum without GHK-Cu, and the biopsy counts (7 / 5 / 5 / 4 of 10), labelled as counts with no between-cream test.
   - **References block and WebPage JSON-LD now per locale** on all three (this is what fixed the Dutch fault above).
-  - **Scores:** page-audit 100/100/100 design on all three after a background fix. External dual-model audit: PDRN 9.72 → 9.60, Argireline® 9.68 → **9.72 with no criterion below 9 on either model**, copper 9.50 → 9.55. The list/table and comparison gaps closed. What remains is ChatGPT-side 8s on front-loading (PDRN, copper) and the organisation byline; Gemini scores those 10 and 7.
+  - **Scores:** page-audit 100/100/100 design on all three after a background fix. External dual-model audit: PDRN 9.72 → 9.60, Argireline® 9.68 → **9.72 with
+    no criterion below 9 on either model**, copper 9.50 → 9.55. The list/table and comparison gaps closed. What remains is ChatGPT-side 8s on front-loading
+    (PDRN, copper) and the organisation byline; Gemini scores those 10 and 7.
   - Chart palette validated per hub: PDRN deep rose `#9E4F5C`, copper clinical blue `#014EB1`, Argireline® slate `#3E4A52`, each against comparator grey `#9AA3A4`.
 - ⏭ **Optional next lift for PDRN and copper:** an "at a glance" list right after the definition, which took Matrixyl's front-loading from 8 to 9/10.
 - 📌 **Research-page standard (Malcolm, 2026-09-22) — applies to every scientific research page we make:**
@@ -240,61 +332,104 @@ AI-generated illustrations and must not be presented as results. Record:
   - ⏭ **Retrofit PDRN, Argireline® and copper to the same standard:** charts plus tables, an external dual-model audit, and a references block translated per locale. Their references heading still serves English everywhere.
 - ✅ **Named author: Malcolm Smith, founder** (Malcolm, 2026-09-23: "you can use me as an author"). Live on Argireline; the other four get it with the template. Author attribution on the external audit went from 5.0 to 10.0.
 - ⏭ **Product-page GEO is a template gap, not a copy gap.** The Matrixyl serum and cream score GEO 51/54: no definition sentence early, ~340 words extractable without JavaScript, no page-level JSON-LD with `dateModified`. This affects every product, so it needs one template-level fix.
-- 🛑 **For Malcolm — the pre-commit quality gate is not running.** Git reports that the `.husky/_/*` hooks are "ignored because [they are] not set as executable", so markdownlint and Prettier (lint-staged) have not run on commits. Fix: `chmod +x .husky/_/*` plus a test commit. Not applied without your OK, because it changes the repo's quality gates. Found 2026-09-22.
-- ✅ **Dutch stale references block fixed** (found and fixed 2026-09-22). The nl translation of `references.html` on PDRN, Argireline® and copper was outdated but still served: no JSON-LD at all, and on copper only 7 of the 9 references. The retrofit registered a fresh translated references block in all five locales, so every locale now carries the current list and its own WebPage JSON-LD. ⚠️ **General lesson: an outdated translation keeps being served.** Check `outdated` on translations, not just their presence.
+- 🛑 **For Malcolm — the pre-commit quality gate is not running.** Git reports that the `.husky/_/*` hooks are "ignored because [they are] not set as
+  executable", so markdownlint and Prettier (lint-staged) have not run on commits. Fix: `chmod +x .husky/_/*` plus a test commit. Not applied without your OK,
+  because it changes the repo's quality gates. Found 2026-09-22.
+- ✅ **Dutch stale references block fixed** (found and fixed 2026-09-22). The nl translation of `references.html` on PDRN, Argireline® and copper was outdated
+  but still served: no JSON-LD at all, and on copper only 7 of the 9 references. The retrofit registered a fresh translated references block in all five
+  locales, so every locale now carries the current list and its own WebPage JSON-LD. ⚠️ **General lesson: an outdated translation keeps being served.** Check
+  `outdated` on translations, not just their presence.
 - ⚠️ **Sister brand: `hairgenetix.com/pages/esther-bodde` is a 404** (the www URL redirects to it). Her reviewer profile link is dead there, and Hairgenetix credits her as "Cosmetic & Plastic Surgeon" where Skingenetix uses "Cosmetic & Medical Physician". For the Hairgenetix sessions.
 - ⏭ **Centralise `scripts/aiso-audit-page.py`.** Hairgenetix and Skingenetix now hold separate copies. It belongs in the seo-aiso-validator skill, per Rule 12.
 - ✅ **Study citations linked** (2026-09-22): 12 in-text citations on PDRN, Argireline® and copper now link to PubMed (first mention per section, new tab), in all six languages. Tool `scripts/link-citations.py`; run it on every future hub spec before `--apply`.
-- ✅ **Unsupported copper claims removed site-wide** (2026-09-22): "high published strength", "most-studied peptide" and "over 50 published studies", from product descriptions, the clinical-research block (10 products), a product FAQ and 4 content pages, in six languages. Tool `scripts/fix-claims.py`, specs in `configs/claim-fixes/`.
-- ✅ **Main menu: "Learn" → "Science"** (Malcolm, 2026-09-22), label only, in six languages (Wissenschaft / Wetenschap / Science / Ciencia / Scienza). The menu structure is unchanged: the five ingredient pages as image tiles, and Discover kept. A column split (Peptides / Beyond peptides / Our approach) plus folding Discover in was applied and **reverted within the hour at Malcolm's instruction: "do not split the main menu"**. Both mega-menus were verified open in all six languages.
+- ✅ **Unsupported copper claims removed site-wide** (2026-09-22): "high published strength", "most-studied peptide" and "over 50 published studies", from
+  product descriptions, the clinical-research block (10 products), a product FAQ and 4 content pages, in six languages. Tool `scripts/fix-claims.py`, specs in
+  `configs/claim-fixes/`.
+- ✅ **Main menu: "Learn" → "Science"** (Malcolm, 2026-09-22), label only, in six languages (Wissenschaft / Wetenschap / Science / Ciencia / Scienza). The menu
+  structure is unchanged: the five ingredient pages as image tiles, and Discover kept. A column split (Peptides / Beyond peptides / Our approach) plus folding
+  Discover in was applied and **reverted within the hour at Malcolm's instruction: "do not split the main menu"**. Both mega-menus were verified open in all six
+  languages.
 - 🛑 **Decision for Malcolm: internal-link programme.** Varied anchors on ~20 product pages, head-term anchors from the-science, the collections and ingredients, and targets per hub (same doc §4). Argireline® has 0 exact-match anchors site-wide.
-- ⏳ **"Well-tolerated" / "gentle" claims** (7 FAQs + 5 pages): verify at source during the glutathione pass. ✅ The Matrixyl "+117% / +327%" copy and the Matrixyl "well tolerated" lines were removed on 2026-09-22 (entry above). ✅ The glutathione ones done 2026-09-23: "gentle enough for daily use" / "well suited to long-term daily use" / "safe for all skin tones" / "excellent safety profile" on `/pages/brightening-glow` now state the trial's actual tolerability (30 women, types III–IV, 10 weeks, no reactions attributed) and that lighter and darker tones and longer use are unstudied. ⏳ Still to sweep: any remaining "gentle" / "well tolerated" lines on the PDRN, Argireline and copper product FAQs and concern pages. **Also on the Argireline science page itself** (found 2026-09-24): FAQ q3 "gentle … generally well tolerated" and q5 "measurable improvements from day 15 … additional cumulative benefits", not yet checked at source.
-- ✅ **Evidence Library PILOT live** (Malcolm approved, 2026-09-22). A `study` metaobject (web pages at `/pages/study/<handle>`, translatable, publishable), rendered by `templates/metaobject/study.json` from stock rich-text sections only. JSON-LD comes from a `jsonld` field via a liquid block: WebPage → Article, `isBasedOn` → ScholarlyArticle with PMID/DOI. **All three pilot criteria passed:** the fields are translatable (a German translation rendered at /de), the HTML is server-side, and the pages appear in `sitemap_metaobject_pages_1.xml`. Two pages, in all six languages, published with `scripts/study-pages.py` from `configs/studies/*.json`:
+- ⏳ **"Well-tolerated" / "gentle" claims** (7 FAQs + 5 pages): verify at source during the glutathione pass. ✅ The Matrixyl "+117% / +327%" copy and the
+  Matrixyl "well tolerated" lines were removed on 2026-09-22 (entry above). ✅ The glutathione ones done 2026-09-23: "gentle enough for daily use" / "well suited
+  to long-term daily use" / "safe for all skin tones" / "excellent safety profile" on `/pages/brightening-glow` now state the trial's actual tolerability (30
+  women, types III–IV, 10 weeks, no reactions attributed) and that lighter and darker tones and longer use are unstudied. ⏳ Still to sweep: any remaining
+  "gentle" / "well tolerated" lines on the PDRN, Argireline and copper product FAQs and concern pages. **Also on the Argireline science page itself** (found
+  2026-09-24): FAQ q3 "gentle … generally well tolerated" and q5 "measurable improvements from day 15 … additional cumulative benefits", not yet checked at
+  source.
+- ✅ **Evidence Library PILOT live** (Malcolm approved, 2026-09-22). A `study` metaobject (web pages at `/pages/study/<handle>`, translatable, publishable),
+  rendered by `templates/metaobject/study.json` from stock rich-text sections only. JSON-LD comes from a `jsonld` field via a liquid block: WebPage → Article,
+  `isBasedOn` → ScholarlyArticle with PMID/DOI. **All three pilot criteria passed:** the fields are translatable (a German translation rendered at /de), the
+  HTML is server-side, and the pages appear in `sitemap_metaobject_pages_1.xml`. Two pages, in all six languages, published with `scripts/study-pages.py` from
+  `configs/studies/*.json`:
   - `/pages/study/argireline-crows-feet-trial-wang-2013`, 770 words. Discloses the McEit-supplied product, the "48.9% = share of people" misreading, and the independent null result (Henseler 2023).
   - `/pages/study/pdrn-vs-retinol-split-face-trial-ye-2026`, 894 words. Discloses no placebo arm, the slow 0.1% retinol comparator, four authors' undeclared commercial affiliations, and 0.1% vs our 1% stated neutrally (no "10× the dose" claim).
   - The PDRN and Argireline hubs link to them in prose, next to the claim.
-- ⏳ **Evidence Library wave 1** (per `docs/research-2026-study-hubs-credibility.md` §3.8): the `/pages/evidence-library` table page with a "how we grade evidence" method, plus study pages for Badenhorst 2016 (copper), Miller 2006 (copper, null result), Raikou 2017 (Argireline) and Watanabe 2014 (glutathione, pending formula facts). Then the product Clinical Research blocks link to the study pages. Gate at 8 weeks; measure with GSC plus an AI-citation panel (DataForSEO `llm_responses` costs money, so it needs Malcolm's OK). Reviewer byline (Dr Bodde) only after she has reviewed.
-- ✅ **Two medical-wording reviews unlinked** (Malcolm approved, 2026-09-22): Mila F ("fades my acne scars", PDRN serum) and Gabrielle D ("rosacea", PDRN night cream). Removed from `custom.customer_reviews`; the metaobjects are kept, with a restore list in `backups/reviews-unlinked-medical-wording-*.json`.
-- ✅ **Links localised site-wide** (2026-09-22): 155 → 0 page views whose internal links dropped translated readers into English. 165 template link settings now use resource references (`scripts/localize-links.py`), and 355 translations were re-prefixed. The 17 Phase 1 prose links were English-only; they are now in all six languages, with 6 anchors improved (`scripts/add-translated-links.py`). Translated pages link to each hub exactly as often as English. The `/collections/matrixyl-3000-3000` 404 is fixed, and a "Read All Reviews" button pointing at the unpublished `/pages/reviews` (404 on every product page) was removed. Re-audit: `docs/audits/links/`.
-- ✅ **Claims registers** for all five ingredients in `docs/claims/`: the strongest verified claims, evidence tables, claims to avoid, safety. **Next: rewrite hub, product, collection and concern copy to the strongest claims, in six languages.** ✅ Done at ingredient level for all five (Matrixyl 2026-09-22, glutathione 2026-09-23); the formula-dependent magnitudes (Matrixyl −39% / +15%, glutathione −10.7% / 77%) stay on the hubs until the supplier certificate confirms the levels (below).
-- 📌 **FOLLOW-UP (parked by Malcolm 2026-09-22, "save for later") — formula facts the strongest claims depend on** (supplier certificate of analysis): glutathione serum = 2% GSSG w/w? Matrixyl serum/cream Matrixyl 3000 % (the manufacturer's data is at 3%; the serum carton says "10% MATRIXYL")? Argireline grade (Argireline vs Argireline Amplified)? Are the Matrixyl cream and PDRN cream ingredient lists swapped? Vegan: the Ingredients page says all formulas are vegan, but the Matrixyl cream FAQ says not.
+- ⏳ **Evidence Library wave 1** (per `docs/research-2026-study-hubs-credibility.md` §3.8): the `/pages/evidence-library` table page with a "how we grade
+  evidence" method, plus study pages for Badenhorst 2016 (copper), Miller 2006 (copper, null result), Raikou 2017 (Argireline) and Watanabe 2014 (glutathione,
+  pending formula facts). Then the product Clinical Research blocks link to the study pages. Gate at 8 weeks; measure with GSC plus an AI-citation panel
+  (DataForSEO `llm_responses` costs money, so it needs Malcolm's OK). Reviewer byline (Dr Bodde) only after she has reviewed.
+- ✅ **Two medical-wording reviews unlinked** (Malcolm approved, 2026-09-22): Mila F ("fades my acne scars", PDRN serum) and Gabrielle D ("rosacea", PDRN night
+  cream). Removed from `custom.customer_reviews`; the metaobjects are kept, with a restore list in `backups/reviews-unlinked-medical-wording-*.json`.
+- ✅ **Links localised site-wide** (2026-09-22): 155 → 0 page views whose internal links dropped translated readers into English. 165 template link settings now
+  use resource references (`scripts/localize-links.py`), and 355 translations were re-prefixed. The 17 Phase 1 prose links were English-only; they are now in
+  all six languages, with 6 anchors improved (`scripts/add-translated-links.py`). Translated pages link to each hub exactly as often as English. The
+  `/collections/matrixyl-3000-3000` 404 is fixed, and a "Read All Reviews" button pointing at the unpublished `/pages/reviews` (404 on every product page) was
+  removed. Re-audit: `docs/audits/links/`.
+- ✅ **Claims registers** for all five ingredients in `docs/claims/`: the strongest verified claims, evidence tables, claims to avoid, safety. **Next: rewrite
+  hub, product, collection and concern copy to the strongest claims, in six languages.** ✅ Done at ingredient level for all five (Matrixyl 2026-09-22,
+  glutathione 2026-09-23); the formula-dependent magnitudes (Matrixyl −39% / +15%, glutathione −10.7% / 77%) stay on the hubs until the supplier certificate
+  confirms the levels (below).
+- 📌 **FOLLOW-UP (parked by Malcolm 2026-09-22, "save for later") — formula facts the strongest claims depend on** (supplier certificate of analysis):
+  glutathione serum = 2% GSSG w/w? Matrixyl serum/cream Matrixyl 3000 % (the manufacturer's data is at 3%; the serum carton says "10% MATRIXYL")? Argireline
+  grade (Argireline vs Argireline Amplified)? Are the Matrixyl cream and PDRN cream ingredient lists swapped? Vegan: the Ingredients page says all formulas are
+  vegan, but the Matrixyl cream FAQ says not.
 - 🛑 **For Malcolm — two displayed reviews make medical claims** ("fades my acne scars", "rosacea"). EU rules hold the brand responsible for claims in testimonials it displays.
 - ✅ **Strongest-claims copy rewrite: PDRN, Argireline® and copper** (2026-09-22, all six languages). Every figure comes from `docs/claims/`.
   - **Clinical Research block on 13 products:** a bold headline naming the ingredient, proof bullets and a study footnote (`scripts/set-clinical-research.py`, `configs/copy/clinical-research-2026-09-22.json`).
   - **"What to expect" timelines on 11 products:** unsourced 1–2 / 4–8 / 8–12 weeks replaced with the measured timelines (PDRN visible from day 14, measured at 28 days; GHK-Cu at 8 weeks; Argireline at 4 weeks).
   - **Description bullets:** "most talked-about" becomes "outperformed retinol head to head"; the Argireline bullet becomes "10% Argireline®, the level used in the clinical trials"; the trademark line is added.
   - **10 FAQ answers** rewritten.
-  - **PDRN, Argireline and copper hubs strengthened.** PDRN: up to 23%, more than twice retinol, day 14, 1.8× firmness, no reactions in sensitive skin. Argireline: 22 of 45 vs 0 of 15; forehead roughness −7.4% vs +4.3% on placebo. Copper: Badenhorst 2016 (55.8% / 31.6%) and the Mokhtar 2026 systematic review added, 9 references.
+  - **PDRN, Argireline and copper hubs strengthened.** PDRN: up to 23%, more than twice retinol, day 14, 1.8× firmness, no reactions in sensitive skin.
+    Argireline: 22 of 45 vs 0 of 15; forehead roughness −7.4% vs +4.3% on placebo. Copper: Badenhorst 2016 (55.8% / 31.6%) and the Mokhtar 2026 systematic
+    review added, 9 references.
   - **Removed as unsupported:** well-documented safety, similarity to human DNA, "removes all allergens", "without irritation" vs retinol, the botulinum comparison and "10% of the peptide".
   - **Concern pages, homepage FAQ (plus its FAQ JSON-LD), FAQ page and the copper collection** updated.
   - **7 search snippets** now lead with a proof point (`scripts/seo-translate.py` for their translations).
   - Unsupported-phrase hits site-wide: **75 → 27**. The remainder is Matrixyl/glutathione (waiting on formula facts), stamp-set usage frequency, and 3 generic lines.
   - **MARKETING score:**
 
-    | Page | Before → after |
-    |---|---|
-    | PDRN serum | 50 → 71 |
-    | PDRN night cream | 43 → 71 |
-    | Copper serum | 71 → 93 |
-    | Copper day gel-cream | 79 → 93 |
-    | Copper night cream | 64 → 93 |
-    | PDRN hub | 71 → 93 |
-    | Skin-repair page | 71 → 93 |
-    | Homepage | 71 → 93 |
-    | Copper collection | 64 → 86 |
+    | Page                 | Before → after |
+    | -------------------- | -------------- |
+    | PDRN serum           | 50 → 71        |
+    | PDRN night cream     | 43 → 71        |
+    | Copper serum         | 71 → 93        |
+    | Copper day gel-cream | 79 → 93        |
+    | Copper night cream   | 64 → 93        |
+    | PDRN hub             | 71 → 93        |
+    | Skin-repair page     | 71 → 93        |
+    | Homepage             | 71 → 93        |
+    | Copper collection    | 64 → 86        |
 
   - The two PDRN products stay below 85 **only because of two customer reviews with medical wording ("rosacea", "acne scars") — the decision is Malcolm's.**
+
 - ⏳ **Next in the rewrite:** Matrixyl 3000 and glutathione (blocked on formula facts), then the generic "gentle"/"radiant" snippets on the serums/creams collections and the "without irritation" lines on /pages/fine-lines-wrinkles and /pages/skin-concerns.
 - ⏳ **MARKETING audit** added to `scripts/page-audit.py` (rules in `configs/marketing-rules.json`, threshold 85 → triggers claims research).
 - ✅ **Audit tooling:** `scripts/page-audit.py` (SEO + GEO/AISO + live-browser design, desktop and mobile) and `configs/page-targets.json`. **Baseline of 17 pages** + site-wide patterns + image to-dos in `docs/audits/pages/README.md`.
 - ✅ **GA4 ecommerce now working** (Malcolm fixed the channel, 2026-09-22). Live-browser test: `view_item` and `add_to_cart` arrive at G-WWKPPYR5F9. `purchase` can only be confirmed with a real order — check on the next sale.
-- ⏭ **Next:** Matrixyl 3000, then glutathione hubs (same spec pattern — copy `copper-peptide-research.json`); then the site-wide patterns — `<h1>` on the 4 concern pages, alternating backgrounds, WebPage schema + updated dates; then product/collection completeness (GEO 28–58). Collagen-page consolidation. Image to-dos: Argireline mechanism illustration; optional PDRN salmon-DNA visual.
-- ✅ ~~GA4 re-tested 2026-09-22 with a live browser session:~~ *(resolved later the same day — see above)* after consent, a product view and a real add-to-cart sent only `page_view`, `form_start`, `form_submit`, `user_engagement` to G-WWKPPYR5F9 — **no `view_item` / `add_to_cart`**, and zero ecommerce events since 1 Sep. A Google Ads tag (AW-18435962476) does fire. The Google & YouTube channel appears connected for Ads, not GA4 ecommerce.
+- ⏭ **Next:** Matrixyl 3000, then glutathione hubs (same spec pattern — copy `copper-peptide-research.json`); then the site-wide patterns — `<h1>` on the 4
+  concern pages, alternating backgrounds, WebPage schema + updated dates; then product/collection completeness (GEO 28–58). Collagen-page consolidation. Image
+  to-dos: Argireline mechanism illustration; optional PDRN salmon-DNA visual.
+- ✅ ~~GA4 re-tested 2026-09-22 with a live browser session:~~ _(resolved later the same day — see above)_ after consent, a product view and a real add-to-cart
+  sent only `page_view`, `form_start`, `form_submit`, `user_engagement` to G-WWKPPYR5F9 — **no `view_item` / `add_to_cart`**, and zero ecommerce events since 1
+  Sep. A Google Ads tag (AW-18435962476) does fire. The Google & YouTube channel appears connected for Ads, not GA4 ecommerce.
 
 **Open questions raised by Phase 1:**
-1. **Argireline® trade name.** The AH-8 research page says the peptide was "developed by Lipotec (now Lubrizol)". If our Acetyl Hexapeptide-8 is Lubrizol's Argireline®, the product and hub can use the name (7,149 opportunity on `argireline`); if not, only nominative educational use on the hub. Needs the supplier spec.
-2. **AH-8 concentration.** The bottle label artwork reads "10% ACETYL HEXAPEPTIDE-8"; the product title and description state no percentage. Confirm before it is used in copy.
 
+1. **Argireline® trade name.** The AH-8 research page says the peptide was "developed by Lipotec (now Lubrizol)". If our Acetyl Hexapeptide-8 is Lubrizol's
+   Argireline®, the product and hub can use the name (7,149 opportunity on `argireline`); if not, only nominative educational use on the hub. Needs the supplier
+   spec.
+2. **AH-8 concentration.** The bottle label artwork reads "10% ACETYL HEXAPEPTIDE-8"; the product title and description state no percentage. Confirm before it is used in copy.
 
 **⚠️ Still blocking measurement: GA4 records no ecommerce events.** Reviews moved to a separate thread.
 
@@ -304,6 +439,7 @@ AI-generated illustrations and must not be presented as results. Record:
 **Owner:** Claude (research, build) + Malcolm (decisions, keyword source, selling timeline)
 
 **Deliverables written 2026-09-21:**
+
 - `docs/research-2026-ai-search-and-content-hubs.md` — the evidence base, graded, with a blacklist of
   fabricated statistics found in circulation
 - `docs/content-hub-strategy-2026.md` — the strategy, architecture and 7-phase implementation plan
@@ -317,13 +453,13 @@ brand with no distinguishing information breaks through **4.6%** of the time, bu
 
 **Status 2026-09-21 (afternoon) — foundation partly connected:**
 
-| Piece | Status |
-|---|---|
-| Search Console | ✅ `sc-domain:skingenetix.com` shared with the service account |
-| GA4 property access | ✅ `properties/552893424` (`G-WWKPPYR5F9`), created 2026-09-07 |
-| **GA4 ecommerce tracking** | 🛑 **NOT CONFIGURED — zero commerce events ever recorded** |
-| DataForSEO | ✅ working — `seo-toolkit/.env`, $473.94, 1,000/day |
-| Klaviyo Reviews API key | ⏳ placeholder in `.env`, awaiting paste |
+| Piece                      | Status                                                         |
+| -------------------------- | -------------------------------------------------------------- |
+| Search Console             | ✅ `sc-domain:skingenetix.com` shared with the service account |
+| GA4 property access        | ✅ `properties/552893424` (`G-WWKPPYR5F9`), created 2026-09-07 |
+| **GA4 ecommerce tracking** | 🛑 **NOT CONFIGURED — zero commerce events ever recorded**     |
+| DataForSEO                 | ✅ working — `seo-toolkit/.env`, $473.94, 1,000/day            |
+| Klaviyo Reviews API key    | ⏳ placeholder in `.env`, awaiting paste                       |
 
 **🛑 The one real blocker now: GA4 records no ecommerce events.**
 Since property creation only `user_engagement`, `scroll`, `click`, `form_start`, `form_submit`,
@@ -343,10 +479,10 @@ reach GA4, so GA4 shows the website slice only.
 
 Klaviyo holds **193 reviews**. They split cleanly into two groups:
 
-| Group | Count | Email domains | Profiles | Verdict |
-|---|---|---|---|---|
-| **9 single products** (+1 orphan) | **93** | 90 gmail, 2 live.nl, 1 outlook | ✅ exist | **Real.** Dutch, typos, personal detail. Malcolm's closed 2026-09-10 decision stands |
-| **10 bundle products** | **100** | **100/100 `@example.com`** | ❌ none | **Synthetic.** All created 2026-08-19, uniform marketing prose, no titles, **83 author names reused from the real reviewers** |
+| Group                             | Count   | Email domains                  | Profiles | Verdict                                                                                                                       |
+| --------------------------------- | ------- | ------------------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **9 single products** (+1 orphan) | **93**  | 90 gmail, 2 live.nl, 1 outlook | ✅ exist | **Real.** Dutch, typos, personal detail. Malcolm's closed 2026-09-10 decision stands                                          |
+| **10 bundle products**            | **100** | **100/100 `@example.com`**     | ❌ none  | **Synthetic.** All created 2026-08-19, uniform marketing prose, no titles, **83 author names reused from the real reviewers** |
 
 **Action taken (Malcolm approved 2026-09-21):** all **100 example.com reviews unpublished** via
 `PATCH /api/reviews/{id}` with `{"status":{"value":"unpublished"}}`. Verified live — bundle pages now show
@@ -374,8 +510,8 @@ ships now and activates only when genuine verified reviews exist. `verified: tru
 Klaviyo can only verify reviews **it collected itself** — imported or hand-created reviews can never be
 verified retroactively.
 
-
 **Verified live on the store, 2026-09-21:**
+
 - ✅ robots.txt blocks no AI crawlers — correct as-is, do not change
 - ✅ `/llms.txt`, `/llms-full.txt`, `/agents.md` all 200 (Shopify May 2026 defaults) — leave them, frontier
   crawlers fetched llms.txt **0 times in 1,227 requests** across a 7-month log study
@@ -400,20 +536,20 @@ measuring English. Full list with evidence in the strategy doc §9.
 (`--suppliers seedream,gpt_image,nbp_pro,nbp_flash --candidates 2`; add `flux2` for the cream
 macros, where it auto-skips the six referenced slots and runs only on the three macro-only ones):
 
-| config | what |
-|---|---|
-| `configs/banners/copper-day-cream-macros.json` | dark navy cream, **pale** ground |
-| `configs/banners/copper-night-cream-macros.json` | light blue cream, graphite ground |
-| `configs/banners/pdrn-cream-macros.json` | blush pink cream, graphite ground |
-| `configs/banners/serum-dropper-faces.json` | 10 faces, clear serum from a pipette, macro |
+| config                                           | what                                        |
+| ------------------------------------------------ | ------------------------------------------- |
+| `configs/banners/copper-day-cream-macros.json`   | dark navy cream, **pale** ground            |
+| `configs/banners/copper-night-cream-macros.json` | light blue cream, graphite ground           |
+| `configs/banners/pdrn-cream-macros.json`         | blush pink cream, graphite ground           |
+| `configs/banners/serum-dropper-faces.json`       | 10 faces, clear serum from a pipette, macro |
 
 **Status 2026-09-16.** All five waves are running via `scripts/run-held-waves.sh`, sequentially in
 one process: matrixyl → copper-day → copper-night → pdrn → serum-dropper-faces. 184 Gemini requests of
 the 250 daily cap, so both nbp engines survive the whole sequence. Log: `/tmp/all-waves.log`.
 
 ⚠️ **They did not run overnight, and the cause is worth knowing.** Two chained watchers were armed with
-`while pgrep -f "generate-multi.py"; do sleep 20; done` — and `pgrep -f` matches the *watcher's own
-command line*, which contains that string. Each waited on itself for 20 hours. Both logs were zero
+`while pgrep -f "generate-multi.py"; do sleep 20; done` — and `pgrep -f` matches the _watcher's own
+command line_, which contains that string. Each waited on itself for 20 hours. Both logs were zero
 bytes, which reads as "not started" rather than "deadlocked". **The full-wave leak scan promised on
 2026-09-15 never ran**; the label check over Malcolm's picks was covered only because it was also run
 by hand. Do not chain on `pgrep`; run sequentially, or key on `manifest.json`, which
@@ -428,7 +564,7 @@ the cap, and past it both Gemini engines fail **silently** while the run still e
 
 - **The macro ground is chosen by measured contrast, never from the brand palette.** The palette
   is a scene colour. Two of the four would have destroyed the shot: the PDRN cream is `#F3BFC2`
-  and its palette ground is *also* `#F3BFC2`; the Copper Day cream is navy on clinical blue.
+  and its palette ground is _also_ `#F3BFC2`; the Copper Day cream is navy on clinical blue.
   Rule: cream luminance > 0.35 → graphite `#1A1A1A`, else pale `#E8EAEC`. All four clear 4.5:1.
 - **`serum-dropper-faces` is a sibling of r3, not a re-run of it.** r3's negative list forbids
   "raised bead of liquid, droplet sitting alone on the cheek, drop about to fall" — in this wave
@@ -447,6 +583,7 @@ the majority of picks across every bundle this week.
 > microneedling stamp sets.
 >
 > **Carried faults, published knowingly rather than fixed:**
+>
 > - `wrinkles-duo` and `wrinkles-routine` were selected from the 2026-09-12 wave, which predates both
 >   the reference rebuild and `substance_block` reaching the brief. Those frames carry the old Matrixyl
 >   render (high collar, exposed neck) and nothing in their brief described the liquid. **A re-run after
@@ -471,7 +608,7 @@ the majority of picks across every bundle this week.
 > Two separate faults were found:
 >
 > 1. **Truncation — FIXED.** `build-refs-2026-08-19.py` cropped each product independently and
->    three of five serum refs taught the engines a *cut-off* bottle. The Drive source renders
+>    three of five serum refs taught the engines a _cut-off_ bottle. The Drive source renders
 >    are clean; the damage was the crop. `scripts/normalise-serum-ref.py` rebuilds all five on
 >    one frame from the uncropped sources, written additively as `product_tight_norm.png`.
 >    Residual: Acetyl is 12% narrow — it is a photograph, not a render, because it still has no
@@ -493,7 +630,6 @@ the majority of picks across every bundle this week.
 >
 > No generation run was made and nothing was spent on 2026-09-14.
 
-
 **Priority:** 🔴 Pilot running; rollout gated on Malcolm's review
 **Owner:** Claude (machinery, generation, QA) + Malcolm (every image choice)
 **Build:** `scripts/build-bundle-set.py <short>` → `configs/banners/bundle-<short>-<date>.json`
@@ -513,17 +649,17 @@ nbp_flash 8, nbp_pro 2, seedream 2, gpt_image 0, luma 0 of 36.
 **Decisions taken with Malcolm 2026-09-11:** drop luma only (keep gpt_image as a fourth
 opinion); pilot two bundles before rolling out the other seven.
 
-| bundle (short) | products | jars | strategy | slots |
-| --- | --- | --- | --- | --- |
-| `copper-peptide-duo` | CP day + night | 2 | ladder | 14 |
-| `pdrn-ritual` | PDRN serum + cream | 1 | ladder | 13 |
-| `matrixyl-ritual` **[PILOT A]** | Matrixyl serum + cream | 1 | ladder | 13 |
-| `brightening-duo` | Glutathione + CP day | 1 | ladder | 13 |
-| `repair-renewal-duo` | PDRN serum + CP day | 1 | ladder | 13 |
-| `repair-renewal-routine` | PDRN serum + CP day + PDRN cream | 2 | ladder | 14 |
-| `wrinkles-routine` | Acetyl + Matrixyl + CP day | 1 | **label** | 13 |
-| `firming-routine` | Matrixyl serum + cream + CP night | 2 | ladder | 14 |
-| `wrinkles-duo` **[PILOT B]** | Acetyl + Matrixyl serums | 0 | **label** | 10 |
+| bundle (short)                  | products                          | jars | strategy  | slots |
+| ------------------------------- | --------------------------------- | ---- | --------- | ----- |
+| `copper-peptide-duo`            | CP day + night                    | 2    | ladder    | 14    |
+| `pdrn-ritual`                   | PDRN serum + cream                | 1    | ladder    | 13    |
+| `matrixyl-ritual` **[PILOT A]** | Matrixyl serum + cream            | 1    | ladder    | 13    |
+| `brightening-duo`               | Glutathione + CP day              | 1    | ladder    | 13    |
+| `repair-renewal-duo`            | PDRN serum + CP day               | 1    | ladder    | 13    |
+| `repair-renewal-routine`        | PDRN serum + CP day + PDRN cream  | 2    | ladder    | 14    |
+| `wrinkles-routine`              | Acetyl + Matrixyl + CP day        | 1    | **label** | 13    |
+| `firming-routine`               | Matrixyl serum + cream + CP night | 2    | ladder    | 14    |
+| `wrinkles-duo` **[PILOT B]**    | Acetyl + Matrixyl serums          | 0    | **label** | 10    |
 
 **⚠️ THE CONTAINER MODEL — corrected twice by Malcolm, and the middle version was the worst.**
 The glass is **FROSTED on all nine products**; it never varies. What varies is the CONTENTS,
@@ -535,7 +671,7 @@ and the frosting takes its apparent colour from whatever sits behind it:
 
 Version one read "frosted NEUTRAL WHITE glass" out of each `product_desc` and briefed the
 Matrixyl serum and cream as interchangeable whites. Version two over-corrected to "CLEAR AND
-SEE-THROUGH", instructing engines that the background must be visible *through* the glass —
+SEE-THROUGH", instructing engines that the background must be visible _through_ the glass —
 a different material, and a fault that would look deliberate in a render rather than broken.
 Version two also had the Copper Peptide and PDRN serums as opaque, which would have briefed a
 translucent blue liquid as solid paint.
@@ -573,12 +709,12 @@ reading "MATRIXYL 3000 PRO C", cut mid-word. Reframed as a close group shot.
 
 ### Published so far (all DRAFT — nothing customer-visible)
 
-| bundle | gallery | FAQ | selection |
-| --- | --- | --- | --- |
-| `complete-copper-peptide-…-routine` | 4 | ✅ | 12 marked of 36 |
-| `day-night-copper-peptide-…-duo-set` | 5 | ✅ | 34 saved |
-| `full-matrixyl-3000-ritual-serum-cream` | 5 | ✅ | 28 saved |
-| `complete-firming-skin-density-…` | 5 | ✅ | 44 saved |
+| bundle                                  | gallery | FAQ | selection       |
+| --------------------------------------- | ------- | --- | --------------- |
+| `complete-copper-peptide-…-routine`     | 4       | ✅  | 12 marked of 36 |
+| `day-night-copper-peptide-…-duo-set`    | 5       | ✅  | 34 saved        |
+| `full-matrixyl-3000-ritual-serum-cream` | 5       | ✅  | 28 saved        |
+| `complete-firming-skin-density-…`       | 5       | ✅  | 44 saved        |
 
 Selections live in `assets/selections/<bundle>-<date>/` with a committed manifest in
 `configs/<bundle>-selection-*.json` — `assets/` is gitignored, so the CHOICE is backed up even
@@ -626,17 +762,17 @@ per BRAND-003. It is therefore generated, not composited.
 Five compositions, all 2048×2048 square, all reference-locked to the three `product_tight.png`
 crops in `assets/images/_refs-2026-08-19/`:
 
-| slot | composition |
-| --- | --- |
-| `set-a-graphite-hero` | graphite ground, cool key from upper left, bottle centre |
-| `set-b-clinical-white` | seamless white, flat catalogue light, single row |
-| `set-c-flatlay-stone` | overhead on pale grey stone, jars lid-up, bottle on its side |
-| `set-d-stepped-plinths` | three stone plinths at three heights |
-| `set-e-vanity-daylight` | bathroom vanity, cool morning daylight, background soft |
+| slot                    | composition                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| `set-a-graphite-hero`   | graphite ground, cool key from upper left, bottle centre     |
+| `set-b-clinical-white`  | seamless white, flat catalogue light, single row             |
+| `set-c-flatlay-stone`   | overhead on pale grey stone, jars lid-up, bottle on its side |
+| `set-d-stepped-plinths` | three stone plinths at three heights                         |
+| `set-e-vanity-daylight` | bathroom vanity, cool morning daylight, background soft      |
 
 **The one thing this brief exists to protect.** The line shares one carton blue but **three
 different container blues** — serum deep blue, Day cream deep navy, Night cream pale ice-blue.
-In a single-product shot an engine cannot conflate them; in a set shot it is the *default*
+In a single-product shot an engine cannot conflate them; in a set shot it is the _default_
 failure, picking one blue and painting all three. Every slot states the three-way separation
 as its own instruction after the per-product blocks, and the negative bars a shared blue by
 name. All three labels are quoted verbatim with their ink colours, because an unspecified
@@ -739,7 +875,10 @@ sweeps:
 
 `front_gap` and `rear_gap` are centre-to-centre as a multiple of THAT ROW'S own unit width, so
 each reads directly as the daylight between the pair and neither drifts when `DEPTH_SCALE`
-changes. Measured on the current masters: front pair +30px / +25px, second row +426px / +137px. The bottle's `rear_gap` is the looser of the two because the serum 3-up is the one image where width is NOT the binding constraint - it fills 62% of the frame against 83% of its height - so spreading that row costs no unit size at all - the bottles stay at 602px at every value tried. Its ceiling is instead ~2.1, where the front bottle stops overlapping the rear pair and the trio reads as three separate bottles rather than one group; at the 1.80 shipped that overlap is still +88px.
+changes. Measured on the current masters: front pair +30px / +25px, second row +426px / +137px. The bottle's `rear_gap` is the looser of the two because the
+serum 3-up is the one image where width is NOT the binding constraint - it fills 62% of the frame against 83% of its height - so spreading that row costs no
+unit size at all - the bottles stay at 602px at every value tried. Its ceiling is instead ~2.1, where the front bottle stops overlapping the rear pair and the
+trio reads as three separate bottles rather than one group; at the 1.80 shipped that overlap is still +88px.
 
 ⚠️ **Three separate knobs were all riding on `step_ratio`, and each only became visible once
 the one before it was freed.** The 6-up's front pair could not be separated without throwing
@@ -841,7 +980,7 @@ Undo: `python3 scripts/patch-template.py --restore backups/page.philosophy-20260
 
 - **Is any of it substantiated?** Unanswered since 2026-08-21. Needed: an EU Responsible
   Person, CPSR + CPNP records per formula, and a GMP certificate from the filling facility.
-  The copy currently states only what each standard *requires* — no certificate, audit result
+  The copy currently states only what each standard _requires_ — no certificate, audit result
   or Responsible Person is claimed — so it is true as written. **But the section's presence
   still implies the brand meets both.** If none of it holds, retire the section rather than
   restyle it. If it does hold, the copy can get specific, which is a copy edit not a rebuild.
@@ -2263,7 +2402,9 @@ uploaded to Drive 2026-05-18T14:28 UTC. The new design replaces the April-20 lab
 `PROFESSIONAL TREATMENT` language) and corrects the `RADIENT → RADIANT` typo. Full 22-shot
 Max-tier 5-backend fan-out completed the same day via the `serum_bottle` template.
 
-**Output:** `assets/ai-generated/2026-05-18-glutathione-radiant-glow-serum/run-01/` — 146 SEO-renamed PNGs at the folder root (originals under `run-01/raw/`) from 190 attempts, 100% shot coverage. Cost: $5.69. Wall clock: 9.6 min. Naming pattern: `glutathione_brightening_radiant_glow_skin_serum_<shot>_<seq>_skingenetix.png`.
+**Output:** `assets/ai-generated/2026-05-18-glutathione-radiant-glow-serum/run-01/` — 146 SEO-renamed PNGs at the folder root (originals under `run-01/raw/`)
+from 190 attempts, 100% shot coverage. Cost: $5.69. Wall clock: 9.6 min. Naming pattern:
+`glutathione_brightening_radiant_glow_skin_serum_<shot>_<seq>_skingenetix.png`.
 
 **Per-shot candidates:** 2 each for hero_white_bg, three_quarter_brand_gradient, brand_glow_hero, pedestal_edge_hero, dramatic_close_up_dark_bg; 8 each for the remaining 17 shots.
 
@@ -2291,7 +2432,9 @@ frosted blue glass dropper bottle with white pipette + silver collar) uploaded t
 Full 22-shot Max-tier 5-backend fan-out (Seedream + FLUX.2 + gpt-image-2 + NBP Pro + NBP 2 Flash)
 completed the same day via the `serum_bottle` template.
 
-**Output:** `assets/ai-generated/2026-05-18-copper-peptide-advanced-repair-serum/run-01/renamed/` — 128 SEO-renamed PNGs (originals under `run-01/raw/`) from 190 attempts, 100% shot coverage. Cost: $6.18. Wall clock: 17.5 min. Naming pattern: `copper_peptide_ghk-cu_advanced_repair_skin_serum_<shot>_<seq>_skingenetix.png`.
+**Output:** `assets/ai-generated/2026-05-18-copper-peptide-advanced-repair-serum/run-01/renamed/` — 128 SEO-renamed PNGs (originals under `run-01/raw/`) from
+190 attempts, 100% shot coverage. Cost: $6.18. Wall clock: 17.5 min. Naming pattern:
+`copper_peptide_ghk-cu_advanced_repair_skin_serum_<shot>_<seq>_skingenetix.png`.
 
 **Failure notes:** FLUX.2 Pro edit blocked all 22 attempts (9MP total-area limit on 2K refs — downscale to 1024 next run). NBP Pro hit the Gemini 429 quota on 30/44 attempts. gpt-image-2 hit the OpenAI 5/min rate limit on 10/56 attempts. Hero shots and texture macros came through cleanly regardless.
 
