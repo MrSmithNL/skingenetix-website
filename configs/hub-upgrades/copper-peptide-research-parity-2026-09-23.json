@@ -1,4 +1,5 @@
 {
+  "_retired": "Retired 2026-09-25. Its chart config and several settings still say 'the same serum without GHK-Cu', which 9fbc203 corrected live to 'the plain serum base' (configs/claim-fixes/copper-vehicle-2026-09-24.json); re-applying it would reinstate the overstatement. Superseded by the science-page template rollout specs copper-peptide-research-{layout,evidence-merge}-2026-09-25.json.",
   "_about": "Parity retrofit of /pages/copper-peptide-research, 2026-09-23: brings the copper hub level with the Matrixyl and glutathione builds (docs/content-plan-2026.md §4 standard), with the three key figures at the TOP of the page (Malcolm, 2026-09-23). ADDITIVE on the live page; the original copper-peptide-research.json is stale and is never re-applied. Adds: an 'at a glance' list and a fresh byline in the overview (built from the LIVE six-locale value), a headline figure in the hero, three stock key figures under the hero, a ten-row stock evidence table, the usage rich-text converted to two image rows (same translated text, split at its two headings), two FAQs, two references with per-locale JSON-LD. The charts section is re-supplied from the 2026-09-22 retrofit unchanged. Figures: docs/claims/copper-peptide-ghk-cu.md; Badenhorst 2016's relative figures re-confirmed in Pickart 2018 (PMC6073405) and its baseline changes rest on the register's full-PDF read of 2026-09-22 (the PDF is image-only); Abdulghani counts and 1973 in Pickart 2015 (PMC4508379); Mokhtar 2026 and Mortazavi 2024 at source, 2026-09-23. No human study states a GHK-Cu concentration, so nothing here attaches a result to 2%.",
   "template": "templates/page.research-copper-peptide.json",
   "page": "copper-peptide-research",
@@ -190,11 +191,7 @@
             }
           }
         },
-        "block_order": [
-          "s1",
-          "s2",
-          "s3"
-        ]
+        "block_order": ["s1", "s2", "s3"]
       }
     },
     {
@@ -208,10 +205,7 @@
           "remove_horizontal_spacing": false,
           "background": "#ffffff",
           "html": {
-            "$chart": [
-              "vehicle",
-              "biopsy"
-            ],
+            "$chart": ["vehicle", "biopsy"],
             "heading": {
               "en": "GHK-Cu in Head-to-Head Studies: What Was Measured",
               "de": "GHK-Cu im direkten Vergleich: Was gemessen wurde",
@@ -288,10 +282,7 @@
             }
           }
         },
-        "block_order": [
-          "u1",
-          "u2"
-        ]
+        "block_order": ["u1", "u2"]
       }
     },
     {
@@ -528,18 +519,7 @@
             }
           }
         },
-        "block_order": [
-          "t1",
-          "t2",
-          "t3",
-          "t4",
-          "t5",
-          "t6",
-          "t7",
-          "t8",
-          "t9",
-          "t10"
-        ]
+        "block_order": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8", "t9", "t10"]
       }
     }
   ],
@@ -578,15 +558,8 @@
       },
       "unit": "%",
       "decimals": 1,
-      "domain": [
-        -28,
-        2
-      ],
-      "ticks": [
-        -20,
-        -10,
-        0
-      ],
+      "domain": [-28, 2],
+      "ticks": [-20, -10, 0],
       "value_width": 70,
       "series": [
         {
@@ -681,15 +654,8 @@
       },
       "unit": "",
       "signed": false,
-      "domain": [
-        0,
-        10
-      ],
-      "ticks": [
-        0,
-        5,
-        10
-      ],
+      "domain": [0, 10],
+      "ticks": [0, 5, 10],
       "value_width": 76,
       "series": [
         {
@@ -889,11 +855,7 @@
     "about": {
       "@type": "Thing",
       "name": "GHK-Cu",
-      "alternateName": [
-        "Copper peptide",
-        "Copper tripeptide-1",
-        "Glycyl-L-histidyl-L-lysine copper"
-      ]
+      "alternateName": ["Copper peptide", "Copper tripeptide-1", "Glycyl-L-histidyl-L-lysine copper"]
     },
     "citation": [
       {

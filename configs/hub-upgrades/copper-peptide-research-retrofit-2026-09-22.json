@@ -1,4 +1,5 @@
 {
+  "_retired": "Retired 2026-09-25. Superseded by the parity spec and then by the science-page template rollout (copper-peptide-research-{layout,evidence-merge}-2026-09-25.json); its chart config carries the pre-9fbc203 comparator wording.",
   "_about": "Research-page-standard retrofit, 2026-09-22 (docs/content-plan-2026.md §4). ADDITIVE ONLY: a charts section with data tables, the references block translated per locale (it served English everywhere, and in nl an outdated older copy), and per-locale WebPage JSON-LD taken from the LIVE page (with reviewedBy). The original hub spec is stale — do not re-apply it. Figures from docs/claims/. Badenhorst 2016 group 2 change from baseline (vs the same serum without GHK-Cu); Abdulghani 1998 responder counts, no between-cream test. Charts sit after the findings row (its wrapper is Bone), so the sections below flip to keep Bone/White alternation.",
   "template": "templates/page.research-copper-peptide.json",
   "page": "copper-peptide-research",
@@ -14,10 +15,7 @@
           "remove_horizontal_spacing": false,
           "background": "#ffffff",
           "html": {
-            "$chart": [
-              "vehicle",
-              "biopsy"
-            ],
+            "$chart": ["vehicle", "biopsy"],
             "heading": {
               "en": "GHK-Cu in Head-to-Head Studies: What Was Measured",
               "de": "GHK-Cu im direkten Vergleich: Was gemessen wurde",
@@ -77,15 +75,8 @@
       },
       "unit": "%",
       "decimals": 1,
-      "domain": [
-        -28,
-        2
-      ],
-      "ticks": [
-        -20,
-        -10,
-        0
-      ],
+      "domain": [-28, 2],
+      "ticks": [-20, -10, 0],
       "value_width": 70,
       "series": [
         {
@@ -180,15 +171,8 @@
       },
       "unit": "",
       "signed": false,
-      "domain": [
-        0,
-        10
-      ],
-      "ticks": [
-        0,
-        5,
-        10
-      ],
+      "domain": [0, 10],
+      "ticks": [0, 5, 10],
       "value_width": 76,
       "series": [
         {
@@ -374,11 +358,7 @@
     "about": {
       "@type": "Thing",
       "name": "GHK-Cu",
-      "alternateName": [
-        "Copper peptide",
-        "Copper tripeptide-1",
-        "Glycyl-L-histidyl-L-lysine copper"
-      ]
+      "alternateName": ["Copper peptide", "Copper tripeptide-1", "Glycyl-L-histidyl-L-lysine copper"]
     },
     "citation": [
       {
