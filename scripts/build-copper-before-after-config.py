@@ -39,6 +39,16 @@ line tightens) and SLACKER from below, so the right face-cream panel is level or
 her chin is never lifted in the right panel.
 
 SUPPLIERS: all six (website-imagery rule 1). Smoke-test one slot per card first.
+
+SMOKE LOG, 2026-09-26 (slots a and d, 12 of 12 returned; gpt_image resolved to gpt-image-2.5-sunburst).
+  HELD: no text, caption, window, hand or phone on any tile; Caucasian casting; the right-side lock on
+  card 1 on five of six engines.
+  KNOWN SUPPLIER TRAITS, NOT BRIEF FAULTS (so the brief was not changed): flux2 mirrored the face
+  between the panels on card 1 (its recorded habit); seedream turned card 2's right panel into a full
+  profile facing the other way; luma and nbp_pro framed the pair with a white border. Card 2's
+  lower-face crop was honoured by NO engine - all returned a three-quarter face, forehead to chin
+  (engines-return-a-portrait-whatever-crop-you-ask-for): crop the winner in post.
+  Slots b, c, e and f ran on the unchanged brief.
 Author: Claude Code, 2026-09-26. Candidates only; nothing is uploaded or published by this file.
 """
 import importlib.util
