@@ -352,6 +352,8 @@ figure, card, table row, reference and FAQ answer on the live English page (fetc
   sun-related skin ageing".
 - **Timing, now sourced:** on the GHK-Cu side (group 1), wrinkle volume was −17.2% and depth −18.3% from the start at week 4, and −25.8% / −26.8% by week 8. The
   Matrixyl side was already −16.8% at week 4, and there was no plain-base reading then, so the week-4 figure is change from the start, not a comparison.
+  **Used since 2026-09-26 as key figure 3** ("4 weeks · First measured change"), replacing the year "2026" (Mokhtar review) that the design critic flagged;
+  the wording says "change from the start" and "19 women", and that the plain-base comparison was made at week 8.
 - **The before/after for card 1 shows her right-side crow's feet**, the side the trial treated with GHK-Cu. In picture terms: her head is turned so that her
   nose points towards the **right-hand edge of the frame**, and her right eye corner and cheek face the camera. That side is locked in both panels (memory
   `state-the-side-lock-in-picture-terms`).

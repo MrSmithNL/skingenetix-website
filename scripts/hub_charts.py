@@ -56,7 +56,12 @@ CSS = (".sgfig{max-width:1120px;margin:0 auto;padding:8px 20px 8px;color:#1A1A1A
        ".sgfig-table th:first-child,.sgfig-table td:first-child{text-align:left;}"
        ".sgfig-table th{font-weight:600;color:#3A3A3A;}"
        ".sgfig-caption{margin-top:14px;font-size:14px;line-height:1.55;color:#3A3A3A;}"
-       ".sgfig-caption p{margin:0 0 6px;}")
+       ".sgfig-caption p{margin:0 0 6px;}"
+       # 200% zoom (a 390px phone at 195px): the fixed value column left the bars 0px wide and the table ran past
+       # the screen. The value drops under its bar and the table may wrap mid-word. Last, so it wins (2026-09-26).
+       "@media (max-width:360px){.sgfig{padding:8px 0;}.sgfig-card{padding:16px 10px 14px;}"
+       ".sgfig-line,.sgfig-axis{grid-template-columns:1fr;gap:2px;}.sgfig-axis>span{display:none;}"
+       ".sgfig-table{font-size:12px;}.sgfig-table th,.sgfig-table td{padding:5px 3px;overflow-wrap:anywhere;}}")
 
 
 def fmt(v, loc, unit="%", signed=True, decimals=None):

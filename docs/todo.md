@@ -230,30 +230,41 @@ AI-generated illustrations and must not be presented as results. Record:
   1. **Go-ahead for the under-eye before/after wave**, about $5–10 across all suppliers (mostly `nbp_pro`). You pick the winner. Until then card 2 carries the A6 cream macro.
   2. **Apply the rule to Argireline?** Its card 5 and index row 05 are the null imaging test (Henseler 2023).
   3. **How far "no negative info" reaches:** the null or non-transferable rows in Evidence & Sources on both pages, and the At-a-glance lines "Independent evidence: none yet" and "Not shown".
-- 🛑 **For Malcolm: six template-level proposals from the critique.** They would change the approved Argireline design too, so they are not applied:
-  1. Body text 15/14 px → 16–17 px, and the H1 larger than the key figures on mobile.
-  2. One accent colour. Clinical blue drives all interactive elements, yet it is copper's colour, and it clashes with PDRN rose. Proposal: keep blue for links and the Shop button only; bullets and step discs in ink or the page colour.
-  3. A new PDRN hero banner, a reference-free Seedream brief at about 4.4:1. Costs image spend; you pick the winner.
-  4. Usage images: row 1 repeats the hero's pink helix, and the serum bottle appears three times in about 1,700 px.
-  5. One grading scale site-wide. Argireline uses A · B · C · Review; PDRN uses A · D · X · Not PDRN · Review.
-  6. On mobile, group the studies that do not apply (X and Not PDRN) in a `<details>`. The table is 6,145 px, about 7 screens.
-- ✅ **Copper peptide LIVE on the template** (2026-09-26, Malcolm: "show this page's new set up and design on the live site"). Both specs applied, verify-live ✓
-  ×6 on each, anchors 6/6, stock sections still translated in de/fr/it, reviewer config repointed (`overview.html`, `evidence_sources`), `set-reviewer --remove`
-  dry run resolves all six languages, preview template deleted. Design critic cycle 1 FIX 6.5 fixed before go-live. Cards 1 and 2 before/after LIVE 2026-09-26:
-  Malcolm's picks A2 and E2 (`gpt_image 01`) from `configs/banners/before-after-copper-cards-r1.json` (35/36 generated, luma refused slot e), uploaded as
-  `skingenetix-copper-peptide-ghk-cu-{crows-feet-wrinkles,firmer-looking-skin}-before-after.jpg`; labels and result lines in six languages; labels measured
-  inside the image in all six at 1440 and 390. Earlier Next: before/after photos on cards 1 and 2
-  (Malcolm, 2026-09-26: "at least 2 sections that show the best proven results from studies - with a before and after image"). Built 2026-09-25:
-  - Claims re-read at source (register §8). The build fixes seven live defects: medicinal wording, a placebo claim, a shortened title, "known only through Skin Biology", Kang overstated, the collagen FAQ without qualifiers, and null or non-transferable rows.
-  - Specs: `configs/hub-upgrades/copper-peptide-research-{layout,evidence-merge}-2026-09-25.json`. Phrase table: `configs/hub-i18n/copper-peptide-research.json`, 83 phrases, all checks passed.
-  - Preview: `/pages/copper-peptide-research?view=copper-preview`, template `templates/page.copper-preview.json`. Delete it after go-live.
-  - Waiting on Malcolm: card 1 and card 2 before/after picks (`~/Desktop/skingenetix-copper-card-candidates.png`, or a new round-3 batch); the key figures; card 2's subject; the Mortazavi quote and dropping Pickart 2018.
-  - Then: apply both specs live, point the reviewer config's copper hub entry at the layout spec (`byline: overview.html`, `jsonld_host: evidence_sources`), verify six languages, capture, and delete the preview template.
-- ⏭ **Next on the template after copper:** Matrixyl 3000, glutathione, one per go-ahead (template doc §6, §6.1, §7). Run the design critic on each before calling it done.
+- 🛑 **For Malcolm: six template-level proposals from the critique.** They would change the approved Argireline design too, so they are not applied. The
+  current list, with before/after sheets on the Desktop, is `docs/design-proposals-2026-09-25.md` (body text size, phone title vs key figures, PDRN hero,
+  usage-image variety, one grading scale, collapsing the sources table on phones). "One accent colour" is no longer on it: Malcolm decided per-ingredient
+  accents on 2026-09-24. The 24 caveat sentences on PDRN and Argireline wait in `docs/caveat-decisions-2026-09-25.md`.
+- 🛑 **For Malcolm: template-level findings from copper critique cycle 2** (2026-09-26, live page; they apply to all five science pages):
+  1. **The CTA band is `#1A1A1A`**, against his "no black backgrounds" rule; template §2 row 12 still specifies Ink. Argireline has the same band.
+  2. **Study links are 16–19 px tall** ("View study →", "View on PubMed →"), the smallest targets on a page whose signature is the click to the study. Proposal: ≥ 44 px, the citation row itself clickable.
+  3. **The before/after "After N weeks" label runs 12–22 px past the screen at 200% zoom** (`theme/sections/research-before-after.liquid`; copper and Argireline). The theme footer's newsletter field already overflows further, so there is no new sideways scroll from it.
+  4. One 80 px spacing value on 10 of 12 sections; card sub-headings (48 px) larger than the section headings above them; the lead figure repeated about 11 times per page; label type heavier than the key-figure numbers; the Shop action about 2.8 phone screens down; grey notes at 4.35:1.
+- ✅ **Copper peptide LIVE on the template** (2026-09-26, Malcolm: "show this page's new set up and design on the live site"). Specs
+  `configs/hub-upgrades/copper-peptide-research-{layout,evidence-merge}-2026-09-25.json`, phrase table `configs/hub-i18n/copper-peptide-research.json`; claims
+  re-read at source in register §8; reviewer config repointed; preview template deleted. Cards 1 and 2 before/after: Malcolm's picks A2 and E2 (`gpt_image 01`,
+  `configs/banners/before-after-copper-cards-r1.json`). Card 4 shows the page's original collagen-lattice image (Malcolm, 2026-09-26).
+  - ✅ **Design critic cycle 2 on the live page** (2026-09-26, fresh context): FIX 6.5 (design 6.7 · usability 6.2 · creativity 6.1 · content 7.2). Page-level
+    fixes applied the same day (Malcolm chose "finish copper"), verify-live ✓ ×6 on both specs, measured live: **key figure 3** is "4 weeks · First measured
+    change" (week-4 change from the start, register §8.4) instead of the year "2026"; **index rows** one line each, 101 px like Argireline (were 127–151); no
+    automatic hyphenation; **card 1** 19 px taller than its image (was 67); **charts side by side** again (the stacking rule was copied from PDRN, whose charts
+    differ by 407 px; copper's by 98); the chart states "the 20 of the trial's 40 women"; **hero overlay 50 → 60**, phone subtitle worst pixel 3.4 → 4.57:1;
+    the CTA names the real product in each language; **charts reflow at 200% zoom** (`scripts/hub_charts.py`, tests 57 → 61), tables inside the screen and
+    bars 133 px (were 0). Page audit **100 / 96 / 100 / 93** (GEO 91 → 96: "copper peptide benefits" now answered in the index caption). Before/after sheet
+    shown: `~/Desktop/skingenetix-renders.png`.
+  - Not changed, and why: step 2 "Give it eight weeks" (PDRN uses the same pattern, "Give it four weeks"); the 352 KB overview cut-out (nit; re-export at
+    ~480 px as WebP with alpha when next touched); the zero-height `hero_banner_css` style section (no visible harm).
+  - 🛑 **Owner calls from cycle 2:** cards 3 and 4 now show the same kind of image (blue collagen lattices, back to back; Malcolm chose card 4 "matching card
+    3"); card 2's vivid before/after rests on the least-documented study (2002 conference data known from reviews). Also still open from 2026-09-25: the
+    Mortazavi "undoubtedly…" quote is live and Pickart 2018 was not dropped, neither confirmed by Malcolm.
+  - ⏳ **External audit** waits for the central auditor rebuild (seo-toolkit F-012). The old 9.6–9.8 scores came from the retired two-model script.
+- ⏭ **Matrixyl 3000 on the template** (Malcolm's go-ahead 2026-09-26, "finish copper, then Matrixyl"). ✅ Step 1, claims re-read at source: register
+  `docs/claims/matrixyl-3000.md` §8 (every figure matched; 14 live defects listed in §8.3, including a null row still live, an altered Robinson title, and
+  "a few ppm" that should be ~150 ppm). ⏳ Four decisions for Malcolm in §8.7 (card 2 subject, "+256% at the highest dose", key figure 2, Katayama and
+  Trzaska), then steps 2–13. Glutathione after that.
 - ⚠️ **Wrong-strength image live** (found 2026-09-25): `/pages/collagen-skin-plumping` (`templates/page.collagen-skin-plumping.json`) shows
   `skingenetix-copper-peptide-ghk-cu-firming-repair-serum.jpg`, an old off-brand copper serum labelled **1%**. Our copper products are 2%. Replace it with a
   current 2% product image (Malcolm to choose, or approve the day gel-cream jar).
-- ⚠️ **Copper JSON-LD descriptions** in de/nl/fr/es/it said "55.8% more … than without" (de, nl) or gave the figure with no comparator. They are corrected in the new copper phrase table and go live with the rollout.
+- ✅ **Copper JSON-LD descriptions** in de/nl/fr/es/it said "55.8% more … than without" (de, nl) or gave the figure with no comparator. Live with the rollout on 2026-09-26; the German description checked with curl the same day.
 - ✅ **Argireline loose ends closed** (2026-09-24): the JSON-LD is now localised per language (it had said `inLanguage: "en"` with the English URL on all five translations), Hoppel 2015 is added to `citation[]`, and the dead overview CSS is removed. Verified live with curl in en/de/it.
 - ⚠️ **Site-wide, theme:** the mobile header menu icon is a 22×22 px tap target (below 44). Measured on both template pages. It is theme chrome, so fixing it is a core-theme change: Malcolm's call.
 - ✅ ~~Argireline loose ends~~: closed 2026-09-24 (entry above).
@@ -348,9 +359,8 @@ AI-generated illustrations and must not be presented as results. Record:
   - ⏭ **Retrofit PDRN, Argireline® and copper to the same standard:** charts plus tables, an external dual-model audit, and a references block translated per locale. Their references heading still serves English everywhere.
 - ✅ **Named author: Malcolm Smith, founder** (Malcolm, 2026-09-23: "you can use me as an author"). Live on Argireline; the other four get it with the template. Author attribution on the external audit went from 5.0 to 10.0.
 - ⏭ **Product-page GEO is a template gap, not a copy gap.** The Matrixyl serum and cream score GEO 51/54: no definition sentence early, ~340 words extractable without JavaScript, no page-level JSON-LD with `dateModified`. This affects every product, so it needs one template-level fix.
-- 🛑 **For Malcolm — the pre-commit quality gate is not running.** Git reports that the `.husky/_/*` hooks are "ignored because [they are] not set as
-  executable", so markdownlint and Prettier (lint-staged) have not run on commits. Fix: `chmod +x .husky/_/*` plus a test commit. Not applied without your OK,
-  because it changes the repo's quality gates. Found 2026-09-22.
+- ✅ **The pre-commit quality gate runs** (fixed 2026-09-25 on Malcolm's "permission granted"; re-checked 2026-09-26). The `.husky/_/*` wrappers are
+  executable and call `sh .husky/pre-commit` (`npx lint-staged`: markdownlint and Prettier on staged md/json/yml). Found not running 2026-09-22.
 - ✅ **Dutch stale references block fixed** (found and fixed 2026-09-22). The nl translation of `references.html` on PDRN, Argireline® and copper was outdated
   but still served: no JSON-LD at all, and on copper only 7 of the 9 references. The retrofit registered a fresh translated references block in all five
   locales, so every locale now carries the current list and its own WebPage JSON-LD. ⚠️ **General lesson: an outdated translation keeps being served.** Check

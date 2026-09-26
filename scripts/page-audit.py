@@ -383,6 +383,16 @@ async def audit_design(path, rep, shots_dir):
     return out
 
 
+def cell(value, limit=None):
+    """Report text for a markdown table cell: pipes neutralised, tags escaped so "<h1>" prints as text.
+
+    The repo's markdownlint gate (MD033) refuses raw HTML, and the outline sits in a table because MD013 exempts
+    tables from the 300-character line limit (2026-09-26: the copper report failed both).
+    """
+    s = str(value).replace("|", "/")
+    return H.escape(s[:limit] if limit else s, quote=False)
+
+
 def write(path, rep, data, design, out_dir):
     slug = path.strip("/").replace("/", "-")
     day = dt.date.today().isoformat()
@@ -396,11 +406,12 @@ def write(path, rep, data, design, out_dir):
             if i["area"] != area:
                 continue
             mark = "✅" if i["ok"] else {"high": "🔴", "med": "🟠", "low": "🟡", "info": "ℹ️"}[i["severity"]]
-            lines.append(f"| {mark} | {i['check']} | {str(i['detail']).replace('|', '/')[:220]} |")
+            lines.append(f"| {mark} | {cell(i['check'])} | {cell(i['detail'], 220)} |")
         lines.append("")
-    lines += ["## Outline as served", "", f"- **H1:** {data.get('h1')}", f"- **H2:** {data.get('h2')}",
-              f"- **Visual-only headings:** {data.get('pseudo_headings')}", f"- **Schema types:** {data.get('schema_types')}",
-              f"- **Extracted words (no JS):** {data.get('extracted_words')} of {data.get('main_words')}", "",
+    lines += ["## Outline as served", "", "| Level | As served |", "|---|---|",
+              f"| H1 | {cell(data.get('h1'))} |", f"| H2 | {cell(data.get('h2'))} |",
+              f"| Visual-only headings | {cell(data.get('pseudo_headings'))} |", f"| Schema types | {cell(data.get('schema_types'))} |",
+              f"| Extracted words (no JS) | {data.get('extracted_words')} of {data.get('main_words')} |", "",
               "## Section map (desktop)", "", "| Top | Height | Section | Type | Background |", "|---|---|---|---|---|"]
     for r in design["desktop"]["rows"]:
         lines.append(f"| {r['top']} | {r['h']} | {r['id']} | {r['type']} | {PALETTE.get(r['bg'], r['bg'])} |")
