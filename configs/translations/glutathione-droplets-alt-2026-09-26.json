@@ -1,0 +1,19 @@
+{
+  "wave": "glutathione-droplets-alt",
+  "created": "2026-09-26",
+  "note": "Alt text for the card-4 image on the glutathione science page (template rollout, design critic cycle 1): skingenetix-glutathione-serum-droplets-champagne.jpg, a hue-shifted copy of skingenetix-glutathione-brightening-serum-texture.jpg (the original stays untouched: other pages key off its URL). The critic found the coppery-rose original off the page's champagne colour family (median hue 15.8° against the 43.2° accent) and its alt text naming our product on a card about other formulations. The alt describes only what is visible and names no product. MEDIA_IMAGE resource, single `alt` key (see configs/translations/page-philosophy-standards-image-alt.json).",
+  "resources": [
+    {
+      "resource_id": "gid://shopify/MediaImage/71102820254081",
+      "title": "Card 4 (key_findings_ba/f4): skingenetix-glutathione-serum-droplets-champagne.jpg",
+      "keys": ["alt"],
+      "translations": {
+        "de": { "alt": "Champagnergoldene Tropfen eines klaren Serums auf einer hellgoldenen Fläche" },
+        "es": { "alt": "Gotas doradas color champán de un sérum transparente sobre una superficie dorada clara" },
+        "fr": { "alt": "Gouttes dorées couleur champagne d'un sérum transparent sur une surface or pâle" },
+        "it": { "alt": "Gocce dorate color champagne di un siero trasparente su una superficie oro chiaro" },
+        "nl": { "alt": "Champagnegouden druppels van een helder serum op een lichtgouden ondergrond" }
+      }
+    }
+  ]
+}
