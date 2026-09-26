@@ -9,8 +9,8 @@ Shopify e-commerce store for skincare products — sister brand to Hairgenetix (
 ## Tech Stack
 
 - **Platform:** Shopify (GraphQL Admin API)
-- **Theme:** Shopify 2.0 (Sense or Refresh)
-- **Translation:** **Translate & Adapt** (Shopify native), 9 languages planned, only `en` published. ⚠️ Langify is NOT installed (verified 2026-08-27).
+- **Theme:** Impact (Shopify 2.0, theme id `184835965313`)
+- **Translation:** **Translate & Adapt** (Shopify native), six locales published and live (`en`, `de`, `es`, `fr`, `it`, `nl`; read `shopLocales`, never a doc). ⚠️ Langify is NOT installed (verified 2026-08-27).
 - **Linting:** markdownlint (.markdownlint.json), Prettier
 - **Pre-commit:** Husky + lint-staged
 - **CI:** GitHub Actions (lint, format, build — all hard gates)
