@@ -111,3 +111,13 @@ def test_a_numeric_scholarly_identifier_is_read_as_a_pmid():
     cfg = {"scholarly": {"name": "GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration",
                          "identifier": "PMID:26236730"}}
     assert bsp.check_citations(cfg, fake({("pmid", "26236730"): PICKART})) == []
+
+
+# ---------------------------------------------------------------- links
+
+def test_links_to_our_own_site_open_in_the_same_tab():
+    """Full https://www.skingenetix.com/… URLs were given target=_blank like a PubMed link (2026-09-26)."""
+    out = bsp.md_html("[hub](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research) and "
+                      "[paper](https://doi.org/10.1111/jocd.12314)")
+    assert '<a href="https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research">hub</a>' in out
+    assert '<a href="https://doi.org/10.1111/jocd.12314" target=_blank rel=noopener>paper</a>' in out

@@ -1,0 +1,22 @@
+{
+  "created": "2026-09-26",
+  "target": "study metaobjects \u2014 Raikou 2017 `banner`, Badenhorst 2016 `banner_mobile` (via configs/studies/*.json + scripts/build-study-page.py)",
+  "decided_by": "Claude, fixing design critique 2026-09-26 findings P1 (Badenhorst phone hero, blocker) and P2 (Raikou desktop hero). docs/audits/2026-09-26-study-pages-design-critique.md",
+  "note": "Copies of two existing banners with a text-zone scrim baked in, so the hero type sits on a quiet ground. Originals untouched (rule 7). Worst-case contrast of white text over the 99.5th-percentile pixel after the theme's 28% ink overlay: Raikou desktop 2.60:1 \u2192 6.87:1 (image darkened to 50% toward its own dark tone over x < 58%, ramping to untouched by 78%, so the wave still decays left to right); Badenhorst phone 1.90:1 \u2192 6.60:1 (42% over the top 85%, easing to 65% at the foot). The 'before' figures match the critic's live measurements (2.60, 1.90).",
+  "images": [
+    {
+      "source": "assets/publish-ready/study-banners-scrim-2026-09-26/skingenetix-argireline-acetyl-hexapeptide-8-forehead-study-banner.jpg",
+      "filename": "skingenetix-argireline-acetyl-hexapeptide-8-forehead-study-banner.jpg",
+      "alt": "A wave of light losing amplitude until it lies flat on a dark ground, representing expression lines relaxing with Argireline",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-8-forehead-study-banner.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-acetyl-hexapeptide-8-forehead-study-banner.jpg?v=1790421205"
+    },
+    {
+      "source": "assets/publish-ready/study-banners-scrim-2026-09-26/skingenetix-copper-peptide-ghk-cu-study-banner-mobile.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-study-banner-mobile.jpg",
+      "alt": "Blue copper peptide crystals in a glass dish with a flask and beaker of blue solution beside a laboratory microscope, in low light",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-study-banner-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-study-banner-mobile.jpg?v=1790421205"
+    }
+  ]
+}

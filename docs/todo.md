@@ -432,8 +432,13 @@ AI-generated illustrations and must not be presented as results. Record:
     project uses it.
   - ✅ Reviewer: `reviewedBy` now comes from the config's `reviewer` key (it was hard-coded, so `--remove` could not take it off Badenhorst);
     `set-reviewer.py` reads stock-template configs; Badenhorst added to `configs/reviewers/esther-bodde.json`.
-  - ⏳ Raikou 2017 (Argireline) page, English → Malcolm's go-ahead → six languages. The live hub's Raikou reference drops the paper's subtitle.
-  - ⏳ Badenhorst: five translations (its /de … /it URLs serve English with no noindex); design critic on the stock rebuild (never run);
+  - ✅ Raikou 2017 (Argireline) live in English (Malcolm's go-ahead, 2026-09-26), from the full text. ⏳ Five translations; then
+    link it from the hub. The live hub's Raikou reference drops the paper's subtitle.
+  - ✅ Design critique cycle 1 (FIX 5.60 / 5.49): the measured defects fixed live on both pages the same day (template doc §8).
+    🛑 **Decision for Malcolm:** heading scale, spacing, card look, the shared lab images (incl. an AI-generated scientist beside
+    "Appraised by the Skingenetix research team"), the eyebrow, and whether study pages get their own art direction (fixes alone
+    are expected to level off around 6.5).
+  - ⏳ Badenhorst: five translations (its /de … /it URLs serve English with no noindex); ✅ design critic run 2026-09-26;
     central audit re-score once seo-toolkit F-012 is back (last 6.33).
   - ⏳ Wang 2013 and Ye 2026 rebuilt on the stock template (pilot content today, no figures or chart). ⚠ `set-reviewer.py --apply` still
     republishes both pilots through `study-pages.py`; do not run it until they are rebuilt.

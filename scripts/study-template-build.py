@@ -53,6 +53,44 @@ TPL = "templates/metaobject/study.json"
 
 BONE, WHITE, INK = "#F0F0F0", "#ffffff", "#1A1A1A"
 
+# Design critique 2026-09-26 (docs/audits/2026-09-26-study-pages-design-critique.md) fixes, T1/T4/T5/T9.
+#
+# T1 — the key figures took a fixed template colour (copper blue), so an Argireline page showed its
+# −7.4% in blue above a slate chart. Malcolm's rule (2026-09-24): each ingredient page uses its own
+# accent. A colour setting cannot read a metaobject field, and the definition has no free field, so a
+# stock `liquid` block picks the accent from the study's handle and overrides the figures' inline
+# --text-color on the numbers only (the section wrapper carries .text-custom too, and matching it
+# turned every label and note blue on 2026-09-26). Rung 4 (custom code) — forced: no stock setting varies per metaobject entry.
+# Keep the braces on separate lines: "}}" trips Shopify's Liquid validation.
+ACCENT = """{%- liquid
+  assign h = metaobject.system.handle
+  assign acc = '1 78 177'
+  if h contains 'argireline' or h contains 'acetyl-hexapeptide'
+    assign acc = '62 74 82'
+  elsif h contains 'pdrn'
+    assign acc = '158 79 92'
+  elsif h contains 'matrixyl' or h contains 'palmitoyl'
+    assign acc = '1 101 105'
+  elsif h contains 'glutathione'
+    assign acc = '138 105 20'
+  endif
+-%}
+<style>
+  .shopify-section--impact-text .impact-text__text .text-custom {
+    --text-color: {{ acc }} !important;
+  }
+</style>"""
+
+# T4 — long prose was centred at 102 characters a line in 15px, and the answer paragraph (the one an
+# AI engine quotes) had lost its emphasis. Left-aligned by the stock text_position setting; the
+# column width and the answer size need section CSS (≤ 500 characters, no `content:`).
+# text_position "start" also sets the flex container to justify-start, which pushed the column to
+# the left edge; centre the column, keep the text left-aligned inside it
+READING = [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}"]
+# the liquid block wraps its output in a bare <div>, so the answer is the third <p> inside it
+ANSWER = READING + [".prose div > p:nth-of-type(3) {font-size: 20px; line-height: 1.5;}",
+                    "@media (max-width: 699px) {.prose div > p:nth-of-type(3) {font-size: 17px;} }"]
+
 # The nine rows of "At a glance". Identical on every study page by design — a reader comparing
 # two studies should find the same nine questions answered in the same order.
 # The same four questions on every study page. Fixed here rather than per study so a reader
@@ -110,8 +148,9 @@ def build():
                 "blocks": {
                     "eyebrow": {"type": "subheading", "settings": {"text": val("eyebrow")}},
                     "head": {"type": "liquid", "settings": {"liquid": rt("hero_text")}},
+                    "accent": {"type": "liquid", "settings": {"liquid": ACCENT}},
                 },
-                "block_order": ["eyebrow", "head"],
+                "block_order": ["eyebrow", "head", "accent"],
                 "settings": {
                     "full_width": True, "allow_transparent_header": False,
                     "enable_parallax": False, "image_size": "sm",
@@ -150,8 +189,9 @@ def build():
                            # left ~200px of dead band on every page that does not use it.
                            "l": {"type": "liquid", "settings": {"liquid": val("sections_html")}}},
                 "block_order": ["a", "l"],
+                "custom_css": ANSWER,
                 "settings": {"full_width": True, "content_width": "medium",
-                             "text_position": "center", "background": WHITE},
+                             "text_position": "start", "background": WHITE},
             },
             # ---- at a glance ----------------------------------------------------------------
             "glance": {
@@ -188,8 +228,8 @@ def build():
                 "blocks": {"m": {"type": "image", "settings": {
                     "image": val("story_image"), "media_width": 50, "media_position": "start",
                     "text_position": "place-self-center-start text-start", "icon": "none",
-                    "icon_width": 48, "title": "What the researchers did",
-                    "content": rtp("story"),
+                    "icon_width": 48, "title": "",
+                    "content": "<h2>" + "What the researchers did" + "</h2>" + rtp("story"),
                     "background": WHITE, "text_color": INK}}},
                 "block_order": ["m"],
                 "settings": {"full_width": False},
@@ -207,10 +247,10 @@ def build():
                              "skingenetix-philosophy-published-research-microscope-petri-dish.jpg",
                     "media_width": 50, "media_position": "end",
                     "text_position": "place-self-center-start text-start", "icon": "none",
-                    "icon_width": 48, "title": "How to read this result",
+                    "icon_width": 48, "title": "",
                     # <ol> is one of the top-level tags this setting accepts, so the field holds
                     # only the <li> items
-                    "content": "<ol>" + val("limits") + "</ol>",
+                    "content": "<h2>" + "How to read this result" + "</h2>" + "<ol>" + val("limits") + "</ol>",
                     "background": WHITE, "text_color": INK}}},
                 "block_order": ["m"],
                 "settings": {"full_width": False, "background": WHITE},
@@ -224,8 +264,8 @@ def build():
                     "image": "shopify://shop_images/skingenetix-menu-scientific-research-2026.jpg",
                     "media_width": 50, "media_position": "start",
                     "text_position": "place-self-center-start text-start", "icon": "none",
-                    "icon_width": 48, "title": "Where this trial sits in the evidence",
-                    "content": rtp("context_html"), "background": WHITE, "text_color": INK}}},
+                    "icon_width": 48, "title": "",
+                    "content": "<h2>" + "Where this trial sits in the evidence" + "</h2>" + rtp("context_html"), "background": WHITE, "text_color": INK}}},
                 "block_order": ["m"],
                 "settings": {"full_width": False, "background": BONE},
             },
@@ -251,15 +291,16 @@ def build():
                 "blocks": {
                     "b": {"type": "liquid", "settings": {"liquid": rt("meaning")}},
                     "b1": {"type": "button", "settings": {
-                        "style": "solid", "size": "base",
+                        "style": "solid", "size": "lg",
                         "text": "Read the full evidence", "url": val("hub_url")}},
                     "b2": {"type": "button", "settings": {
-                        "style": "outline", "size": "base",
+                        "style": "outline", "size": "lg",
                         "text": "See the product", "url": val("product_url")}},
                 },
                 "block_order": ["b", "b1", "b2"],
+                "custom_css": READING,
                 "settings": {"full_width": True, "content_width": "medium",
-                             "text_position": "center", "background": BONE},
+                             "text_position": "start", "background": BONE},
             },
             # ---- reference + schema -----------------------------------------------------------
             "reference": {
@@ -269,8 +310,9 @@ def build():
                     "ld": {"type": "liquid", "settings": {"liquid": val("jsonld")}},
                 },
                 "block_order": ["r", "ld"],
+                "custom_css": READING,
                 "settings": {"full_width": True, "content_width": "medium",
-                             "text_position": "center", "background": WHITE},
+                             "text_position": "start", "background": WHITE},
             },
         },
         "order": ["banner", "figures", "answer", "glance", "chart",

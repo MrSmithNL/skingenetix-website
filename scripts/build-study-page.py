@@ -99,7 +99,7 @@ def md_html(s):
         if m.group(2):
             return f"<em>{m.group(2)}</em>"
         url = m.group(4)
-        ext = url.startswith("http")
+        ext = url.startswith("http") and "skingenetix.com" not in url   # our own pages stay in the tab
         return (f'<a href="{url}"{" target=_blank rel=noopener" if ext else ""}>{m.group(3)}</a>')
     return _MD.sub(sub, s)
 

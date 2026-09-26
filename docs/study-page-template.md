@@ -45,6 +45,11 @@ Built by `scripts/study-template-build.py`. Every section is one the hubs alread
 | 10  | means     | `rich-text` + two buttons    | what it means for our products                                 |
 | 11  | reference | `rich-text`                  | citation, read-at-source note, JSON-LD                         |
 
+**Two pieces of section code, both forced (rung 4):** a `liquid` block in the banner sets the key-figure colour to the
+study's ingredient accent, chosen from the metaobject handle (a colour setting cannot read a field, and the definition has no
+free field); and section Custom CSS on the answer, means and reference sections centres a 66-character reading column and sets
+the answer paragraph at 20px (17px on phones). Both added after the 2026-09-26 design critique.
+
 **Static in the template, identical on every study page** (they translate once, as template resources): the nine at-a-glance labels
 (Design, Participants, What was applied, Compared with, Duration, How it was measured, Concentration, Funding, Our evidence grade), every section
 title, the four FAQ questions and the two button labels. This is forced as well as chosen: a metaobject definition allows 40 fields and 37 are
@@ -112,28 +117,40 @@ Every localisable value is `{"en": "…", "de": "…", …}`. A locale is publis
 
 ## 7. Traps
 
-| Trap                                                                              | What happens                                                                                                  |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Shopify prepends **several** `/* */` comments to metaobject templates             | Strip them all before parsing (`study-template-build.py` does).                                               |
-| Empty sections still render their padding                                         | Remove unused sections rather than leaving them blank.                                                        |
-| `media-with-text` has no section background setting                               | Shopify drops it silently; the three media rows share a ground. Accepted.                                     |
-| `specification-table` value and `media-with-text` content validate top-level tags | Wrap the Liquid in a literal `<p>` (`rtp()`); never the `metafield_tag` filter.                               |
-| `custom-html`'s `html` setting refuses Liquid                                     | The chart is a `liquid` block in a stock `rich-text` section instead.                                         |
-| The theme's faq section ships support copy                                        | "Our customer support is available Monday to Friday" leaked onto a research page; the settings are blanked.   |
-| **Clearing a field drops its translations**                                       | Read and re-register translations before clearing a source, or rebuild them from the config.                  |
-| **A citation can point at the wrong paper**                                       | "Pickart et al., 2015" went live linked to a dental paper (PMID 26236125). The builder now refuses this (§6). |
-| Heavy storefront fetching earns HTTP 429                                          | One verification at a time, with pauses; curl, not Python.                                                    |
+| Trap                                                                              | What happens                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Shopify prepends **several** `/* */` comments to metaobject templates             | Strip them all before parsing (`study-template-build.py` does).                                                                                                                                                                            |
+| Empty sections still render their padding                                         | Remove unused sections rather than leaving them blank.                                                                                                                                                                                     |
+| `media-with-text` has no section background setting                               | Shopify drops it silently; the three media rows share a ground. Accepted.                                                                                                                                                                  |
+| `specification-table` value and `media-with-text` content validate top-level tags | Wrap the Liquid in a literal `<p>` (`rtp()`); never the `metafield_tag` filter.                                                                                                                                                            |
+| `custom-html`'s `html` setting refuses Liquid                                     | The chart is a `liquid` block in a stock `rich-text` section instead.                                                                                                                                                                      |
+| The theme's faq section ships support copy                                        | "Our customer support is available Monday to Friday" leaked onto a research page; the settings are blanked.                                                                                                                                |
+| **Clearing a field drops its translations**                                       | Read and re-register translations before clearing a source, or rebuild them from the config.                                                                                                                                               |
+| **A citation can point at the wrong paper**                                       | "Pickart et al., 2015" went live linked to a dental paper (PMID 26236125). The builder now refuses this (§6).                                                                                                                              |
+| The figures band's wrapper also carries `.text-custom`                            | A colour override on `.shopify-section--impact-text .text-custom` turned every label and note blue. Target `.impact-text__text .text-custom` (the number only).                                                                            |
+| `text_position: start` moves the column as well as the text                       | The rich-text flex container becomes `justify-start` and the column hugs the left edge. Add `.rich-text {justify-content: center;}`.                                                                                                       |
+| A `liquid` block wraps its output in a bare `<div>`                               | `.prose > p` matches nothing; use `.prose div > p`. Read the emitted markup before writing a selector.                                                                                                                                     |
+| Text over a busy banner                                                           | Judged legible by eye at 1440, it measured 2.60–2.70:1. Measure the 99.5th-percentile pixel under the text after the 28% overlay; fix with a scrim baked into a copy of the image (`configs/banners/study-banners-scrim-2026-09-26.json`). |
+| Heavy storefront fetching earns HTTP 429                                          | One verification at a time, with pauses; curl, not Python.                                                                                                                                                                                 |
 
 ## 8. Status (2026-09-26)
 
-| Page                                             | State                                                                                                                                                                                                          |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Badenhorst 2016 (copper)                         | Live on the stock template, English only. Limits reframed 2026-09-26. Central audit 6.33 before the internal-link and citation fixes; not re-scored (the central auditor is being rebuilt, seo-toolkit F-012). |
-| Wang 2013 (Argireline)                           | Live in six languages on pilot content (the `sections_html` fallback block); no figures, chart or glance. Carries the Henseler null sentence. To be rebuilt on the template (ADR-2026-09-26-L).                |
-| Ye 2026 (PDRN)                                   | Live in six languages on pilot content; to be rebuilt on the template.                                                                                                                                         |
-| Raikou 2017 (Argireline)                         | Next. Full PDF read; register §6 re-checked 2026-09-24.                                                                                                                                                        |
-| Robinson 2005 (Matrixyl)                         | Planned, from the abstract (ADR-2026-09-26-L decision 3).                                                                                                                                                      |
-| Evidence Library index `/pages/evidence-library` | Not built (404).                                                                                                                                                                                               |
+| Page                                             | State                                                                                                                                                                                                                                           |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Badenhorst 2016 (copper)                         | Live on the stock template, English only. Limits reframed; design-critique fixes applied (2026-09-26). Central audit 6.33 before the internal-link and citation fixes; not re-scored (the central auditor is being rebuilt, seo-toolkit F-012). |
+| Wang 2013 (Argireline)                           | Live in six languages on pilot content (the `sections_html` fallback block); no figures, chart or glance. Carries the Henseler null sentence. To be rebuilt on the template (ADR-2026-09-26-L).                                                 |
+| Ye 2026 (PDRN)                                   | Live in six languages on pilot content; to be rebuilt on the template.                                                                                                                                                                          |
+| Raikou 2017 (Argireline)                         | **Live in English 2026-09-26** (Malcolm's go-ahead), from the full text. Design-critique fixes applied.                                                                                                                                         |
+| Robinson 2005 (Matrixyl)                         | Planned, from the abstract (ADR-2026-09-26-L decision 3).                                                                                                                                                                                       |
+| Evidence Library index `/pages/evidence-library` | Not built (404).                                                                                                                                                                                                                                |
+
+**Design critique cycle 1 (2026-09-26, `docs/audits/2026-09-26-study-pages-design-critique.md`): FIX, Raikou 5.60, Badenhorst
+5.49.** Fixed the same day and verified by computed style: both banner contrast failures (now 6.87:1 and 6.60:1), the key-figure
+accent, the centred 102-character prose (now a 66ch left-aligned column, answer 20/17px), the three appraisal titles as real `<h2>`,
+phone buttons 39 → 48px, the chart grey 2.56 → 3.14:1, Raikou's key-figure units and "0", Badenhorst's repeated definition, and
+internal links opening new tabs. **Open, for Malcolm:** the heading scale and one spacing value on every section (T2, T3), the
+rounded-card look and the FAQ card-in-card (T6), the shared microscope and AI-scientist images (T7), the middle-dot eyebrow (T11),
+and whether study pages get their own art direction: the critic expects fixes alone to level off around 6.5.
 
 ## 9. The files
 
