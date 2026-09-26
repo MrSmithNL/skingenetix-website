@@ -268,10 +268,21 @@ AI-generated illustrations and must not be presented as results. Record:
     3"); card 2's vivid before/after rests on the least-documented study (2002 conference data known from reviews). Also still open from 2026-09-25: the
     Mortazavi "undoubtedly…" quote is live and Pickart 2018 was not dropped, neither confirmed by Malcolm.
   - ⏳ **External audit** waits for the central auditor rebuild (seo-toolkit F-012). The old 9.6–9.8 scores came from the retired two-model script.
-- ⏭ **Matrixyl 3000 on the template** (Malcolm's go-ahead 2026-09-26, "finish copper, then Matrixyl"). ✅ Step 1, claims re-read at source: register
-  `docs/claims/matrixyl-3000.md` §8 (every figure matched; 14 live defects listed in §8.3, including a null row still live, an altered Robinson title, and
-  "a few ppm" that should be ~150 ppm). ⏳ Four decisions for Malcolm in §8.7 (card 2 subject, "+256% at the highest dose", key figure 2, Katayama and
-  Trzaska), then steps 2–13. Glutathione after that.
+- ⏭ **Matrixyl 3000 on the template** (Malcolm's go-ahead 2026-09-26, "finish copper, then Matrixyl"). Built on a DRAFT, not live:
+  `templates/page.matrixyl-preview.json`, view `/pages/matrixyl-3000-research?view=matrixyl-preview` (delete after go-live).
+  - ✅ Claims re-read at source (register §8; 14 live defects in §8.3). Malcolm's §8.7 decisions: card 2 = pentapeptide-4; "+256% at the highest dose
+    tested"; key figure 2 = +13% face vs placebo; Katayama out, Trzaska in.
+  - ✅ Specs `configs/hub-upgrades/matrixyl-3000-research-{layout,evidence-merge}-2026-09-26.json`, phrase table `configs/hub-i18n/matrixyl-3000-research.json`
+    (102 phrases, checks pass in six languages). Copy follows the 2026-09-26 caveat amendment. Overview cut-out and a phone hero crop uploaded.
+  - ✅ Design critic cycle 1 on the draft: FIX 6.50 (capped by template items already with Malcolm). Page-level findings fixed: H1 split with the INCI name
+    as a smaller second line (264 → 110 px), phone hero crop, key figure 2 label, index row 02 wording, the percentage-row image, chart heading and captions.
+  - ⏳ **Malcolm picks the before/after pairs** for cards 1 and 2 from `~/Desktop/skingenetix-before-after-matrixyl-cards-r1.png` (36/36,
+    `configs/banners/before-after-matrixyl-cards-r1.json`). Then: labels in six languages, show the draft, and go live only on his word (apply both
+    specs to `templates/page.research-matrixyl.json`, retire `matrixyl-3000-research.json` and `-stats-top-2026-09-23.json`, repoint the reviewer
+    config's Matrixyl hub entry, verify-live ×6, page audit, critic on the live page, delete the preview).
+  - Owner note: every Matrixyl pack photo shows "10% MATRIXYL" on the label while the studies used 3%; the register parks what 10% means until the
+    formula sheet arrives (claim 7). The page's percentage row now uses a shot where it is not legible.
+- ⏭ **Glutathione on the template:** being built in parallel by another session (Malcolm's go-ahead 2026-09-26).
 - ⏭ **Glutathione on the template.** ✅ Step 1, claims re-read at source (Malcolm asked for the check 2026-09-26; the rollout itself is not yet approved):
   register `docs/claims/glutathione.md` §8. Every live figure matched; 14 live defects in §8.3, including ❌ "more even-looking skin tone" alt text on both
   before/after images in six languages (breaks template §4 rule 6). Three register corrections from full texts: Wahab 2021's topical serum (2% glutathione
