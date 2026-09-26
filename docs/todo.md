@@ -239,7 +239,10 @@ AI-generated illustrations and must not be presented as results. Record:
   6. On mobile, group the studies that do not apply (X and Not PDRN) in a `<details>`. The table is 6,145 px, about 7 screens.
 - ✅ **Copper peptide LIVE on the template** (2026-09-26, Malcolm: "show this page's new set up and design on the live site"). Both specs applied, verify-live ✓
   ×6 on each, anchors 6/6, stock sections still translated in de/fr/it, reviewer config repointed (`overview.html`, `evidence_sources`), `set-reviewer --remove`
-  dry run resolves all six languages, preview template deleted. Design critic cycle 1 FIX 6.5 fixed before go-live. Next: before/after photos on cards 1 and 2
+  dry run resolves all six languages, preview template deleted. Design critic cycle 1 FIX 6.5 fixed before go-live. Cards 1 and 2 before/after LIVE 2026-09-26:
+  Malcolm's picks A2 and E2 (`gpt_image 01`) from `configs/banners/before-after-copper-cards-r1.json` (35/36 generated, luma refused slot e), uploaded as
+  `skingenetix-copper-peptide-ghk-cu-{crows-feet-wrinkles,firmer-looking-skin}-before-after.jpg`; labels and result lines in six languages; labels measured
+  inside the image in all six at 1440 and 390. Earlier Next: before/after photos on cards 1 and 2
   (Malcolm, 2026-09-26: "at least 2 sections that show the best proven results from studies - with a before and after image"). Built 2026-09-25:
   - Claims re-read at source (register §8). The build fixes seven live defects: medicinal wording, a placebo claim, a shortened title, "known only through Skin Biology", Kang overstated, the collagen FAQ without qualifiers, and null or non-transferable rows.
   - Specs: `configs/hub-upgrades/copper-peptide-research-{layout,evidence-merge}-2026-09-25.json`. Phrase table: `configs/hub-i18n/copper-peptide-research.json`, 83 phrases, all checks passed.

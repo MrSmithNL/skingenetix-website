@@ -3,7 +3,7 @@
 **Status:** adopted 2026-09-23 (Malcolm: _"now lets save this as the template to follow for the other science pages. We will improve them accordingly one by one later."_). Written up 2026-09-24. ADR-2026-09-24-S.
 **Reference page:** [/pages/acetyl-hexapeptide-8-research](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research), live in six languages.
 **Replaces:** Matrixyl 3000 as the reference build. Amends items 2 and 6 of the research-page standard (`docs/content-plan-2026.md` §4).
-**Rollout:** one page at a time, on Malcolm's go-ahead for each. **PDRN done 2026-09-24** (external 9.82, page audit 100/96/100/93). Next: copper peptide, Matrixyl 3000, glutathione.
+**Rollout:** one page at a time, on Malcolm's go-ahead for each. **PDRN done 2026-09-24** (external 9.82, page audit 100/96/100/93). **Copper peptide done 2026-09-26** (design critic cycle 1 FIX 6.5, fixed before go-live; before/after on cards 1 and 2). Next: Matrixyl 3000, glutathione.
 
 ---
 
