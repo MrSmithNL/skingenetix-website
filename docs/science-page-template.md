@@ -64,9 +64,10 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 - Centred `<h2 class="evd__h">` phrased as the query: _What Does X Do for Y?_
 - A lead paragraph on the mechanism, with its citation linked.
 - Caption: _"Here is what the evidence shows, strongest first. Each line opens the study behind it."_
-- **Numbered rows `01`–`05`**, each an `<a class="evd__row" href="#rba-fN">`: a claim line and a one-line qualifier (who, how many, what design, and what it
-  does not show). Order: strongest controlled result first, then the next-strongest human result, then lab or mechanism, then safety. Every row is a positive
-  result; no row reports a null finding (ADR-2026-09-24-P).
+- **Numbered rows `01`–`05`**, each an `<a class="evd__row" href="#rba-fN">`: a claim line and a one-line qualifier (who, how many, what design, and what
+  it was compared with, said positively: _"Tested side by side against a 0.1% retinol cream"_, not _"No placebo side"_). Order: strongest controlled result
+  first, then the next-strongest human result, then lab or mechanism, then safety. Every row is a positive result; no row reports a null finding
+  (ADR-2026-09-24-P). Caveat sentences follow the 2026-09-26 amendment (§4 rule 3).
 - A foot line stating the concentration the trials used against ours, and a link to the study page if one exists.
 - Button to `#evidence-sources`: _See all N studies and how we graded them._
 
@@ -92,7 +93,7 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 - `<div class="est" id="evidence-sources">`. The stable id is what the button in §3.2 targets. Never link to the template-generated section id, which changes if the template is recreated.
 - A real `<table>` with three columns: **Study** (verbatim published title in `<p class="sgref__ti est__ti">`, then author, year, journal, volume, then the
   PubMed/DOI link) · **Grade** (pill: A controlled human trial measured by instrument · B smaller, uncontrolled or manufacturer data · C skin samples · Review)
-  · **What it found, and what it does not show**.
+  · **What it found** (until 2026-09-26 "What it found, and what it does not show"; the required qualifiers stay inside the cells).
 - The class `sgref__ti` keeps the verbatim-title exemption in `page-audit.py` (ADR-2026-09-23-G). Titles are never paraphrased and never enter a translation table.
 - Every study the page's claims rest on is a row. Since 2026-09-24, null and non-transferable studies are not listed (ADR-2026-09-24-P), and the key line is only "Published titles are quoted exactly as they appear in the journal."
 - The WebPage JSON-LD sits at the end of this section's HTML: `author` (Person: Malcolm Smith), `publisher`, `reviewedBy`, `lastReviewed`, `citation[]`, `inLanguage`. Set `jsonld_host: "evidence_sources"` in the spec and in the reviewer config's hub entry.
@@ -130,6 +131,12 @@ These come from the claims registers and ADRs; the template simply gives each on
 3. **No negative findings as cards or index rows, and none in Evidence & Sources** (ADR-2026-09-24-P, Malcolm 2026-09-24). That slot shows a positive USP with a
    before/after. The table keeps only the studies the page's positive claims rest on: rows graded negative, after a procedure, other delivery, injected or "not
    this ingredient" are dropped, as are reviews and disclaimers of those. The At-a-glance "Independent evidence" and "Not shown" lines stay (Malcolm's choice).
+   **Caveat sentences (amendment, 2026-09-26):** a limitation or null clause that no register rule requires ("small group", "day 60 not significant", "does
+   not support a hydration claim", "not read by us") is removed. A required qualifier is kept but said positively ("Tested side by side against a 0.1%
+   retinol cream", "laboratory findings that explain how X may work"). A disclosure is stated once, in _At a glance_, and not repeated on the cards;
+   a table row keeps only the disclosures its register makes a condition (e.g. Argireline's "Product supplied by the Argireline marketer in China").
+   Where two honest wordings exist, use the one that sells (Malcolm: "use wording based on what is more effective for marketing"). Worked record:
+   `docs/caveat-decisions-2026-09-25.md` §10.
 4. **Our prose paraphrases disease names and mechanism phrases,** even when reporting a study (memory `reporting-a-study-is-still-our-prose`). Only the verbatim title is exempt.
 5. **Ingredient-level only on products** until the formula facts are confirmed; the trial magnitudes live on the science page.
 6. **Brightening is cosmetic** (glutathione): never "whitening", "even tone" or "dark spots" in our prose.

@@ -233,7 +233,17 @@ AI-generated illustrations and must not be presented as results. Record:
 - 🛑 **For Malcolm: six template-level proposals from the critique.** They would change the approved Argireline design too, so they are not applied. The
   current list, with before/after sheets on the Desktop, is `docs/design-proposals-2026-09-25.md` (body text size, phone title vs key figures, PDRN hero,
   usage-image variety, one grading scale, collapsing the sources table on phones). "One accent colour" is no longer on it: Malcolm decided per-ingredient
-  accents on 2026-09-24. The 24 caveat sentences on PDRN and Argireline wait in `docs/caveat-decisions-2026-09-25.md`.
+  accents on 2026-09-24.
+- ✅ **The 24 caveat sentences on PDRN and Argireline, decided and live** (2026-09-26, Malcolm: "all recommended. But make choices and use wording based on
+  what is more effective for marketing - and the promotion of our products"; FAQ rewrite: "Use the rewrite"). Record: `docs/caveat-decisions-2026-09-25.md`
+  §10, ADR-2026-09-24-P amendment. 23 items changed, C13 kept; C8, C9, C21 and C15's order went the more promotional way. Also fixed: the Argireline FAQ "How
+  long before I see results?" (its unsupported "beyond 28 days" and "from day 15" replaced by the day-20 and 4-week results). The Argireline chart moved out of
+  a retired spec into the evidence-merge spec (day 20 only); the stats note and three FAQ answers are now owned by the evidence-merge specs as `set` items.
+  Verified in six languages, 0 outdated translations on both pages; renders on the Desktop.
+  - ⏭ **Copper and Matrixyl still use the old column heading** "What it found, and what it does not show". Malcolm's C8 answer covered PDRN and Argireline
+    only; the template (§3.5) now says "What it found", so Matrixyl should be built with it and copper aligned on the next go-ahead.
+  - ⏭ Still open on Argireline: FAQ q3 "gentle … generally well tolerated" (the "gentle / well tolerated" sweep), and the two table rows that now back no
+    claim on the page (Lipotec 2013; Hoppel 2015 since C19) — caveat sheet §6 note 3, Malcolm's call.
 - 🛑 **For Malcolm: template-level findings from copper critique cycle 2** (2026-09-26, live page; they apply to all five science pages):
   1. **The CTA band is `#1A1A1A`**, against his "no black backgrounds" rule; template §2 row 12 still specifies Ink. Argireline has the same band.
   2. **Study links are 16–19 px tall** ("View study →", "View on PubMed →"), the smallest targets on a page whose signature is the click to the study. Proposal: ≥ 44 px, the citation row itself clickable.

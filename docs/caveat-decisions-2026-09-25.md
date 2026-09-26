@@ -1,6 +1,7 @@
 # Caveat sentences on the two template science pages — decision sheet
 
-**Date:** 2026-09-25 · **Status:** waiting for Malcolm's answers. Nothing on the live store has been changed.
+**Date:** 2026-09-25 · **Status:** ✅ **decided and live 2026-09-26** (§10). Malcolm: _"all recommended. But make choices and use wording based on what is
+more effective for marketing - and the promotion of our products."_
 **Pages:** [PDRN](https://www.skingenetix.com/pages/pdrn-research) and [Argireline](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research), the two pages on the science-page template.
 **Malcolm asked:** _"show me on screen so I can decide."_
 
@@ -183,3 +184,51 @@ Then `hub-upgrade.py <spec> --verify-live` per spec, the page audit, and an entr
 - Each sentence was found in the rendered DOM by its exact text and outlined. The AFTER options were applied to the page's DOM in the headless browser only. No Admin API call was made and nothing was written to Shopify.
 - PDRN was captured first. Argireline was captured once the other session's card f5 image was live (commit `bf28080`, 16:02; checked on the page before capture).
 - The scripts are in this session's scratchpad (`caveats/specs.py` holds every item and its exact text, `capture.py`, `compose.py`). They are throwaway and not committed.
+
+## 10. Decided and applied (2026-09-26)
+
+**Malcolm's answer:** "all recommended. But make choices and use wording based on what is more effective for marketing - and the promotion of our
+products." For the FAQ (§6 note 1): "Use the rewrite". Where an item offered a choice, the more promotional option was taken if it stayed inside the claims
+registers and EU Regulation 655/2013. A required qualifier (Q) was reworded, never removed.
+
+| #   | What went live (English; the five translations match)                                                                                         | Differs from §3's recommendation?                                      |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| C1  | Row 01: "…0.1% PDRN eye cream. Tested side by side against a 0.1% retinol cream."                                                             | B, sharper wording ("tested side by side against")                     |
+| C2  | Row 04: "28 days, twice a day; no reactions on either side of the face."                                                                      | —                                                                      |
+| C3  | Card 1: the authors' affiliations sentence removed                                                                                            | —                                                                      |
+| C4  | Card 1: "There was no placebo side." removed                                                                                                  | —                                                                      |
+| C5  | Card 2: "These are laboratory findings that explain how PDRN may work."                                                                       | —                                                                      |
+| C6  | Card 3: "**The retinol side had none either**: both creams were well tolerated"                                                               | —                                                                      |
+| C7  | Card 3: "31 people is a small group." removed                                                                                                 | —                                                                      |
+| C8  | Column heading on both pages: "What it found"                                                                                                 | **Yes** (recommendation was keep). Qualifiers stay inside the cells    |
+| C9  | Ye row: "Four authors at two skincare companies." removed                                                                                     | **Yes** (recommendation was keep). The disclosure stays in At a glance |
+| C10 | Thellung row: "…stopped the effect. The founding laboratory study of the A2A mechanism."                                                      | Reworded more positively than A; "laboratory" kept                     |
+| C11 | Squadrito row: the "caution must be used" clause removed; "Cited here for mechanism only." kept                                               | —                                                                      |
+| C12 | PDRN FAQ: the hydration caution removed; the answer ends "Give it at least 4 weeks of twice-daily use."                                       | —                                                                      |
+| C13 | PDRN FAQ "No study compares a cream with injections head to head." kept                                                                       | —                                                                      |
+| C14 | Key figure 2: "…against +4.3% with placebo (p = 0.022), measured by skin-surface imaging in a 24-woman trial (Raikou et al., 2017)."          | A and B combined (placebo p-value and the instrument)                  |
+| C15 | Independent evidence: Raikou first ("a 24-woman placebo-controlled trial found forehead roughness down at day 20"), then Henseler, now linked | A, with the positive result first                                      |
+| C16 | Row 03: "The developers' own study of a 10% Argireline emulsion."                                                                             | —                                                                      |
+| C17 | Card 4: "These studies tested the ingredient itself, not our finished serum."                                                                 | A, said positively                                                     |
+| C18 | Forehead chart: day 20 only; caption "…a significant difference, p = 0.022 (Raikou et al., 2017)." Axis −12…6 so the −10 label is not clipped | —                                                                      |
+| C19 | Usage: "Concentration is not the whole story…" removed                                                                                        | —                                                                      |
+| C20 | Raikou row: the day-60 clause and "Very small" removed; "Actives supplied by the maker's distributor." kept                                   | —                                                                      |
+| C21 | Tadini row: "…(p < 0.05), a feature of younger skin."                                                                                         | **Yes**: B (the register's own gloss) instead of A                     |
+| C22 | Blanes-Mira row: "Figures as reported in the study's abstract."                                                                               | —                                                                      |
+| C23 | Hoppel row: the "Formulation science…" sentence removed                                                                                       | —                                                                      |
+| C24 | Argireline FAQ q3: the formulation hedge removed                                                                                              | —                                                                      |
+
+**§6 note 1, Argireline FAQ "How long before I see results?"**, now: "In clinical studies of the ingredient, forehead skin was measurably smoother at
+day 20, and after 4 weeks clinicians graded nearly half of users' crow's feet as clearly smoother, against none on placebo. Apply twice a day to clean skin
+and give it at least 4 weeks." **§6 note 2** needed no change: card 4's Henseler citation was already linked to PubMed.
+
+**How it was applied:** the four owning specs were first rebuilt against the live templates and found identical (no drift). Every substitution was required
+to match exactly once. The custom-html sections went through `scripts/hub-i18n.py` (all checks passed; `Henseler, 2023` added to `keep_english`). The
+chart moved from the retired `acetyl-hexapeptide-8-research-retrofit-2026-09-22.json` into the Argireline evidence-merge spec. The Argireline key figure 2
+and FAQ q3/q5, and the PDRN FAQ q5, are now `set` items in the evidence-merge specs; before this they were owned by retired specs or by no spec at all. Applied
+one spec at a time, and `--verify-live` passed in six languages after each (backups `20260926-120409`, `-120458`, `-120622`, `-120707`). One Dutch
+translation (Argireline FAQ q5) stayed flagged outdated after the register although its text was current. It was re-registered against the current digest,
+and both pages now show 0 outdated. The chart also picked up the 200% zoom reflow that `hub_charts.py` gained in commit `5ba7d25`.
+
+**Still open (not part of this sheet):** §6 notes 3, 6 and 7 (the Lipotec and Hoppel rows that back no claim, Argireline FAQ q3's "gentle … well
+tolerated", PDRN FAQ "radiant"). Copper and the Matrixyl build still carry the old column heading; the template now specifies "What it found".
