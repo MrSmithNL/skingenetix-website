@@ -6,6 +6,7 @@ Template: scripts/study-template-build.py · Spec: docs/study-page-template.md
 
     python3 scripts/build-study-page.py configs/studies/<handle>.json           # dry run
     python3 scripts/build-study-page.py configs/studies/<handle>.json --apply   # publish
+    python3 scripts/build-study-page.py configs/studies/<handle>.json --apply --draft   # save, not public
     python3 scripts/build-study-page.py configs/studies/<handle>.json --verify-live
 
 The page is nine stock Impact sections (image-with-text-overlay, impact-text, rich-text,
@@ -347,7 +348,7 @@ def media_gid(stem):
     sys.exit(f"REFUSING: no media file matching {stem!r}")
 
 
-def apply(cfg):
+def apply(cfg, status="ACTIVE"):
     payload = [{"key": k, "value": v} for k, v in {**fields(cfg, "en"), **links(cfg, "en")}.items()]
     for key, stem in (("banner", cfg["banner"]), ("banner_mobile", cfg["banner_mobile"]),
                       ("story_image", cfg["media"]["image"].rsplit(".", 1)[0])):
@@ -355,7 +356,7 @@ def apply(cfg):
     # the old single-blob field is retired by this template; blank it so nothing stale can render
     payload.append({"key": "sections_html", "value": ""})
 
-    cap = {"publishable": {"status": "ACTIVE"}}
+    cap = {"publishable": {"status": status}}   # DRAFT: saved and validated, not on the storefront
     ex = gql('query($h:MetaobjectHandleInput!){ metaobjectByHandle(handle:$h){ id } }',
              {"h": {"type": "study", "handle": cfg["handle"]}})["metaobjectByHandle"]
     if ex:
@@ -370,7 +371,7 @@ def apply(cfg):
     if r["userErrors"]:
         sys.exit(f"  ✗ {r['userErrors']}")
     rid = r["metaobject"]["id"]
-    print(f"  ✓ {cfg['handle']}: {'updated' if ex else 'created'}, ACTIVE, {len(payload)} fields (English)")
+    print(f"  ✓ {cfg['handle']}: {'updated' if ex else 'created'}, {status}, {len(payload)} fields (English)")
 
     trans = [l for l in locales(cfg) if l != "en"]
     if not trans:
@@ -419,6 +420,7 @@ def main():
     ap.add_argument("config")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--verify-live", action="store_true")
+    ap.add_argument("--draft", action="store_true", help="with --apply: save as DRAFT (not on the storefront)")
     a = ap.parse_args()
     cfg = json.loads(pathlib.Path(a.config).read_text())
     print(f"  {cfg['handle']} · locales {', '.join(locales(cfg))}")
@@ -431,7 +433,7 @@ def main():
         return 1
     print("  ✓ all checks pass")
     if a.apply:
-        apply(cfg)
+        apply(cfg, "DRAFT" if a.draft else "ACTIVE")
     return 0
 
 
