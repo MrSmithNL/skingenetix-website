@@ -535,6 +535,18 @@ and Aruan 2023 are dropped.
 
 ### 8.7 For Malcolm to decide
 
+**Decided by Malcolm, 2026-09-26** (asked with the options below; recorded before the build):
+
+1. **Card f2 = the pentapeptide-4 trial** (Robinson 2005), shown as a modest change and labelled "serum only".
+2. **"+256%" carries "at the highest dose tested"** wherever it appears (key figure, card, chart, FAQ).
+3. **Key figure 2 = +13% on the face, against placebo** (the fibre network beside the eye, 2 months, p<0.05, patent data), not the
+   +15% forearm figure. Its qualifier says "on the face, against placebo" and names the measure plainly. The +15% forearm result stays
+   in the ultrasound card and the table.
+4. **Katayama 1993 is dropped** (the parent sequence, not our ingredient; no sentence needs it). **Trzaska 2026 goes into the mechanism
+   lead** and the table as grade C (3 volunteers; both peptides found throughout the outer layer).
+
+The options as put to him:
+
 1. **Card f2:** pentapeptide-4 (Robinson; recommended) or the tripeptide-1 eye study (8.5).
 2. **"At the highest dose tested" beside +256%:** add it (recommended; the other three doses gave +33% to +67%) or leave the figure bare as it is live today.
 3. **Key figure 2:** keep +15% (forearm, p<0.01; already live in six languages), or switch to **+13%** (face, against placebo, p<0.05), which is more relevant to a face serum but a more abstract measure.
