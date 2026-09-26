@@ -210,3 +210,20 @@ def test_fetch_falls_back_to_curl_when_cloudflare_throttles_python(monkeypatch):
     assert hu.fetch("https://www.skingenetix.com/pages/x") == "<html>ok</html>"
     assert calls and calls[0][0] == "curl"
     assert hu.status("https://www.skingenetix.com/pages/x") == 200
+
+
+# ── section_css: a stock section's own Custom CSS (2026-09-26) ──────────────────────────────────────────────
+# Shopify keeps it as a top-level `custom_css` list beside `settings` (memory custom-css-is-a-sibling-of-settings);
+# written into settings it is silently ignored. Custom CSS is capped at 500 characters and refuses `content:`.
+
+def test_section_css_is_written_beside_settings_not_inside():
+    j = template()
+    hu.build({"section_css": {"faq": ["h1 em{display:block;font-size:.42em}"]}}, j)
+    assert j["sections"]["faq"]["custom_css"] == ["h1 em{display:block;font-size:.42em}"]
+    assert "custom_css" not in j["sections"]["faq"]["settings"]
+
+
+def test_section_css_refuses_what_shopify_refuses():
+    for rules in (["a{color:red}" * 60], ["p::before{content:'x'}"]):
+        with pytest.raises(SystemExit):
+            hu.build({"section_css": {"faq": rules}}, template())

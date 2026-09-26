@@ -17,6 +17,7 @@ Spec keys:
   remove_sections ["section_id"]
   _retired        "why, and which spec replaced it" — --apply then refuses (2026-09-24)
   section_settings {"section_id": {"setting": value}} — e.g. backgrounds, for alternation
+  section_css     {"section_id": ["rule", ...]} — a stock section's own Custom CSS (≤500 chars, no content:)
   jsonld          an object, emitted as <script id="sgx-webpage-jsonld"> INSIDE the existing
                   custom-html section named by `jsonld_host` (default "references").
                   ⚠️ Never as its own section: a custom-html section with no visible content
@@ -185,6 +186,12 @@ def build(spec, j):
         j["order"] = [x for x in j["order"] if x != sid]
     for sid, settings in spec.get("section_settings", {}).items():
         j["sections"][sid].setdefault("settings", {}).update(settings)
+    for sid, rules in spec.get("section_css", {}).items():
+        # a stock section's own Custom CSS: a top-level list beside `settings` (inside it, Shopify ignores it),
+        # at most 500 characters and no `content:` (both refused on upload, tested live 2026-09-25)
+        if sum(len(r) for r in rules) > 500 or any("content:" in r for r in rules):
+            sys.exit(f"  ✗ section_css {sid}: over 500 characters or uses content:, which Shopify refuses")
+        j["sections"][sid]["custom_css"] = list(rules)
     host = spec.get("jsonld_host", "references")
     tag = '<script type="application/ld+json" id="sgx-webpage-jsonld">'
     if spec.get("references_add"):
