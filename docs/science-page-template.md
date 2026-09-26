@@ -5,7 +5,8 @@
 **Replaces:** Matrixyl 3000 as the reference build. Amends items 2 and 6 of the research-page standard (`docs/content-plan-2026.md` §4).
 **Rollout:** one page at a time, on Malcolm's go-ahead for each. **PDRN done 2026-09-24** (external 9.82, page audit 100/96/100/93). **Copper peptide done
 2026-09-26** (design critic cycle 1 FIX 6.5 on the preview and cycle 2 FIX 6.5 on the live page, page-level findings fixed both times; before/after on cards 1
-and 2; page audit 100/96/100/93). **Matrixyl 3000 in progress** (step 1 done 2026-09-26, register §8). Then glutathione.
+and 2; page audit 100/96/100/93). **Matrixyl 3000 in progress** (step 1 done 2026-09-26, register §8). Then glutathione
+(step 1 done 2026-09-26, register §8; the rollout awaits Malcolm's go-ahead).
 
 ---
 

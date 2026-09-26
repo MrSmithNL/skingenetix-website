@@ -272,6 +272,12 @@ AI-generated illustrations and must not be presented as results. Record:
   `docs/claims/matrixyl-3000.md` §8 (every figure matched; 14 live defects listed in §8.3, including a null row still live, an altered Robinson title, and
   "a few ppm" that should be ~150 ppm). ⏳ Four decisions for Malcolm in §8.7 (card 2 subject, "+256% at the highest dose", key figure 2, Katayama and
   Trzaska), then steps 2–13. Glutathione after that.
+- ⏭ **Glutathione on the template.** ✅ Step 1, claims re-read at source (Malcolm asked for the check 2026-09-26; the rollout itself is not yet approved):
+  register `docs/claims/glutathione.md` §8. Every live figure matched; 14 live defects in §8.3, including ❌ "more even-looking skin tone" alt text on both
+  before/after images in six languages (breaks template §4 rule 6). Three register corrections from full texts: Wahab 2021's topical serum (2% glutathione
+  and vitamin C) **did** beat placebo (p = 0.029), the only independent controlled trial; Etnawati 2019 is out; Watanabe's wrinkle instrument shows the
+  treated side below placebo, not a fall. No new topical GSSG trial since 2014; no CIR or SCCS opinion. ⏳ Four decisions for Malcolm in §8.7 (go-ahead,
+  Wahab as card 3, a new before/after wave matching the trials' women, fixing the live alt text now), then steps 2–13.
 - 🔄 **`/pages/collagen-skin-plumping`: fix and two proof sections** (Malcolm, 2026-09-26: "option 1. But lets also add 2 content sections (text and
   before and after image) where we show the proven benefits of what peptides can do for that topic of skin concern. we can create new study before and
   after images for these sections."). Spec `configs/hub-upgrades/collagen-skin-plumping-2026-09-26.json`.
