@@ -230,5 +230,5 @@ one spec at a time, and `--verify-live` passed in six languages after each (back
 translation (Argireline FAQ q5) stayed flagged outdated after the register although its text was current. It was re-registered against the current digest,
 and both pages now show 0 outdated. The chart also picked up the 200% zoom reflow that `hub_charts.py` gained in commit `5ba7d25`.
 
-**Still open (not part of this sheet):** §6 notes 3, 6 and 7 (the Lipotec and Hoppel rows that back no claim, Argireline FAQ q3's "gentle … well
-tolerated", PDRN FAQ "radiant"). Copper and the Matrixyl build still carry the old column heading; the template now specifies "What it found".
+**Follow-ups, same day:** §6 note 3: Malcolm: **keep both** rows (Lipotec 2013, Hoppel 2015). The copper page's heading is aligned to "What it found"
+("Yes, align copper"), live in six languages. **Still open:** §6 notes 6 and 7 (Argireline FAQ q3's "gentle … well tolerated", PDRN FAQ "radiant").

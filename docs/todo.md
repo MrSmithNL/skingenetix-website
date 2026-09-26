@@ -240,10 +240,11 @@ AI-generated illustrations and must not be presented as results. Record:
   long before I see results?" (its unsupported "beyond 28 days" and "from day 15" replaced by the day-20 and 4-week results). The Argireline chart moved out of
   a retired spec into the evidence-merge spec (day 20 only); the stats note and three FAQ answers are now owned by the evidence-merge specs as `set` items.
   Verified in six languages, 0 outdated translations on both pages; renders on the Desktop.
-  - ⏭ **Copper and Matrixyl still use the old column heading** "What it found, and what it does not show". Malcolm's C8 answer covered PDRN and Argireline
-    only; the template (§3.5) now says "What it found", so Matrixyl should be built with it and copper aligned on the next go-ahead.
-  - ⏭ Still open on Argireline: FAQ q3 "gentle … generally well tolerated" (the "gentle / well tolerated" sweep), and the two table rows that now back no
-    claim on the page (Lipotec 2013; Hoppel 2015 since C19) — caveat sheet §6 note 3, Malcolm's call.
+  - ✅ **Copper aligned** (Malcolm, 2026-09-26: "Yes, align copper"): its Evidence & Sources heading is "What it found" in six languages, verify-live ✓ ×6,
+    0 outdated. The Matrixyl window (d5) and the glutathione window (d3) were told to build with it.
+  - ✅ **The two Argireline rows that back no claim (Lipotec 2013, Hoppel 2015): Malcolm, 2026-09-26: "Keep both."** Background reading; an accepted
+    exception to template §4 rule 3's "only studies a claim rests on".
+  - ⏭ Still open on Argireline: FAQ q3 "gentle … generally well tolerated" (the "gentle / well tolerated" sweep).
 - 🛑 **For Malcolm: template-level findings from copper critique cycle 2** (2026-09-26, live page; they apply to all five science pages):
   1. **The CTA band is `#1A1A1A`**, against his "no black backgrounds" rule; template §2 row 12 still specifies Ink. Argireline has the same band.
   2. **Study links are 16–19 px tall** ("View study →", "View on PubMed →"), the smallest targets on a page whose signature is the click to the study. Proposal: ≥ 44 px, the citation row itself clickable.
