@@ -16,6 +16,8 @@ What it edits, per the reviewer config:
            updated to match, so a later `hub-upgrade.py --apply` keeps the credit instead of silently dropping it.
   studies  the Evidence Library config files (configs/studies/*.json): the "*Appraised by … Last reviewed …*"
            intro line in six languages and the WebPage JSON-LD, then republished with scripts/study-pages.py.
+           Stock-template configs (no `fields` key; 2026-09-26) carry a plain `byline` and a `reviewer` key
+           instead, and are republished with scripts/build-study-page.py.
 
 Rules:
   * Idempotent: a value already naming the reviewer is left alone. --remove deletes only the reviewer sentence
@@ -98,7 +100,7 @@ def add_to_study_markup(text, loc, cfg):
     """'*Appraised by … team. Last reviewed …*' → the reviewer sentence after the first sentence."""
     if cfg["marker"] in text:
         return text
-    m = re.match(r"(\*[^*]*?\.) ", text)
+    m = re.match(r"(\*?[^*]*?\.) ", text)       # pilot markup is *italic*; stock-template bylines are plain
     if not m:
         return None
     return text[:m.end(1)] + " " + cfg["sentence"][loc] + text[m.end(1):]
@@ -106,6 +108,25 @@ def add_to_study_markup(text, loc, cfg):
 
 def remove_from_study_markup(text, loc, cfg):
     return text.replace(" " + cfg["sentence"][loc], "")
+
+
+def edit_study_config(c, cfg, add=True):
+    """A stock-template study config (scripts/build-study-page.py, 2026-09-24 on): a plain `byline` per locale
+    plus a `reviewer` key that the builder turns into reviewedBy. Edits in place; returns locales that failed."""
+    sedit = add_to_study_markup if add else remove_from_study_markup
+    bad = []
+    for loc, text in c["byline"].items():
+        nv = sedit(text, loc, cfg)
+        if nv is None:
+            bad.append(loc)
+        else:
+            c["byline"][loc] = nv
+    if not bad:
+        if add:
+            c["reviewer"] = cfg["person"]
+        else:
+            c.pop("reviewer", None)
+    return bad
 
 
 # ---------- Shopify side ----------
@@ -253,6 +274,23 @@ def main():
     for path in cfg.get("studies", []):
         p = ROOT / path
         c = json.loads(p.read_text())
+        if "fields" not in c:                        # stock-template config: build-study-page.py publishes it
+            bad = edit_study_config(c, cfg, add)
+            print(f"  study {c['handle']:<52} byline {'✗ not found in ' + str(bad) if bad else '✓ ' + str(len(c['byline'])) + ' locale(s)'}"
+                  f" · reviewer {'set' if c.get('reviewer') else 'none'}")
+            if bad:
+                failed = True
+                continue
+            if a.apply:
+                (ROOT / f"backups/reviewer-study-{c['handle']}-{stamp}.json").write_text(p.read_text())
+                p.write_text(json.dumps(c, indent=2, ensure_ascii=False) + "\n")
+                r = subprocess.run([sys.executable, str(ROOT / "scripts/build-study-page.py"), str(p), "--apply"],
+                                   capture_output=True, text=True)
+                print("      " + (r.stdout.strip().splitlines() or ["(no output)"])[-1][:160])
+                if r.returncode:
+                    print(r.stdout[-800:], r.stderr[-800:])
+                    failed = True
+            continue
         bad = []
         for loc, blocks in c["fields"]["intro"].items():
             hit = next((b for b in blocks if b[0] == "p" and re.search(cfg["date_marker"][loc], b[1])), None)

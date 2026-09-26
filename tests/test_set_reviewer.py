@@ -80,6 +80,29 @@ def test_study_markup_gets_the_sentence_after_the_first_sentence():
     assert sr.remove_from_study_markup(out, "en", CFG) == p[1]
 
 
+def test_a_stock_template_study_config_gains_and_loses_the_credit():
+    """Configs built for scripts/build-study-page.py hold a plain `byline` per locale and a `reviewer` key, not
+    the pilot's `fields.intro` blocks and `jsonld` (Badenhorst 2016 was missing from the reviewer config because
+    set-reviewer.py could not read that shape, so --remove would have left the credit live there)."""
+    c = {"byline": {"en": "Appraised by the Skingenetix research team. Last reviewed 24 September 2026.",
+                    "de": "Bewertet vom Skingenetix-Forschungsteam. Zuletzt geprüft am 24. September 2026."}}
+    assert sr.edit_study_config(c, CFG, add=True) == []
+    assert c["byline"]["en"] == ("Appraised by the Skingenetix research team. Medically reviewed by Dr Esther Bodde, "
+                                 "Cosmetic & Medical Physician. Last reviewed 24 September 2026.")
+    assert CFG["sentence"]["de"] in c["byline"]["de"]
+    assert c["reviewer"] == CFG["person"]
+    assert sr.edit_study_config(c, CFG, add=True) == []          # idempotent
+    assert c["byline"]["en"].count("Esther Bodde") == 1
+    assert sr.edit_study_config(c, CFG, add=False) == []
+    assert c["byline"]["en"] == "Appraised by the Skingenetix research team. Last reviewed 24 September 2026."
+    assert "reviewer" not in c
+
+
+def test_a_stock_template_byline_with_no_sentence_break_fails_the_locale():
+    c = {"byline": {"en": "Appraised by the Skingenetix research team"}}
+    assert sr.edit_study_config(c, CFG, add=True) == ["en"]
+
+
 def test_a_hub_can_carry_its_own_review_date():
     """The glutathione hub was rebuilt on 2026-09-23; its JSON-LD lastReviewed must not be pulled back to the
     config-wide date of the other four hubs (found live 2026-09-23: byline said 23 September, schema said 22)."""

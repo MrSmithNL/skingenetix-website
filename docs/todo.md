@@ -405,6 +405,22 @@ AI-generated illustrations and must not be presented as results. Record:
   "gentle" / "well tolerated" lines on the PDRN, Argireline and copper product FAQs and concern pages. **Also on the Argireline science page itself** (found
   2026-09-24): FAQ q3 "gentle … generally well tolerated" and q5 "measurable improvements from day 15 … additional cumulative benefits", not yet checked at
   source.
+- ⏳ **STUDY — next study articles (started 2026-09-26; ADR-2026-09-26-L).** Malcolm: "start work on the next scientific study articles", and three
+  rulings: the limits section stays, reframed as "How to read this result"; no page for the null Henseler 2023 (Wang 2013 is rebuilt in its slot,
+  Henseler sentence off); Robinson 2005 built from the abstract, no chart. Template doc rewritten: `docs/study-page-template.md`.
+  - ✅ Limits section retitled on the live template and Badenhorst's six points reworded as plain facts (2026-09-26, verified live, captured 1440/390).
+  - ✅ **STUDY-CITE:** `build-study-page.py` now refuses to publish when a PubMed / PMC / DOI link resolves to other authors or another year, or
+    the JSON-LD title is not the identifier's title (tests in `tests/test_build_study_page.py`; it catches the 2026-09-25 dental-paper PMID live).
+    Flag for centralisation: seo-toolkit's `pubmed_adapter.py` searches but cannot verify an identifier; move the check there once a second
+    project uses it.
+  - ✅ Reviewer: `reviewedBy` now comes from the config's `reviewer` key (it was hard-coded, so `--remove` could not take it off Badenhorst);
+    `set-reviewer.py` reads stock-template configs; Badenhorst added to `configs/reviewers/esther-bodde.json`.
+  - ⏳ Raikou 2017 (Argireline) page, English → Malcolm's go-ahead → six languages. The live hub's Raikou reference drops the paper's subtitle.
+  - ⏳ Badenhorst: five translations (its /de … /it URLs serve English with no noindex); design critic on the stock rebuild (never run);
+    central audit re-score once seo-toolkit F-012 is back (last 6.33).
+  - ⏳ Wang 2013 and Ye 2026 rebuilt on the stock template (pilot content today, no figures or chart). ⚠ `set-reviewer.py --apply` still
+    republishes both pilots through `study-pages.py`; do not run it until they are rebuilt.
+  - ⏳ Robinson 2005 (Matrixyl), from the abstract. ⏳ Evidence Library index `/pages/evidence-library` (404 today).
 - ✅ **Evidence Library PILOT live** (Malcolm approved, 2026-09-22). A `study` metaobject (web pages at `/pages/study/<handle>`, translatable, publishable),
   rendered by `templates/metaobject/study.json` from stock rich-text sections only. JSON-LD comes from a `jsonld` field via a liquid block: WebPage → Article,
   `isBasedOn` → ScholarlyArticle with PMID/DOI. **All three pilot criteria passed:** the fields are translatable (a German translation rendered at /de), the

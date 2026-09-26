@@ -230,28 +230,29 @@
   },
   "limits": {
     "heading": {
-      "en": "What this study does not show"
+      "en": "How to read this result"
     },
     "items": [
       {
-        "en": "<strong>It does not isolate the copper peptide.</strong> The control serum contained neither GHK-Cu <em>nor</em> the lipid nano-carrier that delivered it. The 55.8% therefore covers the peptide and its delivery system together. The authors describe the trial as the first to test GHK-Cu formulated into a nano-carrier."
+        "en": "<strong>What was compared.</strong> The GHK-Cu serum was tested against the same base without the peptide <em>and</em> without the lipid nano-carrier that delivered it, so the 55.8% belongs to the peptide and its delivery system together. The authors describe it as the first trial of GHK-Cu formulated into a nano-carrier."
       },
       {
-        "en": "<strong>Our products do not use that nano-carrier.</strong> This figure belongs to the serum that was tested, not to ours."
+        "en": "<strong>How it relates to our products.</strong> Our formulas state 2% GHK-Cu on the pack and do not use that nano-carrier, so the figure describes the serum that was tested rather than ours."
       },
       {
-        "en": "<strong>The concentration is never given.</strong> Without it, the result cannot be matched to the 2% GHK-Cu we state on our own products."
+        "en": "<strong>Concentration.</strong> The paper does not report how much GHK-Cu the tested serum contained, so the result is not tied to a percentage."
       },
       {
-        "en": "<strong>The sides were not randomised.</strong> Every participant received the GHK-Cu serum on the right and the comparator on the left, so any left-right difference in sun exposure or sleeping position sits inside the result."
+        "en": "<strong>Which side was treated.</strong> The GHK-Cu serum always went on the right side of the face and the comparator on the left; the sides were not randomised."
       },
       {
-        "en": "<strong>Against the Matrixyl 3000 product, wrinkle depth was not significant</strong> (p = 0.0577). Only the volume difference reached significance there (p = 0.0044)."
+        "en": "<strong>Against a Matrixyl 3000 product.</strong> The GHK-Cu side reduced wrinkle volume 31.6% more (p = 0.0044). The difference in depth was smaller and did not reach statistical significance (p = 0.0577)."
       },
       {
-        "en": "<strong>It is one small trial.</strong> 39 people, one site, funded by the maker of the serum, in a journal whose peer review is weaker than the major dermatology titles."
+        "en": "<strong>Scale and funding.</strong> One trial of 39 women at an independent test institute, funded by Snowberry New Zealand Ltd, which makes the serum, and published in the <em>Journal of Aging Science</em>."
       }
-    ]
+    ],
+    "_note": "ADR-2026-09-26-L (Malcolm): the appraisal stays, each point a plain fact with the positive side first, no 'does not show' framing. The section title is static in scripts/study-template-build.py."
   },
   "meaning": {
     "heading": {
@@ -352,5 +353,11 @@
         "en": "No, and we do not claim they do. The serum tested here used a lipid nano-carrier that our formulas do not, and its concentration was never disclosed. We cite this trial as evidence for the ingredient, not as a result our products have repeated."
       }
     ]
+  },
+  "reviewer": {
+    "@type": "Person",
+    "name": "Esther Bodde",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Cosmetic & Medical Physician"
   }
 }

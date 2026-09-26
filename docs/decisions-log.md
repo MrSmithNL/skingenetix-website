@@ -333,3 +333,27 @@ kept cards, rows, key figures, charts and FAQ answers:
 
 Applied live on PDRN and Argireline in six languages on 2026-09-26. The Argireline FAQ's unsupported "benefits beyond 28 days" was replaced by the sourced
 day-20 and 4-week results. Template §3.2, §3.5 and §4 rule 3 are updated. Copper and Matrixyl still carry the old column heading.
+
+## ADR-2026-09-26-L: Study pages keep their appraisal, reframed; no page for a null study; Robinson 2005 from the abstract
+
+**Date:** 2026-09-26
+**Status:** Accepted. Malcolm answered three questions when study-page work resumed ("start work on the next scientific study articles").
+**Context:** ADR-2026-09-24-P ("do not publish negative info about the ingredient") was written for the hubs. It never mentioned the study pages
+(`/pages/study/<handle>`), whose "What this study does not show" section is the appraisal the credibility research says the page exists for
+(`docs/research-2026-study-hubs-credibility.md`), and whose tier-1 list (`docs/study-inventory-2026-09-24.md` §5) included a page for a null study.
+**Decision:**
+
+1. **The limits section stays on every study page, reframed.** Its heading becomes "How to read this result", and each point is a plain fact (what
+   was compared, what the paper does not report, who funded it) with no "failed" or "does not show" framing. Where a point has a positive side, it
+   leads with it. Applies to the live Badenhorst page too.
+2. **No page for Henseler 2023** (the null Argireline imaging study). Its tier-1 slot goes to rebuilding the Wang 2013 pilot on the stock template,
+   and the Henseler sentence comes off the Wang page in that rebuild.
+3. **Robinson 2005 (Matrixyl) is built from the abstract**, PubMed record and the CIR 2012 summary: the full text is paywalled and the register holds
+   no percentage. Its key figures are design facts (93 women, 12 weeks, 3 ppm) and it has no chart. This is a stated exception to the template rule
+   "every figure read at source, from the tables", and the page's source note says what was read.
+
+**Trade-offs:** Decision 1 keeps the one element that separates an appraisal from an abstract summary, at the cost of stating limits on a page that
+sells the ingredient; the reframe makes them read as how-to-read facts. Decision 3 gives Matrixyl a study page without a measured magnitude, so the
+page states the result as "small but significant from week 8" and nothing stronger.
+**Supersedes:** `docs/study-page-template.md` §3 "Nulls and non-significant results appear in band 5" and the research doc's "null results qualify
+on the same terms" (§3.3 criterion 5).

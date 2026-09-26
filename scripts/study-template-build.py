@@ -28,7 +28,7 @@ SECTION MAP — every one of these is a section the hubs already use
                                       values come from the metaobject
   chart     custom-html               the only custom block — the hubs render charts this way too
   story     media-with-text           what the researchers did, beside an image
-  limits    rich-text on #1A1A1A      what this study does not show — the hubs' dark-section pattern
+  limits    media-with-text           how to read this result (white, like the other media rows)
   means     rich-text + buttons       what it means for our products
   reference rich-text                 citation, read-at-source note, and the JSON-LD block
 
@@ -194,10 +194,12 @@ def build():
                 "block_order": ["m"],
                 "settings": {"full_width": False},
             },
-            # ---- what this study does not show ------------------------------------------------
+            # ---- how to read this result -----------------------------------------------------
             # Same shape and the same ground as the other two media rows — Malcolm, 2026-09-24:
             # no black backgrounds, and these content blocks stay identical. The image sits on
             # the right so the three rows alternate left / right / left down the page.
+            # Retitled 2026-09-26 (ADR-2026-09-26-L): the appraisal stays, written as plain facts
+            # with the positive side first, not as "what this study does not show".
             "limits": {
                 "type": "media-with-text",
                 "blocks": {"m": {"type": "image", "settings": {
@@ -205,7 +207,7 @@ def build():
                              "skingenetix-philosophy-published-research-microscope-petri-dish.jpg",
                     "media_width": 50, "media_position": "end",
                     "text_position": "place-self-center-start text-start", "icon": "none",
-                    "icon_width": 48, "title": "What this study does not show",
+                    "icon_width": 48, "title": "How to read this result",
                     # <ol> is one of the top-level tags this setting accepts, so the field holds
                     # only the <li> items
                     "content": "<ol>" + val("limits") + "</ol>",

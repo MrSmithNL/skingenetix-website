@@ -26,6 +26,8 @@ WHAT IT ENFORCES before anything goes live
   * SEO title <= 60 characters, description <= 160, per locale
   * the answer paragraph is 35-75 words — the block an AI engine lifts whole
   * every probe in the config's "checks" list survives into the published fields
+  * every PubMed / PMC / DOI link resolves to a paper whose authors and year match its label, and the
+    JSON-LD isBasedOn title is that identifier's own title (network: NCBI + Crossref; fails closed)
 """
 import argparse
 import html as H
@@ -134,8 +136,8 @@ def jsonld(cfg, loc):
             "datePublished": cfg.get("published", cfg["read_at_source"]),
             "dateModified": cfg["read_at_source"],
             "citation": [cite],
-            "reviewedBy": {"@type": "Person", "name": "Esther Bodde", "honorificPrefix": "Dr",
-                           "jobTitle": "Cosmetic & Medical Physician"},
+            # from the config, so `set-reviewer.py --remove` can take it off (it was hard-coded until 2026-09-26)
+            **({"reviewedBy": cfg["reviewer"]} if cfg.get("reviewer") else {}),
             "author": {"@type": "Person", "name": "Malcolm Smith", "jobTitle": "Founder, Skingenetix"},
             "publisher": {"@type": "Organization", "name": "Skingenetix", "url": BASE},
             "isPartOf": {"@type": "WebSite", "url": BASE},
@@ -217,6 +219,122 @@ def check(cfg):
               f"glance {len(cfg['glance']['rows'])} rows · limits {len(cfg['limits']['items'])} · "
               f"seo {len(v['seo_title'])}/{len(v['seo_description'])}")
     return errs
+
+
+# ---------------------------------------------------------------- citation identity
+# Added 2026-09-26. On 2026-09-25 "Pickart et al., 2015" went live linked to PMID 26236125, a dental
+# paper, on the one section of a YMYL page that tells readers where the evidence sits. Nothing checked
+# that an identifier belongs to the paper named beside it, so this refuses to publish until every
+# PubMed / PMC / DOI link resolves to a record whose authors and year match its label, and the
+# JSON-LD `isBasedOn` title is the identifier's own title.
+# Rule 12 note: seo-toolkit's content_engine/adapters/pubmed_adapter.py searches PubMed but does not
+# verify an identifier; this belongs there once two projects use it (docs/todo.md STUDY-CITE).
+
+_CITE = re.compile(r"\[([^\]]+)\]\((https?://(?:pubmed\.ncbi\.nlm\.nih\.gov/(\d+)|(?:dx\.)?doi\.org/(10\.[^)\s]+?)"
+                   r"|pmc\.ncbi\.nlm\.nih\.gov/articles/(PMC\d+)|www\.ncbi\.nlm\.nih\.gov/pmc/articles/(PMC\d+))/?)\)")
+_LABEL = re.compile(r"^\s*([A-ZÀ-Ý][\w'’À-ÿ-]+).*?\b((?:19|20)\d{2})\b")
+
+
+def _strings(node):
+    if isinstance(node, str):
+        yield node
+    elif isinstance(node, dict):
+        for k, v in node.items():
+            if k == "en" or not (len(k) == 2 and k in LOCALES):   # translations share the English URLs
+                yield from _strings(v)
+    elif isinstance(node, list):
+        for v in node:
+            yield from _strings(v)
+
+
+def citation_links(cfg):
+    """(label, kind, id) for every PubMed, PMC and DOI link in the config, markdown or raw <a>."""
+    out = []
+    for s in _strings(cfg):
+        for m in _CITE.finditer(html_to_md(s)):
+            if m.group(3):
+                out.append((m.group(1), "pmid", m.group(3)))
+            elif m.group(4):
+                out.append((m.group(1), "doi", m.group(4)))
+            else:
+                out.append((m.group(1), "pmc", m.group(5) or m.group(6)))
+    return out
+
+
+def _fold(s):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c)).lower()
+
+
+def _title_key(s):
+    return re.sub(r"[^a-z0-9]+", " ", _fold(H.unescape(re.sub(r"<[^>]+>", "", s)))).strip()
+
+
+def check_citations(cfg, resolve):
+    """Errors for every identifier that fails to resolve, names other authors or another year, and for a
+    JSON-LD title that is not its identifier's title. `resolve(kind, id)` -> {title, surnames, year} | None."""
+    errs, seen = [], set()
+    for label, kind, ident in citation_links(cfg):
+        if (label, kind, ident) in seen:
+            continue
+        seen.add((label, kind, ident))
+        rec = resolve(kind, ident)
+        if not rec:
+            errs.append(f"citation {kind}:{ident} ({label!r}) did not resolve")
+            continue
+        m = _LABEL.match(label)
+        if not m:                                     # "doi:10.…" names no author: resolving is the check
+            continue
+        who, year = _fold(m.group(1)), int(m.group(2))
+        names = [_fold(n) for n in rec["surnames"]]
+        if not any(who == n or who in n.replace("-", " ").split() for n in names):
+            errs.append(f"citation {kind}:{ident} is labelled {label!r} but its authors are "
+                        f"{', '.join(rec['surnames'][:3])} — {rec['title'][:80]!r}")
+        elif abs(rec["year"] - year) > 1:
+            errs.append(f"citation {kind}:{ident} is labelled {label!r} but was published in {rec['year']}")
+    s = cfg.get("scholarly")
+    if s:
+        ident = re.sub(r"(?i)^(pmid:?\s*|doi:?\s*|https?://(dx\.)?doi\.org/)", "", s["identifier"]).strip()
+        kind = "pmid" if ident.isdigit() else "pmc" if ident.upper().startswith("PMC") else "doi"
+        rec = resolve(kind, ident)
+        if not rec:
+            errs.append(f"JSON-LD isBasedOn {kind}:{ident} did not resolve")
+        elif _title_key(rec["title"]) != _title_key(s["name"]):
+            errs.append(f"JSON-LD isBasedOn title is not the title of {kind}:{ident} — "
+                        f"the record's title is {rec['title']!r}")
+    return errs
+
+
+def resolve_live(kind, ident, _cache={}):
+    """NCBI esummary for PubMed and PMC, Crossref for a DOI. None on any failure: the check fails closed."""
+    import urllib.parse
+    import urllib.request
+    if (kind, ident) in _cache:
+        return _cache[(kind, ident)]
+    rec = None
+    try:
+        if kind in ("pmid", "pmc"):
+            db, uid = ("pubmed", ident) if kind == "pmid" else ("pmc", ident[3:])
+            time.sleep(0.4)                           # NCBI allows three requests a second without a key
+            u = ("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?"
+                 + urllib.parse.urlencode({"db": db, "id": uid, "retmode": "json"}))
+            r = json.loads(urllib.request.urlopen(u, timeout=30).read())["result"].get(uid)
+            if r and not r.get("error"):
+                y = re.search(r"(19|20)\d{2}", r.get("pubdate", "") or r.get("epubdate", ""))
+                rec = {"title": r["title"], "year": int(y.group()) if y else 0,
+                       "surnames": [a["name"].rsplit(" ", 1)[0] for a in r.get("authors", [])
+                                    if a.get("authtype", "Author") == "Author"]}
+        else:
+            u = "https://api.crossref.org/works/" + urllib.parse.quote(ident)
+            req = urllib.request.Request(u, headers={"User-Agent": "skingenetix-study-builder (mailto:info@skingenetix.com)"})
+            m = json.loads(urllib.request.urlopen(req, timeout=30).read())["message"]
+            parts = (m.get("issued") or m.get("published-print") or m.get("published-online") or {}).get("date-parts", [[0]])
+            rec = {"title": (m.get("title") or [""])[0], "year": int(parts[0][0] or 0),
+                   "surnames": [a.get("family", "") for a in m.get("author", [])]}
+    except Exception as e:                            # noqa: BLE001 — any failure means "not verified"
+        print(f"  · {kind}:{ident} lookup failed: {e}")
+    _cache[(kind, ident)] = rec
+    return rec
 
 
 # ---------------------------------------------------------------- publish
@@ -306,7 +424,7 @@ def main():
     print(f"  {cfg['handle']} · locales {', '.join(locales(cfg))}")
     if a.verify_live:
         return 1 if verify(cfg) else 0
-    errs = check(cfg)
+    errs = check(cfg) + check_citations(cfg, resolve_live)
     for e in errs:
         print("  ✗", e)
     if errs:
