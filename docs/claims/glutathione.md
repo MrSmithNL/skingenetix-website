@@ -509,6 +509,17 @@ GSH/GSSG point stays in FAQ q5.
 
 ### 8.7 For Malcolm to decide
 
+**Decided by Malcolm, 2026-09-26** (asked with the options below, each with the recommendation marked; he took all four recommendations):
+
+1. **Go-ahead: yes.** Glutathione moves onto the template now, in this window, alongside the Matrixyl build.
+2. **Wahab 2021 goes on the page as card f3** and in _Independent evidence_, always labelled "a glutathione and vitamin C serum".
+3. **A new before/after wave for f1 and f2, sent to every supplier**, with a subject who matches the trials (8.5). Malcolm picks the winners.
+4. **The live alt text is fixed now.** Done the same day: both images' English alt via `fileUpdate`, the five translations via
+   `scripts/register-translations.py configs/translations/glutathione-research-before-after-alt-2026-09-26.json` (verified "ok" in each locale, and on the
+   live page in six languages with no "even" wording left). The plan keeps the old values for undo.
+
+The options as put to him:
+
 1. **The go-ahead for the rollout** (the template move itself).
 2. **Wahab 2021 on the page** as card f3 and in _Independent evidence_ (recommended): the only independent controlled trial of topical glutathione, and
    its serum pairs glutathione with vitamin C, as ours pairs it with a vitamin C derivative. It is labelled "a glutathione and vitamin C serum" every

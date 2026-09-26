@@ -1,0 +1,70 @@
+{
+  "wave": "glutathione-research-before-after-alt-fix",
+  "created": "2026-09-26",
+  "decided_by": "Malcolm, 2026-09-26: 'Fix it now' (register docs/claims/glutathione.md §8.7 decision 4).",
+  "note": "Both before/after images on /pages/glutathione-research carried alt text saying 'more even-looking skin tone' / 'more even-looking skin' in all six languages, which breaks template §4 rule 6 (brightening only: never 'even tone' in our prose) and register fact 2 (the trial measured brightness, not evenness). Only that phrase changes; the rest of each description is kept word for word, and each locale uses the term the live page already uses for 'brighter-looking skin' (de 'heller wirkende Haut', es 'piel de aspecto más luminoso', fr 'peau d'apparence plus lumineuse', it 'pelle dall'aspetto più luminoso', nl 'helderder ogende huid').\n\nFile alt text is the MEDIA_IMAGE resource's single `alt` key (see configs/translations/page-philosophy-standards-image-alt.json). The English alt is changed first with fileUpdate (recorded in `english` below), then scripts/register-translations.py registers these five against the fresh digest.\n\nThese images are replaced in the template rollout (register §8.5, new before/after wave), so this fix is short-lived by design.\n\nUndo: fileUpdate the English back to `english_before`, then register the old translations (kept in `translations_before`).",
+  "resources": [
+    {
+      "resource_id": "gid://shopify/MediaImage/70690649145729",
+      "title": "Card 1 (key_findings_ba1, Watanabe): skingenetix-gssg-glutathione-skin-tone-clinical-trial-before-after.jpg",
+      "keys": ["alt"],
+      "english_before": "Illustration: two close photographs of the same woman's face taken weeks apart side by side, the later one showing more even-looking skin tone across the nose and cheeks while her freckles and cheek mole remain unchanged",
+      "english": "Illustration: two close photographs of the same woman's face taken weeks apart side by side, the later one showing brighter-looking skin across the nose and cheeks while her freckles and cheek mole remain unchanged",
+      "translations": {
+        "de": {
+          "alt": "Illustration: Zwei Nahaufnahmen desselben Gesichts einer Frau im Abstand von Wochen nebeneinander - das spätere zeigt heller wirkende Haut auf Nase und Wangen, während Sommersprossen und Muttermal unverändert bleiben"
+        },
+        "es": {
+          "alt": "Ilustración: dos fotografías en primer plano del rostro de la misma mujer tomadas con semanas de diferencia, una junto a la otra; la posterior muestra una piel de aspecto más luminoso en nariz y mejillas mientras sus pecas y lunar permanecen sin cambios"
+        },
+        "fr": {
+          "alt": "Illustration : deux gros plans du visage d'une même femme pris à plusieurs semaines d'intervalle, côte à côte, la seconde montrant une peau d'apparence plus lumineuse sur le nez et les joues tandis que ses taches de rousseur et son grain de beauté restent inchangés"
+        },
+        "it": {
+          "alt": "Illustrazione: due fotografie ravvicinate dello stesso viso di una donna scattate a settimane di distanza, affiancate; nella seconda la pelle su naso e guance ha un aspetto più luminoso, mentre lentiggini e neo sulla guancia restano invariati"
+        },
+        "nl": {
+          "alt": "Illustratie: twee close-upfoto's van hetzelfde gezicht van een vrouw, weken uit elkaar genomen, naast elkaar, waarbij de latere een helderder ogende huid over neus en wangen toont terwijl haar sproeten en moedervlek op de wang onveranderd blijven"
+        }
+      },
+      "translations_before": {
+        "de": "Illustration: Zwei Nahaufnahmen desselben Gesichts einer Frau im Abstand von Wochen nebeneinander - das spätere zeigt einen ebenmäßigeren Teint auf Nase und Wangen, während Sommersprossen und Muttermal unverändert bleiben",
+        "es": "Ilustración: dos fotografías en primer plano del rostro de la misma mujer tomadas con semanas de diferencia, una junto a la otra; la posterior muestra un tono de piel visiblemente más uniforme en nariz y mejillas mientras sus pecas y lunar permanecen sin cambios",
+        "fr": "Illustration : deux gros plans du visage d'une même femme pris à plusieurs semaines d'intervalle, côte à côte, la seconde montrant un teint plus uniforme sur le nez et les joues tandis que ses taches de rousseur et son grain de beauté restent inchangés",
+        "it": "Illustrazione: due fotografie ravvicinate dello stesso viso di una donna scattate a settimane di distanza, affiancate; nella seconda l'incarnato su naso e guance appare più uniforme, mentre lentiggini e neo sulla guancia restano invariati",
+        "nl": "Illustratie: twee close-upfoto's van hetzelfde gezicht van een vrouw, weken uit elkaar genomen, naast elkaar, waarbij de latere een egaler ogende huidtint over neus en wangen toont terwijl haar sproeten en moedervlek op de wang onveranderd blijven"
+      }
+    },
+    {
+      "resource_id": "gid://shopify/MediaImage/70690584265089",
+      "title": "Card 3 (key_findings_ba3, Khanna review): skingenetix-glutathione-radiance-uneven-skin-tone-before-after.jpg",
+      "keys": ["alt"],
+      "english_before": "Illustration: two close photographs of the same woman's freckled cheek taken weeks apart side by side, the later one showing clearer, more even-looking skin between the freckles, which remain unchanged",
+      "english": "Illustration: two close photographs of the same woman's freckled cheek taken weeks apart side by side, the later one showing brighter-looking skin between the freckles, which remain unchanged",
+      "translations": {
+        "de": {
+          "alt": "Illustration: Zwei Nahaufnahmen derselben sommersprossigen Wange einer Frau im Abstand von Wochen nebeneinander - das spätere zeigt heller wirkende Haut zwischen den Sommersprossen, die unverändert bleiben"
+        },
+        "es": {
+          "alt": "Ilustración: dos fotografías en primer plano de la mejilla con pecas de la misma mujer tomadas con semanas de diferencia, una junto a la otra; la posterior muestra una piel de aspecto más luminoso entre las pecas, que permanecen sin cambios"
+        },
+        "fr": {
+          "alt": "Illustration : deux gros plans de la joue tachée de son d'une même femme pris à plusieurs semaines d'intervalle, côte à côte, la seconde montrant une peau d'apparence plus lumineuse entre les taches de rousseur, qui restent inchangées"
+        },
+        "it": {
+          "alt": "Illustrazione: due fotografie ravvicinate della stessa guancia lentigginosa di una donna scattate a settimane di distanza, affiancate; nella seconda la pelle tra le lentiggini ha un aspetto più luminoso, mentre le lentiggini restano invariate"
+        },
+        "nl": {
+          "alt": "Illustratie: twee close-upfoto's van dezelfde sproeterige wang van een vrouw, weken uit elkaar genomen, naast elkaar, waarbij de latere een helderder ogende huid tussen de sproeten toont, die zelf onveranderd blijven"
+        }
+      },
+      "translations_before": {
+        "de": "Illustration: Zwei Nahaufnahmen derselben sommersprossigen Wange einer Frau im Abstand von Wochen nebeneinander - das spätere zeigt klarere, ebenmäßigere Haut zwischen den Sommersprossen, die unverändert bleiben",
+        "es": "Ilustración: dos fotografías en primer plano de la mejilla con pecas de la misma mujer tomadas con semanas de diferencia, una junto a la otra; la posterior muestra una piel visiblemente más clara y uniforme entre las pecas, que permanecen sin cambios",
+        "fr": "Illustration : deux gros plans de la joue tachée de son d'une même femme pris à plusieurs semaines d'intervalle, côte à côte, la seconde montrant une peau plus nette et plus uniforme entre les taches de rousseur, qui restent inchangées",
+        "it": "Illustrazione: due fotografie ravvicinate della stessa guancia lentigginosa di una donna scattate a settimane di distanza, affiancate; nella seconda la pelle tra le lentiggini appare più chiara e uniforme, mentre le lentiggini restano invariate",
+        "nl": "Illustratie: twee close-upfoto's van dezelfde sproeterige wang van een vrouw, weken uit elkaar genomen, naast elkaar, waarbij de latere een helderdere, egaler ogende huid tussen de sproeten toont, die zelf onveranderd blijven"
+      }
+    }
+  ]
+}
