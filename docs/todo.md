@@ -272,9 +272,20 @@ AI-generated illustrations and must not be presented as results. Record:
   `docs/claims/matrixyl-3000.md` §8 (every figure matched; 14 live defects listed in §8.3, including a null row still live, an altered Robinson title, and
   "a few ppm" that should be ~150 ppm). ⏳ Four decisions for Malcolm in §8.7 (card 2 subject, "+256% at the highest dose", key figure 2, Katayama and
   Trzaska), then steps 2–13. Glutathione after that.
-- ⚠️ **Wrong-strength image live** (found 2026-09-25): `/pages/collagen-skin-plumping` (`templates/page.collagen-skin-plumping.json`) shows
-  `skingenetix-copper-peptide-ghk-cu-firming-repair-serum.jpg`, an old off-brand copper serum labelled **1%**. Our copper products are 2%. Replace it with a
-  current 2% product image (Malcolm to choose, or approve the day gel-cream jar).
+- 🔄 **`/pages/collagen-skin-plumping`: fix and two proof sections** (Malcolm, 2026-09-26: "option 1. But lets also add 2 content sections (text and
+  before and after image) where we show the proven benefits of what peptides can do for that topic of skin concern. we can create new study before and
+  after images for these sections."). Spec `configs/hub-upgrades/collagen-skin-plumping-2026-09-26.json`.
+  - ✅ **Copper block claim fixed, six languages:** "reduced wrinkle volume 55.8% more than the same serum without it" (the comparison serum also lacked the
+    nano-carrier) → "a GHK-Cu serum reduced crow's-feet wrinkle volume by 24.1% in 8 weeks, against 15.0% with the plain serum base". Verify-live ✓ ×6,
+    0 outdated; backup `20260926-123002`.
+  - ⏳ **Two proof cards drafted, six languages** (`configs/copy/collagen-skin-plumping-proof-2026-09-26.json`; a new `research-before-after` section `proof`
+    after the ingredient blocks): f1 Matrixyl 3000 deep-wrinkle area −39% in 2 months (Sederma half-face), f2 copper peptide face-cream study (71 women) plus
+    the 7-in-10 new-collagen biopsy count. Before/after wave `configs/banners/before-after-collagen-plumping-r1.json` (builder
+    `scripts/build-collagen-plumping-before-after-config.py`, 6 slots × 6 suppliers; six new women, Matrixyl her LEFT side). **Waiting: Malcolm's picks.**
+  - ⏳ **Wrong-strength image** (found 2026-09-25): the copper block shows `skingenetix-copper-peptide-ghk-cu-firming-repair-serum.jpg`, an old off-brand
+    serum labelled **1%**; our copper products are 2%. Options on the Desktop sheet (NOW, J = day-cream jar, S0–S10 = the current serum's product photos).
+    **Waiting: Malcolm's pick.**
+  - ⚠️ Noted, not changed: this page is still a consolidation candidate with `/pages/firming-skin-density` (Phase 1 note above).
 - ✅ **Copper JSON-LD descriptions** in de/nl/fr/es/it said "55.8% more … than without" (de, nl) or gave the figure with no comparator. Live with the rollout on 2026-09-26; the German description checked with curl the same day.
 - ✅ **Argireline loose ends closed** (2026-09-24): the JSON-LD is now localised per language (it had said `inLanguage: "en"` with the English URL on all five translations), Hoppel 2015 is added to `citation[]`, and the dead overview CSS is removed. Verified live with curl in en/de/it.
 - ⚠️ **Site-wide, theme:** the mobile header menu icon is a 22×22 px tap target (below 44). Measured on both template pages. It is theme chrome, so fixing it is a core-theme change: Malcolm's call.

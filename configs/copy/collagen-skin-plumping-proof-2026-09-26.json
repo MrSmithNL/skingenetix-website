@@ -1,0 +1,140 @@
+{
+  "_about": "Drafted copy for the new `proof` section on /pages/collagen-skin-plumping (Malcolm, 2026-09-26: 'add 2 content sections (text and before and after image) where we show the proven benefits of what peptides can do for that topic of skin concern'). Six languages; numbers, links and tags checked equal across locales. f1 Matrixyl 3000 (Sederma half-face study; wording per docs/claims/matrixyl-3000.md §8.4-8.5), f2 copper peptide (the 2002 face-cream study, 71 women, plus the Abdulghani biopsy count; copper register §8.4; sentences reused from the copper science page's approved translations). To apply: set each block's `image` to the uploaded pick and add this as add_sections id `proof` after `content` in configs/hub-upgrades/collagen-skin-plumping-2026-09-26.json.",
+  "images": "configs/banners/before-after-collagen-plumping-r1.json (wave), picks pending",
+  "section": {
+    "id": "proof",
+    "after": "content",
+    "section": {
+      "type": "research-before-after",
+      "settings": {
+        "title": {
+          "en": "What Peptides Did in Clinical Studies",
+          "de": "Was Peptide in klinischen Studien bewirkt haben",
+          "nl": "Wat peptiden deden in klinische studies",
+          "fr": "Ce que les peptides ont montré dans les études cliniques",
+          "es": "Lo que lograron los péptidos en estudios clínicos",
+          "it": "Cosa hanno ottenuto i peptidi negli studi clinici"
+        }
+      },
+      "blocks": {
+        "f1": {
+          "type": "finding",
+          "settings": {
+            "image": "",
+            "media_position": "start",
+            "before_label": {
+              "en": "Before",
+              "de": "Vorher",
+              "nl": "Voor",
+              "fr": "Avant",
+              "es": "Antes",
+              "it": "Prima"
+            },
+            "after_label": {
+              "en": "After 2 months",
+              "de": "Nach 2 Monaten",
+              "nl": "Na 2 maanden",
+              "fr": "Après 2 mois",
+              "es": "Después de 2 meses",
+              "it": "Dopo 2 mesi"
+            },
+            "result_label": {
+              "en": "−39% deep-wrinkle area in 2 months · manufacturer half-face study",
+              "de": "−39 % Fläche tiefer Falten in 2 Monaten · Halbseitenstudie des Herstellers",
+              "nl": "−39% oppervlak diepe rimpels in 2 maanden · halfgezichtsstudie van de fabrikant",
+              "fr": "−39 % de surface de rides profondes en 2 mois · étude demi-visage du fabricant",
+              "es": "−39 % de superficie de arrugas profundas en 2 meses · estudio de media cara del fabricante",
+              "it": "−39% di superficie delle rughe profonde in 2 mesi · studio a mezzo viso del produttore"
+            },
+            "note_label": "",
+            "label_background": "#1a1a1a",
+            "label_text_color": "#ffffff",
+            "subheading": {
+              "en": "Matrixyl 3000",
+              "de": "Matrixyl 3000",
+              "nl": "Matrixyl 3000",
+              "fr": "Matrixyl 3000",
+              "es": "Matrixyl 3000",
+              "it": "Matrixyl 3000"
+            },
+            "title": {
+              "en": "Deep-Wrinkle Area −39% in 2 Months",
+              "de": "Fläche tiefer Falten −39 % in 2 Monaten",
+              "nl": "Oppervlak van diepe rimpels −39% in 2 maanden",
+              "fr": "Surface des rides profondes −39 % en 2 mois",
+              "es": "Superficie de arrugas profundas −39 % en 2 meses",
+              "it": "Superficie delle rughe profonde −39% in 2 mesi"
+            },
+            "content": {
+              "en": "<p><strong>In the manufacturer's half-face study, 23 women aged 42 to 67 applied a 3% Matrixyl 3000 cream to one half of the face and a placebo cream to the other, twice a day for 2 months.</strong></p><ul><li><strong>Area taken up by deep wrinkles −39%</strong>, measured by 3D skin-surface profiling</li><li><strong>Main-wrinkle depth −20%</strong>, volume −23%, roughness −16%</li><li>On the placebo half, no significant change in wrinkle area, depth or roughness</li></ul><p><strong>Beneath the surface:</strong> in a second study by the same maker, in 28 women, the fibre network just beneath the skin's surface beside the eye was less fragmented, 13% ahead of the placebo side after 2 months.</p><p>More in our <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000 research summary</a>.</p>",
+              "de": "<p><strong>In der Halbseitenstudie des Herstellers trugen 23 Frauen zwischen 42 und 67 Jahren 2 Monate lang zweimal täglich eine Creme mit 3 % Matrixyl 3000 auf eine Gesichtshälfte und eine Placebo-Creme auf die andere auf.</strong></p><ul><li><strong>Fläche tiefer Falten −39 %</strong>, gemessen mit 3D-Profilometrie der Hautoberfläche</li><li><strong>Tiefe der Hauptfalte −20 %</strong>, Volumen −23 %, Rauheit −16 %</li><li>Auf der Placebo-Hälfte keine signifikante Veränderung von Faltenfläche, -tiefe oder Rauheit</li></ul><p><strong>Unter der Oberfläche:</strong> In einer zweiten Studie desselben Herstellers mit 28 Frauen war das Fasernetz direkt unter der Hautoberfläche neben dem Auge weniger zerklüftet, nach 2 Monaten 13 % vor der Placebo-Seite.</p><p>Mehr in unserer <a href=\"/de/pages/matrixyl-3000-research\">Forschungsübersicht zu Matrixyl 3000</a>.</p>",
+              "nl": "<p><strong>In de halfgezichtsstudie van de fabrikant brachten 23 vrouwen van 42 tot 67 jaar 2 maanden lang tweemaal daags een crème met 3% Matrixyl 3000 aan op de ene gezichtshelft en een placebocrème op de andere.</strong></p><ul><li><strong>Oppervlak van diepe rimpels −39%</strong>, gemeten met 3D-profilometrie van het huidoppervlak</li><li><strong>Diepte van de hoofdrimpel −20%</strong>, volume −23%, ruwheid −16%</li><li>Aan de placebohelft geen significante verandering in rimpeloppervlak, -diepte of ruwheid</li></ul><p><strong>Onder het oppervlak:</strong> in een tweede studie van dezelfde fabrikant, bij 28 vrouwen, was het vezelnetwerk net onder het huidoppervlak naast het oog minder gefragmenteerd, na 2 maanden 13% vóór op de placebokant.</p><p>Meer in ons <a href=\"/nl/pages/matrixyl-3000-research\">onderzoeksoverzicht over Matrixyl 3000</a>.</p>",
+              "fr": "<p><strong>Dans l'étude demi-visage du fabricant, 23 femmes de 42 à 67 ans ont appliqué deux fois par jour pendant 2 mois une crème à 3 % de Matrixyl 3000 sur une moitié du visage et une crème placebo sur l'autre.</strong></p><ul><li><strong>Surface occupée par les rides profondes −39 %</strong>, mesurée par profilométrie 3D de la surface de la peau</li><li><strong>Profondeur de la ride principale −20 %</strong>, volume −23 %, rugosité −16 %</li><li>Sur la moitié placebo, aucun changement significatif de la surface, de la profondeur des rides ni de la rugosité</li></ul><p><strong>Sous la surface :</strong> dans une deuxième étude du même fabricant, chez 28 femmes, le réseau de fibres situé juste sous la surface de la peau près de l'œil était moins fragmenté, avec 13 % d'avance sur le côté placebo après 2 mois.</p><p>En savoir plus dans notre <a href=\"/fr/pages/matrixyl-3000-research\">synthèse de recherche sur Matrixyl 3000</a>.</p>",
+              "es": "<p><strong>En el estudio de media cara del fabricante, 23 mujeres de 42 a 67 años aplicaron dos veces al día durante 2 meses una crema con un 3 % de Matrixyl 3000 en una mitad del rostro y una crema placebo en la otra.</strong></p><ul><li><strong>Superficie ocupada por arrugas profundas −39 %</strong>, medida por perfilometría 3D de la superficie de la piel</li><li><strong>Profundidad de la arruga principal −20 %</strong>, volumen −23 %, rugosidad −16 %</li><li>En la mitad con placebo, ningún cambio significativo en la superficie, la profundidad de las arrugas ni la rugosidad</li></ul><p><strong>Bajo la superficie:</strong> en un segundo estudio del mismo fabricante, en 28 mujeres, la red de fibras justo debajo de la superficie de la piel junto al ojo estaba menos fragmentada, un 13 % por delante del lado con placebo a los 2 meses.</p><p>Más en nuestro <a href=\"/es/pages/matrixyl-3000-research\">resumen de investigación sobre Matrixyl 3000</a>.</p>",
+              "it": "<p><strong>Nello studio a mezzo viso del produttore, 23 donne tra i 42 e i 67 anni hanno applicato due volte al giorno per 2 mesi una crema con il 3% di Matrixyl 3000 su una metà del viso e una crema placebo sull'altra.</strong></p><ul><li><strong>Superficie occupata dalle rughe profonde −39%</strong>, misurata con profilometria 3D della superficie cutanea</li><li><strong>Profondità della ruga principale −20%</strong>, volume −23%, ruvidità −16%</li><li>Sulla metà placebo, nessuna variazione significativa di superficie, profondità delle rughe o ruvidità</li></ul><p><strong>Sotto la superficie:</strong> in un secondo studio dello stesso produttore, in 28 donne, la rete di fibre appena sotto la superficie della pelle accanto all'occhio era meno frammentata, con un vantaggio del 13% sul lato placebo dopo 2 mesi.</p><p>Di più nella nostra <a href=\"/it/pages/matrixyl-3000-research\">sintesi della ricerca su Matrixyl 3000</a>.</p>"
+            }
+          }
+        },
+        "f2": {
+          "type": "finding",
+          "settings": {
+            "image": "",
+            "media_position": "end",
+            "before_label": {
+              "en": "Before",
+              "de": "Vorher",
+              "nl": "Voor",
+              "fr": "Avant",
+              "es": "Antes",
+              "it": "Prima"
+            },
+            "after_label": {
+              "en": "After 12 weeks",
+              "de": "Nach 12 Wochen",
+              "nl": "Na 12 weken",
+              "fr": "Après 12 semaines",
+              "es": "Después de 12 semanas",
+              "it": "Dopo 12 settimane"
+            },
+            "result_label": {
+              "en": "Firmer, denser-looking skin (face-cream study, 71 women)",
+              "de": "Straffer und dichter wirkende Haut (Studie mit Gesichtscreme, 71 Frauen)",
+              "nl": "Steviger en dichter ogende huid (studie met gezichtscrème, 71 vrouwen)",
+              "fr": "Peau d'apparence plus ferme et plus dense (étude d'une crème visage, 71 femmes)",
+              "es": "Piel de aspecto más firme y denso (estudio de una crema facial, 71 mujeres)",
+              "it": "Pelle dall'aspetto più tonico e denso (studio su una crema viso, 71 donne)"
+            },
+            "note_label": "",
+            "label_background": "#1a1a1a",
+            "label_text_color": "#ffffff",
+            "subheading": {
+              "en": "Copper peptide (GHK-Cu)",
+              "de": "Kupferpeptid (GHK-Cu)",
+              "nl": "Koperpeptide (GHK-Cu)",
+              "fr": "Peptide de cuivre (GHK-Cu)",
+              "es": "Péptido de cobre (GHK-Cu)",
+              "it": "Peptide di rame (GHK-Cu)"
+            },
+            "title": {
+              "en": "Denser, Firmer-Looking Skin in 12 Weeks",
+              "de": "Dichtere, straffer wirkende Haut in 12 Wochen",
+              "nl": "Dichtere, steviger ogende huid in 12 weken",
+              "fr": "Peau plus dense et d'apparence plus ferme en 12 semaines",
+              "es": "Piel más densa y de aspecto más firme en 12 semanas",
+              "it": "Pelle più densa e dall'aspetto più tonico in 12 settimane"
+            },
+            "content": {
+              "en": "<p>In a 12-week study of a copper-peptide face cream in 71 women, the reported results were firmer, clearer-looking skin, fewer fine lines, shallower wrinkles, and denser, thicker skin.</p><p><strong>New collagen in 7 of 10 people:</strong> in a one-month biopsy study of four creams on thigh skin, ten people per cream, 7 of 10 people using a copper-binding peptide cream showed new collagen, against 5 of 10 with vitamin C, 5 of 10 with melatonin and 4 of 10 with tretinoin. A count of people; the creams were not tested against each other.</p><p>The face-cream study was presented at a dermatology meeting in 2002 and is known from published reviews (<a href='https://pubmed.ncbi.nlm.nih.gov/26236730/' target='_blank' rel='noopener'>Pickart et al., 2015</a>; <a href='https://pubmed.ncbi.nlm.nih.gov/39963574/' target='_blank' rel='noopener'>Mortazavi et al., 2024</a>). More in our <a href=\"/pages/copper-peptide-research\">copper peptide research summary</a>.</p>",
+              "de": "<p>In einer 12-wöchigen Studie mit einer Gesichtscreme mit Kupferpeptid bei 71 Frauen waren die berichteten Ergebnisse straffer und klarer wirkende Haut, weniger feine Linien, flachere Falten sowie dichtere, dickere Haut.</p><p><strong>Neues Kollagen bei 7 von 10 Personen:</strong> In einer einmonatigen Biopsiestudie mit vier Cremes an Oberschenkelhaut, zehn Personen pro Creme, zeigten 7 von 10 Personen mit einer kupferbindenden Peptidcreme neues Kollagen, gegenüber 5 von 10 mit Vitamin C, 5 von 10 mit Melatonin und 4 von 10 mit Tretinoin. Eine Zählung von Personen; die Cremes wurden nicht gegeneinander getestet.</p><p>Die Studie mit der Gesichtscreme wurde 2002 auf einem Dermatologiekongress vorgestellt und ist aus veröffentlichten Übersichten bekannt (<a href='https://pubmed.ncbi.nlm.nih.gov/26236730/' target='_blank' rel='noopener'>Pickart et al., 2015</a>; <a href='https://pubmed.ncbi.nlm.nih.gov/39963574/' target='_blank' rel='noopener'>Mortazavi et al., 2024</a>). Mehr in unserer <a href=\"/de/pages/copper-peptide-research\">Forschungsübersicht zu Kupferpeptiden</a>.</p>",
+              "nl": "<p>In een studie van 12 weken met een gezichtscrème met koperpeptide bij 71 vrouwen waren de gemelde resultaten een steviger en helderder ogende huid, minder fijne lijntjes, minder diepe rimpels en een dichtere, dikkere huid.</p><p><strong>Nieuw collageen bij 7 van de 10 mensen:</strong> in een biopsiestudie van één maand met vier crèmes op de huid van de dij, tien mensen per crème, lieten 7 van de 10 mensen met een koperbindende peptidecrème nieuw collageen zien, tegenover 5 van de 10 met vitamine C, 5 van de 10 met melatonine en 4 van de 10 met tretinoïne. Een telling van mensen; de crèmes werden niet tegen elkaar getest.</p><p>De studie met de gezichtscrème werd in 2002 op een dermatologiecongres gepresenteerd en is bekend uit gepubliceerde reviews (<a href='https://pubmed.ncbi.nlm.nih.gov/26236730/' target='_blank' rel='noopener'>Pickart et al., 2015</a>; <a href='https://pubmed.ncbi.nlm.nih.gov/39963574/' target='_blank' rel='noopener'>Mortazavi et al., 2024</a>). Meer in ons <a href=\"/nl/pages/copper-peptide-research\">onderzoeksoverzicht over koperpeptiden</a>.</p>",
+              "fr": "<p>Dans une étude de 12 semaines portant sur une crème visage au peptide de cuivre chez 71 femmes, les résultats rapportés étaient une peau d'apparence plus ferme et plus nette, moins de ridules, des rides moins profondes et une peau plus dense et plus épaisse.</p><p><strong>Du nouveau collagène chez 7 personnes sur 10 :</strong> dans une étude par biopsie d'un mois portant sur quatre crèmes appliquées sur la peau des cuisses, dix personnes par crème, 7 personnes sur 10 utilisant une crème au peptide liant le cuivre ont montré du nouveau collagène, contre 5 sur 10 avec la vitamine C, 5 sur 10 avec la mélatonine et 4 sur 10 avec la trétinoïne. Un décompte de personnes ; les crèmes n'ont pas été testées les unes contre les autres.</p><p>L'étude de la crème visage a été présentée lors d'un congrès de dermatologie en 2002 et est connue par des revues publiées (<a href='https://pubmed.ncbi.nlm.nih.gov/26236730/' target='_blank' rel='noopener'>Pickart et al., 2015</a> ; <a href='https://pubmed.ncbi.nlm.nih.gov/39963574/' target='_blank' rel='noopener'>Mortazavi et al., 2024</a>). En savoir plus dans notre <a href=\"/fr/pages/copper-peptide-research\">synthèse de recherche sur les peptides de cuivre</a>.</p>",
+              "es": "<p>En un estudio de 12 semanas con una crema facial con péptido de cobre en 71 mujeres, los resultados descritos fueron una piel de aspecto más firme y más limpio, menos líneas finas, arrugas menos profundas y una piel más densa y gruesa.</p><p><strong>Colágeno nuevo en 7 de cada 10 personas:</strong> en un estudio con biopsias de un mes con cuatro cremas aplicadas en la piel del muslo, diez personas por crema, 7 de cada 10 personas que usaron una crema de péptido que se une al cobre mostraron colágeno nuevo, frente a 5 de cada 10 con vitamina C, 5 de cada 10 con melatonina y 4 de cada 10 con tretinoína. Un recuento de personas; las cremas no se probaron unas frente a otras.</p><p>El estudio de la crema facial se presentó en un congreso de dermatología en 2002 y se conoce por revisiones publicadas (<a href='https://pubmed.ncbi.nlm.nih.gov/26236730/' target='_blank' rel='noopener'>Pickart et al., 2015</a>; <a href='https://pubmed.ncbi.nlm.nih.gov/39963574/' target='_blank' rel='noopener'>Mortazavi et al., 2024</a>). Más en nuestro <a href=\"/es/pages/copper-peptide-research\">resumen de investigación sobre péptidos de cobre</a>.</p>",
+              "it": "<p>In uno studio di 12 settimane su una crema viso al peptide di rame in 71 donne, i risultati riportati sono stati una pelle dall'aspetto più tonico e più limpido, meno linee sottili, rughe meno profonde e una pelle più densa e spessa.</p><p><strong>Nuovo collagene in 7 persone su 10:</strong> in uno studio bioptico di un mese su quattro creme applicate sulla pelle della coscia, dieci persone per crema, 7 persone su 10 che usavano una crema al peptide che lega il rame hanno mostrato nuovo collagene, contro 5 su 10 con la vitamina C, 5 su 10 con la melatonina e 4 su 10 con la tretinoina. Un conteggio di persone; le creme non sono state testate l'una contro l'altra.</p><p>Lo studio sulla crema viso è stato presentato a un congresso di dermatologia nel 2002 ed è noto da revisioni pubblicate (<a href='https://pubmed.ncbi.nlm.nih.gov/26236730/' target='_blank' rel='noopener'>Pickart et al., 2015</a>; <a href='https://pubmed.ncbi.nlm.nih.gov/39963574/' target='_blank' rel='noopener'>Mortazavi et al., 2024</a>). Di più nella nostra <a href=\"/it/pages/copper-peptide-research\">sintesi della ricerca sui peptidi di rame</a>.</p>"
+            }
+          }
+        }
+      },
+      "block_order": ["f1", "f2"]
+    }
+  }
+}
