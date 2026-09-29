@@ -75,7 +75,7 @@
             "type": "richtext",
             "settings": {
               "content": {
-                "en": "<h2>Do Collagen Creams Work?</h2><p><strong>Yes, as a moisturizer: collagen in a cream holds water at the skin's surface, helping skin look smoother and plumper.</strong> How it does that depends on the size of the molecule. Native and soluble collagen are far too large to cross intact skin, so they stay on the surface as a film that locks in moisture. Hydrolyzed collagen is collagen cut into small peptides, and some of it reaches the skin's outer layer, where it helps hold water.</p><p>Collagen in a cream does not replace the collagen your skin makes itself. That is where signal peptides come in: <a href=\"/pages/matrixyl-3000-research\">Matrixyl® 3000</a> and <a href=\"/pages/copper-peptide-research\">copper peptide GHK-Cu</a> are associated with the skin's own collagen activity, and both have clinical results on wrinkles. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> pairs three forms of collagen with both Matrixyl 3000 peptides, so one jar does both jobs.</p><p>Written by <strong>Malcolm Smith</strong>, founder of Skingenetix, who compiles the claims registers behind our research pages. Last updated 29 September 2026.</p>"
+                "en": "<h2>Do Collagen Creams Work?</h2><p><strong>Yes, as a moisturizer: collagen in a cream holds water at the skin's surface, helping skin look smoother and plumper.</strong> How it does that depends on the size of the molecule. Native and soluble collagen are far too large to cross intact skin, so they stay on the surface as a film that locks in moisture. Hydrolyzed collagen is collagen cut into small peptides, and some of it reaches the skin's outer layer, where it helps hold water.</p><p>Collagen in a cream does not replace the collagen your skin makes itself. That is where signal peptides come in: <a href=\"/pages/matrixyl-3000-research\">Matrixyl® 3000</a> and <a href=\"/pages/copper-peptide-research\">copper peptide GHK-Cu</a> are associated with the skin's own collagen activity, and both have clinical results on wrinkles. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> contains both: three forms of collagen, and the two Matrixyl 3000 peptides behind that clinical work.</p><p>Written by <strong>Malcolm Smith</strong>, founder of Skingenetix, who compiles the claims registers behind our research pages. Last updated 29 September 2026.</p>"
               }
             }
           }
@@ -135,14 +135,16 @@
               "icon_width": 48,
               "title": "",
               "content": {
-                "en": "<h2>What Does Collagen Do in a Cream?</h2><p><strong>Collagen in a cream is a moisturizing ingredient: it holds water at the skin's surface for a smoother, plumper-looking finish.</strong> Skin lets through compounds under about 500 daltons, a measure of molecular weight (<a href=\"https://pubmed.ncbi.nlm.nih.gov/10839713/\" target=\"_blank\" rel=\"noopener\">Bos and Meinardi, 2000</a>). Native and soluble collagen weigh 30,000 to over 1,000,000 (<a href=\"https://doi.org/10.1177/10915818221104783\" target=\"_blank\" rel=\"noopener\">CIR Expert Panel, 2022</a>), so they stay on top as a film that locks in moisture. Hydrolyzed collagen is small enough for some of it to reach the skin's outer layer (<a href=\"https://pubmed.ncbi.nlm.nih.gov/32098294/\" target=\"_blank\" rel=\"noopener\">Aguirre-Cruz et al., 2020</a>).</p><p><strong>In a four-week study of 23 people with very dry skin</strong>, a cream combining hydrolyzed collagen with hyaluronic acid and proteoglycan raised hydration by 83% and cut water loss by a third, against their skin at the start (<a href=\"https://pubmed.ncbi.nlm.nih.gov/34638528/\" target=\"_blank\" rel=\"noopener\">Lee et al., 2021</a>). Our Pro-Collagen Firming Cream carries all three forms of collagen.</p>"
+                "en": "<h2>What Does Collagen Do in a Cream?</h2><p><strong>Collagen in a cream is a moisturizing ingredient: it holds water at the skin's surface for a smoother, plumper-looking finish.</strong> Skin lets through compounds under about 500 daltons, a measure of molecular weight (<a href=\"https://pubmed.ncbi.nlm.nih.gov/10839713/\" target=\"_blank\" rel=\"noopener\">Bos and Meinardi, 2000</a>). Native and soluble collagen weigh 30,000 to over 1,000,000 (<a href=\"https://doi.org/10.1177/10915818221104783\" target=\"_blank\" rel=\"noopener\">CIR Expert Panel, 2022</a>), so they stay on top as a film that locks in moisture. Hydrolyzed collagen is small enough for some of it to reach the skin's outer layer (<a href=\"https://pubmed.ncbi.nlm.nih.gov/32098294/\" target=\"_blank\" rel=\"noopener\">Aguirre-Cruz et al., 2020</a>).</p><p><strong>In a four-week study of 23 people with very dry skin</strong>, a research cream combining hydrolyzed collagen with hyaluronic acid and proteoglycan raised hydration by 83% and cut water loss by a third, against their skin at the start (<a href=\"https://pubmed.ncbi.nlm.nih.gov/34638528/\" target=\"_blank\" rel=\"noopener\">Lee et al., 2021</a>).</p><p>Our Pro-Collagen Firming Cream contains all three forms: native, soluble and hydrolyzed collagen.</p>"
               },
               "link_text": {
-                "en": "Shop Pro-Collagen Cream"
+                "en": "Shop the Pro-Collagen Cream"
               },
               "link_url": "shopify://products/matrixyl-3000-pro-collagen-firming-cream",
-              "background": "#ffffff",
-              "text_color": "#1a1a1a"
+              "background": "rgba(0,0,0,0)",
+              "text_color": "#1a1a1a",
+              "button_background": "#016569",
+              "button_text_color": "#ffffff"
             }
           },
           "cream_serum": {
@@ -160,7 +162,7 @@
               },
               "link_text": "",
               "link_url": "",
-              "background": "#ffffff",
+              "background": "rgba(0,0,0,0)",
               "text_color": "#1a1a1a"
             }
           },
@@ -179,7 +181,7 @@
               },
               "link_text": "",
               "link_url": "",
-              "background": "#ffffff",
+              "background": "rgba(0,0,0,0)",
               "text_color": "#1a1a1a"
             }
           },
@@ -198,7 +200,7 @@
               },
               "link_text": "",
               "link_url": "",
-              "background": "#ffffff",
+              "background": "rgba(0,0,0,0)",
               "text_color": "#1a1a1a"
             }
           }
@@ -562,12 +564,24 @@
   "section_css": {
     "hero": [
       "@media (min-width:700px){.content-over-media>picture>img{object-position:right center}.content-over-media>div{max-width:clamp(300px,36vw,600px)}h1{font-size:clamp(3.75rem,6.4vw,6rem);line-height:.95}}",
-      "@media (max-width:699px){.content-over-media::before{background-image:linear-gradient(to top,rgba(10,14,22,.85) 0%,rgba(10,14,22,.62) 22%,rgba(10,14,22,0) 58%)}h1{font-size:2.75rem;line-height:1}}"
+      "@media (max-width:699px){.content-over-media::before{background-image:linear-gradient(to top,rgba(10,14,22,.85) 0%,rgba(10,14,22,.62) 22%,rgba(10,14,22,0) 58%)}h1{font-size:2.75rem;line-height:1}}",
+      "h1{overflow-wrap:break-word}",
+      "@media (max-width:299px){h1{font-size:2.25rem}}"
     ],
     "content": [
       "h2{font-size:clamp(1.75rem,2.4vw,2.25rem);line-height:1.1}",
-      "@media (max-width:360px){h2{font-size:1.375rem}}"
-    ]
+      ".prose,.button{overflow-wrap:break-word}",
+      "a:not(.button){color:#016569}",
+      "@media (max-width:699px){.media-with-text__content{padding-inline:0}}",
+      "@media (max-width:360px){h2{font-size:1.375rem}.button{padding-inline:16px}}"
+    ],
+    "answer": [".prose{max-width:32em}", "a{color:#016569}"],
+    "routine": [
+      ".h3{font-size:1.5rem}",
+      "@media (max-width:699px){.multi-column__item{display:grid;grid-template-columns:104px 1fr;gap:16px;align-items:start}}"
+    ],
+    "related": [".h3{font-size:1.5rem}"],
+    "faq": ["@media (max-width:299px){.accordion-box{padding-inline:12px}}"]
   },
   "jsonld": {
     "@context": "https://schema.org",

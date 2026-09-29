@@ -171,6 +171,18 @@ def localise_jsonld(ld, loc, i18n):
     return ld
 
 
+def top_level_statements(css):
+    """How many top-level rules or at-rules a Custom CSS entry holds (an @media counts once, whatever it contains)."""
+    n = depth = 0
+    for ch in css:
+        if ch == "{":
+            n += depth == 0
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+    return n
+
+
 def build(spec, j):
     """Apply the spec's English values to the template JSON. Returns [(key_suffix, values)] to translate."""
     to_translate = []
@@ -228,6 +240,10 @@ def build(spec, j):
         # the `content` property only — "justify-content:" / "align-content:" are legal (false positive, 2026-09-29)
         if sum(len(r) for r in rules) > 500 or any(re.search(r"(?<![\w-])content\s*:", r) for r in rules):
             sys.exit(f"  ✗ section_css {sid}: over 500 characters or uses content:, which Shopify refuses")
+        # Shopify scopes only the first top-level statement of an entry and leaves the rest global (2026-09-29)
+        for r in rules:
+            if top_level_statements(r) > 1:
+                sys.exit(f"  ✗ section_css {sid}: {r[:60]!r} holds more than one statement; give each rule or @media its own entry")
         j["sections"][sid]["custom_css"] = list(rules)
     host = spec.get("jsonld_host", "references")
     tag = '<script type="application/ld+json" id="sgx-webpage-jsonld">'

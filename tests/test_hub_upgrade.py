@@ -236,6 +236,17 @@ def test_section_css_allows_justify_content():
     assert j["sections"]["faq"]["custom_css"][0] == ".rich-text {justify-content: center;}"
 
 
+def test_section_css_refuses_two_statements_in_one_entry():
+    """Shopify scopes only the first top-level statement of an entry: in "h1{…}@media(…){h1{…}}" the @media went out
+    unscoped and silently lost to the section's own h1 rule (collagen preview, 2026-09-29)."""
+    for entry in ("h1{overflow-wrap:break-word}@media (max-width:299px){h1{font-size:2.25rem}}", ".a{color:red}.b{color:blue}"):
+        with pytest.raises(SystemExit):
+            hu.build({"section_css": {"faq": [entry]}}, template())
+    j = template()                                  # one @media holding several rules is one statement, and is scoped whole
+    hu.build({"section_css": {"faq": ["@media (min-width:700px){.x{color:red}h1{font-size:4rem}}"]}}, j)
+    assert j["sections"]["faq"]["custom_css"] == ["@media (min-width:700px){.x{color:red}h1{font-size:4rem}}"]
+
+
 def test_add_section_with_no_after_goes_first_and_reruns_cleanly():
     """A generated spec must re-apply after its placeholder section is gone (clinical-studies, 2026-09-29)."""
     j = template()
