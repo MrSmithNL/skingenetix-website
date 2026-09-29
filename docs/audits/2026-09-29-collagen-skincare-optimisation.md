@@ -52,9 +52,9 @@ Peptides vs. Other Approaches_ (its "collagen cannot penetrate" line contradicte
 - Spec `configs/hub-upgrades/collagen-skincare-2026-09-29.json`, `"english_first": true` (the `hub-upgrade.py` mode made for this page,
   `f4127e7`): every text is `{"en": ...}`; the tool refuses the flag on any template a page uses. Preview
   `https://www.skingenetix.com/pages/collagen-skin-plumping?view=collagen-skincare` (the canonical stays on the page, so it is not
-  indexed). Commits `d89eec4`, `0c25800`.
+  indexed). Commits `d89eec4`, `0c25800`, `e4b9397`.
 - Final order: hero → answer → shop → content (4 rows) → routine → proof → FAQ (7) → related → schema (Article JSON-LD, zero-height host).
-- Section Custom CSS: hero 471, content 272, routine 139, answer 38, related 21, FAQ 61 characters, one statement per entry (Shopify
+- Section Custom CSS: hero 471, content 272, routine 210, FAQ 77, related 44, answer 40, proof 16 characters, one statement per entry (Shopify
   scopes only the first statement of an entry; `hub-upgrade.py` now refuses a multi-statement entry, `0c25800`).
 
 ## A–E
