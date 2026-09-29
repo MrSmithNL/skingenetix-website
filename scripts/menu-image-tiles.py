@@ -110,6 +110,11 @@ SIGNATURES = [
     "/pages/shipping-returns",          # Support
 ]
 
+# Links that sit in a tiled menu as a full-width TEXT line under the tiles rather than as a tile.
+# Malcolm, 2026-09-29: "add this page https://www.skingenetix.com/blogs/clinical-studies to the main menu under
+# 'science'" — a sixth tile with no picture would render as a blank grey square on a second row.
+ROWS = ["/blogs/clinical-studies"]
+
 MARK_START = "/* === SGX MENU IMAGE TILES START === */"
 MARK_END = "/* === SGX MENU IMAGE TILES END === */"
 
@@ -181,6 +186,14 @@ def build_css():
     span_scope = ",\n".join(
         f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"]) .mega-menu__nav > li > a > span'
         for h in SIGNATURES)
+
+    row_li = ",\n".join(f'.mega-menu__nav > li:has(> a[href$="{r}"])' for r in ROWS)
+    row_a = ",\n".join(f'{sc} .mega-menu__nav > li > a[href$="{r}"]' for r in ROWS
+                       for sc in [f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"])' for h in SIGNATURES])
+    row_after = ",\n".join(f'{sc} .mega-menu__nav > li > a[href$="{r}"]::after' for r in ROWS
+                           for sc in [f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"])' for h in SIGNATURES])
+    row_span = ",\n".join(f'{sc} .mega-menu__nav > li > a[href$="{r}"] > span' for r in ROWS
+                          for sc in [f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"])' for h in SIGNATURES])
 
     images = "\n".join(
         f'.mega-menu__nav > li > a[href$="{h}"] '
@@ -309,6 +322,35 @@ def build_css():
 /* Per-tile artwork. Unscoped by menu on purpose: an href appears in exactly one
    menu, and keeping these flat makes the list readable and easy to re-point. */
 {images}
+/* Text rows (ROWS): a full-width, centred line under the tiles — 2026-09-29, the
+   Clinical studies blog under Science. The tile rules above out-rank a plain
+   selector, so these repeat their scope and use !important where they override. */
+{nav_scope} {{
+  flex-wrap: wrap;
+  row-gap: var(--spacing-5, 1.25rem);
+}}
+{row_li} {{
+  flex: 0 0 100% !important;
+  max-width: none !important;
+  width: 100% !important;
+}}
+{row_a} {{
+  display: block !important;
+  aspect-ratio: auto !important;
+  background: none !important;
+  min-height: 0 !important;
+  padding: var(--spacing-4, 1rem) 0 0 !important;
+  border-top: 1px solid #e4e4e4;
+  border-radius: 0 !important;
+  text-align: center;
+}}
+{row_after} {{
+  display: none !important;
+}}
+{row_span} {{
+  color: #1a1a1a !important;
+  text-shadow: none !important;
+}}
 }}
 {MARK_END}"""
 
@@ -363,35 +405,7 @@ def new_block(menu_item):
     }
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--restore")
-    ap.add_argument("--key", help="asset key to restore into")
-    args = ap.parse_args()
-
-    e = env()
-    store = e["SHOPIFY_SKINGENETIX_STORE"]
-    tok = token(e)
-    theme = next(t for t in call(store, tok, "themes.json")["themes"] if t["role"] == "main")
-    tid = theme["id"]
-    print(f"Store      : {store}")
-    print(f"Live theme : {theme['name']} (id {tid})\n")
-
-    if args.restore:
-        if not args.key:
-            sys.exit("--restore needs --key (sections/header-group.json or "
-                     "sections/footer-group.json)")
-        body = (ROOT / args.restore).read_text()
-        call(store, tok, f"themes/{tid}/assets.json", "PUT",
-             {"asset": {"key": args.key, "value": body}})
-        print(f"RESTORED {args.key} from {args.restore}")
-        return
-
-    BACKUPS.mkdir(exist_ok=True)
-    stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-
-    # ---------------------------------------------------------------- header
+def _header(store, tok, tid, stamp):
     raw = call(store, tok, f"themes/{tid}/assets.json?asset[key]={HEADER_KEY}")["asset"]["value"]
     hb = BACKUPS / f"header-group-{stamp}.json"
     hb.write_text(raw)
@@ -434,9 +448,48 @@ def main():
     header["block_order"] = order
     print(f"  block_order: {' -> '.join(order)}")
     header_new = json.dumps(doc, indent=2)
+    return header_new
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--restore")
+    ap.add_argument("--key", help="asset key to restore into")
+    ap.add_argument("--css-only", action="store_true",
+                    help="rebuild and push ONLY the tile CSS in footer-group (the header is left untouched)")
+    args = ap.parse_args()
+
+    e = env()
+    store = e["SHOPIFY_SKINGENETIX_STORE"]
+    tok = token(e)
+    theme = next(t for t in call(store, tok, "themes.json")["themes"] if t["role"] == "main")
+    tid = theme["id"]
+    print(f"Store      : {store}")
+    print(f"Live theme : {theme['name']} (id {tid})\n")
+
+    if args.restore:
+        if not args.key:
+            sys.exit("--restore needs --key (sections/header-group.json or "
+                     "sections/footer-group.json)")
+        body = (ROOT / args.restore).read_text()
+        call(store, tok, f"themes/{tid}/assets.json", "PUT",
+             {"asset": {"key": args.key, "value": body}})
+        print(f"RESTORED {args.key} from {args.restore}")
+        return
+
+    BACKUPS.mkdir(exist_ok=True)
+    stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+
+    # ---------------------------------------------------------------- header
+    if args.css_only:
+        header_new = None
+    else:
+        header_new = _header(store, tok, tid, stamp)
 
     # ---------------------------------------------------------------- footer
     raw_f = call(store, tok, f"themes/{tid}/assets.json?asset[key]={FOOTER_KEY}")["asset"]["value"]
+
     fb = BACKUPS / f"footer-group-{stamp}.json"
     fb.write_text(raw_f)
     print(f"\nBackup     : {fb.relative_to(ROOT)}")
@@ -460,14 +513,16 @@ def main():
     print(f"\nTiles: {len(TILES)} across {len(SIGNATURES)} menus")
 
     if args.dry_run:
-        (BACKUPS / f"header-group-PROPOSED-{stamp}.json").write_text(header_new)
+        if header_new:
+            (BACKUPS / f"header-group-PROPOSED-{stamp}.json").write_text(header_new)
         (BACKUPS / f"footer-group-PROPOSED-{stamp}.json").write_text(footer_new)
         print(f"\nDRY RUN — proposals in backups/, nothing pushed")
         return
 
-    call(store, tok, f"themes/{tid}/assets.json", "PUT",
-         {"asset": {"key": HEADER_KEY, "value": header_new}})
-    print(f"\nPUSHED {HEADER_KEY}")
+    if header_new:
+        call(store, tok, f"themes/{tid}/assets.json", "PUT",
+             {"asset": {"key": HEADER_KEY, "value": header_new}})
+        print(f"\nPUSHED {HEADER_KEY}")
     call(store, tok, f"themes/{tid}/assets.json", "PUT",
          {"asset": {"key": FOOTER_KEY, "value": footer_new}})
     print(f"PUSHED {FOOTER_KEY}")

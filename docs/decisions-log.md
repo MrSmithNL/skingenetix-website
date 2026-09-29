@@ -390,3 +390,10 @@ and approved moving the study pages into it (`docs/decision-clinical-studies-blo
 - The 32-row table page (`templates/page.clinical-studies.json`) was retired unpublished; its rows stay on the hubs.
 - Menu: **Discover** (a stock item beside The Science) replaces the styled line under the Science tiles. It goes live with the footer
   link and the Science-page band once Badenhorst and Raikou are translated.
+
+**Amended again 2026-09-29: the menu item is under Science.** Malcolm: "add this page https://www.skingenetix.com/blogs/clinical-studies
+to the main menu under 'science'." Live the same day: `main-menu` › Science › **Clinical studies** (type BLOG, `/blogs/clinical-studies`),
+translated (Klinische Studien, Klinische studies, Études cliniques, Estudios clínicos, Studi clinici). On desktop it renders as a full-width,
+centred text line under the five ingredient tiles (`scripts/menu-image-tiles.py` ROWS, pushed with the new `--css-only` flag so the header
+was not rewritten); in the phone drawer it is the sixth line. This replaces the Discover placement. Linked on his instruction ahead of the
+Badenhorst and Raikou translations. The footer link and the Science-page band were not part of this instruction and are still open.
