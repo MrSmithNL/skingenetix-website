@@ -247,5 +247,134 @@ def main() -> None:
         print(f"  {s['id']:<40} prompt {len(s['prompt']):>5}  luma {len(s['prompt_luma']):>5}")
 
 
+# ======================================================================================
+# ROUND 2 (2026-09-29): the Matrixyl card only, no moles, clothes that vary.
+# Malcolm, picking from r1: "D4 nbp flash 01 and D6 seedream 01 and E4 nbp tlash 01 are the best - but all of
+# them have moles or worts. this isnt representative for most women who do not have such obvious spots on their
+# face. lets make a new set for these." (memory no-moles-and-varied-clothes-in-model-images.)
+# REUSE, NOT A COPY: the mole-free identity lock, skin paragraph, side-lock, garment pool and Luma swaps are the
+# glutathione r2 builder's (scripts/build-glutathione-cards-before-after-config.py, 36/36 on 2026-09-29), imported.
+# Every swap must match exactly once (gl.swap), and the word "mole" may not survive in any positive text.
+# ======================================================================================
+WAVE_R2 = "before-after-collagen-plumping-r2"
+OUT_R2 = ROOT / "configs" / "banners" / f"{WAVE_R2}.json"
+SMOKE_SLOTS_R2 = {"a"}
+GARMENT_SEED_R2 = 20260930
+NEGATIVE_MARKS = (", no mole, no moles, no wart, no warts, no skin tag, no beauty mark, no beauty spot, no raised spot, "
+                  "no raised bump on the skin, no dark spot on the skin, no logo on clothing, no print on clothing, "
+                  "no writing on clothing, no graphic T-shirt, no bare shoulders, no same top in both panels, "
+                  "no white top in the right panel, no pale top in the right panel")
+WOMEN_R2 = [
+    # ---- matrixyl-deepwrinkles · Sederma half-face study · women 42-67; cast 53-61; skin clear of any mark ----
+    dict(block="matrixyl-deepwrinkles", key="a", crop="cf_three_quarter", walls=(2, 5),
+         who=("a white ENGLISH woman of about fifty-seven, with a short layered silver-blonde crop, fair skin with a "
+              "neutral undertone, grey-blue eyes and fair, softly arched brows"),
+         before=("At the outer corner of the near eye three deep creases fan out towards the temple, the middle one the "
+                 "longest and deepest, with finer crinkles running between them and a couple of short lines dropping onto "
+                 "the top of the cheek. Each deep crease casts a clear shadow where the light grazes it.")),
+    dict(block="matrixyl-deepwrinkles", key="b", crop="cf_eye_corner", walls=(7, 10),
+         who=("a white FRENCH woman of about sixty-one, with shoulder-length grey hair in a soft side parting, light skin "
+              "with a warm undertone, brown eyes and full grey-brown brows"),
+         before=("From the outer corner of her left eye two long, deep creases run out across the temple, a third deep "
+                 "line curves down onto the cheekbone, and fine crinkled lines fill the thin skin between them.")),
+    dict(block="matrixyl-deepwrinkles", key="c", crop="cf_steep", walls=(4, 9),
+         who=("a white SWEDISH woman of about fifty-three, with long straight ash-blonde hair tied back in a low "
+              "ponytail, fair skin with a cool undertone, pale blue eyes and light brows"),
+         before=("Seen from the side, deep creases spread from the outer corner of the near eye across the side of her "
+                 "face, three of them long and clearly etched, with finer crinkles between them and short lines running "
+                 "down onto the cheekbone.")),
+]
+
+
+def _gl():
+    return _load("gl", "scripts/build-glutathione-cards-before-after-config.py")
+
+
+def pick_garments_r2(gl) -> dict:
+    """Two different everyday tops per woman (type AND colour family differ), the right one never white or pale;
+    no garment used twice in the wave. Seeded, so the build is reproducible."""
+    import random
+    rng = random.Random(GARMENT_SEED_R2)
+    for _ in range(100000):
+        pool = list(gl.GARMENT_POOL); rng.shuffle(pool)
+        pairs = {w["key"]: (pool[2 * i], pool[2 * i + 1]) for i, w in enumerate(WOMEN_R2)}
+        if all(l[1] != r[1] and l[5] != r[5] and r[2] >= 2 for l, r in pairs.values()):
+            return pairs
+    raise AssertionError("no garment draw passes")
+
+
+def p9_r2(left, right) -> str:
+    return (f"SHE IS DRESSED ON BOTH DAYS, AND IN DIFFERENT CLOTHES EACH DAY. In the left panel she is wearing "
+            f"{left[0]}; in the right panel she is wearing {right[0]}. They are two plainly different garments - not "
+            f"the same top in another colour - and both are plain everyday clothes with no branding. The right-hand "
+            f"garment is a mid or deep colour, never a pale one. Wherever the picture reaches down far enough, the "
+            f"garment is plainly there at the bottom edge; her shoulders are never bare. ALSO DIFFERENT BETWEEN THE TWO "
+            f"DAYS: her hair, the same cut and colour but falling or tied a little differently.")
+
+
+def main_r2() -> None:
+    gl = _gl()
+    r3.CROPS, r3.BLOCKS, r3.VIEWPOINTS, r3.GAZE = CROPS, BLOCKS, VIEWPOINTS, GAZE
+    r3.LIGHT, r3.SKIN = gl.LIGHT_WRINKLE_R2, gl.SKIN_R2
+    garments = pick_garments_r2(gl)
+    slots = []
+    for w in WOMEN_R2:
+        b = BLOCKS[w["block"]]; left, right = garments[w["key"]]
+        prompt = gl.swap(r3.build_prompt(w), [
+            (gl.R3_AMATEUR, gl.AMATEUR_NEUTRAL), (gl.R3_P9, p9_r2(left, right)), (gl.R3_ONE, gl.ONE_R2),
+            (gl.R3_LOCK, gl.lock_r2(False)), (gl.R3_P19, gl.p19_r2(False)), (gl.SIDE_MARKS, gl.SIDE_MARKS_R2),
+            (r3.NOT_MIRRORED, gl.NOT_MIRRORED_R2), (gl.R3_FOUR, gl.FOUR_CF_R2)], w["key"])
+        luma = gl.swap(r3.build_prompt_luma(w), [
+            gl.LUMA_AMATEUR, ("Real skin: visible pores, vellus hair, uneven pigment. No smoothing.", gl.LUMA_SKIN_R2),
+            ("Hair a little different.", f"Hair a little different. Left panel: she wears {left[0]}; right panel: "
+                                          f"{right[0]} - two different garments, the right one not pale."),
+            gl.LUMA_EDGES,
+            (gl.R3_LUMA_RIGHT, "THE RIGHT PANEL, FIRST OF ALL: the same person, same age, same complexion, no makeup. "),
+            (gl.R3_LUMA_LOCK, "Same face shape, nose, eyes and eyelids, skin colour, brows, hairline, ears, hair colour "
+                              "and cut: her identity."),
+            (gl.SIDE_MARKS, gl.SIDE_MARKS_R2), (r3.NOT_MIRRORED, gl.NOT_MIRRORED_LUMA_R2)], w["key"] + " luma")
+        for t, where in ((prompt, "prompt"), (luma, "luma")):
+            assert "mole" not in t.lower(), f"{w['key']} {where}: 'mole' survived"
+            assert not any(ch.isdigit() for ch in t), f"{w['key']} {where}: digit"
+            assert "window" not in t.lower(), f"{w['key']} {where}: 'window'"
+        assert len(luma) < r3.LUMA_CAP, f"{w['key']}: luma prompt {len(luma)} chars"
+        neg_pair = r3.NEGATIVE_PAIR.replace("no moles disappearing between the panels, ", "")
+        negative_extra = neg_pair + ", " + b["negatives"] + NEGATIVE_MARKS
+        bait = r3.caption_bait(prompt + luma + r3.NEGATIVE_GLOBAL + negative_extra)
+        assert not bait, f"{w['key']}: caption bait {bait}"
+        slots.append({
+            "id": f"cpb2--{w['block']}-{w['key']}",
+            "title": f"{w['block']} · {b['study']} · {CROPS[w['crop']]['label']} — {w['who'].split(',')[0].replace('a ', '', 1)}",
+            "class": "B", "width": r3.SIZE, "height": r3.SIZE,
+            "target_slot": f"{b['page']} {SECTION} {b['block']} ({b['heading']})",
+            "generated_from": f"r2{' smoke slot' if w['key'] in SMOKE_SLOTS_R2 else ''}",
+            "ref_files": [], "prompt": prompt, "prompt_luma": luma,
+            "label": {"left": "Before", "right": b["after_label"], "figure": "",
+                      "measure": "(labels are theme settings, never pixels)", "cite": b["study"]},
+            "negative_extra": negative_extra, "garments": {"left": left[0], "right": right[0]},
+        })
+    cfg = {
+        "wave": WAVE_R2, "created": "2026-09-29", "round": "r2",
+        "doc": "scripts/build-collagen-plumping-before-after-config.py --round r2 (round-3 machinery + glutathione r2 swaps)",
+        "note": ("COLLAGEN & SKIN-PLUMPING CONCERN PAGE, CARD f1 (Matrixyl 3000, Sederma half-face study, deep-wrinkle area "
+                 "-39.4%, depth -19.9%; her LEFT side locked). ROUND 2: new women with clear skin (NO moles, warts, skin tags "
+                 "or beauty marks; identity held by face shape, nose, brows, hairline, ears and hair), and different clothes "
+                 "per slot and per panel. Malcolm, 2026-09-29, rejecting r1's D4/D6/E4 for their moles. CANDIDATES ONLY. "
+                 "Smoke test: slot a on all six suppliers first."),
+        "target_templates": [TEMPLATE],
+        "labels_are_composited": "NOT composited. Labels are text settings on the theme section.",
+        "defaults": {"candidates": 1, "negative_global": r3.NEGATIVE_GLOBAL, "negative_class_b": ""},
+        "slots": slots,
+    }
+    OUT_R2.write_text(json.dumps(cfg, indent=2, ensure_ascii=False) + "\n")
+    print(f"wrote {OUT_R2.relative_to(ROOT)} — {len(slots)} slots")
+    for s in slots:
+        print(f"  {s['id']:<40} prompt {len(s['prompt']):>5}  luma {len(s['prompt_luma']):>5}  "
+              f"L: {s['garments']['left']} | R: {s['garments']['right']}")
+
+
 if __name__ == "__main__":
-    main()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--round", default="r1", choices=["r1", "r2"])
+    main_r2() if ap.parse_args().round == "r2" else main()

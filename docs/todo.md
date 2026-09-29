@@ -327,9 +327,20 @@ AI-generated illustrations and must not be presented as results. Record:
     `configs/banners/collagen-skin-plumping-copper-image-2026-09-29.json` via `scripts/patch-template.py`; live in all six languages (four showed the old
     image for a minute: storefront cache); backup `page.collagen-skin-plumping-20260929-151236.json`.
   - ⚠️ Noted, not changed: this page is still a consolidation candidate with `/pages/firming-skin-density` (Phase 1 note above).
-  - ⏳ **Picks still open** (2026-09-29): option sheets on the Desktop, `skingenetix-options-1-matrixyl-card.png` (D1–F6),
-    `skingenetix-options-2-copper-card.png` (A1–C6). Matrixyl: Malcolm wants a NEW set without moles (all of D–F have them). Copper: shortlisted B4,
-    C5, A5 (mole to be removed) and a gpt_image 01 (row not given); asked where these go, answered with `~/Desktop/skingenetix-where-the-images-go.png`.
+  - ✅ **Card f2 image chosen and uploaded (not live):** Malcolm, 2026-09-29: "A5 nbp pro 01" (both cards kept: "Yes, both cards"). The mole beside
+    her mouth was removed locally in both panels (OpenCV seamless clone from the adjacent cheek, 32,623 px, nothing else) and the 23 px frame trimmed;
+    uploaded as `skingenetix-copper-peptide-ghk-cu-denser-firmer-looking-skin-before-after.jpg` (plan
+    `configs/banners/collagen-skin-plumping-card-images-2026-09-29.json`; the CDN copy checked mole-free).
+  - ⏳ **Card f1 (Matrixyl) needs a new set:** Malcolm rejected r1's D4/D6/E4 for their moles. Round 2 is mole-free with varied clothes
+    (`python3 scripts/build-collagen-plumping-before-after-config.py --round r2` → `configs/banners/before-after-collagen-plumping-r2.json`, reusing
+    the glutathione r2 swaps). Slot a done 6/6 (smoke: no moles, clothes vary); slots b and c were generating at 15:47 (nbp_pro 503 on b: re-run).
+    **Then:** stable-label sheet, Malcolm's pick, upload, move the `proof` section from `configs/copy/` into the spec, apply, verify ×6, capture.
+  - ⏳ **Where this page belongs, and the menu** (Malcolm, 2026-09-29: "where do i find the 'Collagen & Skin Plumping' concern page? Its not in the site
+    navigation menu … Lets analyse where this page should sit in the website structure to make it most effective - and add it to the website
+    menu"). Found: it predates the keyword strategy, sits in no menu, and its only inbound link is the firming page's Related tile; its sections mirror
+    `/pages/firming-skin-density` (same two peptides, same routine, near-identical FAQs). A keyword/GSC analysis was running at hand-off; comparison
+    sheet `~/Desktop/skingenetix-collagen-vs-firming.png`. **Recommend (keep / merge with 301 / Learn guide) with evidence, then change the menu only
+    on Malcolm's OK** (the Skin Solutions mega-menu shows one image tile per page and matches items by translated label).
 - ✅ **Glutathione tile in "Explore More Research" fixed on PDRN, Argireline and copper, six languages** (2026-09-29; Malcolm: "decide whats best based on
   the keyword and SEO and content strategy"). "For a more even, radiant-looking skin tone" broke template §4 rule 6 and glutathione register §8.4. Now "A
   clinically studied antioxidant for brighter-looking skin": the sibling tiles' pattern, the hub's `glutathione for skin` and brightening framing, the
