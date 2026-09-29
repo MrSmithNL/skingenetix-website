@@ -515,9 +515,8 @@ AI-generated illustrations and must not be presented as results. Record:
     3. `--verify-live`.
     4. Delete the preview template.
   - 🛑 **Card images, Malcolm picks:** 2,125 unused science images from earlier runs are on 14 Desktop sheets,
-    `skingenetix-study-images-{ARG,CU,PDRN,GEN}-n.png`. Refs such as "CU-037 flux2" resolve through the scratchpad
-    `unused-images/picks-index.json`. The pool's evidence is in `manifest.json` / `used.json` next to it (115 matched live images
-    excluded by pixel match).
+    `skingenetix-study-images-{ARG,CU,PDRN,GEN}-n.png`. Refs such as "CU-037 flux2" resolve through
+    `configs/banners/clinical-studies-card-image-pool-2026-09-29.json` (115 matched live images excluded by pixel match).
   - 🛑 **For Malcolm:**
     - label pages (`/tagged/<ingredient>`) are indexable, with the list's title and one or two posts each;
     - the "How we grade the evidence" band explains grades that no card shows (critic F6);
