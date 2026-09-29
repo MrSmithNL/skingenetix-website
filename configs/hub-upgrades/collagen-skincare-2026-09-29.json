@@ -196,7 +196,7 @@
               "icon_width": 48,
               "title": "",
               "content": {
-                "en": "<h2>Copper Peptide GHK-Cu: Firmer, Smoother-Looking Skin</h2><p><strong>GHK-Cu is a copper peptide your own body makes, and in a double-blind trial a GHK-Cu serum reduced crow's-feet wrinkle volume by 24.1% in 8 weeks, against 15.0% with the plain serum base</strong> (<a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">read the trial</a>). It is valued for a firmer, more elastic, smoother and plumper-looking complexion, and an independent 2026 review concluded that it reduces wrinkle volume and depth.</p><p>You'll find it in our <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide (GHK-Cu) 2% Renewal Serum</a>, and as copper tripeptide-1 in our <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a>.</p><p>More on <a href=\"/pages/copper-peptide-research\">copper peptides for skin</a> in our research summary.</p>"
+                "en": "<h2>Copper Peptide GHK-Cu: Firmer, Smoother-Looking Skin</h2><p><strong>GHK-Cu is a copper peptide your own body makes, and in a double-blind trial a GHK-Cu serum reduced crow's-feet wrinkle volume by 24.1% in 8 weeks, against 15.0% with the plain serum base</strong> (<a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">the Badenhorst 2016 trial</a>). It is valued for a firmer, more elastic, smoother and plumper-looking complexion, and an independent 2026 review concluded that it reduces wrinkle volume and depth.</p><p>You'll find it in our <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide (GHK-Cu) 2% Renewal Serum</a>, and as copper tripeptide-1 in our <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a>.</p><p>More on <a href=\"/pages/copper-peptide-research\">copper peptides for skin</a> in our research summary.</p>"
               },
               "link_text": "",
               "link_url": "",
@@ -575,13 +575,15 @@
       "@media (max-width:699px){.media-with-text__content{padding-inline:0}}",
       "@media (max-width:360px){h2{font-size:1.375rem}.button{padding-inline:16px}}"
     ],
-    "answer": [".prose{max-width:32em}", "a{color:#016569}"],
+    "answer": [".prose p{max-width:32em}", "a{color:#016569}"],
     "routine": [
       ".h3{font-size:1.5rem}",
-      "@media (max-width:699px){.multi-column__item{display:grid;grid-template-columns:104px 1fr;gap:16px;align-items:start}}"
+      "@media (min-width:300px) and (max-width:699px){.multi-column__item{display:grid;grid-template-columns:104px 1fr;gap:16px;align-items:start}}",
+      "@media (max-width:360px){.h3{font-size:1.125rem}}"
     ],
-    "related": [".h3{font-size:1.5rem}"],
-    "faq": ["@media (max-width:299px){.accordion-box{padding-inline:12px}}"]
+    "related": [".h3{font-size:1.5rem}", ".prose a{color:#016569}"],
+    "faq": ["@media (max-width:299px){.accordion-box{padding-inline:12px}}", "a{color:#016569}"],
+    "proof": ["a{color:#016569}"]
   },
   "jsonld": {
     "@context": "https://schema.org",

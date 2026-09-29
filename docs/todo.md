@@ -347,14 +347,14 @@ AI-generated illustrations and must not be presented as results. Record:
        Aguirre-Cruz 2020); CIR clears every collagen ingredient we use; no product-level trial; only the two creams contain collagen, no serum
        does (§8 gives the "collagen serum" answer). At go-live the Firming page's "Hydrolyzed collagen peptides penetrate the skin surface"
        (Pro-Collagen block) becomes "some reach the skin's outer layer" (register claim 1, condition b).
-    3. 🔄 **English draft built on the hidden preview** (Malcolm, 2026-09-29: "only in english first. only translate when the english
-       version is fully completed and correct and optimized"). Spec `configs/hub-upgrades/collagen-skincare-2026-09-29.json`
-       (`"english_first": true`, new in `hub-upgrade.py` `f4127e7`), preview `/pages/collagen-skin-plumping?view=collagen-skincare`, 9
-       stock sections, Article JSON-LD. Design critic cycle 1 FIX 5.7 and central v2 audit round 1 (uncapped 6.1; capped 2.0 by the
-       preview's canonical, which only go-live fixes) → all page-level findings fixed (watermarked routine photo replaced, alt text,
-       hero contrast and H1, one primary action, answer width, section rhythm, safety FAQ, outcome wording). Cycle 2 running.
-       **Open for Malcolm:** Matrixyl card f1 pick (r2 sheet); hero photo (reuses the Firming collection banner); the FAQ allergy line
-       (collagen source not disclosed; PDRN is salmon-derived). **Then:** translate (five locales), title/meta at go-live.
+    3. ✅ **English draft complete on the hidden preview, waiting on Malcolm's review** (Malcolm, 2026-09-29: "only in english first.
+       only translate when the english version is fully completed and correct and optimized"). Spec
+       `configs/hub-upgrades/collagen-skincare-2026-09-29.json` (`"english_first": true`, `hub-upgrade.py` `f4127e7`), preview
+       `/pages/collagen-skin-plumping?view=collagen-skincare`. Design critic 5.7 → 6.1 → 6.4 (cap; regression fixed after it, measured at
+       195/320/390). Central v2 audit uncapped 6.1 → 9.19 → **9.27**; each run capped at 2.0 only by the preview's canonical, which go-live
+       fixes along with the title (Q2). Checks A–E and every open item: `docs/audits/2026-09-29-collagen-skincare-optimisation.md`.
+       **Open for Malcolm:** review the English; Matrixyl card f1 pick (r2 sheet); hero photo; the FAQ allergy line; products before or
+       after the evidence; the critic's art-direction ideas. **Then:** translate (five locales), title/meta at go-live.
     4. ⏳ Show Malcolm. **Only after his OK:** move to `/pages/collagen-skincare` with a 301 from the old address in all six languages, fix
        internal links, Firming page drops "collagen", fifth Skin Solutions tile "Collagen Skincare" (six labels), verify ×6, critic, audit.
 - ✅ **Glutathione tile in "Explore More Research" fixed on PDRN, Argireline and copper, six languages** (2026-09-29; Malcolm: "decide whats best based on
