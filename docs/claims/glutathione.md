@@ -521,6 +521,14 @@ GSH/GSSG point stays in FAQ q5.
    `scripts/register-translations.py configs/translations/glutathione-research-before-after-alt-2026-09-26.json` (verified "ok" in each locale, and on the
    live page in six languages with no "even" wording left). The plan keeps the old values for undo.
 
+**Decided by Malcolm, 2026-09-29** (after the page went live the same day with product photos on cards 1 and 2): wave r1 is rejected and made again.
+His words: "this time with caucasian women - and the clothes should be random. now they are the same tshirt and same colors. these need to vary. also
+lets not use women with warts." Round 2 (`configs/banners/before-after-glutathione-cards-r2.json`) therefore casts Caucasian women with light-olive,
+Mediterranean-type skin, which keeps the pictures inside the trials' skin types III to V that the page's _Not shown_ line names; gives no subject a
+mole, wart or skin tag (round 1 used one as each woman's identity anchor); varies the clothes across slots and between the two panels, with the
+after-panel top on card 1 never lighter than the before top; and states card 2's matching brightness as a requirement. §8.5's "must NOT show" rules
+are unchanged.
+
 The options as put to him:
 
 1. **The go-ahead for the rollout** (the template move itself).

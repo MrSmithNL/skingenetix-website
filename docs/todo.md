@@ -290,9 +290,11 @@ AI-generated illustrations and must not be presented as results. Record:
   - ✅ Specs `configs/hub-upgrades/glutathione-research-{layout,evidence-merge}-2026-09-26.json`, phrase table `configs/hub-i18n/glutathione-research.json`
     (93 phrases). Built on a hidden preview; design critic cycle 1 FIX 6.11, every page-level finding fixed and re-measured there (phone hero 1.92 → ≥ 4.92:1).
     Live 2026-09-29: verify-live ✓ ×6 on both specs, page audit 100/96/100/93, old specs retired, reviewer config repointed, preview deleted.
-  - ⏳ **Malcolm picks the before/after pairs** for cards 1 (brighter skin) and 2 (crow's feet) from `~/Desktop/skingenetix-glutathione-before-after-r1.png`
-    (35 candidates, `configs/banners/before-after-glutathione-cards-r1.json`). Until then both cards carry product-with-model photos. Then: crop, labels in
-    six languages ("After 10 weeks"; result lines per register §8.5), apply, verify, and design critic cycle 2 on the live page.
+  - ❌ Wave r1 (35 candidates, `configs/banners/before-after-glutathione-cards-r1.json`) rejected by Malcolm 2026-09-29: Caucasian women, random
+    varied clothes, no women with warts (register §8.7).
+  - 🔄 **Wave r2 running** (`configs/banners/before-after-glutathione-cards-r2.json`; light-olive Caucasian subjects, no moles, clothes varied per slot
+    and panel). Then Malcolm picks from `~/Desktop/skingenetix-glutathione-before-after-r2.png`; until then both cards carry product-with-model photos.
+    After the picks: crop, labels in six languages ("After 10 weeks"; result lines per register §8.5), apply, verify, design critic cycle 2 on the live page.
   - ✅ The "Explore more research" Glutathione tile on PDRN, Argireline and copper said "For a more even, radiant-looking skin tone" (template §4 rule 6).
     Fixed by the f3 session 2026-09-29 (`b73d215`): "A clinically studied antioxidant for brighter-looking skin", six languages, verified live.
   - 🛑 **Template-level, new (critic 2026-09-26):** at 200% zoom every finding-card heading breaks mid-word (card text column 91 px, 32 px headings), on
