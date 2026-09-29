@@ -408,7 +408,7 @@ move dropped its five translations; they were re-registered on `gid://shopify/Li
 `scripts/menu-image-tiles.py`, pushed with `--css-only`). Verified live in English, German and the phone drawer. This supersedes the
 Science placement. Backup of the menu before the move: `backups/main-menu-20260929-154059.json`.
 
-## ADR-2026-09-29-C: "Collagen & Skin Plumping" is kept and becomes the collagen-skincare page
+## ADR-2026-09-29-D: "Collagen & Skin Plumping" is kept and becomes the collagen-skincare page
 
 **Date:** 2026-09-29
 **Status:** Accepted. Malcolm: "Yes, and rename address".

@@ -335,7 +335,7 @@ AI-generated illustrations and must not be presented as results. Record:
     (`python3 scripts/build-collagen-plumping-before-after-config.py --round r2` → `configs/banners/before-after-collagen-plumping-r2.json`, reusing
     the glutathione r2 swaps). Slot a done 6/6 (smoke: no moles, clothes vary); slots b and c were generating at 15:47 (nbp_pro 503 on b: re-run).
     **Then:** stable-label sheet, Malcolm's pick, upload, move the `proof` section from `configs/copy/` into the spec, apply, verify ×6, capture.
-  - ✅ **Decided: keep it, rebuilt as "Collagen Skincare"** (Malcolm, 2026-09-29: "Yes, and rename address"; ADR-2026-09-29-C). Keyword pull
+  - ✅ **Decided: keep it, rebuilt as "Collagen Skincare"** (Malcolm, 2026-09-29: "Yes, and rename address"; ADR-2026-09-29-D). Keyword pull
     ($1.43, `configs/keyword-data/collagen-2026-09-29/`) found an unowned collagen cream / serum cluster of ~3,700 searches a month across US, GB,
     DE and NL at difficulty 0–2 (US `collagen cream` 656, `collagen serum` 605). Primary `collagen cream`; the Firming page drops "collagen" so the
     two never compete. Ownership map `configs/keyword-data/collagen-2026-09-29/keyword-ownership-map-2026-09-29.md`.

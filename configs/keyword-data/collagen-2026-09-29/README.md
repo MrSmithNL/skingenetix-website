@@ -12,4 +12,4 @@ Why: Malcolm asked whether `/pages/collagen-skin-plumping` can own a collagen-sk
 - `pull-XX.json`: `all` = every suggestion, `kept_head` = the filtered top terms with `clickstream` (observed) volume.
 - `keyword-ownership-map-2026-09-29.md`: every key URL's primary and secondary terms, and the terms two URLs chase.
 
-Result and decision: `docs/decisions-log.md` ADR-2026-09-29-C.
+Result and decision: `docs/decisions-log.md` ADR-2026-09-29-D.
