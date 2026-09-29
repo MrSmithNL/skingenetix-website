@@ -293,8 +293,8 @@ AI-generated illustrations and must not be presented as results. Record:
   - ⏳ **Malcolm picks the before/after pairs** for cards 1 (brighter skin) and 2 (crow's feet) from `~/Desktop/skingenetix-glutathione-before-after-r1.png`
     (35 candidates, `configs/banners/before-after-glutathione-cards-r1.json`). Until then both cards carry product-with-model photos. Then: crop, labels in
     six languages ("After 10 weeks"; result lines per register §8.5), apply, verify, and design critic cycle 2 on the live page.
-  - ⏳ **Ask Malcolm:** the "Explore more research" Glutathione tile on the PDRN and copper pages still says "For a more even, radiant-looking skin tone"
-    (breaks template §4 rule 6); proposed "For brighter-looking skin" in six languages, as on the Matrixyl draft.
+  - ✅ The "Explore more research" Glutathione tile on PDRN, Argireline and copper said "For a more even, radiant-looking skin tone" (template §4 rule 6).
+    Fixed by the f3 session 2026-09-29 (`b73d215`): "A clinically studied antioxidant for brighter-looking skin", six languages, verified live.
   - 🛑 **Template-level, new (critic 2026-09-26):** at 200% zoom every finding-card heading breaks mid-word (card text column 91 px, 32 px headings), on
     all template pages. Cause: `theme/sections/research-before-after.liquid`. Also template-level: `hub-i18n.py` does not keep "%" with its number in
     de/fr/es (glutathione fixed in its own phrase table) and does not check `alt` attributes in the custom sections.
