@@ -5,8 +5,8 @@
 **Replaces:** Matrixyl 3000 as the reference build. Amends items 2 and 6 of the research-page standard (`docs/content-plan-2026.md` §4).
 **Rollout:** one page at a time, on Malcolm's go-ahead for each. **PDRN done 2026-09-24** (external 9.82, page audit 100/96/100/93). **Copper peptide done
 2026-09-26** (design critic cycle 1 FIX 6.5 on the preview and cycle 2 FIX 6.5 on the live page, page-level findings fixed both times; before/after on cards 1
-and 2; page audit 100/96/100/93). **Matrixyl 3000 in progress** (step 1 done 2026-09-26, register §8). Then glutathione
-(step 1 done 2026-09-26, register §8; the rollout awaits Malcolm's go-ahead).
+and 2; page audit 100/96/100/93). **Glutathione done 2026-09-29** (design critic cycle 1 FIX 6.11 on the preview, page-level findings fixed; page
+audit 100/96/100/93; cards 1 and 2 await Malcolm's before/after picks). **Matrixyl 3000 in progress** (a draft template; step 1 done 2026-09-26, register §8).
 
 ---
 
@@ -251,6 +251,26 @@ One page per go-ahead. Claims before layout, so nothing is translated that is ab
 - **Run the critic on the live page, after the before/after photos.** Cycle 1 judged the preview; cycle 2 on the live page found the key-figure, index-row
   and chart-stacking faults, and scored the same 6.5 because the template-level faults cap it (`docs/todo.md`: CTA band `#1A1A1A` against the no-black
   rule, 16–19 px study links, one spacing value, heading-size inversion).
+
+### 6.3 Learned on the glutathione rollout (2026-09-26 to 29)
+
+- **Read the full text before calling a study null.** The register had Wahab 2021's topical arm as "not reported as significant" from its abstract; the
+  full text showed it beat placebo (p = 0.029), and it became the page's only independent trial (card 3). Etnawati 2019 went the other way: its abstract
+  claimed a win its own results do not show. Step 1 is not done while a verdict rests on an abstract (memory `an-abstracts-silence-is-not-a-null-result`).
+- **A card image must not show our product on a card about another formulation's trial.** Card 3 (another brand's glutathione and vitamin C serum) and
+  card 4 (the trial's lotion) use non-product images. An off-palette image can be brought into the accent's colour family with a hue shift of an existing
+  render, saved under a new ingredient-named file (the original stays untouched): no spend.
+- **Check registrations again after a clean apply.** Two of the 105 registrations came back `outdated` although `--apply` reported every locale ✓, and an
+  outdated translation is still served. `set-reviewer.py`'s dry run caught them; re-registering with a fresh digest fixed both. Run it after every apply.
+- **`hub-i18n.py` checks text nodes, not attributes.** `alt` text inside the custom sections stays English in five languages unless the phrase table
+  carries it (key it as `alt="…"`).
+- **Keep "%" with its number in de, fr and es** (a no-break space): the critic found "−10,7 / %" split across lines on phones. Glutathione does it in its
+  own phrase table; it belongs in `hub-i18n.py` for every page.
+- **The phone hero crop decides the hero overlay.** The glutathione dish sits behind the centred phone text (worst pixel 1.92:1 at overlay 25); overlay 60,
+  copper's value, gives ≥ 4.9:1 in English and German and leaves desktop at 16–19:1. Measure the worst pixel per line in two languages: German runs
+  longer and lands on different pixels.
+- **Measure card overshoot at 1440 after every copy change.** Text taller than the image leaves ragged card ends; a shorter title (one 48 px line) is the
+  cheapest trim. Glutathione ended at 0/0/0/+24/+18 px.
 
 ---
 

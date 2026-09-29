@@ -282,13 +282,22 @@ AI-generated illustrations and must not be presented as results. Record:
     config's Matrixyl hub entry, verify-live ×6, page audit, critic on the live page, delete the preview).
   - Owner note: every Matrixyl pack photo shows "10% MATRIXYL" on the label while the studies used 3%; the register parks what 10% means until the
     formula sheet arrives (claim 7). The page's percentage row now uses a shot where it is not legible.
-- ⏭ **Glutathione on the template:** being built in parallel by another session (Malcolm's go-ahead 2026-09-26).
-- ⏭ **Glutathione on the template.** ✅ Step 1, claims re-read at source (Malcolm asked for the check 2026-09-26; the rollout itself is not yet approved):
-  register `docs/claims/glutathione.md` §8. Every live figure matched; 14 live defects in §8.3, including ❌ "more even-looking skin tone" alt text on both
-  before/after images in six languages (breaks template §4 rule 6). Three register corrections from full texts: Wahab 2021's topical serum (2% glutathione
-  and vitamin C) **did** beat placebo (p = 0.029), the only independent controlled trial; Etnawati 2019 is out; Watanabe's wrinkle instrument shows the
-  treated side below placebo, not a fall. No new topical GSSG trial since 2014; no CIR or SCCS opinion. ⏳ Four decisions for Malcolm in §8.7 (go-ahead,
-  Wahab as card 3, a new before/after wave matching the trials' women, fixing the live alt text now), then steps 2–13.
+- ✅ **Glutathione live on the template, 2026-09-29** (Malcolm: go-ahead 2026-09-26; "publish the page so i can see it on the live site", 2026-09-29).
+  - ✅ Claims re-read at source: register `docs/claims/glutathione.md` §8. Three corrections from full texts: Wahab 2021's topical serum (2% glutathione
+    and vitamin C) **did** beat placebo (p = 0.029), the only independent controlled trial, now card 3; Etnawati 2019 is out; Watanabe's wrinkle
+    instrument shows the treated side below placebo, not a fall. No new topical GSSG trial since 2014; no CIR or SCCS opinion.
+  - ✅ The live "more even-looking skin tone" alt text on both old before/after images fixed in six languages the same day (register §8.7 decision 4).
+  - ✅ Specs `configs/hub-upgrades/glutathione-research-{layout,evidence-merge}-2026-09-26.json`, phrase table `configs/hub-i18n/glutathione-research.json`
+    (93 phrases). Built on a hidden preview; design critic cycle 1 FIX 6.11, every page-level finding fixed and re-measured there (phone hero 1.92 → ≥ 4.92:1).
+    Live 2026-09-29: verify-live ✓ ×6 on both specs, page audit 100/96/100/93, old specs retired, reviewer config repointed, preview deleted.
+  - ⏳ **Malcolm picks the before/after pairs** for cards 1 (brighter skin) and 2 (crow's feet) from `~/Desktop/skingenetix-glutathione-before-after-r1.png`
+    (35 candidates, `configs/banners/before-after-glutathione-cards-r1.json`). Until then both cards carry product-with-model photos. Then: crop, labels in
+    six languages ("After 10 weeks"; result lines per register §8.5), apply, verify, and design critic cycle 2 on the live page.
+  - ⏳ **Ask Malcolm:** the "Explore more research" Glutathione tile on the PDRN and copper pages still says "For a more even, radiant-looking skin tone"
+    (breaks template §4 rule 6); proposed "For brighter-looking skin" in six languages, as on the Matrixyl draft.
+  - 🛑 **Template-level, new (critic 2026-09-26):** at 200% zoom every finding-card heading breaks mid-word (card text column 91 px, 32 px headings), on
+    all template pages. Cause: `theme/sections/research-before-after.liquid`. Also template-level: `hub-i18n.py` does not keep "%" with its number in
+    de/fr/es (glutathione fixed in its own phrase table) and does not check `alt` attributes in the custom sections.
 - 🔄 **`/pages/collagen-skin-plumping`: fix and two proof sections** (Malcolm, 2026-09-26: "option 1. But lets also add 2 content sections (text and
   before and after image) where we show the proven benefits of what peptides can do for that topic of skin concern. we can create new study before and
   after images for these sections."). Spec `configs/hub-upgrades/collagen-skin-plumping-2026-09-26.json`.

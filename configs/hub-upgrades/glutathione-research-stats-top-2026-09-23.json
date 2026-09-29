@@ -1,4 +1,5 @@
 {
+  "_retired": "Superseded 2026-09-29 by the science-page template specs glutathione-research-layout-2026-09-26.json and glutathione-research-evidence-merge-2026-09-26.json (register docs/claims/glutathione.md §8); re-applying this would put back the null, oral and non-transferable studies, the rich-text overview and the old evidence table.",
   "_about": "Malcolm, 2026-09-23: 'the 3 main USPs/claims bar' belongs at the top of every science page. Moves the stats band directly under the hero on glutathione-research, moves the charts below the findings cards and the evidence table below the usage rows, and flips the four backgrounds below so the page still alternates Bone/White. Sections are re-supplied verbatim from configs/hub-upgrades/glutathione-research.json (the current spec), so every six-locale value is re-registered unchanged. Additive; nothing else on the page is touched.",
   "template": "templates/page.glutathione-research.json",
   "page": "glutathione-research",
@@ -112,11 +113,7 @@
             }
           }
         },
-        "block_order": [
-          "s1",
-          "s2",
-          "s3"
-        ]
+        "block_order": ["s1", "s2", "s3"]
       }
     },
     {
@@ -130,10 +127,7 @@
           "remove_horizontal_spacing": false,
           "background": "#ffffff",
           "html": {
-            "$chart": [
-              "pigment",
-              "ratings"
-            ],
+            "$chart": ["pigment", "ratings"],
             "heading": {
               "en": "Glutathione Before and After: What the Trial Measured",
               "de": "Glutathion vorher und nachher: Was die Studie gemessen hat",
@@ -210,10 +204,7 @@
             }
           }
         },
-        "block_order": [
-          "u1",
-          "u2"
-        ]
+        "block_order": ["u1", "u2"]
       }
     },
     {
@@ -450,18 +441,7 @@
             }
           }
         },
-        "block_order": [
-          "t1",
-          "t2",
-          "t3",
-          "t4",
-          "t5",
-          "t6",
-          "t7",
-          "t8",
-          "t9",
-          "t10"
-        ]
+        "block_order": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8", "t9", "t10"]
       }
     }
   ],
@@ -501,16 +481,8 @@
       "unit": "%",
       "signed": true,
       "decimals": 1,
-      "domain": [
-        -14,
-        2
-      ],
-      "ticks": [
-        -12,
-        -8,
-        -4,
-        0
-      ],
+      "domain": [-14, 2],
+      "ticks": [-12, -8, -4, 0],
       "value_width": 70,
       "series": [
         {
@@ -594,17 +566,8 @@
       "unit": "%",
       "signed": false,
       "decimals": 1,
-      "domain": [
-        0,
-        100
-      ],
-      "ticks": [
-        0,
-        25,
-        50,
-        75,
-        100
-      ],
+      "domain": [0, 100],
+      "ticks": [0, 25, 50, 75, 100],
       "value_width": 62,
       "series": [
         {

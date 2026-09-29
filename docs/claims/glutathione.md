@@ -1,5 +1,8 @@
 # Claims register: topical glutathione (GSSG / GSH)
 
+> **Status 2026-09-29: live on the science-page template** (specs `configs/hub-upgrades/glutathione-research-{layout,evidence-merge}-2026-09-26.json`,
+> content from §8.6 with Malcolm's §8.7 decisions; cards 1–2 await his before/after picks).
+>
 > **Status 2026-09-26: re-checked at source for the science-page template rollout (§8).** Three corrections from full texts: Wahab 2021's topical serum
 > did beat placebo; Etnawati 2019's normal-skin result is not significant between groups (claim 8 withdrawn); Watanabe's wrinkle instrument shows the
 > treated side below placebo, not a fall from the start. The rollout waits for Malcolm's go-ahead (§8.7).
