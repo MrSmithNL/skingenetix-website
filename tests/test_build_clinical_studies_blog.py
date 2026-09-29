@@ -58,10 +58,9 @@ def test_the_list_page_is_the_stock_blog_with_one_h1_and_translated_words():
 def test_the_label_row_filters_the_list_by_ingredient():
     """Malcolm, 2026-09-29: labels show and the list sorts by label, as on the Hairgenetix blog (supersedes "tags off
     until ~12 articles"). main-blog's own row (show_tags) reads blog.all_tags, which this store's storefront returns
-    empty on some requests and full on others: the stock row showed on 6 of 18 loads across the six locales
-    (measured 2026-09-29, after re-saving the blog). So the row is a stock Custom Liquid section with main-blog's
-    own markup and a FIXED list, every study's label from the configs, never blog.all_tags; the selected state
-    comes from current_tags and "All posts" from the theme's own translation."""
+    empty on some requests (the stock row showed on 6 of 18 loads, 2026-09-29), and a tag page's blog.articles is
+    already filtered. blogs[blog.handle].articles is not (checked on /tagged/pdrn), so the labels are every live
+    article's tags: no hand-typed list, no label that opens an empty page (critic F12)."""
     spec = bcb.blog_spec()
     assert [a["id"] for a in spec["add_sections"]] == ["hero", "labels", "main", "grading"]
     main = _section(spec, "main")
@@ -69,10 +68,28 @@ def test_the_label_row_filters_the_list_by_ingredient():
     row = _section(spec, "labels")
     assert row["type"] == "custom-liquid"
     liquid = row["settings"]["liquid"]
-    assert "nav-categories" in liquid and "current_tags" in liquid and "link_to_tag" in liquid
-    assert "'blog.general.all_posts' | t" in liquid and "all_tags" not in liquid
-    assert bcb.study_labels() == ["Argireline", "GHK-Cu", "PDRN"]
-    assert "'Argireline|GHK-Cu|PDRN'" in liquid
+    assert "blogs[blog.handle].articles" in liquid and "all_tags" not in liquid
+    assert "/tagged/{{ tag | handleize }}" in liquid and "aria-current" in liquid and "current_tags contains tag" in liquid
+
+
+def test_the_label_row_is_readable_and_tappable():
+    """Critic F1/F13/F16: full-ink labels (the theme's 50% ones measured 3.24:1), the current one underlined,
+    44px targets, a visible focus ring, wrapping instead of a clipped scroll row, and plain links in a <nav>, not tabs.
+    link_to_tag is not used: it adds a "Show products matching tag" tooltip, in English, on every locale."""
+    liquid = _section(bcb.blog_spec(), "labels")["settings"]["liquid"]
+    assert "<nav" in liquid and 'role="tab' not in liquid and "link_to_tag" not in liquid
+    assert "min-height: 44px" in liquid and "focus-visible" in liquid and "flex-wrap: wrap" in liquid
+    assert "opacity" not in liquid
+    assert "Alle Studien" in liquid and "Studien nach Wirkstoff filtern" in liquid   # its own words, six languages
+
+
+def test_interface_words_are_written_per_locale():
+    """Liquid settings are not translatable, so the list's own words are a case on the storefront locale."""
+    case = bcb.by_locale("search_studies")
+    assert case.startswith("{%- case request.locale.iso_code -%}") and case.endswith("{%- endcase -%}")
+    for loc in ("de", "nl", "fr", "es", "it"):
+        assert f"{{%- when '{loc}' -%}}{bcb.p('search_studies', loc)}" in case
+    assert "{%- else -%}Search the studies" in case
 
 
 def test_the_title_sits_on_the_photo_and_the_one_h1_stays_in_main_blog():
@@ -87,6 +104,7 @@ def test_the_title_sits_on_the_photo_and_the_one_h1_stays_in_main_blog():
     title = hero["blocks"]["title"]
     assert title["type"] == "liquid" and "{{ blog.title" in title["settings"]["liquid"]
     assert 'aria-hidden="true"' in title["settings"]["liquid"] and "<h1" not in title["settings"]["liquid"]
+    assert 'class="h0"' in title["settings"]["liquid"]              # critic F8: the page's largest type
     assert sorted(hero["blocks"]["intro"]["settings"]["content"]) == sorted(bcb.LOCALES)
     assert _section(spec, "main")["settings"]["content"] == ""         # the intro moved onto the photo
     css = " ".join(spec["section_css"]["main"])
@@ -95,11 +113,27 @@ def test_the_title_sits_on_the_photo_and_the_one_h1_stays_in_main_blog():
 
 def test_the_search_box_searches_the_studies_only():
     """Malcolm, 2026-09-29: every study searchable. The header's predictive search returns no articles, so the
-    band carries a stock-styled search form scoped to articles; its words are the theme's own translated strings."""
+    band carries a theme-styled search form scoped to articles, named for what it searches (critic F7), with a
+    visible focus mark and 44px targets (critic F3)."""
     liquid = _section(bcb.blog_spec(), "hero")["blocks"]["search"]["settings"]["liquid"]
     assert 'action="{{ routes.search_url }}"' in liquid and 'name="type" value="article"' in liquid
-    assert 'type="search" name="q"' in liquid and "'search.general.search_placeholder' | t" in liquid
+    assert 'type="search" name="q"' in liquid and "Studien durchsuchen" in liquid
+    assert "search_placeholder" not in liquid                          # the theme's German says "Gib etwas ein..."
+    assert ":focus-within" in liquid and "min-height: 44px" in liquid
     assert "{% render" not in liquid                                   # liquid settings cannot render snippets
+
+
+def test_each_article_body_carries_its_searchable_text():
+    """Critic F2: Shopify's search found "raikou", "badenhorst" and "hexapeptide" nowhere, because every article
+    body was empty (the study lives in a metaobject the search does not read). The body is never rendered by
+    templates/article.clinical-study.json, so it carries the study's own approved words for search: the answer,
+    the definition and the citation, or the pilot's verdict and reference, as plain text."""
+    b = bcb.search_body(STOCK)
+    assert list(b) == ["en"] and "Raikou" in b["en"] and "hexapeptide" in b["en"].lower()
+    assert "**" not in b["en"] and "](" not in b["en"] and b["en"].startswith("<p>")
+    w = bcb.search_body(PILOT)
+    assert sorted(w) == sorted(bcb.LOCALES) and "Wang Y" in w["de"]
+    assert "Appraised by" not in w["en"] and "<h2" not in w["en"]
 
 
 def test_section_css_stays_within_what_shopify_accepts():
@@ -119,13 +153,13 @@ def test_the_preview_spec_builds_a_hidden_template_seen_through_view():
 
 def test_list_page_problems_reads_one_h1_the_labels_and_the_search_form():
     good = ('<h1 class="h0">Klinische Studien</h1><p class="h1" aria-hidden="true">Klinische Studien</p>'
-            '<div class="nav-categories"><a href="/de/blogs/clinical-studies">Alle Artikel</a>'
-            '<a href="/de/blogs/clinical-studies/tagged/pdrn">PDRN</a></div>'
+            '<nav class="sgx-labels"><a href="/de/blogs/clinical-studies">Alle Studien</a>'
+            '<a href="/de/blogs/clinical-studies/tagged/pdrn">PDRN</a></nav>'
             '<form action="/de/search" method="get" role="search"><input type="hidden" name="type" value="article">'
             '<a href="/de/blogs/clinical-studies/x-2013">')
     assert bcb.list_page_problems(good, "Klinische Studien", ["x-2013"]) == []
     two = good.replace('<p class="h1"', '<h1 class="h1"').replace("</p>", "</h1>", 1)
     assert "one <h1>" in bcb.list_page_problems(two, "Klinische Studien", ["x-2013"])[0]
-    bad = bcb.list_page_problems(good.replace("nav-categories", "x").replace('value="article"', ""),
+    bad = bcb.list_page_problems(good.replace("sgx-labels", "x").replace('value="article"', ""),
                                  "Klinische Studien", ["x-2013", "y-2016"])
     assert any("label row" in p for p in bad) and any("search" in p for p in bad) and any("y-2016" in p for p in bad)

@@ -12,7 +12,7 @@
           "title": {
             "type": "liquid",
             "settings": {
-              "liquid": "<p class=\"h1\" aria-hidden=\"true\">{{ blog.title | escape }}</p>"
+              "liquid": "<p class=\"h0\" aria-hidden=\"true\">{{ blog.title | escape }}</p>"
             }
           },
           "intro": {
@@ -31,7 +31,7 @@
           "search": {
             "type": "liquid",
             "settings": {
-              "liquid": "<form class=\"search-input\" action=\"{{ routes.search_url }}\" method=\"get\" role=\"search\"><input type=\"hidden\" name=\"type\" value=\"article\"><input type=\"hidden\" name=\"options[prefix]\" value=\"last\"><input type=\"search\" name=\"q\" placeholder=\"{{ 'search.general.search_placeholder' | t }}\" aria-label=\"{{ 'search.general.title' | t | escape }}\" autocomplete=\"off\" spellcheck=\"false\"><button type=\"submit\" aria-label=\"{{ 'search.general.title' | t | escape }}\"><svg aria-hidden=\"true\" focusable=\"false\" fill=\"none\" width=\"22\" viewBox=\"0 0 24 24\"><path d=\"m21 21-4.5-4.5M18.5 10.75a7.75 7.75 0 1 1-15.5 0 7.75 7.75 0 0 1 15.5 0Z\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/></svg></button></form>"
+              "liquid": "<style>\n  .sgx-search { max-width: 26rem; margin-block-start: var(--spacing-6); border-color: rgb(255 255 255 / 0.7); }\n  .search-input.sgx-search > input { font-size: 1.0625rem; font-weight: 400; min-height: 44px; }\n  .search-input.sgx-search > input::placeholder { color: rgb(255 255 255 / 0.85); }\n  .sgx-search > button { display: grid; place-items: center; min-width: 44px; min-height: 44px; }\n  .sgx-search:focus-within { outline: 2px solid #fff; outline-offset: 6px; }\n</style><form class=\"search-input sgx-search\" action=\"{{ routes.search_url }}\" method=\"get\" role=\"search\"><input type=\"hidden\" name=\"type\" value=\"article\"><input type=\"hidden\" name=\"options[prefix]\" value=\"last\"><input type=\"search\" name=\"q\" placeholder=\"{%- case request.locale.iso_code -%}{%- when 'de' -%}Studien durchsuchen{%- when 'nl' -%}Zoek in de studies{%- when 'fr' -%}Rechercher dans les études{%- when 'es' -%}Buscar en los estudios{%- when 'it' -%}Cerca negli studi{%- else -%}Search the studies{%- endcase -%}\" aria-label=\"{%- case request.locale.iso_code -%}{%- when 'de' -%}Studien durchsuchen{%- when 'nl' -%}Zoek in de studies{%- when 'fr' -%}Rechercher dans les études{%- when 'es' -%}Buscar en los estudios{%- when 'it' -%}Cerca negli studi{%- else -%}Search the studies{%- endcase -%}\" autocomplete=\"off\" spellcheck=\"false\"><button type=\"submit\" aria-label=\"{%- case request.locale.iso_code -%}{%- when 'de' -%}Studien durchsuchen{%- when 'nl' -%}Zoek in de studies{%- when 'fr' -%}Rechercher dans les études{%- when 'es' -%}Buscar en los estudios{%- when 'it' -%}Cerca negli studi{%- else -%}Search the studies{%- endcase -%}\"><svg aria-hidden=\"true\" focusable=\"false\" fill=\"none\" width=\"22\" viewBox=\"0 0 24 24\"><path d=\"m21 21-4.5-4.5M18.5 10.75a7.75 7.75 0 1 1-15.5 0 7.75 7.75 0 0 1 15.5 0Z\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/></svg></button></form>"
             }
           }
         },
@@ -43,7 +43,7 @@
           "image_size": "sm",
           "image": "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pink-serum-actives.jpg",
           "mobile_image": "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg",
-          "mobile_text_position": "place-self-start-center text-center",
+          "mobile_text_position": "place-self-start text-start",
           "desktop_text_position": "sm:place-self-center-start sm:text-start",
           "text_color": "#ffffff",
           "overlay_color": "#1A1A1A",
@@ -57,7 +57,7 @@
       "section": {
         "type": "custom-liquid",
         "settings": {
-          "liquid": "{%- assign labels = 'Argireline|GHK-Cu|PDRN' | split: '|' -%}\n<div class=\"scroll-area bleed sm:unbleed justify-items-center\">\n  <div class=\"nav-categories\">\n    <ul class=\"h-stack bold text-base\" role=\"tablist\">\n      <li role=\"tab\" aria-selected=\"{% if current_tags == blank %}true{% else %}false{% endif %}\"><a href=\"{{ blog.url }}\">{{ 'blog.general.all_posts' | t }}</a></li>\n      {%- for tag in labels -%}\n      <li role=\"tab\" aria-selected=\"{% if current_tags contains tag %}true{% else %}false{% endif %}\">{%- if current_tags contains tag -%}{{ tag | link_to_remove_tag: tag }}{%- else -%}{{ tag | link_to_tag: tag }}{%- endif -%}</li>\n      {%- endfor -%}\n    </ul>\n  </div>\n</div>",
+          "liquid": "<style>\n  .sgx-labels { padding-block-start: var(--spacing-6); }\n  .sgx-labels ul { display: flex; flex-wrap: wrap; gap: 0 var(--spacing-6); margin: 0; padding: 0; list-style: none; }\n  .sgx-labels a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: rgb(var(--text-color)); text-decoration: none; text-underline-offset: 0.45em; }\n  .sgx-labels a[aria-current], .sgx-labels a:hover { text-decoration: underline 2px; }\n  .sgx-labels a:focus-visible { outline: 2px solid rgb(var(--text-color)); outline-offset: 2px; }\n</style>\n{%- capture sgx_tags -%}{%- for a in blogs[blog.handle].articles -%}{{ a.tags | join: '§' }}§{%- endfor -%}{%- endcapture -%}\n{%- assign sgx_labels = sgx_tags | split: '§' | uniq | sort -%}\n<nav class=\"sgx-labels\" aria-label=\"{%- case request.locale.iso_code -%}{%- when 'de' -%}Studien nach Wirkstoff filtern{%- when 'nl' -%}Filter de studies op ingrediënt{%- when 'fr' -%}Filtrer les études par ingrédient{%- when 'es' -%}Filtrar los estudios por ingrediente{%- when 'it' -%}Filtra gli studi per ingrediente{%- else -%}Filter the studies by ingredient{%- endcase -%}\">\n  <ul>\n    <li><a href=\"{{ blog.url }}\"{% if current_tags == blank %} aria-current=\"page\"{% endif %}>{%- case request.locale.iso_code -%}{%- when 'de' -%}Alle Studien{%- when 'nl' -%}Alle studies{%- when 'fr' -%}Toutes les études{%- when 'es' -%}Todos los estudios{%- when 'it' -%}Tutti gli studi{%- else -%}All studies{%- endcase -%}</a></li>\n    {%- for tag in sgx_labels -%}\n    <li><a href=\"{{ blog.url }}/tagged/{{ tag | handleize }}\"{% if current_tags contains tag %} aria-current=\"page\"{% endif %}>{{ tag | escape }}</a></li>\n    {%- endfor -%}\n  </ul>\n</nav>",
           "full_width": true,
           "remove_vertical_spacing": true,
           "remove_horizontal_spacing": false
@@ -111,7 +111,7 @@
           "full_width": true,
           "content_width": "medium",
           "text_position": "start",
-          "background": "#F0F0F0"
+          "background": "#FFFFFF"
         }
       }
     }
@@ -119,15 +119,18 @@
   "remove_sections": ["start"],
   "section_css": {
     "hero": [
-      "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }",
-      ".search-input {max-width: 26rem; margin-block-start: var(--spacing-6); border-color: rgb(255 255 255 / 0.7);}",
-      "@media screen and (max-width: 699px) { .search-input {margin-inline: auto;} }",
-      ".search-input > input::placeholder {color: rgb(255 255 255 / 0.85);}"
+      "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }"
     ],
     "main": [
       ".badge--primary {background-color: #E4E6E7; color: #2E3233;}",
-      ".blog-banner-content {position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;}"
+      ".blog-banner-content {position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;}",
+      ".blog-post-card__figure > .badge {font-size: 0.8125rem; padding: 0.3em 0.75em;}",
+      ".blog-post-card__info p:not([class]) {font-size: 1.0625rem;}"
     ],
-    "grading": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}"]
+    "grading": [
+      ".rich-text {justify-content: center;}",
+      ".prose {max-width: 66ch; margin-inline: auto;}",
+      ".prose h2 {font-size: var(--text-h3);}"
+    ]
   }
 }

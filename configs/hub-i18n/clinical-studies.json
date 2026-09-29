@@ -376,5 +376,30 @@
     "fr": "notre boutique",
     "es": "nuestra tienda",
     "it": "nostro negozio"
+  },
+  "_list_ui_about": "The blog list's own interface words (2026-09-29): liquid settings are not translatable, so build-clinical-studies-blog.py writes these into its Liquid blocks as a case on request.locale.iso_code. They replace the theme's generic 'Search for...' (German informal 'Gib etwas ein...') and Shopify's 'All posts'. German formal, Dutch informal, as the rest of the site.",
+  "search_studies": {
+    "en": "Search the studies",
+    "de": "Studien durchsuchen",
+    "nl": "Zoek in de studies",
+    "fr": "Rechercher dans les études",
+    "es": "Buscar en los estudios",
+    "it": "Cerca negli studi"
+  },
+  "all_studies": {
+    "en": "All studies",
+    "de": "Alle Studien",
+    "nl": "Alle studies",
+    "fr": "Toutes les études",
+    "es": "Todos los estudios",
+    "it": "Tutti gli studi"
+  },
+  "filter_label": {
+    "en": "Filter the studies by ingredient",
+    "de": "Studien nach Wirkstoff filtern",
+    "nl": "Filter de studies op ingrediënt",
+    "fr": "Filtrer les études par ingrédient",
+    "es": "Filtrar los estudios por ingrediente",
+    "it": "Filtra gli studi per ingrediente"
   }
 }

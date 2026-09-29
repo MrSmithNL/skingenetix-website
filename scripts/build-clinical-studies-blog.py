@@ -63,37 +63,65 @@ BANNER = "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pi
 BANNER_MOBILE = "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg"
 # The visible title: the blog's own title (translated with the blog), hidden from screen readers because they
 # read the real <h1> in main-blog's banner a few lines later.
-TITLE_LIQUID = '<p class="h1" aria-hidden="true">{{ blog.title | escape }}</p>'
+TITLE_LIQUID = '<p class="h0" aria-hidden="true">{{ blog.title | escape }}</p>'
 # Search scoped to articles. The header's predictive search returns no articles (its request names no
 # resource types), so without this a visitor cannot search the studies from the list. Theme-styled
-# (.search-input, as on /search) and worded by the theme's own translated strings. A liquid setting cannot
-# {% render %} a snippet, so the magnifier is inline.
+# (.search-input, as on /search), worded per locale from the phrase table (search_liquid). A liquid setting
+# cannot {% render %} a snippet, so the magnifier is inline.
 SEARCH_ICON = ('<svg aria-hidden="true" focusable="false" fill="none" width="22" viewBox="0 0 24 24">'
                '<path d="m21 21-4.5-4.5M18.5 10.75a7.75 7.75 0 1 1-15.5 0 7.75 7.75 0 0 1 15.5 0Z" '
                'stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>')
-SEARCH_LIQUID = ('<form class="search-input" action="{{ routes.search_url }}" method="get" role="search">'
-                 '<input type="hidden" name="type" value="article">'
-                 '<input type="hidden" name="options[prefix]" value="last">'
-                 '<input type="search" name="q" placeholder="{{ \'search.general.search_placeholder\' | t }}" '
-                 'aria-label="{{ \'search.general.title\' | t | escape }}" autocomplete="off" spellcheck="false">'
-                 '<button type="submit" aria-label="{{ \'search.general.title\' | t | escape }}">'
-                 + SEARCH_ICON + '</button></form>')
-# The label row under the photo: main-blog's own markup (theme-styled, "All posts" in the theme's translation,
-# the selected state from current_tags) with a FIXED list: every study's label, from the configs. main-blog's
-# own row (show_tags) reads blog.all_tags, which this store's storefront returns empty on some requests and full on
-# others: the stock row showed on 6 of 18 loads across the six locales (2026-09-29, after re-saving the blog).
-# A tag page's blog.articles is already filtered, so it cannot be the source either.
-LABELS_LIQUID = """{%- assign labels = '__LABELS__' | split: '|' -%}
-<div class="scroll-area bleed sm:unbleed justify-items-center">
-  <div class="nav-categories">
-    <ul class="h-stack bold text-base" role="tablist">
-      <li role="tab" aria-selected="{% if current_tags == blank %}true{% else %}false{% endif %}"><a href="{{ blog.url }}">{{ 'blog.general.all_posts' | t }}</a></li>
-      {%- for tag in labels -%}
-      <li role="tab" aria-selected="{% if current_tags contains tag %}true{% else %}false{% endif %}">{%- if current_tags contains tag -%}{{ tag | link_to_remove_tag: tag }}{%- else -%}{{ tag | link_to_tag: tag }}{%- endif -%}</li>
-      {%- endfor -%}
-    </ul>
-  </div>
-</div>"""
+SEARCH_STYLE = """<style>
+  .sgx-search { max-width: 26rem; margin-block-start: var(--spacing-6); border-color: rgb(255 255 255 / 0.7); }
+  .search-input.sgx-search > input { font-size: 1.0625rem; font-weight: 400; min-height: 44px; }
+  .search-input.sgx-search > input::placeholder { color: rgb(255 255 255 / 0.85); }
+  .sgx-search > button { display: grid; place-items: center; min-width: 44px; min-height: 44px; }
+  .sgx-search:focus-within { outline: 2px solid #fff; outline-offset: 6px; }
+</style>"""
+
+
+def search_liquid():
+    """The band's search form. Its words are ours, per locale ('Search the studies'), not the theme's 'Search for...'
+    (critic F7: the loudest text in the band, naming no scope); 17px regular with a focus ring and 44px targets
+    (critic F3); the placeholder 85% white, as the theme's 50% measured 2.7:1 over the phone photo."""
+    words = by_locale("search_studies")
+    return (SEARCH_STYLE + '<form class="search-input sgx-search" action="{{ routes.search_url }}" method="get" role="search">'
+            '<input type="hidden" name="type" value="article">'
+            '<input type="hidden" name="options[prefix]" value="last">'
+            f'<input type="search" name="q" placeholder="{words}" aria-label="{words}" autocomplete="off" spellcheck="false">'
+            f'<button type="submit" aria-label="{words}">' + SEARCH_ICON + '</button></form>')
+
+
+# The label row under the photo, above the list, a filter by ingredient (Malcolm, 2026-09-29, after the Hairgenetix
+# blog). Its labels are every live article's tags, read from blogs[blog.handle].articles, which a tag page does NOT
+# filter (checked on /tagged/pdrn); main-blog's own row (show_tags) reads blog.all_tags, which this storefront
+# returns empty on some requests (6 of 18 loads, 2026-09-29), and a tag page's blog.articles is already filtered.
+# Critic 2026-09-29: full ink (the theme's 50% labels measured 3.24:1), the current one underlined (F1), 44px
+# targets and wrapping, not a clipped scroll row (F13), plain links in a <nav>, not tabs (F16), and no
+# link_to_tag, whose "Show products matching tag" tooltip is English on every locale.
+LABELS_STYLE = """<style>
+  .sgx-labels { padding-block-start: var(--spacing-6); }
+  .sgx-labels ul { display: flex; flex-wrap: wrap; gap: 0 var(--spacing-6); margin: 0; padding: 0; list-style: none; }
+  .sgx-labels a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: rgb(var(--text-color)); text-decoration: none; text-underline-offset: 0.45em; }
+  .sgx-labels a[aria-current], .sgx-labels a:hover { text-decoration: underline 2px; }
+  .sgx-labels a:focus-visible { outline: 2px solid rgb(var(--text-color)); outline-offset: 2px; }
+</style>"""
+
+
+def labels_liquid():
+    return (LABELS_STYLE + """
+{%- capture sgx_tags -%}{%- for a in blogs[blog.handle].articles -%}{{ a.tags | join: '§' }}§{%- endfor -%}{%- endcapture -%}
+{%- assign sgx_labels = sgx_tags | split: '§' | uniq | sort -%}
+""" + '<nav class="sgx-labels" aria-label="' + by_locale("filter_label") + '">' + """
+  <ul>
+    <li><a href="{{ blog.url }}"{% if current_tags == blank %} aria-current="page"{% endif %}>""" + by_locale("all_studies") + """</a></li>
+    {%- for tag in sgx_labels -%}
+    <li><a href="{{ blog.url }}/tagged/{{ tag | handleize }}"{% if current_tags contains tag %} aria-current="page"{% endif %}>{{ tag | escape }}</a></li>
+    {%- endfor -%}
+  </ul>
+</nav>""")
+
+
 HUB_LINKS = [("label_copper", "copper-peptide-research"), ("Matrixyl 3000", "matrixyl-3000-research"),
              ("Argireline®", "acetyl-hexapeptide-8-research"), ("PDRN", "pdrn-research"),
              ("label_glutathione", "glutathione-research")]
@@ -108,6 +136,41 @@ def p(key, loc, **kw):
     for k, v in kw.items():
         s = s.replace("{" + k + "}", str(v))
     return s
+
+
+def by_locale(key):
+    """A phrase-table entry as Liquid chosen by the storefront locale: liquid settings are not translatable."""
+    return ("{%- case request.locale.iso_code -%}"
+            + "".join(f"{{%- when '{l}' -%}}{p(key, l)}" for l in LOCALES if l != "en")
+            + "{%- else -%}" + p(key, "en") + "{%- endcase -%}")
+
+
+def _plain(s):
+    """Markdown-light study copy as plain, escaped text: links keep their words, emphasis marks go."""
+    s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
+    return H.escape(s.replace("**", "").replace("*", "").strip(), quote=False)
+
+
+def search_body(cfg):
+    """{locale: html} the article body carries so Shopify's search finds the study (critic F2: "raikou",
+    "badenhorst" and "hexapeptide" found nothing, as every body was empty). templates/article.clinical-study.json
+    never renders the body and every article has an excerpt, so readers never see it; it is the study's own
+    approved words: answer, definition and citation, or the pilot's intro paragraphs (not the byline) and reference."""
+    out = {}
+    if "h1" in cfg:
+        for loc in LOCALES:
+            parts = [cfg[k][loc] for k in ("answer", "definition", "citation") if loc in cfg.get(k, {})]
+            if parts:
+                out[loc] = "".join(f"<p>{_plain(x)}</p>" for x in parts)
+    else:
+        for loc in LOCALES:
+            if loc not in cfg["fields"]["intro"]:
+                continue
+            paras = [c for k, c in cfg["fields"]["intro"][loc] if k == "p"
+                     and not (c.startswith("*") and not c.startswith("**") and c.endswith("*"))]
+            paras += [c for k, c in cfg["fields"]["reference"].get(loc, []) if k == "p"]
+            out[loc] = "".join(f"<p>{_plain(x)}</p>" for x in paras)
+    return out
 
 
 # ---------------------------------------------------------------- pure mapping (tested offline)
@@ -140,10 +203,6 @@ def tag_for(handle):
 def study_configs():
     return [json.loads(pathlib.Path(f).read_text()) for f in sorted(glob.glob(str(ROOT / "configs/studies/*.json")))]
 
-
-def study_labels():
-    """Every study's ingredient label, once, in alphabetical order: the label row."""
-    return sorted({tag_for(c["handle"]) for c in study_configs()})
 
 
 
@@ -181,18 +240,18 @@ def blog_spec(preview=False):
                     "title": {"type": "liquid", "settings": {"liquid": TITLE_LIQUID}},
                     "intro": {"type": "richtext",
                               "settings": {"content": {l: f"<p>{p('blog_intro', l)}</p>" for l in LOCALES}}},
-                    "search": {"type": "liquid", "settings": {"liquid": SEARCH_LIQUID}}},
+                    "search": {"type": "liquid", "settings": {"liquid": search_liquid()}}},
                 "block_order": ["title", "intro", "search"],
                 # the study pages' own banner (templates/article.clinical-study.json): same height, overlay,
-                # white text, left on desktop and top-centre on phones
+                # white text; left-aligned at every width (critic F11: centred over the glassware on phones)
                 "settings": {"full_width": True, "allow_transparent_header": False, "enable_parallax": False,
                              "image_size": "sm", "image": BANNER, "mobile_image": BANNER_MOBILE,
-                             "mobile_text_position": "place-self-start-center text-center",
+                             "mobile_text_position": "place-self-start text-start",
                              "desktop_text_position": "sm:place-self-center-start sm:text-start",
                              "text_color": "#ffffff", "overlay_color": "#1A1A1A", "overlay_opacity": 28}}},
             {"id": "labels", "after": "hero", "section": {
                 "type": "custom-liquid",
-                "settings": {"liquid": LABELS_LIQUID.replace("__LABELS__", "|".join(study_labels())),
+                "settings": {"liquid": labels_liquid(),
                              "full_width": True, "remove_vertical_spacing": True, "remove_horizontal_spacing": False}}},
             {"id": "main", "after": "labels", "section": {
                 "type": "main-blog",
@@ -206,21 +265,21 @@ def blog_spec(preview=False):
                 "blocks": {"t": {"type": "richtext", "settings": {"content": band}}},
                 "block_order": ["t"],
                 "settings": {"full_width": True, "content_width": "medium", "text_position": "start",
-                             "background": "#F0F0F0"}}},
+                             "background": "#FFFFFF"}}},
         ],
         "remove_sections": ["start"],
         "section_css": {
             # phones: the science pages' darker overlay (60) under white text; the search field under the intro
-            "hero": ["@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }",
-                     ".search-input {max-width: 26rem; margin-block-start: var(--spacing-6); border-color: rgb(255 255 255 / 0.7);}",
-                     "@media screen and (max-width: 699px) { .search-input {margin-inline: auto;} }",
-                     # the theme's 50% placeholder measured 2.7:1 over the phone photo's blue flask (2026-09-29)
-                     ".search-input > input::placeholder {color: rgb(255 255 255 / 0.85);}"],
+            "hero": ["@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }"],
             # the ingredient label on each card: the theme's primary badge is purple, off-brand here. The banner's
             # <h1> is hidden visually only (the title shows on the photo); the label row is its own section (LABELS_LIQUID).
+            # critic F5: the photo badge was 11px (9px on phones) beside the lead card's 13px; F10: excerpts 15px
             "main": [".badge--primary {background-color: #E4E6E7; color: #2E3233;}",
-                     ".blog-banner-content {position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;}"],
-            "grading": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}"]},
+                     ".blog-banner-content {position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;}",
+                     ".blog-post-card__figure > .badge {font-size: 0.8125rem; padding: 0.3em 0.75em;}",
+                     ".blog-post-card__info p:not([class]) {font-size: 1.0625rem;}"],
+            "grading": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}",
+                        ".prose h2 {font-size: var(--text-h3);}"]},
     })
     return spec
 
@@ -236,7 +295,7 @@ def list_page_problems(page, title, handles):
         out.append(f"expected one <h1> {title!r}, found {h1}")
     if not re.search(r'aria-hidden="true"[^>]*>\s*' + re.escape(title) + r"\s*<", page):
         out.append("the title on the photo is missing")
-    if "nav-categories" not in page:
+    if 'class="sgx-labels"' not in page:
         out.append("no label row")
     if not ('role="search"' in page and 'name="type" value="article"' in page):
         out.append("no search form scoped to the studies")
@@ -306,7 +365,8 @@ def upsert_article(gql, blog_id, cfg):
              {"h": {"type": "study", "handle": handle}})["metaobjectByHandle"]
     if not mo:
         sys.exit(f"  ✗ {handle}: no study metaobject")
-    fields = {"title": f["en"]["title"], "summary": f["en"]["summary"], "body": "",
+    body = search_body(cfg)
+    fields = {"title": f["en"]["title"], "summary": f["en"]["summary"], "body": body.get("en", ""),
               "author": {"name": AUTHOR}, "image": card_for(handle), "tags": [tag_for(handle)],
               "templateSuffix": "clinical-study", "isPublished": True, "publishDate": published(cfg) + "T09:00:00Z",
               "metafields": [
@@ -329,7 +389,8 @@ def upsert_article(gql, blog_id, cfg):
     n = register(gql, aid, {"title": {l: v["title"] for l, v in f.items()},
                             "summary_html": {l: v["summary"] for l, v in f.items()},
                             "meta_title": {l: v["seo_title"] for l, v in f.items()},
-                            "meta_description": {l: v["seo_description"] for l, v in f.items()}})
+                            "meta_description": {l: v["seo_description"] for l, v in f.items()},
+                            "body_html": body})
     print(f"  ✓ {handle}: {'updated' if ex else 'created'} · {len(f)} locale(s) · {n} translations · tag {tag_for(handle)}")
     return aid
 
