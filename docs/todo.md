@@ -312,6 +312,18 @@ AI-generated illustrations and must not be presented as results. Record:
     serum labelled **1%**; our copper products are 2%. Options on the Desktop sheet (NOW, J = day-cream jar, S0–S10 = the current serum's product photos).
     **Waiting: Malcolm's pick.**
   - ⚠️ Noted, not changed: this page is still a consolidation candidate with `/pages/firming-skin-density` (Phase 1 note above).
+  - ⏳ **Picks still open** (2026-09-29): option sheets on the Desktop, `skingenetix-options-1-matrixyl-card.png` (D1–F6),
+    `skingenetix-options-2-copper-card.png` (A1–C6), `skingenetix-copper-serum-image-options.png` (J, S0–S10).
+- ✅ **Glutathione tile in "Explore More Research" fixed on PDRN, Argireline and copper, six languages** (2026-09-29; Malcolm: "decide whats best based on
+  the keyword and SEO and content strategy"). "For a more even, radiant-looking skin tone" broke template §4 rule 6 and glutathione register §8.4. Now "A
+  clinically studied antioxidant for brighter-looking skin": the sibling tiles' pattern, the hub's `glutathione for skin` and brightening framing, the
+  register's approved "brighter-looking skin", and the glutathione phrase table's approved translations. Owned by each evidence-merge spec
+  (`set related/r_glutathione/content`). Verified 18/18 page-locales, 0 outdated; backups `20260929-120025`, `-120102`, `-120132`. The Matrixyl window
+  was sent the same wording.
+- ⏳ **Phone hero contrast, Argireline (and PDRN)** (found by the Matrixyl design critic, 2026-09-26; measured 2026-09-29). At 390 px, Argireline's
+  "Ingredient Research" is 2.06:1 and the H1's first line 2.77:1 at the worst point (minimum 4.5:1 / 3:1); PDRN's label is 4.26:1. Proposed: darken the
+  hero photo on phones only (brightness 0.62 through `section_css`, desktop unchanged): Argireline 4.76:1 / 6.03:1, PDRN 7.96:1 / 8.55:1. Sheet
+  `~/Desktop/skingenetix-options-5-phone-hero.png`. **Waiting: Malcolm's decision.**
 - ✅ **Copper JSON-LD descriptions** in de/nl/fr/es/it said "55.8% more … than without" (de, nl) or gave the figure with no comparator. Live with the rollout on 2026-09-26; the German description checked with curl the same day.
 - ✅ **Argireline loose ends closed** (2026-09-24): the JSON-LD is now localised per language (it had said `inLanguage: "en"` with the English URL on all five translations), Hoppel 2015 is added to `citation[]`, and the dead overview CSS is removed. Verified live with curl in en/de/it.
 - ⚠️ **Site-wide, theme:** the mobile header menu icon is a 22×22 px tap target (below 44). Measured on both template pages. It is theme chrome, so fixing it is a core-theme change: Malcolm's call.
