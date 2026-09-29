@@ -407,3 +407,32 @@ move dropped its five translations; they were re-registered on `gid://shopify/Li
 `configs/banners/menu-clinical-studies-tile-2026-09-29.json`). The text line under the Science tiles is gone (`ROWS = []` in
 `scripts/menu-image-tiles.py`, pushed with `--css-only`). Verified live in English, German and the phone drawer. This supersedes the
 Science placement. Backup of the menu before the move: `backups/main-menu-20260929-154059.json`.
+
+## ADR-2026-09-29-C: "Collagen & Skin Plumping" is kept and becomes the collagen-skincare page
+
+**Date:** 2026-09-29
+**Status:** Accepted. Malcolm: "Yes, and rename address".
+**Context:** `/pages/collagen-skin-plumping` predates the keyword strategy. It sat in no menu, its only inbound links were
+Related tiles, and it duplicated `/pages/firming-skin-density` by intent (same Matrixyl 3000 + copper peptide, same routine,
+near-identical FAQs; it also contradicted the Firming page on topical collagen). It earned 1 impression in 90 days. Malcolm
+asked to keep it and add it to the menu only if it can own a collagen or other high-volume term with no overlap or
+cannibalisation with any other key page.
+**Evidence:** the existing keyword data had no qualifying term; its collagen head terms had never been seeded. A paid pull
+(US, GB, DE, NL; $1.43; `configs/keyword-data/collagen-2026-09-29/`) measured an unowned collagen cream / serum cluster of
+about 3,700 observed searches a month: US collagen cream 656, collagen serum 605, collagen face cream 201, collagen cream for
+face 201; GB collagen cream for face 472, collagen face cream 394, collagen cream 394; DE kollagen serum 317, kollagen creme
+211, kollagen booster 105, kollagen gesichtscreme 105; NL collageen serum 102, collageen booster 102, collageen creme 51.
+Keyword difficulty 0–2. The US results mix shops and brands with editorial guides (Allure, Byrdie, NYT Wirecutter); the GB
+results are mostly forums. "Collagen peptides" demand is supplements and is excluded.
+**Decision:**
+
+- The page becomes **Collagen Skincare**: a shoppable guide answering which collagen creams and serums work. Primary
+  term `collagen cream` (with `collagen face cream`, `collagen cream for face`), secondary `collagen serum`; DE `kollagen creme`,
+  `kollagen serum`, `kollagen gesichtscreme`; NL `collageen serum`, `collageen creme`.
+- New address `/pages/collagen-skincare`, with a 301 from `/pages/collagen-skin-plumping` in every language.
+- `/pages/firming-skin-density` keeps firming, sagging and elasticity terms and stops targeting "collagen" (meta description; its
+  topical-collagen FAQ moves to the collagen page). Products keep their own terms (e.g. the Pro-Collagen cream keeps
+  `peptide cream`).
+- Menu: a fifth Skin Solutions tile, "Collagen Skincare", in six languages, once the rebuilt page is approved.
+  **Conditions:** products shown up front (the searches are commercial); the answer on topical collagen is honest and sourced (a
+  new claims register); no product promise to boost collagen; the rebuilt page is shown to Malcolm before it goes live.

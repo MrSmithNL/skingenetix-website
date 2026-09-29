@@ -335,12 +335,17 @@ AI-generated illustrations and must not be presented as results. Record:
     (`python3 scripts/build-collagen-plumping-before-after-config.py --round r2` → `configs/banners/before-after-collagen-plumping-r2.json`, reusing
     the glutathione r2 swaps). Slot a done 6/6 (smoke: no moles, clothes vary); slots b and c were generating at 15:47 (nbp_pro 503 on b: re-run).
     **Then:** stable-label sheet, Malcolm's pick, upload, move the `proof` section from `configs/copy/` into the spec, apply, verify ×6, capture.
-  - ⏳ **Where this page belongs, and the menu** (Malcolm, 2026-09-29: "where do i find the 'Collagen & Skin Plumping' concern page? Its not in the site
-    navigation menu … Lets analyse where this page should sit in the website structure to make it most effective - and add it to the website
-    menu"). Found: it predates the keyword strategy, sits in no menu, and its only inbound link is the firming page's Related tile; its sections mirror
-    `/pages/firming-skin-density` (same two peptides, same routine, near-identical FAQs). A keyword/GSC analysis was running at hand-off; comparison
-    sheet `~/Desktop/skingenetix-collagen-vs-firming.png`. **Recommend (keep / merge with 301 / Learn guide) with evidence, then change the menu only
-    on Malcolm's OK** (the Skin Solutions mega-menu shows one image tile per page and matches items by translated label).
+  - ✅ **Decided: keep it, rebuilt as "Collagen Skincare"** (Malcolm, 2026-09-29: "Yes, and rename address"; ADR-2026-09-29-C). Keyword pull
+    ($1.43, `configs/keyword-data/collagen-2026-09-29/`) found an unowned collagen cream / serum cluster of ~3,700 searches a month across US, GB,
+    DE and NL at difficulty 0–2 (US `collagen cream` 656, `collagen serum` 605). Primary `collagen cream`; the Firming page drops "collagen" so the
+    two never compete. Ownership map `configs/keyword-data/collagen-2026-09-29/keyword-ownership-map-2026-09-29.md`.
+  - 🔄 **Rebuild steps, in order; nothing goes live until Malcolm has seen the page:**
+    1. ✅ Decision and keyword data recorded.
+    2. 🔄 Claims register `docs/claims/collagen-skincare.md`: does topical collagen work, what our two collagen creams actually contain.
+    3. ⏳ Draft in six languages on a hidden preview template: title ≤ 60, meta ≤ 155, one H1, answer-first paragraph, honest collagen vs
+       peptides section, products up front, both proof cards, a real FAQ (the live one is theme placeholder text) with FAQPage schema.
+    4. ⏳ Show Malcolm. **Only after his OK:** move to `/pages/collagen-skincare` with a 301 from the old address in all six languages, fix
+       internal links, Firming page drops "collagen", fifth Skin Solutions tile "Collagen Skincare" (six labels), verify ×6, critic, audit.
 - ✅ **Glutathione tile in "Explore More Research" fixed on PDRN, Argireline and copper, six languages** (2026-09-29; Malcolm: "decide whats best based on
   the keyword and SEO and content strategy"). "For a more even, radiant-looking skin tone" broke template §4 rule 6 and glutathione register §8.4. Now "A
   clinically studied antioxidant for brighter-looking skin": the sibling tiles' pattern, the hub's `glutathione for skin` and brightening framing, the
