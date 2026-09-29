@@ -318,8 +318,8 @@ AI-generated illustrations and must not be presented as results. Record:
   the keyword and SEO and content strategy"). "For a more even, radiant-looking skin tone" broke template §4 rule 6 and glutathione register §8.4. Now "A
   clinically studied antioxidant for brighter-looking skin": the sibling tiles' pattern, the hub's `glutathione for skin` and brightening framing, the
   register's approved "brighter-looking skin", and the glutathione phrase table's approved translations. Owned by each evidence-merge spec
-  (`set related/r_glutathione/content`). Verified 18/18 page-locales, 0 outdated; backups `20260929-120025`, `-120102`, `-120132`. The Matrixyl window
-  was sent the same wording.
+  (`set related/r_glutathione/content`). Verified 18/18 page-locales, 0 outdated; backups `20260929-120025`, `-120102`, `-120132`.
+  ⏭ **Matrixyl draft: use the same wording before it goes live** (its window had planned "For brighter-looking skin"); sent to windows 3d and d3.
 - ⏳ **Phone hero contrast, Argireline (and PDRN)** (found by the Matrixyl design critic, 2026-09-26; measured 2026-09-29). At 390 px, Argireline's
   "Ingredient Research" is 2.06:1 and the H1's first line 2.77:1 at the worst point (minimum 4.5:1 / 3:1); PDRN's label is 4.26:1. Proposed: darken the
   hero photo on phones only (brightness 0.62 through `section_css`, desktop unchanged): Argireline 4.76:1 / 6.03:1, PDRN 7.96:1 / 8.55:1. Sheet
