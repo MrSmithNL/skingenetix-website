@@ -9,8 +9,11 @@
 
 ## 1. What a study page is
 
-One page per qualifying human trial, at `/pages/study/<handle>`: a `study` metaobject rendered by
-`templates/metaobject/study.json`. The page appraises one paper in plain language: what was tested, what it found, how to read the
+One article per qualifying human trial, at **`/blogs/clinical-studies/<handle>`** (since 2026-09-29; the old `/pages/study/<handle>`
+addresses 301 here). The content is a `study` metaobject; the blog article is a shell whose `study.entry` metafield points at it, and
+`templates/article.clinical-study.json` renders it (`python3 scripts/study-template-build.py --article --apply`). The metaobject's own web
+pages are switched off; `templates/metaobject/study.json` is kept only as the source the article template is derived from. Articles are
+created by `scripts/build-clinical-studies-blog.py`. The page appraises one paper in plain language: what was tested, what it found, how to read the
 result, and what it means for our products. It never passes the paper off as ours. The appraisal is the reason the page exists: Google's rater
 guidelines rate a summary of an abstract as _Lowest_, and any competitor can generate one (`docs/research-2026-study-hubs-credibility.md`).
 
@@ -154,14 +157,15 @@ and whether study pages get their own art direction: the critic expects fixes al
 
 ## 9. The files
 
-| File                              | Role                                                                                                                                  |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `scripts/study-template-build.py` | Builds and uploads `templates/metaobject/study.json` (11 stock sections). Dry run by default; `--apply` backs up the live file first. |
-| `scripts/build-study-page.py`     | Checks (including citation identity), publishes and verifies one study from its config.                                               |
-| `configs/studies/<handle>.json`   | One study (§5).                                                                                                                       |
-| `scripts/hub_charts.py`           | The chart renderer, shared with the hubs.                                                                                             |
-| `scripts/set-reviewer.py`         | Adds or removes the medical-reviewer credit; reads both pilot and stock-template configs.                                             |
-| `scripts/study-pages.py`          | The pilot tool. Owns the old `intro` / `key_facts` / `body` / `reference` shape; do not use it for new pages.                         |
-| `tests/test_build_study_page.py`  | Offline tests for the reviewer schema and the citation check.                                                                         |
+| File                                     | Role                                                                                                                                                                                                                             |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `scripts/study-template-build.py`        | Builds and uploads `templates/metaobject/study.json` (11 stock sections). Dry run by default; `--apply` backs up the live file first.                                                                                            |
+| `scripts/build-study-page.py`            | Checks (including citation identity), publishes and verifies one study from its config.                                                                                                                                          |
+| `scripts/build-clinical-studies-blog.py` | The Clinical studies blog: the list page spec, one article shell per study config, `--cutover` (301s, metaobject web pages off). `build-study-page.py` writes the breadcrumb into `hero_text` and the blog URL into the JSON-LD. |
+| `configs/studies/<handle>.json`          | One study (§5).                                                                                                                                                                                                                  |
+| `scripts/hub_charts.py`                  | The chart renderer, shared with the hubs.                                                                                                                                                                                        |
+| `scripts/set-reviewer.py`                | Adds or removes the medical-reviewer credit; reads both pilot and stock-template configs.                                                                                                                                        |
+| `scripts/study-pages.py`                 | The pilot tool. Owns the old `intro` / `key_facts` / `body` / `reference` shape; do not use it for new pages.                                                                                                                    |
+| `tests/test_build_study_page.py`         | Offline tests for the reviewer schema and the citation check.                                                                                                                                                                    |
 
 Related: `docs/study-inventory-2026-09-24.md` (which studies and why), `docs/research-2026-study-hubs-credibility.md` (the qualifying criteria).

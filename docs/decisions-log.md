@@ -378,3 +378,15 @@ elements of the design in `docs/decision-research-section-navigation-2026-09-29.
 **Scope of the page:** the rows are the five hubs' Evidence & Sources tables (ADR-2026-09-24-P already applied), with "Read our
 appraisal" where a study page exists. Individual study pages are not menu items.
 **Not decided here:** product → study links (internal-link programme), the Discover duplicate, and hiding the empty Learn blog.
+
+**Amended 2026-09-29 (same day): Clinical studies is a blog.** Malcolm clarified he meant a blog list of the study articles, like Hairgenetix,
+and approved moving the study pages into it (`docs/decision-clinical-studies-blog-2026-09-29.md`):
+
+- `/blogs/clinical-studies` (stock `main-blog` list under a stock image band). One article per appraised study. Each article is a shell
+  (title, excerpt, card image, date, ingredient tag, SEO) whose `study.entry` metafield points at the unchanged `study` metaobject.
+  `templates/article.clinical-study.json` renders the designed layout through that reference.
+- `/pages/study/<handle>` → `/blogs/clinical-studies/<handle>` (301; Shopify applies it per locale). The `study` definition's web pages are
+  switched off.
+- The 32-row table page (`templates/page.clinical-studies.json`) was retired unpublished; its rows stay on the hubs.
+- Menu: **Discover** (a stock item beside The Science) replaces the styled line under the Science tiles. It goes live with the footer
+  link and the Science-page band once Badenhorst and Raikou are translated.

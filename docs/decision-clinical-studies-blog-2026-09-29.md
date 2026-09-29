@@ -3,8 +3,9 @@
 **Date:** 2026-09-29 · **Asked by:** Malcolm: "what i meant with the hub page … is more a article blog page where we show all the articles in
 a blog list style. Like Hairgenetix set up … Analyse this — also from SEO and content strategy perspective — and decide on the best solution.
 also this Clinical studies overview/hub page should be in the main website navigation right? under the 'Discover' main menu section?"
-**Amends:** ADR-2026-09-29-C (name kept; page type, URL and menu placement change). **Status:** decided; the move of the four live study
-pages waits for Malcolm's go-ahead because it changes live URLs.
+**Amends:** ADR-2026-09-29-C (name kept; page type, URL and menu placement change). **Status:** decided, approved (Malcolm: "Yes, build the blog and
+move them") and **built 2026-09-29**: blog live with four articles, old addresses 301 to the articles (locale-aware), table page
+retired. Still gated on translation: the Discover menu item, footer link and Science-page band.
 
 ---
 

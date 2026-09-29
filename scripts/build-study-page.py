@@ -42,6 +42,15 @@ import time
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://www.skingenetix.com"
 LOCALES = ["en", "de", "nl", "fr", "es", "it"]
+# Studies are articles in the Clinical studies blog since 2026-09-29 (docs/decision-clinical-studies-blog-2026-09-29.md);
+# the old /pages/study/<handle> addresses redirect here.
+PATH = "/blogs/clinical-studies/"
+PHRASES = json.loads((ROOT / "configs/hub-i18n/clinical-studies.json").read_text())
+# breadcrumb's last step: the ingredient, named as its hub names it, linking to the hub
+CRUMB = {"copper": ("label_copper", "copper-peptide-research"), "argireline": ("Argireline®", "acetyl-hexapeptide-8-research"),
+         "acetyl": ("Argireline®", "acetyl-hexapeptide-8-research"), "pdrn": ("PDRN", "pdrn-research"),
+         "matrixyl": ("Matrixyl 3000", "matrixyl-3000-research"), "palmitoyl": ("Matrixyl 3000", "matrixyl-3000-research"),
+         "glutathione": ("label_glutathione", "glutathione-research")}
 HEAD_TERM = re.compile(r"(?i)^(pdrn|argireline|copper peptide|ghk-cu|matrixyl|glutathione|acetyl)\b")
 
 
@@ -125,8 +134,20 @@ def locales(cfg):
     return [l for l in LOCALES if l == "en" or l in cfg["h1"]]
 
 
+def _pre(loc):
+    return "" if loc == "en" else "/" + loc
+
+
+def crumb_parts(cfg, loc):
+    key, hub = next(v for k, v in CRUMB.items() if cfg["handle"].startswith(k))
+    label = PHRASES[key][loc] if key in PHRASES else key
+    return [(PHRASES["science"][loc], f"{_pre(loc)}/pages/the-science"),
+            (PHRASES["title"][loc], f"{_pre(loc)}/blogs/clinical-studies"),
+            (label, f"{_pre(loc)}/pages/{hub}")]
+
+
 def jsonld(cfg, loc):
-    url = f"{BASE}{'' if loc == 'en' else '/' + loc}/pages/study/{cfg['handle']}"
+    url = f"{BASE}{_pre(loc)}{PATH}{cfg['handle']}"
     h1, desc = t(cfg["h1"], loc), t(cfg["seo_description"], loc)
     s = cfg["scholarly"]
     cite = {"@type": "ScholarlyArticle", "name": s["name"], "url": cfg["source_url"],
@@ -141,7 +162,11 @@ def jsonld(cfg, loc):
             **({"reviewedBy": cfg["reviewer"]} if cfg.get("reviewer") else {}),
             "author": {"@type": "Person", "name": "Malcolm Smith", "jobTitle": "Founder, Skingenetix"},
             "publisher": {"@type": "Organization", "name": "Skingenetix", "url": BASE},
-            "isPartOf": {"@type": "WebSite", "url": BASE},
+            "isPartOf": {"@type": "Blog", "name": PHRASES["title"][loc], "url": f"{BASE}{_pre(loc)}/blogs/clinical-studies"},
+            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": i, "name": n, "item": BASE + u}
+                for i, (n, u) in enumerate([("Skingenetix", _pre(loc) + "/")] + crumb_parts(cfg, loc)[:2]
+                                           + [(h1, url[len(BASE):])], 1)]},
             # our page appraises the paper; it is never itself a ScholarlyArticle
             "hasPart": {"@type": "FAQPage", "mainEntity": [
                 {"@type": "Question", "name": t(q, loc),
@@ -158,7 +183,9 @@ def fields(cfg, loc):
     f = {
         "eyebrow": t(cfg["eyebrow"], loc),
         # the banner carries the question and a one-line deck; the byline sits below it
-        "hero_text": f"<h1>{inline(cfg['h1'], loc)}</h1>" + ps([cfg["deck"]], loc),
+        # Science › Clinical studies › ingredient — in the banner field, so it translates with the banner
+        "hero_text": ('<p class="sg-crumb">' + " › ".join(f'<a href="{u}">{n}</a>' for n, u in crumb_parts(cfg, loc))
+                      + f"</p><h1>{inline(cfg['h1'], loc)}</h1>" + ps([cfg["deck"]], loc)),
         # definition first: the auditors scored the page 3/10 for having none, and it is the
         # sentence an engine quotes when asked "what is copper peptide"
         "intro": (f"<p><em>{inline(cfg['byline'], loc)}</em></p>"
@@ -313,6 +340,19 @@ def resolve_live(kind, ident, _cache={}):
     if (kind, ident) in _cache:
         return _cache[(kind, ident)]
     rec = None
+    for attempt in range(3):                       # one blip from NCBI must not block a publish (2026-09-29)
+        rec = _lookup(kind, ident)
+        if rec:
+            break
+        time.sleep(2 * (attempt + 1))
+    _cache[(kind, ident)] = rec
+    return rec
+
+
+def _lookup(kind, ident):
+    import urllib.parse
+    import urllib.request
+    rec = None
     try:
         if kind in ("pmid", "pmc"):
             db, uid = ("pubmed", ident) if kind == "pmid" else ("pmc", ident[3:])
@@ -334,7 +374,6 @@ def resolve_live(kind, ident, _cache={}):
                    "surnames": [a.get("family", "") for a in m.get("author", [])]}
     except Exception as e:                            # noqa: BLE001 — any failure means "not verified"
         print(f"  · {kind}:{ident} lookup failed: {e}")
-    _cache[(kind, ident)] = rec
     return rec
 
 
@@ -394,7 +433,7 @@ def apply(cfg, status="ACTIVE"):
 def verify(cfg):
     bad = 0
     for loc in locales(cfg):
-        url = f"{BASE}{'' if loc == 'en' else '/' + loc}/pages/study/{cfg['handle']}"
+        url = f"{BASE}{_pre(loc)}{PATH}{cfg['handle']}"
         html = spg._get(url + f"?v={time.time()}")
         h1 = [H.unescape(re.sub(r"<[^>]+>", "", x)).strip() for x in re.findall(r"<h1[^>]*>(.*?)</h1>", html, re.S)]
         want = t(cfg["h1"], loc)

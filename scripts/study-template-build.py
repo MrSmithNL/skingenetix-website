@@ -320,10 +320,61 @@ def build():
     }
 
 
+ARTICLE_TPL = "templates/article.clinical-study.json"
+ENTRY = "article.metafields.study.entry.value."
+
+
+def build_article():
+    """The same page as an ARTICLE template for the Clinical studies blog (decision 2026-09-29).
+
+    The study stays a metaobject — its fields, and their six-locale translations, are untouched — and each blog
+    article points at it through the article metafield study.entry. So every `metaobject.<field>` becomes
+    `article.metafields.study.entry.value.<field>`, the accent is picked from the article's handle (the same
+    handle as the study), and the eyebrow block goes: the breadcrumb (Science › Clinical studies › ingredient)
+    is written into hero_text by build-study-page.py, where it translates with the rest of the banner.
+    """
+    def swap(node):
+        if isinstance(node, dict):
+            return {k: swap(v) for k, v in node.items()}
+        if isinstance(node, list):
+            return [swap(v) for v in node]
+        if isinstance(node, str):
+            return node.replace("metaobject.system.handle", "article.handle").replace("metaobject.", ENTRY)
+        return node
+    j = swap(build())
+    banner = j["sections"]["banner"]
+    banner["blocks"].pop("eyebrow", None)
+    banner["block_order"] = [b for b in banner["block_order"] if b != "eyebrow"]
+    return j
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--article", action="store_true", help="build templates/article.clinical-study.json instead")
     a = ap.parse_args()
+    if a.article:
+        j = build_article()
+        try:
+            raw = hu.read_file(ARTICLE_TPL)
+        except IndexError:                                   # a new template: no file yet
+            raw = ""
+        m = re.match(r"^\s*(/\*.*?\*/\s*)+", raw, re.S)
+        hdr = raw[:m.end()] if m else ""
+        out = hdr + json.dumps(j, indent=2, ensure_ascii=False)
+        print(f"  {ARTICLE_TPL}: {len(j['sections'])} sections, entry fields via {ENTRY}")
+        if not a.apply:
+            print("  dry run — pass --apply to upload")
+            return 0
+        if raw:
+            pathlib.Path(ROOT / f"backups/article-clinical-study-{datetime.datetime.now():%Y%m%d-%H%M%S}.json").write_text(raw)
+        r = hu.gql('mutation($t:ID!,$f:[OnlineStoreThemeFilesUpsertFileInput!]!){ themeFilesUpsert(themeId:$t, files:$f)'
+                   '{ userErrors{field message} } }',
+                   {"t": hu.THEME, "f": [{"filename": ARTICLE_TPL, "body": {"type": "TEXT", "value": out}}]})["themeFilesUpsert"]
+        if r["userErrors"]:
+            sys.exit(f"  ✗ {r['userErrors']}")
+        print("  ✓ uploaded")
+        return 0
     raw = hu.read_file(TPL)
     m = re.match(r"^\s*(/\*.*?\*/\s*)+", raw, re.S)   # Shopify prepends SEVERAL comments
     hdr = raw[:m.end()] if m else ""

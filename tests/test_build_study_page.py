@@ -121,3 +121,23 @@ def test_links_to_our_own_site_open_in_the_same_tab():
                       "[paper](https://doi.org/10.1111/jocd.12314)")
     assert '<a href="https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research">hub</a>' in out
     assert '<a href="https://doi.org/10.1111/jocd.12314" target=_blank rel=noopener>paper</a>' in out
+
+
+# ---------------------------------------------------------------- the Clinical studies blog (2026-09-29)
+
+def test_the_page_lives_in_the_clinical_studies_blog():
+    ld = bsp.jsonld(BADENHORST, "de")
+    assert ld["url"] == "https://www.skingenetix.com/de/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016"
+    crumbs = [i["name"] for i in ld["breadcrumb"]["itemListElement"]]
+    assert crumbs == ["Skingenetix", "Wissenschaft", "Klinische Studien", BADENHORST["h1"].get("de", BADENHORST["h1"]["en"])]
+
+
+def test_the_banner_carries_a_translated_breadcrumb_to_the_hub():
+    hero = bsp.fields(BADENHORST, "en")["hero_text"]
+    assert hero.startswith('<p class="sg-crumb"><a href="/pages/the-science">Science</a> › '
+                           '<a href="/blogs/clinical-studies">Clinical studies</a> › '
+                           '<a href="/pages/copper-peptide-research">Copper peptide (GHK-Cu)</a></p><h1>')
+    # Badenhorst has no German yet, so check the translated crumb itself
+    assert bsp.crumb_parts(BADENHORST, "de") == [("Wissenschaft", "/de/pages/the-science"),
+                                                 ("Klinische Studien", "/de/blogs/clinical-studies"),
+                                                 ("Kupferpeptid (GHK-Cu)", "/de/pages/copper-peptide-research")]
