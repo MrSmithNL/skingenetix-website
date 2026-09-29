@@ -1,0 +1,691 @@
+{
+  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick.",
+  "english_first": true,
+  "create": true,
+  "template": "templates/page.collagen-skincare.json",
+  "page": "collagen-skin-plumping",
+  "view": "collagen-skincare",
+  "jsonld_host": "schema",
+  "add_sections": [
+    {
+      "id": "hero",
+      "after": null,
+      "section": {
+        "type": "image-with-text-overlay",
+        "settings": {
+          "full_width": true,
+          "allow_transparent_header": false,
+          "enable_parallax": false,
+          "image_size": "sm",
+          "image": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-full-firming-treatment.jpg",
+          "mobile_image": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-firming-treatment-mobile.jpg",
+          "mobile_text_position": "place-self-end-center text-center",
+          "desktop_text_position": "sm:place-self-center-start sm:text-start",
+          "text_color": "#ffffff",
+          "overlay_color": "#1A1A1A",
+          "overlay_opacity": 45
+        },
+        "blocks": {
+          "sub": {
+            "type": "subheading",
+            "settings": {
+              "text": {
+                "en": "Skin Concern"
+              }
+            }
+          },
+          "desc": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h1>Collagen Cream &amp; Serum</h1><p>Real collagen in two creams, clinically tested peptides in two serums, and a straight answer on what each one does for your skin.</p>"
+              }
+            }
+          },
+          "button": {
+            "type": "button",
+            "settings": {
+              "style": "fill",
+              "size": "lg",
+              "text": {
+                "en": "Shop the Pro-Collagen Cream"
+              },
+              "url": "shopify://products/matrixyl-3000-pro-collagen-firming-cream",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a"
+            }
+          }
+        },
+        "block_order": ["sub", "desc", "button"]
+      }
+    },
+    {
+      "id": "answer",
+      "after": "hero",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "p1": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Do Collagen Creams Work?</h2><p><strong>Yes, as a moisturizer: collagen in a cream holds water at the skin's surface, helping skin look smoother and plumper.</strong> How it does that depends on the size of the molecule. Native and soluble collagen are far too large to cross intact skin, so they stay on the surface as a film that locks in moisture. Hydrolyzed collagen is collagen cut into small peptides, and some of it reaches the skin's outer layer, where it helps hold water.</p><p>Collagen in a cream does not replace the collagen your skin makes itself. That is where signal peptides come in: <a href=\"/pages/matrixyl-3000-research\">Matrixyl® 3000</a> and <a href=\"/pages/copper-peptide-research\">copper peptide GHK-Cu</a> are associated with the skin's own collagen activity, and both have clinical results on wrinkles. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> pairs three forms of collagen with both Matrixyl 3000 peptides, so one jar does both jobs.</p><p>Written by <strong>Malcolm Smith</strong>, founder of Skingenetix, who compiles the claims registers behind our research pages. Last updated 29 September 2026.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["p1"]
+      }
+    },
+    {
+      "id": "shop",
+      "after": "answer",
+      "section": {
+        "type": "featured-collection",
+        "settings": {
+          "products": [
+            "matrixyl-3000-pro-collagen-firming-cream",
+            "pdrn-collagen-night-cream",
+            "matrixyl-3000-firming-serum",
+            "copper-peptide-ghk-cu-renewal-serum"
+          ],
+          "full_width": true,
+          "stack_products": true,
+          "show_progress_bar": false,
+          "products_count": 4,
+          "products_per_row_mobile": "2",
+          "products_per_row_desktop": 4,
+          "subheading": "",
+          "title": {
+            "en": "Shop Collagen Creams and Peptide Serums"
+          },
+          "content": {
+            "en": "<p>Two creams with real collagen in the formula, and two peptide serums with their own clinical results.</p>"
+          },
+          "link_text": "",
+          "background": "#F0F0F0"
+        }
+      }
+    },
+    {
+      "id": "content",
+      "after": "shop",
+      "section": {
+        "type": "media-with-text",
+        "settings": {
+          "full_width": false,
+          "alternate_media_position": true,
+          "spacing": "small"
+        },
+        "blocks": {
+          "collagen": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_open_jar_swatch_3_skingenetix.jpg",
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "content": {
+                "en": "<h2>What Does Collagen Do in a Cream?</h2><p><strong>Collagen in a cream is a moisturizing ingredient: it holds water at the skin's surface for a smoother, plumper-looking finish.</strong> Skin lets through compounds under about 500 daltons, a measure of molecular weight (<a href=\"https://pubmed.ncbi.nlm.nih.gov/10839713/\" target=\"_blank\" rel=\"noopener\">Bos and Meinardi, 2000</a>). Native and soluble collagen weigh 30,000 to over 1,000,000 (<a href=\"https://doi.org/10.1177/10915818221104783\" target=\"_blank\" rel=\"noopener\">CIR Expert Panel, 2022</a>), so they stay on top as a film that locks in moisture. Hydrolyzed collagen is small enough for some of it to reach the skin's outer layer (<a href=\"https://pubmed.ncbi.nlm.nih.gov/32098294/\" target=\"_blank\" rel=\"noopener\">Aguirre-Cruz et al., 2020</a>).</p><p><strong>In a four-week study of 23 people with very dry skin</strong>, a cream combining hydrolyzed collagen with hyaluronic acid and proteoglycan raised hydration by 83% and cut water loss by a third, against their skin at the start (<a href=\"https://pubmed.ncbi.nlm.nih.gov/34638528/\" target=\"_blank\" rel=\"noopener\">Lee et al., 2021</a>). Our Pro-Collagen Firming Cream carries all three forms of collagen.</p>"
+              },
+              "link_text": {
+                "en": "Shop Pro-Collagen Cream"
+              },
+              "link_url": "shopify://products/matrixyl-3000-pro-collagen-firming-cream",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a"
+            }
+          },
+          "cream_serum": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/pdrn_collagen_copper_peptide_deep_renewal_repair_skin_cream_product_and_box_angled_5_skingenetix.jpg",
+              "media_width": 40,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "content": {
+                "en": "<h2>Collagen Cream or Collagen Serum?</h2><p><strong>For collagen itself, choose a cream.</strong> Collagen molecules are too large for a light serum to carry usefully, so both our collagen products are creams, where collagen can sit on the skin as a moisture-holding layer. That is why we don't make a collagen serum.</p><p>A serum does a different job: it carries small, active ingredients into your routine. Our <a href=\"/products/matrixyl-3000-firming-serum\">Matrixyl 3000 Firming Serum</a> and <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide (GHK-Cu) 2% Renewal Serum</a> use signal peptides associated with the skin's own collagen activity.</p><p><strong>Best of both:</strong> apply a peptide serum first, then seal it in with a collagen cream. At night, the <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a> pairs hydrolyzed collagen with PDRN and copper peptide in one jar.</p>"
+              },
+              "link_text": "",
+              "link_url": "",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a"
+            }
+          },
+          "matrixyl": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_model_holding_near_face_5_skingenetix.jpg",
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "content": {
+                "en": "<h2>Matrixyl 3000: Signal Peptides for Deep Wrinkles</h2><p><strong>Matrixyl® 3000 is a pair of signal peptides, palmitoyl tripeptide-1 and palmitoyl tetrapeptide-7, developed by the French company Sederma to firm the look of skin and smooth wrinkles.</strong> In Sederma's 2-month study, the area taken up by deep wrinkles fell by 39% on the treated half of the face, while the placebo half showed no significant change.</p><p>You'll find it in both our <a href=\"/products/matrixyl-3000-firming-serum\">Matrixyl 3000 Firming Serum</a> and our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Pro-Collagen Firming Cream</a>. The serum adds palmitoyl pentapeptide-4, the original Matrixyl®; the cream adds real collagen.</p><p>More in our <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000 research summary</a>.</p>"
+              },
+              "link_text": "",
+              "link_url": "",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a"
+            }
+          },
+          "copper": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/copper_peptide_ghk_cu_2_percent_advanced_repair_skin_serum_product_and_box_angled_2_skingenetix.jpg",
+              "media_width": 40,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "content": {
+                "en": "<h2>Copper Peptide GHK-Cu: Firmer, Smoother-Looking Skin</h2><p><strong>GHK-Cu is a copper peptide your own body makes, and in a double-blind trial a GHK-Cu serum reduced crow's-feet wrinkle volume by 24.1% in 8 weeks, against 15.0% with the plain serum base</strong> (<a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">read the trial</a>). It is valued for a firmer, more elastic, smoother and plumper-looking complexion, and an independent 2026 review concluded that it reduces wrinkle volume and depth.</p><p>You'll find it in our <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide (GHK-Cu) 2% Renewal Serum</a>, and as copper tripeptide-1 in our <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a>.</p><p>More on <a href=\"/pages/copper-peptide-research\">copper peptides for skin</a> in our research summary.</p>"
+              },
+              "link_text": "",
+              "link_url": "",
+              "background": "#ffffff",
+              "text_color": "#1a1a1a"
+            }
+          }
+        },
+        "block_order": ["collagen", "cream_serum", "matrixyl", "copper"]
+      }
+    },
+    {
+      "id": "routine",
+      "after": "content",
+      "section": {
+        "type": "multi-column",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "subheading": "",
+          "title": {
+            "en": "How to Use Collagen Cream and Serum"
+          },
+          "content": {
+            "en": "<p>Morning and evening, for at least 8 weeks: the time the peptide studies below took to measure their results. As with any new product, patch-test first.</p>"
+          },
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "step1": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-howto-step1-cleanse.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "1. Cleanse"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>Use a gentle cleanser, then pat your skin dry.</p>"
+              }
+            }
+          },
+          "step2": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/matrixyl_3000_pro_collagen_10_percent_firming_repair_skin_serum_hands_only_dropper_5_skingenetix.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "2. Peptide Serum"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>Press three or four drops into face and neck: Matrixyl 3000 Firming Serum in the morning, Copper Peptide (GHK-Cu) 2% Renewal Serum in the evening.</p>"
+              }
+            }
+          },
+          "step3": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/matrixyl_3000_triple_collagen_elastin_full_firming_face_cream_applying_cheekbone_3_skingenetix.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "3. Collagen Cream"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>Seal in the serum: Pro-Collagen Firming Cream in the morning, PDRN Collagen Night Cream at night.</p>"
+              }
+            }
+          },
+          "step4": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-howto-step4-spf.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "4. SPF in the Morning"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>Finish every morning with a broad-spectrum SPF 30 or higher.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["step1", "step2", "step3", "step4"]
+      }
+    },
+    {
+      "id": "proof",
+      "after": "routine",
+      "section": {
+        "type": "research-before-after",
+        "settings": {
+          "title": {
+            "en": "What Peptides Did in Clinical Studies"
+          }
+        },
+        "blocks": {
+          "f1": {
+            "type": "finding",
+            "settings": {
+              "image": "",
+              "media_position": "start",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 2 months"
+              },
+              "result_label": {
+                "en": "Deep-wrinkle area −39% in 2 months (manufacturer's half-face study)"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "Matrixyl 3000"
+              },
+              "title": {
+                "en": "Deep-Wrinkle Area −39% in 2 Months"
+              },
+              "content": {
+                "en": "<p><strong>In the manufacturer's half-face study, 23 women aged 42 to 67 applied a 3% Matrixyl 3000 cream to one half of the face and a placebo cream to the other, twice a day for 2 months.</strong></p><ul><li><strong>Area taken up by deep wrinkles −39%</strong>, measured by 3D skin-surface profiling</li><li><strong>Main-wrinkle depth −20%</strong>, volume −23%, roughness −16%</li><li>On the placebo half, no significant change in wrinkle area, depth or roughness</li></ul><p><strong>Beneath the surface:</strong> in a second study by the same maker, in 28 women, the fibre network just beneath the skin's surface beside the eye was less fragmented, 13% ahead of the placebo side after 2 months.</p><p>More in our <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000 research summary</a>.</p>"
+              }
+            }
+          },
+          "f2": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-denser-firmer-looking-skin-before-after.jpg",
+              "media_position": "end",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 12 weeks"
+              },
+              "result_label": {
+                "en": "Firmer, denser-looking skin (face-cream study, 71 women)"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "Copper peptide (GHK-Cu)"
+              },
+              "title": {
+                "en": "Denser, Firmer-Looking Skin in 12 Weeks"
+              },
+              "content": {
+                "en": "<p>In a 12-week study of a copper-peptide face cream in 71 women, the reported results were firmer, clearer-looking skin, fewer fine lines, shallower wrinkles, and denser, thicker skin.</p><p><strong>New collagen in 7 of 10 people:</strong> in a one-month biopsy study of four creams on thigh skin, ten people per cream, 7 of 10 people using a copper-binding peptide cream showed new collagen, against 5 of 10 with vitamin C, 5 of 10 with melatonin and 4 of 10 with tretinoin. A count of people; the creams were not tested against each other.</p><p>The face-cream study was presented at a dermatology meeting in 2002 and is known from published reviews (<a href=\"https://pubmed.ncbi.nlm.nih.gov/26236730/\" target=\"_blank\" rel=\"noopener\">Pickart et al., 2015</a>; <a href=\"https://pubmed.ncbi.nlm.nih.gov/39963574/\" target=\"_blank\" rel=\"noopener\">Mortazavi et al., 2024</a>). More in our <a href=\"/pages/copper-peptide-research\">copper peptide research summary</a>.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["f1", "f2"]
+      }
+    },
+    {
+      "id": "faq",
+      "after": "proof",
+      "section": {
+        "type": "faq",
+        "settings": {
+          "full_width": true,
+          "subheading": "",
+          "title": {
+            "en": "Collagen Cream Questions"
+          },
+          "content": "",
+          "support_hours": "",
+          "answer_time": "",
+          "button_text": "",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "q1": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "Can collagen cream really firm skin?"
+              },
+              "content": {
+                "en": "<p>It can give skin a visibly firmer, smoother finish by holding moisture at the surface. Larger collagen molecules form a moisture-retaining film, and small hydrolyzed collagen peptides reach the skin's outer layer. Paired with signal peptides such as Matrixyl 3000 and GHK-Cu, which are associated with the skin's own collagen activity, a collagen cream can support a firmer look over the weeks.</p>"
+              }
+            }
+          },
+          "q2": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "Does collagen cream penetrate the skin?"
+              },
+              "content": {
+                "en": "<p>One form does, in part. Skin lets through molecules under about 500 daltons. Native and soluble collagen are hundreds of times larger, so they stay on the surface as a moisture-holding film. Hydrolyzed collagen is cut into small peptides, and some of it reaches the skin's outer layer, where it helps hold water.</p>"
+              }
+            }
+          },
+          "q3": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "Do you sell a collagen serum?"
+              },
+              "content": {
+                "en": "<p>No, and on purpose. Collagen molecules are too large for a light serum to carry usefully, so both our collagen products are creams: the <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Pro-Collagen Firming Cream</a> and the <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a>. Our serums carry smaller ingredients instead. The <a href=\"/products/matrixyl-3000-firming-serum\">Matrixyl 3000 Firming Serum</a> uses signal peptides associated with the skin's own collagen activity; the words \"Pro Collagen\" on its label refer to those peptides, not to collagen in the bottle.</p>"
+              }
+            }
+          },
+          "q4": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "What should I look for in a collagen cream for my face?"
+              },
+              "content": {
+                "en": "<p>Three things on the ingredient list: collagen itself (native, soluble or hydrolyzed), a signal peptide such as Matrixyl 3000, and a humectant such as hyaluronic acid. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> has all three: a triple collagen complex, both Matrixyl 3000 peptides and hyaluronic acid. For night, the <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a> pairs hydrolyzed collagen with PDRN and copper peptide.</p>"
+              }
+            }
+          },
+          "q5": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "Should I use collagen cream in the morning or at night?"
+              },
+              "content": {
+                "en": "<p>Both. Use the Pro-Collagen Firming Cream in the morning, under your SPF, and the PDRN Collagen Night Cream in the evening. Apply either one over a peptide serum to seal it in.</p>"
+              }
+            }
+          },
+          "q6": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "How soon will I see results?"
+              },
+              "content": {
+                "en": "<p>The moisturizing film starts working from the first application, so skin can look smoother the same day. The peptide results build over time and vary from person to person: the Matrixyl 3000 and copper peptide studies measured theirs after 8 to 12 weeks of twice-daily use.</p>"
+              }
+            }
+          },
+          "q7": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "Is it safe to use collagen cream every day?"
+              },
+              "content": {
+                "en": "<p>Yes, both our collagen creams are made for daily use. The two Matrixyl 3000 peptides in them were assessed as safe in cosmetics by the independent Cosmetic Ingredient Review panel (<a href=\"https://doi.org/10.1177/1091581818807863\" target=\"_blank\" rel=\"noopener\">Johnson et al., 2018</a>). As with any new product, patch-test first on a small area of skin, and stop using it if your skin stings, reddens or itches; if a reaction does not settle, speak to a pharmacist or doctor.</p><p>Both creams contain ingredients of animal origin: collagen in the Pro-Collagen Firming Cream, and salmon-derived PDRN in the PDRN Collagen Night Cream. If you are allergic to fish or other animal proteins, <a href=\"/pages/contact\">contact us</a> before you use them.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7"]
+      }
+    },
+    {
+      "id": "related",
+      "after": "faq",
+      "section": {
+        "type": "multi-column",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": false,
+          "subheading": "",
+          "title": {
+            "en": "Related Skin Solutions"
+          },
+          "content": {
+            "en": "<p>Or browse <a href=\"/pages/skin-concerns\">all skin concerns</a>.</p>"
+          },
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "r1": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_product_and_box_hero_3_skingenetix.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Fine Lines & Wrinkles"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Explore"
+              },
+              "link_url": "shopify://pages/fine-lines-wrinkles",
+              "link_style": "link"
+            }
+          },
+          "r2": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-matrixyl-3000-pro-collagen-firming-serum-and-carton.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Firming & Skin Density"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Explore"
+              },
+              "link_url": "shopify://pages/firming-skin-density",
+              "link_style": "link"
+            }
+          },
+          "r3": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/pdrn_skin_repair_deep_renewal_face_serum_product_and_box_angled_6_skingenetix.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Skin Repair & Renewal"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Explore"
+              },
+              "link_url": "shopify://pages/skin-repair-renewal",
+              "link_style": "link"
+            }
+          },
+          "r4": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/glutathione_2_percent_vitamin_c_brightening_radiant_glow_skin_serum_product_and_box_hero_1_skingenetix.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Brightening & Glow"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Explore"
+              },
+              "link_url": "shopify://pages/brightening-glow",
+              "link_style": "link"
+            }
+          }
+        },
+        "block_order": ["r1", "r2", "r3", "r4"]
+      }
+    },
+    {
+      "id": "schema",
+      "after": "related",
+      "section": {
+        "type": "custom-html",
+        "settings": {
+          "html": "",
+          "full_width": true,
+          "remove_vertical_spacing": true,
+          "remove_horizontal_spacing": true
+        }
+      }
+    }
+  ],
+  "section_css": {
+    "hero": [
+      "@media (min-width:700px){.content-over-media>picture>img{object-position:right center}.content-over-media>div{max-width:clamp(300px,36vw,600px)}h1{font-size:clamp(3.75rem,6.4vw,6rem);line-height:.95}}",
+      "@media (max-width:699px){.content-over-media::before{background-image:linear-gradient(to top,rgba(10,14,22,.85) 0%,rgba(10,14,22,.62) 22%,rgba(10,14,22,0) 58%)}h1{font-size:2.75rem;line-height:1}}"
+    ],
+    "content": [
+      "h2{font-size:clamp(1.75rem,2.4vw,2.25rem);line-height:1.1}",
+      "@media (max-width:360px){h2{font-size:1.375rem}}"
+    ]
+  },
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.skingenetix.com/pages/collagen-skincare#article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.skingenetix.com/pages/collagen-skincare"
+    },
+    "headline": "Collagen Cream & Serum",
+    "name": "Collagen Cream & Serum: What Works on Skin",
+    "description": "Do collagen creams work? How collagen helps skin, why size matters, why we make no collagen serum, and the peptide creams and serums with clinical results.",
+    "image": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-full-firming-treatment.jpg",
+    "datePublished": "2026-09-29",
+    "dateModified": "2026-09-29",
+    "isPartOf": {
+      "@id": "https://www.skingenetix.com/#website"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Malcolm Smith",
+      "jobTitle": "Founder, Skingenetix",
+      "description": "Founder of Skingenetix. Compiles the ingredient claims registers behind the brand's research pages, working from the published papers themselves.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Skingenetix",
+        "url": "https://www.skingenetix.com"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.skingenetix.com/#organization",
+      "name": "Skingenetix",
+      "url": "https://www.skingenetix.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Topical collagen",
+      "alternateName": ["Collagen cream", "Collagen serum", "Hydrolyzed collagen", "Soluble collagen"]
+    },
+    "mentions": [
+      {
+        "@type": "Product",
+        "name": "Matrixyl 3000 Pro-Collagen Firming Cream",
+        "url": "https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream"
+      },
+      {
+        "@type": "Product",
+        "name": "PDRN 1% Collagen Night Cream",
+        "url": "https://www.skingenetix.com/products/pdrn-collagen-night-cream"
+      },
+      {
+        "@type": "Product",
+        "name": "Matrixyl 3000 Firming Serum",
+        "url": "https://www.skingenetix.com/products/matrixyl-3000-firming-serum"
+      },
+      {
+        "@type": "Product",
+        "name": "Copper Peptide (GHK-Cu) 2% Renewal Serum",
+        "url": "https://www.skingenetix.com/products/copper-peptide-ghk-cu-renewal-serum"
+      }
+    ],
+    "citation": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The 500 Dalton rule for the skin penetration of chemical compounds and drugs",
+        "author": "Bos JD, Meinardi MM",
+        "datePublished": "2000",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Experimental Dermatology"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10839713/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Safety Assessment of Skin and Connective Tissue-Derived Proteins and Peptides as Used in Cosmetics",
+        "author": "Burnett CL et al. (CIR Expert Panel)",
+        "datePublished": "2022",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "International Journal of Toxicology"
+        },
+        "url": "https://doi.org/10.1177/10915818221104783"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Proteoglycan Combined with Hyaluronic Acid and Hydrolyzed Collagen Restores the Skin Barrier in Mild Atopic Dermatitis and Dry, Eczema-Prone Skin: A Pilot Study",
+        "author": "Lee YI et al.",
+        "datePublished": "2021",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "International Journal of Molecular Sciences"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34638528/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Collagen Hydrolysates for Skin Protection: Oral Administration and Topical Formulation",
+        "author": "Aguirre-Cruz G et al.",
+        "datePublished": "2020",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Antioxidants"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32098294/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Safety Assessment of Tripeptide-1, Hexapeptide-12, Their Metal Salts and Fatty Acyl Derivatives, and Palmitoyl Tetrapeptide-7 as Used in Cosmetics",
+        "author": "Johnson W Jr et al.",
+        "datePublished": "2018",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "International Journal of Toxicology"
+        },
+        "url": "https://doi.org/10.1177/1091581818807863"
+      }
+    ]
+  }
+}
