@@ -335,11 +335,32 @@
           "f1": {
             "type": "finding",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-glutathione-radiant-glow-serum-model-holding-near-face.jpg",
+              "image": "shopify://shop_images/skingenetix-glutathione-brighter-looking-skin-before-after.jpg",
               "media_position": "start",
-              "before_label": "",
-              "after_label": "",
-              "result_label": "",
+              "before_label": {
+                "en": "Before",
+                "de": "Vorher",
+                "nl": "Voor",
+                "fr": "Avant",
+                "es": "Antes",
+                "it": "Prima"
+              },
+              "after_label": {
+                "en": "After 10 weeks",
+                "de": "Nach 10 Wochen",
+                "nl": "Na 10 weken",
+                "fr": "Après 10 semaines",
+                "es": "Tras 10 semanas",
+                "it": "Dopo 10 settimane"
+              },
+              "result_label": {
+                "en": "Skin pigment −10.7% vs −3.1% on placebo (10‑week trial)",
+                "de": "Hautpigment −10,7 % vs. −3,1 % mit Placebo (10‑Wochen‑Studie)",
+                "nl": "Huidpigment −10,7% vs −3,1% met placebo (studie van 10 weken)",
+                "fr": "Pigment de la peau −10,7 % vs −3,1 % sous placebo (essai de 10 semaines)",
+                "es": "Pigmento de la piel −10,7 % frente a −3,1 % con placebo (ensayo de 10 semanas)",
+                "it": "Pigmento della pelle −10,7% vs −3,1% con placebo (studio di 10 settimane)"
+              },
               "note_label": "",
               "label_background": "#1a1a1a",
               "label_text_color": "#ffffff",
@@ -364,11 +385,32 @@
           "f2": {
             "type": "finding",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg",
+              "image": "shopify://shop_images/skingenetix-glutathione-crows-feet-before-after.jpg",
               "media_position": "end",
-              "before_label": "",
-              "after_label": "",
-              "result_label": "",
+              "before_label": {
+                "en": "Before",
+                "de": "Vorher",
+                "nl": "Voor",
+                "fr": "Avant",
+                "es": "Antes",
+                "it": "Prima"
+              },
+              "after_label": {
+                "en": "After 10 weeks",
+                "de": "Nach 10 Wochen",
+                "nl": "Na 10 weken",
+                "fr": "Après 10 semaines",
+                "es": "Tras 10 semanas",
+                "it": "Dopo 10 settimane"
+              },
+              "result_label": {
+                "en": "Crow's feet visibly softer in 1 in 3 women, none on placebo",
+                "de": "Krähenfüße bei 1 von 3 Frauen sichtbar weicher, bei keiner mit Placebo",
+                "nl": "Kraaienpootjes zichtbaar zachter bij 1 op de 3 vrouwen, bij geen enkele met placebo",
+                "fr": "Pattes-d'oie visiblement adoucies chez 1 femme sur 3, aucune sous placebo",
+                "es": "Patas de gallo visiblemente más suaves en 1 de cada 3 mujeres, ninguna con placebo",
+                "it": "Zampe di gallina visibilmente più morbide in 1 donna su 3, nessuna con placebo"
+              },
               "note_label": "",
               "label_background": "#1a1a1a",
               "label_text_color": "#ffffff",

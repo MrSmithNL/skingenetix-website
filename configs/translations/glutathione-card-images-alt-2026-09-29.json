@@ -1,0 +1,51 @@
+{
+  "wave": "glutathione-card-images-alt",
+  "created": "2026-09-29",
+  "note": "Alt text for the two before/after images Malcolm picked for the glutathione science page (configs/banners/glutathione-research-card-images-2026-09-29.json): card f1 A5 nbp_pro 01, card f2 E4 nbp_flash 01. The alt describes what is visible and claims no more than the card's text: brighter-looking skin (never even tone, template §4 rule 6) and softer crow's feet. MEDIA_IMAGE resource, single `alt` key.",
+  "resources": [
+    {
+      "resource_id": "gid://shopify/MediaImage/71136696467841",
+      "title": "Card f1: skingenetix-glutathione-brighter-looking-skin-before-after.jpg",
+      "keys": ["alt"],
+      "translations": {
+        "de": {
+          "alt": "Zwei Fotos vom Gesicht derselben Frau, vorher und nach 10 Wochen, auf dem zweiten mit heller wirkender Haut"
+        },
+        "nl": {
+          "alt": "Twee foto's van het gezicht van dezelfde vrouw, voor en na 10 weken, met op de tweede een helderder ogende huid"
+        },
+        "fr": {
+          "alt": "Deux photos du visage de la même femme, avant et après 10 semaines, avec une peau d'apparence plus lumineuse sur la seconde"
+        },
+        "es": {
+          "alt": "Dos fotografías del rostro de la misma mujer, antes y después de 10 semanas, con la piel de aspecto más luminoso en la segunda"
+        },
+        "it": {
+          "alt": "Due fotografie del viso della stessa donna, prima e dopo 10 settimane, con la pelle dall'aspetto più luminoso nella seconda"
+        }
+      }
+    },
+    {
+      "resource_id": "gid://shopify/MediaImage/71136696500609",
+      "title": "Card f2: skingenetix-glutathione-crows-feet-before-after.jpg",
+      "keys": ["alt"],
+      "translations": {
+        "de": {
+          "alt": "Zwei Fotos vom Gesicht derselben Frau, vorher und nach 10 Wochen, auf dem zweiten mit weicheren Krähenfüßen am Augenwinkel"
+        },
+        "nl": {
+          "alt": "Twee foto's van het gezicht van dezelfde vrouw, voor en na 10 weken, met op de tweede zachtere kraaienpootjes bij de ooghoek"
+        },
+        "fr": {
+          "alt": "Deux photos du visage de la même femme, avant et après 10 semaines, avec des pattes-d'oie plus douces au coin de l'œil sur la seconde"
+        },
+        "es": {
+          "alt": "Dos fotografías del rostro de la misma mujer, antes y después de 10 semanas, con las patas de gallo del rabillo del ojo más suaves en la segunda"
+        },
+        "it": {
+          "alt": "Due fotografie del viso della stessa donna, prima e dopo 10 settimane, con le zampe di gallina all'angolo dell'occhio più morbide nella seconda"
+        }
+      }
+    }
+  ]
+}

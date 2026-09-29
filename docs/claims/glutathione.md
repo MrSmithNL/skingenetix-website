@@ -529,6 +529,11 @@ mole, wart or skin tag (round 1 used one as each woman's identity anchor); varie
 after-panel top on card 1 never lighter than the before top; and states card 2's matching brightness as a requirement. §8.5's "must NOT show" rules
 are unchanged.
 
+**Picked by Malcolm, 2026-09-29, and live the same day:** card 1 = r2 A5 nbp_pro 01; card 2 = r2 E4 nbp_flash 01, used as it is. Before choosing, he
+was told that E4's crow's-feet lines soften further than the trial's "moderate" grade and that its after panel is lighter overall (which §8.5 lists
+as a "must NOT show" for card 2); he chose to keep it. B6 seedream 01 is a spare. The labels are "Before" / "After 10 weeks" with the result lines of
+§8.5.
+
 The options as put to him:
 
 1. **The go-ahead for the rollout** (the template move itself).

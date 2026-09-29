@@ -292,10 +292,12 @@ AI-generated illustrations and must not be presented as results. Record:
     Live 2026-09-29: verify-live ✓ ×6 on both specs, page audit 100/96/100/93, old specs retired, reviewer config repointed, preview deleted.
   - ❌ Wave r1 (35 candidates, `configs/banners/before-after-glutathione-cards-r1.json`) rejected by Malcolm 2026-09-29: Caucasian women, random
     varied clothes, no women with warts (register §8.7).
-  - ⏳ **Wave r2 done, 36/36** (`configs/banners/before-after-glutathione-cards-r2.json`, `31e99c2`; light-olive Caucasian subjects, no moles, clothes
-    varied per slot and panel). **Malcolm picks** from `~/Desktop/skingenetix-glutathione-before-after-r2.png` (rows A–C card 1, D–F card 2); until then
-    both cards carry product-with-model photos.
-    After the picks: crop, labels in six languages ("After 10 weeks"; result lines per register §8.5), apply, verify, design critic cycle 2 on the live page.
+  - ✅ **Before/after live on cards 1 and 2, 2026-09-29** (wave r2, 36/36, `31e99c2`; light-olive Caucasian subjects, no moles, clothes varied).
+    Malcolm's picks: card 1 A5 nbp_pro 01, card 2 E4 nbp_flash 01 (used as is, by his choice, after being told its lines soften past "moderate" and its
+    after panel is lighter); B6 seedream 01 kept as a spare. Uploaded per `configs/banners/glutathione-research-card-images-2026-09-29.json` (E4's white
+    frame trimmed), alt text in six languages, labels in six languages (Spanish "Tras 10 semanas": "Después de…" wrapped out of the photo on phones).
+    Verify-live ✓ ×6; labels inside their photo in six languages at 1440 and 390; no outdated translations.
+  - ⏳ Design critic cycle 2 on the live page.
   - ✅ The "Explore more research" Glutathione tile on PDRN, Argireline and copper said "For a more even, radiant-looking skin tone" (template §4 rule 6).
     Fixed by the f3 session 2026-09-29 (`b73d215`): "A clinically studied antioxidant for brighter-looking skin", six languages, verified live.
   - 🛑 **Template-level, new (critic 2026-09-26):** at 200% zoom every finding-card heading breaks mid-word (card text column 91 px, 32 px headings), on
