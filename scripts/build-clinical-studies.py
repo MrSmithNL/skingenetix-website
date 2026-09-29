@@ -42,18 +42,19 @@ PHRASES = json.loads((ROOT / "configs/hub-i18n/clinical-studies.json").read_text
 # Menu order, so the page reads in the order the Science menu lists the ingredients.
 HUBS = [
     # slug, label, hub handle, template, accent, tint, spec used only while the hub is not yet live
-    ("copper-peptide", "Copper peptide (GHK-Cu)", "copper-peptide-research", "templates/page.research-copper-peptide.json",
+    ("copper-peptide", PHRASES["label_copper"], "copper-peptide-research", "templates/page.research-copper-peptide.json",
      "#014EB1", "#E4EDFA", None),
     ("matrixyl-3000", "Matrixyl 3000", "matrixyl-3000-research", "templates/page.research-matrixyl.json",
      "#016569", "#E0EFEF", "configs/hub-upgrades/matrixyl-3000-research-evidence-merge-2026-09-26.json"),
     ("argireline", "Argireline®", "acetyl-hexapeptide-8-research", "templates/page.research-argireline.json",
      "#3E4A52", "#E9ECEE", None),
     ("pdrn", "PDRN", "pdrn-research", "templates/page.pdrn-research.json", "#9E4F5C", "#F6E9EB", None),
-    ("glutathione", "Glutathione", "glutathione-research", "templates/page.glutathione-research.json",
+    ("glutathione", PHRASES["label_glutathione"], "glutathione-research", "templates/page.glutathione-research.json",
      "#8A6914", "#F5EEDC", None),
 ]
 BANNER = "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pink-serum-actives.jpg"
-BANNER_MOBILE = "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg"
+# a scrimmed copy (critique F1): configs/banners/clinical-studies-banner-2026-09-29.json
+BANNER_MOBILE = "shopify://shop_images/skingenetix-clinical-studies-research-banner-mobile.jpg"
 LD_TAG = '<script type="application/ld+json" id="sgx-webpage-jsonld">'
 
 
@@ -68,6 +69,20 @@ def _load(name, path):
 
 def pre(loc):
     return "" if loc == "en" else f"/{loc}"
+
+
+def lab(label, loc):
+    """An ingredient name: a per-locale dict (the hubs translate copper peptide and glutathione) or one string."""
+    return label[loc] if isinstance(label, dict) else label
+
+
+def fmt_date(iso, loc):
+    y, m, d = (int(x) for x in iso.split("-"))
+    return (PHRASES["date_format"][loc].replace("{d}", str(d))
+            .replace("{m}", PHRASES["months"][loc][m - 1]).replace("{y}", str(y)))
+
+
+GRADE_ORDER = {"a": 0, "b": 1, "c": 2, "d": 3, "x": 4, "n": 5, "r": 6}
 
 
 def p(key, loc, **kw):
@@ -120,18 +135,25 @@ def transform(html, loc, slug, label, hub, acc, tint, keys, last):
                 return row.replace('<a class="est__lk"', a + '<a class="est__lk"', 1)
         return row
     h = re.sub(r"<tr>.*?</tr>", add_link, h, flags=re.S)
+
+    def by_grade(m):
+        # design critique 2026-09-29: "no visible sort order" — A, B, C, D, then reviews; hub order within a grade
+        rows = re.findall(r"<tr>.*?</tr>", m.group(2), flags=re.S)
+        key = lambda r: GRADE_ORDER.get((re.search(r"est__pill--(\w)", r) or [None, "r"])[1], 9)
+        return m.group(1) + "".join(sorted(rows, key=key)) + m.group(3)
+    h = re.sub(r"(<tbody>)(.*?)(</tbody>)", by_grade, h, count=1, flags=re.S)
     if not last:
         h = re.sub(r'<p class="est__key">.*?</p>', "", h, flags=re.S)
     return h, n
 
 
-def jsonld(loc, items, appraisals, n):
+def jsonld(loc, items, appraisals, n, today="2026-09-29"):
     url = f"{BASE}{pre(loc)}/pages/clinical-studies"
     science = f"{BASE}{pre(loc)}/pages/the-science"
     return {"@context": "https://schema.org", "@graph": [
         {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "inLanguage": loc,
          "name": p("title", loc), "description": p("seo_description", loc, n=n),
-         "isPartOf": {"@id": f"{BASE}/#website"},
+         "isPartOf": {"@id": f"{BASE}/#website"}, "dateModified": today,
          "about": [{"@type": "Thing", "name": x} for x in
                    ("PDRN", "Argireline", "Copper peptide GHK-Cu", "Matrixyl 3000", "Glutathione")],
          "author": {"@type": "Person", "name": "Malcolm Smith", "jobTitle": "Founder, Skingenetix"},
@@ -185,21 +207,40 @@ def live_tables(hu, sr):
     return tables
 
 
-def build_spec(tables, keys):
+def build_spec(tables, keys, today):
     appraisals = [h for _, _, h in keys]
     per_loc, counts, items = {l: [] for l in LOCALES}, {}, []
     for i, (slug, label, hub, acc, tint, vals, src) in enumerate(tables):
         last = i == len(tables) - 1
         for loc in LOCALES:
-            h, n = transform(vals[loc], loc, slug, label, hub, acc, tint, keys, last)
+            h, n = transform(vals[loc], loc, slug, lab(label, loc), hub, acc, tint, keys, last)
             per_loc[loc].append(h)
             counts[slug] = n
         items += scholarly_items(vals["en"])
     total = sum(counts.values())
-    # the hub link in each lead must look like a link (the hubs' lead has none, so it had no style)
-    style = ('<style>.est__lk--ap{display:block;margin:0 0 6px;font-weight:600}'
-             '.est__lead a{color:var(--sg-accent);text-decoration:underline;text-underline-offset:2px}</style>')
-    jump = {l: p("by_ingredient", l) + " " + ", ".join(f'<a href="#{s}">{lab}</a>' for s, lab, *_ in tables) for l in LOCALES}
+    # The index's own rules, ahead of the five copied hub styles (".est ." out-ranks their single classes):
+    #  * the hub link in each lead must look like a link (the hubs' lead has none, so it had no style)
+    #  * one grade ramp for every table (critique F3: "A" took each hub's accent, so A differed per table
+    #    and nearly matched B or C on some), darker = stronger evidence, and larger (the grade was the
+    #    faintest thing in its row)
+    #  * the ingredient headings in the theme's heading face (F5: 36px bold Muli under a 48px Fraunces close)
+    #  * row links at least 44px tall on phones, not 16-21px (F4)
+    style = ("<style>"
+             ".est__lk--ap{display:block;margin:0 0 6px;font-weight:600}"
+             ".est__lead a{color:var(--sg-accent);text-decoration:underline;text-underline-offset:2px}"
+             ".est .est__pill{font-size:13px;font-weight:700;padding:5px 12px}"
+             ".est .est__pill--a{background:#3A3F41;color:#fff}"
+             ".est .est__pill--b{background:#6B7173;color:#fff}"
+             ".est .est__pill--c{background:#E4E6E7;color:#2E3233}"
+             ".est .est__pill--d{background:#fff;color:#3A3F41;box-shadow:inset 0 0 0 1px #9AA0A2}"
+             ".est .est__pill--r{background:#fff;color:#3A3F41;border:1px dashed #6B7173}"
+             ".est .est__h{font-family:var(--heading-font-family);font-weight:var(--heading-font-weight);"
+             "font-size:40px;line-height:1.1;letter-spacing:var(--heading-letter-spacing)}"
+             "@media(max-width:749px){.est .est__h{font-size:30px}"
+             ".est .est__lk{display:block;padding:14px 0;line-height:1.3}}"   # 13px x 1.3 + 28 = 45px (39 measured at 11px)
+             "</style>")
+    jump = {l: p("by_ingredient", l) + " " + ", ".join(f'<a href="#{s}">{lab(x, l)}</a>' for s, x, *_ in tables)
+            for l in LOCALES}
 
     def rt(values):
         return {"type": "richtext", "settings": {"content": values}}
@@ -217,7 +258,8 @@ def build_spec(tables, keys):
                      "text_color": "#ffffff", "overlay_color": "#1A1A1A", "overlay_opacity": 35}}}]
     add.append({"id": "intro", "after": "banner", "section": {
         "type": "rich-text",
-        "blocks": {"t": rt({l: f'<p>{p("answer", l, n=total)}</p><p>{p("grading", l)}</p><p>{jump[l]}</p>' for l in LOCALES})},
+        "blocks": {"t": rt({l: f'<p>{p("answer", l, n=total)}</p><p>{p("grading", l)}</p><p>{jump[l]}</p>'
+                               f'<p><em>{p("updated", l, date=fmt_date(today, l))}</em></p>' for l in LOCALES})},
         "block_order": ["t"],
         "settings": {"full_width": True, "content_width": "medium", "text_position": "start", "background": "#F0F0F0"}}})
     prev = "intro"
@@ -226,17 +268,24 @@ def build_spec(tables, keys):
         vals = {l: (style if i == 0 else "") + per_loc[l][i] for l in LOCALES}
         if i == len(tables) - 1:
             for l in LOCALES:
-                vals[l] += "\n" + LD_TAG + "\n" + json.dumps(jsonld(l, items, appraisals, total), indent=1,
+                vals[l] += "\n" + LD_TAG + "\n" + json.dumps(jsonld(l, items, appraisals, total, today), indent=1,
                                                              ensure_ascii=False) + "\n</script>"
-        add.append({"id": sid, "after": prev, "section": {"type": "custom-html", "settings": {"html": vals}}})
+        # custom-html refuses "{{" / "}}" as Liquid, and minified CSS closes media queries as ";}}"
+        for l in LOCALES:
+            while "}}" in vals[l] or "{{" in vals[l]:
+                vals[l] = vals[l].replace("}}", "} }").replace("{{", "{ {")
+        # white, as on the hubs: left unset, the section took the bone intro's ground (critique F2)
+        add.append({"id": sid, "after": prev, "section": {"type": "custom-html",
+                                                          "settings": {"background": "#ffffff", "html": vals}}})
         prev = sid
     add.append({"id": "closing", "after": prev, "section": {
         "type": "rich-text",
         "blocks": {"t": rt({l: f'<h2>{p("closing_title", l)}</h2><p>'
                                + p("closing", l, science_link=f'<a href="{pre(l)}/pages/the-science">{p("science", l)}</a>')
+                               + "</p><p>" + p("shop", l, shop_link=f'<a href="{pre(l)}/collections/all">{p("shop_link", l)}</a>')
                                + "</p>" for l in LOCALES})},
         "block_order": ["t"],
-        "settings": {"full_width": True, "content_width": "medium", "text_position": "start", "background": "#ffffff"}}})
+        "settings": {"full_width": True, "content_width": "medium", "text_position": "start", "background": "#F0F0F0"}}})
     spec = {
         "_about": ("GENERATED by scripts/build-clinical-studies.py — do not edit by hand; re-run the generator. "
                    "ADR-2026-09-29-C. Rows are the five hubs' live Evidence & Sources tables. Sources: "
@@ -249,7 +298,8 @@ def build_spec(tables, keys):
             "intro": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}",
                       ".prose p:first-child {font-size: 20px; line-height: 1.5;}",
                       "@media (max-width: 699px) {.prose p:first-child {font-size: 17px;} }"],
-            "closing": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}"]},
+            "closing": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}",
+                        ".prose h2 {font-size: 32px;}", "@media (max-width: 749px) {.prose h2 {font-size: 26px;} }"]},
     }
     return spec, counts, total
 
@@ -260,7 +310,8 @@ def main():
     configs = [json.loads(pathlib.Path(f).read_text()) for f in sorted(glob.glob(str(ROOT / "configs/studies/*.json")))]
     keys = appraisal_keys(configs)
     tables = live_tables(hu, sr)
-    spec, counts, total = build_spec(tables, keys)
+    import datetime
+    spec, counts, total = build_spec(tables, keys, datetime.date.today().isoformat())
     OUT.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n")
     print(f"  study pages: {', '.join(f'{s} {y}' for s, y, _ in keys)}")
     for slug, *_x, src in tables:

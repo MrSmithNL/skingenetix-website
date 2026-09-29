@@ -99,3 +99,60 @@ def test_the_page_schema_is_a_collection_with_a_breadcrumb():
     assert page["@type"] == "CollectionPage" and page["url"].endswith("/de/pages/clinical-studies")
     assert page["mainEntity"]["numberOfItems"] == 1 and page["hasPart"][0]["url"].endswith("/de/pages/study/a")
     assert [i["name"] for i in crumb["itemListElement"]] == ["Skingenetix", "Wissenschaft", "Klinische Studien"]
+
+
+# ---------------------------------------------------------------- design critique 2026-09-29 fixes
+
+def graded(grade_classes):
+    rows = "".join(f'<tr><td class="est__study"><p class="sgref__ti est__ti">T{i}</p><p class="est__me">X et al., 2001</p>'
+                   f'<a class="est__lk" href="https://x/{i}">View</a></td><td class="est__grade">'
+                   f'<span class="est__pill est__pill--{g}">{g}</span></td><td>f</td></tr>'
+                   for i, g in enumerate(grade_classes))
+    return (f'<div class="est" id="evidence-sources"><h2 class="est__h">H</h2><p class="est__lead">L</p>'
+            f'<div class="est__wrap"><table><thead><tr><th>S</th></tr></thead><tbody>{rows}</tbody></table></div></div>')
+
+
+def test_rows_are_sorted_strongest_grade_first():
+    """F-medium: no visible sort order. A, B, C, D, then reviews; the hub's own order within a grade."""
+    h, _ = bcs.transform(graded(["r", "c", "a", "b", "a", "d"]), "en", "s", "L", "hub", "#000", "#fff", [], True)
+    assert [x for x in __import__("re").findall(r"est__pill--(\w)", h)] == ["a", "a", "b", "c", "d", "r"]
+    assert h.index(">T2<") < h.index(">T4<")               # stable within a grade
+
+
+def fake_tables():
+    return [(slug, label, hub, "#123456", "#abcdef", {l: graded(["a", "r"]) for l in bcs.LOCALES}, "test")
+            for slug, label, hub, *_ in bcs.HUBS]
+
+
+def test_tables_sit_on_white_and_the_closing_on_bone():
+    """F2: left unset, the custom-html sections took the bone intro's ground, and a Review pill vanished (1.00:1)."""
+    spec, _, _ = bcs.build_spec(fake_tables(), [], "2026-09-29")
+    secs = {a["id"]: a["section"] for a in spec["add_sections"]}
+    assert all(s["settings"]["background"] == "#ffffff" for k, s in secs.items() if k.startswith("ev_"))
+    assert secs["closing"]["settings"]["background"] == "#F0F0F0"
+
+
+def test_ingredient_names_follow_each_locale():
+    """F12: the German page said 'Glutathione' where the German hub says 'Glutathion'."""
+    spec, _, _ = bcs.build_spec(fake_tables(), [], "2026-09-29")
+    secs = {a["id"]: a["section"] for a in spec["add_sections"]}
+    assert "Glutathion: Studien" in secs["ev_glutathione"]["settings"]["html"]["de"]
+    assert "Kupferpeptid (GHK-Cu)" in secs["intro"]["blocks"]["t"]["settings"]["content"]["de"]
+
+
+def test_the_intro_is_dated_and_the_closing_leads_to_the_shop():
+    spec, _, _ = bcs.build_spec(fake_tables(), [], "2026-09-29")
+    secs = {a["id"]: a["section"] for a in spec["add_sections"]}
+    assert "Zuletzt aktualisiert am 29. September 2026." in secs["intro"]["blocks"]["t"]["settings"]["content"]["de"]
+    assert "29 de septiembre de 2026" in secs["intro"]["blocks"]["t"]["settings"]["content"]["es"]
+    assert 'href="/fr/collections/all">notre boutique</a>' in secs["closing"]["blocks"]["t"]["settings"]["content"]["fr"]
+
+
+def test_no_custom_html_value_carries_liquid_braces():
+    """Shopify refuses a custom-html setting containing "{{" or "}}" (a media query closing as ";}}" did it,
+    2026-09-29) — memory custom-html-rejects-double-braces."""
+    spec, _, _ = bcs.build_spec(fake_tables(), [], "2026-09-29")
+    for a in spec["add_sections"]:
+        if a["section"]["type"] == "custom-html":
+            for loc, v in a["section"]["settings"]["html"].items():
+                assert "}}" not in v and "{{" not in v, (a["id"], loc)

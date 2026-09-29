@@ -1,0 +1,15 @@
+{
+  "created": "2026-09-29",
+  "target": "templates/page.clinical-studies.json, banner section mobile_image (via scripts/build-clinical-studies.py BANNER_MOBILE)",
+  "decided_by": "Claude, fixing design critique 2026-09-29 F1 (phone hero text over the flask necks). docs/audits/2026-09-29-clinical-studies-page-design-critique.md",
+  "note": "A copy of the borrowed /pages/ingredients phone banner (skingenetix-peptide-laboratory-glassware-blue-pink-actives-mobile.jpg, untouched) with a text-zone scrim baked in: darkened to 45% toward its own dark tone over the top 62%, easing to 90% by 87%. Worst-case white-text contrast over the 99.5th-percentile pixel after the section's 35% overlay: 2.42:1 -> 7.53:1 (the critic measured 2.71-3.27 live). Temporary with the borrowed image: a dedicated Clinical studies banner is Malcolm's decision (an image run costs money).",
+  "images": [
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-research-banner-mobile.jpg",
+      "filename": "skingenetix-clinical-studies-research-banner-mobile.jpg",
+      "alt": "Laboratory glassware with pink and blue solutions on a dark bench, in low light",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-research-banner-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-research-banner-mobile.jpg?v=1790680559"
+    }
+  ]
+}

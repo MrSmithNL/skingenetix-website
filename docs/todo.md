@@ -456,7 +456,14 @@ AI-generated illustrations and must not be presented as results. Record:
     `scripts/build-clinical-studies.py` → `configs/hub-upgrades/clinical-studies.json` → `hub-upgrade.py --apply`. Preview:
     `/pages/the-science?view=clinical-studies`. No page object yet. Matrixyl's rows come from its spec until its hub is live; re-run
     the generator after any hub table changes.
-  - ⏳ Design critic on the preview (running 2026-09-29). ⏳ A dedicated banner image (borrowed from /pages/ingredients for now; a new
+  - ✅ Design critic cycle 1 on the preview: FIX 5.75 (`docs/audits/2026-09-29-clinical-studies-page-design-critique.md`). Fixed the
+    same day, verified by computed style in EN and DE: F1 phone hero (scrimmed copy, 2.42 → 7.53:1), F2 tables back on white (the
+    Review pill and three AA failures), F3 one grade ramp across all tables, F4 phone row links 16–21 → 45px, F5 one heading system,
+    F12 German (the copper hub's own German table said "Peer-Übersicht": corrected live on the hub and in its spec; legends use each
+    locale's badge word; ingredient names localised), rows sorted by grade, a dated line + `dateModified`, a closing link to the shop.
+    Open (medium, design direction): three left edges, one section spacing, wayfinding on a 19-screen phone page, 200% zoom column,
+    unlabelled grade on phones, citation style differing between hubs.
+  - ⏳ A dedicated banner image (borrowed from /pages/ingredients for now; a new
     image run costs money, so Malcolm's call).
   - ⏳ Go-live, together and in six languages, once Badenhorst and Raikou are translated: page object (handle `clinical-studies`,
     SEO title/description in `configs/hub-i18n/clinical-studies.json`), Science menu line (and phone drawer), footer Explore link,

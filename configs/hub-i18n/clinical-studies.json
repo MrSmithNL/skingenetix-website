@@ -34,11 +34,11 @@
   },
   "grading": {
     "en": "<strong>How we grade.</strong> <strong>A</strong>: a controlled human trial measured by instrument. <strong>B</strong>: a smaller, uncontrolled or manufacturer study. <strong>C</strong>: tests on skin samples. <strong>D</strong>: cells or animals. <strong>Review</strong>: a summary of other work.",
-    "de": "<strong>So bewerten wir.</strong> <strong>A</strong>: eine kontrollierte Studie am Menschen, mit Geräten gemessen. <strong>B</strong>: eine kleinere, unkontrollierte oder Herstellerstudie. <strong>C</strong>: Tests an Hautproben. <strong>D</strong>: Zellen oder Tiere. <strong>Review</strong>: eine Zusammenfassung anderer Arbeiten.",
-    "nl": "<strong>Zo beoordelen we.</strong> <strong>A</strong>: een gecontroleerde studie bij mensen, met instrumenten gemeten. <strong>B</strong>: een kleinere, ongecontroleerde of fabrikantenstudie. <strong>C</strong>: tests op huidmonsters. <strong>D</strong>: cellen of dieren. <strong>Review</strong>: een samenvatting van ander onderzoek.",
-    "fr": "<strong>Notre notation.</strong> <strong>A</strong> : un essai contrôlé chez l'humain, mesuré par instrument. <strong>B</strong> : une étude plus petite, non contrôlée ou du fabricant. <strong>C</strong> : des tests sur échantillons de peau. <strong>D</strong> : cellules ou animaux. <strong>Review</strong> : une synthèse d'autres travaux.",
-    "es": "<strong>Cómo evaluamos.</strong> <strong>A</strong>: un ensayo controlado en personas, medido con instrumentos. <strong>B</strong>: un estudio más pequeño, no controlado o del fabricante. <strong>C</strong>: pruebas en muestras de piel. <strong>D</strong>: células o animales. <strong>Review</strong>: un resumen de otros trabajos.",
-    "it": "<strong>Come valutiamo.</strong> <strong>A</strong>: uno studio controllato sull'uomo, misurato con strumenti. <strong>B</strong>: uno studio più piccolo, non controllato o del produttore. <strong>C</strong>: test su campioni di pelle. <strong>D</strong>: cellule o animali. <strong>Review</strong>: una sintesi di altri lavori."
+    "de": "<strong>So bewerten wir.</strong> <strong>A</strong>: eine kontrollierte Studie am Menschen, mit Geräten gemessen. <strong>B</strong>: eine kleinere, unkontrollierte oder Herstellerstudie. <strong>C</strong>: Tests an Hautproben. <strong>D</strong>: Zellen oder Tiere. <strong>Übersicht</strong>: eine Zusammenfassung anderer Arbeiten.",
+    "nl": "<strong>Zo beoordelen we.</strong> <strong>A</strong>: een gecontroleerde studie bij mensen, met instrumenten gemeten. <strong>B</strong>: een kleinere, ongecontroleerde of fabrikantenstudie. <strong>C</strong>: tests op huidmonsters. <strong>D</strong>: cellen of dieren. <strong>Overzicht</strong>: een samenvatting van ander onderzoek.",
+    "fr": "<strong>Notre notation.</strong> <strong>A</strong> : un essai contrôlé chez l'humain, mesuré par instrument. <strong>B</strong> : une étude plus petite, non contrôlée ou du fabricant. <strong>C</strong> : des tests sur échantillons de peau. <strong>D</strong> : cellules ou animaux. <strong>Revue</strong> : une synthèse d'autres travaux.",
+    "es": "<strong>Cómo evaluamos.</strong> <strong>A</strong>: un ensayo controlado en personas, medido con instrumentos. <strong>B</strong>: un estudio más pequeño, no controlado o del fabricante. <strong>C</strong>: pruebas en muestras de piel. <strong>D</strong>: células o animales. <strong>Revisión</strong>: un resumen de otros trabajos.",
+    "it": "<strong>Come valutiamo.</strong> <strong>A</strong>: uno studio controllato sull'uomo, misurato con strumenti. <strong>B</strong>: uno studio più piccolo, non controllato o del produttore. <strong>C</strong>: test su campioni di pelle. <strong>D</strong>: cellule o animali. <strong>Rassegna</strong>: una sintesi di altri lavori."
   },
   "by_ingredient": {
     "en": "By ingredient:",
@@ -103,5 +103,140 @@
     "fr": "Les {n} études sur le PDRN, l'Argireline, le peptide de cuivre, le Matrixyl 3000 et le glutathion : évaluées, avec leurs résultats et un lien vers l'article.",
     "es": "Los {n} estudios sobre PDRN, Argireline, péptido de cobre, Matrixyl 3000 y glutatión: evaluados, con sus resultados y un enlace a la publicación.",
     "it": "I {n} studi su PDRN, Argireline, peptide di rame, Matrixyl 3000 e glutatione: valutati per solidità, con i risultati e un link alla pubblicazione."
+  },
+  "_labels_about": "Ingredient names as each hub's own evidence heading gives them in that language (design critique 2026-09-29 F12: the German page said 'Glutathione' where the German hub says 'Glutathion').",
+  "label_copper": {
+    "en": "Copper peptide (GHK-Cu)",
+    "de": "Kupferpeptid (GHK-Cu)",
+    "nl": "Koperpeptide (GHK-Cu)",
+    "fr": "Peptide de cuivre (GHK-Cu)",
+    "es": "Péptido de cobre (GHK-Cu)",
+    "it": "Peptide di rame (GHK-Cu)"
+  },
+  "label_glutathione": {
+    "en": "Glutathione",
+    "de": "Glutathion",
+    "nl": "Glutathion",
+    "fr": "Glutathion",
+    "es": "Glutatión",
+    "it": "Glutatione"
+  },
+  "updated": {
+    "en": "Last updated {date}.",
+    "de": "Zuletzt aktualisiert am {date}.",
+    "nl": "Laatst bijgewerkt op {date}.",
+    "fr": "Dernière mise à jour le {date}.",
+    "es": "Última actualización: {date}.",
+    "it": "Ultimo aggiornamento: {date}."
+  },
+  "months": {
+    "en": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "de": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "nl": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "fr": [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre"
+    ],
+    "es": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "it": [
+      "gennaio",
+      "febbraio",
+      "marzo",
+      "aprile",
+      "maggio",
+      "giugno",
+      "luglio",
+      "agosto",
+      "settembre",
+      "ottobre",
+      "novembre",
+      "dicembre"
+    ]
+  },
+  "date_format": {
+    "en": "{d} {m} {y}",
+    "de": "{d}. {m} {y}",
+    "nl": "{d} {m} {y}",
+    "fr": "{d} {m} {y}",
+    "es": "{d} de {m} de {y}",
+    "it": "{d} {m} {y}"
+  },
+  "shop": {
+    "en": "The products made with these five ingredients are in {shop_link}.",
+    "de": "Die Produkte mit diesen fünf Wirkstoffen finden Sie in {shop_link}.",
+    "nl": "De producten met deze vijf ingrediënten vind je in {shop_link}.",
+    "fr": "Les produits à base de ces cinq ingrédients sont dans {shop_link}.",
+    "es": "Los productos elaborados con estos cinco ingredientes están en {shop_link}.",
+    "it": "I prodotti realizzati con questi cinque ingredienti sono nel {shop_link}."
+  },
+  "shop_link": {
+    "en": "our shop",
+    "de": "unserem Shop",
+    "nl": "onze winkel",
+    "fr": "notre boutique",
+    "es": "nuestra tienda",
+    "it": "nostro negozio"
   }
 }
