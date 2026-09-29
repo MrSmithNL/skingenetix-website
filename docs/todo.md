@@ -319,12 +319,14 @@ AI-generated illustrations and must not be presented as results. Record:
     after the ingredient blocks): f1 Matrixyl 3000 deep-wrinkle area −39% in 2 months (Sederma half-face), f2 copper peptide face-cream study (71 women) plus
     the 7-in-10 new-collagen biopsy count. Before/after wave `configs/banners/before-after-collagen-plumping-r1.json` (builder
     `scripts/build-collagen-plumping-before-after-config.py`, 6 slots × 6 suppliers; six new women, Matrixyl her LEFT side). **Waiting: Malcolm's picks.**
-  - ⏳ **Wrong-strength image** (found 2026-09-25): the copper block shows `skingenetix-copper-peptide-ghk-cu-firming-repair-serum.jpg`, an old off-brand
-    serum labelled **1%**; our copper products are 2%. Options on the Desktop sheet (NOW, J = day-cream jar, S0–S10 = the current serum's product photos).
-    **Waiting: Malcolm's pick.**
+  - ✅ **Wrong-strength image replaced** (Malcolm, 2026-09-29: "use S2"). The copper block's old off-brand serum labelled **1%** is now S2, the
+    current 2% serum with its carton (product media already in Files, alt text in place; nothing renamed or re-uploaded). Plan
+    `configs/banners/collagen-skin-plumping-copper-image-2026-09-29.json` via `scripts/patch-template.py`; live in all six languages (four showed the old
+    image for a minute: storefront cache); backup `page.collagen-skin-plumping-20260929-151236.json`.
   - ⚠️ Noted, not changed: this page is still a consolidation candidate with `/pages/firming-skin-density` (Phase 1 note above).
   - ⏳ **Picks still open** (2026-09-29): option sheets on the Desktop, `skingenetix-options-1-matrixyl-card.png` (D1–F6),
-    `skingenetix-options-2-copper-card.png` (A1–C6), `skingenetix-copper-serum-image-options.png` (J, S0–S10).
+    `skingenetix-options-2-copper-card.png` (A1–C6). Matrixyl: Malcolm wants a NEW set without moles (all of D–F have them). Copper: shortlisted B4,
+    C5, A5 (mole to be removed) and a gpt_image 01 (row not given); asked where these go, answered with `~/Desktop/skingenetix-where-the-images-go.png`.
 - ✅ **Glutathione tile in "Explore More Research" fixed on PDRN, Argireline and copper, six languages** (2026-09-29; Malcolm: "decide whats best based on
   the keyword and SEO and content strategy"). "For a more even, radiant-looking skin tone" broke template §4 rule 6 and glutathione register §8.4. Now "A
   clinically studied antioxidant for brighter-looking skin": the sibling tiles' pattern, the hub's `glutathione for skin` and brightening framing, the
