@@ -119,7 +119,7 @@ claims, the at-a-glance bullets, the how-to step discs and the grade-A pill all 
 | Argireline     | `#3E4A52` slate          | `#E9ECEE`          |
 | Copper peptide | `#014EB1` clinical blue  | `#E4EDFA`          |
 | Matrixyl 3000  | `#016569` teal           | `#E0EFEF`          |
-| Glutathione    | `#8A6914` deep champagne | `#F5EEDC`          |
+| Glutathione    | `#836310` deep champagne | `#F5EEDC`          |
 
 These are the text-safe versions of the art-direction scene colours (`docs/visual-identity/03-art-direction-and-briefs.md`): white on each passes 4.5:1. Never hard-code a colour in the custom sections; use `var(--sg-accent)`. The theme's own buttons (shop grid, CTA) keep the theme style.
 
@@ -271,8 +271,17 @@ One page per go-ahead. Claims before layout, so nothing is translated that is ab
 - **The phone hero crop decides the hero overlay.** The glutathione dish sits behind the centred phone text (worst pixel 1.92:1 at overlay 25); overlay 60,
   copper's value, gives ≥ 4.9:1 in English and German and leaves desktop at 16–19:1. Measure the worst pixel per line in two languages: German runs
   longer and lands on different pixels.
-- **Measure card overshoot at 1440 after every copy change.** Text taller than the image leaves ragged card ends; a shorter title (one 48 px line) is the
-  cheapest trim. Glutathione ended at 0/0/0/+24/+18 px.
+- **Measure card overshoot at 1440 after every copy change, in all six languages.** Text taller than the image leaves ragged card ends; a shorter title
+  (one 48 px line) is the cheapest trim. Cycle 1 measured English only (0/0/0/+24/+18 px) and critic cycle 2 found the five translations 19–95 px over;
+  after trimming (shorter card 1 and card 5 titles, one clause or paragraph off cards 1, 2, 4 and 5) every card in every language is within 19 px.
+- **Check the accent on Bone, not only white on the accent** (§3.6 measured only the second). Glutathione's `#8A6914` was 4.48:1 on `#F0F0F0`, just
+  under AA for the 15–17 px citation links; `#836310` gives 4.90:1 on Bone, 4.83:1 on the tint and 5.59:1 for white on it.
+- **A hero overlay that fixes the phone darkens the desktop too.** Use the section's own Custom CSS for phones only
+  (`@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }`, the rule Malcolm agreed for PDRN
+  and Argireline on 2026-09-29) and leave the desktop overlay at its old value. If the desktop hero still reads empty, measure the raw banner: the
+  glutathione master is 76% near-black on its own, so only a new banner or crop changes it.
+- **Card 5 (tolerability) must not show our product either:** both trials behind it used other formulations. Glutathione uses a crop of its own pipette
+  shot showing only the glass tip and a clear drop. Copper's and Argireline's safety cards still show product (template-level, with Malcolm).
 
 ---
 

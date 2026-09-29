@@ -297,7 +297,13 @@ AI-generated illustrations and must not be presented as results. Record:
     after panel is lighter); B6 seedream 01 kept as a spare. Uploaded per `configs/banners/glutathione-research-card-images-2026-09-29.json` (E4's white
     frame trimmed), alt text in six languages, labels in six languages (Spanish "Tras 10 semanas": "Después de…" wrapped out of the photo on phones).
     Verify-live ✓ ×6; labels inside their photo in six languages at 1440 and 390; no outdated translations.
-  - ⏳ Design critic cycle 2 on the live page.
+  - ✅ Design critic cycle 2 on the live page: FIX 6.30 (cycle 1 6.11). Page-level findings fixed and re-measured 2026-09-29 (cards within 19 px in six
+    languages; card 5 image without our product; accent #836310; desktop hero overlay 25 with phones at 60 through section CSS; chart heading).
+  - 🛑 **For Malcolm:** (1) the desktop hero is 76% near-black in the banner itself, with the dish cropped at the left edge: keep it, or a new banner
+    or crop (a new banner is new spend, every supplier); (2) card 1's after panel is brighter overall while the wall darkens (reads as relighting), his
+    pick; (3) the page does not say our serum is GSSG: the formula fact stays parked until the supplier certificate (register §6 gap 1).
+  - 🛑 **Template-level, new (critic cycle 2):** at 200% zoom the "After N weeks" label pushes the page sideways (25 px en, 48 px de; WCAG 1.4.10),
+    also on copper: `theme/sections/research-before-after.liquid`. Copper's and Argireline's safety cards still show our product (template §6.3).
   - ✅ The "Explore more research" Glutathione tile on PDRN, Argireline and copper said "For a more even, radiant-looking skin tone" (template §4 rule 6).
     Fixed by the f3 session 2026-09-29 (`b73d215`): "A clinically studied antioxidant for brighter-looking skin", six languages, verified live.
   - 🛑 **Template-level, new (critic 2026-09-26):** at 200% zoom every finding-card heading breaks mid-word (card text column 91 px, 32 px headings), on
