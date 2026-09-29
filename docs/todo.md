@@ -298,8 +298,9 @@ AI-generated illustrations and must not be presented as results. Record:
     frame trimmed), alt text in six languages, labels in six languages (Spanish "Tras 10 semanas": "Después de…" wrapped out of the photo on phones).
     Verify-live ✓ ×6; labels inside their photo in six languages at 1440 and 390; no outdated translations.
   - 🔄 **Malcolm, 2026-09-29:** card 5 takes the golden cell image (live; card 3 shows the pipette drop meanwhile); card 3 (Wahab, independent trial)
-    gets a before/after pair and card 4 (instrument results) a skin-measurement-probe picture: wave r3 / probe r1 running on every supplier
-    (`configs/banners/before-after-glutathione-cards-r3.json`, `configs/banners/glutathione-card4-measurement-probe-r1.json`); Malcolm picks.
+    gets a before/after pair and card 4 (instrument results) a skin-measurement-probe picture: wave r3 / probe r1 done on every supplier, 18 + 18
+    candidates, sheets on the Desktop (`9f0edf0`; `configs/banners/before-after-glutathione-cards-r3.json`,
+    `configs/banners/glutathione-card4-measurement-probe-r1.json`). Waiting on Malcolm's picks, then upload, labels and apply.
   - ✅ Design critic cycle 2 on the live page: FIX 6.30 (cycle 1 6.11). Page-level findings fixed and re-measured 2026-09-29 (cards within 19 px in six
     languages; card 5 image without our product; accent #836310; desktop hero overlay 25 with phones at 60 through section CSS; chart heading).
   - 🛑 **For Malcolm:** (1) the desktop hero is 76% near-black in the banner itself, with the dish cropped at the left edge: keep it, or a new banner
