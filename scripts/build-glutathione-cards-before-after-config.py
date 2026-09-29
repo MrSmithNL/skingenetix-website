@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
-"""Build the before/after wave for glutathione findings cards f1 and f2 (science-page template).
+"""Build the before/after waves for glutathione findings cards f1, f2 and f3 (science-page template).
 
-    python3 scripts/build-glutathione-cards-before-after-config.py              # round 2, the current round
-    → configs/banners/before-after-glutathione-cards-r2.json
+    python3 scripts/build-glutathione-cards-before-after-config.py              # round 3, the current round
+    → configs/banners/before-after-glutathione-cards-r3.json (card f3, Wahab 2021)
     python3 scripts/build-glutathione-cards-before-after-config.py --round r1   # re-proves round 1
-    → writes NOTHING; asserts that configs/banners/before-after-glutathione-cards-r1.json (committed) is
-      reproduced byte for byte. Every r2 build runs the same check first, so an r2 edit that leaks into
-      the r1 brief fails the build instead of silently rewriting a committed record.
+    python3 scripts/build-glutathione-cards-before-after-config.py --round r2   # re-proves rounds 1 and 2
+    → write NOTHING; assert that configs/banners/before-after-glutathione-cards-r1.json / -r2.json
+      (committed) are reproduced byte for byte. Every r3 build runs both checks first, so an r3 edit that
+      leaks into an earlier brief fails the build instead of silently rewriting a committed record.
+      (Until 2026-09-29 `--round r2` WROTE the r2 file; it now only proves it, as r1 did once r2 existed.)
 
-    python3 -u scripts/generate-multi.py configs/banners/before-after-glutathione-cards-r2.json \
+    python3 -u scripts/generate-multi.py configs/banners/before-after-glutathione-cards-r3.json \
         --candidates 1 --only <slot-id>[,<slot-id>]
-    python3 scripts/wave-contact-sheet.py before-after-glutathione-cards-r2 \
-        --stable-labels configs/banners/before-after-glutathione-cards-r2.json --expect 5 --tile 400
+    python3 scripts/wave-contact-sheet.py before-after-glutathione-cards-r3 \
+        --stable-labels configs/banners/before-after-glutathione-cards-r3.json --expect 5 --tile 400
 
 ⚠️ `--candidates 1` IS NOT OPTIONAL: generate-multi.py never reads `defaults.candidates` and its flag
 defaults to 2, which silently doubles the spend.
@@ -178,6 +180,60 @@ and manifest.json). Sheet: ~/Desktop/skingenetix-glutathione-before-after-r2.png
   nbp_pro broke the side-lock on E5; flux2 stayed pale, older and undressed. gpt_image held every rule on all
   six slots.
 Author: Claude Code, 2026-09-29. Candidates only; nothing is uploaded or published by this file.
+
+=====================================================================================================
+ROUND 3 (2026-09-29) - configs/banners/before-after-glutathione-cards-r3.json, slot ids glub3--f3-tone-g/h/i
+=====================================================================================================
+Malcolm, 2026-09-29: "New wave, all suppliers" for card 3 (the approval for the spend). Card f3 is the
+independent trial, Wahab et al. 2021 (register §8.1): 46 Indonesian women aged 20-44 (mean 30); every woman
+put a serum with 2% glutathione and vitamin C on one cheek and a matching placebo serum on the other, morning
+and evening for 8 weeks, with SPF each morning. On the serum side the melanin index fell 10.8% while the
+placebo side rose 1.8% (p = 0.029), and skin lightness (L*) improved (p = 0.046). So the pair is a TONE pair
+exactly like f1: a MODEST, even, whole-cheek brightening; plainly the same woman and skin tone; never lighter
+than the skin under her own jaw; no change in evenness, spots, redness, pores, texture or lines (§8.5 f1).
+
+REUSE, NOT A COPY. Round 2's f1 block, skeleton swaps, light (LIGHT_TONE_R2), skin (SKIN_R2, with both r2
+smoke fixes), crops, identity lock, side-lock, no-marks rules, negatives and garment fairness rules are used
+as they are. The r2 helpers p9_r2 / luma_dressed_r2 / swaps_r2 / luma_swaps_r2 / _garment_pair_ok gained
+optional parameters (the garment table, the block table) and a TONE_KEYS set that adds f3's keys g-i; r2's
+keys a-f are untouched, and the r2 byte check proves it. What round 3 changes:
+  1. THE CARD: block f3, study wahab-2021, label "After 8 weeks" (a theme setting, never pixels).
+  2. AGE: EARLY TO MID THIRTIES (the trial's mean was 30, range 20-44), not late thirties to mid-forties.
+     The age paragraph is new and the age negatives follow it (no woman in her early twenties, none over
+     forty); every other f1 negative is kept.
+  3. THREE NEW WOMEN (WOMEN_RD3): Caucasian, light-olive Mediterranean-type skin with a light, even tan, as
+     round 2 (Malcolm's casting), but MALTESE, CYPRIOT and ALBANIAN - no nationality, hair style or garment
+     from round 2 is repeated (asserted for nationality and garments). Their `before` lines are round 2's,
+     matched by crop.
+  4. CLOTHES: drawn by a seeded shuffle (GARMENT_SEED_RD3) from the garments round 2 did not use plus
+     GARMENT_EXTRA_RD3 (new muted, open-necked ones), under round 2's f1 fairness rules: two different types
+     and colour families per slot, the right-panel top never lighter and never white, both muted, both open
+     at the neck. GARMENT_POOL itself is unchanged, so round 2's draw cannot move.
+  5. WALLS AND VIEWPOINTS: new light-neutral walls (left panel white-ish, right panel pale grey, so the
+     right panel's surroundings are never the brighter), right panel turned a touch LESS towards the camera,
+     light leaning towards the near cheek on the left panel only - every difference runs against the
+     improvement, as in round 2. Side lock varies by slot (L, R, L).
+  NAMING: this file already imports the under-eye builder as `r3` and names its sentences R3_*; round 3's
+  own names therefore end in _RD3 to keep the two apart.
+
+SMOKE LOG, r3: RD3_SMOKE_LOG beside SMOKE_SLOTS_RD3 below (slot g; three brief faults found and fixed for h-i).
+
+FULL WAVE, r3, 2026-09-29: 18 of 18 (slot g on the smoke brief, its nbp_flash and flux2 from an immediate
+retry after provider 503s; h-i on the revised brief, no failure). Run folder
+assets/ai-generated/2026-08-22-multi-before-after-glutathione-cards-r3 (manifests manifest-smoke-g.json,
+manifest-smoke-g-retry.json, manifest.json). Sheet: ~/Desktop/skingenetix-glutathione-card3-before-after-r3.png,
+rows A-C = slots g-i (stable labels), columns 1-6 = flux2, gpt_image, luma, nbp_flash, nbp_pro, seedream.
+Centre-panel skin L* change (left -> right), round 2's card-1 pick for scale = +8.8:
+  gpt_image +7.0 / +3.0 / +5.6    nbp_flash +4.3 / +6.6 / +9.1    nbp_pro +9.8 / +6.2 / +15.6
+  seedream +11.2 / +5.1 / +11.3   luma +14.9 / +14.1 / +10.8      flux2 -5.4 / -2.1 / -3.3 (darker)
+  HELD: no mole, wart, skin tag or beauty mark on any dressed tile; the briefed garment pair on 15 of 18 (flux2
+  undressed); every right-panel top the same depth or darker; after the smoke fixes, casting held on 10 of 12
+  (not flux2) and h-i read as thirties on gpt_image, nbp_flash and nbp_pro.
+  FAILURES OF A RULE: nbp_pro C5 burned "DAY 1" / "DAY 2" captions into the panels; nbp_pro B5 has a phone edge
+  and fingertip at the right edge of the right panel; seedream A6 is two different East-Asian-looking women
+  (smoke brief); seedream C6 and all three luma overshoot the ceiling (right panel reads fairer, R/B falls
+  about 0.4-0.6) and luma borders every pair; flux2 is pale, freckled and undressed on all three and mirrors
+  A1. gpt_image and nbp_flash held every rule on all three slots.
 """
 import argparse
 import importlib.util
@@ -791,6 +847,9 @@ GARMENT_POOL = [
 GARMENT_SEED = 20260929
 SLOT_KEYS_R2 = ("a", "b", "c", "d", "e", "f")
 F1_KEYS = {"a", "b", "c"}
+#: Round 3 (card f3) is a tone pair too. Its keys g-i join the tone rules; r2's keys a-f are unaffected.
+F3_KEYS_RD3 = {"g", "h", "i"}
+TONE_KEYS = F1_KEYS | F3_KEYS_RD3
 
 
 def _garment_pair_ok(key: str, left: tuple, right: tuple) -> bool:
@@ -798,7 +857,7 @@ def _garment_pair_ok(key: str, left: tuple, right: tuple) -> bool:
         return False
     if right[2] < 2:                                     # no white or near-white right-panel top (f1 and f2)
         return False
-    if key in F1_KEYS:                                   # f1 fairness: right no lighter, muted, neck open
+    if key in TONE_KEYS:                                 # tone fairness: right no lighter, muted, neck open
         return right[2] >= left[2] and left[3] and right[3] and left[4] and right[4]
     return True
 
@@ -819,10 +878,11 @@ def pick_garments() -> dict:
 GARMENTS_R2 = pick_garments()
 
 
-def p9_r2(key: str) -> str:
-    """Paragraph 9 for one slot: two named garments, different, dressed on both days."""
-    left, right = GARMENTS_R2[key]
-    if key in F1_KEYS:
+def p9_r2(key: str, garments: dict = None) -> str:
+    """Paragraph 9 for one slot: two named garments, different, dressed on both days. `garments` is
+    round 3's table (GARMENTS_RD3); round 2 passes nothing."""
+    left, right = (garments or GARMENTS_R2)[key]
+    if key in TONE_KEYS:
         depth = ("The right-hand garment is the deeper colour of the two" if right[2] > left[2] else
                  "The two garments are about equally deep in colour")
         rule = (f"{depth}, and both are soft, muted colours: a pale or bright top throws its light and colour "
@@ -837,9 +897,9 @@ def p9_r2(key: str) -> str:
             "the same cut and colour but falling or tied a little differently.")
 
 
-def luma_dressed_r2(key: str) -> str:
-    left, right = GARMENTS_R2[key]
-    tail = (" - two different garments, the right one no lighter" if key in F1_KEYS else
+def luma_dressed_r2(key: str, garments: dict = None) -> str:
+    left, right = (garments or GARMENTS_R2)[key]
+    tail = (" - two different garments, the right one no lighter" if key in TONE_KEYS else
             " - two different garments, the right one not pale")
     # (Luma kept her dressed on the smoke slot without the "shoulders never bare" clause's help; the clause
     # was cut from Luma's copy only, to make room for the smoke fixes under LUMA_CAP. The main brief keeps it.)
@@ -1053,8 +1113,8 @@ LUMA_SKIN_R2 = ("Real skin: visible pores, vellus hair and fine lines, nothing e
                 "smoothing.")
 
 
-def swaps_r2(w: dict, tone: bool) -> list:
-    common = [(R3_AMATEUR, AMATEUR_NEUTRAL), (R3_P9, p9_r2(w["key"])), (R3_ONE, ONE_R2),
+def swaps_r2(w: dict, tone: bool, garments: dict = None) -> list:
+    common = [(R3_AMATEUR, AMATEUR_NEUTRAL), (R3_P9, p9_r2(w["key"], garments)), (R3_ONE, ONE_R2),
               (R3_LOCK, lock_r2(tone)), (R3_P19, p19_r2(tone)), (SIDE_MARKS, SIDE_MARKS_R2),
               (r3.NOT_MIRRORED, NOT_MIRRORED_R2)]
     return common + ([(R3_TWO, TWO_TONE_R2), (R3_FOUR, FOUR_TONE)] if tone else [(R3_FOUR, FOUR_CF_R2)])
@@ -1070,8 +1130,8 @@ R3_LUMA_KIND = "It is not lit more kindly - not brighter, softer or more frontal
 NOT_MIRRORED_LUMA_R2 = "Never mirror images: her parting and the near ear and cheek are the same in both"
 
 
-def luma_swaps_r2(w: dict, tone: bool) -> list:
-    b = BLOCKS_R2[w["block"]]
+def luma_swaps_r2(w: dict, tone: bool, blocks: dict = None, garments: dict = None) -> list:
+    b = (blocks or BLOCKS_R2)[w["block"]]
     # The identity anchors live in the lock line two sentences on; f1's complexion is in luma_honesty.
     right = ("THE RIGHT PANEL, FIRST OF ALL: the same person, same age, "
              + ("" if tone else "same complexion, ") + "no makeup. ")
@@ -1080,7 +1140,7 @@ def luma_swaps_r2(w: dict, tone: bool) -> list:
             + ", brows, hairline, ears, hair colour and cut: her identity.")
     pairs = [LUMA_AMATEUR,
              ("Real skin: visible pores, vellus hair, uneven pigment. No smoothing.", LUMA_SKIN_R2),
-             ("Hair a little different.", luma_dressed_r2(w["key"])),
+             ("Hair a little different.", luma_dressed_r2(w["key"], garments)),
              LUMA_EDGES,
              (R3_LUMA_RIGHT, right), (R3_LUMA_LOCK, lock),
              (SIDE_MARKS, SIDE_MARKS_R2), (r3.NOT_MIRRORED, NOT_MIRRORED_LUMA_R2)]
@@ -1223,6 +1283,297 @@ def r2_config() -> dict:
     }
 
 
+# ======================================================================================
+# ROUND 3 (2026-09-29): card f3, Wahab 2021. Everything below is new; above it, only the r2 helpers gained
+# optional parameters and TONE_KEYS (see the ROUND 3 section of the docstring). Names end in _RD3 because
+# `r3` / R3_* already mean the under-eye skeleton in this file.
+# ======================================================================================
+WAVE_RD3 = "before-after-glutathione-cards-r3"
+OUT_RD3 = ROOT / "configs" / "banners" / f"{WAVE_RD3}.json"
+ID_PREFIX_RD3 = "glub3--"
+SLOT_KEYS_RD3 = ("g", "h", "i")
+assert set(SLOT_KEYS_RD3) == F3_KEYS_RD3
+#: r3 smoke-test slot: its candidates came from the brief in effect at smoke time (preserved beside them).
+SMOKE_SLOTS_RD3 = {"g"}
+SMOKE_BRIEF_RD3 = ("assets/ai-generated/2026-08-22-multi-before-after-glutathione-cards-r3/"
+                   "smoke-brief-r3-g.json")
+RD3_SMOKE_LOG = """
+SMOKE LOG, 2026-09-29 (slot g, f3 tone; gpt_image resolved to gpt-image-2.5-sunburst). First pass 4 of 6:
+nbp_flash HTTP 503 Service Unavailable and flux2 fal "downstream_service_unavailable" - provider outages,
+not refusals; both returned on an immediate retry of those two suppliers on the SAME brief, so 6 of 6.
+Manifests: manifest-smoke-g.json, manifest-smoke-g-retry.json. Judged at 100% (each panel at full
+resolution) and at render size (500 px). Slot g is NOT re-run; its brief is at SMOKE_BRIEF_RD3.
+  HELD: no text on any tile; no mole, wart, skin tag or beauty mark on any; the briefed garments (cream
+  cable-knit, then charcoal T-shirt) on five of six, the right-panel top darker on every dressed tile; plain
+  walls. SIZE OF THE CHANGE, as centre-panel skin L* (left -> right): gpt_image +7.0, nbp_flash +4.3, nbp_pro
+  +9.8, seedream +11.2, luma +14.9 - round 2's band (Malcolm's card-1 pick, r2 A5 nbp_pro, is +8.8), except
+  luma, which overshoots as it did in r2 (B3 +15).
+  THREE BRIEF FAULTS, FIXED FOR SLOTS h-i:
+    1. SHE CAME OUT OLDER THAN EARLY-TO-MID THIRTIES on five of six (about forty on gpt_image, nbp_pro and
+       luma; fifty-ish on seedream's left panel; only nbp_flash looked thirty-ish). The age paragraph said
+       "early to mid thirties" but nothing an engine could check, and round 2's nothing_else kept "the fine
+       lines ... beside her mouth", a forties sign. AGE_RD3 now gives checkable signs (a full, youthful face,
+       smooth forehead, no lines between the brows or from nose to mouth; "anyone would put her at thirty to
+       thirty-five, never forty"), NOTHING_ELSE_RD3 drops the mouth lines, and Luma (which has no age
+       paragraph) gets a one-line form.
+    2. SEEDREAM CAST TWO DIFFERENT, EAST-ASIAN-LOOKING WOMEN for "a MALTESE woman" (identity and casting both
+       broken). Unlike round 2's Italian or Greek, Maltese, Cypriot and Albanian carry no look an engine
+       knows; every `who` line now adds "Southern European in her looks".
+    3. LUMA'S RIGHT PANEL WAS FLECKED ALL OVER (forehead, nose, cheeks) - round 2's smoke fault 1 back on
+       Luma despite LUMA_SKIN_R2. Luma's skin line now ends "not one darker dot or fleck anywhere". To stay
+       under LUMA_CAP, Luma's copy drops two sentences that repeat others in the same brief (the crop
+       paragraph's wall-strip sentence; the amateur line's "the two panels match for colour balance").
+  NOT BRIEF FAULTS (known supplier traits, recorded, not changed): nbp_pro and luma framed the pair with a
+  white border; nbp_pro held one side on both panels but the wrong one (nose to the right); luma's left
+  panel has an orange, patchy cast (a white-balance difference between the panels) and overshoots; flux2
+  mirrored the pair, freckled her and left her undressed; gpt_image carries faint brown flecks on the nose
+  and cheek, equal in both panels; nbp_flash straightened her curls in the right panel.
+"""
+
+# --- change 4: clothes. The garments round 2 did not use, plus new muted, open-necked ones. -------------
+_USED_R2 = {g[0] for pair in GARMENTS_R2.values() for g in pair}
+GARMENT_EXTRA_RD3 = [
+    # phrase                                                  type          depth muted  open   family
+    ("a plum-coloured fine-knit cardigan over a plain top",   "cardigan",     4, True,  True,  "purple"),
+    ("a stone-coloured linen shirt, open at the neck",        "shirt",        2, True,  True,  "neutral"),
+    ("a khaki crew-neck T-shirt",                             "tee",          3, True,  True,  "green"),
+    ("a deep-navy scoop-neck long-sleeved top",               "top",          5, True,  True,  "navy"),
+    ("a mid-grey marl V-neck jumper",                         "jumper",       3, True,  True,  "grey"),
+    ("a petrol-blue boat-neck jumper",                        "jumper",       4, True,  True,  "teal"),
+    ("a dusky-mauve crew-neck sweatshirt",                    "sweatshirt",   3, True,  True,  "purple"),
+    ("a dark-brown corduroy shirt, open at the neck",         "shirt",        4, True,  True,  "brown"),
+]
+# No polo shirt: the f1 negatives kept for f3 say "no polo neck", and a garment the negatives appear to ban
+# is a fight the engine resolves its own way (the first r3 draw put a slate-blue polo shirt on slot i).
+GARMENT_POOL_RD3 = [g for g in GARMENT_POOL if g[0] not in _USED_R2 and g[1] != "polo"] + GARMENT_EXTRA_RD3
+assert not {g[0] for g in GARMENT_POOL_RD3} & _USED_R2, "a round-2 garment is back in the round-3 pool"
+GARMENT_SEED_RD3 = 2026092903
+
+
+def pick_garments_rd3() -> dict:
+    """As pick_garments(), for f3's three tone slots, from the round-3 pool."""
+    rng = random.Random(GARMENT_SEED_RD3)
+    for _ in range(100000):
+        pool = list(GARMENT_POOL_RD3)
+        rng.shuffle(pool)
+        pairs = {k: (pool[2 * i], pool[2 * i + 1]) for i, k in enumerate(SLOT_KEYS_RD3)}
+        if all(_garment_pair_ok(k, *p) for k, p in pairs.items()):
+            return pairs
+    raise AssertionError("no round-3 garment draw satisfies the fairness rules")
+
+
+GARMENTS_RD3 = pick_garments_rd3()
+
+# --- change 5: walls (left white-ish, right pale grey) and viewpoints (right turned a touch less). -------
+WALLS_RD3 = [
+    ("a plain BRIGHT WHITE painted wall", f"in front of her, softly, leaning a little towards {NEAR}"),  # 0 g-L
+    ("a plain PALE ASH-GREY painted wall", "straight in front of her and a little above, softly"),       # 1 g-R
+    ("a plain LINEN-WHITE painted wall", "straight in front of her and a little above, softly"),         # 2 h-L
+    ("a plain PALE PEBBLE-GREY painted wall", f"in front of her, softly, leaning a little towards {FAR}"),  # 3 h-R
+    ("a plain CLEAN WHITE painted wall", f"in front of her, softly, leaning a little towards {NEAR}"),   # 4 i-L
+    ("a plain LIGHT SILVER-GREY painted wall", "straight in front of her and a little above, softly"),   # 5 i-R
+]
+VIEWPOINTS_RD3 = {
+    "g": dict(side=L,
+              a=dict(cam="held at her eye line, a hand's width off to the side",
+                     turn="her face turned about thirty-five degrees towards the left-hand edge of the picture, level",
+                     dist="framed very close", place="her near cheekbone sits centred"),
+              b=dict(cam="held a little above her eye line and angled slightly down",
+                     turn="her face turned about thirty degrees towards the left-hand edge of the picture, level",
+                     dist="framed a touch less close, but still close",
+                     place="her near cheekbone sits a little right of centre")),
+    "h": dict(side=R,
+              a=dict(cam="held a little above her eye line and angled slightly down",
+                     turn="her face turned about forty degrees towards the right-hand edge of the picture, chin level",
+                     dist="framed close", place="her face sits centred and a little high"),
+              b=dict(cam="held at her eye line, a little further off to the side",
+                     turn="her face turned about thirty-five degrees towards the right-hand edge of the picture, chin level",
+                     dist="framed a touch closer", place="her face sits a little left of centre")),
+    "i": dict(side=L,
+              a=dict(cam="held at her cheekbone level, a hand's width from her face",
+                     turn="her face turned about thirty-five degrees towards the left-hand edge of the picture, level",
+                     dist="framed very close", place="the cheekbone sits centred"),
+              b=dict(cam="held just above her cheekbone level and angled slightly down",
+                     turn="her face turned about thirty degrees towards the left-hand edge of the picture, level",
+                     dist="framed a touch closer still", place="the cheekbone sits a little low and right of centre")),
+}
+GAZE_RD3 = {
+    "g": ("her eyes look just past the lens", "her eyes are on the lens"),
+    "h": ("her eyes are on the lens", "her eyes look a little down and away from the lens"),
+    "i": ("her eye looks straight ahead, past the lens", "her eye glances a little towards the lens"),
+}
+
+# --- change 2: age. The trial's volunteers averaged thirty (twenty to forty-four). -----------------------
+# Smoke fault 1 (RD3_SMOKE_LOG): five of six engines aged her to forty-plus. The age is now stated with
+# signs an engine can check in its own output, and round 2's "lines beside her mouth" (a forties sign) is
+# dropped from what must stay the same (NOTHING_ELSE_RD3).
+AGE_RD3 = ("SHE IS IN HER EARLY TO MID THIRTIES, AND SHE LOOKS IT - anyone would put her at thirty to "
+           "thirty-five, never forty. Her face is youthful and full: firm cheeks, a firm jawline, a smooth "
+           "forehead at rest, no lines between her brows and no lines running from her nose to the corners of "
+           "her mouth. The only lines are the faintest fine creases at the outer corners of her eyes. Her skin "
+           "is firm and healthy, the everyday skin of a woman who works indoors and out. She is NOT a girl or a "
+           "woman in her early twenties, and NOT middle-aged: no deep lines, no sagging, no slackness.")
+_MOUTH_LINES = "the fine lines at the corner of her eye and beside her mouth"
+assert BLOCKS_R2["f1-tone"]["nothing_else"].count(_MOUTH_LINES) == 1, "r2 f1 nothing_else changed"
+NOTHING_ELSE_RD3 = BLOCKS_R2["f1-tone"]["nothing_else"].replace(
+    _MOUTH_LINES, "the faint fine creases at the corners of her eyes")
+#: Luma has no age paragraph; its short form of the same signs.
+LUMA_AGE_RD3 = ("An ordinary person, not a model.",
+                "An ordinary person, not a model. Early thirties: a youthful face, no lines from nose to mouth.")
+#: Smoke fault 3: Luma's right panel came back flecked all over (round 2's smoke fault 1, back on Luma).
+LUMA_SKIN_RD3 = (LUMA_SKIN_R2, LUMA_SKIN_R2.replace(
+    "the same colour as the skin around it.",
+    "the same colour as the skin around it; not one darker dot or fleck anywhere."))
+assert LUMA_SKIN_RD3[0] != LUMA_SKIN_RD3[1], "LUMA_SKIN_R2 changed"
+#: Room for the three fixes under LUMA_CAP: in Luma's copy only, the crop paragraph's closing sentence about
+#: the wall strip goes - Luma's paragraph 1c already says "only a narrow strip of plain painted wall at one edge".
+LUMA_CROP_CUTS_RD3 = (" The plain wall shows only as a narrow strip beside the back of her head.",
+                      " The plain wall shows only as a narrow strip beside her head.")
+#: ...and the amateur line's closing clause, which repeats the match already stated in Luma's right-panel rules.
+_LUMA_MATCH_TAIL = ", and the two panels match for colour balance."
+assert LUMA_AMATEUR[1].count(_LUMA_MATCH_TAIL) == 1, "LUMA_AMATEUR changed"
+LUMA_AMATEUR_RD3 = (LUMA_AMATEUR[1], LUMA_AMATEUR[1].replace(_LUMA_MATCH_TAIL, "."))
+_AGE_NEG_R2 = "no woman under thirty, no woman over fifty, no elderly woman"
+assert BLOCKS_R2["f1-tone"]["negatives"].count(_AGE_NEG_R2) == 1, "r2 f1 age negatives changed"
+AGE_NEG_RD3 = ("no teenager, no girl, no woman in her early twenties, no woman over forty, no middle-aged woman, "
+               "no elderly woman")
+
+# --- change 1: the card. Round 2's f1 block with the card, study, label and age replaced. ----------------
+BLOCKS_RD3 = {
+    "f3-tone": dict(
+        BLOCKS_R2["f1-tone"],
+        block="f3", heading="Independent Trial: a Glutathione and Vitamin C Serum Lowered Skin Pigment 10.8%",
+        study="wahab-2021", after_label="After 8 weeks",
+        age=AGE_RD3, nothing_else=NOTHING_ELSE_RD3,
+        negatives=BLOCKS_R2["f1-tone"]["negatives"].replace(_AGE_NEG_R2, AGE_NEG_RD3),
+    ),
+}
+
+# --- change 3: the three women. `before` is round 2's line for the same crop. -----------------------------
+# Smoke fault 2 (RD3_SMOKE_LOG): seedream cast two different East-Asian-looking women for "MALTESE". Unlike
+# "Italian", these nationalities carry no look an engine knows, so each line names the look as well.
+_R2_BEFORE = {w["crop"]: w["before"] for w in WOMEN_R2 if w["block"] == "f1-tone"}
+WOMEN_RD3 = [
+    dict(block="f3-tone", key="g", crop="tone_three_quarter", walls=(0, 1),
+         who=("a MALTESE woman of about thirty-three, Southern European in her looks, with near-black hair in "
+              "loose natural curls, pushed back off her face, light-olive skin with a warm golden undertone and "
+              "a light, even tan, dark brown eyes and full natural dark brows")),
+    dict(block="f3-tone", key="h", crop="tone_face", walls=(2, 3),
+         who=("a CYPRIOT woman of about thirty-five, Southern European in her looks, with long, straight, dark "
+              "chestnut hair pulled up into a high ponytail, light-olive skin with a warm golden undertone and a "
+              "light, even tan, hazel-green eyes and straight natural brows")),
+    dict(block="f3-tone", key="i", crop="tone_cheek", walls=(4, 5),
+         who=("an ALBANIAN woman of about thirty-one, Southern European in her looks, with a short mid-brown "
+              "pixie cut swept to one side, off her face, light-olive skin with a warm golden undertone and a "
+              "light, even tan, light brown eyes and soft natural brows")),
+]
+for _w in WOMEN_RD3:
+    _w["before"] = _R2_BEFORE[_w["crop"]]
+NATIONALITIES_RD3 = ("MALTESE", "CYPRIOT", "ALBANIAN")
+
+
+def build_rd3(w: dict) -> tuple:
+    r3.CROPS, r3.BLOCKS, r3.VIEWPOINTS, r3.GAZE, r3.WALLS = CROPS, BLOCKS_RD3, VIEWPOINTS_RD3, GAZE_RD3, WALLS_RD3
+    r3.LIGHT = LIGHT_TONE_R2
+    r3.SKIN = SKIN_R2
+    prompt = swap(r3.build_prompt(w), swaps_r2(w, True, GARMENTS_RD3), f"r3 {w['key']} prompt")
+    crop_cut = [(s, "") for s in LUMA_CROP_CUTS_RD3 if s in CROPS[w["crop"]]["text"]]
+    luma = swap(r3.build_prompt_luma(w), luma_swaps_r2(w, True, BLOCKS_RD3, GARMENTS_RD3) +
+                [LUMA_AGE_RD3, LUMA_SKIN_RD3, LUMA_AMATEUR_RD3] + crop_cut, f"r3 {w['key']} luma")
+    return prompt, luma
+
+
+def rd3_config() -> dict:
+    slots = []
+    earlier_ids = ([f"{ID_PREFIX_R1}{w['block']}-{w['key']}" for w in WOMEN] +
+                   [f"{ID_PREFIX_R2}{w['block']}-{w['key']}" for w in WOMEN_R2])
+    for w in WOMEN_RD3:
+        b = BLOCKS_RD3[w["block"]]
+        prompt, prompt_luma = build_rd3(w)
+        negative_extra = negative_pair_r2("tone") + ", " + b["negatives"]
+        both = prompt + prompt_luma
+        k = w["key"]
+        # --- every round-1 and round-2 guard still binds
+        assert len(prompt_luma) < r3.LUMA_CAP, f"{k}: luma prompt {len(prompt_luma)} chars"
+        assert not any(ch.isdigit() for ch in both), f"{k}: digit in prompt"
+        bait = r3.caption_bait(both + NEGATIVE_GLOBAL_R2 + negative_extra)
+        assert not bait, f"{k}: caption bait {bait}"
+        assert "window" not in both.lower(), f"{k}: 'window' in prompt"
+        assert "white balance is a little wrong" not in both and "slightly off" not in both, k
+        assert "uneven pigment" not in both and "Pigment is uneven" not in both, k
+        assert not re.search(r"\bsun", both, re.I), f"{k}: 'sun' in prompt"
+        for gone in ("grazes down", "grazes DOWN", "lighter-skinned", "SAME COMPLEXION"):
+            assert gone not in both, f"{k}: wrinkle-pair text survived in a tone brief: {gone!r}"
+        assert "FILIPINO" not in both.upper() and "medium, tan" not in both.lower(), f"{k}: r1 casting survived"
+        assert "light-olive" in w["who"] and "light-olive" in prompt and "light-olive" in prompt_luma, k
+        m = MARK_WORDS.search(both)
+        assert not m, f"{k}: a mark is named in a positive: {m.group(0)!r}"
+        assert "moles disappearing" not in negative_extra and "mole disappearing" not in negative_extra, k
+        assert "hairline, the same ears" in prompt, k
+        assert "COLOUR IS UNBROKEN" in prompt and "unbroken across her cheeks and nose" in prompt_luma, k
+        assert "not pinker or greyer" in prompt_luma, k
+        # --- round 3: casting (new nationalities), age, clothes, card
+        assert sum(n in w["who"] for n in NATIONALITIES_RD3) == 1, f"{k}: nationality"
+        assert not any(n in w["who"].upper() for n in NATIONALITIES), f"{k}: a round-2 nationality is repeated"
+        assert "EARLY TO MID THIRTIES" in prompt and "MID-FORTIES" not in prompt, f"{k}: age"
+        # --- r3 smoke fixes (RD3_SMOKE_LOG)
+        assert "beside her mouth" not in prompt and "no lines from nose to mouth" in prompt_luma, f"{k}: age signs"
+        assert "Southern European" in prompt and "Southern European" in prompt_luma, f"{k}: casting anchor"
+        assert "not one darker dot or fleck anywhere" in prompt_luma, f"{k}: luma fleck line"
+        assert "The two panels match exactly for light, exposure and white balance" in prompt_luma, k
+        assert "no woman under thirty" not in negative_extra and "no woman over forty" in negative_extra, k
+        left, right = GARMENTS_RD3[k]
+        assert left[0] in prompt and right[0] in prompt, f"{k}: garment missing from prompt"
+        assert left[0] in prompt_luma and right[0] in prompt_luma, f"{k}: garment missing from luma"
+        assert _garment_pair_ok(k, left, right), k
+        assert right[2] >= left[2] and right[2] >= 2 and left[3] and right[3] and left[4] and right[4], \
+            f"{k}: f3 clothing unfair"
+        assert left[0] not in _USED_R2 and right[0] not in _USED_R2, f"{k}: a round-2 garment is repeated"
+        slots.append({
+            "id": f"{ID_PREFIX_RD3}{w['block']}-{k}",
+            "title": (f"{b['block']} {w['block'].split('-', 1)[1]} · {b['study']} · {CROPS[w['crop']]['label']} — "
+                      f"{re.sub(r'^an? ', '', w['who'].split(',')[0])}"),
+            "class": "B", "width": r3.SIZE, "height": r3.SIZE,
+            "target_slot": f"{b['page']} key_findings_ba {b['block']} ({b['heading']})",
+            "generated_from": (f"r3 smoke brief - {SMOKE_BRIEF_RD3} (not re-run)"
+                               if k in SMOKE_SLOTS_RD3 and SMOKE_BRIEF_RD3 else "r3"),
+            "garments": {"left": left[0], "right": right[0]},
+            "ref_files": [], "prompt": prompt, "prompt_luma": prompt_luma,
+            "label": {"left": "Before", "right": b["after_label"], "figure": "",
+                      "measure": "(labels are theme settings, never pixels)", "cite": b["study"]},
+            "negative_extra": negative_extra,
+        })
+    ids = [s["id"] for s in slots]
+    assert not any(a != c and c.startswith(a) for a in ids for c in ids), "an r3 slot id prefixes another"
+    assert not any(a.startswith(c) or c.startswith(a) for a in ids for c in earlier_ids), "r3 ids collide"
+    garments = [g[0] for p in GARMENTS_RD3.values() for g in p]
+    assert len(set(garments)) == len(garments) == 6, "a garment is used twice"
+    assert all(s["label"]["right"] == "After 8 weeks" for s in slots)
+
+    return {
+        "wave": WAVE_RD3, "created": "2026-09-29", "round": "r3",
+        "doc": ("docs/claims/glutathione.md §8.1 (Wahab 2021) and §8.5 (the f1 tone-pair rules, applied to f3), "
+                "docs/clinical-trial-before-after-images.md, .claude/rules/website-imagery.md; built by "
+                "scripts/build-glutathione-cards-before-after-config.py (round 3) on round 2's tone-pair machinery"),
+        "note": ("GLUTATHIONE SCIENCE PAGE, FINDINGS CARD f3, ROUND 3 (Wahab et al. 2021, the independent trial: a "
+                 "serum with 2% glutathione and vitamin C on one cheek and a placebo serum on the other, twice a "
+                 "day for 8 weeks, SPF each morning; melanin index -10.8% on the serum side against +1.8% on "
+                 "placebo, lightness improved). Slots g-i: a MODEST, even brightening of the cheekbone - plainly "
+                 "the same woman and skin tone, never lighter than the skin under her jaw; no change in evenness, "
+                 "spots, redness, pores, texture or lines; tone-pair light (soft, broad, frontal; exposure and "
+                 "white balance matched). MALCOLM, 2026-09-29: 'New wave, all suppliers'. Casting as round 2 "
+                 "(Caucasian, light-olive Mediterranean-type skin with a light tan) but early-to-mid thirties, as "
+                 "the trial's volunteers averaged 30; new women (Maltese, Cypriot, Albanian); no moles, warts, "
+                 "skin tags or beauty marks; two different garments per slot, none from round 2 (right-panel top "
+                 "never lighter, never white, muted, open at the neck). Label: 'After 8 weeks' (theme setting). "
+                 "CANDIDATES ONLY; Malcolm picks. Smoke test: slot g on all six suppliers first."),
+        "target_templates": [TEMPLATE],
+        "labels_are_composited": "NOT composited. Labels are text settings on the theme section.",
+        "defaults": {"candidates": 1, "negative_global": NEGATIVE_GLOBAL_R2, "negative_class_b": ""},
+        "slots": slots,
+    }
+
+
 PRETTIER = ROOT / "node_modules" / ".bin" / "prettier"
 
 
@@ -1249,20 +1600,35 @@ def check_r1() -> None:
         print(f"r1 check: {OUT.relative_to(ROOT)} reproduced as parsed JSON (Prettier unavailable, bytes unchecked)")
 
 
+def check_r2() -> None:
+    """Round 2 must still come out of this file exactly as committed (31e99c2). Writes nothing."""
+    text, pretty = render(r2_config(), OUT_R2)
+    committed = OUT_R2.read_text()
+    if pretty:
+        assert text == committed, f"{OUT_R2.name} is no longer reproduced byte for byte - an r3 edit leaked into r2"
+        print(f"r2 check: {OUT_R2.relative_to(ROOT)} reproduced byte for byte (after Prettier)")
+    else:
+        assert json.loads(text) == json.loads(committed), f"{OUT_R2.name} is no longer reproduced"
+        print(f"r2 check: {OUT_R2.relative_to(ROOT)} reproduced as parsed JSON (Prettier unavailable, bytes unchecked)")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--round", choices=("r1", "r2"), default="r2",
-                    help="r2 (default) writes the round-2 config; r1 only proves round 1 is reproduced")
+    ap.add_argument("--round", choices=("r1", "r2", "r3"), default="r3",
+                    help="r3 (default) writes the round-3 config; r1 and r2 only prove the committed rounds")
     args = ap.parse_args()
     check_r1()
     if args.round == "r1":
         return
-    cfg = r2_config()
-    text, _ = render(cfg, OUT_R2)
-    OUT_R2.write_text(text)
-    print(f"wrote {OUT_R2.relative_to(ROOT)} — {len(cfg['slots'])} slots")
+    check_r2()
+    if args.round == "r2":
+        return
+    cfg = rd3_config()
+    text, _ = render(cfg, OUT_RD3)
+    OUT_RD3.write_text(text)
+    print(f"wrote {OUT_RD3.relative_to(ROOT)} — {len(cfg['slots'])} slots")
     for s in cfg["slots"]:
-        print(f"  {s['id']:<26} prompt {len(s['prompt']):>5}  luma {len(s['prompt_luma']):>5}   "
+        print(f"  {s['id']:<24} prompt {len(s['prompt']):>5}  luma {len(s['prompt_luma']):>5}   "
               f"L: {s['garments']['left']}  |  R: {s['garments']['right']}")
 
 
