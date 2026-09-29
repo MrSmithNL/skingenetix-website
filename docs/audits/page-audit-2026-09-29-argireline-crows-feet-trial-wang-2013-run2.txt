@@ -1,0 +1,167 @@
+
+
+
+  gate ✓ Answers 200 OK — HTTP 200
+  gate ✓ Is an HTML document — text/html; charset=utf-8
+  gate ✓ Not noindexed
+  gate ✓ Canonical names this page — canonical names this URL (https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013)
+  gate ✓ robots.txt allows Googlebot
+  gate ? hreflang alternates link back — 7 alternates declared; reciprocity not checked
+  kind: evidence · keyword: argireline crow's feet · keyword map: 21 pages · SERP: read
+  judges: claude-sonnet-5-5, gpt-6-sol, gemini-3.8-flash, perplexity/sonar
+======================================================================
+SEO / GEO / AISO PAGE AUDIT — criteria v2
+URL: https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013
+Page kind: evidence · target keyword: “argireline crow's feet”
+Judges: claude-sonnet-5-5→claude-sonnet-5-5, gpt-6-sol→gpt-6-sol, gemini-3.8-flash→gemini-3.8-flash, perplexity/sonar→perplexity/sonar · 3 blind samples each · 132 calls
+Gates:    5 passed · 0 failed · 1 not checked (hreflang_reciprocal)
+Score:    8.99/10  (uncapped 8.99; geometric across query_fit 10.0, content 8.15, trust 10.0, structured_data 10.0, ai_eligibility 10.0, site_strategy 7.5, technical 10.0, vertical_health 7.5)
+Coverage: 38 of 51 applicable criteria assessed (13 not assessable here; 2 not applicable to a evidence page)
+Scoring: f012-gate-score-floor/1+criteria-v2.3.0 · cost $0.78 · 204s
+======================================================================
+
+CONFIRMED FAILURES — fix these (agreed by the panel, or failed a code check)
+  [CONFIRMED_FAIL] C7 Clear structure — 1 met / 2 unmet
+      · [claude-sonnet-5-5] The page repeats headings ("What the researchers did", "Reference") and has several empty sections, including "What the measurements showed" and "Common questions about this trial". A second heading set duplicates the first, so navigation is confusing.
+      · [claude-sonnet-5-5] ## What the measurements showed
+
+## What the researchers did
+      · [gemini-3.8-flash] The page includes empty heading sections and duplicated headings where the title fails to describe the section (such as an empty section followed by an orphaned image).
+      · [gemini-3.8-flash] ## What the measurements showed
+
+## What the researchers did
+
+![A laboratory microscope with a glass petri dish on its stage and a beaker of blue solution alongside, on a dark graphite bench]
+      · [perplexity/sonar] The page has useful headings, but the later section sequence includes several empty sections and repeated headings, leaving the structure confusing and incomplete.
+      · [perplexity/sonar] ## What the measurements showed
+
+## What the researchers did
+
+![A laboratory microscope ...]
+
+## How to read this result
+
+![A research scientist ...]
+
+## Where this trial sits in the evidence
+
+## Common questions about this trial
+  [CONFIRMED_FAIL] C10 Produced with care — 0 met / 4 unmet
+      · [claude-sonnet-5-5] Headings and the reference passage are duplicated (“What the researchers did” and “Reference” each appear twice, with the citation repeated). Several headings sit empty, so the page reads as broken and repeated.
+      · [claude-sonnet-5-5] ## What the researchers did
+      · [gpt-6-sol] The Reference section and its citation appear twice, and “What the researchers did” is also repeated.
+      · [gpt-6-sol] ## Reference
+
+Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study.
+      · [gemini-3.8-flash] The reference citation block and trademark disclaimer are duplicated in full at the bottom of the page, alongside duplicated headings and empty sections.
+      · [gemini-3.8-flash] Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. American Journal of Clinical Dermatology. 2013;14(2):147–153.
+      · [perplexity/sonar] The substantive section is repeated later as a heading, and the reference passage is duplicated. This fails the no-duplicated-content requirement.
+      · [perplexity/sonar] ## What the researchers did
+
+Sixty adults with crow's feet were randomly assigned, three to one, to an emulsion containing 10% Argireline or to the same emulsion without it.
+  [CONFIRMED_FAIL] V1 Safety information present — 1 met / 3 unmet
+      · [claude-sonnet-5-5] The page reports only that the trial saw no side effects. It gives no contraindications, interactions, or advice on when to see a professional, and no guidance on irritation or patch testing. A reader could act on it without knowing the relevant risks.
+      · [claude-sonnet-5-5] Side effects: none reported, and no one dropped out
+      · [gpt-6-sol] The trial reported no side effects, but the page gives no practical guidance on potential reactions or when to seek professional advice before using the cosmetic product.
+      · [gpt-6-sol] Side effects: none reported, and no one dropped out
+      · [perplexity/sonar] The page reports trial side effects but gives no relevant contraindications, interactions, or guidance on when to seek professional advice.
+      · [perplexity/sonar] Side effects: none reported, and no one dropped out
+  [FAIL        ] P3 Linked into its cluster — no link across to a sibling page
+
+CONTESTED — the panel disagreed; unstable, do not fix on this evidence
+  none
+
+GOOGLE FOR “argireline crow's feet” — top results, and what searchers ask next
+  1. Reduce the Appearance of Crow's Feet — theordinary.com
+  2. Say Goodbye to Crow's Feet with 20% Argireline Serum — skindeva.com
+  3. Dermatologists Share the Best Crow's Feet Remedies for ... — www.yahoo.com
+  4. Investigating the effects of Argireline in a skin serum ... - PMC — pmc.ncbi.nlm.nih.gov
+  5. Can I use Argireline for crow's feet? 👀✨ #shorts — www.youtube.com
+  6. Argireline Solution 10%, Serum Good for Reducing the ... — www.amazon.com
+  7. Argireline is a peptide that may block neutrotransmitter release ... — www.instagram.com
+  8. Double-blind, Randomized Trial on the Effectiveness ... — jcadonline.com
+  ? Can Argireline reverse existing wrinkles?
+  ? What is the best serum for crow's feet?
+  ? Can Argireline cause sagging skin?
+  ? What to avoid with Argireline?
+
+AGENCY STANDARD (Rule 27 Checks A/D) — reported, not in the search score
+  [MET         ] X1 One clear primary action, with proof beside it — 4 met / 0 unmet
+
+ALL ASSESSED CRITERIA (search score)
+ query_fit
+  [MET         ] Q1 Achieves its purpose — 4 met / 0 unmet
+  [PASS        ] Q2 Target keyword in the title, once — keyword in the title, once
+  [MET         ] Q3 Serves the keyword's intent — 4 met / 0 unmet
+  [MET         ] Q4 Covers the query's real sub-questions in one page — 4 met / 0 unmet
+  [PASS        ] Q5 No keyword stuffing — “argireline crow's feet” 0× in 982 words
+  [MET         ] Q6 Title and H1 match the content — 4 met / 0 unmet
+  [MET         ] Q7 Page-specific meta description — 4 met / 0 unmet
+ content
+  [MET         ] C1 Effort and originality — 4 met / 0 unmet
+  [MET         ] C2 Facts correct and consistent with expert consensus — 4 met / 0 unmet
+  [MET         ] C3 Complete for its purpose — 4 met / 0 unmet
+  [MET         ] C4 Internally consistent — 4 met / 0 unmet
+  [MET         ] C5 Specific, sourced evidence — 4 met / 0 unmet
+  [CONFIRMED_FAIL] C7 Clear structure — 1 met / 2 unmet
+  [MET         ] C9 Claims proportionate to the evidence — 4 met / 0 unmet
+  [CONFIRMED_FAIL] C10 Produced with care — 0 met / 4 unmet
+  [NOT_APPLICABLE] C11 Comparisons and reviews show their evidence and method — 0 met / 0 unmet / 4 n/a
+  [MET         ] C12 No harmfully misleading information — 4 met / 0 unmet
+ trust
+  [MET         ] R1 Responsible entity identified — 4 met / 0 unmet
+  [MET         ] R2 Byline where a reader expects one — 4 met / 0 unmet
+  [MET         ] R3 Credentials truthful — 4 met / 0 unmet
+  [PASS        ] R4 Citations resolve to what they claim — 3 verified, 0 not comparable (check by hand), 0 unreachable
+  [MET         ] R5 Commercial interest disclosed — 3 met / 0 unmet
+  [MET         ] R7 Visible, accurate date — 4 met / 0 unmet
+  [NOT_APPLICABLE] R8 Reviews genuine and shown — 0 met / 0 unmet / 4 n/a
+ structured_data
+  [PASS        ] S1 Markup matches visible content — marked-up headline/name appear on the page
+  [NOT_ASSESSED] S2 Valid for types that have rules — check not built yet
+  [PASS        ] S3 The type that fits the page — Article present
+  [NA          ] S4 Time-sensitive markup current — no time-sensitive markup
+ ai_eligibility
+  [PASS        ] A1 Snippet-eligible for AI features — no snippet restriction
+  [PASS        ] A2 AI search crawlers allowed — OAI-SearchBot, PerplexityBot, Claude-SearchBot allowed
+  [PASS        ] A3 Main content in the server HTML — main content present in the server HTML
+  [MET         ] A4 Key facts stated in self-contained sentences — 4 met / 0 unmet
+ site_strategy
+  [PASS        ] P1 Keyword owned by one page — “argireline crow's feet” is owned by this page alone
+  [PASS        ] P2 No second own URL competing — no own page in the top 10 (no collision)
+  [FAIL        ] P3 Linked into its cluster — no link across to a sibling page
+  [MET         ] P4 Descriptive internal anchors — 4 met / 0 unmet
+  [NOT_ASSESSED] P5 Distinct from its siblings — check not built yet
+ technical
+  [PASS        ] T2 HTTPS without mixed content — HTTPS, no mixed content
+  [NOT_ASSESSED] T4 Reachable in the site graph — check not built yet
+  [PASS        ] T5 Title, H1 and lang hygiene — one title, one H1, lang set
+  [MET         ] T6 Descriptive image alt text — 3 met / 0 unmet
+  [NOT_ASSESSED] T7 No broken links or resources — check not built yet
+ vertical_health
+  [CONFIRMED_FAIL] V1 Safety information present — 1 met / 3 unmet
+  [MET         ] V3 Study design disclosed on evidence pages — 3 met / 0 unmet
+  [MET         ] V4 No outcome promises — 4 met / 0 unmet
+
+NOT ASSESSED HERE (reported, never scored as pass or zero)
+  C6 Main content prominent and unobstructed — needs a rendered page
+  C8 Not copied, not machine boilerplate — needs a web search
+  R9 Independent reputation — needs a web search
+  S5 Markup survives rendering — needs a rendered page
+  O1 Earned links to this URL — needs backlink data (F-012 S4)
+  O2 Natural anchor profile — needs backlink data (F-012 S4)
+  T1 Core Web Vitals (field) — needs field data (Chrome UX Report)
+  T3 Works on a phone — needs a rendered page
+  X3 Accessible basics — needs a rendered page
+  S2 Valid for types that have rules — check not built yet
+  P5 Distinct from its siblings — check not built yet
+  T4 Reachable in the site graph — check not built yet
+  T7 No broken links or resources — check not built yet
+
+NOT SCORED — no verified source yet
+  V2 No medicinal claim on a cosmetic product — no verified source yet (to verify)
+  V5 Regulatory status stated and true — no verified source yet (to verify)
+
+  report: /Users/malcolmsmith/Claude Code/Projects/seo-toolkit/docs/audits/pages/argireline-crows-feet-trial-wang-2013-2026-09-29-v2.md
+  json:   /private/tmp/claude-501/-Users-malcolmsmith-Claude-Code-Projects-seo-toolkit/15d7fe7a-9f76-4c7c-be3b-3b84fa2934ec/scratchpad/sk2-argireline-crows-feet-trial-wang-2013.json
+  score 8.99 · confirmed failures 4 · contested 0 · cost $0.78
