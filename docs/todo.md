@@ -498,6 +498,34 @@ AI-generated illustrations and must not be presented as results. Record:
   ADR-2026-09-29-C, not yet done). 🛑 Main banner pick (sheets on Malcolm's Desktop). ⏳ Rebuild Wang and Ye on the new layout (they still
   show pilot content, no breadcrumb). 🛑 Ask Malcolm: three excerpts (the SEO descriptions) end "…and what it does not" — reword
   under the positive-results rule? (translated live text, so not changed unasked).
+  🔄 **List page redesign (Malcolm, 2026-09-29): title on the photo, ingredient labels that filter the list, study search, no model
+  images on the cards.** Built on a hidden preview, `/blogs/clinical-studies?view=clinical-studies-preview`, by
+  `scripts/build-clinical-studies-blog.py --preview` (`3246b4e`, `7369619`). What the preview shows:
+  - The photo band carries the title, the intro and a search form scoped to the studies. main-blog's `<h1>` is hidden visually only, so
+    the page keeps one H1.
+  - An ingredient label row (Custom Liquid) built from the live articles' tags. Stock `show_tags` flickers on this store:
+    `blog.all_tags` was empty on 12 of 18 loads.
+  - Design critic cycle 1 gave FIX 5.71 (`docs/audits/2026-09-29-clinical-studies-blog-list-critique.md`); every page-level finding is
+    fixed on the preview.
+  - Verify-live passes in all six languages. Measured contrast at 390px is at least 4.56:1.
+  - ⏳ **Go-live, needs Malcolm's OK:**
+    1. `--apply`: the tag Copper peptide → GHK-Cu (article tags cannot be translated), each article body carries its study's text for
+       search (the body is never rendered), and the new card images.
+    2. `hub-upgrade.py configs/hub-upgrades/clinical-studies-blog.json --apply`.
+    3. `--verify-live`.
+    4. Delete the preview template.
+  - 🛑 **Card images, Malcolm picks:** 2,125 unused science images from earlier runs are on 14 Desktop sheets,
+    `skingenetix-study-images-{ARG,CU,PDRN,GEN}-n.png`. Refs such as "CU-037 flux2" resolve through the scratchpad
+    `unused-images/picks-index.json`. The pool's evidence is in `manifest.json` / `used.json` next to it (115 matched live images
+    excluded by pixel match).
+  - 🛑 **For Malcolm:**
+    - label pages (`/tagged/<ingredient>`) are indexable, with the list's title and one or two posts each;
+    - the "How we grade the evidence" band explains grades that no card shows (critic F6);
+    - Raikou and Badenhorst are still English on five locales (critic F4, the ⏳ above).
+  - Theme-level, not charged to this page:
+    - words break at 200% zoom;
+    - card titles are `<p>`, not headings;
+    - the search no-results page is a dead end.
 - ⏳ **CLINICAL STUDIES section** (ADR-2026-09-29-C; `docs/decision-research-section-navigation-2026-09-29.md`). Malcolm asked where the
   research is in the navigation: nowhere. Approved: `/pages/clinical-studies`, one "All clinical studies" line in the Science menu, a footer
   link, a band on the-science, breadcrumbs on study pages; built now, unpublished; **nothing linked until translated**.
