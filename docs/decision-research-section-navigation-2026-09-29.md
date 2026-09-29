@@ -4,6 +4,8 @@
 there should be an articles or research section right? … design the best solution based on what the SEO, GEO and AISO strategy
 and research says". **Status:** analysed and designed; **nothing changed on the live site**. Each numbered design element in §4
 needs its own go-ahead (navigation changes are site-wide).
+**Approved 2026-09-29 (ADR-2026-09-29-C):** the name "Clinical studies", the placement (Science menu line, footer, the-science), the
+study-page breadcrumb, and building now in English, unpublished, with nothing linked until translated.
 
 ---
 

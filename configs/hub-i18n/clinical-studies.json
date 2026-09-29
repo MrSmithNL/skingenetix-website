@@ -1,0 +1,107 @@
+{
+  "_about": "The page's own words for /pages/clinical-studies (ADR-2026-09-29-C), six languages. The evidence tables themselves are copied from the five live hubs, with their existing translations, by scripts/build-clinical-studies.py. Menu label 'Science' matches the live translated menu label in each locale (Wissenschaft, Wetenschap, Science, Ciencia, Scienza). Ingredient names stay in English in every locale, as on the menu tiles. {n} = number of studies.",
+  "science": {
+    "en": "Science",
+    "de": "Wissenschaft",
+    "nl": "Wetenschap",
+    "fr": "Science",
+    "es": "Ciencia",
+    "it": "Scienza"
+  },
+  "title": {
+    "en": "Clinical studies",
+    "de": "Klinische Studien",
+    "nl": "Klinische studies",
+    "fr": "Études cliniques",
+    "es": "Estudios clínicos",
+    "it": "Studi clinici"
+  },
+  "deck": {
+    "en": "Every study behind the five ingredients we use: graded, summarised and linked to the source.",
+    "de": "Jede Studie hinter den fünf Wirkstoffen, die wir verwenden: bewertet, zusammengefasst und mit der Quelle verlinkt.",
+    "nl": "Elke studie achter de vijf ingrediënten die we gebruiken: beoordeeld, samengevat en gekoppeld aan de bron.",
+    "fr": "Chaque étude derrière les cinq ingrédients que nous utilisons : évaluée, résumée et reliée à sa source.",
+    "es": "Cada estudio detrás de los cinco ingredientes que utilizamos: evaluado, resumido y enlazado a su fuente.",
+    "it": "Ogni studio dietro i cinque ingredienti che utilizziamo: valutato, riassunto e collegato alla fonte."
+  },
+  "answer": {
+    "en": "Skingenetix bases every claim on published research. This page lists the {n} studies behind our five ingredients: human trials, laboratory work and independent reviews. Each one is graded for strength, with what it found and a link to the paper. Where a trial carries a claim, we have read it in full and written up what it shows.",
+    "de": "Skingenetix stützt jede Aussage auf veröffentlichte Forschung. Diese Seite listet die {n} Studien hinter unseren fünf Wirkstoffen auf: Studien am Menschen, Laborarbeiten und unabhängige Übersichtsarbeiten. Jede ist nach ihrer Aussagekraft bewertet, mit ihrem Ergebnis und einem Link zur Veröffentlichung. Wo eine Studie eine Aussage trägt, haben wir sie vollständig gelesen und beschrieben, was sie zeigt.",
+    "nl": "Skingenetix baseert elke claim op gepubliceerd onderzoek. Deze pagina toont de {n} studies achter onze vijf ingrediënten: studies bij mensen, laboratoriumonderzoek en onafhankelijke overzichtsartikelen. Elke studie is beoordeeld op bewijskracht, met wat ze vond en een link naar de publicatie. Waar een studie een claim draagt, hebben we haar volledig gelezen en beschreven wat ze laat zien.",
+    "fr": "Skingenetix fonde chaque affirmation sur la recherche publiée. Cette page présente les {n} études derrière nos cinq ingrédients : essais chez l'humain, travaux de laboratoire et revues indépendantes. Chacune est évaluée selon la solidité de ses preuves, avec ce qu'elle a montré et un lien vers la publication. Lorsqu'un essai porte une affirmation, nous l'avons lu en entier et décrit ce qu'il montre.",
+    "es": "Skingenetix basa cada afirmación en investigación publicada. Esta página reúne los {n} estudios detrás de nuestros cinco ingredientes: ensayos en personas, trabajos de laboratorio y revisiones independientes. Cada uno está evaluado según la solidez de su evidencia, con lo que encontró y un enlace a la publicación. Cuando un ensayo respalda una afirmación, lo hemos leído completo y explicado lo que muestra.",
+    "it": "Skingenetix basa ogni affermazione sulla ricerca pubblicata. Questa pagina raccoglie i {n} studi dietro i nostri cinque ingredienti: studi sull'uomo, lavori di laboratorio e revisioni indipendenti. Ognuno è valutato per la solidità delle prove, con ciò che ha rilevato e un link alla pubblicazione. Quando uno studio sostiene un'affermazione, lo abbiamo letto per intero e descritto ciò che mostra."
+  },
+  "grading": {
+    "en": "<strong>How we grade.</strong> <strong>A</strong>: a controlled human trial measured by instrument. <strong>B</strong>: a smaller, uncontrolled or manufacturer study. <strong>C</strong>: tests on skin samples. <strong>D</strong>: cells or animals. <strong>Review</strong>: a summary of other work.",
+    "de": "<strong>So bewerten wir.</strong> <strong>A</strong>: eine kontrollierte Studie am Menschen, mit Geräten gemessen. <strong>B</strong>: eine kleinere, unkontrollierte oder Herstellerstudie. <strong>C</strong>: Tests an Hautproben. <strong>D</strong>: Zellen oder Tiere. <strong>Review</strong>: eine Zusammenfassung anderer Arbeiten.",
+    "nl": "<strong>Zo beoordelen we.</strong> <strong>A</strong>: een gecontroleerde studie bij mensen, met instrumenten gemeten. <strong>B</strong>: een kleinere, ongecontroleerde of fabrikantenstudie. <strong>C</strong>: tests op huidmonsters. <strong>D</strong>: cellen of dieren. <strong>Review</strong>: een samenvatting van ander onderzoek.",
+    "fr": "<strong>Notre notation.</strong> <strong>A</strong> : un essai contrôlé chez l'humain, mesuré par instrument. <strong>B</strong> : une étude plus petite, non contrôlée ou du fabricant. <strong>C</strong> : des tests sur échantillons de peau. <strong>D</strong> : cellules ou animaux. <strong>Review</strong> : une synthèse d'autres travaux.",
+    "es": "<strong>Cómo evaluamos.</strong> <strong>A</strong>: un ensayo controlado en personas, medido con instrumentos. <strong>B</strong>: un estudio más pequeño, no controlado o del fabricante. <strong>C</strong>: pruebas en muestras de piel. <strong>D</strong>: células o animales. <strong>Review</strong>: un resumen de otros trabajos.",
+    "it": "<strong>Come valutiamo.</strong> <strong>A</strong>: uno studio controllato sull'uomo, misurato con strumenti. <strong>B</strong>: uno studio più piccolo, non controllato o del produttore. <strong>C</strong>: test su campioni di pelle. <strong>D</strong>: cellule o animali. <strong>Review</strong>: una sintesi di altri lavori."
+  },
+  "by_ingredient": {
+    "en": "By ingredient:",
+    "de": "Nach Wirkstoff:",
+    "nl": "Per ingrediënt:",
+    "fr": "Par ingrédient :",
+    "es": "Por ingrediente:",
+    "it": "Per ingrediente:"
+  },
+  "section_title": {
+    "en": "{x} studies",
+    "de": "{x}: Studien",
+    "nl": "{x}: studies",
+    "fr": "Études sur {x}",
+    "es": "Estudios sobre {x}",
+    "it": "Studi su {x}"
+  },
+  "section_lead": {
+    "en": "{n} studies, graded. What it is and what the evidence shows is explained on the {link} research page.",
+    "de": "{n} Studien, bewertet. Was es ist und was die Belege zeigen, erklärt die Forschungsseite zu {link}.",
+    "nl": "{n} studies, beoordeeld. Wat het is en wat het bewijs laat zien, staat op de onderzoekspagina over {link}.",
+    "fr": "{n} études, évaluées. Ce que c'est et ce que montrent les preuves est expliqué sur la page de recherche consacrée à {link}.",
+    "es": "{n} estudios, evaluados. Qué es y qué muestra la evidencia se explica en la página de investigación sobre {link}.",
+    "it": "{n} studi, valutati. Che cos'è e che cosa mostrano le prove è spiegato nella pagina di ricerca su {link}."
+  },
+  "appraisal": {
+    "en": "Read our appraisal →",
+    "de": "Unsere Bewertung lesen →",
+    "nl": "Lees onze beoordeling →",
+    "fr": "Lire notre analyse →",
+    "es": "Leer nuestro análisis →",
+    "it": "Leggi la nostra analisi →"
+  },
+  "closing_title": {
+    "en": "How we read the research",
+    "de": "Wie wir die Forschung lesen",
+    "nl": "Hoe we het onderzoek lezen",
+    "fr": "Comment nous lisons la recherche",
+    "es": "Cómo leemos la investigación",
+    "it": "Come leggiamo la ricerca"
+  },
+  "closing": {
+    "en": "Every figure on our pages was checked against its original source. How we choose and grade the evidence, and what each ingredient does, is set out on our {science_link} page.",
+    "de": "Jede Zahl auf unseren Seiten wurde anhand ihrer Originalquelle geprüft. Wie wir die Belege auswählen und bewerten und was jeder Wirkstoff bewirkt, erklärt unsere Seite {science_link}.",
+    "nl": "Elk cijfer op onze pagina's is gecontroleerd aan de hand van de oorspronkelijke bron. Hoe we het bewijs kiezen en beoordelen, en wat elk ingrediënt doet, staat op onze pagina {science_link}.",
+    "fr": "Chaque chiffre de nos pages a été vérifié à sa source d'origine. La façon dont nous choisissons et évaluons les preuves, et ce que fait chaque ingrédient, sont expliqués sur notre page {science_link}.",
+    "es": "Cada cifra de nuestras páginas se ha comprobado con su fuente original. Cómo elegimos y evaluamos la evidencia, y qué hace cada ingrediente, se explica en nuestra página {science_link}.",
+    "it": "Ogni dato delle nostre pagine è stato verificato sulla fonte originale. Come scegliamo e valutiamo le prove, e che cosa fa ogni ingrediente, è spiegato nella nostra pagina {science_link}."
+  },
+  "seo_title": {
+    "en": "Clinical Studies Behind Our Ingredients | Skingenetix",
+    "de": "Klinische Studien zu unseren Wirkstoffen | Skingenetix",
+    "nl": "Klinische studies achter onze ingrediënten | Skingenetix",
+    "fr": "Études cliniques sur nos ingrédients | Skingenetix",
+    "es": "Estudios clínicos de nuestros ingredientes | Skingenetix",
+    "it": "Studi clinici sui nostri ingredienti | Skingenetix"
+  },
+  "seo_description": {
+    "en": "The {n} studies behind PDRN, Argireline, copper peptide, Matrixyl 3000 and glutathione: graded for strength, with what each found and a link to the paper.",
+    "de": "Die {n} Studien zu PDRN, Argireline, Kupferpeptid, Matrixyl 3000 und Glutathion: nach Aussagekraft bewertet, mit Ergebnis und Link zur Veröffentlichung.",
+    "nl": "De {n} studies achter PDRN, Argireline, koperpeptide, Matrixyl 3000 en glutathion: beoordeeld op bewijskracht, met resultaat en link naar de publicatie.",
+    "fr": "Les {n} études sur le PDRN, l'Argireline, le peptide de cuivre, le Matrixyl 3000 et le glutathion : évaluées, avec leurs résultats et un lien vers l'article.",
+    "es": "Los {n} estudios sobre PDRN, Argireline, péptido de cobre, Matrixyl 3000 y glutatión: evaluados, con sus resultados y un enlace a la publicación.",
+    "it": "I {n} studi su PDRN, Argireline, peptide di rame, Matrixyl 3000 e glutatione: valutati per solidità, con i risultati e un link alla pubblicazione."
+  }
+}

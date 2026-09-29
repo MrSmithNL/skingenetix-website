@@ -170,7 +170,8 @@ def build(spec, j):
         if add["id"] in j["order"]:
             j["order"].remove(add["id"])
         j["sections"][add["id"]] = sec
-        j["order"].insert(j["order"].index(add["after"]) + 1, add["id"])
+        # "after": null puts the section first, so a generated spec re-applies once its placeholder is gone
+        j["order"].insert(j["order"].index(add["after"]) + 1 if add.get("after") else 0, add["id"])
     for ins in spec.get("insert_sections", []):
         check_values(ins["id"], ins["values"])
         if ins["id"] in j["sections"]:
@@ -189,7 +190,8 @@ def build(spec, j):
     for sid, rules in spec.get("section_css", {}).items():
         # a stock section's own Custom CSS: a top-level list beside `settings` (inside it, Shopify ignores it),
         # at most 500 characters and no `content:` (both refused on upload, tested live 2026-09-25)
-        if sum(len(r) for r in rules) > 500 or any("content:" in r for r in rules):
+        # the `content` property only — "justify-content:" / "align-content:" are legal (false positive, 2026-09-29)
+        if sum(len(r) for r in rules) > 500 or any(re.search(r"(?<![\w-])content\s*:", r) for r in rules):
             sys.exit(f"  ✗ section_css {sid}: over 500 characters or uses content:, which Shopify refuses")
         j["sections"][sid]["custom_css"] = list(rules)
     host = spec.get("jsonld_host", "references")

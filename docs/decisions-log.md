@@ -357,3 +357,24 @@ sells the ingredient; the reframe makes them read as how-to-read facts. Decision
 page states the result as "small but significant from week 8" and nothing stronger.
 **Supersedes:** `docs/study-page-template.md` §3 "Nulls and non-significant results appear in band 5" and the research doc's "null results qualify
 on the same terms" (§3.3 criterion 5).
+
+## ADR-2026-09-29-C: A "Clinical studies" section under Science
+
+**Date:** 2026-09-29
+**Status:** Accepted. Malcolm asked where the research articles are in the navigation; the audit found none. He approved all four
+elements of the design in `docs/decision-research-section-navigation-2026-09-29.md`.
+**Decision:**
+
+1. **Name:** "Clinical studies": page `/pages/clinical-studies`, menu line "All clinical studies". This replaces the planned
+   `/pages/evidence-library`.
+2. **Placement:** one line under the five tiles in the existing Science mega-menu (and the sixth line in the phone drawer), a
+   footer link in Explore, and a band on `/pages/the-science`. No new top-level item and no split.
+3. **Study pages:** the banner label "Clinical Study · YYYY" becomes a breadcrumb, _Science › Clinical studies › [ingredient]_,
+   with a four-level BreadcrumbList.
+4. **Timing:** the page is built now in English, unpublished, in parallel with the Raikou prototype work. **Nothing is linked**
+   (menu, footer, the-science, breadcrumbs, hub and homepage links) until the index and the study pages are translated; then it
+   all goes live together in six languages.
+
+**Scope of the page:** the rows are the five hubs' Evidence & Sources tables (ADR-2026-09-24-P already applied), with "Read our
+appraisal" where a study page exists. Individual study pages are not menu items.
+**Not decided here:** product → study links (internal-link programme), the Discover duplicate, and hiding the empty Learn blog.

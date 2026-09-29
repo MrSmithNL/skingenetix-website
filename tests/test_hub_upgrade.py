@@ -227,3 +227,21 @@ def test_section_css_refuses_what_shopify_refuses():
     for rules in (["a{color:red}" * 60], ["p::before{content:'x'}"]):
         with pytest.raises(SystemExit):
             hu.build({"section_css": {"faq": rules}}, template())
+
+
+def test_section_css_allows_justify_content():
+    """`justify-content:` contains the substring "content:" — the check refused a legal rule (2026-09-29)."""
+    j = template()
+    hu.build({"section_css": {"faq": [".rich-text {justify-content: center;}", ".a{align-content:start}"]}}, j)
+    assert j["sections"]["faq"]["custom_css"][0] == ".rich-text {justify-content: center;}"
+
+
+def test_add_section_with_no_after_goes_first_and_reruns_cleanly():
+    """A generated spec must re-apply after its placeholder section is gone (clinical-studies, 2026-09-29)."""
+    j = template()
+    sec = {"type": "rich-text", "settings": {}}
+    spec = {"add_sections": [{"id": "banner", "after": None, "section": sec}]}
+    hu.build(spec, j)
+    assert j["order"][0] == "banner"
+    hu.build(spec, j)
+    assert j["order"].count("banner") == 1 and j["order"][0] == "banner"

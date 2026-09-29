@@ -448,6 +448,20 @@ AI-generated illustrations and must not be presented as results. Record:
   "gentle" / "well tolerated" lines on the PDRN, Argireline and copper product FAQs and concern pages. **Also on the Argireline science page itself** (found
   2026-09-24): FAQ q3 "gentle … generally well tolerated" and q5 "measurable improvements from day 15 … additional cumulative benefits", not yet checked at
   source.
+- ⏳ **CLINICAL STUDIES section** (ADR-2026-09-29-C; `docs/decision-research-section-navigation-2026-09-29.md`). Malcolm asked where the
+  research is in the navigation: nowhere. Approved: `/pages/clinical-studies`, one "All clinical studies" line in the Science menu, a footer
+  link, a band on the-science, breadcrumbs on study pages; built now, unpublished; **nothing linked until translated**.
+  - ✅ Template `templates/page.clinical-studies.json` built in six languages from the five hubs' live evidence tables (32 studies) by
+    `scripts/build-clinical-studies.py` → `configs/hub-upgrades/clinical-studies.json` → `hub-upgrade.py --apply`. Preview:
+    `/pages/the-science?view=clinical-studies`. No page object yet. Matrixyl's rows come from its spec until its hub is live; re-run
+    the generator after any hub table changes.
+  - ⏳ Design critic on the preview (running 2026-09-29). ⏳ A dedicated banner image (borrowed from /pages/ingredients for now; a new
+    image run costs money, so Malcolm's call).
+  - ⏳ Go-live, together and in six languages, once Badenhorst and Raikou are translated: page object (handle `clinical-studies`,
+    SEO title/description in `configs/hub-i18n/clinical-studies.json`), Science menu line (and phone drawer), footer Explore link,
+    the-science band, study-page breadcrumbs, hub and homepage links into the appraisals.
+  - Not decided: product → study links, the Discover duplicate, hiding the empty Learn blog, Dr Bodde's credit on the index (left off:
+    set-reviewer.py cannot remove it from this page yet).
 - ⏳ **STUDY — next study articles (started 2026-09-26; ADR-2026-09-26-L).** Malcolm: "start work on the next scientific study articles", and three
   rulings: the limits section stays, reframed as "How to read this result"; no page for the null Henseler 2023 (Wang 2013 is rebuilt in its slot,
   Henseler sentence off); Robinson 2005 built from the abstract, no chart. Template doc rewritten: `docs/study-page-template.md`.
