@@ -16,6 +16,11 @@ Spec keys:
                   — a stock section (e.g. rich-text) with one richtext block
   remove_sections ["section_id"]
   _retired        "why, and which spec replaced it" — --apply then refuses (2026-09-24)
+  create / view   build a missing template from this spec; verify reads /pages/<page>?view=<view> (2026-09-29)
+  english_first   values may be English only ({"en": ...}); nothing is registered and verify reads English only.
+                  --apply refuses unless the spec has a `view` and no page uses the template, so an unfinished
+                  English draft can never be served in five locales (Malcolm, 2026-09-29: translate only once the
+                  English is complete). To translate: add the five locales to every value, drop the flag, re-apply.
   section_settings {"section_id": {"setting": value}} — e.g. backgrounds, for alternation
   section_css     {"section_id": ["rule", ...]} — a stock section's own Custom CSS (≤500 chars, no content:)
   jsonld          an object, emitted as <script id="sgx-webpage-jsonld"> INSIDE the existing
@@ -41,6 +46,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://www.skingenetix.com"
 THEME = "gid://shopify/OnlineStoreTheme/184835965313"
 LOCALES = ["de", "nl", "fr", "es", "it"]
+DRAFT = "-english-draft.json"          # suffix of a backup written by an english_first apply
 
 _c = importlib.util.spec_from_file_location("hub_charts", ROOT / "scripts/hub_charts.py")
 _charts = importlib.util.module_from_spec(_c); _c.loader.exec_module(_charts)
@@ -67,8 +73,10 @@ def read_file(name):
 
 
 def split(raw):
-    m = re.match(r"\s*(/\*.*?\*/)\s*", raw, re.S)
-    return (m.group(1) if m else ""), json.loads(raw[m.end():] if m else raw)
+    """(header comments, template JSON). Every leading comment is header: Shopify prepends its own "auto-generated"
+    block to a created template's, so one comment is not enough (2026-09-29)."""
+    m = re.match(r"\s*((?:/\*.*?\*/\s*)+)", raw, re.S)
+    return (m.group(1).rstrip() if m else ""), json.loads(raw[m.end():] if m else raw)
 
 
 def load_template(spec, reader=None):
@@ -100,11 +108,16 @@ def upload(name, hdr, j):
         raise RuntimeError(r["themeFilesUpsert"]["userErrors"])
 
 
-def check_values(label, values):
-    missing = [l for l in ["en"] + LOCALES if l not in values]
+def spec_locales(spec):
+    """The locales every value must carry besides English: none for an english_first draft."""
+    return [] if spec.get("english_first") else LOCALES
+
+
+def check_values(label, values, locales=LOCALES):
+    missing = [l for l in ["en"] + locales if l not in values]
     if missing:
         sys.exit(f"  ✗ {label}: missing locales {missing} — every new text ships in all six languages")
-    for l in LOCALES:
+    for l in [l for l in LOCALES if l in values]:
         for href in re.findall(r'href="(/[^"]*)"', values[l]):
             if not href.startswith(f"/{l}/"):
                 sys.exit(f"  ✗ {label} [{l}]: link {href} lacks the /{l}/ prefix")
@@ -126,11 +139,11 @@ def expand_charts(node, charts):
     return node
 
 
-def lift_translatables(settings, key_prefix, to_translate):
+def lift_translatables(settings, key_prefix, to_translate, locales=LOCALES):
     """A setting whose value is {"en": ..., "de": ...} is translatable: keep English, queue the rest."""
     for k, v in list(settings.items()):
         if isinstance(v, dict) and "en" in v:
-            check_values(f"{key_prefix}.{k}", v)
+            check_values(f"{key_prefix}.{k}", v, locales)
             settings[k] = v["en"]
             to_translate.append((f"{key_prefix}.{k}", v))
 
@@ -161,6 +174,7 @@ def localise_jsonld(ld, loc, i18n):
 def build(spec, j):
     """Apply the spec's English values to the template JSON. Returns [(key_suffix, values)] to translate."""
     to_translate = []
+    locales = spec_locales(spec)
     spec = expand_charts(spec, spec.get("charts", {}))
     for rb in spec.get("remove_blocks", []):
         sec, blk = rb.split("/")
@@ -169,7 +183,7 @@ def build(spec, j):
         s["block_order"] = [b for b in s.get("block_order", []) if b != blk]
     for item in spec.get("set", []):
         parts = item["at"].split("/")
-        check_values(item["at"], item["values"])
+        check_values(item["at"], item["values"], locales)
         if len(parts) == 2:                       # section-level setting, e.g. "faq/title"
             j["sections"][parts[0]].setdefault("settings", {})[parts[1]] = item["values"]["en"]
         else:
@@ -179,22 +193,22 @@ def build(spec, j):
     for ab in spec.get("add_blocks", []):
         s = j["sections"][ab["section"]]
         blk = json.loads(json.dumps(ab["block"]))
-        lift_translatables(blk.setdefault("settings", {}), f"{ab['section']}.{ab['id']}", to_translate)
+        lift_translatables(blk.setdefault("settings", {}), f"{ab['section']}.{ab['id']}", to_translate, locales)
         s["blocks"][ab["id"]] = blk
         s["block_order"] = [b for b in s.get("block_order", []) if b != ab["id"]]
         s["block_order"].insert(s["block_order"].index(ab["after"]) + 1 if ab.get("after") else len(s["block_order"]), ab["id"])
     for add in spec.get("add_sections", []):
         sec = json.loads(json.dumps(add["section"]))
-        lift_translatables(sec.setdefault("settings", {}), add["id"], to_translate)
+        lift_translatables(sec.setdefault("settings", {}), add["id"], to_translate, locales)
         for bid, blk in sec.get("blocks", {}).items():
-            lift_translatables(blk.setdefault("settings", {}), f"{add['id']}.{bid}", to_translate)
+            lift_translatables(blk.setdefault("settings", {}), f"{add['id']}.{bid}", to_translate, locales)
         if add["id"] in j["order"]:
             j["order"].remove(add["id"])
         j["sections"][add["id"]] = sec
         # "after": null puts the section first, so a generated spec re-applies once its placeholder is gone
         j["order"].insert(j["order"].index(add["after"]) + 1 if add.get("after") else 0, add["id"])
     for ins in spec.get("insert_sections", []):
-        check_values(ins["id"], ins["values"])
+        check_values(ins["id"], ins["values"], locales)
         if ins["id"] in j["sections"]:
             j["order"].remove(ins["id"])
         j["sections"][ins["id"]] = {"type": ins["type"], "settings": ins["settings"],
@@ -309,14 +323,14 @@ def status(url):
     return curl(url)[0]
 
 
-def locale_texts(node):
-    """Every six-locale value in the spec (charts expanded), for the live checks."""
+def locale_texts(node, locales=LOCALES):
+    """Every six-locale value in the spec (charts expanded), for the live checks — English-only ones for a draft."""
     if isinstance(node, dict):
-        if "en" in node and all(l in node for l in LOCALES) and isinstance(node["en"], str):
+        if "en" in node and all(l in node for l in locales) and isinstance(node["en"], str):
             return [node]
-        return [t for v in node.values() for t in locale_texts(v)]
+        return [t for v in node.values() for t in locale_texts(v, locales)]
     if isinstance(node, list):
-        return [t for v in node for t in locale_texts(v)]
+        return [t for v in node for t in locale_texts(v, locales)]
     return []
 
 
@@ -339,11 +353,36 @@ def missing_anchors(texts, loc, page):
     return [f"#{f}" for f in frags if not re.search(rf'id="{re.escape(f)}"', page)]
 
 
+def pages_using(template, query=None):
+    """Handles of the pages whose template is `template` (templates/page.<suffix>.json), across every page of results."""
+    m = re.fullmatch(r"templates/page\.([^/]+)\.json", template)
+    if not m:
+        sys.exit(f"  ✗ {template} is not an alternate page template (templates/page.<suffix>.json)")
+    handles, after = [], None
+    while True:
+        d = (query or gql)('query($a:String){ pages(first:250, after:$a){ nodes{ handle templateSuffix } '
+                           'pageInfo{ hasNextPage endCursor } } }', {"a": after})["pages"]
+        handles += [p["handle"] for p in d["nodes"] if p["templateSuffix"] == m.group(1)]
+        if not d["pageInfo"]["hasNextPage"]:
+            return handles
+        after = d["pageInfo"]["endCursor"]
+
+
+def refuse_english_on_a_live_template(spec):
+    if not spec.get("view"):
+        sys.exit("  ✗ english_first applies only to a hidden preview: give the spec a \"view\" and check it through ?view=")
+    live = pages_using(spec["template"])
+    if live:
+        sys.exit(f"  ✗ english_first refused: {live} use {spec['template']}, so English would be served in five locales. "
+                 "Translate the spec first.")
+
+
 def verify(spec):
+    locales = spec_locales(spec)
     texts = locale_texts({k: v for k, v in expand_charts(spec, spec.get("charts", {})).items()
-                          if k not in ("charts", "references_i18n", "jsonld_i18n")})
+                          if k not in ("charts", "references_i18n", "jsonld_i18n")}, locales)
     bad = 0
-    for loc in ["en"] + LOCALES:
+    for loc in ["en"] + locales:
         page = fetch(page_url(spec, loc))
         live_h2 = [re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", "", x))).strip() for x in re.findall(r"<h2[^>]*>(.*?)</h2>", page, re.S)]
         want = wanted_headings(texts, loc, "h2")
@@ -364,7 +403,7 @@ def verify(spec):
             blocks = re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', page, re.S)
             try:
                 types = [json.loads(b).get("@type") for b in blocks]
-                ld_ok = "WebPage" in types
+                ld_ok = spec["jsonld"].get("@type", "WebPage") in types      # the type the spec declares (Article, 2026-09-29)
             except Exception:
                 ld_ok = False
         ok = not missing and not dead and ld_ok and not h1_problem and not no_target
@@ -372,12 +411,12 @@ def verify(spec):
         anchors = len(set(re.findall(r'href="#([^"]+)"', " ".join(t[loc] for t in texts))))
         print(f"  {'✓' if ok else '✗'} {loc}: {len(want) - len(missing)}/{len(want)} headings live as <h2>, "
               f"{len(links) - len(dead)}/{len(links)} links resolve, {anchors - len(no_target)}/{anchors} anchors land"
-              f"{', JSON-LD WebPage ok' if loc == 'en' and ld_ok and spec.get('jsonld') else ''}")
+              f"{', JSON-LD ' + spec['jsonld'].get('@type', 'WebPage') + ' ok' if loc == 'en' and ld_ok and spec.get('jsonld') else ''}")
         for m in missing: print(f"      missing heading: {m}")
         for f in no_target: print(f"      anchor with no target on the page: {f}")
         if h1_problem: print(f"      {h1_problem}")
         for d_ in dead: print(f"      dead link: {d_}")
-        if loc == "en" and not ld_ok: print("      JSON-LD WebPage missing or invalid")
+        if loc == "en" and not ld_ok: print(f"      JSON-LD {spec['jsonld'].get('@type', 'WebPage')} missing or invalid")
         time.sleep(1.5)
     return bad
 
@@ -400,6 +439,10 @@ def main():
         bk = sorted(glob.glob(str(ROOT / f"backups/hub-upgrade-{tag}-*.json")))
         if not bk:
             sys.exit("  no backup")
+        if bk[-1].endswith(DRAFT) and pages_using(name):
+            # an english_first backup is English only: never put it back on a template a page serves (review 2026-09-29)
+            sys.exit(f"  ✗ {pathlib.Path(bk[-1]).name} is an English-only draft and {name} is in use; "
+                     "restore a translated backup by hand, or re-apply the spec")
         hdr, j = split(pathlib.Path(bk[-1]).read_text())
         upload(name, hdr, j)
         print(f"  restored {name} from {pathlib.Path(bk[-1]).name} (translations of removed keys remain registered but unused)")
@@ -408,19 +451,27 @@ def main():
     if a.verify_live:
         return 1 if verify(spec) else 0
 
+    if spec.get("english_first") and a.apply:
+        refuse_english_on_a_live_template(spec)
     spec["_spec_name"] = pathlib.Path(a.spec).name
     raw, hdr, j = load_template(spec)
     before = list(j["order"])
     to_translate = build(spec, j)
     print(f"  {name}\n  order before: {before}\n  order after : {j['order']}")
     print(f"  texts to translate: {[k for k, _ in to_translate]}")
+    if spec.get("english_first") and to_translate and all(all(l in v for l in LOCALES) for _, v in to_translate):
+        # the flag would upload the translations and register none of them (review 2026-09-29)
+        sys.exit("  ✗ every text is in six languages: remove \"english_first\" so the translations are registered")
     if not a.apply:
         print("  dry run — nothing written.")
         return 0
     stamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
     if raw is not None:                           # a created template has no earlier state to back up
-        (ROOT / f"backups/hub-upgrade-{tag}-{stamp}.json").write_text(raw)
+        (ROOT / f"backups/hub-upgrade-{tag}-{stamp}{DRAFT if spec.get('english_first') else '.json'}").write_text(raw)
     upload(name, hdr, j)
+    if spec.get("english_first"):
+        print(f"  uploaded (backup {stamp}); english-first draft: no translations registered")
+        return 0
     print(f"  uploaded (backup {stamp}); registering translations:")
     register(spec, to_translate)
     return 0

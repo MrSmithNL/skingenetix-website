@@ -268,8 +268,171 @@ def test_create_never_replaces_a_template_that_exists():
     assert raw == live and j["order"] == ["hero"]
 
 
+def test_split_reads_a_created_template_back_after_shopify_prepends_its_own_header():
+    """Shopify puts its "auto-generated" comment in front of ours, so a created template came back with two
+    comments and the first re-apply failed with "Expecting value: line 1 column 1" (collagen-skincare, 2026-09-29)."""
+    stored = ("/*\n * IMPORTANT: The contents of this file are auto-generated.\n */\n"
+              "/* templates/page.collagen-skincare.json: built from spec.json by scripts/hub-upgrade.py */\n"
+              '{"sections": {"hero": {"type": "rich-text"}}, "order": ["hero"]}')
+    hdr, j = hu.split(stored)
+    assert j["order"] == ["hero"]
+    assert "auto-generated" in hdr and "built from spec.json" in hdr
+
+
 def test_verify_url_uses_the_view_suffix_and_the_locale_prefix():
     spec = {"page": "collagen-skin-plumping", "view": "collagen-skincare"}
     assert hu.page_url(spec, "en").startswith(f"{hu.BASE}/pages/collagen-skin-plumping?view=collagen-skincare&hub=")
     assert hu.page_url(spec, "de").startswith(f"{hu.BASE}/de/pages/collagen-skin-plumping?view=collagen-skincare&hub=")
     assert hu.page_url({"page": "x"}, "fr").startswith(f"{hu.BASE}/fr/pages/x?hub=")
+
+
+# ── english_first: finish the English on a hidden preview, translate afterwards (Malcolm, 2026-09-29) ──────────
+# "only translate when the english version is fully completed and correct and optimized". The six-language rule
+# exists because an untranslated setting on a LIVE template serves English in five locales; a template no page
+# uses has no visitors, so an English-only draft is allowed there, and only there.
+
+EN_FIRST = {"english_first": True, "template": "templates/page.collagen-skincare.json", "create": True,
+            "page": "collagen-skin-plumping", "view": "collagen-skincare"}
+
+
+def en(text):
+    return {"en": text}
+
+
+def test_english_first_builds_from_english_only_values():
+    spec = dict(EN_FIRST, add_sections=[{"id": "answer", "after": None, "section": {
+        "type": "rich-text", "settings": {},
+        "blocks": {"p": {"type": "richtext", "settings": {"content": en("<h2>Do Collagen Creams Work?</h2><p>Yes.</p>")}}},
+        "block_order": ["p"]}}])
+    j = {"sections": {}, "order": []}
+    tt = hu.build(spec, j)
+    assert j["sections"]["answer"]["blocks"]["p"]["settings"]["content"].startswith("<h2>Do Collagen")
+    assert keys(tt) == ["answer.p.content"]
+
+
+def test_english_only_values_are_refused_without_the_flag():
+    spec = {"set": [{"at": "faq/title", "values": en("FAQ")}]}
+    with pytest.raises(SystemExit):
+        hu.build(spec, template())
+
+
+def test_english_first_still_checks_a_translation_that_is_present():
+    bad = en('<p><a href="/pages/x">x</a></p>')
+    bad["de"] = '<p><a href="/pages/x">x</a></p>'            # a German value that forgot its /de/ prefix
+    with pytest.raises(SystemExit):
+        hu.build(dict(EN_FIRST, set=[{"at": "faq/title", "values": bad}]), template())
+
+
+def run_main(tmp_path, monkeypatch, spec, *flags):
+    p = tmp_path / "spec.json"
+    p.write_text(json.dumps(spec))
+    monkeypatch.setattr("sys.argv", ["hub-upgrade.py", str(p), *flags])
+    return hu.main()
+
+
+def test_english_first_apply_needs_a_hidden_preview(tmp_path, monkeypatch):
+    spec = {k: v for k, v in EN_FIRST.items() if k != "view"}
+    monkeypatch.setattr(hu, "upload", lambda *a: pytest.fail("must refuse before writing"))
+    with pytest.raises(SystemExit) as e:
+        run_main(tmp_path, monkeypatch, spec, "--apply")
+    assert "view" in str(e.value)
+
+
+def test_english_first_apply_refuses_a_template_a_live_page_uses(tmp_path, monkeypatch):
+    pages = {"pages": {"nodes": [{"handle": "collagen-skin-plumping", "templateSuffix": "collagen-skincare"}],
+                       "pageInfo": {"hasNextPage": False, "endCursor": None}}}
+    monkeypatch.setattr(hu, "gql", lambda q, v=None: pages)
+    monkeypatch.setattr(hu, "upload", lambda *a: pytest.fail("must refuse before writing"))
+    with pytest.raises(SystemExit) as e:
+        run_main(tmp_path, monkeypatch, EN_FIRST, "--apply")
+    assert "collagen-skin-plumping" in str(e.value)
+
+
+def test_pages_using_matches_the_whole_suffix_across_pages_of_results():
+    batches = iter([
+        {"pages": {"nodes": [{"handle": "a", "templateSuffix": "collagen-skincare-old"}, {"handle": "b", "templateSuffix": None}],
+                   "pageInfo": {"hasNextPage": True, "endCursor": "c1"}}},
+        {"pages": {"nodes": [{"handle": "c", "templateSuffix": "collagen-skincare"}],
+                   "pageInfo": {"hasNextPage": False, "endCursor": None}}},
+    ])
+    assert hu.pages_using("templates/page.collagen-skincare.json", lambda q, v=None: next(batches)) == ["c"]
+
+
+def test_english_first_apply_uploads_and_registers_nothing(tmp_path, monkeypatch, capsys):
+    no_pages = {"pages": {"nodes": [], "pageInfo": {"hasNextPage": False, "endCursor": None}}}
+    monkeypatch.setattr(hu, "gql", lambda q, v=None: no_pages)
+
+    def missing(name):
+        raise IndexError("no such file")
+    monkeypatch.setattr(hu, "read_file", missing)
+    uploaded = []
+    monkeypatch.setattr(hu, "upload", lambda name, hdr, j: uploaded.append((name, j)))
+    monkeypatch.setattr(hu, "register", lambda *a: pytest.fail("an English-only draft registers no translations"))
+    spec = dict(EN_FIRST, add_sections=[{"id": "answer", "after": None, "section": {
+        "type": "rich-text", "settings": {}, "blocks": {"p": {"type": "richtext", "settings": {"content": en("<p>Yes.</p>")}}},
+        "block_order": ["p"]}}])
+    assert run_main(tmp_path, monkeypatch, spec, "--apply") == 0
+    assert uploaded and uploaded[0][0] == "templates/page.collagen-skincare.json"
+    assert "english-first" in capsys.readouterr().out.lower()
+
+
+def test_english_first_refuses_a_spec_whose_texts_are_all_translated(tmp_path, monkeypatch):
+    """Post-build review 2026-09-29: translating every value but forgetting to drop the flag would upload the
+    translations and silently register none of them."""
+    monkeypatch.setattr(hu, "read_file", lambda name: '{"sections": {}, "order": []}')
+    monkeypatch.setattr(hu, "upload", lambda *a: pytest.fail("must refuse before writing"))
+    spec = dict(EN_FIRST, add_sections=[{"id": "answer", "after": None, "section": {
+        "type": "rich-text", "settings": {}, "blocks": {"p": {"type": "richtext", "settings": {"content": six("<p>Yes.</p>")}}},
+        "block_order": ["p"]}}])
+    with pytest.raises(SystemExit) as e:
+        run_main(tmp_path, monkeypatch, spec)
+    assert "english_first" in str(e.value)
+
+
+def test_an_english_first_backup_is_marked_as_a_draft(tmp_path, monkeypatch):
+    no_pages = {"pages": {"nodes": [], "pageInfo": {"hasNextPage": False, "endCursor": None}}}
+    monkeypatch.setattr(hu, "gql", lambda q, v=None: no_pages)
+    monkeypatch.setattr(hu, "ROOT", tmp_path)
+    (tmp_path / "backups").mkdir()
+    monkeypatch.setattr(hu, "read_file", lambda name: '{"sections": {}, "order": []}')
+    monkeypatch.setattr(hu, "upload", lambda *a: None)
+    run_main(tmp_path, monkeypatch, EN_FIRST, "--apply")
+    names = [p.name for p in (tmp_path / "backups").iterdir()]
+    assert len(names) == 1 and names[0].endswith("-english-draft.json")
+
+
+def test_rollback_never_restores_an_english_draft_onto_a_template_a_page_uses(tmp_path, monkeypatch):
+    """Post-build review 2026-09-29: --rollback skipped the english_first guard entirely."""
+    monkeypatch.setattr(hu, "ROOT", tmp_path)
+    (tmp_path / "backups").mkdir()
+    (tmp_path / "backups" / "hub-upgrade-templates__page.collagen-skincare.json-20260929-171038-english-draft.json").write_text(
+        '{"sections": {}, "order": []}')
+    monkeypatch.setattr(hu, "pages_using", lambda template, query=None: ["collagen-skincare"])
+    monkeypatch.setattr(hu, "upload", lambda *a: pytest.fail("must refuse before writing"))
+    spec = {k: v for k, v in EN_FIRST.items() if k != "english_first"}      # the spec after translation
+    with pytest.raises(SystemExit) as e:
+        run_main(tmp_path, monkeypatch, spec, "--rollback")
+    assert "english" in str(e.value).lower()
+
+
+def test_verify_checks_the_json_ld_type_the_spec_declares(monkeypatch):
+    page = ('<h1>Collagen Cream</h1><script type="application/ld+json">{"@type": "Article", "headline": "x"}</script>')
+    monkeypatch.setattr(hu, "fetch", lambda url: page)
+    monkeypatch.setattr(hu, "status", lambda url: 200)
+    monkeypatch.setattr(hu.time, "sleep", lambda s: None)
+    spec = dict(EN_FIRST, jsonld={"@type": "Article"}, add_sections=[{"id": "hero", "after": None, "section": {"settings": {
+        "x": en("<h1>Collagen Cream</h1>")}}}])
+    assert hu.verify(spec) == 0
+
+
+def test_english_first_verify_reads_the_english_preview_only(monkeypatch):
+    fetched = []
+    page = '<h1>Collagen Cream</h1><h2>Do Collagen Creams Work?</h2>'
+    monkeypatch.setattr(hu, "fetch", lambda url: fetched.append(url) or page)
+    monkeypatch.setattr(hu, "status", lambda url: 200)
+    monkeypatch.setattr(hu.time, "sleep", lambda s: None)
+    spec = dict(EN_FIRST, add_sections=[{"id": "answer", "after": None, "section": {"settings": {
+        "x": en("<h1>Collagen Cream</h1><h2>Do Collagen Creams Work?</h2><p><a href=\"/pages/firming-skin-density\">f</a></p>")}}}])
+    assert hu.verify(spec) == 0
+    assert len(fetched) == 1 and "/pages/collagen-skin-plumping?view=collagen-skincare" in fetched[0]
+    assert "/de/" not in fetched[0]
