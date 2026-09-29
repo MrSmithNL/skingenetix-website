@@ -292,8 +292,9 @@ AI-generated illustrations and must not be presented as results. Record:
     Live 2026-09-29: verify-live ✓ ×6 on both specs, page audit 100/96/100/93, old specs retired, reviewer config repointed, preview deleted.
   - ❌ Wave r1 (35 candidates, `configs/banners/before-after-glutathione-cards-r1.json`) rejected by Malcolm 2026-09-29: Caucasian women, random
     varied clothes, no women with warts (register §8.7).
-  - 🔄 **Wave r2 running** (`configs/banners/before-after-glutathione-cards-r2.json`; light-olive Caucasian subjects, no moles, clothes varied per slot
-    and panel). Then Malcolm picks from `~/Desktop/skingenetix-glutathione-before-after-r2.png`; until then both cards carry product-with-model photos.
+  - ⏳ **Wave r2 done, 36/36** (`configs/banners/before-after-glutathione-cards-r2.json`, `31e99c2`; light-olive Caucasian subjects, no moles, clothes
+    varied per slot and panel). **Malcolm picks** from `~/Desktop/skingenetix-glutathione-before-after-r2.png` (rows A–C card 1, D–F card 2); until then
+    both cards carry product-with-model photos.
     After the picks: crop, labels in six languages ("After 10 weeks"; result lines per register §8.5), apply, verify, design critic cycle 2 on the live page.
   - ✅ The "Explore more research" Glutathione tile on PDRN, Argireline and copper said "For a more even, radiant-looking skin tone" (template §4 rule 6).
     Fixed by the f3 session 2026-09-29 (`b73d215`): "A clinically studied antioxidant for brighter-looking skin", six languages, verified live.
