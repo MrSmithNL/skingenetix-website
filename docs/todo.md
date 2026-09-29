@@ -342,7 +342,11 @@ AI-generated illustrations and must not be presented as results. Record:
     two never compete. Ownership map `configs/keyword-data/collagen-2026-09-29/keyword-ownership-map-2026-09-29.md`.
   - 🔄 **Rebuild steps, in order; nothing goes live until Malcolm has seen the page:**
     1. ✅ Decision and keyword data recorded.
-    2. 🔄 Claims register `docs/claims/collagen-skincare.md`: does topical collagen work, what our two collagen creams actually contain.
+    2. ✅ Claims register `docs/claims/collagen-skincare.md` (2026-09-29): collagen works by size (native and soluble collagen form a
+       moisture-retaining film; some hydrolysed collagen reaches the outer layer as a humectant; CIR 2022, Bos & Meinardi 2000, Coapman 1988,
+       Aguirre-Cruz 2020); CIR clears every collagen ingredient we use; no product-level trial; only the two creams contain collagen, no serum
+       does (§8 gives the "collagen serum" answer). At go-live the Firming page's "Hydrolyzed collagen peptides penetrate the skin surface"
+       (Pro-Collagen block) becomes "some reach the skin's outer layer" (register claim 1, condition b).
     3. ⏳ Draft in six languages on a hidden preview template: title ≤ 60, meta ≤ 155, one H1, answer-first paragraph, honest collagen vs
        peptides section, products up front, both proof cards, a real FAQ (the live one is theme placeholder text) with FAQPage schema.
     4. ⏳ Show Malcolm. **Only after his OK:** move to `/pages/collagen-skincare` with a 301 from the old address in all six languages, fix
@@ -567,7 +571,11 @@ AI-generated illustrations and must not be presented as results. Record:
 - 📌 **FOLLOW-UP (parked by Malcolm 2026-09-22, "save for later") — formula facts the strongest claims depend on** (supplier certificate of analysis):
   glutathione serum = 2% GSSG w/w? Matrixyl serum/cream Matrixyl 3000 % (the manufacturer's data is at 3%; the serum carton says "10% MATRIXYL")? Argireline
   grade (Argireline vs Argireline Amplified)? Are the Matrixyl cream and PDRN cream ingredient lists swapped? Vegan: the Ingredients page says all formulas are
-  vegan, but the Matrixyl cream FAQ says not.
+  vegan, but the Matrixyl cream FAQ says not. **Added 2026-09-29 (collagen register `docs/claims/collagen-skincare.md` §0, all still live):**
+  elastin is on the Pro-Collagen cream's carton and FAQ but in neither its key actives nor its full ingredient list; the collagen's source (bovine,
+  porcine, marine or fish) is disclosed nowhere, and the independent CIR panel advises labelling fish-derived collagen as an allergen; the PDRN
+  cream's list ends with the two Matrixyl 3000 peptides, undeclared as actives. Until answered, the collagen page says neither "elastin" nor
+  "vegan" near the two creams.
 - 🛑 **For Malcolm — two displayed reviews make medical claims** ("fades my acne scars", "rosacea"). EU rules hold the brand responsible for claims in testimonials it displays.
 - ✅ **Strongest-claims copy rewrite: PDRN, Argireline® and copper** (2026-09-22, all six languages). Every figure comes from `docs/claims/`.
   - **Clinical Research block on 13 products:** a bold headline naming the ingredient, proof bullets and a study footnote (`scripts/set-clinical-research.py`, `configs/copy/clinical-research-2026-09-22.json`).
