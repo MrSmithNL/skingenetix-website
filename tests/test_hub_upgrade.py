@@ -245,3 +245,31 @@ def test_add_section_with_no_after_goes_first_and_reruns_cleanly():
     assert j["order"][0] == "banner"
     hu.build(spec, j)
     assert j["order"].count("banner") == 1 and j["order"][0] == "banner"
+
+
+# ── a new template built from nothing, previewed through ?view= (collagen-skincare, 2026-09-29) ─────────────
+# A copied template carries no translations (they are keyed to the template resource), so a new page is built
+# from an empty template by one spec that owns every text on it, and is checked on /pages/<page>?view=<suffix>
+# before any page uses it.
+
+def test_a_missing_template_is_refused_unless_the_spec_creates_it():
+    def missing(name):
+        raise IndexError("no such file")
+    with pytest.raises(SystemExit) as e:
+        hu.load_template({"template": "templates/page.new.json"}, missing)
+    assert "create" in str(e.value)
+    raw, hdr, j = hu.load_template({"template": "templates/page.new.json", "create": True}, missing)
+    assert raw is None and j == {"sections": {}, "order": []} and "Claude" in hdr
+
+
+def test_create_never_replaces_a_template_that_exists():
+    live = '{"sections": {"hero": {"type": "rich-text", "settings": {}}}, "order": ["hero"]}'
+    raw, hdr, j = hu.load_template({"template": "templates/page.t.json", "create": True}, lambda name: live)
+    assert raw == live and j["order"] == ["hero"]
+
+
+def test_verify_url_uses_the_view_suffix_and_the_locale_prefix():
+    spec = {"page": "collagen-skin-plumping", "view": "collagen-skincare"}
+    assert hu.page_url(spec, "en").startswith(f"{hu.BASE}/pages/collagen-skin-plumping?view=collagen-skincare&hub=")
+    assert hu.page_url(spec, "de").startswith(f"{hu.BASE}/de/pages/collagen-skin-plumping?view=collagen-skincare&hub=")
+    assert hu.page_url({"page": "x"}, "fr").startswith(f"{hu.BASE}/fr/pages/x?hub=")

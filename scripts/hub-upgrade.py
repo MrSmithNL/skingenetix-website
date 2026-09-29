@@ -71,6 +71,27 @@ def split(raw):
     return (m.group(1) if m else ""), json.loads(raw[m.end():] if m else raw)
 
 
+def load_template(spec, reader=None):
+    """(raw, header, json) of the spec's template. A missing template is built from nothing only when the spec says
+    "create": true — a copy would carry no translations, which are keyed to the template resource (2026-09-29)."""
+    try:
+        raw = (reader or read_file)(spec["template"])
+    except IndexError:
+        if not spec.get("create"):
+            sys.exit(f"  ✗ {spec['template']} does not exist; set \"create\": true to build it from this spec")
+        hdr = (f"/* {spec['template']}: built from {spec.get('_spec_name', 'its spec')} by scripts/hub-upgrade.py "
+               f"(Claude Code, {dt.date.today()}). Edit through the spec, not the theme editor. */")
+        return None, hdr, {"sections": {}, "order": []}
+    hdr, j = split(raw)
+    return raw, hdr, j
+
+
+def page_url(spec, loc):
+    """The storefront URL verify reads: the page itself, or an unused template previewed through ?view=."""
+    view = f"view={spec['view']}&" if spec.get("view") else ""
+    return f"{BASE}{'' if loc == 'en' else '/' + loc}/pages/{spec['page']}?{view}hub={int(time.time())}"
+
+
 def upload(name, hdr, j):
     body = (hdr + "\n" if hdr else "") + json.dumps(j, indent=2, ensure_ascii=False)
     r = gql('mutation($t:ID!,$f:[OnlineStoreThemeFilesUpsertFileInput!]!){ themeFilesUpsert(themeId:$t, files:$f)'
@@ -323,7 +344,7 @@ def verify(spec):
                           if k not in ("charts", "references_i18n", "jsonld_i18n")})
     bad = 0
     for loc in ["en"] + LOCALES:
-        page = fetch(f"{BASE}{'' if loc == 'en' else '/' + loc}/pages/{spec['page']}?hub={int(time.time())}")
+        page = fetch(page_url(spec, loc))
         live_h2 = [re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", "", x))).strip() for x in re.findall(r"<h2[^>]*>(.*?)</h2>", page, re.S)]
         want = wanted_headings(texts, loc, "h2")
         missing = [w for w in want if w not in live_h2]
@@ -387,8 +408,8 @@ def main():
     if a.verify_live:
         return 1 if verify(spec) else 0
 
-    raw = read_file(name)
-    hdr, j = split(raw)
+    spec["_spec_name"] = pathlib.Path(a.spec).name
+    raw, hdr, j = load_template(spec)
     before = list(j["order"])
     to_translate = build(spec, j)
     print(f"  {name}\n  order before: {before}\n  order after : {j['order']}")
@@ -397,7 +418,8 @@ def main():
         print("  dry run — nothing written.")
         return 0
     stamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
-    (ROOT / f"backups/hub-upgrade-{tag}-{stamp}.json").write_text(raw)
+    if raw is not None:                           # a created template has no earlier state to back up
+        (ROOT / f"backups/hub-upgrade-{tag}-{stamp}.json").write_text(raw)
     upload(name, hdr, j)
     print(f"  uploaded (backup {stamp}); registering translations:")
     register(spec, to_translate)
