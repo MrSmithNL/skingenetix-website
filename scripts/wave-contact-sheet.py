@@ -53,7 +53,9 @@ def find_wave(arg):
 def rows_of(wave):
     out = []
     for d in sorted(p for p in wave.iterdir() if p.is_dir() and not p.name.startswith("_")):
-        files = sorted(glob.glob(str(d / "*.png")))
+        # generate-banners.py (2026-08-21 batches) writes .jpg; generate-multi.py writes .png.
+        # Globbing .png only returned "no images" for whole .jpg waves (2026-09-29).
+        files = sorted(f for ext in ("png", "jpg", "jpeg") for f in glob.glob(str(d / f"*.{ext}")))
         if files:
             out.append((d.name, files))
     return out
