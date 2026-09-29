@@ -104,6 +104,119 @@
     "es": "Los {n} estudios sobre PDRN, Argireline, péptido de cobre, Matrixyl 3000 y glutatión: evaluados, con sus resultados y un enlace a la publicación.",
     "it": "I {n} studi su PDRN, Argireline, peptide di rame, Matrixyl 3000 e glutatione: valutati per solidità, con i risultati e un link alla pubblicazione."
   },
+  "_layout_about": "Phrases for the science-page layout of 2026-09-29 (Malcolm: same design as the ingredient pages, quick links at the top, a picture bar per ingredient): key figures band, overview heading and byline, the numbered index, the section bars.",
+  "stat1_label": {
+    "en": "Studies graded",
+    "de": "Studien bewertet",
+    "nl": "Studies beoordeeld",
+    "fr": "Études évaluées",
+    "es": "Estudios evaluados",
+    "it": "Studi valutati"
+  },
+  "stat1_body": {
+    "en": "Every study behind our five ingredients: human trials, laboratory work and independent reviews.",
+    "de": "Jede Studie hinter unseren fünf Wirkstoffen: Studien am Menschen, Laborarbeiten und unabhängige Übersichtsarbeiten.",
+    "nl": "Elke studie achter onze vijf ingrediënten: studies bij mensen, laboratoriumonderzoek en onafhankelijke overzichten.",
+    "fr": "Chaque étude derrière nos cinq ingrédients : essais chez l'humain, travaux de laboratoire et revues indépendantes.",
+    "es": "Cada estudio detrás de nuestros cinco ingredientes: ensayos en personas, trabajos de laboratorio y revisiones independientes.",
+    "it": "Ogni studio dietro i nostri cinque ingredienti: studi sull'uomo, lavori di laboratorio e revisioni indipendenti."
+  },
+  "stat2_label": {
+    "en": "Controlled human trials",
+    "de": "Kontrollierte Studien am Menschen",
+    "nl": "Gecontroleerde studies bij mensen",
+    "fr": "Essais contrôlés chez l'humain",
+    "es": "Ensayos controlados en personas",
+    "it": "Studi controllati sull'uomo"
+  },
+  "stat2_body": {
+    "en": "Grade A: controlled, carried out in people and measured by instrument.",
+    "de": "Note A: kontrolliert, am Menschen durchgeführt und mit Geräten gemessen.",
+    "nl": "Graad A: gecontroleerd, uitgevoerd bij mensen en met instrumenten gemeten.",
+    "fr": "Note A : contrôlés, menés chez l'humain et mesurés par instrument.",
+    "es": "Grado A: controlados, realizados en personas y medidos con instrumentos.",
+    "it": "Grado A: controllati, condotti sull'uomo e misurati con strumenti."
+  },
+  "stat3_label": {
+    "en": "Trials appraised in full",
+    "de": "Studien vollständig bewertet",
+    "nl": "Studies volledig beoordeeld",
+    "fr": "Essais analysés en détail",
+    "es": "Ensayos analizados a fondo",
+    "it": "Studi analizzati per intero"
+  },
+  "stat3_body": {
+    "en": "Read at source and written up on their own pages.",
+    "de": "An der Quelle gelesen und auf eigenen Seiten beschrieben.",
+    "nl": "Bij de bron gelezen en op eigen pagina's beschreven.",
+    "fr": "Lus à la source et décrits sur leur propre page.",
+    "es": "Leídos en su fuente y explicados en su propia página.",
+    "it": "Letti alla fonte e descritti in pagine dedicate."
+  },
+  "overview_title": {
+    "en": "Every claim, traced to its study",
+    "de": "Jede Aussage, zurückverfolgt bis zu ihrer Studie",
+    "nl": "Elke claim, herleid tot de studie",
+    "fr": "Chaque affirmation, reliée à son étude",
+    "es": "Cada afirmación, vinculada a su estudio",
+    "it": "Ogni affermazione, ricondotta al suo studio"
+  },
+  "byline": {
+    "en": "By Skingenetix. Every figure checked against the published paper or its PubMed record. Last updated {date}.",
+    "de": "Von Skingenetix. Jede Zahl anhand der veröffentlichten Studie oder ihres PubMed-Eintrags geprüft. Zuletzt aktualisiert am {date}.",
+    "nl": "Door Skingenetix. Elk cijfer gecontroleerd aan de hand van de gepubliceerde studie of het PubMed-record. Laatst bijgewerkt op {date}.",
+    "fr": "Par Skingenetix. Chaque chiffre vérifié dans l'article publié ou sa fiche PubMed. Dernière mise à jour le {date}.",
+    "es": "Por Skingenetix. Cada cifra comprobada con el artículo publicado o su registro en PubMed. Última actualización: {date}.",
+    "it": "A cura di Skingenetix. Ogni dato verificato sull'articolo pubblicato o sulla sua scheda PubMed. Ultimo aggiornamento: {date}."
+  },
+  "index_title": {
+    "en": "Studies by ingredient",
+    "de": "Studien nach Wirkstoff",
+    "nl": "Studies per ingrediënt",
+    "fr": "Études par ingrédient",
+    "es": "Estudios por ingrediente",
+    "it": "Studi per ingrediente"
+  },
+  "index_caption": {
+    "en": "Each line opens that ingredient's studies, strongest evidence first.",
+    "de": "Jede Zeile öffnet die Studien zu diesem Wirkstoff, die stärksten Belege zuerst.",
+    "nl": "Elke regel opent de studies van dat ingrediënt, het sterkste bewijs eerst.",
+    "fr": "Chaque ligne ouvre les études de cet ingrédient, des preuves les plus solides aux moins solides.",
+    "es": "Cada línea abre los estudios de ese ingrediente, empezando por la evidencia más sólida.",
+    "it": "Ogni riga apre gli studi di quell'ingrediente, a partire dalle prove più solide."
+  },
+  "index_claim": {
+    "en": "{x}: {n} studies",
+    "de": "{x}: {n} Studien",
+    "nl": "{x}: {n} studies",
+    "fr": "{x} : {n} études",
+    "es": "{x}: {n} estudios",
+    "it": "{x}: {n} studi"
+  },
+  "index_qual": {
+    "en": "Strongest result: {claim}",
+    "de": "Stärkstes Ergebnis: {claim}",
+    "nl": "Sterkste resultaat: {claim}",
+    "fr": "Résultat le plus solide : {claim}",
+    "es": "Resultado más sólido: {claim}",
+    "it": "Risultato più solido: {claim}"
+  },
+  "bar_sub": {
+    "en": "{n} studies, graded, strongest first.",
+    "de": "{n} Studien, bewertet, die stärksten zuerst.",
+    "nl": "{n} studies, beoordeeld, de sterkste eerst.",
+    "fr": "{n} études, évaluées, les plus solides d'abord.",
+    "es": "{n} estudios, evaluados, los más sólidos primero.",
+    "it": "{n} studi, valutati, i più solidi per primi."
+  },
+  "table_lead": {
+    "en": "What it is and what the evidence shows is explained on the {link} research page.",
+    "de": "Was es ist und was die Belege zeigen, erklärt die Forschungsseite zu {link}.",
+    "nl": "Wat het is en wat het bewijs laat zien, staat op de onderzoekspagina over {link}.",
+    "fr": "Ce que c'est et ce que montrent les preuves est expliqué sur la page de recherche consacrée à {link}.",
+    "es": "Qué es y qué muestra la evidencia se explica en la página de investigación sobre {link}.",
+    "it": "Che cos'è e che cosa mostrano le prove è spiegato nella pagina di ricerca su {link}."
+  },
   "_labels_about": "Ingredient names as each hub's own evidence heading gives them in that language (design critique 2026-09-29 F12: the German page said 'Glutathione' where the German hub says 'Glutathion').",
   "label_copper": {
     "en": "Copper peptide (GHK-Cu)",

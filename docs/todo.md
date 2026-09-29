@@ -465,6 +465,17 @@ AI-generated illustrations and must not be presented as results. Record:
     locale's badge word; ingredient names localised), rows sorted by grade, a dated line + `dateModified`, a closing link to the shop.
     Open (medium, design direction): three left edges, one section spacing, wayfinding on a 19-screen phone page, 200% zoom column,
     unlabelled grade on phones, citation style differing between hubs.
+  - ✅ **Science-page layout (Malcolm, 2026-09-29):** "design and formatting similar to the Science ingredients pages", "quick links at
+    the top", "a small separation header bar ... models posing with that type of product ... dark style ... unique images ... from
+    the runs we created before". Now: banner · key figures (32 studies · 8 controlled human trials · 4 appraised in full) · overview
+    with the hubs' byline · the hubs' numbered index as quick links (each row in its accent, with the hub's own strongest result) ·
+    per ingredient a picture bar (h2, count, anchor) then its table · closing. Bars are crops of unused product-banner library
+    candidates, labels checked at native size (two rejected: wrong brand mark; a small PDRN label that reads 'PORN'), scrim baked in
+    (desktop ≥ 5.42:1, phone ≥ 5.07:1): `configs/banners/clinical-studies-section-bars-2026-09-29.json`. Caught before commit: the
+    key figure read 13 controlled trials (the count matched CSS as well as badges); it is 8.
+  - 🛑 **Main banner: Malcolm to pick** from the seven science banner sheets on his Desktop (`skingenetix-banner-the-science*.png`,
+    `-lab-glassware-*`, `-2026-08-21-banners-*`); already-used candidates listed in the session report. Borrowed from
+    /pages/ingredients until then.
   - ⏳ A dedicated banner image (borrowed from /pages/ingredients for now; a new
     image run costs money, so Malcolm's call).
   - ⏳ Go-live, together and in six languages, once Badenhorst and Raikou are translated: page object (handle `clinical-studies`,

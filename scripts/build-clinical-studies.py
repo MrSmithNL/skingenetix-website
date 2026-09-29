@@ -45,7 +45,8 @@ HUBS = [
     ("copper-peptide", PHRASES["label_copper"], "copper-peptide-research", "templates/page.research-copper-peptide.json",
      "#014EB1", "#E4EDFA", None),
     ("matrixyl-3000", "Matrixyl 3000", "matrixyl-3000-research", "templates/page.research-matrixyl.json",
-     "#016569", "#E0EFEF", "configs/hub-upgrades/matrixyl-3000-research-evidence-merge-2026-09-26.json"),
+     "#016569", "#E0EFEF", ("configs/hub-upgrades/matrixyl-3000-research-evidence-merge-2026-09-26.json",
+                            "configs/hub-upgrades/matrixyl-3000-research-layout-2026-09-26.json")),
     ("argireline", "Argireline®", "acetyl-hexapeptide-8-research", "templates/page.research-argireline.json",
      "#3E4A52", "#E9ECEE", None),
     ("pdrn", "PDRN", "pdrn-research", "templates/page.pdrn-research.json", "#9E4F5C", "#F6E9EB", None),
@@ -53,6 +54,10 @@ HUBS = [
      "#8A6914", "#F5EEDC", None),
 ]
 BANNER = "shopify://shop_images/skingenetix-peptide-laboratory-glassware-blue-pink-serum-actives.jpg"
+# One picture bar per ingredient (Malcolm, 2026-09-29): crops of unused product-banner library candidates,
+# chosen and label-checked in configs/banners/clinical-studies-section-bars-2026-09-29.json
+BAR = "shopify://shop_images/skingenetix-clinical-studies-{slug}-bar.jpg"
+BAR_MOBILE = "shopify://shop_images/skingenetix-clinical-studies-{slug}-bar-mobile.jpg"
 # a scrimmed copy (critique F1): configs/banners/clinical-studies-banner-2026-09-29.json
 BANNER_MOBILE = "shopify://shop_images/skingenetix-clinical-studies-research-banner-mobile.jpg"
 LD_TAG = '<script type="application/ld+json" id="sgx-webpage-jsonld">'
@@ -115,12 +120,12 @@ def transform(html, loc, slug, label, hub, acc, tint, keys, last):
     h = re.sub(re.escape(LD_TAG) + r".*?</script>", "", html, flags=re.S).rstrip()
     rows = re.findall(r"<tr>\s*<td", h)
     n = len(rows)
-    h = h.replace('id="evidence-sources"', f'id="{slug}"', 1)
+    h = h.replace('id="evidence-sources"', f'id="{slug}-table"', 1)    # the anchor #{slug} is on the section bar
     h = h.replace('<div class="est"', f'<div class="est" style="--sg-accent:{acc};--sg-accent-tint:{tint}"', 1)
-    h = re.sub(r'(<h2 class="est__h">).*?(</h2>)', lambda m: m.group(1) + p("section_title", loc, x=label) + m.group(2),
-               h, count=1, flags=re.S)
+    # the section bar above carries the <h2> and the count, so the table keeps only the link to its hub
+    h = re.sub(r'<h2 class="est__h">.*?</h2>\s*', "", h, count=1, flags=re.S)
     link = f'<a href="{pre(loc)}/pages/{hub}">{label}</a>'
-    h = re.sub(r'(<p class="est__lead">).*?(</p>)', lambda m: m.group(1) + p("section_lead", loc, link=link, n=n) + m.group(2),
+    h = re.sub(r'(<p class="est__lead">).*?(</p>)', lambda m: m.group(1) + p("table_lead", loc, link=link) + m.group(2),
                h, count=1, flags=re.S)
 
     def add_link(m):
@@ -183,6 +188,17 @@ def scholarly_items(html):
 
 # ---------------------------------------------------------------- the live side
 
+def first_claim(html):
+    """The hub index's row 01: its strongest result, already worded under the claims register."""
+    m = re.search(r'<span class="evd__claim">(.*?)</span>', html or "", re.S)
+    return m.group(1).strip() if m else None
+
+
+def _spec_html(path, sid):
+    spec = json.loads((ROOT / path).read_text())
+    return next(a["section"]["settings"]["html"] for a in spec["add_sections"] if a["id"] == sid)
+
+
 def live_tables(hu, sr):
     tables = []
     for slug, label, hub, tpl, acc, tint, fallback in HUBS:
@@ -191,26 +207,46 @@ def live_tables(hu, sr):
         if sec and "What it found" in sec["settings"].get("html", ""):
             tr, stale = sr.translations(hu, tpl)
             vals = {"en": sec["settings"]["html"], **{l: tr[l].get("evidence_sources.html") for l in LOCALES[1:]}}
+            ev = {"en": j["sections"]["evidence"]["settings"]["html"], **{l: tr[l].get("evidence.html") for l in LOCALES[1:]}}
             src = "live"
             if stale:
                 print(f"  ⚠ {slug}: outdated translations on the hub: {stale}")
         elif fallback:
-            spec = json.loads((ROOT / fallback).read_text())
-            vals = next(a["section"]["settings"]["html"] for a in spec["add_sections"] if a["id"] == "evidence_sources")
-            src = f"spec {pathlib.Path(fallback).name} (hub not live yet)"
+            vals, ev = _spec_html(fallback[0], "evidence_sources"), _spec_html(fallback[1], "evidence")
+            src = f"specs {pathlib.Path(fallback[0]).name} + layout (hub not live yet)"
         else:
             sys.exit(f"  ✗ {slug}: no evidence table live and no fallback spec")
-        missing = [l for l in LOCALES if not vals.get(l)]
+        claims = {l: first_claim(ev.get(l)) for l in LOCALES}
+        missing = [l for l in LOCALES if not vals.get(l) or not claims[l]]
         if missing:
-            sys.exit(f"  ✗ {slug}: no {missing} translation of the evidence table — the index ships in six languages")
-        tables.append((slug, label, hub, acc, tint, vals, src))
+            sys.exit(f"  ✗ {slug}: no {missing} translation of the evidence table or index — the page ships in six languages")
+        tables.append((slug, label, hub, acc, tint, vals, src, claims))
     return tables
 
 
-def build_spec(tables, keys, today):
+def index_css(hu):
+    """The hubs' own numbered-index styles (the Argireline template is the reference build)."""
+    hdr, j = hu.split(hu.read_file("templates/page.research-argireline.json"))
+    m = re.search(r"<style>.*?</style>", j["sections"]["evidence"]["settings"]["html"], re.S)
+    return m.group(0) if m else ""
+
+
+def unbrace(vals):
+    """custom-html refuses "{{" / "}}" as Liquid, and minified CSS closes media queries as ";}}"."""
+    out = {}
+    for l, v in vals.items():
+        while "}}" in v or "{{" in v:
+            v = v.replace("}}", "} }").replace("{{", "{ {")
+        out[l] = v
+    return out
+
+
+def build_spec(tables, keys, today, evd_css=""):
     appraisals = [h for _, _, h in keys]
     per_loc, counts, items = {l: [] for l in LOCALES}, {}, []
-    for i, (slug, label, hub, acc, tint, vals, src) in enumerate(tables):
+    # badges in table rows only: each copied table's <style> also names .est__pill--a (it read 13, not 8)
+    grade_a = sum(len(re.findall(r'<span class="est__pill est__pill--a"', t[5]["en"])) for t in tables)
+    for i, (slug, label, hub, acc, tint, vals, src, claims) in enumerate(tables):
         last = i == len(tables) - 1
         for loc in LOCALES:
             h, n = transform(vals[loc], loc, slug, lab(label, loc), hub, acc, tint, keys, last)
@@ -239,8 +275,6 @@ def build_spec(tables, keys, today):
              "@media(max-width:749px){.est .est__h{font-size:30px}"
              ".est .est__lk{display:block;padding:14px 0;line-height:1.3}}"   # 13px x 1.3 + 28 = 45px (39 measured at 11px)
              "</style>")
-    jump = {l: p("by_ingredient", l) + " " + ", ".join(f'<a href="#{s}">{lab(x, l)}</a>' for s, x, *_ in tables)
-            for l in LOCALES}
 
     def rt(values):
         return {"type": "richtext", "settings": {"content": values}}
@@ -256,24 +290,65 @@ def build_spec(tables, keys, today):
                      "mobile_text_position": "place-self-start-center text-center",
                      "desktop_text_position": "sm:place-self-center-start sm:text-start",
                      "text_color": "#ffffff", "overlay_color": "#1A1A1A", "overlay_opacity": 35}}}]
-    add.append({"id": "intro", "after": "banner", "section": {
+    # key figures, as the hubs' stats band (stock impact-text)
+    stats = [(str(total), "stat1"), (str(grade_a), "stat2"), (str(len(appraisals)), "stat3")]
+    add.append({"id": "stats", "after": "banner", "section": {
+        "type": "impact-text",
+        "blocks": {f"s{i}": {"type": "item", "settings": {
+            "animate_impact_text": False, "title": v,
+            "subheading": {l: p(k + "_label", l) for l in LOCALES},
+            "content": {l: f"<p>{p(k + '_body', l)}</p>" for l in LOCALES}}} for i, (v, k) in enumerate(stats, 1)},
+        "block_order": ["s1", "s2", "s3"],
+        "settings": {"full_width": True, "stack_mobile": True, "text_alignment": "center", "impact_text_style": "fill",
+                     "text_divider": "none", "impact_text_size_ratio": 0.7, "background": "#ffffff",
+                     "heading_text_color": "#1A1A1A", "text_color": "#1A1A1A"}}})
+    # overview: answer first, the grading key, the dated byline (the hubs' byline shape, without the reviewer)
+    add.append({"id": "intro", "after": "stats", "section": {
         "type": "rich-text",
-        "blocks": {"t": rt({l: f'<p>{p("answer", l, n=total)}</p><p>{p("grading", l)}</p><p>{jump[l]}</p>'
-                               f'<p><em>{p("updated", l, date=fmt_date(today, l))}</em></p>' for l in LOCALES})},
+        "blocks": {"t": rt({l: f'<h2>{p("overview_title", l)}</h2><p>{p("answer", l, n=total)}</p><p>{p("grading", l)}</p>'
+                               f'<p><em>{p("byline", l, date=fmt_date(today, l))}</em></p>' for l in LOCALES})},
         "block_order": ["t"],
         "settings": {"full_width": True, "content_width": "medium", "text_position": "start", "background": "#F0F0F0"}}})
-    prev = "intro"
-    for i, (slug, *_rest) in enumerate(tables):
+    # quick links: the hubs' numbered index, one row per ingredient in its accent, each opening its section bar
+    rows = {l: "".join(
+        f'<a class="evd__row" href="#{slug}" style="--sg-accent:{acc}"><span class="evd__n">{i:02d}</span><span>'
+        f'<span class="evd__claim">{p("index_claim", l, x=lab(label, l), n=counts[slug])}</span>'
+        f'<span class="evd__qual">{p("index_qual", l, claim=claims[l])}</span></span></a>'
+        for i, (slug, label, hub, acc, tint, vals, src, claims) in enumerate(tables, 1)) for l in LOCALES}
+    # one heading system on the page (critique F5): the index heading in the theme's heading face, as the bars
+    evd_css += ("<style>.evd .evd__h{font-family:var(--heading-font-family);font-weight:var(--heading-font-weight);"
+                "font-size:40px;letter-spacing:var(--heading-letter-spacing)}"
+                "@media(max-width:749px){.evd .evd__h{font-size:30px}}</style>")
+    index = {l: (evd_css + f'<div class="evd"><h2 class="evd__h">{p("index_title", l)}</h2>'
+                 f'<p class="evd__cap">{p("index_caption", l)}</p><div class="evd__list">{rows[l]}</div></div>')
+             for l in LOCALES}
+    add.append({"id": "index", "after": "intro", "section": {"type": "custom-html",
+                                                             "settings": {"background": "#ffffff", "html": unbrace(index)}}})
+    prev = "index"
+    for i, (slug, label, *_rest) in enumerate(tables):
+        # the picture bar: the section's <h2>, the count, and the anchor the quick links jump to
+        bid = "bar_" + slug.replace("-", "_")
+        add.append({"id": bid, "after": prev, "section": {
+            "type": "image-with-text-overlay",
+            "blocks": {
+                "anchor": {"type": "liquid", "settings": {"liquid":
+                    f'<span id="{slug}" style="display:block;position:relative;top:-110px;visibility:hidden"></span>'}},
+                "head": rt({l: f'<h2>{p("section_title", l, x=lab(label, l))}</h2><p>{p("bar_sub", l, n=counts[slug])}</p>'
+                            for l in LOCALES})},
+            "block_order": ["anchor", "head"],
+            "settings": {"full_width": True, "allow_transparent_header": False, "enable_parallax": False,
+                         "image_size": "auto", "image": BAR.format(slug=slug), "mobile_image": BAR_MOBILE.format(slug=slug),
+                         "mobile_text_position": "place-self-center-start text-start",
+                         "desktop_text_position": "sm:place-self-center-start sm:text-start",
+                         "text_color": "#ffffff", "overlay_color": "#1A1A1A", "overlay_opacity": 30}}})
+        prev = bid
         sid = "ev_" + slug.replace("-", "_")
         vals = {l: (style if i == 0 else "") + per_loc[l][i] for l in LOCALES}
         if i == len(tables) - 1:
             for l in LOCALES:
                 vals[l] += "\n" + LD_TAG + "\n" + json.dumps(jsonld(l, items, appraisals, total, today), indent=1,
                                                              ensure_ascii=False) + "\n</script>"
-        # custom-html refuses "{{" / "}}" as Liquid, and minified CSS closes media queries as ";}}"
-        for l in LOCALES:
-            while "}}" in vals[l] or "{{" in vals[l]:
-                vals[l] = vals[l].replace("}}", "} }").replace("{{", "{ {")
+        vals = unbrace(vals)
         # white, as on the hubs: left unset, the section took the bone intro's ground (critique F2)
         add.append({"id": sid, "after": prev, "section": {"type": "custom-html",
                                                           "settings": {"background": "#ffffff", "html": vals}}})
@@ -296,8 +371,12 @@ def build_spec(tables, keys, today):
         "remove_sections": ["start"],
         "section_css": {
             "intro": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}",
-                      ".prose p:first-child {font-size: 20px; line-height: 1.5;}",
-                      "@media (max-width: 699px) {.prose p:first-child {font-size: 17px;} }"],
+                      ".prose h2 + p {font-size: 20px; line-height: 1.5;}",
+                      "@media (max-width: 699px) {.prose h2 + p {font-size: 17px;} }"],
+            **{"bar_" + t[0].replace("-", "_"): [".prose h2 {font-size: 40px; margin: 0 0 4px;}",
+                                                 ".prose p {font-size: 16px; margin: 0;}",
+                                                 "@media (max-width: 749px) {.prose h2 {font-size: 26px;} .prose p {font-size: 14px;} }"]
+               for t in tables},
             "closing": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}",
                         ".prose h2 {font-size: 32px;}", "@media (max-width: 749px) {.prose h2 {font-size: 26px;} }"]},
     }
@@ -311,11 +390,11 @@ def main():
     keys = appraisal_keys(configs)
     tables = live_tables(hu, sr)
     import datetime
-    spec, counts, total = build_spec(tables, keys, datetime.date.today().isoformat())
+    spec, counts, total = build_spec(tables, keys, datetime.date.today().isoformat(), index_css(hu))
     OUT.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n")
     print(f"  study pages: {', '.join(f'{s} {y}' for s, y, _ in keys)}")
-    for slug, *_x, src in tables:
-        print(f"  {slug:<16} {counts[slug]:>2} rows · {src}")
+    for t in tables:
+        print(f"  {t[0]:<16} {counts[t[0]]:>2} rows · {t[6]}")
     print(f"  {total} studies · spec written to {OUT.relative_to(ROOT)}")
     return 0
 

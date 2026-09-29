@@ -1,0 +1,98 @@
+{
+  "created": "2026-09-29",
+  "target": "templates/page.clinical-studies.json \u2014 the five ingredient section bars (via scripts/build-clinical-studies.py)",
+  "decided_by": "Malcolm, 2026-09-29: 'the study sections should each have a small separation header bar - with banner images of the models posing - with that type of product. (use the dark style images we made for the product page banners - using unique images ... just choose images that fit the category - from the runs we created before)'. Picks by Claude, from the 2026-08-22 product banner libraries; none referenced by any other config.",
+  "note": "No new generation. Each is a crop of an existing library candidate: desktop 4:1 (60% of the source height), phone 2:1 (the right 83% at full height), with a left scrim baked in under the heading. Labels checked at native resolution first: acetyl-hexapeptide-8 B nbp_pro_01 was rejected (no helix, wrong wordmark), pdrn B gpt_image_01 was rejected (its small label reads 'PORN' at bar size), glutathione B seedream_01 was rejected (face and bottle too far apart for a slim band). Worst-case white-text contrast after the 30% overlay: desktop 14.54 / 13.56 / 17.56 / 5.92 / 5.42, phone 7.12 / 5.07 / 7.15 / 6.24 / 5.76 (copper, Matrixyl, Argireline, PDRN, glutathione).",
+  "images": [
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-copper-peptide-bar.jpg",
+      "filename": "skingenetix-clinical-studies-copper-peptide-bar.jpg",
+      "alt": "Copper Peptide studies: a woman resting her head on her arm, holding the Skingenetix Copper Peptide Advanced Repair Serum beside her face",
+      "_from": "copper-peptide-repair-serum--D-face-full-eyes-open-right gpt_image_01",
+      "_crop": "desktop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-copper-peptide-bar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-copper-peptide-bar.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-copper-peptide-bar-mobile.jpg",
+      "filename": "skingenetix-clinical-studies-copper-peptide-bar-mobile.jpg",
+      "alt": "Copper Peptide studies: a woman resting her head on her arm, holding the Skingenetix Copper Peptide Advanced Repair Serum beside her face",
+      "_from": "copper-peptide-repair-serum--D-face-full-eyes-open-right gpt_image_01",
+      "_crop": "phone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-copper-peptide-bar-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-copper-peptide-bar-mobile.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-matrixyl-3000-bar.jpg",
+      "filename": "skingenetix-clinical-studies-matrixyl-3000-bar.jpg",
+      "alt": "Matrixyl 3000 studies: a woman with eyes closed holding the Skingenetix Matrixyl 3000 Pro Collagen serum against her cheek",
+      "_from": "matrixyl-3000-pro-collagen-serum--B-face-full-prod-right nbp_flash_01",
+      "_crop": "desktop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-matrixyl-3000-bar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-matrixyl-3000-bar.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-matrixyl-3000-bar-mobile.jpg",
+      "filename": "skingenetix-clinical-studies-matrixyl-3000-bar-mobile.jpg",
+      "alt": "Matrixyl 3000 studies: a woman with eyes closed holding the Skingenetix Matrixyl 3000 Pro Collagen serum against her cheek",
+      "_from": "matrixyl-3000-pro-collagen-serum--B-face-full-prod-right nbp_flash_01",
+      "_crop": "phone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-matrixyl-3000-bar-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-matrixyl-3000-bar-mobile.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-argireline-bar.jpg",
+      "filename": "skingenetix-clinical-studies-argireline-bar.jpg",
+      "alt": "Argireline studies: a woman with her head tilted back, eyes closed, holding the Skingenetix Acetyl Hexapeptide-8 serum by her ear",
+      "_from": "acetyl-hexapeptide-8-serum--B-face-full-prod-right gpt_image_01",
+      "_crop": "desktop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-argireline-bar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-argireline-bar.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-argireline-bar-mobile.jpg",
+      "filename": "skingenetix-clinical-studies-argireline-bar-mobile.jpg",
+      "alt": "Argireline studies: a woman with her head tilted back, eyes closed, holding the Skingenetix Acetyl Hexapeptide-8 serum by her ear",
+      "_from": "acetyl-hexapeptide-8-serum--B-face-full-prod-right gpt_image_01",
+      "_crop": "phone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-argireline-bar-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-argireline-bar-mobile.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-pdrn-bar.jpg",
+      "filename": "skingenetix-clinical-studies-pdrn-bar.jpg",
+      "alt": "PDRN studies: a woman lying on her side holding the Skingenetix PDRN Skin Repair serum beside her face",
+      "_from": "pdrn-skin-repair-serum--D-face-full-eyes-open-right nbp_flash_01",
+      "_crop": "desktop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-pdrn-bar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-pdrn-bar.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-pdrn-bar-mobile.jpg",
+      "filename": "skingenetix-clinical-studies-pdrn-bar-mobile.jpg",
+      "alt": "PDRN studies: a woman lying on her side holding the Skingenetix PDRN Skin Repair serum beside her face",
+      "_from": "pdrn-skin-repair-serum--D-face-full-eyes-open-right nbp_flash_01",
+      "_crop": "phone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-pdrn-bar-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-pdrn-bar-mobile.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-glutathione-bar.jpg",
+      "filename": "skingenetix-clinical-studies-glutathione-bar.jpg",
+      "alt": "Glutathione studies: a woman lying back holding the Skingenetix Glutathione Brightening Radiant Glow Serum beside her face",
+      "_from": "glutathione-brightening-serum--D-face-full-eyes-open-right seedream_01",
+      "_crop": "desktop",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-glutathione-bar.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-glutathione-bar.jpg?v=1790684675"
+    },
+    {
+      "source": "assets/publish-ready/clinical-studies-2026-09-29/skingenetix-clinical-studies-glutathione-bar-mobile.jpg",
+      "filename": "skingenetix-clinical-studies-glutathione-bar-mobile.jpg",
+      "alt": "Glutathione studies: a woman lying back holding the Skingenetix Glutathione Brightening Radiant Glow Serum beside her face",
+      "_from": "glutathione-brightening-serum--D-face-full-eyes-open-right seedream_01",
+      "_crop": "phone",
+      "uploaded_handle": "shopify://shop_images/skingenetix-clinical-studies-glutathione-bar-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-clinical-studies-glutathione-bar-mobile.jpg?v=1790684675"
+    }
+  ]
+}
