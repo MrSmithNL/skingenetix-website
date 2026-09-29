@@ -165,6 +165,8 @@ Malcolm's rule is _standard sections before custom code_ (memory `standard-secti
 | Unclassed `<h2>` + `<ol>` of links, styled by the section's native **Custom CSS** (`custom_css`) | accepted; the CSS is scoped to the section and `@media` works                 |
 | Custom CSS of ~1,600 characters                                                                  | refused: "Custom CSS contains more than 500 characters"                       |
 | `content:` (counters, bullets, step discs via `::before`) in Custom CSS                          | refused: "Invalid property value: content"                                    |
+| `filter: brightness()` in Custom CSS (2026-09-29, on a live hero)                                | refused: "Invalid property value: filter"                                     |
+| `background-color` on the theme's `.content-over-media::before` overlay, inside `@media`         | accepted: the phone-only darker hero overlay on PDRN and Argireline (§6.1)    |
 
 So the four custom sections stay forced for the approved design: Argireline's overview CSS alone is ~2,500 characters, and its numbered index, bullets and step
 discs all need `content`. The stock-plus-Custom-CSS route is still the right tool for **small** tweaks to stock sections (under 500 characters, no `content`),

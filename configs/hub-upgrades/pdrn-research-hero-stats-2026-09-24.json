@@ -1,5 +1,5 @@
 {
-  "_about": "PDRN hero and key figures, 2026-09-24, from the design critique: the hero subtitle becomes the template's one-line promise with no number (it repeated the figure directly below it, and its length ran onto the busy helix at 2.85:1 contrast); key figure 2's subheading now reads as PDRN's improvement, not retinol's change; overlay 25 -> 50: measured at the 98th-percentile background pixel under each text line, 35% left the desktop subtitle at 3.56:1 and the mobile eyebrow at 3.33:1, 45% at 4.49 and 4.24 (small text needs 4.5:1). A stopgap until the banner is recomposed. Owns hero/p1/content and stats/s2/subheading.",
+  "_about": "PDRN hero and key figures, 2026-09-24, from the design critique: the hero subtitle becomes the template's one-line promise with no number (it repeated the figure directly below it, and its length ran onto the busy helix at 2.85:1 contrast); key figure 2's subheading now reads as PDRN's improvement, not retinol's change; overlay 25 -> 50: measured at the 98th-percentile background pixel under each text line, 35% left the desktop subtitle at 3.56:1 and the mobile eyebrow at 3.33:1, 45% at 4.49 and 4.24 (small text needs 4.5:1). A stopgap until the banner is recomposed. Owns hero/p1/content and stats/s2/subheading. 2026-09-29: owns hero section_css, a phone-only darker hero overlay (the theme's .content-over-media::before at 0.7 opacity at <=699px; desktop unchanged; Shopify's Custom CSS refused `filter`) so the white hero text meets WCAG AA: measured at 390 px, Argireline label 2.06->4.76:1 and H1 2.77->6.03:1, PDRN label 4.26->7.96:1 (found by the Matrixyl design critic; Malcolm: 'argireline & PDRN mobile darkened image is agreed').",
   "template": "templates/page.pdrn-research.json",
   "page": "pdrn-research",
   "set": [
@@ -30,5 +30,10 @@
     "hero": {
       "overlay_opacity": 50
     }
+  },
+  "section_css": {
+    "hero": [
+      "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.7); } }"
+    ]
   }
 }
