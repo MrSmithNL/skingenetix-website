@@ -85,6 +85,10 @@ TILES = {
     # photograph reads as two different things on two surfaces. Flagged, not
     # changed — it was chosen on sight.
     "/pages/our-philosophy": "skingenetix-concern-brightening-glow-2026.jpg",
+    # Malcolm, 2026-09-29: the Clinical studies blog under Discover, "and add an image for it". The
+    # evidence-bench frame (gloved hands pipetting into a plate) from the 2026-08-22 science banner batch:
+    # configs/banners/menu-clinical-studies-tile-2026-09-29.json
+    "/blogs/clinical-studies": "skingenetix-menu-clinical-studies-research-lab.jpg",
 
     # --- Support
     "/pages/faq": "skingenetix-skincare-faq-questions-answered-mobile.jpg",
@@ -113,7 +117,8 @@ SIGNATURES = [
 # Links that sit in a tiled menu as a full-width TEXT line under the tiles rather than as a tile.
 # Malcolm, 2026-09-29: "add this page https://www.skingenetix.com/blogs/clinical-studies to the main menu under
 # 'science'" — a sixth tile with no picture would render as a blank grey square on a second row.
-ROWS = ["/blogs/clinical-studies"]
+# Empty since the same day: under Discover the link is a tile with its own image (Malcolm: "add an image for it").
+ROWS = []
 
 MARK_START = "/* === SGX MENU IMAGE TILES START === */"
 MARK_END = "/* === SGX MENU IMAGE TILES END === */"
@@ -194,6 +199,37 @@ def build_css():
                            for sc in [f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"])' for h in SIGNATURES])
     row_span = ",\n".join(f'{sc} .mega-menu__nav > li > a[href$="{r}"] > span' for r in ROWS
                           for sc in [f'.mega-menu:has(.mega-menu__nav > li > a[href$="{h}"])' for h in SIGNATURES])
+
+    rows_block = (f"""/* Text rows (ROWS): a full-width, centred line under the tiles — 2026-09-29, the
+   Clinical studies blog under Science. The tile rules above out-rank a plain
+   selector, so these repeat their scope and use !important where they override. */
+{nav_scope} {{
+  flex-wrap: wrap;
+  row-gap: var(--spacing-5, 1.25rem);
+}}
+{row_li} {{
+  flex: 0 0 100% !important;
+  max-width: none !important;
+  width: 100% !important;
+}}
+{row_a} {{
+  display: block !important;
+  aspect-ratio: auto !important;
+  background: none !important;
+  min-height: 0 !important;
+  padding: var(--spacing-4, 1rem) 0 0 !important;
+  border-top: 1px solid #e4e4e4;
+  border-radius: 0 !important;
+  text-align: center;
+}}
+{row_after} {{
+  display: none !important;
+}}
+{row_span} {{
+  color: #1a1a1a !important;
+  text-shadow: none !important;
+}}
+""" if ROWS else "")
 
     images = "\n".join(
         f'.mega-menu__nav > li > a[href$="{h}"] '
@@ -322,36 +358,7 @@ def build_css():
 /* Per-tile artwork. Unscoped by menu on purpose: an href appears in exactly one
    menu, and keeping these flat makes the list readable and easy to re-point. */
 {images}
-/* Text rows (ROWS): a full-width, centred line under the tiles — 2026-09-29, the
-   Clinical studies blog under Science. The tile rules above out-rank a plain
-   selector, so these repeat their scope and use !important where they override. */
-{nav_scope} {{
-  flex-wrap: wrap;
-  row-gap: var(--spacing-5, 1.25rem);
-}}
-{row_li} {{
-  flex: 0 0 100% !important;
-  max-width: none !important;
-  width: 100% !important;
-}}
-{row_a} {{
-  display: block !important;
-  aspect-ratio: auto !important;
-  background: none !important;
-  min-height: 0 !important;
-  padding: var(--spacing-4, 1rem) 0 0 !important;
-  border-top: 1px solid #e4e4e4;
-  border-radius: 0 !important;
-  text-align: center;
-}}
-{row_after} {{
-  display: none !important;
-}}
-{row_span} {{
-  color: #1a1a1a !important;
-  text-shadow: none !important;
-}}
-}}
+{rows_block}}}
 {MARK_END}"""
 
 

@@ -17,7 +17,8 @@ retired. Still gated on translation: the Discover menu item, footer link and Sci
    fields. Each old address `/pages/study/<name>` gets a permanent redirect.
 3. **The 32-row graded table page is retired before it is published.** Every row already lives in the Evidence & Sources table of its
    ingredient page; the blog's intro links to those five tables.
-4. **Menu:** ~~under Discover~~ **under Science** (Malcolm's instruction later the same day; live, see decisions log). Originally: "Clinical studies" goes under Discover, beside The Science, as a plain menu item. This replaces the line under the Science tiles
+4. **Menu: under Discover, as an image tile** (live 2026-09-29, see decisions log). Malcolm briefly placed it under Science the same
+   day, then moved it back here and asked for an image. Originally: "Clinical studies" goes under Discover, beside The Science, as a plain menu item. This replaces the line under the Science tiles
    approved this morning. The footer link and the band on the Science page stay.
 
 ## 2. Why a blog list is the right overview

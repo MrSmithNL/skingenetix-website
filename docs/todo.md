@@ -476,7 +476,8 @@ AI-generated illustrations and must not be presented as results. Record:
 - ✅ **Clinical studies is a BLOG, built 2026-09-29** (`docs/decision-clinical-studies-blog-2026-09-29.md`; Malcolm: a blog list like
   Hairgenetix, menu under Discover). `/blogs/clinical-studies` live with four articles (Badenhorst, Raikou, Wang, Ye); the old
   `/pages/study/*` addresses 301 per locale; hub and study links moved to the new addresses in six languages; table page retired.
-  ✅ **In the main menu under Science** (Malcolm, 2026-09-29; live, six languages; a text line under the tiles on desktop).
+  ✅ **In the main menu under Discover, with an image tile** (Malcolm, 2026-09-29; live, six languages; it replaced the short-lived
+  Science text line the same day).
   ⏳ Translate Badenhorst and Raikou (their /de…/it versions still show English). ⏳ Footer link and Science-page band (approved in
   ADR-2026-09-29-C, not yet done). 🛑 Main banner pick (sheets on Malcolm's Desktop). ⏳ Rebuild Wang and Ye on the new layout (they still
   show pilot content, no breadcrumb). 🛑 Ask Malcolm: three excerpts (the SEO descriptions) end "…and what it does not" — reword

@@ -397,3 +397,13 @@ translated (Klinische Studien, Klinische studies, Études cliniques, Estudios cl
 centred text line under the five ingredient tiles (`scripts/menu-image-tiles.py` ROWS, pushed with the new `--css-only` flag so the header
 was not rewritten); in the phone drawer it is the sixth line. This replaces the Discover placement. Linked on his instruction ahead of the
 Badenhorst and Raikou translations. The footer link and the Science-page band were not part of this instruction and are still open.
+
+**Amended a third time 2026-09-29: the menu item is under Discover, with an image tile.** Malcolm: "sorry - add the blog overview for
+Clinical studies page menu link under 'Discover' (not science)", then "and add an image for it". Live the same day: the same menu item
+(`gid://shopify/MenuItem/809197994369`, ID kept) moved from Science to Discover, beside The Science, Ingredients and Our Philosophy. The
+move dropped its five translations; they were re-registered on `gid://shopify/Link/809197994369`. On desktop it is the fourth image tile
+(`skingenetix-menu-clinical-studies-research-lab.jpg`, a square crop of the existing evidence-bench candidate
+`the-science--C-evidence-bench-gpt_image_02.png`, no new generation; plan
+`configs/banners/menu-clinical-studies-tile-2026-09-29.json`). The text line under the Science tiles is gone (`ROWS = []` in
+`scripts/menu-image-tiles.py`, pushed with `--css-only`). Verified live in English, German and the phone drawer. This supersedes the
+Science placement. Backup of the menu before the move: `backups/main-menu-20260929-154059.json`.
