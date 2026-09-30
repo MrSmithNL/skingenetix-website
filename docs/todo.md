@@ -573,6 +573,19 @@ AI-generated illustrations and must not be presented as results. Record:
     the-science band, study-page breadcrumbs, hub and homepage links into the appraisals.
   - Not decided: product → study links, the Discover duplicate, hiding the empty Learn blog, Dr Bodde's credit on the index (left off:
     set-reviewer.py cannot remove it from this page yet).
+- ✅ **CENTRAL AUDIT of the four study articles (2026-09-29/30, seo-toolkit F-012 v2 — the "re-score once F-012 is back" below).**
+  Tracker: `docs/audits/tracker-skingenetix.com.md`. Live 2026-09-30 (Malcolm: "yes"): pilot template for Wang and Ye (no more empty
+  sections, ADR-2026-09-30-P); Wang → Raikou appraisal link and hub → Raikou link (six languages); "Before you try it" note on every study
+  (ADR-2026-09-30-S; translations pending native review); study keywords decided (ADR-2026-09-30-K, `keyword-strategy-2026.md` §4);
+  Badenhorst retitled. Scores run 2: Wang 8.99, Raikou 9.22, Badenhorst 9.26, Ye 8.79.
+  - ⏳ **Malcolm:** Search Console → Request indexing for the four `/blogs/clinical-studies/…` URLs (no API for it).
+  - ⏳ **Malcolm:** product-vs-hub keyword ownership — `docs/keyword-ownership-analysis-2026-09-30.md` §1–3.
+  - ⏳ **Malcolm:** product pages carry no precautions (PDRN serum checked) — wording + six languages.
+  - ⏳ Proposals: spoke "Argireline and Matrixyl 3000 together" (858/month US, forum-only page one); a "Does Argireline work?" section on
+    the hub (656/month).
+  - ℹ️ STUDY-CITE centralisation (below) is done in the engine: the central audit's R4 check resolves every DOI/PMID/PMCID on the page.
+    `build-study-page.py`'s pre-publish check stays as the gate.
+  - ⚠ `set-reviewer.py --apply` still republishes the pilots through `study-pages.py` — do not run it until they are rebuilt (unchanged).
 - ⏳ **STUDY — next study articles (started 2026-09-26; ADR-2026-09-26-L).** Malcolm: "start work on the next scientific study articles", and three
   rulings: the limits section stays, reframed as "How to read this result"; no page for the null Henseler 2023 (Wang 2013 is rebuilt in its slot,
   Henseler sentence off); Robinson 2005 built from the abstract, no chart. Template doc rewritten: `docs/study-page-template.md`.

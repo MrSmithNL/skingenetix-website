@@ -436,3 +436,38 @@ results are mostly forums. "Collagen peptides" demand is supplements and is excl
 - Menu: a fifth Skin Solutions tile, "Collagen Skincare", in six languages, once the rebuilt page is approved.
   **Conditions:** products shown up front (the searches are commercial); the answer on topical collagen is honest and sourced (a
   new claims register); no product promise to boost collagen; the rebuilt page is shown to Malcolm before it goes live.
+
+## ADR-2026-09-30-P: The two pilot studies get their own article template until they are rebuilt
+
+**Date:** 2026-09-30
+**Status:** Accepted and live. Malcolm: "yes" (to the audit's fix list).
+**Context:** The central SEO/GEO/AISO audit (2026-09-29, `docs/audits/tracker-skingenetix.com.md`) found Wang 2013 and Ye 2026
+rendering twice: the stock article template printed seven empty section headings under their pilot body and their reference a
+second time. Their content lives in `sections_html`; every stock field is empty.
+**Decision:** `templates/article.clinical-study-pilot.json` — banner, body, safety note, JSON-LD — assigned to both (template
+suffix `clinical-study-pilot`); `build-clinical-studies-blog.py` assigns it to any pilot config. The stock template is unchanged.
+**Undo:** set the two articles' template suffix back to `clinical-study`. **Ends when** the pilots are rebuilt on the stock template.
+
+## ADR-2026-09-30-S: A "Before you try it" safety note on every study article
+
+**Date:** 2026-09-30
+**Status:** Accepted and live in six languages. Malcolm: "yes — if this is best practice for premium skincare brands".
+**Evidence:** `docs/research-2026-09-30-safety-notes-on-study-articles.md`. Not a Google rule (the rater guidelines have no such line)
+and not an EU duty for articles, but the practice of Medik8, INKEY, Timeless and Murad, and justified here because each article sits
+one click from a product and reports trial side effects without use guidance; PDRN is salmon-derived (fish allergy).
+**Decision:** one block right before the product buttons, use guidance only; six-language words in `configs/study-safety-note.json`
+(theme locale files, `skingenetix.study_safety`); PDRN line only on PDRN studies. Never "safe", "proven safe", "hypoallergenic" or
+"dermatologically tested" (EU Reg 655/2013: a safety statement is a claim). **Open:** native review of the five translations; the product
+pages carry no precautions at all (checked on the PDRN serum) — a separate decision.
+
+## ADR-2026-09-30-K: Study articles own their trial's question; "does X work?" belongs to the hub
+
+**Date:** 2026-09-30
+**Status:** Accepted (Malcolm: "the keyword research and keyword strategy should decide this").
+**Evidence:** `docs/keyword-ownership-analysis-2026-09-30.md` §4 ($1.26 of DataForSEO). No study's own question has measurable
+demand; the efficacy questions do — "does argireline work" 656/month (US), page one forums only.
+**Decision:** each study article owns its own trial question (`keyword-strategy-2026.md` §4 table; `page-targets.json` type
+`study`), links up to its hub, and is judged as an evidence page, not a traffic page. "Does X work?" is a hub section. A study title
+never asks the ingredient-wide question — Badenhorst retitled on this rule.
+**Pending, same analysis §1–3:** the product-vs-hub overlaps (argireline, matrixyl 3000) and the "peptide skincare" owner — a
+recommendation awaiting Malcolm.

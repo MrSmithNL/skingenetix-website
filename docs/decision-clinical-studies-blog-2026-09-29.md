@@ -7,6 +7,9 @@ also this Clinical studies overview/hub page should be in the main website navig
 move them") and **built 2026-09-29**: blog live with four articles, old addresses 301 to the articles (locale-aware), table page
 retired. Still gated on translation: the Discover menu item, footer link and Science-page band.
 
+**Amended 2026-09-30:** the two pilot studies render through `templates/article.clinical-study-pilot.json` until rebuilt
+(ADR-2026-09-30-P), and every study carries a "Before you try it" note (ADR-2026-09-30-S).
+
 ---
 
 ## 1. The decision

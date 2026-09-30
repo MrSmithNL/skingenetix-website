@@ -30,23 +30,24 @@ guidelines rate a summary of an abstract as _Lowest_, and any competitor can gen
 The lever for the stock route: Liquid is evaluated inside section settings on a metaobject template, so a stock section can read
 `{{ metaobject.<field>.value }}`. Shopify validates the reference on upload ("must end with '.value' when not using a metafield filter").
 
-## 3. Structure — 11 stock sections
+## 3. Structure — 12 stock sections
 
 Built by `scripts/study-template-build.py`. Every section is one the hubs already use.
 
-| #   | Section   | Stock type                   | Carries                                                        |
-| --- | --------- | ---------------------------- | -------------------------------------------------------------- |
-| 1   | banner    | `image-with-text-overlay`    | eyebrow, H1 and deck over the per-study banner image           |
-| 2   | figures   | `impact-text`                | three key numbers, the hubs' serif stat treatment              |
-| 3   | answer    | `rich-text`                  | byline, definition, the quotable answer paragraph, our verdict |
-| 4   | glance    | `specification-table`        | nine rows; labels static, values per study                     |
-| 5   | chart     | `rich-text` + `liquid` block | the bar chart and its `<table>` from `scripts/hub_charts.py`   |
-| 6   | story     | `media-with-text`            | "What the researchers did", image left                         |
-| 7   | limits    | `media-with-text`            | **"How to read this result"**, image right                     |
-| 8   | context   | `media-with-text`            | "Where this trial sits in the evidence", image left            |
-| 9   | faq       | `faq`                        | four fixed questions, answers per study, FAQPage schema        |
-| 10  | means     | `rich-text` + two buttons    | what it means for our products                                 |
-| 11  | reference | `rich-text`                  | citation, read-at-source note, JSON-LD                         |
+| #   | Section   | Stock type                   | Carries                                                                      |
+| --- | --------- | ---------------------------- | ---------------------------------------------------------------------------- |
+| 1   | banner    | `image-with-text-overlay`    | eyebrow, H1 and deck over the per-study banner image                         |
+| 2   | figures   | `impact-text`                | three key numbers, the hubs' serif stat treatment                            |
+| 3   | answer    | `rich-text`                  | byline, definition, the quotable answer paragraph, our verdict               |
+| 4   | glance    | `specification-table`        | nine rows; labels static, values per study                                   |
+| 5   | chart     | `rich-text` + `liquid` block | the bar chart and its `<table>` from `scripts/hub_charts.py`                 |
+| 6   | story     | `media-with-text`            | "What the researchers did", image left                                       |
+| 7   | limits    | `media-with-text`            | **"How to read this result"**, image right                                   |
+| 8   | context   | `media-with-text`            | "Where this trial sits in the evidence", image left                          |
+| 9   | faq       | `faq`                        | four fixed questions, answers per study, FAQPage schema                      |
+| 9a  | safety    | `rich-text` + `liquid` block | **"Before you try it"** note (2026-09-30), words from the theme locale files |
+| 10  | means     | `rich-text` + two buttons    | what it means for our products                                               |
+| 11  | reference | `rich-text`                  | citation, read-at-source note, JSON-LD                                       |
 
 **Two pieces of section code, both forced (rung 4):** a `liquid` block in the banner sets the key-figure colour to the
 study's ingredient accent, chosen from the metaobject handle (a colour setting cannot read a field, and the definition has no
@@ -57,6 +58,19 @@ the answer paragraph at 20px (17px on phones). Both added after the 2026-09-26 d
 (Design, Participants, What was applied, Compared with, Duration, How it was measured, Concentration, Funding, Our evidence grade), every section
 title, the four FAQ questions and the two button labels. This is forced as well as chosen: a metaobject definition allows 40 fields and 37 are
 used.
+
+**The safety note (2026-09-30, Malcolm's go; research `docs/research-2026-09-30-safety-notes-on-study-articles.md`).**
+Every study article carries a "Before you try it" block right before the product buttons: use guidance only (patch test, stop if
+irritated, ask a doctor if pregnant, breastfeeding or on prescription skin treatment), and on PDRN studies a fish-allergy line (PDRN is
+salmon-derived). Its six-language words live in **`configs/study-safety-note.json`** and are uploaded to the theme locale files
+(`skingenetix.study_safety`) with `python3 scripts/study-template-build.py --safety-locales --apply`. **Never write "safe", "proven
+safe", "hypoallergenic" or "dermatologically tested"** — under EU Reg 655/2013 each is a claim that needs evidence (a test
+refuses them). New studies get the note automatically; nothing to do per study.
+
+**Pilot template (interim).** Wang 2013 and Ye 2026 still hold pilot content in `sections_html` with every stock field empty, so they use
+`templates/article.clinical-study-pilot.json` (banner, body, safety, JSON-LD; `study-template-build.py --article-pilot`). Under the
+stock template they showed seven empty headings and their reference twice (central audit, 2026-09-29). `build-clinical-studies-blog.py`
+assigns the pilot template to pilot configs; switch an article back to `clinical-study` once its study is rebuilt.
 
 ## 4. Hard rules
 
@@ -114,9 +128,17 @@ Every localisable value is `{"en": "…", "de": "…", …}`. A locale is publis
 6. Verify live with **curl**, not Python: Cloudflare throttles Python's urllib. Check one H1, the sections, the table count, the JSON-LD and no
    unrendered Liquid.
 7. Capture 1440 and 390, tile to `~/Desktop/skingenetix-renders.png`, `open` it.
-8. `python3 scripts/page-audit.py /pages/study/<handle>` (internal checklist), the `design-critic` agent on the deployed URL in a fresh context,
-   then the central auditor (`seo-toolkit/scripts/audit_page.py`, quote `weighted_score`) until it clears 9.
-9. Credit the reviewer: add the config to `configs/reviewers/esther-bodde.json` → `studies`.
+8. **Keyword first:** add the article to `configs/page-targets.json` (`"type": "study"`, its `primary` = the trial's own question,
+   its `hub`), following `docs/keyword-strategy-2026.md` §4 "Clinical-study articles". The title asks the trial's question, never
+   the ingredient-wide "does X work?" (that belongs to the hub). Then regenerate the audit's keyword map in seo-toolkit
+   (`configs/skingenetix.config.json`, from `page-targets.json`).
+9. **Audit with the central auditor, v2** (the `seo-aiso-validator` skill; never a local copy):
+   `cd ~/"Claude Code/Projects/seo-toolkit" && .venv/bin/python scripts/audit_page.py "https://www.skingenetix.com/blogs/clinical-studies/<handle>" --criteria v2 --page-type evidence --keyword "<primary>" --serp --market en-US --json <out>.json --out docs/audits/page-audit-<date>-<handle>.md`.
+   Read gates · score · coverage, then **CONFIRMED FAILURES** — that list is the fix list; never fix CONTESTED. Check every "missing X"
+   verdict on the raw page first. Fix, re-audit, **stop at no confirmed failures** (≤ 3 rounds), never at a score. Several articles:
+   `scripts/audit_summary.py <jsons>` shows the shared (template) causes. Budget ≈ USD 1 per audit, standing approval ≈ USD 3.
+   `scripts/page-audit.py` stays for its live-browser design checks only (1440/390), and the `design-critic` agent runs in a fresh context.
+10. Credit the reviewer: add the config to `configs/reviewers/esther-bodde.json` → `studies`.
 
 ## 7. Traps
 
@@ -136,16 +158,16 @@ Every localisable value is `{"en": "…", "de": "…", …}`. A locale is publis
 | Text over a busy banner                                                           | Judged legible by eye at 1440, it measured 2.60–2.70:1. Measure the 99.5th-percentile pixel under the text after the 28% overlay; fix with a scrim baked into a copy of the image (`configs/banners/study-banners-scrim-2026-09-26.json`). |
 | Heavy storefront fetching earns HTTP 429                                          | One verification at a time, with pauses; curl, not Python.                                                                                                                                                                                 |
 
-## 8. Status (2026-09-26)
+## 8. Status (2026-09-30)
 
-| Page                                             | State                                                                                                                                                                                                                                           |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Badenhorst 2016 (copper)                         | Live on the stock template, English only. Limits reframed; design-critique fixes applied (2026-09-26). Central audit 6.33 before the internal-link and citation fixes; not re-scored (the central auditor is being rebuilt, seo-toolkit F-012). |
-| Wang 2013 (Argireline)                           | Live in six languages on pilot content (the `sections_html` fallback block); no figures, chart or glance. Carries the Henseler null sentence. To be rebuilt on the template (ADR-2026-09-26-L).                                                 |
-| Ye 2026 (PDRN)                                   | Live in six languages on pilot content; to be rebuilt on the template.                                                                                                                                                                          |
-| Raikou 2017 (Argireline)                         | **Live in English 2026-09-26** (Malcolm's go-ahead), from the full text. Design-critique fixes applied.                                                                                                                                         |
-| Robinson 2005 (Matrixyl)                         | Planned, from the abstract (ADR-2026-09-26-L decision 3).                                                                                                                                                                                       |
-| Evidence Library index `/pages/evidence-library` | Not built (404).                                                                                                                                                                                                                                |
+| Page                     | State                                                                                                                                                                                                                                      |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Badenhorst 2016 (copper) | Live, English only. Central audit v2 (2026-09-29): 9.26, one finding (title) — retitled "Badenhorst 2016: Can a Copper Peptide Serum Reduce Wrinkles?" (2026-09-30). Translations wait until the English is complete (Malcolm, 2026-09-30) |
+| Wang 2013 (Argireline)   | Live in six languages on pilot content, **pilot template** since 2026-09-30 (no more empty sections); links to Raikou's appraisal. Audit v2 8.99. To be rebuilt on the stock template                                                      |
+| Ye 2026 (PDRN)           | Live in six languages on pilot content, **pilot template** since 2026-09-30. Audit v2 8.79 (the pilot defects, now fixed). To be rebuilt on the stock template                                                                             |
+| Raikou 2017 (Argireline) | Live in English. Audit v2 9.22; the Argireline hub now links to it (six languages, 2026-09-30)                                                                                                                                             |
+| Robinson 2005 (Matrixyl) | Planned, from the abstract (ADR-2026-09-26-L decision 3).                                                                                                                                                                                  |
+| Index                    | Replaced by the blog list `/blogs/clinical-studies` (2026-09-29)                                                                                                                                                                           |
 
 **Design critique cycle 1 (2026-09-26, `docs/audits/2026-09-26-study-pages-design-critique.md`): FIX, Raikou 5.60, Badenhorst
 5.49.** Fixed the same day and verified by computed style: both banner contrast failures (now 6.87:1 and 6.60:1), the key-figure
