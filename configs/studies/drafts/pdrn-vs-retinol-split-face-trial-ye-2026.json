@@ -1,0 +1,253 @@
+{
+  "_note": "DRAFT, English first (Malcolm, 2026-09-30: rebuild the pilot articles on the study template; translate only once the English is complete and optimised). The live article still renders the six-language pilot from configs/studies/pdrn-vs-retinol-split-face-trial-ye-2026.json until go-live. Every figure re-read in the full text on 2026-09-30 (PMC13353946 via NCBI efetch: Methods, Results 'PDRN-850K eye cream shows approximately two-fold greater clinical improvement', Fig 6 legend), matching docs/claims/pdrn.md (verified 2026-09-23). Crow's-feet wrinkle area and number: approximately -20% to -23% (PDRN) vs -6% to -7% (retinol) at day 28, given as a range for the two measures together (no per-measure value), so the key figure says 'up to 23%'. Ratios: about 2x (periocular wrinkles, dermal thickness and density, eye bags and tear trough), about 1.8x (R2 elasticity, F4 firmness); exact statistics in Fig 6B only. No adverse reactions on either side. Register rules: 'more than twice', never '3x'; no invented '+X% firmness'; collagen gains always 'in a laboratory study on human skin samples'; no placebo arm stated as a fact, positive first.",
+  "handle": "pdrn-vs-retinol-split-face-trial-ye-2026",
+  "hub": "pdrn-research",
+  "source_url": "https://doi.org/10.1371/journal.pone.0350905",
+  "read_at_source": "2026-09-30",
+  "published": "2026-09-22",
+  "eyebrow": { "en": "Clinical Study · 2026" },
+  "h1": { "en": "Can PDRN outperform retinol on crow's feet?" },
+  "deck": {
+    "en": "A randomised, double-blind, split-face trial of a 0.1% PDRN eye cream against 0.1% retinol in 31 women — read at source, appraised in full."
+  },
+  "banner": "skingenetix-pdrn-sodium-dna-polynucleotide-research-banner",
+  "banner_mobile": "skingenetix-pdrn-sodium-dna-polynucleotide-research-mobile",
+  "byline": {
+    "en": "Appraised by the Skingenetix research team. Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician. Last reviewed 30 September 2026."
+  },
+  "reviewer": {
+    "@type": "Person",
+    "name": "Esther Bodde",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Cosmetic & Medical Physician"
+  },
+  "definition": {
+    "en": "[PDRN](https://www.skingenetix.com/pages/pdrn-research) (polydeoxyribonucleotide, listed on ingredient labels as sodium DNA) is a purified mix of DNA fragments from salmon. Long used as an injectable in clinics, it is now used in creams and serums for firmer, smoother-looking skin."
+  },
+  "answer": {
+    "en": "The Ye 2026 trial is a randomised, double-blind, split-face study in which 31 women with sensitive skin used a 0.1% PDRN eye cream on one side of the face and 0.1% retinol in the same base on the other, twice a day. After 28 days, crow's-feet wrinkle area and number had fallen by up to 23% on the PDRN side, against about 6–7% with retinol."
+  },
+  "verdict": {
+    "en": "**Our verdict:** the only controlled trial of PDRN on intact skin, and a strong result. PDRN improved crow's feet more than twice as much as retinol within 28 days, visibly by day 14, measured by four instruments with every woman as her own comparison. It is one trial of 31 women, compared with retinol rather than a placebo, so we cite it for the ingredient as studied."
+  },
+  "seo_title": { "en": "PDRN vs Retinol: The Ye 2026 Crow's-Feet Trial" },
+  "seo_description": {
+    "en": "A 0.1% PDRN eye cream softened crow's feet by up to 23% in 28 days, over twice as much as 0.1% retinol. What the 2026 split-face trial shows."
+  },
+  "figures": [
+    {
+      "n": { "en": "Up to &minus;23%" },
+      "label": { "en": "Crow's-feet wrinkle area and number, day 28" },
+      "note": {
+        "en": "On the PDRN side, against about −6% to −7% on the retinol side of the same face, by VISIA image analysis ([Ye et al., 2026](https://doi.org/10.1371/journal.pone.0350905))."
+      }
+    },
+    {
+      "n": { "en": "About 2&times;" },
+      "label": { "en": "Improvement compared with retinol" },
+      "note": {
+        "en": "About twice retinol's improvement in wrinkles around the eyes, dermal thickness and density, and eye bags, and about 1.8 times in firmness and elasticity."
+      }
+    },
+    {
+      "n": { "en": "Day 14" },
+      "label": { "en": "When the PDRN side had visibly improved" },
+      "note": {
+        "en": "For several wrinkle measures, the PDRN side had improved more by day 14 than the retinol side had by day 28. No reactions were reported on either side."
+      }
+    }
+  ],
+  "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page. Keep these nine values in that order.",
+  "glance": {
+    "heading": { "en": "At a glance" },
+    "rows": [
+      {
+        "k": { "en": "Design" },
+        "v": {
+          "en": "Randomised, double-blind, split-face trial: each woman used both creams, one on each side of the face, assigned at random."
+        }
+      },
+      {
+        "k": { "en": "Participants" },
+        "v": {
+          "en": "31 Chinese women aged 35 to 55 (average 47.5), all with self-reported sensitive skin and visible crow's feet, under-eye lines and eye bags."
+        }
+      },
+      {
+        "k": { "en": "What was applied" },
+        "v": {
+          "en": "A water-in-silicone eye cream with 0.1% PDRN-850K, a medium-length salmon PDRN, as its only active, twice a day around the eyes, with daytime sunscreen."
+        }
+      },
+      {
+        "k": { "en": "Compared with" },
+        "v": {
+          "en": "0.1% retinol in an identical cream base, on the other side of the same face. There was no placebo side."
+        }
+      },
+      { "k": { "en": "Duration" }, "v": { "en": "28 days, with measurements at day 0, day 14 and day 28." } },
+      {
+        "k": { "en": "How it was measured" },
+        "v": {
+          "en": "VISIA 7 imaging for wrinkles, Antera 3D for eye bags and tear troughs, a Cutometer for firmness and elasticity, and Ultrascan UC22 ultrasound for dermal thickness and density."
+        }
+      },
+      {
+        "k": { "en": "Concentration" },
+        "v": {
+          "en": "<strong>0.1% PDRN-850K</strong> (about 1,200 base pairs, up to 850 kDa, at least 96% pure), stated in the methods; 0.1% retinol on the comparison side."
+        }
+      },
+      {
+        "k": { "en": "Funding" },
+        "v": {
+          "en": "No specific funding. Four authors are affiliated with commercial skincare biotechnology companies (Inertia Shanghai Biotechnology and DermaHealth Shanghai Biotechnology); the paper declares no conflicts. The PDRN came from Ruijiming (Shandong) Biotechnology."
+        }
+      },
+      {
+        "k": { "en": "Our evidence grade" },
+        "v": {
+          "en": "A — randomised, double-blind and instrument-measured, with each woman as her own comparison; compared with retinol rather than a placebo."
+        }
+      }
+    ]
+  },
+  "measurements": {
+    "chart": {
+      "title": { "en": "Improvement with PDRN, compared with retinol" },
+      "subtitle": {
+        "en": "Retinol's improvement = 1×. The paper reports these ratios as approximate; the exact statistics are in its Figure 6."
+      },
+      "unit": "×",
+      "signed": false,
+      "domain": [0, 2.3],
+      "ticks": [0, 1, 2],
+      "value_width": 64,
+      "series": [
+        { "key": "p", "color": "#9E4F5C", "prefix": "≈", "label": { "en": "0.1% PDRN side" } },
+        { "key": "r", "color": "#9AA3A4", "quiet": true, "label": { "en": "0.1% retinol side" } }
+      ],
+      "rows": [
+        { "values": { "p": 2, "r": 1 }, "label": { "en": "Wrinkles around the eyes" } },
+        { "values": { "p": 2, "r": 1 }, "label": { "en": "Dermal thickness and density (ultrasound)" } },
+        { "values": { "p": 2, "r": 1 }, "label": { "en": "Eye bags and tear troughs" } },
+        { "values": { "p": 1.8, "r": 1 }, "label": { "en": "Firmness and elasticity" } }
+      ],
+      "table_head": { "en": "Measure" },
+      "caption": {
+        "en": "<p>The authors report the PDRN side improving about twice as much as the retinol side on wrinkles around the eyes, dermal thickness and density, and eye bags and tear troughs, and about 1.8 times as much on firmness and elasticity. On crow's feet, wrinkle area and number fell by about 20% to 23% with PDRN, against about 6% to 7% with retinol (<a href='https://doi.org/10.1371/journal.pone.0350905' target='_blank' rel='noopener'>Ye et al., 2026</a>).</p>"
+      }
+    }
+  },
+  "media": {
+    "heading": { "en": "What the researchers did" },
+    "image": "skingenetix-pdrn-solution-petri-dish-study.jpg",
+    "alt": { "en": "A glass petri dish of pale pink solution on a rose-coloured surface" },
+    "body": [
+      {
+        "en": "Thirty-one women with sensitive skin used two eye creams for 28 days, one on each side of the face, assigned at random. Neither they nor the assessors knew which side had which. One cream contained 0.1% PDRN, the other 0.1% retinol, in exactly the same base, so any difference between the two sides came from the active ingredient."
+      },
+      {
+        "en": "The skin was measured with four instruments at the start, at day 14 and at day 28, after 20 minutes' rest in a temperature- and humidity-controlled room. Alongside the clinical trial, the team tested the PDRN in skin cells and in samples of human skin damaged by UV light in the laboratory."
+      }
+    ]
+  },
+  "limits": {
+    "heading": { "en": "How to read this result" },
+    "items": [
+      {
+        "en": "<strong>What it was compared with.</strong> PDRN was tested against 0.1% retinol, an established anti-ageing ingredient, in an identical base. Both sides improved, and PDRN improved more; with no placebo side, the trial measures PDRN against retinol rather than against no treatment. 0.1% retinol works gradually, and four weeks is a short run for it."
+      },
+      {
+        "en": "<strong>Why split-face matters.</strong> Every woman was her own comparison, which removes differences in age, diet and sun exposure between groups."
+      },
+      {
+        "en": "<strong>How it was measured.</strong> Four instruments measured wrinkles, eye bags, firmness and dermal density rather than judging by eye. The ratios are the authors' own approximations; the exact statistics appear in the paper's Figure 6."
+      },
+      {
+        "en": "<strong>What the ultrasound shows.</strong> Dermal thickness and density rose about twice as much with PDRN. The authors note that part of the day-28 change may reflect short-term hydration and plumping as well as structural change."
+      },
+      {
+        "en": "<strong>Scale and setting.</strong> 31 women aged 35 to 55, all with sensitive skin, around the eyes, over 28 days, in an eye cream with PDRN as its only active."
+      },
+      {
+        "en": "<strong>Who ran it.</strong> Four authors are affiliated with commercial skincare biotechnology companies; the paper declares no conflicts of interest and no specific funding."
+      }
+    ]
+  },
+  "context": {
+    "heading": { "en": "Where this trial sits in the evidence" },
+    "body": [
+      {
+        "en": "PDRN has a long record as an injectable, but on intact skin its evidence rests on this trial: the first controlled study of a PDRN cream used without needles or microneedling. A 2026 systematic review of PDRN trials found mostly injected or procedure-assisted studies, and it was completed before this one was published ([Alhussain et al., 2026](https://pubmed.ncbi.nlm.nih.gov/42572627/))."
+      },
+      {
+        "en": "In the same paper, in a laboratory study on human skin samples damaged by UV light, the PDRN cream raised nine types of collagen, elastin and fibrillin: a laboratory result that fits the firmer, denser-looking skin measured on the women's faces."
+      },
+      {
+        "en": "Every study we rely on, graded, is on the [PDRN evidence hub](https://www.skingenetix.com/pages/pdrn-research), alongside our other [ingredient research](https://www.skingenetix.com/pages/the-science). For a peptide trial on crow's feet, see our appraisal of the [Argireline® trial](https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013)."
+      }
+    ]
+  },
+  "faq": {
+    "_note": "Questions live in scripts/study-template-build.py (FAQ_QUESTIONS) — the same four on every study page. Keep these four answers in that order.",
+    "questions": [
+      { "en": "Does this trial prove the ingredient works?" },
+      { "en": "What concentration did the study use?" },
+      { "en": "Is the trial independent?" },
+      { "en": "Do Skingenetix products reproduce this result?" }
+    ],
+    "answers": [
+      {
+        "en": "It shows that a 0.1% PDRN eye cream reduced crow's-feet wrinkle area and number by up to 23% in 28 days, more than twice the improvement of 0.1% retinol on the other side of the same face, measured by imaging. It is one trial of 31 women, compared with retinol rather than a placebo; the rest of the evidence is on the [PDRN evidence hub](https://www.skingenetix.com/pages/pdrn-research)."
+      },
+      {
+        "en": "0.1% of PDRN-850K, a medium-length salmon PDRN (about 1,200 base pairs, up to 850 kDa), as the only active in an eye cream applied twice a day. The comparison side had 0.1% retinol in the same base."
+      },
+      {
+        "en": "It was published in the peer-reviewed journal PLOS ONE with no specific funding. Four of its authors are affiliated with commercial skincare biotechnology companies, and the paper declares no conflicts of interest."
+      },
+      {
+        "en": "Our [PDRN 1% Renewal Serum](https://www.skingenetix.com/products/pdrn-renewal-serum) contains 1% salmon PDRN; the trial used 0.1% of one specific medium-length PDRN in an eye cream. No study has compared PDRN concentrations, so a higher percentage should not be read as a bigger effect, and the trial's results are not our serum's results."
+      }
+    ]
+  },
+  "meaning": {
+    "heading": { "en": "What it means for our products" },
+    "body": [
+      {
+        "en": "This trial is why PDRN is in our range as a skincare ingredient rather than only a clinic treatment: applied to intact skin, it improved crow's feet more than retinol did within four weeks, with no reactions in women with sensitive skin."
+      },
+      {
+        "en": "Our [PDRN 1% Renewal Serum](https://www.skingenetix.com/products/pdrn-renewal-serum) and [PDRN Collagen Night Cream](https://www.skingenetix.com/products/pdrn-collagen-night-cream) contain salmon PDRN. They are different formulas from the trial's eye cream, so we cite the trial for the ingredient as studied, not as a result our products have repeated. The rest of the evidence is on the [PDRN research hub](https://www.skingenetix.com/pages/pdrn-research)."
+      }
+    ],
+    "ctas": [
+      { "label": { "en": "Read the PDRN evidence" }, "href": "/pages/pdrn-research" },
+      { "label": { "en": "See the serum" }, "href": "/products/pdrn-renewal-serum" }
+    ]
+  },
+  "citation": {
+    "en": "Ye R, Wang Q, Du L, Li L, Hu F. Topical medium-length PDRN enhances dermal extracellular matrix repair in photodamaged skin via PI3K–Akt/TGF-β–regulated pathways. *PLOS ONE* 2026;21(7):e0350905. [doi:10.1371/journal.pone.0350905](https://doi.org/10.1371/journal.pone.0350905)"
+  },
+  "source_note": {
+    "en": "Read at source: full text, 30 September 2026. Figures on this page come from the methods, the results of the clinical study and Figure 6, not the abstract."
+  },
+  "scholarly": {
+    "name": "Topical medium-length PDRN enhances dermal extracellular matrix repair in photodamaged skin via PI3K–Akt/TGF-β–regulated pathways",
+    "identifier": "10.1371/journal.pone.0350905",
+    "datePublished": "2026",
+    "journal": "PLOS ONE"
+  },
+  "checks": [
+    "23%",
+    "0.1% PDRN",
+    "0.1% retinol",
+    "31 women",
+    "Day 14",
+    "no specific funding",
+    "Ye R, Wang Q",
+    "Read at source"
+  ],
+  "concerns": ["wrinkles", "crows_feet", "retinol"]
+}

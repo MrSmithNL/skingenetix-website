@@ -387,7 +387,44 @@ def media_gid(stem):
     sys.exit(f"REFUSING: no media file matching {stem!r}")
 
 
-def apply(cfg, status="ACTIVE"):
+PREVIEW_VIEW = "clinical-study-draft"      # templates/article.clinical-study-draft.json, reading study.draft
+
+
+def draft_handle(cfg):
+    """The study entry an English-first rebuild is written to, beside the live one (Malcolm, 2026-09-30)."""
+    return cfg["handle"] + "-draft"
+
+
+def page_url(cfg, loc, view=None):
+    return f"{BASE}{_pre(loc)}{PATH}{cfg['handle']}?" + (f"view={view}&" if view else "") + f"v={time.time()}"
+
+
+def link_draft(cfg):
+    """Point the live article's study.draft metafield at the draft entry (creating the definition once)."""
+    study_def = gql('query{ metaobjectDefinitionByType(type:"study"){ id } }')["metaobjectDefinitionByType"]["id"]
+    have = gql('query{ metafieldDefinitions(first:50, ownerType:ARTICLE, namespace:"study"){ nodes{ key } } }')
+    if "draft" not in [n["key"] for n in have["metafieldDefinitions"]["nodes"]]:
+        r = gql('mutation($d:MetafieldDefinitionInput!){ metafieldDefinitionCreate(definition:$d){ userErrors{ message } } }',
+                {"d": {"name": "Study (draft preview)", "namespace": "study", "key": "draft", "ownerType": "ARTICLE",
+                       "type": "metaobject_reference", "validations": [{"name": "metaobject_definition_id", "value": study_def}]}})
+        if r["metafieldDefinitionCreate"]["userErrors"]:
+            sys.exit(f"  ✗ {r['metafieldDefinitionCreate']['userErrors']}")
+    mo = gql('query($h:MetaobjectHandleInput!){ metaobjectByHandle(handle:$h){ id } }',
+             {"h": {"type": "study", "handle": draft_handle(cfg)}})["metaobjectByHandle"]
+    art = next((a for a in gql('query($q:String!){ articles(first:5, query:$q){ nodes{ id handle blog{ handle } } } }',
+                              {"q": f"handle:{cfg['handle']}"})["articles"]["nodes"] if a["blog"]["handle"] == "clinical-studies"), None)
+    if not (mo and art):
+        sys.exit(f"  ✗ link_draft: draft entry {bool(mo)}, article {bool(art)}")
+    r = gql('mutation($m:[MetafieldsSetInput!]!){ metafieldsSet(metafields:$m){ userErrors{ message } } }',
+            {"m": [{"ownerId": art["id"], "namespace": "study", "key": "draft", "type": "metaobject_reference", "value": mo["id"]}]})
+    if r["metafieldsSet"]["userErrors"]:
+        sys.exit(f"  ✗ {r['metafieldsSet']['userErrors']}")
+    print(f"  ✓ article study.draft → {draft_handle(cfg)}; preview: {page_url(cfg, 'en', PREVIEW_VIEW).split('&v=')[0]}")
+
+
+def apply(cfg, status="ACTIVE", entry_handle=None, english_only=False):
+    """Write the study entry. entry_handle/english_only: an English-first preview written beside the live entry."""
+    handle = entry_handle or cfg["handle"]
     payload = [{"key": k, "value": v} for k, v in {**fields(cfg, "en"), **links(cfg, "en")}.items()]
     for key, stem in (("banner", cfg["banner"]), ("banner_mobile", cfg["banner_mobile"]),
                       ("story_image", cfg["media"]["image"].rsplit(".", 1)[0])):
@@ -397,7 +434,7 @@ def apply(cfg, status="ACTIVE"):
 
     cap = {"publishable": {"status": status}}   # DRAFT: saved and validated, not on the storefront
     ex = gql('query($h:MetaobjectHandleInput!){ metaobjectByHandle(handle:$h){ id } }',
-             {"h": {"type": "study", "handle": cfg["handle"]}})["metaobjectByHandle"]
+             {"h": {"type": "study", "handle": handle}})["metaobjectByHandle"]
     if ex:
         r = gql('mutation($id:ID!,$m:MetaobjectUpdateInput!){ metaobjectUpdate(id:$id, metaobject:$m)'
                 '{ metaobject{ id } userErrors{ field message } } }',
@@ -405,14 +442,14 @@ def apply(cfg, status="ACTIVE"):
     else:
         r = gql('mutation($m:MetaobjectCreateInput!){ metaobjectCreate(metaobject:$m)'
                 '{ metaobject{ id } userErrors{ field message } } }',
-                {"m": {"type": "study", "handle": cfg["handle"], "fields": payload,
+                {"m": {"type": "study", "handle": handle, "fields": payload,
                        "capabilities": cap}})["metaobjectCreate"]
     if r["userErrors"]:
         sys.exit(f"  ✗ {r['userErrors']}")
     rid = r["metaobject"]["id"]
-    print(f"  ✓ {cfg['handle']}: {'updated' if ex else 'created'}, {status}, {len(payload)} fields (English)")
+    print(f"  ✓ {handle}: {'updated' if ex else 'created'}, {status}, {len(payload)} fields (English)")
 
-    trans = [l for l in locales(cfg) if l != "en"]
+    trans = [] if english_only else [l for l in locales(cfg) if l != "en"]
     if not trans:
         print("  · no translations in this config yet — English serves every locale until they land")
         return
@@ -430,11 +467,10 @@ def apply(cfg, status="ACTIVE"):
     print(f"  ✓ {len(t_in)} translations across {len(trans)} locales")
 
 
-def verify(cfg):
+def verify(cfg, view=None):
     bad = 0
-    for loc in locales(cfg):
-        url = f"{BASE}{_pre(loc)}{PATH}{cfg['handle']}"
-        html = spg._get(url + f"?v={time.time()}")
+    for loc in (["en"] if view else locales(cfg)):          # a preview is English-first
+        html = spg._get(page_url(cfg, loc, view))
         h1 = [H.unescape(re.sub(r"<[^>]+>", "", x)).strip() for x in re.findall(r"<h1[^>]*>(.*?)</h1>", html, re.S)]
         want = t(cfg["h1"], loc)
         page = re.sub(r"<(style|script)\b.*?</\1>", "", html, flags=re.S)
@@ -460,18 +496,26 @@ def main():
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--verify-live", action="store_true")
     ap.add_argument("--draft", action="store_true", help="with --apply: save as DRAFT (not on the storefront)")
+    ap.add_argument("--preview", action="store_true",
+                    help="English-first rebuild of a live article: write <handle>-draft, link it as the article's "
+                         "study.draft, verify through ?view=clinical-study-draft (the live article is untouched)")
     a = ap.parse_args()
     cfg = json.loads(pathlib.Path(a.config).read_text())
-    print(f"  {cfg['handle']} · locales {', '.join(locales(cfg))}")
+    print(f"  {cfg['handle']} · locales {', '.join(locales(cfg))}" + (" · PREVIEW (English, draft entry)" if a.preview else ""))
     if a.verify_live:
-        return 1 if verify(cfg) else 0
+        return 1 if verify(cfg, PREVIEW_VIEW if a.preview else None) else 0
     errs = check(cfg) + check_citations(cfg, resolve_live)
     for e in errs:
         print("  ✗", e)
     if errs:
         return 1
     print("  ✓ all checks pass")
-    if a.apply:
+    if a.apply and a.preview:
+        # ACTIVE, not DRAFT: a storefront reference to a draft entry renders nothing. The study definition's own web
+        # pages are off, so the entry has no public page; it is reached only through ?view=clinical-study-draft.
+        apply(cfg, "ACTIVE", entry_handle=draft_handle(cfg), english_only=True)
+        link_draft(cfg)
+    elif a.apply:
         apply(cfg, "DRAFT" if a.draft else "ACTIVE")
     return 0
 

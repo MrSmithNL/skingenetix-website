@@ -120,3 +120,16 @@ def test_merging_the_note_into_a_locale_file_keeps_everything_else():
     body = json.loads(out[out.index("{"):])
     assert body["general"] == {"a": "b"} and body["skingenetix"]["other"] == "x"
     assert body["skingenetix"]["study_safety"]["title"] == "Bevor Sie es ausprobieren"
+
+
+# ── the draft template (Malcolm, 2026-09-30): rebuild a live, translated article English-first ──────────────────
+# Wang 2013 and Ye 2026 are live in six languages on the pilot template. Their stock-format rebuild is written to a
+# separate study entry, `<handle>-draft`, which the article reaches through a second metafield, study.draft. This
+# template reads only that, so /blogs/clinical-studies/<handle>?view=clinical-study-draft shows the draft and the live
+# article (study.entry) does not change until go-live.
+
+def test_the_draft_template_reads_the_draft_entry_and_never_the_live_one():
+    import json
+    s = json.dumps(stb.build_draft_article())
+    assert "article.metafields.study.draft.value." in s and "study.entry" not in s
+    assert stb.build_draft_article()["order"] == stb.build_article()["order"]

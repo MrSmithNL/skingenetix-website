@@ -141,3 +141,34 @@ def test_the_banner_carries_a_translated_breadcrumb_to_the_hub():
     assert bsp.crumb_parts(BADENHORST, "de") == [("Wissenschaft", "/de/pages/the-science"),
                                                  ("Klinische Studien", "/de/blogs/clinical-studies"),
                                                  ("Kupferpeptid (GHK-Cu)", "/de/pages/copper-peptide-research")]
+
+
+# ---------------------------------------------------------------- English-first preview of a live article (2026-09-30)
+
+def _recorder(calls):
+    def gql(q, v=None):
+        calls.append((q, v or {}))
+        if "metaobjectByHandle" in q:
+            return {"metaobjectByHandle": None}
+        if "metaobjectCreate" in q:
+            return {"metaobjectCreate": {"metaobject": {"id": "gid://shopify/Metaobject/9"}, "userErrors": []}}
+        raise AssertionError(f"unexpected call: {q[:60]}")
+    return gql
+
+
+def test_a_preview_writes_only_the_draft_entry_and_registers_no_translation(monkeypatch):
+    calls = []
+    monkeypatch.setattr(bsp, "gql", _recorder(calls))
+    monkeypatch.setattr(bsp, "media_gid", lambda stem: "gid://shopify/MediaImage/1")
+    cfg = copy.deepcopy(BADENHORST)
+    bsp.apply(cfg, "ACTIVE", entry_handle=bsp.draft_handle(cfg), english_only=True)
+    handles = [v["h"]["handle"] for q, v in calls if "h" in v] + [v["m"]["handle"] for q, v in calls if "handle" in v.get("m", {})]
+    assert handles and set(handles) == {cfg["handle"] + "-draft"}
+    assert not any("translationsRegister" in q for q, _ in calls)
+
+
+def test_the_preview_is_checked_through_the_draft_template():
+    url = bsp.page_url(BADENHORST, "de", view="clinical-study-draft")
+    assert url.startswith("https://www.skingenetix.com/de/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016")
+    assert "view=clinical-study-draft" in url
+    assert "view=" not in bsp.page_url(BADENHORST, "en")

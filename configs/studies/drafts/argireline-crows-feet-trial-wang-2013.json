@@ -1,0 +1,338 @@
+{
+  "_note": "DRAFT, English first (Malcolm, 2026-09-30: rebuild the pilot articles on the study template; translate only once the English is complete and optimised). The live article still renders the six-language pilot from configs/studies/argireline-crows-feet-trial-wang-2013.json until go-live. Every figure here is from the full text as recorded in docs/claims/argireline-acetyl-hexapeptide-8.md (row 1-2, §4 table, re-checked at source 2026-09-23): 22 of 45 (48.9%) graded 3-4 vs 0 of 15; replica roughness Sa, Smax, St down p < 0.01 before-vs-after, placebo p > 0.05; no adverse effects, no drop-outs; product supplied by McEit. Register rules: 48.9% is a share of people, never a wrinkle reduction; no % change from Table 2 (no baseline, no between-group test). ADR-2026-09-26-L: limits reframed positive-first; the null Henseler 2023 sentence of the pilot is dropped.",
+  "handle": "argireline-crows-feet-trial-wang-2013",
+  "hub": "acetyl-hexapeptide-8-research",
+  "source_url": "https://doi.org/10.1007/s40257-013-0009-9",
+  "read_at_source": "2026-09-23",
+  "published": "2026-09-22",
+  "eyebrow": {
+    "en": "Clinical Study · 2013"
+  },
+  "h1": {
+    "en": "Does Argireline® soften crow's feet?"
+  },
+  "deck": {
+    "en": "A double-blind, placebo-controlled trial of 10% Argireline® around the eyes in 60 adults — read at source, appraised in full."
+  },
+  "banner": "skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner",
+  "banner_mobile": "skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-mobile",
+  "byline": {
+    "en": "Appraised by the Skingenetix research team. Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician. Last reviewed 23 September 2026."
+  },
+  "reviewer": {
+    "@type": "Person",
+    "name": "Esther Bodde",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Cosmetic & Medical Physician"
+  },
+  "definition": {
+    "en": "[Argireline®](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research) is the trade name of acetyl hexapeptide-8, a short synthetic peptide made by Lipotec, now part of Lubrizol. It is one of the most widely used cosmetic peptides for the look of expression lines, especially crow's feet around the eyes."
+  },
+  "answer": {
+    "en": "The Wang 2013 trial is a randomised, double-blind, placebo-controlled study of 10% Argireline® applied around the eyes twice a day by 60 adults. After four weeks, clinicians graded 22 of the 45 people using Argireline as clearly improved, against none of the 15 on the placebo cream, and silicone skin replicas confirmed smoother skin."
+  },
+  "verdict": {
+    "en": "**Our verdict:** the strongest human evidence for Argireline®. In a double-blind trial with a true placebo, nearly half of those using 10% Argireline around the eyes were graded clearly smoother within four weeks, and no one on placebo was. The main result is a clinician's grade, backed by instrument analysis of skin replicas, so we read it alongside the instrument-measured forehead trial."
+  },
+  "seo_title": {
+    "en": "Wang 2013: Does Argireline Soften Crow's Feet?"
+  },
+  "seo_description": {
+    "en": "Nearly 1 in 2 were graded clearly smoother after 4 weeks of 10% Argireline around the eyes, none on placebo. What the 2013 double-blind trial shows."
+  },
+  "figures": [
+    {
+      "n": {
+        "en": "22 of 45"
+      },
+      "label": {
+        "en": "Graded clearly improved after 4 weeks"
+      },
+      "note": {
+        "en": "With 10% Argireline®, against 0 of 15 on the placebo cream: a grade of 3 or 4 on the clinicians' 0–4 scale ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."
+      }
+    },
+    {
+      "n": {
+        "en": "3 of 3"
+      },
+      "label": {
+        "en": "Roughness measures that fell (p &lt; 0.01)"
+      },
+      "note": {
+        "en": "Silicone replicas of the skin around the eyes showed all three roughness measures falling with Argireline®; the placebo group showed no significant change."
+      }
+    },
+    {
+      "n": {
+        "en": "0"
+      },
+      "label": {
+        "en": "Side effects or drop-outs"
+      },
+      "note": {
+        "en": "No one stopped using the cream and no one reported a side effect over the four weeks ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."
+      }
+    }
+  ],
+  "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page. Keep these nine values in that order.",
+  "glance": {
+    "heading": {
+      "en": "At a glance"
+    },
+    "rows": [
+      {
+        "k": {
+          "en": "Design"
+        },
+        "v": {
+          "en": "Randomised, double-blind, placebo-controlled trial with parallel groups: three people on Argireline® for every one on placebo."
+        }
+      },
+      {
+        "k": {
+          "en": "Participants"
+        },
+        "v": {
+          "en": "60 Chinese adults aged 25 to 60 with crow's feet (50 women, 10 men): 45 on Argireline®, 15 on placebo."
+        }
+      },
+      {
+        "k": {
+          "en": "What was applied"
+        },
+        "v": {
+          "en": "An oil-in-water emulsion with 10% Argireline® and no preservatives, applied around the eyes twice a day."
+        }
+      },
+      {
+        "k": {
+          "en": "Compared with"
+        },
+        "v": {
+          "en": "The same emulsion without Argireline® (placebo). Neither the participants nor the assessors knew who had which."
+        }
+      },
+      {
+        "k": {
+          "en": "Duration"
+        },
+        "v": {
+          "en": "4 weeks, with assessments at the start and at the end."
+        }
+      },
+      {
+        "k": {
+          "en": "How it was measured"
+        },
+        "v": {
+          "en": "Clinicians graded overall improvement on a 0–4 scale; silicone replicas of the skin around the eyes were analysed with a Skin-Visioline VL 650 for three roughness measures (Sa, Smax, St)."
+        }
+      },
+      {
+        "k": {
+          "en": "Concentration"
+        },
+        "v": {
+          "en": "<strong>10% Argireline®</strong>, stated in the methods. Argireline is supplied as a peptide solution, so this is 10% of that solution: the top of the maker's recommended 2–10% range."
+        }
+      },
+      {
+        "k": {
+          "en": "Funding"
+        },
+        "v": {
+          "en": "The trial cream was supplied by McEit, which markets Argireline® in China. The authors declared no conflicts of interest."
+        }
+      },
+      {
+        "k": {
+          "en": "Our evidence grade"
+        },
+        "v": {
+          "en": "A — randomised, double-blind and placebo-controlled; the main result is a clinician's grade, backed by instrument analysis of skin replicas."
+        }
+      }
+    ]
+  },
+  "measurements": {
+    "chart": {
+      "title": {
+        "en": "People graded clearly improved after 4 weeks"
+      },
+      "subtitle": {
+        "en": "A clinician's grade of 3 or 4 on a 0–4 scale, made without knowing who had which cream. A share of people, not a change in wrinkle depth."
+      },
+      "unit": "%",
+      "signed": false,
+      "decimals": 1,
+      "domain": [0, 60],
+      "ticks": [0, 20, 40, 60],
+      "value_width": 70,
+      "series": [
+        {
+          "key": "a",
+          "color": "#3E4A52",
+          "label": {
+            "en": "Argireline® (10%): 22 of 45"
+          }
+        },
+        {
+          "key": "p",
+          "color": "#8A9394",
+          "quiet": true,
+          "label": {
+            "en": "Placebo: 0 of 15"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "a": 48.9,
+            "p": 0
+          },
+          "label": {
+            "en": "Graded 3 or 4 (clearly improved)"
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Measure"
+      },
+      "caption": {
+        "en": "<p>After four weeks, 22 of the 45 people using 10% Argireline® (48.9%) were graded 3 or 4 on the clinicians' 0–4 scale, against none of the 15 on the placebo cream. This is the share of people graded clearly improved, not a 48.9% reduction in wrinkles (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</p>"
+      }
+    }
+  },
+  "media": {
+    "heading": {
+      "en": "What the researchers did"
+    },
+    "image": "skingenetix-argireline-peptide-solution-petri-dish-study.jpg",
+    "alt": {
+      "en": "A glass petri dish of clear peptide solution on a pale grey surface"
+    },
+    "body": [
+      {
+        "en": "Sixty adults with crow's feet were randomly assigned, three to one, to an emulsion containing 10% Argireline® or to the same emulsion without it. Neither the participants nor the assessors knew who had which cream, and everyone applied theirs around the eyes twice a day for four weeks."
+      },
+      {
+        "en": "Results were measured in two ways. Clinicians graded each person's overall improvement on a five-point scale, from 0 (no change) to 4 (about 100% improved). Silicone moulds of the skin around the eyes were taken before and after, and analysed with a Skin-Visioline VL 650 imaging system for three measures of skin roughness."
+      }
+    ]
+  },
+  "limits": {
+    "heading": {
+      "en": "How to read this result"
+    },
+    "items": [
+      {
+        "en": "<strong>What the headline figure is.</strong> 48.9% is the share of people graded clearly improved: 22 of 45. It is not a 48.9% reduction in wrinkles, a misreading that has since appeared in published reviews."
+      },
+      {
+        "en": "<strong>How the result was judged.</strong> The main result is a clinician's visual grade, made without knowing who had which cream. The skin replicas add an instrument measure: all three roughness values fell with Argireline® (p &lt; 0.01) while placebo showed no significant change. The paper compares each group before and after rather than testing the two groups against each other."
+      },
+      {
+        "en": "<strong>Group sizes.</strong> Three people were given Argireline® for every one on placebo, 45 against 15, so the placebo group is small. No one in either group dropped out."
+      },
+      {
+        "en": "<strong>Duration and area.</strong> Four weeks, around the eyes. The forehead has its own trial, which measured smoother skin by day 20 with an imaging instrument ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314))."
+      },
+      {
+        "en": "<strong>Who took part.</strong> 60 Chinese adults aged 25 to 60, mostly women (50 of 60), all with crow's feet at the start."
+      },
+      {
+        "en": "<strong>Supply.</strong> McEit, which markets Argireline® in China, supplied the trial cream; the authors declared no conflicts of interest."
+      }
+    ]
+  },
+  "context": {
+    "heading": {
+      "en": "Where this trial sits in the evidence"
+    },
+    "body": [
+      {
+        "en": "Argireline® is one of the most widely used cosmetic peptides, and this is the largest controlled trial of it: 60 adults, double-blind, with a true placebo. A second controlled trial, from an academic group, measured the forehead with an imaging instrument and found roughness fell 7.4% by day 20 with 10% Argireline® while it rose 4.3% on placebo ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)). We appraise it on [its own page](https://www.skingenetix.com/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017)."
+      },
+      {
+        "en": "The two trials point the same way: smoother-looking skin with Argireline® than without it, within weeks, at 10%. The laboratory work on how Argireline® is thought to act, by quietening the signal that tightens expression muscles, is summarised with every study we rely on, graded, on the [Argireline® evidence hub](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research)."
+      },
+      {
+        "en": "The hub sits alongside our other [ingredient research](https://www.skingenetix.com/pages/the-science), and the [Clinical studies](https://www.skingenetix.com/blogs/clinical-studies) list gathers every trial we have appraised."
+      }
+    ]
+  },
+  "faq": {
+    "_note": "Questions live in scripts/study-template-build.py (FAQ_QUESTIONS) — the same four on every study page. Keep these four answers in that order.",
+    "questions": [
+      {
+        "en": "Does this trial prove the ingredient works?"
+      },
+      {
+        "en": "What concentration did the study use?"
+      },
+      {
+        "en": "Is the trial independent?"
+      },
+      {
+        "en": "Do Skingenetix products reproduce this result?"
+      }
+    ],
+    "answers": [
+      {
+        "en": "It is the strongest human evidence for Argireline®: in a double-blind trial, 22 of 45 people using 10% Argireline around the eyes were graded clearly improved after four weeks, against 0 of 15 on placebo, and skin replicas confirmed smoother skin (p &lt; 0.01). It agrees with the instrument-measured forehead trial ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)), and the rest of the evidence is on the [Argireline® evidence hub](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research)."
+      },
+      {
+        "en": "10% Argireline®, in an oil-in-water emulsion applied around the eyes twice a day. Argireline is supplied as a peptide solution, so this is 10% of that solution: the top of the 2–10% range its maker recommends."
+      },
+      {
+        "en": "It was run by clinical researchers in China and published in the peer-reviewed American Journal of Clinical Dermatology. The trial cream was supplied by McEit, which markets Argireline® in China, and the authors declared no conflicts of interest."
+      },
+      {
+        "en": "Our [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum) lists 10% Argireline®, the level used in this trial, applied the same way, twice a day. It also contains other ingredients, so its results are not the trial's results: we cite this trial as evidence for the ingredient as studied."
+      }
+    ]
+  },
+  "meaning": {
+    "heading": {
+      "en": "What it means for our products"
+    },
+    "body": [
+      {
+        "en": "This trial is a large part of why Argireline® is in our range: in a double-blind test around the eyes, nearly half of the people using it at 10% were graded clearly smoother within four weeks, and no one on placebo was."
+      },
+      {
+        "en": "Our [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum) lists the same 10% Argireline®. It also contains other ingredients, so we cite the trial for the ingredient as studied, not as a result our serum has repeated. The rest of the evidence is on the [Argireline® research hub](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research)."
+      }
+    ],
+    "ctas": [
+      {
+        "label": {
+          "en": "Read the Argireline® evidence"
+        },
+        "href": "/pages/acetyl-hexapeptide-8-research"
+      },
+      {
+        "label": {
+          "en": "See the serum"
+        },
+        "href": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum"
+      }
+    ]
+  },
+  "citation": {
+    "en": "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology* 2013;14(2):147–153. [doi:10.1007/s40257-013-0009-9](https://doi.org/10.1007/s40257-013-0009-9)"
+  },
+  "source_note": {
+    "en": "Read at source: full text, 23 September 2026. Figures on this page come from the results, Table 2 and the adverse-events report, not the abstract. Argireline® is a registered trademark of Lubrizol."
+  },
+  "scholarly": {
+    "name": "The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study",
+    "identifier": "23417317",
+    "datePublished": "2013",
+    "journal": "American Journal of Clinical Dermatology"
+  },
+  "checks": ["22 of 45", "0 of 15", "p &lt; 0.01", "10%", "McEit", "Wang Y, Wang M", "Read at source"],
+  "concerns": ["wrinkles", "crows_feet"]
+}

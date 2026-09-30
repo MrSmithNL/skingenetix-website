@@ -400,6 +400,27 @@ def build_pilot_article():
     return j
 
 
+DRAFT_TPL = "templates/article.clinical-study-draft.json"
+DRAFT_ENTRY = "article.metafields.study.draft.value."
+
+
+def build_draft_article():
+    """The stock article template reading the article's DRAFT study (Malcolm, 2026-09-30: English first).
+
+    Wang 2013 and Ye 2026 are live in six languages on the pilot template. Their stock-format rebuild goes into a
+    separate study entry, `<handle>-draft` (build-study-page.py --preview), linked from the article's second
+    metafield study.draft. This template reads only that, so ?view=clinical-study-draft shows the rebuild while the
+    live article, which reads study.entry, is untouched until go-live.
+    """
+    def swap(node):
+        if isinstance(node, dict):
+            return {k: swap(v) for k, v in node.items()}
+        if isinstance(node, list):
+            return [swap(v) for v in node]
+        return node.replace(ENTRY, DRAFT_ENTRY) if isinstance(node, str) else node
+    return swap(build_article())
+
+
 def merge_locale(raw, strings):
     """A theme locale file with skingenetix.study_safety set to `strings`; everything else kept.
 
@@ -466,6 +487,8 @@ def main():
     ap.add_argument("--article", action="store_true", help="build templates/article.clinical-study.json instead")
     ap.add_argument("--article-pilot", action="store_true",
                     help="build templates/article.clinical-study-pilot.json (the two pilot studies)")
+    ap.add_argument("--article-draft", action="store_true",
+                    help="build templates/article.clinical-study-draft.json (English-first preview of a rebuilt study)")
     ap.add_argument("--safety-locales", action="store_true",
                     help="upload the 'Before you try it' note into the six theme locale files")
     a = ap.parse_args()
@@ -473,6 +496,8 @@ def main():
         return upload_safety_locales(a.apply)
     if a.article_pilot:
         return upload(PILOT_TPL, build_pilot_article(), "article-clinical-study-pilot", a.apply)
+    if a.article_draft:
+        return upload(DRAFT_TPL, build_draft_article(), "article-clinical-study-draft", a.apply)
     if a.article:
         j = build_article()
         try:
