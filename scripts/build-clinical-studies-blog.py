@@ -8,6 +8,7 @@ Decision: docs/decision-clinical-studies-blog-2026-09-29.md (amends ADR-2026-09-
     python3 scripts/build-clinical-studies-blog.py --preview       # also write the hidden-preview list spec
     python3 scripts/build-clinical-studies-blog.py --apply         # blog + list template + articles
     python3 scripts/build-clinical-studies-blog.py --verify-live [--preview]   # the list page in six languages
+    python3 scripts/build-clinical-studies-blog.py --seo           # only the list page's SEO title + description (live)
     python3 scripts/build-clinical-studies-blog.py --cutover       # retire /pages/study/*: 301s, web pages off
 
 HOW THE PIECES FIT
@@ -386,6 +387,38 @@ def ensure_blog(gql):
     return r["blog"]["id"]
 
 
+def blog_seo():
+    """The list page's search-result title and description, per locale (central audit 2026-09-30, Q7: it had no meta
+    description and a bare "Clinical studies" title). The title is the approved seo_title of the retired table page,
+    which describes the blog too; the description is built from blog_intro's approved words and claims nothing."""
+    return {"meta_title": {l: p("seo_title", l) for l in LOCALES},
+            "meta_description": {l: p("blog_seo_description", l) for l in LOCALES}}
+
+
+def apply_blog_seo(gql, blog_id):
+    """Set the blog's SEO title and description (global.title_tag / description_tag) and register the five
+    translations once Shopify exposes them as meta_title / meta_description (the index lags the write)."""
+    seo = blog_seo()
+    r = gql('mutation($m:[MetafieldsSetInput!]!){ metafieldsSet(metafields:$m){ userErrors{ field message } } }',
+            {"m": [{"ownerId": blog_id, "namespace": "global", "key": "title_tag", "type": "single_line_text_field",
+                    "value": seo["meta_title"]["en"]},
+                   {"ownerId": blog_id, "namespace": "global", "key": "description_tag", "type": "multi_line_text_field",
+                    "value": seo["meta_description"]["en"]}]})["metafieldsSet"]
+    if r["userErrors"]:
+        sys.exit(f"  ✗ blog SEO: {r['userErrors']}")
+    for _ in range(12):
+        keys = {c["key"]: c["value"] for c in gql('query($id:ID!){ translatableResource(resourceId:$id){ translatableContent{ key value } } }',
+                                                  {"id": blog_id})["translatableResource"]["translatableContent"]}
+        if keys.get("meta_title") == seo["meta_title"]["en"] and keys.get("meta_description") == seo["meta_description"]["en"]:
+            break
+        time.sleep(5)
+    else:
+        sys.exit("  ✗ blog SEO: meta_title / meta_description never appeared as translatable keys")
+    n = register(gql, blog_id, seo)
+    print(f"  ✓ blog SEO title and description set · {n} translations")
+    return n
+
+
 def register(gql, rid, values_by_key):
     """values_by_key: {key: {locale: value}} — registered against the current digests."""
     tc = {c["key"]: c for c in gql('query($id:ID!){ translatableResource(resourceId:$id){ translatableContent{ key value digest } } }',
@@ -464,6 +497,7 @@ def main():
     ap.add_argument("--cutover", action="store_true")
     ap.add_argument("--preview", action="store_true", help="also write the hidden-preview list spec")
     ap.add_argument("--verify-live", action="store_true", help="check the list page in six languages")
+    ap.add_argument("--seo", action="store_true", help="set only the list page's SEO title and description (live)")
     a = ap.parse_args()
     configs = study_configs()
     if a.verify_live:
@@ -477,7 +511,7 @@ def main():
     for c in configs:
         f = article_fields(c)
         print(f"  {c['handle']:<52} {len(f)} locale(s) · {tag_for(c['handle'])} · {published(c)} · {f['en']['title'][:60]}")
-    if not (a.apply or a.cutover):
+    if not (a.apply or a.cutover or a.seo):
         print(f"  list-page spec written to {SPEC.relative_to(ROOT)} — dry run, nothing else written")
         return 0
     hu = _load("hu", "scripts/hub-upgrade.py")
@@ -485,7 +519,11 @@ def main():
         cutover(hu.gql, [c["handle"] for c in configs])
         return 0
     blog_id = ensure_blog(hu.gql)
+    if a.seo:
+        apply_blog_seo(hu.gql, blog_id)
+        return 0
     register(hu.gql, blog_id, {"title": {l: p("title", l) for l in LOCALES}})
+    apply_blog_seo(hu.gql, blog_id)
     try:
         hu.read_file(BLOG_TPL)
     except IndexError:

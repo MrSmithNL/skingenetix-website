@@ -221,3 +221,15 @@ def test_a_pilot_study_gets_the_pilot_article_template():
     2026-09-29); a re-run of this builder must not switch the pilots back to it."""
     assert bcb.template_suffix(PILOT) == "clinical-study-pilot"
     assert bcb.template_suffix(STOCK) == "clinical-study"
+
+
+def test_the_list_page_has_its_own_search_result_title_and_description():
+    """Central audit 2026-09-30, Q7 confirmed by all four judges: the blog list had no meta description (and a bare
+    "Clinical studies" title). The blog's SEO fields carry both, in six languages, within Google's display lengths."""
+    seo = bcb.blog_seo()
+    assert sorted(seo) == ["meta_description", "meta_title"]
+    for key, limit in (("meta_title", 60), ("meta_description", 155)):
+        assert sorted(seo[key]) == sorted(bcb.LOCALES)
+        assert all(0 < len(v) <= limit for v in seo[key].values()), key
+    assert seo["meta_title"]["de"].endswith("| Skingenetix")
+    assert "{n}" not in json.dumps(seo)                                # not the retired table page's counted text
