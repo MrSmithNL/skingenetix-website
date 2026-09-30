@@ -1,0 +1,111 @@
+{
+  "_about": "Payment Q&As on /pages/faq (Malcolm approved the English 2026-09-30: docs/faq-payment-section-draft-2026-09-30.md). Central audit 2026-09-30, R6 'customer service reachable': no payment help anywhere on the store. Four stock accordion items at the end of 'Orders & Shipping' (payment is part of ordering; a new group would need a new picture, as faq_image_layout injects one per group and sets the group title in white over it). Facts read from the store 2026-09-30: payment icons (shop.enabled_payment_types), EUR base currency with local currencies enabled, Shopify checkout. Voice follows the FAQ's own translations (German du/ihr, Dutch je/jullie, French vous, Spanish tú/vosotros, Italian tu/voi).",
+  "template": "templates/page.faq.json",
+  "page": "faq",
+  "add_blocks": [
+    {
+      "section": "faq_shipping",
+      "id": "pay1",
+      "after": "s5",
+      "block": {
+        "type": "item",
+        "settings": {
+          "title": {
+            "en": "Which payment methods do you accept?",
+            "de": "Welche Zahlungsarten akzeptiert ihr?",
+            "nl": "Welke betaalmethoden accepteren jullie?",
+            "fr": "Quels moyens de paiement acceptez-vous ?",
+            "es": "¿Qué métodos de pago aceptáis?",
+            "it": "Quali metodi di pagamento accettate?"
+          },
+          "content": {
+            "en": "<p>The main cards and wallets: Visa, Mastercard, American Express, Maestro and Union Pay; Apple Pay, Google Pay, Shop Pay and PayPal. Depending on your country you can also use local methods: iDEAL and Wero, Bancontact, MB WAY or MobilePay. Checkout shows only the methods available where you are.</p>",
+            "de": "<p>Die gängigen Karten und Wallets: Visa, Mastercard, American Express, Maestro und Union Pay; Apple Pay, Google Pay, Shop Pay und PayPal. Je nach Land kannst du auch lokale Zahlungsarten nutzen: iDEAL und Wero, Bancontact, MB WAY oder MobilePay. Im Checkout siehst du nur die Zahlungsarten, die in deinem Land verfügbar sind.</p>",
+            "nl": "<p>De gangbare kaarten en wallets: Visa, Mastercard, American Express, Maestro en Union Pay; Apple Pay, Google Pay, Shop Pay en PayPal. Afhankelijk van je land kun je ook lokale betaalmethoden gebruiken: iDEAL en Wero, Bancontact, MB WAY of MobilePay. Bij het afrekenen zie je alleen de methoden die in jouw land beschikbaar zijn.</p>",
+            "fr": "<p>Les principales cartes et portefeuilles : Visa, Mastercard, American Express, Maestro et Union Pay ; Apple Pay, Google Pay, Shop Pay et PayPal. Selon votre pays, vous pouvez aussi utiliser des moyens locaux : iDEAL et Wero, Bancontact, MB WAY ou MobilePay. Le paiement n'affiche que les moyens disponibles là où vous êtes.</p>",
+            "es": "<p>Las principales tarjetas y monederos: Visa, Mastercard, American Express, Maestro y Union Pay; Apple Pay, Google Pay, Shop Pay y PayPal. Según tu país, también puedes usar métodos locales: iDEAL y Wero, Bancontact, MB WAY o MobilePay. En el pago solo verás los métodos disponibles donde estás.</p>",
+            "it": "<p>Le principali carte e i wallet: Visa, Mastercard, American Express, Maestro e Union Pay; Apple Pay, Google Pay, Shop Pay e PayPal. A seconda del tuo paese puoi usare anche metodi locali: iDEAL e Wero, Bancontact, MB WAY o MobilePay. Al checkout vedi solo i metodi disponibili nel tuo paese.</p>"
+          }
+        }
+      }
+    },
+    {
+      "section": "faq_shipping",
+      "id": "pay2",
+      "after": "pay1",
+      "block": {
+        "type": "item",
+        "settings": {
+          "title": {
+            "en": "Which currency will I pay in?",
+            "de": "In welcher Währung bezahle ich?",
+            "nl": "In welke valuta betaal ik?",
+            "fr": "Dans quelle devise vais-je payer ?",
+            "es": "¿En qué moneda pagaré?",
+            "it": "In quale valuta pagherò?"
+          },
+          "content": {
+            "en": "<p>Our prices are set in euros, and where we can, we show them in your local currency. The total on the last checkout page is what you pay. If your card is in another currency, your bank may add its own exchange fee.</p>",
+            "de": "<p>Unsere Preise sind in Euro festgelegt, und wo möglich zeigen wir sie in deiner Landeswährung an. Der Gesamtbetrag auf der letzten Checkout-Seite ist der Betrag, den du bezahlst. Ist deine Karte in einer anderen Währung, kann deine Bank eine eigene Umrechnungsgebühr berechnen.</p>",
+            "nl": "<p>Onze prijzen zijn vastgesteld in euro, en waar mogelijk tonen we ze in je eigen valuta. Het totaal op de laatste afrekenpagina is wat je betaalt. Is je kaart in een andere valuta, dan kan je bank eigen wisselkosten rekenen.</p>",
+            "fr": "<p>Nos prix sont fixés en euros et, lorsque c'est possible, nous les affichons dans votre devise locale. Le total indiqué sur la dernière page du paiement est le montant que vous payez. Si votre carte est dans une autre devise, votre banque peut ajouter ses propres frais de change.</p>",
+            "es": "<p>Nuestros precios están fijados en euros y, siempre que podemos, los mostramos en tu moneda local. El total de la última página del pago es lo que pagas. Si tu tarjeta está en otra moneda, tu banco puede añadir su propia comisión de cambio.</p>",
+            "it": "<p>I nostri prezzi sono fissati in euro e, dove possibile, li mostriamo nella tua valuta locale. Il totale nell'ultima pagina del checkout è quello che paghi. Se la tua carta è in un'altra valuta, la tua banca può applicare una propria commissione di cambio.</p>"
+          }
+        }
+      }
+    },
+    {
+      "section": "faq_shipping",
+      "id": "pay3",
+      "after": "pay2",
+      "block": {
+        "type": "item",
+        "settings": {
+          "title": {
+            "en": "Is it safe to pay on your site?",
+            "de": "Ist das Bezahlen auf eurer Website sicher?",
+            "nl": "Is betalen op jullie website veilig?",
+            "fr": "Le paiement sur votre site est-il sûr ?",
+            "es": "¿Es seguro pagar en vuestra web?",
+            "it": "È sicuro pagare sul vostro sito?"
+          },
+          "content": {
+            "en": "<p>Payment runs through Shopify's checkout, and your card details go straight to the payment provider. Skingenetix never sees or stores your full card number.</p>",
+            "de": "<p>Die Zahlung läuft über den Checkout von Shopify, und deine Kartendaten gehen direkt an den Zahlungsanbieter. Skingenetix sieht und speichert deine vollständige Kartennummer nie.</p>",
+            "nl": "<p>De betaling loopt via de checkout van Shopify, en je kaartgegevens gaan rechtstreeks naar de betaalprovider. Skingenetix ziet en bewaart je volledige kaartnummer nooit.</p>",
+            "fr": "<p>Le paiement passe par le système de paiement de Shopify, et les données de votre carte vont directement au prestataire de paiement. Skingenetix ne voit ni ne conserve jamais votre numéro de carte complet.</p>",
+            "es": "<p>El pago se realiza a través del checkout de Shopify, y los datos de tu tarjeta van directamente al proveedor de pagos. Skingenetix nunca ve ni guarda tu número de tarjeta completo.</p>",
+            "it": "<p>Il pagamento avviene tramite il checkout di Shopify, e i dati della tua carta vanno direttamente al fornitore dei pagamenti. Skingenetix non vede né conserva mai il numero completo della tua carta.</p>"
+          }
+        }
+      }
+    },
+    {
+      "section": "faq_shipping",
+      "id": "pay4",
+      "after": "pay3",
+      "block": {
+        "type": "item",
+        "settings": {
+          "title": {
+            "en": "My payment didn't go through. What should I do?",
+            "de": "Meine Zahlung ist nicht durchgegangen. Was soll ich tun?",
+            "nl": "Mijn betaling is niet gelukt. Wat moet ik doen?",
+            "fr": "Mon paiement n'est pas passé. Que dois-je faire ?",
+            "es": "Mi pago no se ha completado. ¿Qué hago?",
+            "it": "Il mio pagamento non è andato a buon fine. Cosa devo fare?"
+          },
+          "content": {
+            "en": "<p>Check the card details and billing address, or try another payment method. If you were charged but got no order confirmation email, don't pay again: <a href=\"/pages/contact\">write to us</a> with the email address you used and roughly when you ordered, and we'll look it up.</p>",
+            "de": "<p>Prüfe die Kartendaten und die Rechnungsadresse oder versuche es mit einer anderen Zahlungsart. Wenn dir etwas abgebucht wurde, du aber keine Bestellbestätigung per E-Mail erhalten hast, bezahle nicht noch einmal: <a href=\"/de/pages/contact\">schreib uns</a> mit der E-Mail-Adresse, die du verwendet hast, und ungefähr, wann du bestellt hast, und wir sehen nach.</p>",
+            "nl": "<p>Controleer je kaartgegevens en factuuradres, of probeer een andere betaalmethode. Is er geld afgeschreven maar heb je geen bevestigingsmail van je bestelling gekregen, betaal dan niet opnieuw: <a href=\"/nl/pages/contact\">schrijf ons</a> met het e-mailadres dat je hebt gebruikt en ongeveer wanneer je hebt besteld, dan zoeken we het op.</p>",
+            "fr": "<p>Vérifiez les données de votre carte et votre adresse de facturation, ou essayez un autre moyen de paiement. Si vous avez été débité mais n'avez reçu aucun e-mail de confirmation de commande, ne payez pas une seconde fois : <a href=\"/fr/pages/contact\">écrivez-nous</a> en indiquant l'adresse e-mail utilisée et approximativement quand vous avez commandé, et nous vérifierons.</p>",
+            "es": "<p>Revisa los datos de tu tarjeta y la dirección de facturación, o prueba con otro método de pago. Si se te ha cobrado pero no has recibido el email de confirmación del pedido, no vuelvas a pagar: <a href=\"/es/pages/contact\">escríbenos</a> con el email que usaste y aproximadamente cuándo hiciste el pedido, y lo comprobaremos.</p>",
+            "it": "<p>Controlla i dati della carta e l'indirizzo di fatturazione, oppure prova un altro metodo di pagamento. Se ti è stato addebitato l'importo ma non hai ricevuto l'email di conferma dell'ordine, non pagare di nuovo: <a href=\"/it/pages/contact\">scrivici</a> indicando l'indirizzo email che hai usato e più o meno quando hai ordinato, e verificheremo.</p>"
+          }
+        }
+      }
+    }
+  ]
+}

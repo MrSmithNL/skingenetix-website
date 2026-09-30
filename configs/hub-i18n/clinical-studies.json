@@ -452,6 +452,15 @@
     "it": "Confrontato con il retinolo"
   },
   "_blog_seo_about": "The blog list's SEO description (2026-09-30): it had none, a confirmed failure (Q7) in the central audit. Built from blog_intro's approved words; it claims nothing. The SEO title (blog_seo_title) carries the page's keyword, 'skincare clinical studies' (Malcolm, 2026-09-30).",
+  "_safety_list_about": "The list page's 'Before you try it' note (Malcolm, 2026-09-30: 'Add the note, aim for 9+'). build-clinical-studies-blog.py takes the approved note from configs/study-safety-note.json and replaces only its first two sentences with these, because the list covers several studies, not one.",
+  "safety_list_opening": {
+    "en": "These articles summarise published studies. They are not medical advice, and your own results may differ.",
+    "de": "Diese Artikel fassen veröffentlichte Studien zusammen. Sie sind keine medizinische Beratung, und Ihre eigenen Ergebnisse können abweichen.",
+    "nl": "Deze artikelen vatten gepubliceerde studies samen. Ze zijn geen medisch advies, en je eigen resultaten kunnen anders zijn.",
+    "fr": "Ces articles résument des études publiées. Il ne s'agit pas d'un avis médical, et vos propres résultats peuvent différer.",
+    "es": "Estos artículos resumen estudios publicados. No son un consejo médico, y tus propios resultados pueden variar.",
+    "it": "Questi articoli riassumono studi pubblicati. Non sono un consiglio medico, e i tuoi risultati possono essere diversi."
+  },
   "blog_seo_title": {
     "en": "Skincare Clinical Studies, Read in Full | Skingenetix",
     "de": "Klinische Studien zur Hautpflege | Skingenetix",

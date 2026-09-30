@@ -103,7 +103,8 @@ def test_the_concern_row_is_translated_and_the_ingredient_row_skips_concern_tags
     assert "Skin: " in liq and "{%- continue -%}" in liq                 # the ingredient loop skips concern tags
     assert "/pages/fine-lines-wrinkles" in liq and "Hautlösungen: Feine Linien & Falten" in liq
     for c in bcb.CONCERNS.values():                                        # a concern shows only when a study has it
-        assert f'sgx_tags contains "{c["tag"]}"' in liq
+        if c.get("row", True):                                             # "row": False stays out of the row (2026-09-30)
+            assert f'sgx_tags contains "{c["tag"]}"' in liq
 
 
 def test_the_label_row_filters_the_list_by_ingredient():
@@ -113,7 +114,7 @@ def test_the_label_row_filters_the_list_by_ingredient():
     already filtered. blogs[blog.handle].articles is not (checked on /tagged/pdrn), so the labels are every live
     article's tags: no hand-typed list, no label that opens an empty page (critic F12)."""
     spec = bcb.blog_spec()
-    assert [a["id"] for a in spec["add_sections"]] == ["hero", "labels", "main", "grading"]
+    assert [a["id"] for a in spec["add_sections"]] == ["hero", "labels", "main", "safety", "grading"]
     main = _section(spec, "main")
     assert main["settings"]["show_tags"] is False and main["settings"]["show_category"] is True
     row = _section(spec, "labels")
@@ -258,3 +259,34 @@ def test_design_critic_cycle_2_page_level_fixes():
     assert ":has(.sgx-search)" in css and "1.0625rem" in css
     assert "/*" not in css                                              # Liquid parses CSS comments that name tags
     assert not any("justify-content: center" in r for r in spec["section_css"]["grading"])
+
+
+def test_the_list_page_carries_the_approved_safety_note():
+    """Central audit 2026-09-30, V1 confirmed by all four judges (the list sends readers to the shop with no safety note);
+    Malcolm: "Add the note, aim for 9+". The approved note (configs/study-safety-note.json) with only its opening changed
+    for a list; the PDRN line too, as the list includes a PDRN study. Never a safety claim (EU Reg 655/2013)."""
+    spec = bcb.blog_spec()
+    assert [a["id"] for a in spec["add_sections"]] == ["hero", "labels", "main", "safety", "grading"]
+    body = _section(spec, "safety")["blocks"]["t"]["settings"]["content"]
+    note = json.loads((ROOT / "configs/study-safety-note.json").read_text())
+    assert sorted(body) == sorted(bcb.LOCALES)
+    for loc in bcb.LOCALES:
+        assert body[loc].startswith(f"<h2>{note[loc]['title']}</h2>")
+        assert bcb.p("safety_list_opening", loc) in body[loc]
+        assert note[loc]["pdrn"] in body[loc]
+    assert "This article summarises one published study" not in body["en"] and "inner forearm" in body["en"]
+    import re
+    assert not re.search(r"\bsafe\b|hypoallergenic|dermatologically tested", body["en"], re.I)
+
+
+def test_the_concern_row_is_tidied():
+    """Malcolm, 2026-09-30 (design critic cycle 2, N2): "Fine lines & wrinkles" matched all four studies, the same as
+    "All studies", so it leaves the row (its tag stays, for search); "Compared with retinol" is a topic, not a skin
+    concern, so it follows the concerns as its own item, not under the "Skin concern" heading."""
+    liquid = bcb.concern_row_liquid()
+    assert bcb.CONCERNS["wrinkles"]["tag"] not in liquid.split("sgx-labels__more")[0].split("<ul>")[1].split("</ul>")[0] \
+        or bcb.CONCERNS["wrinkles"].get("row") is False
+    ul = liquid.split("<ul>")[1].split("</ul>")[0]
+    assert "Fine lines" not in ul and bcb.CONCERNS["wrinkles"]["tag"] not in ul
+    assert 'class="sgx-labels__topic"' in ul
+    assert ul.index("sgx-labels__topic") > ul.index(bcb.CONCERNS["forehead"]["tag"])

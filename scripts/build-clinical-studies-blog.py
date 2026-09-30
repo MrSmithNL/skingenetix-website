@@ -61,7 +61,10 @@ TAGS = {"copper": "GHK-Cu", "argireline": "Argireline", "acetyl": "Argireline", 
 # "Skin: " / "Topic: " prefix that sorts after every ingredient name (case-sensitive or not) and the badge stays the
 # ingredient. Tags cannot be translated, so the label row shows each one through its phrase-table key per locale;
 # `solutions` is the Skin Solutions page a concern's tag page links to. Order here is the row's order.
-CONCERNS = {"wrinkles": {"tag": "Skin: Fine lines & wrinkles", "phrase": "concern_wrinkles", "solutions": "fine-lines-wrinkles"},
+# "row": False keeps a tag (search, its tag page, its Skin Solutions link) out of the label row: "Fine lines & wrinkles"
+# matched all four studies, the same as "All studies" (Malcolm, 2026-09-30, design critic cycle 2 N2).
+CONCERNS = {"wrinkles": {"tag": "Skin: Fine lines & wrinkles", "phrase": "concern_wrinkles", "solutions": "fine-lines-wrinkles",
+                         "row": False},
             "crows_feet": {"tag": "Skin: Crow's feet & eye area", "phrase": "concern_crows_feet"},
             "forehead": {"tag": "Skin: Forehead lines", "phrase": "concern_forehead"},
             "retinol": {"tag": "Topic: Compared with retinol", "phrase": "concern_retinol"}}
@@ -129,6 +132,7 @@ LABELS_STYLE = """<style>
   .sgx-labels__more { margin: 0; }
   .sgx-labels__more a { font-weight: 400; text-decoration: underline 1px; }
   .sgx-labels__h { font-weight: 400; font-size: 0.8125rem; color: rgb(var(--text-color) / 0.72); }
+  .sgx-labels__topic { border-inline-start: 1px solid rgb(var(--text-color) / 0.25); padding-inline-start: var(--spacing-6); }
   .prose:has(.sgx-search) p:not(.h0) { font-size: 1.0625rem; max-width: 62ch; }
   @media screen and (max-width: 699px) {
     .sgx-labels { padding-block-start: var(--spacing-3); }
@@ -170,11 +174,16 @@ def tags_for(cfg):
 def concern_row_liquid():
     """The second label row: each concern a study carries, worded per locale; on a concern's own tag page, a link to
     its Skin Solutions page. Shown only when some study has a concern tag."""
-    items = "".join(
-        f'\n    {{%- if sgx_tags contains "{c["tag"]}" -%}}'
-        f'<li><a href="{{{{ blog.url }}}}/tagged/{{{{ "{c["tag"]}" | handleize }}}}"'
-        f'{{% if current_tags contains "{c["tag"]}" %}} aria-current="page"{{% endif %}}>{by_locale(c["phrase"])}</a></li>'
-        f'{{%- endif -%}}' for c in CONCERNS.values())
+    def item(c, cls=""):
+        return (f'\n    {{%- if sgx_tags contains "{c["tag"]}" -%}}'
+                f'<li{cls}><a href="{{{{ blog.url }}}}/tagged/{{{{ "{c["tag"]}" | handleize }}}}"'
+                f'{{% if current_tags contains "{c["tag"]}" %}} aria-current="page"{{% endif %}}>{by_locale(c["phrase"])}</a></li>'
+                f'{{%- endif -%}}')
+    # skin concerns under the "Skin concern" heading; a "Topic: " tag is not a concern, so it follows them as its own
+    # item (Malcolm, 2026-09-30, critic cycle 2 N2)
+    items = ("".join(item(c) for c in CONCERNS.values() if c["tag"].startswith("Skin: ") and c.get("row", True))
+             + "".join(item(c, ' class="sgx-labels__topic"') for c in CONCERNS.values()
+                       if c["tag"].startswith("Topic: ") and c.get("row", True)))
     more = "".join(
         f'\n  {{%- if current_tags contains "{c["tag"]}" -%}}<p class="sgx-labels__more"><a href="'
         f'{{%- unless routes.root_url == "/" -%}}{{{{ routes.root_url }}}}{{%- endunless -%}}/pages/{c["solutions"]}">'
@@ -325,7 +334,12 @@ def blog_spec(preview=False):
                              "show_date": True, "show_author": False, "show_comments_count": False,
                              "show_category": True, "banner_text_color": "#1A1A1A", "banner_background": "#F0F0F0",
                              "content": ""}}},
-            {"id": "grading", "after": "main", "section": {
+            {"id": "safety", "after": "main", "section": {
+                "type": "rich-text",
+                "blocks": {"t": {"type": "richtext", "settings": {"content": {l: safety_note(l) for l in LOCALES}}}},
+                "block_order": ["t"],
+                "settings": {"full_width": True, "content_width": "medium", "text_position": "start"}}},
+            {"id": "grading", "after": "safety", "section": {
                 "type": "rich-text",
                 "blocks": {"t": {"type": "richtext", "settings": {"content": band}}},
                 "block_order": ["t"],
@@ -344,10 +358,24 @@ def blog_spec(preview=False):
                      ".blog-post-card__figure > .badge {font-size: 0.8125rem; padding: 0.3em 0.75em;}",
                      ".blog-post-card__info p:not([class]) {font-size: 1.0625rem;}"],
             # critic cycle 2 N4: the band lines up with the list (it was the page's only centred column), 17px text
+            "safety": [".prose {max-width: 66ch; margin-inline: 0;}", ".prose h2 {font-size: var(--text-h4);}",
+                       ".prose p {font-size: 1.0625rem;}"],
             "grading": [".prose {max-width: 66ch; margin-inline: 0;}", ".prose h2 {font-size: var(--text-h3);}",
                         ".prose p {font-size: 1.0625rem;}"]},
     })
     return spec
+
+
+SAFETY = json.loads((ROOT / "configs/study-safety-note.json").read_text())
+
+
+def safety_note(loc):
+    """The approved "Before you try it" note (configs/study-safety-note.json) for the list page: only its first two
+    sentences change ("These articles summarise published studies…"), and the PDRN line is included because the list
+    includes a PDRN study. Central audit 2026-09-30 V1; Malcolm: "Add the note, aim for 9+"."""
+    n = SAFETY[loc]
+    rest = re.split(r"(?<=[.!?])\s+", n["body"], maxsplit=2)[2]
+    return f'<h2>{n["title"]}</h2><p>{p("safety_list_opening", loc)} {rest}</p><p>{n["pdrn"]}</p>'
 
 
 def list_page_problems(page, title, handles):

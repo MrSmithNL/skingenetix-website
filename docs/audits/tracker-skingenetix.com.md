@@ -69,3 +69,25 @@ score is 9.0 or more.
 
 Rendered checks (layout on a phone, main content prominence, accessibility), backlinks, field Core Web Vitals (too
 little traffic for Chrome's data), and hreflang reciprocity across the six locales.
+
+## Clinical studies list page, `/blogs/clinical-studies` (2026-09-30)
+
+Keyword: "skincare clinical studies" (Malcolm). Page note with the Rule 27 checks: `2026-09-30-clinical-studies-list-optimisation.md`.
+
+| Run            | Gates  | Score    | Confirmed failures | Report                                                 |
+| -------------- | ------ | -------- | ------------------ | ------------------------------------------------------ |
+| 1 (no keyword) | 5 pass | 6.65     | Q7 · R6 · V1       | `page-audit-2026-09-30-blogs-clinical-studies.md`      |
+| 2              | 6 pass | **9.18** | **C3**             | `page-audit-2026-09-30-blogs-clinical-studies-run2.md` |
+
+**Fixed between the runs, all live in six languages:**
+
+- **Q7:** an SEO title and a meta description.
+- **R6:** four payment Q&As on the FAQ, plus a footer "Payment" link, site-wide.
+- **V1:** the approved "Before you try it" note on the list (Malcolm).
+- **Design critic cycle 2:** the page-level fixes.
+
+**Open:**
+
+- **C3.** The card summaries should state each trial's size. This waits for Malcolm's go. Wang and Ye are in the d1 window's
+  rebuild; Raikou is this window's.
+- **C11** was contested, so it is not fixed.
