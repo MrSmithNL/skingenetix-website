@@ -1,0 +1,32 @@
+{
+  "created": "2026-09-30",
+  "target": "draft study banners \u2014 Ye 2026 banner + banner_mobile, Wang 2013 banner_mobile (configs/studies/drafts/*.json)",
+  "decided_by": "Claude, study-page-template \u00a77 trap 'text over a busy banner', on the Wang/Ye rebuild (Malcolm 2026-09-30)",
+  "note": "Copies of the existing banners with a text-zone scrim baked in (originals untouched, rule 7): darkened toward each image's own 3rd-percentile tone, desktop over x < 55% ramping to untouched by 78%, mobile over the full height easing at the edges. Worst-case white text over the 99.5th-percentile pixel after the theme's 28% ink overlay, measured: see each image's 'contrast'. Wang's desktop banner already measured 16.05:1 and is unchanged.",
+  "images": [
+    {
+      "source": "assets/publish-ready/study-banners-scrim-2026-09-30/skingenetix-pdrn-sodium-dna-polynucleotide-study-banner-desktop.jpg",
+      "filename": "skingenetix-pdrn-sodium-dna-polynucleotide-study-banner-desktop.jpg",
+      "alt": "Pink DNA double helices on a dark ground, representing the salmon DNA fragments in PDRN",
+      "contrast": "2.77:1 -> 5.06:1",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-sodium-dna-polynucleotide-study-banner-desktop.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-sodium-dna-polynucleotide-study-banner-desktop.jpg?v=1790759112"
+    },
+    {
+      "source": "assets/publish-ready/study-banners-scrim-2026-09-30/skingenetix-pdrn-sodium-dna-polynucleotide-study-banner-mobile.jpg",
+      "filename": "skingenetix-pdrn-sodium-dna-polynucleotide-study-banner-mobile.jpg",
+      "alt": "Pink DNA double helices on a dark ground, representing the salmon DNA fragments in PDRN",
+      "contrast": "2.33:1 -> 5.16:1",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-sodium-dna-polynucleotide-study-banner-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-sodium-dna-polynucleotide-study-banner-mobile.jpg?v=1790759111"
+    },
+    {
+      "source": "assets/publish-ready/study-banners-scrim-2026-09-30/skingenetix-acetyl-hexapeptide-8-peptide-refraction-study-banner-mobile.jpg",
+      "filename": "skingenetix-acetyl-hexapeptide-8-peptide-refraction-study-banner-mobile.jpg",
+      "alt": "A clear droplet on a glass slide refracting light on a dark ground, representing peptide research",
+      "contrast": "2.48:1 -> 5.02:1",
+      "uploaded_handle": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-peptide-refraction-study-banner-mobile.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-acetyl-hexapeptide-8-peptide-refraction-study-banner-mobile.jpg?v=1790759110"
+    }
+  ]
+}
