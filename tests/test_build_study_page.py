@@ -172,3 +172,81 @@ def test_the_preview_is_checked_through_the_draft_template():
     assert url.startswith("https://www.skingenetix.com/de/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016")
     assert "view=clinical-study-draft" in url
     assert "view=" not in bsp.page_url(BADENHORST, "en")
+
+
+# ---------------------------------------------------------------- preview of a NEW study, before any live article (2026-09-30)
+# A new study has no live article to borrow a ?view= from, so its English draft sits in a hidden, unlinked blog on the
+# real study template, with its own title and description, so the audit judges the page it will become.
+
+NEW = {**copy.deepcopy(BADENHORST), "handle": "pdrn-microneedling-split-face-trial-yogya-2022"}
+
+
+def _blog_recorder(calls, articles=(), blog=True):
+    def gql(q, v=None):
+        calls.append((q, v or {}))
+        if "blogs(" in q:
+            return {"blogs": {"nodes": [{"id": "gid://shopify/Blog/7", "handle": bsp.DRAFTS_BLOG}] if blog else []}}
+        if "blogCreate" in q:
+            return {"blogCreate": {"blog": {"id": "gid://shopify/Blog/7"}, "userErrors": []}}
+        if "metaobjectByHandle" in q:
+            return {"metaobjectByHandle": {"id": "gid://shopify/Metaobject/9"}}
+        if "articles(" in q:
+            return {"articles": {"nodes": list(articles)}}
+        if "articleCreate" in q:
+            return {"articleCreate": {"article": {"id": "gid://shopify/Article/1"}, "userErrors": []}}
+        if "articleUpdate" in q:
+            return {"articleUpdate": {"article": {"id": "gid://shopify/Article/1"}, "userErrors": []}}
+        raise AssertionError(f"unexpected call: {q[:60]}")
+    return gql
+
+
+def test_a_new_study_preview_is_read_from_the_drafts_blog():
+    url = bsp.page_url(NEW, "en", blog=bsp.DRAFTS_BLOG)
+    assert url.startswith(f"https://www.skingenetix.com/blogs/{bsp.DRAFTS_BLOG}/{NEW['handle']}?")
+    assert "view=" not in url
+    assert bsp.DRAFTS_BLOG != "clinical-studies"
+
+
+def test_the_new_study_preview_article_is_hidden_and_on_the_study_template(monkeypatch):
+    calls = []
+    monkeypatch.setattr(bsp, "gql", _blog_recorder(calls))
+    bsp.preview_article(NEW)
+    a = next(v["a"] for q, v in calls if "articleCreate" in q)
+    assert a["blogId"] == "gid://shopify/Blog/7" and a["handle"] == NEW["handle"]
+    assert a["templateSuffix"] == "clinical-study" and a["isPublished"] is True
+    assert a["title"] == NEW["h1"]["en"] and a["summary"] == NEW["seo_description"]["en"]
+    mf = {(m["namespace"], m["key"]): m["value"] for m in a["metafields"]}
+    assert mf[("seo", "hidden")] == "1"                                   # noindex, out of the sitemap
+    assert mf[("study", "entry")] == "gid://shopify/Metaobject/9"
+    assert mf[("global", "title_tag")] == NEW["seo_title"]["en"]
+    assert not any("translationsRegister" in q for q, _ in calls)          # English first
+
+
+def test_the_new_study_preview_updates_its_own_draft_article(monkeypatch):
+    calls = []
+    mine = {"id": "gid://shopify/Article/1", "handle": NEW["handle"], "blog": {"handle": bsp.DRAFTS_BLOG}}
+    monkeypatch.setattr(bsp, "gql", _blog_recorder(calls, articles=[mine]))
+    bsp.preview_article(NEW)
+    assert any("articleUpdate" in q for q, _ in calls) and not any("articleCreate" in q for q, _ in calls)
+
+
+def test_the_new_study_preview_refuses_a_study_that_is_already_live(monkeypatch):
+    """A live article gets the draft-entry route; writing its handle into the drafts blog would fork it."""
+    calls = []
+    live = {"id": "gid://shopify/Article/2", "handle": NEW["handle"], "blog": {"handle": "clinical-studies"}}
+    monkeypatch.setattr(bsp, "gql", _blog_recorder(calls, articles=[live]))
+    try:
+        bsp.preview_article(NEW)
+    except SystemExit:
+        pass
+    else:
+        raise AssertionError("expected a refusal")
+    assert not any("articleCreate" in q or "articleUpdate" in q for q, _ in calls)
+
+
+def test_the_drafts_blog_is_created_once_and_hidden(monkeypatch):
+    calls = []
+    monkeypatch.setattr(bsp, "gql", _blog_recorder(calls, blog=False))
+    bsp.preview_article(NEW)
+    b = next(v["b"] for q, v in calls if "blogCreate" in q)
+    assert b["handle"] == bsp.DRAFTS_BLOG and b["commentPolicy"] == "CLOSED"

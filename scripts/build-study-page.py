@@ -395,8 +395,71 @@ def draft_handle(cfg):
     return cfg["handle"] + "-draft"
 
 
-def page_url(cfg, loc, view=None):
-    return f"{BASE}{_pre(loc)}{PATH}{cfg['handle']}?" + (f"view={view}&" if view else "") + f"v={time.time()}"
+def page_url(cfg, loc, view=None, blog=None):
+    path = f"/blogs/{blog}/" if blog else PATH
+    return f"{BASE}{_pre(loc)}{path}{cfg['handle']}?" + (f"view={view}&" if view else "") + f"v={time.time()}"
+
+
+# A NEW study has no live article whose ?view= could show its draft (2026-09-30). Its English draft is published as an
+# article in a hidden, unlinked blog, on the real study template and with its own title and description, so the page
+# the audit judges is the page it will become. `seo.hidden` keeps the draft out of search and the sitemap. At go-live
+# the list builder creates the real article in the clinical-studies blog from the finished config, and this draft
+# article is deleted (docs/study-page-template.md §3).
+DRAFTS_BLOG = "clinical-studies-drafts"
+
+
+def live_article(cfg):
+    """The study's article in the live clinical-studies blog, or None for a study not yet published."""
+    return next((a for a in gql('query($q:String!){ articles(first:10, query:$q){ nodes{ id handle blog{ handle } } } }',
+                                {"q": f"handle:{cfg['handle']}"})["articles"]["nodes"]
+                 if a["handle"] == cfg["handle"] and a["blog"]["handle"] == PATH.strip("/").split("/")[1]), None)
+
+
+def drafts_blog_id():
+    b = next((n for n in gql('query{ blogs(first:50){ nodes{ id handle } } }')["blogs"]["nodes"]
+              if n["handle"] == DRAFTS_BLOG), None)
+    if b:
+        return b["id"]
+    r = gql('mutation($b:BlogCreateInput!){ blogCreate(blog:$b){ blog{ id } userErrors{ field message } } }',
+            {"b": {"title": "Clinical studies", "handle": DRAFTS_BLOG, "commentPolicy": "CLOSED"}})["blogCreate"]
+    if r["userErrors"]:
+        sys.exit(f"  ✗ drafts blog: {r['userErrors']}")
+    return r["blog"]["id"]
+
+
+def preview_article(cfg):
+    """Publish or update a new study's English draft in the hidden drafts blog. Refuses a study that is live."""
+    handle = cfg["handle"]
+    found = [a for a in gql('query($q:String!){ articles(first:10, query:$q){ nodes{ id handle blog{ handle } } } }',
+                            {"q": f"handle:{handle}"})["articles"]["nodes"] if a["handle"] == handle]
+    elsewhere = [a["blog"]["handle"] for a in found if a["blog"]["handle"] != DRAFTS_BLOG]
+    if elsewhere:
+        sys.exit(f"  ✗ {handle} is already an article in {elsewhere}: preview it with ?view={PREVIEW_VIEW} instead")
+    blog_id = drafts_blog_id()
+    mo = gql('query($h:MetaobjectHandleInput!){ metaobjectByHandle(handle:$h){ id } }',
+             {"h": {"type": "study", "handle": handle}})["metaobjectByHandle"]
+    if not mo:
+        sys.exit(f"  ✗ {handle}: no study entry to preview")
+    art = {"title": t(cfg["h1"], "en"), "summary": t(cfg["seo_description"], "en"), "body": ps([cfg["answer"]], "en"),
+           "author": {"name": "Malcolm Smith"}, "templateSuffix": "clinical-study", "isPublished": True,
+           "metafields": [
+               {"namespace": "study", "key": "entry", "type": "metaobject_reference", "value": mo["id"]},
+               {"namespace": "global", "key": "title_tag", "type": "single_line_text_field",
+                "value": t(cfg["seo_title"], "en")},
+               {"namespace": "global", "key": "description_tag", "type": "multi_line_text_field",
+                "value": t(cfg["seo_description"], "en")},
+               {"namespace": "seo", "key": "hidden", "type": "number_integer", "value": "1"}]}
+    mine = next((a for a in found if a["blog"]["handle"] == DRAFTS_BLOG), None)
+    if mine:
+        r = gql('mutation($id:ID!,$a:ArticleUpdateInput!){ articleUpdate(id:$id, article:$a)'
+                '{ article{ id } userErrors{ field message } } }', {"id": mine["id"], "a": art})["articleUpdate"]
+    else:
+        r = gql('mutation($a:ArticleCreateInput!){ articleCreate(article:$a){ article{ id } userErrors{ field message } } }',
+                {"a": {**art, "blogId": blog_id, "handle": handle}})["articleCreate"]
+    if r["userErrors"]:
+        sys.exit(f"  ✗ {handle}: {r['userErrors']}")
+    print(f"  ✓ draft article {'updated' if mine else 'created'} (hidden, English); preview: "
+          f"{page_url(cfg, 'en', blog=DRAFTS_BLOG).split('?')[0]}")
 
 
 def link_draft(cfg):
@@ -467,10 +530,10 @@ def apply(cfg, status="ACTIVE", entry_handle=None, english_only=False):
     print(f"  ✓ {len(t_in)} translations across {len(trans)} locales")
 
 
-def verify(cfg, view=None):
+def verify(cfg, view=None, blog=None):
     bad = 0
-    for loc in (["en"] if view else locales(cfg)):          # a preview is English-first
-        html = spg._get(page_url(cfg, loc, view))
+    for loc in (["en"] if view or blog else locales(cfg)):  # a preview is English-first
+        html = spg._get(page_url(cfg, loc, view, blog))
         h1 = [H.unescape(re.sub(r"<[^>]+>", "", x)).strip() for x in re.findall(r"<h1[^>]*>(.*?)</h1>", html, re.S)]
         want = t(cfg["h1"], loc)
         page = re.sub(r"<(style|script)\b.*?</\1>", "", html, flags=re.S)
@@ -497,20 +560,27 @@ def main():
     ap.add_argument("--verify-live", action="store_true")
     ap.add_argument("--draft", action="store_true", help="with --apply: save as DRAFT (not on the storefront)")
     ap.add_argument("--preview", action="store_true",
-                    help="English-first rebuild of a live article: write <handle>-draft, link it as the article's "
-                         "study.draft, verify through ?view=clinical-study-draft (the live article is untouched)")
+                    help="English-first preview. A live article: write <handle>-draft, link it as the article's "
+                         "study.draft, verify through ?view=clinical-study-draft (the live article is untouched). "
+                         f"A new study: write its entry and a hidden, noindexed article in /blogs/{DRAFTS_BLOG}/")
     a = ap.parse_args()
     cfg = json.loads(pathlib.Path(a.config).read_text())
     print(f"  {cfg['handle']} · locales {', '.join(locales(cfg))}" + (" · PREVIEW (English, draft entry)" if a.preview else ""))
+    # a live study previews through its draft entry and ?view=; a new one through the hidden drafts blog
+    route = ({"view": PREVIEW_VIEW} if live_article(cfg) else {"blog": DRAFTS_BLOG}) if a.preview else {}
     if a.verify_live:
-        return 1 if verify(cfg, PREVIEW_VIEW if a.preview else None) else 0
+        return 1 if verify(cfg, **route) else 0
     errs = check(cfg) + check_citations(cfg, resolve_live)
     for e in errs:
         print("  ✗", e)
     if errs:
         return 1
     print("  ✓ all checks pass")
-    if a.apply and a.preview:
+    if a.apply and a.preview and "blog" in route:
+        # not live yet: the entry is written under its own handle (nothing references it until the draft article)
+        apply(cfg, "ACTIVE", english_only=True)
+        preview_article(cfg)
+    elif a.apply and a.preview:
         # ACTIVE, not DRAFT: a storefront reference to a draft entry renders nothing. The study definition's own web
         # pages are off, so the entry has no public page; it is reached only through ?view=clinical-study-draft.
         apply(cfg, "ACTIVE", entry_handle=draft_handle(cfg), english_only=True)
