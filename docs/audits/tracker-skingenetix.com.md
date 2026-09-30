@@ -95,3 +95,23 @@ Keyword: "skincare clinical studies" (Malcolm). Page note with the Rule 27 check
     they go live.
   - **Re-audit the list after that.** Before then, two cards still lack the size, so C3 would likely stay confirmed.
 - **C11** was contested, so it is not fixed.
+
+### 2026-09-30 (later): Wang and Ye live in the new layout; list re-audit (run 3)
+
+| Page                            | Score    | Gates  | Confirmed failures        | Report                                                                   |
+| ------------------------------- | -------- | ------ | ------------------------- | ------------------------------------------------------------------------ |
+| Wang 2013 (live, six languages) | **9.82** | 6 pass | none                      | `page-audit-2026-09-30-argireline-crows-feet-trial-wang-2013-live.md`    |
+| Ye 2026 (live, six languages)   | **9.64** | 6 pass | none (Q3 contested)       | `page-audit-2026-09-30-pdrn-vs-retinol-split-face-trial-ye-2026-live.md` |
+| Clinical studies list, run 3    | **9.37** | 6 pass | **R6** (C3 now contested) | `page-audit-2026-09-30-blogs-clinical-studies-run3.md`                   |
+
+Wang and Ye meet ADR-2026-09-30-Q. C3 cleared once all four cards carried the trial size: it is contested, not confirmed.
+
+**R6 oscillates, and is handed to Malcolm under the loop's guard.**
+
+- The fix is in place:
+  - four payment Q&As on /pages/faq;
+  - a "Payment → /pages/faq" footer link in six languages. The engine's link list does include it (checked in the run-3 JSON).
+- The same page passed R6 in run 2 (2 met / 1 unmet) and failed in run 3 (1 met / 2 unmet). Nothing changed in between.
+- The judges do not open the linked page. A "Payment" link that lands on the general FAQ reads to them as the FAQ.
+- **The honest improvement is a link straight to the payment answers**, e.g. their own FAQ group with a stable anchor, or a short payment help
+  page. It needs Malcolm's go: it is a new group with a picture, or a new page.
