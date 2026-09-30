@@ -221,7 +221,9 @@ def blog_spec(preview=False):
     stock rich-text band under it. preview=True targets the hidden template seen through ?view=."""
     links = {l: ", ".join(f'<a href="{pre(l)}/pages/{hub}#evidence-sources">{PHRASES[k][l] if k in PHRASES else k}</a>'
                           for k, hub in HUB_LINKS) for l in LOCALES}
-    band = {l: (f'<h2>{p("grading_title", l)}</h2><p>{p("grading", l)}</p><p>{p("all_evidence", l, links=links[l])}</p>'
+    # No grade key (Malcolm, 2026-09-30: "yes remove grade key"): no card shows a grade (critic F6). The heading is the
+    # already-translated "Studies by ingredient", so the change needs no new translation.
+    band = {l: (f'<h2>{p("index_title", l)}</h2><p>{p("all_evidence", l, links=links[l])}</p>'
                 f'<p>{p("shop", l, shop_link=f"""<a href="{pre(l)}/collections/all">{p("shop_link", l)}</a>""")}</p>')
             for l in LOCALES}
     spec = {

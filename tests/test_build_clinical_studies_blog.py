@@ -55,6 +55,16 @@ def test_the_list_page_is_the_stock_blog_with_one_h1_and_translated_words():
     assert "<h1" not in json.dumps(spec)                               # main-blog's banner carries the only H1
 
 
+def test_the_evidence_band_has_no_grade_key():
+    """Malcolm, 2026-09-30: "yes remove grade key" — no card shows a grade, so the key explained nothing (critic F6).
+    The band keeps the links to each ingredient's graded evidence, under an already-translated heading."""
+    band = _section(bcb.blog_spec(), "grading")["blocks"]["t"]["settings"]["content"]
+    for l in bcb.LOCALES:
+        assert "<strong>A</strong>" not in band[l] and bcb.p("grading_title", l) not in band[l]
+        assert band[l].startswith(f"<h2>{bcb.p('index_title', l)}</h2>")
+    assert "Studien nach Wirkstoff" in band["de"] and "research-page" not in band["en"]
+
+
 def test_the_label_row_filters_the_list_by_ingredient():
     """Malcolm, 2026-09-29: labels show and the list sorts by label, as on the Hairgenetix blog (supersedes "tags off
     until ~12 articles"). main-blog's own row (show_tags) reads blog.all_tags, which this store's storefront returns

@@ -505,6 +505,12 @@ AI-generated illustrations and must not be presented as results. Record:
   `hub-upgrade-templates__blog.clinical-studies.json-20260930-101157`); `--verify-live` ✓ ×6; search "retinol" → Ye 2026; /tagged/ghk-cu →
   Badenhorst. The preview template `blog.clinical-studies-preview.json` is left in place (unused, harmless) until Malcolm's card picks are
   in. Still open: card images (no models) wait on his picks; Raikou and Badenhorst titles show English on /de…/it.
+  **Malcolm, 2026-09-30:** (1) card images — numbered sheets rebuilt by `scripts/study-card-pool-sheets.py` (25 sheets on the Desktop,
+  `skingenetix-study-images-{CU,ARG,PDRN,GEN}-n.png`, 2,125 refs from the pool index); waiting on his numbers. (2) **Translation waits
+  until the English articles are fully complete and optimised** (applies to Raikou and Badenhorst). (3) Label pages
+  `/blogs/clinical-studies/tagged/*` **stay in Google** ("we will be adding more articles"); **grade key removed** from the band under the
+  list (now "Studies by ingredient", already translated), live ×6, backup `20260930-102216`. (4) **New: tags for skin issues, skin
+  solutions and other relevant keywords** — plan in progress.
   History — list page redesign (Malcolm, 2026-09-29): title on the photo, ingredient labels that filter the list, study search, no model
   images on the cards. Built on a hidden preview, `/blogs/clinical-studies?view=clinical-studies-preview`, by
   `scripts/build-clinical-studies-blog.py --preview` (`3246b4e`, `7369619`). What the preview shows:
