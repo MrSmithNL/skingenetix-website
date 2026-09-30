@@ -90,6 +90,7 @@ SEARCH_STYLE = """<style>
   .search-input.sgx-search > input::placeholder { color: rgb(255 255 255 / 0.85); }
   .sgx-search > button { display: grid; place-items: center; min-width: 44px; min-height: 44px; }
   .sgx-search:focus-within { outline: 2px solid #fff; outline-offset: 6px; }
+  @media screen and (max-width: 699px) { .search-input.sgx-search > input::placeholder { color: rgb(255 255 255 / 0.95); } }
 </style>"""
 
 
@@ -112,6 +113,11 @@ def search_liquid():
 # Critic 2026-09-29: full ink (the theme's 50% labels measured 3.24:1), the current one underlined (F1), 44px
 # targets and wrapping, not a clipped scroll row (F13), plain links in a <nav>, not tabs (F16), and no
 # link_to_tag, whose "Show products matching tag" tooltip is English on every locale.
+# Critic cycle 2 (2026-09-30, FIX 6.55): this <style> has no 500-character cap and reaches the whole list, so it also
+# carries the page-level fixes: one sideways-scrolling line per label row on phones (four wrapped lines pushed the first
+# study to y=993 of 844), a shorter lead photo on phones, one badge style, 17px intro, hyphenation at 200% zoom, card
+# focus ring, no card zoom under reduced motion. No CSS comments: Liquid parses them. NOT the tablet crop the critic
+# asked for (N8): shifting the photo put the flasks under the text, intro 7.90 -> 2.31:1 at 768 (measured).
 LABELS_STYLE = """<style>
   .sgx-labels { padding-block-start: var(--spacing-6); }
   .sgx-labels ul { display: flex; flex-wrap: wrap; gap: 0 var(--spacing-6); margin: 0; padding: 0; list-style: none; }
@@ -122,6 +128,22 @@ LABELS_STYLE = """<style>
   .sgx-labels__h { display: inline-flex; align-items: center; min-height: 44px; }
   .sgx-labels__more { margin: 0; }
   .sgx-labels__more a { font-weight: 400; text-decoration: underline 1px; }
+  .sgx-labels__h { font-weight: 400; font-size: 0.8125rem; color: rgb(var(--text-color) / 0.72); }
+  .prose:has(.sgx-search) p:not(.h0) { font-size: 1.0625rem; max-width: 62ch; }
+  @media screen and (max-width: 699px) {
+    .sgx-labels { padding-block-start: var(--spacing-3); }
+    .sgx-labels ul { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-inline-end: var(--spacing-10);
+      -webkit-mask-image: linear-gradient(to right, #000 82%, transparent); mask-image: linear-gradient(to right, #000 82%, transparent); }
+    .sgx-labels ul::-webkit-scrollbar { display: none; }
+    .sgx-labels li { flex: none; }
+    .blog-post-card--featured .blog-post-card__figure img { height: auto; aspect-ratio: 2 / 1; object-fit: cover; }
+    .content-over-media--sm:has(.sgx-search) { --content-over-media-height: 320px; }
+    .prose:has(.sgx-search) p:not(.h0) { font-size: 1rem; }
+  }
+  .blog-post-card--featured .badge { font-size: 0.8125rem; padding: 0.3em 0.75em; background-color: #FFFFFF; color: #2E3233; }
+  .blog-post-card__info .h2, .blog-post-card__info .h3 { -webkit-hyphens: auto; hyphens: auto; }
+  .blog-post-card a:focus-visible { outline: 2px solid rgb(var(--text-color)); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .blog-post-card .zoom-image { transition: none !important; transform: none !important; } }
 </style>"""
 
 
@@ -321,8 +343,9 @@ def blog_spec(preview=False):
                      ".blog-banner-content {position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;}",
                      ".blog-post-card__figure > .badge {font-size: 0.8125rem; padding: 0.3em 0.75em;}",
                      ".blog-post-card__info p:not([class]) {font-size: 1.0625rem;}"],
-            "grading": [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; margin-inline: auto;}",
-                        ".prose h2 {font-size: var(--text-h3);}"]},
+            # critic cycle 2 N4: the band lines up with the list (it was the page's only centred column), 17px text
+            "grading": [".prose {max-width: 66ch; margin-inline: 0;}", ".prose h2 {font-size: var(--text-h3);}",
+                        ".prose p {font-size: 1.0625rem;}"]},
     })
     return spec
 

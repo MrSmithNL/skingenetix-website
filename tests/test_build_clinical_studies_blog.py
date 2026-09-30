@@ -235,3 +235,26 @@ def test_the_list_page_has_its_own_search_result_title_and_description():
     # Malcolm, 2026-09-30: the list page targets "skincare clinical studies" (configs/page-targets.json): once, in the title
     assert seo["meta_title"]["en"].lower().count("skincare clinical studies") == 1
     assert "{n}" not in json.dumps(seo)                                # not the retired table page's counted text
+
+
+def test_design_critic_cycle_2_page_level_fixes():
+    """docs/audits/2026-09-30-clinical-studies-blog-list-critique-cycle2.md (FIX 6.55). The label section's <style> has no
+    500-character cap and reaches the whole list, so the page-level fixes live there:
+    - (1) first screen: on phones each label row is ONE line that scrolls sideways with a fading edge (four wrapped lines
+      pushed the first study title to y=993 of 844), and the lead card's photo is shorter there;
+    - (N2) the "Skin concern" row heading no longer looks like one of its links;
+    - (5) the lead card's badge matches the other cards'; (7) the intro is 17px with a readable measure;
+    - (10) long words hyphenate at 200% zoom instead of breaking mid-word; (8, the tablet crop) was tried and reverted;
+    - (nit) no card zoom under reduced motion, and a visible focus ring on the cards.
+    The closing band lines up with the list (N4: the only centred column)."""
+    spec = bcb.blog_spec()
+    css = _section(spec, "labels")["settings"]["liquid"]
+    assert "@media screen and (max-width: 699px)" in css and "flex-wrap: nowrap" in css and "overflow-x: auto" in css
+    assert "mask-image" in css
+    assert ".sgx-labels__h" in css and "font-weight: 400" in css
+    assert ".blog-post-card--featured .badge" in css and "prefers-reduced-motion" in css and "hyphens: auto" in css
+    assert ".blog-post-card a:focus-visible" in css
+    assert "object-position" not in css      # (8) tried and reverted: the flasks moved under the text, intro 2.31:1 at 768
+    assert ":has(.sgx-search)" in css and "1.0625rem" in css
+    assert "/*" not in css                                              # Liquid parses CSS comments that name tags
+    assert not any("justify-content: center" in r for r in spec["section_css"]["grading"])
