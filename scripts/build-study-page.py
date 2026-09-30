@@ -424,6 +424,12 @@ def drafts_blog_id():
             {"b": {"title": "Clinical studies", "handle": DRAFTS_BLOG, "commentPolicy": "CLOSED"}})["blogCreate"]
     if r["userErrors"]:
         sys.exit(f"  ✗ drafts blog: {r['userErrors']}")
+    # the blog's own index page lists every draft: noindex it as well (verified 2026-09-30: robots noindex,nofollow)
+    h = gql('mutation($m:[MetafieldsSetInput!]!){ metafieldsSet(metafields:$m){ userErrors{ field message } } }',
+            {"m": [{"ownerId": r["blog"]["id"], "namespace": "seo", "key": "hidden", "type": "number_integer",
+                    "value": "1"}]})["metafieldsSet"]
+    if h["userErrors"]:
+        sys.exit(f"  ✗ drafts blog seo.hidden: {h['userErrors']}")
     return r["blog"]["id"]
 
 

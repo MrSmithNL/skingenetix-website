@@ -1,0 +1,425 @@
+{
+  "_note": "DRAFT, English first (Malcolm, 2026-09-30: 'the next 4 clinical trial articles'). ADR-2026-09-26-L decision 3: built without the full text, which is paywalled (Europe PMC: subscription only; Unpaywall oa_status 'closed'; Semantic Scholar: closed; all checked 2026-09-30). Read at source 2026-09-30: the PubMed abstract and esummary (title verified verbatim), the Wiley landing page, and four secondary texts that report the full paper: CIR 2012 scientific literature review 'Safety Assessment of Palmitoyl Oligopeptides' (public PDF, not marked do-not-cite: ~0.4 g per side, no skin irritation, 'described as small, but was significant at weeks 8 and 12', self-assessed age spots / dark circles / firmness 'significant at week 12'); CIR 2024 final report on pentapeptide-4 ('well tolerated'; safe as used); Abu Samah & Heard 2011, Int J Cosmet Sci 33:483, Cardiff University, free to read at Wiley (2-week washout; REAL 1.0 imaging at baseline and weeks 4, 8, 12; P&G algorithms for linear depression area around the eye (crow's-feet area) and on the cheek (texture); blind-coded expert Visual Perception Study; self-assessment; TEWL not different; only published in-vivo study then to isolate pal-KTTKS); Aldag et al. 2016, CCID 9:411, PMC5108505, Merz-funded (blinded experts on a -4 to +4 scale; ANOVA mixed model with p <= 0.10 as significant; line length and expert-graded fine lines significant at weeks 8 and 12; texture at weeks 4 and 8, age spots and dark circles at week 12; at p <= 0.05 only texture week 4 and age spots week 12; reports n = 94). Gorouhi & Maibach 2009 (UCSF, free at Wiley) agrees on age spots (expert and self-assessed). NO effect size is in any readable source, so the chart shows TIMING only (the week each difference first reached significance), from Aldag; ADR-L said 'no chart' but the template has no no-chart path — lead to decide. Register corrections: the facial areas ARE known (eye area and cheek; the register said 'not stated'); the paper's significance bar is p <= 0.10 (not in the register); age spots were significant at week 12 even at p <= 0.05 (the register's §8.5 called them self-assessed and directional).",
+  "handle": "matrixyl-wrinkle-trial-robinson-2005",
+  "hub": "matrixyl-3000-research",
+  "source_url": "https://doi.org/10.1111/j.1467-2494.2005.00261.x",
+  "read_at_source": "2026-09-30",
+  "published": "2026-09-30",
+  "eyebrow": {
+    "en": "Clinical Study · 2005"
+  },
+  "h1": {
+    "en": "Does palmitoyl pentapeptide-4 reduce fine lines and wrinkles?"
+  },
+  "deck": {
+    "en": "A 12-week, double-blind, split-face trial of palmitoyl pentapeptide-4 in 93 women: the peptide in the original Matrixyl®, not the two peptides in Matrixyl® 3000."
+  },
+  "banner": "skingenetix-matrixyl-palmitoyl-pentapeptide-collagen-fibre-study-banner-desktop",
+  "banner_mobile": "skingenetix-matrixyl-palmitoyl-pentapeptide-collagen-fibre-study-banner-mobile",
+  "byline": {
+    "en": "Appraised by the Skingenetix research team. Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician. Last reviewed 30 September 2026."
+  },
+  "reviewer": {
+    "@type": "Person",
+    "name": "Esther Bodde",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Cosmetic & Medical Physician"
+  },
+  "definition": {
+    "en": "Palmitoyl pentapeptide-4 (pal-KTTKS) is the peptide Sederma sells as Matrixyl®, the original version of the ingredient: five amino acids from type I procollagen joined to palmitic acid, a fatty acid. It is a different ingredient from [Matrixyl® 3000](https://www.skingenetix.com/pages/matrixyl-3000-research), which pairs palmitoyl tripeptide-1 with palmitoyl tetrapeptide-7."
+  },
+  "answer": {
+    "en": "In the Robinson 2005 trial, 93 women used a moisturiser with 3 ppm palmitoyl pentapeptide-4 on one side of the face and the same moisturiser without it on the other, twice a day for 12 weeks, without knowing which was which. From week 8, image analysis and expert graders found fine lines and wrinkles reduced more on the peptide side."
+  },
+  "verdict": {
+    "en": "**Our verdict:** the largest published controlled trial of palmitoyl pentapeptide-4 on its own, with each woman as her own comparison, and the peptide side pulled ahead on fine lines and wrinkles from week 8. The effect was small, the authors worked for Procter & Gamble, and it tested the original Matrixyl®, not Matrixyl® 3000."
+  },
+  "seo_title": {
+    "en": "Palmitoyl Pentapeptide-4 for Wrinkles: Robinson 2005 Trial"
+  },
+  "seo_description": {
+    "en": "In a split-face trial of 93 women, 3 ppm palmitoyl pentapeptide-4, the original Matrixyl®, reduced fine lines and wrinkles more than placebo from week 8."
+  },
+  "figures": [
+    {
+      "n": {
+        "en": "93"
+      },
+      "label": {
+        "en": "Women, each her own comparison"
+      },
+      "note": {
+        "en": "A moisturiser with the peptide on one side of the face and the same moisturiser without it on the other, twice a day for 12 weeks ([Robinson et al., 2005](https://pubmed.ncbi.nlm.nih.gov/18492182/))."
+      }
+    },
+    {
+      "n": {
+        "en": "Week 8"
+      },
+      "label": {
+        "en": "Fine lines and wrinkles ahead of placebo"
+      },
+      "note": {
+        "en": "Image analysis and expert graders both favoured the peptide side at weeks 8 and 12, by the paper's statistical test ([Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/))."
+      }
+    },
+    {
+      "n": {
+        "en": "3 ppm"
+      },
+      "label": {
+        "en": "Peptide in the moisturiser"
+      },
+      "note": {
+        "en": "Three parts per million (0.0003%) of palmitoyl pentapeptide-4. No skin irritation was reported, and water loss through the skin did not differ between the two sides."
+      }
+    }
+  ],
+  "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page. Keep these nine values in that order.",
+  "glance": {
+    "heading": {
+      "en": "At a glance"
+    },
+    "rows": [
+      {
+        "k": {
+          "en": "Design"
+        },
+        "v": {
+          "en": "Randomised, double-blind, split-face trial: each woman used both moisturisers, one on each side of the face, with the side chosen at random."
+        }
+      },
+      {
+        "k": {
+          "en": "Participants"
+        },
+        "v": {
+          "en": "93 healthy Caucasian women aged 35 to 55 with fine lines and wrinkles on the face."
+        }
+      },
+      {
+        "k": {
+          "en": "What was applied"
+        },
+        "v": {
+          "en": "An oil-in-water facial moisturiser with 3 ppm palmitoyl pentapeptide-4, about 0.4 g on one side of the face twice a day, after a two-week washout."
+        }
+      },
+      {
+        "k": {
+          "en": "Compared with"
+        },
+        "v": {
+          "en": "The same moisturiser without the peptide, on the other side of the same face. Neither the women nor the graders knew which side had which."
+        }
+      },
+      {
+        "k": {
+          "en": "Duration"
+        },
+        "v": {
+          "en": "12 weeks, with photographs at the start and at weeks 4, 8 and 12."
+        }
+      },
+      {
+        "k": {
+          "en": "How it was measured"
+        },
+        "v": {
+          "en": "Computer analysis of standardised photographs (lines around the eyes, texture on the cheeks), blinded expert grading of the two sides, the women's own ratings, and water loss through the skin."
+        }
+      },
+      {
+        "k": {
+          "en": "Concentration"
+        },
+        "v": {
+          "en": "<strong>3 ppm palmitoyl pentapeptide-4</strong> (0.0003%), stated in the abstract: the peptide itself, within the 2–8 ppm range recommended for cosmetics."
+        }
+      },
+      {
+        "k": {
+          "en": "Funding"
+        },
+        "v": {
+          "en": "All six authors were scientists at Procter & Gamble's Miami Valley Laboratories, and P&G sells skincare containing this peptide, so the trial is not independent."
+        }
+      },
+      {
+        "k": {
+          "en": "Our evidence grade"
+        },
+        "v": {
+          "en": "A — randomised, double-blind, placebo-controlled and measured by image analysis and blinded graders; a small effect, with no size given in any source we could read."
+        }
+      }
+    ]
+  },
+  "measurements": {
+    "_chart_note": "COUNT of check-ups, not magnitude: no effect size exists outside the paywalled full text. Out of the three check-ups (weeks 4, 8, 12), how many showed the peptide side significantly ahead, per Aldag et al. 2016 (PMC5108505): at the paper's p <= 0.10, texture weeks 4 and 8, line length and expert-graded fine lines weeks 8 and 12, age spots and dark circles week 12; at p <= 0.05, texture week 4 and age spots week 12. Replaces a first-significant-week chart (2026-09-30), where a longer bar meant later and read as bigger.",
+    "chart": {
+      "title": {
+        "en": "Check-ups at which the peptide side was ahead of placebo"
+      },
+      "subtitle": {
+        "en": "Out of three check-ups (weeks 4, 8 and 12), by the paper's own test (p ≤ 0.10) and by the stricter, usual test (p ≤ 0.05). A count of check-ups, not the size of the change, which no readable source reports."
+      },
+      "unit": "",
+      "signed": false,
+      "domain": [0, 3],
+      "ticks": [0, 1, 2, 3],
+      "value_width": 110,
+      "series": [
+        {
+          "key": "p",
+          "color": "#016569",
+          "label": {
+            "en": "By the paper's test (p ≤ 0.10)"
+          }
+        },
+        {
+          "key": "s",
+          "color": "#8A9394",
+          "quiet": true,
+          "label": {
+            "en": "By the usual test (p ≤ 0.05)"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "p": 2,
+            "s": 1
+          },
+          "labels": {
+            "p": {
+              "en": "2 of 3 (weeks 4, 8)"
+            },
+            "s": {
+              "en": "1 of 3 (week 4)"
+            }
+          },
+          "label": {
+            "en": "Skin texture"
+          }
+        },
+        {
+          "values": {
+            "p": 2,
+            "s": 0
+          },
+          "labels": {
+            "p": {
+              "en": "2 of 3 (weeks 8, 12)"
+            },
+            "s": {
+              "en": "0 of 3"
+            }
+          },
+          "label": {
+            "en": "Fine-line and wrinkle length (image analysis)"
+          }
+        },
+        {
+          "values": {
+            "p": 2,
+            "s": 0
+          },
+          "labels": {
+            "p": {
+              "en": "2 of 3 (weeks 8, 12)"
+            },
+            "s": {
+              "en": "0 of 3"
+            }
+          },
+          "label": {
+            "en": "Fine lines and wrinkles (expert graders)"
+          }
+        },
+        {
+          "values": {
+            "p": 1,
+            "s": 1
+          },
+          "labels": {
+            "p": {
+              "en": "1 of 3 (week 12)"
+            },
+            "s": {
+              "en": "1 of 3 (week 12)"
+            }
+          },
+          "label": {
+            "en": "The look of age spots"
+          }
+        },
+        {
+          "values": {
+            "p": 1,
+            "s": 0
+          },
+          "labels": {
+            "p": {
+              "en": "1 of 3 (week 12)"
+            },
+            "s": {
+              "en": "0 of 3"
+            }
+          },
+          "label": {
+            "en": "The look of dark circles"
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Measure"
+      },
+      "caption": {
+        "en": "<p>By the paper's own test (p ≤ 0.10), the palmitoyl pentapeptide-4 side was ahead on skin texture at weeks 4 and 8, on fine lines and wrinkles at weeks 8 and 12, and on the look of age spots and dark circles at week 12. By the stricter, usual test (p ≤ 0.05), texture at week 4 and age spots at week 12 were significant. Timings from a review of the full paper (<a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/' target='_blank' rel='noopener'>Aldag et al., 2016</a>).</p>"
+      }
+    }
+  },
+  "media": {
+    "heading": {
+      "en": "What the researchers did"
+    },
+    "image": "skingenetix-palmitoyl-pentapeptide-fibroblast-signal-skin-diagram.jpg",
+    "alt": {
+      "en": "Illustrated block of skin in which a glowing signal reaches a collagen-making cell among teal fibres"
+    },
+    "body": [
+      {
+        "en": "Ninety-three women aged 35 to 55 were given two facial moisturisers after a two-week washout: one with 3 ppm palmitoyl pentapeptide-4 and one without it, otherwise identical. Each applied about 0.4 g of one to the left side of her face and the other to the right, twice a day for 12 weeks, with the side decided at random and hidden from her and from the assessors."
+      },
+      {
+        "en": "Faces were photographed at the start and at weeks 4, 8 and 12 with Procter & Gamble's REAL facial imaging system. Computers measured the lines around the eyes and the texture of the cheeks, expert graders compared the two sides of each face without knowing which was which, the women rated their own skin, and water loss through the skin was checked."
+      }
+    ]
+  },
+  "limits": {
+    "heading": {
+      "en": "How to read this result"
+    },
+    "items": [
+      {
+        "en": "<strong>Which peptide this is.</strong> Palmitoyl pentapeptide-4, the original Matrixyl®, not the two peptides of Matrixyl® 3000, whose own studies are on the [Matrixyl® 3000 evidence hub](https://www.skingenetix.com/pages/matrixyl-3000-research)."
+      },
+      {
+        "en": "<strong>How it was judged.</strong> Computer analysis of standardised photographs and expert graders working blind agreed, and the women's own ratings of their fine lines pointed the same way."
+      },
+      {
+        "en": "<strong>How big the effect was.</strong> The authors call it small, and significant at weeks 8 and 12. The full paper is paywalled and no source we could read gives a percentage, so this page reports when the differences appeared, not their size."
+      },
+      {
+        "en": "<strong>What “significant” means here.</strong> By the usual bar (p ≤ 0.05), the peptide side was ahead on skin texture at week 4 and on the look of age spots at week 12. The fine-line and wrinkle results met the paper's own, looser bar of p ≤ 0.10 ([Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/))."
+      },
+      {
+        "en": "<strong>Who took part.</strong> 93 Caucasian women aged 35 to 55; men and other ethnic groups were not included. The peptide was well tolerated, with no skin irritation reported."
+      },
+      {
+        "en": "<strong>Who ran it.</strong> All six authors worked for Procter & Gamble, which sells skincare containing this peptide. The paper was peer-reviewed and published in the International Journal of Cosmetic Science."
+      }
+    ]
+  },
+  "context": {
+    "heading": {
+      "en": "Where this trial sits in the evidence"
+    },
+    "body": [
+      {
+        "en": "Palmitoyl pentapeptide-4 was designed from a piece of type I procollagen to prompt collagen production, and this trial tested whether it changes how facial skin looks. A 2011 academic review found it was then the only published human study to test the peptide apart from other actives ([Abu Samah and Heard, 2011](https://doi.org/10.1111/j.1468-2494.2011.00657.x))."
+      },
+      {
+        "en": "In Sederma's own two-month comparison, summarised by the independent Cosmetic Ingredient Review panel, creams with 3% Matrixyl® and 3% Matrixyl® 3000 both reduced deep wrinkles and roughness from the start, with no significant difference between them ([CIR, 2012](https://www.cir-safety.org/sites/default/files/palmit072012slr.pdf)). The same panel assessed palmitoyl pentapeptide-4 as safe in cosmetics as used, citing this trial's tolerance result ([CIR, 2024](https://www.cir-safety.org/sites/default/files/FR_Pentapeptides_092024.pdf))."
+      },
+      {
+        "en": "Every study behind [Matrixyl® 3000](https://www.skingenetix.com/pages/matrixyl-3000-research), the pair of peptides in our serum and cream, is graded on its evidence hub, alongside our other [ingredient research](https://www.skingenetix.com/pages/the-science). The [Clinical studies](https://www.skingenetix.com/blogs/clinical-studies) list gathers every trial we have appraised."
+      }
+    ]
+  },
+  "faq": {
+    "_note": "Questions live in scripts/study-template-build.py (FAQ_QUESTIONS) — the same four on every study page. Keep these four answers in that order.",
+    "questions": [
+      {
+        "en": "Does this trial prove the ingredient works?"
+      },
+      {
+        "en": "What concentration did the study use?"
+      },
+      {
+        "en": "Is the trial independent?"
+      },
+      {
+        "en": "Do Skingenetix products reproduce this result?"
+      }
+    ],
+    "answers": [
+      {
+        "en": "It is the largest published controlled trial of palmitoyl pentapeptide-4 on its own: in 93 women, the peptide side improved more on fine lines and wrinkles than the placebo side from week 8, by image analysis and expert grading. The effect was small, and the trial tested the original Matrixyl®, not Matrixyl® 3000 (see its [evidence hub](https://www.skingenetix.com/pages/matrixyl-3000-research))."
+      },
+      {
+        "en": "3 ppm (three parts per million, or 0.0003%) of palmitoyl pentapeptide-4 in an oil-in-water facial moisturiser, about 0.4 g per side twice a day. That is the peptide itself; a percentage on a label usually refers to a supplier's solution, which holds the peptide in parts per million."
+      },
+      {
+        "en": "It was run by six Procter & Gamble scientists and published in the peer-reviewed International Journal of Cosmetic Science. P&G sells skincare containing this peptide, so it is not independent. A Cardiff University review later set out its design and results in detail ([Abu Samah and Heard, 2011](https://doi.org/10.1111/j.1468-2494.2011.00657.x))."
+      },
+      {
+        "en": "Our [Matrixyl 3000 Firming Serum](https://www.skingenetix.com/products/matrixyl-3000-firming-serum) contains palmitoyl pentapeptide-4 alongside Matrixyl® 3000; our [Pro-Collagen Firming Cream](https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream) contains Matrixyl® 3000 but not this peptide. The serum is a different formula from the trial's moisturiser, so its results are not the trial's results: we cite the trial for the ingredient as studied."
+      }
+    ]
+  },
+  "meaning": {
+    "heading": {
+      "en": "What it means for our products"
+    },
+    "body": [
+      {
+        "en": "This trial is the main human evidence for the palmitoyl pentapeptide-4 in our serum: in a double-blind test in 93 women, the original Matrixyl® peptide reduced the look of fine lines and wrinkles more than the same moisturiser without it, from week 8."
+      },
+      {
+        "en": "Our [Matrixyl 3000 Firming Serum](https://www.skingenetix.com/products/matrixyl-3000-firming-serum) pairs it with Matrixyl® 3000, whose own studies are on the [Matrixyl® 3000 research hub](https://www.skingenetix.com/pages/matrixyl-3000-research). The serum is a different formula from the trial's moisturiser, so we cite the trial for the ingredient as studied, not as a result our serum has repeated."
+      }
+    ],
+    "ctas": [
+      {
+        "label": {
+          "en": "Read the Matrixyl® 3000 evidence"
+        },
+        "href": "/pages/matrixyl-3000-research"
+      },
+      {
+        "label": {
+          "en": "See the serum"
+        },
+        "href": "/products/matrixyl-3000-firming-serum"
+      }
+    ]
+  },
+  "citation": {
+    "en": "Robinson LR, Fitzgerald NC, Doughty DG, Dawes NC, Berge CA, Bissett DL. Topical palmitoyl pentapeptide provides improvement in photoaged human facial skin. *International Journal of Cosmetic Science* 2005;27(3):155–160. [doi:10.1111/j.1467-2494.2005.00261.x](https://doi.org/10.1111/j.1467-2494.2005.00261.x)"
+  },
+  "source_note": {
+    "en": "Read at source: the abstract and PubMed record, 30 September 2026. The full paper is paywalled; its methods and results are taken from the independent Cosmetic Ingredient Review's 2012 literature review and two published reviews that read it: [Abu Samah and Heard, 2011](https://doi.org/10.1111/j.1468-2494.2011.00657.x) (Cardiff University) and [Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/) (funded by Merz). Matrixyl® and Matrixyl® 3000 are registered trademarks of Sederma."
+  },
+  "scholarly": {
+    "name": "Topical palmitoyl pentapeptide provides improvement in photoaged human facial skin",
+    "identifier": "18492182",
+    "datePublished": "2005",
+    "journal": "International Journal of Cosmetic Science"
+  },
+  "checks": [
+    "93 women",
+    "3 ppm",
+    "12 weeks",
+    "Week 8",
+    "0.4 g",
+    "p ≤ 0.10",
+    "p ≤ 0.05",
+    "Procter",
+    "Robinson LR, Fitzgerald NC",
+    "Read at source"
+  ],
+  "concerns": ["wrinkles", "crows_feet"]
+}

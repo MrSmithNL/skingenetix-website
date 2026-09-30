@@ -188,6 +188,8 @@ def _blog_recorder(calls, articles=(), blog=True):
             return {"blogs": {"nodes": [{"id": "gid://shopify/Blog/7", "handle": bsp.DRAFTS_BLOG}] if blog else []}}
         if "blogCreate" in q:
             return {"blogCreate": {"blog": {"id": "gid://shopify/Blog/7"}, "userErrors": []}}
+        if "metafieldsSet" in q:
+            return {"metafieldsSet": {"userErrors": []}}
         if "metaobjectByHandle" in q:
             return {"metaobjectByHandle": {"id": "gid://shopify/Metaobject/9"}}
         if "articles(" in q:
@@ -250,3 +252,6 @@ def test_the_drafts_blog_is_created_once_and_hidden(monkeypatch):
     bsp.preview_article(NEW)
     b = next(v["b"] for q, v in calls if "blogCreate" in q)
     assert b["handle"] == bsp.DRAFTS_BLOG and b["commentPolicy"] == "CLOSED"
+    hid = [m for q, v in calls if "metafieldsSet" in q for m in v["m"]]
+    assert hid == [{"ownerId": "gid://shopify/Blog/7", "namespace": "seo", "key": "hidden",
+                    "type": "number_integer", "value": "1"}]            # the blog's own index page is noindexed too
