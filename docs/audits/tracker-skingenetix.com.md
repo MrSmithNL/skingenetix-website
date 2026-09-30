@@ -18,6 +18,21 @@ Reports: `page-audit-2026-09-29-*.md` / `.json` (run 1) and `…-run2.txt` / `.j
 
 A difference under ~0.9 is within the audit's measured noise. The score is a diagnostic, not a ranking forecast.
 
+**The bar (Malcolm, 2026-09-30, ADR-2026-09-30-Q).** A page is done when all gates pass, there are no confirmed failures, **and** the
+score is 9.0 or more.
+
+### Re-audit, 2026-09-30
+
+| Article                                         | Score    | Gates                        | Coverage          | Confirmed failures       | Report                                                                  |
+| ----------------------------------------------- | -------- | ---------------------------- | ----------------- | ------------------------ | ----------------------------------------------------------------------- |
+| Badenhorst 2016 (the reference format, Malcolm) | **9.78** | 5 pass, hreflang not checked | 39 of 51 assessed | **none**; contested none | `page-audit-2026-09-30-copper-peptide-wrinkle-trial-badenhorst-2016.md` |
+
+- **Status:** done, with no fix round needed. Dimension scores: query fit 9.64, content 9.44, and 10.0 on the other six.
+- **Lone objections:** one judge each marked Q3 (intent), C2 (facts) and C4 (consistency) unmet, with no reasons recorded. They are
+  not confirmed, so there is nothing to fix.
+- **Cost:** USD 1.08.
+- **Next:** Raikou, Wang and Ye are audited after they are rebuilt in this format (Malcolm: "the others aren't yet").
+
 ### Done — live 2026-09-30 (Malcolm: "yes")
 
 | #   | Issue                                                                                     | What changed                                                                                                                                                                                       | Verified                                                                                  |

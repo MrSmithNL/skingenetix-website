@@ -135,7 +135,9 @@ Every localisable value is `{"en": "…", "de": "…", …}`. A locale is publis
 9. **Audit with the central auditor, v2** (the `seo-aiso-validator` skill; never a local copy):
    `cd ~/"Claude Code/Projects/seo-toolkit" && .venv/bin/python scripts/audit_page.py "https://www.skingenetix.com/blogs/clinical-studies/<handle>" --criteria v2 --page-type evidence --keyword "<primary>" --serp --market en-US --json <out>.json --out docs/audits/page-audit-<date>-<handle>.md`.
    Read gates · score · coverage, then **CONFIRMED FAILURES** — that list is the fix list; never fix CONTESTED. Check every "missing X"
-   verdict on the raw page first. Fix, re-audit, **stop at no confirmed failures** (≤ 3 rounds), never at a score. Several articles:
+   verdict on the raw page first. Fix, re-audit. **Done = all gates pass, no confirmed failures AND a score of 9.0 or more**
+   (Malcolm, 2026-09-30, ADR-2026-09-30-Q). Below 9 with nothing confirmed, keep improving the page honestly for its readers,
+   re-audit, and report to Malcolm; never pad, never fabricate, never add hidden text. Several articles:
    `scripts/audit_summary.py <jsons>` shows the shared (template) causes. Budget ≈ USD 1 per audit, standing approval ≈ USD 3.
    `scripts/page-audit.py` stays for its live-browser design checks only (1440/390), and the `design-critic` agent runs in a fresh context.
 10. Credit the reviewer: add the config to `configs/reviewers/esther-bodde.json` → `studies`.

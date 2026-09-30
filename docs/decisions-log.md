@@ -471,3 +471,42 @@ demand; the efficacy questions do — "does argireline work" 656/month (US), pag
 never asks the ingredient-wide question — Badenhorst retitled on this rule.
 **Pending, same analysis §1–3:** the product-vs-hub overlaps (argireline, matrixyl 3000) and the "peptide skincare" owner — a
 recommendation awaiting Malcolm.
+
+## ADR-2026-09-30-Q: A page is done at a score of 9 or more, with no confirmed failures
+
+**Date:** 2026-09-30
+**Status:** Accepted. Malcolm: "lets keep improving until it scores a 9 or more."
+**Context:** Commits `e89d845` and `fe94d19` retired the external ≥ 9.0 bar in both page templates. They followed the
+`seo-aiso-validator` skill's rule that a score is never a gate, and they did not record a decision from Malcolm. He had set the bar
+on 2026-09-24 ("improve it until it scores above a 9"), and he restated it when asked.
+**Decision:** a page built or rebuilt on this store is done when three things hold on the central auditor (v2, `report.score`
+quoted with its gates and coverage):
+
+1. every gate passes;
+2. there are no confirmed failures;
+3. the score is **9.0 or more**.
+
+The fix rules do not change:
+
+- fix only confirmed failures the page can honestly meet;
+- never fix contested verdicts;
+- never add a citation, number, credential or person that is not true;
+- never pad the page or add hidden text;
+- safety wording, claims and brand decisions go to Malcolm.
+
+When the confirmed failures are cleared but the score is still under 9, the loop continues:
+
+- improve the page for its readers where the weakest dimension points;
+- re-audit;
+- report to Malcolm, and ask him when nothing honest is left to do.
+
+**Consequences:**
+
+- `docs/study-page-template.md` step 9 and `docs/science-page-template.md` step 10 now read "no confirmed failures and a score of
+  9.0 or more".
+- This project's bar is stricter than the skill's default, which stops at no confirmed failures.
+- A score difference under about 0.9 is judge noise, so a page just under 9 is re-audited once before any content is changed for
+  the score.
+
+**First application:** Badenhorst 2016 on 2026-09-30 scored 9.78, with 0 confirmed failures, all five gates passing and 39 of
+51 criteria assessed (`docs/audits/page-audit-2026-09-30-copper-peptide-wrinkle-trial-badenhorst-2016.md`). Done with no fix round.
