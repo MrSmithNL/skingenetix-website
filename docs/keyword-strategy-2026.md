@@ -11,15 +11,15 @@ clickstream, search intent and difficulty · 12 live SERPs.
 ## 1. The correction that reorders everything
 
 **Google Ads search volume is modelled and bucketed. It is not demand.** Comparing it against
-DataForSEO clickstream — *observed* searches — on this catalogue:
+DataForSEO clickstream — _observed_ searches — on this catalogue:
 
-| Term | Ads says | Actually observed | Inflation |
-|---|---|---|---|
-| **ghk copper peptide** | **135,000** | **757** | **178×** |
-| copper peptide | 33,100 | 1,362 | 24× |
-| pdrn skincare | 12,100 | 1,817 | 6.7× |
-| pdrn serum | 22,200 | 3,936 | 5.6× |
-| **pdrn** | 49,500 | **19,734** | 2.5× |
+| Term                   | Ads says    | Actually observed | Inflation |
+| ---------------------- | ----------- | ----------------- | --------- |
+| **ghk copper peptide** | **135,000** | **757**           | **178×**  |
+| copper peptide         | 33,100      | 1,362             | 24×       |
+| pdrn skincare          | 12,100      | 1,817             | 6.7×      |
+| pdrn serum             | 22,200      | 3,936             | 5.6×      |
+| **pdrn**               | 49,500      | **19,734**        | 2.5×      |
 
 Ranked on Ads volume, **copper peptide looks like the flagship at 135,000**. That number is an artefact
 — the same bucket returned for `ghk copper peptide`, `copper peptide ghk` and several other phrasings.
@@ -37,11 +37,11 @@ now corrected.
 opportunity = observed_volume × relevance × winnability
 ```
 
-| Component | Definition |
-|---|---|
-| **observed** | Clickstream volume. Falls back to Ads ÷ 3 when clickstream is absent (the measured median ratio here) |
-| **relevance** | **1.0** names an ingredient we sell · **0.6** generic category we could win · **0.15** competitor-branded (real demand, wrong audience) · **0.0** off-intent |
-| **winnability** | 1.0 at KD ≤ 10, tapering to 0.3 at KD ≥ 40 |
+| Component       | Definition                                                                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **observed**    | Clickstream volume. Falls back to Ads ÷ 3 when clickstream is absent (the measured median ratio here)                                                        |
+| **relevance**   | **1.0** names an ingredient we sell · **0.6** generic category we could win · **0.15** competitor-branded (real demand, wrong audience) · **0.0** off-intent |
+| **winnability** | 1.0 at KD ≤ 10, tapering to 0.3 at KD ≥ 40                                                                                                                   |
 
 **Off-intent** strips injections, oral supplements, bodybuilding, lab reagents, hair, and skin
 conditions. **Brand detection is vocabulary-based, not a list** — a named competitor list can never be
@@ -55,28 +55,28 @@ brand, which fails safe.
 
 ### By ingredient family — PDRN is 68% of everything
 
-| Family | US | GB | DE | NL | FR | ES | IT | **Total** |
-|---|---|---|---|---|---|---|---|---|
-| **PDRN** | 43,324 | 16,303 | 7,596 | 1,728 | 4,849 | 263 | 2,654 | **76,717** |
-| Generic peptide | 4,530 | 2,765 | 1,204 | 93 | 291 | 270 | 444 | 9,597 |
-| Copper (GHK-Cu) | 5,430 | 1,889 | 844 | 613 | 217 | 225 | 140 | 9,358 |
-| Argireline / AH-8 | 4,973 | 1,259 | 1,056 | 358 | 674 | 434 | 351 | 9,105 |
-| Matrixyl 3000 | 3,427 | 1,574 | 211 | 102 | 217 | 395 | 210 | 6,136 |
-| Glutathione | 1,537 | 814 | 422 | 110 | 72 | 39 | 0 | 2,994 |
+| Family            | US     | GB     | DE    | NL    | FR    | ES  | IT    | **Total**  |
+| ----------------- | ------ | ------ | ----- | ----- | ----- | --- | ----- | ---------- |
+| **PDRN**          | 43,324 | 16,303 | 7,596 | 1,728 | 4,849 | 263 | 2,654 | **76,717** |
+| Generic peptide   | 4,530  | 2,765  | 1,204 | 93    | 291   | 270 | 444   | 9,597      |
+| Copper (GHK-Cu)   | 5,430  | 1,889  | 844   | 613   | 217   | 225 | 140   | 9,358      |
+| Argireline / AH-8 | 4,973  | 1,259  | 1,056 | 358   | 674   | 434 | 351   | 9,105      |
+| Matrixyl 3000     | 3,427  | 1,574  | 211   | 102   | 217   | 395 | 210   | 6,136      |
+| Glutathione       | 1,537  | 814    | 422   | 110   | 72    | 39  | 0     | 2,994      |
 
 **PDRN is 8× the next family.** Investment must follow that, not be split evenly across five hubs.
 
 ### By market — English is 77% of the opportunity
 
 | Market | Opportunity | Share |
-|---|---|---|
-| **US** | 63,121 | 56% |
-| **GB** | 24,495 | 22% |
-| DE | 11,333 | 10% |
-| FR | 6,320 | 6% |
-| IT | 3,750 | 3% |
-| NL | 3,004 | 3% |
-| ES | 1,626 | 1% |
+| ------ | ----------- | ----- |
+| **US** | 63,121      | 56%   |
+| **GB** | 24,495      | 22%   |
+| DE     | 11,333      | 10%   |
+| FR     | 6,320       | 6%    |
+| IT     | 3,750       | 3%    |
+| NL     | 3,004       | 3%    |
+| ES     | 1,626       | 1%    |
 
 ➡️ **English-first is the data's answer, not just a workflow convenience.** The store ships worldwide,
 so US and GB demand is addressable. The Netherlands — the home market — is 3%.
@@ -85,22 +85,22 @@ so US and GB demand is addressable. The Netherlands — the home market — is 3
 
 ## 4. The hero map — one owner per term
 
-**The rule:** one page per keyword *and intent*. Differentiating two pages by format fails; only intent
+**The rule:** one page per keyword _and intent_. Differentiating two pages by format fails; only intent
 works. Opportunity figures are summed across all seven markets; observed volumes shown US/GB/DE.
 
 ### Hub pages — informational head terms
 
-| Page | Owns | Opp | Observed US/GB/DE | KD |
-|---|---|---|---|---|
-| **`/pages/pdrn-research`** | **`pdrn`** | **36,914** | 19,734 / 6,462 / 4,650 | 6 |
-| | `what is pdrn` | 7,887 | 5,602 / 2,285 / — | 7 |
-| | `pdrn meaning` | 2,116 | 1,665 / 551 / 105 | 15 |
-| | `salmon dna pdrn` · `salmon pdrn` | 1,368 | 1,211 / 157 / — | 0 |
-| | `pdrn benefits` · `what does pdrn do` | 1,177 | 1,110 / 78 / — | 9–11 |
-| **`/pages/acetyl-hexapeptide-8-research`** | **`argireline`** | **7,149** | 3,734 / 1,103 / 845 | 3 |
-| **`/pages/copper-peptide-research`** | `copper peptide` | 2,204 | 1,362 / 394 / 105 | 9 |
-| **`/pages/glutathione-research`** | `glutathione for skin` | 1,631 | 1,211 / 472 / 422 | 29 |
-| **`/pages/matrixyl-3000-research`** | matrixyl informational long-tail | low | — | — |
+| Page                                       | Owns                                  | Opp        | Observed US/GB/DE      | KD   |
+| ------------------------------------------ | ------------------------------------- | ---------- | ---------------------- | ---- |
+| **`/pages/pdrn-research`**                 | **`pdrn`**                            | **36,914** | 19,734 / 6,462 / 4,650 | 6    |
+|                                            | `what is pdrn`                        | 7,887      | 5,602 / 2,285 / —      | 7    |
+|                                            | `pdrn meaning`                        | 2,116      | 1,665 / 551 / 105      | 15   |
+|                                            | `salmon dna pdrn` · `salmon pdrn`     | 1,368      | 1,211 / 157 / —        | 0    |
+|                                            | `pdrn benefits` · `what does pdrn do` | 1,177      | 1,110 / 78 / —         | 9–11 |
+| **`/pages/acetyl-hexapeptide-8-research`** | **`argireline`**                      | **7,149**  | 3,734 / 1,103 / 845    | 3    |
+| **`/pages/copper-peptide-research`**       | `copper peptide`                      | 2,204      | 1,362 / 394 / 105      | 9    |
+| **`/pages/glutathione-research`**          | `glutathione for skin`                | 1,631      | 1,211 / 472 / 422      | 29   |
+| **`/pages/matrixyl-3000-research`**        | matrixyl informational long-tail      | low        | —                      | —    |
 
 ⚠️ **Do not also target `what is pdrn in skincare` (1,425) or `what does pdrn do for skin` (629) with
 separate articles.** They are the same intent as the hub and would cannibalise it. Cover them as
@@ -108,26 +108,26 @@ separate articles.** They are the same intent as the hub and would cannibalise i
 
 ### Product pages — transactional terms
 
-| Product | Owns | Opp | Observed US/GB/DE | KD |
-|---|---|---|---|---|
-| `pdrn-renewal-serum` | **`pdrn serum`** | **8,319** | 3,936 / 2,049 / 845 | 1 |
-| `copper-peptide-ghk-cu-renewal-serum` | `copper peptide serum` | 5,496 | 2,977 / 1,339 / 634 | 3 |
-| `matrixyl-3000-firming-serum` | `matrixyl 3000` | 5,127 | 2,725 / 1,339 / 211 | 0 |
-| `pdrn-collagen-night-cream` | `pdrn cream` | 4,453 | 2,321 / 1,024 / 634 | 2 |
-| `acetyl-hexapeptide-8-anti-wrinkle-serum` | `argireline serum` | 991 | 605 / — / 211 | 13 |
-| `glutathione-brightening-serum` | `glutathione serum` | 953 | 555 / 236 / — | 0 |
-| `matrixyl-3000-pro-collagen-firming-cream` | `peptide cream` | 627 | 504 / 472 / — | 4 |
+| Product                                    | Owns                   | Opp       | Observed US/GB/DE   | KD  |
+| ------------------------------------------ | ---------------------- | --------- | ------------------- | --- |
+| `pdrn-renewal-serum`                       | **`pdrn serum`**       | **8,319** | 3,936 / 2,049 / 845 | 1   |
+| `copper-peptide-ghk-cu-renewal-serum`      | `copper peptide serum` | 5,496     | 2,977 / 1,339 / 634 | 3   |
+| `matrixyl-3000-firming-serum`              | `matrixyl 3000`        | 5,127     | 2,725 / 1,339 / 211 | 0   |
+| `pdrn-collagen-night-cream`                | `pdrn cream`           | 4,453     | 2,321 / 1,024 / 634 | 2   |
+| `acetyl-hexapeptide-8-anti-wrinkle-serum`  | `argireline serum`     | 991       | 605 / — / 211       | 13  |
+| `glutathione-brightening-serum`            | `glutathione serum`    | 953       | 555 / 236 / —       | 0   |
+| `matrixyl-3000-pro-collagen-firming-cream` | `peptide cream`        | 627       | 504 / 472 / —       | 4   |
 
 ### Collection pages — category and plural terms
 
-| Collection | Owns | Opp | Observed US/GB/DE | KD |
-|---|---|---|---|---|
-| **`/collections/pdrn`** | **`pdrn skincare`** | **3,628** | 1,817 / 1,182 / — | 0 |
-| `/collections/serums` | **`peptide serum`** | 4,016 | 3,129 / 1,418 / 1,056 | 0 |
-| `/collections/all` or a peptide collection | `peptide skincare` | 312 | 100 / 157 / 211 | 9 |
+| Collection                                 | Owns                | Opp       | Observed US/GB/DE     | KD  |
+| ------------------------------------------ | ------------------- | --------- | --------------------- | --- |
+| **`/collections/pdrn`**                    | **`pdrn skincare`** | **3,628** | 1,817 / 1,182 / —     | 0   |
+| `/collections/serums`                      | **`peptide serum`** | 4,016     | 3,129 / 1,418 / 1,056 | 0   |
+| `/collections/all` or a peptide collection | `peptide skincare`  | 312       | 100 / 157 / 211       | 9   |
 
 **`/collections/pdrn` has a proven template.** In GB, **Boots ranks #1 for `pdrn serum` with a
-collection page** titled *"PDRN Skincare | Serums, Creams & More"*, and Cult Beauty ranks #8 with the
+collection page** titled _"PDRN Skincare | Serums, Creams & More"_, and Cult Beauty ranks #8 with the
 same shape. That is exactly the page we should build.
 
 ⚠️ **`peptide serum` is assigned to the collection, not a product.** The classifier called it PRODUCT;
@@ -136,16 +136,36 @@ cannot win it.
 
 ### Articles — commercial guides
 
-| Article | Target | Opp | KD | Verdict |
-|---|---|---|---|---|
-| Best PDRN serums, compared on concentration | `best pdrn serum` | 1,042 | 3 | ✅ **Build** |
-| Best copper peptide serums | `best copper peptide serum` | 532 | 5 | ✅ Build |
-| ~~Best peptide serums~~ | `best peptide serum` | 1,287 | 10 | ❌ **Do not build** |
+| Article                                     | Target                      | Opp   | KD  | Verdict             |
+| ------------------------------------------- | --------------------------- | ----- | --- | ------------------- |
+| Best PDRN serums, compared on concentration | `best pdrn serum`           | 1,042 | 3   | ✅ **Build**        |
+| Best copper peptide serums                  | `best copper peptide serum` | 532   | 5   | ✅ Build            |
+| ~~Best peptide serums~~                     | `best peptide serum`        | 1,287 | 10  | ❌ **Do not build** |
 
 ⚠️ **`best peptide serum` is owned by publishers** — Forbes #2, Reddit #3, Ulta #5, Marie Claire #6,
 YouTube #8. This matches the research finding that commercial "best X" queries send **40.86%** of
-citations to third-party listicles. **The play is to get *into* Forbes and Marie Claire's lists, not to
+citations to third-party listicles. **The play is to get _into_ Forbes and Marie Claire's lists, not to
 publish a competing one.** That belongs to the off-site track, not the content plan.
+
+### Clinical-study articles — evidence spokes _(added 2026-09-30)_
+
+Researched 2026-09-30 (`docs/keyword-ownership-analysis-2026-09-30.md` §4; data
+`configs/keyword-data/targeted-2026-09-30/`, $1.26). Each article's own trial question has **no measurable search
+demand** — it is an evidence page for its hub, not a traffic page. The efficacy questions that _do_ carry demand go to
+the hub, the only page that weighs every trial.
+
+| Article                                           | Owns                            | Hub it serves                          | Observed demand     |
+| ------------------------------------------------- | ------------------------------- | -------------------------------------- | ------------------- |
+| `argireline-crows-feet-trial-wang-2013`           | `argireline crow's feet`        | `/pages/acetyl-hexapeptide-8-research` | none measurable     |
+| `argireline-forehead-roughness-trial-raikou-2017` | `argireline forehead lines`     | `/pages/acetyl-hexapeptide-8-research` | none measurable     |
+| `copper-peptide-wrinkle-trial-badenhorst-2016`    | `copper peptide serum wrinkles` | `/pages/copper-peptide-research`       | none measurable     |
+| `pdrn-vs-retinol-split-face-trial-ye-2026`        | `pdrn vs retinol`               | `/pages/pdrn-research`                 | none measurable yet |
+
+**Rule:** _"Does X work?" belongs to the ingredient hub_ — `does argireline work` (656 US, page one is forums) and
+`does copper peptide serum work` (50 US) are hub sections, linking down to each appraisal. A study title asks its own
+trial's question, never the ingredient-wide one (Badenhorst's was retitled on 2026-09-30 for exactly this).
+**Open decision (2026-09-30):** the product/hub overlaps on "argireline" and "matrixyl 3000" and the "peptide skincare"
+owner — recommendation in the analysis doc §1–3, awaiting Malcolm.
 
 ---
 
@@ -155,14 +175,14 @@ publish a competing one.** That belongs to the off-site track, not the content p
 
 **1. Brand-owned ingredient explainers rank reliably.** Not a publisher-only space:
 
-| Term | Brand pages in the top 10 |
-|---|---|
-| `what is pdrn` (US) | **SkinCeuticals #2**, Cult Beauty #8, Skin Laundry #9, INKEY List #11 |
-| `pdrn` (US) | Skin Laundry #6, SkinCeuticals #8 |
-| `pdrn serum` (US) | **INKEY List #5**, Medicube #7 |
-| `pdrn` (FR) | **Lancôme #2** |
-| `argireline` (US) | The Ordinary #4 |
-| `matrixyl 3000` (US) | **Timeless #2**, The Ordinary #4, No7 #7 |
+| Term                 | Brand pages in the top 10                                             |
+| -------------------- | --------------------------------------------------------------------- |
+| `what is pdrn` (US)  | **SkinCeuticals #2**, Cult Beauty #8, Skin Laundry #9, INKEY List #11 |
+| `pdrn` (US)          | Skin Laundry #6, SkinCeuticals #8                                     |
+| `pdrn serum` (US)    | **INKEY List #5**, Medicube #7                                        |
+| `pdrn` (FR)          | **Lancôme #2**                                                        |
+| `argireline` (US)    | The Ordinary #4                                                       |
+| `matrixyl 3000` (US) | **Timeless #2**, The Ordinary #4, No7 #7                              |
 
 ➡️ The hub model is validated for this category, in three languages.
 
@@ -182,11 +202,11 @@ first-citation slots.
 
 Real, qualified PDRN demand exists for formats we do not sell:
 
-| Term | Opportunity | Observed US/GB/DE |
-|---|---|---|
-| `pdrn toner` | 1,157 | 454 / 315 / 211 |
-| `pdrn mask` | 811 | 706 / — / 211 |
-| `pdrn essence` + `pdrn 100 essence` | 1,168 | 151 / 709 / 105 |
+| Term                                | Opportunity | Observed US/GB/DE |
+| ----------------------------------- | ----------- | ----------------- |
+| `pdrn toner`                        | 1,157       | 454 / 315 / 211   |
+| `pdrn mask`                         | 811         | 706 / — / 211     |
+| `pdrn essence` + `pdrn 100 essence` | 1,168       | 151 / 709 / 105   |
 
 **~3,100 of qualified opportunity sits on PDRN formats with no matching product.** That is a range
 decision for Malcolm, not a content one — but it is the clearest product-development signal in the data.
@@ -195,27 +215,27 @@ decision for Malcolm, not a content one — but it is the clearest product-devel
 
 ## 7. Locale sequencing
 
-| Priority | Markets | Why |
-|---|---|---|
-| **1** | **US + GB (English)** | 77% of total opportunity. Ships worldwide, so addressable |
-| **2** | DE | 10%, and the largest EU locale by a wide margin |
-| **3** | FR | 6%. Note Lancôme already ranks #2 for `pdrn` — competitive |
-| **4** | IT, NL | 3% each |
-| **5** | ES | 1%. Lowest return on translation effort |
+| Priority | Markets               | Why                                                        |
+| -------- | --------------------- | ---------------------------------------------------------- |
+| **1**    | **US + GB (English)** | 77% of total opportunity. Ships worldwide, so addressable  |
+| **2**    | DE                    | 10%, and the largest EU locale by a wide margin            |
+| **3**    | FR                    | 6%. Note Lancôme already ranks #2 for `pdrn` — competitive |
+| **4**    | IT, NL                | 3% each                                                    |
+| **5**    | ES                    | 1%. Lowest return on translation effort                    |
 
 **Hard gate unchanged:** 14 days in English, measured, before translating. Shipping English ahead of
-translation makes the other five locales *worse*, not neutral — an outdated translation is still served.
+translation makes the other five locales _worse_, not neutral — an outdated translation is still served.
 
 ---
 
 ## 8. Known limits
 
-- **Clickstream is a panel estimate**, not a census. It is *observed* rather than modelled, which is why
+- **Clickstream is a panel estimate**, not a census. It is _observed_ rather than modelled, which is why
   it is trusted over Ads here — but it is not ground truth either.
 - **Enrichment covers the top 350 buckets per market**, not all 17,279. The long tail below that is
   scored on the Ads ÷ 3 fallback.
 - **Brand detection is a heuristic.** It correctly caught Theramid and Rejuall; it missed
-  *"the 6 peptide skin booster serum"* (Cosrx) because every token is ordinary vocabulary. Skim before
+  _"the 6 peptide skin booster serum"_ (Cosrx) because every token is ordinary vocabulary. Skim before
   committing a term to a page.
 - **Zero-opportunity rows** in the data are terms where clickstream observed no searches at all. Treat
   them as unproven, not as zero demand.

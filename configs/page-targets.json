@@ -1,145 +1,112 @@
 {
-  "_about": "Target keywords per page from docs/keyword-strategy-2026.md \u00a74 (hero map). Used by scripts/page-audit.py to check that the page's title, H1 and first 30% of text carry the terms the page is meant to own. primary = the head term; secondary = terms folded into the page as sections.",
+  "_about": "Target keywords per page from docs/keyword-strategy-2026.md §4 (hero map). Used by scripts/page-audit.py to check that the page's title, H1 and first 30% of text carry the terms the page is meant to own. primary = the head term; secondary = terms folded into the page as sections. Study articles (type 'study', with their 'hub') added 2026-09-30 from keyword-strategy-2026.md §4.",
   "/pages/pdrn-research": {
     "primary": "pdrn",
-    "secondary": [
-      "what is pdrn",
-      "salmon dna",
-      "pdrn benefits",
-      "sodium dna"
-    ],
+    "secondary": ["what is pdrn", "salmon dna", "pdrn benefits", "sodium dna"],
     "type": "hub"
   },
   "/pages/acetyl-hexapeptide-8-research": {
     "primary": "argireline",
-    "secondary": [
-      "acetyl hexapeptide-8",
-      "expression lines"
-    ],
+    "secondary": ["acetyl hexapeptide-8", "expression lines"],
     "type": "hub"
   },
   "/pages/copper-peptide-research": {
     "primary": "copper peptide",
-    "secondary": [
-      "ghk-cu",
-      "copper peptide benefits"
-    ],
+    "secondary": ["ghk-cu", "copper peptide benefits"],
     "type": "hub"
   },
   "/pages/matrixyl-3000-research": {
     "primary": "matrixyl 3000",
-    "secondary": [
-      "palmitoyl tripeptide-1",
-      "tetrapeptide-7"
-    ],
+    "secondary": ["palmitoyl tripeptide-1", "tetrapeptide-7"],
     "type": "hub"
   },
   "/pages/glutathione-research": {
     "primary": "glutathione",
-    "secondary": [
-      "glutathione for skin",
-      "brightening"
-    ],
+    "secondary": ["glutathione for skin", "brightening"],
     "type": "hub"
   },
   "/pages/the-science": {
     "primary": "peptide skincare",
-    "secondary": [
-      "research"
-    ],
+    "secondary": ["research"],
     "type": "index"
   },
   "/": {
     "primary": "peptide skincare",
-    "secondary": [
-      "copper peptide",
-      "pdrn",
-      "matrixyl 3000"
-    ],
+    "secondary": ["copper peptide", "pdrn", "matrixyl 3000"],
     "type": "home"
   },
   "/pages/fine-lines-wrinkles": {
     "primary": "fine lines",
-    "secondary": [
-      "wrinkles",
-      "acetyl hexapeptide-8",
-      "matrixyl 3000"
-    ],
+    "secondary": ["wrinkles", "acetyl hexapeptide-8", "matrixyl 3000"],
     "type": "concern"
   },
   "/pages/firming-skin-density": {
     "primary": "firming",
-    "secondary": [
-      "skin density",
-      "matrixyl 3000",
-      "copper peptide"
-    ],
+    "secondary": ["skin density", "matrixyl 3000", "copper peptide"],
     "type": "concern"
   },
   "/pages/skin-repair-renewal": {
     "primary": "skin repair",
-    "secondary": [
-      "renewal",
-      "pdrn",
-      "copper peptide"
-    ],
+    "secondary": ["renewal", "pdrn", "copper peptide"],
     "type": "concern"
   },
   "/pages/brightening-glow": {
     "primary": "brightening",
-    "secondary": [
-      "glow",
-      "glutathione",
-      "vitamin c"
-    ],
+    "secondary": ["glow", "glutathione", "vitamin c"],
     "type": "concern"
   },
   "/collections/pdrn": {
     "primary": "pdrn skincare",
-    "secondary": [
-      "pdrn serum",
-      "pdrn cream",
-      "salmon dna"
-    ],
+    "secondary": ["pdrn serum", "pdrn cream", "salmon dna"],
     "type": "collection"
   },
   "/collections/serums": {
     "primary": "peptide serum",
-    "secondary": [
-      "copper peptide",
-      "pdrn"
-    ],
+    "secondary": ["copper peptide", "pdrn"],
     "type": "collection"
   },
   "/products/pdrn-renewal-serum": {
     "primary": "pdrn serum",
-    "secondary": [
-      "salmon dna",
-      "1%"
-    ],
+    "secondary": ["salmon dna", "1%"],
     "type": "product"
   },
   "/products/copper-peptide-ghk-cu-renewal-serum": {
     "primary": "copper peptide serum",
-    "secondary": [
-      "ghk-cu",
-      "2%"
-    ],
+    "secondary": ["ghk-cu", "2%"],
     "type": "product"
   },
   "/products/matrixyl-3000-firming-serum": {
     "primary": "matrixyl 3000",
-    "secondary": [
-      "serum"
-    ],
+    "secondary": ["serum"],
     "type": "product"
   },
   "/products/acetyl-hexapeptide-8-anti-wrinkle-serum": {
     "primary": "argireline",
-    "secondary": [
-      "acetyl hexapeptide-8",
-      "10%"
-    ],
+    "secondary": ["acetyl hexapeptide-8", "10%"],
     "type": "product"
+  },
+  "/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013": {
+    "primary": "argireline crow's feet",
+    "secondary": ["argireline clinical trial"],
+    "type": "study",
+    "hub": "/pages/acetyl-hexapeptide-8-research"
+  },
+  "/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017": {
+    "primary": "argireline forehead lines",
+    "secondary": [],
+    "type": "study",
+    "hub": "/pages/acetyl-hexapeptide-8-research"
+  },
+  "/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016": {
+    "primary": "copper peptide serum wrinkles",
+    "secondary": ["copper peptide clinical trial"],
+    "type": "study",
+    "hub": "/pages/copper-peptide-research"
+  },
+  "/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026": {
+    "primary": "pdrn vs retinol",
+    "secondary": ["pdrn clinical trial"],
+    "type": "study",
+    "hub": "/pages/pdrn-research"
   }
 }

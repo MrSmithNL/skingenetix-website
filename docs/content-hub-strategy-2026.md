@@ -4,13 +4,13 @@
 `docs/seo-strategy.md` and `docs/content-strategy.md` (both "Draft", both factually stale)
 
 **Evidence base:** `docs/research-2026-ai-search-and-content-hubs.md` — body **and addendum**. Every claim
-below traces there. Read this doc for *what to do*; read that one for *why*, and before overriding anything.
+below traces there. Read this doc for _what to do_; read that one for _why_, and before overriding anything.
 
 **Goal as stated:** rank Skingenetix as high as possible for the biggest-volume keyword(s) per product,
 across Google and AI search, via a content structure of research and informative articles.
 
 > **I am recommending something different from what was asked, and the reason is in §1.** The brief assumes
-> the content hub is the lever. The 2026 evidence — including an academic study that used *skincare* as its
+> the content hub is the lever. The 2026 evidence — including an academic study that used _skincare_ as its
 > test category — says the lever for a brand at this stage is the **product and feed layer**, and that the
 > hub is a slower second act. I've planned both, in that order. If you want the hub first regardless, say
 > so and I'll resequence — it's a legitimate call, just a more expensive one.
@@ -24,24 +24,24 @@ across Google and AI search, via a content structure of research and informative
 **Chu & Hou, arXiv:2606.17443v2, 21 August 2026 — and skincare is their primary test category**, chosen
 precisely because consumers cannot judge quality before purchase. Three models, 670 valid trials.
 
-When a real brand and a fictional brand carried *identical* specifications, the real brand was recommended
+When a real brand and a fictional brand carried _identical_ specifications, the real brand was recommended
 **100% of the time**. Not once did a fictional brand win — all three models, both languages, all four
 skincare subcategories. That is the incumbent advantage, at its theoretical maximum.
 
 **But it breaks with a single concrete signal:**
 
 | Unknown brand's differentiating signal | Breakthrough rate |
-|---|---|
-| None | **4.6%** |
-| Star rating (+0.075–0.1 advantage) | 64.3% |
-| Price | 66.8% |
-| **Reviews** | **79.7%** |
+| -------------------------------------- | ----------------- |
+| None                                   | **4.6%**          |
+| Star rating (+0.075–0.1 advantage)     | 64.3%             |
+| Price                                  | 66.8%             |
+| **Reviews**                            | **79.7%**         |
 
 **Variance decomposition: product parameters 82.4% · position 6.5% · brand 1.2%.**
 
-Authors, quoted: *"the barrier for new brands is not brand equity itself, but the lack of any
+Authors, quoted: _"the barrier for new brands is not brand equity itself, but the lack of any
 distinguishing information. This overturns the common assumption that small brands cannot compete with
-large ones."*
+large ones."_
 
 ➡️ **This is more hopeful and more actionable than the "small brands can't win" narrative**, and it points
 at the product page and the feed — reviews, ratings, price, specs — not at articles.
@@ -50,16 +50,16 @@ at the product page and the feed — reviews, ratings, price, specs — not at a
 clinical claims** is worth +0.17 rating points at zero cost — we will not do that, and since 15 May 2026 it
 is formally against Google's spam policy ("attempting to manipulate generative AI responses"). And the
 first-mover payoff (+0.802) **collapses to +0.007 under universal adoption** — but non-participating brands
-received *zero* recommendations. Abstaining is not neutral.
+received _zero_ recommendations. Abstaining is not neutral.
 
 ### 1.2 Beauty's weak spot is exactly where we can win
 
 **Adobe AI Citation Readability by retail sub-industry (May 2026):**
 
-| Sub-industry | Overall | Blog/News | Category | **PDP** |
-|---|---|---|---|---|
+| Sub-industry  | Overall       | Blog/News     | Category      | **PDP**            |
+| ------------- | ------------- | ------------- | ------------- | ------------------ |
 | **Cosmetics** | **63% (1st)** | **78% (1st)** | **71% (1st)** | **51% (5th of 6)** |
-| Grocery | 48% | 62% | 58% | **70%** |
+| Grocery       | 48%           | 62%           | 58%           | **70%**            |
 
 **Cosmetics leads every surface except the product page, where it sits 19 points behind groceries.** The
 editorial advantage is category-wide — every skincare brand has an ingredient blog — so it is not a
@@ -78,15 +78,15 @@ carrying AI Overviews **grew 71% in six months**; transactional-intent **decline
 Current prevalence (Seer, 53 brands, 5.47M queries, GSC data): **informational 36% · commercial 8% ·
 transactional 5%.**
 
-➡️ "Best peptide serum for wrinkles" is *commercial* — the fastest-growing AIO category, being absorbed.
-"Buy Skingenetix PDRN serum 30ml" is *transactional* — receding. **The protected ground is branded and
+➡️ "Best peptide serum for wrinkles" is _commercial_ — the fastest-growing AIO category, being absorbed.
+"Buy Skingenetix PDRN serum 30ml" is _transactional_ — receding. **The protected ground is branded and
 transactional.** Informational content — the layer a hub adds — remains the most exposed of all at 36%.
 
 ### 1.4 Ranking is still the AI lever; the furniture is not
 
 Citation rate by retrieval position: **rank 1 = 58.4%, rank 10 = 14.2%.** On-page structural tactics move
 citation by 3–11 percentage points; rank moves it by 44. Google's May 2026 documentation:
-*"optimizing for generative AI search is optimizing for the search experience, and thus still SEO."*
+_"optimizing for generative AI search is optimizing for the search experience, and thus still SEO."_
 
 Every controlled 2026 study finds schema, structural rewriting, question-headings and llms.txt null or
 negative. **We do not need a separate "AISO programme"** — we need to rank, and to be complete and current.
@@ -102,13 +102,13 @@ and a working plan-file → `patch-template.py` → backup → publish pipeline.
 
 **Five real gaps, all verified live on 2026-09-21:**
 
-| Gap | Evidence |
-|---|---|
-| **Not in Google Search Console** | Service account sees only `hairgenetix.com` and `loveoverexile.com`. **Zero ranking data exists for this site** |
-| **No keyword study** | None in the repo. Already a named blocker: *"Product renaming stays blocked until the SEO/GEO/AISO keyword study"* (`todo.md:1730`) |
-| **4 live title collisions** | `/pages/` and `/collections/` both 200, both self-canonical, both leading with the identical phrase — *"Fine Lines and Wrinkles - Peptide Skincare Routine"* vs *"Fine Lines and Wrinkles - Products"* |
-| **No meta titles/descriptions** | BUILD-005 genuinely not started. No pattern documented |
-| **Zero cross-family linking** | A solution page never links to the relevant research page, or vice versa |
+| Gap                              | Evidence                                                                                                                                                                                               |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Not in Google Search Console** | Service account sees only `hairgenetix.com` and `loveoverexile.com`. **Zero ranking data exists for this site**                                                                                        |
+| **No keyword study**             | None in the repo. Already a named blocker: _"Product renaming stays blocked until the SEO/GEO/AISO keyword study"_ (`todo.md:1730`)                                                                    |
+| **4 live title collisions**      | `/pages/` and `/collections/` both 200, both self-canonical, both leading with the identical phrase — _"Fine Lines and Wrinkles - Peptide Skincare Routine"_ vs _"Fine Lines and Wrinkles - Products"_ |
+| **No meta titles/descriptions**  | BUILD-005 genuinely not started. No pattern documented                                                                                                                                                 |
+| **Zero cross-family linking**    | A solution page never links to the relevant research page, or vice versa                                                                                                                               |
 
 **✅ CORRECTED 2026-09-21 — the store is live, stocked and selling.** An earlier draft said "zero inventory,
 not yet selling", copied from a stale `todo.md` line. Verified against Shopify:
@@ -140,12 +140,12 @@ it is where the beauty category is collectively weakest.
 **88.29% of all ChatGPT product offers derive from crawled PDPs.** Measured levers, from 200,000 commercial
 prompts across five engines:
 
-| PDP feature | Lift in top offers | Our status |
-|---|---|---|
-| "Best Price" signal | **+777%** | n/a — we are not price-competing |
-| **FAQs on the PDP** | **+188%** | ✅ 6 per product via `custom.faq_items` — already built |
-| **Video** | **+106%** | ❌ none |
-| **Customer Q&As** | **+60%** | ❌ none |
+| PDP feature         | Lift in top offers | Our status                                              |
+| ------------------- | ------------------ | ------------------------------------------------------- |
+| "Best Price" signal | **+777%**          | n/a — we are not price-competing                        |
+| **FAQs on the PDP** | **+188%**          | ✅ 6 per product via `custom.faq_items` — already built |
+| **Video**           | **+106%**          | ❌ none                                                 |
+| **Customer Q&As**   | **+60%**           | ❌ none                                                 |
 
 Plus what ChatGPT extracts: reviews and trust signals, delivery info, **availability (79%)**, and clear
 descriptive product naming.
@@ -155,8 +155,8 @@ PDRN 1%, Glutathione 2%); full specs and volumes; visible maintained date; compa
 confident rather than hedged language. **These are the gatekeepers the one properly controlled experiment
 actually found** — and unusually, we can supply all of them honestly.
 
-⚠️ **Google removed FAQ rich results entirely on 7 May 2026.** FAQ *content* still lifts PDP citation
-(+188%); FAQ *rich snippets* are gone. Keep the content, expect no snippet.
+⚠️ **Google removed FAQ rich results entirely on 7 May 2026.** FAQ _content_ still lifts PDP citation
+(+188%); FAQ _rich snippets_ are gone. Keep the content, expect no snippet.
 
 ### 3.2 Reviews — they exist, and they are invisible to machines
 
@@ -164,13 +164,13 @@ actually found** — and unusually, we can supply all of them honestly.
 
 **Verified live 2026-09-21. Klaviyo Reviews is installed and working:**
 
-| Component | Status |
-|---|---|
-| App `fulfilled-1` (by Klaviyo) | ✅ Scopes incl. `read/write_product_reviews`, `write_products`, `write_themes` |
-| Onsite JS `klaviyo.js`, company `WYH5Jg` | ✅ Loading |
-| Star-rating + full-reviews theme blocks | ✅ Installed, rendering on PDPs |
-| Review content | ✅ **4.8/5 from 10 reviews** on each of the 9 singles |
-| Metafield *definitions* `reviews.rating` / `reviews.rating_count` | ✅ Exist, storefront `PUBLIC_READ` |
+| Component                                                         | Status                                                                         |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| App `fulfilled-1` (by Klaviyo)                                    | ✅ Scopes incl. `read/write_product_reviews`, `write_products`, `write_themes` |
+| Onsite JS `klaviyo.js`, company `WYH5Jg`                          | ✅ Loading                                                                     |
+| Star-rating + full-reviews theme blocks                           | ✅ Installed, rendering on PDPs                                                |
+| Review content                                                    | ✅ **4.8/5 from 10 reviews** on each of the 9 singles                          |
+| Metafield _definitions_ `reviews.rating` / `reviews.rating_count` | ✅ Exist, storefront `PUBLIC_READ`                                             |
 
 **⚠️ Three linked gaps mean none of it reaches Google or AI:**
 
@@ -180,7 +180,7 @@ actually found** — and unusually, we can supply all of them honestly.
 2. **`reviews.rating` / `reviews.rating_count` are empty on 0 of 21 products.** Definitions exist, values
    don't. That is the field Google Merchant Center reads for Shopping star ratings.
 3. **Product JSON-LD carries no `aggregateRating` and no `review`.** Verified keys: `brand, category,
-   description, gtin, image, name, offers, sku, url`. Offers is healthy (€59.00, InStock). Rating: absent.
+description, gtin, image, name, offers, sku, url`. Offers is healthy (€59.00, InStock). Rating: absent.
 
 **Coverage:** 9 singles have 10 reviews each; **the 2 stamp sets and all 10 bundles have zero.**
 
@@ -213,7 +213,7 @@ lever available — and we already have the ingredient data, the concentrations 
 fill 30 Q&A pairs per SKU honestly.
 
 ⚠️ **AI performance insights in Merchant Center are AU/CA/IN/NZ/US only** — not UK, not EU. Google agentic
-checkout is US-only; UK is 2027 at the earliest. We can *submit* the attributes; we cannot yet *measure*
+checkout is US-only; UK is 2027 at the earliest. We can _submit_ the attributes; we cannot yet _measure_
 them from a European account.
 
 ### 3.4 Schema — the minimum, correctly
@@ -222,7 +222,7 @@ Not a lever, possibly a small negative (**−4.6%** on AIO in the only controlle
 rich results and correctness, once:
 
 - **Organization** with `@id`, on one page only — not sitewide
-- **Product** with **price, availability, specs** — these are AI gatekeepers *as facts*, and schema is where
+- **Product** with **price, availability, specs** — these are AI gatekeepers _as facts_, and schema is where
   Google reads them for Shopping
 - **BreadcrumbList**
 - Keep the existing per-product `FAQPage`
@@ -249,26 +249,26 @@ Still worth building. Slower, and secondary to Track A.
 
 **Five ingredient hubs.** Because: the products are ingredient-branded and those are the winnable technical
 entities; concern terms are owned by publishers; **a small map is the only route to authority** (Floyi — the
-Authority tier is 25–50% *ranked coverage of the map*, and below 5%, where 97.2% of sites sit, the citation
+Authority tier is 25–50% _ranked coverage of the map_, and below 5%, where 97.2% of sites sit, the citation
 rate is 0.14%); and the proto-hub already exists on this axis.
 
 Concern pages stay as **commercial-investigational satellites** routing to products. They are not hubs.
 
 ### 4.2 Who owns which term
 
-The ingredient name *is* the product name, so collection, product and research page all orbit one phrase.
+The ingredient name _is_ the product name, so collection, product and research page all orbit one phrase.
 That is three-way cannibalisation built into the structure — and it is what destroyed pages at Hairgenetix,
 where two pages answering one question collapsed a 1,504-clicks/month article to 212.
 
-| Term shape | Owner | Why |
-|---|---|---|
-| `copper peptide serum` (commercial head) | **`/products/<handle>`** | Hairgenetix's product page went **17.9 → 1.1** on exactly this shape and delivered 109 orders, beating both blog articles. Price + specs are unanimous AI gatekeepers — only a PDP has them. Transactional intent is also the *receding* AIO category |
-| `copper peptide serums` / browse | `/collections/<ingredient>` | Category pages take 15.96% of e-commerce AI citations — the most under-discussed winner |
-| `what is GHK-Cu` (informational head) | **`/pages/<ingredient>-research`** | Exists already. Must **not** carry the commercial term in title or H1 |
-| Long-tail questions, comparisons | **New blog spokes** | §4.3 |
-| `peptides for fine lines` | `/pages/<concern>` | Commercial-investigational |
+| Term shape                               | Owner                              | Why                                                                                                                                                                                                                                                   |
+| ---------------------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `copper peptide serum` (commercial head) | **`/products/<handle>`**           | Hairgenetix's product page went **17.9 → 1.1** on exactly this shape and delivered 109 orders, beating both blog articles. Price + specs are unanimous AI gatekeepers — only a PDP has them. Transactional intent is also the _receding_ AIO category |
+| `copper peptide serums` / browse         | `/collections/<ingredient>`        | Category pages take 15.96% of e-commerce AI citations — the most under-discussed winner                                                                                                                                                               |
+| `what is GHK-Cu` (informational head)    | **`/pages/<ingredient>-research`** | Exists already. Must **not** carry the commercial term in title or H1                                                                                                                                                                                 |
+| Long-tail questions, comparisons         | **New blog spokes**                | §4.3                                                                                                                                                                                                                                                  |
+| `peptides for fine lines`                | `/pages/<concern>`                 | Commercial-investigational                                                                                                                                                                                                                            |
 
-**Rule, non-negotiable: one hero page per keyword *and intent* pair.** Differentiating by format alone —
+**Rule, non-negotiable: one hero page per keyword _and intent_ pair.** Differentiating by format alone —
 slug, H1, angle — **failed completely** at Hairgenetix. Intent is the only axis that works.
 
 ### 4.3 The spoke layer
@@ -278,17 +278,17 @@ blog is empty, so there is no migration cost. It becomes costly the moment the f
 
 **Format priority by measured influence uplift:**
 
-| Format | Evidence | Verdict |
-|---|---|---|
-| **Comparison** | +55.3% uplift; 2.4× more brand mentions; a gatekeeper in the Sprinklr experiment | **Build — with the caveat below** |
-| **Numbers/statistics-led** (concentrations, trial results) | **+61.6%**, highest non-code genre | **Build** |
-| Definition / explainer | +57.3%, but Aleyda Solis explicitly deprioritises *"standalone commodity definitions"* | **Put it at the top of the hub page. Not its own article** |
-| **Q&A / FAQ-shaped articles** | **−5.7%**, the only negative genre; FAQ pages 4.8% citation share; FAQ+HowTo schema "roughly 10× worse" | **Do not build** |
+| Format                                                     | Evidence                                                                                                | Verdict                                                    |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **Comparison**                                             | +55.3% uplift; 2.4× more brand mentions; a gatekeeper in the Sprinklr experiment                        | **Build — with the caveat below**                          |
+| **Numbers/statistics-led** (concentrations, trial results) | **+61.6%**, highest non-code genre                                                                      | **Build**                                                  |
+| Definition / explainer                                     | +57.3%, but Aleyda Solis explicitly deprioritises _"standalone commodity definitions"_                  | **Put it at the top of the hub page. Not its own article** |
+| **Q&A / FAQ-shaped articles**                              | **−5.7%**, the only negative genre; FAQ pages 4.8% citation share; FAQ+HowTo schema "roughly 10× worse" | **Do not build**                                           |
 
 ⚠️ **The comparison caveat, and it matters.** Lily Ray's 220-site cohort — 54% lost 30%+ of peak traffic —
-lists "comparison pages (A vs B)" among the eight highest-risk templates *at scale*. The reconciliation is
-her own test: ***"Could a competitor publish a near-identical version of this page tomorrow using the same
-prompt?"*** A comparison grounded in **our** stated concentrations, **our** cited trials and **our**
+lists "comparison pages (A vs B)" among the eight highest-risk templates _at scale_. The reconciliation is
+her own test: **_"Could a competitor publish a near-identical version of this page tomorrow using the same
+prompt?"_** A comparison grounded in **our** stated concentrations, **our** cited trials and **our**
 before/after photography passes. A generic "Copper Peptides vs Retinol" explainer does not — and that is
 exactly what an AI-drafted comparison defaults to.
 
@@ -297,21 +297,26 @@ and takes a median of **377 words per source**. An **800-word page gets >50% cov
 gets 13%.** Citation rate peaks at 500–999 words. A competitor outranks Hairgenetix's 4,466-word guide with
 **1,014 words and no H2s**.
 
+**Clinical-study articles are the spoke layer's evidence pages** (`/blogs/clinical-studies`, decided 2026-09-29).
+Their keywords — each its own trial's question, with "does X work?" left to the hub — are in
+`docs/keyword-strategy-2026.md` §4 ("Clinical-study articles"), researched 2026-09-30. Keyword ownership for every page
+lives there; this document decides the page types.
+
 **Map size: 4–6 spokes per hub, 20–30 articles total.** Coverage of 26–50% of the query fan-out beats 100%
 (38.2% vs 34.0%), and scaled content abuse is now formal spam policy.
 
 ### 4.4 Cadence — and the honest arithmetic
 
 **Only 1.74% of newly published pages rank in the top 10 within a year**, down from 5.7% in 2017. **72.9%
-of top-10 pages are 3+ years old.** The average #1 page is five years old. Publishing *n* posts multiplies
-a 1.74% probability by *n*.
+of top-10 pages are 3+ years old.** The average #1 page is five years old. Publishing _n_ posts multiplies
+a 1.74% probability by _n_.
 
 **And the finding that should govern the whole track: freshness in AI citations is manufactured by updates,
 not by new publishing.** Seer, 7,683 pages / 47,097 citations: by publish date only **42%** of consistently
 cited pages look fresh; by last-update date, **72%** do. **27% were originally published 2+ years ago** and
-maintained. *"Newest gets you the spike, established plus maintained gets you the staying power."*
+maintained. _"Newest gets you the spike, established plus maintained gets you the staying power."_
 
-⚠️ Counterweight: Orbit Media's 13-year dataset finds *"publish monthly or less"* also correlates with weak
+⚠️ Counterweight: Orbit Media's 13-year dataset finds _"publish monthly or less"_ also correlates with weak
 performance. **Too little is also bad.** The defensible position is a small number of genuinely
 non-commodity pieces, maintained — not a treadmill, and not silence.
 
@@ -323,7 +328,7 @@ Three things only:
    the only structural finding that survives scrutiny. Our own AISO work measured the same on hairgenetix:
    trust signals at 80% of page HTML are stripped by Trafilatura; at 70% they survive.
 2. **Match headings semantically to the query** (30.2% → 41.0%). **Semantic match, not question syntax** —
-   the Q&A *genre* measures negative.
+   the Q&A _genre_ measures negative.
 3. **Be complete and current.** Concentrations, real citations, comparisons, confident language, visible
    maintained date.
 
@@ -342,7 +347,7 @@ destroyed attribution for the quarter.
 4. ✅ Baseline captured: `configs/keyword-data/gsc-baseline-2026-09-22.json` + 7,280 keywords across US/DE/NL.
 5. 🛑 **GA4 still records zero ecommerce events** — see §10. Traffic data works; conversion data does not.
 
-### Phase 1 — Fix what is already live · *cheap, parallel to Phase 0*
+### Phase 1 — Fix what is already live · _cheap, parallel to Phase 0_
 
 Every item is a defect on a live page.
 
@@ -361,7 +366,7 @@ Every item is a defect on a live page.
 
 **Exit:** no duplicate-intent titles, every page has meta, every research page has ≥2 inbound in-prose links.
 
-### Phase 2 — Product and feed layer · *Track A, the highest-value work*
+### Phase 2 — Product and feed layer · _Track A, the highest-value work_
 
 1. **Merchant Center conversational attributes** — up to 30 Q&A pairs per SKU, ingredient-sheet
    `document_link`, related products. Built from data we already hold honestly.
@@ -389,7 +394,7 @@ Deliverable: a **hero map** — keyword family → intent → hero page → seco
 
 **Exit:** one hero page per keyword+intent, zero unassigned head terms, zero double-assignments.
 
-### Phase 4 — Build the hub layer · *Track B*
+### Phase 4 — Build the hub layer · _Track B_
 
 1. **Rename the blog handle** (`news` → `learn`). Free now, costly later.
 2. **Noindex blog tag archives** — `{% if current_tags %}` → `<meta name="robots" content="noindex,follow">`.
@@ -419,7 +424,7 @@ locales worse, not neutral.**
 - Key translations by **stable prefix without the `:hash` suffix** — the hash derives from the current
   English value and invalidates the moment English changes.
 
-### Phase 6 — Off-site · *parallel track*
+### Phase 6 — Off-site · _parallel track_
 
 See §8.
 
@@ -434,7 +439,7 @@ See §8.
 new links**. Check for the same pattern the moment GSC has data — it may outrank the entire hub build on ROI.
 
 **AI visibility — this requirement is unusual, don't skip it.** The St. Gallen study found identical prompts
-re-run *minutes apart* share only **32–43% of cited sources**. Standard error drops below 0.10 only at
+re-run _minutes apart_ share only **32–43% of cited sources**. Standard error drops below 0.10 only at
 **n = 7 runs per prompt per day**; source coverage needs **n = 8**.
 
 ➡️ **Any AI visibility measurement must run ≥7 times per prompt, or it is measuring noise.** Every GEO
@@ -450,7 +455,7 @@ seven days** after the recommendation. Consensus undercount: ~3× on referrer, ~
 ## 7. Expectations — set honestly
 
 - **Beauty AI referral traffic is growing fastest of any category (+312.5% YoY) from the smallest base** —
-  2.0M monthly visits *worldwide, across the whole category*. AI referrals remain a low single-digit
+  2.0M monthly visits _worldwide, across the whole category_. AI referrals remain a low single-digit
   percentage of most sites' total traffic. A well-run DTC brand's public figure: **Omnilux, 3.2% of total
   revenue from AI channels** in March 2026. That is the realistic shape of the prize.
 - **Hub architecture alone did not lift traffic at Hairgenetix inside the measurement window** —
@@ -484,22 +489,22 @@ I am flagging this, not planning it. It needs a scope decision.
 
 ## 9. What not to do — explicitly
 
-| Don't | Because |
-|---|---|
-| Build or optimise `llms.txt` | Frontier crawlers fetched it **0 times in 1,227 requests**; Google says it doesn't use them; scored 2.0/10, lowest of 23 factors. Shopify already serves one |
-| Run a schema-first AISO push | Only controlled study: **−4.6% / +2.4% / +2.2%** |
-| Write 3,000-word ultimate guides | Fixed ~2,000-word grounding budget; 800 words gets >50% coverage, 4,000 gets 13% |
-| Build FAQ-format *articles* | Q&A genre **−5.7%**; FAQ pages 4.8% citation share. (FAQ content on *product pages* is different — that's +188%) |
-| Scale formulaic comparison or "what is X" pages | Ray's 220-site cohort: 54% lost 30%+ of peak traffic. Eight highest-risk templates include exactly these |
-| Chase publishing cadence | 1.74% of new pages rank top-10 in a year. **No dataset on optimal e-commerce cadence exists** |
-| Restructure pages "for AI" | Structure significant in **1 of 6 models**, three coefficients *below 1.0*. Sullivan: *"We don't want you to do that. We really don't"* |
-| Re-date pages without substantive change | Google: *"(No, it won't)"*. Raters are trained to check the Wayback Machine |
-| Differentiate two pages by format | Failed completely at Hairgenetix. Intent is the only axis |
-| Translate before measuring | An outdated translation is still served — English-first makes five locales *worse* |
-| Rename or re-upload a live image | Translations key off the URL; Shopify suffixes on collision and serves the old file |
-| Use authority-style or unsupported clinical language | Worth +0.17 rating points and explicitly against Google's spam policy since 15 May 2026. **The one tactic in the evidence base we will not use** |
-| Bundle changes | August 2026 at Hairgenetix: three changes at once, attribution destroyed |
-| Quote "+40% from GEO tactics" | 2023 preprint, GPT-3.5, bespoke metric, tactics allowed to invent statistics, **never replicated** |
+| Don't                                                | Because                                                                                                                                                      |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Build or optimise `llms.txt`                         | Frontier crawlers fetched it **0 times in 1,227 requests**; Google says it doesn't use them; scored 2.0/10, lowest of 23 factors. Shopify already serves one |
+| Run a schema-first AISO push                         | Only controlled study: **−4.6% / +2.4% / +2.2%**                                                                                                             |
+| Write 3,000-word ultimate guides                     | Fixed ~2,000-word grounding budget; 800 words gets >50% coverage, 4,000 gets 13%                                                                             |
+| Build FAQ-format _articles_                          | Q&A genre **−5.7%**; FAQ pages 4.8% citation share. (FAQ content on _product pages_ is different — that's +188%)                                             |
+| Scale formulaic comparison or "what is X" pages      | Ray's 220-site cohort: 54% lost 30%+ of peak traffic. Eight highest-risk templates include exactly these                                                     |
+| Chase publishing cadence                             | 1.74% of new pages rank top-10 in a year. **No dataset on optimal e-commerce cadence exists**                                                                |
+| Restructure pages "for AI"                           | Structure significant in **1 of 6 models**, three coefficients _below 1.0_. Sullivan: _"We don't want you to do that. We really don't"_                      |
+| Re-date pages without substantive change             | Google: _"(No, it won't)"_. Raters are trained to check the Wayback Machine                                                                                  |
+| Differentiate two pages by format                    | Failed completely at Hairgenetix. Intent is the only axis                                                                                                    |
+| Translate before measuring                           | An outdated translation is still served — English-first makes five locales _worse_                                                                           |
+| Rename or re-upload a live image                     | Translations key off the URL; Shopify suffixes on collision and serves the old file                                                                          |
+| Use authority-style or unsupported clinical language | Worth +0.17 rating points and explicitly against Google's spam policy since 15 May 2026. **The one tactic in the evidence base we will not use**             |
+| Bundle changes                                       | August 2026 at Hairgenetix: three changes at once, attribution destroyed                                                                                     |
+| Quote "+40% from GEO tactics"                        | 2023 preprint, GPT-3.5, bespoke metric, tactics allowed to invent statistics, **never replicated**                                                           |
 
 ---
 
@@ -534,11 +539,14 @@ I am flagging this, not planning it. It needs a scope decision.
 
 **Still open, non-blocking:**
 
+<!-- markdownlint-disable MD029 -- numbering continues the blocking list above -->
+
 3. **Track order** — product/feed before hub, against the brief. Confirm or override.
 4. **Is the off-site track in scope?** (§8)
 5. **Do the thin concern collections earn their place?** Four collide with a page on the same handle.
 6. **Scope check:** 5 hubs × 4–6 spokes ≈ 20–30 articles.
 7. **Blog handle** — free to rename while the blog has 0 articles.
+<!-- markdownlint-enable MD029 -->
 
 ⚠️ **Note on measurement scope:** five of seven orders came from **Kaufland and Bol**, which never touch the
 website or GA4. GA4 will only ever show the website slice — do not read it as total revenue.
@@ -548,7 +556,7 @@ website or GA4. GA4 will only ever show the website slice — do not read it as 
 - ✅ **Resolved 2026-09-22 — volume data now exists.** 7,280 keywords across US/DE/NL, plus live SERP
   checks on `what is pdrn` (US) and `pdrn serum` (DE). See `docs/keyword-research-2026-09-22.md`.
 - **Still only three markets.** FR, ES and IT volumes are not pulled. Do that before translating into them.
-- **No clickstream pulled.** DataForSEO's clickstream endpoints give *observed* rather than modelled
+- **No clickstream pulled.** DataForSEO's clickstream endpoints give _observed_ rather than modelled
   volume and settled the naming question on Hairgenetix. Worth running before any product renaming.
 - **`l argireline` shows 74,000 (US) and is unverified** — likely a bucket artefact. Not in the hero map.
 - **KD scores are uniformly low (0–28)** across every family. Verified against a real SERP for PDRN only.
