@@ -494,42 +494,55 @@ AI-generated illustrations and must not be presented as results. Record:
   `/pages/study/*` addresses 301 per locale; hub and study links moved to the new addresses in six languages; table page retired.
   ✅ **In the main menu under Discover, with an image tile** (Malcolm, 2026-09-29; live, six languages; it replaced the short-lived
   Science text line the same day).
-  🔄 **Wang 2013 and Ye 2026 rebuilt on the study template, English first (Malcolm, 2026-09-30: "improve the others to match" the
-  Badenhorst reference, enough content for SEO/GEO, then audit).** Drafts in `configs/studies/drafts/`, hidden previews at
-  `?view=clinical-study-draft` (new `--preview` route, `178ee66`); the live six-language pilots are untouched. Scrimmed banners
-  (Ye 2.77→5.06 and 2.33→5.16, Wang phone 2.48→5.02). Central audit v2 on the previews: Wang uncapped **9.55**, Ye **9.45**; the
-  only failures (canonical gate, S1 old title in the theme's schema) clear at go-live. ⏳ **Malcolm reviews the two previews**, then
-  translation (five locales) and go-live per `docs/study-page-template.md` §3.
-  ⏳ Translate Badenhorst and Raikou (their /de…/it versions still show English). ⏳ Footer link and Science-page band (approved in
-  ADR-2026-09-29-C, not yet done). 🛑 Main banner pick (sheets on Malcolm's Desktop). ⏳ Rebuild Wang and Ye on the new layout (they still
-  show pilot content, no breadcrumb). 🛑 Ask Malcolm: three excerpts (the SEO descriptions) end "…and what it does not" — reword
-  under the positive-results rule? (translated live text, so not changed unasked).
-  ✅ **List page redesign LIVE (2026-09-30, Malcolm: "please fix this" — he did not see it on the live page because it was still only on
-  the preview).** Title, intro and study search on the photo band; ingredient label row (All studies · Argireline · GHK-Cu · PDRN)
-  filtering the list; tag Copper peptide → GHK-Cu; each article body carries its study's text for search (never rendered). Applied
-  with `build-clinical-studies-blog.py --apply` + `hub-upgrade.py configs/hub-upgrades/clinical-studies-blog.json --apply` (backup
-  `hub-upgrade-templates__blog.clinical-studies.json-20260930-101157`); `--verify-live` ✓ ×6; search "retinol" → Ye 2026; /tagged/ghk-cu →
-  Badenhorst. The preview template `blog.clinical-studies-preview.json` is left in place (unused, harmless) until Malcolm's card picks are
-  in. Still open: card images (no models) wait on his picks; Raikou and Badenhorst titles show English on /de…/it.
-  **Malcolm, 2026-09-30:** (1) card images — numbered sheets rebuilt by `scripts/study-card-pool-sheets.py` (25 sheets on the Desktop,
-  `skingenetix-study-images-{CU,ARG,PDRN,GEN}-n.png`, 2,125 refs from the pool index). ✅ **Live: first picks made by Claude on his
-  instruction** ("you make the initial choices for all the study blog images"): Badenhorst CU-013, Raikou ARG-031, Wang ARG-110, Ye
-  PDRN-213 — no models, ingredient colours; plan `configs/banners/clinical-studies-article-cards-2026-09-30.json`. He can swap any card
-  by pool number. (2) **Translation waits
-  until the English articles are fully complete and optimised** (applies to Raikou and Badenhorst). (3) Label pages
-  `/blogs/clinical-studies/tagged/*` **stay in Google** ("we will be adding more articles"); **grade key removed** from the band under the
-  list (now "Studies by ingredient", already translated), live ×6, backup `20260930-102216`. (4) **New: tags for skin issues, skin
-  solutions and other relevant keywords** — ✅ **live 2026-09-30** (Malcolm chose the proposed set): a second label row "Skin concern" —
-  Fine lines & wrinkles (all four), Crow's feet & eye area (Wang, Badenhorst, Ye), Forehead lines (Raikou), Compared with retinol (Ye),
-  chosen from the 2026-09-30 keyword pull (`pdrn vs retinol` ~330/mo, `argireline eye cream` 157, `best serum for forehead lines` 78).
-  Tags carry a `Skin:` / `Topic:` prefix so the card badge (`article.tags | first`) stays the ingredient; the row shows each label per
-  locale from the phrase table (store wording reused: "Hautanliegen", "Feine Linien & Falten"…); the wrinkles page links to the Fine Lines &
-  Wrinkles Skin Solutions page. A study lists its keys under `concerns` in its config. Verified live: badges unchanged, every tag page
-  lists the right studies, German translated, no Liquid error. ⏳ **For Malcolm:** tag pages all share the title "Clinical studies"
-  (the theme's `<title>` ignores the tag); giving each its concern needs a core-layout edit — his OK first.
-  History — list page redesign (Malcolm, 2026-09-29): title on the photo, ingredient labels that filter the list, study search, no model
-  images on the cards. Built on a hidden preview, `/blogs/clinical-studies?view=clinical-studies-preview`, by
-  `scripts/build-clinical-studies-blog.py --preview` (`3246b4e`, `7369619`). What the preview shows:
+  ✅ **Wang 2013 and Ye 2026 LIVE in the new layout, six languages (2026-09-30, Malcolm: "fix them now and publish them").**
+  - The d1 drafts were translated into five locales by one agent per language. Every string was checked for numbers, markup,
+    URLs and SEO lengths. Ye's fr/es answer was tightened to the builder's 75-word window.
+  - Published in this order: `build-study-page.py --apply`, Wang then Ye, then `build-clinical-studies-blog.py --apply`. That
+    switched both articles to `clinical-study` with new titles, summaries (trial size, audit C3) and SEO.
+  - Checks: verify-live ✓ ×6 on both, no outdated translations.
+  - **The article template's own words were English on every locale** (Badenhorst and Raikou too): the at-a-glance labels,
+    FAQ questions, buttons and four section headings. Fixed:
+    - `configs/translations/article-clinical-study-template-labels-2026-09-30.json` and
+      `…-section-headings-2026-09-30.json` (registered);
+    - the chart heading as a locale case in `study-template-build.py` (a liquid setting cannot be translated).
+  - Pilot configs kept as `tests/fixtures/pilot-…-wang-2013.json` and in git history.
+  - Still there: the `-draft` metaobjects and `study.draft` links. Cleanup means deleting data, so it waits for Malcolm's word.
+    (previous state) 🔄 **Wang 2013 and Ye 2026 rebuilt on the study template, English first (Malcolm, 2026-09-30: "improve the others to match" the
+    Badenhorst reference, enough content for SEO/GEO, then audit).** Drafts in `configs/studies/drafts/`, hidden previews at
+    `?view=clinical-study-draft` (new `--preview` route, `178ee66`); the live six-language pilots are untouched. Scrimmed banners
+    (Ye 2.77→5.06 and 2.33→5.16, Wang phone 2.48→5.02). Central audit v2 on the previews: Wang uncapped **9.55**, Ye **9.45**; the
+    only failures (canonical gate, S1 old title in the theme's schema) clear at go-live. ⏳ **Malcolm reviews the two previews**, then
+    translation (five locales) and go-live per `docs/study-page-template.md` §3.
+    ⏳ Translate Badenhorst and Raikou (their /de…/it versions still show English). ⏳ Footer link and Science-page band (approved in
+    ADR-2026-09-29-C, not yet done). 🛑 Main banner pick (sheets on Malcolm's Desktop). ⏳ Rebuild Wang and Ye on the new layout (they still
+    show pilot content, no breadcrumb). 🛑 Ask Malcolm: three excerpts (the SEO descriptions) end "…and what it does not" — reword
+    under the positive-results rule? (translated live text, so not changed unasked).
+    ✅ **List page redesign LIVE (2026-09-30, Malcolm: "please fix this" — he did not see it on the live page because it was still only on
+    the preview).** Title, intro and study search on the photo band; ingredient label row (All studies · Argireline · GHK-Cu · PDRN)
+    filtering the list; tag Copper peptide → GHK-Cu; each article body carries its study's text for search (never rendered). Applied
+    with `build-clinical-studies-blog.py --apply` + `hub-upgrade.py configs/hub-upgrades/clinical-studies-blog.json --apply` (backup
+    `hub-upgrade-templates__blog.clinical-studies.json-20260930-101157`); `--verify-live` ✓ ×6; search "retinol" → Ye 2026; /tagged/ghk-cu →
+    Badenhorst. The preview template `blog.clinical-studies-preview.json` is left in place (unused, harmless) until Malcolm's card picks are
+    in. Still open: card images (no models) wait on his picks; Raikou and Badenhorst titles show English on /de…/it.
+    **Malcolm, 2026-09-30:** (1) card images — numbered sheets rebuilt by `scripts/study-card-pool-sheets.py` (25 sheets on the Desktop,
+    `skingenetix-study-images-{CU,ARG,PDRN,GEN}-n.png`, 2,125 refs from the pool index). ✅ **Live: first picks made by Claude on his
+    instruction** ("you make the initial choices for all the study blog images"): Badenhorst CU-013, Raikou ARG-031, Wang ARG-110, Ye
+    PDRN-213 — no models, ingredient colours; plan `configs/banners/clinical-studies-article-cards-2026-09-30.json`. He can swap any card
+    by pool number. (2) **Translation waits
+    until the English articles are fully complete and optimised** (applies to Raikou and Badenhorst). (3) Label pages
+    `/blogs/clinical-studies/tagged/*` **stay in Google** ("we will be adding more articles"); **grade key removed** from the band under the
+    list (now "Studies by ingredient", already translated), live ×6, backup `20260930-102216`. (4) **New: tags for skin issues, skin
+    solutions and other relevant keywords** — ✅ **live 2026-09-30** (Malcolm chose the proposed set): a second label row "Skin concern" —
+    Fine lines & wrinkles (all four), Crow's feet & eye area (Wang, Badenhorst, Ye), Forehead lines (Raikou), Compared with retinol (Ye),
+    chosen from the 2026-09-30 keyword pull (`pdrn vs retinol` ~330/mo, `argireline eye cream` 157, `best serum for forehead lines` 78).
+    Tags carry a `Skin:` / `Topic:` prefix so the card badge (`article.tags | first`) stays the ingredient; the row shows each label per
+    locale from the phrase table (store wording reused: "Hautanliegen", "Feine Linien & Falten"…); the wrinkles page links to the Fine Lines &
+    Wrinkles Skin Solutions page. A study lists its keys under `concerns` in its config. Verified live: badges unchanged, every tag page
+    lists the right studies, German translated, no Liquid error. ⏳ **For Malcolm:** tag pages all share the title "Clinical studies"
+    (the theme's `<title>` ignores the tag); giving each its concern needs a core-layout edit — his OK first.
+    History — list page redesign (Malcolm, 2026-09-29): title on the photo, ingredient labels that filter the list, study search, no model
+    images on the cards. Built on a hidden preview, `/blogs/clinical-studies?view=clinical-studies-preview`, by
+    `scripts/build-clinical-studies-blog.py --preview` (`3246b4e`, `7369619`). What the preview shows:
   - The photo band carries the title, the intro and a search form scoped to the studies. main-blog's `<h1>` is hidden visually only, so
     the page keeps one H1.
   - An ingredient label row (Custom Liquid) built from the live articles' tags. Stock `show_tags` flickers on this store:

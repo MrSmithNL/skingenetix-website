@@ -1,572 +1,708 @@
 {
+  "_note": "DRAFT, English first (Malcolm, 2026-09-30: rebuild the pilot articles on the study template; translate only once the English is complete and optimised). The live article still renders the six-language pilot from configs/studies/argireline-crows-feet-trial-wang-2013.json until go-live. Every figure here is from the full text as recorded in docs/claims/argireline-acetyl-hexapeptide-8.md (row 1-2, §4 table, re-checked at source 2026-09-23): 22 of 45 (48.9%) graded 3-4 vs 0 of 15; replica roughness Sa, Smax, St down p < 0.01 before-vs-after, placebo p > 0.05; no adverse effects, no drop-outs; product supplied by McEit. Register rules: 48.9% is a share of people, never a wrinkle reduction; no % change from Table 2 (no baseline, no between-group test). ADR-2026-09-26-L: limits reframed positive-first; the null Henseler 2023 sentence of the pilot is dropped.",
   "handle": "argireline-crows-feet-trial-wang-2013",
-  "hub_handle": "acetyl-hexapeptide-8-research",
-  "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/23417317/",
-  "seo": {
-    "en": {
-      "title": "Wang 2013 Argireline Trial: Does It Soften Crow's Feet?",
-      "description": "Nearly 1 in 2 were graded clearly smoother after 4 weeks on 10% Argireline, none on placebo. What the 2013 double-blind trial shows, and what it does not."
-    },
-    "de": {
-      "title": "Argireline-Studie Wang 2013: Mildert es Krähenfüße?",
-      "description": "Fast jede zweite Person wurde mit 10 % Argireline nach 4 Wochen als deutlich glatter eingestuft, mit Placebo niemand. Was die Doppelblindstudie zeigt."
-    },
-    "nl": {
-      "title": "Argireline-studie Wang 2013: verzacht het kraaienpootjes?",
-      "description": "Bijna 1 op de 2 werd met 10% Argireline na 4 weken als duidelijk gladder beoordeeld, met placebo niemand. Wat de dubbelblinde studie laat zien."
-    },
-    "fr": {
-      "title": "Essai Argireline Wang 2013 : atténue-t-il les pattes d'oie ?",
-      "description": "Près d'1 personne sur 2 jugée nettement plus lisse après 4 semaines avec 10 % d'Argireline, aucune sous placebo. Ce que montre l'essai en double aveugle."
-    },
-    "es": {
-      "title": "Ensayo de Argireline Wang 2013: ¿suaviza las patas de gallo?",
-      "description": "Casi 1 de cada 2 fue valorada claramente más lisa tras 4 semanas con un 10 % de Argireline, nadie con placebo. Lo que muestra el ensayo doble ciego."
-    },
-    "it": {
-      "title": "Studio Argireline Wang 2013: attenua le zampe di gallina?",
-      "description": "Quasi 1 persona su 2 giudicata nettamente più levigata dopo 4 settimane con il 10% di Argireline, nessuna col placebo. Cosa mostra lo studio in doppio cieco."
-    }
+  "hub": "acetyl-hexapeptide-8-research",
+  "source_url": "https://doi.org/10.1007/s40257-013-0009-9",
+  "read_at_source": "2026-09-23",
+  "published": "2026-09-22",
+  "eyebrow": {
+    "en": "Clinical Study · 2013",
+    "de": "Klinische Studie · 2013",
+    "nl": "Klinische studie · 2013",
+    "fr": "Étude clinique · 2013",
+    "es": "Estudio clínico · 2013",
+    "it": "Studio clinico · 2013"
   },
-  "fields": {
-    "intro": {
-      "en": [
-        ["h1", "Does Argireline soften crow's feet? The 2013 placebo-controlled trial (Wang et al.)"],
-        [
-          "p",
-          "*Appraised by the Skingenetix research team. Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician. Last reviewed 22 September 2026.*"
-        ],
-        [
-          "p",
-          "**Verdict:** in a double-blind trial of 60 adults, nearly half of those using 10% Argireline around the eyes were graded clearly improved after four weeks. On placebo, no one was. It is the strongest human evidence for Argireline: well designed, but small, short and graded mainly by eye."
-        ]
-      ],
-      "de": [
-        ["h1", "Mildert Argireline Krähenfüße? Die placebokontrollierte Studie von 2013 (Wang et al.)"],
-        [
-          "p",
-          "*Bewertet vom Skingenetix-Forschungsteam. Medizinisch geprüft von Dr. Esther Bodde (Cosmetic & Medical Physician). Zuletzt geprüft am 22. September 2026.*"
-        ],
-        [
-          "p",
-          "**Fazit:** In einer Doppelblindstudie mit 60 Erwachsenen wurde fast die Hälfte derer, die 10 % Argireline um die Augen auftrugen, nach vier Wochen als deutlich verbessert eingestuft. Mit Placebo: niemand. Es ist der stärkste Beleg am Menschen für Argireline: gut angelegt, aber klein, kurz und vor allem mit dem Auge bewertet."
-        ]
-      ],
-      "nl": [
-        ["h1", "Verzacht Argireline kraaienpootjes? De placebogecontroleerde studie uit 2013 (Wang et al.)"],
-        [
-          "p",
-          "*Beoordeeld door het Skingenetix-onderzoeksteam. Medisch beoordeeld door dr. Esther Bodde (Cosmetic & Medical Physician). Laatst gecontroleerd op 22 september 2026.*"
-        ],
-        [
-          "p",
-          "**Conclusie:** in een dubbelblinde studie met 60 volwassenen werd bijna de helft van wie 10% Argireline rond de ogen gebruikte na vier weken als duidelijk verbeterd beoordeeld. Met placebo: niemand. Het is het sterkste bewijs bij mensen voor Argireline: goed opgezet, maar klein, kort en vooral met het oog beoordeeld."
-        ]
-      ],
-      "fr": [
-        ["h1", "L'Argireline atténue-t-elle les pattes d'oie ? L'essai contrôlé contre placebo de 2013 (Wang et al.)"],
-        [
-          "p",
-          "*Analyse de l'équipe de recherche Skingenetix. Vérifié sur le plan médical par le Dr Esther Bodde (Cosmetic & Medical Physician). Dernière révision le 22 septembre 2026.*"
-        ],
-        [
-          "p",
-          "**Verdict :** dans un essai en double aveugle mené auprès de 60 adultes, près de la moitié des personnes appliquant 10 % d'Argireline autour des yeux ont été jugées nettement améliorées après quatre semaines. Sous placebo : personne. C'est la preuve humaine la plus solide pour l'Argireline : bien conçue, mais petite, courte et évaluée surtout à l'œil."
-        ]
-      ],
-      "es": [
-        ["h1", "¿Suaviza la Argireline las patas de gallo? El ensayo controlado con placebo de 2013 (Wang et al.)"],
-        [
-          "p",
-          "*Valorado por el equipo de investigación de Skingenetix. Revisado médicamente por la Dra. Esther Bodde (Cosmetic & Medical Physician). Última revisión: 22 de septiembre de 2026.*"
-        ],
-        [
-          "p",
-          "**Veredicto:** en un ensayo doble ciego con 60 adultos, casi la mitad de quienes usaron un 10 % de Argireline alrededor de los ojos fue valorada como claramente mejorada tras cuatro semanas. Con placebo: nadie. Es la evidencia en personas más sólida sobre la Argireline: bien diseñada, pero pequeña, corta y valorada sobre todo a simple vista."
-        ]
-      ],
-      "it": [
-        ["h1", "L'Argireline attenua le zampe di gallina? Lo studio controllato con placebo del 2013 (Wang et al.)"],
-        [
-          "p",
-          "*Valutato dal team di ricerca Skingenetix. Revisione medica della dott.ssa Esther Bodde (Cosmetic & Medical Physician). Ultima revisione: 22 settembre 2026.*"
-        ],
-        [
-          "p",
-          "**Verdetto:** in uno studio in doppio cieco su 60 adulti, quasi la metà di chi usava il 10% di Argireline intorno agli occhi è stata giudicata nettamente migliorata dopo quattro settimane. Con il placebo: nessuno. È la prova sull'uomo più solida per l'Argireline: ben disegnata, ma piccola, breve e valutata soprattutto a occhio."
-        ]
-      ]
-    },
-    "key_facts": {
-      "en": [
-        ["h2", "Key facts"],
-        [
-          "ul",
-          [
-            "**Design:** randomised, double-blind, placebo-controlled, parallel groups (3 to 1)",
-            "**Participants:** 60 Chinese adults aged 25 to 60 (50 women, 10 men): 45 on Argireline, 15 on placebo",
-            "**What was applied:** an oil-in-water emulsion with 10% Argireline, around the eyes, twice a day",
-            "**Duration:** 4 weeks",
-            "**Comparator:** the same emulsion without Argireline",
-            "**Main measures:** clinicians' 0–4 global improvement grade; silicone skin replicas analysed by imaging",
-            "**Result:** 22 of 45 (48.9%) graded 3 or 4, against 0 of 15 on placebo; skin roughness fell significantly (p < 0.01), with no significant change on placebo",
-            "**Side effects:** none reported, and no one dropped out",
-            "**Funding and conflicts:** the trial product was supplied by McEit, which markets Argireline in China; the authors declared no conflicts",
-            "**Our evidence grade:** A (randomised, double-blind, placebo-controlled)",
-            "**Source:** Wang Y et al., American Journal of Clinical Dermatology, 2013 · [PubMed 23417317](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-          ]
-        ]
-      ],
-      "de": [
-        ["h2", "Die wichtigsten Fakten"],
-        [
-          "ul",
-          [
-            "**Design:** randomisiert, doppelblind, placebokontrolliert, Parallelgruppen (3 zu 1)",
-            "**Teilnehmende:** 60 chinesische Erwachsene zwischen 25 und 60 Jahren (50 Frauen, 10 Männer): 45 mit Argireline, 15 mit Placebo",
-            "**Angewendet:** eine Öl-in-Wasser-Emulsion mit 10 % Argireline, um die Augen, zweimal täglich",
-            "**Dauer:** 4 Wochen",
-            "**Vergleich:** dieselbe Emulsion ohne Argireline",
-            "**Messungen:** ärztliche Gesamtbewertung auf einer Skala von 0 bis 4; Silikon-Hautabdrücke, per Bildgebung ausgewertet",
-            "**Ergebnis:** 22 von 45 (48,9 %) mit Stufe 3 oder 4 bewertet, gegenüber 0 von 15 mit Placebo; die Hautrauheit sank deutlich (p < 0,01), ohne signifikante Veränderung unter Placebo",
-            "**Nebenwirkungen:** keine berichtet, niemand brach ab",
-            "**Finanzierung und Interessen:** das Studienprodukt stellte McEit bereit, das Argireline in China vertreibt; die Autoren erklärten keine Interessenkonflikte",
-            "**Unsere Evidenzstufe:** A (randomisiert, doppelblind, placebokontrolliert)",
-            "**Quelle:** Wang Y et al., American Journal of Clinical Dermatology, 2013 · [PubMed 23417317](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-          ]
-        ]
-      ],
-      "nl": [
-        ["h2", "De belangrijkste feiten"],
-        [
-          "ul",
-          [
-            "**Opzet:** gerandomiseerd, dubbelblind, placebogecontroleerd, parallelle groepen (3 op 1)",
-            "**Deelnemers:** 60 Chinese volwassenen van 25 tot 60 jaar (50 vrouwen, 10 mannen): 45 met Argireline, 15 met placebo",
-            "**Aangebracht:** een olie-in-water-emulsie met 10% Argireline, rond de ogen, twee keer per dag",
-            "**Duur:** 4 weken",
-            "**Vergelijking:** dezelfde emulsie zonder Argireline",
-            "**Metingen:** algemene beoordeling door artsen op een schaal van 0 tot 4; siliconen huidafdrukken, geanalyseerd met beeldvorming",
-            "**Resultaat:** 22 van de 45 (48,9%) beoordeeld met 3 of 4, tegenover 0 van de 15 met placebo; de huidruwheid daalde duidelijk (p < 0,01), zonder significante verandering bij placebo",
-            "**Bijwerkingen:** geen gemeld, niemand stopte",
-            "**Financiering en belangen:** het studieproduct werd geleverd door McEit, dat Argireline in China verkoopt; de auteurs meldden geen belangenconflicten",
-            "**Onze bewijsgraad:** A (gerandomiseerd, dubbelblind, placebogecontroleerd)",
-            "**Bron:** Wang Y et al., American Journal of Clinical Dermatology, 2013 · [PubMed 23417317](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-          ]
-        ]
-      ],
-      "fr": [
-        ["h2", "Les faits clés"],
-        [
-          "ul",
-          [
-            "**Méthode :** randomisé, en double aveugle, contrôlé contre placebo, groupes parallèles (3 pour 1)",
-            "**Participants :** 60 adultes chinois de 25 à 60 ans (50 femmes, 10 hommes) : 45 sous Argireline, 15 sous placebo",
-            "**Appliqué :** une émulsion huile-dans-eau à 10 % d'Argireline, autour des yeux, deux fois par jour",
-            "**Durée :** 4 semaines",
-            "**Comparateur :** la même émulsion sans Argireline",
-            "**Mesures :** évaluation globale par des cliniciens sur une échelle de 0 à 4 ; répliques cutanées en silicone analysées par imagerie",
-            "**Résultat :** 22 sur 45 (48,9 %) notés 3 ou 4, contre 0 sur 15 sous placebo ; la rugosité cutanée a nettement baissé (p < 0,01), sans changement significatif sous placebo",
-            "**Effets indésirables :** aucun signalé, aucun abandon",
-            "**Financement et conflits :** le produit de l'essai a été fourni par McEit, qui commercialise l'Argireline en Chine ; les auteurs n'ont déclaré aucun conflit d'intérêts",
-            "**Notre niveau de preuve :** A (randomisé, en double aveugle, contrôlé contre placebo)",
-            "**Source :** Wang Y et al., American Journal of Clinical Dermatology, 2013 · [PubMed 23417317](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-          ]
-        ]
-      ],
-      "es": [
-        ["h2", "Datos clave"],
-        [
-          "ul",
-          [
-            "**Diseño:** aleatorizado, doble ciego, controlado con placebo, grupos paralelos (3 a 1)",
-            "**Participantes:** 60 adultos chinos de 25 a 60 años (50 mujeres, 10 hombres): 45 con Argireline, 15 con placebo",
-            "**Qué se aplicó:** una emulsión de aceite en agua con un 10 % de Argireline, alrededor de los ojos, dos veces al día",
-            "**Duración:** 4 semanas",
-            "**Comparador:** la misma emulsión sin Argireline",
-            "**Mediciones:** valoración global de los clínicos en una escala de 0 a 4; réplicas cutáneas de silicona analizadas por imagen",
-            "**Resultado:** 22 de 45 (48,9 %) valorados con 3 o 4, frente a 0 de 15 con placebo; la rugosidad de la piel bajó claramente (p < 0,01), sin cambios significativos con placebo",
-            "**Efectos secundarios:** ninguno notificado, nadie abandonó",
-            "**Financiación y conflictos:** el producto del ensayo lo suministró McEit, que comercializa la Argireline en China; los autores no declararon conflictos",
-            "**Nuestro nivel de evidencia:** A (aleatorizado, doble ciego, controlado con placebo)",
-            "**Fuente:** Wang Y et al., American Journal of Clinical Dermatology, 2013 · [PubMed 23417317](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-          ]
-        ]
-      ],
-      "it": [
-        ["h2", "I fatti principali"],
-        [
-          "ul",
-          [
-            "**Disegno:** randomizzato, in doppio cieco, controllato con placebo, gruppi paralleli (3 a 1)",
-            "**Partecipanti:** 60 adulti cinesi tra 25 e 60 anni (50 donne, 10 uomini): 45 con Argireline, 15 con placebo",
-            "**Cosa è stato applicato:** un'emulsione olio in acqua con il 10% di Argireline, intorno agli occhi, due volte al giorno",
-            "**Durata:** 4 settimane",
-            "**Confronto:** la stessa emulsione senza Argireline",
-            "**Misurazioni:** valutazione globale dei clinici su una scala da 0 a 4; repliche cutanee in silicone analizzate con imaging",
-            "**Risultato:** 22 su 45 (48,9%) valutati 3 o 4, contro 0 su 15 con il placebo; la ruvidità cutanea è diminuita nettamente (p < 0,01), senza cambiamenti significativi con il placebo",
-            "**Effetti collaterali:** nessuno riportato, nessun abbandono",
-            "**Finanziamento e conflitti:** il prodotto dello studio è stato fornito da McEit, che commercializza l'Argireline in Cina; gli autori non hanno dichiarato conflitti",
-            "**Il nostro livello di evidenza:** A (randomizzato, in doppio cieco, controllato con placebo)",
-            "**Fonte:** Wang Y et al., American Journal of Clinical Dermatology, 2013 · [PubMed 23417317](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-          ]
-        ]
-      ]
-    },
-    "body": {
-      "en": [
-        ["h2", "What the researchers did"],
-        [
-          "p",
-          "Sixty adults with crow's feet were randomly assigned, three to one, to an emulsion containing 10% Argireline or to the same emulsion without it. Neither the participants nor the assessors knew who had which. Everyone applied their cream around the eyes twice a day for four weeks."
-        ],
-        [
-          "p",
-          "Results were measured in two ways. Clinicians graded each person's overall improvement on a five-point scale, from 0 (no change) to 4 (around 100% improved). Silicone moulds of the skin around the eyes were taken before and after, and analysed by an imaging system to give objective measures of skin roughness."
-        ],
-        ["h2", "What they found"],
-        [
-          "p",
-          "After four weeks, 22 of the 45 people using Argireline were graded 3 or 4, a clear visible improvement. None of the 15 on placebo were. The skin replicas agreed: every roughness measure fell significantly in the Argireline group, while the placebo group showed no significant change. No one reported a side effect, and no one dropped out."
-        ],
-        [
-          "p",
-          "The 48.9% figure you may see quoted is this share of people, 22 of 45. It is not a 48.9% reduction in wrinkle depth, a misreading that has since appeared in at least two published reviews."
-        ],
-        ["h2", "How good is this evidence?"],
-        [
-          "p",
-          "It is a strong design for a cosmetic trial: randomised, double-blind, with a genuine placebo made from the same base, and an objective measure alongside the clinicians' grades. Its limits are size and length. Fifteen people is a small placebo group, four weeks is short, and the main outcome is a visual grade rather than a measured wrinkle depth. The replica results compare each group before and after; the paper does not report a direct statistical test between the groups. The trial cream was supplied by the company that markets Argireline in China."
-        ],
-        ["h2", "What it does not show"],
-        [
-          "p",
-          "It tested Argireline in a simple emulsion, not our serum, and only around the eyes. It says nothing about forehead lines, about results beyond four weeks, or about people outside the age range studied. It also does not show that Argireline acts on the facial muscles themselves: that mechanism has only been shown in the laboratory."
-        ],
-        ["h2", "How it compares with our serum"],
-        [
-          "p",
-          "The trial used 10% Argireline, and so does the [Skingenetix Acetyl Hexapeptide-8 Serum](/products/acetyl-hexapeptide-8-anti-wrinkle-serum): the same level, applied the same way, twice a day. Our serum also contains other ingredients, so its results are not the trial's results."
-        ],
-        ["h2", "Where this study fits"],
-        [
-          "p",
-          "It is the strongest of the human trials on [Argireline®](/pages/acetyl-hexapeptide-8-research). A second placebo-controlled trial found forehead roughness fell 7.4% by day 20 while it rose on placebo ([Raikou et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28150423/) — [our appraisal of the forehead-lines trial](/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017)). An independent 2023 split-face study, which added Argireline to a hyaluronic acid serum and measured wrinkles by camera, found no difference between the two sides ([Henseler, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10665711/)). Taken together, the evidence is positive, consistent in the controlled trials, and still small."
-        ]
-      ],
-      "de": [
-        ["h2", "Wie die Forschenden vorgingen"],
-        [
-          "p",
-          "Sechzig Erwachsene mit Krähenfüßen wurden im Verhältnis drei zu eins zufällig einer Emulsion mit 10 % Argireline oder derselben Emulsion ohne Argireline zugeteilt. Weder die Teilnehmenden noch die Bewertenden wussten, wer was erhielt. Alle trugen ihre Creme vier Wochen lang zweimal täglich um die Augen auf."
-        ],
-        [
-          "p",
-          "Die Ergebnisse wurden auf zwei Arten gemessen. Ärztinnen und Ärzte bewerteten die Gesamtverbesserung jeder Person auf einer Fünf-Punkte-Skala von 0 (keine Veränderung) bis 4 (etwa 100 % verbessert). Vorher und nachher wurden Silikonabdrücke der Haut um die Augen genommen und per Bildgebung ausgewertet, um die Hautrauheit objektiv zu messen."
-        ],
-        ["h2", "Was sie herausfanden"],
-        [
-          "p",
-          "Nach vier Wochen wurden 22 der 45 Personen mit Argireline mit Stufe 3 oder 4 bewertet, einer deutlich sichtbaren Verbesserung. Von den 15 Personen mit Placebo niemand. Die Hautabdrücke bestätigten das: Alle Rauheitswerte sanken in der Argireline-Gruppe deutlich, während die Placebogruppe keine signifikante Veränderung zeigte. Niemand berichtete über Nebenwirkungen, und niemand brach ab."
-        ],
-        [
-          "p",
-          "Die oft zitierten 48,9 % sind genau dieser Anteil an Personen, 22 von 45. Es ist keine Verringerung der Faltentiefe um 48,9 % – ein Missverständnis, das seither in mindestens zwei veröffentlichten Übersichtsarbeiten auftaucht."
-        ],
-        ["h2", "Wie belastbar ist dieser Beleg?"],
-        [
-          "p",
-          "Für eine kosmetische Studie ist das Design stark: randomisiert, doppelblind, mit einem echten Placebo auf derselben Grundlage und einer objektiven Messung neben der ärztlichen Bewertung. Die Grenzen sind Größe und Dauer. Fünfzehn Personen sind eine kleine Placebogruppe, vier Wochen sind kurz, und das Hauptergebnis ist eine visuelle Bewertung statt einer gemessenen Faltentiefe. Die Abdruckergebnisse vergleichen jede Gruppe vorher und nachher; einen direkten statistischen Vergleich zwischen den Gruppen berichtet die Arbeit nicht. Die Studiencreme stellte das Unternehmen bereit, das Argireline in China vertreibt."
-        ],
-        ["h2", "Was die Studie nicht zeigt"],
-        [
-          "p",
-          "Sie testete Argireline in einer einfachen Emulsion, nicht in unserem Serum, und nur um die Augen. Über Stirnfalten, Ergebnisse nach mehr als vier Wochen oder Menschen außerhalb der untersuchten Altersgruppe sagt sie nichts. Sie zeigt auch nicht, dass Argireline direkt auf die Gesichtsmuskeln wirkt: Dieser Mechanismus ist nur im Labor belegt."
-        ],
-        ["h2", "Im Vergleich mit unserem Serum"],
-        [
-          "p",
-          "Die Studie verwendete 10 % Argireline, ebenso wie das [Acetyl Hexapeptide-8 Serum von Skingenetix](/products/acetyl-hexapeptide-8-anti-wrinkle-serum): dieselbe Menge, gleich angewendet, zweimal täglich. Unser Serum enthält weitere Inhaltsstoffe, daher sind seine Ergebnisse nicht die Studienergebnisse."
-        ],
-        ["h2", "Wo sich die Studie einordnet"],
-        [
-          "p",
-          "Sie ist die stärkste der Studien am Menschen zu [Argireline®](/pages/acetyl-hexapeptide-8-research). Eine zweite placebokontrollierte Studie fand, dass die Rauheit der Stirn bis Tag 20 um 7,4 % sank, während sie mit Placebo zunahm ([Raikou et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28150423/) — [unsere Bewertung der Stirnfalten-Studie](/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017)). Eine unabhängige Halbseitenstudie von 2023, die Argireline einem Hyaluronsäure-Serum zusetzte und Falten per Kamera maß, fand keinen Unterschied zwischen den Seiten ([Henseler, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10665711/)). Insgesamt sind die Belege positiv, in den kontrollierten Studien übereinstimmend und noch klein."
-        ]
-      ],
-      "nl": [
-        ["h2", "Wat de onderzoekers deden"],
-        [
-          "p",
-          "Zestig volwassenen met kraaienpootjes werden willekeurig, drie op één, ingedeeld bij een emulsie met 10% Argireline of dezelfde emulsie zonder. Deelnemers en beoordelaars wisten niet wie wat kreeg. Iedereen bracht de crème vier weken lang twee keer per dag rond de ogen aan."
-        ],
-        [
-          "p",
-          "De resultaten werden op twee manieren gemeten. Artsen beoordeelden de algehele verbetering van elke persoon op een vijfpuntsschaal, van 0 (geen verandering) tot 4 (ongeveer 100% verbeterd). Voor en na werden siliconen afdrukken van de huid rond de ogen gemaakt en met beeldvorming geanalyseerd, voor een objectieve meting van de huidruwheid."
-        ],
-        ["h2", "Wat ze vonden"],
-        [
-          "p",
-          "Na vier weken werden 22 van de 45 mensen met Argireline beoordeeld met 3 of 4, een duidelijk zichtbare verbetering. Van de 15 met placebo niemand. De huidafdrukken bevestigden dat: elke ruwheidsmaat daalde duidelijk in de Argireline-groep, terwijl de placebogroep geen significante verandering liet zien. Niemand meldde bijwerkingen en niemand stopte."
-        ],
-        [
-          "p",
-          "Het vaak geciteerde cijfer van 48,9% is precies dit aandeel mensen, 22 van de 45. Het is geen vermindering van de rimpeldiepte met 48,9% – een misverstand dat sindsdien in minstens twee gepubliceerde reviews staat."
-        ],
-        ["h2", "Hoe sterk is dit bewijs?"],
-        [
-          "p",
-          "Voor een cosmetische studie is de opzet sterk: gerandomiseerd, dubbelblind, met een echte placebo in dezelfde basis en een objectieve meting naast de beoordeling door artsen. De beperkingen zijn omvang en duur. Vijftien mensen is een kleine placebogroep, vier weken is kort, en de hoofduitkomst is een visuele beoordeling in plaats van een gemeten rimpeldiepte. De afdrukresultaten vergelijken elke groep voor en na; het artikel meldt geen directe statistische vergelijking tussen de groepen. De studiecrème werd geleverd door het bedrijf dat Argireline in China verkoopt."
-        ],
-        ["h2", "Wat de studie niet laat zien"],
-        [
-          "p",
-          "Ze testte Argireline in een eenvoudige emulsie, niet in ons serum, en alleen rond de ogen. Over voorhoofdsrimpels, resultaten na meer dan vier weken of mensen buiten de onderzochte leeftijdsgroep zegt ze niets. Ze laat ook niet zien dat Argireline direct op de gezichtsspieren werkt: dat mechanisme is alleen in het laboratorium aangetoond."
-        ],
-        ["h2", "Vergeleken met ons serum"],
-        [
-          "p",
-          "De studie gebruikte 10% Argireline, net als het [Acetyl Hexapeptide-8 Serum van Skingenetix](/products/acetyl-hexapeptide-8-anti-wrinkle-serum): dezelfde hoeveelheid, op dezelfde manier aangebracht, twee keer per dag. Ons serum bevat ook andere ingrediënten, dus de resultaten ervan zijn niet die van de studie."
-        ],
-        ["h2", "Waar deze studie past"],
-        [
-          "p",
-          "Het is de sterkste van de studies bij mensen naar [Argireline®](/pages/acetyl-hexapeptide-8-research). Een tweede placebogecontroleerde studie vond dat de ruwheid van het voorhoofd op dag 20 7,4% lager was, terwijl die met placebo toenam ([Raikou et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28150423/) — [onze beoordeling van de voorhoofdsstudie](/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017)). Een onafhankelijke halfgelaatsstudie uit 2023, die Argireline aan een hyaluronzuurserum toevoegde en rimpels met een camera mat, vond geen verschil tussen de twee kanten ([Henseler, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10665711/)). Samen is het bewijs positief, consistent in de gecontroleerde studies en nog klein."
-        ]
-      ],
-      "fr": [
-        ["h2", "Ce que les chercheurs ont fait"],
-        [
-          "p",
-          "Soixante adultes présentant des pattes d'oie ont été répartis au hasard, trois pour un, entre une émulsion à 10 % d'Argireline et la même émulsion sans Argireline. Ni les participants ni les évaluateurs ne savaient qui recevait quoi. Chacun a appliqué sa crème autour des yeux deux fois par jour pendant quatre semaines."
-        ],
-        [
-          "p",
-          "Les résultats ont été mesurés de deux façons. Des cliniciens ont évalué l'amélioration globale de chaque personne sur une échelle de cinq points, de 0 (aucun changement) à 4 (environ 100 % d'amélioration). Des moulages en silicone de la peau autour des yeux ont été réalisés avant et après, puis analysés par imagerie pour mesurer objectivement la rugosité cutanée."
-        ],
-        ["h2", "Ce qu'ils ont trouvé"],
-        [
-          "p",
-          "Après quatre semaines, 22 des 45 personnes sous Argireline ont été notées 3 ou 4, soit une amélioration nettement visible. Aucune des 15 personnes sous placebo. Les répliques cutanées l'ont confirmé : toutes les mesures de rugosité ont nettement baissé dans le groupe Argireline, tandis que le groupe placebo ne montrait aucun changement significatif. Personne n'a signalé d'effet indésirable ni abandonné l'essai."
-        ],
-        [
-          "p",
-          "Le chiffre de 48,9 % souvent cité correspond à cette proportion de personnes, 22 sur 45. Ce n'est pas une réduction de 48,9 % de la profondeur des rides, une erreur de lecture reprise depuis dans au moins deux revues publiées."
-        ],
-        ["h2", "Quelle est la solidité de cette preuve ?"],
-        [
-          "p",
-          "Pour un essai cosmétique, la méthode est solide : randomisation, double aveugle, véritable placebo dans la même base et mesure objective en plus de l'évaluation clinique. Ses limites tiennent à la taille et à la durée. Quinze personnes forment un petit groupe placebo, quatre semaines, c'est court, et le critère principal est une évaluation visuelle plutôt qu'une profondeur de rides mesurée. Les résultats des répliques comparent chaque groupe avant et après ; l'article ne rapporte pas de test statistique direct entre les groupes. La crème de l'essai a été fournie par l'entreprise qui commercialise l'Argireline en Chine."
-        ],
-        ["h2", "Ce que l'essai ne montre pas"],
-        [
-          "p",
-          "Il a testé l'Argireline dans une émulsion simple, pas dans notre sérum, et uniquement autour des yeux. Il ne dit rien des rides du front, des résultats au-delà de quatre semaines ni des personnes hors de la tranche d'âge étudiée. Il ne montre pas non plus que l'Argireline agit directement sur les muscles du visage : ce mécanisme n'a été montré qu'en laboratoire."
-        ],
-        ["h2", "Comparé à notre sérum"],
-        [
-          "p",
-          "L'essai a utilisé 10 % d'Argireline, tout comme le [sérum Acetyl Hexapeptide-8 de Skingenetix](/products/acetyl-hexapeptide-8-anti-wrinkle-serum) : la même dose, appliquée de la même façon, deux fois par jour. Notre sérum contient aussi d'autres ingrédients : ses résultats ne sont donc pas ceux de l'essai."
-        ],
-        ["h2", "La place de cet essai"],
-        [
-          "p",
-          "C'est le plus solide des essais humains sur l'[Argireline®](/pages/acetyl-hexapeptide-8-research). Un second essai contrôlé contre placebo a montré une baisse de 7,4 % de la rugosité du front au 20e jour, alors qu'elle augmentait sous placebo ([Raikou et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28150423/) — [notre analyse de l'essai sur les rides du front](/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017)). Une étude indépendante en hémi-visage de 2023, qui ajoutait l'Argireline à un sérum à l'acide hyaluronique et mesurait les rides par caméra, n'a trouvé aucune différence entre les deux côtés ([Henseler, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10665711/)). Dans l'ensemble, les preuves sont positives, cohérentes dans les essais contrôlés, et encore limitées."
-        ]
-      ],
-      "es": [
-        ["h2", "Qué hicieron los investigadores"],
-        [
-          "p",
-          "Sesenta adultos con patas de gallo fueron asignados al azar, en proporción tres a uno, a una emulsión con un 10 % de Argireline o a la misma emulsión sin ella. Ni los participantes ni los evaluadores sabían quién recibía qué. Todos aplicaron su crema alrededor de los ojos dos veces al día durante cuatro semanas."
-        ],
-        [
-          "p",
-          "Los resultados se midieron de dos formas. Los clínicos valoraron la mejora global de cada persona en una escala de cinco puntos, de 0 (sin cambios) a 4 (en torno a un 100 % de mejora). Se tomaron moldes de silicona de la piel alrededor de los ojos antes y después, analizados por imagen para medir de forma objetiva la rugosidad de la piel."
-        ],
-        ["h2", "Qué encontraron"],
-        [
-          "p",
-          "Tras cuatro semanas, 22 de las 45 personas con Argireline fueron valoradas con 3 o 4, una mejora claramente visible. Ninguna de las 15 con placebo. Las réplicas cutáneas lo confirmaron: todas las medidas de rugosidad bajaron claramente en el grupo de Argireline, mientras que el grupo placebo no mostró cambios significativos. Nadie notificó efectos secundarios y nadie abandonó."
-        ],
-        [
-          "p",
-          "La cifra del 48,9 % que se suele citar es esta proporción de personas, 22 de 45. No es una reducción del 48,9 % en la profundidad de las arrugas, un error de lectura que desde entonces aparece en al menos dos revisiones publicadas."
-        ],
-        ["h2", "¿Qué solidez tiene esta evidencia?"],
-        [
-          "p",
-          "Para un ensayo cosmético, el diseño es sólido: aleatorizado, doble ciego, con un placebo real en la misma base y una medida objetiva junto a la valoración clínica. Sus límites son el tamaño y la duración. Quince personas son un grupo placebo pequeño, cuatro semanas es poco tiempo y el resultado principal es una valoración visual, no una profundidad de arrugas medida. Los resultados de las réplicas comparan cada grupo antes y después; el artículo no informa de una prueba estadística directa entre grupos. La crema del ensayo la suministró la empresa que comercializa la Argireline en China."
-        ],
-        ["h2", "Qué no demuestra"],
-        [
-          "p",
-          "Probó la Argireline en una emulsión sencilla, no en nuestro sérum, y solo alrededor de los ojos. No dice nada sobre las arrugas de la frente, los resultados más allá de cuatro semanas ni las personas fuera del rango de edad estudiado. Tampoco demuestra que la Argireline actúe directamente sobre los músculos faciales: ese mecanismo solo se ha demostrado en el laboratorio."
-        ],
-        ["h2", "Comparado con nuestro sérum"],
-        [
-          "p",
-          "El ensayo usó un 10 % de Argireline, igual que el [sérum Acetyl Hexapeptide-8 de Skingenetix](/products/acetyl-hexapeptide-8-anti-wrinkle-serum): la misma dosis, aplicada de la misma forma, dos veces al día. Nuestro sérum contiene además otros ingredientes, así que sus resultados no son los del ensayo."
-        ],
-        ["h2", "Dónde encaja este estudio"],
-        [
-          "p",
-          "Es el más sólido de los ensayos en personas sobre la [Argireline®](/pages/acetyl-hexapeptide-8-research). Un segundo ensayo controlado con placebo encontró que la rugosidad de la frente bajó un 7,4 % en el día 20, mientras que con placebo aumentó ([Raikou et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28150423/) — [nuestro análisis del ensayo sobre las arrugas de la frente](/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017)). Un estudio independiente de hemicara de 2023, que añadió Argireline a un sérum de ácido hialurónico y midió las arrugas con cámara, no encontró diferencias entre los dos lados ([Henseler, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10665711/)). En conjunto, la evidencia es positiva, coherente en los ensayos controlados y todavía limitada."
-        ]
-      ],
-      "it": [
-        ["h2", "Cosa hanno fatto i ricercatori"],
-        [
-          "p",
-          "Sessanta adulti con zampe di gallina sono stati assegnati a caso, tre a uno, a un'emulsione con il 10% di Argireline o alla stessa emulsione senza. Né i partecipanti né i valutatori sapevano chi riceveva cosa. Tutti hanno applicato la crema intorno agli occhi due volte al giorno per quattro settimane."
-        ],
-        [
-          "p",
-          "I risultati sono stati misurati in due modi. I clinici hanno valutato il miglioramento complessivo di ogni persona su una scala a cinque punti, da 0 (nessun cambiamento) a 4 (circa il 100% di miglioramento). Prima e dopo sono stati presi calchi in silicone della pelle intorno agli occhi, analizzati con imaging per misurare in modo oggettivo la ruvidità cutanea."
-        ],
-        ["h2", "Cosa hanno scoperto"],
-        [
-          "p",
-          "Dopo quattro settimane, 22 delle 45 persone con Argireline sono state valutate 3 o 4, un miglioramento chiaramente visibile. Nessuna delle 15 con il placebo. Le repliche cutanee lo hanno confermato: tutte le misure di ruvidità sono diminuite nettamente nel gruppo Argireline, mentre il gruppo placebo non ha mostrato cambiamenti significativi. Nessuno ha riportato effetti collaterali e nessuno ha abbandonato."
-        ],
-        [
-          "p",
-          "Il dato del 48,9% spesso citato è proprio questa quota di persone, 22 su 45. Non è una riduzione del 48,9% della profondità delle rughe, un errore di lettura comparso da allora in almeno due revisioni pubblicate."
-        ],
-        ["h2", "Quanto è solida questa prova?"],
-        [
-          "p",
-          "Per uno studio cosmetico il disegno è solido: randomizzato, in doppio cieco, con un vero placebo nella stessa base e una misura oggettiva accanto alla valutazione clinica. I limiti sono le dimensioni e la durata. Quindici persone sono un gruppo placebo piccolo, quattro settimane sono poche e l'esito principale è una valutazione visiva, non una profondità delle rughe misurata. I risultati delle repliche confrontano ogni gruppo prima e dopo; l'articolo non riporta un confronto statistico diretto tra i gruppi. La crema dello studio è stata fornita dall'azienda che commercializza l'Argireline in Cina."
-        ],
-        ["h2", "Cosa non dimostra"],
-        [
-          "p",
-          "Ha testato l'Argireline in un'emulsione semplice, non nel nostro siero, e solo intorno agli occhi. Non dice nulla sulle rughe della fronte, sui risultati oltre le quattro settimane né sulle persone fuori dalla fascia d'età studiata. Non dimostra nemmeno che l'Argireline agisca direttamente sui muscoli del viso: questo meccanismo è stato dimostrato solo in laboratorio."
-        ],
-        ["h2", "Confronto con il nostro siero"],
-        [
-          "p",
-          "Lo studio ha usato il 10% di Argireline, come il [siero Acetyl Hexapeptide-8 di Skingenetix](/products/acetyl-hexapeptide-8-anti-wrinkle-serum): la stessa dose, applicata allo stesso modo, due volte al giorno. Il nostro siero contiene anche altri ingredienti, quindi i suoi risultati non sono quelli dello studio."
-        ],
-        ["h2", "Dove si colloca questo studio"],
-        [
-          "p",
-          "È il più solido degli studi sull'uomo sull'[Argireline®](/pages/acetyl-hexapeptide-8-research). Un secondo studio controllato con placebo ha rilevato che la ruvidità della fronte è diminuita del 7,4% al 20° giorno, mentre con il placebo è aumentata ([Raikou et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28150423/) — [la nostra analisi dello studio sulle rughe della fronte](/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017)). Uno studio indipendente a emiviso del 2023, che aggiungeva l'Argireline a un siero all'acido ialuronico e misurava le rughe con una fotocamera, non ha trovato differenze tra i due lati ([Henseler, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10665711/)). Nel complesso le prove sono positive, coerenti negli studi controllati e ancora limitate."
-        ]
-      ]
-    },
-    "reference": {
-      "en": [
-        ["h2", "Reference"],
-        [
-          "p",
-          "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology*. 2013;14(2):147–153. doi:10.1007/s40257-013-0009-9. [View on PubMed](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-        ],
-        ["p", "Argireline® is a registered trademark of Lubrizol."]
-      ],
-      "de": [
-        ["h2", "Quelle"],
-        [
-          "p",
-          "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology*. 2013;14(2):147–153. doi:10.1007/s40257-013-0009-9. [Auf PubMed ansehen](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-        ],
-        ["p", "Argireline® ist eine eingetragene Marke von Lubrizol."]
-      ],
-      "nl": [
-        ["h2", "Bron"],
-        [
-          "p",
-          "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology*. 2013;14(2):147–153. doi:10.1007/s40257-013-0009-9. [Bekijk op PubMed](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-        ],
-        ["p", "Argireline® is een gedeponeerd handelsmerk van Lubrizol."]
-      ],
-      "fr": [
-        ["h2", "Référence"],
-        [
-          "p",
-          "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology*. 2013;14(2):147–153. doi:10.1007/s40257-013-0009-9. [Voir sur PubMed](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-        ],
-        ["p", "Argireline® est une marque déposée de Lubrizol."]
-      ],
-      "es": [
-        ["h2", "Referencia"],
-        [
-          "p",
-          "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology*. 2013;14(2):147–153. doi:10.1007/s40257-013-0009-9. [Ver en PubMed](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-        ],
-        ["p", "Argireline® es una marca registrada de Lubrizol."]
-      ],
-      "it": [
-        ["h2", "Riferimento"],
-        [
-          "p",
-          "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology*. 2013;14(2):147–153. doi:10.1007/s40257-013-0009-9. [Vedi su PubMed](https://pubmed.ncbi.nlm.nih.gov/23417317/)"
-        ],
-        ["p", "Argireline® è un marchio registrato di Lubrizol."]
-      ]
-    }
+  "h1": {
+    "en": "Does Argireline® soften crow's feet?",
+    "de": "Mildert Argireline® Krähenfüße?",
+    "nl": "Verzacht Argireline® kraaienpootjes?",
+    "fr": "L'Argireline® atténue-t-elle les pattes d'oie ?",
+    "es": "¿Suaviza la Argireline® las patas de gallo?",
+    "it": "L'Argireline® attenua le zampe di gallina?"
   },
-  "jsonld": {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013#webpage",
-    "url": "https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013",
-    "name": "Wang 2013 Argireline Trial: Does It Soften Crow's Feet?",
-    "description": "Nearly 1 in 2 were graded clearly smoother after 4 weeks on 10% Argireline, none on placebo. What the 2013 double-blind trial shows, and what it does not.",
-    "isPartOf": {
-      "@id": "https://www.skingenetix.com/#website"
-    },
-    "lastReviewed": "2026-09-22",
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Does Argireline soften crow's feet? The 2013 placebo-controlled trial (Wang et al.)",
-      "datePublished": "2026-09-22",
-      "dateModified": "2026-09-22",
-      "author": {
-        "@type": "Organization",
-        "name": "Skingenetix",
-        "url": "https://www.skingenetix.com"
+  "deck": {
+    "en": "A double-blind, placebo-controlled trial of 10% Argireline® around the eyes in 60 adults — read at source, appraised in full.",
+    "de": "Eine doppelblinde, placebokontrollierte Studie mit 10 % Argireline® um die Augen bei 60 Erwachsenen – an der Quelle gelesen, vollständig bewertet.",
+    "nl": "Een dubbelblinde, placebogecontroleerde studie met 10% Argireline® rond de ogen bij 60 volwassenen – bij de bron gelezen, volledig beoordeeld.",
+    "fr": "Un essai en double aveugle, contrôlé contre placebo, de l'Argireline® à 10 % autour des yeux chez 60 adultes — lu à la source, analysé en entier.",
+    "es": "Un ensayo doble ciego y controlado con placebo de la Argireline® al 10 % alrededor de los ojos, en 60 adultos — leído en su fuente y analizado a fondo.",
+    "it": "Uno studio in doppio cieco, controllato con placebo, sul 10% di Argireline® intorno agli occhi in 60 adulti — letto alla fonte, analizzato per intero."
+  },
+  "banner": "skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-banner",
+  "banner_mobile": "skingenetix-acetyl-hexapeptide-8-peptide-refraction-study-banner-mobile",
+  "byline": {
+    "en": "Appraised by the Skingenetix research team. Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician. Last reviewed 23 September 2026.",
+    "de": "Bewertet vom Skingenetix-Forschungsteam. Medizinisch geprüft von Dr. Esther Bodde (Cosmetic & Medical Physician). Zuletzt geprüft am 23. September 2026.",
+    "nl": "Beoordeeld door het Skingenetix-onderzoeksteam. Medisch beoordeeld door dr. Esther Bodde, Cosmetic & Medical Physician. Laatst gecontroleerd op 23 september 2026.",
+    "fr": "Analyse de l'équipe de recherche Skingenetix. Vérifié sur le plan médical par le Dr Esther Bodde (Cosmetic & Medical Physician). Dernière révision le 23 septembre 2026.",
+    "es": "Valorado por el equipo de investigación de Skingenetix. Revisado médicamente por la Dra. Esther Bodde (Cosmetic & Medical Physician). Última revisión: 23 de septiembre de 2026.",
+    "it": "Valutato dal team di ricerca Skingenetix. Revisione medica della dott.ssa Esther Bodde (Cosmetic & Medical Physician). Ultima revisione: 23 settembre 2026."
+  },
+  "reviewer": {
+    "@type": "Person",
+    "name": "Esther Bodde",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Cosmetic & Medical Physician"
+  },
+  "definition": {
+    "en": "[Argireline®](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research) is the trade name of acetyl hexapeptide-8, a short synthetic peptide made by Lipotec, now part of Lubrizol. It is one of the most widely used cosmetic peptides for the look of expression lines, especially crow's feet around the eyes.",
+    "de": "[Argireline®](https://www.skingenetix.com/de/pages/acetyl-hexapeptide-8-research) ist der Handelsname von acetyl hexapeptide-8, einem kurzen synthetischen Peptid, hergestellt von Lipotec, heute Teil von Lubrizol. Es gehört zu den am häufigsten verwendeten kosmetischen Peptiden bei sichtbaren Mimikfalten, besonders bei Krähenfüßen um die Augen.",
+    "nl": "[Argireline®](https://www.skingenetix.com/nl/pages/acetyl-hexapeptide-8-research) is de handelsnaam van acetyl hexapeptide-8, een kort synthetisch peptide van Lipotec, nu onderdeel van Lubrizol. Het is een van de meest gebruikte cosmetische peptiden voor de aanblik van expressielijntjes, vooral kraaienpootjes rond de ogen.",
+    "fr": "[Argireline®](https://www.skingenetix.com/fr/pages/acetyl-hexapeptide-8-research) est le nom commercial de l'acetyl hexapeptide-8, un peptide de synthèse court fabriqué par Lipotec, aujourd'hui intégré à Lubrizol. C'est l'un des peptides cosmétiques les plus utilisés pour l'aspect des rides d'expression, en particulier les pattes d'oie autour des yeux.",
+    "es": "[Argireline®](https://www.skingenetix.com/es/pages/acetyl-hexapeptide-8-research) es el nombre comercial del acetyl hexapeptide-8, un péptido sintético corto fabricado por Lipotec, que hoy forma parte de Lubrizol. Es uno de los péptidos cosméticos más utilizados para el aspecto de las líneas de expresión, sobre todo las patas de gallo alrededor de los ojos.",
+    "it": "[Argireline®](https://www.skingenetix.com/it/pages/acetyl-hexapeptide-8-research) è il nome commerciale dell'acetyl hexapeptide-8, un breve peptide sintetico prodotto da Lipotec, oggi parte di Lubrizol. È uno dei peptidi cosmetici più usati per l'aspetto delle rughe d'espressione, in particolare delle zampe di gallina intorno agli occhi."
+  },
+  "answer": {
+    "en": "The Wang 2013 trial is a randomised, double-blind, placebo-controlled study of 10% Argireline® applied around the eyes twice a day by 60 adults. After four weeks, clinicians graded 22 of the 45 people using Argireline as clearly improved, against none of the 15 on the placebo cream, and silicone skin replicas confirmed smoother skin.",
+    "de": "Die Wang-Studie von 2013 ist eine randomisierte, doppelblinde, placebokontrollierte Studie zu 10 % Argireline®, das 60 Erwachsene zweimal täglich um die Augen auftrugen. Nach vier Wochen bewerteten Ärztinnen und Ärzte 22 der 45 Personen mit Argireline als deutlich verbessert, gegenüber keiner der 15 Personen mit der Placebocreme, und Silikon-Hautabdrücke bestätigten eine glattere Haut.",
+    "nl": "De Wang-studie uit 2013 is een gerandomiseerde, dubbelblinde, placebogecontroleerde studie bij 60 volwassenen naar 10% Argireline®, twee keer per dag rond de ogen aangebracht. Na vier weken beoordeelden artsen 22 van de 45 mensen met Argireline als duidelijk verbeterd, tegenover niemand van de 15 met de placebocrème, en siliconen huidafdrukken bevestigden een gladdere huid.",
+    "fr": "L'essai Wang 2013 est une étude randomisée, en double aveugle et contrôlée contre placebo, dans laquelle 60 adultes ont appliqué de l'Argireline® à 10 % autour des yeux deux fois par jour. Après quatre semaines, les cliniciens ont jugé nettement améliorées 22 des 45 personnes sous Argireline, contre aucune des 15 personnes sous crème placebo, et des répliques cutanées en silicone ont confirmé une peau plus lisse.",
+    "es": "El ensayo de Wang de 2013 es un estudio aleatorizado, doble ciego y controlado con placebo de la Argireline® al 10 %, aplicada alrededor de los ojos dos veces al día por 60 adultos. Tras cuatro semanas, los clínicos valoraron como claramente mejoradas a 22 de las 45 personas que usaban Argireline, frente a ninguna de las 15 que usaban la crema placebo, y las réplicas cutáneas de silicona confirmaron una piel más lisa.",
+    "it": "Lo studio Wang 2013 è randomizzato, in doppio cieco e controllato con placebo: 60 adulti hanno applicato il 10% di Argireline® intorno agli occhi due volte al giorno. Dopo quattro settimane, i clinici hanno valutato come nettamente migliorate 22 delle 45 persone che usavano Argireline, contro nessuna delle 15 con la crema placebo, e le repliche cutanee in silicone hanno confermato una pelle più liscia."
+  },
+  "verdict": {
+    "en": "**Our verdict:** the strongest human evidence for Argireline®. In a double-blind trial with a true placebo, nearly half of those using 10% Argireline around the eyes were graded clearly smoother within four weeks, and no one on placebo was. The main result is a clinician's grade, backed by instrument analysis of skin replicas, so we read it alongside the instrument-measured forehead trial.",
+    "de": "**Unser Fazit:** der stärkste Beleg am Menschen für Argireline®. In einer Doppelblindstudie mit echtem Placebo wurde fast die Hälfte derer, die 10 % Argireline um die Augen auftrugen, innerhalb von vier Wochen als deutlich glatter eingestuft, mit Placebo niemand. Das Hauptergebnis ist eine ärztliche Bewertung, gestützt durch die Geräteauswertung von Hautabdrücken; deshalb lesen wir es zusammen mit der gerätegemessenen Stirnfalten-Studie.",
+    "nl": "**Onze conclusie:** het sterkste bewijs bij mensen voor Argireline®. In een dubbelblinde studie met een echte placebo werd bijna de helft van wie 10% Argireline rond de ogen gebruikte binnen vier weken als duidelijk gladder beoordeeld, en niemand met placebo. De hoofduitkomst is een beoordeling door artsen, gesteund door instrumentele analyse van huidafdrukken. Daarom lezen we deze studie naast de voorhoofdsstudie, waarin met een instrument is gemeten.",
+    "fr": "**Notre verdict :** la preuve humaine la plus solide pour l'Argireline®. Dans un essai en double aveugle avec un véritable placebo, près de la moitié des personnes appliquant 10 % d'Argireline autour des yeux ont été jugées nettement plus lisses en quatre semaines, et personne sous placebo. Le résultat principal est une évaluation clinique, étayée par l'analyse instrumentale de répliques cutanées : nous le lisons donc en parallèle de l'essai sur le front, mesuré par instrument.",
+    "es": "**Nuestro veredicto:** la evidencia en personas más sólida sobre la Argireline®. En un ensayo doble ciego con un placebo real, casi la mitad de quienes usaron un 10 % de Argireline alrededor de los ojos fue valorada con la piel claramente más lisa en cuatro semanas, y nadie con placebo lo fue. El resultado principal es la valoración de un clínico, respaldada por el análisis instrumental de réplicas cutáneas, así que lo leemos junto al ensayo sobre la frente, medido con instrumentos.",
+    "it": "**Il nostro verdetto:** la prova sull'uomo più solida per l'Argireline®. In uno studio in doppio cieco con un vero placebo, quasi la metà di chi usava il 10% di Argireline intorno agli occhi è stata valutata come nettamente più liscia entro quattro settimane; con il placebo, nessuno. Il risultato principale è una valutazione clinica, supportata dall'analisi strumentale delle repliche cutanee, per questo lo leggiamo insieme allo studio sulla fronte misurato con strumenti."
+  },
+  "seo_title": {
+    "en": "Wang 2013: Does Argireline Soften Crow's Feet?",
+    "de": "Wang 2013: Mildert Argireline Krähenfüße?",
+    "nl": "Wang 2013: verzacht Argireline kraaienpootjes?",
+    "fr": "Wang 2013 : l'Argireline atténue-t-elle les pattes d'oie ?",
+    "es": "Wang 2013: ¿suaviza la Argireline las patas de gallo?",
+    "it": "Wang 2013: l'Argireline attenua le zampe di gallina?"
+  },
+  "seo_description": {
+    "en": "In a double-blind trial of 60 adults with crow's feet, nearly half of those on 10% Argireline were graded clearly smoother in 4 weeks, none on placebo.",
+    "de": "Doppelblindstudie mit 60 Erwachsenen mit Krähenfüßen: Fast die Hälfte wurde mit 10 % Argireline in 4 Wochen als deutlich glatter bewertet, mit Placebo niemand.",
+    "nl": "Dubbelblinde studie bij 60 volwassenen met kraaienpootjes: bijna de helft met 10% Argireline werd in 4 weken duidelijk gladder beoordeeld, met placebo niemand.",
+    "fr": "Essai en double aveugle, 60 adultes aux pattes d'oie : près de la moitié sous 10 % d'Argireline jugés nettement plus lisses en 4 semaines, aucun sous placebo.",
+    "es": "Ensayo doble ciego con 60 adultos con patas de gallo: casi la mitad con Argireline al 10 % fue valorada claramente más lisa en 4 semanas; con placebo, nadie.",
+    "it": "Doppio cieco, 60 adulti con zampe di gallina: col 10% di Argireline quasi la metà è stata giudicata nettamente più liscia in 4 settimane, nessuno col placebo."
+  },
+  "figures": [
+    {
+      "n": {
+        "en": "22 of 45",
+        "de": "22 von 45",
+        "nl": "22 van 45",
+        "fr": "22 sur 45",
+        "es": "22 de 45",
+        "it": "22 su 45"
       },
-      "publisher": {
-        "@type": "Organization",
-        "@id": "https://www.skingenetix.com/#organization",
-        "name": "Skingenetix"
+      "label": {
+        "en": "Graded clearly improved after 4 weeks",
+        "de": "Nach 4 Wochen als deutlich verbessert eingestuft",
+        "nl": "Na 4 weken als duidelijk verbeterd beoordeeld",
+        "fr": "Personnes jugées nettement améliorées après 4 semaines",
+        "es": "Valoradas como claramente mejoradas tras 4 semanas",
+        "it": "Valutati nettamente migliorati dopo 4 settimane"
       },
-      "about": {
-        "@type": "Thing",
-        "name": "Acetyl hexapeptide-8",
-        "alternateName": ["Argireline", "Acetyl hexapeptide-3"]
-      },
-      "isBasedOn": {
-        "@type": "ScholarlyArticle",
-        "name": "The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study",
-        "author": "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J",
-        "datePublished": "2013",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "American Journal of Clinical Dermatology"
-        },
-        "identifier": [
-          {
-            "@type": "PropertyValue",
-            "propertyID": "PMID",
-            "value": "23417317"
-          },
-          {
-            "@type": "PropertyValue",
-            "propertyID": "DOI",
-            "value": "10.1007/s40257-013-0009-9"
-          }
-        ],
-        "sameAs": "https://pubmed.ncbi.nlm.nih.gov/23417317/"
+      "note": {
+        "en": "With 10% Argireline®, against 0 of 15 on the placebo cream: a grade of 3 or 4 on the clinicians' 0–4 scale ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "de": "Mit 10 % Argireline®, gegenüber 0 von 15 mit der Placebocreme: Stufe 3 oder 4 auf der ärztlichen Skala von 0 bis 4 ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "nl": "Met 10% Argireline®, tegenover 0 van 15 met de placebocrème: een beoordeling van 3 of 4 op de schaal van 0 tot 4 die de artsen gebruikten ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "fr": "Avec 10 % d'Argireline®, contre 0 sur 15 avec la crème placebo : une note de 3 ou 4 sur l'échelle de 0 à 4 des cliniciens ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "es": "Con un 10 % de Argireline®, frente a 0 de 15 con la crema placebo: una valoración de 3 o 4 en la escala de 0 a 4 de los clínicos ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "it": "Con il 10% di Argireline®, contro 0 su 15 con la crema placebo: una valutazione di 3 o 4 sulla scala 0–4 dei clinici ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."
       }
     },
-    "reviewedBy": {
-      "@type": "Person",
-      "name": "Esther Bodde",
-      "honorificPrefix": "Dr",
-      "jobTitle": "Cosmetic & Medical Physician"
+    {
+      "n": {
+        "en": "3 of 3",
+        "de": "3 von 3",
+        "nl": "3 van 3",
+        "fr": "3 sur 3",
+        "es": "3 de 3",
+        "it": "3 su 3"
+      },
+      "label": {
+        "en": "Roughness measures that fell (p &lt; 0.01)",
+        "de": "Gesunkene Rauheitswerte (p &lt; 0,01)",
+        "nl": "Ruwheidsmaten die daalden (p &lt; 0,01)",
+        "fr": "Mesures de rugosité en baisse (p &lt; 0,01)",
+        "es": "Medidas de rugosidad que bajaron (p &lt; 0,01)",
+        "it": "Misure di ruvidità diminuite (p &lt; 0,01)"
+      },
+      "note": {
+        "en": "Silicone replicas of the skin around the eyes showed all three roughness measures falling with Argireline®; the placebo group showed no significant change.",
+        "de": "Silikonabdrücke der Haut um die Augen zeigten mit Argireline® einen Rückgang aller drei Rauheitswerte; die Placebogruppe zeigte keine signifikante Veränderung.",
+        "nl": "Siliconen afdrukken van de huid rond de ogen lieten met Argireline® alle drie de ruwheidsmaten dalen; de placebogroep liet geen significante verandering zien.",
+        "fr": "Les répliques en silicone de la peau du contour des yeux ont montré une baisse des trois mesures de rugosité avec l'Argireline® ; le groupe placebo n'a montré aucun changement significatif.",
+        "es": "Las réplicas de silicona de la piel alrededor de los ojos mostraron que las tres medidas de rugosidad bajaban con la Argireline®; el grupo placebo no mostró cambios significativos.",
+        "it": "Le repliche in silicone della pelle intorno agli occhi hanno mostrato una diminuzione di tutte e tre le misure di ruvidità con Argireline®; il gruppo placebo non ha mostrato cambiamenti significativi."
+      }
+    },
+    {
+      "n": {
+        "en": "0",
+        "de": "0",
+        "nl": "0",
+        "fr": "0",
+        "es": "0",
+        "it": "0"
+      },
+      "label": {
+        "en": "Side effects or drop-outs",
+        "de": "Nebenwirkungen oder Studienabbrüche",
+        "nl": "Bijwerkingen of uitvallers",
+        "fr": "Effets indésirables ou abandons",
+        "es": "Efectos secundarios o abandonos",
+        "it": "Effetti collaterali o abbandoni"
+      },
+      "note": {
+        "en": "No one stopped using the cream and no one reported a side effect over the four weeks ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "de": "Niemand brach die Anwendung der Creme ab, und niemand berichtete in den vier Wochen über eine Nebenwirkung ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "nl": "Niemand stopte met de crème en niemand meldde een bijwerking in de vier weken ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "fr": "Personne n'a arrêté la crème et personne n'a signalé d'effet indésirable pendant les quatre semaines ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "es": "Nadie dejó de usar la crema y nadie notificó ningún efecto secundario durante las cuatro semanas ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/)).",
+        "it": "Nessuno ha smesso di usare la crema e nessuno ha riportato effetti collaterali nelle quattro settimane ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."
+      }
+    }
+  ],
+  "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page. Keep these nine values in that order.",
+  "glance": {
+    "heading": {
+      "en": "At a glance",
+      "de": "Auf einen Blick",
+      "nl": "In één oogopslag",
+      "fr": "En bref",
+      "es": "De un vistazo",
+      "it": "In sintesi"
+    },
+    "rows": [
+      {
+        "k": {
+          "en": "Design",
+          "de": "Design",
+          "nl": "Opzet",
+          "fr": "Méthode",
+          "es": "Diseño",
+          "it": "Disegno"
+        },
+        "v": {
+          "en": "Randomised, double-blind, placebo-controlled trial with parallel groups: three people on Argireline® for every one on placebo.",
+          "de": "Randomisierte, doppelblinde, placebokontrollierte Studie mit Parallelgruppen: drei Personen mit Argireline® auf jede Person mit Placebo.",
+          "nl": "Gerandomiseerde, dubbelblinde, placebogecontroleerde studie met parallelle groepen: drie mensen met Argireline® op elke persoon met placebo.",
+          "fr": "Essai randomisé, en double aveugle, contrôlé contre placebo, en groupes parallèles : trois personnes sous Argireline® pour une sous placebo.",
+          "es": "Ensayo aleatorizado, doble ciego y controlado con placebo, con grupos paralelos: tres personas con Argireline® por cada una con placebo.",
+          "it": "Studio randomizzato, in doppio cieco, controllato con placebo, a gruppi paralleli: tre persone con Argireline® per ognuna con placebo."
+        }
+      },
+      {
+        "k": {
+          "en": "Participants",
+          "de": "Teilnehmende",
+          "nl": "Deelnemers",
+          "fr": "Participants",
+          "es": "Participantes",
+          "it": "Partecipanti"
+        },
+        "v": {
+          "en": "60 Chinese adults aged 25 to 60 with crow's feet (50 women, 10 men): 45 on Argireline®, 15 on placebo.",
+          "de": "60 chinesische Erwachsene zwischen 25 und 60 Jahren mit Krähenfüßen (50 Frauen, 10 Männer): 45 mit Argireline®, 15 mit Placebo.",
+          "nl": "60 Chinese volwassenen van 25 tot 60 jaar met kraaienpootjes (50 vrouwen, 10 mannen): 45 met Argireline®, 15 met placebo.",
+          "fr": "60 adultes chinois de 25 à 60 ans présentant des pattes d'oie (50 femmes, 10 hommes) : 45 sous Argireline®, 15 sous placebo.",
+          "es": "60 adultos chinos de 25 a 60 años con patas de gallo (50 mujeres, 10 hombres): 45 con Argireline®, 15 con placebo.",
+          "it": "60 adulti cinesi tra 25 e 60 anni con zampe di gallina (50 donne, 10 uomini): 45 con Argireline®, 15 con placebo."
+        }
+      },
+      {
+        "k": {
+          "en": "What was applied",
+          "de": "Was aufgetragen wurde",
+          "nl": "Wat werd aangebracht",
+          "fr": "Ce qui a été appliqué",
+          "es": "Qué se aplicó",
+          "it": "Cosa è stato applicato"
+        },
+        "v": {
+          "en": "An oil-in-water emulsion with 10% Argireline® and no preservatives, applied around the eyes twice a day.",
+          "de": "Eine Öl-in-Wasser-Emulsion mit 10 % Argireline® ohne Konservierungsstoffe, zweimal täglich um die Augen aufgetragen.",
+          "nl": "Een olie-in-water-emulsie met 10% Argireline® en zonder conserveermiddelen, twee keer per dag rond de ogen aangebracht.",
+          "fr": "Une émulsion huile-dans-eau à 10 % d'Argireline®, sans conservateurs, appliquée autour des yeux deux fois par jour.",
+          "es": "Una emulsión de aceite en agua con un 10 % de Argireline® y sin conservantes, aplicada alrededor de los ojos dos veces al día.",
+          "it": "Un'emulsione olio in acqua con il 10% di Argireline® e senza conservanti, applicata intorno agli occhi due volte al giorno."
+        }
+      },
+      {
+        "k": {
+          "en": "Compared with",
+          "de": "Vergleich",
+          "nl": "Vergeleken met",
+          "fr": "Comparateur",
+          "es": "Comparado con",
+          "it": "Confronto"
+        },
+        "v": {
+          "en": "The same emulsion without Argireline® (placebo). Neither the participants nor the assessors knew who had which.",
+          "de": "Dieselbe Emulsion ohne Argireline® (Placebo). Weder die Teilnehmenden noch die Bewertenden wussten, wer was erhielt.",
+          "nl": "Dezelfde emulsie zonder Argireline® (placebo). Deelnemers noch beoordelaars wisten wie wat kreeg.",
+          "fr": "La même émulsion sans Argireline® (placebo). Ni les participants ni les évaluateurs ne savaient qui recevait quoi.",
+          "es": "La misma emulsión sin Argireline® (placebo). Ni los participantes ni los evaluadores sabían quién usaba cuál.",
+          "it": "La stessa emulsione senza Argireline® (placebo). Né i partecipanti né i valutatori sapevano chi riceveva quale crema."
+        }
+      },
+      {
+        "k": {
+          "en": "Duration",
+          "de": "Dauer",
+          "nl": "Duur",
+          "fr": "Durée",
+          "es": "Duración",
+          "it": "Durata"
+        },
+        "v": {
+          "en": "4 weeks, with assessments at the start and at the end.",
+          "de": "4 Wochen, mit Bewertungen zu Beginn und am Ende.",
+          "nl": "4 weken, met beoordelingen aan het begin en aan het eind.",
+          "fr": "4 semaines, avec des évaluations au début et à la fin.",
+          "es": "4 semanas, con evaluaciones al inicio y al final.",
+          "it": "4 settimane, con valutazioni all'inizio e alla fine."
+        }
+      },
+      {
+        "k": {
+          "en": "How it was measured",
+          "de": "Wie gemessen wurde",
+          "nl": "Hoe er gemeten werd",
+          "fr": "Mesures",
+          "es": "Cómo se midió",
+          "it": "Come è stato misurato"
+        },
+        "v": {
+          "en": "Clinicians graded overall improvement on a 0–4 scale; silicone replicas of the skin around the eyes were analysed with a Skin-Visioline VL 650 for three roughness measures (Sa, Smax, St).",
+          "de": "Ärztinnen und Ärzte bewerteten die Gesamtverbesserung auf einer Skala von 0 bis 4; Silikonabdrücke der Haut um die Augen wurden mit einem Skin-Visioline VL 650 auf drei Rauheitswerte (Sa, Smax, St) ausgewertet.",
+          "nl": "Artsen beoordeelden de algehele verbetering op een schaal van 0 tot 4; siliconen afdrukken van de huid rond de ogen werden met een Skin-Visioline VL 650 geanalyseerd op drie ruwheidsmaten (Sa, Smax, St).",
+          "fr": "Des cliniciens ont évalué l'amélioration globale sur une échelle de 0 à 4 ; des répliques en silicone de la peau du contour des yeux ont été analysées avec un Skin-Visioline VL 650 pour trois mesures de rugosité (Sa, Smax, St).",
+          "es": "Los clínicos valoraron la mejora global en una escala de 0 a 4; las réplicas de silicona de la piel alrededor de los ojos se analizaron con un Skin-Visioline VL 650 para tres medidas de rugosidad (Sa, Smax, St).",
+          "it": "I clinici hanno valutato il miglioramento complessivo su una scala 0–4; le repliche in silicone della pelle intorno agli occhi sono state analizzate con uno Skin-Visioline VL 650 per tre misure di ruvidità (Sa, Smax, St)."
+        }
+      },
+      {
+        "k": {
+          "en": "Concentration",
+          "de": "Konzentration",
+          "nl": "Concentratie",
+          "fr": "Concentration",
+          "es": "Concentración",
+          "it": "Concentrazione"
+        },
+        "v": {
+          "en": "<strong>10% Argireline®</strong>, stated in the methods. Argireline is supplied as a peptide solution, so this is 10% of that solution: the top of the maker's recommended 2–10% range.",
+          "de": "<strong>10 % Argireline®</strong>, im Methodenteil angegeben. Argireline wird als Peptidlösung geliefert; gemeint sind also 10 % dieser Lösung: das obere Ende des vom Hersteller empfohlenen Bereichs von 2–10 %.",
+          "nl": "<strong>10% Argireline®</strong>, vermeld in de methoden. Argireline wordt geleverd als peptideoplossing, dus dit is 10% van die oplossing: de bovenkant van het bereik van 2–10% dat de fabrikant aanbeveelt.",
+          "fr": "<strong>10 % d'Argireline®</strong>, indiqué dans la section méthodes. L'Argireline est fournie sous forme de solution peptidique : il s'agit donc de 10 % de cette solution, soit le haut de la fourchette de 2 à 10 % recommandée par le fabricant.",
+          "es": "<strong>10 % de Argireline®</strong>, indicado en los métodos. La Argireline se suministra como solución de péptido, así que hablamos de un 10 % de esa solución: el extremo superior del intervalo del 2 al 10 % que recomienda el fabricante.",
+          "it": "<strong>10% di Argireline®</strong>, indicato nei metodi. L'Argireline viene fornito come soluzione di peptide, quindi il 10% si riferisce a quella soluzione: il valore più alto dell'intervallo 2–10% raccomandato dal produttore."
+        }
+      },
+      {
+        "k": {
+          "en": "Funding",
+          "de": "Finanzierung",
+          "nl": "Financiering",
+          "fr": "Financement",
+          "es": "Financiación",
+          "it": "Finanziamento"
+        },
+        "v": {
+          "en": "The trial cream was supplied by McEit, which markets Argireline® in China. The authors declared no conflicts of interest.",
+          "de": "Die Studiencreme stellte McEit bereit, das Argireline® in China vertreibt. Die Autoren erklärten keine Interessenkonflikte.",
+          "nl": "De studiecrème werd geleverd door McEit, dat Argireline® in China op de markt brengt. De auteurs meldden geen belangenconflicten.",
+          "fr": "La crème de l'essai a été fournie par McEit, qui commercialise l'Argireline® en Chine. Les auteurs n'ont déclaré aucun conflit d'intérêts.",
+          "es": "La crema del ensayo la suministró McEit, que comercializa la Argireline® en China. Los autores no declararon conflictos de intereses.",
+          "it": "La crema dello studio è stata fornita da McEit, che commercializza l'Argireline® in Cina. Gli autori non hanno dichiarato conflitti di interesse."
+        }
+      },
+      {
+        "k": {
+          "en": "Our evidence grade",
+          "de": "Unsere Evidenzstufe",
+          "nl": "Onze bewijsgraad",
+          "fr": "Notre niveau de preuve",
+          "es": "Nuestro nivel de evidencia",
+          "it": "Il nostro livello di evidenza"
+        },
+        "v": {
+          "en": "A — randomised, double-blind and placebo-controlled; the main result is a clinician's grade, backed by instrument analysis of skin replicas.",
+          "de": "A — randomisiert, doppelblind und placebokontrolliert; das Hauptergebnis ist eine ärztliche Bewertung, gestützt durch die Geräteauswertung von Hautabdrücken.",
+          "nl": "A – gerandomiseerd, dubbelblind en placebogecontroleerd; de hoofduitkomst is een beoordeling door artsen, gesteund door instrumentele analyse van huidafdrukken.",
+          "fr": "A — randomisé, en double aveugle et contrôlé contre placebo ; le résultat principal est une évaluation clinique, étayée par l'analyse instrumentale de répliques cutanées.",
+          "es": "A — aleatorizado, doble ciego y controlado con placebo; el resultado principal es la valoración de un clínico, respaldada por el análisis instrumental de réplicas cutáneas.",
+          "it": "A — randomizzato, in doppio cieco e controllato con placebo; il risultato principale è una valutazione clinica, supportata dall'analisi strumentale delle repliche cutanee."
+        }
+      }
+    ]
+  },
+  "measurements": {
+    "chart": {
+      "title": {
+        "en": "People graded clearly improved after 4 weeks",
+        "de": "Personen, die nach 4 Wochen als deutlich verbessert eingestuft wurden",
+        "nl": "Mensen na 4 weken als duidelijk verbeterd beoordeeld",
+        "fr": "Personnes jugées nettement améliorées après 4 semaines",
+        "es": "Personas valoradas como claramente mejoradas tras 4 semanas",
+        "it": "Persone valutate nettamente migliorate dopo 4 settimane"
+      },
+      "subtitle": {
+        "en": "A clinician's grade of 3 or 4 on a 0–4 scale, made without knowing who had which cream. A share of people, not a change in wrinkle depth.",
+        "de": "Ärztliche Bewertung mit Stufe 3 oder 4 auf einer Skala von 0 bis 4, abgegeben ohne Wissen, wer welche Creme erhielt. Ein Anteil von Personen, keine Veränderung der Faltentiefe.",
+        "nl": "Een beoordeling van 3 of 4 op een schaal van 0 tot 4, door artsen die niet wisten wie welke crème had. Een aandeel mensen, geen verandering in rimpeldiepte.",
+        "fr": "Une note clinique de 3 ou 4 sur une échelle de 0 à 4, attribuée sans savoir qui avait quelle crème. Une proportion de personnes, pas une variation de la profondeur des rides.",
+        "es": "La valoración de un clínico de 3 o 4 en una escala de 0 a 4, hecha sin saber quién usaba cada crema. Una proporción de personas, no un cambio en la profundidad de las arrugas.",
+        "it": "Una valutazione clinica di 3 o 4 su una scala 0–4, espressa senza sapere chi usava quale crema. Una quota di persone, non una variazione della profondità delle rughe."
+      },
+      "unit": "%",
+      "signed": false,
+      "decimals": 1,
+      "domain": [0, 60],
+      "ticks": [0, 20, 40, 60],
+      "value_width": 70,
+      "series": [
+        {
+          "key": "a",
+          "color": "#3E4A52",
+          "label": {
+            "en": "Argireline® (10%): 22 of 45",
+            "de": "Argireline® (10 %): 22 von 45",
+            "nl": "Argireline® (10%): 22 van 45",
+            "fr": "Argireline® (10 %) : 22 sur 45",
+            "es": "Argireline® (10 %): 22 de 45",
+            "it": "Argireline® (10%): 22 su 45"
+          }
+        },
+        {
+          "key": "p",
+          "color": "#8A9394",
+          "quiet": true,
+          "label": {
+            "en": "Placebo: 0 of 15",
+            "de": "Placebo: 0 von 15",
+            "nl": "Placebo: 0 van 15",
+            "fr": "Placebo : 0 sur 15",
+            "es": "Placebo: 0 de 15",
+            "it": "Placebo: 0 su 15"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "a": 48.9,
+            "p": 0
+          },
+          "label": {
+            "en": "Graded 3 or 4 (clearly improved)",
+            "de": "Stufe 3 oder 4 (deutlich verbessert)",
+            "nl": "Beoordeeld met 3 of 4 (duidelijk verbeterd)",
+            "fr": "Note de 3 ou 4 (nettement amélioré)",
+            "es": "Valoración de 3 o 4 (mejora clara)",
+            "it": "Valutati 3 o 4 (nettamente migliorati)"
+          }
+        }
+      ],
+      "table_head": {
+        "en": "Measure",
+        "de": "Messgröße",
+        "nl": "Meting",
+        "fr": "Mesure",
+        "es": "Medida",
+        "it": "Misura"
+      },
+      "caption": {
+        "en": "<p>After four weeks, 22 of the 45 people using 10% Argireline® (48.9%) were graded 3 or 4 on the clinicians' 0–4 scale, against none of the 15 on the placebo cream. This is the share of people graded clearly improved, not a 48.9% reduction in wrinkles (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</p>",
+        "de": "<p>Nach vier Wochen wurden 22 der 45 Personen mit 10 % Argireline® (48,9 %) mit Stufe 3 oder 4 auf der ärztlichen Skala von 0 bis 4 bewertet, gegenüber keiner der 15 Personen mit der Placebocreme. Das ist der Anteil der Personen, die als deutlich verbessert eingestuft wurden, keine Verringerung der Falten um 48,9 % (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</p>",
+        "nl": "<p>Na vier weken werden 22 van de 45 mensen met 10% Argireline® (48,9%) beoordeeld met 3 of 4 op de schaal van 0 tot 4 van de artsen, tegenover niemand van de 15 met de placebocrème. Dit is het aandeel mensen dat als duidelijk verbeterd werd beoordeeld, geen vermindering van rimpels met 48,9% (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</p>",
+        "fr": "<p>Après quatre semaines, 22 des 45 personnes utilisant 10 % d'Argireline® (48,9 %) ont obtenu une note de 3 ou 4 sur l'échelle de 0 à 4 des cliniciens, contre aucune des 15 personnes sous crème placebo. Il s'agit de la proportion de personnes jugées nettement améliorées, et non d'une réduction de 48,9 % des rides (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</p>",
+        "es": "<p>Tras cuatro semanas, 22 de las 45 personas que usaban un 10 % de Argireline® (48,9 %) recibieron una valoración de 3 o 4 en la escala de 0 a 4 de los clínicos, frente a ninguna de las 15 que usaban la crema placebo. Es la proporción de personas valoradas como claramente mejoradas, no una reducción del 48,9 % de las arrugas (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</p>",
+        "it": "<p>Dopo quattro settimane, 22 delle 45 persone che usavano il 10% di Argireline® (48,9%) sono state valutate 3 o 4 sulla scala 0–4 dei clinici, contro nessuna delle 15 con la crema placebo. È la quota di persone valutate come nettamente migliorate, non una riduzione del 48,9% delle rughe (<a href='https://pubmed.ncbi.nlm.nih.gov/23417317/' target='_blank' rel='noopener'>Wang et al., 2013</a>).</p>"
+      }
     }
   },
+  "media": {
+    "heading": {
+      "en": "What the researchers did",
+      "de": "Wie die Forschenden vorgingen",
+      "nl": "Wat de onderzoekers deden",
+      "fr": "Ce que les chercheurs ont fait",
+      "es": "Qué hicieron los investigadores",
+      "it": "Cosa hanno fatto i ricercatori"
+    },
+    "image": "skingenetix-argireline-peptide-solution-petri-dish-study.jpg",
+    "alt": {
+      "en": "A glass petri dish of clear peptide solution on a pale grey surface",
+      "de": "Eine Petrischale aus Glas mit klarer Peptidlösung auf einer hellgrauen Fläche",
+      "nl": "Een glazen petrischaal met heldere peptideoplossing op een lichtgrijze ondergrond",
+      "fr": "Une boîte de Petri en verre contenant une solution peptidique transparente, sur une surface gris pâle",
+      "es": "Una placa de Petri de vidrio con una solución de péptido transparente sobre una superficie gris pálido",
+      "it": "Una capsula di Petri in vetro con una soluzione di peptide trasparente su una superficie grigio chiaro"
+    },
+    "body": [
+      {
+        "en": "Sixty adults with crow's feet were randomly assigned, three to one, to an emulsion containing 10% Argireline® or to the same emulsion without it. Neither the participants nor the assessors knew who had which cream, and everyone applied theirs around the eyes twice a day for four weeks.",
+        "de": "Sechzig Erwachsene mit Krähenfüßen wurden im Verhältnis drei zu eins zufällig einer Emulsion mit 10 % Argireline® oder derselben Emulsion ohne Argireline zugeteilt. Weder die Teilnehmenden noch die Bewertenden wussten, wer welche Creme erhielt, und alle trugen ihre Creme vier Wochen lang zweimal täglich um die Augen auf.",
+        "nl": "Zestig volwassenen met kraaienpootjes werden willekeurig, drie op één, ingedeeld bij een emulsie met 10% Argireline® of dezelfde emulsie zonder. Deelnemers en beoordelaars wisten niet wie welke crème had, en iedereen bracht de eigen crème vier weken lang twee keer per dag rond de ogen aan.",
+        "fr": "Soixante adultes présentant des pattes d'oie ont été répartis au hasard, trois pour un, entre une émulsion à 10 % d'Argireline® et la même émulsion sans Argireline. Ni les participants ni les évaluateurs ne savaient qui recevait quelle crème, et chacun a appliqué la sienne autour des yeux deux fois par jour pendant quatre semaines.",
+        "es": "Sesenta adultos con patas de gallo fueron asignados al azar, en proporción tres a uno, a una emulsión con un 10 % de Argireline® o a la misma emulsión sin ella. Ni los participantes ni los evaluadores sabían quién usaba cada crema, y todos aplicaron la suya alrededor de los ojos dos veces al día durante cuatro semanas.",
+        "it": "Sessanta adulti con zampe di gallina sono stati assegnati a caso, tre a uno, a un'emulsione con il 10% di Argireline® o alla stessa emulsione senza. Né i partecipanti né i valutatori sapevano chi riceveva quale crema, e tutti l'hanno applicata intorno agli occhi due volte al giorno per quattro settimane."
+      },
+      {
+        "en": "Results were measured in two ways. Clinicians graded each person's overall improvement on a five-point scale, from 0 (no change) to 4 (about 100% improved). Silicone moulds of the skin around the eyes were taken before and after, and analysed with a Skin-Visioline VL 650 imaging system for three measures of skin roughness.",
+        "de": "Die Ergebnisse wurden auf zwei Arten gemessen. Ärztinnen und Ärzte bewerteten die Gesamtverbesserung jeder Person auf einer Fünf-Punkte-Skala von 0 (keine Veränderung) bis 4 (etwa 100 % verbessert). Vorher und nachher wurden Silikonabdrücke der Haut um die Augen genommen und mit dem Bildgebungssystem Skin-Visioline VL 650 auf drei Werte der Hautrauheit ausgewertet.",
+        "nl": "De resultaten werden op twee manieren gemeten. Artsen beoordeelden de algehele verbetering van elke persoon op een vijfpuntsschaal, van 0 (geen verandering) tot 4 (ongeveer 100% verbeterd). Voor en na werden siliconen afdrukken van de huid rond de ogen gemaakt en met het beeldvormingssysteem Skin-Visioline VL 650 geanalyseerd op drie maten voor huidruwheid.",
+        "fr": "Les résultats ont été mesurés de deux façons. Des cliniciens ont évalué l'amélioration globale de chaque personne sur une échelle de cinq points, de 0 (aucun changement) à 4 (environ 100 % d'amélioration). Des moulages en silicone de la peau du contour des yeux ont été réalisés avant et après, puis analysés avec un système d'imagerie Skin-Visioline VL 650 pour trois mesures de la rugosité cutanée.",
+        "es": "Los resultados se midieron de dos formas. Los clínicos valoraron la mejora global de cada persona en una escala de cinco puntos, de 0 (sin cambios) a 4 (en torno a un 100 % de mejora). Se tomaron moldes de silicona de la piel alrededor de los ojos antes y después, y se analizaron con un sistema de imagen Skin-Visioline VL 650 para tres medidas de la rugosidad de la piel.",
+        "it": "I risultati sono stati misurati in due modi. I clinici hanno valutato il miglioramento complessivo di ogni persona su una scala a cinque punti, da 0 (nessun cambiamento) a 4 (circa il 100% di miglioramento). Prima e dopo sono stati presi calchi in silicone della pelle intorno agli occhi, analizzati con il sistema di imaging Skin-Visioline VL 650 per tre misure della ruvidità cutanea."
+      }
+    ]
+  },
+  "limits": {
+    "heading": {
+      "en": "How to read this result",
+      "de": "So lesen Sie dieses Ergebnis",
+      "nl": "Hoe je dit resultaat leest",
+      "fr": "Comment lire ce résultat",
+      "es": "Cómo leer este resultado",
+      "it": "Come leggere questo risultato"
+    },
+    "items": [
+      {
+        "en": "<strong>What the headline figure is.</strong> 48.9% is the share of people graded clearly improved: 22 of 45. It is not a 48.9% reduction in wrinkles, a misreading that has since appeared in published reviews.",
+        "de": "<strong>Was die Kernzahl bedeutet.</strong> 48,9 % ist der Anteil der Personen, die als deutlich verbessert eingestuft wurden: 22 von 45. Es ist keine Verringerung der Falten um 48,9 % – ein Missverständnis, das seither in veröffentlichten Übersichtsarbeiten auftaucht.",
+        "nl": "<strong>Wat het hoofdcijfer is.</strong> 48,9% is het aandeel mensen dat als duidelijk verbeterd werd beoordeeld: 22 van 45. Het is geen vermindering van rimpels met 48,9%, een misverstand dat sindsdien in gepubliceerde reviews is opgedoken.",
+        "fr": "<strong>Ce que représente le chiffre clé.</strong> 48,9 % est la proportion de personnes jugées nettement améliorées : 22 sur 45. Ce n'est pas une réduction de 48,9 % des rides, une erreur de lecture reprise depuis dans des revues publiées.",
+        "es": "<strong>Qué es la cifra principal.</strong> El 48,9 % es la proporción de personas valoradas como claramente mejoradas: 22 de 45. No es una reducción del 48,9 % de las arrugas, un error de lectura que desde entonces ha aparecido en revisiones publicadas.",
+        "it": "<strong>Che cosa indica il dato principale.</strong> Il 48,9% è la quota di persone valutate come nettamente migliorate: 22 su 45. Non è una riduzione del 48,9% delle rughe, un errore di lettura comparso da allora in revisioni pubblicate."
+      },
+      {
+        "en": "<strong>How the result was judged.</strong> The main result is a clinician's visual grade, made without knowing who had which cream. The skin replicas add an instrument measure: all three roughness values fell with Argireline® (p &lt; 0.01) while placebo showed no significant change. The paper compares each group before and after rather than testing the two groups against each other.",
+        "de": "<strong>Wie das Ergebnis beurteilt wurde.</strong> Das Hauptergebnis ist eine visuelle ärztliche Bewertung, abgegeben ohne Wissen, wer welche Creme erhielt. Die Hautabdrücke ergänzen eine Gerätemessung: Alle drei Rauheitswerte sanken mit Argireline® (p &lt; 0,01), während Placebo keine signifikante Veränderung zeigte. Die Arbeit vergleicht jede Gruppe vorher und nachher, statt die beiden Gruppen gegeneinander zu testen.",
+        "nl": "<strong>Hoe het resultaat werd beoordeeld.</strong> De hoofduitkomst is een visuele beoordeling door artsen die niet wisten wie welke crème had. De huidafdrukken voegen een meting met een instrument toe: alle drie de ruwheidswaarden daalden met Argireline® (p &lt; 0,01), terwijl placebo geen significante verandering liet zien. Het artikel vergelijkt elke groep voor en na, in plaats van de twee groepen tegen elkaar te toetsen.",
+        "fr": "<strong>Comment le résultat a été évalué.</strong> Le résultat principal est une évaluation visuelle par des cliniciens, faite sans savoir qui avait quelle crème. Les répliques cutanées ajoutent une mesure instrumentale : les trois valeurs de rugosité ont baissé avec l'Argireline® (p &lt; 0,01), alors que le placebo n'a montré aucun changement significatif. L'article compare chaque groupe avant et après, plutôt que de tester les deux groupes l'un contre l'autre.",
+        "es": "<strong>Cómo se valoró el resultado.</strong> El resultado principal es la valoración visual de un clínico, hecha sin saber quién usaba cada crema. Las réplicas cutáneas añaden una medida instrumental: los tres valores de rugosidad bajaron con la Argireline® (p &lt; 0,01), mientras que con placebo no hubo cambios significativos. El artículo compara cada grupo antes y después, en lugar de contrastar los dos grupos entre sí.",
+        "it": "<strong>Come è stato giudicato il risultato.</strong> Il risultato principale è una valutazione visiva dei clinici, espressa senza sapere chi usava quale crema. Le repliche cutanee aggiungono una misura strumentale: tutti e tre i valori di ruvidità sono diminuiti con Argireline® (p &lt; 0,01), mentre con il placebo non ci sono stati cambiamenti significativi. L'articolo confronta ogni gruppo prima e dopo, anziché mettere a confronto statistico i due gruppi tra loro."
+      },
+      {
+        "en": "<strong>Group sizes.</strong> Three people were given Argireline® for every one on placebo, 45 against 15, so the placebo group is small. No one in either group dropped out.",
+        "de": "<strong>Gruppengrößen.</strong> Auf jede Person mit Placebo kamen drei Personen mit Argireline®, 45 gegenüber 15; die Placebogruppe ist also klein. In keiner der beiden Gruppen brach jemand ab.",
+        "nl": "<strong>Groepsgrootte.</strong> Op elke persoon met placebo kregen drie mensen Argireline®, 45 tegenover 15, dus de placebogroep is klein. In geen van beide groepen viel iemand uit.",
+        "fr": "<strong>Taille des groupes.</strong> Trois personnes ont reçu l'Argireline® pour une sous placebo, 45 contre 15 : le groupe placebo est donc petit. Personne n'a abandonné, dans aucun des deux groupes.",
+        "es": "<strong>Tamaño de los grupos.</strong> Por cada persona con placebo, tres recibieron Argireline®, 45 frente a 15, así que el grupo placebo es pequeño. Nadie abandonó en ninguno de los dos grupos.",
+        "it": "<strong>Dimensioni dei gruppi.</strong> Per ogni persona con placebo, tre hanno ricevuto Argireline®, 45 contro 15, quindi il gruppo placebo è piccolo. Nessuno, in nessuno dei due gruppi, ha abbandonato lo studio."
+      },
+      {
+        "en": "<strong>Duration and area.</strong> Four weeks, around the eyes. The forehead has its own trial, which measured smoother skin by day 20 with an imaging instrument ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)).",
+        "de": "<strong>Dauer und Bereich.</strong> Vier Wochen, um die Augen. Für die Stirn gibt es eine eigene Studie, die bis Tag 20 mit einem Bildgebungsgerät glattere Haut maß ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)).",
+        "nl": "<strong>Duur en gebied.</strong> Vier weken, rond de ogen. Voor het voorhoofd is er een eigen studie, die op dag 20 met een beeldvormend instrument een gladdere huid mat ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)).",
+        "fr": "<strong>Durée et zone.</strong> Quatre semaines, autour des yeux. Le front a son propre essai, qui a mesuré une peau plus lisse au 20e jour avec un instrument d'imagerie ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)).",
+        "es": "<strong>Duración y zona.</strong> Cuatro semanas, alrededor de los ojos. La frente tiene su propio ensayo, que midió una piel más lisa en el día 20 con un instrumento de imagen ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)).",
+        "it": "<strong>Durata e zona.</strong> Quattro settimane, intorno agli occhi. La fronte ha un suo studio, che ha misurato con uno strumento di imaging una pelle più liscia entro il 20° giorno ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314))."
+      },
+      {
+        "en": "<strong>Who took part.</strong> 60 Chinese adults aged 25 to 60, mostly women (50 of 60), all with crow's feet at the start.",
+        "de": "<strong>Wer teilnahm.</strong> 60 chinesische Erwachsene zwischen 25 und 60 Jahren, überwiegend Frauen (50 von 60), alle zu Beginn mit Krähenfüßen.",
+        "nl": "<strong>Wie meededen.</strong> 60 Chinese volwassenen van 25 tot 60 jaar, vooral vrouwen (50 van de 60), allemaal met kraaienpootjes bij de start.",
+        "fr": "<strong>Qui a participé.</strong> 60 adultes chinois de 25 à 60 ans, surtout des femmes (50 sur 60), tous avec des pattes d'oie au départ.",
+        "es": "<strong>Quién participó.</strong> 60 adultos chinos de 25 a 60 años, en su mayoría mujeres (50 de 60), todos con patas de gallo al inicio.",
+        "it": "<strong>Chi ha partecipato.</strong> 60 adulti cinesi tra 25 e 60 anni, per lo più donne (50 su 60), tutti con zampe di gallina all'inizio dello studio."
+      },
+      {
+        "en": "<strong>Supply.</strong> McEit, which markets Argireline® in China, supplied the trial cream; the authors declared no conflicts of interest.",
+        "de": "<strong>Bereitstellung.</strong> McEit, das Argireline® in China vertreibt, stellte die Studiencreme bereit; die Autoren erklärten keine Interessenkonflikte.",
+        "nl": "<strong>Levering.</strong> McEit, dat Argireline® in China op de markt brengt, leverde de studiecrème; de auteurs meldden geen belangenconflicten.",
+        "fr": "<strong>Fourniture du produit.</strong> McEit, qui commercialise l'Argireline® en Chine, a fourni la crème de l'essai ; les auteurs n'ont déclaré aucun conflit d'intérêts.",
+        "es": "<strong>Suministro.</strong> McEit, que comercializa la Argireline® en China, suministró la crema del ensayo; los autores no declararon conflictos de intereses.",
+        "it": "<strong>Fornitura.</strong> McEit, che commercializza l'Argireline® in Cina, ha fornito la crema dello studio; gli autori non hanno dichiarato conflitti di interesse."
+      }
+    ]
+  },
+  "context": {
+    "heading": {
+      "en": "Where this trial sits in the evidence",
+      "de": "Wo sich diese Studie in der Evidenz einordnet",
+      "nl": "De plaats van deze studie in het bewijs",
+      "fr": "La place de cet essai parmi les preuves",
+      "es": "Dónde se sitúa este ensayo en la evidencia",
+      "it": "Dove si colloca questo studio tra le prove"
+    },
+    "body": [
+      {
+        "en": "Argireline® is one of the most widely used cosmetic peptides, and this is the largest controlled trial of it: 60 adults, double-blind, with a true placebo. A second controlled trial, from an academic group, measured the forehead with an imaging instrument and found roughness fell 7.4% by day 20 with 10% Argireline® while it rose 4.3% on placebo ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)). We appraise it on [its own page](https://www.skingenetix.com/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017).",
+        "de": "Argireline® gehört zu den am häufigsten verwendeten kosmetischen Peptiden, und dies ist die größte kontrollierte Studie dazu: 60 Erwachsene, doppelblind, mit echtem Placebo. Eine zweite kontrollierte Studie einer akademischen Forschungsgruppe maß die Stirn mit einem Bildgebungsgerät und fand einen Rückgang der Rauheit um 7,4 % bis Tag 20 mit 10 % Argireline®, während sie mit Placebo um 4,3 % stieg ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)). Wir bewerten sie auf [einer eigenen Seite](https://www.skingenetix.com/de/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017).",
+        "nl": "Argireline® is een van de meest gebruikte cosmetische peptiden, en dit is de grootste gecontroleerde studie ernaar: 60 volwassenen, dubbelblind, met een echte placebo. Een tweede gecontroleerde studie, van een academische groep, mat het voorhoofd met een beeldvormend instrument en vond dat de ruwheid op dag 20 met 10% Argireline® 7,4% was gedaald, terwijl die met placebo 4,3% was gestegen ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)). We beoordelen die studie op [een eigen pagina](https://www.skingenetix.com/nl/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017).",
+        "fr": "L'Argireline® est l'un des peptides cosmétiques les plus utilisés, et cet essai est le plus grand essai contrôlé mené sur elle : 60 adultes, en double aveugle, avec un véritable placebo. Un second essai contrôlé, mené par une équipe universitaire, a mesuré le front avec un instrument d'imagerie : la rugosité a baissé de 7,4 % au 20e jour avec 10 % d'Argireline®, alors qu'elle augmentait de 4,3 % sous placebo ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)). Nous l'analysons sur [sa propre page](https://www.skingenetix.com/fr/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017).",
+        "es": "La Argireline® es uno de los péptidos cosméticos más utilizados, y este es el mayor ensayo controlado realizado con ella: 60 adultos, doble ciego, con un placebo real. Un segundo ensayo controlado, de un grupo académico, midió la frente con un instrumento de imagen y encontró que la rugosidad bajó un 7,4 % en el día 20 con un 10 % de Argireline®, mientras que con placebo aumentó un 4,3 % ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)). Lo analizamos en [su propia página](https://www.skingenetix.com/es/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017).",
+        "it": "L'Argireline® è uno dei peptidi cosmetici più usati, e questo è il suo studio controllato più ampio: 60 adulti, in doppio cieco, con un vero placebo. Un secondo studio controllato, di un gruppo accademico, ha misurato la fronte con uno strumento di imaging e ha rilevato che la ruvidità è diminuita del 7,4% entro il 20° giorno con il 10% di Argireline®, mentre con il placebo è aumentata del 4,3% ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)). Lo analizziamo nella [sua pagina dedicata](https://www.skingenetix.com/it/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017)."
+      },
+      {
+        "en": "The two trials point the same way: smoother-looking skin with Argireline® than without it, within weeks, at 10%. The laboratory work on how Argireline® is thought to act, by quietening the signal that tightens expression muscles, is summarised with every study we rely on, graded, on the [Argireline® evidence hub](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research).",
+        "de": "Beide Studien weisen in dieselbe Richtung: glatter wirkende Haut mit Argireline® als ohne, innerhalb weniger Wochen, bei 10 %. Die Laborforschung dazu, wie Argireline® vermutlich wirkt (indem es das Signal dämpft, das die Mimikmuskeln anspannt), ist zusammen mit jeder Studie, auf die wir uns stützen, bewertet auf der [Evidenzseite zu Argireline®](https://www.skingenetix.com/de/pages/acetyl-hexapeptide-8-research) zusammengefasst.",
+        "nl": "De twee studies wijzen dezelfde kant op: een gladder ogende huid met Argireline® dan zonder, binnen enkele weken, bij 10%. Het laboratoriumonderzoek naar hoe Argireline® vermoedelijk werkt, door het signaal te dempen dat expressiespieren aanspant, staat samengevat bij elke studie waarop we steunen, beoordeeld, op de [onderzoekspagina over Argireline®](https://www.skingenetix.com/nl/pages/acetyl-hexapeptide-8-research).",
+        "fr": "Les deux essais vont dans le même sens : une peau d'apparence plus lisse avec l'Argireline® que sans, en quelques semaines, à 10 %. Les travaux de laboratoire sur la façon dont l'Argireline® agirait, en atténuant le signal qui contracte les muscles d'expression, sont résumés, avec chaque étude sur laquelle nous nous appuyons et son évaluation, sur la [page de recherche sur l'Argireline®](https://www.skingenetix.com/fr/pages/acetyl-hexapeptide-8-research).",
+        "es": "Los dos ensayos apuntan en la misma dirección: una piel de aspecto más liso con Argireline® que sin ella, en cuestión de semanas, al 10 %. El trabajo de laboratorio sobre cómo se cree que actúa la Argireline®, atenuando la señal que tensa los músculos de expresión, se resume junto con cada estudio en el que nos basamos, evaluado, en la [página de evidencia sobre la Argireline®](https://www.skingenetix.com/es/pages/acetyl-hexapeptide-8-research).",
+        "it": "I due studi vanno nella stessa direzione: una pelle dall'aspetto più liscio con Argireline® che senza, nel giro di qualche settimana, al 10%. La ricerca di laboratorio su come si ritiene che agisca l'Argireline®, smorzando il segnale che fa contrarre i muscoli d'espressione, è riassunta insieme a ogni studio su cui ci basiamo, con la sua valutazione, nella [pagina delle prove sull'Argireline®](https://www.skingenetix.com/it/pages/acetyl-hexapeptide-8-research)."
+      },
+      {
+        "en": "The hub sits alongside our other [ingredient research](https://www.skingenetix.com/pages/the-science), and the [Clinical studies](https://www.skingenetix.com/blogs/clinical-studies) list gathers every trial we have appraised.",
+        "de": "Die Evidenzseite steht neben unserer übrigen [Wirkstoffforschung](https://www.skingenetix.com/de/pages/the-science), und die Liste unter [Klinische Studien](https://www.skingenetix.com/de/blogs/clinical-studies) versammelt jede Studie, die wir bewertet haben.",
+        "nl": "Die pagina staat naast ons andere [onderzoek naar ingrediënten](https://www.skingenetix.com/nl/pages/the-science), en de lijst [Klinische studies](https://www.skingenetix.com/nl/blogs/clinical-studies) verzamelt elke studie die we hebben beoordeeld.",
+        "fr": "Cette page de recherche côtoie nos autres [recherches sur les ingrédients](https://www.skingenetix.com/fr/pages/the-science), et la liste des [Études cliniques](https://www.skingenetix.com/fr/blogs/clinical-studies) rassemble chaque essai que nous avons analysé.",
+        "es": "Esa página se encuentra junto al resto de nuestra [investigación sobre ingredientes](https://www.skingenetix.com/es/pages/the-science), y la lista de [Estudios clínicos](https://www.skingenetix.com/es/blogs/clinical-studies) reúne todos los ensayos que hemos analizado.",
+        "it": "Quella pagina si affianca alle nostre altre [ricerche sugli ingredienti](https://www.skingenetix.com/it/pages/the-science), e l'elenco degli [Studi clinici](https://www.skingenetix.com/it/blogs/clinical-studies) raccoglie ogni studio che abbiamo analizzato."
+      }
+    ]
+  },
+  "faq": {
+    "_note": "Questions live in scripts/study-template-build.py (FAQ_QUESTIONS) — the same four on every study page. Keep these four answers in that order.",
+    "questions": [
+      {
+        "en": "Does this trial prove the ingredient works?",
+        "de": "Beweist diese Studie, dass der Wirkstoff wirkt?",
+        "nl": "Bewijst deze studie dat het ingrediënt werkt?",
+        "fr": "Cet essai prouve-t-il que l'ingrédient fonctionne ?",
+        "es": "¿Demuestra este ensayo que el ingrediente funciona?",
+        "it": "Questo studio dimostra che l'ingrediente funziona?"
+      },
+      {
+        "en": "What concentration did the study use?",
+        "de": "Welche Konzentration verwendete die Studie?",
+        "nl": "Welke concentratie gebruikte de studie?",
+        "fr": "Quelle concentration l'étude a-t-elle utilisée ?",
+        "es": "¿Qué concentración usó el estudio?",
+        "it": "Quale concentrazione ha usato lo studio?"
+      },
+      {
+        "en": "Is the trial independent?",
+        "de": "Ist die Studie unabhängig?",
+        "nl": "Is de studie onafhankelijk?",
+        "fr": "L'essai est-il indépendant ?",
+        "es": "¿Es independiente el ensayo?",
+        "it": "Lo studio è indipendente?"
+      },
+      {
+        "en": "Do Skingenetix products reproduce this result?",
+        "de": "Erzielen Skingenetix-Produkte dasselbe Ergebnis?",
+        "nl": "Geven Skingenetix-producten hetzelfde resultaat?",
+        "fr": "Les produits Skingenetix reproduisent-ils ce résultat ?",
+        "es": "¿Reproducen los productos de Skingenetix este resultado?",
+        "it": "I prodotti Skingenetix riproducono questo risultato?"
+      }
+    ],
+    "answers": [
+      {
+        "en": "It is the strongest human evidence for Argireline®: in a double-blind trial, 22 of 45 people using 10% Argireline around the eyes were graded clearly improved after four weeks, against 0 of 15 on placebo, and skin replicas confirmed smoother skin (p &lt; 0.01). It agrees with the instrument-measured forehead trial ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)), and the rest of the evidence is on the [Argireline® evidence hub](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research).",
+        "de": "Sie ist der stärkste Beleg am Menschen für Argireline®: In einer Doppelblindstudie wurden 22 von 45 Personen, die 10 % Argireline um die Augen auftrugen, nach vier Wochen als deutlich verbessert eingestuft, gegenüber 0 von 15 mit Placebo, und Hautabdrücke bestätigten eine glattere Haut (p &lt; 0,01). Sie stimmt mit der gerätegemessenen Stirnfalten-Studie überein ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)); die übrige Evidenz finden Sie auf der [Evidenzseite zu Argireline®](https://www.skingenetix.com/de/pages/acetyl-hexapeptide-8-research).",
+        "nl": "Het is het sterkste bewijs bij mensen voor Argireline®: in een dubbelblinde studie werden 22 van 45 mensen die 10% Argireline rond de ogen gebruikten na vier weken als duidelijk verbeterd beoordeeld, tegenover 0 van 15 met placebo, en huidafdrukken bevestigden een gladdere huid (p &lt; 0,01). Het resultaat komt overeen met de voorhoofdsstudie met instrumentele metingen ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)), en het overige bewijs staat op de [onderzoekspagina over Argireline®](https://www.skingenetix.com/nl/pages/acetyl-hexapeptide-8-research).",
+        "fr": "C'est la preuve humaine la plus solide pour l'Argireline® : dans un essai en double aveugle, 22 personnes sur 45 utilisant 10 % d'Argireline autour des yeux ont été jugées nettement améliorées après quatre semaines, contre 0 sur 15 sous placebo, et les répliques cutanées ont confirmé une peau plus lisse (p &lt; 0,01). Il concorde avec l'essai sur le front mesuré par instrument ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)), et le reste des preuves figure sur la [page de recherche sur l'Argireline®](https://www.skingenetix.com/fr/pages/acetyl-hexapeptide-8-research).",
+        "es": "Es la evidencia en personas más sólida sobre la Argireline®: en un ensayo doble ciego, 22 de 45 personas que usaron un 10 % de Argireline alrededor de los ojos fueron valoradas como claramente mejoradas tras cuatro semanas, frente a 0 de 15 con placebo, y las réplicas cutáneas confirmaron una piel más lisa (p &lt; 0,01). Coincide con el ensayo sobre la frente medido con instrumentos ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)), y el resto de la evidencia está en la [página de evidencia sobre la Argireline®](https://www.skingenetix.com/es/pages/acetyl-hexapeptide-8-research).",
+        "it": "È la prova sull'uomo più solida per l'Argireline®: in uno studio in doppio cieco, 22 persone su 45 che usavano il 10% di Argireline intorno agli occhi sono state valutate come nettamente migliorate dopo quattro settimane, contro 0 su 15 con il placebo, e le repliche cutanee hanno confermato una pelle più liscia (p &lt; 0,01). Concorda con lo studio sulla fronte misurato con strumenti ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314)), e il resto delle prove è nella [pagina delle prove sull'Argireline®](https://www.skingenetix.com/it/pages/acetyl-hexapeptide-8-research)."
+      },
+      {
+        "en": "10% Argireline®, in an oil-in-water emulsion applied around the eyes twice a day. Argireline is supplied as a peptide solution, so this is 10% of that solution: the top of the 2–10% range its maker recommends.",
+        "de": "10 % Argireline®, in einer Öl-in-Wasser-Emulsion, zweimal täglich um die Augen aufgetragen. Argireline wird als Peptidlösung geliefert; gemeint sind also 10 % dieser Lösung: das obere Ende des vom Hersteller empfohlenen Bereichs von 2–10 %.",
+        "nl": "10% Argireline®, in een olie-in-water-emulsie die twee keer per dag rond de ogen werd aangebracht. Argireline wordt geleverd als peptideoplossing, dus dit is 10% van die oplossing: de bovenkant van het bereik van 2–10% dat de fabrikant aanbeveelt.",
+        "fr": "10 % d'Argireline®, dans une émulsion huile-dans-eau appliquée autour des yeux deux fois par jour. L'Argireline est fournie sous forme de solution peptidique : il s'agit donc de 10 % de cette solution, soit le haut de la fourchette de 2 à 10 % recommandée par son fabricant.",
+        "es": "Un 10 % de Argireline®, en una emulsión de aceite en agua aplicada alrededor de los ojos dos veces al día. La Argireline se suministra como solución de péptido, así que hablamos de un 10 % de esa solución: el extremo superior del intervalo del 2 al 10 % que recomienda su fabricante.",
+        "it": "Il 10% di Argireline®, in un'emulsione olio in acqua applicata intorno agli occhi due volte al giorno. L'Argireline viene fornito come soluzione di peptide, quindi il 10% si riferisce a quella soluzione: il valore più alto dell'intervallo 2–10% raccomandato dal produttore."
+      },
+      {
+        "en": "It was run by clinical researchers in China and published in the peer-reviewed American Journal of Clinical Dermatology. The trial cream was supplied by McEit, which markets Argireline® in China, and the authors declared no conflicts of interest.",
+        "de": "Sie wurde von klinischen Forschenden in China durchgeführt und in der begutachteten Fachzeitschrift American Journal of Clinical Dermatology veröffentlicht. Die Studiencreme stellte McEit bereit, das Argireline® in China vertreibt, und die Autoren erklärten keine Interessenkonflikte.",
+        "nl": "De studie werd uitgevoerd door klinische onderzoekers in China en gepubliceerd in het door vakgenoten beoordeelde tijdschrift American Journal of Clinical Dermatology. De studiecrème werd geleverd door McEit, dat Argireline® in China op de markt brengt, en de auteurs meldden geen belangenconflicten.",
+        "fr": "Il a été mené par des chercheurs cliniciens en Chine et publié dans l'American Journal of Clinical Dermatology, une revue à comité de lecture. La crème de l'essai a été fournie par McEit, qui commercialise l'Argireline® en Chine, et les auteurs n'ont déclaré aucun conflit d'intérêts.",
+        "es": "Lo realizaron investigadores clínicos en China y se publicó en la revista revisada por pares American Journal of Clinical Dermatology. La crema del ensayo la suministró McEit, que comercializa la Argireline® en China, y los autores no declararon conflictos de intereses.",
+        "it": "È stato condotto da ricercatori clinici in Cina e pubblicato sulla rivista con revisione paritaria American Journal of Clinical Dermatology. La crema dello studio è stata fornita da McEit, che commercializza l'Argireline® in Cina, e gli autori non hanno dichiarato conflitti di interesse."
+      },
+      {
+        "en": "Our [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum) lists 10% Argireline®, the level used in this trial, applied the same way, twice a day. It also contains other ingredients, so its results are not the trial's results: we cite this trial as evidence for the ingredient as studied.",
+        "de": "Unser [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/de/products/acetyl-hexapeptide-8-anti-wrinkle-serum) weist 10 % Argireline® aus, die in dieser Studie verwendete Menge, und wird ebenso angewendet: zweimal täglich. Es enthält auch weitere Inhaltsstoffe, daher sind seine Ergebnisse nicht die Studienergebnisse: Wir zitieren diese Studie als Beleg für den Wirkstoff, so wie er untersucht wurde.",
+        "nl": "Ons [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/nl/products/acetyl-hexapeptide-8-anti-wrinkle-serum) vermeldt 10% Argireline®, de hoeveelheid uit deze studie, op dezelfde manier aangebracht: twee keer per dag. Het bevat ook andere ingrediënten, dus de resultaten ervan zijn niet die van de studie: we halen deze studie aan als bewijs voor het ingrediënt zoals het is onderzocht.",
+        "fr": "Notre [sérum Acetyl Hexapeptide-8](https://www.skingenetix.com/fr/products/acetyl-hexapeptide-8-anti-wrinkle-serum) indique 10 % d'Argireline® dans sa formule, la dose utilisée dans cet essai, et s'applique de la même façon, deux fois par jour. Il contient aussi d'autres ingrédients : ses résultats ne sont donc pas ceux de l'essai. Nous citons cet essai comme preuve pour l'ingrédient tel qu'il a été étudié.",
+        "es": "Nuestro [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/es/products/acetyl-hexapeptide-8-anti-wrinkle-serum) declara un 10 % de Argireline®, el nivel usado en este ensayo, y se aplica de la misma forma, dos veces al día. También contiene otros ingredientes, así que sus resultados no son los del ensayo: citamos este ensayo como evidencia del ingrediente tal como se estudió.",
+        "it": "Il nostro [siero Acetyl Hexapeptide-8](https://www.skingenetix.com/it/products/acetyl-hexapeptide-8-anti-wrinkle-serum) dichiara il 10% di Argireline®, la dose usata in questo studio, da applicare allo stesso modo, due volte al giorno. Contiene anche altri ingredienti, quindi i suoi risultati non sono quelli dello studio: citiamo questo studio come prova per l'ingrediente così come è stato studiato."
+      }
+    ]
+  },
+  "meaning": {
+    "heading": {
+      "en": "What it means for our products",
+      "de": "Was das für unsere Produkte bedeutet",
+      "nl": "Wat dit betekent voor onze producten",
+      "fr": "Ce que cela signifie pour nos produits",
+      "es": "Qué significa para nuestros productos",
+      "it": "Cosa significa per i nostri prodotti"
+    },
+    "body": [
+      {
+        "en": "This trial is a large part of why Argireline® is in our range: in a double-blind test around the eyes, nearly half of the people using it at 10% were graded clearly smoother within four weeks, and no one on placebo was.",
+        "de": "Diese Studie ist ein wesentlicher Grund dafür, dass Argireline® in unserem Sortiment ist: In einem Doppelblindtest um die Augen wurde fast die Hälfte der Personen, die es mit 10 % anwendeten, innerhalb von vier Wochen als deutlich glatter eingestuft, mit Placebo niemand.",
+        "nl": "Deze studie is voor een groot deel de reden dat Argireline® in ons assortiment zit: in een dubbelblinde test rond de ogen werd bijna de helft van de mensen die het bij 10% gebruikten binnen vier weken als duidelijk gladder beoordeeld, en niemand met placebo.",
+        "fr": "Cet essai explique en grande partie la présence de l'Argireline® dans notre gamme : dans un test en double aveugle autour des yeux, près de la moitié des personnes qui l'utilisaient à 10 % ont été jugées nettement plus lisses en quatre semaines, et personne sous placebo.",
+        "es": "Este ensayo es buena parte de la razón por la que la Argireline® está en nuestra gama: en una prueba doble ciego alrededor de los ojos, casi la mitad de las personas que la usaron al 10 % fueron valoradas con la piel claramente más lisa en cuatro semanas, y nadie con placebo lo fue.",
+        "it": "Questo studio è in buona parte il motivo per cui l'Argireline® fa parte della nostra gamma: in un test in doppio cieco intorno agli occhi, quasi la metà delle persone che lo usavano al 10% è stata valutata come nettamente più liscia entro quattro settimane, e nessuna con il placebo."
+      },
+      {
+        "en": "Our [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum) lists the same 10% Argireline®. It also contains other ingredients, so we cite the trial for the ingredient as studied, not as a result our serum has repeated. The rest of the evidence is on the [Argireline® research hub](https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research).",
+        "de": "Unser [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/de/products/acetyl-hexapeptide-8-anti-wrinkle-serum) weist dieselben 10 % Argireline® aus. Es enthält auch weitere Inhaltsstoffe; deshalb zitieren wir die Studie für den Wirkstoff, so wie er untersucht wurde, nicht als Ergebnis, das unser Serum wiederholt hat. Die übrige Evidenz finden Sie auf der [Forschungsseite zu Argireline®](https://www.skingenetix.com/de/pages/acetyl-hexapeptide-8-research).",
+        "nl": "Ons [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/nl/products/acetyl-hexapeptide-8-anti-wrinkle-serum) vermeldt dezelfde 10% Argireline®. Het bevat ook andere ingrediënten, dus we halen de studie aan voor het ingrediënt zoals het is onderzocht, niet als een resultaat dat ons serum heeft herhaald. Het overige bewijs staat op de [onderzoekspagina over Argireline®](https://www.skingenetix.com/nl/pages/acetyl-hexapeptide-8-research).",
+        "fr": "Notre [sérum Acetyl Hexapeptide-8](https://www.skingenetix.com/fr/products/acetyl-hexapeptide-8-anti-wrinkle-serum) indique les mêmes 10 % d'Argireline®. Il contient aussi d'autres ingrédients : nous citons donc l'essai pour l'ingrédient tel qu'il a été étudié, et non comme un résultat que notre sérum aurait reproduit. Le reste des preuves figure sur la [page de recherche sur l'Argireline®](https://www.skingenetix.com/fr/pages/acetyl-hexapeptide-8-research).",
+        "es": "Nuestro [Acetyl Hexapeptide-8 Serum](https://www.skingenetix.com/es/products/acetyl-hexapeptide-8-anti-wrinkle-serum) declara el mismo 10 % de Argireline®. También contiene otros ingredientes, así que citamos el ensayo en relación con el ingrediente tal como se estudió, no como un resultado que nuestro sérum haya repetido. El resto de la evidencia está en la [página de investigación sobre la Argireline®](https://www.skingenetix.com/es/pages/acetyl-hexapeptide-8-research).",
+        "it": "Il nostro [siero Acetyl Hexapeptide-8](https://www.skingenetix.com/it/products/acetyl-hexapeptide-8-anti-wrinkle-serum) dichiara lo stesso 10% di Argireline®. Contiene anche altri ingredienti, quindi citiamo lo studio per l'ingrediente così come è stato studiato, non come un risultato che il nostro siero ha replicato. Il resto delle prove è nella [pagina di ricerca sull'Argireline®](https://www.skingenetix.com/it/pages/acetyl-hexapeptide-8-research)."
+      }
+    ],
+    "ctas": [
+      {
+        "label": {
+          "en": "Read the Argireline® evidence",
+          "de": "Evidenz zu Argireline® lesen",
+          "nl": "Lees het bewijs voor Argireline®",
+          "fr": "Lire les preuves sur l'Argireline®",
+          "es": "Leer la evidencia sobre la Argireline®",
+          "it": "Leggi le prove sull'Argireline®"
+        },
+        "href": "/pages/acetyl-hexapeptide-8-research"
+      },
+      {
+        "label": {
+          "en": "See the serum",
+          "de": "Zum Serum",
+          "nl": "Bekijk het serum",
+          "fr": "Voir le sérum",
+          "es": "Ver el sérum",
+          "it": "Scopri il siero"
+        },
+        "href": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum"
+      }
+    ]
+  },
+  "citation": {
+    "en": "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology* 2013;14(2):147–153. [doi:10.1007/s40257-013-0009-9](https://doi.org/10.1007/s40257-013-0009-9)",
+    "de": "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology* 2013;14(2):147–153. [doi:10.1007/s40257-013-0009-9](https://doi.org/10.1007/s40257-013-0009-9)",
+    "nl": "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology* 2013;14(2):147–153. [doi:10.1007/s40257-013-0009-9](https://doi.org/10.1007/s40257-013-0009-9)",
+    "fr": "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology* 2013;14(2):147–153. [doi:10.1007/s40257-013-0009-9](https://doi.org/10.1007/s40257-013-0009-9)",
+    "es": "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology* 2013;14(2):147–153. [doi:10.1007/s40257-013-0009-9](https://doi.org/10.1007/s40257-013-0009-9)",
+    "it": "Wang Y, Wang M, Xiao S, Pan P, Li P, Huo J. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. *American Journal of Clinical Dermatology* 2013;14(2):147–153. [doi:10.1007/s40257-013-0009-9](https://doi.org/10.1007/s40257-013-0009-9)"
+  },
+  "source_note": {
+    "en": "Read at source: full text, 23 September 2026. Figures on this page come from the results, Table 2 and the adverse-events report, not the abstract. Argireline® is a registered trademark of Lubrizol.",
+    "de": "An der Quelle gelesen: Volltext, 23. September 2026. Die Zahlen auf dieser Seite stammen aus dem Ergebnisteil, Tabelle 2 und dem Bericht über unerwünschte Ereignisse, nicht aus der Kurzfassung. Argireline® ist eine eingetragene Marke von Lubrizol.",
+    "nl": "Gelezen bij de bron: volledige tekst, 23 september 2026. De cijfers op deze pagina komen uit de resultaten, tabel 2 en het verslag van bijwerkingen, niet uit de samenvatting. Argireline® is een gedeponeerd handelsmerk van Lubrizol.",
+    "fr": "Lu à la source : texte intégral, 23 septembre 2026. Les chiffres de cette page proviennent des résultats, du tableau 2 et du rapport sur les effets indésirables, et non du résumé. Argireline® est une marque déposée de Lubrizol.",
+    "es": "Leído en su fuente: texto completo, 23 de septiembre de 2026. Las cifras de esta página proceden de los resultados, la tabla 2 y el informe de efectos adversos, no del resumen. Argireline® es una marca registrada de Lubrizol.",
+    "it": "Letto alla fonte: testo completo, 23 settembre 2026. I dati di questa pagina provengono dai risultati, dalla Tabella 2 e dalla segnalazione degli eventi avversi, non dall'abstract. Argireline® è un marchio registrato di Lubrizol."
+  },
+  "scholarly": {
+    "name": "The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study",
+    "identifier": "23417317",
+    "datePublished": "2013",
+    "journal": "American Journal of Clinical Dermatology"
+  },
+  "checks": ["22 of 45", "0 of 15", "p &lt; 0.01", "10%", "McEit", "Wang Y, Wang M", "Read at source"],
   "concerns": ["wrinkles", "crows_feet"]
 }

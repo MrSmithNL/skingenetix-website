@@ -1,0 +1,38 @@
+{
+  "wave": "article-clinical-study-section-headings",
+  "created": "2026-09-30",
+  "note": "The three media-with-text headings of templates/article.clinical-study.json ('What the researchers did', 'How to read this result', 'Where this trial sits in the evidence') are hardcoded English in settings that also carry a Liquid reference to the study entry, so they showed in English on every locale. Each translation is the English value with only the <h2> text replaced; the Liquid is identical. Heading words: the translated heading fields of configs/studies/*wang-2013.json (media/limits/context .heading), written by the 2026-09-30 translation pass.",
+  "resource_id": "gid://shopify/OnlineStoreThemeJsonTemplate/article.clinical-study?theme_id=184835965313",
+  "keys": [
+    "section.article.clinical-study.json.story.m.content",
+    "section.article.clinical-study.json.limits.m.content",
+    "section.article.clinical-study.json.context.m.content"
+  ],
+  "translations": {
+    "de": {
+      "section.article.clinical-study.json.story.m.content": "<h2>Wie die Forschenden vorgingen</h2><p>{{ article.metafields.study.entry.value.story.value }}</p>",
+      "section.article.clinical-study.json.limits.m.content": "<h2>So lesen Sie dieses Ergebnis</h2><ol>{{ article.metafields.study.entry.value.limits.value }}</ol>",
+      "section.article.clinical-study.json.context.m.content": "<h2>Wo sich diese Studie in der Evidenz einordnet</h2><p>{{ article.metafields.study.entry.value.context_html.value }}</p>"
+    },
+    "nl": {
+      "section.article.clinical-study.json.story.m.content": "<h2>Wat de onderzoekers deden</h2><p>{{ article.metafields.study.entry.value.story.value }}</p>",
+      "section.article.clinical-study.json.limits.m.content": "<h2>Hoe je dit resultaat leest</h2><ol>{{ article.metafields.study.entry.value.limits.value }}</ol>",
+      "section.article.clinical-study.json.context.m.content": "<h2>De plaats van deze studie in het bewijs</h2><p>{{ article.metafields.study.entry.value.context_html.value }}</p>"
+    },
+    "fr": {
+      "section.article.clinical-study.json.story.m.content": "<h2>Ce que les chercheurs ont fait</h2><p>{{ article.metafields.study.entry.value.story.value }}</p>",
+      "section.article.clinical-study.json.limits.m.content": "<h2>Comment lire ce résultat</h2><ol>{{ article.metafields.study.entry.value.limits.value }}</ol>",
+      "section.article.clinical-study.json.context.m.content": "<h2>La place de cet essai parmi les preuves</h2><p>{{ article.metafields.study.entry.value.context_html.value }}</p>"
+    },
+    "es": {
+      "section.article.clinical-study.json.story.m.content": "<h2>Qué hicieron los investigadores</h2><p>{{ article.metafields.study.entry.value.story.value }}</p>",
+      "section.article.clinical-study.json.limits.m.content": "<h2>Cómo leer este resultado</h2><ol>{{ article.metafields.study.entry.value.limits.value }}</ol>",
+      "section.article.clinical-study.json.context.m.content": "<h2>Dónde se sitúa este ensayo en la evidencia</h2><p>{{ article.metafields.study.entry.value.context_html.value }}</p>"
+    },
+    "it": {
+      "section.article.clinical-study.json.story.m.content": "<h2>Cosa hanno fatto i ricercatori</h2><p>{{ article.metafields.study.entry.value.story.value }}</p>",
+      "section.article.clinical-study.json.limits.m.content": "<h2>Come leggere questo risultato</h2><ol>{{ article.metafields.study.entry.value.limits.value }}</ol>",
+      "section.article.clinical-study.json.context.m.content": "<h2>Dove si colloca questo studio tra le prove</h2><p>{{ article.metafields.study.entry.value.context_html.value }}</p>"
+    }
+  }
+}

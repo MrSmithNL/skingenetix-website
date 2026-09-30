@@ -133,3 +133,11 @@ def test_the_draft_template_reads_the_draft_entry_and_never_the_live_one():
     s = json.dumps(stb.build_draft_article())
     assert "article.metafields.study.draft.value." in s and "study.entry" not in s
     assert stb.build_draft_article()["order"] == stb.build_article()["order"]
+
+
+def test_the_chart_heading_is_chosen_by_locale():
+    """A liquid setting is not translatable: "What the measurements showed" showed in English on /de…/it once Wang 2013
+    and Ye 2026 went live translated on this template (2026-09-30). The heading is a case on the storefront locale."""
+    liquid = stb.build_article()["sections"]["chart"]["blocks"]["c"]["settings"]["liquid"]
+    assert "{%- case request.locale.iso_code -%}" in liquid and "{%- when 'de' -%}" in liquid
+    assert "{%- else -%}What the measurements showed{%- endcase -%}" in liquid

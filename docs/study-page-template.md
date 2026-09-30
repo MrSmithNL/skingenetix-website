@@ -75,6 +75,16 @@ live article is untouched. **Go-live:** move the draft config over the live one,
 real handle, with translations), `build-clinical-studies-blog.py --apply` (the article switches to `clinical-study` and takes the new title, summary
 and SEO fields), verify ×6, then delete the `-draft` entry and clear `study.draft`.
 
+**Template words in six languages (2026-09-30).** The template's static words are translated as template resources:
+
+- `configs/translations/article-clinical-study-template-labels-2026-09-30.json`: the nine at-a-glance labels, the FAQ title and
+  questions, and the two buttons;
+- `…-section-headings-2026-09-30.json`: the story, limits and context headings, with their Liquid unchanged;
+- the chart heading sits in a liquid block, which cannot be translated, so `study-template-build.py` writes it as a
+  `request.locale.iso_code` case.
+
+Re-register the two plans if those English words ever change.
+
 **Pilot template (interim).** Wang 2013 and Ye 2026 still hold pilot content in `sections_html` with every stock field empty, so they use
 `templates/article.clinical-study-pilot.json` (banner, body, safety, JSON-LD; `study-template-build.py --article-pilot`). Under the
 stock template they showed seven empty headings and their reference twice (central audit, 2026-09-29). `build-clinical-studies-blog.py`

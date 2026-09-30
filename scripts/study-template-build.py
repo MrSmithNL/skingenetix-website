@@ -129,6 +129,15 @@ GLANCE_ROWS = [
 ]
 
 
+CHART_HEADING = ("{%- case request.locale.iso_code -%}"
+                 "{%- when 'de' -%}Was die Messungen zeigten"
+                 "{%- when 'nl' -%}Wat de metingen lieten zien"
+                 "{%- when 'fr' -%}Ce que les mesures ont montré"
+                 "{%- when 'es' -%}Qué mostraron las mediciones"
+                 "{%- when 'it' -%}Cosa hanno mostrato le misurazioni"
+                 "{%- else -%}What the measurements showed{%- endcase -%}")
+
+
 def rtp(field):
     """A prose field inside a setting that validates its top-level tags.
 
@@ -233,8 +242,10 @@ def build():
             "chart": {
                 "type": "rich-text",
                 "blocks": {
+                    # A liquid setting is not translatable, so the heading is chosen by locale here (2026-09-30:
+                    # it showed in English on /de…/it once Wang and Ye went live translated on this template).
                     "c": {"type": "liquid", "settings": {"liquid":
-                        '<h2 style="text-align:center">What the measurements showed</h2>'
+                        '<h2 style="text-align:center">' + CHART_HEADING + '</h2>'
                         + val("chart_html")}},
                 },
                 "block_order": ["c"],

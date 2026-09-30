@@ -15,7 +15,9 @@ _s.loader.exec_module(bcb)
 sys.argv = _argv
 
 STOCK = json.loads((ROOT / "configs/studies/argireline-forehead-roughness-trial-raikou-2017.json").read_text())
-PILOT = json.loads((ROOT / "configs/studies/argireline-crows-feet-trial-wang-2013.json").read_text())
+# The pilot shape (fields/intro/body/reference, seo per locale): Wang 2013 as it was before its rebuild went live on
+# 2026-09-30. No live study uses the shape now, but the builder still reads it, so the fixture keeps it tested.
+PILOT = json.loads((ROOT / "tests/fixtures/pilot-argireline-crows-feet-trial-wang-2013.json").read_text())
 
 
 def test_a_stock_template_config_maps_to_an_article():
@@ -290,3 +292,17 @@ def test_the_concern_row_is_tidied():
     assert "Fine lines" not in ul and bcb.CONCERNS["wrinkles"]["tag"] not in ul
     assert 'class="sgx-labels__topic"' in ul
     assert ul.index("sgx-labels__topic") > ul.index(bcb.CONCERNS["forehead"]["tag"])
+
+
+def test_wang_and_ye_are_on_the_stock_template_in_six_languages():
+    """Malcolm, 2026-09-30: "the pdrn and argireline clinical study articles still look terrible (old layout and
+    formatting) … fix them now and publish them". Their rebuilds (the d1 window's drafts, translated into five locales)
+    replaced the pilot configs, so the builder gives them the stock template, six-locale titles and summaries, and the
+    trial size in each summary (list-page audit C3)."""
+    for h, size in (("argireline-crows-feet-trial-wang-2013", "60 adults"), ("pdrn-vs-retinol-split-face-trial-ye-2026", "31 women")):
+        cfg = json.loads((ROOT / f"configs/studies/{h}.json").read_text())
+        assert bcb.template_suffix(cfg) == "clinical-study"
+        f = bcb.article_fields(cfg)
+        assert sorted(f) == sorted(bcb.LOCALES)
+        assert size in f["en"]["summary"] and all(len(v["summary"]) <= 160 for v in f.values())
+
