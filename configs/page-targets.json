@@ -108,5 +108,11 @@
     "secondary": ["pdrn clinical trial"],
     "type": "study",
     "hub": "/pages/pdrn-research"
+  },
+  "/blogs/clinical-studies": {
+    "primary": "skincare clinical studies",
+    "secondary": [],
+    "type": "index",
+    "_note": "Malcolm, 2026-09-30. Descriptive, no measured demand in any of the six markets (no 'clinical studies' term has any); an evidence page, not a traffic page (ADR-2026-09-30-K). 'science backed skincare' (151 US + 157 GB) is left to /pages/the-science, pending the 'peptide skincare' ownership decision. Data: configs/keyword-data/list-page-2026-09-30/."
   }
 }

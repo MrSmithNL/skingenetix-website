@@ -389,9 +389,10 @@ def ensure_blog(gql):
 
 def blog_seo():
     """The list page's search-result title and description, per locale (central audit 2026-09-30, Q7: it had no meta
-    description and a bare "Clinical studies" title). The title is the approved seo_title of the retired table page,
-    which describes the blog too; the description is built from blog_intro's approved words and claims nothing."""
-    return {"meta_title": {l: p("seo_title", l) for l in LOCALES},
+    description and a bare "Clinical studies" title). The title carries the page's keyword, "skincare clinical studies"
+    (Malcolm, 2026-09-30; configs/page-targets.json); the description is built from blog_intro's approved words and
+    claims nothing."""
+    return {"meta_title": {l: p("blog_seo_title", l) for l in LOCALES},
             "meta_description": {l: p("blog_seo_description", l) for l in LOCALES}}
 
 

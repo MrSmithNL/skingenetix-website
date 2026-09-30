@@ -232,4 +232,6 @@ def test_the_list_page_has_its_own_search_result_title_and_description():
         assert sorted(seo[key]) == sorted(bcb.LOCALES)
         assert all(0 < len(v) <= limit for v in seo[key].values()), key
     assert seo["meta_title"]["de"].endswith("| Skingenetix")
+    # Malcolm, 2026-09-30: the list page targets "skincare clinical studies" (configs/page-targets.json): once, in the title
+    assert seo["meta_title"]["en"].lower().count("skincare clinical studies") == 1
     assert "{n}" not in json.dumps(seo)                                # not the retired table page's counted text
