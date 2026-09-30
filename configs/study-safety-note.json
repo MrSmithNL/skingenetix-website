@@ -1,0 +1,33 @@
+{
+  "_about": "The 'Before you try it' note on every clinical-study article, six languages. Malcolm approved a safety note on 2026-09-30 ('yes - if this is best practice for premium skincare brands'); research: docs/research-2026-09-30-safety-notes-on-study-articles.md (Medik8, INKEY, Timeless, Murad carry one; EU claims rules allow use guidance, never 'safe'). Uploaded into the theme's locale files under skingenetix.study_safety by scripts/study-template-build.py --safety-locales; rendered by the 'safety' section of both article templates. The PDRN line shows only on PDRN studies. Voice follows the site: Sie (de), vous (fr), je (nl), tú (es), tu (it). Translations are Claude's, pending native review.",
+  "en": {
+    "title": "Before you try it",
+    "body": "This article summarises one published study. It is not medical advice, and your own results may differ. Our products are cosmetics. As with anything new for your skin, try a small amount on your inner forearm for 24 hours first, and add one new product at a time. Stop using it if you notice redness, itching, burning or swelling. If irritation continues, or if you have a skin condition, are pregnant or breastfeeding, or use prescription skin treatments, please ask your doctor or pharmacist before starting.",
+    "pdrn": "PDRN is derived from salmon. If you have a fish allergy, please speak to your doctor before using it, and try a small amount on your forearm first."
+  },
+  "de": {
+    "title": "Bevor Sie es ausprobieren",
+    "body": "Dieser Artikel fasst eine veröffentlichte Studie zusammen. Er ist keine medizinische Beratung, und Ihre eigenen Ergebnisse können abweichen. Unsere Produkte sind Kosmetika. Wie bei allem, was neu für Ihre Haut ist: Tragen Sie zuerst 24 Stunden lang eine kleine Menge auf die Innenseite Ihres Unterarms auf, und führen Sie jeweils nur ein neues Produkt ein. Beenden Sie die Anwendung, wenn Sie Rötungen, Juckreiz, Brennen oder Schwellungen bemerken. Wenn die Reizung anhält oder wenn Sie eine Hauterkrankung haben, schwanger sind oder stillen oder verschreibungspflichtige Hautbehandlungen anwenden, fragen Sie bitte vor der Anwendung Ihren Arzt oder Apotheker.",
+    "pdrn": "PDRN wird aus Lachs gewonnen. Wenn Sie eine Fischallergie haben, sprechen Sie bitte vor der Anwendung mit Ihrem Arzt und tragen Sie zuerst eine kleine Menge auf Ihren Unterarm auf."
+  },
+  "nl": {
+    "title": "Voordat je het probeert",
+    "body": "Dit artikel vat één gepubliceerde studie samen. Het is geen medisch advies, en je eigen resultaten kunnen anders zijn. Onze producten zijn cosmetica. Zoals bij alles wat nieuw is voor je huid: probeer eerst 24 uur lang een kleine hoeveelheid op de binnenkant van je onderarm, en begin met één nieuw product tegelijk. Stop met het gebruik als je roodheid, jeuk, een branderig gevoel of zwelling opmerkt. Als de irritatie aanhoudt, of als je een huidaandoening hebt, zwanger bent of borstvoeding geeft, of huidbehandelingen op recept gebruikt, vraag dan eerst je arts of apotheker om advies.",
+    "pdrn": "PDRN wordt gewonnen uit zalm. Als je een visallergie hebt, overleg dan eerst met je arts en probeer eerst een kleine hoeveelheid op je onderarm."
+  },
+  "fr": {
+    "title": "Avant d'essayer",
+    "body": "Cet article résume une étude publiée. Il ne s'agit pas d'un avis médical, et vos propres résultats peuvent différer. Nos produits sont des cosmétiques. Comme pour toute nouveauté pour votre peau, appliquez d'abord une petite quantité sur l'intérieur de l'avant-bras pendant 24 heures, et n'introduisez qu'un seul nouveau produit à la fois. Arrêtez l'utilisation si vous remarquez des rougeurs, des démangeaisons, une sensation de brûlure ou un gonflement. Si l'irritation persiste, ou si vous avez une affection cutanée, êtes enceinte ou allaitez, ou utilisez des traitements cutanés sur ordonnance, demandez conseil à votre médecin ou à votre pharmacien avant de commencer.",
+    "pdrn": "Le PDRN est issu du saumon. Si vous êtes allergique au poisson, parlez-en à votre médecin avant de l'utiliser, et appliquez d'abord une petite quantité sur votre avant-bras."
+  },
+  "es": {
+    "title": "Antes de probarlo",
+    "body": "Este artículo resume un estudio publicado. No es un consejo médico, y tus propios resultados pueden variar. Nuestros productos son cosméticos. Como con cualquier novedad para tu piel, aplica primero una pequeña cantidad en la cara interna del antebrazo durante 24 horas, e introduce un solo producto nuevo cada vez. Deja de usarlo si notas enrojecimiento, picor, ardor o hinchazón. Si la irritación continúa, o si tienes una afección de la piel, estás embarazada o en periodo de lactancia, o usas tratamientos cutáneos con receta, consulta a tu médico o farmacéutico antes de empezar.",
+    "pdrn": "El PDRN procede del salmón. Si tienes alergia al pescado, consulta a tu médico antes de usarlo y aplica primero una pequeña cantidad en el antebrazo."
+  },
+  "it": {
+    "title": "Prima di provarlo",
+    "body": "Questo articolo riassume uno studio pubblicato. Non è un consiglio medico, e i tuoi risultati possono essere diversi. I nostri prodotti sono cosmetici. Come per qualsiasi novità per la tua pelle, applica prima una piccola quantità sull'interno dell'avambraccio per 24 ore, e introduci un solo prodotto nuovo alla volta. Interrompi l'uso se noti arrossamento, prurito, bruciore o gonfiore. Se l'irritazione persiste, o se hai una condizione della pelle, sei in gravidanza o allatti, o usi trattamenti cutanei su prescrizione, chiedi consiglio al tuo medico o farmacista prima di iniziare.",
+    "pdrn": "Il PDRN è ricavato dal salmone. Se hai un'allergia al pesce, parlane con il tuo medico prima di usarlo e applica prima una piccola quantità sull'avambraccio."
+  }
+}

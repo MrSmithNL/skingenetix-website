@@ -358,6 +358,15 @@ def register(gql, rid, values_by_key):
     return len(t)
 
 
+def template_suffix(cfg):
+    """`clinical-study` for a stock-template study; `clinical-study-pilot` for the two pilots.
+
+    A pilot (Wang 2013, Ye 2026) keeps its body in `sections_html` with every stock field empty; under the
+    stock template it showed seven empty headings and its reference twice (central audit, 2026-09-29).
+    """
+    return "clinical-study" if "h1" in cfg else "clinical-study-pilot"
+
+
 def upsert_article(gql, blog_id, cfg):
     handle = cfg["handle"]
     f = article_fields(cfg)
@@ -368,7 +377,7 @@ def upsert_article(gql, blog_id, cfg):
     body = search_body(cfg)
     fields = {"title": f["en"]["title"], "summary": f["en"]["summary"], "body": body.get("en", ""),
               "author": {"name": AUTHOR}, "image": card_for(handle), "tags": [tag_for(handle)],
-              "templateSuffix": "clinical-study", "isPublished": True, "publishDate": published(cfg) + "T09:00:00Z",
+              "templateSuffix": template_suffix(cfg), "isPublished": True, "publishDate": published(cfg) + "T09:00:00Z",
               "metafields": [
                   {"namespace": "study", "key": "entry", "type": "metaobject_reference", "value": mo["id"]},
                   {"namespace": "global", "key": "title_tag", "type": "single_line_text_field", "value": f["en"]["seo_title"]},

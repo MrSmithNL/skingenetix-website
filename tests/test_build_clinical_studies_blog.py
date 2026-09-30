@@ -163,3 +163,10 @@ def test_list_page_problems_reads_one_h1_the_labels_and_the_search_form():
     bad = bcb.list_page_problems(good.replace("sgx-labels", "x").replace('value="article"', ""),
                                  "Klinische Studien", ["x-2013", "y-2016"])
     assert any("label row" in p for p in bad) and any("search" in p for p in bad) and any("y-2016" in p for p in bad)
+
+
+def test_a_pilot_study_gets_the_pilot_article_template():
+    """The stock template printed seven empty headings and the reference twice under a pilot (audit
+    2026-09-29); a re-run of this builder must not switch the pilots back to it."""
+    assert bcb.template_suffix(PILOT) == "clinical-study-pilot"
+    assert bcb.template_suffix(STOCK) == "clinical-study"

@@ -91,6 +91,25 @@ READING = [".rich-text {justify-content: center;}", ".prose {max-width: 66ch; ma
 ANSWER = READING + [".prose div > p:nth-of-type(3) {font-size: 20px; line-height: 1.5;}",
                     "@media (max-width: 699px) {.prose div > p:nth-of-type(3) {font-size: 17px;} }"]
 
+# The "Before you try it" note (Malcolm, 2026-09-30; docs/research-2026-09-30-safety-notes-on-study-articles.md).
+# Its words live in the theme's locale files under skingenetix.study_safety (six languages, one source file:
+# configs/study-safety-note.json, uploaded with --safety-locales), so the languages cannot drift. The PDRN line —
+# PDRN is salmon-derived, fish allergy — shows only on PDRN studies. Use guidance only: EU claims rules make any
+# "safe" statement a claim that needs evidence.
+SAFETY = """{%- liquid
+  assign h = metaobject.system.handle
+-%}
+<div class="study-safety">
+<h2>{{ 'skingenetix.study_safety.title' | t }}</h2>
+<p>{{ 'skingenetix.study_safety.body' | t }}</p>
+{%- if h contains 'pdrn' -%}
+<p><strong>{{ 'skingenetix.study_safety.pdrn' | t }}</strong></p>
+{%- endif -%}
+</div>"""
+SAFETY_KEYS = ("title", "body", "pdrn")
+LOCALE_FILES = {"en": "locales/en.default.json", "de": "locales/de.json", "nl": "locales/nl.json",
+                "fr": "locales/fr.json", "es": "locales/es.json", "it": "locales/it.json"}
+
 # The nine rows of "At a glance". Identical on every study page by design — a reader comparing
 # two studies should find the same nine questions answered in the same order.
 # The same four questions on every study page. Fixed here rather than per study so a reader
@@ -285,6 +304,17 @@ def build():
                              "team_avatar": "", "team_avatar_width": 50,
                              "support_hours": "", "answer_time": "", "show_contact": False},
             },
+            # ---- before you try it (safety note) ---------------------------------------------
+            # Right before the product buttons: the research placed it after the trial's side effects
+            # and limits and before the product link, as one calm block — not a footer, not a pop-up.
+            "safety": {
+                "type": "rich-text",
+                "blocks": {"n": {"type": "liquid", "settings": {"liquid": SAFETY}}},
+                "block_order": ["n"],
+                "custom_css": READING,
+                "settings": {"full_width": True, "content_width": "medium",
+                             "text_position": "start", "background": BONE},
+            },
             # ---- what it means for our products ----------------------------------------------
             "means": {
                 "type": "rich-text",
@@ -316,11 +346,12 @@ def build():
             },
         },
         "order": ["banner", "figures", "answer", "glance", "chart",
-                  "story", "limits", "context", "faq", "means", "reference"],
+                  "story", "limits", "context", "faq", "safety", "means", "reference"],
     }
 
 
 ARTICLE_TPL = "templates/article.clinical-study.json"
+PILOT_TPL = "templates/article.clinical-study-pilot.json"
 ENTRY = "article.metafields.study.entry.value."
 
 
@@ -348,11 +379,100 @@ def build_article():
     return j
 
 
+def build_pilot_article():
+    """The article template for the two PILOT studies (Wang 2013, Ye 2026) until they are rebuilt.
+
+    A pilot keeps its whole designed body in `sections_html` and leaves every stock field empty, so the
+    stock template printed seven empty section headings under it ("What the measurements showed", "How to
+    read this result", "Where this trial sits in the evidence", "Common questions about this trial", …) and
+    the reference twice — found by the central SEO/GEO/AISO audit on 2026-09-29. This template keeps only
+    what a pilot fills: the banner, the intro and body, and the JSON-LD (the body carries its own reference).
+    Assign it with the article's template suffix `clinical-study-pilot`; move the article back to
+    `clinical-study` once its study is rebuilt in the stock-template format.
+    """
+    j = build_article()
+    keep = ["banner", "answer", "safety", "reference"]
+    j["sections"] = {k: j["sections"][k] for k in keep}
+    ref = j["sections"]["reference"]
+    ref["blocks"] = {"ld": ref["blocks"]["ld"]}
+    ref["block_order"] = ["ld"]
+    j["order"] = keep
+    return j
+
+
+def merge_locale(raw, strings):
+    """A theme locale file with skingenetix.study_safety set to `strings`; everything else kept.
+
+    Shopify prepends /* … */ comments to theme JSON; they are kept as they were.
+    """
+    m = re.match(r"^\s*(/\*.*?\*/\s*)+", raw, re.S)
+    hdr = raw[:m.end()] if m else ""
+    body = json.loads(raw[len(hdr):])
+    body.setdefault("skingenetix", {})["study_safety"] = {k: strings[k] for k in SAFETY_KEYS}
+    return hdr + json.dumps(body, indent=2, ensure_ascii=False)
+
+
+def upload_safety_locales(apply):
+    """Put the six-language note into the theme's locale files (before the templates reference it)."""
+    note = json.loads((ROOT / "configs/study-safety-note.json").read_text())
+    files = []
+    for loc, filename in LOCALE_FILES.items():
+        raw = hu.read_file(filename)
+        files.append((filename, raw, merge_locale(raw, note[loc])))
+        print(f"  {filename}: study_safety ← {note[loc]['title']!r}")
+    if not apply:
+        print("  dry run — pass --apply to upload")
+        return 0
+    stamp = f"{datetime.datetime.now():%Y%m%d-%H%M%S}"
+    for filename, raw, _ in files:
+        pathlib.Path(ROOT / f"backups/{filename.replace('/', '__')}-{stamp}").write_text(raw)
+    r = hu.gql('mutation($t:ID!,$f:[OnlineStoreThemeFilesUpsertFileInput!]!){ themeFilesUpsert(themeId:$t, files:$f)'
+               '{ userErrors{field message} } }',
+               {"t": hu.THEME, "f": [{"filename": f, "body": {"type": "TEXT", "value": new}} for f, _, new in files]}
+               )["themeFilesUpsert"]
+    if r["userErrors"]:
+        sys.exit(f"  ✗ {r['userErrors']}")
+    print(f"  ✓ uploaded {len(files)} locale files (backups/*-{stamp})")
+    return 0
+
+
+def upload(filename, j, backup_name, apply):
+    """Write one article template to the live theme, backing up what was there."""
+    try:
+        raw = hu.read_file(filename)
+    except IndexError:                                       # a new template: no file yet
+        raw = ""
+    m = re.match(r"^\s*(/\*.*?\*/\s*)+", raw, re.S)
+    hdr = raw[:m.end()] if m else ""
+    out = hdr + json.dumps(j, indent=2, ensure_ascii=False)
+    print(f"  {filename}: {len(j['sections'])} sections, entry fields via {ENTRY}")
+    if not apply:
+        print("  dry run — pass --apply to upload")
+        return 0
+    if raw:
+        pathlib.Path(ROOT / f"backups/{backup_name}-{datetime.datetime.now():%Y%m%d-%H%M%S}.json").write_text(raw)
+    r = hu.gql('mutation($t:ID!,$f:[OnlineStoreThemeFilesUpsertFileInput!]!){ themeFilesUpsert(themeId:$t, files:$f)'
+               '{ userErrors{field message} } }',
+               {"t": hu.THEME, "f": [{"filename": filename, "body": {"type": "TEXT", "value": out}}]})["themeFilesUpsert"]
+    if r["userErrors"]:
+        sys.exit(f"  ✗ {r['userErrors']}")
+    print("  ✓ uploaded")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--article", action="store_true", help="build templates/article.clinical-study.json instead")
+    ap.add_argument("--article-pilot", action="store_true",
+                    help="build templates/article.clinical-study-pilot.json (the two pilot studies)")
+    ap.add_argument("--safety-locales", action="store_true",
+                    help="upload the 'Before you try it' note into the six theme locale files")
     a = ap.parse_args()
+    if a.safety_locales:
+        return upload_safety_locales(a.apply)
+    if a.article_pilot:
+        return upload(PILOT_TPL, build_pilot_article(), "article-clinical-study-pilot", a.apply)
     if a.article:
         j = build_article()
         try:
