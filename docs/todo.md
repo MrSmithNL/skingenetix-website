@@ -506,7 +506,10 @@ AI-generated illustrations and must not be presented as results. Record:
   Badenhorst. The preview template `blog.clinical-studies-preview.json` is left in place (unused, harmless) until Malcolm's card picks are
   in. Still open: card images (no models) wait on his picks; Raikou and Badenhorst titles show English on /de…/it.
   **Malcolm, 2026-09-30:** (1) card images — numbered sheets rebuilt by `scripts/study-card-pool-sheets.py` (25 sheets on the Desktop,
-  `skingenetix-study-images-{CU,ARG,PDRN,GEN}-n.png`, 2,125 refs from the pool index); waiting on his numbers. (2) **Translation waits
+  `skingenetix-study-images-{CU,ARG,PDRN,GEN}-n.png`, 2,125 refs from the pool index). ✅ **Live: first picks made by Claude on his
+  instruction** ("you make the initial choices for all the study blog images"): Badenhorst CU-013, Raikou ARG-031, Wang ARG-110, Ye
+  PDRN-213 — no models, ingredient colours; plan `configs/banners/clinical-studies-article-cards-2026-09-30.json`. He can swap any card
+  by pool number. (2) **Translation waits
   until the English articles are fully complete and optimised** (applies to Raikou and Badenhorst). (3) Label pages
   `/blogs/clinical-studies/tagged/*` **stay in Google** ("we will be adding more articles"); **grade key removed** from the band under the
   list (now "Studies by ingredient", already translated), live ×6, backup `20260930-102216`. (4) **New: tags for skin issues, skin

@@ -45,7 +45,9 @@ PREVIEW = "clinical-studies-preview"
 SPEC = ROOT / "configs/hub-upgrades/clinical-studies-blog.json"
 PREVIEW_SPEC = ROOT / "configs/hub-upgrades/clinical-studies-blog-preview.json"
 PHRASES = json.loads((ROOT / "configs/hub-i18n/clinical-studies.json").read_text())
-CARDS = json.loads((ROOT / "configs/banners/clinical-studies-article-cards-2026-09-29.json").read_text())
+# Card images: science images from the unused pool, no models or branding (Malcolm, 2026-09-29), first picks made by
+# Claude on his instruction (2026-09-30); each entry names its article's handle. The 2026-09-29 plan (model banners) is history.
+CARDS = json.loads((ROOT / "configs/banners/clinical-studies-article-cards-2026-09-30.json").read_text())
 AUTHOR = "Malcolm Smith"
 # One ingredient label per article: the card badge and the label row above the list. Article tags are not
 # translatable (the ARTICLE resource exposes title, body_html, summary_html, handle, meta_title and
@@ -212,7 +214,7 @@ def published(cfg):
 
 
 def card_for(handle):
-    img = next(i for i in CARDS["images"] if f"-{handle}-card." in i["filename"])
+    img = next(i for i in CARDS["images"] if i["handle"] == handle)
     return {"url": f"https://www.skingenetix.com/cdn/shop/files/{img['filename']}", "altText": img["alt"]}
 
 

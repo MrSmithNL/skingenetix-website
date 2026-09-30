@@ -39,7 +39,19 @@ def test_tags_dates_and_card_images():
     assert bcb.tag_for("copper-peptide-wrinkle-trial-badenhorst-2016") == "GHK-Cu"
     assert bcb.published(STOCK) == STOCK["published"] and bcb.published(PILOT) == "2026-09-22"
     c = bcb.card_for("pdrn-vs-retinol-split-face-trial-ye-2026")
-    assert c["url"].endswith("skingenetix-clinical-study-pdrn-vs-retinol-split-face-trial-ye-2026-card.jpg") and c["altText"]
+    assert c["url"].endswith("skingenetix-pdrn-dna-strands-pink-gel-macro-study-card.jpg") and c["altText"]
+
+
+def test_every_study_has_one_science_card_and_no_model_card():
+    """Malcolm, 2026-09-29/30: no model or product-branding images on the blog cards; the cards come from the
+    science-image pool, one per study, looked up by the article's handle."""
+    pool = json.loads((ROOT / "configs/banners/clinical-studies-card-image-pool-2026-09-29.json").read_text())["refs"]
+    for cfg in bcb.study_configs():
+        img = next(i for i in bcb.CARDS["images"] if i["handle"] == cfg["handle"])
+        ref = pool[img["_from"]]
+        assert not ref["has_person"] and not ref["has_product"], img["_from"]
+        assert bcb.card_for(cfg["handle"])["url"].endswith("/" + img["filename"])
+    assert len({i["filename"] for i in bcb.CARDS["images"]}) == len(bcb.CARDS["images"])
 
 
 def _section(spec, sid):

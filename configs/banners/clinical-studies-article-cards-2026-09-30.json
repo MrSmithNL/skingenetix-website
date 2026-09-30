@@ -1,0 +1,45 @@
+{
+  "created": "2026-09-30",
+  "target": "Clinical studies blog article images (card + social image), set by scripts/build-clinical-studies-blog.py --apply",
+  "decided_by": "Claude, on Malcolm's instruction (2026-09-30): \"you make the initial choices for all the study blog images\" \u2014 his standing rule for the blog is no model or product-branding images (2026-09-29). Picked from the unused science-image pool (configs/banners/clinical-studies-card-image-pool-2026-09-29.json; numbered sheets by scripts/study-card-pool-sheets.py), 'No person, no product' group only. Malcolm reviews on the live page and can swap any card by pool number.",
+  "why": "One image per study, in its ingredient's colour (copper blue, Argireline grey, PDRN rose), each a different subject, balanced dark/light across the list: Badenhorst CU-013 (lab bench, dark), Raikou ARG-031 (skin surface at cell scale for a roughness study, light), Wang ARG-110 (peptide crystals on a dark slide), Ye PDRN-213 (DNA-like strands in pink gel: PDRN is DNA fragments; the double-helix candidates were rejected because PDRN-082 crosses its strands inconsistently, which no real helix does).",
+  "note": "3:2 crops at native resolution (no upscaling), JPEG q90; ARG-110 cropped to (70, 260, 1975, 1530) to drop the slide's grey edges. Checked at full size and at card size. New filenames (Shopify suffixes, never replaces, an existing name); none prefixes another file's name.",
+  "images": [
+    {
+      "handle": "copper-peptide-wrinkle-trial-badenhorst-2016",
+      "_from": "CU-013",
+      "source": "assets/publish-ready/clinical-studies-2026-09-30/skingenetix-copper-peptide-ghk-cu-crystals-lab-bench-study-card.jpg",
+      "filename": "skingenetix-copper-peptide-ghk-cu-crystals-lab-bench-study-card.jpg",
+      "alt": "Blue copper peptide (GHK-Cu) crystals in a glass dish beside a flask and a beaker of blue solution and a microscope",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-crystals-lab-bench-study-card.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-crystals-lab-bench-study-card.jpg?v=1790756872"
+    },
+    {
+      "handle": "argireline-forehead-roughness-trial-raikou-2017",
+      "_from": "ARG-031",
+      "source": "assets/publish-ready/clinical-studies-2026-09-30/skingenetix-argireline-skin-surface-cells-illustration-study-card.jpg",
+      "filename": "skingenetix-argireline-skin-surface-cells-illustration-study-card.jpg",
+      "alt": "Illustration of the skin's outer surface at cell scale: flat, overlapping skin cells in grey",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-skin-surface-cells-illustration-study-card.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-skin-surface-cells-illustration-study-card.jpg?v=1790756873"
+    },
+    {
+      "handle": "argireline-crows-feet-trial-wang-2013",
+      "_from": "ARG-110",
+      "source": "assets/publish-ready/clinical-studies-2026-09-30/skingenetix-argireline-peptide-crystals-glass-slide-study-card.jpg",
+      "filename": "skingenetix-argireline-peptide-crystals-glass-slide-study-card.jpg",
+      "alt": "Clear peptide crystals on a dark glass slide, close up",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-peptide-crystals-glass-slide-study-card.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-peptide-crystals-glass-slide-study-card.jpg?v=1790756870"
+    },
+    {
+      "handle": "pdrn-vs-retinol-split-face-trial-ye-2026",
+      "_from": "PDRN-213",
+      "source": "assets/publish-ready/clinical-studies-2026-09-30/skingenetix-pdrn-dna-strands-pink-gel-macro-study-card.jpg",
+      "filename": "skingenetix-pdrn-dna-strands-pink-gel-macro-study-card.jpg",
+      "alt": "Clear, thread-like strands tangled in a pink gel, close up",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-dna-strands-pink-gel-macro-study-card.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-dna-strands-pink-gel-macro-study-card.jpg?v=1790756871"
+    }
+  ]
+}
