@@ -67,6 +67,14 @@ salmon-derived). Its six-language words live in **`configs/study-safety-note.jso
 safe", "hypoallergenic" or "dermatologically tested"** — under EU Reg 655/2013 each is a claim that needs evidence (a test
 refuses them). New studies get the note automatically; nothing to do per study.
 
+**English-first rebuild of a live article (2026-09-30).** A live, translated article cannot be rebuilt in place: `build-study-page.py --apply` blanks
+`sections_html` and rewrites every shared field. `--preview` writes the stock-format config (kept in `configs/studies/drafts/`, which the blog builder
+does not read) to a second entry, `<handle>-draft`, links it through the article metafield `study.draft`, and
+`templates/article.clinical-study-draft.json` (`study-template-build.py --article-draft`) renders it at `<article url>?view=clinical-study-draft`. The
+live article is untouched. **Go-live:** move the draft config over the live one, add the five locales, run `build-study-page.py <config> --apply` (the
+real handle, with translations), `build-clinical-studies-blog.py --apply` (the article switches to `clinical-study` and takes the new title, summary
+and SEO fields), verify ×6, then delete the `-draft` entry and clear `study.draft`.
+
 **Pilot template (interim).** Wang 2013 and Ye 2026 still hold pilot content in `sections_html` with every stock field empty, so they use
 `templates/article.clinical-study-pilot.json` (banner, body, safety, JSON-LD; `study-template-build.py --article-pilot`). Under the
 stock template they showed seven empty headings and their reference twice (central audit, 2026-09-29). `build-clinical-studies-blog.py`
@@ -162,14 +170,14 @@ Every localisable value is `{"en": "…", "de": "…", …}`. A locale is publis
 
 ## 8. Status (2026-09-30)
 
-| Page                     | State                                                                                                                                                                                                                                      |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Badenhorst 2016 (copper) | Live, English only. Central audit v2 (2026-09-29): 9.26, one finding (title) — retitled "Badenhorst 2016: Can a Copper Peptide Serum Reduce Wrinkles?" (2026-09-30). Translations wait until the English is complete (Malcolm, 2026-09-30) |
-| Wang 2013 (Argireline)   | Live in six languages on pilot content, **pilot template** since 2026-09-30 (no more empty sections); links to Raikou's appraisal. Audit v2 8.99. To be rebuilt on the stock template                                                      |
-| Ye 2026 (PDRN)           | Live in six languages on pilot content, **pilot template** since 2026-09-30. Audit v2 8.79 (the pilot defects, now fixed). To be rebuilt on the stock template                                                                             |
-| Raikou 2017 (Argireline) | Live in English. Audit v2 9.22; the Argireline hub now links to it (six languages, 2026-09-30)                                                                                                                                             |
-| Robinson 2005 (Matrixyl) | Planned, from the abstract (ADR-2026-09-26-L decision 3).                                                                                                                                                                                  |
-| Index                    | Replaced by the blog list `/blogs/clinical-studies` (2026-09-29)                                                                                                                                                                           |
+| Page                     | State                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Badenhorst 2016 (copper) | Live, English only. Central audit v2 (2026-09-29): 9.26, one finding (title) — retitled "Badenhorst 2016: Can a Copper Peptide Serum Reduce Wrinkles?" (2026-09-30). Translations wait until the English is complete (Malcolm, 2026-09-30)                                                                                                                                      |
+| Wang 2013 (Argireline)   | Live in six languages on the **pilot template**. **Rebuilt on the stock template as an English draft (2026-09-30)**: `configs/studies/drafts/…wang-2013.json`, preview `?view=clinical-study-draft`. Audit v2 on the preview: uncapped **9.55**; the only failures (canonical gate, S1) are preview artefacts that go-live clears. Next: Malcolm's review, translation, go-live |
+| Ye 2026 (PDRN)           | Live in six languages on the **pilot template**. **Rebuilt on the stock template as an English draft (2026-09-30)**, re-read in the full text (PMC). Preview `?view=clinical-study-draft`. Audit v2 on the preview: uncapped **9.45**; failures are preview artefacts only. Next: Malcolm's review, translation, go-live                                                        |
+| Raikou 2017 (Argireline) | Live in English. **Audit v2 2026-09-30: 9.82, all gates, 0 confirmed failures — done** (ADR-2026-09-30-Q); the Argireline hub links to it                                                                                                                                                                                                                                       |
+| Robinson 2005 (Matrixyl) | Planned, from the abstract (ADR-2026-09-26-L decision 3).                                                                                                                                                                                                                                                                                                                       |
+| Index                    | Replaced by the blog list `/blogs/clinical-studies` (2026-09-29)                                                                                                                                                                                                                                                                                                                |
 
 **Design critique cycle 1 (2026-09-26, `docs/audits/2026-09-26-study-pages-design-critique.md`): FIX, Raikou 5.60, Badenhorst
 5.49.** Fixed the same day and verified by computed style: both banner contrast failures (now 6.87:1 and 6.60:1), the key-figure

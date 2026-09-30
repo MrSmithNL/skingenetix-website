@@ -494,6 +494,12 @@ AI-generated illustrations and must not be presented as results. Record:
   `/pages/study/*` addresses 301 per locale; hub and study links moved to the new addresses in six languages; table page retired.
   ✅ **In the main menu under Discover, with an image tile** (Malcolm, 2026-09-29; live, six languages; it replaced the short-lived
   Science text line the same day).
+  🔄 **Wang 2013 and Ye 2026 rebuilt on the study template, English first (Malcolm, 2026-09-30: "improve the others to match" the
+  Badenhorst reference, enough content for SEO/GEO, then audit).** Drafts in `configs/studies/drafts/`, hidden previews at
+  `?view=clinical-study-draft` (new `--preview` route, `178ee66`); the live six-language pilots are untouched. Scrimmed banners
+  (Ye 2.77→5.06 and 2.33→5.16, Wang phone 2.48→5.02). Central audit v2 on the previews: Wang uncapped **9.55**, Ye **9.45**; the
+  only failures (canonical gate, S1 old title in the theme's schema) clear at go-live. ⏳ **Malcolm reviews the two previews**, then
+  translation (five locales) and go-live per `docs/study-page-template.md` §3.
   ⏳ Translate Badenhorst and Raikou (their /de…/it versions still show English). ⏳ Footer link and Science-page band (approved in
   ADR-2026-09-29-C, not yet done). 🛑 Main banner pick (sheets on Malcolm's Desktop). ⏳ Rebuild Wang and Ye on the new layout (they still
   show pilot content, no breadcrumb). 🛑 Ask Malcolm: three excerpts (the SEO descriptions) end "…and what it does not" — reword
