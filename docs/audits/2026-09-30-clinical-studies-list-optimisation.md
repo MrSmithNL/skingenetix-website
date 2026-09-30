@@ -86,3 +86,6 @@ search-result description.
 | Ye         | "…split-face trial of 31 women…"                                              | the d1 window's rebuild |
 
 Each change alters live, translated text, so it needs Malcolm's go.
+
+**Update, 2026-09-30 (Malcolm: yes).** Raikou's summary is live with "24 women" (meta description, JSON-LD, card). Wang and
+Ye get their sizes in the d1 rebuild. Re-audit the list once those are live.

@@ -88,6 +88,10 @@ Keyword: "skincare clinical studies" (Malcolm). Page note with the Rule 27 check
 
 **Open:**
 
-- **C3.** The card summaries should state each trial's size. This waits for Malcolm's go. Wang and Ye are in the d1 window's
-  rebuild; Raikou is this window's.
+- **C3.** The card summaries should state each trial's size. **Malcolm said yes (2026-09-30).**
+  - Raikou is **live**: "In a randomised trial of 24 women, …", in its meta description, JSON-LD and card.
+  - Badenhorst already said 40 women.
+  - Wang and Ye are in the d1 window's rebuild drafts (commit `edc6676`: "60 adults", "31 women") and reach the cards when
+    they go live.
+  - **Re-audit the list after that.** Before then, two cards still lack the size, so C3 would likely stay confirmed.
 - **C11** was contested, so it is not fixed.
