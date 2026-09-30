@@ -498,8 +498,15 @@ AI-generated illustrations and must not be presented as results. Record:
   ADR-2026-09-29-C, not yet done). 🛑 Main banner pick (sheets on Malcolm's Desktop). ⏳ Rebuild Wang and Ye on the new layout (they still
   show pilot content, no breadcrumb). 🛑 Ask Malcolm: three excerpts (the SEO descriptions) end "…and what it does not" — reword
   under the positive-results rule? (translated live text, so not changed unasked).
-  🔄 **List page redesign (Malcolm, 2026-09-29): title on the photo, ingredient labels that filter the list, study search, no model
-  images on the cards.** Built on a hidden preview, `/blogs/clinical-studies?view=clinical-studies-preview`, by
+  ✅ **List page redesign LIVE (2026-09-30, Malcolm: "please fix this" — he did not see it on the live page because it was still only on
+  the preview).** Title, intro and study search on the photo band; ingredient label row (All studies · Argireline · GHK-Cu · PDRN)
+  filtering the list; tag Copper peptide → GHK-Cu; each article body carries its study's text for search (never rendered). Applied
+  with `build-clinical-studies-blog.py --apply` + `hub-upgrade.py configs/hub-upgrades/clinical-studies-blog.json --apply` (backup
+  `hub-upgrade-templates__blog.clinical-studies.json-20260930-101157`); `--verify-live` ✓ ×6; search "retinol" → Ye 2026; /tagged/ghk-cu →
+  Badenhorst. The preview template `blog.clinical-studies-preview.json` is left in place (unused, harmless) until Malcolm's card picks are
+  in. Still open: card images (no models) wait on his picks; Raikou and Badenhorst titles show English on /de…/it.
+  History — list page redesign (Malcolm, 2026-09-29): title on the photo, ingredient labels that filter the list, study search, no model
+  images on the cards. Built on a hidden preview, `/blogs/clinical-studies?view=clinical-studies-preview`, by
   `scripts/build-clinical-studies-blog.py --preview` (`3246b4e`, `7369619`). What the preview shows:
   - The photo band carries the title, the intro and a search form scoped to the studies. main-blog's `<h1>` is hidden visually only, so
     the page keeps one H1.
