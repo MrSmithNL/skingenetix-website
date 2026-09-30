@@ -350,5 +350,6 @@
     "journal": "Journal of Cosmetic Dermatology"
   },
   "checks": ["7.4", "4.3", ".022", ".025", "10% w/w", "coded jars", "Raikou V, Varvaresou A", "Read at source"],
-  "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page. Keep these nine values in that order."
+  "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page. Keep these nine values in that order.",
+  "concerns": ["wrinkles", "forehead"]
 }

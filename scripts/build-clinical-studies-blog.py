@@ -55,6 +55,16 @@ AUTHOR = "Malcolm Smith"
 # English on /de/, and GHK-Cu is the ingredient's own name in every locale (2026-09-29).
 TAGS = {"copper": "GHK-Cu", "argireline": "Argireline", "acetyl": "Argireline", "pdrn": "PDRN",
         "matrixyl": "Matrixyl 3000", "palmitoyl": "Matrixyl 3000", "glutathione": "Glutathione"}
+# Skin-concern tags (Malcolm, 2026-09-30: "add tags for skin issues and skin solutions"; he chose this set). A study
+# config lists its keys under "concerns". The card badge is `article.tags | first`, so every concern tag carries a
+# "Skin: " / "Topic: " prefix that sorts after every ingredient name (case-sensitive or not) and the badge stays the
+# ingredient. Tags cannot be translated, so the label row shows each one through its phrase-table key per locale;
+# `solutions` is the Skin Solutions page a concern's tag page links to. Order here is the row's order.
+CONCERNS = {"wrinkles": {"tag": "Skin: Fine lines & wrinkles", "phrase": "concern_wrinkles", "solutions": "fine-lines-wrinkles"},
+            "crows_feet": {"tag": "Skin: Crow's feet & eye area", "phrase": "concern_crows_feet"},
+            "forehead": {"tag": "Skin: Forehead lines", "phrase": "concern_forehead"},
+            "retinol": {"tag": "Topic: Compared with retinol", "phrase": "concern_retinol"}}
+CONCERN_PREFIXES = ("Skin: ", "Topic: ")
 # The photo band above the list. Section Custom CSS refuses `background` / `background-image` (tested
 # 2026-09-29), and main-blog's banner is colour-only and always renders <h1>{{ blog.title }}</h1>. So the
 # visible title, the intro and the search form sit on this stock image band, and main-blog's banner text is
@@ -107,6 +117,10 @@ LABELS_STYLE = """<style>
   .sgx-labels a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: rgb(var(--text-color)); text-decoration: none; text-underline-offset: 0.45em; }
   .sgx-labels a[aria-current], .sgx-labels a:hover { text-decoration: underline 2px; }
   .sgx-labels a:focus-visible { outline: 2px solid rgb(var(--text-color)); outline-offset: 2px; }
+  .sgx-labels--concern { padding-block-start: 0; }
+  .sgx-labels__h { display: inline-flex; align-items: center; min-height: 44px; }
+  .sgx-labels__more { margin: 0; }
+  .sgx-labels__more a { font-weight: 400; text-decoration: underline 1px; }
 </style>"""
 
 
@@ -118,10 +132,34 @@ def labels_liquid():
   <ul>
     <li><a href="{{ blog.url }}"{% if current_tags == blank %} aria-current="page"{% endif %}>""" + by_locale("all_studies") + """</a></li>
     {%- for tag in sgx_labels -%}
+    {%- if tag contains "Skin: " or tag contains "Topic: " -%}{%- continue -%}{%- endif -%}
     <li><a href="{{ blog.url }}/tagged/{{ tag | handleize }}"{% if current_tags contains tag %} aria-current="page"{% endif %}>{{ tag | escape }}</a></li>
     {%- endfor -%}
   </ul>
-</nav>""")
+</nav>""" + concern_row_liquid())
+
+
+def tags_for(cfg):
+    """The ingredient first (it is the card badge), then the study's concerns in CONCERNS order."""
+    return [tag_for(cfg["handle"])] + [c["tag"] for k, c in CONCERNS.items() if k in cfg.get("concerns", [])]
+
+
+def concern_row_liquid():
+    """The second label row: each concern a study carries, worded per locale; on a concern's own tag page, a link to
+    its Skin Solutions page. Shown only when some study has a concern tag."""
+    items = "".join(
+        f'\n    {{%- if sgx_tags contains "{c["tag"]}" -%}}'
+        f'<li><a href="{{{{ blog.url }}}}/tagged/{{{{ "{c["tag"]}" | handleize }}}}"'
+        f'{{% if current_tags contains "{c["tag"]}" %}} aria-current="page"{{% endif %}}>{by_locale(c["phrase"])}</a></li>'
+        f'{{%- endif -%}}' for c in CONCERNS.values())
+    more = "".join(
+        f'\n  {{%- if current_tags contains "{c["tag"]}" -%}}<p class="sgx-labels__more"><a href="'
+        f'{{%- unless routes.root_url == "/" -%}}{{{{ routes.root_url }}}}{{%- endunless -%}}/pages/{c["solutions"]}">'
+        f'{by_locale("solutions_link")}</a></p>{{%- endif -%}}' for c in CONCERNS.values() if c.get("solutions"))
+    return ('\n{%- if sgx_tags contains "Skin: " or sgx_tags contains "Topic: " -%}'
+            f'\n<nav class="sgx-labels sgx-labels--concern" aria-label="{by_locale("concern_filter_label")}">'
+            f'\n  <ul>\n    <li class="sgx-labels__h">{by_locale("concern_row")}</li>' + items + '\n  </ul>' + more
+            + '\n</nav>\n{%- endif -%}')
 
 
 HUB_LINKS = [("label_copper", "copper-peptide-research"), ("Matrixyl 3000", "matrixyl-3000-research"),
@@ -380,7 +418,7 @@ def upsert_article(gql, blog_id, cfg):
         sys.exit(f"  ✗ {handle}: no study metaobject")
     body = search_body(cfg)
     fields = {"title": f["en"]["title"], "summary": f["en"]["summary"], "body": body.get("en", ""),
-              "author": {"name": AUTHOR}, "image": card_for(handle), "tags": [tag_for(handle)],
+              "author": {"name": AUTHOR}, "image": card_for(handle), "tags": tags_for(cfg),
               "templateSuffix": template_suffix(cfg), "isPublished": True, "publishDate": published(cfg) + "T09:00:00Z",
               "metafields": [
                   {"namespace": "study", "key": "entry", "type": "metaobject_reference", "value": mo["id"]},
@@ -404,7 +442,7 @@ def upsert_article(gql, blog_id, cfg):
                             "meta_title": {l: v["seo_title"] for l, v in f.items()},
                             "meta_description": {l: v["seo_description"] for l, v in f.items()},
                             "body_html": body})
-    print(f"  ✓ {handle}: {'updated' if ex else 'created'} · {len(f)} locale(s) · {n} translations · tag {tag_for(handle)}")
+    print(f"  ✓ {handle}: {'updated' if ex else 'created'} · {len(f)} locale(s) · {n} translations · tags {', '.join(tags_for(cfg))}")
     return aid
 
 

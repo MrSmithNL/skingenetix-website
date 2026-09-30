@@ -513,7 +513,14 @@ AI-generated illustrations and must not be presented as results. Record:
   until the English articles are fully complete and optimised** (applies to Raikou and Badenhorst). (3) Label pages
   `/blogs/clinical-studies/tagged/*` **stay in Google** ("we will be adding more articles"); **grade key removed** from the band under the
   list (now "Studies by ingredient", already translated), live ×6, backup `20260930-102216`. (4) **New: tags for skin issues, skin
-  solutions and other relevant keywords** — plan in progress.
+  solutions and other relevant keywords** — ✅ **live 2026-09-30** (Malcolm chose the proposed set): a second label row "Skin concern" —
+  Fine lines & wrinkles (all four), Crow's feet & eye area (Wang, Badenhorst, Ye), Forehead lines (Raikou), Compared with retinol (Ye),
+  chosen from the 2026-09-30 keyword pull (`pdrn vs retinol` ~330/mo, `argireline eye cream` 157, `best serum for forehead lines` 78).
+  Tags carry a `Skin:` / `Topic:` prefix so the card badge (`article.tags | first`) stays the ingredient; the row shows each label per
+  locale from the phrase table (store wording reused: "Hautanliegen", "Feine Linien & Falten"…); the wrinkles page links to the Fine Lines &
+  Wrinkles Skin Solutions page. A study lists its keys under `concerns` in its config. Verified live: badges unchanged, every tag page
+  lists the right studies, German translated, no Liquid error. ⏳ **For Malcolm:** tag pages all share the title "Clinical studies"
+  (the theme's `<title>` ignores the tag); giving each its concern needs a core-layout edit — his OK first.
   History — list page redesign (Malcolm, 2026-09-29): title on the photo, ingredient labels that filter the list, study search, no model
   images on the cards. Built on a hidden preview, `/blogs/clinical-studies?view=clinical-studies-preview`, by
   `scripts/build-clinical-studies-blog.py --preview` (`3246b4e`, `7369619`). What the preview shows:

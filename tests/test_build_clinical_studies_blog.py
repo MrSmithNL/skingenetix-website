@@ -77,6 +77,35 @@ def test_the_evidence_band_has_no_grade_key():
     assert "Studien nach Wirkstoff" in band["de"] and "research-page" not in band["en"]
 
 
+# ── skin-concern tags (Malcolm, 2026-09-30: "add tags for skin issues and skin solutions"; chose the proposed set) ──
+
+def test_concern_tags_follow_the_ingredient_tag_so_the_card_badge_stays_the_ingredient():
+    """The card badge is `article.tags | first` (stock blog-post-card). Concern tags carry a "Skin: " / "Topic: " prefix
+    that sorts after every ingredient name, case-sensitive or not, so the badge is the ingredient whichever order
+    Shopify keeps the tags in."""
+    ye = next(c for c in bcb.study_configs() if c["handle"] == "pdrn-vs-retinol-split-face-trial-ye-2026")
+    assert bcb.tags_for(ye) == ["PDRN", "Skin: Fine lines & wrinkles", "Skin: Crow's feet & eye area", "Topic: Compared with retinol"]
+    ingredients = set(bcb.TAGS.values())
+    for c in bcb.CONCERNS.values():
+        for i in ingredients:
+            assert c["tag"] > i and c["tag"].lower() > i.lower(), (c["tag"], i)
+
+
+def test_every_study_names_its_concerns_from_the_vocabulary():
+    for cfg in bcb.study_configs():
+        assert cfg.get("concerns") and set(cfg["concerns"]) <= set(bcb.CONCERNS), cfg["handle"]
+        assert bcb.tags_for(cfg)[0] == bcb.tag_for(cfg["handle"])
+
+
+def test_the_concern_row_is_translated_and_the_ingredient_row_skips_concern_tags():
+    liq = bcb.labels_liquid()
+    assert "Krähenfüße & Augenbereich" in liq and "Hautanliegen" in liq and "Stirnfalten" in liq
+    assert "Skin: " in liq and "{%- continue -%}" in liq                 # the ingredient loop skips concern tags
+    assert "/pages/fine-lines-wrinkles" in liq and "Hautlösungen: Feine Linien & Falten" in liq
+    for c in bcb.CONCERNS.values():                                        # a concern shows only when a study has it
+        assert f'sgx_tags contains "{c["tag"]}"' in liq
+
+
 def test_the_label_row_filters_the_list_by_ingredient():
     """Malcolm, 2026-09-29: labels show and the list sorts by label, as on the Hairgenetix blog (supersedes "tags off
     until ~12 articles"). main-blog's own row (show_tags) reads blog.all_tags, which this store's storefront returns
