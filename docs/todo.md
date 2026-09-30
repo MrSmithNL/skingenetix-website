@@ -494,7 +494,19 @@ AI-generated illustrations and must not be presented as results. Record:
   `/pages/study/*` addresses 301 per locale; hub and study links moved to the new addresses in six languages; table page retired.
   ✅ **In the main menu under Discover, with an image tile** (Malcolm, 2026-09-29; live, six languages; it replaced the short-lived
   Science text line the same day).
-  ✅ **Wang 2013 and Ye 2026 LIVE in the new layout, six languages (2026-09-30, Malcolm: "fix them now and publish them").**
+  🔄 **Four NEW study articles, English drafts on the hidden preview blog (2026-09-30, Malcolm: "work on writing and creating the
+  next 4 clinical trial articles based on the most value/volume keywords").** One qualifying human trial per remaining family, by
+  observed demand: Yogya 2022 (`pdrn microneedling`), Tadini 2015 (`acetyl hexapeptide-3`; it measured firmness, not wrinkles),
+  Robinson 2005 (`palmitoyl pentapeptide-4`; lines at the paper's p ≤ 0.10 only), Watanabe 2014 (`glutathione brighten skin`).
+  Previews: `/blogs/clinical-studies-drafts/<handle>` (noindexed; route in `docs/study-page-template.md` §3). Commits `552789b`,
+  `75f8f55`. Copper has no second qualifying trial (null, uncontrolled, mixtures, or abstract-only review).
+  - ⏳ Central audits of the four previews (the canonical and noindex gates are preview artefacts; read the uncapped score).
+  - ⏳ **For Malcolm:** review the four previews; decide on launching the PDRN microneedling stamp set (ACTIVE in Shopify but not
+    on the online store; Yogya is its evidence page); Robinson's p ≤ 0.10 footing.
+  - ⏳ Go-live after his OK: five-locale translations, card images (pool), `build-study-page.py --apply`, list builder `--apply`
+    (the list owner's script; coordinate), verify ×6, delete the draft articles, re-audit live. Concern tags for firmness and
+    brightening would be new keys in the list builder's `CONCERNS` (list owner's call).
+    ✅ **Wang 2013 and Ye 2026 LIVE in the new layout, six languages (2026-09-30, Malcolm: "fix them now and publish them").**
   - The d1 drafts were translated into five locales by one agent per language. Every string was checked for numbers, markup,
     URLs and SEO lengths. Ye's fr/es answer was tightened to the builder's 75-word window.
   - Published in this order: `build-study-page.py --apply`, Wang then Ye, then `build-clinical-studies-blog.py --apply`. That
