@@ -15,7 +15,7 @@
     "en": "A randomised, double-blind, split-face trial of 2% oxidised glutathione against placebo in 30 women — read at source, appraised in full."
   },
   "banner": "skingenetix-glutathione-lotion-petri-dish-study-banner-desktop",
-  "banner_mobile": "skingenetix-glutathione-lotion-petri-dish-study-banner-mobile",
+  "banner_mobile": "skingenetix-glutathione-lotion-dish-study-banner-phone",
   "byline": {
     "en": "Appraised by the Skingenetix research team. Medically reviewed by Dr Esther Bodde, Cosmetic & Medical Physician. Last reviewed 30 September 2026."
   },
@@ -60,7 +60,7 @@
         "en": "Saw brighter-looking skin"
       },
       "note": {
-        "en": "Of the women rated the glutathione side of their face moderately brighter at week 10, against 23% for the placebo side. The investigator's ratings: 67% against 3%."
+        "en": "The women's own ratings at week 10: the glutathione side moderately brighter for 77%, the placebo side for 23%. The investigator's ratings: 67% against 3%."
       }
     },
     {
@@ -158,28 +158,28 @@
   "measurements": {
     "chart": {
       "title": {
-        "en": "Women who saw moderately brighter-looking skin"
+        "en": "Skin pigment at the start and at week 10"
       },
       "subtitle": {
-        "en": "Share of the 30 women who rated each side of their face 2 (\"moderate change\") on the trial's scale, without knowing which side had glutathione."
+        "en": "Melanin index on each cheekbone, read by a Mexameter probe. Lower means less pigment: skin that looks brighter."
       },
-      "unit": "%",
+      "unit": "",
       "signed": false,
       "decimals": 1,
-      "domain": [0, 100],
-      "ticks": [0, 25, 50, 75, 100],
+      "domain": [0, 300],
+      "ticks": [0, 100, 200, 300],
       "value_width": 62,
       "series": [
         {
           "key": "gs",
-          "color": "#8A6914",
+          "color": "#836310",
           "label": {
-            "en": "2% GSSG side"
+            "en": "2% glutathione side"
           }
         },
         {
           "key": "pl",
-          "color": "#9AA3A4",
+          "color": "#8A9394",
           "quiet": true,
           "label": {
             "en": "Placebo side"
@@ -189,26 +189,17 @@
       "rows": [
         {
           "values": {
-            "gs": 13.3,
-            "pl": 0
+            "gs": 272.8,
+            "pl": 274.1
           },
           "label": {
-            "en": "Week 6"
+            "en": "Start"
           }
         },
         {
           "values": {
-            "gs": 33.3,
-            "pl": 0
-          },
-          "label": {
-            "en": "Week 8"
-          }
-        },
-        {
-          "values": {
-            "gs": 76.7,
-            "pl": 23.3
+            "gs": 243.5,
+            "pl": 265.5
           },
           "label": {
             "en": "Week 10"
@@ -216,12 +207,13 @@
         }
       ],
       "table_head": {
-        "en": "Rated by the women"
+        "en": "Melanin index"
       },
       "caption": {
-        "en": "<p>A score of 2 was the authors' mark of a visible benefit. The investigator's ratings rose the same way: 13.3%, 36.7% and 66.7% on the glutathione side, against 0%, 0% and 3.3% on the placebo side. The ratings are reported as shares of women; the statistics are on the instrument reading, which was lower on the glutathione side every week (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>, Table 3 and Figure 2).</p>"
+        "en": "<p>The two sides started level, 272.8 and 274.1. By week 10 the glutathione side had fallen 10.7% and the placebo side 3.1%; the difference was significant from week 1 and at p &lt; 0.001 from week 3 onwards (<a href='https://pubmed.ncbi.nlm.nih.gov/25378941/' target='_blank' rel='noopener'>Watanabe et al., 2014</a>, Figure 2). The women's own ratings are in the key figures above.</p>"
       }
-    }
+    },
+    "_chart_note": "2026-09-30 design critique W3: the chart now plots the measured result (melanin index, Mexameter), not the women's ratings, which carry no statistics; bars start at 0, so the difference is shown at its true size."
   },
   "media": {
     "heading": {

@@ -57,10 +57,10 @@
         "en": "Week 8"
       },
       "label": {
-        "en": "Fine lines and wrinkles ahead of placebo"
+        "en": "Fine lines ahead of placebo (p ≤ 0.10)"
       },
       "note": {
-        "en": "Image analysis and expert graders both favoured the peptide side at weeks 8 and 12, by the paper's statistical test ([Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/))."
+        "en": "Image analysis and expert graders both favoured the peptide side at weeks 8 and 12, by the paper's own test (p ≤ 0.10); by the stricter p ≤ 0.05, texture at week 4 and age spots at week 12 were significant ([Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/))."
       }
     },
     {
@@ -168,7 +168,7 @@
       "signed": false,
       "domain": [0, 3],
       "ticks": [0, 1, 2, 3],
-      "value_width": 110,
+      "value_width": 64,
       "series": [
         {
           "key": "p",
@@ -179,10 +179,9 @@
         },
         {
           "key": "s",
-          "color": "#8A9394",
-          "quiet": true,
+          "color": "#4A9396",
           "label": {
-            "en": "By the usual test (p ≤ 0.05)"
+            "en": "By the stricter test (p ≤ 0.05)"
           }
         }
       ],
@@ -194,10 +193,10 @@
           },
           "labels": {
             "p": {
-              "en": "2 of 3 (weeks 4, 8)"
+              "en": "2 of 3"
             },
             "s": {
-              "en": "1 of 3 (week 4)"
+              "en": "1 of 3"
             }
           },
           "label": {
@@ -211,7 +210,7 @@
           },
           "labels": {
             "p": {
-              "en": "2 of 3 (weeks 8, 12)"
+              "en": "2 of 3"
             },
             "s": {
               "en": "0 of 3"
@@ -228,7 +227,7 @@
           },
           "labels": {
             "p": {
-              "en": "2 of 3 (weeks 8, 12)"
+              "en": "2 of 3"
             },
             "s": {
               "en": "0 of 3"
@@ -245,10 +244,10 @@
           },
           "labels": {
             "p": {
-              "en": "1 of 3 (week 12)"
+              "en": "1 of 3"
             },
             "s": {
-              "en": "1 of 3 (week 12)"
+              "en": "1 of 3"
             }
           },
           "label": {
@@ -262,7 +261,7 @@
           },
           "labels": {
             "p": {
-              "en": "1 of 3 (week 12)"
+              "en": "1 of 3"
             },
             "s": {
               "en": "0 of 3"
@@ -285,9 +284,9 @@
     "heading": {
       "en": "What the researchers did"
     },
-    "image": "skingenetix-palmitoyl-pentapeptide-fibroblast-signal-skin-diagram.jpg",
+    "image": "skingenetix-palmitoyl-pentapeptide-moisturiser-cream-peak-study.jpg",
     "alt": {
-      "en": "Illustrated block of skin in which a glowing signal reaches a collagen-making cell among teal fibres"
+      "en": "A soft peak of white moisturiser on a deep teal surface"
     },
     "body": [
       {
