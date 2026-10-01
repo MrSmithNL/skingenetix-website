@@ -110,9 +110,18 @@ assigns the pilot template to pilot configs; switch an article back to `clinical
   (p = 0.0044); the depth difference did not reach significance"). No "does not show" or "failed" framing.
 - **No page for a null study.** Henseler 2023 was dropped from tier 1 for this reason.
 - **Every figure read at source**, from the tables and methods, not the abstract. The reference section states the date and which parts were
-  read. **Exception:** Robinson 2005 is built from the abstract, PubMed record and the CIR 2012 summary. Its full text is paywalled, so its key
-  figures are design facts, it has no chart, and its source note says so.
+  read. **Exception:** Robinson 2005 (built 2026-09-30) rests on the abstract, the PubMed record and four secondary reports (CIR 2012 and 2024,
+  Abu Samah 2011, Aldag 2016), because its full text is paywalled. It has no effect sizes, so its chart counts check-ups ahead of placebo, and
+  its source note says what was read.
 - **The concentration row is mandatory**, even when the paper never gives one.
+- **Key figures are results** (design critique, 2026-10-01): a magnitude with its comparator ("−14%, against −8% with saline"), not a time,
+  a p-value, a count of women or a word. Use a time or a count only when the paper reports no magnitude, and then say so in the label.
+- **The comparator is grey `#8A9394`** (3.14:1 on white) on every chart, and grey means the comparator only. A second series of the active
+  takes a tint of the ingredient accent that clears 3:1 (Robinson: `#4A9396`). `#9AA3A4` fails at 2.58:1.
+- **Images make claims.** Check every science image against the ingredient register's "avoid" list like copy. A diagram of droplets reaching the
+  dermis was a blocker on Robinson (penetration claim). Prefer photographs of what the study used.
+- **Wording follows the register, not the keyword.** Glutathione pages say "brighter-looking", never lighten or whiten in our prose; pick the
+  keyword inside that rule ("glutathione brighten skin").
 - **Every citation identifier must belong to the paper named beside it.** Enforced by the builder since 2026-09-26 (§6).
 - **Prose fields are `multi_line_text_field` holding HTML, emitted with `.value`.** `| metafield_tag` wraps rich text in a div that trafilatura,
   and so AI crawlers, discards (214 words extracted with it, 941 without).
