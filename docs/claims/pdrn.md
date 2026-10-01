@@ -193,3 +193,16 @@ the paper has never been read beyond its title, and it supports only "promising"
 **Inherited, not re-read today:** Ye 2026 clinical figures (re-read 2026-09-23, log above); Yogya 2022, Belletti 2007, Squadrito 2014 and 2017, Kim BR
 2023, Lee YJ 2022, Havas 2026, Bak 2025 (register §2 and the 2026-09-23 esummary pass). Their table rows reuse the approved 2026-09-23 wording; the
 injected and non-salmon rows are split one study per row, with no new figures.
+
+## Applied on the store — 2026-10-01 (hub links its new Yogya 2022 article)
+
+The central audit failed the new study article `/blogs/clinical-studies/pdrn-microneedling-split-face-trial-yogya-2022` on P3 (the hub did not
+link back to it). `/pages/pdrn-research` now carries one sentence on it, in the At a glance _Not shown_ line, straight after "Those are different
+routes, and this page keeps them apart", in six languages:
+
+> After microneedling, a polynucleotide serum improved wrinkle indentation around the eyes significantly within 2 months, where saline took 6:
+> read [our appraisal of the 29-woman microneedling trial](/blogs/clinical-studies/pdrn-microneedling-split-face-trial-yogya-2022).
+
+Source: §2 row 2 (PN side 10.3 → 8.9 at 2 months, between sides P = 0.006; saline side significant only at 6 months). It says "polynucleotide",
+not PDRN, because the paper does not state the PN's source, and the sentence before it already says the result does not transfer to a leave-on
+cream. Spec `configs/hub-upgrades/pdrn-research-layout-2026-09-24.json` (overview), translations through `configs/hub-i18n/pdrn-research.json`.
