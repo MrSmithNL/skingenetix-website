@@ -494,18 +494,24 @@ AI-generated illustrations and must not be presented as results. Record:
   `/pages/study/*` addresses 301 per locale; hub and study links moved to the new addresses in six languages; table page retired.
   ✅ **In the main menu under Discover, with an image tile** (Malcolm, 2026-09-29; live, six languages; it replaced the short-lived
   Science text line the same day).
-  🔄 **Four NEW study articles, English drafts on the hidden preview blog (2026-09-30, Malcolm: "work on writing and creating the
-  next 4 clinical trial articles based on the most value/volume keywords").** One qualifying human trial per remaining family, by
-  observed demand: Yogya 2022 (`pdrn microneedling`), Tadini 2015 (`acetyl hexapeptide-3`; it measured firmness, not wrinkles),
-  Robinson 2005 (`palmitoyl pentapeptide-4`; lines at the paper's p ≤ 0.10 only), Watanabe 2014 (`glutathione brighten skin`).
-  Previews: `/blogs/clinical-studies-drafts/<handle>` (noindexed; route in `docs/study-page-template.md` §3). Commits `552789b`,
-  `75f8f55`. Copper has no second qualifying trial (null, uncontrolled, mixtures, or abstract-only review).
-  - ⏳ Central audits of the four previews (the canonical and noindex gates are preview artefacts; read the uncapped score).
-  - ⏳ **For Malcolm:** review the four previews; decide on launching the PDRN microneedling stamp set (ACTIVE in Shopify but not
-    on the online store; Yogya is its evidence page); Robinson's p ≤ 0.10 footing.
-  - ⏳ Go-live after his OK: five-locale translations, card images (pool), `build-study-page.py --apply`, list builder `--apply`
-    (the list owner's script; coordinate), verify ×6, delete the draft articles, re-audit live. Concern tags for firmness and
-    brightening would be new keys in the list builder's `CONCERNS` (list owner's call).
+  ✅ **Four NEW study articles LIVE in six languages (2026-10-01, Malcolm: "All four, now").** Asked 2026-09-30: "work on writing and
+  creating the next 4 clinical trial articles based on the most value/volume keywords". One qualifying human trial per remaining
+  family, by observed demand: Yogya 2022 (`pdrn microneedling`), Tadini 2015 (`acetyl hexapeptide-3`; it measured firmness, not
+  wrinkles), Robinson 2005 (`palmitoyl pentapeptide-4`; lines at the paper's p ≤ 0.10 only, said openly), Watanabe 2014
+  (`glutathione brighten skin`). Copper has no second qualifying trial (null, uncontrolled, mixtures, or abstract-only review).
+  - Built English-first on a hidden preview blog (new route, `docs/study-page-template.md` §3). Design critique cycle 1: FIX ×4,
+    every page-level finding fixed (`docs/audits/2026-10-01-new-study-drafts-design-critique.md`). Preview audits after the
+    fixes, uncapped: 9.50 / 9.50 / 9.55 / 9.84; the only confirmed failures were the preview's own noindex.
+  - Translated by one agent per language through `scripts/study-i18n.py` (extract, `--check`, merge); voice as the site (Sie,
+    je, vous, tú, tu); glutathione wording as the hub. Go-live: configs moved to `configs/studies/`, `build-study-page.py
+--apply` (170 translations each), list builder `--apply` (articles created with cards and tags), verify ×6, the four draft
+    articles deleted, Dr Bodde's credit added. Commits `aafd247`, `b35ed71`.
+  - ⏳ Live audits of the four (in progress).
+  - ⏳ **For Malcolm** (review pack `docs/review-2026-10-01-four-new-study-drafts.md`): concern tags for firmness and brightening
+    (new keys in the list builder's `CONCERNS`); Robinson's list badge says "Matrixyl 3000" for an original-Matrixyl trial;
+    launching the PDRN microneedling stamp set (ACTIVE in Shopify, not on the online store; Yogya is its evidence page); the live
+    Matrixyl hub's card f2 calls Robinson "significant" without the p ≤ 0.10 threshold; the shared chart component and new
+    instrument images (critique S1, S2); the live Ye Spanish says "tratamiento" twice (a register word to avoid).
     ✅ **Payment help page `/pages/payment` LIVE, six languages (2026-10-01, Malcolm: "proceed").** It exists because R6
     (customer service reachable) kept flipping on the Clinical studies list: the footer "Payment" link landed on the general FAQ.
     - Built from stock sections by `scripts/build-payment-page.py`, with copy in `configs/copy/payment-page-2026-10-01.json`.
