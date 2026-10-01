@@ -1,0 +1,50 @@
+{
+  "outcomes": {
+    "heading": {"en": "What the trial found around the eyes, result by result"},
+    "items": [
+      {
+        "title": {"en": "22 of 45 graded clearly improved after 4 weeks, against 0 of 15 on placebo"},
+        "body": [
+          {"en": "After four weeks, the clinicians running the trial compared the lines around each person's eyes with how they had looked at the start and scored the change from 0, meaning no change, up to 4, meaning 100% improved. Neither the clinicians nor the participants knew who had the Argireline® cream and who had the placebo."},
+          {"en": "On 10% Argireline®, 22 of 45 people scored 3 or 4, the trial's measure of clear improvement; none of the 15 on placebo did. Across the whole scale, 34 of the 45 were graded 2 or higher, the threshold the trial's sample size was planned around, again against none on placebo, and 7 reached the top grade of 4. On placebo, 13 of 15 were graded 0 and 2 were graded 1 (Figure 1)."},
+          {"en": "For a reader, that means about three in four people using Argireline® around the eyes were graded 2 or higher within a month of twice-daily use, and about half were judged clearly improved. The paper's own photographs of two participants, a woman of 40 and a man of 49, show the kind of change the clinicians graded: lines that look softer and shallower ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."}
+        ],
+        "image": "TBD",
+        "before_after": false,
+        "_image_brief": "PLAIN PHOTOGRAPH until a compliant before/after exists (see _before_after_recommendation). Two identical small clear-glass vials of white oil-in-water emulsion standing side by side on a pale grey surface, each with an identical blank white label: the trial's double-blind vials (the paper: 'Vials of argireline and placebo with identical investigational labels, which prevented identification of the contents'). Soft daylight, shallow depth of field. No text on the labels, no brand, no people, no skin, no droplet. Suggested filename: skingenetix-argireline-double-blind-trial-vials.jpg (names the ingredient; differs from the page's petri-dish story image and the refraction banner).",
+        "_before_after_recommendation": {
+          "verdict": "This result CAN carry a before/after (visible on a face, measured around the eyes), but the hub picture skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg does not pass at full size: the deep fold at the outer corner of the eye and most of the fine lines below it are gone in the after panel. docs/clinical-trial-before-after-images.md section 3 says no line may disappear, and the paper's own Figures 2 and 3 show softened lines that are still clearly present. 15 of the 22 responders were graded 3, only 7 of 45 reached grade 4. The hub's other periorbital pair (wrinkle-depth-before-after-eye-close-up) is live on the hub for Blanes-Mira 2002, so reusing it would picture two trials with one image.",
+          "to_switch_on": "Generate a new pair on the before/after pipeline at a grade-3 magnitude (every line present in both panels, only shallower; nothing else about the person improves; two sessions, not two frames), let Malcolm pick it, then set before_after true, image to its filename, and use these labels.",
+          "after": {"en": "After 4 weeks"},
+          "result": {"en": "22 of 45 graded clearly improved vs 0 of 15 on placebo"}
+        }
+      },
+      {
+        "title": {"en": "All three roughness measures fell on skin replicas, with no change on placebo"},
+        "body": [
+          {"en": "At the start and after four weeks, silicone moulds were taken of the skin around the eyes. Each mould was scanned with a Skin-Visioline VL 650 and a confocal laser microscope, which together build a three-dimensional map of the skin's surface, and three roughness values were calculated: Sa, the average height of the lines at one spot; Smax, the drop from the highest peak to the lowest point across all the lines; and St, the average height across all the lines in the area."},
+          {"en": "With Argireline®, all three values fell between the first and second moulds (p &lt; 0.01). On placebo, none of them moved significantly (p &gt; 0.05). Both tests compare each group with its own starting moulds (Table 2)."},
+          {"en": "The paper also prints two worked examples of the analysis. In a woman of 45, the number of lines counted in the scanned area fell from 14 to 7; in a man of 55, from 13 to 9. In both, the lines' depth, volume, area and total length were lower after four weeks. The moulds measure the same skin the clinicians graded, so the instrument result and the visual grade describe one change from two sides ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."}
+        ],
+        "image": "TBD",
+        "before_after": false,
+        "_image_brief": "PLAIN PHOTOGRAPH of what the trial used: a silicone skin replica, a small round disc of grey impression silicone (about 3 cm across) lying face-up on a pale lab bench, its surface showing the fine fan of lines it was cast from; a pair of steel tweezers beside it. Raking side light so the texture reads. No people, no skin, no instrument branding, no screen, no text. One replica only (two would picture a before/after comparison the photograph cannot show). Suggested filename: skingenetix-argireline-silicone-skin-replica-crows-feet-study.jpg."
+      }
+    ]
+  },
+  "mechanisms": {
+    "heading": {"en": "How was Argireline® designed to work?"},
+    "items": [
+      {
+        "title": {"en": "Modelled on SNAP-25, a protein involved in expression"},
+        "body": [
+          {"en": "Argireline® is a chain of six amino acids, the building blocks of proteins, copied from one end of SNAP-25, a protein involved in expression. Its developers designed it in the laboratory to soften the look of expression lines such as crow's feet ([Blanes-Mira et al., 2002](https://pubmed.ncbi.nlm.nih.gov/18498523/))."},
+          {"en": "In the developers' laboratory tests, the peptide interfered with the assembly of the SNARE complex, a set of proteins that cells must join together before they can release the chemical messengers they store. These are laboratory findings: they show what Argireline® was designed to do, while this trial measured the change in the skin around the eyes ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."}
+        ],
+        "evidence": "laboratory",
+        "image": "TBD",
+        "_image_brief": "PLAIN PHOTOGRAPH of laboratory protein work: a short row of small clear plastic sample tubes in a white rack on a pale bench, a single pipette tip resting beside them, cool neutral light. No petri dish (the page's story image is one), no cells, no nerve or muscle imagery, no diagram of anything entering skin, no syringe, no face, no text or branding. Suggested filename: skingenetix-argireline-laboratory-protein-assay-tubes.jpg."
+      }
+    ]
+  }
+}

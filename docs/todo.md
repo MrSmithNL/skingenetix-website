@@ -489,6 +489,24 @@ AI-generated illustrations and must not be presented as results. Record:
   "gentle" / "well tolerated" lines on the PDRN, Argireline and copper product FAQs and concern pages. **Also on the Argireline science page itself** (found
   2026-09-24): FAQ q3 "gentle … generally well tolerated" and q5 "measurable improvements from day 15 … additional cumulative benefits", not yet checked at
   source.
+- 🔄 **STUDY-DETAIL: one section per proven result, and how it works (Malcolm, 2026-10-01).** Malcolm asked: "every study blog
+  article should have seperate content sections for each of the proven trial outcomes with before and after images where this can
+  be used ... and ... separate content blocks for the proven working active effects". Rules are in `docs/study-page-template.md`
+  §3.1; the decision is ADR-2026-10-01-R.
+  - ✅ **Template:** built, tested (186 pass) and merged (`204c6f4`). It has a companion `study_detail` entry and the article link
+    `study.detail`, and the `research-before-after` section skips empty slots.
+  - ✅ **All eight articles measured against the rules:** 20 result sections, 2 before/afters and 8 how-it-works blocks proposed.
+    Proposals and source tables are in `research/study-detail-2026-10-01/`; the review is
+    `docs/review-2026-10-01-study-results-and-how-it-works.md`.
+  - ⏳ **Deploy the template** in the documented order once the other window's live audits finish.
+  - ⏳ **For Malcolm (review §4):**
+    1. which before/after pictures to use; five of the seven hub pictures show more change than their trial measured;
+    2. the live-claim corrections, including Ye's "about 2×" for eye bags (it is about 1.5×) and its understated wrinkle figure (about 3.5×);
+    3. a section for Robinson's p ≤ 0.10 fine-lines result;
+    4. the Wang SNAP-25 block;
+    5. where the pictures for about 26 plain blocks come from.
+  - ⏳ **Then, per article:** pictures → config → English preview → design critic → audit (9 or more, no confirmed failures) →
+    Malcolm → translate → live.
 - ✅ **Clinical studies is a BLOG, built 2026-09-29** (`docs/decision-clinical-studies-blog-2026-09-29.md`; Malcolm: a blog list like
   Hairgenetix, menu under Discover). `/blogs/clinical-studies` live with four articles (Badenhorst, Raikou, Wang, Ye); the old
   `/pages/study/*` addresses 301 per locale; hub and study links moved to the new addresses in six languages; table page retired.
