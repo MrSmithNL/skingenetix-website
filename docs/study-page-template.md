@@ -115,7 +115,8 @@ assigns the pilot template to pilot configs; switch an article back to `clinical
   its source note says what was read.
 - **The concentration row is mandatory**, even when the paper never gives one.
 - **Key figures are results** (design critique, 2026-10-01): a magnitude with its comparator ("−14%, against −8% with saline"), not a time,
-  a p-value, a count of women or a word. Use a time or a count only when the paper reports no magnitude, and then say so in the label.
+  a p-value, a count of women or a word. Use a time or a count only when the paper reports no further magnitude, and then say so in the
+  figure's note (a plain label reads better than a caveat).
 - **The comparator is grey `#8A9394`** (3.14:1 on white) on every chart, and grey means the comparator only. A second series of the active
   takes a tint of the ingredient accent that clears 3:1 (Robinson: `#4A9396`). `#9AA3A4` fails at 2.58:1.
 - **Images make claims.** Check every science image against the ingredient register's "avoid" list like copy. A diagram of droplets reaching the

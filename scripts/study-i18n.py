@@ -17,6 +17,7 @@ What it does per string and locale:
   * composes the byline from a live study's translated byline with this study's date, so set-reviewer.py can find and
     remove the reviewer sentence as an exact substring in every language (a hand-translated variant would strand it)
 Never translated: `_notes`, `checks` (English probes), `scholarly` (the journal's own title) and the byline.
+The `citation` paragraph is kept verbatim; a locale may only append a note such as "(auf Englisch)".
 """
 import argparse, collections, json, pathlib, re, sys
 
@@ -110,6 +111,9 @@ def merge(cfg, translations, ref_byline):
         for key, en in want.items():
             if key in tr:
                 errs += [f"{loc} {key}: {e}" for e in problems(en, tr[key], loc)]
+        # the reference is the journal's own words: a translation may only add a note after it (e.g. "(auf Englisch)")
+        if "/citation" in tr and "/citation" in want and not tr["/citation"].startswith(want["/citation"].rstrip()):
+            errs.append(f"{loc} /citation: the English reference must stay verbatim at the start")
         # the builder's own per-locale limits (build-study-page.py check()), caught before a merge, not at --apply
         if len(tr.get("/seo_title", "")) > 60:
             errs.append(f"{loc} /seo_title: SEO title {len(tr['/seo_title'])} chars (max 60)")

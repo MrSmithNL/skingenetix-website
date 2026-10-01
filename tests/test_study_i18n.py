@@ -27,7 +27,7 @@ CFG = {
 }
 
 
-def test_strings_are_every_english_leaf_except_notes_checks_citation_and_byline():
+def test_strings_are_every_english_leaf_except_notes_checks_scholarly_and_byline():
     s = si.strings(CFG)
     assert set(s) == {"/h1", "/figures/0/n", "/figures/0/label", "/faq/answers/0", "/meaning/ctas/0/label"}
     assert s["/figures/0/n"] == "&minus;14%"
@@ -99,3 +99,16 @@ def test_the_builders_length_rules_hold_in_every_locale():
     assert any("SEO title" in e for e in si.merge(copy.deepcopy(cfg), {"de": long_title}, ref_byline=ref)[1])
     short_answer = {**good, "/answer": "Zu kurz."}
     assert any("answer" in e for e in si.merge(copy.deepcopy(cfg), {"de": short_answer}, ref_byline=ref)[1])
+
+
+def test_a_translated_citation_must_keep_the_english_reference_verbatim():
+    cfg = {**copy.deepcopy(CFG), "citation": {"en": "Yogya Y et al. Efficacy and Safety of Radiofrequency. Dermatol Ther 2022."}}
+    base = {"/h1": "Glättet PDRN-Microneedling Falten schneller?", "/figures/0/n": "&minus;14 %",
+            "/figures/0/label": "Faltentiefe nach 2 Monaten", "/meaning/ctas/0/label": "Die Evidenz lesen",
+            "/faq/answers/0": "Siehe den [Hub](https://www.skingenetix.com/pages/pdrn-research) und "
+                              "[die Studie](https://doi.org/10.1007/s13555-022-00729-7)."}
+    ref = {"de": "Bewertet. Zuletzt geprüft am 23. September 2026."}
+    ok = {**base, "/citation": cfg["citation"]["en"] + " (auf Englisch)"}
+    assert si.merge(copy.deepcopy(cfg), {"de": ok}, ref_byline=ref)[1] == []
+    typo = {**base, "/citation": "Yogya Y et al. Efficacy and Safety of Radiofrecuency. Dermatol Ther 2022. (auf Englisch)"}
+    assert any("citation" in e for e in si.merge(copy.deepcopy(cfg), {"de": typo}, ref_byline=ref)[1])
