@@ -365,6 +365,52 @@ ARTICLE_TPL = "templates/article.clinical-study.json"
 PILOT_TPL = "templates/article.clinical-study-pilot.json"
 ENTRY = "article.metafields.study.entry.value."
 
+# ---- one section per result, and "how it works" (Malcolm, 2026-10-01) ------------------------------------------------
+# "every study blog article should have seperate content sections for each of the proven trial outcomes with before and
+# after images where this can be used (similar to the ingredient science pages). And these should also be separate
+# content blocks for the proven working active effects of what was tested to explain the workings of what they were
+# testing on skin (also like the science ingredient pages)."
+#
+# Both reuse the science pages' own section, research-before-after (key_findings_ba on the hubs): the stock
+# media-with-text has no labels and the stock before-after slider takes two files and two labels (rung 1, an existing
+# section, though our own). The study entry is full — 40 of 40 fields, read live 2026-10-01 — so the content lives in a
+# companion `study_detail` entry that the article reaches through study.detail (fields: build-study-page.py
+# DETAIL_FIELDS). The slots are fixed; the section draws nothing for an empty slot, or for a section with none filled.
+DETAIL_ENTRY = "article.metafields.study.detail.value."
+DRAFT_DETAIL_ENTRY = "article.metafields.study.draft_detail.value."
+OUTCOME_SLOTS, MECHANISM_SLOTS = 4, 3
+
+
+def detail_sections():
+    """The results section (labelled before/after pictures) and the how-it-works section (plain pictures)."""
+    def d(field):
+        return "{{ " + DETAIL_ENTRY + field + ".value }}"
+
+    def block(slot, position, labels):
+        return {"type": "finding", "settings": {
+            "image": d(f"{slot}_image"), "media_position": position,
+            "before_label": d(f"{slot}_before") if labels else "",
+            "after_label": d(f"{slot}_after") if labels else "",
+            "result_label": d(f"{slot}_result") if labels else "",
+            "note_label": "",                     # Malcolm, 2026-09-22: "No AI disclosure please."
+            "label_background": "#1a1a1a", "label_text_color": "#ffffff",
+            "subheading": "", "title": d(f"{slot}_title"),
+            # the richtext setting validates its top-level tags, like media-with-text (rtp() above)
+            "content": "<p>" + d(f"{slot}_body") + "</p>"}}
+
+    outs = [f"o{i}" for i in range(1, OUTCOME_SLOTS + 1)]
+    mechs = [f"m{j}" for j in range(1, MECHANISM_SLOTS + 1)]
+    return {
+        # pictures alternate left / right, as on the hubs
+        "outcomes": {"type": "research-before-after",
+                     "blocks": {k: block(k, "start" if i % 2 else "end", True) for i, k in enumerate(outs, 1)},
+                     "block_order": outs, "settings": {"title": d("outcomes_heading")}},
+        # the first sits opposite "What the researchers did", whose picture is on the left
+        "mechanism": {"type": "research-before-after",
+                      "blocks": {k: block(k, "end" if j % 2 else "start", False) for j, k in enumerate(mechs, 1)},
+                      "block_order": mechs, "settings": {"title": d("mechanism_heading")}},
+    }
+
 
 def build_article():
     """The same page as an ARTICLE template for the Clinical studies blog (decision 2026-09-29).
@@ -387,6 +433,11 @@ def build_article():
     banner = j["sections"]["banner"]
     banner["blocks"].pop("eyebrow", None)
     banner["block_order"] = [b for b in banner["block_order"] if b != "eyebrow"]
+    # results straight after "At a glance", before the chart that sums them up (the hubs' key_findings_ba → charts);
+    # how it works straight after "What the researchers did"
+    j["sections"].update(detail_sections())
+    j["order"].insert(j["order"].index("glance") + 1, "outcomes")
+    j["order"].insert(j["order"].index("story") + 1, "mechanism")
     return j
 
 
@@ -428,7 +479,9 @@ def build_draft_article():
             return {k: swap(v) for k, v in node.items()}
         if isinstance(node, list):
             return [swap(v) for v in node]
-        return node.replace(ENTRY, DRAFT_ENTRY) if isinstance(node, str) else node
+        if isinstance(node, str):
+            return node.replace(ENTRY, DRAFT_ENTRY).replace(DETAIL_ENTRY, DRAFT_DETAIL_ENTRY)
+        return node
     return swap(build_article())
 
 
@@ -468,6 +521,31 @@ def upload_safety_locales(apply):
     return 0
 
 
+SECTION = "sections/research-before-after.liquid"
+
+
+def upload_section(apply):
+    """Upload our research-before-after section from the repo (theme/ is its source of truth), backing up the live file.
+
+    The results and how-it-works sections rely on it skipping empty slots (2026-10-01), so it goes up before any
+    article template that has those sections. The science pages use the same file: check one after uploading.
+    """
+    new = (ROOT / "theme" / SECTION).read_text()
+    raw = hu.read_file(SECTION)
+    print(f"  {SECTION}: {len(raw)} → {len(new)} characters" + (" (unchanged)" if raw == new else ""))
+    if not apply or raw == new:
+        print("  dry run — pass --apply to upload" if not apply else "  nothing to upload")
+        return 0
+    pathlib.Path(ROOT / f"backups/section-research-before-after-{datetime.datetime.now():%Y%m%d-%H%M%S}.liquid").write_text(raw)
+    r = hu.gql('mutation($t:ID!,$f:[OnlineStoreThemeFilesUpsertFileInput!]!){ themeFilesUpsert(themeId:$t, files:$f)'
+               '{ userErrors{field message} } }',
+               {"t": hu.THEME, "f": [{"filename": SECTION, "body": {"type": "TEXT", "value": new}}]})["themeFilesUpsert"]
+    if r["userErrors"]:
+        sys.exit(f"  ✗ {r['userErrors']}")
+    print("  ✓ uploaded")
+    return 0
+
+
 def upload(filename, j, backup_name, apply):
     """Write one article template to the live theme, backing up what was there."""
     try:
@@ -502,7 +580,11 @@ def main():
                     help="build templates/article.clinical-study-draft.json (English-first preview of a rebuilt study)")
     ap.add_argument("--safety-locales", action="store_true",
                     help="upload the 'Before you try it' note into the six theme locale files")
+    ap.add_argument("--section", action="store_true",
+                    help="upload theme/sections/research-before-after.liquid (the results and how-it-works sections)")
     a = ap.parse_args()
+    if a.section:
+        return upload_section(a.apply)
     if a.safety_locales:
         return upload_safety_locales(a.apply)
     if a.article_pilot:

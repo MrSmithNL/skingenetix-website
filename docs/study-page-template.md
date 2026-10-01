@@ -30,24 +30,28 @@ guidelines rate a summary of an abstract as _Lowest_, and any competitor can gen
 The lever for the stock route: Liquid is evaluated inside section settings on a metaobject template, so a stock section can read
 `{{ metaobject.<field>.value }}`. Shopify validates the reference on upload ("must end with '.value' when not using a metafield filter").
 
-## 3. Structure — 12 stock sections
+## 3. Structure — 14 sections
 
 Built by `scripts/study-template-build.py`. Every section is one the hubs already use.
 
-| #   | Section   | Stock type                   | Carries                                                                      |
-| --- | --------- | ---------------------------- | ---------------------------------------------------------------------------- |
-| 1   | banner    | `image-with-text-overlay`    | eyebrow, H1 and deck over the per-study banner image                         |
-| 2   | figures   | `impact-text`                | three key numbers, the hubs' serif stat treatment                            |
-| 3   | answer    | `rich-text`                  | byline, definition, the quotable answer paragraph, our verdict               |
-| 4   | glance    | `specification-table`        | nine rows; labels static, values per study                                   |
-| 5   | chart     | `rich-text` + `liquid` block | the bar chart and its `<table>` from `scripts/hub_charts.py`                 |
-| 6   | story     | `media-with-text`            | "What the researchers did", image left                                       |
-| 7   | limits    | `media-with-text`            | **"How to read this result"**, image right                                   |
-| 8   | context   | `media-with-text`            | "Where this trial sits in the evidence", image left                          |
-| 9   | faq       | `faq`                        | four fixed questions, answers per study, FAQPage schema                      |
-| 9a  | safety    | `rich-text` + `liquid` block | **"Before you try it"** note (2026-09-30), words from the theme locale files |
-| 10  | means     | `rich-text` + two buttons    | what it means for our products                                               |
-| 11  | reference | `rich-text`                  | citation, read-at-source note, JSON-LD                                       |
+| #   | Section   | Type                         | Carries                                                                                   |
+| --- | --------- | ---------------------------- | ----------------------------------------------------------------------------------------- |
+| 1   | banner    | `image-with-text-overlay`    | eyebrow, H1 and deck over the per-study banner image                                      |
+| 2   | figures   | `impact-text`                | three key numbers, the hubs' serif stat treatment                                         |
+| 3   | answer    | `rich-text`                  | byline, definition, the quotable answer paragraph, our verdict                            |
+| 4   | glance    | `specification-table`        | nine rows; labels static, values per study                                                |
+| 4a  | outcomes  | `research-before-after`      | **one section per proven result** (up to 4), labelled before/after where one can be used  |
+| 5   | chart     | `rich-text` + `liquid` block | the bar chart and its `<table>` from `scripts/hub_charts.py`                              |
+| 6   | story     | `media-with-text`            | "What the researchers did", image left                                                    |
+| 6a  | mechanism | `research-before-after`      | **how it works on skin**: one block per tested effect (up to 3), no labels                |
+| 7   | limits    | `media-with-text`            | **"How to read this result"**, image right                                                |
+| 8   | context   | `media-with-text`            | "Where this trial sits in the evidence", image left                                       |
+| 9   | faq       | `faq`                        | four fixed questions, answers per study, FAQPage schema                                   |
+| 9a  | safety    | `rich-text` + `liquid` block | **"Before you try it"** note (2026-09-30), words from the theme locale files              |
+| 10  | means     | `rich-text` + two buttons    | what it means for our products                                                            |
+| 11  | reference | `rich-text`                  | citation, read-at-source note, JSON-LD                                                    |
+
+Sections 4a and 6a (Malcolm, 2026-10-01) are on the article template only, and only on studies that fill them: §3.1.
 
 **Two pieces of section code, both forced (rung 4):** a `liquid` block in the banner sets the key-figure colour to the
 study's ingredient accent, chosen from the metaobject handle (a colour setting cannot read a field, and the definition has no
@@ -56,8 +60,57 @@ the answer paragraph at 20px (17px on phones). Both added after the 2026-09-26 d
 
 **Static in the template, identical on every study page** (they translate once, as template resources): the nine at-a-glance labels
 (Design, Participants, What was applied, Compared with, Duration, How it was measured, Concentration, Funding, Our evidence grade), every section
-title, the four FAQ questions and the two button labels. This is forced as well as chosen: a metaobject definition allows 40 fields and 37 are
-used.
+title, the four FAQ questions and the two button labels. This is forced as well as chosen: a metaobject definition allows 40 fields and **all 40
+are used** (read live 2026-10-01; this line said 37 until then).
+
+### 3.1 Results one by one, and how it works (Malcolm, 2026-10-01)
+
+> "every study blog article should have seperate content sections for each of the proven trial outcomes with before and after images
+> where this can be used (similar to the ingredient science pages). And these should also be separate content blocks for the proven
+> working active effects of what was tested to explain the workings of what they were testing on skin (also like the science ingredient
+> pages)."
+
+Both sections reuse the science pages' own `research-before-after` section (`key_findings_ba` on the hubs, `docs/science-page-template.md`
+§3.3), so a reader arriving from a hub meets the same card. The `study` entry is full, so their content lives in a **companion entry of type
+`study_detail`** under the study's handle (35 fields: two headings, four result slots, three how-it-works slots), which the article reaches
+through the metafield **`study.detail`** (`study.draft_detail` on the English-first route). `build-study-page.py` creates the definition, the
+two article metafields, the entry and the link; `build-clinical-studies-blog.py` links it when it creates an article. A study whose config has
+neither key writes nothing and renders exactly as before. The slots are fixed; since 2026-10-01 the section draws nothing for a slot with
+neither heading nor image, and nothing at all when no slot is filled.
+
+**A result gets its own section when** it is positive and statistically supported against the comparison: better than placebo, vehicle or
+the comparator product at p ≤ 0.05, or, where the paper only tests change within each group, significant on the active and not on the
+comparator (say so). Robinson 2005's p ≤ 0.10 results follow Malcolm's ruling on that study. Strongest first, up to four. Results without a
+p-value (a responder share, a self-assessment) go inside the section of the result they support, not in their own.
+
+| Part of a result section | Rule                                                                                                                                                       |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Heading (`title`)        | The result in words with its comparator, as a reader would ask it: "Wrinkle volume fell 55.8% more than with the plain serum". Plain text, no markup.       |
+| Body                     | What was measured and how (the instrument, in plain words); the figure with its comparator, time point and p; what it means for the reader; the citation. |
+| Picture, before/after    | **Only** when the result is visible on a face, the picture shows the area the trial measured, and its change does not exceed the trial's result (`docs/clinical-trial-before-after-images.md` §3). Reuse the hub picture made for that trial before generating one. Labels: **Before** (fixed, six languages), **After [time]** and the **result with its comparator** (≤ 64 characters, every language). |
+| Picture, plain           | Everything else: an instrument reading (roughness, water loss, firmness, melanin index), a result too small or too uncertain to picture honestly, or a procedure. A photograph of what the trial used. **No labels**: a Before/After pill on one photograph claims a comparison it does not show (the builder refuses it). |
+
+**A how-it-works block** explains one effect that was **tested**, in this paper (Badenhorst's cell arm, Ye's skin samples) or in a cited
+laboratory study, never a mechanism a supplier asserts. Up to three. Each carries `evidence`: `laboratory`, `skin samples` or `people`, and
+a laboratory or skin-sample finding must say so in its own words (the builder refuses one that does not): the registers keep mechanism detail
+"framed as laboratory findings", never as what happens in the reader's skin. The wording comes from the ingredient register's allowed list,
+paraphrased; nothing from its avoid list (muscles and nerves for Argireline, penetration and DNA repair for PDRN, "boosts collagen in your
+skin" for the peptides, lightening for glutathione). Its picture is a photograph of the method (cells, a dish, a skin sample), never a
+diagram of something travelling into the skin ([§4](#4-hard-rules), "Images make claims").
+
+**Both:** every image names the ingredient in its filename, and no image appears twice on a page (the banner, the story picture and every
+block are checked together). The section headings are per study, so they can carry the question a reader asks ("How does GHK-Cu work on
+skin?").
+
+**First deploy, once, in this order** (each step depends on the one before):
+
+1. `build-study-page.py <a config with outcomes> --apply --preview` creates the `study_detail` definition and the article metafields
+   `study.detail` and `study.draft_detail`. Shopify checks a template's field references against these definitions.
+2. `study-template-build.py --section --apply` uploads the section with the empty-slot guard. Then check one science page (the Argireline
+   hub's four cards) to confirm it is unchanged.
+3. `study-template-build.py --article --apply` and `--article-draft --apply` upload the two article templates.
+
+Order matters for live pages: until step 2 is live, an empty slot draws a grey box on every study article.
 
 **The safety note (2026-09-30, Malcolm's go; research `docs/research-2026-09-30-safety-notes-on-study-articles.md`).**
 Every study article carries a "Before you try it" block right before the product buttons: use guidance only (patch test, stop if
@@ -123,6 +176,8 @@ assigns the pilot template to pilot configs; switch an article back to `clinical
   dermis was a blocker on Robinson (penetration claim). Prefer photographs of what the study used.
 - **Wording follows the register, not the keyword.** Glutathione pages say "brighter-looking", never lighten or whiten in our prose; pick the
   keyword inside that rule ("glutathione brighten skin").
+- **One section per proven result, and how it works** (Malcolm, 2026-10-01): §3.1. A before/after only where the result can be seen and the
+  picture does not exceed it; a mechanism only where it was tested, said in laboratory terms, in the register's words.
 - **Every citation identifier must belong to the paper named beside it.** Enforced by the builder since 2026-09-26 (§6).
 - **Prose fields are `multi_line_text_field` holding HTML, emitted with `.value`.** `| metafield_tag` wraps rich text in a div that trafilatura,
   and so AI crawlers, discards (214 words extracted with it, 941 without).
@@ -151,7 +206,12 @@ Every localisable value is `{"en": "…", "de": "…", …}`. A locale is publis
 | `citation`, `source_note`, `source_url`, `read_at_source`, `scholarly` | the reference section and the JSON-LD                                                                                               |
 | `seo_title`, `seo_description`                                         | SEO fields                                                                                                                          |
 | `reviewer`                                                             | `reviewedBy`; set and removed by `scripts/set-reviewer.py`                                                                          |
-| `checks`                                                               | strings that must survive into the published fields (the verified figures)                                                          |
+| `checks`                                                               | strings that must survive into the published fields (the verified figures), result and how-it-works blocks included                |
+| `outcomes` → `heading`, `items[≤4]` → `title`, `body[]`, `image`, `before_after`, `after`, `result` | one section per proven result (§3.1); `after` and `result` only with `before_after: true` |
+| `mechanisms` → `heading`, `items[≤3]` → `title`, `body[]`, `image`, `evidence`                       | how it works (§3.1); `evidence` is `laboratory`, `skin samples` or `people`                |
+
+Both new keys are optional. To take the sections off a study that had them, keep the key with `"items": []`: every slot is then cleared. A full
+`--apply` refuses a block that lacks any of the study's languages; `--preview` takes English alone.
 
 ## 6. Build sequence
 
@@ -160,6 +220,9 @@ Every localisable value is `{"en": "…", "de": "…", …}`. A locale is publis
 2. Update the ingredient's claims register (`docs/claims/<ingredient>.md`) if anything differs.
 3. Write the config. Paraphrase conditions and mechanisms in our own prose: the EU wording scan treats a disease name in our sentence as our
    claim, whatever the sentence reports.
+3a. **Results and how it works (§3.1):** list every positive, significant result from step 1; give each its own `outcomes` item, strongest first,
+   with a before/after only where §3.1 allows one (check the hub's `key_findings_ba` for a picture made for this trial). List the effects that
+   were tested, here or in a cited laboratory study, as `mechanisms`, each checked line by line against the register's allowed and avoid lists.
 4. Dry run: `python3 scripts/build-study-page.py configs/studies/<handle>.json`. This checks lengths, the H1, the answer length and the `checks`
    probes, and **resolves every PubMed / PMC / DOI link** (NCBI esummary, Crossref). It refuses if an identifier fails to resolve, names other
    authors or a year more than one off, or if the `scholarly` title is not the identifier's own title. It fails closed when a lookup fails.
@@ -229,6 +292,7 @@ and whether study pages get their own art direction: the critic expects fixes al
 | `scripts/build-study-page.py`            | Checks (including citation identity), publishes and verifies one study from its config.                                                                                                                                          |
 | `scripts/build-clinical-studies-blog.py` | The Clinical studies blog: the list page spec, one article shell per study config, `--cutover` (301s, metaobject web pages off). `build-study-page.py` writes the breadcrumb into `hero_text` and the blog URL into the JSON-LD. |
 | `configs/studies/<handle>.json`          | One study (§5).                                                                                                                                                                                                                  |
+| `theme/sections/research-before-after.liquid` | The results and how-it-works sections (shared with the hubs' `key_findings_ba`). Skips empty slots since 2026-10-01. Upload it before any template that relies on that. |
 | `scripts/hub_charts.py`                  | The chart renderer, shared with the hubs.                                                                                                                                                                                        |
 | `scripts/set-reviewer.py`                | Adds or removes the medical-reviewer credit; reads both pilot and stock-template configs.                                                                                                                                        |
 | `scripts/study-pages.py`                 | The pilot tool. Owns the old `intro` / `key_facts` / `body` / `reference` shape; do not use it for new pages.                                                                                                                    |

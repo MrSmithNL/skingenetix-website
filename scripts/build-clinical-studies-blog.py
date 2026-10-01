@@ -510,6 +510,13 @@ def upsert_article(gql, blog_id, cfg):
                   {"namespace": "global", "key": "title_tag", "type": "single_line_text_field", "value": f["en"]["seo_title"]},
                   {"namespace": "global", "key": "description_tag", "type": "multi_line_text_field",
                    "value": f["en"]["seo_description"]}]}
+    # the study's results and how-it-works sections live in a companion study_detail entry under the same handle
+    # (2026-10-01; written by build-study-page.py); a study without them has none and is built as before
+    detail = gql('query($h:MetaobjectHandleInput!){ metaobjectByHandle(handle:$h){ id } }',
+                 {"h": {"type": "study_detail", "handle": handle}})["metaobjectByHandle"]
+    if detail:
+        fields["metafields"].append({"namespace": "study", "key": "detail", "type": "metaobject_reference",
+                                     "value": detail["id"]})
     ex = gql('query($q:String!){ articles(first:5, query:$q){ nodes{ id handle blog{ handle } } } }',
              {"q": f"handle:{handle}"})["articles"]["nodes"]
     ex = next((a for a in ex if a["blog"]["handle"] == BLOG), None)

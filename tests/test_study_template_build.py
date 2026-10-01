@@ -39,10 +39,12 @@ def test_the_pilot_template_reads_the_study_through_the_article():
     assert "metaobject." not in str(j)
 
 
-def test_the_stock_article_template_is_unchanged():
+def test_the_stock_article_template_keeps_its_sections_and_prints_the_reference_once():
+    """The full order, with the result and how-it-works sections added 2026-10-01, is asserted further down."""
     j = stb.build_article()
-    assert j["order"] == ["banner", "figures", "answer", "glance", "chart", "story", "limits",
-                          "context", "faq", "safety", "means", "reference"]
+    for k in ["banner", "figures", "answer", "glance", "chart", "story", "limits",
+              "context", "faq", "safety", "means", "reference"]:
+        assert k in j["order"], k
     assert j["sections"]["reference"]["block_order"] == ["r", "ld"]
 
 
@@ -141,3 +143,81 @@ def test_the_chart_heading_is_chosen_by_locale():
     liquid = stb.build_article()["sections"]["chart"]["blocks"]["c"]["settings"]["liquid"]
     assert "{%- case request.locale.iso_code -%}" in liquid and "{%- when 'de' -%}" in liquid
     assert "{%- else -%}What the measurements showed{%- endcase -%}" in liquid
+
+
+# ── one section per proven result, and "how it works" blocks (Malcolm, 2026-10-01) ─────────────────────────────────
+# "every study blog article should have separate content sections for each of the proven trial outcomes with before
+# and after images where this can be used (similar to the ingredient science pages). And these should also be separate
+# content blocks for the proven working active effects of what was tested". The study entry is full (40 of 40 fields,
+# read live 2026-10-01), so both read a companion `study_detail` entry through the article metafield study.detail, and
+# both reuse the science pages' own research-before-after section (key_findings_ba on the hubs).
+
+_d = importlib.util.spec_from_file_location("bsp_detail", ROOT / "scripts/build-study-page.py")
+bsp = importlib.util.module_from_spec(_d)
+_d.loader.exec_module(bsp)
+DETAIL = "article.metafields.study.detail.value."
+
+
+def test_results_follow_the_glance_and_how_it_works_follows_the_method():
+    assert stb.build_article()["order"] == ["banner", "figures", "answer", "glance", "outcomes", "chart", "story",
+                                            "mechanism", "limits", "context", "faq", "safety", "means", "reference"]
+
+
+def test_each_result_is_its_own_labelled_before_after_block_read_from_the_detail_entry():
+    s = stb.build_article()["sections"]["outcomes"]
+    assert s["type"] == "research-before-after" and s["block_order"] == ["o1", "o2", "o3", "o4"]
+    assert s["settings"]["title"] == "{{ " + DETAIL + "outcomes_heading.value }}"
+    for i, k in enumerate(s["block_order"], 1):
+        b = s["blocks"][k]
+        st = b["settings"]
+        assert b["type"] == "finding"
+        assert st["image"] == "{{ " + DETAIL + f"o{i}_image.value }}}}"
+        assert st["title"] == "{{ " + DETAIL + f"o{i}_title.value }}}}"
+        for label in ("before", "after", "result"):
+            assert st[f"{label}_label"] == "{{ " + DETAIL + f"o{i}_{label}.value }}}}"
+        assert st["content"] == "<p>{{ " + DETAIL + f"o{i}_body.value }}}}</p>"
+        assert st["note_label"] == ""                           # Malcolm, 2026-09-22: "No AI disclosure please."
+    assert [s["blocks"][k]["settings"]["media_position"] for k in s["block_order"]] == ["start", "end", "start", "end"]
+
+
+def test_how_it_works_blocks_carry_no_before_after_labels():
+    s = stb.build_article()["sections"]["mechanism"]
+    assert s["type"] == "research-before-after" and s["block_order"] == ["m1", "m2", "m3"]
+    assert s["settings"]["title"] == "{{ " + DETAIL + "mechanism_heading.value }}"
+    for k in s["block_order"]:
+        st = s["blocks"][k]["settings"]
+        assert st["before_label"] == st["after_label"] == st["result_label"] == st["note_label"] == ""
+        assert st["title"] == "{{ " + DETAIL + f"{k}_title.value }}}}"
+        assert st["image"] == "{{ " + DETAIL + f"{k}_image.value }}}}"
+        assert st["content"] == "<p>{{ " + DETAIL + f"{k}_body.value }}}}</p>"
+
+
+def test_the_draft_template_reads_the_draft_detail_and_never_the_live_one():
+    s = json.dumps(stb.build_draft_article())
+    assert "article.metafields.study.draft_detail.value.o1_title.value" in s
+    assert "study.detail." not in s and "study.entry." not in s
+
+
+def test_the_pilot_and_metaobject_templates_carry_no_detail_sections():
+    """The metaobject template cannot reach the companion entry (the study has no free field to reference it), and
+    the pilot template keeps only what a pilot fills."""
+    for j in (stb.build_pilot_article(), stb.build()):
+        assert "outcomes" not in j["sections"] and "mechanism" not in j["sections"]
+        assert "detail" not in json.dumps(j)
+
+
+def test_every_detail_field_the_template_reads_is_defined_and_the_definition_fits():
+    refs = set(re.findall(r"study\.detail\.value\.(\w+)\.value", json.dumps(stb.build_article())))
+    defined = [k for k, _ in bsp.DETAIL_FIELDS]
+    assert refs == set(defined)                                 # nothing read that is not defined, nothing defined unread
+    assert len(defined) == len(set(defined)) <= 40              # Shopify's per-definition limit
+
+
+def test_the_section_draws_nothing_for_an_empty_slot():
+    """A study with two results leaves two of the four slots empty. Unguarded, an empty slot drew the theme's grey
+    placeholder box, and a section with no filled slot drew its heading over nothing. Every block on the science
+    pages has a heading, so they are unaffected."""
+    liquid = (ROOT / "theme/sections/research-before-after.liquid").read_text()
+    assert "if rba_filled > 0" in liquid
+    assert "if block.settings.title == blank and block.settings.image == blank -%}{%- continue" in liquid
+    assert liquid.index("if rba_filled > 0") < liquid.index("<style>")   # the style block is inside the guard too

@@ -510,3 +510,27 @@ When the confirmed failures are cleared but the score is still under 9, the loop
 
 **First application:** Badenhorst 2016 on 2026-09-30 scored 9.78, with 0 confirmed failures, all five gates passing and 39 of
 51 criteria assessed (`docs/audits/page-audit-2026-09-30-copper-peptide-wrinkle-trial-badenhorst-2016.md`). Done with no fix round.
+
+## ADR-2026-10-01-R: Study articles get one section per proven result, and how-it-works blocks
+
+**Date:** 2026-10-01
+**Status:** Accepted (Malcolm's instruction). Template built and tested on branch `study-outcome-sections`; not yet deployed.
+**Instruction:** "every study blog article should have seperate content sections for each of the proven trial outcomes with before and
+after images where this can be used (similar to the ingredient science pages). And these should also be separate content blocks for the
+proven working active effects of what was tested … lets add this to the scientific study article template - and lets run the existing study
+articles against this criteria".
+**Decision:** two sections on the article template, both the science pages' own `research-before-after` section: **results** (up to four,
+after "At a glance") and **how it works** (up to three, after "What the researchers did"). The rules are in `docs/study-page-template.md`
+§3.1:
+
+- a result qualifies when it is positive and significant against the comparison (p ≤ 0.05);
+- a before/after appears only where the result is visible and the picture does not exceed it;
+- a how-it-works block covers an effect that was tested, framed as laboratory work, in the register's words.
+
+The `study` entry is full (40 of 40 fields), so the content lives in a companion `study_detail` entry linked from the article as
+`study.detail`. The section was amended to skip empty slots, so the science pages are unchanged.
+**Defaults applied, open to Malcolm:**
+
+- an instrument-only result (Raikou's roughness, Tadini's firmness reading) gets a plain photograph, not a before/after. The Argireline hub
+  already shows a forehead before/after for Raikou;
+- Robinson 2005's p ≤ 0.10 results follow his ruling on that study (review pack decision 2).

@@ -22,9 +22,25 @@
 
   ADDITIVE ONLY - this is a new file. No core theme file is modified.
   CSS is scoped to #shopify-section-{{ section.id }}, the same pattern the theme's own sections use.
+
+  EMPTY SLOTS (added 2026-10-01, Claude Code, for Malcolm's per-result study sections)
+  The clinical-study article template fills these blocks from each study's own fields, through fixed slots: a study
+  with two results leaves two of four slots empty. An empty slot drew the theme's grey placeholder box, and a section
+  with no filled slot drew its heading over nothing. So a block with neither a heading nor an image is skipped, and a
+  section with no block left renders nothing at all - not even its style tag. Every block on the science pages has a
+  heading and an image, so they render exactly as before.
 ------------------------------------------------------------------------------------------------------------------------
 {%- endcomment -%}
 
+{%- liquid
+  assign rba_filled = 0
+  for block in section.blocks
+    unless block.settings.title == blank and block.settings.image == blank
+      assign rba_filled = rba_filled | plus: 1
+    endunless
+  endfor
+-%}
+{%- if rba_filled > 0 -%}
 <style>
   /* Geometry matched to the theme's own `media-with-text`, measured live on
      /pages/copper-peptide-research: 24px column gap (which yields a 660px media at 1440),
@@ -128,6 +144,7 @@
   {%- endif -%}
 
   {%- for block in section.blocks -%}
+    {%- if block.settings.title == blank and block.settings.image == blank -%}{%- continue -%}{%- endif -%}
     {%- liquid
       assign img = block.settings.image
       assign reverse = false
@@ -183,6 +200,7 @@
     </div>
   {%- endfor -%}
 </div>
+{%- endif -%}
 
 {% schema %}
 {

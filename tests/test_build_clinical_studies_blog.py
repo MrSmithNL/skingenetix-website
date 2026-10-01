@@ -306,3 +306,44 @@ def test_wang_and_ye_are_on_the_stock_template_in_six_languages():
         assert sorted(f) == sorted(bcb.LOCALES)
         assert size in f["en"]["summary"] and all(len(v["summary"]) <= 160 for v in f.values())
 
+
+
+# --- the companion study_detail entry (2026-10-01): one section per result, and "how it works" ------------------------
+# A study with results or mechanisms has a second entry, type study_detail, under its own handle. The article reaches it
+# through study.detail, so the blog builder links it when it creates or updates the article.
+
+def _upsert_recorder(calls, detail):
+    def gql(q, v=None):
+        calls.append((q, v or {}))
+        if "metaobjectByHandle" in q:
+            kind = v["h"]["type"]
+            if kind == "study":
+                return {"metaobjectByHandle": {"id": "gid://shopify/Metaobject/1"}}
+            return {"metaobjectByHandle": {"id": "gid://shopify/Metaobject/2"} if detail else None}
+        if "articles(" in q:
+            return {"articles": {"nodes": []}}
+        if "articleCreate" in q:
+            return {"articleCreate": {"article": {"id": "gid://shopify/Article/9"}, "userErrors": []}}
+        if "translatableResource" in q:
+            return {"translatableResource": {"translatableContent": []}}
+        raise AssertionError(f"unexpected call: {q[:60]}")
+    return gql
+
+
+def _created_metafields(calls):
+    a = next(v["a"] for q, v in calls if "articleCreate" in q)
+    return {(m["namespace"], m["key"]): m["value"] for m in a["metafields"]}
+
+
+def test_the_article_links_its_companion_entry_when_there_is_one():
+    calls = []
+    bcb.upsert_article(_upsert_recorder(calls, detail=True), "gid://shopify/Blog/1", STOCK)
+    mf = _created_metafields(calls)
+    assert mf[("study", "entry")] == "gid://shopify/Metaobject/1"
+    assert mf[("study", "detail")] == "gid://shopify/Metaobject/2"
+
+
+def test_an_article_without_a_companion_entry_is_built_as_before():
+    calls = []
+    bcb.upsert_article(_upsert_recorder(calls, detail=False), "gid://shopify/Blog/1", STOCK)
+    assert ("study", "detail") not in _created_metafields(calls)

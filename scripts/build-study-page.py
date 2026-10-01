@@ -215,6 +215,148 @@ def fields(cfg, loc):
     return f
 
 
+# ---------------------------------------------------------------- one section per result, and "how it works"
+# Malcolm, 2026-10-01: "every study blog article should have separate content sections for each of the proven trial
+# outcomes with before and after images where this can be used (similar to the ingredient science pages). And these
+# should also be separate content blocks for the proven working active effects of what was tested".
+#
+# The study entry is full (40 of 40 fields, read live 2026-10-01), so both live in a companion entry of type
+# `study_detail`, under the study's own handle, which the article reaches through the metafield study.detail
+# (study.draft_detail on the English-first route). The template has fixed slots; a slot this study does not use is
+# written empty, and the research-before-after section draws nothing for an empty slot.
+#
+# Config keys (both optional; a config with neither builds exactly as before and writes no companion entry):
+#   "outcomes":   {"heading": {...}, "items": [{"title", "body": [...], "image",
+#                                               "before_after": true, "after": {...}, "result": {...}}]}
+#   "mechanisms": {"heading": {...}, "items": [{"title", "body": [...], "image", "evidence"}]}
+# To take the sections off a study that had them, keep the keys with "items": [] — every slot is then cleared.
+
+OUTCOME_SLOTS, MECHANISM_SLOTS = 4, 3
+DETAIL_TYPE = "study_detail"
+_TEXT, _PROSE, _FILE = "single_line_text_field", "multi_line_text_field", "file_reference"
+DETAIL_FIELDS = ([("outcomes_heading", _TEXT), ("mechanism_heading", _TEXT)]
+                 + [(f"o{i}_{k}", kind) for i in range(1, OUTCOME_SLOTS + 1)
+                    for k, kind in (("title", _TEXT), ("before", _TEXT), ("after", _TEXT), ("result", _TEXT),
+                                    ("body", _PROSE), ("image", _FILE))]
+                 + [(f"m{j}_{k}", kind) for j in range(1, MECHANISM_SLOTS + 1)
+                    for k, kind in (("title", _TEXT), ("body", _PROSE), ("image", _FILE))])
+# the science pages' own words for the label (configs/hub-upgrades/acetyl-hexapeptide-8-evidence-merge-2026-09-23.json)
+BEFORE = {"en": "Before", "de": "Vorher", "nl": "Voor", "fr": "Avant", "es": "Antes", "it": "Prima"}
+# Malcolm, 2026-09-24: every content image on an ingredient's page names that ingredient in its filename
+INGREDIENT_TERMS = {"copper": ("copper-peptide", "ghk-cu"), "argireline": ("argireline", "acetyl-hexapeptide"),
+                    "acetyl": ("argireline", "acetyl-hexapeptide"), "pdrn": ("pdrn", "polynucleotide"),
+                    "matrixyl": ("matrixyl", "palmitoyl"), "palmitoyl": ("matrixyl", "palmitoyl"),
+                    "glutathione": ("glutathione", "gssg")}
+# Where a mechanism was shown, and the words its English text must use to say so. The claims registers keep mechanism
+# detail "framed as laboratory findings" — never as what happens in the reader's skin.
+EVIDENCE = {"laboratory": ("laborator",), "skin samples": ("skin sample", "laborator"), "people": ()}
+RESULT_MAX = 64          # the result pill is one line over a 660px picture at desktop width
+
+
+def _items(cfg, key):
+    return (cfg.get(key) or {}).get("items") or []
+
+
+def detail_fields(cfg, loc):
+    """The companion entry's text fields for one locale, or None for a config with neither key."""
+    if "outcomes" not in cfg and "mechanisms" not in cfg:
+        return None
+    outs, mechs = _items(cfg, "outcomes"), _items(cfg, "mechanisms")
+    f = {"outcomes_heading": html_to_md(t(cfg["outcomes"].get("heading", ""), loc)) if outs else "",
+         "mechanism_heading": html_to_md(t(cfg["mechanisms"].get("heading", ""), loc)) if mechs else ""}
+    for i in range(1, OUTCOME_SLOTS + 1):
+        o = outs[i - 1] if i <= len(outs) else {}
+        pair = bool(o.get("before_after"))
+        f[f"o{i}_title"] = html_to_md(t(o.get("title", ""), loc))
+        f[f"o{i}_before"] = BEFORE[loc] if pair else ""
+        f[f"o{i}_after"] = html_to_md(t(o.get("after", ""), loc)) if pair else ""
+        f[f"o{i}_result"] = html_to_md(t(o.get("result", ""), loc)) if pair else ""
+        f[f"o{i}_body"] = inline_ps(o.get("body", []), loc)
+    for j in range(1, MECHANISM_SLOTS + 1):
+        m = mechs[j - 1] if j <= len(mechs) else {}
+        f[f"m{j}_title"] = html_to_md(t(m.get("title", ""), loc))
+        f[f"m{j}_body"] = inline_ps(m.get("body", []), loc)
+    return f
+
+
+def detail_images(cfg):
+    """(field, file stem) for every image slot; None where the slot is unused."""
+    outs, mechs = _items(cfg, "outcomes"), _items(cfg, "mechanisms")
+    stem = lambda item: item["image"].rsplit(".", 1)[0] if item.get("image") else None   # noqa: E731
+    return ([(f"o{i}_image", stem(outs[i - 1]) if i <= len(outs) else None) for i in range(1, OUTCOME_SLOTS + 1)]
+            + [(f"m{j}_image", stem(mechs[j - 1]) if j <= len(mechs) else None)
+               for j in range(1, MECHANISM_SLOTS + 1)])
+
+
+def _missing_locales(v, locs):
+    """Locales a localisable value lacks. A plain string serves every locale (an image name, a flag)."""
+    return [l for l in locs if isinstance(v, dict) and l not in v]
+
+
+def check_detail(cfg, english_only=False):
+    """Problems with the results and how-it-works sections, before anything is written.
+
+    english_only: the English-first preview. Otherwise every text must carry each of the study's languages: t() falls
+    back to English, and an English-only block on a six-language study would be registered as five "translations".
+    """
+    outs, mechs = _items(cfg, "outcomes"), _items(cfg, "mechanisms")
+    if not outs and not mechs:
+        return []
+    errs = []
+    locs = [] if english_only else [l for l in locales(cfg) if l != "en"]
+    for key, items in (("outcomes", outs), ("mechanisms", mechs)):
+        lack = _missing_locales(cfg[key].get("heading", ""), locs) if items else []
+        errs += [f"{key}: heading has no {', '.join(lack)}"] if lack else []
+    for slot, item in [(f"o{i}", o) for i, o in enumerate(outs, 1)] + [(f"m{j}", m) for j, m in enumerate(mechs, 1)]:
+        for k in ("title", "after", "result"):
+            lack = _missing_locales(item.get(k, ""), locs)
+            errs += [f"{slot}: {k} has no {', '.join(lack)}"] if lack else []
+        lack = sorted({l for p in item.get("body", []) for l in _missing_locales(p, locs)})
+        errs += [f"{slot}: body has no {', '.join(lack)}"] if lack else []
+    if len(outs) > OUTCOME_SLOTS:
+        errs.append(f"{len(outs)} results: the template has {OUTCOME_SLOTS} slots")
+    if len(mechs) > MECHANISM_SLOTS:
+        errs.append(f"{len(mechs)} mechanisms: the template has {MECHANISM_SLOTS} slots")
+    for key, items in (("outcomes", outs), ("mechanisms", mechs)):
+        if items and not t(cfg[key].get("heading", ""), "en"):
+            errs.append(f"{key}: no section heading")
+    terms = next((v for k, v in INGREDIENT_TERMS.items() if cfg["handle"].startswith(k)), ())
+    on_page = [cfg["banner"], cfg["banner_mobile"], cfg["media"]["image"].rsplit(".", 1)[0]]
+    for slot, item in [(f"o{i}", o) for i, o in enumerate(outs, 1)] + [(f"m{j}", m) for j, m in enumerate(mechs, 1)]:
+        errs += [f"{slot}: no {need}" for need in ("title", "body", "image") if not item.get(need)]
+        img = (item.get("image") or "").rsplit(".", 1)[0]
+        if img and terms and not any(x in img.lower() for x in terms):
+            errs.append(f"{slot}: image {img!r} does not name the ingredient ({' / '.join(terms)})")
+        on_page += [img] if img else []
+    for i, o in enumerate(outs, 1):
+        if not o.get("before_after"):
+            if o.get("after") or o.get("result"):
+                errs.append(f"o{i}: after/result labels on a plain photograph (set before_after only for a before/after picture)")
+            continue
+        errs += [f"o{i}: a before/after needs its {need} label" for need in ("after", "result") if not o.get(need)]
+        result = o.get("result") or {}
+        for loc, label in (result.items() if isinstance(result, dict) else [("en", result)]):
+            if len(html_to_md(label)) > RESULT_MAX:
+                errs.append(f"o{i} {loc}: result label is {len(html_to_md(label))} characters (max {RESULT_MAX})")
+    for j, m in enumerate(mechs, 1):
+        ev = m.get("evidence")
+        if ev not in EVIDENCE:
+            errs.append(f"m{j}: evidence must be one of: {', '.join(EVIDENCE)}")
+        elif EVIDENCE[ev]:
+            text = " ".join(t(p, "en") for p in m.get("body", [])).lower()
+            if not any(w in text for w in EVIDENCE[ev]):
+                errs.append(f"m{j}: a {ev} finding must say so in its text ('{EVIDENCE[ev][0]}…')")
+    twice = sorted({x for x in on_page if on_page.count(x) > 1})
+    if twice:
+        errs.append(f"image used twice on the page: {', '.join(twice)}")
+    return errs
+
+
+def detail_link_key(draft):
+    """The article metafield that points at the companion entry: the live one, or the English-first draft's."""
+    return "draft_detail" if draft else "detail"
+
+
 def links(cfg, loc):
     """URL fields. Not translatable, so the locale prefix is baked in per locale."""
     pre = "" if loc == "en" else "/" + loc
@@ -239,12 +381,14 @@ def check(cfg):
             errs.append(f"{loc}: answer paragraph {words} words (want 40-60)")
         if loc == "en" and HEAD_TERM.match(t(cfg["h1"], loc)):
             errs.append("H1 leads with the bare ingredient term (cannibalises the hub)")
-        blob = json.dumps(v, ensure_ascii=False)
+        # the result and how-it-works blocks are on the page too, so a verified figure may live there alone
+        blob = json.dumps({**v, **(detail_fields(cfg, loc) or {})}, ensure_ascii=False)
         missing = [p for p in cfg.get("checks", []) if p not in blob and html_to_md(p) not in blob]
         if loc == "en" and missing:
             errs.append(f"en: verified figures missing from the page: {missing}")
         print(f"  {loc:3} {len(v)} fields · chart {len(v['chart_html']):>6} chars · "
               f"glance {len(cfg['glance']['rows'])} rows · limits {len(cfg['limits']['items'])} · "
+              f"results {len(_items(cfg, 'outcomes'))} · how it works {len(_items(cfg, 'mechanisms'))} · "
               f"seo {len(v['seo_title'])}/{len(v['seo_description'])}")
     return errs
 
@@ -433,8 +577,10 @@ def drafts_blog_id():
     return r["blog"]["id"]
 
 
-def preview_article(cfg):
-    """Publish or update a new study's English draft in the hidden drafts blog. Refuses a study that is live."""
+def preview_article(cfg, detail_id=None):
+    """Publish or update a new study's English draft in the hidden drafts blog. Refuses a study that is live.
+
+    detail_id: the study's companion study_detail entry (results and how-it-works sections), linked as study.detail."""
     handle = cfg["handle"]
     found = [a for a in gql('query($q:String!){ articles(first:10, query:$q){ nodes{ id handle blog{ handle } } } }',
                             {"q": f"handle:{handle}"})["articles"]["nodes"] if a["handle"] == handle]
@@ -455,6 +601,9 @@ def preview_article(cfg):
                {"namespace": "global", "key": "description_tag", "type": "multi_line_text_field",
                 "value": t(cfg["seo_description"], "en")},
                {"namespace": "seo", "key": "hidden", "type": "number_integer", "value": "1"}]}
+    if detail_id:
+        art["metafields"].append({"namespace": "study", "key": detail_link_key(False), "type": "metaobject_reference",
+                                  "value": detail_id})
     mine = next((a for a in found if a["blog"]["handle"] == DRAFTS_BLOG), None)
     if mine:
         r = gql('mutation($id:ID!,$a:ArticleUpdateInput!){ articleUpdate(id:$id, article:$a)'
@@ -468,8 +617,9 @@ def preview_article(cfg):
           f"{page_url(cfg, 'en', blog=DRAFTS_BLOG).split('?')[0]}")
 
 
-def link_draft(cfg):
-    """Point the live article's study.draft metafield at the draft entry (creating the definition once)."""
+def link_draft(cfg, detail_id=None):
+    """Point the live article's study.draft metafield at the draft entry (creating the definition once), and
+    study.draft_detail at the draft's companion entry when it has one."""
     study_def = gql('query{ metaobjectDefinitionByType(type:"study"){ id } }')["metaobjectDefinitionByType"]["id"]
     have = gql('query{ metafieldDefinitions(first:50, ownerType:ARTICLE, namespace:"study"){ nodes{ key } } }')
     if "draft" not in [n["key"] for n in have["metafieldDefinitions"]["nodes"]]:
@@ -488,6 +638,8 @@ def link_draft(cfg):
             {"m": [{"ownerId": art["id"], "namespace": "study", "key": "draft", "type": "metaobject_reference", "value": mo["id"]}]})
     if r["metafieldsSet"]["userErrors"]:
         sys.exit(f"  ✗ {r['metafieldsSet']['userErrors']}")
+    if detail_id:
+        link_detail(art["id"], detail_id, draft=True)
     print(f"  ✓ article study.draft → {draft_handle(cfg)}; preview: {page_url(cfg, 'en', PREVIEW_VIEW).split('&v=')[0]}")
 
 
@@ -518,7 +670,11 @@ def apply(cfg, status="ACTIVE", entry_handle=None, english_only=False):
     rid = r["metaobject"]["id"]
     print(f"  ✓ {handle}: {'updated' if ex else 'created'}, {status}, {len(payload)} fields (English)")
 
-    trans = [] if english_only else [l for l in locales(cfg) if l != "en"]
+    register(rid, [] if english_only else [l for l in locales(cfg) if l != "en"], lambda l: fields(cfg, l))
+
+
+def register(rid, trans, values):
+    """Register one entry's translations: `values(locale)` -> {field: text}. Empty fields have nothing to translate."""
     if not trans:
         print("  · no translations in this config yet — English serves every locale until they land")
         return
@@ -527,13 +683,97 @@ def apply(cfg, status="ACTIVE", entry_handle=None, english_only=False):
         'query($id:ID!){ translatableResource(resourceId:$id){ translatableContent{ key value digest } } }',
         {"id": rid})["translatableResource"]["translatableContent"]}
     t_in = [{"locale": l, "key": k, "value": v, "translatableContentDigest": tc[k]["digest"]}
-            for l in trans for k, v in fields(cfg, l).items() if k in tc]
+            for l in trans for k, v in values(l).items() if k in tc and v]
     for i in range(0, len(t_in), 50):
         rr = gql('mutation($id:ID!,$t:[TranslationInput!]!){ translationsRegister(resourceId:$id, translations:$t)'
                  '{ userErrors{ message } } }', {"id": rid, "t": t_in[i:i + 50]})["translationsRegister"]
         if rr["userErrors"]:
             sys.exit(f"  ✗ translations: {rr['userErrors']}")
     print(f"  ✓ {len(t_in)} translations across {len(trans)} locales")
+
+
+def ensure_detail_definition():
+    """The study_detail definition and the two article metafields that point at it, created once (2026-10-01).
+
+    Mirrors the study definition: translatable, publishable, admin-only (Liquid reads it through the article).
+    A field added to DETAIL_FIELDS later is added to the live definition here.
+    """
+    d = gql('query($t:String!){ metaobjectDefinitionByType(type:$t){ id fieldDefinitions{ key } } }',
+            {"t": DETAIL_TYPE})["metaobjectDefinitionByType"]
+    defs = [{"key": k, "name": k.replace("_", " ").capitalize(), "type": kind} for k, kind in DETAIL_FIELDS]
+    if not d:
+        r = gql('mutation($d:MetaobjectDefinitionCreateInput!){ metaobjectDefinitionCreate(definition:$d)'
+                '{ metaobjectDefinition{ id } userErrors{ field message } } }',
+                {"d": {"type": DETAIL_TYPE, "name": "Study detail", "fieldDefinitions": defs,
+                       "capabilities": {"publishable": {"enabled": True}, "translatable": {"enabled": True}}}}
+                )["metaobjectDefinitionCreate"]
+        if r["userErrors"]:
+            sys.exit(f"  ✗ {DETAIL_TYPE} definition: {r['userErrors']}")
+        d = {"id": r["metaobjectDefinition"]["id"], "fieldDefinitions": [{"key": k} for k, _ in DETAIL_FIELDS]}
+        print(f"  ✓ created the {DETAIL_TYPE} definition ({len(defs)} fields)")
+    have = {f["key"] for f in d["fieldDefinitions"]}
+    new = [x for x in defs if x["key"] not in have]
+    if new:
+        r = gql('mutation($id:ID!,$d:MetaobjectDefinitionUpdateInput!){ metaobjectDefinitionUpdate(id:$id, definition:$d)'
+                '{ userErrors{ field message } } }',
+                {"id": d["id"], "d": {"fieldDefinitions": [{"create": x} for x in new]}})["metaobjectDefinitionUpdate"]
+        if r["userErrors"]:
+            sys.exit(f"  ✗ {DETAIL_TYPE} fields: {r['userErrors']}")
+    links = gql('query{ metafieldDefinitions(first:50, ownerType:ARTICLE, namespace:"study"){ nodes{ key } } }')
+    for key, name in ((detail_link_key(False), "Study detail"), (detail_link_key(True), "Study detail (draft preview)")):
+        if key in [n["key"] for n in links["metafieldDefinitions"]["nodes"]]:
+            continue
+        r = gql('mutation($d:MetafieldDefinitionInput!){ metafieldDefinitionCreate(definition:$d){ userErrors{ message } } }',
+                {"d": {"name": name, "namespace": "study", "key": key, "ownerType": "ARTICLE",
+                       "type": "metaobject_reference", "validations": [{"name": "metaobject_definition_id", "value": d["id"]}]}})
+        if r["metafieldDefinitionCreate"]["userErrors"]:
+            sys.exit(f"  ✗ study.{key}: {r['metafieldDefinitionCreate']['userErrors']}")
+        print(f"  ✓ created the article metafield study.{key}")
+    return d["id"]
+
+
+def apply_detail(cfg, entry_handle=None, english_only=False, status="ACTIVE"):
+    """Write the study's companion study_detail entry; returns its id, or None (and touches nothing) for a config
+    with neither `outcomes` nor `mechanisms`."""
+    en = detail_fields(cfg, "en")
+    if en is None:
+        return None
+    ensure_detail_definition()
+    handle = entry_handle or cfg["handle"]
+    ex = gql('query($h:MetaobjectHandleInput!){ metaobjectByHandle(handle:$h){ id } }',
+             {"h": {"type": DETAIL_TYPE, "handle": handle}})["metaobjectByHandle"]
+    payload = [{"key": k, "value": v} for k, v in en.items()]
+    for key, stem in detail_images(cfg):
+        if stem:
+            payload.append({"key": key, "value": media_gid(stem)})
+        elif ex:                                     # a slot the study no longer uses: clear its picture
+            payload.append({"key": key, "value": ""})
+    cap = {"publishable": {"status": status}}
+    if ex:
+        r = gql('mutation($id:ID!,$m:MetaobjectUpdateInput!){ metaobjectUpdate(id:$id, metaobject:$m)'
+                '{ metaobject{ id } userErrors{ field message } } }',
+                {"id": ex["id"], "m": {"fields": payload, "capabilities": cap}})["metaobjectUpdate"]
+    else:
+        r = gql('mutation($m:MetaobjectCreateInput!){ metaobjectCreate(metaobject:$m)'
+                '{ metaobject{ id } userErrors{ field message } } }',
+                {"m": {"type": DETAIL_TYPE, "handle": handle, "fields": payload, "capabilities": cap}})["metaobjectCreate"]
+    if r["userErrors"]:
+        sys.exit(f"  ✗ {DETAIL_TYPE} {handle}: {r['userErrors']}")
+    rid = r["metaobject"]["id"]
+    print(f"  ✓ {DETAIL_TYPE} {handle}: {'updated' if ex else 'created'}, {len(_items(cfg, 'outcomes'))} results, "
+          f"{len(_items(cfg, 'mechanisms'))} how-it-works blocks")
+    register(rid, [] if english_only else [l for l in locales(cfg) if l != "en"], lambda l: detail_fields(cfg, l))
+    return rid
+
+
+def link_detail(article_id, detail_id, draft=False):
+    """Point an article at its companion entry (study.detail, or study.draft_detail for the English-first preview)."""
+    r = gql('mutation($m:[MetafieldsSetInput!]!){ metafieldsSet(metafields:$m){ userErrors{ message } } }',
+            {"m": [{"ownerId": article_id, "namespace": "study", "key": detail_link_key(draft),
+                    "type": "metaobject_reference", "value": detail_id}]})
+    if r["metafieldsSet"]["userErrors"]:
+        sys.exit(f"  ✗ {r['metafieldsSet']['userErrors']}")
+    print(f"  ✓ article study.{detail_link_key(draft)} → {detail_id}")
 
 
 def verify(cfg, view=None, blog=None):
@@ -549,12 +789,18 @@ def verify(cfg, view=None, blog=None):
         dead = [h for h in set(re.findall(
             r'href="(/[a-z]{2}/(?:pages|products|collections)/[^"#?]+|/(?:pages|products|collections)/[^"#?]+)"', page))
             if h.count("/") <= 4 and "study/" not in h and spg._status(BASE + h) != 200][:3]
-        ok = h1 == [want] and ld and banner and not leftover and not dead
+        # the results and how-it-works blocks: every heading on the page, and no empty slot drawn as a grey box
+        d = detail_fields(cfg, loc) or {}
+        lost = [v for k, v in d.items() if k.endswith("_title") and v and v not in H.unescape(page)]
+        boxes = page.count("<svg class=\"placeholder\"") if d else 0   # placeholder_svg_tag: 'placeholder'
+        ok = h1 == [want] and ld and banner and not leftover and not dead and not lost and not boxes
         bad += not ok
         print(f"  {'✓' if ok else '✗'} {loc}: h1 {'ok' if h1 == [want] else h1}, banner "
               f"{'ok' if banner else 'MISSING'}, tables {page.count('<table')}, "
               f"JSON-LD {'valid' if ld else 'INVALID'}"
-              + (", UNRENDERED LIQUID" if leftover else "") + (f", dead: {dead}" if dead else ""))
+              + (f", result/how-it-works blocks {sum(1 for k, v in d.items() if k.endswith('_title') and v)}" if d else "")
+              + (", UNRENDERED LIQUID" if leftover else "") + (f", dead: {dead}" if dead else "")
+              + (f", MISSING BLOCKS: {lost}" if lost else "") + (f", {boxes} EMPTY-SLOT PLACEHOLDERS" if boxes else ""))
         time.sleep(1)
     return bad
 
@@ -576,7 +822,7 @@ def main():
     route = ({"view": PREVIEW_VIEW} if live_article(cfg) else {"blog": DRAFTS_BLOG}) if a.preview else {}
     if a.verify_live:
         return 1 if verify(cfg, **route) else 0
-    errs = check(cfg) + check_citations(cfg, resolve_live)
+    errs = check(cfg) + check_detail(cfg, english_only=a.preview) + check_citations(cfg, resolve_live)
     for e in errs:
         print("  ✗", e)
     if errs:
@@ -585,14 +831,18 @@ def main():
     if a.apply and a.preview and "blog" in route:
         # not live yet: the entry is written under its own handle (nothing references it until the draft article)
         apply(cfg, "ACTIVE", english_only=True)
-        preview_article(cfg)
+        preview_article(cfg, detail_id=apply_detail(cfg, english_only=True))
     elif a.apply and a.preview:
         # ACTIVE, not DRAFT: a storefront reference to a draft entry renders nothing. The study definition's own web
         # pages are off, so the entry has no public page; it is reached only through ?view=clinical-study-draft.
         apply(cfg, "ACTIVE", entry_handle=draft_handle(cfg), english_only=True)
-        link_draft(cfg)
+        link_draft(cfg, detail_id=apply_detail(cfg, entry_handle=draft_handle(cfg), english_only=True))
     elif a.apply:
         apply(cfg, "DRAFT" if a.draft else "ACTIVE")
+        did = apply_detail(cfg, status="DRAFT" if a.draft else "ACTIVE")
+        art = live_article(cfg) if did else None
+        if art:                                      # a study not yet live is linked by build-clinical-studies-blog.py
+            link_detail(art["id"], did)
     return 0
 
 

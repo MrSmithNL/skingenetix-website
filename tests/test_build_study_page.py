@@ -255,3 +255,219 @@ def test_the_drafts_blog_is_created_once_and_hidden(monkeypatch):
     hid = [m for q, v in calls if "metafieldsSet" in q for m in v["m"]]
     assert hid == [{"ownerId": "gid://shopify/Blog/7", "namespace": "seo", "key": "hidden",
                     "type": "number_integer", "value": "1"}]            # the blog's own index page is noindexed too
+
+
+# ---------------------------------------------------------------- one section per result, and "how it works" (2026-10-01)
+# Malcolm: separate content sections for each proven trial outcome, with a before/after picture where one can be used,
+# and separate blocks for the proven effects that explain how the active works. They live in a companion
+# `study_detail` entry (the study entry is full, 40 of 40 fields) linked from the article as study.detail.
+
+OUT = {"heading": {"en": "What the trial found, result by result"},
+       "items": [{"title": {"en": "Wrinkle volume fell 55.8% more than with the plain serum"},
+                  "image": "skingenetix-copper-peptide-ghk-cu-crows-feet-wrinkles-before-after.jpg",
+                  "before_after": True, "after": {"en": "After 8 weeks", "de": "Nach 8 Wochen"},
+                  "result": {"en": "Wrinkle volume −24.1% vs −15.0% with the plain serum"},
+                  "body": [{"en": "First paragraph."}, {"en": "Second paragraph."}]},
+                 {"title": {"en": "Wrinkle depth fell further too"},
+                  "image": "skingenetix-copper-peptide-ghk-cu-wrinkle-depth-scan-study.jpg",
+                  "body": [{"en": "Depth paragraph."}]}]}
+MECH = {"heading": {"en": "How GHK-Cu works on skin"},
+        "items": [{"title": {"en": "More collagen from skin cells"}, "evidence": "laboratory",
+                   "image": "skingenetix-copper-peptide-ghk-cu-fibroblast-culture-study.jpg",
+                   "body": [{"en": "In the laboratory, skin cells grown with GHK-Cu made more collagen."}]}]}
+
+
+def with_detail(**changes):
+    cfg = copy.deepcopy(BADENHORST)
+    cfg["outcomes"], cfg["mechanisms"] = copy.deepcopy(OUT), copy.deepcopy(MECH)
+    cfg.update(changes)
+    return cfg
+
+
+def test_a_config_without_the_new_keys_builds_exactly_as_before():
+    """Eight live articles have no outcomes or mechanisms: they must write no companion entry and pass every check."""
+    assert bsp.detail_fields(BADENHORST, "en") is None
+    assert bsp.check_detail(BADENHORST) == []
+
+
+def test_used_slots_are_filled_and_unused_slots_are_cleared():
+    f = bsp.detail_fields(with_detail(), "en")
+    assert f["outcomes_heading"] == "What the trial found, result by result"
+    assert f["o1_title"] == "Wrinkle volume fell 55.8% more than with the plain serum"
+    assert (f["o1_before"], f["o1_after"]) == ("Before", "After 8 weeks")
+    assert f["o1_result"] == "Wrinkle volume −24.1% vs −15.0% with the plain serum"
+    assert f["o1_body"] == "First paragraph.</p><p>Second paragraph."      # the template supplies the outer <p>
+    assert f["o2_before"] == f["o2_after"] == f["o2_result"] == ""      # a plain photograph carries no labels
+    assert f["m1_title"] == "More collagen from skin cells" and f["mechanism_heading"] == "How GHK-Cu works on skin"
+    # a slot a study no longer uses is written empty, so an old result cannot linger on the page
+    assert f["o3_title"] == f["o4_body"] == f["m2_title"] == f["m3_body"] == ""
+    assert set(f) == {k for k, kind in bsp.DETAIL_FIELDS if kind != "file_reference"}
+
+
+def test_the_before_label_uses_the_science_pages_words():
+    assert bsp.detail_fields(with_detail(), "de")["o1_before"] == "Vorher"
+    assert bsp.detail_fields(with_detail(), "de")["o1_after"] == "Nach 8 Wochen"
+    assert [bsp.BEFORE[l] for l in bsp.LOCALES] == ["Before", "Vorher", "Voor", "Avant", "Antes", "Prima"]
+
+
+def test_the_images_of_each_slot_are_listed_and_unused_ones_cleared():
+    imgs = dict(bsp.detail_images(with_detail()))
+    assert imgs["o1_image"] == "skingenetix-copper-peptide-ghk-cu-crows-feet-wrinkles-before-after"
+    assert imgs["m1_image"] == "skingenetix-copper-peptide-ghk-cu-fibroblast-culture-study"
+    assert imgs["o3_image"] is None and imgs["m3_image"] is None
+
+
+def _problems(cfg):
+    return " | ".join(bsp.check_detail(cfg))
+
+
+def test_at_most_four_results_and_three_mechanisms():
+    cfg = with_detail()
+    cfg["outcomes"]["items"] *= 3
+    cfg["mechanisms"]["items"] *= 4
+    p = _problems(cfg)
+    assert "6 results" in p and "4 mechanisms" in p
+
+
+def test_a_before_after_needs_its_after_and_result_labels():
+    cfg = with_detail()
+    del cfg["outcomes"]["items"][0]["result"]
+    assert "o1" in _problems(cfg) and "result" in _problems(cfg)
+
+
+def test_labels_on_a_plain_photograph_are_refused():
+    """A Before/After pill on a single photograph would claim a before/after the picture does not show."""
+    cfg = with_detail()
+    cfg["outcomes"]["items"][1]["after"] = {"en": "After 8 weeks"}
+    assert "o2" in _problems(cfg) and "before_after" in _problems(cfg)
+
+
+def test_every_image_names_the_ingredient():
+    """Malcolm, 2026-09-24: every content image on an ingredient's page carries that ingredient in its filename."""
+    cfg = with_detail()
+    cfg["mechanisms"]["items"][0]["image"] = "skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg"
+    assert "m1" in _problems(cfg) and "ingredient" in _problems(cfg)
+
+
+def test_no_image_is_used_twice_on_one_page():
+    cfg = with_detail()
+    cfg["outcomes"]["items"][1]["image"] = cfg["media"]["image"]
+    assert "twice" in _problems(cfg)
+
+
+def test_a_laboratory_mechanism_must_say_it_is_one():
+    """Register rule: mechanism detail is framed as laboratory findings, never as what happens in the reader's skin."""
+    cfg = with_detail()
+    cfg["mechanisms"]["items"][0]["body"] = [{"en": "GHK-Cu makes your skin produce more collagen."}]
+    assert "m1" in _problems(cfg) and "laborator" in _problems(cfg)
+    cfg["mechanisms"]["items"][0]["evidence"] = "anecdote"
+    assert "evidence" in _problems(cfg)
+
+
+def test_a_result_label_must_fit_on_the_picture():
+    cfg = with_detail()
+    cfg["outcomes"]["items"][0]["result"]["de"] = "x" * 70
+    assert "o1" in _problems(cfg) and "de" in _problems(cfg)
+
+
+def test_a_section_with_blocks_needs_its_heading():
+    cfg = with_detail()
+    del cfg["mechanisms"]["heading"]
+    assert "heading" in _problems(cfg)
+
+
+def test_the_results_count_towards_the_verified_figures():
+    """The `checks` probes look at everything published, so a figure may live in a result block alone."""
+    cfg = with_detail(checks=["−24.1% vs −15.0% with the plain serum"])
+    assert not [e for e in bsp.check(cfg) if "verified figures" in e]
+
+
+def _detail_recorder(calls, exists=False):
+    def gql(q, v=None):
+        calls.append((q, v or {}))
+        if "metaobjectDefinitionByType" in q:
+            return {"metaobjectDefinitionByType": {"id": "gid://shopify/MetaobjectDefinition/5", "fieldDefinitions":
+                    [{"key": k} for k, _ in bsp.DETAIL_FIELDS]}}
+        if "metafieldDefinitions(" in q:          # both article links already defined
+            return {"metafieldDefinitions": {"nodes": [{"key": "entry"}, {"key": "detail"}, {"key": "draft_detail"}]}}
+        if "metaobjectByHandle" in q:
+            return {"metaobjectByHandle": {"id": "gid://shopify/Metaobject/77"} if exists else None}
+        if "metaobjectCreate" in q:
+            return {"metaobjectCreate": {"metaobject": {"id": "gid://shopify/Metaobject/77"}, "userErrors": []}}
+        if "metaobjectUpdate" in q:
+            return {"metaobjectUpdate": {"metaobject": {"id": "gid://shopify/Metaobject/77"}, "userErrors": []}}
+        raise AssertionError(f"unexpected call: {q[:60]}")
+    return gql
+
+
+def test_the_companion_entry_is_written_under_the_study_handle(monkeypatch):
+    calls = []
+    monkeypatch.setattr(bsp, "gql", _detail_recorder(calls))
+    monkeypatch.setattr(bsp, "media_gid", lambda stem: "gid://shopify/MediaImage/" + stem[-6:])
+    rid = bsp.apply_detail(with_detail(), entry_handle=None, english_only=True)
+    assert rid == "gid://shopify/Metaobject/77"
+    m = next(v["m"] for q, v in calls if "metaobjectCreate" in q)
+    assert m["type"] == "study_detail" and m["handle"] == BADENHORST["handle"]
+    vals = {f["key"]: f["value"] for f in m["fields"]}
+    assert vals["o1_title"].startswith("Wrinkle volume") and vals["o1_image"].startswith("gid://shopify/MediaImage/")
+    assert "o3_image" not in vals                     # an empty file reference is not sent on create
+    assert not any("translationsRegister" in q for q, _ in calls)
+
+
+def test_an_update_clears_the_images_of_slots_no_longer_used(monkeypatch):
+    calls = []
+    monkeypatch.setattr(bsp, "gql", _detail_recorder(calls, exists=True))
+    monkeypatch.setattr(bsp, "media_gid", lambda stem: "gid://shopify/MediaImage/1")
+    bsp.apply_detail(with_detail(), entry_handle="x-draft", english_only=True)
+    m = next(v["m"] for q, v in calls if "metaobjectUpdate" in q)
+    vals = {f["key"]: f["value"] for f in m["fields"]}
+    assert vals["o3_image"] == "" and vals["m3_image"] == ""
+
+
+def test_no_companion_entry_for_a_config_without_the_new_keys(monkeypatch):
+    calls = []
+    monkeypatch.setattr(bsp, "gql", _detail_recorder(calls))
+    assert bsp.apply_detail(BADENHORST, entry_handle=None, english_only=True) is None
+    assert calls == []
+
+
+def test_the_new_study_preview_links_its_companion_entry(monkeypatch):
+    calls = []
+    monkeypatch.setattr(bsp, "gql", _blog_recorder(calls))
+    bsp.preview_article({**NEW, "outcomes": OUT}, detail_id="gid://shopify/Metaobject/77")
+    a = next(v["a"] for q, v in calls if "articleCreate" in q)
+    mf = {(m["namespace"], m["key"]): m["value"] for m in a["metafields"]}
+    assert mf[("study", "detail")] == "gid://shopify/Metaobject/77"
+
+
+def test_a_preview_without_a_companion_entry_sets_no_detail_link(monkeypatch):
+    calls = []
+    monkeypatch.setattr(bsp, "gql", _blog_recorder(calls))
+    bsp.preview_article(NEW)
+    a = next(v["a"] for q, v in calls if "articleCreate" in q)
+    assert ("study", "detail") not in {(m["namespace"], m["key"]) for m in a["metafields"]}
+
+
+def test_the_detail_link_key_follows_the_route():
+    assert bsp.detail_link_key(draft=False) == "detail"
+    assert bsp.detail_link_key(draft=True) == "draft_detail"
+
+
+def test_a_full_publish_refuses_a_block_missing_one_of_the_studys_languages():
+    """t() falls back to English, so an English-only result on a six-language study would be registered as the German,
+    Dutch, French, Spanish and Italian translation. The English-first preview is the one place English alone is right."""
+    cfg = with_detail()
+    cfg["h1"] = {**cfg["h1"], "de": "Kann ein Kupferpeptid-Serum Falten mindern?"}    # the study is now in German too
+    full = " | ".join(bsp.check_detail(cfg))
+    assert "o1" in full and "de" in full and "title" in full
+    assert bsp.check_detail(cfg, english_only=True) == []
+
+
+def test_study_i18n_extracts_the_new_blocks_for_translation():
+    s = importlib.util.spec_from_file_location("si18n", ROOT / "scripts/study-i18n.py")
+    m = importlib.util.module_from_spec(s)
+    s.loader.exec_module(m)
+    strings = json.dumps(m.strings(with_detail()), ensure_ascii=False)
+    assert "Wrinkle volume fell 55.8% more than with the plain serum" in strings
+    assert "In the laboratory, skin cells grown with GHK-Cu made more collagen." in strings
+    assert "After 8 weeks" in strings
