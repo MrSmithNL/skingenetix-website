@@ -1,0 +1,40 @@
+{
+  "_about": "Card f4 on /pages/pdrn-research: Ye 2026's eye-bag figure from Figure 6B (-14.8% vs -10.2%, about 1.5x), which the card gave as 'about 2x' (the abstract's rounding). Malcolm approved the correction 2026-10-01 (docs/review-2026-10-01-study-results-and-how-it-works.md §3). Set-only: patches three settings of one block.",
+  "template": "templates/page.pdrn-research.json",
+  "page": "pdrn-research",
+  "set": [
+    {
+      "at": "key_findings_ba/f4/title",
+      "values": {
+        "en": "Under-Eye Bags: Volume −14.8% vs −10.2% With Retinol",
+        "de": "Tränensäcke: Volumen −14,8 % gegenüber −10,2 % mit Retinol",
+        "nl": "Wallen onder de ogen: volume −14,8% tegenover −10,2% met retinol",
+        "fr": "Poches sous les yeux : volume −14,8 % contre −10,2 % avec le rétinol",
+        "es": "Bolsas bajo los ojos: volumen −14,8 % frente a −10,2 % con retinol",
+        "it": "Borse sotto gli occhi: volume −14,8% contro −10,2% con il retinolo"
+      }
+    },
+    {
+      "at": "key_findings_ba/f4/result_label",
+      "values": {
+        "en": "Eye-bag volume −14.8% vs −10.2% with retinol (28 days)",
+        "de": "Tränensäcke −14,8 % vs. −10,2 % mit Retinol (28 Tage)",
+        "nl": "Wallen −14,8% vs −10,2% met retinol (28 dagen)",
+        "fr": "Poches −14,8 % contre −10,2 % avec rétinol (28 jours)",
+        "es": "Bolsas −14,8 % frente a −10,2 % con retinol (28 días)",
+        "it": "Borse −14,8% contro −10,2% con retinolo (28 giorni)"
+      }
+    },
+    {
+      "at": "key_findings_ba/f4/content",
+      "values": {
+        "en": "<p>The same controlled trial scanned the under-eye area in 3D. On the PDRN side, eye-bag volume fell 14.8% in 28 days, against 10.2% on the retinol side.</p><p><strong>Study design:</strong> randomised, double-blind, split-face. 31 women aged 35 to 55 with sensitive skin used a 0.1% PDRN eye cream on one side of the face and a 0.1% retinol cream in the same base on the other, twice a day for 28 days.</p><p><strong>Results on the PDRN side:</strong></p><ul><li><strong>Eye-bag volume</strong> fell 14.8%, against 10.2% with retinol, and tear-trough volume 13.7% against 10.2%, measured by 3D skin imaging</li><li><strong>Crow's-feet wrinkle area</strong> fell 23.0%, more than three times the retinol side's 6.6%</li></ul><p><em>Ye R et al. (2026). PLOS ONE, 21(7):e0350905. <a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>View on PubMed</a></em></p>",
+        "de": "<p>Dieselbe kontrollierte Studie hat den Bereich unter den Augen in 3D vermessen. Auf der PDRN-Seite nahm das Volumen der Tränensäcke in 28 Tagen um 14,8 % ab, auf der Retinol-Seite um 10,2 %.</p><p><strong>Studiendesign:</strong> randomisiert, doppelblind, Halbseitenvergleich. 31 Frauen zwischen 35 und 55 Jahren mit empfindlicher Haut verwendeten 28 Tage lang zweimal täglich eine Augencreme mit 0,1 % PDRN auf einer Gesichtshälfte und eine Creme mit 0,1 % Retinol in derselben Grundlage auf der anderen.</p><p><strong>Ergebnisse auf der PDRN-Seite:</strong></p><ul><li><strong>Das Volumen der Tränensäcke</strong> nahm um 14,8 % ab, gegenüber 10,2 % mit Retinol, und das Volumen der Augenringe um 13,7 % gegenüber 10,2 %, gemessen mit 3D-Hautbildgebung</li><li><strong>Die Faltenfläche der Krähenfüße</strong> nahm um 23,0 % ab, mehr als dreimal so stark wie die 6,6 % auf der Retinol-Seite</li></ul><p><em>Ye R et al. (2026). PLOS ONE, 21(7):e0350905. <a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Auf PubMed ansehen</a></em></p>",
+        "nl": "<p>Dezelfde gecontroleerde studie heeft het gebied onder de ogen in 3D gescand. Aan de PDRN-kant nam het volume van de wallen in 28 dagen met 14,8% af, tegenover 10,2% aan de retinolkant.</p><p><strong>Studieopzet:</strong> gerandomiseerd, dubbelblind, split-face. 31 vrouwen van 35 tot 55 jaar met een gevoelige huid gebruikten 28 dagen lang tweemaal daags een oogcrème met 0,1% PDRN op de ene gezichtshelft en een crème met 0,1% retinol in dezelfde basis op de andere.</p><p><strong>Resultaten aan de PDRN-kant:</strong></p><ul><li><strong>Het volume van de wallen</strong> nam met 14,8% af, tegenover 10,2% met retinol, en het volume van de traangoten met 13,7% tegenover 10,2%, gemeten met 3D-huidbeeldvorming</li><li><strong>Het rimpeloppervlak van de kraaienpootjes</strong> nam met 23,0% af, meer dan drie keer de 6,6% aan de retinolkant</li></ul><p><em>Ye R et al. (2026). PLOS ONE, 21(7):e0350905. <a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Bekijk op PubMed</a></em></p>",
+        "fr": "<p>Le même essai contrôlé a mesuré la zone sous les yeux en 3D. Du côté PDRN, le volume des poches a diminué de 14,8 % en 28 jours, contre 10,2 % du côté rétinol.</p><p><strong>Protocole :</strong> randomisé, en double aveugle, sur demi-visage. 31 femmes de 35 à 55 ans à la peau sensible ont appliqué pendant 28 jours, deux fois par jour, une crème contour des yeux à 0,1 % de PDRN d'un côté du visage et une crème à 0,1 % de rétinol dans la même base de l'autre.</p><p><strong>Résultats du côté PDRN :</strong></p><ul><li><strong>Le volume des poches</strong> a diminué de 14,8 %, contre 10,2 % avec le rétinol, et celui des cernes creux de 13,7 % contre 10,2 %, mesurés par imagerie cutanée 3D</li><li><strong>La surface des rides des pattes d'oie</strong> a diminué de 23,0 %, plus de trois fois les 6,6 % du côté rétinol</li></ul><p><em>Ye R et al. (2026). PLOS ONE, 21(7):e0350905. <a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Voir sur PubMed</a></em></p>",
+        "es": "<p>El mismo ensayo controlado midió la zona bajo los ojos en 3D. En el lado del PDRN, el volumen de las bolsas bajó un 14,8 % en 28 días, frente a un 10,2 % en el lado del retinol.</p><p><strong>Diseño del estudio:</strong> aleatorizado, doble ciego, de media cara. 31 mujeres de 35 a 55 años con piel sensible usaron durante 28 días, dos veces al día, una crema de contorno de ojos con un 0,1 % de PDRN en un lado de la cara y una crema con un 0,1 % de retinol en la misma base en el otro.</p><p><strong>Resultados en el lado del PDRN:</strong></p><ul><li><strong>El volumen de las bolsas</strong> bajó un 14,8 %, frente a un 10,2 % con retinol, y el de las ojeras hundidas un 13,7 % frente a un 10,2 %, medidos con imagen cutánea en 3D</li><li><strong>La superficie de las arrugas de las patas de gallo</strong> bajó un 23,0 %, más del triple del 6,6 % del lado del retinol</li></ul><p><em>Ye R et al. (2026). PLOS ONE, 21(7):e0350905. <a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Ver en PubMed</a></em></p>",
+        "it": "<p>Lo stesso studio controllato ha misurato in 3D la zona sotto gli occhi. Sul lato PDRN, il volume delle borse è diminuito del 14,8% in 28 giorni, contro il 10,2% sul lato retinolo.</p><p><strong>Disegno dello studio:</strong> randomizzato, doppio cieco, a mezzo viso. 31 donne tra i 35 e i 55 anni con pelle sensibile hanno usato per 28 giorni, due volte al giorno, una crema contorno occhi allo 0,1% di PDRN su un lato del viso e una crema allo 0,1% di retinolo nella stessa base sull'altro.</p><p><strong>Risultati sul lato PDRN:</strong></p><ul><li><strong>Il volume delle borse</strong> è diminuito del 14,8%, contro il 10,2% con il retinolo, e quello delle occhiaie incavate del 13,7% contro il 10,2%, misurati con imaging cutaneo 3D</li><li><strong>La superficie delle rughe delle zampe di gallina</strong> è diminuita del 23,0%, più del triplo del 6,6% sul lato retinolo</li></ul><p><em>Ye R et al. (2026). PLOS ONE, 21(7):e0350905. <a href='https://pubmed.ncbi.nlm.nih.gov/42430369/' target='_blank' rel='noopener'>Vedi su PubMed</a></em></p>"
+      }
+    }
+  ]
+}
