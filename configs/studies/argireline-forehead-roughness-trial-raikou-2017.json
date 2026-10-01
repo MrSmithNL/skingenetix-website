@@ -57,7 +57,7 @@
         "en": "8.1 &rarr; 5.7"
       },
       "label": {
-        "en": "Water loss through the skin fell, day 20 (g/m²/h)"
+        "en": "Water loss through the skin fell, day 20"
       },
       "note": {
         "en": "It fell with Argireline® while it rose on the placebo cream (P = .025), and the gap held at day 40 (P = .01): skin held on to its moisture."
@@ -65,13 +65,13 @@
     },
     {
       "n": {
-        "en": "None"
+        "en": "5.4 vs 18.0"
       },
       "label": {
-        "en": "Skin reactions reported with the peptide creams"
+        "en": "Water loss through the skin, day 40"
       },
       "note": {
-        "en": "No warmth, stinging, redness, flaking, itching or eye irritation was reported in any of the three peptide groups over 60 days ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314))."
+        "en": "With 10% Argireline®, against the placebo cream (P = .01), the widest gap of the trial. No skin reactions were reported with any of the peptide creams over 60 days ([Raikou et al., 2017](https://doi.org/10.1111/jocd.12314))."
       }
     }
   ],
@@ -172,8 +172,15 @@
       },
       "unit": "%",
       "decimals": 1,
-      "domain": [-10, 10],
-      "ticks": [-5, 0, 5],
+      "domain": [
+        -10,
+        10
+      ],
+      "ticks": [
+        -5,
+        0,
+        5
+      ],
       "value_width": 70,
       "series": [
         {
@@ -253,7 +260,7 @@
         "en": "<strong>The placebo base.</strong> The placebo cream was deliberately low in emollients, so that the peptides could be measured on their own. Its users' water loss rose and they reported dryness, which widens the moisture comparison."
       },
       {
-        "en": "<strong>Where it was measured.</strong> Skin was imaged on the forehead and around the eyes. The significant differences were on the forehead, which the authors put down to the single main expression muscle between the brows, against the larger muscle group around the eye."
+        "en": "<strong>Where it was measured.</strong> Skin was imaged on the forehead and around the eyes. The significant differences were on the forehead, the site where cosmetics aimed at moderate lines are usually measured, the authors note."
       },
       {
         "en": "<strong>How the creams were given out.</strong> In coded jars, so the women did not see which cream they had; the paper does not describe how the assessors were blinded."
@@ -349,7 +356,19 @@
     "datePublished": "2017",
     "journal": "Journal of Cosmetic Dermatology"
   },
-  "checks": ["7.4", "4.3", ".022", ".025", "10% w/w", "coded jars", "Raikou V, Varvaresou A", "Read at source"],
+  "checks": [
+    "7.4",
+    "4.3",
+    ".022",
+    ".025",
+    "10% w/w",
+    "coded jars",
+    "Raikou V, Varvaresou A",
+    "Read at source"
+  ],
   "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page. Keep these nine values in that order.",
-  "concerns": ["wrinkles", "forehead"]
+  "concerns": [
+    "wrinkles",
+    "forehead"
+  ]
 }

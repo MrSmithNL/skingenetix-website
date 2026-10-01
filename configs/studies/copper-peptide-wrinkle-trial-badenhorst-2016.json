@@ -17,7 +17,7 @@
     "en": "Badenhorst 2016: Can a Copper Peptide Serum Reduce Wrinkles?"
   },
   "seo_description": {
-    "en": "Wrinkle volume fell 24.1% against 15.0% on the plain base, in an 8-week trial of 40 women. What this GHK-Cu study shows, and what it does not."
+    "en": "Wrinkle volume fell 24.1% against 15.0% with the plain base, and 31.6% more than with a Matrixyl 3000 product, in an 8-week trial of 40 women."
   },
   "citation": {
     "en": "Badenhorst T, Svirskis D, Merrilees M, Bolke L, Wu Z. Effects of GHK-Cu on MMP and TIMP expression, collagen and elastin production, and facial wrinkle parameters. *Journal of Aging Science* 2016;4(3):166. [doi:10.4172/2329-8847.1000166](https://doi.org/10.4172/2329-8847.1000166)"
@@ -56,13 +56,13 @@
     },
     {
       "n": {
-        "en": "39 of 40"
+        "en": "31.6%"
       },
       "label": {
-        "en": "Tolerated the products"
+        "en": "Greater reduction than a Matrixyl 3000 product"
       },
       "note": {
-        "en": "One participant had minor skin reactions &mdash; to the GHK-Cu serum and to the comparator alike ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
+        "en": "For wrinkle volume after 8 weeks: &minus;25.8% with the GHK-Cu serum against &minus;20.0% with the Matrixyl 3000 product, in the 19 women who compared the two (p = 0.0044) ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
       }
     }
   ],
@@ -76,7 +76,7 @@
           "en": "Design"
         },
         "v": {
-          "en": "Randomised, double-blind, split-face, run at Dermatest GmbH, an independent cosmetic research institute."
+          "en": "Randomised, double-blind, split-face, run at Dermatest GmbH, a cosmetic research institute."
         }
       },
       {
@@ -84,7 +84,7 @@
           "en": "Participants"
         },
         "v": {
-          "en": "40 women aged 40 to 65. Results are reported for the 39 who completed."
+          "en": "40 women aged 40 to 65. All three products were well tolerated by 39 of the 40, and results are reported for those 39."
         }
       },
       {
@@ -100,7 +100,7 @@
           "en": "Compared with"
         },
         "v": {
-          "en": "Group 1 (19 women): Strivectin SD Advanced Concentrate, which contains Matrixyl 3000, on the left side. Group 2 (20 women): the plain serum vehicle &mdash; no GHK-Cu and no nano-carrier &mdash; on the left side."
+          "en": "Group 1 (19 women): a commercial product containing Matrixyl 3000, on the left side. Group 2 (20 women): the plain serum vehicle &mdash; no GHK-Cu and no nano-carrier &mdash; on the left side."
         }
       },
       {
@@ -151,7 +151,7 @@
     },
     "intro": [
       {
-        "en": "Both sides of every face improved over the eight weeks. The side treated with the GHK-Cu serum improved more, and the gap widened between weeks 4 and 8."
+        "en": "Every woman's GHK-Cu side improved. Against the Matrixyl 3000 product the gap opened in the second month; the plain serum was measured at week 8."
       }
     ],
     "chart": {
@@ -163,8 +163,15 @@
       },
       "unit": "%",
       "decimals": 1,
-      "domain": [-28, 2],
-      "ticks": [-20, -10, 0],
+      "domain": [
+        -28,
+        2
+      ],
+      "ticks": [
+        -20,
+        -10,
+        0
+      ],
       "value_width": 70,
       "series": [
         {
@@ -249,7 +256,7 @@
         "en": "<strong>Against a Matrixyl 3000 product.</strong> The GHK-Cu side reduced wrinkle volume 31.6% more (p = 0.0044). The difference in depth was smaller and did not reach statistical significance (p = 0.0577)."
       },
       {
-        "en": "<strong>Scale and funding.</strong> One trial of 39 women at an independent test institute, funded by Snowberry New Zealand Ltd, which makes the serum, and published in the <em>Journal of Aging Science</em>."
+        "en": "<strong>Scale and funding.</strong> One trial of 39 women at a cosmetic research institute, funded by Snowberry New Zealand Ltd, which makes the serum, and published in the <em>Journal of Aging Science</em>."
       }
     ],
     "_note": "ADR-2026-09-26-L (Malcolm): the appraisal stays, each point a plain fact with the positive side first, no 'does not show' framing. The section title is static in scripts/study-template-build.py."
@@ -338,13 +345,13 @@
     ],
     "answers": [
       {
-        "en": "It shows that a GHK-Cu serum outperformed a plain serum base on one wrinkle, measured by 3D imaging, in 39 women over 8 weeks. Against a commercial Matrixyl 3000 product it reduced wrinkle volume 31.6% more (p = 0.0044), though the difference in depth was **not statistically significant** (p = 0.0577). It is one small trial, funded by the serum's maker, and the base it beat also lacked the nano-carrier — so it is not proof that copper peptide alone did the work ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166)). The other trials we rely on are listed on the [evidence hub](https://www.skingenetix.com/pages/copper-peptide-research)."
+        "en": "It shows that a GHK-Cu serum reduced the volume of one wrinkle near the eye 55.8% more than a plain serum base in 20 women (p &lt; 0.0001), and 31.6% more than a commercial Matrixyl 3000 product in 19 others (p = 0.0044), measured by 3D imaging over 8 weeks; against the Matrixyl product the depth difference was smaller (p = 0.0577). The plain base lacked the nano-carrier as well as the peptide, so the result belongs to the two together. It is one trial, funded by the serum's maker ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166)); the other trials we rely on are on the [evidence hub](https://www.skingenetix.com/pages/copper-peptide-research)."
       },
       {
         "en": "The paper never states one. That is why no claim on this site says a result was “clinically proven at 2%” — the trial cannot support a concentration claim, and our own products state 2% GHK-Cu on the pack independently of it."
       },
       {
-        "en": "Partly. It was run at Dermatest GmbH, an independent cosmetic research institute, and the statistics were done at the University of Auckland. But it was funded by Snowberry New Zealand Ltd, which makes the serum that was tested, and it was published in a journal whose peer review is weaker than the major dermatology titles. We grade it A− for those reasons."
+        "en": "Partly. It was run at Dermatest GmbH, a cosmetic research institute, and the statistics were done at the University of Auckland. But it was funded by Snowberry New Zealand Ltd, which makes the serum that was tested, and it was published in a journal whose peer review is weaker than the major dermatology titles. We grade it A− for those reasons."
       },
       {
         "en": "No, and we do not claim they do. The serum tested here used a lipid nano-carrier that our formulas do not, and its concentration was never disclosed. We cite this trial as evidence for the ingredient, not as a result our products have repeated."
@@ -357,5 +364,8 @@
     "honorificPrefix": "Dr",
     "jobTitle": "Cosmetic & Medical Physician"
   },
-  "concerns": ["wrinkles", "crows_feet"]
+  "concerns": [
+    "wrinkles",
+    "crows_feet"
+  ]
 }

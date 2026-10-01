@@ -110,7 +110,9 @@ def merge(cfg, translations, ref_byline):
             errs.append(f"{loc} {key}: not in the English")
         for key, en in want.items():
             if key in tr:
-                errs += [f"{loc} {key}: {e}" for e in problems(en, tr[key], loc)]
+                # the citation is the journal's own words and may stand verbatim (the live studies keep it so, 2026-10-01)
+                errs += [f"{loc} {key}: {e}" for e in problems(en, tr[key], loc)
+                         if not (key == "/citation" and e == "identical to the English")]
         # the reference is the journal's own words: a translation may only add a note after it (e.g. "(auf Englisch)")
         if "/citation" in tr and "/citation" in want and not tr["/citation"].startswith(want["/citation"].rstrip()):
             errs.append(f"{loc} /citation: the English reference must stay verbatim at the start")

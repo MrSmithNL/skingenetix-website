@@ -112,3 +112,19 @@ def test_a_translated_citation_must_keep_the_english_reference_verbatim():
     assert si.merge(copy.deepcopy(cfg), {"de": ok}, ref_byline=ref)[1] == []
     typo = {**base, "/citation": "Yogya Y et al. Efficacy and Safety of Radiofrecuency. Dermatol Ther 2022. (auf Englisch)"}
     assert any("citation" in e for e in si.merge(copy.deepcopy(cfg), {"de": typo}, ref_byline=ref)[1])
+
+
+def test_a_citation_identical_to_the_english_is_allowed():
+    """The live six-language studies (Wang 2013, Ye 2026) keep the reference exactly as the journal prints it in every
+    locale, with no added note. That is the rule itself, not an untranslated string: only the citation is exempt from
+    the "identical to the English" check (2026-10-01, found re-translating Wang)."""
+    cfg = {**copy.deepcopy(CFG), "citation": {"en": "Wang Y, Wang M, Xiao S, et al. The anti-wrinkle efficacy of argireline. 2013."}}
+    base = {"/h1": "Glättet PDRN-Microneedling Falten schneller?", "/figures/0/n": "&minus;14 %",
+            "/figures/0/label": "Faltentiefe nach 2 Monaten", "/meaning/ctas/0/label": "Die Evidenz lesen",
+            "/faq/answers/0": "Siehe den [Hub](https://www.skingenetix.com/pages/pdrn-research) und "
+                              "[die Studie](https://doi.org/10.1007/s13555-022-00729-7).",
+            "/citation": cfg["citation"]["en"]}
+    ref = {"de": "Bewertet. Zuletzt geprüft am 23. September 2026."}
+    assert si.merge(copy.deepcopy(cfg), {"de": base}, ref_byline=ref)[1] == []
+    untranslated = {**base, "/figures/0/label": "Wrinkle indentation at 2 months"}   # any other string still refused
+    assert any("identical" in e for e in si.merge(copy.deepcopy(cfg), {"de": untranslated}, ref_byline=ref)[1])
