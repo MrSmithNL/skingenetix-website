@@ -506,7 +506,15 @@ AI-generated illustrations and must not be presented as results. Record:
   - ⏳ Go-live after his OK: five-locale translations, card images (pool), `build-study-page.py --apply`, list builder `--apply`
     (the list owner's script; coordinate), verify ×6, delete the draft articles, re-audit live. Concern tags for firmness and
     brightening would be new keys in the list builder's `CONCERNS` (list owner's call).
-    ✅ **Wang 2013 and Ye 2026 LIVE in the new layout, six languages (2026-09-30, Malcolm: "fix them now and publish them").**
+    ✅ **Payment help page `/pages/payment` LIVE, six languages (2026-10-01, Malcolm: "proceed").** It exists because R6
+    (customer service reachable) kept flipping on the Clinical studies list: the footer "Payment" link landed on the general FAQ.
+    - Built from stock sections by `scripts/build-payment-page.py`, with copy in `configs/copy/payment-page-2026-10-01.json`.
+    - Content: an icon row, the four approved FAQ payment answers, and a contact band (the button is a shopify:// link, so it
+      keeps the locale). Also a byline and a "last reviewed" date (audit R2/R7).
+    - The footer "Payment" link now goes to `/pages/payment`; menu snapshot in backups/.
+    - Audit run 1: 8.64, with R2 and R7 confirmed; both fixed. Run 2 and the list re-audit are waiting for Cloudflare's 429 to clear.
+    - Also done: the Wang/Ye `-draft` study entries were deleted (snapshots in backups/) and their `study.draft` links cleared.
+      ✅ **Wang 2013 and Ye 2026 LIVE in the new layout, six languages (2026-09-30, Malcolm: "fix them now and publish them").**
   - The d1 drafts were translated into five locales by one agent per language. Every string was checked for numbers, markup,
     URLs and SEO lengths. Ye's fr/es answer was tightened to the builder's 75-word window.
   - Published in this order: `build-study-page.py --apply`, Wang then Ye, then `build-clinical-studies-blog.py --apply`. That

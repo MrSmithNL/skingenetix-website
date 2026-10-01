@@ -1,0 +1,141 @@
+{
+  "_about": "The /pages/payment help page (Malcolm, 2026-10-01: 'proceed' on the option of a short payment-help page). Why: the central audit's R6 ('customer service reachable') kept flipping on the Clinical studies list because the footer 'Payment' link landed on the general FAQ; judges do not open linked pages. Facts as in the approved FAQ payment answers (configs/hub-upgrades/faq-payment-2026-09-30.json, read from Shopify 2026-09-30): enabled payment types, EUR base with local currencies, Shopify checkout. The four questions are reused verbatim from that spec. Voice follows the FAQ (German du, Dutch je, French vous, Spanish tú, Italian tu). No safety claim: the checkout copy states what happens to card details, never 'safe' or 'secure'.",
+  "page_title": {
+    "en": "Payment",
+    "de": "Zahlung",
+    "nl": "Betalen",
+    "fr": "Paiement",
+    "es": "Pago",
+    "it": "Pagamento"
+  },
+  "intro": {
+    "en": "<p>How to pay for your Skingenetix order, which currency you pay in, and what to do if a payment doesn't go through.</p><p>Written by the Skingenetix team.</p><p>Last reviewed 1 October 2026, against our checkout settings.</p>",
+    "de": "<p>Wie du deine Skingenetix-Bestellung bezahlst, in welcher Währung du zahlst und was du tun kannst, wenn eine Zahlung nicht durchgeht.</p><p>Verfasst vom Skingenetix-Team.</p><p>Zuletzt geprüft am 1. Oktober 2026 anhand unserer Checkout-Einstellungen.</p>",
+    "nl": "<p>Hoe je je Skingenetix-bestelling betaalt, in welke valuta je betaalt en wat je doet als een betaling niet lukt.</p><p>Geschreven door het Skingenetix-team.</p><p>Laatst gecontroleerd op 1 oktober 2026, aan de hand van onze checkout-instellingen.</p>",
+    "fr": "<p>Comment payer votre commande Skingenetix, dans quelle devise vous payez et que faire si un paiement n'aboutit pas.</p><p>Rédigé par l'équipe Skingenetix.</p><p>Dernière vérification le 1er octobre 2026, d'après nos réglages de paiement.</p>",
+    "es": "<p>Cómo pagar tu pedido de Skingenetix, en qué moneda pagas y qué hacer si un pago no se completa.</p><p>Escrito por el equipo de Skingenetix.</p><p>Última revisión: 1 de octubre de 2026, según la configuración de nuestro checkout.</p>",
+    "it": "<p>Come pagare il tuo ordine Skingenetix, in quale valuta paghi e cosa fare se un pagamento non va a buon fine.</p><p>Scritto dal team Skingenetix.</p><p>Ultimo controllo il 1° ottobre 2026, in base alle impostazioni del nostro checkout.</p>"
+  },
+  "seo_title": {
+    "en": "Payment Methods and Checkout | Skingenetix",
+    "de": "Zahlungsarten und Checkout | Skingenetix",
+    "nl": "Betaalmethoden en afrekenen | Skingenetix",
+    "fr": "Moyens de paiement et commande | Skingenetix",
+    "es": "Métodos de pago y checkout | Skingenetix",
+    "it": "Metodi di pagamento e checkout | Skingenetix"
+  },
+  "seo_description": {
+    "en": "The cards, wallets and local methods we accept, which currency you pay in, how checkout handles your card and what to do if a payment fails.",
+    "de": "Welche Karten, Wallets und lokalen Zahlungsarten wir akzeptieren, in welcher Währung du zahlst und was du tust, wenn eine Zahlung fehlschlägt.",
+    "nl": "Welke kaarten, wallets en lokale betaalmethoden we accepteren, in welke valuta je betaalt en wat je doet als een betaling mislukt.",
+    "fr": "Les cartes, portefeuilles et moyens locaux acceptés, la devise de paiement, le traitement de votre carte et que faire si un paiement échoue.",
+    "es": "Las tarjetas, monederos y métodos locales que aceptamos, en qué moneda pagas, cómo se gestiona tu tarjeta y qué hacer si falla un pago.",
+    "it": "Le carte, i wallet e i metodi locali che accettiamo, in quale valuta paghi, come viene gestita la tua carta e cosa fare se un pagamento non riesce."
+  },
+  "icons": [
+    {
+      "id": "p_cards",
+      "icon": "picto-credit-card",
+      "title": {
+        "en": "Cards and wallets",
+        "de": "Karten und Wallets",
+        "nl": "Kaarten en wallets",
+        "fr": "Cartes et portefeuilles",
+        "es": "Tarjetas y monederos",
+        "it": "Carte e wallet"
+      },
+      "content": {
+        "en": "<p>Visa, Mastercard, American Express, Maestro, Union Pay, Apple Pay, Google Pay, Shop Pay and PayPal.</p>",
+        "de": "<p>Visa, Mastercard, American Express, Maestro, Union Pay, Apple Pay, Google Pay, Shop Pay und PayPal.</p>",
+        "nl": "<p>Visa, Mastercard, American Express, Maestro, Union Pay, Apple Pay, Google Pay, Shop Pay en PayPal.</p>",
+        "fr": "<p>Visa, Mastercard, American Express, Maestro, Union Pay, Apple Pay, Google Pay, Shop Pay et PayPal.</p>",
+        "es": "<p>Visa, Mastercard, American Express, Maestro, Union Pay, Apple Pay, Google Pay, Shop Pay y PayPal.</p>",
+        "it": "<p>Visa, Mastercard, American Express, Maestro, Union Pay, Apple Pay, Google Pay, Shop Pay e PayPal.</p>"
+      }
+    },
+    {
+      "id": "p_local",
+      "icon": "picto-earth",
+      "title": {
+        "en": "Local methods",
+        "de": "Lokale Zahlungsarten",
+        "nl": "Lokale betaalmethoden",
+        "fr": "Moyens locaux",
+        "es": "Métodos locales",
+        "it": "Metodi locali"
+      },
+      "content": {
+        "en": "<p>iDEAL and Wero, Bancontact, MB WAY or MobilePay, depending on your country.</p>",
+        "de": "<p>iDEAL und Wero, Bancontact, MB WAY oder MobilePay, je nach Land.</p>",
+        "nl": "<p>iDEAL en Wero, Bancontact, MB WAY of MobilePay, afhankelijk van je land.</p>",
+        "fr": "<p>iDEAL et Wero, Bancontact, MB WAY ou MobilePay, selon votre pays.</p>",
+        "es": "<p>iDEAL y Wero, Bancontact, MB WAY o MobilePay, según tu país.</p>",
+        "it": "<p>iDEAL e Wero, Bancontact, MB WAY o MobilePay, a seconda del tuo paese.</p>"
+      }
+    },
+    {
+      "id": "p_checkout",
+      "icon": "picto-lock",
+      "title": {
+        "en": "Shopify checkout",
+        "de": "Shopify-Checkout",
+        "nl": "Shopify-checkout",
+        "fr": "Paiement Shopify",
+        "es": "Checkout de Shopify",
+        "it": "Checkout Shopify"
+      },
+      "content": {
+        "en": "<p>Your card details go straight to the payment provider. We never see your full card number.</p>",
+        "de": "<p>Deine Kartendaten gehen direkt an den Zahlungsanbieter. Wir sehen deine vollständige Kartennummer nie.</p>",
+        "nl": "<p>Je kaartgegevens gaan rechtstreeks naar de betaalprovider. Wij zien je volledige kaartnummer nooit.</p>",
+        "fr": "<p>Les données de votre carte vont directement au prestataire de paiement. Nous ne voyons jamais votre numéro de carte complet.</p>",
+        "es": "<p>Los datos de tu tarjeta van directamente al proveedor de pagos. Nunca vemos tu número de tarjeta completo.</p>",
+        "it": "<p>I dati della tua carta vanno direttamente al fornitore dei pagamenti. Non vediamo mai il numero completo della tua carta.</p>"
+      }
+    },
+    {
+      "id": "p_help",
+      "icon": "picto-customer-support",
+      "title": {
+        "en": "Help with a payment",
+        "de": "Hilfe bei einer Zahlung",
+        "nl": "Hulp bij een betaling",
+        "fr": "Aide pour un paiement",
+        "es": "Ayuda con un pago",
+        "it": "Aiuto con un pagamento"
+      },
+      "content": {
+        "en": "<p>Charged but no confirmation? Don't pay again: write to us and we'll look it up.</p>",
+        "de": "<p>Abgebucht, aber keine Bestätigung? Bezahle nicht noch einmal: Schreib uns, und wir sehen nach.</p>",
+        "nl": "<p>Afgeschreven maar geen bevestiging? Betaal niet opnieuw: schrijf ons, dan zoeken we het op.</p>",
+        "fr": "<p>Débité sans confirmation ? Ne payez pas une seconde fois : écrivez-nous et nous vérifierons.</p>",
+        "es": "<p>¿Cobrado pero sin confirmación? No vuelvas a pagar: escríbenos y lo comprobaremos.</p>",
+        "it": "<p>Addebitato ma nessuna conferma? Non pagare di nuovo: scrivici e verificheremo.</p>"
+      }
+    }
+  ],
+  "faq_title": {
+    "en": "Payment questions",
+    "de": "Fragen zur Zahlung",
+    "nl": "Vragen over betalen",
+    "fr": "Questions sur le paiement",
+    "es": "Preguntas sobre el pago",
+    "it": "Domande sul pagamento"
+  },
+  "help": {
+    "en": "<h2>Still need help?</h2><p>Write to us with the email address you used for your order, and we'll look into it.</p>",
+    "de": "<h2>Noch Fragen?</h2><p>Schreib uns mit der E-Mail-Adresse, die du für deine Bestellung verwendet hast, und wir sehen nach.</p>",
+    "nl": "<h2>Nog hulp nodig?</h2><p>Schrijf ons met het e-mailadres dat je voor je bestelling hebt gebruikt, dan zoeken we het uit.</p>",
+    "fr": "<h2>Besoin d'aide ?</h2><p>Écrivez-nous en indiquant l'adresse e-mail utilisée pour votre commande, et nous vérifierons.</p>",
+    "es": "<h2>¿Necesitas más ayuda?</h2><p>Escríbenos con el email que usaste para tu pedido y lo revisaremos.</p>",
+    "it": "<h2>Serve altro aiuto?</h2><p>Scrivici indicando l'indirizzo email che hai usato per l'ordine e verificheremo.</p>"
+  },
+  "help_button": {
+    "en": "Contact us",
+    "de": "Kontakt",
+    "nl": "Contact",
+    "fr": "Nous contacter",
+    "es": "Contacto",
+    "it": "Contattaci"
+  }
+}
