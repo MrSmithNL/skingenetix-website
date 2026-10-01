@@ -451,6 +451,39 @@
     "es": "Comparado con el retinol",
     "it": "Confrontato con il retinolo"
   },
+  "_concern_firming_brightening_about": "Malcolm, 2026-10-01 ('agree'): Firming (Tadini 2015) and Brightening (Watanabe 2014). Each label and link reuses the store's own translated title of the Skin Solutions page it links to (/pages/firming-skin-density 'Straffung & Volumen' ...; /pages/brightening-glow 'Strahlende Haut & Glow' ...), read from the page translations on 2026-10-01.",
+  "concern_firming": {
+    "en": "Firming",
+    "de": "Straffung",
+    "nl": "Verstevigen",
+    "fr": "Fermeté",
+    "es": "Firmeza",
+    "it": "Compattezza"
+  },
+  "concern_brightening": {
+    "en": "Brightening",
+    "de": "Strahlende Haut",
+    "nl": "Stralende huid",
+    "fr": "Éclat",
+    "es": "Luminosidad",
+    "it": "Luminosità"
+  },
+  "solutions_link_firming": {
+    "en": "Skin Solutions: Firming & Skin Density",
+    "de": "Hautlösungen: Straffung & Volumen",
+    "nl": "Huidoplossingen: Verstevigen & Volume",
+    "fr": "Solutions Peau : Fermeté & Volume",
+    "es": "Soluciones Piel: Firmeza & Volumen",
+    "it": "Soluzioni Pelle: Compattezza & Volume"
+  },
+  "solutions_link_brightening": {
+    "en": "Skin Solutions: Brightening & Glow",
+    "de": "Hautlösungen: Strahlende Haut & Glow",
+    "nl": "Huidoplossingen: Stralende Huid & Glow",
+    "fr": "Solutions Peau : Éclat & Glow",
+    "es": "Soluciones Piel: Luminosidad & Glow",
+    "it": "Soluzioni Pelle: Luminosità & Glow"
+  },
   "_blog_seo_about": "The blog list's SEO description (2026-09-30): it had none, a confirmed failure (Q7) in the central audit. Built from blog_intro's approved words; it claims nothing. The SEO title (blog_seo_title) carries the page's keyword, 'skincare clinical studies' (Malcolm, 2026-09-30).",
   "_safety_list_about": "The list page's 'Before you try it' note (Malcolm, 2026-09-30: 'Add the note, aim for 9+'). build-clinical-studies-blog.py takes the approved note from configs/study-safety-note.json and replaces only its first two sentences with these, because the list covers several studies, not one.",
   "safety_list_opening": {

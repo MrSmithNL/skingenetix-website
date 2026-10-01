@@ -54,8 +54,11 @@ AUTHOR = "Malcolm Smith"
 # translatable (the ARTICLE resource exposes title, body_html, summary_html, handle, meta_title and
 # meta_description only), so a label must read the same in all six languages: "Copper peptide" showed in
 # English on /de/, and GHK-Cu is the ingredient's own name in every locale (2026-09-29).
+# First prefix match wins, so "matrixyl-3000" sits before "matrixyl": Robinson 2005 ("matrixyl-wrinkle-trial-…") tested
+# palmitoyl pentapeptide-4, the original Matrixyl®, which the register says never to call Matrixyl 3000 (Malcolm,
+# 2026-10-01, "agree").
 TAGS = {"copper": "GHK-Cu", "argireline": "Argireline", "acetyl": "Argireline", "pdrn": "PDRN",
-        "matrixyl": "Matrixyl 3000", "palmitoyl": "Matrixyl 3000", "glutathione": "Glutathione"}
+        "matrixyl-3000": "Matrixyl 3000", "matrixyl": "Matrixyl", "palmitoyl": "Matrixyl 3000", "glutathione": "Glutathione"}
 # Skin-concern tags (Malcolm, 2026-09-30: "add tags for skin issues and skin solutions"; he chose this set). A study
 # config lists its keys under "concerns". The card badge is `article.tags | first`, so every concern tag carries a
 # "Skin: " / "Topic: " prefix that sorts after every ingredient name (case-sensitive or not) and the badge stays the
@@ -67,6 +70,12 @@ CONCERNS = {"wrinkles": {"tag": "Skin: Fine lines & wrinkles", "phrase": "concer
                          "row": False},
             "crows_feet": {"tag": "Skin: Crow's feet & eye area", "phrase": "concern_crows_feet"},
             "forehead": {"tag": "Skin: Forehead lines", "phrase": "concern_forehead"},
+            # Tadini 2015 and Watanabe 2014 fitted none of the above (Malcolm, 2026-10-01, "agree"); worded per locale as
+            # the Skin Solutions page each links to, whose link text is its own phrase (solutions_phrase)
+            "firming": {"tag": "Skin: Firming", "phrase": "concern_firming", "solutions": "firming-skin-density",
+                        "solutions_phrase": "solutions_link_firming"},
+            "brightening": {"tag": "Skin: Brightening", "phrase": "concern_brightening", "solutions": "brightening-glow",
+                            "solutions_phrase": "solutions_link_brightening"},
             "retinol": {"tag": "Topic: Compared with retinol", "phrase": "concern_retinol"}}
 CONCERN_PREFIXES = ("Skin: ", "Topic: ")
 # The photo band above the list. Section Custom CSS refuses `background` / `background-image` (tested
@@ -187,7 +196,8 @@ def concern_row_liquid():
     more = "".join(
         f'\n  {{%- if current_tags contains "{c["tag"]}" -%}}<p class="sgx-labels__more"><a href="'
         f'{{%- unless routes.root_url == "/" -%}}{{{{ routes.root_url }}}}{{%- endunless -%}}/pages/{c["solutions"]}">'
-        f'{by_locale("solutions_link")}</a></p>{{%- endif -%}}' for c in CONCERNS.values() if c.get("solutions"))
+        f'{by_locale(c.get("solutions_phrase", "solutions_link"))}</a></p>{{%- endif -%}}'
+        for c in CONCERNS.values() if c.get("solutions"))
     return ('\n{%- if sgx_tags contains "Skin: " or sgx_tags contains "Topic: " -%}'
             f'\n<nav class="sgx-labels sgx-labels--concern" aria-label="{by_locale("concern_filter_label")}">'
             f'\n  <ul>\n    <li class="sgx-labels__h">{by_locale("concern_row")}</li>' + items + '\n  </ul>' + more
