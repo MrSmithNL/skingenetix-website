@@ -568,3 +568,16 @@ The options as put to him:
 **Could not be opened:** the full texts of Robinson 2005, Lintner & Peschard 2000, Mondon 2015, Zang 2026 and Trzaska 2026 (abstracts only);
 Katayama 1993 at JBC (403); Gorouhi & Maibach 2009 (Wiley 403); the published CIR 2018 article (SAGE 403); and Lintner's 2000 _SÖFW_ paper. Nothing
 in the proposals above rests on a number from an unopened text, except the tripeptide-1 alternative, which is read second-hand through CIR 2012.
+
+## 9. Applied on the store — 2026-10-01 (hub links its new Robinson 2005 article)
+
+The central audit failed `/blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005` on P3 (the hub did not link back to it). On the live
+`/pages/matrixyl-3000-research` the Robinson paragraph of the `evidence` section now ends, in six languages, with _"Read
+[our appraisal of the 93-woman split-face trial](/blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005)."_ The PubMed link stays. No
+claim changed: the paragraph's "significantly more than placebo" is still one of the three unqualified places listed under claim 6, awaiting
+Malcolm; the linked article states the paper's p ≤ 0.10 threshold.
+
+Applied through a set-only spec, `configs/hub-upgrades/matrixyl-3000-research-study-link-2026-10-01.json` (that one setting), because the
+owning spec `matrixyl-3000-research.json` also carries drift the live page does not have (section order and backgrounds, charts CSS,
+references JSON-LD). The owning spec was updated in step. ⚠️ **The template rebuild replaces this section:** its evidence foot line
+(`matrixyl-3000-research-layout-2026-09-26.json`) must carry the same link when it goes live, or P3 fails again.
