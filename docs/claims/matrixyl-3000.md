@@ -146,8 +146,12 @@ Plain-customer form, for "What to expect": _"Most studies of these peptides meas
   from Aldag 2016, PMC5108505, which reports the full paper's statistics): the paper counted **p ≤ 0.10** as significant. At that level line length
   (image analysis) and expert-graded fine lines were ahead at weeks 8 and 12, texture at weeks 4 and 8, and age spots and dark circles at week 12. At
   the usual **p ≤ 0.05** only **texture (week 4)** and **age spots** **(week 12)** were significant (Gorouhi & Maibach 2009 agree on age spots). Any
-  'significant' wrinkle wording must carry the threshold. The live hub card f2 still says "significant" without it: review it (open for Malcolm). The
-  Sederma Matrixyl 3000 studies ran for 2 months (claims 1 and 3), with changes measurable at 1 month on ultrasound.
+  'significant' wrinkle wording must carry the threshold. **Card f2** exists only in the unreleased template rebuild (evidence-merge spec, preview
+  template), not on the live page. Its line now carries the threshold in six languages (Malcolm, 2026-10-01: "agree"). ⏳ **Still unqualified on the
+  live page** (checked 2026-10-01, three places): the overview paragraph ("reduced the look of wrinkles and fine lines significantly more than
+  placebo"), "Give it at least 8 weeks" ("found significant results at weeks 8 and 12"), and the Robinson row in Evidence & Sources. The draft
+  rebuild repeats the second and third (usage step 2, evidence row). Asked Malcolm whether to extend the fix to these. The Sederma Matrixyl 3000
+  studies ran for 2 months (claims 1 and 3), with changes measurable at 1 month on ultrasound.
 - **Grade:** it inherits A (Robinson) and B (Sederma).
 - **Attach to:** "What to expect" on both products. On the **cream**, drop the pentapeptide-4 half and say "the Matrixyl 3000 studies ran for 2 months". **This replaces** the current serum line _"smoother, more hydrated skin within days"_, which has no data (see §2).
 
