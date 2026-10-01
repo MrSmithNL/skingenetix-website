@@ -142,7 +142,12 @@ Short form: _"−39% deep-wrinkle area in 2 months (clinical study on Matrixyl®
 **Claim:** _"Measurable wrinkle results in 8 weeks: significant in the pentapeptide-4 trial from week 8, and in the Matrixyl® 3000 studies at 2 months."_
 Plain-customer form, for "What to expect": _"Most studies of these peptides measured results at 8 weeks, and they kept building to 12."_
 
-- **Fact:** Robinson 2005 was significant at weeks 8 and 12 (per CIR's summary of the full text). The Sederma Matrixyl 3000 studies ran for 2 months (claims 1 and 3), with changes measurable at 1 month on ultrasound.
+- **Fact:** Robinson 2005 was significant at weeks 8 and 12 (per CIR's summary of the full text). **Threshold, found 2026-09-30** (study-page build,
+  from Aldag 2016, PMC5108505, which reports the full paper's statistics): the paper counted **p ≤ 0.10** as significant. At that level line length
+  (image analysis) and expert-graded fine lines were ahead at weeks 8 and 12, texture at weeks 4 and 8, and age spots and dark circles at week 12. At
+  the usual **p ≤ 0.05** only **texture (week 4)** and **age spots** **(week 12)** were significant (Gorouhi & Maibach 2009 agree on age spots). Any
+  'significant' wrinkle wording must carry the threshold. The live hub card f2 still says "significant" without it: review it (open for Malcolm). The
+  Sederma Matrixyl 3000 studies ran for 2 months (claims 1 and 3), with changes measurable at 1 month on ultrasound.
 - **Grade:** it inherits A (Robinson) and B (Sederma).
 - **Attach to:** "What to expect" on both products. On the **cream**, drop the pentapeptide-4 half and say "the Matrixyl 3000 studies ran for 2 months". **This replaces** the current serum line _"smoother, more hydrated skin within days"_, which has no data (see §2).
 
@@ -273,7 +278,10 @@ volume"; "39 men, ~10% depth, ~30% density"; collagen I +258%, fibronectin +164%
 3. **"Vegan" contradiction:** `/pages/ingredients` says every formula is vegan; the cream's FAQ says it is not (§2 #19).
 4. **No product-level tolerance test (HRIPT / in-use).** Commissioning one (typically 50+ subjects) would unlock "well tolerated" and possibly "suitable for sensitive skin" as product claims.
 5. **No independent controlled trial of Matrixyl 3000 alone exists** (PubMed and Europe PMC, 2026-09-22). This is a real gap in the science, and the hub page should say so honestly (the copper hub now does the same).
-6. **Robinson 2005 full text not read** (paywalled). No effect size is available; the "small, significant at weeks 8 and 12" wording comes from CIR's summary of the full text.
+6. **Robinson 2005 full text not read** (paywalled). No effect size is available; the "small, significant at weeks 8 and 12" wording comes from CIR's
+   summary of the full text. Since 2026-09-30 four secondary reports fill in the method: CIR 2012 and 2024, Abu Samah & Heard 2011 (REAL imaging at
+   baseline and weeks 4/8/12; crow's-feet area and cheek; blinded expert grading; no TEWL difference), and Aldag 2016 (the p ≤ 0.10 mixed model).
+   Study page: `configs/studies/drafts/matrixyl-wrinkle-trial-robinson-2005.json`.
 7. **Sederma primary documents.** I read the 2013 brochure through a distributor's upload. The older 24/25-volunteer data are known only through CIR and an
    archived third-party page. Asking our supplier for the current Croda/Sederma technical dossier would confirm the figures and may add newer studies (for
    example, men's panels).
@@ -416,7 +424,7 @@ peptide RCTs, but it includes no Matrixyl trial. The remainder are delivery tech
 - **Say "just beneath the skin's surface", not "upper skin layer".** The measured band is the top of the dermis.
 - **Skin samples:** direction only. Write "more collagen I, IV, VII and XVII than with placebo, in donated skin samples (manufacturer data, no figures published)", with no numbers.
 - **Two different 39% figures.** Matrixyl 3000's −39.4% is deep-wrinkle **area** (2 months, 23 women). Tripeptide-1's −39% is wrinkle **length** (4 weeks, 15 women). Never merge them.
-- **Robinson:** "small but significant from week 8" is its honest strength. No percentage exists, and the facial area measured is not stated. It is a claim for the **serum only**.
+- **Robinson:** "small but significant from week 8" is its honest strength. No percentage exists. The areas measured were the crow's-feet area and the cheek (Abu Samah 2011; corrected 2026-09-30), at the paper's p ≤ 0.10. It is a claim for the **serum only**.
 - **Katayama:** "fibroblasts, the cells that make collagen, grown in the lab". Write "a piece cut from procollagen as collagen is made; the authors proposed that such pieces tell cells to make more", not "released as collagen is broken down".
 - **Percentage:** "the two peptides are well under 0.1% of the supplied solution; at the 3% the manufacturer recommends, a cream holds a few parts per million of peptide". CIR's "typical use below 10 ppm" is citable; the 100 + 50 ppm figure is not.
 - **"Independent evidence"** takes only independent sources: CIR, and the L'Oréal lab study. Trzaska 2026 has No7/Boots co-authors, so call it "a university study" and keep it out of that line.
