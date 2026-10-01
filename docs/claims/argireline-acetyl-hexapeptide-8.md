@@ -50,6 +50,14 @@ against the vehicle (p < 0.05; 40 women aged 35–55; Reviscometer). In plain te
 directions, which is a feature of younger skin. Elasticity (Cutometer) did **not** change. Usable as "helps skin look more supple and even" only with
 care, because it is a technical measure.
 
+**Corrected 2026-10-01 (study-detail research, `research/study-detail-2026-10-01/argireline-skin-firmness-trial-tadini-2015-notes.md`):** the
+authors read the lower anisotropy as **"increased firmness or tensor effect"** (Tadini 2015, p. 904; "tensor effect" is the cosmetic-science term
+for a tightening effect), so "more supple" points the wrong way: the skin measured stiffer, not softer. Allowed: "lowered facial anisotropy, which
+rises with age"; firmness **attributed to the authors** ("which the authors read as firmer, tauter skin"); a question such as "Does Argireline® firm
+and tighten facial skin?". Not allowed in our own voice: "firms the skin", "cut a firmness measure". Anisotropy rises **with age** (p. 906), not
+"as skin loses firmness". Primary support for treating the two names as one peptide: Raikou 2017 (p. 271) writes "acetyl hexapeptide-3 or
+acetyl hexapeptide-8, as it has been recently renamed".
+
 **How to phrase the mechanism (cosmetic-safe):** "Argireline® is a peptide modelled on part of SNAP-25, a protein involved in expression. It is
 designed to **soften the look of expression lines** such as crow's feet and forehead lines." Keep the SNARE and neuron detail on the learning hub,
 framed as _laboratory_ findings, as the current hub copy already does.
