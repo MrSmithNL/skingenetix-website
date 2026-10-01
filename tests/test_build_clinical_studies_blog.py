@@ -109,6 +109,38 @@ def test_the_concern_row_is_translated_and_the_ingredient_row_skips_concern_tags
             assert f'sgx_tags contains "{c["tag"]}"' in liq
 
 
+def test_robinson_tested_the_original_matrixyl_so_its_label_is_matrixyl():
+    """Malcolm, 2026-10-01 ("agree", review pack decision 1): Robinson 2005 tested palmitoyl pentapeptide-4, the
+    original Matrixyl®, and the register says never to conflate it with Matrixyl 3000, so its card badge and filter
+    label read "Matrixyl". A Matrixyl 3000 trial (handle "matrixyl-3000-…") keeps its own label."""
+    assert bcb.tag_for("matrixyl-wrinkle-trial-robinson-2005") == "Matrixyl"
+    assert bcb.tag_for("matrixyl-3000-deep-wrinkle-trial-example") == "Matrixyl 3000"
+
+
+def _cfg(handle_start):
+    return next(c for c in bcb.study_configs() if c["handle"].startswith(handle_start))
+
+
+def test_firming_and_brightening_concerns_link_their_own_skin_solutions_pages():
+    """Malcolm, 2026-10-01 ("agree", review pack decision 2): Tadini (firmness) and Watanabe (brighter-looking skin)
+    fitted no concern, so each gets one, worded per locale as the store's Skin Solutions page it links to."""
+    assert bcb.tags_for(_cfg("argireline-skin-firmness")) == ["Argireline", "Skin: Firming"]
+    assert bcb.tags_for(_cfg("glutathione-skin-brightening")) == ["Glutathione", "Skin: Brightening"]
+    liq = bcb.labels_liquid()
+    for key, page, de_label, de_link in (("firming", "firming-skin-density", "Straffung", "Hautlösungen: Straffung & Volumen"),
+                                         ("brightening", "brightening-glow", "Strahlende Haut",
+                                          "Hautlösungen: Strahlende Haut & Glow")):
+        c = bcb.CONCERNS[key]
+        assert c["solutions"] == page and f"/pages/{page}" in liq
+        for l in bcb.LOCALES:                                          # every word exists in all six languages
+            assert bcb.p(c["phrase"], l) and bcb.p(c["solutions_phrase"], l), (key, l)
+        assert de_label in liq and de_link in liq
+    # each concern's tag page links to its own Skin Solutions page, worded as that page (not the wrinkles link)
+    more = liq.split("sgx-labels__more")
+    firm = next(m for m in more if "/pages/firming-skin-density" in m)
+    assert "Firming & Skin Density" in firm and "Fine Lines" not in firm
+
+
 def test_the_label_row_filters_the_list_by_ingredient():
     """Malcolm, 2026-09-29: labels show and the list sorts by label, as on the Hairgenetix blog (supersedes "tags off
     until ~12 articles"). main-blog's own row (show_tags) reads blog.all_tags, which this store's storefront returns

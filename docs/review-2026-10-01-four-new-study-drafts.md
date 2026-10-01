@@ -2,7 +2,18 @@
 
 **Date:** 2026-10-01 · **For:** Malcolm · **Prepared by:** Claude
 **Status:** **live in six languages** since 16:05 on 2026-10-01, on your go-ahead ("All four, now", given in another Claude window).
-Four smaller decisions are still open (section 3).
+**Decisions taken 2026-10-01 ("1 - 4 = agree", all four recommendations):**
+
+| #   | Decision                              | What was done                                                                                                                                                                                                                          |
+| --- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Robinson's label becomes "Matrixyl"   | Live: card badge and filter label "Matrixyl" (`build-clinical-studies-blog.py`, TAGS). A Matrixyl 3000 trial keeps "Matrixyl 3000".                                                                                                    |
+| 2   | "Firming" and "Brightening" labels    | Live in six languages on Tadini and Watanabe. Each label page links to its Skin Solutions page, worded as that page ("Straffung & Volumen", "Éclat & Glow" …).                                                                         |
+| 3   | Stamp set decided separately          | No change. The Yogya article does not link to it.                                                                                                                                                                                      |
+| 4   | Matrixyl card 2 carries the threshold | Done in six languages in the **unreleased** Matrixyl rebuild, where card 2 lives (not on the live page). Three other "significant" mentions on the live page are a new question for you (see `docs/claims/matrixyl-3000.md`, claim 6). |
+
+Undo for 1 and 2: the previous tags of all eight articles are in `backups/clinical-studies-article-tags-20261001-161634.json`, and the
+list template's previous version in `backups/hub-upgrade-templates__blog.clinical-studies.json-20261001-161715.json`
+(`hub-upgrade.py configs/hub-upgrades/clinical-studies-blog.json --rollback`).
 
 You asked for the next four clinical-trial articles, chosen by keyword value (2026-09-30). They were written, designed, checked by
 the design critic, scored by the central auditor, translated, and published in the Clinical studies blog. This page shows what
@@ -100,8 +111,12 @@ Yogya as background on the ingredient, never as proof that the stamp works.
 
 ### Decision 4: One card on the Matrixyl research page
 
-Card 2 on the Matrixyl® 3000 research page (live) describes the Robinson result as "significant" without saying it passed only the
+Card 2 on the Matrixyl® 3000 research page describes the Robinson result as "significant" without saying it passed only the
 looser 1-in-10 bar. The new article states that bar openly, so the two pages now describe the same result differently.
+
+**Correction (2026-10-01, after your answer):** card 2 is in the unreleased rebuild of the Matrixyl page, not on the live page. This
+note first said "live", repeating the register without checking the page. The fix went into the rebuild. The live page says
+"significant" without the threshold in three other places, which are listed in the register and put to you separately.
 
 - **A. Add the bar to the card's wording (recommended)**, in all six languages, so the hub and the article agree.
 - **B. Leave the card as it is.**
