@@ -8,6 +8,7 @@ once without clobbering each other. This tool puts their strings back and refuse
 
     python3 scripts/study-i18n.py extract configs/studies/drafts/<handle>.json   # -> configs/studies/i18n/<handle>.en.json
     # translators write configs/studies/i18n/<handle>.<loc>.json with the same keys
+    python3 scripts/study-i18n.py merge configs/studies/drafts/<handle>.json --locales de --check   # a translator's own check
     python3 scripts/study-i18n.py merge configs/studies/drafts/<handle>.json     # checks, then writes the five locales
 
 What it does per string and locale:
@@ -109,6 +110,13 @@ def merge(cfg, translations, ref_byline):
         for key, en in want.items():
             if key in tr:
                 errs += [f"{loc} {key}: {e}" for e in problems(en, tr[key], loc)]
+        # the builder's own per-locale limits (build-study-page.py check()), caught before a merge, not at --apply
+        if len(tr.get("/seo_title", "")) > 60:
+            errs.append(f"{loc} /seo_title: SEO title {len(tr['/seo_title'])} chars (max 60)")
+        if len(tr.get("/seo_description", "")) > 160:
+            errs.append(f"{loc} /seo_description: {len(tr['/seo_description'])} chars (max 160, aim 155)")
+        if "/answer" in tr and not 35 <= len(tr["/answer"].split()) <= 75:
+            errs.append(f"{loc} /answer: answer {len(tr['/answer'].split())} words (35-75)")
     if errs:
         return cfg, errs
     for loc, tr in translations.items():
@@ -123,6 +131,7 @@ def main():
     ap.add_argument("action", choices=["extract", "merge"])
     ap.add_argument("config")
     ap.add_argument("--locales", default=",".join(LOCALES))
+    ap.add_argument("--check", action="store_true", help="merge: report problems only, write nothing (safe in parallel)")
     a = ap.parse_args()
     path = pathlib.Path(a.config); cfg = json.loads(path.read_text()); h = cfg["handle"]
     I18N.mkdir(parents=True, exist_ok=True)
@@ -140,6 +149,9 @@ def main():
     if errs:
         print(f"  REFUSED: {len(errs)} problem(s); nothing written")
         return 1
+    if a.check:
+        print(f"  ✓ {h}: {', '.join(locs) or 'nothing'} clean (check only, nothing written)")
+        return 0
     path.write_text(json.dumps(cfg, indent=2, ensure_ascii=False) + "\n")
     print(f"  ✓ {h}: merged {', '.join(locs) or 'nothing'} ({len(strings(cfg))} strings each)")
     return 0

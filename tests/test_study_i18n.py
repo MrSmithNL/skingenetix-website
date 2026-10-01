@@ -83,3 +83,19 @@ def test_the_byline_date_is_rewritten_in_every_locale_format():
                       ("Última revisión: 23 de septiembre de 2026.", "30 de septiembre de 2026."),
                       ("Ultima revisione: 23 settembre 2026.", "30 settembre 2026.")]:
         assert si.byline(en, ref).endswith(want)
+
+
+def test_the_builders_length_rules_hold_in_every_locale():
+    cfg = {**copy.deepcopy(CFG), "seo_title": {"en": "Yogya 2022: Does PDRN Microneedling Smooth Wrinkles?"},
+           "answer": {"en": " ".join(["word"] * 50)}}
+    good = {**{k: v for k, v in [("/h1", "Glättet PDRN-Microneedling Falten schneller?"), ("/figures/0/n", "&minus;14 %"),
+                                 ("/figures/0/label", "Faltentiefe nach 2 Monaten"), ("/meaning/ctas/0/label", "Die Evidenz lesen"),
+                                 ("/faq/answers/0", "Siehe den [Hub](https://www.skingenetix.com/pages/pdrn-research) und "
+                                                    "[die Studie](https://doi.org/10.1007/s13555-022-00729-7).")]},
+            "/seo_title": "Yogya 2022: Glättet PDRN-Microneedling Falten schneller?", "/answer": " ".join(["Wort"] * 50)}
+    ref = {"de": "Bewertet. Zuletzt geprüft am 23. September 2026."}
+    assert si.merge(copy.deepcopy(cfg), {"de": good}, ref_byline=ref)[1] == []
+    long_title = {**good, "/seo_title": "Yogya 2022: " + "x" * 60}
+    assert any("SEO title" in e for e in si.merge(copy.deepcopy(cfg), {"de": long_title}, ref_byline=ref)[1])
+    short_answer = {**good, "/answer": "Zu kurz."}
+    assert any("answer" in e for e in si.merge(copy.deepcopy(cfg), {"de": short_answer}, ref_byline=ref)[1])
