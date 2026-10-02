@@ -200,6 +200,13 @@
     </div>
   {%- endfor -%}
 </div>
+{%- elsif section.settings.empty_previous_hash != blank -%}
+  {%- comment -%}
+    Empty (2026-10-02): the theme closes the gap between two sections of the same background by comparing each
+    section's --section-background-hash with the previous one's. Sitting empty between two such sections, this
+    wrapper broke the comparison and opened an 80px band, so it hands the given hash on to the next section.
+  {%- endcomment -%}
+  <style>#shopify-section-{{ section.id }} + * { --previous-section-background-hash: {{ section.settings.empty_previous_hash }}; }</style>
 {%- endif -%}
 
 {% schema %}
@@ -209,7 +216,9 @@
   "class": "shopify-section--research-before-after",
   "max_blocks": 6,
   "settings": [
-    { "type": "text", "id": "title", "label": "Section heading" }
+    { "type": "text", "id": "title", "label": "Section heading" },
+    { "type": "text", "id": "empty_previous_hash", "label": "When empty: background hash to hand on",
+      "info": "Study articles only. The hash of the section above, so the sections either side still blend when this one has nothing to show." }
   ],
   "blocks": [
     {
