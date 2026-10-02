@@ -405,10 +405,12 @@ def detail_sections():
         "outcomes": {"type": "research-before-after",
                      "blocks": {k: block(k, "start" if i % 2 else "end", True) for i, k in enumerate(outs, 1)},
                      "block_order": outs, "settings": {"title": d("outcomes_heading")}},
-        # the first sits opposite "What the researchers did", whose picture is on the left
+        # the first sits opposite "What the researchers did", whose picture is on the left. When a study has no
+        # how-it-works block, the empty section hands on that row's background hash (0, no background) so the
+        # theme still closes the gap to "How to read this result" (an 80px band opened otherwise, 2026-10-02)
         "mechanism": {"type": "research-before-after",
                       "blocks": {k: block(k, "end" if j % 2 else "start", False) for j, k in enumerate(mechs, 1)},
-                      "block_order": mechs, "settings": {"title": d("mechanism_heading")}},
+                      "block_order": mechs, "settings": {"title": d("mechanism_heading"), "empty_previous_hash": "0"}},
     }
 
 

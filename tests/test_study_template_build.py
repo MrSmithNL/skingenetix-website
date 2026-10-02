@@ -221,3 +221,16 @@ def test_the_section_draws_nothing_for_an_empty_slot():
     assert "if rba_filled > 0" in liquid
     assert "if block.settings.title == blank and block.settings.image == blank -%}{%- continue" in liquid
     assert liquid.index("if rba_filled > 0") < liquid.index("<style>")   # the style block is inside the guard too
+
+
+def test_an_empty_how_it_works_section_keeps_the_gap_between_its_neighbours_closed():
+    """Impact closes the gap between two sections with the same background by comparing each section's
+    --section-background-hash with the previous one's. An empty section between 'What the researchers did' and 'How
+    to read this result' (both hash 0) broke that comparison and opened an 80px band on every live article
+    (measured 2026-10-02). When empty, the section hands the previous hash on; the results section's neighbours
+    differ anyway, so it hands nothing."""
+    liquid = (ROOT / "theme/sections/research-before-after.liquid").read_text()
+    assert "section.settings.empty_previous_hash" in liquid and "--previous-section-background-hash" in liquid
+    j = stb.build_article()
+    assert j["sections"]["mechanism"]["settings"]["empty_previous_hash"] == "0"
+    assert "empty_previous_hash" not in j["sections"]["outcomes"]["settings"]
