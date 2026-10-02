@@ -361,8 +361,16 @@
       "unit": "%",
       "signed": false,
       "decimals": 1,
-      "domain": [0, 60],
-      "ticks": [0, 20, 40, 60],
+      "domain": [
+        0,
+        60
+      ],
+      "ticks": [
+        0,
+        20,
+        40,
+        60
+      ],
       "value_width": 70,
       "series": [
         {
@@ -702,8 +710,97 @@
     "identifier": "23417317",
     "datePublished": "2013",
     "journal": "American Journal of Clinical Dermatology",
-    "authors": ["Wang Y", "Wang M", "Xiao S", "Pan P", "Li P", "Huo J"]
+    "authors": [
+      "Wang Y",
+      "Wang M",
+      "Xiao S",
+      "Pan P",
+      "Li P",
+      "Huo J"
+    ]
   },
-  "checks": ["22 of 45", "0 of 15", "10%", "McEit", "Wang Y, Wang M", "Read at source", "34 of 45", "7 of 45"],
-  "concerns": ["wrinkles", "crows_feet"]
+  "checks": [
+    "22 of 45",
+    "0 of 15",
+    "10%",
+    "McEit",
+    "Wang Y, Wang M",
+    "Read at source",
+    "34 of 45",
+    "7 of 45"
+  ],
+  "concerns": [
+    "wrinkles",
+    "crows_feet"
+  ],
+  "outcomes": {
+    "heading": {
+      "en": "What the trial found around the eyes, result by result"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "22 of 45 graded clearly improved after 4 weeks, against 0 of 15 on placebo"
+        },
+        "body": [
+          {
+            "en": "After four weeks, the clinicians running the trial compared the lines around each person's eyes with how they had looked at the start and scored the change from 0, meaning no change, up to 4, meaning 100% improved. Neither the clinicians nor the participants knew who had the Argireline® cream and who had the placebo."
+          },
+          {
+            "en": "On 10% Argireline®, 22 of 45 people scored 3 or 4, the trial's measure of clear improvement; none of the 15 on placebo did. Across the whole scale, 34 of the 45 were graded 2 or higher, the threshold the trial's sample size was planned around, again against none on placebo, and 7 reached the top grade of 4. On placebo, 13 of 15 were graded 0 and 2 were graded 1 (Figure 1)."
+          },
+          {
+            "en": "For a reader, that means about three in four people using Argireline® around the eyes were graded 2 or higher within a month of twice-daily use, and about half were judged clearly improved. The paper's own photographs of two participants, a woman of 40 and a man of 49, show the kind of change the clinicians graded: lines that look softer and shallower ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."
+          }
+        ],
+        "image": "skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg",
+        "before_after": true,
+        "after": {
+          "en": "After 4 weeks"
+        },
+        "result": {
+          "en": "22 of 45 graded clearly improved vs 0 of 15 on placebo"
+        }
+      },
+      {
+        "title": {
+          "en": "All three roughness measures fell on skin replicas, with no change on placebo"
+        },
+        "body": [
+          {
+            "en": "At the start and after four weeks, silicone moulds were taken of the skin around the eyes. Each mould was scanned with a Skin-Visioline VL 650 and a confocal laser microscope, which together build a three-dimensional map of the skin's surface, and three roughness values were calculated: Sa, the average height of the lines at one spot; Smax, the drop from the highest peak to the lowest point across all the lines; and St, the average height across all the lines in the area."
+          },
+          {
+            "en": "With Argireline®, all three values fell between the first and second moulds (p &lt; 0.01). On placebo, none of them moved significantly (p &gt; 0.05). Both tests compare each group with its own starting moulds (Table 2)."
+          },
+          {
+            "en": "The paper also prints two worked examples of the analysis. In a woman of 45, the number of lines counted in the scanned area fell from 14 to 7; in a man of 55, from 13 to 9. In both, the lines' depth, volume, area and total length were lower after four weeks. The moulds measure the same skin the clinicians graded, so the instrument result and the visual grade describe one change from two sides ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."
+          }
+        ],
+        "image": "skingenetix-argireline-skin-surface-replica-roughness-study.jpg"
+      }
+    ]
+  },
+  "mechanisms": {
+    "heading": {
+      "en": "How was Argireline® designed to work?"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Modelled on SNAP-25, a protein involved in expression"
+        },
+        "body": [
+          {
+            "en": "Argireline® is a chain of six amino acids, the building blocks of proteins, copied from one end of SNAP-25, a protein involved in expression. Its developers designed it in the laboratory to soften the look of expression lines such as crow's feet ([Blanes-Mira et al., 2002](https://pubmed.ncbi.nlm.nih.gov/18498523/))."
+          },
+          {
+            "en": "In the developers' laboratory tests, the peptide interfered with the assembly of the SNARE complex, a set of proteins that cells must join together before they can release the chemical messengers they store. These are laboratory findings: they show what Argireline® was designed to do, while this trial measured the change in the skin around the eyes ([Wang et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23417317/))."
+          }
+        ],
+        "evidence": "laboratory",
+        "image": "skingenetix-argireline-acetyl-hexapeptide-crystals-laboratory-study.jpg"
+      }
+    ]
+  }
 }

@@ -1,0 +1,250 @@
+{
+  "created": "2026-10-02",
+  "target": "Result and how-it-works blocks on the clinical-study articles (study_detail entries; docs/study-page-template.md \u00a73.1)",
+  "decided_by": "Claude, on Malcolm's instruction (2026-10-01): 'use all of the before and after images created from the recent previous batches - and find which ones work best per section - but select from all available already created images'. Before/afters judged at full size against each trial's measured change (docs/clinical-trial-before-after-images.md \u00a73); moles retouched locally (Malcolm 2026-09-29). Plain pictures from the unused science pool (configs/banners/clinical-studies-card-image-pool-2026-09-29.json), no people, no packaging, nothing that pictures a claim. Reused live: skingenetix-copper-peptide-ghk-cu-crows-feet-wrinkles-before-after.jpg (Badenhorst o1), skingenetix-glutathione-brighter-looking-skin-before-after.jpg (Watanabe o1).",
+  "images": [
+    {
+      "slot": "wang.o1",
+      "source": "assets/derived/study-detail-2026-10-02/skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg",
+      "filename": "skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg",
+      "alt": "Before and after: crow's feet at the outer corner of the eye, the lines still there but softer",
+      "from": "before-after-copper-cards-r1 cub1--copper-crowsfeet-b gpt_image_01 (cheek mole retouched, both panels)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "ye.o1",
+      "source": "assets/derived/study-detail-2026-10-02/skingenetix-pdrn-crows-feet-under-eye-lines-before-after-study.jpg",
+      "filename": "skingenetix-pdrn-crows-feet-under-eye-lines-before-after-study.jpg",
+      "alt": "Before and after: crow's feet and fine lines beside the eye, every line kept, about a quarter softer",
+      "from": "before-after-copper-cards-r1 cub1--copper-crowsfeet-c gpt_image_01 (cheek mole retouched, both panels)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-crows-feet-under-eye-lines-before-after-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-crows-feet-under-eye-lines-before-after-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "ye.o4",
+      "source": "assets/derived/study-detail-2026-10-02/skingenetix-pdrn-eye-bag-volume-before-after-study.jpg",
+      "filename": "skingenetix-pdrn-eye-bag-volume-before-after-study.jpg",
+      "alt": "Before and after: lower-eyelid bags still present, slightly smaller",
+      "from": "before-after-undereye-forehead uef--pdrn-undereye-c gpt_image_01 (two moles retouched)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-eye-bag-volume-before-after-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-eye-bag-volume-before-after-study.jpg?v=1790922695"
+    },
+    {
+      "slot": "watanabe.o2",
+      "source": "assets/derived/study-detail-2026-10-02/skingenetix-glutathione-crows-feet-softer-before-after-study.jpg",
+      "filename": "skingenetix-glutathione-crows-feet-softer-before-after-study.jpg",
+      "alt": "Before and after: crow's feet a little softer, the same lines in both photographs",
+      "from": "before-after-glutathione-cards-r1 glub1--f2-crowsfeet-f gpt_image_01 (cheek mole retouched)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-crows-feet-softer-before-after-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-crows-feet-softer-before-after-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "wang.o2",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-acetyl-hexapeptide-8-cell/ingredient_2--F-surface-electron/ingredient_2--F-surface-electron-gpt_image_01.png",
+      "filename": "skingenetix-argireline-skin-surface-replica-roughness-study.jpg",
+      "alt": "Skin surface at cell scale, the layer a silicone replica records",
+      "from": "ARG-030 (skin surface at cell scale, electron-microscope register (overlapping corneocyte flakes))",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-skin-surface-replica-roughness-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-skin-surface-replica-roughness-study.jpg?v=1790922695"
+    },
+    {
+      "slot": "wang.m1",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-acetyl-hexapeptide-8/ingredient_2--B-material-macro/ingredient_2--B-material-macro-gpt_image_01.png",
+      "filename": "skingenetix-argireline-acetyl-hexapeptide-crystals-laboratory-study.jpg",
+      "alt": "Clear peptide crystals on a glass slide",
+      "from": "ARG-102 (clear peptide crystals on a glass slide, macro)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-crystals-laboratory-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-acetyl-hexapeptide-crystals-laboratory-study.jpg?v=1790922695"
+    },
+    {
+      "slot": "raikou.o1",
+      "source": "assets/ai-generated/2026-05-18-argireline-serum/run-01/argireline_10_percent_age_control_skin_serum_serum_drop_macro_1_skingenetix.png",
+      "filename": "skingenetix-argireline-cream-drop-forehead-roughness-study.jpg",
+      "alt": "A clear drop of cream on grey marble",
+      "from": "ARG-067 (clear serum drop on marble)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-cream-drop-forehead-roughness-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-cream-drop-forehead-roughness-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "raikou.o2",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-acetyl-hexapeptide-8/ingredient_2--C-pipette-and-droplet/ingredient_2--C-pipette-and-droplet-gpt_image_01.png",
+      "filename": "skingenetix-argireline-pipette-droplet-skin-water-loss-study.jpg",
+      "alt": "A glass pipette releasing a single clear droplet",
+      "from": "ARG-048 (glass pipette releasing a single clear droplet, pale grey ground)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-pipette-droplet-skin-water-loss-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-pipette-droplet-skin-water-loss-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "tadini.o1",
+      "source": "assets/ai-generated/2026-08-21-acetyl-hexapeptide-8-serum/run-01/acetyl_hexapeptide_8_10_percent_anti_wrinkle_line_smoothing_skin_serum_macro_dropper_tip_gel_4_skingenetix.png",
+      "filename": "skingenetix-argireline-dropper-gel-skin-anisotropy-study.jpg",
+      "alt": "A glass dropper releasing clear gel",
+      "from": "ARG-042 (glass dropper tip releasing clear gel, macro)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-dropper-gel-skin-anisotropy-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-dropper-gel-skin-anisotropy-study.jpg?v=1790922695"
+    },
+    {
+      "slot": "tadini.o2",
+      "source": "assets/ai-generated/2026-05-18-argireline-serum/run-01/argireline_10_percent_age_control_skin_serum_serum_trail_on_glass_3_skingenetix.png",
+      "filename": "skingenetix-argireline-serum-trail-two-week-study.jpg",
+      "alt": "A trail of clear serum on glass",
+      "from": "ARG-077 (clear argireline serum trail on glass, blue-grey ground)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-argireline-serum-trail-two-week-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-argireline-serum-trail-two-week-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "badenhorst.o2",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-copper-peptide/ingredient_1--C-pipette-and-droplet/ingredient_1--C-pipette-and-droplet-gpt_image_01.png",
+      "filename": "skingenetix-copper-peptide-ghk-cu-pipette-droplet-matrixyl-comparison-study.jpg",
+      "alt": "A glass pipette releasing a droplet on a clinical blue ground",
+      "from": "CU-147 (glass pipette releasing a single droplet on a clinical blue ground)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-pipette-droplet-matrixyl-comparison-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-pipette-droplet-matrixyl-comparison-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "badenhorst.o3",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-copper-peptide/ingredient_1--B-material-macro/ingredient_1--B-material-macro-gpt_image_01.png",
+      "filename": "skingenetix-copper-peptide-ghk-cu-crystals-wrinkle-depth-study.jpg",
+      "alt": "Blue copper-peptide crystals, macro",
+      "from": "CU-322 (mound of blue copper-peptide crystals on a blue ground, macro)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-crystals-wrinkle-depth-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-crystals-wrinkle-depth-study.jpg?v=1790922695"
+    },
+    {
+      "slot": "badenhorst.m1",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-copper-peptide-cell/ingredient_1--D-fibroblast-field/ingredient_1--D-fibroblast-field-gpt_image_01.png",
+      "filename": "skingenetix-copper-peptide-ghk-cu-fibroblasts-collagen-laboratory.jpg",
+      "alt": "Spindle-shaped skin fibroblasts under a microscope",
+      "from": "CU-045 (field of spindle-shaped fibroblasts under a microscope, blue)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-fibroblasts-collagen-laboratory.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-fibroblasts-collagen-laboratory.jpg?v=1790922695"
+    },
+    {
+      "slot": "badenhorst.m2",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-copper-peptide-cell/ingredient_1--E-single-fibroblast/ingredient_1--E-single-fibroblast-gpt_image_01.png",
+      "filename": "skingenetix-copper-peptide-ghk-cu-fibroblast-elastin-laboratory.jpg",
+      "alt": "A single skin fibroblast under a microscope",
+      "from": "CU-056 (single spindle fibroblast cell close-up, blue microscope register)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-fibroblast-elastin-laboratory.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-copper-peptide-ghk-cu-fibroblast-elastin-laboratory.jpg?v=1790922695"
+    },
+    {
+      "slot": "ye.o2",
+      "source": "assets/ai-generated/2026-04-20-pdrn-collagen-cream/run-01/pdrn_collagen_repair_skin_cream_cream_swipe_trail_1_skingenetix.png",
+      "filename": "skingenetix-pdrn-cream-swatch-elasticity-firmness-study.jpg",
+      "alt": "A swatch of pink PDRN cream on marble",
+      "from": "PDRN-133 (pink pdrn cream swatch on marble)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-cream-swatch-elasticity-firmness-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-cream-swatch-elasticity-firmness-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "ye.o3",
+      "source": "assets/ai-generated/2026-08-22-multi-pdrn-cream-macros/PDRN-CREAM-SPATULA-03/PDRN-CREAM-SPATULA-03-gpt_image_01.png",
+      "filename": "skingenetix-pdrn-cream-spatula-skin-thickness-study.jpg",
+      "alt": "A steel spatula holding pink PDRN cream",
+      "from": "PDRN-204 (steel spatula holding pink PDRN cream, alone, dark ground)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-cream-spatula-skin-thickness-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-cream-spatula-skin-thickness-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "ye.m1",
+      "source": "assets/ai-generated/2026-04-20-pdrn-serum/run-01/pdrn_cellular_repair_skin_serum_1_percent_serum_trail_1_skingenetix.png",
+      "filename": "skingenetix-pdrn-solution-glass-dish-collagen-skin-samples.jpg",
+      "alt": "Pink solution pooling in a laboratory glass dish",
+      "from": "PDRN-144 (pink serum stream pooling in a glass dish)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-solution-glass-dish-collagen-skin-samples.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-solution-glass-dish-collagen-skin-samples.jpg?v=1790922694"
+    },
+    {
+      "slot": "ye.m2",
+      "source": "assets/ai-generated/2026-08-20-pdrn-skin-repair-serum/run-02/pdrn_skin_repair_deep_renewal_face_serum_macro_dropper_tip_gel_2_skingenetix.png",
+      "filename": "skingenetix-pdrn-gel-dropper-elastin-skin-samples.jpg",
+      "alt": "A glass dropper releasing pink gel",
+      "from": "PDRN-099 (glass dropper tip releasing pink gel, macro)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-gel-dropper-elastin-skin-samples.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-gel-dropper-elastin-skin-samples.jpg?v=1790922694"
+    },
+    {
+      "slot": "ye.m3",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-pdrn/ingredient_4--C-pipette-and-droplet/ingredient_4--C-pipette-and-droplet-gpt_image_01.png",
+      "filename": "skingenetix-pdrn-pipette-droplet-collagen-genes-laboratory.jpg",
+      "alt": "A glass pipette releasing a single pink droplet",
+      "from": "PDRN-103 (glass pipette releasing a single pink droplet on a rose ground)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-pipette-droplet-collagen-genes-laboratory.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-pipette-droplet-collagen-genes-laboratory.jpg?v=1790922694"
+    },
+    {
+      "slot": "yogya.o1",
+      "source": "assets/ai-generated/2026-08-20-pdrn-skin-repair-serum/run-02/pdrn_skin_repair_deep_renewal_face_serum_serum_drop_macro_2_skingenetix.png",
+      "filename": "skingenetix-pdrn-polynucleotide-serum-drop-microneedling-study.jpg",
+      "alt": "A drop of pink polynucleotide serum",
+      "from": "PDRN-196 (pink pdrn serum drop macro)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-pdrn-polynucleotide-serum-drop-microneedling-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-pdrn-polynucleotide-serum-drop-microneedling-study.jpg?v=1790922695"
+    },
+    {
+      "slot": "robinson.o1",
+      "source": "assets/ai-generated/2026-08-21-banners-wave1/D2-tile-firming/D2-tile-firming_01.jpg",
+      "filename": "skingenetix-matrixyl-palmitoyl-pentapeptide-cream-peak-fine-lines-study.jpg",
+      "alt": "A peak of white moisturiser on emerald teal",
+      "from": "GEN-213 (stiff peak of white cream on emerald teal)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-palmitoyl-pentapeptide-cream-peak-fine-lines-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-palmitoyl-pentapeptide-cream-peak-fine-lines-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "robinson.o2",
+      "source": "assets/ai-generated/2026-05-18-argireline-serum/run-01/argireline_10_percent_age_control_skin_serum_serum_drop_macro_2_skingenetix.png",
+      "filename": "skingenetix-matrixyl-palmitoyl-pentapeptide-serum-drop-age-spots-study.jpg",
+      "alt": "A clear drop on a reflective surface",
+      "from": "ARG-068 (clear serum drop on marble)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-palmitoyl-pentapeptide-serum-drop-age-spots-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-palmitoyl-pentapeptide-serum-drop-age-spots-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "robinson.o3",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-acetyl-hexapeptide-8-cell/ingredient_2--F-surface-electron/ingredient_2--F-surface-electron-nbp_pro_01.png",
+      "filename": "skingenetix-matrixyl-palmitoyl-pentapeptide-skin-surface-texture-study.jpg",
+      "alt": "Skin surface at cell scale, grey",
+      "from": "ARG-036 (skin surface at cell scale, electron-microscope register (overlapping corneocyte flakes))",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-palmitoyl-pentapeptide-skin-surface-texture-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-palmitoyl-pentapeptide-skin-surface-texture-study.jpg?v=1790922695"
+    },
+    {
+      "slot": "robinson.m1",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-acetyl-hexapeptide-8-cell/ingredient_2--D-cell-field/ingredient_2--D-cell-field-gpt_image_01.png",
+      "filename": "skingenetix-matrixyl-palmitoyl-pentapeptide-cells-microscope-laboratory.jpg",
+      "alt": "A field of cells seen through a microscope, grey",
+      "from": "ARG-013 (field of skin cells seen through a microscope, grey monochrome)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-palmitoyl-pentapeptide-cells-microscope-laboratory.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-palmitoyl-pentapeptide-cells-microscope-laboratory.jpg?v=1790922695"
+    },
+    {
+      "slot": "robinson.m2",
+      "source": "assets/ai-generated/2026-08-22-multi-science-ingredient-acetyl-hexapeptide-8-cell/ingredient_2--E-single-cell/ingredient_2--E-single-cell-gpt_image_01.png",
+      "filename": "skingenetix-matrixyl-palmitoyl-pentapeptide-skin-cell-collagen-laboratory.jpg",
+      "alt": "A single cell under a microscope, grey",
+      "from": "ARG-021 (single cell close-up, microscope register, grey monochrome)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-matrixyl-palmitoyl-pentapeptide-skin-cell-collagen-laboratory.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-palmitoyl-pentapeptide-skin-cell-collagen-laboratory.jpg?v=1790922695"
+    },
+    {
+      "slot": "watanabe.o3",
+      "source": "assets/ai-generated/2026-08-21-banners-wave1/D4-tile-brightening/D4-tile-brightening_02.jpg",
+      "filename": "skingenetix-glutathione-clear-lotion-pool-skin-texture-study.jpg",
+      "alt": "A shallow pool of clear lotion on champagne gold",
+      "from": "GEN-222 (shallow pool of clear liquid on champagne gold)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-clear-lotion-pool-skin-texture-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-clear-lotion-pool-skin-texture-study.jpg?v=1790922694"
+    },
+    {
+      "slot": "watanabe.o4",
+      "source": "assets/ai-generated/2026-08-20-pdrn-skin-repair-serum/run-01/pdrn_skin_repair_deep_renewal_face_serum_serum_trail_on_glass_2_skingenetix.png",
+      "filename": "skingenetix-glutathione-golden-serum-trail-skin-moisture-study.jpg",
+      "alt": "A golden serum trail on glass",
+      "from": "PDRN-190 (amber serum trail on glass)",
+      "uploaded_handle": "shopify://shop_images/skingenetix-glutathione-golden-serum-trail-skin-moisture-study.jpg",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-glutathione-golden-serum-trail-skin-moisture-study.jpg?v=1790922695"
+    }
+  ]
+}

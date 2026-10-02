@@ -361,8 +361,16 @@
       },
       "unit": "",
       "signed": false,
-      "domain": [0, 3],
-      "ticks": [0, 1, 2, 3],
+      "domain": [
+        0,
+        3
+      ],
+      "ticks": [
+        0,
+        1,
+        2,
+        3
+      ],
       "value_width": 64,
       "series": [
         {
@@ -847,7 +855,14 @@
     "identifier": "18492182",
     "datePublished": "2005",
     "journal": "International Journal of Cosmetic Science",
-    "authors": ["Robinson LR", "Fitzgerald NC", "Doughty DG", "Dawes NC", "Berge CA", "Bissett DL"]
+    "authors": [
+      "Robinson LR",
+      "Fitzgerald NC",
+      "Doughty DG",
+      "Dawes NC",
+      "Berge CA",
+      "Bissett DL"
+    ]
   },
   "checks": [
     "93 women",
@@ -863,5 +878,103 @@
     "Week 12",
     "Week 4"
   ],
-  "concerns": ["wrinkles", "crows_feet"]
+  "concerns": [
+    "wrinkles",
+    "crows_feet"
+  ],
+  "outcomes": {
+    "heading": {
+      "en": "What the trial found, result by result"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Fine lines and wrinkles reduced more than with the plain moisturiser from week 8"
+        },
+        "body": [
+          {
+            "en": "This was the question the trial was designed to answer, and it was measured two ways. A computer program written by Procter & Gamble measured the lines in the crow's-feet area on each photograph, adding up how much of the area they covered and how long they were. Separately, the blinded graders scored fine lines and wrinkles on the −4 to +4 scale ([Abu Samah and Heard, 2011](https://doi.org/10.1111/j.1468-2494.2011.00657.x); [Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/))."
+          },
+          {
+            "en": "Both methods favoured the peptide side at week 8 and again at week 12, by the paper's own test (p ≤ 0.10, a looser bar than the usual p ≤ 0.05) ([Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/)). The women's own ratings also showed a significant improvement in fine lines and wrinkles ([Robinson et al., 2005](https://pubmed.ncbi.nlm.nih.gov/18492182/))."
+          },
+          {
+            "en": "The change was small, but a computer and human graders, working separately, found it at the same two check-ups, and the women noticed it too. That agreement is what makes this the trial's central result."
+          }
+        ],
+        "image": "skingenetix-matrixyl-palmitoyl-pentapeptide-cream-peak-fine-lines-study.jpg"
+      },
+      {
+        "title": {
+          "en": "The look of age spots improved more than with the plain moisturiser by week 12"
+        },
+        "body": [
+          {
+            "en": "Age spots were judged by trained eyes, not by a machine. Expert graders looked at the standardised photographs of the two sides of each face, coded so they could not tell which side had the peptide, and scored five features of each side, age spots among them, on a scale from −4 (much worse) to +4 (much better) ([Abu Samah and Heard, 2011](https://doi.org/10.1111/j.1468-2494.2011.00657.x); [Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/))."
+          },
+          {
+            "en": "At week 12, the last check-up, the peptide side scored better on age spots than the side given the same moisturiser without it, at the usual bar for a difference unlikely to be chance (p ≤ 0.05) ([Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/)). The women's own ratings agreed: a review of controlled peptide trials reports that both the graders' and the women's scores for age spots were significantly better on the peptide side ([Gorouhi and Maibach, 2009](https://pubmed.ncbi.nlm.nih.gov/19570099/))."
+          },
+          {
+            "en": "The trial was built to test fine lines and wrinkles, so this is a second benefit seen on the same faces: after three months of twice-daily use, the side with palmitoyl pentapeptide-4 looked better for age spots, both to graders who did not know which side it was and to the women themselves."
+          }
+        ],
+        "image": "skingenetix-matrixyl-palmitoyl-pentapeptide-serum-drop-age-spots-study.jpg"
+      },
+      {
+        "title": {
+          "en": "Skin texture looked better than with the plain moisturiser at week 4"
+        },
+        "body": [
+          {
+            "en": "Texture is the fine grain of the skin's surface: how smooth and even it looks between the lines. It was one of the five features the blinded graders scored on each side of the face, using the same −4 to +4 scale and the photographs taken at weeks 4, 8 and 12 ([Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/))."
+          },
+          {
+            "en": "At the first check-up, week 4, the peptide side already scored better on texture than the side given the same moisturiser without it, at the usual bar for a difference unlikely to be chance (p ≤ 0.05). At week 8 it was still ahead by the paper's own, looser test (p ≤ 0.10) ([Aldag et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5108505/))."
+          },
+          {
+            "en": "Week 4 was the trial's first check-up, and texture was the only feature ahead at that point: the earliest difference the trial recorded, a month into twice-daily use, seen by graders who did not know which side had the peptide."
+          }
+        ],
+        "image": "skingenetix-matrixyl-palmitoyl-pentapeptide-skin-surface-texture-study.jpg"
+      }
+    ]
+  },
+  "mechanisms": {
+    "heading": {
+      "en": "How does palmitoyl pentapeptide-4 work? What lab tests show"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "A five-amino-acid piece of procollagen raised collagen in lab-grown cells"
+        },
+        "body": [
+          {
+            "en": "Collagen starts as a longer molecule, procollagen, and as it is made, enzymes trim pieces off both ends. In the laboratory, researchers at the University of Tennessee cut one end piece into ever shorter fragments and tested each on fibroblasts, the cells that make collagen, grown in culture dishes. The shortest fragment that still worked was five amino acids long (KTTKS). It raised the cells' production of collagen and of fibronectin, a protein that helps cells anchor to the collagen network ([Katayama et al., 1993](https://pubmed.ncbi.nlm.nih.gov/8486721/))."
+          },
+          {
+            "en": "The authors proposed that these trimmed-off pieces act as a signal telling cells to make more collagen. Palmitoyl pentapeptide-4 is that same five-amino-acid sequence with palmitic acid, a fatty acid, attached, and it was designed around this laboratory finding."
+          }
+        ],
+        "evidence": "laboratory",
+        "image": "skingenetix-matrixyl-palmitoyl-pentapeptide-cells-microscope-laboratory.jpg"
+      },
+      {
+        "title": {
+          "en": "With its fatty-acid tail, it raised collagen in lab tests on human skin cells"
+        },
+        "body": [
+          {
+            "en": "In the laboratory, Sederma, the company that sells palmitoyl pentapeptide-4 as Matrixyl®, gave it to human skin fibroblasts for three days. Collagen I rose with the dose, to 93% above cells given only the solvent at 8 ppm, the highest dose tested, and fibronectin rose 100% at that dose ([Lintner, 2005](https://patents.google.com/patent/US6974799B2/en), Sederma patent US 6,974,799)."
+          },
+          {
+            "en": "A University of Reading laboratory, funded by a public research council, found the same direction in 2026: in skin fibroblasts from adult donors, palmitoyl pentapeptide-4 raised the collagen each cell made, significantly more than in cells given the culture medium alone, measured with a dye that binds collagen ([de Mello et al., 2026](https://pmc.ncbi.nlm.nih.gov/articles/PMC13280649/)). Laboratory findings that explain how palmitoyl pentapeptide-4 may work."
+          }
+        ],
+        "evidence": "laboratory",
+        "image": "skingenetix-matrixyl-palmitoyl-pentapeptide-skin-cell-collagen-laboratory.jpg"
+      }
+    ]
+  }
 }

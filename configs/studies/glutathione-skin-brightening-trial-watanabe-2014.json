@@ -361,8 +361,16 @@
       "unit": "",
       "signed": false,
       "decimals": 1,
-      "domain": [0, 300],
-      "ticks": [0, 100, 200, 300],
+      "domain": [
+        0,
+        300
+      ],
+      "ticks": [
+        0,
+        100,
+        200,
+        300
+      ],
       "value_width": 62,
       "series": [
         {
@@ -717,7 +725,12 @@
     "identifier": "25378941",
     "datePublished": "2014",
     "journal": "Clinical, Cosmetic and Investigational Dermatology",
-    "authors": ["Watanabe F", "Hashizume E", "Chan GP", "Kamimura A"]
+    "authors": [
+      "Watanabe F",
+      "Hashizume E",
+      "Chan GP",
+      "Kamimura A"
+    ]
   },
   "checks": [
     "10.7%",
@@ -733,5 +746,102 @@
     "Watanabe F, Hashizume E",
     "Read at source"
   ],
-  "concerns": ["brightening"]
+  "concerns": [
+    "brightening"
+  ],
+  "outcomes": {
+    "heading": {
+      "en": "What the glutathione trial found, result by result"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Skin pigment fell 10.7% in 10 weeks, against 3.1% on the placebo side"
+        },
+        "body": [
+          {
+            "en": "Pigment was read with a Mexameter, a hand-held probe placed on the cheekbone. It shines light at set wavelengths and measures how much comes back; melanin, the skin's main pigment, takes up two of them, so the reading, the melanin index, follows the pigment in the skin. Each weekly reading was the average of three, taken after 20 minutes' rest in the testing room."
+          },
+          {
+            "en": "The glutathione side read lower than the placebo side from the first week, and the gap kept widening: p &lt; 0.05 at week 1, p &lt; 0.01 at week 2 and p &lt; 0.001 in every weekly reading from week 3 to week 10, when the two sides stood 22 points apart, 243.5 against 265.5 ([Watanabe et al., 2014](https://pubmed.ncbi.nlm.nih.gov/25378941/), Figure 2)."
+          },
+          {
+            "en": "The eye followed the instrument. In blinded ratings every two weeks, the first slight brightening was seen at week 4, on 23% of glutathione sides and on no placebo side; by week 8 the investigator rated 37% of glutathione sides moderately brighter, against none on placebo. The pattern is a measurable change within weeks, and a visible one that builds over the full ten weeks of twice-daily use."
+          }
+        ],
+        "image": "skingenetix-glutathione-brighter-looking-skin-before-after.jpg",
+        "before_after": true,
+        "after": {
+          "en": "After 10 weeks"
+        },
+        "result": {
+          "en": "Skin pigment −10.7% vs −3.1% on the placebo side"
+        }
+      },
+      {
+        "title": {
+          "en": "Crow's feet: lower wrinkle reading than placebo, visibly softer in 1 in 3 women"
+        },
+        "body": [
+          {
+            "en": "Crow's feet were assessed at the outer corner of each eye. A digital skin camera photographed the area every week, and skin-analysis software built a three-dimensional map of the surface and scored its curvature: the curvature index, where a lower reading means less pronounced lines."
+          },
+          {
+            "en": "The glutathione side's reading was lower than the placebo side's at week 6 (p &lt; 0.05) and at week 10 (p &lt; 0.01) ([Watanabe et al., 2014](https://pubmed.ncbi.nlm.nih.gov/25378941/), Figure 3B). The authors conclude that the lotion \"effectively reduced wrinkle formation in both objective and subjective evaluation tests\"."
+          },
+          {
+            "en": "The blinded ratings point the same way, by eye. The share of glutathione sides rated moderately softer, the authors' mark of a visible benefit, grew at every visit: one woman at week 4, 10% at week 6, 20% at week 8 and, at week 10, a third: 33% by the investigator and 30% by the women. No placebo side reached that mark at any visit. Softer-looking crow's feet are the trial's second visible benefit, building through the second half of the ten weeks."
+          }
+        ],
+        "image": "skingenetix-glutathione-crows-feet-softer-before-after-study.jpg",
+        "before_after": true,
+        "after": {
+          "en": "After 10 weeks"
+        },
+        "result": {
+          "en": "Rated visibly softer: 1 in 3 women vs none on placebo"
+        }
+      },
+      {
+        "title": {
+          "en": "Measurably smoother skin texture than the placebo side from week 6 to week 10"
+        },
+        "body": [
+          {
+            "en": "Texture was read from the same weekly photographs of the crow's feet. The software traces fine edges in each image to measure keratin, the tough protein of the skin's outermost layer, and reports it as a keratin index; in the paper's figure, a lower index means smoother skin."
+          },
+          {
+            "en": "The glutathione side's index fell over the trial and was lower than the placebo side's at every weekly reading from week 6 to week 10: p &lt; 0.05 at weeks 6 and 8, p &lt; 0.01 at week 7 and p &lt; 0.001 at weeks 9 and 10 ([Watanabe et al., 2014](https://pubmed.ncbi.nlm.nih.gov/25378941/), Figure 3C)."
+          },
+          {
+            "en": "Five weekly readings in a row, with the strongest statistics in the last two, make this the trial's most consistent result after pigment. It is an instrument finding: measurably smoother texture at the outer corner of the eye, recorded by the camera software in the same area as the softer-looking crow's feet."
+          }
+        ],
+        "image": "skingenetix-glutathione-clear-lotion-pool-skin-texture-study.jpg"
+      },
+      {
+        "title": {
+          "en": "Higher skin moisture than the placebo side at weeks 8 and 9"
+        },
+        "body": [
+          {
+            "en": "Moisture was read on the cheekbone with a Corneometer, a probe that measures how well the skin's outer layer holds an electrical charge. Water raises that reading, so it tracks how much water the outermost layer of skin is holding. It was taken every week, after the same 20 minutes' rest as the pigment reading."
+          },
+          {
+            "en": "From week 8 the glutathione side read higher than the placebo side, significantly at weeks 8 and 9 (p &lt; 0.05) ([Watanabe et al., 2014](https://pubmed.ncbi.nlm.nih.gov/25378941/), Figure 3A). The authors read it as \"the moisturizing effect of GSSG\"."
+          },
+          {
+            "en": "The comparison was a demanding one: both lotions carried the same oils and the same water-binding ingredients (Table 1), so the glutathione side held more moisture than a side given a moisturising lotion of its own. It sits alongside the brighter-looking result as a supporting benefit of twice-daily use."
+          }
+        ],
+        "image": "skingenetix-glutathione-golden-serum-trail-skin-moisture-study.jpg"
+      }
+    ]
+  },
+  "mechanisms": {
+    "heading": {
+      "en": "How does glutathione work on skin?"
+    },
+    "items": []
+  }
 }

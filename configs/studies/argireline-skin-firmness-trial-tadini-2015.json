@@ -361,8 +361,16 @@
       "unit": "",
       "signed": false,
       "decimals": 1,
-      "domain": [0, 3],
-      "ticks": [0, 1, 2, 3],
+      "domain": [
+        0,
+        3
+      ],
+      "ticks": [
+        0,
+        1,
+        2,
+        3
+      ],
       "value_width": 64,
       "series": [
         {
@@ -732,7 +740,11 @@
     "identifier": "10.1590/S1984-82502015000400016",
     "datePublished": "2015",
     "journal": "Brazilian Journal of Pharmaceutical Sciences",
-    "authors": ["Tadini KA", "Mercurio DG", "Campos PMBGM"]
+    "authors": [
+      "Tadini KA",
+      "Mercurio DG",
+      "Campos PMBGM"
+    ]
   },
   "checks": [
     "2.5",
@@ -749,5 +761,54 @@
     "Tadini KA, Mercurio DG",
     "Read at source"
   ],
-  "concerns": ["firming"]
+  "concerns": [
+    "firming"
+  ],
+  "outcomes": {
+    "heading": {
+      "en": "What the skin instruments found, result by result"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Facial anisotropy fell about a third and ended lower than with the plain cream"
+        },
+        "body": [
+          {
+            "en": "Each cheek was read with a Reviscometer RV600, which rests two fine sensors on the skin: one sends a tiny sound pulse, the other clocks its arrival, and the reading is repeated in several directions. The pulse travels faster through stiffer skin, which is why the authors read a lower anisotropy as a sign of firmer skin. Readings were taken 10 to 15 hours after the last application, so they measure the skin, not fresh cream on its surface."
+          },
+          {
+            "en": "With 10% Argireline®, the group's average anisotropy went from about 2.5 at the start to about 1.7 at week 4, a fall of about a third and significantly below its start. The plain-cream group moved from about 2.5 to about 2.2, which the paper does not mark as significant. At week 4 the two creams differed significantly (p &lt; 0.05; values read from Figure 5B)."
+          },
+          {
+            "en": "The authors conclude that acetyl hexapeptide-3 acts on the skin's mechanical properties, the claim in their paper's title, and that its effect on facial anisotropy makes it an effective ingredient for anti-ageing creams ([Tadini et al., 2015](https://doi.org/10.1590/S1984-82502015000400016))."
+          }
+        ],
+        "image": "skingenetix-argireline-dropper-gel-skin-anisotropy-study.jpg"
+      },
+      {
+        "title": {
+          "en": "Within two weeks anisotropy was significantly lower; the plain cream's was not"
+        },
+        "body": [
+          {
+            "en": "The first check-up came after two weeks of twice-daily use. On the Argireline® cream, facial anisotropy averaged about 1.6, down from about 2.5: roughly 37% lower and significantly below its starting value (p &lt; 0.05, Kruskal–Wallis test). On the plain cream it averaged about 2.0, a change the paper does not mark as significant (values read from Figure 5B)."
+          },
+          {
+            "en": "At this visit the paper compares each cream with its own starting value; the head-to-head comparison between the two creams was made at week 4, where the Argireline® cream came out lower. The two-week reading shows how soon the change appeared, and the four-week reading shows it held."
+          },
+          {
+            "en": "Two weeks is the earliest point at which any of the three Argireline® trials we appraise recorded a significant change: the [forehead trial](https://www.skingenetix.com/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017) took its first measurements at day 20, and the [crow's-feet trial](https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013) reported its results at week 4 ([Tadini et al., 2015](https://doi.org/10.1590/S1984-82502015000400016))."
+          }
+        ],
+        "image": "skingenetix-argireline-serum-trail-two-week-study.jpg"
+      }
+    ]
+  },
+  "mechanisms": {
+    "heading": {
+      "en": "How might Argireline® change the way facial skin behaves?"
+    },
+    "items": []
+  }
 }

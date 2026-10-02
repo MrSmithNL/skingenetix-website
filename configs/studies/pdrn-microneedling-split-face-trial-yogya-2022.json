@@ -361,8 +361,16 @@
       "unit": "",
       "signed": false,
       "decimals": 1,
-      "domain": [0, 12],
-      "ticks": [0, 4, 8, 12],
+      "domain": [
+        0,
+        12
+      ],
+      "ticks": [
+        0,
+        4,
+        8,
+        12
+      ],
       "value_width": 56,
       "series": [
         {
@@ -788,7 +796,14 @@
     "identifier": "10.1007/s13555-022-00729-7",
     "datePublished": "2022",
     "journal": "Dermatology and Therapy",
-    "authors": ["Yogya Y", "Wanitphakdeedecha R", "Wongdama S", "Nanchaipruek Y", "Yan C", "Rakchart S"]
+    "authors": [
+      "Yogya Y",
+      "Wanitphakdeedecha R",
+      "Wongdama S",
+      "Nanchaipruek Y",
+      "Yan C",
+      "Rakchart S"
+    ]
   },
   "checks": [
     "29 women",
@@ -807,5 +822,38 @@
     "0.8–1.5 mm",
     "2.2 out of 10"
   ],
-  "concerns": ["wrinkles", "crows_feet"]
+  "concerns": [
+    "wrinkles",
+    "crows_feet"
+  ],
+  "outcomes": {
+    "heading": {
+      "en": "What the polynucleotide serum added to microneedling"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "With microneedling, eye wrinkles eased 14% in two months, against 8% with saline"
+        },
+        "body": [
+          {
+            "en": "The wrinkles around the eyes were measured with an Antera 3D, a handheld camera that scans the skin in three dimensions and scores how deeply it dips into its lines: a lower score means shallower wrinkles. Each side of the face was scanned before the first session and at two weeks and one, two, three and six months after the last."
+          },
+          {
+            "en": "By the two-month check, the polynucleotide side scored 8.9, down 14% from 10.3; the saline side scored 10.3, down 8% from 11.2. That gap between the sides was significant (p = 0.006), and it was still significant a month later (p < 0.05) ([Yogya et al., 2022](https://doi.org/10.1007/s13555-022-00729-7), Figure 3)."
+          },
+          {
+            "en": "The serum side then held its gain, at 8.9 at three months and 8.8 at six, while the saline side's score rose back to 10.4 at three months before reaching 9.5 at six. That is what the polynucleotides added in this clinic setting: a smoother eye area sooner, held steady from the second month."
+          }
+        ],
+        "image": "skingenetix-pdrn-polynucleotide-serum-drop-microneedling-study.jpg"
+      }
+    ]
+  },
+  "mechanisms": {
+    "heading": {
+      "en": "How do polynucleotides work after microneedling?"
+    },
+    "items": []
+  }
 }

@@ -30,7 +30,13 @@
     "identifier": "10.4172/2329-8847.1000166",
     "datePublished": "2016",
     "journal": "Journal of Aging Science",
-    "authors": ["Badenhorst T", "Svirskis D", "Merrilees M", "Bolke L", "Wu Z"],
+    "authors": [
+      "Badenhorst T",
+      "Svirskis D",
+      "Merrilees M",
+      "Bolke L",
+      "Wu Z"
+    ],
     "authors_read_at_source": "the paper's first page (doi:10.4172/2329-8847.1000166 PDF, 2026-10-02): Travis Badenhorst, Darren Svirskis, Mervyn Merrilees, Liane Bolke, Zimei Wu; Crossref lists only the first three"
   },
   "figures": [
@@ -165,8 +171,15 @@
       },
       "unit": "%",
       "decimals": 1,
-      "domain": [-28, 2],
-      "ticks": [-20, -10, 0],
+      "domain": [
+        -28,
+        2
+      ],
+      "ticks": [
+        -20,
+        -10,
+        0
+      ],
       "value_width": 70,
       "series": [
         {
@@ -359,5 +372,110 @@
     "honorificPrefix": "Dr",
     "jobTitle": "Cosmetic & Medical Physician"
   },
-  "concerns": ["wrinkles", "crows_feet"]
+  "concerns": [
+    "wrinkles",
+    "crows_feet"
+  ],
+  "outcomes": {
+    "heading": {
+      "en": "What the trial found, result by result"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Crow's-feet wrinkle volume fell 55.8% more than with the plain serum"
+        },
+        "body": [
+          {
+            "en": "Wrinkle volume is the space a crease takes up below the surrounding skin. After a skin check and ten days without cosmetics, each woman had one large wrinkle chosen close to the corner of the eye, where crow's feet form, and that same wrinkle was measured in 3D at the start and after 8 weeks. In this group of 20 women the GHK-Cu serum went on the right side of the face and the plain serum on the left, morning and evening, with no other skincare on those areas."
+          },
+          {
+            "en": "By week 8, wrinkle volume on the GHK-Cu side was down 24.1% from the start, against 15.0% on the plain side: a 55.8% greater reduction (p < 0.0001), the clearest result in the trial. The paper adds that every participant using the GHK-Cu serum, in both groups, showed a reduction in wrinkle volume and depth."
+          },
+          {
+            "en": "Because both sides belong to the same face, differences between women drop out of the comparison, and the gap reflects what was applied. For anyone with crow's feet it is the most relevant number in the paper, measured on exactly that line. The plain serum carried neither the GHK-Cu nor the lipid nano-carrier that delivered it, so the extra reduction belongs to the two together ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
+          }
+        ],
+        "image": "skingenetix-copper-peptide-ghk-cu-crows-feet-wrinkles-before-after.jpg",
+        "before_after": true,
+        "after": {
+          "en": "After 8 weeks"
+        },
+        "result": {
+          "en": "Volume −24.1% vs −15.0% with the plain serum"
+        }
+      },
+      {
+        "title": {
+          "en": "Wrinkle volume fell 31.6% more than with a Matrixyl 3000 product"
+        },
+        "body": [
+          {
+            "en": "The other 19 women put the GHK-Cu serum on the right side and a commercial skincare product containing Matrixyl 3000 on the left. Matrixyl 3000 is a peptide ingredient already used in commercial skincare, and it includes a fat-soluble form of GHK; the researchers chose it as a positive control, a comparison expected to improve wrinkles too. Both products came in identical coded containers, so neither the women nor the investigators knew which was which."
+          },
+          {
+            "en": "After 8 weeks, wrinkle volume on the GHK-Cu side was down 25.8% from the start, against 20.0% on the Matrixyl side: a 31.6% greater reduction (p = 0.0044). At 4 weeks the two sides had improved by almost the same amount (17.2% and 16.8%). The GHK-Cu side pulled ahead in the second month, when its reduction grew by about half again while the Matrixyl side's grew by about a fifth."
+          },
+          {
+            "en": "Beating another active product is a harder test than beating a plain base. The timing matters too for anyone starting a GHK-Cu serum: in this trial the larger gains came between weeks 4 and 8, so the first month is not the whole story ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
+          }
+        ],
+        "image": "skingenetix-copper-peptide-ghk-cu-pipette-droplet-matrixyl-comparison-study.jpg"
+      },
+      {
+        "title": {
+          "en": "Wrinkle depth fell 32.8% more than with the plain serum"
+        },
+        "body": [
+          {
+            "en": "Depth is how far the crease sinks below the surrounding skin. PRIMOS, the 3D imaging system used here, measures it without touching the face: it projects a pattern of fine parallel stripes onto the skin, a camera records how the stripes bend over the crease, and software turns that bending into a three-dimensional map. The woman's head is held still in a support while the measuring head is brought close."
+          },
+          {
+            "en": "In the 20 women who compared the GHK-Cu serum with the plain serum, the same wrinkle was 20.3% shallower on the GHK-Cu side after 8 weeks, against 15.3% on the plain side: a 32.8% greater reduction (p = 0.0123)."
+          },
+          {
+            "en": "Depth and volume are two readings of the same line, and on both the GHK-Cu side came out ahead of the plain serum. Together they describe a crow's-feet wrinkle that became both shallower and smaller over the eight weeks ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
+          }
+        ],
+        "image": "skingenetix-copper-peptide-ghk-cu-crystals-wrinkle-depth-study.jpg"
+      }
+    ]
+  },
+  "mechanisms": {
+    "heading": {
+      "en": "How does GHK-Cu work on skin?"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Skin cells made up to 18% more collagen in the laboratory"
+        },
+        "body": [
+          {
+            "en": "In the laboratory arm of the same paper, the researchers grew fibroblasts from adult human skin: the cells that make collagen, the protein that gives skin its firm framework. They added GHK-Cu at three very low strengths (0.01, 1 and 100 nanomolar, a ten-thousand-fold range), gave a matching set of cells water only, and measured the collagen the cells released into the surrounding fluid."
+          },
+          {
+            "en": "By day 4, the cells given GHK-Cu had released 9% to 18% more collagen than the untreated cells, at every strength (p < 0.05), and the weakest strength gave the largest rise. The researchers give these laboratory findings as the reason they went on to test the serum on faces ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
+          }
+        ],
+        "image": "skingenetix-copper-peptide-ghk-cu-fibroblasts-collagen-laboratory.jpg",
+        "evidence": "laboratory"
+      },
+      {
+        "title": {
+          "en": "Skin cells built about 30% more elastin in the laboratory"
+        },
+        "body": [
+          {
+            "en": "Elastin is the stretchy protein that lets skin spring back into shape. In the same laboratory experiment, the researchers also measured the elastin the fibroblasts had built up, using a colour test that reads elastin once it has been made soluble."
+          },
+          {
+            "en": "After 2 days the difference was small; by day 4 the cells given GHK-Cu held about 30% more elastin than the untreated cells, at every strength (29% to 35%, p < 0.017), with no clear difference between strengths. It is a laboratory finding that helps explain how GHK-Cu may work, while the trial on faces measured the wrinkle itself ([Badenhorst et al., 2016](https://doi.org/10.4172/2329-8847.1000166))."
+          }
+        ],
+        "image": "skingenetix-copper-peptide-ghk-cu-fibroblast-elastin-laboratory.jpg",
+        "evidence": "laboratory"
+      }
+    ]
+  }
 }
