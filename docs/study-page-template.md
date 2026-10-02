@@ -112,6 +112,17 @@ skin?").
 
 Order matters for live pages: until step 2 is live, an empty slot draws a grey box on every study article.
 
+**Deployed 2026-10-02.** The definition and both article links were created; the section and both templates were uploaded (08:39–08:45
+CEST). English previews of all eight studies were built at `<article>?view=clinical-study-draft`. **Two traps were met, both fixed:**
+
+- **An empty section between two same-background sections opens a gap.** Impact closes the gap by comparing each section's
+  `--section-background-hash` with the previous one's (`#prev + * { --previous-section-background-hash }`). The empty how-it-works
+  wrapper between "What the researchers did" and "How to read this result" (both hash 0) broke that, and opened an 80px band (40px on
+  phones) on every live article for five minutes. The fix: the section's `empty_previous_hash` setting is set to `0` on the mechanism
+  slot, so an empty section hands the hash on. Verified on the live page: every section at its original position.
+- **A template uploaded seconds after a schema change loses the new setting.** Shopify drops a setting it does not yet know. Re-upload
+  the template, then read it back.
+
 **The safety note (2026-09-30, Malcolm's go; research `docs/research-2026-09-30-safety-notes-on-study-articles.md`).**
 Every study article carries a "Before you try it" block right before the product buttons: use guidance only (patch test, stop if
 irritated, ask a doctor if pregnant, breastfeeding or on prescription skin treatment), and on PDRN studies a fish-allergy line (PDRN is

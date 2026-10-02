@@ -498,7 +498,15 @@ AI-generated illustrations and must not be presented as results. Record:
   - ✅ **All eight articles measured against the rules:** 20 result sections, 2 before/afters and 8 how-it-works blocks proposed.
     Proposals and source tables are in `research/study-detail-2026-10-01/`; the review is
     `docs/review-2026-10-01-study-results-and-how-it-works.md`.
-  - ⏳ **Deploy the template** in the documented order once the other window's live audits finish.
+  - ✅ **Claim fixes live ×6 (2026-10-01/02):** seven study articles; PDRN hub card f4 plus stats s2, card f1, evidence row 02,
+    FAQ q1 and the chart (Figure 6B); Argireline and PDRN registers corrected. Verified live.
+  - ✅ **Pictures chosen and uploaded (2026-10-02):** six before/afters (four new pairs, moles retouched; two hub pairs reused) and
+    23 plain pictures; `configs/banners/study-detail-images-2026-10-02.json`. Desktop sheets `skingenetix-study-before-afters.png`
+    and `skingenetix-study-plain-pictures.png`.
+  - ✅ **Template deployed (2026-10-02):** definition, section (with empty-slot guard and hash hand-over) and both article
+    templates. Live articles unchanged (verified section by section). English previews of all eight are at
+    `?view=clinical-study-draft`. The content configs are on branch `study-outcome-sections` until translated: a full `--apply`
+    refuses English-only blocks.
   - ⏳ **For Malcolm (review §4):**
     1. which before/after pictures to use; five of the seven hub pictures show more change than their trial measured;
     2. the live-claim corrections, including Ye's "about 2×" for eye bags (it is about 1.5×) and its understated wrinkle figure (about 3.5×);
