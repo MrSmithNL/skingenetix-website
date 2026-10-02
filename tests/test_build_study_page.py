@@ -284,10 +284,14 @@ def with_detail(**changes):
     return cfg
 
 
+# a study config without the two keys (every live article until 2026-10-02 had neither)
+PLAIN = {k: v for k, v in BADENHORST.items() if k not in ("outcomes", "mechanisms")}
+
+
 def test_a_config_without_the_new_keys_builds_exactly_as_before():
-    """Eight live articles have no outcomes or mechanisms: they must write no companion entry and pass every check."""
-    assert bsp.detail_fields(BADENHORST, "en") is None
-    assert bsp.check_detail(BADENHORST) == []
+    """A config with neither key must write no companion entry and pass every check."""
+    assert bsp.detail_fields(PLAIN, "en") is None
+    assert bsp.check_detail(PLAIN) == []
 
 
 def test_used_slots_are_filled_and_unused_slots_are_cleared():
@@ -427,7 +431,7 @@ def test_an_update_clears_the_images_of_slots_no_longer_used(monkeypatch):
 def test_no_companion_entry_for_a_config_without_the_new_keys(monkeypatch):
     calls = []
     monkeypatch.setattr(bsp, "gql", _detail_recorder(calls))
-    assert bsp.apply_detail(BADENHORST, entry_handle=None, english_only=True) is None
+    assert bsp.apply_detail(PLAIN, entry_handle=None, english_only=True) is None
     assert calls == []
 
 
