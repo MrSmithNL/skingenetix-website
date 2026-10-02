@@ -471,3 +471,55 @@ def test_study_i18n_extracts_the_new_blocks_for_translation():
     assert "Wrinkle volume fell 55.8% more than with the plain serum" in strings
     assert "In the laboratory, skin cells grown with GHK-Cu made more collagen." in strings
     assert "After 8 weeks" in strings
+
+
+# ---------------------------------------------------------------- the study's own authors are credited (Malcolm, 2026-10-02)
+# The researchers are credited as the authors of the study, visibly and in the schema. Our appraisal keeps its own
+# author: naming the researchers as authors of a page that links our products would claim an endorsement they never gave.
+
+AUTHORED = {**copy.deepcopy(BADENHORST), "scholarly": {**BADENHORST["scholarly"],
+            "authors": ["Badenhorst T", "Svirskis D", "Merrilees M", "Bolke L", "Wu Z"]}}
+
+
+def test_the_study_authors_are_people_on_the_scholarly_article():
+    ld = bsp.jsonld(AUTHORED, "en")
+    want = [{"@type": "Person", "name": n} for n in AUTHORED["scholarly"]["authors"]]
+    assert ld["citation"][0]["author"] == want
+    assert ld["mainEntity"]["isBasedOn"]["author"] == want
+    assert ld["author"]["name"] not in AUTHORED["scholarly"]["authors"]          # our page is not theirs
+
+
+def test_the_intro_opens_with_the_research_credit_in_every_locale():
+    en = bsp.fields(AUTHORED, "en")["intro"]
+    assert en.startswith("<p>Original research by Badenhorst T, Svirskis D, Merrilees M, Bolke L and Wu Z, published in "
+                         "<em>Journal of Aging Science</em> (2016).</p><p><em>")
+    for loc in ("de", "nl", "fr", "es", "it"):
+        credit = bsp.research_credit(AUTHORED, loc)
+        assert "Badenhorst T" in credit and "Wu Z" in credit and "<em>Journal of Aging Science</em>" in credit
+        assert " and " not in credit                                               # the joining word is translated
+
+
+def test_a_study_without_its_authors_is_refused():
+    cfg = copy.deepcopy(BADENHORST)
+    cfg["scholarly"].pop("authors", None)
+    assert any("authors" in e for e in bsp.check(cfg))
+
+
+def test_the_credited_authors_must_be_the_records_authors():
+    rec = {"title": AUTHORED["scholarly"]["name"], "year": 2016,
+           "surnames": ["Badenhorst", "Svirskis", "Merrilees", "Bolke", "Wu"]}
+    resolve = lambda kind, ident: rec
+    assert not [e for e in bsp.check_citations(AUTHORED, resolve) if e.startswith("scholarly.authors")]
+    wrong = {**rec, "surnames": ["Badenhorst", "Svirskis", "Merrilees", "Wu"]}
+    assert any(e.startswith("scholarly.authors") for e in bsp.check_citations(AUTHORED, lambda k, i: wrong))
+
+
+def test_a_truncated_record_passes_only_when_the_full_list_was_read_at_source():
+    """Crossref holds 3 of Badenhorst 2016's 5 authors; the paper's own first page names all five (read 2026-10-02)."""
+    short = {"title": AUTHORED["scholarly"]["name"], "year": 2016, "surnames": ["Badenhorst", "Svirskis", "Merrilees"]}
+    bare = {**AUTHORED, "scholarly": {k: v for k, v in AUTHORED["scholarly"].items() if k != "authors_read_at_source"}}
+    assert any(e.startswith("scholarly.authors") for e in bsp.check_citations(bare, lambda k, i: short))
+    noted = {**AUTHORED, "scholarly": {**AUTHORED["scholarly"], "authors_read_at_source": "the paper's first page"}}
+    assert not [e for e in bsp.check_citations(noted, lambda k, i: short) if e.startswith("scholarly.authors")]
+    other = {**short, "surnames": ["Pickart", "Margolina", "Badenhorst"]}
+    assert any(e.startswith("scholarly.authors") for e in bsp.check_citations(noted, lambda k, i: other))

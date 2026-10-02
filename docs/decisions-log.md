@@ -534,3 +534,34 @@ The `study` entry is full (40 of 40 fields), so the content lives in a companion
 - an instrument-only result (Raikou's roughness, Tadini's firmness reading) gets a plain photograph, not a before/after. The Argireline hub
   already shows a forehead before/after for Raikou;
 - Robinson 2005's p ≤ 0.10 results follow his ruling on that study (review pack decision 2).
+
+---
+
+## ADR-2026-10-01-T: Review-pack decisions on the four new study articles
+
+**Date:** 2026-10-01
+**Status:** Accepted (Malcolm: "1 - 4 = agree", then "agree on both"). Live, verified in six languages.
+**Context:** the review pack `docs/review-2026-10-01-four-new-study-drafts.md` listed what was still open after the four articles
+(Yogya 2022, Tadini 2015, Robinson 2005, Watanabe 2014) went live. Malcolm took each recommendation.
+**Decisions:**
+
+1. **Robinson 2005 is labelled "Matrixyl", not "Matrixyl 3000"**, on its list card and in the filter row. It tested palmitoyl
+   pentapeptide-4, the original Matrixyl®, and the register says never to conflate the two. A Matrixyl 3000 trial (handle
+   `matrixyl-3000-…`) keeps its own label (`TAGS` in `scripts/build-clinical-studies-blog.py`, `cf0a4de`).
+2. **Two new skin-concern labels: "Firming" (Tadini) and "Brightening" (Watanabe).** Each label page links to its Skin Solutions page
+   (`/pages/firming-skin-density`, `/pages/brightening-glow`) and reuses that page's own translated title ("Straffung & Volumen", "Éclat
+   & Glow" …) (`cf0a4de`).
+3. **The PDRN microneedling stamp set stays a separate decision.** Yogya tested radiofrequency microneedling in a hospital, which the
+   register marks "not transferable" to a home stamp, so the article does not link the set. If the set launches, its page may cite
+   Yogya as background on the ingredient only.
+4. **Robinson's "significant" always carries the paper's threshold** (p ≤ 0.10; the usual bar is p ≤ 0.05): on the rebuild's card
+   f2 (`92bde04`) and in the three live places on the Matrixyl hub (`09aad33`, set-only spec
+   `configs/hub-upgrades/matrixyl-3000-research-robinson-threshold-2026-10-01.json`).
+5. **German glutathione wording stays "heller wirkend"**, matching the live hub and the register's "brighter-looking". "Strahlend"
+   would claim radiance, which the trial did not measure. Any future change applies to the hub and the articles together.
+
+**Robinson's p ≤ 0.10 footing** (the first draft of the review pack called this "decision 2", which ADR-2026-10-01-R refers to): settled
+when Malcolm published all four articles ("All four, now"). Robinson went live stating the bar openly in its key figure and limits.
+**Undo:** article tags `backups/clinical-studies-article-tags-20261001-161634.json`; list template
+`backups/hub-upgrade-templates__blog.clinical-studies.json-20261001-161715.json`; Matrixyl hub template
+`backups/hub-upgrade-templates__page.research-matrixyl.json-20261001-170516.json` (each `hub-upgrade.py <spec> --rollback`).

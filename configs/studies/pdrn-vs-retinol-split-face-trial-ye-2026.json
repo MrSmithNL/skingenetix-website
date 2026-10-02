@@ -360,18 +360,8 @@
       },
       "unit": "%",
       "signed": false,
-      "domain": [
-        0,
-        50
-      ],
-      "ticks": [
-        0,
-        10,
-        20,
-        30,
-        40,
-        50
-      ],
+      "domain": [0, 50],
+      "ticks": [0, 10, 20, 30, 40, 50],
       "value_width": 64,
       "series": [
         {
@@ -795,7 +785,8 @@
     "name": "Topical medium-length PDRN enhances dermal extracellular matrix repair in photodamaged skin via PI3K–Akt/TGF-β–regulated pathways",
     "identifier": "10.1371/journal.pone.0350905",
     "datePublished": "2026",
-    "journal": "PLOS ONE"
+    "journal": "PLOS ONE",
+    "authors": ["Ye R", "Wang Q", "Du L", "Li L", "Hu F"]
   },
   "checks": [
     "23%",
@@ -809,9 +800,5 @@
     "14.8",
     "Figure 6B"
   ],
-  "concerns": [
-    "wrinkles",
-    "crows_feet",
-    "retinol"
-  ]
+  "concerns": ["wrinkles", "crows_feet", "retinol"]
 }

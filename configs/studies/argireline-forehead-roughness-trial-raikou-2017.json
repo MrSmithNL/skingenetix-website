@@ -172,15 +172,8 @@
       },
       "unit": "%",
       "decimals": 1,
-      "domain": [
-        -10,
-        10
-      ],
-      "ticks": [
-        -5,
-        0,
-        5
-      ],
+      "domain": [-10, 10],
+      "ticks": [-5, 0, 5],
       "value_width": 70,
       "series": [
         {
@@ -354,21 +347,10 @@
     "name": "The efficacy study of the combination of tripeptide-10-citrulline and acetyl hexapeptide-3. A prospective, randomized controlled study",
     "identifier": "10.1111/jocd.12314",
     "datePublished": "2017",
-    "journal": "Journal of Cosmetic Dermatology"
+    "journal": "Journal of Cosmetic Dermatology",
+    "authors": ["Raikou V", "Varvaresou A", "Panderi I", "Papageorgiou E"]
   },
-  "checks": [
-    "7.4",
-    "4.3",
-    ".022",
-    ".025",
-    "10% w/w",
-    "coded jars",
-    "Raikou V, Varvaresou A",
-    "Read at source"
-  ],
+  "checks": ["7.4", "4.3", ".022", ".025", "10% w/w", "coded jars", "Raikou V, Varvaresou A", "Read at source"],
   "_glance_note": "Row labels live in scripts/study-template-build.py (GLANCE_ROWS) — identical on every study page. Keep these nine values in that order.",
-  "concerns": [
-    "wrinkles",
-    "forehead"
-  ]
+  "concerns": ["wrinkles", "forehead"]
 }

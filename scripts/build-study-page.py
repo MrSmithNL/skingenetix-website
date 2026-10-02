@@ -151,7 +151,10 @@ def jsonld(cfg, loc):
     h1, desc = t(cfg["h1"], loc), t(cfg["seo_description"], loc)
     s = cfg["scholarly"]
     cite = {"@type": "ScholarlyArticle", "name": s["name"], "url": cfg["source_url"],
-            "identifier": s["identifier"], "datePublished": s["datePublished"]}
+            "identifier": s["identifier"], "datePublished": s["datePublished"],
+            # the researchers are credited as the study's authors (Malcolm, 2026-10-02); our page keeps its own
+            # author below: naming them as authors of a page that links our products would claim an endorsement
+            **({"author": [{"@type": "Person", "name": n} for n in s["authors"]]} if s.get("authors") else {})}
     return {"@context": "https://schema.org", "@type": "WebPage", "@id": url + "#webpage", "url": url,
             "name": h1, "description": desc, "inLanguage": loc,
             "lastReviewed": cfg["read_at_source"],
@@ -178,6 +181,15 @@ def jsonld(cfg, loc):
                                                                  "name": s["journal"]}}}}
 
 
+def research_credit(cfg, loc):
+    """'Original research by A, B and C, published in <em>Journal</em> (year).' in the locale (Malcolm, 2026-10-02)."""
+    s = cfg["scholarly"]
+    names = s["authors"]
+    who = names[0] if len(names) == 1 else ", ".join(names[:-1]) + f" {PHRASES['and'][loc]} " + names[-1]
+    return PHRASES["research_credit"][loc].format(authors=who, journal=f"<em>{s['journal']}</em>",
+                                                  year=str(s["datePublished"])[:4])
+
+
 def fields(cfg, loc):
     """Every translatable field, keyed as the template's section settings read them."""
     f = {
@@ -188,7 +200,7 @@ def fields(cfg, loc):
                       + f"</p><h1>{inline(cfg['h1'], loc)}</h1>" + ps([cfg["deck"]], loc)),
         # definition first: the auditors scored the page 3/10 for having none, and it is the
         # sentence an engine quotes when asked "what is copper peptide"
-        "intro": (f"<p><em>{inline(cfg['byline'], loc)}</em></p>"
+        "intro": (f"<p>{research_credit(cfg, loc)}</p><p><em>{inline(cfg['byline'], loc)}</em></p>"
                   + ps([cfg["definition"], cfg["answer"], cfg["verdict"]], loc)),
         "seo_title": t(cfg["seo_title"], loc),
         "seo_description": t(cfg["seo_description"], loc),
@@ -368,6 +380,9 @@ def links(cfg, loc):
 
 def check(cfg):
     errs = []
+    if not (cfg.get("scholarly") or {}).get("authors"):
+        errs.append("scholarly.authors missing: the study's authors must be credited (Malcolm, 2026-10-02)")
+        return errs
     for loc in locales(cfg):
         v = fields(cfg, loc)
         if len(v["seo_title"]) > 60:
@@ -474,6 +489,15 @@ def check_citations(cfg, resolve):
         elif _title_key(rec["title"]) != _title_key(s["name"]):
             errs.append(f"JSON-LD isBasedOn title is not the title of {kind}:{ident} — "
                         f"the record's title is {rec['title']!r}")
+        if rec and s.get("authors"):
+            mine = [_fold(n.rsplit(" ", 1)[0]) for n in s["authors"]]
+            theirs = [_fold(n) for n in rec["surnames"]]
+            # a record may truncate the list (Crossref holds 3 of Badenhorst 2016's 5): accepted only when the config
+            # says where the full list was read, and only if the record agrees with the start of it
+            short_ok = s.get("authors_read_at_source") and len(theirs) < len(mine)
+            if (len(mine) != len(theirs) and not short_ok) or \
+                    any(m != t and m not in t.replace("-", " ").split() for m, t in zip(mine, theirs)):
+                errs.append(f"scholarly.authors {s['authors']} are not the authors of {kind}:{ident}: {rec['surnames']}")
     return errs
 
 
