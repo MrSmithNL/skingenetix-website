@@ -525,11 +525,21 @@ AI-generated illustrations and must not be presented as results. Record:
 --apply` (170 translations each), list builder `--apply` (articles created with cards and tags), verify ×6, the four draft
     articles deleted, Dr Bodde's credit added. Commits `aafd247`, `b35ed71`.
   - ⏳ Live audits of the four (in progress).
-  - ⏳ **For Malcolm** (review pack `docs/review-2026-10-01-four-new-study-drafts.md`): concern tags for firmness and brightening
-    (new keys in the list builder's `CONCERNS`); Robinson's list badge says "Matrixyl 3000" for an original-Matrixyl trial;
-    launching the PDRN microneedling stamp set (ACTIVE in Shopify, not on the online store; Yogya is its evidence page); the live
-    Matrixyl hub's card f2 calls Robinson "significant" without the p ≤ 0.10 threshold; the shared chart component and new
-    instrument images (critique S1, S2); the live Ye Spanish says "tratamiento" twice (a register word to avoid).
+  - ✅ **Malcolm's decisions, 2026-10-01** ("1 - 4 = agree", "agree on both"; ADR-2026-10-01-T; review pack
+    `docs/review-2026-10-01-four-new-study-drafts.md`):
+    - Robinson is labelled "Matrixyl", not "Matrixyl 3000" (live).
+    - "Firming" (Tadini) and "Brightening" (Watanabe) concern labels, each linking its Skin Solutions page, live ×6 (`cf0a4de`).
+    - The stamp set stays a separate decision: Yogya's result is "not transferable" to a home stamp.
+    - Robinson's p ≤ 0.10 threshold is on the rebuild's card f2 (`92bde04`, draft) and in the live Matrixyl hub's three
+      "significant" places (`09aad33`; card f2 was never live).
+    - German "heller wirkend" is kept.
+  - ⏳ **Still open for Malcolm:**
+    - launching the PDRN microneedling stamp set (ACTIVE in Shopify, not on the online store);
+    - the shared chart component and instrument images (critique S1, S2), which would also replace the two pictures every study
+      page repeats (T7);
+    - the live Ye Spanish says "tratamiento" twice, a register word to avoid (noted by the go-live window; not re-checked here).
+  - ⚠️ When the Matrixyl rebuild goes live, its evidence foot line needs the Robinson article link (P3). It already carries
+    the threshold.
     ✅ **Payment help page `/pages/payment` LIVE, six languages (2026-10-01, Malcolm: "proceed").** It exists because R6
     (customer service reachable) kept flipping on the Clinical studies list: the footer "Payment" link landed on the general FAQ.
     - Built from stock sections by `scripts/build-payment-page.py`, with copy in `configs/copy/payment-page-2026-10-01.json`.
