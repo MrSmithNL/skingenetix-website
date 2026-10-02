@@ -29,7 +29,9 @@
     "name": "Effects of GHK-Cu on MMP and TIMP Expression, Collagen and Elastin Production, and Facial Wrinkle Parameters",
     "identifier": "10.4172/2329-8847.1000166",
     "datePublished": "2016",
-    "journal": "Journal of Aging Science"
+    "journal": "Journal of Aging Science",
+    "authors": ["Badenhorst T", "Svirskis D", "Merrilees M", "Bolke L", "Wu Z"],
+    "authors_read_at_source": "the paper's first page (doi:10.4172/2329-8847.1000166 PDF, 2026-10-02): Travis Badenhorst, Darren Svirskis, Mervyn Merrilees, Liane Bolke, Zimei Wu; Crossref lists only the first three"
   },
   "figures": [
     {
@@ -163,15 +165,8 @@
       },
       "unit": "%",
       "decimals": 1,
-      "domain": [
-        -28,
-        2
-      ],
-      "ticks": [
-        -20,
-        -10,
-        0
-      ],
+      "domain": [-28, 2],
+      "ticks": [-20, -10, 0],
       "value_width": 70,
       "series": [
         {
@@ -364,8 +359,5 @@
     "honorificPrefix": "Dr",
     "jobTitle": "Cosmetic & Medical Physician"
   },
-  "concerns": [
-    "wrinkles",
-    "crows_feet"
-  ]
+  "concerns": ["wrinkles", "crows_feet"]
 }

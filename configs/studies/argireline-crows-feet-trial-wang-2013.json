@@ -361,16 +361,8 @@
       "unit": "%",
       "signed": false,
       "decimals": 1,
-      "domain": [
-        0,
-        60
-      ],
-      "ticks": [
-        0,
-        20,
-        40,
-        60
-      ],
+      "domain": [0, 60],
+      "ticks": [0, 20, 40, 60],
       "value_width": 70,
       "series": [
         {
@@ -709,20 +701,9 @@
     "name": "The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study",
     "identifier": "23417317",
     "datePublished": "2013",
-    "journal": "American Journal of Clinical Dermatology"
+    "journal": "American Journal of Clinical Dermatology",
+    "authors": ["Wang Y", "Wang M", "Xiao S", "Pan P", "Li P", "Huo J"]
   },
-  "checks": [
-    "22 of 45",
-    "0 of 15",
-    "10%",
-    "McEit",
-    "Wang Y, Wang M",
-    "Read at source",
-    "34 of 45",
-    "7 of 45"
-  ],
-  "concerns": [
-    "wrinkles",
-    "crows_feet"
-  ]
+  "checks": ["22 of 45", "0 of 15", "10%", "McEit", "Wang Y, Wang M", "Read at source", "34 of 45", "7 of 45"],
+  "concerns": ["wrinkles", "crows_feet"]
 }

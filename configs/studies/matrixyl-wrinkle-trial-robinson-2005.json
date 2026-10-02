@@ -361,16 +361,8 @@
       },
       "unit": "",
       "signed": false,
-      "domain": [
-        0,
-        3
-      ],
-      "ticks": [
-        0,
-        1,
-        2,
-        3
-      ],
+      "domain": [0, 3],
+      "ticks": [0, 1, 2, 3],
       "value_width": 64,
       "series": [
         {
@@ -854,7 +846,8 @@
     "name": "Topical palmitoyl pentapeptide provides improvement in photoaged human facial skin",
     "identifier": "18492182",
     "datePublished": "2005",
-    "journal": "International Journal of Cosmetic Science"
+    "journal": "International Journal of Cosmetic Science",
+    "authors": ["Robinson LR", "Fitzgerald NC", "Doughty DG", "Dawes NC", "Berge CA", "Bissett DL"]
   },
   "checks": [
     "93 women",
@@ -870,8 +863,5 @@
     "Week 12",
     "Week 4"
   ],
-  "concerns": [
-    "wrinkles",
-    "crows_feet"
-  ]
+  "concerns": ["wrinkles", "crows_feet"]
 }

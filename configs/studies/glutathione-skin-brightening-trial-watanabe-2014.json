@@ -361,16 +361,8 @@
       "unit": "",
       "signed": false,
       "decimals": 1,
-      "domain": [
-        0,
-        300
-      ],
-      "ticks": [
-        0,
-        100,
-        200,
-        300
-      ],
+      "domain": [0, 300],
+      "ticks": [0, 100, 200, 300],
       "value_width": 62,
       "series": [
         {
@@ -724,7 +716,8 @@
     "name": "Skin-whitening and skin-condition-improving effects of topical oxidized glutathione: a double-blind and placebo-controlled clinical trial in healthy women",
     "identifier": "25378941",
     "datePublished": "2014",
-    "journal": "Clinical, Cosmetic and Investigational Dermatology"
+    "journal": "Clinical, Cosmetic and Investigational Dermatology",
+    "authors": ["Watanabe F", "Hashizume E", "Chan GP", "Kamimura A"]
   },
   "checks": [
     "10.7%",
@@ -740,7 +733,5 @@
     "Watanabe F, Hashizume E",
     "Read at source"
   ],
-  "concerns": [
-    "brightening"
-  ]
+  "concerns": ["brightening"]
 }
