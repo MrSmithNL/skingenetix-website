@@ -565,3 +565,25 @@ when Malcolm published all four articles ("All four, now"). Robinson went live s
 **Undo:** article tags `backups/clinical-studies-article-tags-20261001-161634.json`; list template
 `backups/hub-upgrade-templates__blog.clinical-studies.json-20261001-161715.json`; Matrixyl hub template
 `backups/hub-upgrade-templates__page.research-matrixyl.json-20261001-170516.json` (each `hub-upgrade.py <spec> --rollback`).
+
+## ADR-2026-10-02-U: Study authors are credited for the research; our page keeps its own author
+
+**Status:** Implemented 2026-10-02 (`2658b5d`), live on all eight study articles in every language each has.
+**Context:** Malcolm: "the author of the article needs to be the authors of the actual clinical study, as they need to be accredited
+for the content. Add this to all the existing articles in the authority page content and technical schemas." Asked to choose between
+crediting the researchers as the study's authors and making them the page's authors, he chose the second.
+**Decision, and the deviation from his choice:** the researchers are credited as the authors **of the research**, everywhere it is
+true to say so:
+
+1. Visible: each article's intro opens with "Original research by [every author], published in [journal] ([year])." in its language.
+2. Schema: every author is a `Person` on the `ScholarlyArticle` that the page `isBasedOn` (and in `citation`).
+3. Checks: `scholarly.authors` is required, and must match the PubMed/Crossref record in order. A truncated record passes only with
+   `authors_read_at_source` (Badenhorst 2016: the paper names five, Crossref three).
+
+The page's own `author` was **not** changed to the researchers. Our article is an appraisal written by Skingenetix. It says who funded
+each trial and links our products. Naming the researchers as its authors would state they wrote it and imply their endorsement, which
+is a misleading commercial practice under the EU Unfair Commercial Practices Directive, and against Google's rule that `author` names
+whoever wrote the content. Malcolm was told this in the session.
+**To change it:** only with each research team's written agreement. Then `jsonld()` in `scripts/build-study-page.py` is the one place to
+edit.
+**Undo:** revert `2658b5d` and run `build-study-page.py configs/studies/<handle>.json --apply` for each study.

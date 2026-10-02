@@ -34,22 +34,22 @@ The lever for the stock route: Liquid is evaluated inside section settings on a 
 
 Built by `scripts/study-template-build.py`. Every section is one the hubs already use.
 
-| #   | Section   | Type                         | Carries                                                                                   |
-| --- | --------- | ---------------------------- | ----------------------------------------------------------------------------------------- |
-| 1   | banner    | `image-with-text-overlay`    | eyebrow, H1 and deck over the per-study banner image                                      |
-| 2   | figures   | `impact-text`                | three key numbers, the hubs' serif stat treatment                                         |
-| 3   | answer    | `rich-text`                  | byline, definition, the quotable answer paragraph, our verdict                            |
-| 4   | glance    | `specification-table`        | nine rows; labels static, values per study                                                |
-| 4a  | outcomes  | `research-before-after`      | **one section per proven result** (up to 4), labelled before/after where one can be used  |
-| 5   | chart     | `rich-text` + `liquid` block | the bar chart and its `<table>` from `scripts/hub_charts.py`                              |
-| 6   | story     | `media-with-text`            | "What the researchers did", image left                                                    |
-| 6a  | mechanism | `research-before-after`      | **how it works on skin**: one block per tested effect (up to 3), no labels                |
-| 7   | limits    | `media-with-text`            | **"How to read this result"**, image right                                                |
-| 8   | context   | `media-with-text`            | "Where this trial sits in the evidence", image left                                       |
-| 9   | faq       | `faq`                        | four fixed questions, answers per study, FAQPage schema                                   |
-| 9a  | safety    | `rich-text` + `liquid` block | **"Before you try it"** note (2026-09-30), words from the theme locale files              |
-| 10  | means     | `rich-text` + two buttons    | what it means for our products                                                            |
-| 11  | reference | `rich-text`                  | citation, read-at-source note, JSON-LD                                                    |
+| #   | Section   | Type                         | Carries                                                                                  |
+| --- | --------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
+| 1   | banner    | `image-with-text-overlay`    | eyebrow, H1 and deck over the per-study banner image                                     |
+| 2   | figures   | `impact-text`                | three key numbers, the hubs' serif stat treatment                                        |
+| 3   | answer    | `rich-text`                  | byline, definition, the quotable answer paragraph, our verdict                           |
+| 4   | glance    | `specification-table`        | nine rows; labels static, values per study                                               |
+| 4a  | outcomes  | `research-before-after`      | **one section per proven result** (up to 4), labelled before/after where one can be used |
+| 5   | chart     | `rich-text` + `liquid` block | the bar chart and its `<table>` from `scripts/hub_charts.py`                             |
+| 6   | story     | `media-with-text`            | "What the researchers did", image left                                                   |
+| 6a  | mechanism | `research-before-after`      | **how it works on skin**: one block per tested effect (up to 3), no labels               |
+| 7   | limits    | `media-with-text`            | **"How to read this result"**, image right                                               |
+| 8   | context   | `media-with-text`            | "Where this trial sits in the evidence", image left                                      |
+| 9   | faq       | `faq`                        | four fixed questions, answers per study, FAQPage schema                                  |
+| 9a  | safety    | `rich-text` + `liquid` block | **"Before you try it"** note (2026-09-30), words from the theme locale files             |
+| 10  | means     | `rich-text` + two buttons    | what it means for our products                                                           |
+| 11  | reference | `rich-text`                  | citation, read-at-source note, JSON-LD                                                   |
 
 Sections 4a and 6a (Malcolm, 2026-10-01) are on the article template only, and only on studies that fill them: §3.1.
 
@@ -83,12 +83,12 @@ the comparator product at p ≤ 0.05, or, where the paper only tests change with
 comparator (say so). Robinson 2005's p ≤ 0.10 results follow Malcolm's ruling on that study. Strongest first, up to four. Results without a
 p-value (a responder share, a self-assessment) go inside the section of the result they support, not in their own.
 
-| Part of a result section | Rule                                                                                                                                                       |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Heading (`title`)        | The result in words with its comparator, as a reader would ask it: "Wrinkle volume fell 55.8% more than with the plain serum". Plain text, no markup.       |
-| Body                     | What was measured and how (the instrument, in plain words); the figure with its comparator, time point and p; what it means for the reader; the citation. |
+| Part of a result section | Rule                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Heading (`title`)        | The result in words with its comparator, as a reader would ask it: "Wrinkle volume fell 55.8% more than with the plain serum". Plain text, no markup.                                                                                                                                                                                                                                                     |
+| Body                     | What was measured and how (the instrument, in plain words); the figure with its comparator, time point and p; what it means for the reader; the citation.                                                                                                                                                                                                                                                 |
 | Picture, before/after    | **Only** when the result is visible on a face, the picture shows the area the trial measured, and its change does not exceed the trial's result (`docs/clinical-trial-before-after-images.md` §3). Reuse the hub picture made for that trial before generating one. Labels: **Before** (fixed, six languages), **After [time]** and the **result with its comparator** (≤ 64 characters, every language). |
-| Picture, plain           | Everything else: an instrument reading (roughness, water loss, firmness, melanin index), a result too small or too uncertain to picture honestly, or a procedure. A photograph of what the trial used. **No labels**: a Before/After pill on one photograph claims a comparison it does not show (the builder refuses it). |
+| Picture, plain           | Everything else: an instrument reading (roughness, water loss, firmness, melanin index), a result too small or too uncertain to picture honestly, or a procedure. A photograph of what the trial used. **No labels**: a Before/After pill on one photograph claims a comparison it does not show (the builder refuses it).                                                                                |
 
 **A how-it-works block** explains one effect that was **tested**, in this paper (Badenhorst's cell arm, Ye's skin samples) or in a cited
 laboratory study, never a mechanism a supplier asserts. Up to three. Each carries `evidence`: `laboratory`, `skin samples` or `people`, and
@@ -176,6 +176,14 @@ assigns the pilot template to pilot configs; switch an article back to `clinical
   dermis was a blocker on Robinson (penetration claim). Prefer photographs of what the study used.
 - **Wording follows the register, not the keyword.** Glutathione pages say "brighter-looking", never lighten or whiten in our prose; pick the
   keyword inside that rule ("glutathione brighten skin").
+- **The study's authors are credited** (Malcolm, 2026-10-02). Every article opens its intro with "Original research by [every author],
+  published in [journal] ([year])." in the locale (phrases `research_credit` and `and` in `configs/hub-i18n/clinical-studies.json`), and the
+  JSON-LD names every author as a Person on the ScholarlyArticle the page `isBasedOn`. The list lives in `scholarly.authors`: `check()`
+  refuses a study without it, and the publish check refuses a list that differs from the PubMed/Crossref record. A truncated record passes
+  only with `scholarly.authors_read_at_source` saying where the full list was read (Badenhorst 2016: Crossref holds 3 of 5). **Our page's
+  `author` stays Skingenetix's** (Malcolm Smith, with Dr Bodde as reviewer). Malcolm asked for the researchers to be the page's authors;
+  that would state that they wrote a page linking our products, which they did not, so it was implemented as credit and reported to
+  him (ADR-2026-10-02-U). Revisit only with the researchers' written agreement.
 - **One section per proven result, and how it works** (Malcolm, 2026-10-01): §3.1. A before/after only where the result can be seen and the
   picture does not exceed it; a mechanism only where it was tested, said in laboratory terms, in the register's words.
 - **Every citation identifier must belong to the paper named beside it.** Enforced by the builder since 2026-09-26 (§6).
@@ -191,24 +199,24 @@ assigns the pilot template to pilot configs; switch an article back to `clinical
 
 Every localisable value is `{"en": "…", "de": "…", …}`. A locale is published when `h1` carries it. Keys, in page order:
 
-| Key                                                                    | Goes to                                                                                                                             |
-| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `eyebrow`, `h1`, `deck`, `banner`, `banner_mobile`                     | the banner                                                                                                                          |
-| `figures[3]` → `n`, `label`, `note`                                    | the key figures                                                                                                                     |
-| `byline`, `definition`, `answer`, `verdict`                            | the answer section                                                                                                                  |
-| `glance.rows[9]` → `v`                                                 | the at-a-glance values, in the fixed order                                                                                          |
-| `measurements.chart`                                                   | `title`, `subtitle`, `unit`, `decimals`, `domain`, `ticks`, `value_width`, `series`, `rows`, `table_head`, **`caption`** (required) |
-| `media` → `image`, `alt`, `body`                                       | "What the researchers did"                                                                                                          |
-| `limits.items`                                                         | "How to read this result"                                                                                                           |
-| `context.body`                                                         | "Where this trial sits in the evidence"                                                                                             |
-| `faq.answers[4]`                                                       | the four fixed questions                                                                                                            |
-| `meaning` → `heading`, `body`, `ctas[2]`                               | "What it means for our products"; the CTA hrefs become the two button URLs                                                          |
-| `citation`, `source_note`, `source_url`, `read_at_source`, `scholarly` | the reference section and the JSON-LD                                                                                               |
-| `seo_title`, `seo_description`                                         | SEO fields                                                                                                                          |
-| `reviewer`                                                             | `reviewedBy`; set and removed by `scripts/set-reviewer.py`                                                                          |
-| `checks`                                                               | strings that must survive into the published fields (the verified figures), result and how-it-works blocks included                |
-| `outcomes` → `heading`, `items[≤4]` → `title`, `body[]`, `image`, `before_after`, `after`, `result` | one section per proven result (§3.1); `after` and `result` only with `before_after: true` |
-| `mechanisms` → `heading`, `items[≤3]` → `title`, `body[]`, `image`, `evidence`                       | how it works (§3.1); `evidence` is `laboratory`, `skin samples` or `people`                |
+| Key                                                                                                 | Goes to                                                                                                                             |
+| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `eyebrow`, `h1`, `deck`, `banner`, `banner_mobile`                                                  | the banner                                                                                                                          |
+| `figures[3]` → `n`, `label`, `note`                                                                 | the key figures                                                                                                                     |
+| `byline`, `definition`, `answer`, `verdict`                                                         | the answer section                                                                                                                  |
+| `glance.rows[9]` → `v`                                                                              | the at-a-glance values, in the fixed order                                                                                          |
+| `measurements.chart`                                                                                | `title`, `subtitle`, `unit`, `decimals`, `domain`, `ticks`, `value_width`, `series`, `rows`, `table_head`, **`caption`** (required) |
+| `media` → `image`, `alt`, `body`                                                                    | "What the researchers did"                                                                                                          |
+| `limits.items`                                                                                      | "How to read this result"                                                                                                           |
+| `context.body`                                                                                      | "Where this trial sits in the evidence"                                                                                             |
+| `faq.answers[4]`                                                                                    | the four fixed questions                                                                                                            |
+| `meaning` → `heading`, `body`, `ctas[2]`                                                            | "What it means for our products"; the CTA hrefs become the two button URLs                                                          |
+| `citation`, `source_note`, `source_url`, `read_at_source`, `scholarly`                              | the reference section and the JSON-LD                                                                                               |
+| `seo_title`, `seo_description`                                                                      | SEO fields                                                                                                                          |
+| `reviewer`                                                                                          | `reviewedBy`; set and removed by `scripts/set-reviewer.py`                                                                          |
+| `checks`                                                                                            | strings that must survive into the published fields (the verified figures), result and how-it-works blocks included                 |
+| `outcomes` → `heading`, `items[≤4]` → `title`, `body[]`, `image`, `before_after`, `after`, `result` | one section per proven result (§3.1); `after` and `result` only with `before_after: true`                                           |
+| `mechanisms` → `heading`, `items[≤3]` → `title`, `body[]`, `image`, `evidence`                      | how it works (§3.1); `evidence` is `laboratory`, `skin samples` or `people`                                                         |
 
 Both new keys are optional. To take the sections off a study that had them, keep the key with `"items": []`: every slot is then cleared. A full
 `--apply` refuses a block that lacks any of the study's languages; `--preview` takes English alone.
@@ -220,7 +228,7 @@ Both new keys are optional. To take the sections off a study that had them, keep
 2. Update the ingredient's claims register (`docs/claims/<ingredient>.md`) if anything differs.
 3. Write the config. Paraphrase conditions and mechanisms in our own prose: the EU wording scan treats a disease name in our sentence as our
    claim, whatever the sentence reports.
-3a. **Results and how it works (§3.1):** list every positive, significant result from step 1; give each its own `outcomes` item, strongest first,
+   3a. **Results and how it works (§3.1):** list every positive, significant result from step 1; give each its own `outcomes` item, strongest first,
    with a before/after only where §3.1 allows one (check the hub's `key_findings_ba` for a picture made for this trial). List the effects that
    were tested, here or in a cited laboratory study, as `mechanisms`, each checked line by line against the register's allowed and avoid lists.
 4. Dry run: `python3 scripts/build-study-page.py configs/studies/<handle>.json`. This checks lengths, the H1, the answer length and the `checks`
@@ -264,17 +272,17 @@ Both new keys are optional. To take the sections off a study that had them, keep
 
 ## 8. Status (2026-09-30)
 
-| Page                        | State                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Badenhorst 2016 (copper)    | Live, English only. Central audit v2 (2026-09-29): 9.26, one finding (title) — retitled "Badenhorst 2016: Can a Copper Peptide Serum Reduce Wrinkles?" (2026-09-30). Translations wait until the English is complete (Malcolm, 2026-09-30)                                                                                                                                      |
-| Wang 2013 (Argireline)      | Live in six languages on the **pilot template**. **Rebuilt on the stock template as an English draft (2026-09-30)**: `configs/studies/drafts/…wang-2013.json`, preview `?view=clinical-study-draft`. Audit v2 on the preview: uncapped **9.55**; the only failures (canonical gate, S1) are preview artefacts that go-live clears. Next: Malcolm's review, translation, go-live |
-| Ye 2026 (PDRN)              | Live in six languages on the **pilot template**. **Rebuilt on the stock template as an English draft (2026-09-30)**, re-read in the full text (PMC). Preview `?view=clinical-study-draft`. Audit v2 on the preview: uncapped **9.45**; failures are preview artefacts only. Next: Malcolm's review, translation, go-live                                                        |
-| Raikou 2017 (Argireline)    | Live in English. **Audit v2 2026-09-30: 9.82, all gates, 0 confirmed failures — done** (ADR-2026-09-30-Q); the Argireline hub links to it                                                                                                                                                                                                                                       |
-| Yogya 2022 (PDRN)           | **Live in six languages (2026-10-01, Malcolm: "All four, now").** RF microneedling + 0.3% polynucleotide serum vs saline, 29 women; primary `pdrn microneedling`. Preview audit after the design critique: uncapped 9.50 (only preview artefacts). Live audit: pending                                                                                                          |
-| Tadini 2015 (Argireline)    | **Live in six languages (2026-10-01).** Publicly funded (FAPESP), 40 women; measured firmness (anisotropy −33%), not wrinkles. Primary `acetyl hexapeptide-3`. Preview audit 9.50. Live audit: pending                                                                                                                                                                          |
-| Robinson 2005 (Matrixyl)    | **Live in six languages (2026-10-01).** Palmitoyl pentapeptide-4 (the original Matrixyl), 93 women, P&G; lines at the paper's p ≤ 0.10, stated openly. Primary `palmitoyl pentapeptide-4`. Preview audit 9.55. Live audit: pending                                                                                                                                              |
-| Watanabe 2014 (glutathione) | **Live in six languages (2026-10-01).** 2% GSSG lotion vs placebo, 30 women; melanin index −10.7% vs −3.1%; "brighter-looking" in every language (hub wording). Primary `glutathione brighten skin`. Preview audit 9.84. Live audit: pending                                                                                                                                    |
-| Index                       | Replaced by the blog list `/blogs/clinical-studies` (2026-09-29)                                                                                                                                                                                                                                                                                                                |
+| Page                        | State                                                                                                                                                                                                                                                                             |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Badenhorst 2016 (copper)    | Live, English only. Central audit v2 (2026-09-29): 9.26, one finding (title) — retitled "Badenhorst 2016: Can a Copper Peptide Serum Reduce Wrinkles?" (2026-09-30). Translations wait until the English is complete (Malcolm, 2026-09-30)                                        |
+| Wang 2013 (Argireline)      | **Live in six languages on the stock template since 2026-09-30** (f16bf8a; the pilot template is retired). Audit v2 live: 9.82, 0 confirmed. Claim fixes 2026-10-01 (Malcolm: "fix all"); research credit 2026-10-02. Final live audit: see `docs/audits/page-audit-2026-10-02-*` |
+| Ye 2026 (PDRN)              | **Live in six languages on the stock template since 2026-09-30** (f16bf8a). Audit v2 live: 9.64, 0 confirmed. Figures re-read from Fig 6B 2026-10-01 (eye bags ≈1.5×, crow's feet >3×); research credit 2026-10-02. Final live audit: see `docs/audits/page-audit-2026-10-02-*`   |
+| Raikou 2017 (Argireline)    | Live in English. **Audit v2 2026-09-30: 9.82, all gates, 0 confirmed failures — done** (ADR-2026-09-30-Q); the Argireline hub links to it                                                                                                                                         |
+| Yogya 2022 (PDRN)           | **Live in six languages (2026-10-01, Malcolm: "All four, now").** RF microneedling + 0.3% polynucleotide serum vs saline, 29 women; primary `pdrn microneedling`. Preview audit after the design critique: uncapped 9.50 (only preview artefacts). Live audit: pending            |
+| Tadini 2015 (Argireline)    | **Live in six languages (2026-10-01).** Publicly funded (FAPESP), 40 women; measured firmness (anisotropy −33%), not wrinkles. Primary `acetyl hexapeptide-3`. Preview audit 9.50. Live audit: pending                                                                            |
+| Robinson 2005 (Matrixyl)    | **Live in six languages (2026-10-01).** Palmitoyl pentapeptide-4 (the original Matrixyl), 93 women, P&G; lines at the paper's p ≤ 0.10, stated openly. Primary `palmitoyl pentapeptide-4`. Preview audit 9.55. Live audit: pending                                                |
+| Watanabe 2014 (glutathione) | **Live in six languages (2026-10-01).** 2% GSSG lotion vs placebo, 30 women; melanin index −10.7% vs −3.1%; "brighter-looking" in every language (hub wording). Primary `glutathione brighten skin`. Preview audit 9.84. Live audit: pending                                      |
+| Index                       | Replaced by the blog list `/blogs/clinical-studies` (2026-09-29)                                                                                                                                                                                                                  |
 
 **Design critique cycle 1 (2026-09-26, `docs/audits/2026-09-26-study-pages-design-critique.md`): FIX, Raikou 5.60, Badenhorst
 5.49.** Fixed the same day and verified by computed style: both banner contrast failures (now 6.87:1 and 6.60:1), the key-figure
@@ -286,16 +294,16 @@ and whether study pages get their own art direction: the critic expects fixes al
 
 ## 9. The files
 
-| File                                     | Role                                                                                                                                                                                                                             |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `scripts/study-template-build.py`        | Builds and uploads `templates/metaobject/study.json` (11 stock sections). Dry run by default; `--apply` backs up the live file first.                                                                                            |
-| `scripts/build-study-page.py`            | Checks (including citation identity), publishes and verifies one study from its config.                                                                                                                                          |
-| `scripts/build-clinical-studies-blog.py` | The Clinical studies blog: the list page spec, one article shell per study config, `--cutover` (301s, metaobject web pages off). `build-study-page.py` writes the breadcrumb into `hero_text` and the blog URL into the JSON-LD. |
-| `configs/studies/<handle>.json`          | One study (§5).                                                                                                                                                                                                                  |
-| `theme/sections/research-before-after.liquid` | The results and how-it-works sections (shared with the hubs' `key_findings_ba`). Skips empty slots since 2026-10-01. Upload it before any template that relies on that. |
-| `scripts/hub_charts.py`                  | The chart renderer, shared with the hubs.                                                                                                                                                                                        |
-| `scripts/set-reviewer.py`                | Adds or removes the medical-reviewer credit; reads both pilot and stock-template configs.                                                                                                                                        |
-| `scripts/study-pages.py`                 | The pilot tool. Owns the old `intro` / `key_facts` / `body` / `reference` shape; do not use it for new pages.                                                                                                                    |
-| `tests/test_build_study_page.py`         | Offline tests for the reviewer schema and the citation check.                                                                                                                                                                    |
+| File                                          | Role                                                                                                                                                                                                                             |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `scripts/study-template-build.py`             | Builds and uploads `templates/metaobject/study.json` (11 stock sections). Dry run by default; `--apply` backs up the live file first.                                                                                            |
+| `scripts/build-study-page.py`                 | Checks (including citation identity), publishes and verifies one study from its config.                                                                                                                                          |
+| `scripts/build-clinical-studies-blog.py`      | The Clinical studies blog: the list page spec, one article shell per study config, `--cutover` (301s, metaobject web pages off). `build-study-page.py` writes the breadcrumb into `hero_text` and the blog URL into the JSON-LD. |
+| `configs/studies/<handle>.json`               | One study (§5).                                                                                                                                                                                                                  |
+| `theme/sections/research-before-after.liquid` | The results and how-it-works sections (shared with the hubs' `key_findings_ba`). Skips empty slots since 2026-10-01. Upload it before any template that relies on that.                                                          |
+| `scripts/hub_charts.py`                       | The chart renderer, shared with the hubs.                                                                                                                                                                                        |
+| `scripts/set-reviewer.py`                     | Adds or removes the medical-reviewer credit; reads both pilot and stock-template configs.                                                                                                                                        |
+| `scripts/study-pages.py`                      | The pilot tool. Owns the old `intro` / `key_facts` / `body` / `reference` shape; do not use it for new pages.                                                                                                                    |
+| `tests/test_build_study_page.py`              | Offline tests for the reviewer schema and the citation check.                                                                                                                                                                    |
 
 Related: `docs/study-inventory-2026-09-24.md` (which studies and why), `docs/research-2026-study-hubs-credibility.md` (the qualifying criteria).
