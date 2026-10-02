@@ -102,3 +102,42 @@ generation run.
 4. Then the design critic and the central audit (done means 9 or more, with no confirmed failures).
 5. You review it.
 6. It is translated into five languages and goes live.
+
+## 6. Status, 2026-10-02 (after your decisions)
+
+You decided:
+
+1. Pictures: search every earlier batch and pick the best per section.
+2. Fix all the live claims.
+3. Robinson's fine lines get their own section, labelled with the p ≤ 0.10 bar.
+4. The Wang how-it-works block is allowed.
+
+### Done
+
+- **Claim fixes, live in six languages and verified.**
+  - Seven study articles.
+  - The PDRN science page in six places: card f4, stats s2, card f1, evidence row 02, FAQ q1 and the chart, all now from Figure 6B.
+  - The Argireline and PDRN registers.
+- **Pictures, uploaded** (`configs/banners/study-detail-images-2026-10-02.json`; Desktop sheets `skingenetix-study-before-afters.png` and
+  `skingenetix-study-plain-pictures.png`).
+  - Six before/after pairs. Four are new, each judged at full size against its trial's number, with moles retouched: Wang crow's feet,
+    Ye crow's feet, Ye eye bags, Watanabe crow's feet. Two science-page pairs are reused as they are: Badenhorst crow's feet and Watanabe
+    brightness.
+  - 23 plain pictures from the unused science pool.
+  - Robinson has no before/after: no size of effect is published.
+  - Yogya has none either: no honest subtle pair exists in the pool.
+- **Template deployed.** The study articles now have both sections. A live article shows nothing new until its English is approved and
+  translated; this was checked section by section on Badenhorst.
+- **English previews of all eight**, each verified (one H1, banner, valid JSON-LD, every new block present). Open any article and add
+  `?view=clinical-study-draft`. Desktop sheets: `skingenetix-study-previews-new-sections.png` and
+  `skingenetix-study-preview-ye-phone.png`.
+
+### For you
+
+1. **Approve the English** of the new sections, article by article, on the previews. Translation into five languages follows your OK,
+   then go-live.
+2. **The reused Badenhorst pair** still shows a small mole near the eye. Retouch the same spot in both halves, or leave it?
+3. **Four science-page cards** still use the pictures judged to exceed their trials: Argireline f1 and f5, PDRN f1, glutathione f2.
+   Swap them for the new honest pairs as well?
+4. **One German line** in the PDRN page's overview says crow's feet improved "mehr als doppelt so stark wie Retinol". That is true
+   (3.5×), but it is weaker than the English, which now says "more than three times". Upgrade it?
