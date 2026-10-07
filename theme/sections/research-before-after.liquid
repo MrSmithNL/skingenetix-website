@@ -122,6 +122,10 @@
   /* The section heading (used by the study articles, 2026-10-02; the science pages leave it empty) spans the
      full width, centred, with room before the first card. Unstyled it sat over the left column only. */
   #shopify-section-{{ section.id }} .section-stack__intro { max-width: 46rem; margin: 0 auto 3rem; text-align: center; }
+  /* Study articles only (a section with a heading; design critique 2026-10-02): the result headline one step below the
+     section heading, which it matched at 48px, and the picture centred beside a text card that runs taller than it. */
+  #shopify-section-{{ section.id }}:has(.section-stack__intro) .rba__text .h2 { font-size: var(--text-h3, 2rem); }
+  #shopify-section-{{ section.id }}:has(.section-stack__intro) .rba__media { align-self: center; }
 
   @media screen and (max-width: 999px) {
     #shopify-section-{{ section.id }} .rba__row { grid-template-columns: 1fr; gap: 20px; }
