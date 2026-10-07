@@ -48,6 +48,43 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔴 SEO-RANK-001 — Search performance review, competitor analysis and the plan to rank first (2026-10-07)
+
+**Priority:** 🔴 High. **Owner:** Claude (build) + Malcolm (6 decisions).
+**Report:** `docs/seo-performance-and-ranking-plan-2026-10-07.md` (Parts A performance, B competitors, C plan with the keyword-by-keyword table).
+**Evidence:** `audits/2026-10-07-visibility-forensics/` (README = the evidence record; `config.json` = the forensics/monitor config; `serp/report.md`; three teardowns; `data/`).
+**Audits:** first central v2 run on all five hubs: PDRN 8.99, copper 8.58, glutathione (see tracker), Argireline 7.83 → capped 4.9 (P1), Matrixyl 8.5 → capped 4.9 (P1). The old 9.6–9.8 scores are withdrawn.
+
+**The findings that set the order:** (1) the English PDRN hub has never been crawled by Google (URL Inspection: "unknown"), nor have the Yogya, Tadini and Robinson articles; (2) genuine referring domains = 0 (622 link-generator junk domains appeared 6–7 Oct; ignore, no disavow);
+(3) we are in no top 10 and no AI Overview on 33 SERPs; (4) the pages above us win on reviews in markup, brand demand, distribution and third-party mentions, not content; (5) our hubs lack the question-shaped sections the Overviews cite (does it work, side effects, what to mix,
+vs retinol, Botox framing) and share four template faults (C10 duplicated FAQ image, V1 no safety block, Q5 repetition, S3 no Article type); (6) a hacked town site holds 17 US desktop page-one slots on our head terms while the September spam update rolls.
+
+**▶ Layer 1 (weeks 1–2):**
+
+- [ ] 🛑 Malcolm: Request indexing in Search Console for `/pages/pdrn-research`, Yogya, Tadini, Robinson; re-inspect weekly.
+- [ ] Hub template fix, all five hubs: remove the duplicated FAQ image block; add the safety block (register wording); cut repetition under 1.5/100 words; add `Article` to the schema; add `dateModified` where missing; one definition sentence above the stat tiles. Re-audit to 9.0+
+      with no confirmed failures.
+- [ ] PDRN hub: one retinol figure ("more than three times", Ye Fig. 6B) in six languages (intro says "twice"; German "doppelt"); the PAA sections (salmon sperm?, do serums work?, what not to mix, with retinol?, how to use).
+- [ ] Argireline hub: "Does Argireline work?", "Botox in a bottle: what it is and is not" (🛑 register check), side effects, vs retinol, what not to mix, vs Matrixyl; German title with "Argireline".
+- [ ] Copper and glutathione hubs: side effects / who should avoid; what not to mix and layering (🛑 formulation owner: the copper serum contains vitamin C); oral vs topical vs injection.
+- [ ] 🛑 Malcolm: keyword ownership (ADR-2026-09-30-K open item): hub "argireline" / product "argireline serum"; serum "matrixyl 3000" / hub the science terms; cream title → "collagen cream with matrixyl"; a collection owns "peptide skincare"; the product page may carry the word
+      "Argireline" (trademark). Then update `configs/page-targets.json` and titles; the P1 caps lift.
+- [ ] Hub → study links for the four articles failing P3; product → study links.
+- [ ] Hide the empty `/blogs/learn` from the sitemap until the first spoke; distinct tag-page titles (🛑 core layout).
+- [ ] Report stonevillenc.org to Google (hacked-site spam); costs nothing.
+- [ ] Finish STUDY-DETAIL (approve English → translate → live).
+
+**▶ Layer 2 (months 1–6), needs Malcolm's scope and budget decision:** reviews flow → `aggregateRating`; Merchant Center attributes (30 Q&A per SKU) and feed completeness (no product carries Google Shopping attributes today); listicle outreach (Innerbody, Forbes, Allure, Glamour,
+Vogue); dermatologist/creator YouTube sampling; disclosed Reddit presence; newswire for trial appraisals; retail distribution; Dr Bodde's confirmed review. Measure genuine referring domains and brand mentions monthly; `llm_responses` citation panel (🛑 spend, about USD 0.70/run).
+
+**▶ Layer 3 (months 1–4):** spokes in this order: "Argireline and Matrixyl 3000 together" (858/mo, forum-only SERP), "Does Argireline work?" hub section (656), PDRN-vs-retinol comparison section on the Ye article, "Best PDRN serums" (1,042, KD 3), `/collections/pdrn` on the Boots
+model, "How to use a PDRN serum", "PDRN vs polynucleotides", copper + vitamin C/retinol, `/collections/serums` rebuild (ItemList), then the rest of `content-plan-2026.md` §5.
+
+**Measurement:** weekly `monitor.py` with the forensics config (🛑 about USD 0.50/week SERP spend); central audit after every change; 8-week cannibalisation gate per article; monthly authority and mentions. Proof-point targets: first for "pdrn vs retinol", "does argireline work",
+"matrixyl and argireline" within 3 months.
+
+---
+
 ### 🔄 CONTENT-001 — Content structure & build plan (2026-09-22)
 
 **Priority:** 🔴 Phase 1 done (2026-09-22), Phase 2 done (2026-09-23, all five hubs to the research-page standard). The Argireline page is now **the science-page

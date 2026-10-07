@@ -1,0 +1,1642 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "21.3859 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10071230-1509-0139-0000-a8dcd1e0928d",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "21.3201 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "peptide serum",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "peptide serum",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=peptide%20serum&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+     "datetime": "2026-10-07 12:30:21 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Serums",
+        "url": "https://www.google.com/search?q=facial+serums+peptide+serum&hl=en&gl=US&shoprs=CAEYCSoNcGVwdGlkZSBzZXJ1bTIRCAkSDUZhY2lhbCBTZXJ1bXNgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAF6BQgbEIUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Reviews",
+        "url": "https://www.google.com/search?q=reviews+peptide+serum&hl=en&gl=US&shoprs=CAEYEioNcGVwdGlkZSBzZXJ1bTILCBISB1Jldmlld3NgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAJ6BQgbEIYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Eye Cream",
+        "url": "https://www.google.com/search?q=eye+cream+peptide+serum&hl=en&gl=US&shoprs=CAEYCSoNcGVwdGlkZSBzZXJ1bTINCAkSCUV5ZSBDcmVhbWAB&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAN6BQgbEIcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Moisturizers",
+        "url": "https://www.google.com/search?q=moisturizers+peptide+serum&hl=en&gl=US&shoprs=CAEYCSoNcGVwdGlkZSBzZXJ1bTIQCAkSDE1vaXN0dXJpemVyc2AB&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAR6BQgbEIgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Moisturizers",
+        "url": "https://www.google.com/search?q=facial+moisturizers+peptide+serum&hl=en&gl=US&shoprs=CAEYCSoNcGVwdGlkZSBzZXJ1bTIXCAkSE0ZhY2lhbCBNb2lzdHVyaXplcnNgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAV6BQgbEIkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Wrinkles",
+        "url": "https://www.google.com/search?q=wrinkles+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIaCAESCFdyaW5rbGVzOgwIsoCsAhC2gKwCMABY96ogYAE&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAZ6BQgbEIoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Anti-aging",
+        "url": "https://www.google.com/search?q=anti-aging+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIaCAESCkFudGktYWdpbmc6Cgjs4S0QodstMABY96ogYAE&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAd6BQgbEIsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Retinol",
+        "url": "https://www.google.com/search?q=retinol+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIXCAESB1JldGlub2w6CgjB2y0QwtstMABY96ogYAE&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAh6BQgbEIwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Vitamin C",
+        "url": "https://www.google.com/search?q=vitamin+c+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIZCAESCVZpdGFtaW4gQzoKCMHbLRC_rlEwAFj3qiBgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAl6BQgbEI0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "On sale",
+        "url": "https://www.google.com/search?q=peptide+serum+sale&hl=en&gl=US&shoprs=CAESBEoCGAEYBioNcGVwdGlkZSBzZXJ1bTITCAYSB09uIHNhbGUYAiIESgIYAVj3qiBgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAp6BQgbEI4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Get it by Fri",
+        "url": "https://www.google.com/search?q=peptide+serum&hl=en&gl=US&shoprs=CAESDZoBCgoIEAI4AUAFSAEYFCoNcGVwdGlkZSBzZXJ1bTImCBQSDUdldCBpdCBieSBGcmkiDZoBCgoIEAI4AUAFSAEqBBABGAFgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAt6BQgbEI8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Pink",
+        "url": "https://www.google.com/search?q=pink+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIWCAESBFBpbms6DAjYjPUBEOmK9QEwC1j3qiBgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKAx6BQgbEJAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Naturium",
+        "url": "https://www.google.com/search?q=naturium+peptide+serum&hl=en&gl=US&shoprs=CAEYAioNcGVwdGlkZSBzZXJ1bTIMCAISCE5hdHVyaXVtWPeqIGAB&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKA16BQgbEJEB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Buy",
+        "url": "https://www.google.com/search?q=buy+peptide+serum&hl=en&gl=US&shoprs=CAEYEioNcGVwdGlkZSBzZXJ1bTIHCBISA0J1eWAB&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKA56BQgbEJMB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hyaluronic Acid",
+        "url": "https://www.google.com/search?q=hyaluronic+acid+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIgCAESD0h5YWx1cm9uaWMgQWNpZDoLCMHbLRChgKwCMABY96ogYAE&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKA96BQgbEJQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Under $10",
+        "url": "https://www.google.com/search?q=peptide+serum+under+$10&hl=en&gl=US&shoprs=CAESDRILEQAAAADQEmNBGAEYBSoNcGVwdGlkZSBzZXJ1bTIiCAUSCVVuZGVyICQxMBgCIg0SCxEAAAAA0BJjQRgBKgIYAVj3qiBgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBB6BQgbEJUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Good Molecules",
+        "url": "https://www.google.com/search?q=good+molecules+peptide+serum&hl=en&gl=US&shoprs=CAEYAioNcGVwdGlkZSBzZXJ1bTISCAISDkdvb2QgTW9sZWN1bGVzWPeqIGAB&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBF6BQgbEJYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Niacinamide",
+        "url": "https://www.google.com/search?q=niacinamide+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIcCAESC05pYWNpbmFtaWRlOgsIwdstEKSArAIwAFj3qiBgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBJ6BQgbEJgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Body Lotion",
+        "url": "https://www.google.com/search?q=body+lotion+peptide+serum&hl=en&gl=US&shoprs=CAEYCSoNcGVwdGlkZSBzZXJ1bTIPCAkSC0JvZHkgTG90aW9uYAE&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBN6BQgbEJkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Alpha Hydroxy",
+        "url": "https://www.google.com/search?q=alpha+hydroxy+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIdCAESDUFscGhhIEh5ZHJveHk6CgjB2y0QztstMABY96ogYAE&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBR6BQgbEJoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Blue",
+        "url": "https://www.google.com/search?q=blue+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIWCAESBEJsdWU6DAjYjPUBEOaK9QEwC1j3qiBgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBV6BQgbEJsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Collagen Boosting",
+        "url": "https://www.google.com/search?q=collagen+boosting+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIhCAESEUNvbGxhZ2VuIEJvb3N0aW5nOgoI7OEtEMbbLTAAWPeqIGAB&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBZ6BQgbEJwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Target",
+        "url": "https://www.google.com/search?q=target+peptide+serum&hl=en&gl=US&shoprs=CAEYAioNcGVwdGlkZSBzZXJ1bTIKCAISBlRhcmdldFj3qiBgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBd6BQgbEJ0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For All Skin Types",
+        "url": "https://www.google.com/search?q=peptide+serum+for+all+skin+types&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIkCAESEkZvciBBbGwgU2tpbiBUeXBlcxgCOgoIsvg7ELX4OzAAWPeqIGAB&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBh6BQgbEJ8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Face",
+        "url": "https://www.google.com/search?q=face+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIUCAESBEZhY2U6Cgif2S0QodktMAJY96ogYAE&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBl6BQgbEKAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Bottle",
+        "url": "https://www.google.com/search?q=bottle+peptide+serum&hl=en&gl=US&shoprs=CAEYASoNcGVwdGlkZSBzZXJ1bTIWCAESBkJvdHRsZToKCMaLaRDHi2kwAFj3qiBgAQ&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQip4GKBp6BQgbEKEB",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "ai_overview",
+      "popular_products",
+      "people_also_ask",
+      "organic",
+      "video",
+      "images",
+      "product_considerations",
+      "related_searches"
+     ],
+     "se_results_count": 194,
+     "pages_count": 1,
+     "items_count": 15,
+     "items": [
+      {
+       "type": "ai_overview",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "asynchronous_ai_overview": false,
+       "markdown": "A peptide serum is `a lightweight skincare treatment that uses tiny chains of amino acids to help your skin look firmer and smoother`.[[1]](https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)\n\n### What Peptides Do\n\n- **Boost Collagen:** They signal your skin cells to make more collagen and elastin, which reduces fine lines.[[1]](https://www.colorescience.com/blogs/blog/what-is-peptide-serum)\n- **Strengthen Skin:** They help repair and protect your natural moisture barrier.[[1]](https://www.colorescience.com/blogs/blog/what-is-peptide-serum)\n- **Hydrate:** Many formulas combine peptides with hyaluronic acid to plump dry skin.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)\n\n### Top Recommendations and Prices\n\n- **[The Ordinary Multi-Peptide + HA Serum Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462746445076156,imageDocid:13092667665142988600,gpcid:42175154390984629,headlineOfferDocid:15677554999539973809,catalogid:15366446604106546830,productDocid:15474320564230156004,rds:PC_42175154390984629%7CPROD_PC_42175154390984629&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIDBAg):** A popular anti-aging choice that costs about $20.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)\n- **[COSRX The 6 Peptide Skin Booster Serum Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462757157632386,imageDocid:7263375925433894922,gpcid:12574506115952644513,headlineOfferDocid:10474476498142476968,catalogid:2668514587280735638,productDocid:6244816029251746314,rds:PC_12574506115952644513%7CPROD_PC_12574506115952644513&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIDBAm):** A larger, toner-like starter serum that costs around $11 to $25.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:6244816029251746314,catalogid:2668514587280735638,gpcid:12574506115952644513,mid:576462757157632386&ibp=oshop)\n- **[Minimalist Multi-Peptides 10% Face Serum Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:17760560265029829812,gpcid:6230314104366251300,headlineOfferDocid:11829012812078255412,catalogid:10973463051519897757,productDocid:3272057430321487294,rds:PC_6230314104366251300%7CPROD_PC_6230314104366251300&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIHhAD):** A budget-friendly option found at retailers like Ulta for about $13.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:3272057430321487294,catalogid:10973463051519897757,gpcid:6230314104366251300&ibp=oshop)\n- You can browse a wider selection on [Amazon](https://www.amazon.com/peptides-serum/s?k=peptides+serum) or read reviews on [Forbes](https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/).[[1]](https://www.amazon.com/peptides-serum/s?k=peptides+serum)[[2]](https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/)\n\n### How to Use Peptide Serums\n\n- Apply a few drops after cleansing and toning.[[1]](https://www.dermstore.com/c/skin-care/treatments-serums/peptide/)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)\n- Follow with your favorite moisturizer to lock in hydration.[[1]](https://www.colorescience.com/blogs/blog/what-is-peptide-serum)\n- Use them morning and night, but avoid mixing them directly with strong acids or vitamin C in the exact same step.[[1]](https://www.colorescience.com/blogs/blog/what-is-peptide-serum)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)\n\nIf you want help picking the right product, tell me:\n\n- Your **skin type** (dry, oily, sensitive, or acne-prone)\n- Your main **skin concern** (anti-aging, redness, or extra hydration)\n- Your preferred **budget** \n\nI can recommend the best serum for your routine.",
+       "items": [
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "A peptide serum is a lightweight skincare treatment that uses tiny chains of amino acids to help your skin look firmer and smoother.",
+         "markdown": "A peptide serum is `a lightweight skincare treatment that uses tiny chains of amino acids to help your skin look firmer and smoother`.[[1]](https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Forbes",
+           "domain": "www.forbes.com",
+           "url": "https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/",
+           "title": "The Best Peptide Serums That Smooth And Firm Skin - Forbes",
+           "text": "The Best Peptide Serums That Smooth And Firm Skin. ByAmber Kallor, Beauty & Grooming Editor. I've covered beauty products and trea..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop",
+           "title": "The Ordinary Multi-Peptide + HA Serum",
+           "text": "The Ordinary Multi-Peptide + HA Serum, formerly known as Buffet, is an age-supporting peptide serum that targets fine lines, loss ..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "What Peptides Do",
+         "text": "Boost Collagen: They signal your skin cells to make more collagen and elastin, which reduces fine lines. Strengthen Skin: They help repair and protect your natural moisture barrier. Hydrate: Many formulas combine peptides with hyaluronic acid to plump dry skin.",
+         "markdown": "- **Boost Collagen:** They signal your skin cells to make more collagen and elastin, which reduces fine lines.[[1]](https://www.colorescience.com/blogs/blog/what-is-peptide-serum)\n- **Strengthen Skin:** They help repair and protect your natural moisture barrier.[[1]](https://www.colorescience.com/blogs/blog/what-is-peptide-serum)\n- **Hydrate:** Many formulas combine peptides with hyaluronic acid to plump dry skin.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Colorescience",
+           "domain": "www.colorescience.com",
+           "url": "https://www.colorescience.com/blogs/blog/what-is-peptide-serum",
+           "title": "What is Peptide Serum & Why Should You Use It?",
+           "text": "When choosing a peptide serum, you may want to review the ingredients to see which type of peptide is used. * Master peptide scien..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop",
+           "title": "The Ordinary Multi-Peptide + HA Serum",
+           "text": "The Ordinary Multi-Peptide + HA Serum, formerly known as Buffet, is an age-supporting peptide serum that targets fine lines, loss ..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "Top Recommendations and Prices",
+         "text": "The Ordinary Multi-Peptide + HA Serum : A popular anti-aging choice that costs about $20. COSRX The 6 Peptide Skin Booster Serum : A larger, toner-like starter serum that costs around $11 to $25. Minimalist Multi-Peptides 10% Face Serum : A budget-friendly option found at retailers like Ulta for about $13. You can browse a wider selection on Amazon or read reviews on Forbes.",
+         "markdown": "- **[The Ordinary Multi-Peptide + HA Serum Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462746445076156,imageDocid:13092667665142988600,gpcid:42175154390984629,headlineOfferDocid:15677554999539973809,catalogid:15366446604106546830,productDocid:15474320564230156004,rds:PC_42175154390984629%7CPROD_PC_42175154390984629&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIDBAg):** A popular anti-aging choice that costs about $20.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)\n- **[COSRX The 6 Peptide Skin Booster Serum Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462757157632386,imageDocid:7263375925433894922,gpcid:12574506115952644513,headlineOfferDocid:10474476498142476968,catalogid:2668514587280735638,productDocid:6244816029251746314,rds:PC_12574506115952644513%7CPROD_PC_12574506115952644513&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIDBAm):** A larger, toner-like starter serum that costs around $11 to $25.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:6244816029251746314,catalogid:2668514587280735638,gpcid:12574506115952644513,mid:576462757157632386&ibp=oshop)\n- **[Minimalist Multi-Peptides 10% Face Serum Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:17760560265029829812,gpcid:6230314104366251300,headlineOfferDocid:11829012812078255412,catalogid:10973463051519897757,productDocid:3272057430321487294,rds:PC_6230314104366251300%7CPROD_PC_6230314104366251300&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIHhAD):** A budget-friendly option found at retailers like Ulta for about $13.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:3272057430321487294,catalogid:10973463051519897757,gpcid:6230314104366251300&ibp=oshop)\n- You can browse a wider selection on [Amazon](https://www.amazon.com/peptides-serum/s?k=peptides+serum) or read reviews on [Forbes](https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/).[[1]](https://www.amazon.com/peptides-serum/s?k=peptides+serum)[[2]](https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/)",
+         "links": [
+          {
+           "type": "link_element",
+           "title": "The Ordinary Multi-Peptide + HA SerumGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462746445076156,imageDocid:13092667665142988600,gpcid:42175154390984629,headlineOfferDocid:15677554999539973809,catalogid:15366446604106546830,productDocid:15474320564230156004,rds:PC_42175154390984629%7CPROD_PC_42175154390984629&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIDBAg",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "COSRX The 6 Peptide Skin Booster SerumGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462757157632386,imageDocid:7263375925433894922,gpcid:12574506115952644513,headlineOfferDocid:10474476498142476968,catalogid:2668514587280735638,productDocid:6244816029251746314,rds:PC_12574506115952644513%7CPROD_PC_12574506115952644513&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIDBAm",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Minimalist Multi-Peptides 10% Face SerumGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:17760560265029829812,gpcid:6230314104366251300,headlineOfferDocid:11829012812078255412,catalogid:10973463051519897757,productDocid:3272057430321487294,rds:PC_6230314104366251300%7CPROD_PC_6230314104366251300&q=product&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQxa4PegoIAggACAAIHhAD",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Amazon",
+           "description": null,
+           "url": "https://www.amazon.com/peptides-serum/s?k=peptides+serum",
+           "domain": "www.amazon.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Forbes",
+           "description": null,
+           "url": "https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/",
+           "domain": "www.forbes.com"
+          }
+         ],
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop",
+           "title": "The Ordinary Multi-Peptide + HA Serum",
+           "text": "The Ordinary Multi-Peptide + HA Serum, formerly known as Buffet, is an age-supporting peptide serum that targets fine lines, loss ..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:6244816029251746314,catalogid:2668514587280735638,gpcid:12574506115952644513,mid:576462757157632386&ibp=oshop",
+           "title": "COSRX The 6 Peptide Skin Booster Serum",
+           "text": "COSRX The 6 Peptide Skin Booster Serum 150ml is a lightweight, toner-like Korean peptide serum formulated with six multi-functiona..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:3272057430321487294,catalogid:10973463051519897757,gpcid:6230314104366251300&ibp=oshop",
+           "title": "Minimalist Multi-Peptides 10% Face Serum",
+           "text": "Unleash the power of science with Minimalist Multi Peptide 10 percent Face Serum, a cutting-edge formula designed to target signs ..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Amazon.com",
+           "domain": "www.amazon.com",
+           "url": "https://www.amazon.com/peptides-serum/s?k=peptides+serum",
+           "title": "Peptides Serum - Amazon.com",
+           "text": "Preps Skin with Copper Peptides, GHK-Cu for Uneven Skin Texture, Skin Renewal Boosting Facial Essence, Korean Skin Care 20K+ bough..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Forbes",
+           "domain": "www.forbes.com",
+           "url": "https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/",
+           "title": "The Best Peptide Serums That Smooth And Firm Skin - Forbes",
+           "text": "The Best Peptide Serums That Smooth And Firm Skin. ByAmber Kallor, Beauty & Grooming Editor. I've covered beauty products and trea..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "How to Use Peptide Serums",
+         "text": "Apply a few drops after cleansing and toning. Follow with your favorite moisturizer to lock in hydration. Use them morning and night, but avoid mixing them directly with strong acids or vitamin C in the exact same step.",
+         "markdown": "- Apply a few drops after cleansing and toning.[[1]](https://www.dermstore.com/c/skin-care/treatments-serums/peptide/)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)\n- Follow with your favorite moisturizer to lock in hydration.[[1]](https://www.colorescience.com/blogs/blog/what-is-peptide-serum)\n- Use them morning and night, but avoid mixing them directly with strong acids or vitamin C in the exact same step.[[1]](https://www.colorescience.com/blogs/blog/what-is-peptide-serum)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Dermstore",
+           "domain": "www.dermstore.com",
+           "url": "https://www.dermstore.com/c/skin-care/treatments-serums/peptide/",
+           "title": "Peptide Serums | Dermstore",
+           "text": "Peptide Serums. Peptide serums contain the building blocks for collagen and elastin—two things that enhance your overall skin appe..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop",
+           "title": "The Ordinary Multi-Peptide + HA Serum",
+           "text": "The Ordinary Multi-Peptide + HA Serum, formerly known as Buffet, is an age-supporting peptide serum that targets fine lines, loss ..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Colorescience",
+           "domain": "www.colorescience.com",
+           "url": "https://www.colorescience.com/blogs/blog/what-is-peptide-serum",
+           "title": "What is Peptide Serum & Why Should You Use It?",
+           "text": "When choosing a peptide serum, you may want to review the ingredients to see which type of peptide is used. * Master peptide scien..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "If you want help picking the right product, tell me:Your skin type (dry, oily, sensitive, or acne-prone)\nYour main skin concern (anti-aging, redness, or extra hydration)\nYour preferred budget\nI can recommend the best serum for your routine.",
+         "markdown": "If you want help picking the right product, tell me:\n\n- Your **skin type** (dry, oily, sensitive, or acne-prone)\n- Your main **skin concern** (anti-aging, redness, or extra hydration)\n- Your preferred **budget** \n\nI can recommend the best serum for your routine.",
+         "links": null,
+         "images": null,
+         "references": null
+        }
+       ],
+       "references": [
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Amazon.com",
+         "domain": "www.amazon.com",
+         "url": "https://www.amazon.com/peptides-serum/s?k=peptides+serum",
+         "title": "Peptides Serum - Amazon.com",
+         "text": "Preps Skin with Copper Peptides, GHK-Cu for Uneven Skin Texture, Skin Renewal Boosting Facial Essence, Korean Skin Care 20K+ bough..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Forbes",
+         "domain": "www.forbes.com",
+         "url": "https://www.forbes.com/sites/forbes-personal-shopper/2026/08/06/best-peptide-serums/",
+         "title": "The Best Peptide Serums That Smooth And Firm Skin - Forbes",
+         "text": "The Best Peptide Serums That Smooth And Firm Skin. ByAmber Kallor, Beauty & Grooming Editor. I've covered beauty products and trea..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Dermstore",
+         "domain": "www.dermstore.com",
+         "url": "https://www.dermstore.com/c/skin-care/treatments-serums/peptide/",
+         "title": "Peptide Serums | Dermstore",
+         "text": "Peptide Serums. Peptide serums contain the building blocks for collagen and elastin—two things that enhance your overall skin appe..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Colorescience",
+         "domain": "www.colorescience.com",
+         "url": "https://www.colorescience.com/blogs/blog/what-is-peptide-serum",
+         "title": "What is Peptide Serum & Why Should You Use It?",
+         "text": "When choosing a peptide serum, you may want to review the ingredients to see which type of peptide is used. * Master peptide scien..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Google",
+         "domain": "www.google.com",
+         "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:15474320564230156004,catalogid:15366446604106546830,gpcid:42175154390984629,mid:576462746445076156&ibp=oshop",
+         "title": "The Ordinary Multi-Peptide + HA Serum",
+         "text": "The Ordinary Multi-Peptide + HA Serum, formerly known as Buffet, is an age-supporting peptide serum that targets fine lines, loss ..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Google",
+         "domain": "www.google.com",
+         "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:6244816029251746314,catalogid:2668514587280735638,gpcid:12574506115952644513,mid:576462757157632386&ibp=oshop",
+         "title": "COSRX The 6 Peptide Skin Booster Serum",
+         "text": "COSRX The 6 Peptide Skin Booster Serum 150ml is a lightweight, toner-like Korean peptide serum formulated with six multi-functiona..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Google",
+         "domain": "www.google.com",
+         "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:3272057430321487294,catalogid:10973463051519897757,gpcid:6230314104366251300&ibp=oshop",
+         "title": "Minimalist Multi-Peptides 10% Face Serum",
+         "text": "Unleash the power of science with Minimalist Multi Peptide 10 percent Face Serum, a cutting-edge formula designed to target signs ..."
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]",
+       "title": "Popular products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Good Molecules Super Peptide Serum",
+         "url": "https://www.stonevillenc.org/good-molecules-super-peptide-serum-reviews-spot/",
+         "domain": "www.stonevillenc.org",
+         "description": "Good Molecules & more\nFree delivery on $35+\nAbsorbs quickly without leaving a sticky residue · Exceptionally lightweight Town of Stoneville, NC",
+         "more_sellers": true,
+         "seller": "Good Molecules",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:0",
+         "price": {
+          "current": 12,
+          "regular": 0.4,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$12.00 $0.40/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 757,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8231338246013861331",
+          "data_docid": "11734438442309332888",
+          "gid": "12456434822688567040"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+         "url": "https://www.tiktok.com/@abbeyyung/video/7335943808326126891",
+         "domain": "www.tiktok.com",
+         "description": "Sephora & more\nFree delivery on $50+\nTends to peel badly · Can leave a pink tint on the skin TikTok",
+         "more_sellers": true,
+         "seller": "Sephora",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:1",
+         "price": {
+          "current": 32,
+          "regular": 1.07,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$32.00 $1.07/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 4300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2452231911483610697",
+          "data_docid": "10921632636141198043",
+          "gid": "14315254744359337565"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Good Molecules Copper Peptide Face Serum with PDRN",
+         "url": null,
+         "domain": null,
+         "description": "Target & more\nFree delivery on $35+",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:2",
+         "price": {
+          "current": 11.99,
+          "regular": 0.4,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$11.99 $0.40/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 17,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15013153015014628514",
+          "data_docid": "6864382686474197828",
+          "gid": "7776478574149258176"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Naturium Multi-Peptide Advanced Serum",
+         "url": "http://www.thehappysloths.com/2025/09/naturium-multi-peptide-advanced-serum-barrier-bounce-serum-review.html",
+         "domain": "www.thehappysloths.com",
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nAbsorbs quickly · Instantly nourishing without being heavy The Happy Sloths",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:3",
+         "price": {
+          "current": 24.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$24.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.2,
+          "votes_count": 539,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4918769338529436950",
+          "data_docid": "3239758784921032742",
+          "gid": "498857955954828351"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Londontown Peptide Serum Concentrate",
+         "url": null,
+         "domain": null,
+         "description": "Londontown & more\nMoisturizes well (38 user reviews)",
+         "more_sellers": true,
+         "seller": "Londontown",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:4",
+         "price": {
+          "current": 16.5,
+          "regular": 22,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$16.50 $22"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.1,
+          "votes_count": 311,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "729038640105057804",
+          "data_docid": "2442491678044585142",
+          "gid": "4137035101638719192"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + HA Serum",
+         "url": "https://www.tiktok.com/@abbeyyung/video/7335943808326126891",
+         "domain": "www.tiktok.com",
+         "description": "The Ordinary & more\nFree delivery\nTends to peel badly · Can leave a pink tint on the skin TikTok",
+         "more_sellers": true,
+         "seller": "The Ordinary",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:5",
+         "price": {
+          "current": 19.9,
+          "regular": 0.66,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$19.90 $0.66/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 7100,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15366446604106546830",
+          "data_docid": "15474320564230156004",
+          "gid": "42175154390984629"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Peptide Serum, Peptides Skincare, Hydrating Serum for Face, Reverse Time Serum, Fine Lines and Dark Spots, Plumper Glow, Face and Neck Care - Smooche",
+         "url": null,
+         "domain": null,
+         "description": "Smooche\nFree delivery",
+         "more_sellers": false,
+         "seller": "Smooche",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:6",
+         "price": {
+          "current": 43,
+          "regular": 63,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$43.00 $63"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.1,
+          "votes_count": 28,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "14906349659851979116",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Advanced Clinicals Peptide Serum",
+         "url": "https://stonevillenc.org/advanced-clinicals-peptide-serum-reviews-pure/",
+         "domain": "stonevillenc.org",
+         "description": "Target & more\nFree delivery on $35+\nLightweight, non-greasy texture · Doesn't leave a sticky residue Town of Stoneville, NC",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:7",
+         "price": {
+          "current": 12.99,
+          "regular": 7.42,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$12.99 $7.42/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 10000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2855208255482199956",
+          "data_docid": "13202473076176381625",
+          "gid": "16182319666415062136"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Face Reality Antioxidant Peptide Serum",
+         "url": null,
+         "domain": null,
+         "description": "Face Reality & more\nFree delivery on $700+\nMoisturizes well (51 user reviews)",
+         "more_sellers": true,
+         "seller": "Face Reality",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:8",
+         "price": {
+          "current": 56,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$56.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 296,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8639006850131007021",
+          "data_docid": "1414266957696419587",
+          "gid": "11687662427288238190"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Eighth Day The Regenerative Serum",
+         "url": "https://www.whowhatwear.com/beauty/skin/eighth-day-regenerative-serum-review",
+         "domain": "www.whowhatwear.com",
+         "description": "Eighth Day & more\nFree delivery\nNever feels heavy or greasy · Gives your skin a youthful glow fast Who What Wear",
+         "more_sellers": true,
+         "seller": "Eighth Day",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-a8dcd1e0928d:9",
+         "price": {
+          "current": 125,
+          "regular": null,
+          "max_value": 195,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$125.00 Was $195"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 423,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3588184087876309108",
+          "data_docid": "12706899186756024030",
+          "gid": "17694328078709600347"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Which copper peptide serum is the best?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Does peptide lifting cream really work?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Which peptides are best for anti-aging?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What does peptide serum for face?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]",
+       "domain": "us.allies.shop",
+       "title": "Best Peptides Serum for Youthful Skin | Top-rated Skincare",
+       "url": "https://us.allies.shop/collections/peptides/skin-concern-pigmentation?srsltid=AU7gw4VvzdYCSNWFiqCPiqnqz8GfXbrcQhQwA3hGmENZYGzfT5zeL_PE",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://us.allies.shop › Peptides",
+       "website_name": "ALLIES [North America]",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Known as thebuilding blocks of your skin, Peptides build collagen and elastin, encouraging a rejuvenated effect.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 75,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "Free delivery over $75"
+       },
+       "highlighted": [
+        "Peptides build collagen and elastin"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Best peptide serum!!? : r/30PlusSkinCare",
+       "url": "https://www.reddit.com/r/30PlusSkinCare/comments/1qlj8zy/best_peptide_serum/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "30+ comments  ·  8 months ago",
+       "website_name": "Reddit · r/30PlusSkinCare",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "What are some good recommendations for a peptide serum for anti aging?",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": [
+        {
+         "type": "link_element",
+         "title": "34 answers",
+         "description": null,
+         "url": "https://www.reddit.com/r/30PlusSkinCare/comments/1qlj8zy/best_peptide_serum/o1exrgr/",
+         "domain": "www.reddit.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]/div[1]",
+       "domain": "us.allies.shop",
+       "title": "Best Peptides Serum for Youthful Skin | Top-rated Skincare",
+       "url": "https://us.allies.shop/collections/peptides/benefit-glow-radiance?srsltid=AU7gw4WuGwnWqw6ad0nIBRPLUcpqHY3xmt0waJRy17VfAFqns-dZuszy",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://us.allies.shop › Peptides",
+       "website_name": "ALLIES [North America]",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Wanting to incorporate Peptides into your skincare routine? Look no further than these best selling Allies of Skin formulas that marry proven actives. Lifting  ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 75,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "Free delivery over $75"
+       },
+       "highlighted": [
+        "Peptides"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "video",
+       "rank_group": 1,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]",
+       "items": [
+        {
+         "type": "video_element",
+         "source": "YouTube · Dr Dray",
+         "title": "Peptides for Skin: Which Ones Actually Work? Dermatologist ...",
+         "timestamp": "2026-09-07 12:30:20 +00:00",
+         "url": "https://www.youtube.com/watch?v=bQvrFrhUets"
+        },
+        {
+         "type": "video_element",
+         "source": "YouTube · Dr. Mamina",
+         "title": "Peptides in Skincare: What They Actually Do and How to ...",
+         "timestamp": "2026-06-11 00:00:00 +00:00",
+         "url": "https://www.youtube.com/watch?v=T4x-Vgax6iQ"
+        },
+        {
+         "type": "video_element",
+         "source": "Facebook · Houston Methodist",
+         "title": "Peptide serums are popular in the skin care world, but have ...",
+         "timestamp": "2026-09-07 12:30:20 +00:00",
+         "url": "https://www.facebook.com/houstonmethodist/videos/peptide-serums-are-popular-in-the-skin-care-world-but-have-you-ever-wondered-how/1989853508348613/"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[14]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=en&gl=US&sxsrf=APpeQnuOVvVWCOb5RXQtup_nStuKH3llaA:1791376218408&q=peptide+serum&udm=2&source=univ&fir=69bnIFuYo6j1xM%252CTVDgULn9CucfGM%252C_%253BO9e-pg6Y33dVnM%252Cqs-yU73CarnO5M%252C_%253B-t5dqjCxK5a9UM%252Cm9-Fx9uGHQjZlM%252C_%253BXpkLmrJY3WM7OM%252CS8iP9tl8u4SnxM%252C_%253Bl5BmpkGSIfOQVM%252CO_KE3aBLAp0c-M%252C_%253BZKs-hRAA14ucpM%252CC4DTl4gzKKB5hM%252C_%253B14zdzNsyMwrjeM%252CpqHalJmCDjzqiM%252C_%253Bns_nQ9UW3Hpx4M%252CPFXTpRrrWfit4M%252C_&usg=AI4_-kRoMbzmNOLw3Y8QOqeoA5T6H3ruuA&sa=X&ved=2ahUKEwjW0aC59KeXAxU4SFUIHbMMMCgQ7Al6BAhlEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "9 best peptide serums for plump, glowing skin in 2025",
+         "url": "https://www.womenshealthmag.com/uk/beauty/skin/g64319183/peptide-serum/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ4sWiPDq9kM-PUYmsDoTdklKM3vOdUUTBOeORU4kzmYngcRl6q8h_Thw&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "8 Best Peptide Serums We Tested 2025, Approved by ...",
+         "url": "https://www.glamour.com/gallery/best-peptide-serum",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4E_iotJBcNSAcX5j0X5LI-rrS7vZ71jmCO1AgVVIVz4Hu06rfRNIzMsg&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Power Peptides",
+         "url": "https://geekandgorgeous.us/products/power-peptides",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLUOQuDzxInUWBome56p2XN3p5WnkDIFWXQvt367U4SXCow-WQhf4ralw&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Multi-Peptide Face Serum - Advanced Clinicals",
+         "url": "https://advancedclinicals.com/products/peptide-serum-1-8oz?srsltid=AU7gw4XcD0KY6prfKKd_U06cv9_RX0JoLLcCbv1UVcvdh08K4A4axQB8",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JRpLG99VkD1rTZe6SI2PesAbzOvgbZroYJyL93ZMM7EWrDDHUBFWfnY&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Multi-Peptide Serum, Anti-Wrinkle Face Serum, 1.75 fl oz (52 ml)",
+         "url": "https://pk.iherb.com/pr/advanced-clinicals-multi-peptide-serum-anti-wrinkle-face-serum-1-75-fl-oz-52-ml/100964",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJCFQsTDpj316K8eOwQ_Us4aFvEgp0Lqp6lw1TIcFPDgMYd9wZ_eVWqrM&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "8 Best Peptide Serums, According to Editor and Experts",
+         "url": "https://www.cosmopolitan.com/style-beauty/beauty/g69119999/best-peptide-serum/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCGCs2OpB9cZ6iSJ0eBqUe8ivBCcbEYPDhpwJfLlao2dmtua-huOQ1Pbs&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "7 Best Peptide Serums 2026 for Plumper, Bouncier Skin | Allure",
+         "url": "https://www.allure.com/gallery/best-peptide-skin-care-products",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFVdelKHEauBBZh5_F1IbmY2nrlVWMfFjDrgonyEriJimieYQxEa9l5W0&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "20 Best Peptide Serums of 2024, According to Dermatologists",
+         "url": "https://www.prevention.com/beauty/skin-care/g45158597/best-peptide-serums/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS-xr9-zg4fiuOe0lyS2zbhBfRex2Dc7Km39Uc_ThiOfbMQwHA-bxdvrA&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 2,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[16]/div[1]",
+       "title": "More products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Mad Hippie Corrective Peptide Serum",
+         "url": "https://www.stonevillenc.org/mad-hippie-corrective-peptide-serum-reviews-news/",
+         "domain": "www.stonevillenc.org",
+         "description": "Nordstrom & more\nFree delivery\nLayers exceptionally well underneath heavier creams · Notable hydrating boost",
+         "more_sellers": true,
+         "seller": "Nordstrom",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTej2nrVMIB_oTAAt97UkZZEvxaeJmyPh4BJjSaAIQH_LXuBlvBFip3gISXG_2gqw8bTYNvM-KXYZh7c5OMsqVS99bLE_LDCRJicgYrW9ek4zUnsrD_pCgVpw",
+         "price": {
+          "current": 32.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$32.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 500,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9186067236593497641",
+          "data_docid": "3733492942374548637",
+          "gid": "1526888885402137203"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Good Molecules Super Peptide Serum Duo, For Anti-Aging, Firming, and Wrinkle Reduction",
+         "url": null,
+         "domain": null,
+         "description": "Good Molecules\nFree delivery on $35+\nAnti-aging · Wrinkles · For All Skin Types",
+         "more_sellers": false,
+         "seller": "Good Molecules",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT2RfH81JaqMx-hCdoU0SNlUcbwYPD3RR8V9WbaaQzAK4usPPLX0c93TqDbOw_2ejWer8ZiK-SOZR0VDAYa5nxRfvSflDeTXA1GgtLrke_NhzYLaYwvO3Zp",
+         "price": {
+          "current": 24,
+          "regular": 12,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$24.00 $12/ct"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "3770140121198191732",
+          "data_docid": "5153147246997731663",
+          "gid": "4264984014410613566"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Kari Gran Essential Peptide Serum",
+         "url": "https://thefiltery.com/kari-gran-review/",
+         "domain": "thefiltery.com",
+         "description": "Kari Gran Skin Care & more\nFree delivery\nGentle and nourishing formula · Extremely hydrating The Filtery",
+         "more_sellers": true,
+         "seller": "Kari Gran Skin Care",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSmCP5cOFgk7v6PjSLLdhu8W4HmMe9Ik35ESZil8VRY3Yw1t2BJ8cyJ8Vw6sq6ndlxSpJQ3ngMjnzNwErW8-ip5eHFMbgIKxQU1fxY9bq6Pri-hQM2p6NU9w0Q",
+         "price": {
+          "current": 80,
+          "regular": 112,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$80.00 $112"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 481,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15609528399459703512",
+          "data_docid": "2253906255419283224",
+          "gid": "859311717290164117"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Minimalist Multi-Peptides 10% Face Serum",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nImproves skin texture (79 user reviews)",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSQDTzOe-xK7u8tiU_v30iI8tkzHW3Uvx90pIb_T6Jq06R8pihOh6rW21J0ko9naBZV6RPnP9f-5LAzOXydFmkdNxzfdAVOqmRnm35qyy3WI-jh2EJhXh0BeA",
+         "price": {
+          "current": 12.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$12.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 708,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "10973463051519897757",
+          "data_docid": "3272057430321487294",
+          "gid": "6230314104366251300"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Peptide Complex Serum by Microderm GLO Best Skin Toning Facial Tightening",
+         "url": null,
+         "domain": null,
+         "description": "Microderm GLO Skincare & more\nFree delivery\nFirms skin enough to make it look better. A reviewer on ebay.com",
+         "more_sellers": true,
+         "seller": "Microderm GLO Skincare",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRwMArjz5IUwPpHTZ6LeVgDCU2xyuzBmOM5i2Z8Z2ozwuZcnLeJ_HywdKj-iRNzP0yRmPF05kG_oqOfDEZcYftZL8nElpUFDaH-zPhaii1fJUD8b5cPq_ep",
+         "price": {
+          "current": 18.99,
+          "regular": 60,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$18.99 $60"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 3.8,
+          "votes_count": 4,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7261217611494471186",
+          "data_docid": "18267930644133117751",
+          "gid": "13271397791827355025"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "ZO Skin Health Peptide Facial Refining Concentrate",
+         "url": null,
+         "domain": null,
+         "description": "Revived Skin Clinic & more",
+         "more_sellers": true,
+         "seller": "Revived Skin Clinic",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQsWti6usCOcVm7ar5oNVZF8MK8PczsBtUIOqQVgWOTwGSvtEOISvQf4SdjV-M9_pyqyCKMOIbhujl-E12j1w1Es4T2N3KVgtAX1B6WNztJwhpMTafgRPGMTeYF",
+         "price": {
+          "current": 265,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$265.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.2,
+          "votes_count": 34,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8685932442153350333",
+          "data_docid": "8274385649845865706",
+          "gid": "16062799002944652192"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Private Label Peptide Serum",
+         "url": null,
+         "domain": null,
+         "description": "Pravada Private Label\nHyaluronic Acid · Anti-aging · Original",
+         "more_sellers": false,
+         "seller": "Pravada Private Label",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjM9Qc4U2Fjks0sPjTBzHDx5PZWNgXdwxUh7AFKhtYRrnSLH0STMa798VWRgR1A5WXCtHBTJAMdbOFuP-FIZcfC8bdDKa3U47MionnH-xLJQ2y5RCR2CrP",
+         "price": {
+          "current": 3.95,
+          "regular": 7.9,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$3.95 $7.90/fl oz"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "14461654508042809048",
+          "data_docid": "9725685618229298347",
+          "gid": "16069519325244912424"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "goop beauty - Youth-Boost Peptide - Serum",
+         "url": null,
+         "domain": null,
+         "description": "revolve.com & more\nFree delivery\nImproves skin texture (107 user reviews)",
+         "more_sellers": true,
+         "seller": "revolve.com",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRTnggph0rt-r-SuJoqxwp8_CNjH5SoZQ6zFiNMkpbNrTVV4zhOCyFRmegF6zzMhwnXGI18beT1UwKGM_qhTEXqqTGkqIC8stLCLTkFdowLFXDyxIxTtU0XmA",
+         "price": {
+          "current": 150,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$150.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 409,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8271624459619078743",
+          "data_docid": "4676593157309870073",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancer Triple Peptide Drops with Vitamin E &Niacinamide",
+         "url": null,
+         "domain": null,
+         "description": "Lancer Skincare & more\nFree delivery by Tue\nImproves skin texture (45 user reviews)",
+         "more_sellers": true,
+         "seller": "Lancer Skincare",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSX9hxHwpdOnt12X00ru6kfjQigzGRqv-W8YNHPRREeDjK6oHri2nRXxv515KgCoHD4EGLHFClJxPq-ysDMmim2QjUM3LsORclChvsK0PIz88h3BFbaN3vHRw",
+         "price": {
+          "current": 125,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$125.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 221,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "1428213356273330781",
+          "data_docid": "12777655513040301370",
+          "gid": "9008867846977341012"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Timeless Skin Care Coenzyme Q10 Serum",
+         "url": null,
+         "domain": null,
+         "description": "Timeless Skin Care & more\nFree delivery\nMoisturizes well (460 user reviews)",
+         "more_sellers": true,
+         "seller": "Timeless Skin Care",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTpUm_eYMRhv03_thr35slSEgAuAwGIo1z9X_hQ8Zh0EFU8KbOb7CZg4I0UbUJ5kr9_fFoFnFoMkmyeBVoD2OhJOUZ0SDu2Ygd4sU05p133TBcy3B6VmGer",
+         "price": {
+          "current": 76.95,
+          "regular": 19,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$76.95 $19/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 3100,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9888981250538512074",
+          "data_docid": "14307806667767816636",
+          "gid": "6016657578427386065"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]/div[1]",
+       "domain": "www.stonevillenc.org",
+       "title": "peptide serum for aging skin",
+       "url": "https://www.stonevillenc.org/peptide-serum-for-aging-skin-blog/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.stonevillenc.org › peptide-serum-for-aging...",
+       "website_name": "Town of Stoneville, NC",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Sep 22, 2026 — Here are the best budget-friendly peptide serums that combat fine lines, wrinkles and loss supple, \"bouncy\" appearance.",
+       "pre_snippet": "09/22/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "the best budget-friendly peptide serums"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-22 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[1]",
+       "domain": "www.kohls.com",
+       "title": "Peptides Facial Serums Fine Lines & Wrinkles Skincare",
+       "url": "https://www.kohls.com/catalog/peptides-facial-serums-fine-lines-wrinkles-skincare-beauty.jsp?CN=Ingredients:Peptides+Silhouette:Facial%20Serums+Concerns:Fine%20Lines%20%26%20Wrinkles+Category:Skincare+Department:Beauty",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.kohls.com › catalog › peptides-facial-serums...",
+       "website_name": "Kohl's",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Enjoy free shipping and easy returns every day at Kohl's. Find great deals on Peptides Facial Serums Fine Lines & Wrinkles Skincare at Kohl's today!",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 10,
+        "regular": null,
+        "max_value": 140,
+        "currency": "USD",
+        "is_price_range": true,
+        "displayed_price": "$10 to $140"
+       },
+       "highlighted": [
+        "Peptides Facial Serums Fine Lines & Wrinkles Skincare at Kohl's"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[21]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "www.youtube.com",
+       "title": "How to pick a peptide skincare product, according to a",
+       "url": "https://www.youtube.com/shorts/X46f7iosDss",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "684K+ views  ·  2 years ago",
+       "website_name": "YouTube · Dr. Sam Ellis",
+       "is_image": false,
+       "is_video": true,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_video"
+       ],
+       "description": "The 6 Peptide Skin Booster Serum with Niacinamide & Hyaluronic Acid, $21. The information in this video is not intended as medical advice, ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "The 6 Peptide Skin Booster Serum"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2024-04-22 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[22]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "www.youtube.com",
+       "title": "Peptides in skincare hype or worth the hype? | Dermatologist ...",
+       "url": "https://www.youtube.com/watch?v=7dyfRKfYNFs",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "53K+ views  ·  1 year ago",
+       "website_name": "YouTube · Dr. Jenny Liu",
+       "is_image": false,
+       "is_video": true,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_video"
+       ],
+       "description": null,
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-04-06 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "product_considerations",
+       "rank_group": 1,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[24]/div[1]",
+       "title": "Things to know",
+       "items": [
+        {
+         "type": "product_considerations_element",
+         "title": null,
+         "consideration_category": "Benefits",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": null,
+         "consideration_category": "Side Effects",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": null,
+         "consideration_category": "How to Use",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": null,
+         "consideration_category": "Suitable Skin Types",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": null,
+         "consideration_category": "Choosing",
+         "expanded_element": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 15,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Best peptide serum",
+        "Peptide serum reviews",
+        "Best peptide serum for face",
+        "Copper Peptide Serum",
+        "What are the best peptides for skin",
+        "Best peptides for skin tightening",
+        "Best peptide Serum Sephora",
+        "Naturium peptide serum"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

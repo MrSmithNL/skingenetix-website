@@ -3,6 +3,26 @@
 Open issues from the central SEO / GEO / AISO audit (`seo-toolkit`, criteria v2), triaged by the
 `seo-aiso-validator` loop rules. Fixes that change a published page go live only with Malcolm's go.
 
+## Ingredient hubs — first central v2 run, 2026-10-07
+
+Context and plan: `docs/seo-performance-and-ranking-plan-2026-10-07.md`; evidence `audits/2026-10-07-visibility-forensics/README.md`. The
+earlier 9.6–9.8 hub scores came from the retired two-model script and are withdrawn. Page type `article`, `--serp`, market en-US.
+
+| Hub | Keyword | Score | Confirmed failures | Report |
+|---|---|---|---|---|
+| /pages/pdrn-research | pdrn | 8.99 | C10 (retinol figure stated three ways: "more than twice", 3.5×, "more than three times"; jar image repeated), Q5 ("pdrn" 108×), S3 (no Article) | `page-audit-2026-10-07-pages-pdrn-research-live.*` |
+| /pages/acetyl-hexapeptide-8-research | argireline | 7.83 → **4.9** (P1 cap) | P1 (product page also claims "argireline" in `page-targets.json`), Q4 (no retinol comparison, nothing on what to avoid), C10 (duplicated FAQ image), V1 (no contraindications/pregnancy/interactions), Q5 (46×), S3 | `…-acetyl-hexapeptide-8-research-live.*` |
+| /pages/copper-peptide-research | copper peptide | 8.58 | C10 (duplicated FAQ image; citation paragraph ×3; alt text "Advanced Day Repair cream" vs "Day Gel-Cream"), V1, Q5 (69×), S3 | `…-copper-peptide-research-live.*` |
+| /pages/matrixyl-3000-research | matrixyl 3000 | 8.5 → **4.9** (P1 cap) | P1 (serum also claims "matrixyl 3000"), V1, Q5 (78×), S3 | `…-matrixyl-3000-research-live.*` |
+| /pages/glutathione-research | glutathione for skin | 7.78 | C9 (unqualified "Yes"; serum with niacinamide backed by other-formula trials), C10 (duplicated image; Watanabe citation ×4; serum named two ways), V1, V4 ("keep using it to keep the result"), S3 | `…-glutathione-research-live.*` |
+
+**Fix once, at the template:** C10, V1, Q5 and S3 are shared-template faults; one change clears them on all five hubs, then re-audit.
+**Decision for Malcolm:** keyword ownership (hub "argireline" / product "argireline serum"; serum "matrixyl 3000" / hub the science terms) lifts both P1 caps.
+**Wording fixes:** PDRN's one retinol figure in six languages; glutathione's "Yes" qualified and its two promise sentences reworded.
+
+**Not assessed by the auditor and found elsewhere today:** the English PDRN hub is not indexed at all (URL Inspection: unknown to Google); genuine
+referring domains are 0; Lighthouse mobile LCP 7.8–11.1 s on the hubs. See the report.
+
 ## Clinical-study articles — first audit, 2026-09-29
 
 Four articles under `/blogs/clinical-studies/`, audited twice (engine before and after the fixes this run prompted).
@@ -47,7 +67,7 @@ score is 9.0 or more.
 
 | #   | Item                                                                                                                                                                                                                                                               | Where                                                |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| 4   | **Ask Google to recrawl the four new addresses.** Search Console → URL inspection → Request indexing, for each `/blogs/clinical-studies/<handle>` (Wang, Raikou, Badenhorst, Ye). There is no API for this button, and no Search Console credential in this setup. | Manual, about 2 minutes                              |
+| 4   | **Ask Google to recrawl the four new addresses.** Search Console → URL inspection → Request indexing, for each `/blogs/clinical-studies/<handle>` (Wang, Raikou, Badenhorst, Ye). There is no API for this button. (Read access to Search Console does exist through the service account; only the button is manual. Corrected 2026-10-07.) | Manual, about 2 minutes                              |
 | 7   | **Product vs hub keyword ownership** — recommendation: Argireline hub keeps "argireline", product takes "argireline serum"; Matrixyl product keeps "matrixyl 3000", hub takes the science terms; a collection owns "peptide skincare"                              | `docs/keyword-ownership-analysis-2026-09-30.md` §1–3 |
 | 8   | **Product pages carry no precautions** (checked on the PDRN serum: no patch-test, irritation or fish-allergy text). The safety research found product-page precautions near-universal among premium brands and expected for EU online listings                     | Decision + wording, six languages                    |
 

@@ -1,0 +1,141 @@
+======================================================================
+SEO / GEO / AISO PAGE AUDIT — criteria v2
+URL: https://www.skingenetix.com/pages/glutathione-research
+Page kind: article · target keyword: “glutathione for skin”
+Judges: claude-sonnet-5-5→claude-sonnet-5-5, gpt-6-sol→—, gemini-3.8-flash→gemini-3.8-flash, perplexity/sonar→perplexity/sonar · 3 blind samples each · 120 calls · failed calls: {'gpt-6-sol': 30}
+Gates:    6 passed · 0 failed · 0 not checked
+Score:    7.78/10  (uncapped 7.78; geometric across query_fit 9.38, content 7.78, trust 10.0, structured_data 5.0, ai_eligibility 10.0, site_strategy 9.17, technical 10.0, vertical_health 3.33)
+Coverage: 44 of 56 applicable criteria assessed (12 not assessable here; 3 not applicable to a article page)
+Scoring: f012-gate-score-floor/1+criteria-v2.5.0 · cost $1.02 · 275s
+======================================================================
+
+CONFIRMED FAILURES — fix these (agreed by the panel, or failed a code check)
+  [CONFIRMED_FAIL] C9 Claims proportionate to the evidence — 1 met / 2 unmet
+      · [claude-sonnet-5-5] The page gives an unqualified "Yes" based on one manufacturer-run trial and one small independent trial. It supports its own serum, which also contains niacinamide, with studies of a different formulation. It adds "keep using it to keep the result" with no source. It also calls the Watanabe trial the "one controlled trial" while citing a second.
+      · [claude-sonnet-5-5] Does topical glutathione work for brightening skin? Yes.
+      · [perplexity/sonar] The trials described lasted only 8–10 weeks; the page gives no evidence that continued use is needed to maintain results, so this recommendation exceeds the evidence presented.
+      · [perplexity/sonar] Use it morning and evening for at least 10 weeks, and keep using it to keep the result.
+  [CONFIRMED_FAIL] C10 Produced with care — 1 met / 2 unmet
+      · [claude-sonnet-5-5] The same image and alt text appear twice. The Watanabe citation block is repeated four times. The serum is named inconsistently, as 'Glutathione Brightening Radiant Glow Serum' and as 'Glutathione 2% Brightening Serum'. These count as duplicated content and inconsistent product names.
+      · [claude-sonnet-5-5] A model holding the Skingenetix Glutathione Brightening Radiant Glow Serum, 2% glutathione, 30ml, up beside her eye in close-up
+      · [perplexity/sonar] The same reference passage is repeated across several evidence sections, and the model image appears twice. The page also inconsistently describes the manufacturer trial as involving 30 women in one place and 46 women in another: “In the 8-week independent trial, none of the 46 women…”
+      · [perplexity/sonar] Watanabe F et al. (2014). Clin Cosmet Investig Dermatol, 7:267–274. [View on PubMed](https://pubmed.ncbi.nlm.nih.gov/25378941/)
+  [CONFIRMED_FAIL] V1 Safety information present — 1 met / 2 unmet
+      · [claude-sonnet-5-5] The page gives only a patch-test tip and a no-reactions claim. It names no contraindications, interactions, pregnancy or medical-condition cautions, and no advice on when to see a professional. The PAA questions about who should not take glutathione go unaddressed.
+      · [claude-sonnet-5-5] No reactions attributed to glutathione in 76 women across two controlled trials of 8 and 10 weeks. Patch-test first.
+      · [perplexity/sonar] It gives limited trial safety findings and patch-test advice, but omits other relevant risks and when to seek professional advice.
+      · [perplexity/sonar] In two controlled trials, 76 women used topical glutathione twice a day for 8 to 10 weeks with no reactions attributed to it. As with any new product, patch-test first.
+  [CONFIRMED_FAIL] V4 No outcome promises — 1 met / 2 unmet
+      · [claude-sonnet-5-5] Results are cited with trial evidence and limitations, such as no data on fair skin. But the unqualified "Yes", "keep using it to keep the result", and "It works where it is applied" imply certain results. The caveat that one trial was manufacturer-run is also downplayed.
+      · [claude-sonnet-5-5] Yes. In a double-blind, placebo-controlled trial, 2% oxidised glutathione lowered skin pigment by 10.7% in 10 weeks
+      · [perplexity/sonar] This categorical claim implies a certain effect, although trial results elsewhere are quantified and qualified.
+      · [perplexity/sonar] It works where it is applied.
+  [FAIL        ] S3 The type that fits the page — expected Article, NewsArticle or BlogPosting (found: BreadcrumbList, FAQPage, Question, WebPage)
+
+CONTESTED — the panel disagreed; unstable, do not fix on this evidence
+  [CONTESTED   ] Q4 Covers the query's real sub-questions in one page — 1 met / 1 unmet
+
+GOOGLE FOR “glutathione for skin” — top results, and what searchers ask next
+  1. Glutathione Benefits for Your Health and Body — www.healthline.com
+  2. 14 Amazing Glutathione Benefits for Your Body and Health — citynaturopathic.ca
+  3. Glutathione for skin lightening - Dermatologist explains — www.youtube.com
+  4. Glutathione In Skin Care: Does It Work? — www.100percentpure.com
+  5. Best Glutathione for Skin Whitening — vivaaestheticclinic.com
+  6. Glutathione for Glowing Skin?| Do Glutathione Tablets work? — www.youtube.com
+  7. Which Type of Glutathione Is Best for Skin Whitening? — cymbiotika.com
+  ? How does glutathione improve skin?
+  ? Which glutathione cream is the best?
+  ? Can people with Hashimoto's take glutathione?
+  ? Who should not take glutathione?
+
+AGENCY STANDARD (Rule 27 Checks A/D) — reported, not in the search score
+  [MET         ] X1 One clear primary action, with proof beside it — 2 met / 0 unmet
+
+ALL ASSESSED CRITERIA (search score)
+ query_fit
+  [MET         ] Q1 Achieves its purpose — 3 met / 0 unmet
+  [PASS        ] Q2 Target keyword in the title, once — keyword in the title, once
+  [MET         ] Q3 Serves the keyword's intent — 2 met / 0 unmet
+  [CONTESTED   ] Q4 Covers the query's real sub-questions in one page — 1 met / 1 unmet
+  [PASS        ] Q5 No keyword stuffing — “glutathione for skin” 0× in 3075 words
+  [MET         ] Q6 Title and H1 match the content — 1 met / 0 unmet
+  [MET         ] Q7 Page-specific meta description — 3 met / 0 unmet
+  [PASS        ] Q8 Distinct, descriptive title — distinct from 1 related pages' titles; no boilerplate
+ content
+  [MET         ] C1 Effort and originality — 3 met / 0 unmet
+  [MET         ] C2 Facts correct and consistent with expert consensus — 2 met / 0 unmet
+  [MET         ] C3 Complete for its purpose — 3 met / 0 unmet
+  [MET         ] C4 Internally consistent — 2 met / 1 unmet
+  [MET         ] C5 Specific, sourced evidence — 3 met / 0 unmet
+  [MET         ] C7 Clear structure — 2 met / 0 unmet
+  [CONFIRMED_FAIL] C9 Claims proportionate to the evidence — 1 met / 2 unmet
+  [CONFIRMED_FAIL] C10 Produced with care — 1 met / 2 unmet
+  [NOT_APPLICABLE] C11 Comparisons and reviews show their evidence and method — 0 met / 0 unmet / 3 n/a
+  [MET         ] C12 No harmfully misleading information — 2 met / 1 unmet
+ trust
+  [MET         ] R1 Responsible entity identified — 2 met / 0 unmet
+  [MET         ] R2 Byline where a reader expects one — 3 met / 0 unmet
+  [MET         ] R3 Credentials truthful — 3 met / 0 unmet
+  [PASS        ] R4 Citations resolve to what they claim — 5 verified, 0 not comparable (check by hand), 0 unreachable
+  [MET         ] R5 Commercial interest disclosed — 3 met / 0 unmet
+  [MET         ] R7 Visible, accurate date — 3 met / 0 unmet
+  [NOT_APPLICABLE] R8 Reviews genuine and shown — 0 met / 0 unmet / 3 n/a
+ structured_data
+  [NOT_ASSESSED] S1 Markup matches visible content — no headline or product name in the markup
+  [PASS        ] S2 Valid for types that have rules — 1 item(s) carry every required property · notes: FAQ: rich result retired
+  [FAIL        ] S3 The type that fits the page — expected Article, NewsArticle or BlogPosting (found: BreadcrumbList, FAQPage, Question, WebPage)
+  [NA          ] S4 Time-sensitive markup current — no time-sensitive markup
+ ai_eligibility
+  [PASS        ] A1 Snippet-eligible for AI features — no snippet restriction
+  [PASS        ] A2 AI search crawlers allowed — OAI-SearchBot, PerplexityBot, Claude-SearchBot allowed
+  [PASS        ] A3 Main content in the server HTML — main content present in the server HTML
+  [MET         ] A4 Key facts stated in self-contained sentences — 3 met / 0 unmet
+ site_strategy
+  [PASS        ] P1 Keyword owned by one page — “glutathione for skin” is owned by this page alone
+  [PASS        ] P2 No second own URL competing — no own page in the top 10 (no collision)
+  [PASS        ] P3 Linked into its cluster — hub links down to 1 of 1 spokes
+  [MET         ] P4 Descriptive internal anchors — 2 met / 1 unmet
+  [NOT_ASSESSED] P5 Distinct from its siblings — no sibling pages declared in the keyword map
+ technical
+  [NOT_ASSESSED] T1 Core Web Vitals (field) — the CrUX API refused the request (403) — enable the Chrome UX Report API on the key's Google Cloud project and allow it on the key
+  [PASS        ] T2 HTTPS without mixed content — HTTPS, no mixed content
+  [NOT_ASSESSED] T3 Works on a phone — viewport set; the layout at 390 px (horizontal scroll, tap targets) needs a rendered page
+  [PASS        ] T4 Reachable in the site graph — in the sitemap (lastmod 2026-09-23; the page's markup says dateModified 2026-09-29); linked from the home page
+  [PASS        ] T5 Title, H1 and lang hygiene — one title, one H1, lang set
+  [MET         ] T6 Descriptive image alt text — 2 met / 0 unmet
+  [PASS        ] T7 No broken links or resources — 25 links and images answer
+  [PASS        ] T8 Language versions declared correctly — 5 alternates: valid codes, self-listed, all link back, languages match
+  [PASS        ] T9 Descriptive image filenames — 15 content images, all with descriptive filenames
+  [NOT_ASSESSED] T10 Images served efficiently — 15 image(s) in modern formats or small; sizing for display needs lab data — PageSpeed lab data unavailable (PageSpeed answered 403 — enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key)
+  [PASS        ] T12 Links crawlable and labelled — 14 internal links crawlable and labelled
+  [PASS        ] T13 Readable URL — readable: words and hyphens
+ vertical_health
+  [CONFIRMED_FAIL] V1 Safety information present — 1 met / 2 unmet
+  [CONFIRMED_FAIL] V4 No outcome promises — 1 met / 2 unmet
+
+NOT ASSESSED HERE (reported, never scored as pass or zero)
+  C6 Main content prominent and unobstructed — needs a rendered page
+  C8 Not copied, not machine boilerplate — needs a web search
+  R9 Independent reputation — needs a web search
+  S5 Markup survives rendering — needs a rendered page
+  O1 Earned links to this URL — needs backlink data (F-012 S4)
+  O2 Natural anchor profile — needs backlink data (F-012 S4)
+  X3 Accessible basics — needs a rendered page
+  S1 Markup matches visible content — no headline or product name in the markup
+  P5 Distinct from its siblings — no sibling pages declared in the keyword map
+  T1 Core Web Vitals (field) — the CrUX API refused the request (403) — enable the Chrome UX Report API on the key's Google Cloud project and allow it on the key
+  T3 Works on a phone — viewport set; the layout at 390 px (horizontal scroll, tap targets) needs a rendered page
+  T10 Images served efficiently — 15 image(s) in modern formats or small; sizing for display needs lab data — PageSpeed lab data unavailable (PageSpeed answered 403 — enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key)
+
+NOT SCORED — no verified source yet
+  V2 No medicinal claim on a cosmetic product — no verified source yet (to verify)
+  V5 Regulatory status stated and true — no verified source yet (to verify)
+
+MEASURED, NOT SCORED (the figure, and why it is not in the score)
+  Server response time (TTFB): 0.73 s — web.dev's rough guide is 0.8 s or less; not a Core Web Vital, not scored
+  HTML weight: 420 KB — no Google threshold; reported
+  Lab speed (PageSpeed, mobile): not available — PageSpeed answered 403 — enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key
+  Keyword in the URL: 1 of 2 keyword words in the path — reported, not scored: Google says keywords in the URL have “hardly any effect beyond appearing in breadcrumbs”
+  Keyword words in image filenames: 13 of 15 content image filenames carry keyword words — reported, not scored: Google asks for descriptive filenames (T9), not keywords
+  Image reuse: 15 distinct content images; shown more than once: skingenetix-glutathione-brightening-radiant-glow-serum-model-at-eye.jpg ×2 — reported, not scored: no primary source ties image originality or reuse to ranking (a gallery repeats its images by design)
+  Title length: 57 characters — Google sets no limit; the title link is truncated to fit the device width

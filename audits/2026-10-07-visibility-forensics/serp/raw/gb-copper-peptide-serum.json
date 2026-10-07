@@ -1,0 +1,882 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "16.0837 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10071232-1509-0139-0000-c280b1f2a668",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "15.8943 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "copper peptide serum",
+    "location_code": 2826,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "copper peptide serum",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2826,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=copper%20peptide%20serum&hl=en&gl=GB&ie=UTF-8&uule=w+CAIQIFISCamRx0IRO1oCEXoliDJDoPjE",
+     "datetime": "2026-10-07 12:33:12 +00:00",
+     "spell": null,
+     "refinement_chips": null,
+     "item_types": [
+      "organic",
+      "popular_products",
+      "people_also_ask",
+      "video",
+      "related_searches"
+     ],
+     "se_results_count": 189,
+     "pages_count": 1,
+     "items_count": 13,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "theordinary.com",
+       "title": "Multi-Peptide + Copper Peptides 1% Serum",
+       "url": "https://theordinary.com/en-gb/multi-peptide-copper-peptides-1-serum-100625.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://theordinary.com › en-gb › multi-peptide-copper...",
+       "website_name": "The Ordinary",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Copper Peptides 1% helps to improve the appearance of fine lines and supports your skin's overall elasticity, smoothness and firmness. reducing the appearance ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.5,
+        "votes_count": 1239,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 28.9,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£28.90"
+       },
+       "highlighted": [
+        "helps to improve the appearance of fine lines"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]",
+       "title": null,
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+         "url": null,
+         "domain": null,
+         "description": "The Ordinary & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "The Ordinary",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-c280b1f2a668:0",
+         "price": {
+          "current": 28.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£28.90"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 4300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2452231911483610697",
+          "data_docid": "378959402095812392",
+          "gid": "14315254744359337565"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biossance Squalane + Copper Peptide Rapid Plumping Serum 50ml",
+         "url": null,
+         "domain": null,
+         "description": "LOOKFANTASTIC & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "LOOKFANTASTIC",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-c280b1f2a668:1",
+         "price": {
+          "current": 41.25,
+          "regular": 55,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£41.25 £55 & more prices"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 2600,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "6209350323940441259",
+          "data_docid": "1107407440235107409",
+          "gid": "16220593450865214335"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Sapónne Naturals Advanced GHK-Cu Copper Peptide Serum 1%",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-c280b1f2a668:2",
+         "price": {
+          "current": 31.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£31.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 29,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14180789182688353299",
+          "data_docid": "6505703773523207009",
+          "gid": "15665054915206731626"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biossance Squalane and Copper Peptide Rapid Plumping Serum 12ml",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk & more",
+         "more_sellers": true,
+         "seller": "Amazon.co.uk",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-c280b1f2a668:3",
+         "price": {
+          "current": 16.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£16.89"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 144,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9382445938379565437",
+          "data_docid": "5185042599179439061",
+          "gid": "3653008186778648232"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "GHK-Cu Copper Peptide Serum",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+         "more_sellers": false,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-c280b1f2a668:4",
+         "price": {
+          "current": 19.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£19.99"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "15180182481373717954",
+          "data_docid": "265794664050707270",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Good Molecules Copper Peptide Serum with PDRN 30ml",
+         "url": null,
+         "domain": null,
+         "description": "Good Molecules & more\nFree delivery on £35+",
+         "more_sellers": true,
+         "seller": "Good Molecules",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-c280b1f2a668:5",
+         "price": {
+          "current": 11,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£11.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 17,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15013153015014628514",
+          "data_docid": "1908336615152775633",
+          "gid": "7776478574149258176"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medik8 Copper PCA Peptides",
+         "url": null,
+         "domain": null,
+         "description": "The Skin Hut & more\nFree delivery on £55+",
+         "more_sellers": true,
+         "seller": "The Skin Hut",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-c280b1f2a668:6",
+         "price": {
+          "current": 52,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£52.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 424,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14087886674605722570",
+          "data_docid": "14769407049973634641",
+          "gid": "16766231247814859464"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Minimalist Copper Peptide + PDRN 1.25% Serum 10ml",
+         "url": null,
+         "domain": null,
+         "description": "BargainBrit & more",
+         "more_sellers": true,
+         "seller": "BargainBrit",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-c280b1f2a668:7",
+         "price": {
+          "current": 13,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£13.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.1,
+          "votes_count": 35,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "13057735939415223889",
+          "data_docid": "7848598867864506176",
+          "gid": "3667862495587090071"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What does copper peptide serum do?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the downsides of copper peptides?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Which copper peptide serum is best?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Should I use copper peptides every day?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]",
+       "domain": "nichebeautylab.com",
+       "title": "Anti-aging 3% Pure Copper Peptide Treatment",
+       "url": "https://nichebeautylab.com/en-gb/products/copper-peptide?srsltid=AU7gw4WcJTQhukuUf7m4Bcmr_aKuJ-rOkgReKoFuHV1MDAQLOf2KJGAg",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://nichebeautylab.com › en-gb › products › copper-...",
+       "website_name": "niche beauty lab",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Topical application helps maintain proper skin function by serving as an antioxidant, promoting collagen and elastin production and removing damaged collagen ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.4,
+        "votes_count": 321,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 39,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£39.00"
+       },
+       "highlighted": [
+        "Topical application helps maintain proper skin function"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://nichebeautylab.com/en-gb/products/copper-peptide?srsltid=AU7gw4WcJTQhukuUf7m4Bcmr_aKuJ-rOkgReKoFuHV1MDAQLOf2KJGAg#:~:text=Topical%20application%20helps%20maintain%20proper,and%20elastin%20from%20the%20skin.",
+         "domain": "nichebeautylab.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]",
+       "domain": "www.boots.com",
+       "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum ...",
+       "url": "https://www.boots.com/the-ordinary-multi-peptide-copper-peptides-1-serum-10333206?srsltid=AU7gw4W9ur4Dyp4JldAhubZcthaRIgM6JASgwtHI-AuYyXCGZeGzlwWN",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.boots.com › the-ordinary-multi-peptide-co...",
+       "website_name": "Boots",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "This multi-peptide serum is reported to improve skin texture, reduce the appearance of fine lines and wrinkles, and promote a more radiant, youthful complexion. Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.6,
+        "votes_count": 1181,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 26.01,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£26.01"
+       },
+       "highlighted": [
+        "improve skin texture, reduce the appearance of fine lines and wrinkles"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.boots.com/the-ordinary-multi-peptide-copper-peptides-1-serum-10333206?srsltid=AU7gw4W9ur4Dyp4JldAhubZcthaRIgM6JASgwtHI-AuYyXCGZeGzlwWN#:~:text=This%20multi-peptide%20serum%20is%20reported,a%20more%20radiant%2C%20youthful%20complexion.",
+         "domain": "www.boots.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]",
+       "domain": "www.amazon.co.uk",
+       "title": "Copper Peptides Serum For Face",
+       "url": "https://www.amazon.co.uk/copper-peptides-serum-face/s?k=copper+peptides+serum+for+face",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.co.uk › copper-peptides-serum-face",
+       "website_name": "Amazon UK",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Copper peptide face serums to target fine lines and promote smoother skin texture. Nourishing ingredients for daily skincare routines.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 10,
+        "regular": null,
+        "max_value": 32,
+        "currency": "GBP",
+        "is_price_range": true,
+        "displayed_price": "£10 to £32"
+       },
+       "highlighted": [
+        "Copper peptide face serums"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]/div[1]",
+       "domain": "www.innerbody.com",
+       "title": "Best Copper Peptide Serum | The top 7 options of 2026",
+       "url": "https://www.innerbody.com/best-copper-peptide-serum",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.innerbody.com › best-copper-peptide-serum",
+       "website_name": "Innerbody",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "3 Sept 2026 — We tested copper peptide serums to bring you all the details, including safety, efficacy, pricing, and more.",
+       "pre_snippet": "09/03/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "copper peptide serums"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "How we evaluated copper...",
+         "description": null,
+         "url": "https://www.innerbody.com/best-copper-peptide-serum#how-we-evaluated-copper-peptide-serums",
+         "domain": "www.innerbody.com"
+        },
+        {
+         "type": "link_element",
+         "title": "Biossance Squalane + Copper...",
+         "description": null,
+         "url": "https://www.innerbody.com/best-copper-peptide-serum#biossance-squalane--copper-peptide-rapid-plumping-serum",
+         "domain": "www.innerbody.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-03 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "video",
+       "rank_group": 1,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]",
+       "items": [
+        {
+         "type": "video_element",
+         "source": "YouTube · Dr Dray",
+         "title": "Do Copper Peptides Really Work? Dermatologist Reviews the ...",
+         "timestamp": "2026-08-03 00:00:00 +00:00",
+         "url": "https://www.youtube.com/watch?v=--tBqDNB-LY"
+        },
+        {
+         "type": "video_element",
+         "source": "YouTube · PENN.SMITH.SKINCARE",
+         "title": "Remedy Copper Peptide Serum: Everything You Need To Know",
+         "timestamp": "2026-09-07 12:33:10 +00:00",
+         "url": "https://www.youtube.com/watch?v=TMnW0C7PG18"
+        },
+        {
+         "type": "video_element",
+         "source": "Instagram · Mark Strom, MD, FAAD",
+         "title": "STOP wasting your money on the wrong copper peptides ...",
+         "timestamp": "2026-09-30 12:33:10 +00:00",
+         "url": "https://www.instagram.com/reel/Dd346uFxQ6A/"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]",
+       "domain": "www.spacenk.com",
+       "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+       "url": "https://www.spacenk.com/uk/skincare/treatment/serums/multi-peptide-copper-peptides-1-serum-MUK200039353.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.spacenk.com › skincare › treatment › serums",
+       "website_name": "Space NK",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Target visible signs of aging with The Ordinary Multi-Peptide + Copper Peptides 1% Serum, vegan skincare formulated with hyaluronic acid.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 5,
+        "votes_count": 1197,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 28.9,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£28.90"
+       },
+       "highlighted": [
+        "Copper Peptides",
+        "Serum"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]",
+       "domain": "www.healthline.com",
+       "title": "How Copper Peptides Assist the Health of Your Skin and Hair",
+       "url": "https://www.healthline.com/health/copper-peptides",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.healthline.com › health › copper-peptides",
+       "website_name": "Healthline",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "26 Oct 2020 — Benefits of copper peptides in skin care · Reduced appearance of wrinkles · Firmer skin · Evens skin tone · Antioxidant effects. Read more",
+       "pre_snippet": "10/26/2020 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Reduced appearance of wrinkles"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.healthline.com/health/copper-peptides#:~:text=Benefits%20of%20copper%20peptides%20in,skin%20care&text=Reduced%20appearance%20of%20wrinkles&text=Firmer%20skin&text=Evens%20skin%20tone&text=Antioxidant%20effects",
+         "domain": "www.healthline.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2020-10-26 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[21]/div[1]/div[1]",
+       "domain": "madaboutskincare.com",
+       "title": "Copper Peptide Serum (30ml)",
+       "url": "https://madaboutskincare.com/products/copper-peptide-serum-30ml?srsltid=AU7gw4VTd4cxtAlB8-8phozm7TfkWWw_XyxMYSkf-V2AAwEWiJMqGj3j",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://madaboutskincare.com › products › copper-pepti...",
+       "website_name": "MAD ABOUT SKIN",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Copper peptides are the star of this lightweight serum and come in a market leading 3% concentration to give collagen production its maximum boost and smooth ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 17.99,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£17.99"
+       },
+       "highlighted": [
+        "Copper peptides are the star of this lightweight serum"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://madaboutskincare.com/products/copper-peptide-serum-30ml?srsltid=AU7gw4VTd4cxtAlB8-8phozm7TfkWWw_XyxMYSkf-V2AAwEWiJMqGj3j#:~:text=Copper%20peptides%20are%20the%20star,and%20smooth%20out%20your%20skin.",
+         "domain": "madaboutskincare.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[23]/div[1]/div[1]",
+       "domain": "www.byrdie.com",
+       "title": "Copper Peptides for Skin: A Complete Guide",
+       "url": "https://www.byrdie.com/copper-peptides-serum",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.byrdie.com › ... › Skincare Ingredients A–Z",
+       "website_name": "Byrdie",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "15 Sept 2025 — Copper peptides \"serve as an antioxidant, promote collagen and elastin production, and also remove damaged collagen and elastin from the skin,\" ... Read more",
+       "pre_snippet": "09/15/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "an"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.byrdie.com/copper-peptides-serum#:~:text=Copper%20peptides%20%22serve%20as%20an,from%20the%20skin%2C%22%20says%20Vargas.",
+         "domain": "www.byrdie.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-09-15 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Best copper peptide serum",
+        "Theramid Copper Peptide serum",
+        "Copper Peptide Serum cosrx",
+        "Copper peptide Serum GHK-Cu",
+        "Copper peptide serum UK",
+        "Copper peptide Serum The Ordinary",
+        "Copper peptide serum hair",
+        "Copper peptide serum reviews"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

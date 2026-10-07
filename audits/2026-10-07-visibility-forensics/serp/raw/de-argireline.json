@@ -1,0 +1,898 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "65.6997 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10071235-1509-0139-0000-92fa7506e970",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "65.5082 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "argireline",
+    "location_code": 2276,
+    "language_code": "de",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "argireline",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2276,
+     "language_code": "de",
+     "check_url": "https://www.google.com/search?q=argireline&hl=de&gl=DE&ie=UTF-8&uule=w+CAIQIFISCWu-scIecppHEVvlkY5rXeh1",
+     "datetime": "2026-10-07 12:36:20 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Erfahrungen",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=Argireline+Erfahrungen&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rhfBuKaMHEeNvRRWpsls-K0jPzFhhTYw1Mp3Lex1m-ivWRCaYH5bOtONoQB_VZP565lSMbWDbx3sualUWQdjahsBR6GMU_f4TQihL2PO2ToCgwhJZ7yWROIco6tJk6gR18NbYPQLtR4W_HlnuMwd2-cXdx_l9k1tEtKcnNLGzXUtKMps-PWAY0WODTp7vKof37VE_aKUXNkWucA4K-8eLhO4YtOU&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQxKsJKAB6BAgiEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Schädlich",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=Argireline+sch%C3%A4dlich&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rH0J9BcQGsm1kKnwAKOWyUCHsn3IjX7dBQUKzHT9J1RvDa0Fzp0V-wjVUGKDu_AsfXGgBeSSUyN8cUmgNYPDlF2_mmxymU0ET_WXwPp7gwHcW7rUlls2T9leX_ArLAdAzfQgiyhU1TEhEX6oBYLQVCZntB6hNFSLJ-r-NKYpNStANX8rULNIXog46HLB3zV1PWSrH0vQyrioaAeLbtxI2xg8PAk8&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQxKsJKAF6BAgkEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Serum hochdosiert",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=Argireline+Serum+hochdosiert&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rwX6sI78Uc9oS5YtwhCGaV7Wg5LHt-IrOtV7lPVxUnuOhkhOpjta_03sqsbgy3lMgFcphvWKIeveBN1tCHJmt2fZpaO5S2w58SfEcpMlhC7KJ4RPdDNdnCyUrMizq13tjLqhJ7b5ewKk1cO37x3IXl8Cw_5dZoMuCymhMrx5-E1lAYHIRYMcboppOuRZXdCXUgCjPVQuKaWNmGec_mbgm0MYoMDA&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQxKsJKAJ6BAgmEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Dm",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=Argireline+dm&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rUH41ck2z8MLtzLgJQT5ecPqd21mIda0J-cIEiY6lNzl-Gn1qsj2dq0flGV2PP_V5hng2mB_vfeHk_CaUN-twKPCCLrQxjQotfzeBHJK7spKzNyRJW3CtslJSOmBNjkxCghR-z2e9gp2y2eNN5nL3pL17aNWOnqYiLbVF9GY7ASR_Na6y7nq0FZotUGEwBR0CDvBsEQ&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQxKsJKAN6BAgnEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "The Ordinary",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=Argireline+The+Ordinary&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rDGpVLV-J2lF5czJrL5x5Mdn3TL6Xc764cTvRKjG1dKY3n2swI3cUzaAx643RpzlbLl3_Z_1kSim82Q4lImoxP2ei90cl7gDl_gQ8ypr2QR87Dd4N9PSON8ZwN__MwxWKz4p1qHWw2QUAY6Vd3iiZl7SRsbcl9_ACF-Jrz2udX9bYFb9eFBEWeOseaLyvX1Un1VLWNzAP9P2g5nb2oUv2emzhZGc&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQxKsJKAR6BAglEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Wirkung",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=Argireline+Wirkung&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rbnJ6yWERZ6T5MSJAEHLfAWEdYfW9FDgKwWAk1JIm66M0VxfXV9TITkmjUFVpc7T_m3Bkmz6XXuRNlrKyD3MDRK_rn8L2Tg2PNBbWynJRDT6rHLy2ReJ7TvaQDACTiQv_yX6EKTXHfuCNgKhAZd1CXxKMjbLMBGe3zRph6oad26VRZYx-RKPFuFQKEwKkMg4BliNI5g&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQxKsJKAV6BAh5EAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Kaufen",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=Argireline+kaufen&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rQgLKhWx3niBjjo4uGEacpWXRT8rWwMmXwg962OZyVFgYmeX_YubZyQDF6fqCkhNGgvrZf8wHkpRC8lK7Z0UdFGAnlYcUzoXdBLama8yUSN3KL700jUE8QpPLoAnx5Ybt-zSvQtLg_cNsOVfIWlK7deljf2BAsZIhlCf308ukq68vdzqkiRz-thc_x43QFvsyVxlD7g&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQxKsJKAZ6BAh4EAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Rossmann",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=Argireline+Rossmann&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rCMTPkrLeUGyztLjwmR70xbeYUsTPWhiiIwqiQb0kOdzZ1S_Hwfj4pdk9xyCt-Y5aTYsC9UVYQWtRuG08jkSA3w-V6jFdBZDuSfJIATZjePqT81cOgR2jgONBh2tIzTMFrYU51yxMdPuhaHwhOdPfnO0gcctM8WdkYgvsLXAXjqpsYkChsPRiML8lgNnbJw4Drb9_REHGBIMvgyaSBhpOAPmOgMY&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQxKsJKAd6BAh3EAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "popular_products",
+      "organic",
+      "people_also_ask",
+      "images",
+      "related_searches"
+     ],
+     "se_results_count": 199,
+     "pages_count": 1,
+     "items_count": 14,
+     "items": [
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]",
+       "title": "Vergleichsportale",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Argireline Solution 10%",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071235-1509-0139-0000-92fa7506e970:0",
+         "price": {
+          "current": 11.45,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,45 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "540920059023938909",
+          "data_docid": "9540476252181302748",
+          "gid": "10969510345251461226"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "ARGIRELINE peptide solution C",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071235-1509-0139-0000-92fa7506e970:1",
+         "price": {
+          "current": 8.3,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "8,30 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "447869863125150044",
+          "data_docid": "10218335392375050251",
+          "gid": "7661210390097826518"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Skinderma Argireline Ampullen 20 x 2 ml",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071235-1509-0139-0000-92fa7506e970:2",
+         "price": {
+          "current": 25.75,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "25,75 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "13171820587604072797",
+          "data_docid": "999984246736206769",
+          "gid": "10480003228350497414"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "SKIN DEVA Argireline Serum 20% mit Matrixyl 3000 und HA",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071235-1509-0139-0000-92fa7506e970:3",
+         "price": {
+          "current": 42.56,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "42,56 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "9742037520581164335",
+          "data_docid": "5954832648669548548",
+          "gid": "18251047335005030944"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "ANAIRUI Matrixyl 3000 Argireline Peptid-Serum gegen Falten & feine Linien 30ml",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRuhRlOO4e-056Djwu3Xx_AWLxiqOXg9ftFOF1qpe_xLRoQdtoFuk7OqMYR9PrnNSszzcv9LvmPTrA3vyGhY93mKUlZn7GMzaQQsAJo3EiQUbNgtuiVqR56",
+         "price": {
+          "current": 19.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "19,99 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "7106067249973625340",
+          "data_docid": "3045600675779859075",
+          "gid": "16622347382205923733"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Argireline 10% Creme mit Retinol und Vitamin E",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTMqUm7mk8Mdi0T68gGfKhtGefBvEAuHXRaGzCLOY-ES_arWgGMWV0a_V9y7hbNx8QnJkqbKyHruidV9nIoE0pJmzifCxHFioBcaqYhpvTAeKyRxr-dhD4",
+         "price": {
+          "current": 44.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "44,95 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "17653998292390443483",
+          "data_docid": "11842958462113114991",
+          "gid": "6656564995138777504"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "ANAIRUI Matrixyl 3000 & Argireline Anti-Aging Face Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTnznJ2kmmixJfqm1h0uSWxTNznyc1kp-L-dYzk-ecuK0O2W90eDneS3i57y-QXRfrqw4oL1o0JINyvzT3CspD1scOYxbCAg8CouDNkbEroz-5z-qd0OHQmkA",
+         "price": {
+          "current": 22.27,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "22,27 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "17146932603783567274",
+          "data_docid": "13564059163124842903",
+          "gid": "12356088918840685593"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Veana Argireline 10% Creme + Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRFYhIJj2jUqNhtkIiIkXXOsAvsuaHkx-To2Vyom4W_E2ARUa36r9K6VhGq2I4Vi3BjXX6nCqE3v6NgsOAv3lzzTiP5LM4BlqCu3AIA3eR3DfFX0rS-pplNcw",
+         "price": {
+          "current": 69,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "69,00 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "5245614710183414365",
+          "data_docid": "4181305276323095618",
+          "gid": "6934432303523551216"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+       "domain": "pureandcare.de",
+       "title": "10% Argireline®-Peptide-Serum",
+       "url": "https://pureandcare.de/serum-10-argireline",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://pureandcare.de/serum-10-argireline",
+       "website_name": "PUCA - PURE & CARE",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": null,
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+       "domain": "theordinary.com",
+       "title": "Clinical Formulations with Integrity",
+       "url": "https://theordinary.com/de-de/argireline-solution-10-serum-100403.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://theordinary.com/de-de/argireline-solution-10-serum-100403.html",
+       "website_name": "The Ordinary",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": null,
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Für was ist Argireline gut?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Welche Nachteile hat Argireline?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Ist Argireline ein Ersatz für Botox?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Was ist besser, Matrixyl oder Argireline?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+       "domain": "pureandcare.de",
+       "title": "10% Argireline®-Peptide-Serum - PUCA - PURE & CARE",
+       "url": "https://pureandcare.de/serum-10-argireline?srsltid=AU7gw4X4YEtwEUS_UtwcATP1D2zOehqx8T14H948aP6pzcsZ3p1f5s9r",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://pureandcare.de › serum-10-argireline",
+       "website_name": "pureandcare.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Serum mit botoxähnlicher Wirkung – Enthält das Peptid Argireline®, das Kollagen aufbaut und Mimikfalten sowie Linien sichtbar reduziert.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 5,
+        "votes_count": 9,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 9.32,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "9,32 €"
+       },
+       "highlighted": [
+        "Serum mit botoxähnlicher Wirkung"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+       "domain": "theordinary.com",
+       "title": "Argireline Solution 10%",
+       "url": "https://theordinary.com/de-de/argireline-solution-10-serum-100403.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://theordinary.com › de-de › argireline-solution-10...",
+       "website_name": "The Ordinary",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Argireline Solution 10% von The Ordinary hilft, das Erscheinungsbild von Falten wie Stirnfalten und Krähenfüßen zu reduzieren. Mit einer hohen Konzentration an ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.3,
+        "votes_count": 750,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 11.2,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "11,20 €"
+       },
+       "highlighted": [
+        "hilft, das Erscheinungsbild von Falten wie Stirnfalten und Krähenfüßen zu reduzieren"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+       "domain": "de.typology.com",
+       "title": "Argireline, ein Peptid, das für die Haut gefährlich ist?",
+       "url": "https://de.typology.com/magazin/gibt-es-risiken-bei-der-anwendung-von-argireline",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://de.typology.com › ... › Aminosäuren/Peptide",
+       "website_name": "Typology",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "25.11.2025 — Argireline ist ein Peptid, das in der Hautpflege gegen die ersten Falten unverzichtbar geworden ist. Sein Ruf beruht auf einem biomimetischen ...",
+       "pre_snippet": "11/25/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Argireline"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-11-25 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]",
+       "domain": "www.amazon.de",
+       "title": "Suchergebnis Auf Amazon.de Für: Argireline",
+       "url": "https://www.amazon.de/argireline/s?k=argireline",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.de › argireline › k=argireline",
+       "website_name": "Amazon.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Entdecken Sie Argireline-Seren und -Cremes von verschiedenen Marken in unterschiedlichen Konzentrationen und Texturoptionen für Ihre tägliche Hautpflege.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Argireline-Seren und -Cremes"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+       "domain": "www.dragonspice.de",
+       "title": "ARGIRELINE® peptide solution C | kaufen",
+       "url": "https://www.dragonspice.de/naturkosmetikRohstoffe/Alle-Rohstoffe-A-Z/ARGIRELINE-peptide-solution-C-von-Dragonspice-Naturwaren.html?srsltid=AU7gw4WhJ4Qb0qumGQZNwX7I--ToN3PDlrVD034yZBlnlUzrLcPPuARf",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.dragonspice.de › Alle-Rohstoffe-A-Z › AR...",
+       "website_name": "Dragonspice Naturwaren",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Argireline ist ein echtes Faltenwunder - Herstellung relativ unkompliziert - sehr variabel einsetzbar: sprühen - in Cremes zusetzen - als ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 4.9,
+        "regular": null,
+        "max_value": 34.7,
+        "currency": "EUR",
+        "is_price_range": true,
+        "displayed_price": "4,90 € bis 34,70 €"
+       },
+       "highlighted": [
+        "Argireline ist ein echtes Faltenwunder"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[16]/div[1]/div[1]",
+       "domain": "www.idealo.de",
+       "title": "The Ordinary Argireline Solution 10% (30ml)",
+       "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/6302086_-argireline-solution-10-30ml-the-ordinary.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.idealo.de › ... › Gesichtspflege",
+       "website_name": "Idealo",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Argireline entspannt die Muskelspannung ähnlich wie Botox und glättet dadurch Mimikfalten, insbesondere auf der Stirn und um die Augen. Welche Inhaltsstoffe ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 8.96,
+        "regular": null,
+        "max_value": 16.35,
+        "currency": "EUR",
+        "is_price_range": true,
+        "displayed_price": "8,96 € bis 16,35 €"
+       },
+       "highlighted": [
+        "Argireline entspannt die Muskelspannung ähnlich wie Botox"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]",
+       "domain": "rau-cosmetics.de",
+       "title": "Argireline® | Wirkstofflexikon",
+       "url": "https://rau-cosmetics.de/wirkstofflexikon/argireline?srsltid=AU7gw4VdhgBDcgIl3gTa2qBA44Lsn-l3BVG6aBN_0g-fgOffspHN_ohp",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://rau-cosmetics.de › wirkstofflexikon › argireline",
+       "website_name": "RAU Cosmetics",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Was ist Argireline? Das „sanfte\" Peptid für ein geglättetes Hautbild. Argireline® ist der Markenname für Acetyl Hexapeptide-8, eine Kette aus sechs ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Das „sanfte\" Peptid für ein geglättetes Hautbild"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[20]/div[1]",
+       "title": "Bilder",
+       "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnthDo9dpiRmFGVMNdoKGhuIerdxvw:1791376578569&q=argireline&udm=2&source=univ&fir=sUGVmbYU_8ZsCM%252CbRdFgkUU3NawVM%252C_%253BfexS3fazn1hH2M%252CU0hyhEr8apYApM%252C_%253BfzoYBVDSa_JdHM%252CNLYmnG7XHbVgSM%252C_%253BxkBmEbL5DwocoM%252C467GfVYPgprwRM%252C_%253BexKxI0JyofcotM%252Cyz1by5W9PSI5aM%252C_%253Bxa8T0gUs-AkqWM%252Cv2WD67SsUX_YXM%252C_%253B2EjX6wqHjb2JmM%252CxkEehl-VQy_FfM%252C_%253BSjWcrV1DTKHGeM%252CGB60-FOR-A0GeM%252C_%253B0VtMaaSLuViB4M%252C6Mc5996uPRozhM%252C_&usg=AI4_-kTCiM0AZYNdlbhC19h8xnRUmF2SjA&sa=X&ved=2ahUKEwi6jv_k9aeXAxXYKvsDHUbwB6QQ7Al6BAhiEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "The Ordinary Argireline Solution 10%, Serum Good for Reducing the  Appearance of Fine Lines, 30ml : Amazon.co.uk: Beauty",
+         "url": "https://www.amazon.co.uk/The-Ordinary-Argireline-Solution-10/dp/B072JH13CD",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Jqw-uagJqOkvrEUohV2H_xRYXn8HkerdcB_T8LauFotO_vkO8bvRKBg&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Buy Amplified Anti-Aging Peptide Active Serum with Argireline® 25ml by  MooGoo USA online - MooGoo USA",
+         "url": "https://moogoousa.com/products/amplified-anti-ageing-argireline-peptide-active-serum-25ml?srsltid=AU7gw4VkMEosncWkPBsUKB98QONo0HlfbZM7YQ_1F4oZLrk9frtzhYZ4",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXLvGKDpxI1QZ82PvYndhhnv9eMgkmSsT_Hef3epLNUqrKqI3wH6713ms&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "The 10 Best Argireline Serums, According to Dermatologists",
+         "url": "https://people.com/best-argireline-serums-7570588",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS2-03ZSTEcaVg9TIdv3X-02C92SmoBKiLvuyz7lWCfN65mD5mIiHCQ7w&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "The Ordinary Argireline 10% | Anti-Wrinkle & Fine Line Serum — Lancaster’s  Luxe Lashes & Spa LLC",
+         "url": "https://www.lancastersluxelashes.com/the-ordinary-skin-care/the-ordinary-argireline-solution-10?srsltid=AU7gw4XSx-4tyW1CzQTQLoeuvaS0KmNvHoTftclFpg5hu3T9kzcZU4Tv",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTCit0Ye1AcY8SQ6zlMgtZv73o-5qVPO52zrj_2JN5GsVIQlYJK5GmnEo&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "When To Use Argireline Serum In Your Routine?",
+         "url": "https://depology.com/blogs/news/when-to-use-argireline-serum-in-your-routine",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd4J6HDBDKFjyt-NNRKH1pG0y_spr5M8jCHLGuFWaGaqtf1uJzR7f1GDc&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Argireline Peptide – The classic anti-aging active ...",
+         "url": "https://www.cosmacon.de/en/glossary/argireline-peptide-the-classic-anti-aging-active-ingredient/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEC49YRmAOnYO2pUpVg217ZyMFjUgeCSGn1ImCS-9Fr1-g8_Bg2WozH5c&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "The Ordinary Argireline Solution 10% - 10% Peptide Complex ...",
+         "url": "https://makeup.ie/product/523907/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxwabowMTeWMIGmtHvo10d_9d_CpaR7k83u9Ww5dkYBkmCy4rBDsWJAo&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "ARGIRELINE - Institute BCN",
+         "url": "https://institutebcn.com/producto/argireline-in/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX2vOyEsIQTxlcTdOSeLvuW_M6UAlOTFcPkW3H4A9qFlHY2t5WjPngbw0&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Fórmula Argireline Amplified® - Lidherma",
+         "url": "https://www.lidherma.com/productos/detalle/formula-argireline-amplified.html",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhHf_iJaq79RWF7_Yh3Fre2amS_GrdtB0XXVz-d3K0bSdgmLLPTE24J4M&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[22]/div[1]/div[1]",
+       "domain": "www.freundin.de",
+       "title": "Argireline: Top-Produkte mit der Botox-Alternative",
+       "url": "https://www.freundin.de/beauty-argireline-botox-alternative",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.freundin.de › Beauty › Pflege",
+       "website_name": "Freundin",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "22.08.2022 — Argireline kann Falten reduzieren, ohne dass es dazu einer Spritze bedarf. Wir erklären, was den Botox-ähnlichen Inhaltsstoff so wirksam ...",
+       "pre_snippet": "08/22/2022 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Argireline kann Falten reduzieren"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2022-08-22 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Argireline Erfahrungen",
+        "Argireline schädlich",
+        "Argireline Serum hochdosiert",
+        "Argireline dm",
+        "Argireline The Ordinary",
+        "Argireline Wirkung",
+        "Argireline kaufen",
+        "Argireline Rossmann"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

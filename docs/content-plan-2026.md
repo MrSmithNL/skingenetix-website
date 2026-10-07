@@ -1,5 +1,13 @@
 # Content Structure & Build Plan — Skingenetix, 2026
 
+> **2026-10-07 update.** The performance review and competitor analysis in `docs/seo-performance-and-ranking-plan-2026-10-07.md`
+> re-orders this plan: Layer 1 is indexing and the hub template fixes (the English PDRN hub was never crawled; every hub
+> fails the same four template criteria), Layer 2 is the off-site track (reviews in markup, Merchant Center attributes,
+> listicle inclusion, mentions), Layer 3 is the spokes below, led by "Argireline and Matrixyl 3000 together", the "Does
+> Argireline work?" hub section, the PDRN-vs-retinol comparison and "Best PDRN serums". The hero map and the rules in
+> this file stand; the keyword-by-keyword targets are in Part C of that report. Hub scores quoted here from the retired
+> two-model script (9.6–9.8) are withdrawn; the central v2 baseline of 2026-10-07 is in `docs/audits/tracker-skingenetix.com.md`.
+
 **Date:** 2026-09-22 · **Status:** Ready to build — one decision left in §8 (concern collections)
 **Built on:** `keyword-strategy-2026.md` (the hero map and scoring — authoritative on demand) ·
 `keyword-research-2026-09-22.md` (first-pass demand) ·
@@ -164,19 +172,26 @@ They already exist, already carry PubMed citations, and already rank. They need 
 
 **Order: PDRN first, then copper peptide, then argireline, then matrixyl, then glutathione.**
 
-> **▶ Status 2026-09-23: 5 of 5 hubs done** (PDRN, Argireline®, copper, Matrixyl 3000, glutathione). Phase 2 is complete. Every hub meets the research-page standard below; the glutathione hub (`configs/hub-upgrades/glutathione-research.json`) is the second full build on the Matrixyl pattern and audits 100/100/100/100 with an external score of 9.65. Later that day the PDRN and copper hubs were brought level with those two builds (at-a-glance, key figures, evidence table, image rows, FAQs) and, on Malcolm's instruction, the three key figures moved to the top of all five pages (ADR-2026-09-23-T). The Argireline loose end was closed the same afternoon, and went further: on Malcolm's direction the page was rebuilt into what is now **the science-page template** (`docs/science-page-template.md`, ADR-2026-09-24-S). It has a merged Evidence & Sources table, a numbered evidence index linking to each finding, a 3-step how-to, Malcolm named as author, all six languages, external audit 9.68. The other four pages move to it one at a time, on Malcolm's go-ahead. **PDRN moved 2026-09-24** (external 9.82).
+> **▶ Status 2026-09-23: 5 of 5 hubs done** (PDRN, Argireline®, copper, Matrixyl 3000, glutathione). Phase 2 is complete. Every hub meets the research-page standard below; the glutathione hub (`configs/hub-upgrades/glutathione-research.json`) is the second full build on the
+> Matrixyl pattern and audits 100/100/100/100 with an external score of 9.65. Later that day the PDRN and copper hubs were brought level with those two builds (at-a-glance, key figures, evidence table, image rows, FAQs) and, on Malcolm's instruction, the three key figures moved
+> to the top of all five pages (ADR-2026-09-23-T). The Argireline loose end was closed the same afternoon, and went further: on Malcolm's direction the page was rebuilt into what is now **the science-page template** (`docs/science-page-template.md`, ADR-2026-09-24-S). It has a
+> merged Evidence & Sources table, a numbered evidence index linking to each finding, a 3-step how-to, Malcolm named as author, all six languages, external audit 9.68. The other four pages move to it one at a time, on Malcolm's go-ahead. **PDRN moved 2026-09-24** (external 9.82).
 
 **Research-page standard (Malcolm, 2026-09-22). Every scientific research page we make must:**
 
 1. **Pass the external SEO/GEO/AISO audit.** Use `scripts/aiso-audit-page.py` (ChatGPT + Gemini, 20 criteria, pass mark 9.0) alongside `scripts/page-audit.py`. Triage every finding before fixing.
-2. **Use stock Impact sections first.** Examples: `impact-text` for headline figures, `rich-text` for prose with real `<h2>`s, `faq`, `featured-collection`, `multi-column`. Custom code only where no stock section can do the job. **Amended 2026-09-24 (ADR-2026-09-24-S):** the template adds four custom-html sections to the charts. They are the overview, the evidence index, the how-to and the merged Evidence & Sources table. Each was forced: Shopify richtext strips classes, and `specification-table` renders `<div>` rows, not a `<table>`. The reasons are in `docs/science-page-template.md` §5, with the translation cost and the tool that carries it (`scripts/hub-i18n.py`).
+2. **Use stock Impact sections first.** Examples: `impact-text` for headline figures, `rich-text` for prose with real `<h2>`s, `faq`, `featured-collection`, `multi-column`. Custom code only where no stock section can do the job. **Amended 2026-09-24 (ADR-2026-09-24-S):** the
+   template adds four custom-html sections to the charts. They are the overview, the evidence index, the how-to and the merged Evidence & Sources table. Each was forced: Shopify richtext strips classes, and `specification-table` renders `<div>` rows, not a `<table>`. The reasons
+   are in `docs/science-page-template.md` §5, with the translation cost and the tool that carries it (`scripts/hub-i18n.py`).
 3. **Carry multiple images, taken from existing files first.**
 4. **Show the key data as charts.** Use `scripts/hub_charts.py`, with a real `<table>` of the same numbers beneath each chart, because AI extraction keeps tables and drops div rows.
 5. **Check every internal and external link.** Internal: `--verify-live` in six languages plus `scripts/link-audit.py`. External: each URL fetched, bot-blocked publishers opened in a real browser, and each DOI's title confirmed at Crossref.
 
-6. **Lead with the key figures.** The three-figure `impact-text` band sits directly under the hero on every science page, before the definition (Malcolm, 2026-09-23: the main claims bar belongs at the top; ADR-2026-09-23-T). Then, in the template: definition, byline and at-a-glance → evidence index → findings cards → charts → usage rows → **Evidence & Sources** (replaces the separate evidence table and references) → FAQ → shop → related → CTA.
+6. **Lead with the key figures.** The three-figure `impact-text` band sits directly under the hero on every science page, before the definition (Malcolm, 2026-09-23: the main claims bar belongs at the top; ADR-2026-09-23-T). Then, in the template: definition, byline and
+   at-a-glance → evidence index → findings cards → charts → usage rows → **Evidence & Sources** (replaces the separate evidence table and references) → FAQ → shop → related → CTA.
 
-**The Argireline page is the reference build** (`docs/science-page-template.md`), replacing Matrixyl 3000 (2026-09-24). The 2026-09-22 retrofit of PDRN, Argireline® and copper (charts, external audit, localised references) is done. What remains is moving PDRN, copper, Matrixyl and glutathione onto the template, one at a time.
+**The Argireline page is the reference build** (`docs/science-page-template.md`), replacing Matrixyl 3000 (2026-09-24). The 2026-09-22 retrofit of PDRN, Argireline® and copper (charts, external audit, localised references) is done. What remains is moving PDRN, copper, Matrixyl
+and glutathione onto the template, one at a time.
 
 ---
 

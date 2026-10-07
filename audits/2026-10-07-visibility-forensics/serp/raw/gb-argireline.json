@@ -1,0 +1,971 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "41.2961 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10071232-1509-0139-0000-a13105348ef9",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "41.1314 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "argireline",
+    "location_code": 2826,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "argireline",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2826,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=argireline&hl=en&gl=GB&ie=UTF-8&uule=w+CAIQIFISCamRx0IRO1oCEXoliDJDoPjE",
+     "datetime": "2026-10-07 12:32:55 +00:00",
+     "spell": null,
+     "refinement_chips": null,
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "popular_products",
+      "video",
+      "related_searches",
+      "knowledge_graph"
+     ],
+     "se_results_count": 177,
+     "pages_count": 1,
+     "items_count": 13,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "pmc.ncbi.nlm.nih.gov",
+       "title": "Investigating the effects of Argireline in a skin serum ... - PMC",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10665711/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://pmc.ncbi.nlm.nih.gov › articles › PMC10665711",
+       "website_name": "National Institutes of Health (NIH) | (.gov)",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "by H Henseler · 2023 · Cited by 17 — Argireline reduced wrinkle depth by up to 30% after four weeks of treatment without exhibiting toxicity, while the oil/water emulsion on its own reduced ...",
+       "pre_snippet": "by H Henseler · 2023 · Cited by 17",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Argireline reduced wrinkle depth by up to 30"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What does Argireline do for your skin?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_expanded_element",
+           "featured_title": null,
+           "url": "https://www.joinmidi.com/post/argireline#:~:text=What%20does%20Argireline%20do%20for,crow's%20feet%20and%20forehead%20wrinkles.",
+           "domain": "www.joinmidi.com",
+           "title": "Argireline: What to Know Before You Buy - Midi Health",
+           "description": "What does Argireline do for the skin? Argireline (acetyl hexapeptide-8) is a synthetic peptide that works by inhibiting the neurotransmitter signals that cause facial muscles to contract, which over time can soften the appearance of expression lines like crow's feet and forehead wrinkles.",
+           "images": null,
+           "timestamp": null,
+           "table": null
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What to avoid with Argireline?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_expanded_element",
+           "featured_title": null,
+           "url": "https://argentum.com/blogs/the-journal/a-guide-to-argireline#:~:text=Strong%20acids%3A,as%20this%20can%20cause%20irritation.",
+           "domain": "argentum.com",
+           "title": "What is Argireline and what can it do for your skin?",
+           "description": "Strong acids :\n You may want to avoid using Argireline with strong exfoliating acids like AHAs (alpha hydroxy acids) and BHAs (beta hydroxy acids) simultaneously, as this can cause irritation.",
+           "images": null,
+           "timestamp": null,
+           "table": null
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Which is better, hyaluronic acid or Argireline?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_expanded_element",
+           "featured_title": null,
+           "url": "https://www.buzzrx.com/blog/what-does-argireline-do-for-your-skin-buzzrx#:~:text=People%20who%20have%20used%20Argireline,elastin%20production%20in%20the%20skin.",
+           "domain": "www.buzzrx.com",
+           "title": "What Does Argireline Do For Your Skin? - BuzzRx",
+           "description": "People who have used Argireline report they have fewer wrinkles and increased moisture levels with overall youthful-looking, healthy skin. However, unlike hyaluronic acid, which stimulates collagen production, Argireline does not lead to significantly more collagen and elastin production in the skin.",
+           "images": null,
+           "timestamp": null,
+           "table": null
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+       "domain": "theordinary.com",
+       "title": "Fight Deep-Set Lines with Argireline Solution 10% Serum",
+       "url": "https://theordinary.com/en-gb/argireline-solution-10-serum-100403.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://theordinary.com › en-gb › argireline-solution-10...",
+       "website_name": "The Ordinary",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "The Ordinary Argireline Solution 10% helps to reduce the appearance of wrinkles, such as forehead lines and crow's feet. Featuring a high concentration of ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.3,
+        "votes_count": 750,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 9.2,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£9.20"
+       },
+       "highlighted": [
+        "helps to reduce the appearance of wrinkles"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://theordinary.com/en-gb/argireline-solution-10-serum-100403.html#:~:text=When%20should%20I%20use%20Argireline",
+         "domain": "theordinary.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[3]/div[1]",
+       "domain": "www.amazon.co.uk",
+       "title": "Amazon.co.uk: Argireline",
+       "url": "https://www.amazon.co.uk/argireline/s?k=argireline",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.co.uk › argireline › k=argireline",
+       "website_name": "Amazon UK",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Browse argireline-based skincare products that help minimise wrinkles and support skin elasticity. Good for Reducing the Appearance of Fine Lines,",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 9,
+        "regular": null,
+        "max_value": 79,
+        "currency": "GBP",
+        "is_price_range": true,
+        "displayed_price": "£9 to £79"
+       },
+       "highlighted": [
+        "argireline-based skincare products"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]",
+       "title": null,
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Argireline Solution 10% 30ml",
+         "url": null,
+         "domain": null,
+         "description": "Notino.co.uk & more",
+         "more_sellers": true,
+         "seller": "Notino.co.uk",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:0",
+         "price": {
+          "current": 9.6,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£9.60"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 8200,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "540920059023938909",
+          "data_docid": "10542029218380412838",
+          "gid": "10969510345251461226"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "SKIN DEVA Argireline Serum 20% with Matrixyl 3000 and HA",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:1",
+         "price": {
+          "current": 24.83,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£24.83"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 890,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9742037520581164335",
+          "data_docid": "9265465095215757409",
+          "gid": "18251047335005030944"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "ANAIRUI Matrixyl 3000 & Argireline Anti-Aging Face Serum",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:2",
+         "price": {
+          "current": 19.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£19.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 334,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "17146932603783567274",
+          "data_docid": "13564059163124842903",
+          "gid": "12356088918840685593"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Horace Bio-Retinol + Argireline Peptide Serum",
+         "url": null,
+         "domain": null,
+         "description": "Horace & more\nFree delivery on £25+",
+         "more_sellers": true,
+         "seller": "Horace",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:3",
+         "price": {
+          "current": 24,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£24.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 506,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "13700961694521182612",
+          "data_docid": "5180432422748329396",
+          "gid": "7501665063113865663"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary The Ordinary Fine Lines Duo Bundle With Argireline And Matrixyl",
+         "url": null,
+         "domain": null,
+         "description": "Next & more",
+         "more_sellers": true,
+         "seller": "Next",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:4",
+         "price": {
+          "current": 20.5,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£20.50"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.1,
+          "votes_count": 964,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "104007080952108527",
+          "data_docid": "7844156771547208262",
+          "gid": "12590183146707755336"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Sapónne 15% Argireline + Matrixyl 3000 Multi-Peptide Anti-Ageing Serum",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:5",
+         "price": {
+          "current": 24.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£24.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 10,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "17791405233037064260",
+          "data_docid": "17342086720315283506",
+          "gid": "14874337704366397206"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Argireline Solution 10% Liquid",
+         "url": null,
+         "domain": null,
+         "description": "eBay.co.uk & more",
+         "more_sellers": true,
+         "seller": "eBay.co.uk",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:6",
+         "price": {
+          "current": 16.14,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£16.14"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 84,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11880145302781644454",
+          "data_docid": "6970032790905611480",
+          "gid": "14871994146099703477"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Asterwood Matrixyl 3000 + Argireline Serum With Hyaluronic Acid Anti-Aging And Anti-Wrinkle",
+         "url": null,
+         "domain": null,
+         "description": "Shoparize & more",
+         "more_sellers": true,
+         "seller": "Shoparize",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:7",
+         "price": {
+          "current": 25.46,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£25.46"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "7139022995405276016",
+          "data_docid": "12611396140913783222",
+          "gid": "1573947503842610548"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "video",
+       "rank_group": 1,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]",
+       "items": [
+        {
+         "type": "video_element",
+         "source": "YouTube · UnBlah Yourself",
+         "title": "Does Argireline work like botox in a bottle? 6 month results ...",
+         "timestamp": "2023-09-01 00:00:00 +00:00",
+         "url": "https://www.youtube.com/watch?v=lC3gyG6y55g"
+        },
+        {
+         "type": "video_element",
+         "source": "YouTube · Mad About Skin",
+         "title": "Official - WORLDS BEST ANTI AGING SERUM (5 Year Update",
+         "timestamp": "2025-08-01 00:00:00 +00:00",
+         "url": "https://www.youtube.com/watch?v=-n31tCoEO9c"
+        },
+        {
+         "type": "video_element",
+         "source": "YouTube · Melissa Van Dijk",
+         "title": "How to use The Ordinary Argireline Solution 10%",
+         "timestamp": "2024-01-29 00:00:00 +00:00",
+         "url": "https://www.youtube.com/watch?v=GGhv9YrukHU"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]/div[1]",
+       "domain": "www.vogue.com",
+       "title": "All About Argireline, a Peptide Called Botox in a Bottle",
+       "url": "https://www.vogue.com/article/argireline-peptide",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.vogue.com › article › argireline-peptide",
+       "website_name": "Vogue",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "8 Apr 2026 — “Argireline is a synthetic peptide that works by inhibiting the neurotransmitter signals that cause facial muscles to contract,” adds Antony ... Read more",
+       "pre_snippet": "04/08/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "works by inhibiting the neurotransmitter signals that cause facial muscles to contract"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.vogue.com/article/argireline-peptide#:~:text=%E2%80%9CArgireline%20is%20a%20synthetic%20peptide,and%20founder%20of%20Eighth%20Day.",
+         "domain": "www.vogue.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-04-08 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]/div[1]",
+       "domain": "www.boots.com",
+       "title": "The Ordinary Argireline Solution 10% 30ml",
+       "url": "https://www.boots.com/the-ordinary-argireline-solution-30ml-10286199?srsltid=AU7gw4XsOeCsaqZUgHiZBxpKNdZEowmWMyQ1is66_e4M2W_Nh6vgOdGA",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.boots.com › the-ordinary-argireline-solutio...",
+       "website_name": "Boots",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "This serum helps smooth the appearance of fine lines and wrinkles, especially on the forehead and around the eyes. Many users report noticeable improvements in ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.4,
+        "votes_count": 747,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 9.2,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£9.20"
+       },
+       "highlighted": [
+        "smooth the appearance of fine lines and wrinkles"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.boots.com/the-ordinary-argireline-solution-30ml-10286199?srsltid=AU7gw4XsOeCsaqZUgHiZBxpKNdZEowmWMyQ1is66_e4M2W_Nh6vgOdGA#:~:text=This%20serum%20helps%20smooth%20the,little%20as%20a%20few%20weeks.",
+         "domain": "www.boots.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]",
+       "domain": "www.byrdie.com",
+       "title": "Argireline for Skin: Benefits and How to Use",
+       "url": "https://www.byrdie.com/argireline-for-skin-4771349",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.byrdie.com › ... › Skincare Ingredients A–Z",
+       "website_name": "Byrdie",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "30 Mar 2024 — Argireline is a potent anti-aging skincare ingredient. relaxes your muscles and prevents wrinkles",
+       "pre_snippet": "03/30/2024 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Argireline is a potent anti-aging skincare ingredient"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2024-03-30 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]",
+       "domain": "www.lubrizol.com",
+       "title": "Argireline® Peptides",
+       "url": "https://www.lubrizol.com/solutions/products/argireline",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.lubrizol.com › solutions › products › argir...",
+       "website_name": "Lubrizol",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Argireline ® peptide reduces the appearance of wrinkles and fine lines, providing anti-aging benefits for smoother, younger-looking skin in personal care ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "reduces the appearance of wrinkles and fine lines"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.lubrizol.com/solutions/products/argireline#:~:text=Argireline%C2%AE%20peptide%20reduces%20the%20appearance,skin%20in%20personal%20care%20products.",
+         "domain": "www.lubrizol.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[21]/div[1]/div[1]",
+       "domain": "argentum.com",
+       "title": "What is Argireline and what can it do for your skin?",
+       "url": "https://argentum.com/blogs/the-journal/a-guide-to-argireline?srsltid=AU7gw4VEIR55BHTE4aOIZzdrvK11hGCWcjQvjp2ocF4j44UfY41AGqeN",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://argentum.com › the-journal › a-guide-to-argireline",
+       "website_name": "argentum.com",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Argireline helps to relax facial muscles, thereby reducing the formation and appearance of wrinkles and fine lines.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Argireline helps to relax facial muscles"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Argireline before and after",
+        "Argireline serum",
+        "Argireline side effects",
+        "Argireline where to buy",
+        "Argireline The Ordinary",
+        "Argireline and Matrixyl",
+        "Argireline products",
+        "Argireline Reddit"
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "knowledge_graph",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "right",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]",
+       "title": "Acetyl hexapeptide-8",
+       "subtitle": "Chemical compound",
+       "description": "Acetyl hexapeptide-8, also known as acetyl hexapeptide-8 amide and Argireline, is a synthetic hexapeptide used as a topical cosmetic ingredient that may improve the appearance of wrinkles. Source: More Less Description",
+       "card_id": null,
+       "url": null,
+       "image_url": null,
+       "logo_url": null,
+       "cid": null,
+       "items": [
+        {
+         "type": "knowledge_graph_images_item",
+         "rank_group": 0,
+         "rank_absolute": 0,
+         "page": 1,
+         "position": "left",
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+         "link": null,
+         "items": [
+          {
+           "type": "knowledge_graph_images_element",
+           "url": null,
+           "domain": null,
+           "alt": "Image of The 10 Best Argireline Serums, According to Dermatologists",
+           "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:8",
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+          },
+          {
+           "type": "knowledge_graph_images_element",
+           "url": null,
+           "domain": null,
+           "alt": "Image of When To Use Argireline Serum In Your Routine?",
+           "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:9",
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+          },
+          {
+           "type": "knowledge_graph_images_element",
+           "url": null,
+           "domain": null,
+           "alt": "Image of The Ordinary Argireline 10% | Anti-Wrinkle & Fine Line Serum ...",
+           "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:10",
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]"
+          },
+          {
+           "type": "knowledge_graph_images_element",
+           "url": null,
+           "domain": null,
+           "alt": "Image of ARGIRELINE - Institute BCN",
+           "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:11",
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]"
+          }
+         ],
+         "rectangle": null
+        },
+        {
+         "type": "knowledge_graph_description_item",
+         "rank_group": 0,
+         "rank_absolute": 0,
+         "page": 1,
+         "position": "left",
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]",
+         "text": "Acetyl hexapeptide-8, also known as acetyl hexapeptide-8 amide and Argireline, is a synthetic hexapeptide used as a topical cosmetic ingredient that may improve the appearance of wrinkles. Source: Wikipedia Wikipedia More Less Description",
+         "links": [
+          {
+           "type": "link_element",
+           "title": "Wikipedia",
+           "url": "https://en.wikipedia.org/wiki/Acetyl_hexapeptide-3",
+           "domain": "en.wikipedia.org",
+           "description": null,
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/visd-inline-description[1]/div[1]/div[1]/a[1]"
+          },
+          {
+           "type": "link_element",
+           "title": "Wikipedia",
+           "url": "https://en.wikipedia.org/wiki/Acetyl_hexapeptide-3",
+           "domain": "en.wikipedia.org",
+           "description": null,
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/visd-inline-description[1]/div[1]/span[2]/span[1]/span[1]/a[1]"
+          }
+         ],
+         "rectangle": null
+        },
+        {
+         "type": "knowledge_graph_row_item",
+         "rank_group": 0,
+         "rank_absolute": 0,
+         "page": 1,
+         "position": "left",
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+         "title": "IUPAC ID",
+         "data_attrid": "kc:/chemistry/chemical_compound:iupac id",
+         "text": "IUPAC ID : (6S,9S,12S,15S,18S,21S)-21-acetamido-1-amino-12-(3-amino-3-oxopropyl)-6-carbamoyl-18-(2-carboxyethyl)-9-(3-guanidinopropyl)-1-imino-15-(2-(methylthio)ethyl)-8,11,14,17,20-pentaoxo-2,7,10,13,16,19-hexaazatetracosan-24-oic acid",
+         "links": null,
+         "rectangle": null
+        },
+        {
+         "type": "knowledge_graph_row_item",
+         "rank_group": 0,
+         "rank_absolute": 0,
+         "page": 1,
+         "position": "left",
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "title": "Molar mass",
+         "data_attrid": "kc:/chemistry/chemical_compound:molar mass",
+         "text": "Molar mass : 888.99 g/mol",
+         "links": null,
+         "rectangle": null
+        },
+        {
+         "type": "knowledge_graph_row_item",
+         "rank_group": 0,
+         "rank_absolute": 0,
+         "page": 1,
+         "position": "left",
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]",
+         "title": "Formula",
+         "data_attrid": "kc:/chemistry/chemical_compound:formula",
+         "text": "Formula : C34H60N14O12S",
+         "links": null,
+         "rectangle": null
+        },
+        {
+         "type": "knowledge_graph_carousel_item",
+         "rank_group": 0,
+         "rank_absolute": 0,
+         "page": 1,
+         "position": "left",
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[4]/div[1]/div[1]",
+         "title": "People also search for",
+         "data_attrid": null,
+         "link": null,
+         "items": [
+          {
+           "type": "knowledge_graph_carousel_element",
+           "title": "Palmitoyl pentapeptide-4",
+           "subtitle": null,
+           "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=en&gl=GB&sxsrf=APpeQnt2QySxdIhv_bmpMVo4PhvXblzOuw:1791376374074&si=APenkKllX05q7xl66dAosm6nb1iufu-bJlxCkZH1IWMVBt1d4LBH4fTcCCdh1edYG24OZQfndklry4sR2px4K939VtkM9BsJ9qtagnOcAz5s37Kow1GpobwshCrH7XzB68VNVpGfSLaynjY06_PE3lDWbBP4qYVEjH3rQlzRvyyRkYd5_t1_uEoUOszSDTLUaUfFRJAD5KXCJMiFjI0mU9CbNS5T5CDjfQ%3D%3D&q=Palmitoyl+pentapeptide-4&sa=X&ved=2ahUKEwji272D9aeXAxUsVqQEHf0hLo8Qs9oBKAB6BAgJEAY",
+           "domain": "www.google.com",
+           "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:12",
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+          },
+          {
+           "type": "knowledge_graph_carousel_element",
+           "title": "Copper peptide GHK-Cu",
+           "subtitle": null,
+           "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=en&gl=GB&sxsrf=APpeQnt2QySxdIhv_bmpMVo4PhvXblzOuw:1791376374074&si=APenkKkicnuBo3HChbgOSg9PTrSKjmOZoDYMZFfiLeKjxtW67yqnzsU_VFofqy83pfHuKbUMLlCJcAID5l3If1mL_S1NYl0pQC0Dcj2sgSDtlj2u2Aw9rxYIpV4K14fJqfARDM5CvCwjJ2opc-RgL8PMtTh0itGleR2vPiFP-VIVxxmFeFmlSjTlGgZXbUxy6kATEXCYE_cS&q=GHK-Cu&sa=X&ved=2ahUKEwji272D9aeXAxUsVqQEHf0hLo8Qs9oBKAB6BAgJEAo",
+           "domain": "www.google.com",
+           "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:13",
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]"
+          },
+          {
+           "type": "knowledge_graph_carousel_element",
+           "title": "Epitalon",
+           "subtitle": null,
+           "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=en&gl=GB&sxsrf=APpeQnt2QySxdIhv_bmpMVo4PhvXblzOuw:1791376374074&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0Q-Wp80qwZX9nu4IK4bMvwcK_p9Vy5Y0nAGlxfr9ueiyFtJou1iMoMTi6KdrGLMfkOUcpL348nbziKExDjg-PFejMZ75zTn9JzZ8CXnqvoJyUfyLrV5WAoD_k6amlQa0QZtjSilIV11e5g48UAlm2lD3TgXDwvbDgXIulJ6LOcq51XsKfA%3D%3D&q=Epitalon&sa=X&ved=2ahUKEwji272D9aeXAxUsVqQEHf0hLo8Qs9oBKAB6BAgJEA4",
+           "domain": "www.google.com",
+           "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:14",
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]"
+          },
+          {
+           "type": "knowledge_graph_carousel_element",
+           "title": "AOD9604",
+           "subtitle": null,
+           "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=en&gl=GB&sxsrf=APpeQnt2QySxdIhv_bmpMVo4PhvXblzOuw:1791376374074&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0WzqD0j3RtWKkD-HoPRLc-zXqgF-4sbFdBRPrl9KqNvXummFYbIHvunlu_DHLApJRFmn_gQmcEXbo7BHPriO27K_hLZUTK60Ca7ZJyiTsN6LlNLgqNq3B8K8V3q28FCp66x4POqvkBRt0EQYLwV2Ly33Kuv9eh2QCyD48BBG9E6omPEB-w%3D%3D&q=AOD9604&sa=X&ved=2ahUKEwji272D9aeXAxUsVqQEHf0hLo8Qs9oBKAB6BAgJEBI",
+           "domain": "www.google.com",
+           "image_url": "https://api.dataforseo.com/cdn/i/10071232-1509-0139-0000-a13105348ef9:15",
+           "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]"
+          }
+         ],
+         "rectangle": null
+        }
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

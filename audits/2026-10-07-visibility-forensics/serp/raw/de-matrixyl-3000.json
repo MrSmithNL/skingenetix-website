@@ -1,0 +1,856 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "30.1428 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10071236-1509-0139-0000-5fe750c893ac",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "30.0027 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "matrixyl 3000",
+    "location_code": 2276,
+    "language_code": "de",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "matrixyl 3000",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2276,
+     "language_code": "de",
+     "check_url": "https://www.google.com/search?q=matrixyl%203000&hl=de&gl=DE&ie=UTF-8&uule=w+CAIQIFISCWu-scIecppHEVvlkY5rXeh1",
+     "datetime": "2026-10-07 12:36:50 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Kollagenproduktion",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnvKH6Aige2AGNGaQFETdM8R-ZqaaA:1791376608572&q=kollagenproduktion+matrixyl+3000&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rLiLRLr-gfc3Ye1m5cZRmteSn04Ozf5NDRegnyV6GTWZgVH7ucupvRJM0ezaI8f9h6EA7KLAbMi7bWYlovuVq8Pz3uy7BGk3mS52aoHB-E_25MXj3sYdi9t56huF7bjr4AdoNoDXRyc35XczGYywOfUEQupy87ml6U7v6mpcSMfx-tCZ8ph0YY65HdHDS1G4d0OwHOMVjZOAVZVn_wdVsFtCRJCo&sa=X&ved=2ahUKEwinjqXz9aeXAxUGV6QEHeJJChgQxKsJKAB6BAgzEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Anti-Aging",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnvKH6Aige2AGNGaQFETdM8R-ZqaaA:1791376608572&q=anti-aging+matrixyl+3000&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r_qrbTxIuRPMiRG81FwjWW9EizA4eo0kGFJtvonDr5IzR9EorwV994nOeVpRAXVY7rUoTJKSL_fSC9LEwjwsS3k-mdT7plorPlPK5O1RDtbqqBDwzDxQqZct7HuS6hdMcnnD51Cdap8Y1Gj9xUcpYnujdEOD8i-SkRt6tARFE3Fh40fU0GfLhcwgSQBk7D2Aq3OuXSw&sa=X&ved=2ahUKEwinjqXz9aeXAxUGV6QEHeJJChgQxKsJKAF6BAg4EAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Peptid",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnvKH6Aige2AGNGaQFETdM8R-ZqaaA:1791376608572&q=peptid+matrixyl+3000&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rDl2wzj05RRnvsrTws3MXcId2togbjTI7KExczQZAg6yv5qhOZ20VOwHXMUMcEJjiijH-RYf81nbIH-H-iMEK_FrRG3uPVJxiy6PGqB_kyB9bWHdYTkROphq3FfgiIGznmUOJ2Qk5dIlBxDrXaBF0lWcKyrInEWJHmISn5BsXwkpchPezpDPK1s2gFnjPF2o_Z35B9A&sa=X&ved=2ahUKEwinjqXz9aeXAxUGV6QEHeJJChgQxKsJKAJ6BAg3EAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Gesichtsseren",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnvKH6Aige2AGNGaQFETdM8R-ZqaaA:1791376608572&q=gesichtsseren+matrixyl+3000&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rhfEV-4K40i-ZaIQJgdggp1LOcdGZuj8e998h5iy6e47wYP0bMYOg_fYZtsheWMovs93os72g1aq6FQpUJoPcFv583qzhIlPGP2OW6IRCCPETQveq-OVxCudxbzPux-U7IRcCAAqcJc9afXtHmTkHI1P7SdRX-PHp-KvD5e-a3MgAH82C&sa=X&ved=2ahUKEwinjqXz9aeXAxUGV6QEHeJJChgQxKsJKAN6BAg2EAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Feuchtigkeitscremes",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnvKH6Aige2AGNGaQFETdM8R-ZqaaA:1791376608572&q=feuchtigkeitscremes+matrixyl+3000&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r_qrbTxIuRPMiRG81FwjWW3LXOj3MYjsuyOeThHdYyoqY3SFsBwcvNbWBdNwqJ4OKNnUFulE95LUW7TVCF9aa5jG5IdCCJp3Na2mqL_QFHlldWbwf-iHarSuqS0A2chru8fFQoe3yxoLT9-T-bD3OdOkWQfZQShx-rCXu-FBS2d2weXX1&sa=X&ved=2ahUKEwinjqXz9aeXAxUGV6QEHeJJChgQxKsJKAR6BAg1EAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Körperlotionen",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnvKH6Aige2AGNGaQFETdM8R-ZqaaA:1791376608572&q=k%C3%B6rperlotionen+matrixyl+3000&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rTalc9ibXQalw1qPNRsa2kSk1Mfdld4zjQlPqZfo0-yZoQl99afOvLvltRjWzjMFrTuvwo1pPdQWm5aML3WENrH8EG-ciRzhIxLTRYlFYmC2kPN2Fxa1vE9NgnVQC0eIKALfELPQca5Cqt3cjCxPLdDFU1uS4IYrb7pihf3Brs0xkP7DI&sa=X&ved=2ahUKEwinjqXz9aeXAxUGV6QEHeJJChgQxKsJKAV6BAhiEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Reviews",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnvKH6Aige2AGNGaQFETdM8R-ZqaaA:1791376608572&q=reviews+matrixyl+3000&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rM4C1ogCMDpmOJgEzBCm9ozGk-FpW8DRB4G2vcASpaTZ7mRM6jtgDiUYNWWYyjeQMr2V0aql4zyMUC9guKj1fbV0uljB0ayH81Y5eiQXv8TjdUAFajqpu0xhiFAS5HIlBt5ZtqykwodsPw0-mOqgwpfbub0JwBB6o4Sp76ao1WIAaraf_&sa=X&ved=2ahUKEwinjqXz9aeXAxUGV6QEHeJJChgQxKsJKAZ6BAhjEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Buy",
+        "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=de&gl=DE&sxsrf=APpeQnvKH6Aige2AGNGaQFETdM8R-ZqaaA:1791376608572&q=buy+matrixyl+3000&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rt11Oc1rCwVOV971F8PT8zeBoQyk-kHGO0pij2ntdez6AhWUit6yqZM0qdSqMDk7w72SZpEJRqbJj5_3RxEFdaStt1CgRN7y5Ekn7YYKBc1EgIT9VoFDKrv7G73L3cE39FHTbovrTjwP1nSrxpATks4-DiFw&sa=X&ved=2ahUKEwinjqXz9aeXAxUGV6QEHeJJChgQxKsJKAd6BAhhEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "popular_products"
+     ],
+     "se_results_count": 625000,
+     "pages_count": 1,
+     "items_count": 13,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "www.amazon.de",
+       "title": "Suchergebnis Auf Amazon.de Für: Matrixyl Ordinary",
+       "url": "https://www.amazon.de/matrixyl-ordinary/s?k=matrixyl+ordinary",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.de › matrixyl-ordinary › k=matrixyl...",
+       "website_name": "Amazon.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Matrixyl 3000 & Argireline Anti-Aging Gesichtsserum. A Retinal Shot Tightening Booster. Anti-Aging, Korean Skincare, 15 ml",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Matrixyl 3000 & Argireline Anti-Aging Gesichtsserum"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Was macht Matrixyl 3000?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Was ist besser, Matrixyl oder Argireline?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Ist Matrixyl gut für die Haut?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Welche Peptide sind die besten gegen Falten?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+       "domain": "www.yesstyle.com",
+       "title": "MATRIXYL 3000 + Argirelox Blended Serum - Anti-Aging- ...",
+       "url": "https://www.yesstyle.com/de/kisocare-matrixyl-3000-argirelox-blended-serum-anti-aging-serum-30ml/info.html/pid.1134104216",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.yesstyle.com › ... › Gesichtsserum",
+       "website_name": "YesStyle",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Dieses Serum mit Matrixyl 3000 und Argirelox-Peptiden stimuliert die Haut von innen heraus, um sie straffer zu machen, die Feuchtigkeit zu erhöhen sowie Zeichen ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.7,
+        "votes_count": 311,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 10.95,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "10,95 €"
+       },
+       "highlighted": [
+        "stimuliert die Haut von innen heraus, um sie straffer zu machen"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]",
+       "domain": "www.ulprospector.com",
+       "title": "Matrixyl® 3000 OS von Croda Beauty Actives",
+       "url": "https://www.ulprospector.com/de/na/PersonalCare/Detail/1240/711253/Matrixyl-3000-OS",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.ulprospector.com › PersonalCare › Detail",
+       "website_name": "UL Prospector",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "12.06.2025 — Matrixyl®3000 OS promotes wrinkle smoothing and improves tone and elasticity. radicals, skin firming, and wrinkle reduction.",
+       "pre_snippet": "06/12/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Matrixyl®3000 OS promotes w"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-06-12 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]",
+       "domain": "makeupstore.de",
+       "title": "Timeless Skin Care HA Matrixyl 3000 - Spray für Gesicht und ...",
+       "url": "https://makeupstore.de/product/832706/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://makeupstore.de › ... › Körpersprays",
+       "website_name": "makeupstore.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "- Geeignet für alle Hauttypen, besonders für trockene und dehydrierte Haut; - Einfach anzuwenden; - Enthält Hyaluronsäure, die eine effektive Durchdringung der ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 5,
+        "votes_count": 1,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 18.41,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "18,41 €"
+       },
+       "highlighted": [
+        "Geeignet für alle Hauttypen, besonders für trockene und dehydrierte Haut"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]",
+       "domain": "www.kaufland.de",
+       "title": "Peptidserum – Gesichtsserum – Anti-Aging-Serum",
+       "url": "https://www.kaufland.de/product/499502512/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.kaufland.de › ... › Anti-Aging-Cremes",
+       "website_name": "Kaufland.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Erlebe die kraftvolle Anti-Aging-Wirkung dank Matrixyl 3000, das Falten reduziert und die Hautstruktur verbessert. Profitiere von intensiver Feuchtigkeit durch ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 32.95,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "32,95 €"
+       },
+       "highlighted": [
+        "Matrixyl 3000"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]/div[1]",
+       "domain": "www.docberger-antiaging.de",
+       "title": "Matrixyl™ 3000 | Effect & Use",
+       "url": "https://www.docberger-antiaging.de/en/blogs/wirkstoff/matrixyl%E2%84%A2-3000",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.docberger-antiaging.de › ...",
+       "website_name": "doc berger effect",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "18.03.2024 — MatrixylTM 3000 is an innovative peptide in skincare, specifically designed to support skin regeneration and combat signs of skin aging.",
+       "pre_snippet": "03/18/2024 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "MatrixylTM 3000"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2024-03-18 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]/div[1]",
+       "domain": "www.idealo.at",
+       "title": "Timeless Matrixyl 3000 Serum (30ml)",
+       "url": "https://www.idealo.at/preisvergleich/OffersOfProduct/207748408_-matrixyl-3000-serum-30ml-timeless.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.idealo.at › ... › Gesichtspflege",
+       "website_name": "idealo",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Matrixyl 3000 fördert die Kollagensynthese um bis zu 258 % und hilft dadurch, Fältchen zu reduzieren sowie die Hautelastizität und Festigkeit zu verbessern. Wie ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 38.57,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "38,57 €"
+       },
+       "highlighted": [
+        "Matrixyl 3000 fördert die Kollagensynthese um bis zu 258"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[16]/div[1]",
+       "title": "Vergleichsportale",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Skincyclopedia Face Serum 10% Matrixyl 3000",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071236-1509-0139-0000-5fe750c893ac:0",
+         "price": {
+          "current": 7.98,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "7,98 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "4905468732757046546",
+          "data_docid": "102854988808612634",
+          "gid": "6597484606037310574"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "SKIN1004 Madagascar Centella Matrixyl 10 Boosting Shot Ampoule",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071236-1509-0139-0000-5fe750c893ac:1",
+         "price": {
+          "current": 5.17,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "5,17 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "17132830798665765846",
+          "data_docid": "2914888828267737313",
+          "gid": "10301944429329628766"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Matrixyl 3000 Serum Timeless Skin Care",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071236-1509-0139-0000-5fe750c893ac:2",
+         "price": {
+          "current": 24.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "24,90 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "15888727297519007217",
+          "data_docid": "18288772837920741448",
+          "gid": "433126526201277253"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "ANAIRUI Matrixyl 3000 Argireline Peptid-Serum gegen Falten & feine Linien 30ml",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071236-1509-0139-0000-5fe750c893ac:3",
+         "price": {
+          "current": 19.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "19,99 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "7106067249973625340",
+          "data_docid": "3045600675779859075",
+          "gid": "16622347382205923733"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Straffendes Gesichtsserum mit 3% Matrixyl und Hyaluronsäure InoPharm Pure Elements 3% Matrixyl + HA Lifting Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQMkCxeqV_1MVFmniTvkx2q8QRnbI09TpaO1xh2FO39W1_t8mlSQt0SLqkEHtqUBtn0bZWB8waGg5IaxJQijHWF-qAvn53lGueeqHaWHxBinCdZYxc-fwEW-w",
+         "price": {
+          "current": 12.53,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "12,53 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "7975365296308908628",
+          "data_docid": "9794603667327423360",
+          "gid": "4780418248076175501"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Gigarde Caviar Matrixyl Serum 30 ml",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT_JBTfaE0xOx58uEKEN4s8XK4stVGMNpGgS-hD2PcSE4U2MBv6gX5WFDBpQGlug1ir7Knta7s9-VBRq6Uf4COmTpQVjH4oEzw3UtHEJQpVlXrlf6Vn_UJoYg",
+         "price": {
+          "current": 53.2,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "53,20 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "8933030222284312497",
+          "data_docid": "4302587698856766435",
+          "gid": "5782305671727147894"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Freezing'Age Matrixyl 3000 Peptide Serum - Anti-Aging Gezichtsverzorging - 40ml",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQZ2cRe5_a-wCd3XkFKL5OhljdmbEGgXpQCN8eBFeZUR8HOLMWyk9g40GoJCFyts36uCsMK4-ZcUtEbdg90UsmD3URrpnDWaD68VIvq5Dg",
+         "price": {
+          "current": 34.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "34,99 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "4376245565454039127",
+          "data_docid": "12857852764486025232",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Peptide Complex Serum with Matrixyl 3000 Minimizes Look of Fine Lines & Deep Wrinkles",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQW-vTcIKqXwv0hGLZRo1FP0oGveZfdhLelFbxEgiinJQ41hqbzKvQdXMitGrOlQV_GFaMvBv_YXt4Y21VhsrJ4wztNbAppx3SFjon_aPY7UGdt073qHr48",
+         "price": {
+          "current": 35.77,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "35,77 €"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "16648359175295641590",
+          "data_docid": "6915161949264703858",
+          "gid": "85299134653743691"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+       "domain": "www.amazon.de",
+       "title": "Matrixyl Ordinary",
+       "url": "https://www.amazon.de/matrixyl-ordinary/s?k=matrixyl+ordinary",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.de/matrixyl-ordinary/s?k=matrixyl+ordinary",
+       "website_name": "Amazon.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "ANAiRUi Matrixyl 3000 & Argireline Anti-Aging ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+       "domain": "www.yesstyle.com",
+       "title": "Kisocare - MATRIXYL 3000 + Argirelox Blended Serum - Anti-Aging-Serum",
+       "url": "https://www.yesstyle.com/de/kisocare-matrixyl-3000-argirelox-blended-serum-anti-aging-serum-30ml/info.html/pid.1134104216",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.yesstyle.com/de/kisocare-matrixyl-3000-argirelox-blended-serum-anti-aging-serum-30ml/info.html/pid.1134104216",
+       "website_name": "YesStyle",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": null,
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]/div[1]",
+       "domain": "www.youtube.com",
+       "title": "Matrixyl 3000 #shorts",
+       "url": "https://www.youtube.com/shorts/AyZ1_OU_wQU",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "Ca. 13.190 Aufrufe  ·  vor 3 Jahren",
+       "website_name": "YouTube · Dr. Shereene Idriss",
+       "is_image": false,
+       "is_video": true,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_video"
+       ],
+       "description": "Matrixyl 3000 #shorts ... This content isn't available. Skip video.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Matrixyl 3000"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2023-05-23 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 11,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]",
+       "domain": "www.mosanne.com",
+       "title": "Skin Deva Coenzym Q10 Serum + Matrixyl 3000 ...",
+       "url": "https://www.mosanne.com/de/products/skin-deva-coenzyme-q10-matrixyl-3000-hyaluronic-acid-serum-1oz?srsltid=AU7gw4Vi-q8KTPeHbKylBi5C2fZKCe6NeOd78Dz_X-K7y2VA2FpVp4t0",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.mosanne.com › products › skin-deva-coenz...",
+       "website_name": "mosanne",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Das Serum mit Coenzym Q10, Matrixyl 3000 und Hyaluronsäure bekämpft Falten, regt die Kollagenproduktion an, spendet Feuchtigkeit und strafft die Haut für ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 31.95,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "31,95 €"
+       },
+       "highlighted": [
+        "bekämpft Falten, regt die Kollagenproduktion an"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1600 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "37.3659 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10071237-1509-0139-0000-86e0bd6bd7c7",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "37.2510 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "pdrn serum",
+    "location_code": 2528,
+    "language_code": "nl",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "pdrn serum",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2528,
+     "language_code": "nl",
+     "check_url": "https://www.google.com/search?q=pdrn%20serum&hl=nl&gl=NL&ie=UTF-8&uule=w+CAIQIFISCbvkh9vDCcZHEZ8Kvf_OdaGz",
+     "datetime": "2026-10-07 12:38:05 +00:00",
+     "spell": null,
+     "refinement_chips": null,
+     "item_types": [
+      "popular_products",
+      "people_also_ask",
+      "organic",
+      "images"
+     ],
+     "se_results_count": 10,
+     "pages_count": 1,
+     "items_count": 9,
+     "items": [
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]",
+       "title": "Vergelijkingssites",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.beslist.nl/p/medicube-pdrn-pink-peptide-serum-30-ml-haarserum/286/8800289474989/?aff_id=903&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQINxAE",
+         "domain": "www.beslist.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071237-1509-0139-0000-86e0bd6bd7c7:0",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 14,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anua PDRN Hyaluronic Acid Capsule 100 Serum",
+         "url": "https://www.beslist.nl/p/anua-pdrn-hyaluronic-acid-capsule-100-serum-30-ml/286/8809640738616/?aff_id=903&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIUhAE",
+         "domain": "www.beslist.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071237-1509-0139-0000-86e0bd6bd7c7:1",
+         "price": {
+          "current": 18.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 18,40"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Frankly PDRN Bounce Ball Serum",
+         "url": "https://www.beslist.nl/p/frankly-pdrn-bounce-ball-serum-30-ml-gezichtsserum/286/8800250591974/?aff_id=903&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIUBAE",
+         "domain": "www.beslist.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071237-1509-0139-0000-86e0bd6bd7c7:2",
+         "price": {
+          "current": 17.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 17,95"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics PDRN 100 Essence",
+         "url": "https://www.beslist.nl/p/vt-cosmetics-pdrn-essence-100-serum-transparant-100ml/286/8803463004286/?aff_id=903&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQITBAE",
+         "domain": "www.beslist.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10071237-1509-0139-0000-86e0bd6bd7c7:3",
+         "price": {
+          "current": 25.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 25,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink One Day Serum",
+         "url": "https://www.beslist.nl/p/medicube-pdrn-pink-one-day-serum-set-15-ml-haarserum/286/8800289461262/?aff_id=903&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIkAEQBA",
+         "domain": "www.beslist.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfDG5EP5OvtDejftZzoGcXNQltkHTu-V1KI0QSZtq97a4TR9V3rLe7egtXT0vYtiOp2ncIUSScGpH7k7rqbs8izblpJ65XxTeNeNZZSWhpuasYn0aQNyVFsw",
+         "price": {
+          "current": 11.79,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 11,79"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Haruharu Wonder Rose PDRN Firming Serum",
+         "url": "https://www.beslist.nl/p/haruharu-wonder-rose-pdrn-firming-serum-30-ml/286/8809532222537/?aff_id=903&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIjgEQBA",
+         "domain": "www.beslist.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSiZdmYWN69pXEv2p8nmLq-fgw_DX-n_kiKSt5ft9l4FD2jsNTPsdcDzxHiw0-JmXmiTpS2zwODhOR5uo7k9fOgui0VQvi8tlDltP6gQYnWk08wZzvRX5iaUA",
+         "price": {
+          "current": 11.92,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 11,92"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Centellian24 360o Shot PDRN Active Serum",
+         "url": "https://www.beslist.nl/p/centellian24-360-shot-pdrn-active-serum-gezichtsverzorging-50ml/286/8806109101158/?aff_id=903&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIjwEQBA",
+         "domain": "www.beslist.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTKufjK1o1reOGEQW1eOgkSsxBBbtU56F1SoFIk4cSIWANtPHVtzCwIJyL0xL4cmFARZdwAyL7EzD_plCkE0YiniuAHkSBtvG0CgHrMEVWWRiUHK2uSwAvvTQ",
+         "price": {
+          "current": 18.38,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 18,38"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Genabelle PDRN Vita Toning Ampoule",
+         "url": "https://www.beslist.nl/p/genabelle-pdrn-vita-toning-ampoule-vitamine-c-serum-30-ml/286/8806135251025/?aff_id=903&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIjQEQBA",
+         "domain": "www.beslist.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQOQ6o-EnQlI0DLPVbgNoqoYQLQ7cWf3OD_1mGITjSYsyubowo2Bdx406CQDfxi49fMDT8tT-I-LDDmF74uMzFCeC6icJzDGI1jf5JvvTWD-1AELgIA6bqw",
+         "price": {
+          "current": 21.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 21,40"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink One Day Serum",
+         "url": "https://www.vergelijk.nl/cgi-bin/origin.cgi?origin=google&url=/gezichtsserum/medicube/pdrn_roze_eendaags_serum_-_10x1_5ml_1048640604/%3FexcludeShipping%3Dtrue%26offersFilteringTarget%3Dnew&extra_origin=dma&utm_source=google&utm_medium=dma&utm_campaign=organic&utm_content=csslink&dmaOptimized=true&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIOxAE",
+         "domain": "www.vergelijk.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT0afey5iuebvx0v8ak7QVOXzB392Vjg_HrjNGd1tC27C092X_D2UDVyvVlc4J7a7jGCqnrtosCPBa4U86qMcYsZWamgBpds7gvdcLdWsKDa0UtRG2MtkSm-Q",
+         "price": {
+          "current": 9.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 9,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink One Day Serum",
+         "url": "https://www.vergelijk.nl/cgi-bin/origin.cgi?origin=google&url=/gezichtsserum/medicube/pdrn_pink_one_day_serum_set_15_ml_1214799609/%3FexcludeShipping%3Dtrue%26offersFilteringTarget%3Dnew&extra_origin=dma&utm_source=google&utm_medium=dma&utm_campaign=organic&utm_content=csslink&dmaOptimized=true&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIOBAE",
+         "domain": "www.vergelijk.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfDG5EP5OvtDejftZzoGcXNQltkHTu-V1KI0QSZtq97a4TR9V3rLe7egtXT0vYtiOp2ncIUSScGpH7k7rqbs8izblpJ65XxTeNeNZZSWhpuasYn0aQNyVFsw",
+         "price": {
+          "current": 11.79,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 11,79"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "mixsoon PDRN Collagen Serum",
+         "url": "https://www.vergelijk.nl/cgi-bin/origin.cgi?origin=google&url=/gezichtsserum/mixsoon/pdrn_collage_serum_-_verstevigend_hydraterend_en_revitaliserend_voor_gezicht_peptide_hydratatie_30ml_1183578684/%3FexcludeShipping%3Dtrue%26offersFilteringTarget%3Dnew&extra_origin=dma&utm_source=google&utm_medium=dma&utm_campaign=organic&utm_content=csslink&dmaOptimized=true&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIORAE",
+         "domain": "www.vergelijk.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQkPN9s4wJQ6lAjcp3PaFENVBgekzBsoq8Vo9PL6x3AmjF9pne08YxMYQfjWQrSNiqxxLboPEYNb0g31lXXKZyVDX4R9AgwGvfjwjg4Aks",
+         "price": {
+          "current": 11.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 11,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Haruharu Wonder Rose PDRN Soothing Serum",
+         "url": "https://www.vergelijk.nl/cgi-bin/origin.cgi?origin=google&url=/gezichtsserum/haruharu_wonder/wonder_-_rose_pdrn_soothing_serum_-_30ml_1225762196/%3FexcludeShipping%3Dtrue%26offersFilteringTarget%3Dnew&extra_origin=dma&utm_source=google&utm_medium=dma&utm_campaign=organic&utm_content=csslink&dmaOptimized=true&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIOhAE",
+         "domain": "www.vergelijk.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTxOge51JGcfEQTYSV_IN_9zl_9bHjuEx8DVx_cL7gpL06LYbkfekP8RhXGACnyXUHDfREQjI0Fana-Z7Z2JrixrYWxk_LBb7QdYCPPynw7",
+         "price": {
+          "current": 13.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 13,95"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Haruharu Wonder Rose PDRN Firming Serum",
+         "url": "https://www.vergelijk.nl/cgi-bin/origin.cgi?origin=google&url=/gezichtsserum/haruharu_wonder/rose_pdrn_firming_serum_-_30_ml_1250430738/%3FexcludeShipping%3Dtrue%26offersFilteringTarget%3Dnew&extra_origin=dma&utm_source=google&utm_medium=dma&utm_campaign=organic&utm_content=csslink&dmaOptimized=true&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIiwEQBA",
+         "domain": "www.vergelijk.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSiZdmYWN69pXEv2p8nmLq-fgw_DX-n_kiKSt5ft9l4FD2jsNTPsdcDzxHiw0-JmXmiTpS2zwODhOR5uo7k9fOgui0VQvi8tlDltP6gQYnWk08wZzvRX5iaUA",
+         "price": {
+          "current": 14.15,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 14,15"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Eqqualberry Purple PDRN Pore Minimizing Serum",
+         "url": "https://www.vergelijk.nl/cgi-bin/origin.cgi?origin=google&url=/gezichtsserum/eqqualberry/purple_pdrn_pore_minimizing_serum_1105515884/%3FexcludeShipping%3Dtrue%26offersFilteringTarget%3Dnew&extra_origin=dma&utm_source=google&utm_medium=dma&utm_campaign=organic&utm_content=csslink&dmaOptimized=true&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIjAEQBA",
+         "domain": "www.vergelijk.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRa4Ljv_HkAs1fY6uYo2WLsMBwSAmsM1HyUmvfPvaZa7lXBCWhNjNNU1dAHA22mMAbd4GtG1aw3Mbqveba8TMN9whCpCPD3AvC82dTBgydtvPHCqhKX-vUg",
+         "price": {
+          "current": 14.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 14,95"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.vergelijk.nl/cgi-bin/origin.cgi?origin=google&url=/gezichtsserum/medicube/pdrn_pink_peptide_serum_30_ml_1166209624/%3FexcludeShipping%3Dtrue%26offersFilteringTarget%3Dnew&extra_origin=dma&utm_source=google&utm_medium=dma&utm_campaign=organic&utm_content=csslink&dmaOptimized=true&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIigEQBA",
+         "domain": "www.vergelijk.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSQMYYaqmRgOcAeA6ciLPZ-yV9Q5dZpy0I3zMfb9jh9Uvw3I6iOeO8HO0r5iRnMcaAvULwt8X0MbBwQRwG0aEwY4zt9RrvsRn21t-PtWAGHgfJ1Z6KGF4M9",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 14,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anua PDRN Hyaluronic Acid Capsule 100 Serum",
+         "url": "https://www.vergelijk.nl/cgi-bin/origin.cgi?origin=google&url=/gezichtsserum/anua/pdrn_hyaluronic_acid_capsule_100_serum_30ml_1105325208/%3FexcludeShipping%3Dtrue%26offersFilteringTarget%3Dnew&extra_origin=dma&utm_source=google&utm_medium=dma&utm_campaign=organic&utm_content=csslink&dmaOptimized=true&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIiQEQBA",
+         "domain": "www.vergelijk.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5b6wWNsQSbjmyRma8Xn5lC7UYggogOa8K1cycDgaKaRmj7fdZuQ66B9szk-8tOOYZO2SdThDCLzEShidZmkud1WJsES1OJWnKpOfgtExl",
+         "price": {
+          "current": 16.38,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 16,38"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSQMYYaqmRgOcAeA6ciLPZ-yV9Q5dZpy0I3zMfb9jh9Uvw3I6iOeO8HO0r5iRnMcaAvULwt8X0MbBwQRwG0aEwY4zt9RrvsRn21t-PtWAGHgfJ1Z6KGF4M9",
+         "price": {
+          "current": 21.44,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 21,44"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "6773575022961355835",
+          "data_docid": "4433059755807010340",
+          "gid": "12797384870457311317"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anua PDRN Hyaluronic Acid Capsule 100 Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5b6wWNsQSbjmyRma8Xn5lC7UYggogOa8K1cycDgaKaRmj7fdZuQ66B9szk-8tOOYZO2SdThDCLzEShidZmkud1WJsES1OJWnKpOfgtExl",
+         "price": {
+          "current": 29.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 29,90"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "1329419847938759827",
+          "data_docid": "4901678440573196407",
+          "gid": "2841720041226487448"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Frankly PDRN Bounce Ball Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsBetliwCcitxOQR-En1778jtje00KnBWpbs-4qjFrH6Nda11rS2iwR1K8TRFs38lvwp9mNQiNhjbvbH01RanSyZMJ_MlX5RWqm9Q7nvmZybzfwILRM_xF",
+         "price": {
+          "current": 19.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 19,95"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "5036667827635486132",
+          "data_docid": "10886362972444104061",
+          "gid": "15217950784174181775"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Miracle PDRN & Pink Peptide Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRzU-yMrRu2i_Y1vUY2FCbboUIWINC_19IXRLxvR_BKggS74gNfl0f9HecZrat3hXP8CusC6xP6rvoqAwR4z4i4IR4E4WvFpjx3Y-7QrimFUzq3L16K3RQ9",
+         "price": {
+          "current": 13.49,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 13,49"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "17480720493318850965",
+          "data_docid": "9921625426254064992",
+          "gid": "12328823892915295708"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics PDRN 100 Essence",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ9YtFfDWj-SK38c8Zyj2p7FTATIRaFhXdKv8rVsQSKBtDtve1cEDtkF_IbpjQcgl2OkJuWW9WZFqCs-dkU-FzWA3YKaBlAWZii864h_6B_ArrfrB9X3AfVDQ",
+         "price": {
+          "current": 36.31,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 36,31"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "14909588713219190312",
+          "data_docid": "10074691023874977513",
+          "gid": "8570938476592967718"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink One Day Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfDG5EP5OvtDejftZzoGcXNQltkHTu-V1KI0QSZtq97a4TR9V3rLe7egtXT0vYtiOp2ncIUSScGpH7k7rqbs8izblpJ65XxTeNeNZZSWhpuasYn0aQNyVFsw",
+         "price": {
+          "current": 18,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 18,00"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "4759757975970420904",
+          "data_docid": "12302572830717776490",
+          "gid": "12135547165596058913"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Haruharu Wonder Rose PDRN Firming Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSiZdmYWN69pXEv2p8nmLq-fgw_DX-n_kiKSt5ft9l4FD2jsNTPsdcDzxHiw0-JmXmiTpS2zwODhOR5uo7k9fOgui0VQvi8tlDltP6gQYnWk08wZzvRX5iaUA",
+         "price": {
+          "current": 17.25,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 17,25"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "1016900674236974535",
+          "data_docid": "13379126208054599347",
+          "gid": "2405021222878578639"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Centellian24 360o Shot PDRN Active Serum",
+         "url": null,
+         "domain": null,
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTKufjK1o1reOGEQW1eOgkSsxBBbtU56F1SoFIk4cSIWANtPHVtzCwIJyL0xL4cmFARZdwAyL7EzD_plCkE0YiniuAHkSBtvG0CgHrMEVWWRiUHK2uSwAvvTQ",
+         "price": {
+          "current": 29.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 29,95"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "7532429318648200346",
+          "data_docid": "9537504975807213818",
+          "gid": "9330154252905652905"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.shoppingbird.com/nl/p/medicube-pdrn-pink-peptide-serum-30-ml-691ad88d3e3f742bf00760c7?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIShAE",
+         "domain": "www.shoppingbird.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSQMYYaqmRgOcAeA6ciLPZ-yV9Q5dZpy0I3zMfb9jh9Uvw3I6iOeO8HO0r5iRnMcaAvULwt8X0MbBwQRwG0aEwY4zt9RrvsRn21t-PtWAGHgfJ1Z6KGF4M9",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 14,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anua PDRN Hyaluronic Acid Capsule 100 Serum",
+         "url": "https://www.shoppingbird.com/nl/p/anua-pdrn-hyaluronic-acid-capsule-100-serum-30ml-68d8feca5ec52153bf0376d4?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIQhAE",
+         "domain": "www.shoppingbird.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5b6wWNsQSbjmyRma8Xn5lC7UYggogOa8K1cycDgaKaRmj7fdZuQ66B9szk-8tOOYZO2SdThDCLzEShidZmkud1WJsES1OJWnKpOfgtExl",
+         "price": {
+          "current": 22.01,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 22,01"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics PDRN 100 Essence",
+         "url": "https://www.shoppingbird.com/nl/p/vt-cosmetics-pdrn-essence-100-30ml-67d1fa833d266b95d50b9405?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIQBAE",
+         "domain": "www.shoppingbird.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ9YtFfDWj-SK38c8Zyj2p7FTATIRaFhXdKv8rVsQSKBtDtve1cEDtkF_IbpjQcgl2OkJuWW9WZFqCs-dkU-FzWA3YKaBlAWZii864h_6B_ArrfrB9X3AfVDQ",
+         "price": {
+          "current": 26.23,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 26,23"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink One Day Serum",
+         "url": "https://www.shoppingbird.com/nl/p/medicube-pdrn-pink-one-day-serum-vernieuwende-gezichtsserum-voor-hydratatie-en-stralende-huid-10x15-ml-69b96e7ceacdfb3b8e0520db?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIPRAE",
+         "domain": "www.shoppingbird.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfDG5EP5OvtDejftZzoGcXNQltkHTu-V1KI0QSZtq97a4TR9V3rLe7egtXT0vYtiOp2ncIUSScGpH7k7rqbs8izblpJ65XxTeNeNZZSWhpuasYn0aQNyVFsw",
+         "price": {
+          "current": 11.79,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 11,79"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Haruharu Wonder Rose PDRN Firming Serum",
+         "url": "https://www.shoppingbird.com/nl/p/haruharu-wonder-rose-pdrn-verstevigend-serum-met-retinal-01-boost-collageen-minimaliseer-fijne-lijntjes-en-rimpels-voor-gevoelige-huid-glazen-hu-6a07490dfcc76e92120e64a6?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIhgEQBA",
+         "domain": "www.shoppingbird.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSiZdmYWN69pXEv2p8nmLq-fgw_DX-n_kiKSt5ft9l4FD2jsNTPsdcDzxHiw0-JmXmiTpS2zwODhOR5uo7k9fOgui0VQvi8tlDltP6gQYnWk08wZzvRX5iaUA",
+         "price": {
+          "current": 12.66,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 12,66"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Centellian24 360o Shot PDRN Active Serum",
+         "url": "https://www.shoppingbird.com/nl/p/centellian24-360-shot-pdrn-active-serum-korean-skincare-50-ml-6a0cc6cae8e2c4d776087ad5?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIggEQBA",
+         "domain": "www.shoppingbird.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTKufjK1o1reOGEQW1eOgkSsxBBbtU56F1SoFIk4cSIWANtPHVtzCwIJyL0xL4cmFARZdwAyL7EzD_plCkE0YiniuAHkSBtvG0CgHrMEVWWRiUHK2uSwAvvTQ",
+         "price": {
+          "current": 22.45,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 22,45"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Genabelle PDRN Vita Toning Ampoule",
+         "url": "https://www.shoppingbird.com/nl/p/genabelle-pdrn-vita-toning-ampoule-30-ml-6ac5ce8b28c42d7a620cd392?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIgwEQBA",
+         "domain": "www.shoppingbird.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQOQ6o-EnQlI0DLPVbgNoqoYQLQ7cWf3OD_1mGITjSYsyubowo2Bdx406CQDfxi49fMDT8tT-I-LDDmF74uMzFCeC6icJzDGI1jf5JvvTWD-1AELgIA6bqw",
+         "price": {
+          "current": 21.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 21,40"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Nacific Cica PDRN Calming Serum",
+         "url": "https://www.shoppingbird.com/nl/p/nacific-cica-pdrn-calming-serum-intensief-hydraterend-serum-met-kalmerend-effect-50-ml-6a8c30819845cfb65708b510?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIgQEQBA",
+         "domain": "www.shoppingbird.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSG_0Qe813twjGmllKYNaL4unbx5q0eXs8jHXpjxCG3KGqWlG5vuZQexaYaw_d5PvcaH8qqHXj5q14fFyXzfuoFy7Pwdm8KRRHu5WfLwQ",
+         "price": {
+          "current": 17.77,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 17,77"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.shoparize.com/nl/p/medicube-pdrn-pink-peptide-serum-30-ml/8800289474989/9a2fc973-f870-5d38-8bf5-a30fab3a7732?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIQRAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSQMYYaqmRgOcAeA6ciLPZ-yV9Q5dZpy0I3zMfb9jh9Uvw3I6iOeO8HO0r5iRnMcaAvULwt8X0MbBwQRwG0aEwY4zt9RrvsRn21t-PtWAGHgfJ1Z6KGF4M9",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 14,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anua PDRN Hyaluronic Acid Capsule 100 Serum",
+         "url": "https://www.shoparize.com/nl/p/anua-pdrn-hyaluronic-acid-capsule-100-serum-30ml/8809640738616/9f56399e-2aff-497f-b913-1872f46751c9?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIPxAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5b6wWNsQSbjmyRma8Xn5lC7UYggogOa8K1cycDgaKaRmj7fdZuQ66B9szk-8tOOYZO2SdThDCLzEShidZmkud1WJsES1OJWnKpOfgtExl",
+         "price": {
+          "current": 18.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 18,40"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Frankly PDRN Bounce Ball Serum",
+         "url": "https://www.shoparize.com/nl/p/frankly-pdrn-bounce-ball-serum-30-ml/8800250591974/a11e99d6-e534-4cc0-a9b5-a0fcf617676f?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIPhAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsBetliwCcitxOQR-En1778jtje00KnBWpbs-4qjFrH6Nda11rS2iwR1K8TRFs38lvwp9mNQiNhjbvbH01RanSyZMJ_MlX5RWqm9Q7nvmZybzfwILRM_xF",
+         "price": {
+          "current": 17.79,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 17,79"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink One Day Serum",
+         "url": "https://www.shoparize.com/nl/p/medicube-pdrn-pink-one-day-serum-set-15-ml-10-x-15ml/8800289461262/a19dc41e-f1ef-4dfb-8d41-9e5ef0def607?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIPBAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfDG5EP5OvtDejftZzoGcXNQltkHTu-V1KI0QSZtq97a4TR9V3rLe7egtXT0vYtiOp2ncIUSScGpH7k7rqbs8izblpJ65XxTeNeNZZSWhpuasYn0aQNyVFsw",
+         "price": {
+          "current": 13.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 13,89"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Haruharu Wonder Rose PDRN Firming Serum",
+         "url": "https://www.shoparize.com/nl/p/haruharu-wonder-rose-pdrn-firming-serum-with-retinal-01-30-ml-boost-collagen-firming-bulgarian-rose-fine-lines-wrinkles-for-sensitive-skin/8809532222537/d902234b-9f88-560d-b3ec-b66d937b36df?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegUIgAEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSiZdmYWN69pXEv2p8nmLq-fgw_DX-n_kiKSt5ft9l4FD2jsNTPsdcDzxHiw0-JmXmiTpS2zwODhOR5uo7k9fOgui0VQvi8tlDltP6gQYnWk08wZzvRX5iaUA",
+         "price": {
+          "current": 17.27,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 17,27"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Centellian24 360o Shot PDRN Active Serum",
+         "url": "https://www.shoparize.com/nl/p/centellian24-360-shot-pdrn-active-serum-korean-skincare-50-ml/8806109101158/a152aea4-ab49-4401-ba48-3fa0a465b9b9?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIfxAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTKufjK1o1reOGEQW1eOgkSsxBBbtU56F1SoFIk4cSIWANtPHVtzCwIJyL0xL4cmFARZdwAyL7EzD_plCkE0YiniuAHkSBtvG0CgHrMEVWWRiUHK2uSwAvvTQ",
+         "price": {
+          "current": 22.45,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 22,45"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Nacific Cica PDRN Calming Serum",
+         "url": "https://www.shoparize.com/nl/p/cica-pdrn-calming-serum-50ml/8809517466802/a2d0e131-b099-40b1-b773-427b71a98317?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIfhAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSG_0Qe813twjGmllKYNaL4unbx5q0eXs8jHXpjxCG3KGqWlG5vuZQexaYaw_d5PvcaH8qqHXj5q14fFyXzfuoFy7Pwdm8KRRHu5WfLwQ",
+         "price": {
+          "current": 17.77,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 17,77"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mediheal PDRN Lifting Serum",
+         "url": "https://www.shoparize.com/nl/p/mediheal-pdrn-lifting-serum-40-ml/8809936745564/a167587b-c8ae-44e0-ae3a-bdaadbf20ee6?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIexAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcREYM39maZzPP5Sj_x9ZAmKvrx7W09Mr9tr6p-jEtFgpoWKCnjJ2rOsLPo_37Sv6HvaxmooMyqUcTzKViRLGcVAYKaMTeBzfj3p0L-hBh0",
+         "price": {
+          "current": 19.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 19,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://bigshopper.nl/product/medicube-pdrn-pink-peptide-serum-1147862210.htm?sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIRhAE",
+         "domain": "bigshopper.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSQMYYaqmRgOcAeA6ciLPZ-yV9Q5dZpy0I3zMfb9jh9Uvw3I6iOeO8HO0r5iRnMcaAvULwt8X0MbBwQRwG0aEwY4zt9RrvsRn21t-PtWAGHgfJ1Z6KGF4M9",
+         "price": {
+          "current": 17.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 17,89"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anua PDRN Hyaluronic Acid Capsule 100 Serum",
+         "url": "https://bigshopper.nl/product/anua-pdrn-hyaluronic-acid-capsule-100-serum-30-ml-1445389882.htm?sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQISxAE",
+         "domain": "bigshopper.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5b6wWNsQSbjmyRma8Xn5lC7UYggogOa8K1cycDgaKaRmj7fdZuQ66B9szk-8tOOYZO2SdThDCLzEShidZmkud1WJsES1OJWnKpOfgtExl",
+         "price": {
+          "current": 18.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 18,40"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Frankly PDRN Bounce Ball Serum",
+         "url": "https://bigshopper.nl/product/frankly-pdrn-bounce-ball-serum-30ml-2281657130.htm?sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIQxAE",
+         "domain": "bigshopper.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsBetliwCcitxOQR-En1778jtje00KnBWpbs-4qjFrH6Nda11rS2iwR1K8TRFs38lvwp9mNQiNhjbvbH01RanSyZMJ_MlX5RWqm9Q7nvmZybzfwILRM_xF",
+         "price": {
+          "current": 16.28,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 16,28"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics PDRN 100 Essence",
+         "url": "https://bigshopper.nl/product/vt-cosmetics-pdrn-essence-100-gezichtsessence-30-ml-1301172124.htm?sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIRBAE",
+         "domain": "bigshopper.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ9YtFfDWj-SK38c8Zyj2p7FTATIRaFhXdKv8rVsQSKBtDtve1cEDtkF_IbpjQcgl2OkJuWW9WZFqCs-dkU-FzWA3YKaBlAWZii864h_6B_ArrfrB9X3AfVDQ",
+         "price": {
+          "current": 25.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 25,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink One Day Serum",
+         "url": "https://bigshopper.nl/product/medicube-pdrn-pink-one-day-serum-set-15-ml-10-x-1-5-ml-3641400747.htm?sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIeRAE",
+         "domain": "bigshopper.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfDG5EP5OvtDejftZzoGcXNQltkHTu-V1KI0QSZtq97a4TR9V3rLe7egtXT0vYtiOp2ncIUSScGpH7k7rqbs8izblpJ65XxTeNeNZZSWhpuasYn0aQNyVFsw",
+         "price": {
+          "current": 11.77,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 11,77"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Haruharu Wonder Rose PDRN Firming Serum",
+         "url": "https://bigshopper.nl/product/haruharu-wonder-rose-pdrn-firming-serum-30-ml-3376222859.htm?sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIehAE",
+         "domain": "bigshopper.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSiZdmYWN69pXEv2p8nmLq-fgw_DX-n_kiKSt5ft9l4FD2jsNTPsdcDzxHiw0-JmXmiTpS2zwODhOR5uo7k9fOgui0VQvi8tlDltP6gQYnWk08wZzvRX5iaUA",
+         "price": {
+          "current": 13.67,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 13,67"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Centellian24 360o Shot PDRN Active Serum",
+         "url": "https://bigshopper.nl/product/centellian24-360o-shot-pdrn-active-serum-50ml-2249038653.htm?sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIfRAE",
+         "domain": "bigshopper.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTKufjK1o1reOGEQW1eOgkSsxBBbtU56F1SoFIk4cSIWANtPHVtzCwIJyL0xL4cmFARZdwAyL7EzD_plCkE0YiniuAHkSBtvG0CgHrMEVWWRiUHK2uSwAvvTQ",
+         "price": {
+          "current": 19.53,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 19,53"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Genabelle PDRN Vita Toning Ampoule",
+         "url": "https://bigshopper.nl/product/genabelle-pdrn-vita-toning-ampoule-gezichtsampule-2224132741.htm?sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIeBAE",
+         "domain": "bigshopper.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQOQ6o-EnQlI0DLPVbgNoqoYQLQ7cWf3OD_1mGITjSYsyubowo2Bdx406CQDfxi49fMDT8tT-I-LDDmF74uMzFCeC6icJzDGI1jf5JvvTWD-1AELgIA6bqw",
+         "price": {
+          "current": 22.51,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 22,51"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.supersales.nl/p/medicube-pdrn-pink-peptide-serum-30-ml-691ad88d3e3f742bf00760c7?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIRRAE",
+         "domain": "www.supersales.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSQMYYaqmRgOcAeA6ciLPZ-yV9Q5dZpy0I3zMfb9jh9Uvw3I6iOeO8HO0r5iRnMcaAvULwt8X0MbBwQRwG0aEwY4zt9RrvsRn21t-PtWAGHgfJ1Z6KGF4M9",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 14,99"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anua PDRN Hyaluronic Acid Capsule 100 Serum",
+         "url": "https://www.supersales.nl/p/anua-pdrn-hyaluronic-acid-capsule-100-serum-30ml-68d8feca5ec52153bf0376d4?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIURAE",
+         "domain": "www.supersales.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5b6wWNsQSbjmyRma8Xn5lC7UYggogOa8K1cycDgaKaRmj7fdZuQ66B9szk-8tOOYZO2SdThDCLzEShidZmkud1WJsES1OJWnKpOfgtExl",
+         "price": {
+          "current": 22.01,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 22,01"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics PDRN 100 Essence",
+         "url": "https://www.supersales.nl/p/vt-cosmetics-pdrn-essence-100-30ml-67d1fa833d266b95d50b9405?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQITxAE",
+         "domain": "www.supersales.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ9YtFfDWj-SK38c8Zyj2p7FTATIRaFhXdKv8rVsQSKBtDtve1cEDtkF_IbpjQcgl2OkJuWW9WZFqCs-dkU-FzWA3YKaBlAWZii864h_6B_ArrfrB9X3AfVDQ",
+         "price": {
+          "current": 26.23,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 26,23"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink One Day Serum",
+         "url": "https://www.supersales.nl/p/medicube-pdrn-pink-one-day-serum-vernieuwende-gezichtsserum-voor-hydratatie-en-stralende-huid-10x15-ml-69b96e7ceacdfb3b8e0520db?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIThAE",
+         "domain": "www.supersales.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfDG5EP5OvtDejftZzoGcXNQltkHTu-V1KI0QSZtq97a4TR9V3rLe7egtXT0vYtiOp2ncIUSScGpH7k7rqbs8izblpJ65XxTeNeNZZSWhpuasYn0aQNyVFsw",
+         "price": {
+          "current": 11.79,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 11,79"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Haruharu Wonder Rose PDRN Firming Serum",
+         "url": "https://www.supersales.nl/p/haruharu-wonder-rose-pdrn-verstevigend-serum-met-retinal-01-boost-collageen-minimaliseer-fijne-lijntjes-en-rimpels-voor-gevoelige-huid-glazen-hu-6a07490dfcc76e92120e64a6?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIfBAE",
+         "domain": "www.supersales.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSiZdmYWN69pXEv2p8nmLq-fgw_DX-n_kiKSt5ft9l4FD2jsNTPsdcDzxHiw0-JmXmiTpS2zwODhOR5uo7k9fOgui0VQvi8tlDltP6gQYnWk08wZzvRX5iaUA",
+         "price": {
+          "current": 12.66,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 12,66"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Centellian24 360o Shot PDRN Active Serum",
+         "url": "https://www.supersales.nl/p/centellian24-360-shot-pdrn-active-serum-korean-skincare-50-ml-6a0cc6cae8e2c4d776087ad5?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIdRAE",
+         "domain": "www.supersales.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTKufjK1o1reOGEQW1eOgkSsxBBbtU56F1SoFIk4cSIWANtPHVtzCwIJyL0xL4cmFARZdwAyL7EzD_plCkE0YiniuAHkSBtvG0CgHrMEVWWRiUHK2uSwAvvTQ",
+         "price": {
+          "current": 22.45,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 22,45"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Genabelle PDRN Vita Toning Ampoule",
+         "url": "https://www.supersales.nl/p/genabelle-pdrn-vita-toning-ampoule-30-ml-6ac5ce8b28c42d7a620cd392?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIdxAE",
+         "domain": "www.supersales.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQOQ6o-EnQlI0DLPVbgNoqoYQLQ7cWf3OD_1mGITjSYsyubowo2Bdx406CQDfxi49fMDT8tT-I-LDDmF74uMzFCeC6icJzDGI1jf5JvvTWD-1AELgIA6bqw",
+         "price": {
+          "current": 21.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 21,40"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Nacific Cica PDRN Calming Serum",
+         "url": "https://www.supersales.nl/p/nacific-cica-pdrn-calming-serum-intensief-hydraterend-serum-met-kalmerend-effect-50-ml-6a8c30819845cfb65708b510?channel=google-css&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQrogGegQIdhAE",
+         "domain": "www.supersales.nl",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSG_0Qe813twjGmllKYNaL4unbx5q0eXs8jHXpjxCG3KGqWlG5vuZQexaYaw_d5PvcaH8qqHXj5q14fFyXzfuoFy7Pwdm8KRRHu5WfLwQ",
+         "price": {
+          "current": 17.77,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "€ 17,77"
+         },
+         "rating": null,
+         "product_identifiers": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Wat is het beste PDRN-serum?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Wat is een PDRn serum?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Welke producten heeft PDRN?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Wat is het beste serum voor een oudere huid?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+       "domain": "www.amazon.com",
+       "title": "PDRN Serum 3%, 30000ppm Salmon DNA, 9 Peptide ...",
+       "url": "https://www.amazon.com/RAUME-Serum-000ppm-Salmon-Firming/dp/B0GKHSMTT9",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.com › RAUM...",
+       "website_name": "Amazon.com",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "BARRIER SUPPORT & MOISTURE LOCK: Enriched with Ceramide NP and Panthenol to strengthen the skin barrier and lock in hydration, leaving skin feeling smooth, ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Enriched with Ceramide NP and Panthenol"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]",
+       "domain": "kbeautyworld.com",
+       "title": "PDRN Gids: 10 beste Koreaanse skincareproducten",
+       "url": "https://kbeautyworld.com/nl/blogs/skincare-101/pdrn-korean-skincare-products?srsltid=AU7gw4Wc9OI1ZBb7mRDb6MqzpoeJavw98PR_Z-vCv4R4VDtNaN9JvI-Z",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://kbeautyworld.com › Huidverzorging 101",
+       "website_name": "K Beauty World",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "21 aug 2026 — Een licht serum met PDRN, niacinamide, hyaluronzuur, collageen en verschillende peptiden voor een gehydrateerde en soepele huid. Het uit zalm ...",
+       "pre_snippet": "08/21/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "serum",
+        "PDRN"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-08-21 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]",
+       "domain": "www.caretobeauty.com",
+       "title": "PDRN Huidverzorging: Wat is het en wat doet het?",
+       "url": "https://www.caretobeauty.com/nl/blog/what-is-pdrn-skincare/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.caretobeauty.com › Home › Huidverzorging",
+       "website_name": "Care to Beauty",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "27 jan 2026 — Het Dermagius Exocare PDRN Serum is een regenererend en verjongend serum geformuleerd met zalm PDRN, plantaardige exosomen en Centella asiatica.",
+       "pre_snippet": "01/27/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "regenererend en verjongend serum"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-01-27 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]",
+       "domain": "www.bol.com",
+       "title": "Korean Skincare PDRN Pink Serum – Zalm DNA - Bol",
+       "url": "https://www.bol.com/nl/nl/p/korean-skincare-pdrn-pink-serum-zalm-dna-salmon-dna-serum-peptide-serum-hyaluronzuur-serum-vitamine-b12-anti-aging-serum-hydraterend-gezichtsserum-glow-serum/9300000274562420/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.bol.com › ... › Gezichtsverzorging › Serums",
+       "website_name": "bol.com",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Glow Serum Resultaten met PDRN Pink Vitamin ampul. Voor en na foto's van gezichtshuid met. Glazen flesje roze PDRN Pink Vitamin Glow Boosting ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN Pink Vitamin ampul"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]",
+       "domain": "www.facebook.com",
+       "title": "Trying the Medicube PDRN Pink Peptide Serum  I've been ...",
+       "url": "https://www.facebook.com/sandrittaqp/videos/trying-the-medicube-pdrn-pink-peptide-serum-ive-been-adding-more-pdrn-skincare-i/2142122939981315/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "4 reacties  ·  1 maand geleden",
+       "website_name": "Facebook · Sandrittaqp Fashion & Beauty",
+       "is_image": false,
+       "is_video": true,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_video"
+       ],
+       "description": "It contains PDRN, peptides and niacinamide and leaves my skin feeling hydrated with such a lovely fresh glow afterwards ✨ Definitely one for my ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-07 12:38:02 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Wat is een goed PDRN-serum? : r/SkincareAddictionLux",
+       "url": "https://www.reddit.com/r/SkincareAddictionLux/comments/1p4dmnq/whats_a_good_pdrn_serum/?tl=nl",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "10+ reacties  ·  10 maanden geleden",
+       "website_name": "Reddit · r/SkincareAddictionLux",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Ik ben op zoek naar een serum dat sterke voordelen voor huidregeneratie biedt, geweldig is voor de huid na behandeling of geïrriteerde huid, en ook werkt ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": [
+        {
+         "type": "link_element",
+         "title": "16 antwoorden",
+         "description": null,
+         "url": "https://www.reddit.com/r/SkincareAddictionLux/comments/1p4dmnq/whats_a_good_pdrn_serum/nqb7vif/?tl=nl",
+         "domain": "www.reddit.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[16]/div[1]",
+       "title": "Afbeeldingen",
+       "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=nl&gl=NL&sxsrf=APpeQnu9_UPy2RBxwavkjlwKBDyCsKmsjw:1791376681748&q=pdrn+serum&udm=2&source=univ&fir=y-QyZ5StGVR1eM%252C0LPTBW0L3MezeM%252C_%253Bym3ZDIRcjz4ZAM%252CwJbvfT21XCJPfM%252C_%253BDdpgJkoRGuI8DM%252CbRsfjPAf7XRu_M%252C_%253BgWGiwBuGqquTjM%252C7o8IJfbrlrSH9M%252C_%253BXTvwbgEHxENpEM%252CJWfp1Cb2kN17mM%252C_%253BRm2oeWc8RwfPLM%252CUOp5hKRX2EJUeM%252C_%253BDnF6JYjctjRLvM%252CTUfz7UrvGu7vqM%252C_%253ByzabTmE2AD4wcM%252CZdx5oEt5CIVegM%252C_%253BjlSj8d6cQ9Ox6M%252CDVr4okYgcK_CdM%252C_&usg=AI4_-kQ7SAY83_krcEri498GExUCgWY-JA&sa=X&ved=2ahUKEwjh3ZiW9qeXAxX1NfsDHa8yI9sQ7Al6BAhlEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "FRANKLY PDRN İçeren Cildi Gençleştirmeye Yardımcı Çift Fazlı ...",
+         "url": "https://www.trendyol.com/frankly/pdrn-iceren-cildi-genclestirmeye-yardimci-cift-fazli-esans-serum-pdrn-bounce-ball-serum-30-ml-p-939800254",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071237-1509-0139-0000-86e0bd6bd7c7:4"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN Roze Peptide Serum, 30 ml",
+         "url": "https://nl.iherb.com/pr/medicube-pdrn-pink-peptide-serum-1-01-fl-oz-30-ml/150469",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071237-1509-0139-0000-86e0bd6bd7c7:5"
+        },
+        {
+         "type": "images_element",
+         "alt": "Can PDRN serums replace salmon sperm facials? - The Nod Mag",
+         "url": "https://thenodmag.com/content/pdrn-serums-salmon-sperm-ampoules-skincare",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071237-1509-0139-0000-86e0bd6bd7c7:6"
+        },
+        {
+         "type": "images_element",
+         "alt": "VT COSMETICS PDRN 100 Essence, Korean Gingseng Plant-derived PDRN Serum for  Natural Glow, Korean skincare 1.01 fl. Oz.: Buy Online at Best Price in ...",
+         "url": "https://www.amazon.ae/VT-COSMETICS-Gingseng-Plant-derived-skincare/dp/B0CRKPZ9PQ",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSafXZC0kmcICHeiV4Kke3NnPP0SyfOf3VRPdwcJFr1yZcLWADRRqX7ZfE&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "EQQUALBERRY - Purple Pdrn Pore Minimizing Serum",
+         "url": "https://koreanskincare.nl/products/eqqualberry-purple-pdrn-pore-minimizing-serum",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWvb7wYubRWca9Ra43xqiSbLuyvWvDwoMKzY_BQJdR24h2-DsIY2JYF6c&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Medicube PDRN pink peptide serum 30ml: Buy Online at Best ...",
+         "url": "https://www.amazon.eg/-/en/Medicube-PDRN-pink-peptide-serum/dp/B0DBF65JYY",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-OV6JJB5ySlPlDy5Z3bCm-kCKc_4hGigUkV9VZqXQ_9r1TyvVe5eXK6U&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN Vitamin C Ampoule Serum , 1.35 fl oz (40 ml)",
+         "url": "https://pk.iherb.com/pr/aplb-pdrn-vitamin-c-ampoule-serum-1-35-fl-oz-40-ml/150069",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHw1wCrplJNu8jn0sRuMKrNCeTgxV_yOCsPBnAmKjxIadRooX_pjLPQXM&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "360º Shot PDRN Active Serum 50ml",
+         "url": "https://www.koreanbeauty.nl/products/centellian24-360%C2%BA-shot-pdrn-active-serum-50ml",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzBNvHasXjEzUvCa_hUKLHLsjOVu7XPUguBfxfHmPrBOf4JYdNSGVhuxo&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN SERUM FOR BOUNCY SKIN – Launch Global-Ready K-Beauty ...",
+         "url": "https://www.kprivatelabel.com/product/pdrn-serum/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIAcvdokpezDdH1MIoECSt95fn6eOBDL88j0rhRCso5ZR4BhP3lxTPsT0&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

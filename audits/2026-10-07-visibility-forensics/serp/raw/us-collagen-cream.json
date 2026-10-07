@@ -1,0 +1,1596 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "26.3590 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10071230-1509-0139-0000-309fe459543f",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "26.2088 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "collagen cream",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "collagen cream",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=collagen%20cream&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+     "datetime": "2026-10-07 12:31:12 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Moisturizers",
+        "url": "https://www.google.com/search?q=facial+moisturizers+collagen+cream&hl=en&gl=US&shoprs=GAkqDmNvbGxhZ2VuIGNyZWFtMhcICRITRmFjaWFsIE1vaXN0dXJpemVyc2AB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAF6BQgcEIYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Collagen Boosting",
+        "url": "https://www.google.com/search?q=collagen+boosting+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMiEIARIRQ29sbGFnZW4gQm9vc3Rpbmc6Cgjs4S0QxtstMABY96ogYAE&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAJ6BQgcEIcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Body Lotion",
+        "url": "https://www.google.com/search?q=body+lotion+collagen+cream&hl=en&gl=US&shoprs=GAkqDmNvbGxhZ2VuIGNyZWFtMg8ICRILQm9keSBMb3Rpb25gAQ&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAN6BQgcEIgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Reviews",
+        "url": "https://www.google.com/search?q=reviews+collagen+cream&hl=en&gl=US&shoprs=GBIqDmNvbGxhZ2VuIGNyZWFtMgsIEhIHUmV2aWV3c2AB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAR6BQgcEIkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Eye Cream",
+        "url": "https://www.google.com/search?q=eye+cream+collagen&hl=en&gl=US&shoprs=GAkqDmNvbGxhZ2VuIGNyZWFtMg0ICRIJRXllIENyZWFtYAE&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAV6BQgcEIoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Anti-aging",
+        "url": "https://www.google.com/search?q=anti-aging+collagen+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhoIARIKQW50aS1hZ2luZzoKCOzhLRCh2y0wAFj3qiBgAQ&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAZ6BQgcEIsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Skin",
+        "url": "https://www.google.com/search?q=skin+collagen+cream&hl=en&gl=US&shoprs=GBIqDmNvbGxhZ2VuIGNyZWFtMggIEhIEU2tpbmAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAd6BQgcEIwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Wrinkles",
+        "url": "https://www.google.com/search?q=wrinkles+collagen+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhoIARIIV3JpbmtsZXM6DAiygKwCELaArAIwAFj3qiBgAQ&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAh6BQgcEI0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "On sale",
+        "url": "https://www.google.com/search?q=collagen+cream+sale&hl=en&gl=US&shoprs=EgRKAhgBGAYqDmNvbGxhZ2VuIGNyZWFtMhMIBhIHT24gc2FsZRgCIgRKAhgBWPeqIGAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAl6BQgcEI4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Get it by Fri",
+        "url": "https://www.google.com/search?q=collagen+cream&hl=en&gl=US&shoprs=Eg2aAQoKCBACOAFABUgBGBQqDmNvbGxhZ2VuIGNyZWFtMiYIFBINR2V0IGl0IGJ5IEZyaSINmgEKCggQAjgBQAVIASoEEAEYAWAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAp6BQgcEI8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hand Cream",
+        "url": "https://www.google.com/search?q=hand+cream+collagen&hl=en&gl=US&shoprs=GAkqDmNvbGxhZ2VuIGNyZWFtMg4ICRIKSGFuZCBDcmVhbWAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAt6BQgcEJAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Recipe",
+        "url": "https://www.google.com/search?q=recipe+collagen+cream&hl=en&gl=US&shoprs=GBIqDmNvbGxhZ2VuIGNyZWFtMgoIEhIGUmVjaXBlYAE&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKAx6BQgcEJEB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Stretch Mark Creams",
+        "url": "https://www.google.com/search?q=stretch+mark+creams+collagen+cream&hl=en&gl=US&shoprs=GAkqDmNvbGxhZ2VuIGNyZWFtMhcICRITU3RyZXRjaCBNYXJrIENyZWFtc2AB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKA16BQgcEJIB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Jar",
+        "url": "https://www.google.com/search?q=jar+collagen+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhMIARIDSmFyOgoIxotpEMiLaTAAWPeqIGAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKA56BQgcEJMB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For All Skin Types",
+        "url": "https://www.google.com/search?q=collagen+cream+for+all+skin+types&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMiQIARISRm9yIEFsbCBTa2luIFR5cGVzGAI6Cgiy-DsQtfg7MABY96ogYAE&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKA96BQgcEJQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Face",
+        "url": "https://www.google.com/search?q=face+collagen+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhQIARIERmFjZToKCJ_ZLRCh2S0wAlj3qiBgAQ&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBB6BQgcEJUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Blue",
+        "url": "https://www.google.com/search?q=blue+collagen+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhYIARIEQmx1ZToMCNiM9QEQ5or1ATALWPeqIGAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBF6BQgcEJYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Buy",
+        "url": "https://www.google.com/search?q=buy+collagen+cream&hl=en&gl=US&shoprs=GBIqDmNvbGxhZ2VuIGNyZWFtMgcIEhIDQnV5YAE&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBJ6BQgcEJcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Serums",
+        "url": "https://www.google.com/search?q=facial+serums+collagen+cream&hl=en&gl=US&shoprs=GAkqDmNvbGxhZ2VuIGNyZWFtMhEICRINRmFjaWFsIFNlcnVtc2AB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBN6BQgcEJgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Organic",
+        "url": "https://www.google.com/search?q=organic+collagen+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhkIARIHT3JnYW5pYzoMCN2itAEQ3qK0ATAAWPeqIGAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBR6BQgcEJkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Bottle",
+        "url": "https://www.google.com/search?q=bottle+collagen+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhYIARIGQm90dGxlOgoIxotpEMeLaTAAWPeqIGAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBV6BQgcEJoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Brand",
+        "url": "https://www.google.com/search?q=brand+collagen+cream&hl=en&gl=US&shoprs=GBIqDmNvbGxhZ2VuIGNyZWFtMgkIEhIFQnJhbmRgAQ&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBZ6BQgcEJsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For Men",
+        "url": "https://www.google.com/search?q=collagen+cream+for+men&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhkIARIHRm9yIE1lbhgCOgoIoNstEK_bLTADWPeqIGAB&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBd6BQgcEJwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Body",
+        "url": "https://www.google.com/search?q=body+collagen+cream&hl=en&gl=US&shoprs=GAEqDmNvbGxhZ2VuIGNyZWFtMhQIARIEQm9keToKCJ_ZLRCg2S0wAlj3qiBgAQ&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQip4GKBh6BQgcEJ0B",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "ai_overview",
+      "popular_products",
+      "organic",
+      "people_also_ask",
+      "images",
+      "perspectives",
+      "product_considerations"
+     ],
+     "se_results_count": 219000,
+     "pages_count": 1,
+     "items_count": 14,
+     "items": [
+      {
+       "type": "ai_overview",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "asynchronous_ai_overview": false,
+       "markdown": "Collagen creams primarily act as `powerful deep moisturizers that plump and hydrate the skin surface` , though they need added peptides or retinoids to truly stimulate long-term collagen production.[[1]](https://www.allure.com/story/best-collagen-creams)\n\n### How Collagen Creams Work\n\n- **Surface Hydration:** Topical collagen molecules are generally too large to penetrate deep into the skin, but they form a protective, moisture-locking barrier that instantly smooths and softens dry skin.[[1]](https://www.allure.com/story/best-collagen-creams)\n- **Paired Ingredients:** Effective formulas often combine hydrolyzed collagen with [Olay Collagen Peptide Moisturizing Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462884739848525,imageDocid:16902328756680486276,gpcid:14859901770837195703,headlineOfferDocid:7145718335797291284,catalogid:423920445256632175,productDocid:9129739736910258693,rds:PC_14859901770837195703%7CPROD_PC_14859901770837195703&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIDhAT) or retinoids, niacinamide, and peptides to support elasticity and firmness.[[1]](https://www.byrdie.com/best-collagen-creams)[[2]](https://www.allure.com/story/best-collagen-creams)\n- **Expert Consensus:** Most users on [Reddit](https://www.reddit.com/r/Aging/comments/1plodam/is_there_actually_a_collagen_cream_that_works_my/) agree that while direct anti-aging claims from pure collagen are mostly marketing, these creams excel at giving a dewy, well-hydrated glow.[[1]](https://www.reddit.com/r/Aging/comments/1plodam/is_there_actually_a_collagen_cream_that_works_my/)[[2]](https://www.allure.com/story/best-collagen-creams)\n\n### Popular Options & Pricing\n\n- **Budget Picks:** [Piping Rock Collagen & Placenta Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462498078896053,imageDocid:2600200291543383639,gpcid:9248838291879867153,headlineOfferDocid:5815864117219514364,catalogid:16441806804969423123,productDocid:13257771758055889656,rds:PC_9248838291879867153%7CPROD_PC_9248838291879867153&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAG) (~$5) and [Mason Natural Collagen Skin Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462845892921337,imageDocid:15338838926502711808,gpcid:13770764747675420522,headlineOfferDocid:8462871481439741958,catalogid:11330572993243830396,productDocid:14071265497252530040,rds:PC_13770764747675420522%7CPROD_PC_13770764747675420522&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAI) (~$9) offer affordable daily hydration.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:14071265497252530040,catalogid:11330572993243830396,gpcid:13770764747675420522,mid:576462845892921337&ibp=oshop)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:13257771758055889656,catalogid:16441806804969423123,gpcid:9248838291879867153,mid:576462498078896053&ibp=oshop)\n- **Mid-Range Favorites:** [Medicube Triple Collagen Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462820669474890,imageDocid:2608339752556983711,gpcid:191684127866463283,headlineOfferDocid:10128316362104407563,catalogid:9490978596799607787,productDocid:13219482782832546710,rds:PC_191684127866463283%7CPROD_PC_191684127866463283&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAO) (~$21) and [Sungbeon Editor Deep Collagen Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:9535102885610387240,headlineOfferDocid:7203704118501629028,catalogid:16884802550358940659,productDocid:6679679422948840093,rds:CID_16884802550358940659%7CPROD_CID_16884802550358940659&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAQ) (~$32) target barrier repair and elasticity with K-beauty formulations.[[1]](https://www.allure.com/story/best-collagen-creams)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:13219482782832546710,catalogid:9490978596799607787,gpcid:191684127866463283,mid:576462820669474890&ibp=oshop)\n- **Luxury Options:** High-end choices like [Elemis Pro-Collagen Marine Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:4224446399184380415,gpcid:14429049343353735479,headlineOfferDocid:13185553539322024511,catalogid:271032916177586809,productDocid:13723345961085312695,rds:PC_9926787397782714681%7CPROD_PC_9926787397782714681&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAY) (~$140) utilize marine algae and collagen synergies for mature skin types.[[1]](https://www.gmcollin.com/products/marine-collagen-revitalizing-cream)[[2]](https://www.allure.com/story/best-collagen-creams)\n\nIf you want to narrow down the right choice, let me know:\n\n- Your **skin type** (dry, oily, sensitive, or combination)\n- Your **primary goal** (intense hydration, fine lines, or pore care)\n- Your preferred **budget range**",
+       "items": [
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "Collagen creams primarily act as powerful deep moisturizers that plump and hydrate the skin surface, though they need added peptides or retinoids to truly stimulate long-term collagen production.",
+         "markdown": "Collagen creams primarily act as `powerful deep moisturizers that plump and hydrate the skin surface` , though they need added peptides or retinoids to truly stimulate long-term collagen production.[[1]](https://www.allure.com/story/best-collagen-creams)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Allure",
+           "domain": "www.allure.com",
+           "url": "https://www.allure.com/story/best-collagen-creams",
+           "title": "12 Best Collagen Creams to Boost Bounce and Glow - Allure",
+           "text": "Our Top Collagen Creams * Best Overall: Sungboon Editor Deep Collagen Retinol Power Boosting Capsule Cream, $32. * Best Lightweigh..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "How Collagen Creams Work",
+         "text": "Surface Hydration: Topical collagen molecules are generally too large to penetrate deep into the skin, but they form a protective, moisture-locking barrier that instantly smooths and softens dry skin. Paired Ingredients: Effective formulas often combine hydrolyzed collagen with Olay Collagen Peptide Moisturizing Cream or retinoids, niacinamide, and peptides to support elasticity and firmness. Expert Consensus: Most users on Reddit agree that while direct anti-aging claims from pure collagen are mostly marketing, these creams excel at giving a dewy, well-hydrated glow.",
+         "markdown": "- **Surface Hydration:** Topical collagen molecules are generally too large to penetrate deep into the skin, but they form a protective, moisture-locking barrier that instantly smooths and softens dry skin.[[1]](https://www.allure.com/story/best-collagen-creams)\n- **Paired Ingredients:** Effective formulas often combine hydrolyzed collagen with [Olay Collagen Peptide Moisturizing Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462884739848525,imageDocid:16902328756680486276,gpcid:14859901770837195703,headlineOfferDocid:7145718335797291284,catalogid:423920445256632175,productDocid:9129739736910258693,rds:PC_14859901770837195703%7CPROD_PC_14859901770837195703&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIDhAT) or retinoids, niacinamide, and peptides to support elasticity and firmness.[[1]](https://www.byrdie.com/best-collagen-creams)[[2]](https://www.allure.com/story/best-collagen-creams)\n- **Expert Consensus:** Most users on [Reddit](https://www.reddit.com/r/Aging/comments/1plodam/is_there_actually_a_collagen_cream_that_works_my/) agree that while direct anti-aging claims from pure collagen are mostly marketing, these creams excel at giving a dewy, well-hydrated glow.[[1]](https://www.reddit.com/r/Aging/comments/1plodam/is_there_actually_a_collagen_cream_that_works_my/)[[2]](https://www.allure.com/story/best-collagen-creams)",
+         "links": [
+          {
+           "type": "link_element",
+           "title": "Olay Collagen Peptide Moisturizing CreamGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462884739848525,imageDocid:16902328756680486276,gpcid:14859901770837195703,headlineOfferDocid:7145718335797291284,catalogid:423920445256632175,productDocid:9129739736910258693,rds:PC_14859901770837195703%7CPROD_PC_14859901770837195703&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIDhAT",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Reddit",
+           "description": null,
+           "url": "https://www.reddit.com/r/Aging/comments/1plodam/is_there_actually_a_collagen_cream_that_works_my/",
+           "domain": "www.reddit.com"
+          }
+         ],
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Allure",
+           "domain": "www.allure.com",
+           "url": "https://www.allure.com/story/best-collagen-creams",
+           "title": "12 Best Collagen Creams to Boost Bounce and Glow - Allure",
+           "text": "Our Top Collagen Creams * Best Overall: Sungboon Editor Deep Collagen Retinol Power Boosting Capsule Cream, $32. * Best Lightweigh..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Byrdie",
+           "domain": "www.byrdie.com",
+           "url": "https://www.byrdie.com/best-collagen-creams",
+           "title": "The 7 Best Collagen Creams of 2026, Tested and Reviewed - Byrdie",
+           "text": "Best Overall: Our favorite collagen cream is the Olay Collagen Peptide Moisturizing Cream, which has a lightweight formula that hy..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Allure",
+           "domain": "www.allure.com",
+           "url": "https://www.allure.com/story/best-collagen-creams",
+           "title": "12 Best Collagen Creams to Boost Bounce and Glow - Allure",
+           "text": "Our Top Collagen Creams * Best Overall: Sungboon Editor Deep Collagen Retinol Power Boosting Capsule Cream, $32. * Best Lightweigh..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Reddit",
+           "domain": "www.reddit.com",
+           "url": "https://www.reddit.com/r/Aging/comments/1plodam/is_there_actually_a_collagen_cream_that_works_my/",
+           "title": "Is there actually a collagen cream that works? My skin is starting to look ...",
+           "text": "Collagen Creams Ineffectiveness: Topical collagen creams are generally ineffective for anti-aging and firming because collagen mol..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "Popular Options & Pricing",
+         "text": "Budget Picks: Piping Rock Collagen & Placenta Cream (~$5) and Mason Natural Collagen Skin Cream (~$9) offer affordable daily hydration. Mid-Range Favorites: Medicube Triple Collagen Cream (~$21) and Sungbeon Editor Deep Collagen Cream (~$32) target barrier repair and elasticity with K-beauty formulations. Luxury Options: High-end choices like Elemis Pro-Collagen Marine Cream (~$140) utilize marine algae and collagen synergies for mature skin types.",
+         "markdown": "- **Budget Picks:** [Piping Rock Collagen & Placenta Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462498078896053,imageDocid:2600200291543383639,gpcid:9248838291879867153,headlineOfferDocid:5815864117219514364,catalogid:16441806804969423123,productDocid:13257771758055889656,rds:PC_9248838291879867153%7CPROD_PC_9248838291879867153&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAG) (~$5) and [Mason Natural Collagen Skin Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462845892921337,imageDocid:15338838926502711808,gpcid:13770764747675420522,headlineOfferDocid:8462871481439741958,catalogid:11330572993243830396,productDocid:14071265497252530040,rds:PC_13770764747675420522%7CPROD_PC_13770764747675420522&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAI) (~$9) offer affordable daily hydration.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:14071265497252530040,catalogid:11330572993243830396,gpcid:13770764747675420522,mid:576462845892921337&ibp=oshop)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:13257771758055889656,catalogid:16441806804969423123,gpcid:9248838291879867153,mid:576462498078896053&ibp=oshop)\n- **Mid-Range Favorites:** [Medicube Triple Collagen Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462820669474890,imageDocid:2608339752556983711,gpcid:191684127866463283,headlineOfferDocid:10128316362104407563,catalogid:9490978596799607787,productDocid:13219482782832546710,rds:PC_191684127866463283%7CPROD_PC_191684127866463283&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAO) (~$21) and [Sungbeon Editor Deep Collagen Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:9535102885610387240,headlineOfferDocid:7203704118501629028,catalogid:16884802550358940659,productDocid:6679679422948840093,rds:CID_16884802550358940659%7CPROD_CID_16884802550358940659&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAQ) (~$32) target barrier repair and elasticity with K-beauty formulations.[[1]](https://www.allure.com/story/best-collagen-creams)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:13219482782832546710,catalogid:9490978596799607787,gpcid:191684127866463283,mid:576462820669474890&ibp=oshop)\n- **Luxury Options:** High-end choices like [Elemis Pro-Collagen Marine Cream Go to product viewer dialog for this item.](https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:4224446399184380415,gpcid:14429049343353735479,headlineOfferDocid:13185553539322024511,catalogid:271032916177586809,productDocid:13723345961085312695,rds:PC_9926787397782714681%7CPROD_PC_9926787397782714681&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAY) (~$140) utilize marine algae and collagen synergies for mature skin types.[[1]](https://www.gmcollin.com/products/marine-collagen-revitalizing-cream)[[2]](https://www.allure.com/story/best-collagen-creams)",
+         "links": [
+          {
+           "type": "link_element",
+           "title": "Piping Rock Collagen & Placenta CreamGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462498078896053,imageDocid:2600200291543383639,gpcid:9248838291879867153,headlineOfferDocid:5815864117219514364,catalogid:16441806804969423123,productDocid:13257771758055889656,rds:PC_9248838291879867153%7CPROD_PC_9248838291879867153&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAG",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Mason Natural Collagen Skin CreamGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462845892921337,imageDocid:15338838926502711808,gpcid:13770764747675420522,headlineOfferDocid:8462871481439741958,catalogid:11330572993243830396,productDocid:14071265497252530040,rds:PC_13770764747675420522%7CPROD_PC_13770764747675420522&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAI",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Medicube Triple Collagen CreamGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462820669474890,imageDocid:2608339752556983711,gpcid:191684127866463283,headlineOfferDocid:10128316362104407563,catalogid:9490978596799607787,productDocid:13219482782832546710,rds:PC_191684127866463283%7CPROD_PC_191684127866463283&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAO",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Sungbeon Editor Deep Collagen CreamGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:9535102885610387240,headlineOfferDocid:7203704118501629028,catalogid:16884802550358940659,productDocid:6679679422948840093,rds:CID_16884802550358940659%7CPROD_CID_16884802550358940659&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAQ",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Elemis Pro-Collagen Marine CreamGo to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:4224446399184380415,gpcid:14429049343353735479,headlineOfferDocid:13185553539322024511,catalogid:271032916177586809,productDocid:13723345961085312695,rds:PC_9926787397782714681%7CPROD_PC_9926787397782714681&q=product&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQxa4PegoIAggACAAIHRAY",
+           "domain": "www.google.com"
+          }
+         ],
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:14071265497252530040,catalogid:11330572993243830396,gpcid:13770764747675420522,mid:576462845892921337&ibp=oshop",
+           "title": "Mason Natural Mason Collagen Beauty Cream",
+           "text": "Mason American Collagen Cream offers a formula rich in concentrated collagen and vitamin E to effectively enhance skin beauty. It ..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:13257771758055889656,catalogid:16441806804969423123,gpcid:9248838291879867153,mid:576462498078896053&ibp=oshop",
+           "title": "Piping Rock Collagen & Placenta Cream 4 oz Jar",
+           "text": "Provides a rich moisture balance. Promotes supple and hydrated looking skin. Use nightly for best results."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Allure",
+           "domain": "www.allure.com",
+           "url": "https://www.allure.com/story/best-collagen-creams",
+           "title": "12 Best Collagen Creams to Boost Bounce and Glow - Allure",
+           "text": "Our Top Collagen Creams * Best Overall: Sungboon Editor Deep Collagen Retinol Power Boosting Capsule Cream, $32. * Best Lightweigh..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:13219482782832546710,catalogid:9490978596799607787,gpcid:191684127866463283,mid:576462820669474890&ibp=oshop",
+           "title": "Medicube Triple Collagen Cream",
+           "text": "The existing 'Triple Deep Erasing Cream' has been renewed as the 'Triple Collagen Cream'. With this renewal, the name has been cha..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "GM Collin",
+           "domain": "www.gmcollin.com",
+           "url": "https://www.gmcollin.com/products/marine-collagen-revitalizing-cream",
+           "title": "marine collagen revitalizing cream - GM Collin",
+           "text": "71 reviews $130 Anti-aging Size: 1.7 oz 1.7 oz - $130.00 Especially created to challenge the first visible signs of aging and mois..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Allure",
+           "domain": "www.allure.com",
+           "url": "https://www.allure.com/story/best-collagen-creams",
+           "title": "12 Best Collagen Creams to Boost Bounce and Glow - Allure",
+           "text": "Our Top Collagen Creams * Best Overall: Sungboon Editor Deep Collagen Retinol Power Boosting Capsule Cream, $32. * Best Lightweigh..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "If you want to narrow down the right choice, let me know:Your skin type (dry, oily, sensitive, or combination)\nYour primary goal (intense hydration, fine lines, or pore care)\nYour preferred budget range",
+         "markdown": "If you want to narrow down the right choice, let me know:\n\n- Your **skin type** (dry, oily, sensitive, or combination)\n- Your **primary goal** (intense hydration, fine lines, or pore care)\n- Your preferred **budget range**",
+         "links": null,
+         "images": null,
+         "references": null
+        }
+       ],
+       "references": [
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Reddit",
+         "domain": "www.reddit.com",
+         "url": "https://www.reddit.com/r/Aging/comments/1plodam/is_there_actually_a_collagen_cream_that_works_my/",
+         "title": "Is there actually a collagen cream that works? My skin is starting to look ...",
+         "text": "Collagen Creams Ineffectiveness: Topical collagen creams are generally ineffective for anti-aging and firming because collagen mol..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Allure",
+         "domain": "www.allure.com",
+         "url": "https://www.allure.com/story/best-collagen-creams",
+         "title": "12 Best Collagen Creams to Boost Bounce and Glow - Allure",
+         "text": "Our Top Collagen Creams * Best Overall: Sungboon Editor Deep Collagen Retinol Power Boosting Capsule Cream, $32. * Best Lightweigh..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "GM Collin",
+         "domain": "www.gmcollin.com",
+         "url": "https://www.gmcollin.com/products/marine-collagen-revitalizing-cream",
+         "title": "marine collagen revitalizing cream - GM Collin",
+         "text": "71 reviews $130 Anti-aging Size: 1.7 oz 1.7 oz - $130.00 Especially created to challenge the first visible signs of aging and mois..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Byrdie",
+         "domain": "www.byrdie.com",
+         "url": "https://www.byrdie.com/best-collagen-creams",
+         "title": "The 7 Best Collagen Creams of 2026, Tested and Reviewed - Byrdie",
+         "text": "Best Overall: Our favorite collagen cream is the Olay Collagen Peptide Moisturizing Cream, which has a lightweight formula that hy..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Google",
+         "domain": "www.google.com",
+         "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:14071265497252530040,catalogid:11330572993243830396,gpcid:13770764747675420522,mid:576462845892921337&ibp=oshop",
+         "title": "Mason Natural Mason Collagen Beauty Cream",
+         "text": "Mason American Collagen Cream offers a formula rich in concentrated collagen and vitamin E to effectively enhance skin beauty. It ..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Google",
+         "domain": "www.google.com",
+         "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:13257771758055889656,catalogid:16441806804969423123,gpcid:9248838291879867153,mid:576462498078896053&ibp=oshop",
+         "title": "Piping Rock Collagen & Placenta Cream 4 oz Jar",
+         "text": "Provides a rich moisture balance. Promotes supple and hydrated looking skin. Use nightly for best results."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Google",
+         "domain": "www.google.com",
+         "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:13219482782832546710,catalogid:9490978596799607787,gpcid:191684127866463283,mid:576462820669474890&ibp=oshop",
+         "title": "Medicube Triple Collagen Cream",
+         "text": "The existing 'Triple Deep Erasing Cream' has been renewed as the 'Triple Collagen Cream'. With this renewal, the name has been cha..."
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]",
+       "title": "Popular products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Medicube Triple Collagen Cream",
+         "url": "https://www.cozycritique.com/post/decoding-collagen",
+         "domain": "www.cozycritique.com",
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nAbsorbs quickly · Thick jelly-like consistency absorbs nicely Cozy Critique",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:0",
+         "price": {
+          "current": 20.9,
+          "regular": 12,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$20.90 $12/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 1400,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9490978596799607787",
+          "data_docid": "13219482782832546710",
+          "gid": "191684127866463283"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Collagen Body Cream",
+         "url": null,
+         "domain": null,
+         "description": "Target & more\nFree delivery on $35+\nMoisturizes well (931 user reviews)",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:1",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$14.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 9500,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "5620299738669040717",
+          "data_docid": "8921385474758785680",
+          "gid": "15937312645840073801"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Olay Regenerist Collagen Peptide 24 Moisturizer",
+         "url": "https://thestripe.com/olay-collagen-peptide24-review/",
+         "domain": "thestripe.com",
+         "description": "OLAY.com & more\nFree delivery by Tue\nPACKED with good-for-your-skin anti-ageing ingredients · Smoother, firmer skin The Stripe",
+         "more_sellers": true,
+         "seller": "OLAY.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:2",
+         "price": {
+          "current": 39.99,
+          "regular": 24,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$39.99 $24/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 3900,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "6617758198881487399",
+          "data_docid": "3364835678461318251",
+          "gid": "11283840323454898011"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Advanced Clinicals Collagen + Peptide Firming Body Cream",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nMoisturizes well (62 user reviews)",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:3",
+         "price": {
+          "current": 19.99,
+          "regular": 1.25,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$19.99 $1.25/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 584,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4875932669092285779",
+          "data_docid": "9361705385530777005",
+          "gid": "8365626226761869145"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "L'Oreal Paris Collagen Moisture Filler Daily Moisturizer",
+         "url": null,
+         "domain": null,
+         "description": "Target & more\nFree delivery on $100+\nMoisturizes well (165 user reviews)",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:4",
+         "price": {
+          "current": 9.99,
+          "regular": 5.88,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$9.99 $5.88/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 669,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7964054460581163916",
+          "data_docid": "1794922401318474635",
+          "gid": "17137905116981079041"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube Triple Collagen Cream 50ml",
+         "url": null,
+         "domain": null,
+         "description": "medicube.us & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "medicube.us",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:5",
+         "price": {
+          "current": 26,
+          "regular": 0.52,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$26.00 $0.52/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 142,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12884998994044632843",
+          "data_docid": "10270872815227606952",
+          "gid": "10289590556898135314"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "MEDICUBE COLLAGEN JELLY CREAM",
+         "url": "https://www.cozycritique.com/post/decoding-collagen",
+         "domain": "www.cozycritique.com",
+         "description": "Target & more\nFree delivery on $35+\nAbsorbs quickly · Thick jelly-like consistency absorbs nicely Cozy Critique",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:6",
+         "price": {
+          "current": 14.99,
+          "regular": 0.3,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$14.99 $0.30/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 8200,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11752208036419117452",
+          "data_docid": "8164378578781891698",
+          "gid": "13641809061912226318"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancôme Lancome Rénergie Collagen+ Lift-Xtend Cream",
+         "url": "https://myskingotbetter.blog/2026/06/08/lancome-renergie-collagen-lift-xtend-cream-review/",
+         "domain": "myskingotbetter.blog",
+         "description": "Nordstrom & more\nFree delivery\nDoesn't leave any greasy feeling · Absorbs quickly BBlog",
+         "more_sellers": true,
+         "seller": "Nordstrom",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:7",
+         "price": {
+          "current": 140,
+          "regular": 82,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$140.00 $82/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 3800,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "5162156878064079254",
+          "data_docid": "582226666820955764",
+          "gid": "15377486644700937385"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Tried a capsule collagen cream and now I'm curious",
+       "url": "https://www.reddit.com/r/koreanskincare/comments/1qgqfue/tried_a_capsule_collagen_cream_and_now_im_curious/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "8 months ago",
+       "website_name": "Reddit · r/koreanskincare",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "I've been using it for about a month now, and the biggest thing I noticed isn't exactly that my skin feels super moisturized — it's more like ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "my skin feels super moisturized"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.reddit.com/r/koreanskincare/comments/1qgqfue/tried_a_capsule_collagen_cream_and_now_im_curious/#:~:text=I've%20been%20using%20it%20for,moisture%20doesn't%20disappear%20as%20fast.",
+         "domain": "www.reddit.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[6]/div[1]",
+       "title": "More products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Neutrogena Collagen Bank Daily Face Moisturizer",
+         "url": null,
+         "domain": null,
+         "description": "Target & more\nFree delivery on $35+",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:8",
+         "price": {
+          "current": 19.99,
+          "regular": 10,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$19.99 $10.00/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 4000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "17407367413346874435",
+          "data_docid": "17759630780781298709",
+          "gid": "7992523666652523969"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Clinique Smart Clinical Repair Collagen + PDRN Face Cream",
+         "url": null,
+         "domain": null,
+         "description": "Clinique & more\nFree delivery\nMoisturizes well (147 user reviews)",
+         "more_sellers": true,
+         "seller": "Clinique",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:9",
+         "price": {
+          "current": 68,
+          "regular": 40,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$68.00 $40/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 346,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "16585234753869067861",
+          "data_docid": "11054661011679281733",
+          "gid": "15691678991971168589"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "APLB Collagen EGF Peptide Facial Cream",
+         "url": null,
+         "domain": null,
+         "description": "Olive Young Global & more",
+         "more_sellers": true,
+         "seller": "Olive Young Global",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:10",
+         "price": {
+          "current": 10.24,
+          "regular": 5.59,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$10.24 $5.59/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 171,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3066776141831977190",
+          "data_docid": "10965026886533042621",
+          "gid": "3372381251876991014"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Collagen Capsule Cream",
+         "url": "https://nypost.com/shopping/best-pdrn-skincare-products-review/",
+         "domain": "nypost.com",
+         "description": "Walmart & more\nBalanced hydration · Not 100% fragrance-free, though non-irritating New York Post",
+         "more_sellers": true,
+         "seller": "Walmart",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:11",
+         "price": {
+          "current": 21.97,
+          "regular": 11,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$21.97 $11/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 1200,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "16049043872465250324",
+          "data_docid": "17888719966215156422",
+          "gid": "7288495715319887598"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Sungboon Editor Deep Collagen Power Boosting Cream In Serum",
+         "url": "https://www.u-buy.co.uk/product/IDWM41SGK-deep-collagen-anti-wrinkle-cream-in-serum",
+         "domain": "www.u-buy.co.uk",
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nDeep hydration without heaviness · Helps skin look smoother and firmer Ubuy UK",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:12",
+         "price": {
+          "current": 26,
+          "regular": 26,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$26.00 $26/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 142,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12232278899731631700",
+          "data_docid": "1433661756994022700",
+          "gid": "4144818158903976771"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "CKD Guaranteed Retino Collagen Small Molecule 300",
+         "url": null,
+         "domain": null,
+         "description": "Nordstrom & more\nFree delivery\nRetinol, Hyaluronic Acid · Anti-aging, Collagen Boosting · For All Skin Types",
+         "more_sellers": true,
+         "seller": "Nordstrom",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:13",
+         "price": {
+          "current": 25,
+          "regular": 19,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$25.00 $19/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 5,
+          "votes_count": 3,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8839908460699551123",
+          "data_docid": "1068207971209614401",
+          "gid": "16783285308159507553"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Nature's Truth Professional Collagen Cream Skin Care Cream",
+         "url": null,
+         "domain": null,
+         "description": "Walmart - Natures Truth LLC & more",
+         "more_sellers": true,
+         "seller": "Walmart - Natures Truth LLC",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:14",
+         "price": {
+          "current": 9.89,
+          "regular": 2.47,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$9.89 $2.47/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 73,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "307762870311477548",
+          "data_docid": "4000377402380134884",
+          "gid": "17311208115270068118"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Collagen & Vitamin E Face and Body Cream",
+         "url": null,
+         "domain": null,
+         "description": "Essence de Beauté & more\nFree delivery\nThis lasted me for a very long time a little goes a long way and i keep it in the refridgerator. A reviewer on ebay.com",
+         "more_sellers": true,
+         "seller": "Essence de Beauté",
+         "image_url": "https://api.dataforseo.com/cdn/i/10071230-1509-0139-0000-309fe459543f:15",
+         "price": {
+          "current": 42,
+          "regular": null,
+          "max_value": 58,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$42.00 Usually $58"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 47,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "1730162143899040664",
+          "data_docid": "3519068078333771610",
+          "gid": "9961610013705793446"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the most effective collagen cream?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Do collagen creams actually work?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Is it okay to use collagen cream every day?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Which is better for older skin, collagen or retinol?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+       "domain": "www.sweetcare.com",
+       "title": "Medicube Collagen Lifting Firming Face Cream",
+       "url": "https://www.sweetcare.com/mu/medicube-triple-collagen-cream-p-023714mw",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.sweetcare.com › ... › loss of firmness",
+       "website_name": "SweetCare",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Firm, hydrate, and smooth your skin with Medicube Triple Collagen Cream – a powerful anti-aging moisturizer enriched with collagen, elastin, and skin-renewing ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 5,
+        "votes_count": 2,
+        "rating_max": 5
+       },
+       "price": null,
+       "highlighted": [
+        "Collagen Cream",
+        "collagen"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=en&gl=US&sxsrf=APpeQnsNLrVw99oAKdvQAnC9JXak8hvJ8Q:1791376270063&q=collagen+cream&udm=2&source=univ&fir=DzHafwRF84AjiM%252CbsKwg337HSa_nM%252C_%253BNIjyvtR5DVAeHM%252Cp18IRxy3VRrntM%252C_%253BlSN1bHJL6bB6tM%252CbsKwg337HSa_nM%252C_%253BOnf7u79j9u2JQM%252Cgyg4-Gwv5ZUzaM%252C_%253BNFmStyJ4bZzoCM%252CLs3ZuGAmdODisM%252C_%253B_ihpSD2Drp4FfM%252CTwEyvJoVNxLRuM%252C_%253BFxK8a7Hz5-z8ZM%252CUfukRP0drwCmoM%252C_%253BjChZzLhNJkpK4M%252ChT7rUzAoTiURYM%252C_%253B0zcqN7LPYOcqKM%252Cgyg4-Gwv5ZUzaM%252C_&usg=AI4_-kR4b_gQ81MgqFS59kkXuu83jTsxuw&sa=X&ved=2ahUKEwiG4PDR9KeXAxV5R1cBHeUPA8EQ7Al6BAhcEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "Collagen ++Anti-Aging Moisturizing and Firming Day Cream, Hydrating Cream,  Anti Wrinkle Face & Neck Peptide",
+         "url": "https://www.amazon.com/Collagen-Anti-Aging-Moisturizing-Firming-Cream/dp/B07GHS37LC",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXGDvJq8rMBFWMCKcRbpM4GINxQ7q4upOpANnG7RULKyXOohuhAr9VKgw&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Why Collagen Cream Deserves a Spot in Your Skincare Routine ...",
+         "url": "https://www.lorealparisusa.com/beauty-magazine/skin-care/anti-aging/collagen-skin-benefits",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8yDXUHXUXueEXDY0FmDMSWbqH58r913Ty4bcZOi1UVubQ9us29D2HXC4w_w&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Collagen ++Anti-Aging Moisturizing and Firming Day Cream, Hydrating Cream,  Anti Wrinkle Face & Neck Peptide",
+         "url": "https://www.amazon.com/Collagen-Anti-Aging-Moisturizing-Firming-Cream/dp/B07GHS37LC",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqjo1Nqm625iQ_ZtVq5mBd8yA-r4kHzGSoRuXS3-KcDnMoNhH6baf6wQI&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Site Loop: Person’s face before and after using Olay Regenerist Collagen  Peptide 24 Face Moisturizer",
+         "url": "https://www.byrdie.com/best-collagen-creams",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMi5yhSV-lo2887Mih6WgGUpeRZZek1bYjGHG2eR28cg&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Wrinkle Collagen Cream 50ml",
+         "url": "https://www.stylekorean.com/product/wrinkle-collagen-cream-50ml/1779156335?srsltid=AU7gw4Vf5OOPiqUHE0JPqEHyoCGi93kDVxyYdoYFXCE7JJqWr-ZPeGRL",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbDaSRRFMNt8sA_LmDh8qUZiNP4zsWlIyaO4KwU7J-4hk910DePic39Ic&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Collagen Cream, 80g Whitening Moisturizing Firming Anti-Aging Face Cream  Helps Lighten Fine Lines Brightens Younger Skin",
+         "url": "https://www.amazon.com.be/-/en/Collagen-Whitening-Moisturizing-Anti-Aging-Brightens/dp/B085NJ5FDQ",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCIGjuAgzJ2LwOeXFpJldG6YbR1uLRIV40FFrIT2N45ZF8oonsltCKnZk&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Bouncy Skin Starts With These Collagen Creams | Allure",
+         "url": "https://www.allure.com/story/best-collagen-creams",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT55i1r7jcW3KBYo4sTaVtJPYhKTO9s3V22tazb-IL2t6Nbo1G2sKLAtuA&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "DAISO It's Skin Seven Peptide Collagen Cream 50ml",
+         "url": "https://stylejolly.com/Product/Detail/view/pid/31125",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9wBepOgzh4Xup2-rqN6YRm6tpMLaC2NtQ5SKak2rvVDRYzDYrqBbhQ7E&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Site Loop: Person’s face before and after using medicube Collagen Jelly  Cream",
+         "url": "https://www.byrdie.com/best-collagen-creams",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ8Em9uNjAjWergmujTgMyS-vS9lYK3f21bCdpGv2EnA&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+       "domain": "www.facebook.com",
+       "title": "Dr. Gure Collagen Body Cream Now Available 🧴 #DrGure ...",
+       "url": "https://www.facebook.com/pulsebw/posts/dr-gure-collagen-body-cream-now-available-drgure-collagen-collagencream-pulsepha/1091057439698664/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "10+ reactions  ·  1 year ago",
+       "website_name": "Facebook · Pulse Pharmacy",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Hydrates & moisturises. • Firms & nourishes. • Conditions, soothes & softens. • Antioxidants defend skin surface. • Gluten-Free. whilst ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Hydrates & moisturises"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[16]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Firming day cream/more collagen : r/BeautyDE",
+       "url": "https://www.reddit.com/r/BeautyDE/comments/1m0t7ym/hautstraffende_tagescrememehr_kollagen/?tl=en",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "20+ comments  ·  1 year ago",
+       "website_name": "Reddit · r/BeautyDE",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "day cream that firms the skin or stimulates collagen production, dry or normal skin. help the skin produce more of its own collagen & elastin.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "day cream that firms the skin or stimulates collagen production"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]",
+       "domain": "www.doordash.com",
+       "title": "Mediheal Retinol Collagen Cream Lifting Masks / 美迪惠尔 ...",
+       "url": "https://www.doordash.com/products/mediheal-retinol-collagen-cream-lifting-masks-4-4-ct/ugp_150a64e6-c7f7-4937-944d-24e2e3a04e06?srsltid=AU7gw4Xmgyxb0OgLCEmlYN1WxWSS3SKy5PlXsKO2i_Dqr_h8ieUaUGgO",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.doordash.com › products",
+       "website_name": "DoorDash",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Mediheal Retinol Collagen Cream Lifting Masks / 美迪惠尔视黄醇胶原蛋白霜提升面膜(4片) ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Mediheal Retinol Collagen Cream Lifting Masks"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.doordash.com/products/mediheal-retinol-collagen-cream-lifting-masks-4-4-ct/ugp_150a64e6-c7f7-4937-944d-24e2e3a04e06?srsltid=AU7gw4Xmgyxb0OgLCEmlYN1WxWSS3SKy5PlXsKO2i_Dqr_h8ieUaUGgO#:~:text=Mediheal%20Retinol%20Collagen%20Cream%20Lifting,Masks%20%2F%20%E7%BE%8E%E8%BF%AA%E6%83%A0%E5%B0%94%E8%A7%86%E9%BB%84%E9%86%87%E8%83%B6%E5%8E%9F%E8%9B%8B%E7%99%BD%E9%9C%9C%E6%8F%90%E5%8D%87%E9%9D%A2%E8%86%9C(4%E7%89%87)%20(4%20ct)",
+         "domain": "www.doordash.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]",
+       "domain": "cancerchat.cancerresearchuk.org",
+       "title": "Collagen daily face cream - Ask the nurses - Cancer Chat",
+       "url": "https://cancerchat.cancerresearchuk.org/f/ask-the-nurses/124840/collagen-daily-face-cream/561675",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://cancerchat.cancerresearchuk.org › ask-the-nurses",
+       "website_name": "Cancer Research UK",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Feb 7, 2025 — Hi. Everyone. My skin is looking awful. Started to use collagen daily face cream but wondered if safe to do so as I'm taking anastrazole.",
+       "pre_snippet": "02/07/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Started to use collagen daily face cream"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-02-07 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[22]/div[1]/div[1]",
+       "domain": "www.boutiqaat.com",
+       "title": "Buy Dermo Clean Anti Aging Moisturizing Collagen Cream",
+       "url": "https://www.boutiqaat.com/en-bh/women/derrmo-clean-laboratories-anti-aging-moisturizing-collagen-cream-50-ml-169-fl-oz-sc-00017578-1/p/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.boutiqaat.com › en-bh › women › derrmo-...",
+       "website_name": "Boutiqaat",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Shop Dermo Clean Anti Aging Moisturizing Collagen Cream - 50ml Online For Women on Boutiqaat in Bahrain. ☆Fast delivery ✓100% Genuine Products ✓24/7 ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Shop Dermo Clean Anti Aging Moisturizing Collagen Cream"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "perspectives",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "right",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[24]/div[1]",
+       "title": "What people are saying",
+       "items": [
+        {
+         "type": "perspectives_element",
+         "title": "No Cream Can Literally Lift Your Skin, but These Get Close",
+         "description": null,
+         "url": "https://www.allure.com/story/best-skin-tightening-cream",
+         "domain": "www.allure.com",
+         "date": "2 weeks ago",
+         "source": "Christa Joanna Lee",
+         "timestamp": "2026-09-23 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "AD I want uncomplicated skincare that works. Lancôme Rénergie Collagen+ Lift-Xtend Cream helps firm skin and improves skin elasticity for a more lifted appearance. And you can try out this high-performance formula in a 30ml size now available at Boots 🙌🏼 \n#lancomeskincare",
+         "description": null,
+         "url": "https://www.instagram.com/reel/Dd8HBtVBsSM/",
+         "domain": "www.instagram.com",
+         "date": "6 days ago",
+         "source": "clubforty.claire",
+         "timestamp": "2026-10-01 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Do Collagen Creams Actually Work?",
+         "description": null,
+         "url": "https://www.youtube.com/shorts/Q2_56t0BU9I",
+         "domain": "www.youtube.com",
+         "date": "3 weeks ago",
+         "source": "Dr Ingky",
+         "timestamp": "2026-09-16 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Dr Ingky. . You bought an expensive collagen cream, but your wrinkles are still there Topical collagen mainly works as a moisturizing ingredient because intact collagen doesn't easily penetrate deep enough into the skin to replace lost collagen. For better anti-",
+         "description": null,
+         "url": "https://www.facebook.com/official.dr.ingky/videos/you-bought-an-expensive-collagen-cream-but-your-wrinkles-are-still-theretopical-/1619538713034765/",
+         "domain": "www.facebook.com",
+         "date": "3 weeks ago",
+         "source": "official.dr.ingky",
+         "timestamp": "2026-09-16 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "The 10 Best Neck-Firming Creams To Support Smoother, Tighter Skin",
+         "description": null,
+         "url": "https://www.forbes.com/sites/forbes-personal-shopper/article/best-neck-firming-creams/",
+         "domain": "www.forbes.com",
+         "date": "3 weeks ago",
+         "source": "Molly Calhoun",
+         "timestamp": "2026-09-16 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Thoughts on this collagen cream?",
+         "description": null,
+         "url": "https://www.reddit.com/r/Sephora/comments/1wa24f7/thoughts_on_this_collagen_cream/",
+         "domain": "www.reddit.com",
+         "date": "1 month ago",
+         "source": "r/Sephora",
+         "timestamp": "2026-09-07 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "🍚 RICE + BABY OIL “COLLAGEN CREAM”—SKIN REPAIR OR VIRAL MYTH?\n\nRice-based skincare may temporarily make the skin feel softer, while baby oil helps seal in moisture. However, this homemade mixture does not contain collagen, stimulate collagen production or erase wrinkles—even with nightly use.\n\nA safer option:\n\n• Cleanse your face gently\n• Apply a fragrance-free moisturizer to slightly damp skin\n• If your skin is very dry, press 1–2 drops of plain mineral oil over the moisturizer\n• Use only on dry areas, preferably at night\n• Wash your face normally in the morning\n\n⚠️ Homemade rice creams can become contaminated quickly, especially when water is added. Avoid storing or repeatedly using them. Baby oil may also feel too heavy for oily or acne-prone skin.\n\nFor improving fine lines, daily sunscreen and evidence-based ingredients such as retinoids are more reliable options.\n\nWould you try rice in your skincare routine? 👇\n\n#CollagenCream #RiceCream #BabyOil #SkinRepair #NightSkincare AntiAgin",
+         "description": null,
+         "url": "https://www.instagram.com/p/DeKLA8cNm0C/",
+         "domain": "www.instagram.com",
+         "date": "20 hours ago",
+         "source": "dr_madiha_bhayani",
+         "timestamp": "2026-10-06 16:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "My skin has been craving extra hydration lately, and this collagen jelly cream leaves it looking so smooth, lifted, and glowy! ✨",
+         "description": null,
+         "url": "https://www.facebook.com/fashionablylatemom/posts/my-skin-has-been-craving-extra-hydration-lately-and-this-collagen-jelly-cream-le/1638948767812169/",
+         "domain": "www.facebook.com",
+         "date": "3 weeks ago",
+         "source": "fashionablylatemom",
+         "timestamp": "2026-09-16 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "My Costco haul had an unexpected beauty find: re:nk Cellestial Collagen Cream✨\nLook for it at Costco starting October 7.\n\n.\n#renk #SkinLongevity #GlowSkin #CostcoFinds #CollagenCream @renk.global",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DdUBrBNxx20/",
+         "domain": "www.instagram.com",
+         "date": "3 weeks ago",
+         "source": "sheelnspire",
+         "timestamp": "2026-09-16 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Massage your neck with this hydrating cream!",
+         "description": null,
+         "url": "https://www.youtube.com/shorts/Y5WEpuAiTz4",
+         "domain": "www.youtube.com",
+         "date": "2 days ago",
+         "source": "Memaw Talks",
+         "timestamp": "2026-10-05 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Costco run just got a whole lot more exciting 🛒✨ Meet re:nk CELLESTIAL COLLAGEN CREAM — luxe packaging, rich texture, and formulated with 8 types of collagen for that firmer, more elastic look over time. This is what I call investing in healthy aging, not just another skincare purchase. Coming soon to Costco!\n\n#renk #SkinLongevity #GlowSkin #CostcoFinds #CollagenCream @renk.global",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DdrWj3FhKzH/",
+         "domain": "www.instagram.com",
+         "date": "2 weeks ago",
+         "source": "shivna_saxena",
+         "timestamp": "2026-09-23 12:31:11 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "The Inexcepted Co",
+         "description": null,
+         "url": "https://www.facebook.com/61590246343879/posts/-im-in-my-40s-my-skin-needed-help-this-triple-collagen-cream-firms-and-hydrates-/122128525575341544/",
+         "domain": "www.facebook.com",
+         "date": "1 week ago",
+         "source": "Facebook",
+         "timestamp": "2026-09-30 12:31:11 +00:00"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "product_considerations",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "right",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[26]/div[1]",
+       "title": "Things to know",
+       "items": [
+        {
+         "type": "product_considerations_element",
+         "title": "What are the potential side effects of collagen cream?",
+         "consideration_category": "Side Effects",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What are the benefits of collagen cream?",
+         "consideration_category": "Benefits",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How does collagen cream work?",
+         "consideration_category": "How It Works",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What are the key ingredients in collagen cream?",
+         "consideration_category": "Key Ingredients",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How to choose the right collagen cream?",
+         "consideration_category": "Choosing",
+         "expanded_element": null
+        }
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

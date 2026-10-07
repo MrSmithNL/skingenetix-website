@@ -1,0 +1,626 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "24.2604 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10071231-1509-0139-0000-6229796e4498",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "24.1072 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "pdrn vs retinol",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "pdrn vs retinol",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=pdrn%20vs%20retinol&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+     "datetime": "2026-10-07 12:31:38 +00:00",
+     "spell": null,
+     "refinement_chips": null,
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "video",
+      "images",
+      "related_searches"
+     ],
+     "se_results_count": 107000,
+     "pages_count": 1,
+     "items_count": 12,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "houseofcommunal.com",
+       "title": "Is PDRN Good for Acne-Prone Skin? Here's What ...",
+       "url": "https://houseofcommunal.com/blogs/news/pdrn-for-acne-prone-skin?srsltid=AU7gw4WO6Nr3mfyKarisFCQGaeTUFUzhebvHdyuO5y7nOBpw2JCuRlwf",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://houseofcommunal.com › blogs › news › pdrn-fo...",
+       "website_name": "House of Communal",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Aug 12, 2026 — Retinol does this. PDRN works through repair and regeneration, not accelerated cell turnover. On retinol nights, use PDRN in the AM and retinol ...",
+       "pre_snippet": "08/12/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN works through repair and regeneration"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-08-12 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Is retinol better than PDRn?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_expanded_element",
+           "featured_title": null,
+           "url": "https://www.getrael.com/blogs/r-blog/pdrn-vs-retinol-for-wrinkles#:~:text=Retinol%20is%20extensively%20studied%20for,comfortably%20tolerate%20retinol's%20adjustment%20period.",
+           "domain": "www.getrael.com",
+           "title": "PDRN vs Retinol for Wrinkles - Rael",
+           "description": "Retinol is extensively studied for helping skin look smoother and more refined, backed by decades of dermatology research and well-documented effects on cell turnover and collagen support. PDRN is a better fit if your skin is sensitive or reactive and can't comfortably tolerate retinol's adjustment period.",
+           "images": null,
+           "timestamp": null,
+           "table": null
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What works 11 times faster than retinol?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_expanded_element",
+           "featured_title": null,
+           "url": "https://us.medik8.com/pages/retinal-vs-retinol-which-is-better-for-your-skin#:~:text=Retinal%20is%20BETTER%20and%20FASTER,visible%20benefits%20to%20the%20skin.",
+           "domain": "us.medik8.com",
+           "title": "Retinal vs Retinol: Which Is Better For Your Skin? - Medik8-US",
+           "description": "Retinal is BETTER and FASTER than retinol … This next-generation rare form of vitamin A acts up to 11 times faster than classic retinol. Providing remarkable anti-aging, radiance-boosting and skin-smoothing visible benefits to the skin.",
+           "images": null,
+           "timestamp": null,
+           "table": null
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What not to mix with pdrn cream?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_expanded_element",
+           "featured_title": null,
+           "url": "https://kbeautystore.com/blogs/news/pdrn-in-skincare-the-game-changing-ingredient-you-need-in-your-routine#:~:text=While%20PDRN%20is%20gentle%2C%20combining,works%20to%20regenerate%20skin%20beneath.",
+           "domain": "kbeautystore.com",
+           "title": "PDRN in Skincare: The Game-Changing Ingredient You ...",
+           "description": "While PDRN is gentle, combining it with strong exfoliants like AHAs (alpha hydroxy acids) or BHAs (beta hydroxy acids) can lead to irritation, especially if you have sensitive skin. Exfoliating acids work by sloughing off dead skin cells, while PDRN works to regenerate skin beneath.",
+           "images": null,
+           "timestamp": null,
+           "table": null
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Does medicube pdrn contain retinol?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_expanded_element",
+           "featured_title": null,
+           "url": "https://thekbeautyedit.co.uk/products/medicube-pdrn-pink-peptide-eye-cream-30ml#:~:text=The%20Medicube%20PDRN%20Pink%20Peptide,Niacinamide%20and%20a%20peptide%20complex.",
+           "domain": "thekbeautyedit.co.uk",
+           "title": "Medicube PDRN Pink Peptide Eye Cream 30ml - The K Beauty Edit",
+           "description": "The Medicube PDRN Pink Peptide Eye Cream is a lightweight multi-tasking eye cream packed with four key actives: Salmon DNA PDRN, 99%-purity Retinol, Niacinamide and a peptide complex.",
+           "images": null,
+           "timestamp": null,
+           "table": null
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "video",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[6]/div[1]",
+       "items": [
+        {
+         "type": "video_element",
+         "source": "Instagram · Ira Sankrityayan",
+         "title": "PDRN vs RETINAL — know this before you spend your money ...",
+         "timestamp": "2026-04-04 00:00:00 +00:00",
+         "url": "https://www.instagram.com/reel/DWsvMyTE8L2/"
+        },
+        {
+         "type": "video_element",
+         "source": "Facebook · Beauty Korea Dubai",
+         "title": "𝐏𝐃𝐑𝐍 𝐯𝐬. 𝐑𝐞𝐭𝐢𝐧𝐨𝐥: 𝐖𝐡𝐢𝐜𝐡 𝐀𝐧𝐭𝐢-𝐀𝐠𝐢𝐧𝐠 ...",
+         "timestamp": "2025-09-23 00:00:00 +00:00",
+         "url": "https://www.facebook.com/beautykoreadubai/posts/-%F0%9D%90%8F%F0%9D%90%83%F0%9D%90%91%F0%9D%90%8D-%F0%9D%90%AF%F0%9D%90%AC-%F0%9D%90%91%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A8%F0%9D%90%A5-%F0%9D%90%96%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%9C%F0%9D%90%A1-%F0%9D%90%80%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%A2-%F0%9D%90%80%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%A0%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%A2%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD-%F0%9D%90%88%F0%9D%90%AC-%F0%9D%90%91%F0%9D%90%A2%F0%9D%90%A0%F0%9D%90%A1%F0%9D%90%AD-%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB-%F0%9D%90%98%F0%9D%90%A8%F0%9D%90%AE%F0%9D%90%82%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%A8%F0%9D%90%AC%F0%9D%90%9E-%F0%9D%90%91%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A8%F0%9D%90%A5-if-y/1221122600046278/"
+        },
+        {
+         "type": "video_element",
+         "source": "YouTube · Oleksa Ley",
+         "title": "PDRN & Retinol don't play when it comes to wrinklesbut only ...",
+         "timestamp": "2026-09-16 12:31:37 +00:00",
+         "url": "https://www.youtube.com/shorts/f752_-BgmWg"
+        },
+        {
+         "type": "video_element",
+         "source": "Facebook · Luxe Organix Philippines",
+         "title": "PDRN + Retinol = skin renewal duo  PDRN helps support ...",
+         "timestamp": "2026-09-09 12:31:37 +00:00",
+         "url": "https://www.facebook.com/luxeorganixph/posts/pdrn-retinol-skin-renewal-duo-pdrn-helps-support-skin-regeneration-while-retinol/1425785149647173/"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+       "domain": "www.linkedin.com",
+       "title": "Longevity Skincare Emerges with New Scientific Standard",
+       "url": "https://www.linkedin.com/posts/cristiana-banila94_longevityskincare-skinaging-epigenetics-activity-7402377686746030080-AMiN",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "60+ reactions  ·  10 months ago",
+       "website_name": "LinkedIn · Cristiana Banila, PhD",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "PDRN directly repairs damaged tissue —acting. PDRN boosts cellular proliferation and increases blood flow, Patients asking \"which is better, ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN directly repairs damaged tissue"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]/div[1]",
+       "domain": "www.youtube.com",
+       "title": "innisfree pdrn vs cica retinol",
+       "url": "https://www.youtube.com/shorts/5Q3PQOMV8z8",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "30+ views  ·  2 weeks ago",
+       "website_name": "YouTube · aureliafw",
+       "is_image": false,
+       "is_video": true,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_video"
+       ],
+       "description": "innisfree pdrn vs cica retinol ✨. Innisfree Retinol Green Tea PDRN Skinbooster Ampoule 25ml Set Bundle - Serum 3 products",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Innisfree Retinol Green Tea PDRN Skinbooster Ampoule"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-19 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Anyone not use retinal or similar products : r/45PlusSkincare",
+       "url": "https://www.reddit.com/r/45PlusSkincare/comments/1oquo5p/anyone_not_use_retinal_or_similar_products/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "30+ comments  ·  11 months ago",
+       "website_name": "Reddit · r/45PlusSkincare",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Retinoids and Vitamin C work on your skin long term. I can't tell if the PDRN makes a bug difference. I use PDRN and peptides during the day ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]/div[1]",
+       "domain": "www.youtube.com",
+       "title": "Collagen vs Retinol vs Azelaic Acid: Mary & May PDRN ...",
+       "url": "https://www.youtube.com/shorts/mARTjtWHqMg",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "180+ views  ·  2 weeks ago",
+       "website_name": "YouTube",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "PDRN: Deep plumping, micro-needling effect, and firming. • Retinol PDRN: Skin renewal, fine lines, texture, and anti-aging boost. PDRN: Calming ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN: Deep plumping, micro-needling effect, and firming"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]/div[1]",
+       "domain": "skinsort.com",
+       "title": "Rejuran - Advanced Anti-Aging Retinol + C-PDRN Serum",
+       "url": "https://skinsort.com/compare/rejuran-turnover-ampoule-vs-rejuran-advanced-anti-aging-retinol-c-pdrn-serum",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://skinsort.com › compare › rejuran-turnover-amp...",
+       "website_name": "SkinSort",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Retinoid Visibly reduces the signs of aging. Vitamin C Brightens, evens tone, and supports collagen. Peptides Supports skin hydration and improves firmness. Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "pdrn vs retinol from skinsort.com",
+         "url": "https://skinsort.com/compare/rejuran-turnover-ampoule-vs-rejuran-advanced-anti-aging-retinol-c-pdrn-serum",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr69e92xnf7GZPBFxiQ8Z1KmQyGJnTMKVc-PiJ0ORdlE_8UD2Vg2fj&usqp=CAE&s"
+        }
+       ],
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 5,
+        "votes_count": 1,
+        "rating_max": 5
+       },
+       "price": null,
+       "highlighted": [
+        "Retinoid Visibly reduces the signs of aging"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://skinsort.com/compare/rejuran-turnover-ampoule-vs-rejuran-advanced-anti-aging-retinol-c-pdrn-serum#:~:text=Retinoid%20Visibly%20reduces%20the%20signs,skin%20hydration%20and%20improves%20firmness.",
+         "domain": "skinsort.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=8de974bdd654ed99&hl=en&gl=US&sxsrf=APpeQns8BJBWPpM5klZvuOy9EKkZ5_iT7g:1791376296834&q=pdrn+vs+retinol&udm=2&source=univ&fir=1Bps07ySZ8VinM%252CcaeDa-IDOjgr9M%252C_%253BB4c4AS9YIi4z8M%252Cxdk6rXhmXbLboM%252C_%253By7bfuiNCPsQIiM%252Cow_-zYrfMqbkuM%252C_%253BMnmGMuZfHoNNlM%252CoPGeyMwxu8lIwM%252C_%253BTvQaihFxbFooVM%252C6GDTi1W8CI5n2M%252C_%253B4IFw_2Hpzww_mM%252Cow_-zYrfMqbkuM%252C_%253B7wg52O-ogrG6yM%252CW_-QZkaNXyfTMM%252C_%253Bo18yhMInUFwCoM%252CoKkfzvgU2h-cbM%252C_%253BfvioS9LuSptPxM%252COXX60qy57zaBKM%252C_&usg=AI4_-kTs1GDuQ22TSBtf6T__ySx9OUtd6g&sa=X&ved=2ahUKEwjOh9Pe9KeXAxVjVeUKHdfsNhUQ7Al6BAhREAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "✨ PDRN vs. Retinol: The Ultimate Anti-Aging Matchup ...",
+         "url": "https://www.instagram.com/p/DSEo-oYlKNV/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZPPOI7wBMxFw-OunuyzUeaHnCyI_MUNZ6-VcQV2n67zL7jLVheP2ZHU&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN Skincare: Hype or Worth It? Clinical Study Results",
+         "url": "https://www.tiktok.com/@sirdermzalot/video/7681291830557822238",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqiAFgxvU6-Cx9j7vMT8bLaI_CpDdznuqQj7pXDMirWC4xJkp6y60KDE&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN Vs Retinol: Two Approaches To Skin Repair ...",
+         "url": "https://www.cliqueclinic.com/blog/pdrn-vs-retinol-skin-repair-regeneration",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcXfIjEMHhETT7-THQZlPiy1aylQxgH-VZ5wzGeO4xFIFh5nswBLwGbmU&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Rejuran Advanced Anti-Aging Retinol + c-PDRN Serum",
+         "url": "https://dermapproved.com/products/rejuran-advanced-anti-aging-retinol-c-pdrn-serum/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcfmEk-qD-3Egpo-oIrDqASAakd3PmZL6SN4dmDH7aR_8_tcHr4KdjT5I&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Pdrn and Retinol Layering | TikTok",
+         "url": "https://www.tiktok.com/discover/pdrn-and-retinol-layering",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy7-aTYryj9FI94m7DxF9qns4BqfFszyPs0uu8FZdo8eIb-uBlf1aeA4&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN Vs Retinol: Two Approaches To Skin Repair ...",
+         "url": "https://www.cliqueclinic.com/blog/pdrn-vs-retinol-skin-repair-regeneration",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRe01h_Mh8iFm1Lk14ctpvNPw9Ae3-4jPdIZ-cnHKwCIAr6ftrf0tVkPY&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN vs Retinol: Which Does Your Skin Need?",
+         "url": "https://dlux-essentials.com/blogs/article/pdrn-vs-retinol?srsltid=AU7gw4X8M9aNMqcLaGVOy4Rrc-FPjk8hGcOJbegulqaocGZkLddPLriT",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7bRuY6mM2_TdqFqw4mll3HWEC64EGkTNFmd-VGn5kFexPOy0Fjg2kTsc&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Curious about layering PDRN and retinol? 👀✨, Watch @binkychan’s in-depth  review as she shares her step-by-step routine using the PDRN Cream Balm and  Retinol + Bakuchiol Treatment Cream—and see how the ...",
+         "url": "https://www.facebook.com/luxeorganixph/posts/curious-about-layering-pdrn-and-retinol-watch-binkychans-in-depth-review-as-she-/1424130019812686/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1SwD63FwQELCdQuowaLE4BwokPIQT9gm8fv0S0msVde7oJnDb8FneUrU&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN vs. Retinol vs. Bakuchiol: Which Is Best for Wrinkles ...",
+         "url": "https://beautynestco.com/en/blogs/asian-skincare/pdrn-vs-retinol-vs-bakuchiol-quelle-est-la-meilleure-solution-contre-les-rides",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWvxUw7fybJ3ilBl7DVKn08OK-3yG1NuyfPlQtBysB3qVcDODbVGUacjLlhg&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]",
+       "domain": "www.tiktok.com",
+       "title": "Vt Pdrn Essence Before Retinol",
+       "url": "https://www.tiktok.com/discover/vt-pdrn-essence-before-retinol",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.tiktok.com › Discover",
+       "website_name": "TikTok",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Sep 21, 2026 — PDRN in the morning and retinol at night. What this duo does: PDRN Reju 1000 Cream AM for hydration and Pure Retinol 0.15% PM for texture and ... Read more",
+       "pre_snippet": "09/21/2026 00:00:00",
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "pdrn vs retinol from www.tiktok.com",
+         "url": "https://www.tiktok.com/discover/vt-pdrn-essence-before-retinol",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWMRZ1Ll9VFO180qv8qErV5HPBcVGH_QDbRXvf8Gf7V3HIxwqWN05H&usqp=CAE&s"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN in the morning and retinol at night"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.tiktok.com/discover/vt-pdrn-essence-before-retinol#:~:text=PDRN%20in%20the%20morning%20and,for%20texture%20and%20fine%20lines.",
+         "domain": "www.tiktok.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-21 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[21]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Reedle Shot and PDRN with Retinal 0.1%",
+       "url": "https://www.reddit.com/r/SkincareAddictionUK/comments/1u16ydk/reedle_shot_and_pdrn_with_retinal_01/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "2 comments  ·  4 months ago",
+       "website_name": "Reddit · r/SkincareAddictionUK",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "... PDRN serum with 0.1 % retinal with the reedle shot in the same routine. ... Retinol vs retinal — why are they constantly confused? r/ ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN serum with 0.1 % retinal"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.reddit.com/r/SkincareAddictionUK/comments/1u16ydk/reedle_shot_and_pdrn_with_retinal_01/#:~:text=I%20recently%20bought%20the%20VT,shot%20in%20the%20same%20routine.&text=r%2FSkinbarrierLovers",
+         "domain": "www.reddit.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Pdrn vs retinol reddit",
+        "Pdrn vs retinol for acne",
+        "PDRN Serum"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
