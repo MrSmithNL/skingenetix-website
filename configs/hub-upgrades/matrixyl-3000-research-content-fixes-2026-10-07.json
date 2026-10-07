@@ -1,0 +1,60 @@
+{
+ "_about": "2026-10-07 central-audit content fixes, set-only (never re-apply the owner spec). Q5 keyword trims (PDRN), the questions searchers ask (People Also Ask), a safety answer on every hub (V1), the glutathione answers qualified (C9/V4), the Argireline mechanism answer rewritten (C10). Six languages, translated from the live locale text.",
+ "template": "templates/page.research-matrixyl.json",
+ "page": "matrixyl-3000-research",
+ "set": [],
+ "add_blocks": [
+  {
+   "section": "faq",
+   "id": "q7",
+   "after": "q6",
+   "block": {
+    "type": "item",
+    "settings": {
+     "title": {
+      "en": "Who should be careful with Matrixyl 3000?",
+      "de": "Wer sollte bei Matrixyl 3000 vorsichtig sein?",
+      "nl": "Wie moet voorzichtig zijn met Matrixyl 3000?",
+      "fr": "Qui doit être prudent avec Matrixyl 3000 ?",
+      "es": "¿Quién debería tener cuidado con Matrixyl 3000?",
+      "it": "Chi dovrebbe fare attenzione a Matrixyl 3000?"
+     },
+     "content": {
+      "en": "<p>The independent Cosmetic Ingredient Review panel assessed both of its peptides as safe in their present use in cosmetics, and the manufacturer's own 2-month study reported it as well tolerated. Our serum and cream have no tolerance study of their own, so patch-test any new product first. It has not been tested in pregnancy or while breastfeeding, so ask your doctor or pharmacist first. Do not apply it to broken skin, keep it away from the eyes, and see a pharmacist or dermatologist if a reaction persists.</p>",
+      "de": "<p>Das unabhängige Cosmetic Ingredient Review Panel hat beide seiner Peptide in ihrer derzeitigen Verwendung in Kosmetika als sicher bewertet, und die eigene 2-monatige Studie des Herstellers berichtete, dass es gut verträglich war. Für unser Serum und unsere Creme gibt es keine eigene Verträglichkeitsstudie, machen Sie daher bei jedem neuen Produkt zuerst einen Verträglichkeitstest. Es wurde nicht in der Schwangerschaft oder während der Stillzeit getestet, fragen Sie daher zuerst Ihren Arzt oder Ihre Apotheke. Tragen Sie es nicht auf verletzte Haut auf, halten Sie es von den Augen fern und wenden Sie sich an eine Apotheke oder einen Hautarzt, wenn eine Reaktion anhält.</p>",
+      "nl": "<p>Het onafhankelijke Cosmetic Ingredient Review-panel beoordeelde beide peptiden als veilig bij hun huidige gebruik in cosmetica, en de eigen studie van 2 maanden van de fabrikant meldde dat het goed werd verdragen. Ons serum en onze crème hebben geen eigen verdraagbaarheidsstudie, dus test elk nieuw product eerst op een klein stukje huid. Het is niet getest tijdens zwangerschap of borstvoeding, dus vraag eerst je arts of apotheker om advies. Breng het niet aan op een gebroken huid, houd het uit de buurt van de ogen en ga naar een apotheker of dermatoloog als een reactie aanhoudt.</p>",
+      "fr": "<p>Le comité indépendant Cosmetic Ingredient Review a évalué ses deux peptides comme sûrs dans leur usage actuel en cosmétique, et l'étude de 2 mois du fabricant l'a décrit comme bien toléré. Notre sérum et notre crème n'ont pas d'étude de tolérance qui leur soit propre : testez tout nouveau produit sur une petite zone d'abord. Il n'a pas été testé pendant la grossesse ni l'allaitement, demandez donc d'abord conseil à votre médecin ou à votre pharmacien. Ne l'appliquez pas sur une peau lésée, gardez-le à distance des yeux, et consultez un pharmacien ou un dermatologue si une réaction persiste.</p>",
+      "es": "<p>El panel independiente Cosmetic Ingredient Review evaluó sus dos péptidos como seguros en su uso actual en cosméticos, y el propio estudio de 2 meses del fabricante lo describió como bien tolerado. Nuestro sérum y nuestra crema no tienen un estudio de tolerancia propio, así que prueba cualquier producto nuevo en una zona pequeña. No se ha probado durante el embarazo ni la lactancia, así que consulta antes con tu médico o farmacéutico. No lo apliques sobre piel dañada, manténlo alejado de los ojos y consulta a un farmacéutico o dermatólogo si una reacción persiste.</p>",
+      "it": "<p>Il comitato indipendente Cosmetic Ingredient Review ha valutato entrambi i suoi peptidi come sicuri nell'uso attuale nei cosmetici, e lo studio di 2 mesi del produttore stesso lo ha riportato come ben tollerato. Il nostro siero e la nostra crema non hanno uno studio di tollerabilità proprio, quindi prova prima ogni nuovo prodotto su una piccola area. Non è stato testato in gravidanza o durante l'allattamento, quindi chiedi prima al tuo medico o al farmacista. Non applicarlo su pelle lesa, tienilo lontano dagli occhi e rivolgiti a un farmacista o a un dermatologo se una reazione persiste.</p>"
+     }
+    }
+   }
+  },
+  {
+   "section": "faq",
+   "id": "q8",
+   "after": "q7",
+   "block": {
+    "type": "item",
+    "settings": {
+     "title": {
+      "en": "Matrixyl 3000 vs Argireline: what is the difference, and can they be used together?",
+      "de": "Matrixyl 3000 oder Argireline®: Was ist der Unterschied, und kann man sie zusammen verwenden?",
+      "nl": "Matrixyl 3000 versus Argireline: wat is het verschil, en kunnen ze samen worden gebruikt?",
+      "fr": "Matrixyl 3000 ou Argireline : quelle différence, et peut-on les utiliser ensemble ?",
+      "es": "Matrixyl 3000 frente a Argireline: ¿cuál es la diferencia y se pueden usar juntos?",
+      "it": "Matrixyl 3000 o Argireline: qual è la differenza, e si possono usare insieme?"
+     },
+     "content": {
+      "en": "<p>They are different peptides for different jobs. Matrixyl 3000 pairs two peptides tested for the look of deep wrinkles and skin texture in its manufacturer's 2-month study; Argireline® is a single peptide tested for the look of expression lines such as crow's feet over four weeks. No trial has tested them together, so there is no evidence of a combined effect. Neither is an acid, so they can be layered, one new product at a time. Read our <a href=\"/pages/acetyl-hexapeptide-8-research\">Argireline research page</a>.</p>",
+      "de": "<p>Es sind unterschiedliche Peptide für unterschiedliche Aufgaben. Matrixyl 3000 verbindet zwei Peptide, die in der 2-monatigen Studie des Herstellers für das Aussehen tiefer Falten und der Hautstruktur getestet wurden; Argireline® ist ein einzelnes Peptid, das über vier Wochen für das Aussehen von Mimikfalten wie Krähenfüßen getestet wurde. Keine Studie hat beide zusammen getestet, es gibt also keinen Beleg für eine kombinierte Wirkung. Keines von beiden ist eine Säure, sie lassen sich daher kombinieren, jeweils mit nur einem neuen Produkt. Lesen Sie unsere <a href=\"/de/pages/acetyl-hexapeptide-8-research\">Argireline®-Forschungsseite</a>.</p>",
+      "nl": "<p>Het zijn verschillende peptiden voor verschillende taken. Matrixyl 3000 combineert twee peptiden die in de studie van 2 maanden van de fabrikant zijn getest voor het uiterlijk van diepe rimpels en huidtextuur; Argireline® is één peptide dat gedurende vier weken is getest voor het uiterlijk van mimieklijntjes zoals kraaienpootjes. Geen enkele studie heeft ze samen getest, dus er is geen bewijs voor een gecombineerd effect. Geen van beide is een zuur, dus ze kunnen op elkaar worden aangebracht, met één nieuw product tegelijk. Lees onze <a href=\"/nl/pages/acetyl-hexapeptide-8-research\">onderzoekspagina over Argireline</a>.</p>",
+      "fr": "<p>Ce sont des peptides différents, pour des rôles différents. Matrixyl 3000 associe deux peptides testés pour l'apparence des rides profondes et de la texture de la peau dans l'étude de 2 mois de son fabricant ; Argireline® est un peptide unique testé pour l'apparence des rides d'expression comme les pattes-d'oie sur quatre semaines. Aucun essai ne les a testés ensemble : il n'existe donc aucune preuve d'un effet combiné. Aucun des deux n'est un acide, ils peuvent donc être superposés, un seul nouveau produit à la fois. Lisez notre <a href=\"/fr/pages/acetyl-hexapeptide-8-research\">page de recherche sur Argireline</a>.</p>",
+      "es": "<p>Son péptidos distintos para funciones distintas. Matrixyl 3000 combina dos péptidos probados para el aspecto de las arrugas profundas y de la textura de la piel en el estudio de 2 meses de su fabricante; Argireline® es un único péptido probado durante cuatro semanas para el aspecto de las líneas de expresión, como las patas de gallo. Ningún ensayo los ha probado juntos, así que no hay evidencia de un efecto combinado. Ninguno es un ácido, así que se pueden combinar, introduciendo un producto nuevo cada vez. Lee nuestra <a href=\"/es/pages/acetyl-hexapeptide-8-research\">página de investigación sobre Argireline</a>.</p>",
+      "it": "<p>Sono peptidi diversi per compiti diversi. Matrixyl 3000 abbina due peptidi testati per l'aspetto delle rughe profonde e della texture della pelle nello studio di 2 mesi del suo produttore; Argireline® è un singolo peptide testato per l'aspetto delle rughe d'espressione come le zampe di gallina nell'arco di quattro settimane. Nessuno studio li ha testati insieme, quindi non ci sono prove di un effetto combinato. Nessuno dei due è un acido, quindi si possono abbinare, introducendo un solo nuovo prodotto alla volta. Leggi la nostra <a href=\"/it/pages/acetyl-hexapeptide-8-research\">pagina di ricerca su Argireline®</a>.</p>"
+     }
+    }
+   }
+  }
+ ]
+}

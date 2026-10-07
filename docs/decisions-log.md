@@ -587,3 +587,45 @@ whoever wrote the content. Malcolm was told this in the session.
 **To change it:** only with each research team's written agreement. Then `jsonld()` in `scripts/build-study-page.py` is the one place to
 edit.
 **Undo:** revert `2658b5d` and run `build-study-page.py configs/studies/<handle>.json --apply` for each study.
+
+## ADR-2026-10-07-V: Layer 1 of the ranking plan applied live on "let's proceed with the fixes and improvements"
+
+**Context.** `docs/seo-performance-and-ranking-plan-2026-10-07.md` found the five hubs below the audit bar on the central v2 criteria
+(PDRN 8.99, copper 8.58, glutathione 7.78, Argireline and Matrixyl capped at 4.9), four of the failures shared through the hub template,
+the five translated SEO titles of PDRN, Argireline, copper and The Science outdated since 2026-09-22, and the English PDRN hub not
+indexed. Malcolm, 2026-10-07: "lets proceed with the fixes and improvements".
+**Decision.** The fixes that need no further decision went live the same day, in six languages at once (nothing served in English on
+another locale), through set-only specs (`configs/hub-upgrades/*-audit-fixes-2026-10-07.json`, `*-content-fixes-2026-10-07.json`):
+
+1. **Schema:** the hub page object is `Article` (with `headline`, `mainEntityOfPage`, `dateModified` 2026-10-07) instead of `WebPage` (S3).
+2. **The FAQ section's team avatar is cleared** on all five hubs: Impact rendered the same product image twice, desktop and mobile, and the
+   audit read it as a duplicated block (C10).
+3. **PDRN hub:** the retinol comparison says "more than three times" everywhere (Ye 2026 Figure 6B), including the German "mehr als dreimal";
+   the keyword repetition is trimmed (96 → about 75 uses, the four packed paragraphs broken up, the ritual image alt rewritten); the question
+   headings searchers use are added as FAQ items: "Is PDRN salmon sperm? Where does it come from?", "Do PDRN serums actually work?",
+   "Can I use PDRN with retinol, and what should I not mix it with?", "Who should be careful with PDRN?".
+4. **Argireline hub:** the "how it works" answer now answers (the register's cosmetic-safe mechanism wording); new items "Does Argireline
+   work?", "Is Argireline better than retinol?", "What should I avoid using with Argireline, and who should be careful?".
+5. **Copper hub:** "What should I not mix with copper peptides, and how do I layer them?" (the product page's own layering guidance: the serum
+   pairs GHK-Cu with 3-O-ethyl ascorbic acid) and "Who should be careful…, and are creams the same as the injections sold online?".
+6. **Matrixyl hub:** "Who should be careful with Matrixyl 3000?" and "Matrixyl 3000 vs Argireline…" (links the Argireline hub; a spoke follows).
+7. **Glutathione hub:** the "does it work" answer is qualified to the two trials and the ingredient at 2% (C9); "It works where it is
+   applied" and "keep using it to keep the result" are replaced with what the trial measured (V4); a safety item separating topical from
+   oral and IV glutathione.
+8. **Every safety item** says the same five things in the register's wording: patch-test; not tested in pregnancy or breastfeeding, ask a
+   doctor or pharmacist; not on broken skin, away from the eyes; see a pharmacist or dermatologist if a reaction persists; our own formulas
+   have no tolerance study. Never "safe", "hypoallergenic" or "dermatologically tested" (ADR-2026-09-30-S).
+9. **SEO titles and descriptions** of PDRN, Argireline, copper (titles) and The Science re-translated to mirror the English, with
+   "Argireline" named in every language (`configs/seo-changes/hub-meta-*-2026-10-07.translations.json`).
+10. **Keyword ownership in `configs/page-targets.json`** aligned to the strategy and the ownership analysis: hub "argireline", product
+    "argireline serum"; product "matrixyl 3000", hub the science terms; a collection "peptide skincare"; home the brand. This lifts the P1
+    caps. The product titles and the Matrixyl cream's title were **not** changed: that stays Malcolm's decision (trademark on the product
+    page; "collagen cream with matrixyl" for the cream).
+
+**Withheld, for Malcolm:** an "Is Argireline 'Botox in a bottle'?" item (the register lists the phrase under claims to avoid; a
+"what it is and is not" framing needs his word); the product-page titles above; the Ye article's missing sibling link (needs the
+study-article rebuild).
+**Undo.** Each hub: `python3 scripts/hub-upgrade.py <spec> --rollback` restores the backup the apply wrote (`backups/…20261007-15*`).
+SEO texts: the previous five-locale values are in `configs/seo-snapshots/seo-before-hub-meta-translations-2026-10-07.json`; re-register
+with `scripts/seo-translate.py`. The ritual image alt: `productUpdateMedia` on MediaImage 70951919255937 with the old alt (in the same
+snapshot folder's git history). `configs/page-targets.json`: `git revert`.

@@ -206,3 +206,14 @@ routes, and this page keeps them apart", in six languages:
 Source: §2 row 2 (PN side 10.3 → 8.9 at 2 months, between sides P = 0.006; saline side significant only at 6 months). It says "polynucleotide",
 not PDRN, because the paper does not state the PN's source, and the sentence before it already says the result does not transfer to a leave-on
 cream. Spec `configs/hub-upgrades/pdrn-research-layout-2026-09-24.json` (overview), translations through `configs/hub-i18n/pdrn-research.json`.
+
+## Applied on the store — 2026-10-07 (central-audit fixes, ADR-2026-10-07-V)
+
+- The overview's retinol comparison now reads "more than three times the improvement seen with retinol" in all six languages (was "more than
+  twice"; German "mehr als doppelt" → "mehr als dreimal"), matching the 3.5× key figure and the FAQ (Figure 6B).
+- New FAQ items, register-checked: "Is PDRN salmon sperm? Where does it come from?" (q4 retitled); "Do PDRN serums actually work?" (the one
+  controlled trial, for what it measured; 31 women; other strengths including our 1% not trialled); "Can I use PDRN with retinol, and what
+  should I not mix it with?" (no combination tested; the trial used them on opposite sides); "Who should be careful with PDRN?" (fish
+  allergy as a precaution; not tested in pregnancy; not on broken skin; patch-test; a cosmetic, not the injected product).
+- Keyword repetition trimmed from 96 to about 75 uses of "PDRN" in the extracted text (the vegan, ppm and layering paragraphs; the four
+  cards; FAQ and CTA wording; the ritual image alt). No claim changed.

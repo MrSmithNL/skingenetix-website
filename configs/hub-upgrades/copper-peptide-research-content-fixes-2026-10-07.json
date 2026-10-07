@@ -1,0 +1,60 @@
+{
+ "_about": "2026-10-07 central-audit content fixes, set-only (never re-apply the owner spec). Q5 keyword trims (PDRN), the questions searchers ask (People Also Ask), a safety answer on every hub (V1), the glutathione answers qualified (C9/V4), the Argireline mechanism answer rewritten (C10). Six languages, translated from the live locale text.",
+ "template": "templates/page.research-copper-peptide.json",
+ "page": "copper-peptide-research",
+ "set": [],
+ "add_blocks": [
+  {
+   "section": "faq",
+   "id": "q7",
+   "after": "q6",
+   "block": {
+    "type": "item",
+    "settings": {
+     "title": {
+      "en": "What should I not mix with copper peptides, and how do I layer them?",
+      "de": "Womit sollte ich Kupferpeptide nicht mischen, und wie kombiniere ich sie?",
+      "nl": "Waarmee moet ik koperpeptiden niet combineren, en hoe laag ik ze op elkaar aan?",
+      "fr": "Avec quoi ne faut-il pas mélanger les peptides de cuivre, et comment les superposer ?",
+      "es": "¿Con qué no debería mezclar los péptidos de cobre y cómo los combino?",
+      "it": "Con che cosa non devo mescolare i peptidi di rame, e come li abbino?"
+     },
+     "content": {
+      "en": "<p>No combination has been tested in a trial. Our serum already pairs 2% GHK-Cu with a stable vitamin C (3-O-ethyl ascorbic acid) and niacinamide in one formula. If you separately use pure L-ascorbic acid vitamin C, strong acids (AHA or BHA) or high-strength retinol, apply those at a different time of day. Copper peptides are not acids or exfoliants, so they layer easily with other peptides, hyaluronic acid and moisturisers: apply the serum to clean skin, then your cream, then SPF in the morning. Introduce one new product at a time.</p>",
+      "de": "<p>Keine Kombination wurde in einer Studie getestet. Unser Serum verbindet 2 % GHK-Cu bereits mit einem stabilen Vitamin C (3-O-Ethylascorbinsäure) und Niacinamid in einer Formel. Wenn Sie zusätzlich reines Vitamin C (L-Ascorbinsäure), starke Säuren (AHA oder BHA) oder hochdosiertes Retinol verwenden, tragen Sie diese zu einer anderen Tageszeit auf. Kupferpeptide sind keine Säuren oder Peelings, daher lassen sie sich leicht mit anderen Peptiden, Hyaluronsäure und Feuchtigkeitscremes kombinieren: Tragen Sie das Serum auf gereinigte Haut auf, dann Ihre Creme, morgens abschließend Sonnenschutz. Führen Sie jeweils nur ein neues Produkt ein.</p>",
+      "nl": "<p>Geen enkele combinatie is in een studie getest. Ons serum combineert 2% GHK-Cu al met een stabiele vitamine C (3-O-ethylascorbinezuur) en niacinamide in één formule. Als je daarnaast zuivere L-ascorbinezuur-vitamine C, sterke zuren (AHA of BHA) of retinol met een hoge concentratie gebruikt, breng die dan op een ander moment van de dag aan. Koperpeptiden zijn geen zuren of exfoliantia, dus ze combineren makkelijk met andere peptiden, hyaluronzuur en moisturizers: breng het serum aan op een schone huid, daarna je crème, en 's ochtends SPF. Voer één nieuw product tegelijk in.</p>",
+      "fr": "<p>Aucune association n'a été testée dans un essai. Notre sérum associe déjà 2 % de GHK-Cu à une vitamine C stable (acide 3-O-éthyl ascorbique) et à de la niacinamide dans une seule formule. Si vous utilisez séparément de la vitamine C sous forme d'acide L-ascorbique pur, des acides forts (AHA ou BHA) ou un rétinol très dosé, appliquez-les à un autre moment de la journée. Les peptides de cuivre ne sont ni des acides ni des exfoliants, ils se superposent donc facilement aux autres peptides, à l'acide hyaluronique et aux crèmes hydratantes : appliquez le sérum sur une peau propre, puis votre crème, puis un SPF le matin. Introduisez un seul nouveau produit à la fois.</p>",
+      "es": "<p>No se ha probado ninguna combinación en un ensayo. Nuestro sérum ya combina un 2 % de GHK-Cu con una vitamina C estable (ácido 3-O-etil ascórbico) y niacinamida en una sola fórmula. Si usas por separado vitamina C en forma de ácido L-ascórbico puro, ácidos fuertes (AHA o BHA) o retinol de alta concentración, aplícalos en otro momento del día. Los péptidos de cobre no son ácidos ni exfoliantes, así que se combinan fácilmente con otros péptidos, ácido hialurónico y cremas hidratantes: aplica el sérum sobre la piel limpia, luego tu crema y después SPF por la mañana. Introduce un producto nuevo cada vez.</p>",
+      "it": "<p>Nessuna combinazione è stata testata in uno studio. Il nostro siero abbina già il 2% di GHK-Cu a una vitamina C stabile (acido 3-O-etil ascorbico) e a niacinamide in un'unica formula. Se usi separatamente vitamina C pura sotto forma di acido L-ascorbico, acidi forti (AHA o BHA) o retinolo ad alta concentrazione, applicali in un momento diverso della giornata. I peptidi di rame non sono acidi né esfolianti, quindi si abbinano facilmente ad altri peptidi, acido ialuronico e creme idratanti: applica il siero sulla pelle pulita, poi la crema, poi la SPF al mattino. Introduci un solo nuovo prodotto alla volta.</p>"
+     }
+    }
+   }
+  },
+  {
+   "section": "faq",
+   "id": "q8",
+   "after": "q4",
+   "block": {
+    "type": "item",
+    "settings": {
+     "title": {
+      "en": "Who should be careful with copper peptides, and are creams the same as the injections sold online?",
+      "de": "Wer sollte bei Kupferpeptiden vorsichtig sein, und sind Cremes dasselbe wie die online verkauften Injektionen?",
+      "nl": "Wie moet voorzichtig zijn met koperpeptiden, en zijn crèmes hetzelfde als de injecties die online worden verkocht?",
+      "fr": "Qui doit être prudent avec les peptides de cuivre, et les crèmes sont-elles identiques aux injections vendues en ligne ?",
+      "es": "¿Quién debería tener cuidado con los péptidos de cobre y son lo mismo las cremas que las inyecciones que se venden en internet?",
+      "it": "Chi dovrebbe fare attenzione ai peptidi di rame, e le creme sono la stessa cosa delle iniezioni vendute online?"
+     },
+     "content": {
+      "en": "<p>In the 8-week controlled trial, 39 of 40 women tolerated the GHK-Cu serum well; one had minor skin reactions on both sides of the face and stopped, and they settled without treatment. Our 2% products have no tolerance study of their own, so patch-test first. It has not been tested in pregnancy or while breastfeeding, so ask your doctor or pharmacist first. Do not apply it to broken skin, keep it away from the eyes, and see a pharmacist or dermatologist if a reaction persists. A cream or serum is a cosmetic applied to the skin; the GHK-Cu injections and powders sold online are a different, unregulated use, and nothing on this page is about them.</p>",
+      "de": "<p>In der 8-wöchigen kontrollierten Studie vertrugen 39 von 40 Frauen das GHK-Cu-Serum gut; eine hatte leichte Hautreaktionen auf beiden Gesichtshälften und brach ab, und sie klangen ohne Behandlung ab. Für unsere Produkte mit 2 % gibt es keine eigene Verträglichkeitsstudie, machen Sie daher zuerst einen Verträglichkeitstest an einer kleinen Hautstelle. Es wurde nicht in der Schwangerschaft oder während der Stillzeit getestet, fragen Sie daher zuerst Ihren Arzt oder Ihre Apotheke. Tragen Sie es nicht auf verletzte Haut auf, halten Sie es von den Augen fern und wenden Sie sich an eine Apotheke oder einen Hautarzt, wenn eine Reaktion anhält. Eine Creme oder ein Serum ist ein Kosmetikprodukt, das auf die Haut aufgetragen wird; die online verkauften GHK-Cu-Injektionen und -Pulver sind eine andere, nicht regulierte Anwendung, und nichts auf dieser Seite handelt von ihnen.</p>",
+      "nl": "<p>In de gecontroleerde studie van 8 weken verdroegen 39 van de 40 vrouwen het GHK-Cu-serum goed; één had lichte huidreacties aan beide kanten van het gezicht en stopte, en die trokken zonder behandeling weg. Onze producten met 2% hebben geen eigen verdraagbaarheidsstudie, dus test eerst op een klein stukje huid. Het is niet getest tijdens zwangerschap of borstvoeding, dus vraag eerst je arts of apotheker om advies. Breng het niet aan op een gebroken huid, houd het uit de buurt van de ogen en ga naar een apotheker of dermatoloog als een reactie aanhoudt. Een crème of serum is een cosmetisch product dat op de huid wordt aangebracht; de GHK-Cu-injecties en -poeders die online worden verkocht zijn een ander, niet gereguleerd gebruik, en niets op deze pagina gaat daarover.</p>",
+      "fr": "<p>Dans l'essai contrôlé de 8 semaines, 39 femmes sur 40 ont bien toléré le sérum au GHK-Cu ; l'une a eu de légères réactions cutanées des deux côtés du visage et a arrêté, et elles se sont apaisées sans traitement. Nos produits à 2 % n'ont pas d'étude de tolérance qui leur soit propre : testez-les donc d'abord sur une petite zone. Il n'a pas été testé pendant la grossesse ni l'allaitement, demandez donc d'abord conseil à votre médecin ou à votre pharmacien. Ne l'appliquez pas sur une peau lésée, gardez-le à distance des yeux, et consultez un pharmacien ou un dermatologue si une réaction persiste. Une crème ou un sérum est un produit cosmétique appliqué sur la peau ; les injections et les poudres de GHK-Cu vendues en ligne relèvent d'un autre usage, non réglementé, et rien sur cette page ne les concerne.</p>",
+      "es": "<p>En el ensayo controlado de 8 semanas, 39 de las 40 mujeres toleraron bien el sérum con GHK-Cu; una tuvo reacciones cutáneas leves en ambos lados de la cara y lo dejó, y remitieron sin tratamiento. Nuestros productos al 2 % no tienen un estudio de tolerancia propio, así que prueba antes en una zona pequeña. No se ha probado durante el embarazo ni la lactancia, así que consulta antes con tu médico o farmacéutico. No lo apliques sobre piel dañada, manténlo alejado de los ojos y consulta a un farmacéutico o dermatólogo si una reacción persiste. Una crema o un sérum es un cosmético que se aplica sobre la piel; las inyecciones y los polvos de GHK-Cu que se venden en internet son un uso distinto y no regulado, y nada de esta página trata de ellos.</p>",
+      "it": "<p>Nello studio controllato di 8 settimane, 39 donne su 40 hanno tollerato bene il siero al GHK-Cu; una ha avuto lievi reazioni cutanee su entrambi i lati del viso e ha sospeso, e sono passate senza trattamento. I nostri prodotti al 2% non hanno uno studio di tollerabilità proprio, quindi fai prima una prova su una piccola area. Non è stato testato in gravidanza o durante l'allattamento, quindi chiedi prima al tuo medico o al farmacista. Non applicarlo su pelle lesa, tienilo lontano dagli occhi e rivolgiti a un farmacista o a un dermatologo se una reazione persiste. Una crema o un siero è un cosmetico applicato sulla pelle; le iniezioni e le polveri di GHK-Cu vendute online sono un uso diverso e non regolamentato, e nulla in questa pagina li riguarda.</p>"
+     }
+    }
+   }
+  }
+ ]
+}

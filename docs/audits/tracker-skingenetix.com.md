@@ -23,6 +23,14 @@ earlier 9.6–9.8 hub scores came from the retired two-model script and are with
 **Not assessed by the auditor and found elsewhere today:** the English PDRN hub is not indexed at all (URL Inspection: unknown to Google); genuine
 referring domains are 0; Lighthouse mobile LCP 7.8–11.1 s on the hubs. See the report.
 
+### Fixes applied 2026-10-07 (Malcolm: "proceed with the fixes and improvements")
+
+Live on all five hubs in six languages (ADR-2026-10-07-V): `Article` schema with `dateModified`; the duplicated FAQ avatar removed; the
+PDRN retinol figure unified and its keyword repetition trimmed; question-shaped FAQ items (does it work, vs retinol, what not to mix, who
+should be careful) on every hub; the glutathione answers qualified; the Argireline mechanism answer rewritten; SEO titles and descriptions
+re-translated for PDRN, Argireline, copper and The Science; keyword ownership aligned in `page-targets.json`. Run 2 of the central audit
+follows below.
+
 ## Clinical-study articles — first audit, 2026-09-29
 
 Four articles under `/blogs/clinical-studies/`, audited twice (engine before and after the fixes this run prompted).

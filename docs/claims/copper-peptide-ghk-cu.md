@@ -357,3 +357,13 @@ figure, card, table row, reference and FAQ answer on the live English page (fetc
 - **The before/after for card 1 shows her right-side crow's feet**, the side the trial treated with GHK-Cu. In picture terms: her head is turned so that her
   nose points towards the **right-hand edge of the frame**, and her right eye corner and cheek face the camera. That side is locked in both panels (memory
   `state-the-side-lock-in-picture-terms`).
+
+## 9. Applied on the store — 2026-10-07 (central-audit fixes, ADR-2026-10-07-V)
+
+- New FAQ items on the hub: "What should I not mix with copper peptides, and how do I layer them?" (reuses the product page's own guidance:
+  the serum pairs 2% GHK-Cu with 3-O-ethyl ascorbic acid and niacinamide; pure L-ascorbic acid, strong acids and high-strength retinol at a
+  different time of day; no combination trialled) and "Who should be careful with copper peptides, and are creams the same as the
+  injections sold online?" (§5 Badenhorst wording: 39 of 40; one minor reaction that settled; our 2% products have no tolerance study;
+  injections and powders sold online are a different, unregulated use).
+- The five translated SEO titles now use the local ingredient name (Kupferpeptide, koperpeptiden, peptides de cuivre, péptidos de cobre,
+  peptidi di rame).

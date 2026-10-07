@@ -181,3 +181,14 @@ half of users' crow's feet as clearly smoother, against none on placebo." That i
 _Method note: PubMed E-utilities searches ("argireline", "acetyl hexapeptide", "acetyl hexapeptide-3", "hexapeptide wrinkle"), then a Europe PMC
 sweep, then full texts from PMC, SciELO, the Raikou author PDF, and the Wang 2013 full text (PDF mirror). Lubrizol pages were read in a browser. Wiley
 full texts for Blanes-Mira and Raikou were paywalled; Raikou was obtained from the author institution's repository._
+
+## 7. Applied on the store — 2026-10-07 (central-audit fixes, ADR-2026-10-07-V)
+
+- FAQ "How does Acetyl Hexapeptide-8 work on expression lines?" now uses §1's cosmetic-safe mechanism wording (modelled on part of SNAP-25;
+  designed to soften the look of expression lines; laboratory studies vs what the trials measured in people).
+- New FAQ items: "Does Argireline work?" (claims #1, #2 and #6: 22 of 45 vs none on placebo; replicas; forehead roughness −7.4% vs +4.3%,
+  P = .022; not permanent; does not change how the skin works); "Is Argireline better than retinol?" (no comparison exists; different jobs;
+  no irritation comparison made); "What should I avoid using with Argireline, and who should be careful?" (no combination tested; topical
+  only, never inject or needle, per §4 Chen 2021; not tested in pregnancy; patch-test; claim #8 for the trials; our serum untested).
+- Withheld for Malcolm: a "Botox in a bottle: what it is and is not" item (§3 lists the phrase under claims to avoid).
+- The five translated SEO titles now name "Argireline®"; the descriptions mirror the English.

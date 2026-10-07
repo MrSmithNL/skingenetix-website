@@ -550,3 +550,15 @@ key figure 3 kept as "Week 1" with the week-6 result in its note; card f2 as cro
 combination study out (ADR-P and rule 6).
 
 **Parked, unchanged:** the formula fact (§6 gap 1). The certificate should show OXIDIZED GLUTATHIONE at 2%.
+
+## 9. Applied on the store — 2026-10-07 (central-audit fixes, ADR-2026-10-07-V)
+
+- FAQ "Does topical glutathione work for brightening skin?" no longer opens with an unqualified "Yes": it names the two controlled trials
+  and their measures, says they total 76 women, and that both tested the ingredient at 2% while our serum's own formula has not been
+  trialled (audit C9).
+- FAQ "Can glutathione be absorbed through the skin?" no longer says "It works where it is applied"; it states what the split-face trial
+  measured and that human absorption of GSSG has not been measured (V4; §4 "no published human penetration data").
+- FAQ "How long does it take to work?" no longer says "keep using it to keep the result"; it says the effect was measured during use and
+  what happens after stopping was not studied (V4).
+- New FAQ: "Who should be careful with topical glutathione, and is it the same as oral or IV glutathione?" (topical, oral and IV kept apart,
+  per §4 and §5; the one mild-redness case from Watanabe; patch-test; not tested in pregnancy).

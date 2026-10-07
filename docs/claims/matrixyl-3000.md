@@ -583,3 +583,10 @@ Applied through a set-only spec, `configs/hub-upgrades/matrixyl-3000-research-st
 owning spec `matrixyl-3000-research.json` also carries drift the live page does not have (section order and backgrounds, charts CSS,
 references JSON-LD). The owning spec was updated in step. ⚠️ **The template rebuild replaces this section:** its evidence foot line
 (`matrixyl-3000-research-layout-2026-09-26.json`) must carry the same link when it goes live, or P3 fails again.
+
+## 10. Applied on the store — 2026-10-07 (central-audit fixes, ADR-2026-10-07-V)
+
+- New FAQ items on the hub: "Who should be careful with Matrixyl 3000?" (§5: CIR "safe in the present practices of use"; the manufacturer's
+  2-month study reported it well tolerated, labelled as the manufacturer's; our serum and cream have no tolerance study; patch-test; not
+  tested in pregnancy) and "Matrixyl 3000 vs Argireline: what is the difference, and can they be used together?" (§1 bundle rule: two
+  peptides for different jobs, no study of the pair, no combined claim; links the Argireline hub).

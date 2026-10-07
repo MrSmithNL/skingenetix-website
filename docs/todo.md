@@ -62,14 +62,17 @@ vs retinol, Botox framing) and share four template faults (C10 duplicated FAQ im
 **▶ Layer 1 (weeks 1–2):**
 
 - [ ] 🛑 Malcolm: Request indexing in Search Console for `/pages/pdrn-research`, Yogya, Tadini, Robinson; re-inspect weekly.
-- [ ] Hub template fix, all five hubs: remove the duplicated FAQ image block; add the safety block (register wording); cut repetition under 1.5/100 words; add `Article` to the schema; add `dateModified` where missing; one definition sentence above the stat tiles. Re-audit to 9.0+
+- [x] (done 2026-10-07, live ×6; re-audit run 2 in the tracker) Hub template fix, all five hubs: remove the duplicated FAQ image block; add the safety block (register wording); cut repetition under 1.5/100 words; add `Article` to the schema; add `dateModified` where missing; one
+  definition sentence above the stat tiles. Re-audit to 9.0+
       with no confirmed failures.
-- [ ] PDRN hub: one retinol figure ("more than three times", Ye Fig. 6B) in six languages (intro says "twice"; German "doppelt"); the PAA sections (salmon sperm?, do serums work?, what not to mix, with retinol?, how to use).
-- [ ] Argireline hub: "Does Argireline work?", "Botox in a bottle: what it is and is not" (🛑 register check), side effects, vs retinol, what not to mix, vs Matrixyl; German title with "Argireline".
-- [ ] Copper and glutathione hubs: side effects / who should avoid; what not to mix and layering (🛑 formulation owner: the copper serum contains vitamin C); oral vs topical vs injection.
-- [ ] 🛑 Malcolm: keyword ownership (ADR-2026-09-30-K open item): hub "argireline" / product "argireline serum"; serum "matrixyl 3000" / hub the science terms; cream title → "collagen cream with matrixyl"; a collection owns "peptide skincare"; the product page may carry the word
+- [x] (done 2026-10-07, live ×6) PDRN hub: one retinol figure ("more than three times", Ye Fig. 6B) in six languages (intro says "twice"; German "doppelt"); the PAA sections (salmon sperm?, do serums work?, what not to mix, with retinol?, how to use).
+- [x] (done 2026-10-07 except the Botox item, which stays 🛑 Malcolm's) Argireline hub: "Does Argireline work?", "Botox in a bottle: what it is and is not" (🛑 register check), side effects, vs retinol, what not to mix, vs Matrixyl; German title with "Argireline".
+- [x] (done 2026-10-07; the vitamin C answer reuses the product page's own guidance; Matrixyl got its safety and "vs Argireline" items too) Copper and glutathione hubs: side effects / who should avoid; what not to mix and layering (🛑 formulation owner: the copper serum contains
+  vitamin C); oral vs topical vs injection.
+- [x] (config aligned 2026-10-07; 🛑 still Malcolm's: "Argireline" on the product page, the cream's title) Keyword ownership (ADR-2026-09-30-K open item): hub "argireline" / product "argireline serum"; serum "matrixyl 3000" / hub the science terms; cream title → "collagen cream
+  with matrixyl"; a collection owns "peptide skincare"; the product page may carry the word
       "Argireline" (trademark). Then update `configs/page-targets.json` and titles; the P1 caps lift.
-- [ ] Hub → study links for the four articles failing P3; product → study links.
+- [ ] (hubs already link all eight; Ye → Yogya sibling link waits for the STUDY-DETAIL rebuild) Hub → study links for the four articles failing P3; product → study links.
 - [ ] Hide the empty `/blogs/learn` from the sitemap until the first spoke; distinct tag-page titles (🛑 core layout).
 - [ ] Report stonevillenc.org to Google (hacked-site spam); costs nothing.
 - [ ] Finish STUDY-DETAIL (approve English → translate → live).
