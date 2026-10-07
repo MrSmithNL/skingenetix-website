@@ -1,0 +1,2076 @@
+{
+ "url": "https://www.skingenetix.com/pages/pdrn-research",
+ "kind": "article",
+ "keyword": "pdrn",
+ "audit_score": {
+  "score": 9.69,
+  "uncapped_score": 9.69,
+  "dimensions": [
+   {
+    "dimension": "query_fit",
+    "score": 10.0,
+    "weight": 17.0,
+    "criteria": 8,
+    "unmeasured": 0
+   },
+   {
+    "dimension": "content",
+    "score": 9.0,
+    "weight": 24.0,
+    "criteria": 10,
+    "unmeasured": 0
+   },
+   {
+    "dimension": "trust",
+    "score": 10.0,
+    "weight": 18.0,
+    "criteria": 6,
+    "unmeasured": 0
+   },
+   {
+    "dimension": "structured_data",
+    "score": 10.0,
+    "weight": 2.0,
+    "criteria": 3,
+    "unmeasured": 0
+   },
+   {
+    "dimension": "ai_eligibility",
+    "score": 10.0,
+    "weight": 8.0,
+    "criteria": 4,
+    "unmeasured": 0
+   },
+   {
+    "dimension": "site_strategy",
+    "score": 9.17,
+    "weight": 4.0,
+    "criteria": 4,
+    "unmeasured": 0
+   },
+   {
+    "dimension": "technical",
+    "score": 10.0,
+    "weight": 6.0,
+    "criteria": 9,
+    "unmeasured": 0
+   },
+   {
+    "dimension": "vertical_health",
+    "score": 10.0,
+    "weight": 13.0,
+    "criteria": 2,
+    "unmeasured": 0
+   }
+  ],
+  "caps": [],
+  "unconfirmed_caps": [],
+  "provisional": false,
+  "blocked": false,
+  "gates_passed": [
+   "http_status_ok",
+   "html_document",
+   "not_noindex",
+   "canonical_self_or_absent",
+   "robots_txt_allows",
+   "redirect_hops"
+  ],
+  "gates_failed": [],
+  "gates_unchecked": [],
+  "considered": 57,
+  "applicable": 57,
+  "coverage": 1.0,
+  "low_confidence": false,
+  "excluded": [],
+  "unmeasured": [],
+  "criteria_unclassified": 0,
+  "not_assessed": [
+   "C6",
+   "C8",
+   "R9",
+   "S5",
+   "P5",
+   "O1",
+   "O2",
+   "T1",
+   "T3",
+   "T10",
+   "X3"
+  ],
+  "required_not_assessed": [],
+  "assessed_share": 0.807
+ },
+ "gates": [
+  {
+   "gate_id": "http_status_ok",
+   "name": "Answers 200 OK",
+   "passed": true,
+   "detail": "HTTP 200"
+  },
+  {
+   "gate_id": "html_document",
+   "name": "Is an HTML document",
+   "passed": true,
+   "detail": "text/html; charset=utf-8"
+  },
+  {
+   "gate_id": "not_noindex",
+   "name": "Not noindexed",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate_id": "canonical_self_or_absent",
+   "name": "Canonical names this page",
+   "passed": true,
+   "detail": "canonical names this URL (https://www.skingenetix.com/pages/pdrn-research)"
+  },
+  {
+   "gate_id": "robots_txt_allows",
+   "name": "robots.txt allows Googlebot",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate_id": "redirect_hops",
+   "name": "Reached in \u2264 10 redirect hops",
+   "passed": true,
+   "detail": "0 hops"
+  }
+ ],
+ "verdicts": {
+  "Q1": {
+   "criterion_id": "Q1",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "Q3": {
+   "criterion_id": "Q3",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "Q4": {
+   "criterion_id": "Q4",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "Q6": {
+   "criterion_id": "Q6",
+   "state": "MET",
+   "met": 2,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "no verdict"
+   },
+   "evidence_by_judge": {}
+  },
+  "Q7": {
+   "criterion_id": "Q7",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "C1": {
+   "criterion_id": "C1",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "C2": {
+   "criterion_id": "C2",
+   "state": "MET",
+   "met": 2,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "no verdict",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "C3": {
+   "criterion_id": "C3",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "C4": {
+   "criterion_id": "C4",
+   "state": "MET",
+   "met": 2,
+   "unmet": 1,
+   "na": 0,
+   "score": 6.67,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "UNMET"
+   },
+   "evidence_by_judge": {}
+  },
+  "C5": {
+   "criterion_id": "C5",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "C7": {
+   "criterion_id": "C7",
+   "state": "MET",
+   "met": 2,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "no verdict"
+   },
+   "evidence_by_judge": {}
+  },
+  "C9": {
+   "criterion_id": "C9",
+   "state": "CONFIRMED_FAIL",
+   "met": 1,
+   "unmet": 2,
+   "na": 0,
+   "score": 3.33,
+   "evidence": [
+    "Headline and FAQ claims rest on one industry-linked trial, and the summary stresses 'up to 23%'. The 1% products were never tested. The 'Day 14' stat claims evidence of 'improvement evident' vs. visible change. Overall the page is hedged, but the hero 3.5\u00d7 framing is hype-leaning.",
+    "more than three times the improvement seen with retinol",
+    "The page is cautious in many places, but it still overreaches. The headline says PDRN gave \"more than three times the improvement seen with retinol\". It also says the PDRN side \"improved significantly more\" than retinol on every measure, with no independent evidence. The trial's 0.1% eye cream is used to promote 1% products.",
+    "In the one controlled trial of a leave-on cream, yes, for what it measured.",
+    "The page is mostly careful, but its headline hype ('3.5\u00d7', 'more than three times') rests on one industry-linked trial with no placebo. It also says 'improved significantly more on every measure' and sells 1% products that were not tested.",
+    "an eye cream with 0.1% PDRN softened the look of crow's feet by up to 23% in 28 days, more than three times the improvement seen with retinol.",
+    "The page acknowledges that its single trial tested a 0.1% eye cream, not its 1% products, yet directs readers toward a PDRN routine without evidence that the products or routine produce the reported results.",
+    "For a routine built around PDRN, see [skin repair and renewal](/pages/skin-repair-renewal).",
+    "The page acknowledges that its 1% products have not been trialled, yet directs readers to a product routine without evidence that the tested 0.1% cream\u2019s results apply to those products.",
+    "The study tested a 0.1% eye cream, while the page recommends twice-daily use for its 1% products despite acknowledging those strengths have not been trialled. This recommendation exceeds the evidence presented.",
+    "Twice a day for at least 4 weeks. The trial saw the first change at day 14 and measured its results at day 28."
+   ],
+   "by_judge": {
+    "claude-sonnet-5-5": "UNMET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "UNMET"
+   },
+   "evidence_by_judge": {
+    "claude-sonnet-5-5": [
+     "Headline and FAQ claims rest on one industry-linked trial, and the summary stresses 'up to 23%'. The 1% products were never tested. The 'Day 14' stat claims evidence of 'improvement evident' vs. visible change. Overall the page is hedged, but the hero 3.5\u00d7 framing is hype-leaning.",
+     "more than three times the improvement seen with retinol",
+     "The page is cautious in many places, but it still overreaches. The headline says PDRN gave \"more than three times the improvement seen with retinol\". It also says the PDRN side \"improved significantly more\" than retinol on every measure, with no independent evidence. The trial's 0.1% eye cream is used to promote 1% products.",
+     "In the one controlled trial of a leave-on cream, yes, for what it measured.",
+     "The page is mostly careful, but its headline hype ('3.5\u00d7', 'more than three times') rests on one industry-linked trial with no placebo. It also says 'improved significantly more on every measure' and sells 1% products that were not tested.",
+     "an eye cream with 0.1% PDRN softened the look of crow's feet by up to 23% in 28 days, more than three times the improvement seen with retinol."
+    ],
+    "perplexity/sonar": [
+     "The page acknowledges that its single trial tested a 0.1% eye cream, not its 1% products, yet directs readers toward a PDRN routine without evidence that the products or routine produce the reported results.",
+     "For a routine built around PDRN, see [skin repair and renewal](/pages/skin-repair-renewal).",
+     "The page acknowledges that its 1% products have not been trialled, yet directs readers to a product routine without evidence that the tested 0.1% cream\u2019s results apply to those products.",
+     "The study tested a 0.1% eye cream, while the page recommends twice-daily use for its 1% products despite acknowledging those strengths have not been trialled. This recommendation exceeds the evidence presented.",
+     "Twice a day for at least 4 weeks. The trial saw the first change at day 14 and measured its results at day 28."
+    ]
+   }
+  },
+  "C10": {
+   "criterion_id": "C10",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "C11": {
+   "criterion_id": "C11",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "C12": {
+   "criterion_id": "C12",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "R1": {
+   "criterion_id": "R1",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "R2": {
+   "criterion_id": "R2",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "R3": {
+   "criterion_id": "R3",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "R5": {
+   "criterion_id": "R5",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "R7": {
+   "criterion_id": "R7",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "R8": {
+   "criterion_id": "R8",
+   "state": "NOT_APPLICABLE",
+   "met": 0,
+   "unmet": 0,
+   "na": 3,
+   "score": null,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "NA",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "NA",
+    "perplexity/sonar": "NA"
+   },
+   "evidence_by_judge": {}
+  },
+  "A4": {
+   "criterion_id": "A4",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "P4": {
+   "criterion_id": "P4",
+   "state": "MET",
+   "met": 2,
+   "unmet": 1,
+   "na": 0,
+   "score": 6.67,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "UNMET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "T6": {
+   "criterion_id": "T6",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "X1": {
+   "criterion_id": "X1",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "V1": {
+   "criterion_id": "V1",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  },
+  "V4": {
+   "criterion_id": "V4",
+   "state": "MET",
+   "met": 3,
+   "unmet": 0,
+   "na": 0,
+   "score": 10.0,
+   "evidence": [],
+   "by_judge": {
+    "claude-sonnet-5-5": "MET",
+    "gpt-6-sol": "no verdict",
+    "gemini-3.8-flash": "MET",
+    "perplexity/sonar": "MET"
+   },
+   "evidence_by_judge": {}
+  }
+ },
+ "checks": {
+  "Q2": {
+   "status": "pass",
+   "detail": "keyword in the title, once"
+  },
+  "Q5": {
+   "status": "pass",
+   "detail": "\u201cpdrn\u201d 80\u00d7 in 3262 words"
+  },
+  "R4": {
+   "status": "pass",
+   "detail": "5 verified, 0 not comparable (check by hand), 0 unreachable"
+  },
+  "S1": {
+   "status": "pass",
+   "detail": "marked-up headline/name appear on the page"
+  },
+  "S3": {
+   "status": "pass",
+   "detail": "Article present"
+  },
+  "S4": {
+   "status": "na",
+   "detail": "no time-sensitive markup"
+  },
+  "A1": {
+   "status": "pass",
+   "detail": "no snippet restriction"
+  },
+  "A2": {
+   "status": "pass",
+   "detail": "OAI-SearchBot, PerplexityBot, Claude-SearchBot allowed"
+  },
+  "A3": {
+   "status": "pass",
+   "detail": "main content present in the server HTML"
+  },
+  "T2": {
+   "status": "pass",
+   "detail": "HTTPS, no mixed content"
+  },
+  "T3": {
+   "status": "not_assessed",
+   "detail": "viewport set; the layout at 390 px (horizontal scroll, tap targets) needs a rendered page"
+  },
+  "T5": {
+   "status": "pass",
+   "detail": "one title, one H1, lang set"
+  },
+  "Q8": {
+   "status": "pass",
+   "detail": "distinct from 1 related pages' titles; no boilerplate"
+  },
+  "S2": {
+   "status": "pass",
+   "detail": "1 item(s) carry every required property \u00b7 notes: FAQ: rich result retired; Article: recommended missing \u2014 image"
+  },
+  "P1": {
+   "status": "pass",
+   "detail": "\u201cpdrn\u201d is owned by this page alone"
+  },
+  "P2": {
+   "status": "pass",
+   "detail": "no own page in the top 10 (no collision)"
+  },
+  "P3": {
+   "status": "pass",
+   "detail": "hub links down to 2 of 2 spokes"
+  },
+  "P5": {
+   "status": "not_assessed",
+   "detail": "no sibling pages declared in the keyword map"
+  },
+  "T1": {
+   "status": "not_assessed",
+   "detail": "the CrUX API refused the request (403) \u2014 enable the Chrome UX Report API on the key's Google Cloud project and allow it on the key"
+  },
+  "T4": {
+   "status": "pass",
+   "detail": "in the sitemap (lastmod 2026-09-22; the page's markup says dateModified 2026-10-07); linked from the home page"
+  },
+  "T7": {
+   "status": "pass",
+   "detail": "31 links and images answer"
+  },
+  "T8": {
+   "status": "pass",
+   "detail": "5 alternates: valid codes, self-listed, all link back, languages match"
+  },
+  "T9": {
+   "status": "pass",
+   "detail": "16 content images, all with descriptive filenames"
+  },
+  "T10": {
+   "status": "not_assessed",
+   "detail": "16 image(s) in modern formats or small; sizing for display needs lab data \u2014 PageSpeed lab data unavailable (PageSpeed answered 403 \u2014 enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key)"
+  },
+  "T12": {
+   "status": "pass",
+   "detail": "18 internal links crawlable and labelled"
+  },
+  "T13": {
+   "status": "pass",
+   "detail": "readable: words and hyphens"
+  }
+ },
+ "not_assessed": {
+  "C6": "needs a rendered page",
+  "C8": "needs a web search",
+  "R9": "needs a web search",
+  "S5": "needs a rendered page",
+  "O1": "needs backlink data (F-012 S4)",
+  "O2": "needs backlink data (F-012 S4)",
+  "X3": "needs a rendered page",
+  "P5": "no sibling pages declared in the keyword map",
+  "T1": "the CrUX API refused the request (403) \u2014 enable the Chrome UX Report API on the key's Google Cloud project and allow it on the key",
+  "T3": "viewport set; the layout at 390 px (horizontal scroll, tap targets) needs a rendered page",
+  "T10": "16 image(s) in modern formats or small; sizing for display needs lab data \u2014 PageSpeed lab data unavailable (PageSpeed answered 403 \u2014 enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key)"
+ },
+ "not_scored": {
+  "V2": "no verified source yet (to verify)",
+  "V5": "no verified source yet (to verify)"
+ },
+ "excluded": [
+  "R6",
+  "X2",
+  "V3"
+ ],
+ "criteria": {
+  "Q1": {
+   "id": "Q1",
+   "dimension": "query_fit",
+   "name": "Achieves its purpose",
+   "test": "MET when the page does what a page of its type is for \u2014 informs, sells, explains who someone is, lets the reader act \u2014 and a reader arriving for that purpose would be satisfied. UNMET when the purpose is unclear, unfulfilled, or buried. Judge the purpose first (QRG \u00a72.2), then whether the main content achieves it.",
+   "method": "llm",
+   "scope": "page",
+   "group": "opening",
+   "required_for": [
+    "home",
+    "product",
+    "collection",
+    "article",
+    "evidence",
+    "about",
+    "contact",
+    "faq",
+    "legal",
+    "profile"
+   ],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a72.2, \u00a73.1",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "Q2": {
+   "id": "Q2",
+   "dimension": "query_fit",
+   "name": "Target keyword in the title, once",
+   "test": "The declared primary keyword, or a close variant, appears in the <title>; the same phrase is not repeated.",
+   "method": "code",
+   "scope": "keyword",
+   "group": "body",
+   "required_for": [],
+   "na_for": [
+    "home",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/appearance/title-link",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "Q3": {
+   "id": "Q3",
+   "dimension": "query_fit",
+   "name": "Serves the keyword's intent",
+   "test": "MET when the page answers the declared query's dominant intent (Know, Know Simple, Do, Website or Visit-in-person, QRG \u00a712.7) and its most likely interpretation. UNMET when a searcher with that query would need another page.",
+   "method": "llm",
+   "scope": "keyword",
+   "group": "opening",
+   "required_for": [],
+   "na_for": [
+    "home",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a712.7",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "Q4": {
+   "id": "Q4",
+   "dimension": "query_fit",
+   "name": "Covers the query's real sub-questions in one page",
+   "test": "MET when the page answers the searchers' real follow-up questions about its own subject (from People-also-ask / related searches) within this page. On a page with a SITE ROLE as a spoke of a hub, questions about the topic in general may be left to that hub when the page links to it \u2014 answering them here would compete with the hub. UNMET when obvious follow-up questions about the page's own subject go unanswered, or are pushed to thin separate pages.",
+   "method": "llm",
+   "scope": "serp",
+   "group": "body",
+   "required_for": [],
+   "na_for": [
+    "home",
+    "collection",
+    "contact",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide (query fan-out)",
+   "verified": "2026-09-30",
+   "tier": "universal"
+  },
+  "Q5": {
+   "id": "Q5",
+   "dimension": "query_fit",
+   "name": "No keyword stuffing",
+   "test": "No unnatural, out-of-context repetition of the target term or its variants.",
+   "method": "code",
+   "scope": "keyword",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/essentials/spam-policies",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "Q6": {
+   "id": "Q6",
+   "dimension": "query_fit",
+   "name": "Title and H1 match the content",
+   "test": "MET when the page title and H1 accurately describe the main content. UNMET when either exaggerates, shocks, or promises something the page does not deliver (QRG \u00a75.2 Low-title examples).",
+   "method": "llm",
+   "scope": "page",
+   "group": "opening",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a75.2",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "Q7": {
+   "id": "Q7",
+   "dimension": "query_fit",
+   "name": "Page-specific meta description",
+   "test": "MET when a meta description is present and summarises this particular page. UNMET when it is missing, generic boilerplate shared across pages, or describes something else. Length alone is not a failure.",
+   "method": "llm",
+   "scope": "page",
+   "group": "opening",
+   "required_for": [],
+   "na_for": [
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developers.google.com/search/docs/appearance/snippet",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "Q8": {
+   "id": "Q8",
+   "dimension": "query_fit",
+   "name": "Distinct, descriptive title",
+   "test": "The <title> is not identical to its hub's, a sibling's or the home page's title; it is not only the site name, does not repeat the site name, and is not empty. Length is reported, never scored (Google: no limit; the title link is truncated to fit the device width).",
+   "method": "code",
+   "scope": "site",
+   "group": "head",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/appearance/title-link",
+   "verified": "2026-09-30",
+   "tier": "universal"
+  },
+  "C1": {
+   "id": "C1",
+   "dimension": "content",
+   "name": "Effort and originality",
+   "test": "MET when the main content adds something beyond what is commonly available: first-hand experience, original analysis, synthesis, or evident expertise and effort (QRG \u00a73.2). UNMET when it restates commodity information anyone could assemble.",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [
+    "legal",
+    "transactional",
+    "utility",
+    "contact"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a73.2; https://developers.google.com/search/docs/fundamentals/creating-helpful-content Q1-Q4",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "C2": {
+   "id": "C2",
+   "dimension": "content",
+   "name": "Facts correct and consistent with expert consensus",
+   "test": "MET when statements of fact are accurate and consistent with well-established expert consensus. UNMET when any is clearly inaccurate, or contradicts consensus without saying so (QRG \u00a74.4; fiction, satire, clearly marked opinion and reasonably debatable claims are excluded). A true finding stated too strongly is judged under C9, not here; a falsehood that could harm a reader is judged under C12.",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a74.4",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "C3": {
+   "id": "C3",
+   "dimension": "content",
+   "name": "Complete for its purpose",
+   "test": "MET when the page carries the facts its type and purpose need: price, specifications and availability on a product; method, sample and limits on an evidence page; the steps on an instructional page; the key facts on an article. UNMET when a reader must go elsewhere for an essential fact.",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a73.2; arXiv 2605.25517",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "C4": {
+   "id": "C4",
+   "dimension": "content",
+   "name": "Internally consistent",
+   "test": "MET when figures, claims, names and dates agree throughout the page. UNMET when the page contradicts itself.",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "arXiv 2605.25517",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "C5": {
+   "id": "C5",
+   "dimension": "content",
+   "name": "Specific, sourced evidence",
+   "test": "MET when specific numbers, definitions and comparisons are attributed to a source a reader can check (named study, linked source, reference list). UNMET when specific claims are made without any traceable source.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [
+    "evidence"
+   ],
+   "na_for": [
+    "home",
+    "collection",
+    "contact",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content Q13",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "C6": {
+   "id": "C6",
+   "dimension": "content",
+   "name": "Main content prominent and unobstructed",
+   "test": "No filler before the main content; no ad, overlay or intrusive interstitial covering it.",
+   "method": "render",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a75.2.2, \u00a74.5.4",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "C7": {
+   "id": "C7",
+   "dimension": "content",
+   "name": "Clear structure",
+   "test": "MET when headings and sections let a reader find their way through the content. UNMET when a long page is an undivided wall or headings do not describe their sections. Do not count headings or paragraph lengths.",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "C8": {
+   "id": "C8",
+   "dimension": "content",
+   "name": "Not copied, not machine boilerplate",
+   "test": "No verbatim copying from the open web; no LLM boilerplate strings.",
+   "method": "search",
+   "scope": "web",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a74.6.6-4.6.7",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "C9": {
+   "id": "C9",
+   "dimension": "content",
+   "name": "Claims proportionate to the evidence",
+   "test": "MET when claims stay within their sources: study results are not presented as proof for a product the study did not test, recommendation strength matches evidence strength, and there is no hype. UNMET when any claim outruns the evidence given for it.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [
+    "evidence"
+   ],
+   "na_for": [
+    "home",
+    "collection",
+    "contact",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a74.4, \u00a75.6",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "C10": {
+   "id": "C10",
+   "dimension": "content",
+   "name": "Produced with care",
+   "test": "MET when spelling, grammar and names (brand, ingredient, product, person) are correct and consistent, and no block or paragraph is duplicated. UNMET when there are repeated errors, inconsistent names, or duplicated passages.",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content Q10-Q11",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "C11": {
+   "id": "C11",
+   "dimension": "content",
+   "name": "Comparisons and reviews show their evidence and method",
+   "test": "Applies only where the page reviews, compares or ranks products or options; otherwise answer NA. MET when it says why, with first-hand evidence, benefits and drawbacks, and how items were compared. UNMET when rankings or verdicts are asserted without method or evidence.",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "C12": {
+   "id": "C12",
+   "dimension": "content",
+   "name": "No harmfully misleading information",
+   "test": "MET when nothing on the page is false or misleading in a way that could harm a reader who acted on it. UNMET when a clearly inaccurate statement, a contradiction of expert consensus, or an unsubstantiated theory could lead a reader to harm their health, money or safety \u2014 for example an unsafe dose, frequency or combination, a claim to cure or treat a disease, or advice to avoid professional care (QRG \u00a74.4; trivial errors, fiction, satire, clearly marked opinion and reasonably debatable claims are excluded).",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": "lowest",
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a74.4",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "R1": {
+   "id": "R1",
+   "dimension": "trust",
+   "name": "Responsible entity identified",
+   "test": "MET when it is clear who is responsible for the page (organisation or person), and a reader can find how to contact them. UNMET when responsibility is hidden or unclear (QRG \u00a72.5.2-2.5.3).",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a72.5.2-2.5.3",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "R2": {
+   "id": "R2",
+   "dimension": "trust",
+   "name": "Byline where a reader expects one",
+   "test": "MET when the page says, with its content or in the article header above it, who wrote or compiled it \u2014 a named person, or a named team or organisation (\"By the Skingenetix research team\" counts). UNMET when an article, evidence page or profile carries no author a reader can see at all. Whether the named author is credible is judged elsewhere, not here.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [
+    "article",
+    "evidence",
+    "profile"
+   ],
+   "na_for": [
+    "home",
+    "product",
+    "collection",
+    "about",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content (Who); Google author markup accepts Person or Organization",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "R3": {
+   "id": "R3",
+   "dimension": "trust",
+   "name": "Credentials truthful",
+   "test": "MET when stated author or reviewer credentials are specific, plausible and consistent with what the page shows, and no review is claimed without a named reviewer. UNMET when credentials are vague, overstated, or implausible. Absent credentials are not UNMET \u2014 only false or overstated ones.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [
+    "evidence",
+    "about",
+    "profile"
+   ],
+   "na_for": [],
+   "conditional": false,
+   "floor": "lowest",
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a74.5.3",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "R4": {
+   "id": "R4",
+   "dimension": "trust",
+   "name": "Citations resolve to what they claim",
+   "test": "Every DOI/PMID/URL cited resolves, and to the work named beside it.",
+   "method": "code",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [
+    "evidence"
+   ],
+   "na_for": [
+    "home",
+    "collection",
+    "contact",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": "lowest",
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a74.5.3; https://developers.google.com/search/docs/fundamentals/creating-helpful-content Q13",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "R5": {
+   "id": "R5",
+   "dimension": "trust",
+   "name": "Commercial interest disclosed",
+   "test": "MET when any material commercial relationship \u2014 the publisher selling what it recommends, affiliate links, sponsorship \u2014 is disclosed where it bears on the claims, and promotion is distinguishable from information. UNMET when it is hidden.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [
+    "evidence"
+   ],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a73.4",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "R6": {
+   "id": "R6",
+   "dimension": "trust",
+   "name": "Customer service reachable",
+   "test": "MET when contact, returns, shipping and payment help are reachable from the page. UNMET when a buyer cannot find them.",
+   "method": "llm",
+   "scope": "page",
+   "group": "commerce",
+   "required_for": [
+    "product",
+    "transactional",
+    "contact"
+   ],
+   "na_for": [
+    "article",
+    "evidence",
+    "legal",
+    "utility",
+    "faq"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a75.5",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "R7": {
+   "id": "R7",
+   "dimension": "trust",
+   "name": "Visible, accurate date",
+   "test": "MET when a published or last-updated (or last-reviewed) date is visible with the content or in the article header above it, and plausible. UNMET when no date is visible where readers need one.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [
+    "article",
+    "evidence",
+    "legal"
+   ],
+   "na_for": [
+    "home",
+    "collection",
+    "contact",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content Q31",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "R8": {
+   "id": "R8",
+   "dimension": "trust",
+   "name": "Reviews genuine and shown",
+   "test": "Applies only where the page shows or marks up reviews or ratings; otherwise answer NA. MET when review content is visible and plausibly from customers. UNMET when ratings appear without visible reviews.",
+   "method": "llm",
+   "scope": "page",
+   "group": "commerce",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/appearance/structured-data/review-snippet",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "R9": {
+   "id": "R9",
+   "dimension": "trust",
+   "name": "Independent reputation",
+   "test": "What independent sources say about the site and creator.",
+   "method": "search",
+   "scope": "web",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a73.3",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "S1": {
+   "id": "S1",
+   "dimension": "structured_data",
+   "name": "Markup matches visible content",
+   "test": "Marked-up name/headline/price/rating appear on the page.",
+   "method": "code",
+   "scope": "page",
+   "group": "head",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "S2": {
+   "id": "S2",
+   "dimension": "structured_data",
+   "name": "Valid for types that have rules",
+   "test": "Every node of a Google Search feature type carries that feature's required properties with valid values (data/audit/structured_data_rules.json, read from Google's feature pages 2026-09-30), and every JSON-LD block parses. Never 'required properties' on Article or Organization; recommended gaps, conditional requirements and retired features (FAQ, HowTo) are notes. Merchant listing is enforced on product pages only.",
+   "method": "code",
+   "scope": "page",
+   "group": "head",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/appearance/structured-data/search-gallery",
+   "verified": "2026-09-30",
+   "tier": "universal"
+  },
+  "S3": {
+   "id": "S3",
+   "dimension": "structured_data",
+   "name": "The type that fits the page",
+   "test": "Product on product, Article family on article/evidence, Organization on home/about, ProfilePage on profile.",
+   "method": "code",
+   "scope": "page",
+   "group": "head",
+   "required_for": [
+    "product"
+   ],
+   "na_for": [
+    "legal",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developers.google.com/search/docs/appearance/structured-data/search-gallery",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "S4": {
+   "id": "S4",
+   "dimension": "structured_data",
+   "name": "Time-sensitive markup current",
+   "test": "No past Event.endDate, expired JobPosting or stale Offer.priceValidUntil.",
+   "method": "code",
+   "scope": "page",
+   "group": "head",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "S5": {
+   "id": "S5",
+   "dimension": "structured_data",
+   "name": "Markup survives rendering",
+   "test": "JSON-LD present in raw and rendered DOM.",
+   "method": "render",
+   "scope": "page",
+   "group": "head",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "inference; Rich Results Test renders",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "A1": {
+   "id": "A1",
+   "dimension": "ai_eligibility",
+   "name": "Snippet-eligible for AI features",
+   "test": "No nosnippet / max-snippet:0 in robots meta or X-Robots-Tag; no data-nosnippet over main content.",
+   "method": "code",
+   "scope": "page",
+   "group": "head",
+   "required_for": [
+    "home",
+    "product",
+    "collection",
+    "article",
+    "evidence",
+    "about",
+    "contact",
+    "faq",
+    "profile"
+   ],
+   "na_for": [
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide; https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "A2": {
+   "id": "A2",
+   "dimension": "ai_eligibility",
+   "name": "AI search crawlers allowed",
+   "test": "robots.txt allows OAI-SearchBot, PerplexityBot and Claude-SearchBot.",
+   "method": "code",
+   "scope": "page",
+   "group": "head",
+   "required_for": [],
+   "na_for": [
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.openai.com/api/docs/bots; provider bot docs",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "A3": {
+   "id": "A3",
+   "dimension": "ai_eligibility",
+   "name": "Main content in the server HTML",
+   "test": "The substantive main content is present without JavaScript.",
+   "method": "code",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "Vercel first-party crawler logs (GPTBot/ClaudeBot do not execute JS)",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "A4": {
+   "id": "A4",
+   "dimension": "ai_eligibility",
+   "name": "Key facts stated in self-contained sentences",
+   "test": "MET when the page's key answer and definitions can be understood and quoted without the surrounding paragraphs. UNMET when essential facts only make sense in context (\"as mentioned above\", pronouns without referents). This is judged for readers; it is not a citation lever.",
+   "method": "llm",
+   "scope": "page",
+   "group": "opening",
+   "required_for": [],
+   "na_for": [
+    "legal",
+    "transactional",
+    "utility",
+    "contact",
+    "collection"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "arXiv 2604.25707 (absorption; observational)",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "P1": {
+   "id": "P1",
+   "dimension": "site_strategy",
+   "name": "Keyword owned by one page",
+   "test": "No other page in the site keyword map has this page's primary keyword.",
+   "method": "code",
+   "scope": "site",
+   "group": "body",
+   "required_for": [
+    "product",
+    "collection",
+    "article",
+    "evidence"
+   ],
+   "na_for": [
+    "home",
+    "faq",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "page_type_taxonomy.md; keyword_targeting.md",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "P2": {
+   "id": "P2",
+   "dimension": "site_strategy",
+   "name": "No second own URL competing",
+   "test": "At most one own URL ranks for the declared keyword.",
+   "method": "code",
+   "scope": "serp",
+   "group": "body",
+   "required_for": [
+    "product",
+    "collection",
+    "article",
+    "evidence"
+   ],
+   "na_for": [
+    "home",
+    "faq",
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "src/content_engine/services/publishing_gate.py (S-405)",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "P3": {
+   "id": "P3",
+   "dimension": "site_strategy",
+   "name": "Linked into its cluster",
+   "test": "Links up to its hub and across to a sibling; the hub links back.",
+   "method": "code",
+   "scope": "site",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "Rule 27 Check C; https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "P4": {
+   "id": "P4",
+   "dimension": "site_strategy",
+   "name": "Descriptive internal anchors",
+   "test": "MET when the page's links to other pages on the site use anchor text that tells the reader what the target is. UNMET when anchors are generic (\"click here\", \"read more\", bare URLs).",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "P5": {
+   "id": "P5",
+   "dimension": "site_strategy",
+   "name": "Distinct from its siblings",
+   "test": "Main content not a near-duplicate of declared siblings.",
+   "method": "code",
+   "scope": "site",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "O1": {
+   "id": "O1",
+   "dimension": "off_page",
+   "name": "Earned links to this URL",
+   "test": "Referring domains to the URL against SERP competitors.",
+   "method": "code",
+   "scope": "links",
+   "group": "body",
+   "required_for": [],
+   "na_for": [
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "O2": {
+   "id": "O2",
+   "dimension": "off_page",
+   "name": "Natural anchor profile",
+   "test": "Exact-match share of backlink anchors not excessive (a risk flag).",
+   "method": "code",
+   "scope": "links",
+   "group": "body",
+   "required_for": [],
+   "na_for": [
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/essentials/spam-policies",
+   "verified": "2026-09-29",
+   "tier": "universal"
+  },
+  "T1": {
+   "id": "T1",
+   "dimension": "technical",
+   "name": "Core Web Vitals (field)",
+   "test": "LCP \u2264 2.5 s, INP \u2264 200 ms, CLS \u2264 0.1 at p75 from field data.",
+   "method": "code",
+   "scope": "field",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://web.dev/articles/vitals",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "T2": {
+   "id": "T2",
+   "dimension": "technical",
+   "name": "HTTPS without mixed content",
+   "test": "HTTPS; no http:// subresources.",
+   "method": "code",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "technical_seo.md",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "T3": {
+   "id": "T3",
+   "dimension": "technical",
+   "name": "Works on a phone",
+   "test": "Viewport; no horizontal scroll at 390 px; tap targets.",
+   "method": "render",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "T4": {
+   "id": "T4",
+   "dimension": "technical",
+   "name": "Reachable in the site graph",
+   "test": "Linked from the site; in the sitemap.",
+   "method": "code",
+   "scope": "site",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "technical_seo.md",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "T5": {
+   "id": "T5",
+   "dimension": "technical",
+   "name": "Title, H1 and lang hygiene",
+   "test": "One <title>, one H1, lang set.",
+   "method": "code",
+   "scope": "page",
+   "group": "head",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "technical_seo.md",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "T6": {
+   "id": "T6",
+   "dimension": "technical",
+   "name": "Descriptive image alt text",
+   "test": "MET when content images carry alt text that describes them. UNMET when content images lack alt text or use filenames or keywords instead of descriptions. Answer NA when the page has no content images.",
+   "method": "llm",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "T7": {
+   "id": "T7",
+   "dimension": "technical",
+   "name": "No broken links or resources",
+   "test": "No broken internal links or missing images.",
+   "method": "code",
+   "scope": "site",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "technical_seo.md",
+   "verified": "2026-09-26",
+   "tier": "universal"
+  },
+  "T8": {
+   "id": "T8",
+   "dimension": "technical",
+   "name": "Language versions declared correctly",
+   "test": "Where hreflang alternates are declared (HTML link or HTTP Link header): every code is valid (ISO 639-1, optional script or ISO 3166-1 Alpha 2 region, or x-default); the set lists this page itself; every alternate answers 200, is indexable, lists this page back, and is written in the language it is declared as. Scored, not a gate: a broken set is ignored by Google, the page still indexes (DEC-064).",
+   "method": "code",
+   "scope": "site",
+   "group": "head",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+   "verified": "2026-09-30",
+   "tier": "universal"
+  },
+  "T9": {
+   "id": "T9",
+   "dimension": "technical",
+   "name": "Descriptive image filenames",
+   "test": "Every content image (distinct files in the main content; icons, SVGs, furniture and platform video thumbnails left out) has a short filename that says what it shows \u2014 not a camera, generic or hash name (IMG00023.JPG, image1.jpg, pic.gif). Keywords in filenames are reported, not scored.",
+   "method": "code",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developers.google.com/search/docs/appearance/google-images",
+   "verified": "2026-09-30",
+   "tier": "universal"
+  },
+  "T10": {
+   "id": "T10",
+   "dimension": "technical",
+   "name": "Images served efficiently",
+   "test": "No content image over 32 KB is served as JPEG/PNG to a browser that accepts WebP/AVIF (WebP is 25-34% smaller: \u2265 8 KiB saved, Lighthouse's modern-format line), and Lighthouse's image-delivery findings list no saving \u2265 4 KiB. Passes only when both were measured; a lazy-loaded first image and images without width and height are notes.",
+   "method": "code",
+   "scope": "site",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://developer.chrome.com/docs/performance/insights/image-delivery",
+   "verified": "2026-09-30",
+   "tier": "universal"
+  },
+  "T12": {
+   "id": "T12",
+   "dimension": "technical",
+   "name": "Links crawlable and labelled",
+   "test": "Internal links in the main content are <a href> to a URL \u2014 not javascript: hrefs, <span href> or onclick-only \u2014 and each has anchor text Google reads: text, an image's alt, or the title fallback. A link labelled only by aria-label is noted, not failed (Google does not document it).",
+   "method": "code",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+   "verified": "2026-09-30",
+   "tier": "universal"
+  },
+  "T13": {
+   "id": "T13",
+   "dimension": "technical",
+   "name": "Readable URL",
+   "test": "The page's canonical address uses readable words and hyphens \u2014 no underscores joining words, no path ending in a long ID, no session or tracking parameters. Mixed case is a note. Keywords in the URL are reported, not scored (SEO Starter Guide: 'hardly any effect beyond appearing in breadcrumbs').",
+   "method": "code",
+   "scope": "page",
+   "group": "head",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://developers.google.com/search/docs/crawling-indexing/url-structure",
+   "verified": "2026-09-30",
+   "tier": "universal"
+  },
+  "X1": {
+   "id": "X1",
+   "dimension": "experience",
+   "name": "One clear primary action, with proof beside it",
+   "test": "MET when the page offers one clear next action for a visitor who is ready, with supporting evidence next to the ask. On an evidence or article page a next step is optional: MET when any call to action comes after the evidence and does not compete with it. UNMET when there is no clear action where one is expected, or several compete.",
+   "method": "llm",
+   "scope": "page",
+   "group": "commerce",
+   "required_for": [
+    "product",
+    "contact"
+   ],
+   "na_for": [
+    "legal",
+    "transactional",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "agency standard",
+   "source": "Rule 27 Check D",
+   "verified": "2026-09-26",
+   "tier": "agency"
+  },
+  "X2": {
+   "id": "X2",
+   "dimension": "experience",
+   "name": "Objections and next steps answered",
+   "test": "MET when the page tells the visitor what happens next, what it costs, how long it takes and who they deal with. UNMET when those obvious questions go unanswered.",
+   "method": "llm",
+   "scope": "page",
+   "group": "commerce",
+   "required_for": [
+    "product",
+    "contact"
+   ],
+   "na_for": [
+    "article",
+    "evidence",
+    "legal",
+    "utility"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "agency standard",
+   "source": "Rule 27 Check D",
+   "verified": "2026-09-26",
+   "tier": "agency"
+  },
+  "X3": {
+   "id": "X3",
+   "dimension": "experience",
+   "name": "Accessible basics",
+   "test": "Contrast AA, focus, tap targets, 200% zoom. Not a ranking factor.",
+   "method": "render",
+   "scope": "page",
+   "group": "body",
+   "required_for": [],
+   "na_for": [],
+   "conditional": false,
+   "floor": null,
+   "grade": "legal/agency",
+   "source": "Rule 27 Check A; European Accessibility Act",
+   "verified": "2026-09-26",
+   "tier": "agency"
+  },
+  "V1": {
+   "id": "V1",
+   "dimension": "vertical_health",
+   "name": "Safety information present",
+   "test": "Applies to health, cosmetic and supplement topics; otherwise answer NA. MET when side effects, contraindications, interactions and when to see a professional are given where relevant. UNMET when a reader could act on the page without knowing a relevant risk.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "MODERATE",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a73.4 (\"Trust: Consider the extent to which the page is accurate, honest, safe, and reliable\") \u2014 an interpretation, not an explicit QRG requirement; premium-brand practice (Medik8, INKEY, Timeless, Murad). Research 2026-09-30: skingenetix-website docs/research-2026-09-30-safety-notes-on-study-articles.md",
+   "verified": "2026-09-30",
+   "tier": "vertical:health"
+  },
+  "V2": {
+   "id": "V2",
+   "dimension": "vertical_health",
+   "name": "No medicinal claim on a cosmetic product",
+   "test": "Applies to cosmetic products and their claims; otherwise answer NA. MET when every claim stays within cosmetic function (appearance, feel, cleansing, protection). UNMET when the page claims to treat, cure, prevent or heal a condition.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": "lowest",
+   "grade": "to verify",
+   "source": "EU Regulation 655/2013 \u2014 article citation to verify before scoring",
+   "verified": "2026-09-26",
+   "tier": "vertical:health"
+  },
+  "V3": {
+   "id": "V3",
+   "dimension": "vertical_health",
+   "name": "Study design disclosed on evidence pages",
+   "test": "MET when an evidence page states the study's sample, population, design, funding and limitations. UNMET when any of these is missing.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [
+    "evidence"
+   ],
+   "na_for": [
+    "home",
+    "product",
+    "collection",
+    "about",
+    "contact",
+    "faq",
+    "legal",
+    "transactional",
+    "utility",
+    "article"
+   ],
+   "conditional": false,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a73.2",
+   "verified": "2026-09-29",
+   "tier": "vertical:health"
+  },
+  "V4": {
+   "id": "V4",
+   "dimension": "vertical_health",
+   "name": "No outcome promises",
+   "test": "Applies to health, cosmetic and supplement topics; otherwise answer NA. MET when results are stated with their evidence and variability. UNMET when the page guarantees or implies certain results.",
+   "method": "llm",
+   "scope": "page",
+   "group": "trust",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "STRONG",
+   "source": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf \u00a74.4, \u00a75.6",
+   "verified": "2026-09-26",
+   "tier": "vertical:health"
+  },
+  "V5": {
+   "id": "V5",
+   "dimension": "vertical_health",
+   "name": "Regulatory status stated and true",
+   "test": "Applies where a product has a regulatory status (cosmetic, CE-marked device, food supplement, medicine); otherwise answer NA. MET when that status is stated and consistent with how the product is described. UNMET when it is missing or contradicted.",
+   "method": "llm",
+   "scope": "page",
+   "group": "commerce",
+   "required_for": [],
+   "na_for": [],
+   "conditional": true,
+   "floor": null,
+   "grade": "to verify",
+   "source": "regulatory sources to cite before scoring",
+   "verified": "2026-09-26",
+   "tier": "vertical:health"
+  }
+ },
+ "confirmed_failures": [
+  "C9"
+ ],
+ "contested": [],
+ "agency": [
+  "X1"
+ ],
+ "top_results": [
+  "1. Pharmacological Activity and Clinical Use of PDRN - PMC \u2014 pmc.ncbi.nlm.nih.gov",
+  "2. Social Media Mythbusters: PDRN Serums \u2014 www.dermatologytimes.com",
+  "3. What Is PDRN? Salmon DNA Skincare for Regeneration \u2014 www.skinlaundry.com",
+  "4. [Anti-Aging] WTF is PDRN? Here's my deep dive! \u2014 www.reddit.com",
+  "5. What is PDRN and Benefits of PDRN Skincare \u2014 www.skinceuticals.com",
+  "6. PDRN Has Quickly Taken Over Skin Care \u2014 www.allure.com",
+  "7. How to Get the Most From Topical PDRN Products \u2014 www.newbeauty.com"
+ ],
+ "sub_questions": [
+  "Is PDRn salmon sperm?",
+  "Is PDRN good for your skin?",
+  "Is PDRN the same as retinol?",
+  "How much does a PDRN facial cost?"
+ ],
+ "judges": [
+  "claude-sonnet-5-5",
+  "gpt-6-sol",
+  "gemini-3.8-flash",
+  "perplexity/sonar"
+ ],
+ "models_answered": {
+  "claude-sonnet-5-5": "claude-sonnet-5-5",
+  "gemini-3.8-flash": "gemini-3.8-flash",
+  "perplexity/sonar": "perplexity/sonar"
+ },
+ "failed_calls": {
+  "gpt-6-sol": 30
+ },
+ "calls": 120,
+ "repeats": 3,
+ "cost_usd": 0.9599,
+ "duration_ms": 274695,
+ "scoring_model": "f012-gate-score-floor/1+criteria-v2.5.0",
+ "audited_at": "2026-10-07T14:28:03+00:00",
+ "diagnostics": {
+  "Server response time (TTFB)": "0.48 s \u2014 web.dev's rough guide is 0.8 s or less; not a Core Web Vital, not scored",
+  "HTML weight": "433 KB \u2014 no Google threshold; reported",
+  "Lab speed (PageSpeed, mobile)": "not available \u2014 PageSpeed answered 403 \u2014 enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key",
+  "Keyword in the URL": "1 of 1 keyword words in the path \u2014 reported, not scored: Google says keywords in the URL have \u201chardly any effect beyond appearing in breadcrumbs\u201d",
+  "Keyword words in image filenames": "12 of 16 content image filenames carry keyword words \u2014 reported, not scored: Google asks for descriptive filenames (T9), not keywords",
+  "Image reuse": "16 distinct content images \u2014 reported, not scored: no primary source ties image originality or reuse to ranking (a gallery repeats its images by design)",
+  "Title length": "55 characters \u2014 Google sets no limit; the title link is truncated to fit the device width"
+ }
+}

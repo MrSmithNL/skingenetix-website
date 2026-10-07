@@ -53,7 +53,8 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 **Priority:** 🔴 High. **Owner:** Claude (build) + Malcolm (6 decisions).
 **Report:** `docs/seo-performance-and-ranking-plan-2026-10-07.md` (Parts A performance, B competitors, C plan with the keyword-by-keyword table).
 **Evidence:** `audits/2026-10-07-visibility-forensics/` (README = the evidence record; `config.json` = the forensics/monitor config; `serp/report.md`; three teardowns; `data/`).
-**Audits:** first central v2 run on all five hubs: PDRN 8.99, copper 8.58, glutathione (see tracker), Argireline 7.83 → capped 4.9 (P1), Matrixyl 8.5 → capped 4.9 (P1). The old 9.6–9.8 scores are withdrawn.
+**Audits (central v2):** run 1 PDRN 8.99 · copper 8.58 · glutathione 7.78 · Argireline 7.83→4.9 (P1 cap) · Matrixyl 8.5→4.9 (P1 cap). After the 2026-10-07 fixes, run 3: **PDRN 9.69 · Argireline 9.75 · copper 9.26 · Matrixyl 9.6 · glutathione 9.72**; four meet the bar, PDRN's one
+open item (the 3.5× framing) is Malcolm's decision, copper 9.40 after batch 3, with two register-level items open (the 55.8% derivation; the "lacked GHK-Cu and its nano-carrier" wording). The old 9.6–9.8 scores are withdrawn.
 
 **The findings that set the order:** (1) the English PDRN hub has never been crawled by Google (URL Inspection: "unknown"), nor have the Yogya, Tadini and Robinson articles; (2) genuine referring domains = 0 (622 link-generator junk domains appeared 6–7 Oct; ignore, no disavow);
 (3) we are in no top 10 and no AI Overview on 33 SERPs; (4) the pages above us win on reviews in markup, brand demand, distribution and third-party mentions, not content; (5) our hubs lack the question-shaped sections the Overviews cite (does it work, side effects, what to mix,
@@ -76,6 +77,14 @@ vs retinol, Botox framing) and share four template faults (C10 duplicated FAQ im
 - [ ] Hide the empty `/blogs/learn` from the sitemap until the first spoke; distinct tag-page titles (🛑 core layout).
 - [ ] Report stonevillenc.org to Google (hacked-site spam); costs nothing.
 - [ ] Finish STUDY-DETAIL (approve English → translate → live).
+
+**🛑 Ready for Malcolm's yes or no (2026-10-07):** an Argireline FAQ item for the "Botox in a bottle" question searchers ask (the register
+lists the phrase under claims to avoid, so it is withheld until he approves this framing). Proposed text, title "Is Argireline 'Botox in a
+bottle'?": "No. The nickname compares a cosmetic peptide applied to the skin with a prescription injection, and the two are not alike:
+Argireline® is not a medicine, it is not injected, and the trials did not measure any change in muscles. What they measured was the look of
+expression lines after four weeks of twice-daily use: nearly 1 in 2 people were graded clearly smoother around the eyes, against no one on
+placebo. Treat it as a skincare ingredient with that evidence, not as an alternative to a clinical treatment." Translations follow the same
+day on his yes.
 
 **▶ Layer 2 (months 1–6), needs Malcolm's scope and budget decision:** reviews flow → `aggregateRating`; Merchant Center attributes (30 Q&A per SKU) and feed completeness (no product carries Google Shopping attributes today); listicle outreach (Innerbody, Forbes, Allure, Glamour,
 Vogue); dermatologist/creator YouTube sampling; disclosed Reddit presence; newswire for trial appraisals; retail distribution; Dr Bodde's confirmed review. Measure genuine referring domains and brand mentions monthly; `llm_responses` citation panel (🛑 spend, about USD 0.70/run).

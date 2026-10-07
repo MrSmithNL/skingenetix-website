@@ -31,6 +31,19 @@ should be careful) on every hub; the glutathione answers qualified; the Argireli
 re-translated for PDRN, Argireline, copper and The Science; keyword ownership aligned in `page-targets.json`. Run 2 of the central audit
 follows below.
 
+### Runs 2 and 3, after the fixes (2026-10-07, 15:30–17:00)
+
+| Hub | Run 1 | Run 2 (after batch 1) | Run 3 (after batch 2) | Confirmed failures left | Report (latest) |
+|---|---|---|---|---|---|
+| /pages/pdrn-research | 8.99 | 9.36 | **9.69** | C9 only: the judges call the "3.5×" hero figure "hype-leaning" and note the 1% products were not trialled. The figure is accurate (23.0% vs 6.6%, Ye 2026 Fig. 6B) and was set under Malcolm's strongest-credible-claim rule (ADR-2026-09-24-P), so it is **his decision, not a fix** | `…-pages-pdrn-research-live-run3.*` |
+| /pages/acetyl-hexapeptide-8-research | 7.83 → capped 4.9 | 9.34 → capped 4.9 (map not yet aligned) | **9.75** | none | `…-pages-acetyl-hexapeptide-8-research-live-run3.*` |
+| /pages/copper-peptide-research | 8.58 | 9.12 | 9.26 → **9.40** (run 4, after batch 3) | C10 cleared. Left: C4 (the judges compute −24.1% vs −15.0% as 61% more, not the 55.8% the page and register quote as the paper's vehicle-relative figure: **re-read the derivation at source before touching it**; and "the compared serum lacked GHK-Cu and its nano-carrier" reads as if it contained GHK-Cu: reword), C9 (new, judgement), Q5 (one packed paragraph that the auditor's own extraction settings do not reproduce locally: engine question). Loop limit reached (4 runs); next session | `…-pages-copper-peptide-research-live-run4.*` |
+| /pages/matrixyl-3000-research | 8.5 → capped 4.9 | 9.42 (cap lifted; Q2/S1 on the new keyword) | **9.6** | none | `…-pages-matrixyl-3000-research-live-run3.*` |
+| /pages/glutathione-research | 7.78 | 9.33 | **9.72** | none | `…-pages-glutathione-research-live-run3.*` |
+
+Four of five hubs meet ADR-2026-09-30-Q; copper is at 9.40 with two register-level items open. Spend: 15 audits at about USD 1 each. One judge (gpt-6-sol) failed every call in every
+run: the OpenAI account has no credits ("credit_balance_exhausted"), so the panel is three models; a decision for Malcolm.
+
 ## Clinical-study articles — first audit, 2026-09-29
 
 Four articles under `/blogs/clinical-studies/`, audited twice (engine before and after the fixes this run prompted).

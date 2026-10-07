@@ -1,0 +1,129 @@
+======================================================================
+SEO / GEO / AISO PAGE AUDIT — criteria v2
+URL: https://www.skingenetix.com/pages/glutathione-research
+Page kind: article · target keyword: “glutathione for skin”
+Judges: claude-sonnet-5-5→claude-sonnet-5-5, gpt-6-sol→—, gemini-3.8-flash→gemini-3.8-flash, perplexity/sonar→perplexity/sonar · 3 blind samples each · 120 calls · failed calls: {'gpt-6-sol': 30}
+Gates:    6 passed · 0 failed · 0 not checked
+Score:    9.44/10  (uncapped 9.44; geometric across query_fit 10.0, content 8.15, trust 10.0, structured_data 10.0, ai_eligibility 10.0, site_strategy 9.17, technical 10.0, vertical_health 10.0)
+Coverage: 45 of 56 applicable criteria assessed (11 not assessable here; 3 not applicable to a article page)
+Scoring: f012-gate-score-floor/1+criteria-v2.5.0 · cost $1.02 · 281s
+======================================================================
+
+CONFIRMED FAILURES — fix these (agreed by the panel, or failed a code check)
+  [CONFIRMED_FAIL] C4 Internally consistent — 1 met / 2 unmet
+      · [claude-sonnet-5-5] This conflicts with "none of the 46 women showed or reported redness" and "no adverse reactions related to GSSG". The page also says "its one controlled trial" in places and "two controlled trials" in others.
+      · [claude-sonnet-5-5] In the two controlled trials, one woman had mild facial redness for two days that settled without stopping.
+      · [perplexity/sonar] The page says no reactions occurred among the 46 women in the independent trial, but later says one woman had mild facial redness in the two trials without clarifying which trial or reconciling the discrepancy.
+      · [perplexity/sonar] In the 8-week independent trial, none of the 46 women showed or reported redness, swelling, stinging or itching.
+
+...
+
+In the two controlled trials, one woman had mild facial redness for two days that settled without stopping.
+
+CONTESTED — the panel disagreed; unstable, do not fix on this evidence
+  none
+
+GOOGLE FOR “glutathione for skin” — top results, and what searchers ask next
+  1. Does glutathione actually work for dull skin ... — www.reddit.com
+  2. Glutathione: The Master Antioxidant for Skin Health — www.linkedin.com
+  3. Iv Glutathione For Skin Whitening — www.amazon.com
+  4. Glutathione injections - advice? — www.realself.com
+  5. Skin Fairness - Glutathione Injection Helps In Lightening Skin — www.practo.com
+  6. NOW Solutions Glutathione Skin Brightener with ... — www.instacart.com
+  7. Glutathione Skin Whitening Pills — www.essentialdayspa.com
+  8. Glutathione Skin Whitening In Vitamin & Mineral Health ... — www.ebay.com
+  ? Does glutathione good for skin?
+  ? Which is better, retinol or glutathione?
+  ? What foods are high in glutathione?
+  ? What are the side effects of glutathione on skin?
+
+AGENCY STANDARD (Rule 27 Checks A/D) — reported, not in the search score
+  [MET         ] X1 One clear primary action, with proof beside it — 3 met / 0 unmet
+
+ALL ASSESSED CRITERIA (search score)
+ query_fit
+  [MET         ] Q1 Achieves its purpose — 3 met / 0 unmet
+  [PASS        ] Q2 Target keyword in the title, once — keyword in the title, once
+  [MET         ] Q3 Serves the keyword's intent — 3 met / 0 unmet
+  [MET         ] Q4 Covers the query's real sub-questions in one page — 2 met / 0 unmet
+  [PASS        ] Q5 No keyword stuffing — “glutathione for skin” 0× in 3196 words
+  [MET         ] Q6 Title and H1 match the content — 2 met / 0 unmet
+  [MET         ] Q7 Page-specific meta description — 3 met / 0 unmet
+  [PASS        ] Q8 Distinct, descriptive title — distinct from 1 related pages' titles; no boilerplate
+ content
+  [MET         ] C1 Effort and originality — 3 met / 0 unmet
+  [MET         ] C2 Facts correct and consistent with expert consensus — 2 met / 1 unmet
+  [MET         ] C3 Complete for its purpose — 3 met / 0 unmet
+  [CONFIRMED_FAIL] C4 Internally consistent — 1 met / 2 unmet
+  [MET         ] C5 Specific, sourced evidence — 3 met / 0 unmet
+  [MET         ] C7 Clear structure — 2 met / 0 unmet
+  [MET         ] C9 Claims proportionate to the evidence — 2 met / 1 unmet
+  [MET         ] C10 Produced with care — 2 met / 1 unmet
+  [NOT_APPLICABLE] C11 Comparisons and reviews show their evidence and method — 0 met / 0 unmet / 3 n/a
+  [MET         ] C12 No harmfully misleading information — 2 met / 0 unmet
+ trust
+  [MET         ] R1 Responsible entity identified — 3 met / 0 unmet
+  [MET         ] R2 Byline where a reader expects one — 3 met / 0 unmet
+  [MET         ] R3 Credentials truthful — 3 met / 0 unmet
+  [PASS        ] R4 Citations resolve to what they claim — 5 verified, 0 not comparable (check by hand), 0 unreachable
+  [MET         ] R5 Commercial interest disclosed — 3 met / 0 unmet
+  [MET         ] R7 Visible, accurate date — 3 met / 0 unmet
+  [NOT_APPLICABLE] R8 Reviews genuine and shown — 0 met / 0 unmet / 3 n/a
+ structured_data
+  [PASS        ] S1 Markup matches visible content — marked-up headline/name appear on the page
+  [PASS        ] S2 Valid for types that have rules — 1 item(s) carry every required property · notes: FAQ: rich result retired; Article: recommended missing — image
+  [PASS        ] S3 The type that fits the page — Article present
+  [NA          ] S4 Time-sensitive markup current — no time-sensitive markup
+ ai_eligibility
+  [PASS        ] A1 Snippet-eligible for AI features — no snippet restriction
+  [PASS        ] A2 AI search crawlers allowed — OAI-SearchBot, PerplexityBot, Claude-SearchBot allowed
+  [PASS        ] A3 Main content in the server HTML — main content present in the server HTML
+  [MET         ] A4 Key facts stated in self-contained sentences — 3 met / 0 unmet
+ site_strategy
+  [PASS        ] P1 Keyword owned by one page — “glutathione for skin” is owned by this page alone
+  [PASS        ] P2 No second own URL competing — no own page in the top 10 (no collision)
+  [PASS        ] P3 Linked into its cluster — hub links down to 1 of 1 spokes
+  [MET         ] P4 Descriptive internal anchors — 2 met / 1 unmet
+  [NOT_ASSESSED] P5 Distinct from its siblings — no sibling pages declared in the keyword map
+ technical
+  [NOT_ASSESSED] T1 Core Web Vitals (field) — the CrUX API refused the request (403) — enable the Chrome UX Report API on the key's Google Cloud project and allow it on the key
+  [PASS        ] T2 HTTPS without mixed content — HTTPS, no mixed content
+  [NOT_ASSESSED] T3 Works on a phone — viewport set; the layout at 390 px (horizontal scroll, tap targets) needs a rendered page
+  [PASS        ] T4 Reachable in the site graph — in the sitemap (lastmod 2026-09-23; the page's markup says dateModified 2026-10-07); linked from the home page
+  [PASS        ] T5 Title, H1 and lang hygiene — one title, one H1, lang set
+  [MET         ] T6 Descriptive image alt text — 3 met / 0 unmet
+  [PASS        ] T7 No broken links or resources — 24 links and images answer
+  [PASS        ] T8 Language versions declared correctly — 5 alternates: valid codes, self-listed, all link back, languages match
+  [PASS        ] T9 Descriptive image filenames — 14 content images, all with descriptive filenames
+  [NOT_ASSESSED] T10 Images served efficiently — 14 image(s) in modern formats or small; sizing for display needs lab data — PageSpeed lab data unavailable (PageSpeed answered 403 — enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key)
+  [PASS        ] T12 Links crawlable and labelled — 14 internal links crawlable and labelled
+  [PASS        ] T13 Readable URL — readable: words and hyphens
+ vertical_health
+  [MET         ] V1 Safety information present — 3 met / 0 unmet
+  [MET         ] V4 No outcome promises — 3 met / 0 unmet
+
+NOT ASSESSED HERE (reported, never scored as pass or zero)
+  C6 Main content prominent and unobstructed — needs a rendered page
+  C8 Not copied, not machine boilerplate — needs a web search
+  R9 Independent reputation — needs a web search
+  S5 Markup survives rendering — needs a rendered page
+  O1 Earned links to this URL — needs backlink data (F-012 S4)
+  O2 Natural anchor profile — needs backlink data (F-012 S4)
+  X3 Accessible basics — needs a rendered page
+  P5 Distinct from its siblings — no sibling pages declared in the keyword map
+  T1 Core Web Vitals (field) — the CrUX API refused the request (403) — enable the Chrome UX Report API on the key's Google Cloud project and allow it on the key
+  T3 Works on a phone — viewport set; the layout at 390 px (horizontal scroll, tap targets) needs a rendered page
+  T10 Images served efficiently — 14 image(s) in modern formats or small; sizing for display needs lab data — PageSpeed lab data unavailable (PageSpeed answered 403 — enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key)
+
+NOT SCORED — no verified source yet
+  V2 No medicinal claim on a cosmetic product — no verified source yet (to verify)
+  V5 Regulatory status stated and true — no verified source yet (to verify)
+
+MEASURED, NOT SCORED (the figure, and why it is not in the score)
+  Server response time (TTFB): 0.24 s — web.dev's rough guide is 0.8 s or less; not a Core Web Vital, not scored
+  HTML weight: 421 KB — no Google threshold; reported
+  Lab speed (PageSpeed, mobile): not available — PageSpeed answered 403 — enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key
+  Keyword in the URL: 1 of 2 keyword words in the path — reported, not scored: Google says keywords in the URL have “hardly any effect beyond appearing in breadcrumbs”
+  Keyword words in image filenames: 12 of 14 content image filenames carry keyword words — reported, not scored: Google asks for descriptive filenames (T9), not keywords
+  Image reuse: 14 distinct content images — reported, not scored: no primary source ties image originality or reuse to ranking (a gallery repeats its images by design)
+  Title length: 57 characters — Google sets no limit; the title link is truncated to fit the device width
