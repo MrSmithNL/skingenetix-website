@@ -1,0 +1,22 @@
+{
+  "_about": "2026-10-08 H1 fix (plan step 1.4a; verified 2026-10-08: the page served no <h1>, because the Impact heading block renders <p class=\"h1\">). The title moves into the hero's richtext block as a real <h1> in six languages (it renders at the theme's 60px/40px, the same as the heading block, measured on the hubs), and the heading block is then switched off (disabled: true keeps its translations) by scripts/disable-block.py. Set-only, built from the live values re-read today. Undo: --rollback and re-enable the block.",
+  "template": "templates/page.fine-lines-wrinkles.json",
+  "page": "fine-lines-wrinkles",
+  "set": [
+    {
+      "at": "hero/desc/content",
+      "values": {
+        "en": "<h1>Fine Lines &amp; Wrinkles</h1><p>Understand what causes wrinkles and how clinically studied peptides can visibly reduce them.</p>",
+        "de": "<h1>Feine Linien &amp; Falten</h1><p>Erfahre, was Falten verursacht und wie klinisch untersuchte Peptide sie sichtbar mildern können.</p>",
+        "nl": "<h1>Fijne Lijntjes &amp; Rimpels</h1><p>Begrijp wat rimpels veroorzaakt en hoe klinisch onderzochte peptiden ze zichtbaar kunnen verminderen.</p>",
+        "fr": "<h1>Ridules &amp; Rides</h1><p>Découvrez ce qui cause les rides et comment des peptides étudiés cliniquement peuvent les atténuer visiblement.</p>",
+        "es": "<h1>Líneas Finas &amp; Arrugas</h1><p>Descubre qué causa las arrugas y cómo los péptidos estudiados clínicamente pueden atenuarlas visiblemente.</p>",
+        "it": "<h1>Linee Sottili &amp; Rughe</h1><p>Scopri cosa causa le rughe e come i peptidi studiati clinicamente possono attenuarle visibilmente.</p>"
+      }
+    }
+  ],
+  "_disable_block": {
+    "section": "hero",
+    "block": "heading"
+  }
+}

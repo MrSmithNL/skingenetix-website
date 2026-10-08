@@ -1,5 +1,5 @@
 {
-  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick.",
+  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1.",
   "english_first": true,
   "create": true,
   "template": "templates/page.collagen-skincare.json",
@@ -23,7 +23,7 @@
           "desktop_text_position": "sm:place-self-center-start sm:text-start",
           "text_color": "#ffffff",
           "overlay_color": "#1A1A1A",
-          "overlay_opacity": 45
+          "overlay_opacity": 22
         },
         "blocks": {
           "sub": {
@@ -56,7 +56,11 @@
             }
           }
         },
-        "block_order": ["sub", "desc", "button"]
+        "block_order": [
+          "sub",
+          "desc",
+          "button"
+        ]
       }
     },
     {
@@ -75,17 +79,93 @@
             "type": "richtext",
             "settings": {
               "content": {
-                "en": "<h2>Do Collagen Creams Work?</h2><p><strong>Yes, as a moisturizer: collagen in a cream holds water at the skin's surface, helping skin look smoother and plumper.</strong> How it does that depends on the size of the molecule. Native and soluble collagen are far too large to cross intact skin, so they stay on the surface as a film that locks in moisture. Hydrolyzed collagen is collagen cut into small peptides, and some of it reaches the skin's outer layer, where it helps hold water.</p><p>Collagen in a cream does not replace the collagen your skin makes itself. That is where signal peptides come in: <a href=\"/pages/matrixyl-3000-research\">Matrixyl® 3000</a> and <a href=\"/pages/copper-peptide-research\">copper peptide GHK-Cu</a> are associated with the skin's own collagen activity, and both have clinical results on wrinkles. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> contains both: three forms of collagen, and the two Matrixyl 3000 peptides behind that clinical work.</p><p>Written by <strong>Malcolm Smith</strong>, founder of Skingenetix, who compiles the claims registers behind our research pages. Last updated 29 September 2026.</p>"
+                "en": "<h2>Do Collagen Creams Work?</h2><p><strong>Yes, as a moisturizer: collagen in a cream holds water at the skin's surface, helping skin look smoother and plumper.</strong> How it does that depends on the size of the molecule. Native and soluble collagen are far too large to cross intact skin, so they stay on the surface as a film that locks in moisture. Hydrolyzed collagen is collagen cut into small peptides, and some of it reaches the skin's outer layer, where it helps hold water.</p><p>Collagen in a cream does not replace the collagen your skin makes itself. That is where signal peptides come in: <a href=\"/pages/matrixyl-3000-research\">Matrixyl® 3000</a> and <a href=\"/pages/copper-peptide-research\">copper peptide GHK-Cu</a> are associated with the skin's own collagen activity, and both have clinical results on wrinkles. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> contains both: three forms of collagen, and the two Matrixyl 3000 peptides behind that clinical work.</p><p>Written by the <strong>Skingenetix Research Team</strong>, which compiles the claims registers behind our research pages. Last updated 8 October 2026.</p>"
               }
             }
           }
         },
-        "block_order": ["p1"]
+        "block_order": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "id": "proof",
+      "after": "answer",
+      "section": {
+        "type": "research-before-after",
+        "settings": {
+          "title": {
+            "en": "What Peptides Did in Clinical Studies"
+          }
+        },
+        "blocks": {
+          "f1": {
+            "type": "finding",
+            "settings": {
+              "image": "",
+              "media_position": "start",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 2 months"
+              },
+              "result_label": {
+                "en": "Deep-wrinkle area −39% in 2 months (manufacturer's half-face study)"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "Matrixyl 3000"
+              },
+              "title": {
+                "en": "Deep-Wrinkle Area −39% in 2 Months"
+              },
+              "content": {
+                "en": "<p><strong>In the manufacturer's half-face study, 23 women aged 42 to 67 applied a 3% Matrixyl 3000 cream to one half of the face and a placebo cream to the other, twice a day for 2 months.</strong></p><ul><li><strong>Area taken up by deep wrinkles −39%</strong>, measured by 3D skin-surface profiling</li><li><strong>Main-wrinkle depth −20%</strong>, volume −23%, roughness −16%</li><li>On the placebo half, no significant change in wrinkle area, depth or roughness</li></ul><p><strong>Beneath the surface:</strong> in a second study by the same maker, in 28 women, the fibre network just beneath the skin's surface beside the eye was less fragmented, 13% ahead of the placebo side after 2 months.</p><p>More in our <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000 research summary</a>.</p>"
+              }
+            }
+          },
+          "f2": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-denser-firmer-looking-skin-before-after.jpg",
+              "media_position": "end",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 12 weeks"
+              },
+              "result_label": {
+                "en": "Firmer, denser-looking skin (face-cream study, 71 women)"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "Copper peptide (GHK-Cu)"
+              },
+              "title": {
+                "en": "Denser, Firmer-Looking Skin in 12 Weeks"
+              },
+              "content": {
+                "en": "<p>In a 12-week study of a copper-peptide face cream in 71 women, the reported results were firmer, clearer-looking skin, fewer fine lines, shallower wrinkles, and denser, thicker skin.</p><p><strong>New collagen in 7 of 10 people:</strong> in a one-month biopsy study of four creams on thigh skin, ten people per cream, 7 of 10 people using a copper-binding peptide cream showed new collagen, against 5 of 10 with vitamin C, 5 of 10 with melatonin and 4 of 10 with tretinoin. A count of people; the creams were not tested against each other.</p><p>The face-cream study was presented at a dermatology meeting in 2002 and is known from published reviews (<a href=\"https://pubmed.ncbi.nlm.nih.gov/26236730/\" target=\"_blank\" rel=\"noopener\">Pickart et al., 2015</a>; <a href=\"https://pubmed.ncbi.nlm.nih.gov/39963574/\" target=\"_blank\" rel=\"noopener\">Mortazavi et al., 2024</a>). More in our <a href=\"/pages/copper-peptide-research\">copper peptide research summary</a>.</p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "f1",
+          "f2"
+        ]
       }
     },
     {
       "id": "shop",
-      "after": "answer",
+      "after": "proof",
       "section": {
         "type": "featured-collection",
         "settings": {
@@ -205,7 +285,12 @@
             }
           }
         },
-        "block_order": ["collagen", "cream_serum", "matrixyl", "copper"]
+        "block_order": [
+          "collagen",
+          "cream_serum",
+          "matrixyl",
+          "copper"
+        ]
       }
     },
     {
@@ -283,83 +368,17 @@
             }
           }
         },
-        "block_order": ["step1", "step2", "step3", "step4"]
-      }
-    },
-    {
-      "id": "proof",
-      "after": "routine",
-      "section": {
-        "type": "research-before-after",
-        "settings": {
-          "title": {
-            "en": "What Peptides Did in Clinical Studies"
-          }
-        },
-        "blocks": {
-          "f1": {
-            "type": "finding",
-            "settings": {
-              "image": "",
-              "media_position": "start",
-              "before_label": {
-                "en": "Before"
-              },
-              "after_label": {
-                "en": "After 2 months"
-              },
-              "result_label": {
-                "en": "Deep-wrinkle area −39% in 2 months (manufacturer's half-face study)"
-              },
-              "note_label": "",
-              "label_background": "#1a1a1a",
-              "label_text_color": "#ffffff",
-              "subheading": {
-                "en": "Matrixyl 3000"
-              },
-              "title": {
-                "en": "Deep-Wrinkle Area −39% in 2 Months"
-              },
-              "content": {
-                "en": "<p><strong>In the manufacturer's half-face study, 23 women aged 42 to 67 applied a 3% Matrixyl 3000 cream to one half of the face and a placebo cream to the other, twice a day for 2 months.</strong></p><ul><li><strong>Area taken up by deep wrinkles −39%</strong>, measured by 3D skin-surface profiling</li><li><strong>Main-wrinkle depth −20%</strong>, volume −23%, roughness −16%</li><li>On the placebo half, no significant change in wrinkle area, depth or roughness</li></ul><p><strong>Beneath the surface:</strong> in a second study by the same maker, in 28 women, the fibre network just beneath the skin's surface beside the eye was less fragmented, 13% ahead of the placebo side after 2 months.</p><p>More in our <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000 research summary</a>.</p>"
-              }
-            }
-          },
-          "f2": {
-            "type": "finding",
-            "settings": {
-              "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-denser-firmer-looking-skin-before-after.jpg",
-              "media_position": "end",
-              "before_label": {
-                "en": "Before"
-              },
-              "after_label": {
-                "en": "After 12 weeks"
-              },
-              "result_label": {
-                "en": "Firmer, denser-looking skin (face-cream study, 71 women)"
-              },
-              "note_label": "",
-              "label_background": "#1a1a1a",
-              "label_text_color": "#ffffff",
-              "subheading": {
-                "en": "Copper peptide (GHK-Cu)"
-              },
-              "title": {
-                "en": "Denser, Firmer-Looking Skin in 12 Weeks"
-              },
-              "content": {
-                "en": "<p>In a 12-week study of a copper-peptide face cream in 71 women, the reported results were firmer, clearer-looking skin, fewer fine lines, shallower wrinkles, and denser, thicker skin.</p><p><strong>New collagen in 7 of 10 people:</strong> in a one-month biopsy study of four creams on thigh skin, ten people per cream, 7 of 10 people using a copper-binding peptide cream showed new collagen, against 5 of 10 with vitamin C, 5 of 10 with melatonin and 4 of 10 with tretinoin. A count of people; the creams were not tested against each other.</p><p>The face-cream study was presented at a dermatology meeting in 2002 and is known from published reviews (<a href=\"https://pubmed.ncbi.nlm.nih.gov/26236730/\" target=\"_blank\" rel=\"noopener\">Pickart et al., 2015</a>; <a href=\"https://pubmed.ncbi.nlm.nih.gov/39963574/\" target=\"_blank\" rel=\"noopener\">Mortazavi et al., 2024</a>). More in our <a href=\"/pages/copper-peptide-research\">copper peptide research summary</a>.</p>"
-              }
-            }
-          }
-        },
-        "block_order": ["f1", "f2"]
+        "block_order": [
+          "step1",
+          "step2",
+          "step3",
+          "step4"
+        ]
       }
     },
     {
       "id": "faq",
-      "after": "proof",
+      "after": "routine",
       "section": {
         "type": "faq",
         "settings": {
@@ -454,7 +473,15 @@
             }
           }
         },
-        "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7"]
+        "block_order": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7"
+        ]
       }
     },
     {
@@ -544,7 +571,12 @@
             }
           }
         },
-        "block_order": ["r1", "r2", "r3", "r4"]
+        "block_order": [
+          "r1",
+          "r2",
+          "r3",
+          "r4"
+        ]
       }
     },
     {
@@ -562,12 +594,6 @@
     }
   ],
   "section_css": {
-    "hero": [
-      "@media (min-width:700px){.content-over-media>picture>img{object-position:right center}.content-over-media>div{max-width:clamp(300px,36vw,600px)}h1{font-size:clamp(3.75rem,6.4vw,6rem);line-height:.95}}",
-      "@media (max-width:699px){.content-over-media::before{background-image:linear-gradient(to top,rgba(10,14,22,.85) 0%,rgba(10,14,22,.62) 22%,rgba(10,14,22,0) 58%)}h1{font-size:2.75rem;line-height:1}}",
-      "h1{overflow-wrap:break-word}",
-      "@media (max-width:299px){h1{font-size:2.25rem}}"
-    ],
     "content": [
       "h2{font-size:clamp(1.75rem,2.4vw,2.25rem);line-height:1.1}",
       ".prose,.button{overflow-wrap:break-word}",
@@ -575,15 +601,26 @@
       "@media (max-width:699px){.media-with-text__content{padding-inline:0}}",
       "@media (max-width:360px){h2{font-size:1.375rem}.button{padding-inline:16px}}"
     ],
-    "answer": [".prose p{max-width:32em}", "a{color:#016569}"],
+    "answer": [
+      ".prose p{max-width:32em}",
+      "a{color:#016569}"
+    ],
     "routine": [
       ".h3{font-size:1.5rem}",
       "@media (min-width:300px) and (max-width:699px){.multi-column__item{display:grid;grid-template-columns:104px 1fr;gap:16px;align-items:start}}",
       "@media (max-width:360px){.h3{font-size:1.125rem}}"
     ],
-    "related": [".h3{font-size:1.5rem}", ".prose a{color:#016569}"],
-    "faq": ["@media (max-width:299px){.accordion-box{padding-inline:12px}}", "a{color:#016569}"],
-    "proof": ["a{color:#016569}"]
+    "related": [
+      ".h3{font-size:1.5rem}",
+      ".prose a{color:#016569}"
+    ],
+    "faq": [
+      "@media (max-width:299px){.accordion-box{padding-inline:12px}}",
+      "a{color:#016569}"
+    ],
+    "proof": [
+      "a{color:#016569}"
+    ]
   },
   "jsonld": {
     "@context": "https://schema.org",
@@ -603,15 +640,9 @@
       "@id": "https://www.skingenetix.com/#website"
     },
     "author": {
-      "@type": "Person",
-      "name": "Malcolm Smith",
-      "jobTitle": "Founder, Skingenetix",
-      "description": "Founder of Skingenetix. Compiles the ingredient claims registers behind the brand's research pages, working from the published papers themselves.",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Skingenetix",
-        "url": "https://www.skingenetix.com"
-      }
+      "@type": "Organization",
+      "name": "Skingenetix",
+      "url": "https://www.skingenetix.com"
     },
     "publisher": {
       "@type": "Organization",
@@ -622,7 +653,12 @@
     "about": {
       "@type": "Thing",
       "name": "Topical collagen",
-      "alternateName": ["Collagen cream", "Collagen serum", "Hydrolyzed collagen", "Soluble collagen"]
+      "alternateName": [
+        "Collagen cream",
+        "Collagen serum",
+        "Hydrolyzed collagen",
+        "Soluble collagen"
+      ]
     },
     "mentions": [
       {

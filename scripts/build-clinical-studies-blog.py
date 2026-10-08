@@ -49,7 +49,7 @@ PHRASES = json.loads((ROOT / "configs/hub-i18n/clinical-studies.json").read_text
 # Card images: science images from the unused pool, no models or branding (Malcolm, 2026-09-29), first picks made by
 # Claude on his instruction (2026-09-30); each entry names its article's handle. The 2026-09-29 plan (model banners) is history.
 CARDS = json.loads((ROOT / "configs/banners/clinical-studies-article-cards-2026-09-30.json").read_text())
-AUTHOR = "Malcolm Smith"
+AUTHOR = "Skingenetix Research Team"  # team credit on every article (Malcolm, 2026-10-08: no named writer)
 # One ingredient label per article: the card badge and the label row above the list. Article tags are not
 # translatable (the ARTICLE resource exposes title, body_html, summary_html, handle, meta_title and
 # meta_description only), so a label must read the same in all six languages: "Copper peptide" showed in

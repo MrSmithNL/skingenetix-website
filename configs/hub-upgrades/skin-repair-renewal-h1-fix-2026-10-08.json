@@ -1,0 +1,22 @@
+{
+  "_about": "2026-10-08 H1 fix (plan step 1.4a; verified 2026-10-08: the page served no <h1>, because the Impact heading block renders <p class=\"h1\">). The title moves into the hero's richtext block as a real <h1> in six languages (it renders at the theme's 60px/40px, the same as the heading block, measured on the hubs), and the heading block is then switched off (disabled: true keeps its translations) by scripts/disable-block.py. Set-only, built from the live values re-read today. Undo: --rollback and re-enable the block.",
+  "template": "templates/page.skin-repair-renewal.json",
+  "page": "skin-repair-renewal",
+  "set": [
+    {
+      "at": "hero/desc/content",
+      "values": {
+        "en": "<h1>Skin Repair &amp; Renewal</h1><p>How PDRN and copper peptide support the skin's natural renewal for a firmer, smoother and more revitalised-looking complexion.</p>",
+        "de": "<h1>Erneuerung &amp; Frische</h1><p>Wie PDRN und Copper Peptide die natürliche Hauterneuerung unterstützen - für einen sichtbar strafferen, glatteren und frischer wirkenden Teint.</p>",
+        "nl": "<h1>Huidherstel &amp; Vernieuwing</h1><p>Hoe PDRN en copper peptide de natuurlijke vernieuwing van de huid ondersteunen voor een steviger, gladder en frissere teint.</p>",
+        "fr": "<h1>Renouvellement &amp; Fraîcheur</h1><p>Comment le PDRN et le Copper Peptide soutiennent le renouvellement naturel de la peau pour un teint visiblement plus ferme, plus lisse et plus frais.</p>",
+        "es": "<h1>Renovación &amp; Frescura</h1><p>Cómo PDRN y el copper peptide ayudan a la renovación natural de la piel para un cutis visiblemente más firme, más suave y con más vitalidad.</p>",
+        "it": "<h1>Rinnovamento &amp; Freschezza</h1><p>Come PDRN e copper peptide supportano il rinnovamento naturale della pelle per un incarnato visibilmente più compatto, levigato e rivitalizzato.</p>"
+      }
+    }
+  ],
+  "_disable_block": {
+    "section": "hero",
+    "block": "heading"
+  }
+}

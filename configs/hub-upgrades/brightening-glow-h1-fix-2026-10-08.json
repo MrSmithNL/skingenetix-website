@@ -1,0 +1,22 @@
+{
+  "_about": "2026-10-08 H1 fix (plan step 1.4a; verified 2026-10-08: the page served no <h1>, because the Impact heading block renders <p class=\"h1\">). The title moves into the hero's richtext block as a real <h1> in six languages (it renders at the theme's 60px/40px, the same as the heading block, measured on the hubs), and the heading block is then switched off (disabled: true keeps its translations) by scripts/disable-block.py. Set-only, built from the live values re-read today. Undo: --rollback and re-enable the block.",
+  "template": "templates/page.brightening-glow.json",
+  "page": "brightening-glow",
+  "set": [
+    {
+      "at": "hero/desc/content",
+      "values": {
+        "en": "<h1>Brightening &amp; Glow</h1><p>How glutathione and antioxidant actives support luminosity and a brighter-looking skin tone, and help protect against oxidative dullness.</p>",
+        "de": "<h1>Strahlende Haut &amp; Glow</h1><p>Wie Glutathion und antioxidative Wirkstoffe Leuchtkraft und einen heller wirkenden Teint unterstützen und vor oxidativer Mattigkeit schützen helfen.</p>",
+        "nl": "<h1>Stralende Huid &amp; Glow</h1><p>Hoe glutathione en antioxidante actieve stoffen zorgen voor glow en een helderder ogende teint, en helpen beschermen tegen een doffe huid.</p>",
+        "fr": "<h1>Éclat &amp; Glow</h1><p>Comment le glutathion et les actifs antioxydants soutiennent la luminosité et un teint d'apparence plus lumineuse, et aident à protéger contre le ternissement oxydatif.</p>",
+        "es": "<h1>Luminosidad &amp; Glow</h1><p>Cómo el glutatión y los activos antioxidantes favorecen la luminosidad y un tono de piel de aspecto más luminoso, y ayudan a proteger frente al apagamiento oxidativo.</p>",
+        "it": "<h1>Luminosità &amp; Glow</h1><p>Come il glutatione e gli attivi antiossidanti supportano la luminosità e un incarnato dall'aspetto più luminoso, e aiutano a proteggere dall'opacità da stress ossidativo.</p>"
+      }
+    }
+  ],
+  "_disable_block": {
+    "section": "hero",
+    "block": "heading"
+  }
+}

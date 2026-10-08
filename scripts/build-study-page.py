@@ -163,7 +163,7 @@ def jsonld(cfg, loc):
             "citation": [cite],
             # from the config, so `set-reviewer.py --remove` can take it off (it was hard-coded until 2026-09-26)
             **({"reviewedBy": cfg["reviewer"]} if cfg.get("reviewer") else {}),
-            "author": {"@type": "Person", "name": "Malcolm Smith", "jobTitle": "Founder, Skingenetix"},
+            "author": {"@type": "Organization", "name": "Skingenetix", "url": BASE},  # team credit, Malcolm 2026-10-08
             "publisher": {"@type": "Organization", "name": "Skingenetix", "url": BASE},
             "isPartOf": {"@type": "Blog", "name": PHRASES["title"][loc], "url": f"{BASE}{_pre(loc)}/blogs/clinical-studies"},
             "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
@@ -617,7 +617,7 @@ def preview_article(cfg, detail_id=None):
     if not mo:
         sys.exit(f"  ✗ {handle}: no study entry to preview")
     art = {"title": t(cfg["h1"], "en"), "summary": t(cfg["seo_description"], "en"), "body": ps([cfg["answer"]], "en"),
-           "author": {"name": "Malcolm Smith"}, "templateSuffix": "clinical-study", "isPublished": True,
+           "author": {"name": "Skingenetix Research Team"}, "templateSuffix": "clinical-study", "isPublished": True,
            "metafields": [
                {"namespace": "study", "key": "entry", "type": "metaobject_reference", "value": mo["id"]},
                {"namespace": "global", "key": "title_tag", "type": "single_line_text_field",

@@ -588,6 +588,42 @@ whoever wrote the content. Malcolm was told this in the session.
 edit.
 **Undo:** revert `2658b5d` and run `build-study-page.py configs/studies/<handle>.json --apply` for each study.
 
+## ADR-2026-10-08-W: Team credit instead of a named writer; the research's live faults fixed on "fix the issues the research found"
+
+**Context.** Malcolm, 2026-10-08, after the per-page competitor analysis (`docs/website-traffic-and-performance-plan-2026-10-08.md`):
+"Remove my name from all pages as the writer. And replace with a more generic term that would work best for this website." and "Fix the
+issues the research found." The inventory found the name as writer credit in the five hub bylines and their JSON-LD (six languages), the
+eight articles' Shopify author field (Shopify's own Article JSON-LD emits it), the `study` metaobjects' JSON-LD (8 live, 8 drafts), the
+collagen preview, and the generators that would write it back. The research's verified live faults: no `<h1>` on the four Skin Solutions
+pages and The Science; five register-breaking phrases on three concern pages; the German copper hub's English H1; "Coming soon" on the
+creams collection; a retinol multiple on Skin Repair that contradicted the hub.
+**Decision.**
+
+1. **The writer credit is the Skingenetix Research Team**, visible ("Written by the Skingenetix Research Team, which compiles the claims
+   registers behind these pages", translated per locale by one translator each, `configs/claim-fixes/concern-pages-2026-10-08.<loc>.json`)
+   and in schema (`author` = Organization Skingenetix). The reviewer credit (Dr Bodde) and the research credit (ADR-2026-10-02-U) are
+   untouched. The study articles' visible byline was already generic. Applied: `configs/hub-upgrades/*-team-credit-2026-10-08.json`
+   (five hub templates, six languages), `scripts/author-credit-replace.py` (8 articles, 16 study entries with their translations),
+   `scripts/build-study-page.py` and `scripts/build-clinical-studies-blog.py` (generators), the stored specs and phrase maps scrubbed so a
+   re-apply cannot restore the name. Code comments naming the requester in the footer stylesheet are not credits and stay.
+2. **H1:** the Impact heading block renders `<p class="h1">` whatever its "heading tag" setting, so the title now lives in the hero's
+   richtext block as a real `<h1>` in six languages (same rendered size, 60 px desktop and 40 px phone) and the heading block is disabled,
+   not deleted, so its translations survive (`*-h1-fix-2026-10-08.json` + `scripts/disable-block.py`).
+3. **Claims:** "even reverse them", "safe for sensitive skin? Yes", "Overnight Structural Repair", "stimulation of new collagen production"
+   and the unsupported retinol-irritation sentence replaced with register wording in six languages (`*-claim-fixes-2026-10-08.json`; the
+   English and the reasons in `configs/claim-fixes/concern-pages-2026-10-08.en.json`). The Skin Repair retinol multiple is made consistent
+   with the hub ("more than three times", Ye 2026 Fig. 6B); whether trial magnitudes stay on concern, product and collection pages at all
+   is still Malcolm's decision 15 in the plan.
+4. **German copper H1** "Kupferpeptid (GHK-Cu)"; **"Coming soon"** removed from the creams collection in six languages
+   (`scripts/collection-description-apply.py`).
+5. **Collagen Skincare preview** (hidden): "What Peptides Did in Clinical Studies" moved directly under "Do Collagen Creams Work?"; the
+   hero styled like the Skin Solutions banners (custom CSS removed, overlay 22); byline and schema author to the team credit. The
+   explainer image for the answer section follows Malcolm's pick from `block-collagen-skincare-explainer-r1`.
+
+**Consequences.** A named author is a stronger expertise signal in the auditor's A-criteria than an organisation; the next audits of the
+hubs will show whether the score moves, and the medical reviewer line carries the person signal. The stamp sets (out-of-stock schema under
+a pre-order template) and the in-vivo figures on product and collection pages wait for decisions 13 and 15.
+
 ## ADR-2026-10-07-V: Layer 1 of the ranking plan applied live on "let's proceed with the fixes and improvements"
 
 **Context.** `docs/seo-performance-and-ranking-plan-2026-10-07.md` found the five hubs below the audit bar on the central v2 criteria

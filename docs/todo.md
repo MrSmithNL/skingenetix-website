@@ -77,8 +77,29 @@ app-script trim · 1.6 spoke 1 · 1.7 the Learn blog · 1.8 STUDY-DETAIL go-live
 **▶ Phase 2 (weeks 3–6):** reviews in markup · Merchant Center · outreach materials · spokes 2–5 · collagen go-live · GB and DE
 titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining spokes, translation waves, monthly authority, re-plan.
 
-**Not done on purpose:** no page published (every concept is English-only; the six-language rule applies); no store write of
-any kind; `configs/page-targets.json` unchanged until decision 3.
+**Done 2026-10-08 afternoon, on Malcolm's "fix the issues the research found" and "remove my name as the writer" (ADR-2026-10-08-W):**
+
+- ✅ Writer credit → **Skingenetix Research Team** everywhere: five hub bylines and JSON-LD in six languages
+  (`configs/hub-upgrades/*-team-credit-2026-10-08.json`), 8 article author fields + 16 study entries' JSON-LD
+  (`scripts/author-credit-replace.py`), the collagen preview, both generators, the stored specs and phrase maps.
+- ✅ H1 restored on the four Skin Solutions pages and The Science in six languages (`*-h1-fix-2026-10-08.json` + `scripts/disable-block.py`);
+  German copper hub H1 "Kupferpeptid (GHK-Cu)".
+- ✅ Register-breaking claims replaced in six languages on Fine Lines, Firming and Skin Repair (`*-claim-fixes-2026-10-08.json`; English
+  and reasons in `configs/claim-fixes/concern-pages-2026-10-08.en.json`); the Skin Repair retinol multiple and the PDRN collection meta
+  description made consistent with the hub ("more than three times").
+- ✅ "Coming soon" removed from the creams collection in six languages (`scripts/collection-description-apply.py`).
+- ✅ Collagen Skincare preview: "What Peptides Did in Clinical Studies" moved under "Do Collagen Creams Work?", hero styled like the
+  Skin Solutions banners, team byline; explainer image wave `block-collagen-skincare-explainer-r1` generated (OpenAI judge and
+  gpt-image are out of credits; Seedream refused one slot) — **Malcolm picks**.
+- ✅ `configs/page-targets.json`: eleven unowned pages added with uncontested owner terms (the contested moves wait for decision 3).
+- ⏳ **Malcolm's picks:** the Matrixyl hub rebuild's before/after pairs (`~/Desktop/skingenetix-before-after-matrixyl-cards-r1.png`, 36
+  candidates, generated 2026-09-26, never picked) and the collagen page's (`…collagen-plumping-r1.png` 36, `…r2.png` 18); the explainer
+  (`~/Desktop/skingenetix-block-collagen-skincare-explainer-r1.png`). Mark with `_` / `__` in Finder on the files in `assets/ai-generated/`.
+- ⏳ Collagen page in the menu: not yet (hidden preview); the fifth **Skin Solutions** tile at go-live (ADR-2026-09-29-D), six languages.
+- Not done: the stamp sets' out-of-stock schema (decision 13: pre-order or hide); trial magnitudes on product and collection pages
+  (decision 15); the speed test on a duplicate theme (decision 7); the key-figure tiles as H2s on study articles (STUDY-DETAIL go-live).
+
+**Not done on purpose earlier today:** no page published (every concept is English-only; the six-language rule applies).
 
 ---
 

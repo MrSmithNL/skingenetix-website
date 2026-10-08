@@ -1,5 +1,5 @@
 {
-  "_about": "Target keywords per page from docs/keyword-strategy-2026.md §4 (hero map). Used by scripts/page-audit.py to check that the page's title, H1 and first 30% of text carry the terms the page is meant to own. primary = the head term; secondary = terms folded into the page as sections. Study articles (type 'study', with their 'hub') added 2026-09-30 from keyword-strategy-2026.md §4. Ownership aligned to keyword-strategy-2026.md §4 and keyword-ownership-analysis-2026-09-30.md §1–3 on 2026-10-07 (hub owns 'argireline', product 'argireline serum'; product owns 'matrixyl 3000', hub the science terms; a collection owns 'peptide skincare').",
+  "_about": "Target keywords per page from docs/keyword-strategy-2026.md §4 (hero map). Used by scripts/page-audit.py to check that the page's title, H1 and first 30% of text carry the terms the page is meant to own. primary = the head term; secondary = terms folded into the page as sections. Study articles (type 'study', with their 'hub') added 2026-09-30 from keyword-strategy-2026.md §4. Ownership aligned to keyword-strategy-2026.md §4 and keyword-ownership-analysis-2026-09-30.md §1–3 on 2026-10-07 (hub owns 'argireline', product 'argireline serum'; product owns 'matrixyl 3000', hub the science terms; a collection owns 'peptide skincare'). 2026-10-08: eleven pages that had no owner added from the per-page competitor analysis (docs/website-traffic-and-performance-plan-2026-10-08.md Part 2.2 and 3.2): the glutathione serum, the four creams, the two stamp sets, the copper, creams and microneedling collections, and the collagen page. Owner terms are the uncontested ones (what each page already ranks for, or the measured term no other page claims); the contested moves (brightening serum, peptide cream, peptides for skin, the hub and article retargets) wait for Malcolm's decision 3 in the plan.",
   "/pages/pdrn-research": {
     "primary": "pdrn",
     "secondary": [
@@ -231,5 +231,95 @@
       "peptide cream"
     ],
     "type": "collection"
+  },
+  "/products/glutathione-brightening-serum": {
+    "primary": "glutathione serum",
+    "secondary": [
+      "brightening serum",
+      "glutathione 2%"
+    ],
+    "type": "product"
+  },
+  "/products/pdrn-collagen-night-cream": {
+    "primary": "pdrn cream",
+    "secondary": [
+      "pdrn night cream",
+      "1%"
+    ],
+    "type": "product"
+  },
+  "/products/matrixyl-3000-pro-collagen-firming-cream": {
+    "primary": "matrixyl cream",
+    "secondary": [
+      "collagen cream with matrixyl",
+      "matrixyl 3000 cream"
+    ],
+    "type": "product"
+  },
+  "/products/copper-peptide-ghk-cu-night-cream": {
+    "primary": "ghk-cu cream",
+    "secondary": [
+      "copper peptide cream",
+      "copper peptide night cream"
+    ],
+    "type": "product"
+  },
+  "/products/copper-peptide-ghk-cu-day-gel-cream": {
+    "primary": "copper peptide day cream",
+    "secondary": [
+      "copper peptide gel cream",
+      "ghk-cu day cream"
+    ],
+    "type": "product"
+  },
+  "/products/copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month": {
+    "primary": "microneedling stamp",
+    "secondary": [
+      "copper peptide microneedling",
+      "microneedling stamp set"
+    ],
+    "type": "product"
+  },
+  "/products/pdrn-microneedling-facial-stamp-set-1-month": {
+    "primary": "pdrn stamp",
+    "secondary": [
+      "pdrn microneedling stamp",
+      "microneedling stamp set"
+    ],
+    "type": "product"
+  },
+  "/collections/copper-peptide": {
+    "primary": "copper peptide skincare",
+    "secondary": [
+      "copper peptide products",
+      "ghk-cu skincare"
+    ],
+    "type": "collection"
+  },
+  "/collections/creams-moisturizers": {
+    "primary": "peptide creams",
+    "secondary": [
+      "peptide cream",
+      "peptide moisturizer"
+    ],
+    "type": "collection"
+  },
+  "/collections/microneedling": {
+    "primary": "microneedling skincare set",
+    "secondary": [
+      "microneedling stamp",
+      "microneedling serum"
+    ],
+    "type": "collection"
+  },
+  "/pages/collagen-skin-plumping": {
+    "primary": "collagen cream",
+    "secondary": [
+      "collagen serum",
+      "collagen face cream",
+      "collagen skincare"
+    ],
+    "type": "concern",
+    "note": "becomes /pages/collagen-skincare at go-live (ADR-2026-09-29-D)"
   }
 }

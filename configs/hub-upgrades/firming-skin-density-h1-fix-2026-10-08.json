@@ -1,0 +1,22 @@
+{
+  "_about": "2026-10-08 H1 fix (plan step 1.4a; verified 2026-10-08: the page served no <h1>, because the Impact heading block renders <p class=\"h1\">). The title moves into the hero's richtext block as a real <h1> in six languages (it renders at the theme's 60px/40px, the same as the heading block, measured on the hubs), and the heading block is then switched off (disabled: true keeps its translations) by scripts/disable-block.py. Set-only, built from the live values re-read today. Undo: --rollback and re-enable the block.",
+  "template": "templates/page.firming-skin-density.json",
+  "page": "firming-skin-density",
+  "set": [
+    {
+      "at": "hero/desc/content",
+      "values": {
+        "en": "<h1>Firming &amp; Skin Density</h1><p>How collagen proteins, elastin and peptide science support the look of firmer, denser skin as it changes with age.</p>",
+        "de": "<h1>Straffung &amp; Volumen</h1><p>Wie Kollagenproteine, Elastin und Peptidwissenschaft dabei helfen, die Haut straffer und voller wirken zu lassen - auch wenn sie sich mit dem Alter verändert.</p>",
+        "nl": "<h1>Verstevigen &amp; Volume</h1><p>Hoe collageeneiwitten, elastine en peptidewetenschap de huid er steviger en voller laten uitzien naarmate deze verandert met de leeftijd.</p>",
+        "fr": "<h1>Fermeté &amp; Volume</h1><p>Comment les protéines de collagène, l'élastine et la science des peptides soutiennent l'aspect d'une peau plus ferme et plus volumineuse à mesure qu'elle évolue avec l'âge.</p>",
+        "es": "<h1>Firmeza &amp; Volumen</h1><p>Cómo las proteínas del colágeno, la elastina y la ciencia de los péptidos hacen que la piel se vea visiblemente más firme y con más volumen a medida que cambia con la edad.</p>",
+        "it": "<h1>Compattezza &amp; Volume</h1><p>Come le proteine del collagene, l'elastina e la scienza dei peptidi aiutano la pelle ad apparire più compatta e voluminosa con il passare degli anni.</p>"
+      }
+    }
+  ],
+  "_disable_block": {
+    "section": "hero",
+    "block": "heading"
+  }
+}

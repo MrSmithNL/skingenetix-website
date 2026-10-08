@@ -1,0 +1,18 @@
+{
+  "_about": "2026-10-08: the German copper hub kept the English H1 'Copper Peptide (GHK-Cu)' (verified live). German H1 'Kupferpeptid (GHK-Cu)', the store's own German label (configs/hub-i18n/clinical-studies.json label_copper). Set-only from the live six-language values; only the de value changes. Undo: --rollback.",
+  "template": "templates/page.research-copper-peptide.json",
+  "page": "copper-peptide-research",
+  "set": [
+    {
+      "at": "hero/p1/content",
+      "values": {
+        "en": "<h1>Copper Peptide (GHK-Cu)</h1><p>A copper-binding peptide the body makes itself, shown in a double-blind trial to reduce the look of crow's-feet wrinkles.</p>",
+        "de": "<h1>Kupferpeptid (GHK-Cu)</h1><p>Ein kupferbindendes Peptid, das der Körper selbst bildet und das in einer doppelblinden Studie das Erscheinungsbild von Krähenfüßen nachweislich verringerte.</p>",
+        "nl": "<h1>Copper Peptide (GHK-Cu)</h1><p>Een koperbindend peptide dat het lichaam zelf aanmaakt en dat in een dubbelblinde studie de aanblik van kraaienpootjes aantoonbaar verminderde.</p>",
+        "fr": "<h1>Copper Peptide (GHK-Cu)</h1><p>Un peptide liant le cuivre que le corps fabrique lui-même, dont un essai en double aveugle a montré qu'il réduit l'apparence des pattes-d'oie.</p>",
+        "es": "<h1>Copper Peptide (GHK-Cu)</h1><p>Un péptido que se une al cobre y que el propio cuerpo fabrica, que en un ensayo doble ciego demostró reducir el aspecto de las patas de gallo.</p>",
+        "it": "<h1>Copper Peptide (GHK-Cu)</h1><p>Un peptide che lega il rame e che il corpo produce da sé, che in uno studio in doppio cieco ha dimostrato di ridurre l'aspetto delle zampe di gallina.</p>"
+      }
+    }
+  ]
+}

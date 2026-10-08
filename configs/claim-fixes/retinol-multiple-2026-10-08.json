@@ -1,0 +1,76 @@
+{
+  "_about": "2026-10-08 consistency fix (audit criterion C4, found by the per-page teardown): the PDRN hub was corrected on 2026-10-07 to 'more than three times' the improvement of retinol (Ye 2026 Fig. 6B: 23.0% vs 6.6%), but the Skin Repair & Renewal page's PDRN serum block still said 'more than twice'. The multiple itself stays until Malcolm decides whether trial magnitudes stay on concern and product pages (plan decision 15); this only makes the stated figure consistent with the hub in six languages. Minimal substitution of one phrase inside the live block text. Applied through configs/hub-upgrades/skin-repair-renewal-retinol-multiple-2026-10-08.json with scripts/hub-upgrade.py. Undo: --rollback.",
+  "template": "templates/page.skin-repair-renewal.json",
+  "page": "skin-repair-renewal",
+  "at": "content/pdrn_serum/content",
+  "substitutions": {
+    "en": [
+      [
+        "more than twice as much as retinol",
+        "more than three times as much as retinol"
+      ]
+    ],
+    "de": [
+      [
+        "mehr als doppelt so viel wie Retinol",
+        "mehr als dreimal so viel wie Retinol"
+      ],
+      [
+        "mehr als doppelt so stark wie Retinol",
+        "mehr als dreimal so stark wie Retinol"
+      ],
+      [
+        "mehr als doppelt",
+        "mehr als dreimal"
+      ]
+    ],
+    "nl": [
+      [
+        "meer dan twee keer zoveel als retinol",
+        "meer dan drie keer zoveel als retinol"
+      ],
+      [
+        "meer dan tweemaal",
+        "meer dan driemaal"
+      ],
+      [
+        "meer dan twee keer",
+        "meer dan drie keer"
+      ],
+      [
+        "ruim twee keer",
+        "ruim drie keer"
+      ]
+    ],
+    "fr": [
+      [
+        "plus de deux fois plus que le rétinol",
+        "plus de trois fois plus que le rétinol"
+      ],
+      [
+        "plus de deux fois",
+        "plus de trois fois"
+      ]
+    ],
+    "es": [
+      [
+        "más del doble que el retinol",
+        "más del triple que el retinol"
+      ],
+      [
+        "más del doble",
+        "más del triple"
+      ]
+    ],
+    "it": [
+      [
+        "più del doppio rispetto al retinolo",
+        "più del triplo rispetto al retinolo"
+      ],
+      [
+        "più del doppio",
+        "più del triplo"
+      ]
+    ]
+  }
+}

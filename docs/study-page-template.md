@@ -181,7 +181,7 @@ assigns the pilot template to pilot configs; switch an article back to `clinical
   JSON-LD names every author as a Person on the ScholarlyArticle the page `isBasedOn`. The list lives in `scholarly.authors`: `check()`
   refuses a study without it, and the publish check refuses a list that differs from the PubMed/Crossref record. A truncated record passes
   only with `scholarly.authors_read_at_source` saying where the full list was read (Badenhorst 2016: Crossref holds 3 of 5). **Our page's
-  `author` stays Skingenetix's** (Malcolm Smith, with Dr Bodde as reviewer). Malcolm asked for the researchers to be the page's authors;
+  `author` stays Skingenetix's** (the Organization since 2026-10-08, with Dr Bodde as reviewer; the Shopify article author field reads "Skingenetix Research Team"). Malcolm asked for the researchers to be the page's authors;
   that would state that they wrote a page linking our products, which they did not, so it was implemented as credit and reported to
   him (ADR-2026-10-02-U). Revisit only with the researchers' written agreement.
 - **One section per proven result, and how it works** (Malcolm, 2026-10-01): §3.1. A before/after only where the result can be seen and the

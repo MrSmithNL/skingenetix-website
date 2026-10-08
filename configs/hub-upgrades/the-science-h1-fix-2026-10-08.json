@@ -1,0 +1,22 @@
+{
+  "_about": "2026-10-08 H1 fix (plan step 1.4a; verified 2026-10-08: the page served no <h1>, because the Impact heading block renders <p class=\"h1\">). The title moves into the hero's richtext block as a real <h1> in six languages (it renders at the theme's 60px/40px, the same as the heading block, measured on the hubs), and the heading block is then switched off (disabled: true keeps its translations) by scripts/disable-block.py. Set-only, built from the live values re-read today. Undo: --rollback and re-enable the block.",
+  "template": "templates/page.science.json",
+  "page": "the-science",
+  "set": [
+    {
+      "at": "hero/hero_text/content",
+      "values": {
+        "en": "<h1>The Research Behind Our Formulas</h1><p>Every ingredient in Skingenetix is supported by peer-reviewed studies published in dermatology and cosmetic science journals. All referenced research is publicly accessible.</p>",
+        "de": "<h1>Die Forschung hinter unseren Formeln</h1><p>Jeder Wirkstoff in Skingenetix wird durch peer-reviewte Studien gestützt, die in dermatologischen und kosmetikwissenschaftlichen Fachzeitschriften veröffentlicht wurden. Alle referenzierten Studien sind öffentlich zugänglich.</p>",
+        "nl": "<h1>Het Onderzoek Achter Onze Formules</h1><p>Elk ingrediënt in Skingenetix wordt ondersteund door peer-reviewed studies gepubliceerd in dermatologie- en cosmetische wetenschapstijdschriften. Al het genoemde onderzoek is openbaar toegankelijk.</p>",
+        "fr": "<h1>Les études derrière nos formules</h1><p>Chaque ingrédient de Skingenetix est soutenu par des études évaluées par des pairs, publiées dans des revues de dermatologie et de cosmétologie. Toutes les recherches citées sont accessibles au public.</p>",
+        "es": "<h1>La investigación detrás de nuestras fórmulas</h1><p>Cada ingrediente de Skingenetix está respaldado por estudios revisados por pares publicados en revistas de dermatología y ciencia cosmética. Toda la investigación referenciada es de acceso público.</p>",
+        "it": "<h1>La Ricerca Dietro le Nostre Formule</h1><p>Ogni ingrediente di Skingenetix è supportato da studi peer-reviewed pubblicati in riviste di dermatologia e scienza cosmetica. Tutta la ricerca citata è accessibile pubblicamente.</p>"
+      }
+    }
+  ],
+  "_disable_block": {
+    "section": "hero",
+    "block": "hero_heading"
+  }
+}

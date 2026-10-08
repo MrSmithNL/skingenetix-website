@@ -1,0 +1,40 @@
+{
+  "_about": "2026-10-08 claim fixes on page.fine-lines-wrinkles (plan step 1.4a; Malcolm: 'Fix the issues the research found'): 2026-10-08 claim fixes on the Skin Solutions pages (plan step 1.4a; Malcolm: 'Fix the issues the research found'). Five phrases the registers forbid were live; the English replacements below are grounded in docs/claims/argireline-acetyl-hexapeptide-8.md §1 claim 8 and §3, docs/claims/matrixyl-3000.md §1 claim 1 and §4, docs/claims/copper-peptide-ghk-cu.md 'Claims to AVOID', docs/claims/pdrn.md (Ye 2026), and the rule that trial magnitudes stay off product and concern pages. ",
+  "template": "templates/page.fine-lines-wrinkles.json",
+  "page": "fine-lines-wrinkles",
+  "set": [
+    {
+      "at": "content/intro/content",
+      "values": {
+        "en": "<p>Fine lines and wrinkles are among the earliest and most visible signs of skin aging. Fine lines are shallow creases, typically less than 1mm deep, that first appear around the eyes, forehead, and mouth. Over time, they deepen into wrinkles - permanent folds that become visible even when your face is completely relaxed.</p><p>While wrinkles are a natural part of aging, understanding the biology behind them reveals why some people develop them earlier - and what can be done to slow their progress and soften how they look.</p>",
+        "de": "<p>Feine Linien und Falten gehören zu den frühesten und sichtbarsten Zeichen der Hautalterung. Feine Linien sind flache Fältchen - typischerweise weniger als 1 mm tief -, die zuerst um die Augen, auf der Stirn und um den Mund herum auftreten. Mit der Zeit vertiefen sie sich zu Falten - dauerhaften Furchen, die auch bei völlig entspanntem Gesicht sichtbar sind.</p><p>Falten sind ein natürlicher Teil des Alterungsprozesses. Wer die Biologie dahinter versteht, erkennt, warum manche Menschen früher Falten entwickeln - und was getan werden kann, um ihr Fortschreiten zu verlangsamen und ihr Erscheinungsbild zu mildern.</p>",
+        "nl": "<p>Fijne Lijntjes & Rimpels behoren tot de vroegste en meest zichtbare tekenen van huidveroudering. Fijne lijntjes zijn ondiepe plooien, doorgaans minder dan 1 mm diep, die als eerste verschijnen rond de ogen, het voorhoofd en de mond. Na verloop van tijd verdiepen ze zich tot rimpels - permanente plooien die zichtbaar zijn zelfs wanneer je gezicht volledig ontspannen is.</p><p>Hoewel rimpels een natuurlijk onderdeel van veroudering zijn, laat inzicht in de biologie erachter zien waarom sommige mensen ze eerder ontwikkelen - en wat er gedaan kan worden om hun voortgang te vertragen en het uiterlijk ervan te verzachten.</p>",
+        "fr": "<p>Les ridules et les rides font partie des premiers signes visibles du vieillissement cutané. Les ridules sont de légères marques, généralement de moins de 1 mm de profondeur, qui apparaissent en premier autour des yeux, du front et de la bouche. Avec le temps, elles se creusent en rides - des plis permanents visibles même lorsque le visage est totalement détendu.</p><p>Bien que les rides soient une partie naturelle du vieillissement, comprendre leur origine permet de mieux saisir pourquoi certaines personnes en développent plus tôt - et ce qui peut être fait pour ralentir leur progression et atténuer leur apparence.</p>",
+        "es": "<p>Las líneas finas y las arrugas son algunos de los primeros signos visibles del envejecimiento cutáneo. Las líneas finas son surcos superficiales, normalmente de menos de 1 mm de profundidad, que aparecen primero alrededor de los ojos, la frente y la boca. Con el tiempo, se profundizan y se convierten en arrugas - pliegues permanentes que se ven incluso cuando el rostro está completamente relajado.</p><p>Aunque las arrugas son una parte natural del envejecimiento, entender la biología que hay detrás explica por qué algunas personas las desarrollan antes - y qué se puede hacer para ralentizar su avance y suavizar su aspecto.</p>",
+        "it": "<p>Le rughe sottili e le rughe profonde sono tra i primi e più visibili segni dell'invecchiamento cutaneo. Le rughe sottili sono solchi superficiali, tipicamente meno di 1 mm di profondità, che compaiono per prime intorno agli occhi, sulla fronte e intorno alla bocca. Con il tempo si approfondiscono in rughe permanenti, visibili anche quando il viso è completamente rilassato.</p><p>Sebbene le rughe siano una parte naturale dell'invecchiamento, comprendere la biologia che le determina aiuta a capire perché alcune persone le sviluppano prima - e cosa si può fare per rallentarne la progressione e attenuarne l'aspetto.</p>"
+      }
+    },
+    {
+      "at": "faq/f4/title",
+      "values": {
+        "en": "How well tolerated is Acetyl Hexapeptide-8?",
+        "de": "Wie gut verträglich ist Acetyl Hexapeptide-8?",
+        "nl": "Hoe goed wordt Acetyl Hexapeptide-8 verdragen?",
+        "fr": "Acetyl Hexapeptide-8 est-il bien toléré ?",
+        "es": "¿Qué tal se tolera Acetyl Hexapeptide-8?",
+        "it": "Quanto è ben tollerato Acetyl Hexapeptide-8?"
+      }
+    },
+    {
+      "at": "faq/f4/content",
+      "values": {
+        "en": "<p>In the controlled studies of the ingredient it was well tolerated: no one dropped out, and no redness, stinging, peeling or itching was reported with twice-daily use. It is not an acid or a retinoid. Our serum has not had a tolerance study of its own, so patch-test first and stop if stinging or redness does not settle.</p>",
+        "de": "<p>In den kontrollierten Studien zum Wirkstoff war er gut verträglich: Niemand brach ab, und bei zweimal täglicher Anwendung wurden weder Rötungen noch Brennen, Schuppung oder Juckreiz berichtet. Er ist weder eine Säure noch ein Retinoid. Für unser Serum gibt es noch keine eigene Verträglichkeitsstudie. Mach daher zuerst einen Patch-Test und setze es ab, wenn Brennen oder Rötungen nicht abklingen.</p>",
+        "nl": "<p>In de gecontroleerde studies van het ingrediënt werd het goed verdragen: niemand haakte af en er werd geen roodheid, prikkeling, schilfering of jeuk gemeld bij tweemaal daags gebruik. Het is geen zuur en geen retinoïde. Ons serum is zelf nog niet in een verdraagbaarheidsstudie onderzocht, dus doe eerst een patchtest en stop als prikkeling of roodheid niet verdwijnt.</p>",
+        "fr": "<p>Dans les études contrôlées sur cet actif, il a été bien toléré : personne n'a abandonné, et aucune rougeur, aucun picotement, aucune desquamation ni aucune démangeaison n'ont été signalés avec une application deux fois par jour. Ce n'est ni un acide ni un rétinoïde. Notre sérum n'a pas fait l'objet d'une étude de tolérance qui lui soit propre : faites d'abord un test cutané et arrêtez l'application si les picotements ou les rougeurs ne disparaissent pas.</p>",
+        "es": "<p>En los estudios controlados del ingrediente se toleró bien: nadie abandonó y no se notificaron rojeces, escozor, descamación ni picor con el uso dos veces al día. No es un ácido ni un retinoide. Nuestro sérum no ha tenido un estudio de tolerancia propio, así que haz primero una prueba en una zona pequeña y deja de usarlo si el escozor o las rojeces no remiten.</p>",
+        "it": "<p>Negli studi controllati sull'ingrediente è stato ben tollerato: nessuno ha abbandonato lo studio e con l'applicazione due volte al giorno non sono stati segnalati rossore, bruciore, desquamazione o prurito. Non è un acido né un retinoide. Il nostro siero non ha ancora avuto uno studio di tollerabilità proprio, quindi fai prima un patch test e interrompi l'uso se bruciore o rossore non passano.</p>"
+      }
+    }
+  ]
+}

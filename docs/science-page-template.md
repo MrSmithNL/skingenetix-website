@@ -47,7 +47,7 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
 ### 3.1 `overview` — answer first, then the credentials
 
 - **Intro, centred, full width, at the top of the Bone band.** `<h2 class="ovw__ih">What Is X?</h2>`, then a definition of 40–60 words whose first sentence is bold and self-contained (the sentence an AI engine quotes), then one sentence on how results were measured.
-- **Author line:** `<p class="ovw__auth">Written by <strong>Malcolm Smith</strong>, founder of Skingenetix, who compiles the claims registers behind these pages.</p>`
+- **Author line:** `<p class="ovw__auth">Written by the <strong>Skingenetix Research Team</strong>, which compiles the claims registers behind these pages.</p>` (team credit since 2026-10-08, Malcolm: no named writer on any page; the five translations are in `configs/claim-fixes/concern-pages-2026-10-08.<loc>.json` under `hubs|overview.byline`)
 - **Byline paragraph — a contract, not copy.** Exactly `<p><em>By Skingenetix. Medically reviewed by Dr Esther Bodde, Cosmetic &amp; Medical Physician. Every figure checked against the published paper or its PubMed record. Last reviewed <date>.</em></p>`
   - `<p><em>` with **no class**: `scripts/set-reviewer.py` finds the byline by that literal shape.
   - The reviewer sentence is taken verbatim from `configs/reviewers/esther-bodde.json`: `--remove` deletes it as an exact substring, so any rewording strands Dr Bodde's credit.
@@ -97,7 +97,7 @@ The old pages carried separate `evidence_table` (`specification-table`) and `ref
   · **What it found** (until 2026-09-26 "What it found, and what it does not show"; the required qualifiers stay inside the cells).
 - The class `sgref__ti` keeps the verbatim-title exemption in `page-audit.py` (ADR-2026-09-23-G). Titles are never paraphrased and never enter a translation table.
 - Every study the page's claims rest on is a row. Since 2026-09-24, null and non-transferable studies are not listed (ADR-2026-09-24-P), and the key line is only "Published titles are quoted exactly as they appear in the journal."
-- The WebPage JSON-LD sits at the end of this section's HTML: `author` (Person: Malcolm Smith), `publisher`, `reviewedBy`, `lastReviewed`, `citation[]`, `inLanguage`. Set `jsonld_host: "evidence_sources"` in the spec and in the reviewer config's hub entry.
+- The WebPage JSON-LD sits at the end of this section's HTML: `author` (Organization: Skingenetix, since 2026-10-08; was a named Person), `publisher`, `reviewedBy`, `lastReviewed`, `citation[]`, `inLanguage`. Set `jsonld_host: "evidence_sources"` in the spec and in the reviewer config's hub entry.
 
 ---
 

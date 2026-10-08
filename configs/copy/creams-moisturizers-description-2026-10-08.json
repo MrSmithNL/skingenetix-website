@@ -1,0 +1,21 @@
+{
+  "_about": "2026-10-08: the Creams & Moisturizers collection description ended in 'Coming soon.' in six languages while five creams were live (found by the per-page competitor teardown, verified live). This removes that sentence only; the rest of each description is the live text re-read today (translatableResource body_html, none outdated). Applied with scripts/collection-description-apply.py: collectionUpdate for English, translationsRegister against the new digest for the five locales. Undo: re-apply the 'before' values below.",
+  "collection": "creams-moisturizers",
+  "field": "body_html",
+  "before": {
+    "en": "Rich, nourishing formulations designed to lock in hydration and protect your skin barrier. Coming soon.",
+    "de": "Reichhaltige, nährende Formulierungen, die Feuchtigkeit einschließen und deine Hautbarriere schützen. Demnächst verfügbar.",
+    "nl": "Rijke, voedende formules die hydratatie vasthouden en je huidbarrière beschermen. Binnenkort beschikbaar.",
+    "fr": "Formules riches et nourrissantes pour préserver l'hydratation et protéger la barrière cutanée. Bientôt disponible.",
+    "es": "Formulaciones ricas y nutritivas diseñadas para fijar la hidratación y proteger tu barrera cutánea. Próximamente.",
+    "it": "Formule ricche e nutrienti per mantenere l'idratazione e proteggere la barriera cutanea. Prossimamente."
+  },
+  "after": {
+    "en": "Rich, nourishing formulations designed to lock in hydration and protect your skin barrier.",
+    "de": "Reichhaltige, nährende Formulierungen, die Feuchtigkeit einschließen und deine Hautbarriere schützen.",
+    "nl": "Rijke, voedende formules die hydratatie vasthouden en je huidbarrière beschermen.",
+    "fr": "Formules riches et nourrissantes pour préserver l'hydratation et protéger la barrière cutanée.",
+    "es": "Formulaciones ricas y nutritivas diseñadas para fijar la hidratación y proteger tu barrera cutánea.",
+    "it": "Formule ricche e nutrienti per mantenere l'idratazione e proteggere la barriera cutanea."
+  }
+}

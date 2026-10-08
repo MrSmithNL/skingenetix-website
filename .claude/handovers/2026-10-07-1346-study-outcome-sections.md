@@ -46,16 +46,16 @@ in the hreflang set or the sitemap, and both clear at go-live.
 
 Keywords:
 
-| Article    | Keyword                         |
-| ---------- | ------------------------------- |
-| Wang       | "argireline crow's feet"        |
-| Raikou     | "argireline forehead lines"     |
+| Article | Keyword |
+| --- | --- |
+| Wang | "argireline crow's feet" |
+| Raikou | "argireline forehead lines" |
 | Badenhorst | "copper peptide serum wrinkles" |
-| Ye         | "pdrn vs retinol"               |
-| Yogya      | "pdrn after microneedling"      |
-| Tadini     | "acetyl hexapeptide-3"          |
-| Robinson   | "palmitoyl pentapeptide-4"      |
-| Watanabe   | "glutathione brighten skin"     |
+| Ye | "pdrn vs retinol" |
+| Yogya | "pdrn after microneedling" |
+| Tadini | "acetyl hexapeptide-3" |
+| Robinson | "palmitoyl pentapeptide-4" |
+| Watanabe | "glutathione brighten skin" |
 
 ## 5. Stop conditions (ask before)
 

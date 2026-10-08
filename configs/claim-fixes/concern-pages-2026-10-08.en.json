@@ -1,0 +1,54 @@
+{
+  "_about": "2026-10-08 claim fixes on the Skin Solutions pages (plan step 1.4a; Malcolm: 'Fix the issues the research found'). Five phrases the registers forbid were live; the English replacements below are grounded in docs/claims/argireline-acetyl-hexapeptide-8.md §1 claim 8 and §3, docs/claims/matrixyl-3000.md §1 claim 1 and §4, docs/claims/copper-peptide-ghk-cu.md 'Claims to AVOID', docs/claims/pdrn.md (Ye 2026), and the rule that trial magnitudes stay off product and concern pages. Locale values: configs/claim-fixes/concern-pages-2026-10-08.<loc>.json (one translator per locale, minimal substitution into the live locale text). Assembled into set-only specs configs/hub-upgrades/<page>-claim-fixes-2026-10-08.json and applied with scripts/hub-upgrade.py. Undo: --rollback per spec.",
+  "changes": [
+    {
+      "template": "templates/page.fine-lines-wrinkles.json",
+      "page": "fine-lines-wrinkles",
+      "at": "content/intro/content",
+      "mode": "substitute",
+      "old_fragment": "slow, prevent, and even reverse them",
+      "new_fragment": "slow their progress and soften how they look",
+      "why": "'reverse' promises an outcome; the registers allow the look of lines softened"
+    },
+    {
+      "template": "templates/page.fine-lines-wrinkles.json",
+      "page": "fine-lines-wrinkles",
+      "at": "faq/f4/title",
+      "mode": "replace",
+      "new": "How well tolerated is Acetyl Hexapeptide-8?",
+      "why": "'safe for sensitive skin' needs product-level evidence we do not have (Argireline register §3)"
+    },
+    {
+      "template": "templates/page.fine-lines-wrinkles.json",
+      "page": "fine-lines-wrinkles",
+      "at": "faq/f4/content",
+      "mode": "replace",
+      "new": "<p>In the controlled studies of the ingredient it was well tolerated: no one dropped out, and no redness, stinging, peeling or itching was reported with twice-daily use. It is not an acid or a retinoid. Our serum has not had a tolerance study of its own, so patch-test first and stop if stinging or redness does not settle.</p>",
+      "why": "Argireline register §1 claim 8 and §4 (Wang 2013, Raikou 2017); no 'gentlest', no 'no parabens' (EC Annex III), no comparison with retinoids"
+    },
+    {
+      "template": "templates/page.firming-skin-density.json",
+      "page": "firming-skin-density",
+      "at": "content/nightcream/title",
+      "mode": "replace",
+      "new": "Copper Peptide (GHK-Cu) Night Cream - Night-Time Support for Firmer-Looking Skin",
+      "why": "'structural repair' is a repair claim on the copper avoid list"
+    },
+    {
+      "template": "templates/page.firming-skin-density.json",
+      "page": "firming-skin-density",
+      "at": "faq/f4/content",
+      "mode": "replace",
+      "new": "<p>No. The clinical study behind Matrixyl® 3000 was run on women aged 42 to 67, and in that group the look of deep wrinkles was visibly reduced over 2 months (manufacturer study). Starting earlier gives more years of prevention, but the look of firmer, smoother skin can be supported at any age.</p>",
+      "why": "'stimulation of new collagen production' is a physiological action (Matrixyl register §4); the −39% figure stays on the hub (in-vivo magnitudes rule)"
+    },
+    {
+      "template": "templates/page.skin-repair-renewal.json",
+      "page": "skin-repair-renewal",
+      "at": "faq/f2/content",
+      "mode": "replace",
+      "new": "<p>Retinol is a vitamin A derivative that speeds up skin turnover; PDRN and GHK-Cu work differently, supporting the look of renewed, revitalised skin. In the one head-to-head study (31 women, 28 days, double-blind), the PDRN side showed a clearly larger improvement in the look of crow's feet than the retinol side, and both sides were well tolerated. The full figures are on the <a href=\"/pages/pdrn-research\">PDRN research page</a>. Both can be combined with retinol if you wish.</p>",
+      "why": "the multiple ('more than twice') stays on the hub; the retinol-irritation sentence was unsupported (Ye 2026 reported no adverse reactions on the retinol side); translated hrefs carry the locale prefix"
+    }
+  ]
+}
