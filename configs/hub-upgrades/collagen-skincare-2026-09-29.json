@@ -1,5 +1,5 @@
 {
-  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7). 2026-10-08: the answer section is a media-with-text with the explainer image Malcolm picked (r2 A7 nbp_pro 02, configs/banners/collagen-skincare-explainer-publish-2026-10-08.json); the <h2> stays inside the content so the page keeps its heading. 2026-10-08 (Malcolm: 'add another study results section with before and after image'): third result card f3, palmitoyl pentapeptide-4 fine lines (Robinson 2005; wording from the Matrixyl register claim 2 and §8.4, p ≤ 0.10 stated per ADR-2026-10-01-T), order f1 (Matrixyl deep wrinkles), f3, f2 (copper). Before/after pairs: Malcolm's resolved picks, chosen by Claude on his 'you choose': f1 = collagen-plumping r1 C2 gpt_image 01, f3 = Matrixyl cards r1 D2 gpt_image 01, moles clone-retouched per the no-moles rule.",
+  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7). 2026-10-08: the answer section is a media-with-text with the explainer image Malcolm picked (r2 A7 nbp_pro 02, configs/banners/collagen-skincare-explainer-publish-2026-10-08.json); the <h2> stays inside the content so the page keeps its heading. 2026-10-08 (Malcolm: 'add another study results section with before and after image'): third result card f3, palmitoyl pentapeptide-4 fine lines (Robinson 2005; wording from the Matrixyl register claim 2 and §8.4, p ≤ 0.10 stated per ADR-2026-10-01-T), order f1 (Matrixyl deep wrinkles), f3, f2 (copper). Before/after pairs: Malcolm's resolved picks, chosen by Claude on his 'you choose': f1 = collagen-plumping r1 C2 gpt_image 01, f3 = Matrixyl cards r1 D2 gpt_image 01, moles clone-retouched per the no-moles rule. 2026-10-08 (audit S2, markup only): the JSON-LD mentions reference each product page's own Product node by @id (/products/<handle>#product, which carries live offers) instead of offer-less Product copies; dateModified 2026-10-08 to match the visible 'Last updated 8 October 2026'. The shop grid was moved below the explanation for audit X1 and put back under the proof cards the same hour: ADR-2026-09-29-D's condition 'products shown up front' makes that Malcolm's choice. Proof cards alternate image left/right in display order (f1 start, f3 end, f2 start), Malcolm 2026-10-08.",
   "english_first": true,
   "create": true,
   "template": "templates/page.collagen-skincare.json",
@@ -139,7 +139,7 @@
             "type": "finding",
             "settings": {
               "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-denser-firmer-looking-skin-before-after.jpg",
-              "media_position": "end",
+              "media_position": "start",
               "before_label": {
                 "en": "Before"
               },
@@ -167,7 +167,7 @@
             "type": "finding",
             "settings": {
               "image": "shopify://shop_images/skingenetix-palmitoyl-pentapeptide-4-fine-lines-before-after-12-weeks.jpg",
-              "media_position": "start",
+              "media_position": "end",
               "before_label": {
                 "en": "Before"
               },
@@ -673,7 +673,7 @@
     "description": "Do collagen creams work? How collagen helps skin, why size matters, why we make no collagen serum, and the peptide creams and serums with clinical results.",
     "image": "https://cdn.shopify.com/s/files/1/0932/8679/3601/files/skingenetix-matrixyl-3000-pro-collagen-full-firming-treatment.jpg",
     "datePublished": "2026-09-29",
-    "dateModified": "2026-09-29",
+    "dateModified": "2026-10-08",
     "isPartOf": {
       "@id": "https://www.skingenetix.com/#website"
     },
@@ -700,22 +700,22 @@
     },
     "mentions": [
       {
-        "@type": "Product",
+        "@id": "https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream#product",
         "name": "Matrixyl 3000 Pro-Collagen Firming Cream",
         "url": "https://www.skingenetix.com/products/matrixyl-3000-pro-collagen-firming-cream"
       },
       {
-        "@type": "Product",
+        "@id": "https://www.skingenetix.com/products/pdrn-collagen-night-cream#product",
         "name": "PDRN 1% Collagen Night Cream",
         "url": "https://www.skingenetix.com/products/pdrn-collagen-night-cream"
       },
       {
-        "@type": "Product",
+        "@id": "https://www.skingenetix.com/products/matrixyl-3000-firming-serum#product",
         "name": "Matrixyl 3000 Firming Serum",
         "url": "https://www.skingenetix.com/products/matrixyl-3000-firming-serum"
       },
       {
-        "@type": "Product",
+        "@id": "https://www.skingenetix.com/products/copper-peptide-ghk-cu-renewal-serum#product",
         "name": "Copper Peptide (GHK-Cu) 2% Renewal Serum",
         "url": "https://www.skingenetix.com/products/copper-peptide-ghk-cu-renewal-serum"
       }
