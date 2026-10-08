@@ -1,5 +1,5 @@
 {
-  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7). 2026-10-08: the answer section is a media-with-text with the explainer image Malcolm picked (r2 A7 nbp_pro 02, configs/banners/collagen-skincare-explainer-publish-2026-10-08.json); the <h2> stays inside the content so the page keeps its heading. 2026-10-08 (Malcolm: 'add another study results section with before and after image'): third result card f3, palmitoyl pentapeptide-4 fine lines (Robinson 2005; wording from the Matrixyl register claim 2 and §8.4, p ≤ 0.10 stated per ADR-2026-10-01-T), order f1 (Matrixyl deep wrinkles), f3, f2 (copper). Before/after pairs: Malcolm's resolved picks, chosen by Claude on his 'you choose': f1 = collagen-plumping r1 C2 gpt_image 01, f3 = Matrixyl cards r1 D2 gpt_image 01, moles clone-retouched per the no-moles rule. 2026-10-08 (audit S2, markup only): the JSON-LD mentions reference each product page's own Product node by @id (/products/<handle>#product, which carries live offers) instead of offer-less Product copies; dateModified 2026-10-08 to match the visible 'Last updated 8 October 2026'. The shop grid was moved below the explanation for audit X1 and put back under the proof cards the same hour: ADR-2026-09-29-D's condition 'products shown up front' makes that Malcolm's choice. Proof cards alternate image left/right in display order (f1 start, f3 end, f2 start), Malcolm 2026-10-08.",
+  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7). 2026-10-08: the answer section is a media-with-text with the explainer image Malcolm picked (r2 A7 nbp_pro 02, configs/banners/collagen-skincare-explainer-publish-2026-10-08.json); the <h2> stays inside the content so the page keeps its heading. 2026-10-08 (Malcolm: 'add another study results section with before and after image'): third result card f3, palmitoyl pentapeptide-4 fine lines (Robinson 2005; wording from the Matrixyl register claim 2 and §8.4, p ≤ 0.10 stated per ADR-2026-10-01-T), order f1 (Matrixyl deep wrinkles), f3, f2 (copper). Before/after pairs: Malcolm's resolved picks, chosen by Claude on his 'you choose': f1 = collagen-plumping r1 C2 gpt_image 01, f3 = Matrixyl cards r1 D2 gpt_image 01, moles clone-retouched per the no-moles rule. 2026-10-08 (audit S2, markup only): the JSON-LD mentions reference each product page's own Product node by @id (/products/<handle>#product, which carries live offers) instead of offer-less Product copies; dateModified 2026-10-08 to match the visible 'Last updated 8 October 2026'. The shop grid was moved below the explanation for audit X1 and put back under the proof cards the same hour: ADR-2026-09-29-D's condition 'products shown up front' makes that Malcolm's choice. Proof cards alternate image left/right in display order (f1 start, f3 end, f2 start), Malcolm 2026-10-08. 2026-10-08 later (Malcolm: 'make the changes so that the collagen page scores maximum on the SEO and AISO checks'): the shop grid moves below the explanation (hero -> answer -> proof -> content -> shop -> routine -> faq -> related), which the live audit measured as X1 met 3/0, 9.73, zero confirmed failures; this settles ADR-2026-09-29-D's 'products up front' in favour of the audit (the hero's shop button stays the up-front product action). Speed (same day): the hero's reveal-on-scroll fade is neutralised in the hero's own section CSS ('image-banner{opacity:1!important}'): the theme hid the banner (opacity 0) until theme.js loaded and the full image downloaded, so Google timed LCP from the fade. Local Lighthouse 13.5 mobile, two runs each: 15.2/13.7 s as it was, 6.0/6.5 s with the hero rule, 6.2/6.2 s with every reveal off; the other sections keep their animation. Accuracy (same day, from the audit's C9/C4 evidence): shop intro 'serums made with clinically tested peptides' (not 'their own clinical results'); the copper block cites Mokhtar 2026 with its limitation; FAQ q4 states each ingredient's job and that no study tested the three together; the routine points to the studies 'above'; Mokhtar 2026 added to the JSON-LD citations.",
   "english_first": true,
   "create": true,
   "template": "templates/page.collagen-skincare.json",
@@ -202,38 +202,8 @@
       }
     },
     {
-      "id": "shop",
-      "after": "proof",
-      "section": {
-        "type": "featured-collection",
-        "settings": {
-          "products": [
-            "matrixyl-3000-pro-collagen-firming-cream",
-            "pdrn-collagen-night-cream",
-            "matrixyl-3000-firming-serum",
-            "copper-peptide-ghk-cu-renewal-serum"
-          ],
-          "full_width": true,
-          "stack_products": true,
-          "show_progress_bar": false,
-          "products_count": 4,
-          "products_per_row_mobile": "2",
-          "products_per_row_desktop": 4,
-          "subheading": "",
-          "title": {
-            "en": "Shop Collagen Creams and Peptide Serums"
-          },
-          "content": {
-            "en": "<p>Two creams with real collagen in the formula, and two peptide serums with their own clinical results.</p>"
-          },
-          "link_text": "",
-          "background": "#F0F0F0"
-        }
-      }
-    },
-    {
       "id": "content",
-      "after": "shop",
+      "after": "proof",
       "section": {
         "type": "media-with-text",
         "settings": {
@@ -314,7 +284,7 @@
               "icon_width": 48,
               "title": "",
               "content": {
-                "en": "<h2>Copper Peptide GHK-Cu: Firmer, Smoother-Looking Skin</h2><p><strong>GHK-Cu is a copper peptide your own body makes, and in a double-blind trial a GHK-Cu serum reduced crow's-feet wrinkle volume by 24.1% in 8 weeks, against 15.0% with the plain serum base</strong> (<a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">the Badenhorst 2016 trial</a>). It is valued for a firmer, more elastic, smoother and plumper-looking complexion, and an independent 2026 review concluded that it reduces wrinkle volume and depth.</p><p>You'll find it in our <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide (GHK-Cu) 2% Renewal Serum</a>, and as copper tripeptide-1 in our <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a>.</p><p>More on <a href=\"/pages/copper-peptide-research\">copper peptides for skin</a> in our research summary.</p>"
+                "en": "<h2>Copper Peptide GHK-Cu: Firmer, Smoother-Looking Skin</h2><p><strong>GHK-Cu is a copper peptide your own body makes, and in a double-blind trial a GHK-Cu serum reduced crow's-feet wrinkle volume by 24.1% in 8 weeks, against 15.0% with the plain serum base</strong> (<a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">the Badenhorst 2016 trial</a>). It is valued for a firmer, more elastic, smoother and plumper-looking complexion, and an independent 2026 systematic review (<a href=\"https://pubmed.ncbi.nlm.nih.gov/42619529/\" target=\"_blank\" rel=\"noopener\">Mokhtar et al., 2026</a>) concluded that it reduces wrinkle volume and depth compared with controls, while noting that well-designed clinical trials are still few.</p><p>You'll find it in our <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide (GHK-Cu) 2% Renewal Serum</a>, and as copper tripeptide-1 in our <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a>.</p><p>More on <a href=\"/pages/copper-peptide-research\">copper peptides for skin</a> in our research summary.</p>"
               },
               "link_text": "",
               "link_url": "",
@@ -332,8 +302,38 @@
       }
     },
     {
-      "id": "routine",
+      "id": "shop",
       "after": "content",
+      "section": {
+        "type": "featured-collection",
+        "settings": {
+          "products": [
+            "matrixyl-3000-pro-collagen-firming-cream",
+            "pdrn-collagen-night-cream",
+            "matrixyl-3000-firming-serum",
+            "copper-peptide-ghk-cu-renewal-serum"
+          ],
+          "full_width": true,
+          "stack_products": true,
+          "show_progress_bar": false,
+          "products_count": 4,
+          "products_per_row_mobile": "2",
+          "products_per_row_desktop": 4,
+          "subheading": "",
+          "title": {
+            "en": "Shop Collagen Creams and Peptide Serums"
+          },
+          "content": {
+            "en": "<p>Two creams with real collagen in the formula, and two serums made with clinically tested peptides.</p>"
+          },
+          "link_text": "",
+          "background": "#F0F0F0"
+        }
+      }
+    },
+    {
+      "id": "routine",
+      "after": "shop",
       "section": {
         "type": "multi-column",
         "settings": {
@@ -344,7 +344,7 @@
             "en": "How to Use Collagen Cream and Serum"
           },
           "content": {
-            "en": "<p>Morning and evening, for at least 8 weeks: the time the peptide studies below took to measure their results. As with any new product, patch-test first.</p>"
+            "en": "<p>Morning and evening, for at least 8 weeks: the time the peptide studies above took to measure their results. As with any new product, patch-test first.</p>"
           },
           "background": "#FFFFFF"
         },
@@ -473,7 +473,7 @@
                 "en": "What should I look for in a collagen cream for my face?"
               },
               "content": {
-                "en": "<p>Three things on the ingredient list: collagen itself (native, soluble or hydrolyzed), a signal peptide such as Matrixyl 3000, and a humectant such as hyaluronic acid. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> has all three: a triple collagen complex, both Matrixyl 3000 peptides and hyaluronic acid. For night, the <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a> pairs hydrolyzed collagen with PDRN and copper peptide.</p>"
+                "en": "<p>Three ingredients, each with its own job: collagen itself (native, soluble or hydrolyzed) and a humectant such as hyaluronic acid hold water at the skin's surface, and a signal peptide such as Matrixyl 3000 is the ingredient with the wrinkle results above. We know of no study that tested all three together, so read this as what each one does, not as a proven formula. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> has all three: a triple collagen complex, both Matrixyl 3000 peptides and hyaluronic acid. For night, the <a href=\"/products/pdrn-collagen-night-cream\">PDRN Collagen Night Cream</a> pairs hydrolyzed collagen with PDRN and copper peptide.</p>"
               }
             }
           },
@@ -657,7 +657,8 @@
     ],
     "hero": [
       "@media (min-width:700px){.content-over-media>picture>img{object-position:right center}}",
-      "@media (max-width:699px){.content-over-media>picture>img{object-position:right center}}"
+      "@media (max-width:699px){.content-over-media>picture>img{object-position:right center}}",
+      "image-banner{opacity:1!important}"
     ]
   },
   "jsonld": {
@@ -775,6 +776,17 @@
           "name": "International Journal of Toxicology"
         },
         "url": "https://doi.org/10.1177/1091581818807863"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Regenerative Potential of GHK-Cu in Aesthetic Medicine.",
+        "author": "Mokhtar J et al.",
+        "datePublished": "2026",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Aesthetic Surgery Journal"
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42619529/"
       }
     ]
   }

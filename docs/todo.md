@@ -117,8 +117,13 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
   `scripts/menu-image-tiles.py` TILES entry swapped and rebuilt. Undo: `python3 scripts/menu-image-tiles.py --restore
   backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
 - ✅ **Collagen page, 2026-10-08 evening:** the three result cards alternate image left/right (Malcolm); JSON-LD product mentions by
-  `@id` (audit S2 fixed). ⏳ **Shop grid position is Malcolm's choice:** under the result cards (ADR-2026-09-29-D "products up front",
-  live; audit X1 fails) or below the explanation (tested live: 9.73, zero confirmed failures). Page note open item 5.
+  `@id` (audit S2 fixed); on "make the changes so that the collagen page scores maximum", the grid below the explanation (X1 met)
+  and the hero's fade neutralised on this page only (live largest paint 4.0 and 4.4 s, was about 14 s), ADR-2026-10-08-X.
+- ⏳ **Skin Concerns hub, three faults found 2026-10-08:** (1) no card or prose link to Collagen Skincare, so the hub does not link
+  its fifth spoke (draft English card waits for Malcolm, then six languages; then declare `hub_url: /pages/skin-concerns` for the
+  five concern pages in seo-toolkit's keyword map so P3/P5 are assessed); (2) no `<h1>` (the hero heading block renders
+  `<p class="h1">`; same fix as ADR-2026-10-08-W item 2); (3) FAQ "Are peptides safe for sensitive skin? Yes." (a register-breaking
+  phrase already replaced on the concern pages).
 - ✅ Explainer live (Malcolm, 2026-10-08: "use A7 nbp_pro 02"): r2 slot A (blue water under a lifted film), uploaded as
   `skingenetix-collagen-cream-moisture-film-skin-layers-explainer.jpg` (`configs/banners/collagen-skincare-explainer-publish-2026-10-08.json`);
   the `answer` section is now a media-with-text with the image beside "Do Collagen Creams Work?" (the `<h2>` stays in the content).

@@ -588,6 +588,34 @@ whoever wrote the content. Malcolm was told this in the session.
 edit.
 **Undo:** revert `2658b5d` and run `build-study-page.py configs/studies/<handle>.json --apply` for each study.
 
+## ADR-2026-10-08-X: Collagen Skincare optimised for the audit and for speed; ADR-2026-09-29-D's "products up front" amended
+
+**Date:** 2026-10-08
+**Status:** Accepted and live. Malcolm: "make the changes so that the collagen page scores maximum on the SEO and AISO checks. And
+make sure that the web page is optimized for optimal google ranking."
+**Context.** The live audit (central v2) confirmed two failures: X1 (the four-product grid sat between the result cards and the
+explanation, so product links competed with the evidence) and S2 (the Article's Product `mentions` carried no offers). The grid's
+place came from ADR-2026-09-29-D's condition "products shown up front". Local Lighthouse found the hero's reveal-on-scroll fade
+held the largest paint back: the theme sets `[reveal-on-scroll=true]{opacity:0}` and `image-banner` fades in only after theme.js
+has loaded and the full image has downloaded.
+**Decision.**
+
+1. **The grid sits below the explanation** (hero, answer, proof, content, shop, routine, faq, related). The hero's "Shop the
+   Pro-Collagen Cream" button remains the up-front product action, so "products up front" is kept in that narrower sense. Measured
+   live: X1 met 3/0, 9.73, zero confirmed failures.
+2. **Product `mentions` reference each product page's own Product node by `@id`** (`/products/<handle>#product`, which carries the
+   live offers), never offer-less copies; `dateModified` follows the visible "Last updated".
+3. **The hero's fade is neutralised on this page only**, in the hero section's own Custom CSS (`image-banner{opacity:1!important}`,
+   scoped by Shopify to the section); every other section keeps its animation; no theme setting changed. Local A/B (Lighthouse 13.5
+   mobile, two runs each): 15.2/13.7 s as it was, 6.0/6.5 s with the hero rule, 6.2/6.2 s with every reveal off. Live after: 4.0 and
+   4.4 s (scores 0.86 and 0.83, CLS 0) against 12.4 and 11.0 s on the Firming page, which still fades.
+4. The proof cards alternate image sides (f1 left, f3 right, f2 left), Malcolm the same day.
+
+**Consequences.** The hero-only rule is a per-template alternative to decision 7 in the traffic plan (the theme-wide animation
+setting): the same one line can go on each page's hero without changing how the rest of the site moves. It is applied elsewhere only
+with Malcolm's yes. Undo: remove the rule from `section_css.hero` and the live hero's `custom_css`; restore the order from
+`backups/collagen-grid-below-explanation-20261008-171749.json`.
+
 ## ADR-2026-10-08-W: Team credit instead of a named writer; the research's live faults fixed on "fix the issues the research found"
 
 **Context.** Malcolm, 2026-10-08, after the per-page competitor analysis (`docs/website-traffic-and-performance-plan-2026-10-08.md`):

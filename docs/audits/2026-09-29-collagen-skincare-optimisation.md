@@ -72,6 +72,12 @@ Peptides vs. Other Approaches_ (its "collagen cannot penetrate" line contradicte
 old page; that gate and Q2 clear only at go-live, so the **go-live re-audit on `/pages/collagen-skincare` is the one that counts**. Cost
 3 × ~USD 1.16, within the standing budget.
 
+**Live audits, 2026-10-08 (`page-audit-2026-10-08-pages-collagen-skincare-live*.txt`):** 9.74 with X1 and S2 confirmed → 9.73 with
+the grid below the explanation and S2 fixed (zero confirmed failures; C9 unmeasured) → 9.85 with the hero speed rule (C9 contested)
+→ **9.73 final**, after the four accuracy fixes: zero confirmed failures, C9 met 3/0, nine citations verified, X1 met 3/0; the
+only gap is C11 split (one judge "unmet", two "not applicable"), judge noise that is not fixed (ADR-2026-09-30-Q). P2 not assessed
+in the last two runs because DataForSEO's SERP endpoint answered 50000 (it passed in the first two). About USD 0.9 per run.
+
 ## Open for Malcolm
 
 1. **Review the English page** (preview link above). Nothing is translated until he says it is complete.
@@ -82,10 +88,9 @@ old page; that gate and Q2 clear only at go-live, so the **go-live re-audit on `
 4. **Safety FAQ, allergy line:** "Both creams contain ingredients of animal origin: collagen in the Pro-Collagen Firming Cream, and
    salmon-derived PDRN in the PDRN Collagen Night Cream. If you are allergic to fish or other animal proteins, contact us before you use
    them." The collagen's source species is still undisclosed (claims register §6 gap 1).
-5. **Products before or after the evidence** (check D above). Measured 2026-10-08 on the live page: grid under the result cards
-   (today, ADR-2026-09-29-D) = X1 confirmed failure, so the page misses the "no confirmed failures" bar (ADR-2026-09-30-Q); grid after
-   the explanation section = 9.73, zero confirmed failures, X1 met by all three judges. The hero's "Shop the Pro-Collagen Cream" button
-   keeps a product action at the top either way. Switching is one template write (`order`), backup first.
+5. ~~**Products before or after the evidence**~~ **Decided 2026-10-08 (ADR-2026-10-08-X):** Malcolm asked for the maximum audit
+   score, so the grid sits below the explanation (X1 met 3/0); the hero's shop button stays the up-front product action. The same ADR
+   records the hero-only speed rule (live largest paint 4.0 and 4.4 s against 11 to 12 s on the Firming page).
 6. **Design, beyond this page (critic cycle 3, 6.4):** no visual signature, because the whole Skin Concern family has no direction
    contract; more iterations on this page will not lift that. Its three concrete ideas, all within stock sections: (a) the four content
    rows repeat the shop grid's four product photos in the same order; swap two of them for owned science images (e.g.
