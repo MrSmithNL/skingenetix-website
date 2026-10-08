@@ -1,0 +1,1092 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "15.1765 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080906-1509-0139-0000-4324b89e77c0",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "15.0444 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "pdrn cream",
+    "location_code": 2826,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "pdrn cream",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2826,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=pdrn%20cream&hl=en&gl=GB&ie=UTF-8&uule=w+CAIQIFISCamRx0IRO1oCEXoliDJDoPjE",
+     "datetime": "2026-10-08 09:07:09 +00:00",
+     "spell": null,
+     "refinement_chips": null,
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "popular_products",
+      "images",
+      "related_searches"
+     ],
+     "se_results_count": 125,
+     "pages_count": 1,
+     "items_count": 14,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "glamtouch.co.uk",
+       "title": "Rejuveon PDRN 1000 Plus Cream 20g",
+       "url": "https://glamtouch.co.uk/products/rejuveon-pdrn-1000-plus-cream-20g?srsltid=AU7gw4UJFRLJTPu8GqcMBkv5WvQNVi4B6bxaSWrzcxhfJ_GRQKh6Zl5f",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://glamtouch.co.uk › products › rejuveon-pdrn-100...",
+       "website_name": "Glam Touch UK",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "✓ Wrinkle Reduction & Firming – Boosts collagen and elastin production, smoothing fine lines and improving skin elasticity for a lifted, youthful appearance. Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 25.9,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£25.90"
+       },
+       "highlighted": [
+        "Boosts collagen and elastin production"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://glamtouch.co.uk/products/rejuveon-pdrn-1000-plus-cream-20g?srsltid=AU7gw4UJFRLJTPu8GqcMBkv5WvQNVi4B6bxaSWrzcxhfJ_GRQKh6Zl5f#:~:text=%E2%9C%94%20Wrinkle%20Reduction%20%26%20Firming,for%20a%20lifted%2C%20youthful%20appearance.",
+         "domain": "glamtouch.co.uk"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy PDRN skin care products?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the best collagen cream for the face in the UK?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Do I need to use moisturizer after PDRn?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Which PDRN stick is the best?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[6]/div[1]",
+       "title": null,
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Boots Hydrating Pdrn Serum",
+         "url": null,
+         "domain": null,
+         "description": "Boots.com & more\nFree delivery on £25+",
+         "more_sellers": true,
+         "seller": "Boots.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080906-1509-0139-0000-4324b89e77c0:0",
+         "price": {
+          "current": 8,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£8.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 14,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4737863381718548457",
+          "data_docid": "5752716942401251622",
+          "gid": "1473424696096896302"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "PDRN Capsule Cream 50g, Hydrating Face Moisturizer with 100,000ppm PDRN | Salmon DNA Anti Aging Face Cream, Hyaluronic Acid, Peptides, Firming &",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+         "more_sellers": false,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080906-1509-0139-0000-4324b89e77c0:1",
+         "price": {
+          "current": 8.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£8.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 8,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "13294724003073071798",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Hyaluronic Moisturizing Cream",
+         "url": null,
+         "domain": null,
+         "description": "Superdrug.com & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Superdrug.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080906-1509-0139-0000-4324b89e77c0:2",
+         "price": {
+          "current": 18.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£18.89"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 282,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14553083065197230574",
+          "data_docid": "12898977768016743499",
+          "gid": "1729797342863514470"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Advanced PDRN Rejuvenating Serum Cream 20g, Moisturising, Fast-Absorbing | Salmon DNA Skin & Barrier Repair Cream, Hydrating Firming Pdrn Serum for",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+         "more_sellers": false,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080906-1509-0139-0000-4324b89e77c0:3",
+         "price": {
+          "current": 6.12,
+          "regular": 6.64,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£6.12 £6.64"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "10227729287249095371",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "SWANICOCO PDRN Rejuvenating Repair Cream 99.9% Pure Salmon DNA Bakuchiol",
+         "url": null,
+         "domain": null,
+         "description": "Stylevana UK & more",
+         "more_sellers": true,
+         "seller": "Stylevana UK",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080906-1509-0139-0000-4324b89e77c0:4",
+         "price": {
+          "current": 12,
+          "regular": 14,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£12.00 £14 & more prices"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 8,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2500366236648438355",
+          "data_docid": "6343279291805746260",
+          "gid": "17660013416509877523"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "2PCS Advanced PDRN Rejuvenating Cream, Salmon DNA PDRN Serum Cream - Lightweight Hydrating Moisturiser with Niacinamide, Hyaluronic acid - Korean Skin",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+         "more_sellers": false,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080906-1509-0139-0000-4324b89e77c0:5",
+         "price": {
+          "current": 9.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£9.99"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "7833208048734610027",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Revolution Pro Miracle PDRN + Peptide Plumping Capsule Cream",
+         "url": null,
+         "domain": null,
+         "description": "Revolution Beauty & more\nFree delivery on £30+",
+         "more_sellers": true,
+         "seller": "Revolution Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080906-1509-0139-0000-4324b89e77c0:6",
+         "price": {
+          "current": 8,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£8.00"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "14835807937273853990",
+          "data_docid": "12927676923333483778",
+          "gid": "119276890323689936"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "2PCS Advanced PDRN Rejuvenating Cream, PDRN Cream, PDRN Moisturiser - Korean Face Cream with Niacinamide & Hydrolysed Collagen, Barrier Care Hydration",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+         "more_sellers": false,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080906-1509-0139-0000-4324b89e77c0:7",
+         "price": {
+          "current": 5.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£5.99"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "16770865135464861011",
+          "gid": null
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+       "domain": "www.skin2seoul.co.uk",
+       "title": "Medicube PDRN Pink Hyaluronic Moisturizing Cream 50ml",
+       "url": "https://www.skin2seoul.co.uk/products/medicube-pdrn-pink-hyaluronic-moisturizing-cream-50ml?srsltid=AU7gw4VQ6OdDIyrz7zYIA66yqIQgFaCw_4TKyhQpgalcMo1O1JMFZdZu",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.skin2seoul.co.uk › products › medicube-p...",
+       "website_name": "Skin2Seoul",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Infused with Salmon‑derived PDRN and 2% Niacinamide, this cream helps reduce blemishes, even skin tone and restore moisture within days. With a blend of ten ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 21,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£21.00"
+       },
+       "highlighted": [
+        "helps reduce blemishes, even skin tone and restore moisture"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.skin2seoul.co.uk/products/medicube-pdrn-pink-hyaluronic-moisturizing-cream-50ml?srsltid=AU7gw4VQ6OdDIyrz7zYIA66yqIQgFaCw_4TKyhQpgalcMo1O1JMFZdZu#:~:text=Medicube%20PDRN%20Pink%20Hyaluronic%20Moisturizing,skin%20supple%20and%20visibly%20dewy.",
+         "domain": "www.skin2seoul.co.uk"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+       "domain": "www.asos.com",
+       "title": "Get To Know PDRN | The Best PDRN Skincare Products",
+       "url": "https://www.asos.com/women/fashion-feed/2025_10_20-mon/what-is-pdrn/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.asos.com › fashion-feed › 2025_10_20-mon",
+       "website_name": "ASOS",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "20 Oct 2025 — PDRN, AKA Polydeoxyribonucleotide, consists of salmon DNA fragments that can help restore the skin's natural barrier function.",
+       "pre_snippet": "10/20/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-10-20 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]",
+       "domain": "www.superdrug.com",
+       "title": "Dr. Reju-All Advanced PDRN Rejuvenating Cream 20g | Skin",
+       "url": "https://www.superdrug.com/skin/face-skin-care/face-cream/dr-reju-all-advanced-pdrn-rejuvenating-cream-20g/p/mp-00298714",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.superdrug.com › face-skin-care › face-cream",
+       "website_name": "Superdrug",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "This highly nourishing formula helps the skin recover from daily environmental stress while restoring hydration, glow, and firmness overnight.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "helps the skin recover from daily environmental stress"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+       "domain": "koreanpdrn.co.uk",
+       "title": "Best PDRN Cream & Toner Guide | Korean Skincare",
+       "url": "https://koreanpdrn.co.uk/guides/best-pdrn-cream-and-toner-guide",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://koreanpdrn.co.uk › Guides",
+       "website_name": "koreanpdrn.co.uk",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "18 Aug 2026 — The best overall pdrn cream in our analysis is the Anua PDRN Hyaluronic Acid 100 Moisturizing Cream. This formulation effectively couples ... Read more",
+       "pre_snippet": "08/18/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Anua PDRN Hyaluronic Acid 100 Moisturizing Cream"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://koreanpdrn.co.uk/guides/best-pdrn-cream-and-toner-guide#:~:text=The%20best%20overall%20pdrn%20cream,barrier%20while%20offering%20long-lasting%20softness.",
+         "domain": "koreanpdrn.co.uk"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-08-18 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[16]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=en&gl=GB&sxsrf=APpeQnuWp9r1hws41tOviO00bnEBkKJBng:1791450428200&q=pdrn+cream&udm=2&source=univ&fir=Rxp7Q4dHXd7nwM%252CjNjUAFEwjEKEqM%252C_%253BiydkoX0mUIvDKM%252CQJovyowrO2nZEM%252C_%253B6u8IBy9Neou2LM%252CZ-JTASYmhWqWrM%252C_%253B4fbRkzuRyBjC7M%252CxzyiJjSnflwu4M%252C_%253BwDOXyGnk3Pbj6M%252CjWzWxW8CJhITuM%252C_%253BZ8AvOZKs_hYlQM%252Cl5b9M_pXPvmvCM%252C_%253BcIsHzTrtl6HbCM%252CxzyiJjSnflwu4M%252C_%253BjyeyEVFw8dOclM%252CoP5O07Krv8riTM%252C_%253B48pNq9wjtrzF_M%252CJCzANyBBfaO4-M%252C_&usg=AI4_-kQ22QupPnWAsrW-iwhX869y_lby0w&sa=X&ved=2ahUKEwjhlZ3ziKqXAxXZV0EAHQhiFjgQ7Al6BAh3EAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "VT COSMETICS PDRN Cream 100, Nourishing & Restorative Moisturizer with  100,000 ppm Vegan PDRN, Lightweight Hydrating Cream for Glowy Glass Skin,  ...",
+         "url": "https://www.amazon.in/VT-COSMETICS-Restorative-Moisturizer-Lightweight/dp/B0DG1NJDX1",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8iDn1h9CpwoCJ8k21RUUjqU1n2j7NyugOv08F9pn1tLbdi82Pem_A28&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "This little PDRN cream is flying off Korean pharmacy shelves—and for a good  reason!, With 0.3% PDRN (way more than your average product), it’s  basically medical-grade skin repair in a tube:), But make ...",
+         "url": "https://www.instagram.com/reel/DIm53ocSDF6/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOywXRsiwAwGs89zQPr8t6GR9fta_4ZrrtvKK4EV-1XYGn05ja0bhmmoU&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN Capsule Cream 100 50ml",
+         "url": "https://www.koreanbeauty.co.uk/products/vt-cosmetics-pdrn-capsule-cream-100-50ml",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR215CY1OrGsx52-F_AbpS96k66QMcLZh3xQVuRzGVyRiay75QC2P6cpRM&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Daily Recovery with VT PDRN Cream 100 - RD Cosmetics",
+         "url": "https://www.rdcosmetics.az/en/products/vt-cosmetics-pdrn-cream-100-1",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDgOgYvc6zhYXWUIIRLvFxNWhX0dO0Z-zXKxQLTv4GjzOJVUIRI9DfbYs&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "New Product Alert: PDRN Pink Peptide Cream💖 We've launched ...",
+         "url": "https://www.instagram.com/p/DCguBbdSFnG/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2b6jLxbVa2PK_1OBUJ1Z7N87MexCsRFP8gb53ElghVwwRptjIa4da3k8&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Genabelle PDRN Rejuvenating Cream - Lightweight Moisturizer with Original  PDRN, CICA, Hyaluronic Acid - Nourishing, Hydrating, and Soothing Formula -  ...",
+         "url": "https://www.amazon.sa/-/en/Genabelle-PDRN-Rejuvenating-Cream-Lightweight/dp/B0B342Z92T",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZKkhEHjPADpZdwE9rGMn_5pPN3w_4yHcuAMmmCUnKojRy7piBiqecy4&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Daily Recovery with VT PDRN Cream 100 - RD Cosmetics",
+         "url": "https://www.rdcosmetics.az/en/products/vt-cosmetics-pdrn-cream-100-1",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBAk1sTssrCOzgAY2m_4U8bwcb454l2ZwDER8Qr8RLJVLvwhq3RoRGMPI&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Dr. Reju-All PDRN Cream, 0.7 fl oz, 2-pack",
+         "url": "https://www.costco.com/p/-/dr-reju-all-pdrn-cream-07-fl-oz-2-pack/4000412845",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0BVWN3a2CTpke7sf5Wqc4LclrB4c2Mb7MYygiAf87H73H3EZxH4Pg3oZZhQ&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Rejuvenex PDRN Cream",
+         "url": "https://lobeautyuae.com/products/rejuvenex-pdrn-cream",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPVby7sFWHzRZ6M12YhDDX68MMf-vzNK9oU55LTfGoFNyqKW3n-BsYGWg&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 2,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[18]/div[1]",
+       "title": null,
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Dr Althea PDRN Reju 5000 Cream",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSKmGhNi060Mb015sbtY50QE9hTxLR92cfqZc4y9-5NXty1JfqBKh9zFtOccS4T-uppiubRI0Cwiyz76AqyXMVwo3VBmVR7TIjTQt9uwQQdBNKVWv_9SWB7",
+         "price": {
+          "current": 15.03,
+          "regular": 17,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£15.03 £17 & more prices"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 709,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15292616775771917185",
+          "data_docid": "17006524061040393202",
+          "gid": "16343939046216130359"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics PDRN Capsule Cream 100 50ml",
+         "url": null,
+         "domain": null,
+         "description": "PriceRunner & more",
+         "more_sellers": true,
+         "seller": "PriceRunner",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTKKg8J8rUTfjKFnM0ggGTbnyOsz86wTgAtB6uIkpneVqSsGlIOH_G6ctyZx0iyfuVBZ2G6YHDHZRX8C37MT-a5QBNcBM4gFf9f6Q2N9mgV0O_P39U3TaDZ",
+         "price": {
+          "current": 15.16,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£15.16"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 2000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "1234657308562414618",
+          "data_docid": "16585963018920447337",
+          "gid": "16052845116865328360"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics VT PDRN Capsule Cream 100",
+         "url": null,
+         "domain": null,
+         "description": "John Lewis & more",
+         "more_sellers": true,
+         "seller": "John Lewis",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRDCXedRkM1O2HIEWn3UPKbXn1sbDTBqs31MVLV4z_zWZC5vXhuL1RZLQKo9Ry2Iz8n_P4pU32XzfTJPYTi_T6IkOauZNKhyUt1VtjHm6i3uDKH1NA_1Ezb",
+         "price": {
+          "current": 22,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£22.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 171,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "17660205603922607807",
+          "data_docid": "16799650695302804715",
+          "gid": "11901583012483169079"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics PDRN Cream 100",
+         "url": null,
+         "domain": null,
+         "description": "idealo compare prices & more",
+         "more_sellers": true,
+         "seller": "idealo compare prices",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR96Cyv3BZvSdc22KQGjZjQ5DoQfxhsSf-MIte6yhcsQmM4_g3c63nCjCWtG99GZQVEgodsvkfGsFYV4OTeOdl7X-m5eLZAFjfRBakJRHSQwvzh5OLHX8xZlL0",
+         "price": {
+          "current": 32.39,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£32.39"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 142,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4252780513717400666",
+          "data_docid": "10173985693533081548",
+          "gid": "18226322856207159208"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr.Reju-All Advanced PDRN Rejuvenating Cream",
+         "url": null,
+         "domain": null,
+         "description": "Superdrug.com & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Superdrug.com",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSKFmY68X0jQuDAFyBb8NAPXTqkDNXsIcxWZKb5ycFLm5UF-lYDoGR9YxL-WSz3oBZuvHOBMiq-G8o4jx5yxCmFEjPqJ7Ewr_BJuSTKOuTC2OUwW3FFQOUg",
+         "price": {
+          "current": 25.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£25.90"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 6000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "10459111032760021455",
+          "data_docid": "17498184934634027780",
+          "gid": "8646978946219106753"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anua PDRN Hyaluronic Acid 100 Moisturizing Cream",
+         "url": null,
+         "domain": null,
+         "description": "eBay - pussybei & more",
+         "more_sellers": true,
+         "seller": "eBay - pussybei",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTFT8-PLFV83VZQCwNH5TswuZ7Fvcocv2T0VwxgIEVnko_qtyVGHJGGk0C1jVIndJ_TvnJ9lU0XnayBiubRbhebicZDu-tD9ATk7TwktP6ayMPIUnFIOIhSsQ",
+         "price": {
+          "current": 10.02,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£10.02"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 822,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15053764059092682279",
+          "data_docid": "17002911335602106718",
+          "gid": "4747202048804444430"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Collagen Capsule Cream",
+         "url": null,
+         "domain": null,
+         "description": "PriceSpy.co.uk & more",
+         "more_sellers": true,
+         "seller": "PriceSpy.co.uk",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSfnnmGhCdAsrrOQCX_RoAnJYfJU4XW8ayoaefteUIBETi2BzDp9wlA8WdvyfJL0rGRTORw5lQS8q55sA_2HoblDo0BvfRkZfTNj-CQy3Ud8zpX_X7CC5SgYg",
+         "price": {
+          "current": 14.55,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£14.55"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 3200,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "13582968475080751859",
+          "data_docid": "1809205268998413049",
+          "gid": "3029738313430106099"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "PDRN Anti-Wrinkle Shot Lift & Firming Cream, Anti-Age Care & Tightening,1pc | Reducing Fine Lines, Moisturising & Fast-Absorbing, Gentle Formula,",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "more_sellers": false,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQDDW92tZqURoNyB-oGJRFQaLdWQLE2isXTwjtnIKM0yySvS6DVqEKKFVECCe_B2WKw3-WgVj3B6uwug1pkSYP9ZO1L0WSAZC-wEd2DyghyfyoKL_3ao-wS",
+         "price": {
+          "current": 3.59,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£3.59"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "655971259107006609",
+          "gid": null
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]",
+       "domain": "uk.theinkeylist.com",
+       "title": "PDRN: Benefits, How to Use & Best Products",
+       "url": "https://uk.theinkeylist.com/pages/pdrn?srsltid=AU7gw4WxbootzpQ2j-L6zDkpxT6S4jJ7bfgsIMvY0HExrUJINpDTGjtJ",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://uk.theinkeylist.com › pages › pdrn",
+       "website_name": "The INKEY List",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "12 May 2026 — Powered by vegan, plant-derived DNA, this serum supports your skin's natural collagen and hyaluronic acid levels to help it look smoother and ...",
+       "pre_snippet": "05/12/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "supports your skin's natural collagen and hyaluronic acid levels"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-05-12 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[22]/div[1]/div[1]",
+       "domain": "pureseoul.co.uk",
+       "title": "PDRN",
+       "url": "https://pureseoul.co.uk/collections/pdrn",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://pureseoul.co.uk › collections › pdrn",
+       "website_name": "pureseoul",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "PDRN Salmon Caring Centella Cream (100ml) We've got all the Korean skincare, makeup, hair care, and body care goodies you'll love.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 30,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "Free delivery over £30"
+       },
+       "highlighted": [
+        "PDRN Salmon Caring Centella Cream"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[24]/div[1]/div[1]",
+       "domain": "www.womanandhome.com",
+       "title": "What is PDRN and why is it suddenly everywhere? Derms ...",
+       "url": "https://www.womanandhome.com/beauty/skincare/what-is-pdrn-and-why-is-it-suddenly-everywhere-dermatologists-weigh-in-on-the-k-beauty-phenomenon/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.womanandhome.com › Beauty › Skincare",
+       "website_name": "Woman & Home",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "17 Apr 2026 — It's formulated with 5% panthenol and 5% centella asiatica leaf water to help soothe irritation, while the PDRN supports skin regeneration and ... Read more",
+       "pre_snippet": "04/17/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN supports skin regeneration"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.womanandhome.com/beauty/skincare/what-is-pdrn-and-why-is-it-suddenly-everywhere-dermatologists-weigh-in-on-the-k-beauty-phenomenon/#:~:text=It's%20formulated%20with%205%25%20panthenol,supports%20skin%20regeneration%20and%20elasticity.",
+         "domain": "www.womanandhome.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-04-17 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[26]/div[1]/div[1]",
+       "domain": "www.caretobeauty.com",
+       "title": "VT Cosmetics PDRN Cream 100 50ml (1.69floz) UK",
+       "url": "https://www.caretobeauty.com/uk/vt-cosmetics-pdrn-cream-100-50ml/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.caretobeauty.com › ... › Moisturizer",
+       "website_name": "Care to Beauty",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Vegan PDRN sourced from Korean ginseng for a unique ingredient choice; · Deep repair capabilities to enhance skin vitality; · Exclusive Blue Azulene capsules for ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 27.92,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£27.92"
+       },
+       "highlighted": [
+        "Vegan PDRN sourced from Korean ginseng"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.caretobeauty.com/uk/vt-cosmetics-pdrn-cream-100-50ml/#:~:text=Vegan%20PDRN%20sourced%20from%20Korean,for%20a%20unique%20ingredient%20choice%3B&text=Deep%20repair%20capabilities%20to%20enhance,skin%20vitality%3B&text=Exclusive%20Blue%20Azulene%20capsules%20for,improved%20skin%20firmness%3B",
+         "domain": "www.caretobeauty.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Pdrn cream boots",
+        "PDRN cream how to use",
+        "Rejuveon PDRN cream review",
+        "Anua PDRN Cream",
+        "Dr Rejuall PDRN cream how to use",
+        "How to use PDRN cream on face",
+        "PDRN Cream Dr Reju",
+        "Dr Rejuall PDRN Cream 60ml"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

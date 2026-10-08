@@ -1,0 +1,1608 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "24.8203 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080858-1509-0139-0000-b23b5255851a",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "24.5900 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "brightening serum",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "brightening serum",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=brightening%20serum&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+     "datetime": "2026-10-08 08:58:25 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Vitamin C",
+        "url": "https://www.google.com/search?q=vitamin+c+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yGQgBEglWaXRhbWluIEM6CgjB2y0Qv65RMABYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAF6BQguEIsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Moisturizers",
+        "url": "https://www.google.com/search?q=facial+moisturizers+brightening+serum&hl=en&gl=US&shoprs=CAEYCSoRYnJpZ2h0ZW5pbmcgc2VydW0yFwgJEhNGYWNpYWwgTW9pc3R1cml6ZXJzYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAJ6BQguEIwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Reviews",
+        "url": "https://www.google.com/search?q=reviews+brightening+serum&hl=en&gl=US&shoprs=CAEYEioRYnJpZ2h0ZW5pbmcgc2VydW0yCwgSEgdSZXZpZXdzYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAN6BQguEI0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Niacinamide",
+        "url": "https://www.google.com/search?q=niacinamide+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yHAgBEgtOaWFjaW5hbWlkZToLCMHbLRCkgKwCMABYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAR6BQguEI4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Get it by Sat",
+        "url": "https://www.google.com/search?q=brightening+serum&hl=en&gl=US&shoprs=CAESDZoBCgoIEAI4AUAGSAEYFCoRYnJpZ2h0ZW5pbmcgc2VydW0yJggUEg1HZXQgaXQgYnkgU2F0Ig2aAQoKCBACOAFABkgBKgQQARgBYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAV6BQguEI8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Retinol",
+        "url": "https://www.google.com/search?q=retinol+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yFwgBEgdSZXRpbm9sOgoIwdstEMLbLTAAWMOSIWAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAZ6BQguEJAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hyperpigmentation",
+        "url": "https://www.google.com/search?q=hyperpigmentation+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yIwgBEhFIeXBlcnBpZ21lbnRhdGlvbjoMCLKArAIQtICsAjAAWMOSIWAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAd6BQguEJEB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Body Lotion",
+        "url": "https://www.google.com/search?q=body+lotion+brightening+serum&hl=en&gl=US&shoprs=CAEYCSoRYnJpZ2h0ZW5pbmcgc2VydW0yDwgJEgtCb2R5IExvdGlvbmAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAh6BQguEJIB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Target",
+        "url": "https://www.google.com/search?q=target+brightening+serum&hl=en&gl=US&shoprs=CAEYAioRYnJpZ2h0ZW5pbmcgc2VydW0yCggCEgZUYXJnZXRYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAl6BQguEJMB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Bottle",
+        "url": "https://www.google.com/search?q=bottle+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yFggBEgZCb3R0bGU6CgjGi2kQx4tpMABYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAp6BQguEJUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "On sale",
+        "url": "https://www.google.com/search?q=brightening+serum+sale&hl=en&gl=US&shoprs=CAESBEoCGAEYBioRYnJpZ2h0ZW5pbmcgc2VydW0yEwgGEgdPbiBzYWxlGAIiBEoCGAFYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAt6BQguEJYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Pink",
+        "url": "https://www.google.com/search?q=pink+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yFggBEgRQaW5rOgwI2Iz1ARDpivUBMAtYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKAx6BQguEJcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Eye Cream",
+        "url": "https://www.google.com/search?q=eye+cream+brightening+serum&hl=en&gl=US&shoprs=CAEYCSoRYnJpZ2h0ZW5pbmcgc2VydW0yDQgJEglFeWUgQ3JlYW1gAQ&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKA16BQguEJgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Moisturizers",
+        "url": "https://www.google.com/search?q=moisturizers+brightening+serum&hl=en&gl=US&shoprs=CAEYCSoRYnJpZ2h0ZW5pbmcgc2VydW0yEAgJEgxNb2lzdHVyaXplcnNgAQ&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKA56BQguEJkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Anti-aging",
+        "url": "https://www.google.com/search?q=anti-aging+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yGggBEgpBbnRpLWFnaW5nOgoI7OEtEKHbLTAAWMOSIWAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKA96BQguEJoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Ulta Beauty",
+        "url": "https://www.google.com/search?q=ulta+beauty+brightening+serum&hl=en&gl=US&shoprs=CAEYAioRYnJpZ2h0ZW5pbmcgc2VydW0yDwgCEgtVbHRhIEJlYXV0eVjDkiFgAQ&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBB6BQguEJsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Good Molecules",
+        "url": "https://www.google.com/search?q=good+molecules+brightening+serum&hl=en&gl=US&shoprs=CAEYAioRYnJpZ2h0ZW5pbmcgc2VydW0yEggCEg5Hb29kIE1vbGVjdWxlc1jDkiFgAQ&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBF6BQguEJ0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Under $25",
+        "url": "https://www.google.com/search?q=brightening+serum+under+$25&hl=en&gl=US&shoprs=CAESDRILEQAAAACE13dBGAEYBSoRYnJpZ2h0ZW5pbmcgc2VydW0yIggFEglVbmRlciAkMjUYAiINEgsRAAAAAITXd0EYASoCGAFYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBJ6BQguEJ8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hyaluronic Acid",
+        "url": "https://www.google.com/search?q=hyaluronic+acid+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yIAgBEg9IeWFsdXJvbmljIEFjaWQ6CwjB2y0QoYCsAjAAWMOSIWAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBN6BQguEKAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Body",
+        "url": "https://www.google.com/search?q=body+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yFAgBEgRCb2R5OgoIn9ktEKDZLTACWMOSIWAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBR6BQguEKEB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Melanin Reduction",
+        "url": "https://www.google.com/search?q=melanin+reduction+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yIggBEhFNZWxhbmluIFJlZHVjdGlvbjoLCOzhLRCs0qoBMABYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBV6BQguEKIB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For All Skin Types",
+        "url": "https://www.google.com/search?q=brightening+serum+for+all+skin+types&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yJAgBEhJGb3IgQWxsIFNraW4gVHlwZXMYAjoKCLL4OxC1-DswAFjDkiFgAQ&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBZ6BQguEKMB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Alpha Hydroxy",
+        "url": "https://www.google.com/search?q=alpha+hydroxy+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yHQgBEg1BbHBoYSBIeWRyb3h5OgoIwdstEM7bLTAAWMOSIWAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBd6BQguEKQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For Men",
+        "url": "https://www.google.com/search?q=brightening+serum+for+men&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yGQgBEgdGb3IgTWVuGAI6Cgig2y0Qr9stMANYw5IhYAE&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBh6BQguEKUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Face",
+        "url": "https://www.google.com/search?q=face+brightening+serum&hl=en&gl=US&shoprs=CAEYASoRYnJpZ2h0ZW5pbmcgc2VydW0yFAgBEgRGYWNlOgoIn9ktEKHZLTACWMOSIWAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBl6BQguEKYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Sephora",
+        "url": "https://www.google.com/search?q=sephora+brightening+serum&hl=en&gl=US&shoprs=CAEYAioRYnJpZ2h0ZW5pbmcgc2VydW0yCwgCEgdTZXBob3JhWMOSIWAB&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQip4GKBp6BQguEKcB",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "popular_products",
+      "people_also_ask",
+      "organic",
+      "discussions_and_forums",
+      "short_videos",
+      "images",
+      "perspectives",
+      "product_considerations",
+      "related_searches"
+     ],
+     "se_results_count": 66600000,
+     "pages_count": 1,
+     "items_count": 15,
+     "items": [
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]",
+       "title": "Popular products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Antioxidant Radiance Serum",
+         "url": null,
+         "domain": null,
+         "description": "The Ordinary More\nFree delivery\nImproves skin texture (151 user reviews)",
+         "more_sellers": false,
+         "seller": "The Ordinary",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:0",
+         "price": {
+          "current": 14,
+          "regular": 0.47,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$14.00 $0.47/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 1100,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7656002208002033495",
+          "data_docid": "16151980729786587480",
+          "gid": "14135330715316061576"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "BYOMA Brightening Serum",
+         "url": null,
+         "domain": null,
+         "description": "Target More\nFree delivery on $35+\nMoisturizes well (295 user reviews)",
+         "more_sellers": false,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:1",
+         "price": {
+          "current": 15.99,
+          "regular": 16,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$15.99 $16/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 1600,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7801891434317118241",
+          "data_docid": "676692057804506305",
+          "gid": "4235619721213499110"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Good Molecules Daily Brightening Serum",
+         "url": "https://sarahfynn.com/2019/12/04/good-molecules-daily-brightening-serum-review/",
+         "domain": "sarahfynn.com",
+         "description": "Target More\nFree delivery on $100+\nLayers very well with other products without pilling · Very lightweight serum sarah fynn",
+         "more_sellers": false,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:2",
+         "price": {
+          "current": 7.99,
+          "regular": 7.88,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$7.99 $7.88/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 1200,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8804427115771217080",
+          "data_docid": "15890157406463681268",
+          "gid": "18122561660710558938"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Ranavat Radiant Rani Brightening Saffron Serum",
+         "url": "https://www.thequalityedit.com/articles/ranavat-skin-and-hair-care-review",
+         "domain": "www.thequalityedit.com",
+         "description": "Sephora More\nFree delivery on $50+\nRelieves my skin of stress · Scent is so soothing The Quality Edit",
+         "more_sellers": false,
+         "seller": "Sephora",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:3",
+         "price": {
+          "current": 35,
+          "regular": 7,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$35.00 $7.00/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 2600,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4960954774431716053",
+          "data_docid": "16506335784650227754",
+          "gid": "4691378674917742609"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Caudalie Vinoperfect Serum",
+         "url": "https://escentual.com/blogs/editorial/caudalie-vinoperfect-brightening-dark-spot-serum-review",
+         "domain": "escentual.com",
+         "description": "Nordstrom More\nFree delivery\nAbsorbs very quickly · Gave my skin a beautiful glow Escentual",
+         "more_sellers": false,
+         "seller": "Nordstrom",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:4",
+         "price": {
+          "current": 82,
+          "regular": 2.71,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$82.00 $2.71/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 36000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7965064879770181984",
+          "data_docid": "14676672746389613723",
+          "gid": "8447564886306623839"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Topicals Faded Brightening Serum for Dark Spots and Discoloration",
+         "url": null,
+         "domain": null,
+         "description": "Topicals More\nFree delivery on $50+\nGentle (206 user reviews)",
+         "more_sellers": false,
+         "seller": "Topicals",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:5",
+         "price": {
+          "current": 28,
+          "regular": 0.56,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$28.00 $0.56/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 1800,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12382751110556338584",
+          "data_docid": "2057738939974946860",
+          "gid": "13859075165659956225"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Tatcha The Brightening Serum",
+         "url": "https://www.spacenk.com/uk/inside-space/most-wanted/tatcha-brightening-serum-and-eye-cream-review.html",
+         "domain": "www.spacenk.com",
+         "description": "Tatcha More\nFree delivery by Sat\nReally smooths and deeply hydrates the eye area · Surprisingly lightweight Space NK",
+         "more_sellers": false,
+         "seller": "Tatcha",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:6",
+         "price": {
+          "current": 34,
+          "regular": 100,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$34.00 $100/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 2900,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14944869950251174339",
+          "data_docid": "6757134810186512661",
+          "gid": "14993210561142194523"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Fade Bright Lightening Platinum Skin Care",
+         "url": null,
+         "domain": null,
+         "description": "Platinum Skin Care More\nImproves skin texture (44 user reviews)",
+         "more_sellers": false,
+         "seller": "Platinum Skin Care",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:7",
+         "price": {
+          "current": 48,
+          "regular": 24,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$48.00 $24/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.2,
+          "votes_count": 1300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "13226917350930052347",
+          "data_docid": "11999337805475682446",
+          "gid": "1320928089928210041"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Paula's Choice 25% Vitamin C + Glutathione Clinical Serum",
+         "url": "https://ritueldeoceane.com/paulas-choice-25-vit-c-glutathione-serum-review/",
+         "domain": "ritueldeoceane.com",
+         "description": "Paula's Choice More\nFree delivery on $35+\nDoes not pill under makeup and sunscreen · Does not irritate my skin at all Rituel de Océane",
+         "more_sellers": false,
+         "seller": "Paula's Choice",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:8",
+         "price": {
+          "current": 15.4,
+          "regular": 22,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$15.40 $22"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 2400,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15403093401406974574",
+          "data_docid": "3229001642182853794",
+          "gid": "14714195129565711070"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Naturium Multi-Bright Advanced Serum",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty More\nFree delivery on $35+",
+         "more_sellers": false,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:9",
+         "price": {
+          "current": 23.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$23.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 25,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "17208765687950912656",
+          "data_docid": "2110230510328414049",
+          "gid": "4609860948085301574"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Which serum is best for brightening?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Do brightening serums really work?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is a good brightening serum?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What does brightening serum do?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]",
+       "domain": "lemieuxskincare.com",
+       "title": "Brightening Serum",
+       "url": "https://lemieuxskincare.com/products/brightening-serum?srsltid=AU7gw4VLXdSe-TspYlXRGY5AeNGuoZjEerHjxdT7fSwaSd53OCSSdbSm",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://lemieuxskincare.com › products › brightening-se...",
+       "website_name": "Le Mieux Skincare",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Brighten and even out your complexion with this advanced skin-illuminating serum, formulated to target dark spots, hyperpigmentation, and uneven tone. Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.9,
+        "votes_count": 10,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 95,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$95.00"
+       },
+       "highlighted": [
+        "Brighten and even out your complexion"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://lemieuxskincare.com/products/brightening-serum?srsltid=AU7gw4VLXdSe-TspYlXRGY5AeNGuoZjEerHjxdT7fSwaSd53OCSSdbSm#:~:text=Brighten%20and%20even%20out%20your,spots%2C%20hyperpigmentation%2C%20and%20uneven%20tone.",
+         "domain": "lemieuxskincare.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]",
+       "domain": "www.skinauthority.com",
+       "title": "Brightening Serum",
+       "url": "https://www.skinauthority.com/products/brightening-serum?srsltid=AU7gw4VcM4_D_CpUUoeq_vvbgiIyfTdPnh1BQxSV2MzO1N-xFiTyLfWU",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.skinauthority.com › products › brightening...",
+       "website_name": "Skin Authority",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Transform dull skin with Skin Authority's Brightening Serum. Formulated to reduce dark spots, freckles and enhance radiance, unveil a luminous complexion.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.9,
+        "votes_count": 16,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 80,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$80.00"
+       },
+       "highlighted": [
+        "Formulated to reduce dark spots, freckles and enhance radiance"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]/div[1]",
+       "domain": "facileskin.com",
+       "title": "BRIGHTEN - Facile Skin",
+       "url": "https://facileskin.com/products/brighten?srsltid=AU7gw4WnGA-UdG_pfbDoOqvT9rGLFwVdiXpPAVlBHdJ9euDI37EF8y48",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://facileskin.com › products › brighten",
+       "website_name": "facileskin.com",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "5% Tranexamic Acid. A potent skin brightener that targets dark spots and discoloration, helping fade the look of hyperpigmentation, melasma, and sun damage. Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.9,
+        "votes_count": 177,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 38,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$38.00"
+       },
+       "highlighted": [
+        "5% Tranexamic Acid"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://facileskin.com/products/brighten?srsltid=AU7gw4WnGA-UdG_pfbDoOqvT9rGLFwVdiXpPAVlBHdJ9euDI37EF8y48#:~:text=5%25%20Tranexamic%20Acid,hyperpigmentation%2C%20melasma%2C%20and%20sun%20damage.",
+         "domain": "facileskin.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 2,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]",
+       "title": "More products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "MEDIHEAL Vitamin C Brightening Serum",
+         "url": "https://www.tiktok.com/discover/honest-review-of-mediheal-vitamin-c",
+         "domain": "www.tiktok.com",
+         "description": "Nordstrom More\nFree delivery\nFeels good on sensitive skin · Refreshing and cooling TikTok",
+         "more_sellers": false,
+         "seller": "Nordstrom",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:10",
+         "price": {
+          "current": 18.7,
+          "regular": 14,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$18.70 $14/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 1300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8230463946621306165",
+          "data_docid": "687477433609537376",
+          "gid": "5666484588141529715"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Brightening Serum iS Clinical",
+         "url": "https://www.byrdie.com/is-clinical-review",
+         "domain": "www.byrdie.com",
+         "description": "Megan Marlene Skincare More\nFast, visible results · Removes all my makeup Byrdie",
+         "more_sellers": false,
+         "seller": "Megan Marlene Skincare",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:11",
+         "price": {
+          "current": 90,
+          "regular": null,
+          "max_value": 152,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$90.00 Was $152"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 825,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11443234099639831265",
+          "data_docid": "8535897356307276899",
+          "gid": "15701911291620293152"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "INNBEAUTY PROJECT Pro C Serum Brightening & Dark Spot Solution with 15% Vitamin C + Ferulic Acid - Refillable, None",
+         "url": null,
+         "domain": null,
+         "description": "Sephora More\nFree delivery by Wed\nAbsorbs well (132 user reviews)",
+         "more_sellers": false,
+         "seller": "Sephora",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:12",
+         "price": {
+          "current": 56,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$56.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 393,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4006460297022010152",
+          "data_docid": "15211872074393474765",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Beauty of Joseon Glow Deep Serum",
+         "url": null,
+         "domain": null,
+         "description": "Beauty of Joseon More\nFree delivery on $50+",
+         "more_sellers": false,
+         "seller": "Beauty of Joseon",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:13",
+         "price": {
+          "current": 17,
+          "regular": 0.57,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$17.00 $0.57/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 11000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8846191388843805107",
+          "data_docid": "2671290511209698434",
+          "gid": "16084963902763648386"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Good Molecules Discoloration Correcting Serum",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty More\nFree delivery on $35+\nImproves skin texture (390 user reviews)",
+         "more_sellers": false,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:14",
+         "price": {
+          "current": 12,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$12.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.3,
+          "votes_count": 11000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7553614801670916517",
+          "data_docid": "5152491973047697091",
+          "gid": "6010785676471716545"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Sunday Riley C.E.O. 15% Vitamin C Brightening Serum",
+         "url": "https://www.alexaskin.com/blog/sunday-riley-ceo-15-vitamin-c-brightening-serum-review",
+         "domain": "www.alexaskin.com",
+         "description": "Anthropologie More\nAbsorbs fast and well · Did brighten my skin Alexa Skin",
+         "more_sellers": false,
+         "seller": "Anthropologie",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:15",
+         "price": {
+          "current": 85,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$85.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.3,
+          "votes_count": 12000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "6798592502249383111",
+          "data_docid": "15232227732016247986",
+          "gid": "1235705681827983262"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "SEPHORA COLLECTION GLOW Super Brightening Serum",
+         "url": "https://www.allure.com/review/sephora-collection-super-brightening-serum-review",
+         "domain": "www.allure.com",
+         "description": "Kohl's More\nFree delivery\nBrightens and fades dark spots over time · Lovely, post-application glow Allure",
+         "more_sellers": false,
+         "seller": "Kohl's",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:16",
+         "price": {
+          "current": 23,
+          "regular": 23,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$23.00 $23/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.2,
+          "votes_count": 683,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3227188373553214313",
+          "data_docid": "8841659630030945086",
+          "gid": "11449300850304501526"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Alpha Arbutin 2% + HA",
+         "url": "https://www.byrdie.com/the-ordinary-alpha-arbutin-2-percent-ha-review-5093392",
+         "domain": "www.byrdie.com",
+         "description": "The Ordinary More\nFree delivery\nSkin felt hydrated without any stickiness · No sticky feeling on my skin Byrdie",
+         "more_sellers": false,
+         "seller": "The Ordinary",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:17",
+         "price": {
+          "current": 11.5,
+          "regular": 0.38,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$11.50 $0.38/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 25000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7556788258237410933",
+          "data_docid": "793818838781885814",
+          "gid": "4273837487888298343"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The INKEY List 15% Vitamin C & EGF Brightening Serum",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty More\nFree delivery on $35+\nAbsorbs well (167 user reviews)",
+         "more_sellers": false,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:18",
+         "price": {
+          "current": 20,
+          "regular": 0.67,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$20.00 $0.67/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.3,
+          "votes_count": 1400,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "1629204263329763341",
+          "data_docid": "13832465678846697814",
+          "gid": "18359443797043159901"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Clarins Bright Plus Advanced Brightening Dark Spot Expert Serum",
+         "url": "https://www.beautybulletin.com/clarins-bright-plus-range/",
+         "domain": "www.beautybulletin.com",
+         "description": "Macy's More\nFree delivery\nGently diminishes dark spots and uneven skin tone · Bright, even-toned complexion Beauty Bulletin",
+         "more_sellers": false,
+         "seller": "Macy's",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-b23b5255851a:19",
+         "price": {
+          "current": 89,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$89.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 1500,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15345796802049969036",
+          "data_docid": "94897515108827645",
+          "gid": "13496312582361845023"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "discussions_and_forums",
+       "rank_group": 1,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]",
+       "title": "Discussions and forums",
+       "items": [
+        {
+         "type": "discussions_and_forums_element",
+         "title": "Most potent brightening serums that you have tried?",
+         "url": "https://www.reddit.com/r/AsianBeauty/comments/1i0we6h/most_potent_brightening_serums_that_you_have_tried/",
+         "domain": "www.reddit.com",
+         "source": "Reddit",
+         "description": null,
+         "timestamp": "2025-10-08 08:58:24 +00:00",
+         "posts_count": 120
+        },
+        {
+         "type": "discussions_and_forums_element",
+         "title": "What is the best brightening serum you have used?",
+         "url": "https://www.reddit.com/r/SkincareAddictionLux/comments/1q2fw6i/what_is_the_best_brightening_serum_you_have_used/",
+         "domain": "www.reddit.com",
+         "source": "Reddit",
+         "description": null,
+         "timestamp": "2026-01-08 08:58:24 +00:00",
+         "posts_count": 70
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "short_videos",
+       "rank_group": 1,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]",
+       "title": "Short videos",
+       "items": [
+        {
+         "type": "short_videos_element",
+         "title": "Rating 8 Popular Brightening/De-tan Face Serums. Let's see if ...",
+         "url": "https://www.instagram.com/reel/DZFXP8fSoDt/?hl=en",
+         "domain": "google.com",
+         "source": "Chetali Chadha | Skincare Educator"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Best Brightening Serums Part 2. Rating ...",
+         "url": "https://www.youtube.com/shorts/5MmPojdFXJs",
+         "domain": "google.com",
+         "source": "Chetali Chadha"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "this supercharged daily brightening serum is made with potent ...",
+         "url": "https://www.facebook.com/goop/videos/20-vitamin-c-advanced-brightening-serum/2079298972978838/",
+         "domain": "google.com",
+         "source": "goop"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Ranking 5 Skin Brightening Serum",
+         "url": "https://www.facebook.com/AestheticHUB.com.bd/posts/ranking-5-skin-brightening-serum/122176106828806323/",
+         "domain": "google.com",
+         "source": "Aesthetic HUB"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "iS Clinical Brightening Serum Review",
+         "url": "https://www.youtube.com/shorts/aaovWSc6G3k",
+         "domain": "google.com",
+         "source": "Face The Future"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "20% vitamin c+ advanced brightening serum | goop",
+         "url": "https://www.facebook.com/goop/videos/20-vitamin-c-advanced-brightening-serum/1103109538884015/",
+         "domain": "google.com",
+         "source": "goop"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Looking to brighten up your routine? Here are some ...",
+         "url": "https://www.instagram.com/reel/Dc3g8ADoIVc/",
+         "domain": "google.com",
+         "source": "Abuja-Based Skincare Hub"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Brightening Face Serum| Vitamin C serum",
+         "url": "https://www.youtube.com/shorts/lT7tdhv5P5w",
+         "domain": "google.com",
+         "source": "Samapti Banerjee"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "this supercharged daily brightening serum is made with potent ...",
+         "url": "https://www.facebook.com/goop/videos/20-vitamin-c-advanced-brightening-serum/1606349121019308/",
+         "domain": "google.com",
+         "source": "goop"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "this supercharged daily brightening serum is made with potent ...",
+         "url": "https://www.facebook.com/goop/videos/20-vitamin-c-advanced-brightening-serum/1801834141020532/",
+         "domain": "google.com",
+         "source": "goop"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=63a1e0baac38d7a4&hl=en&gl=US&sxsrf=APpeQnsLUcgJzg5Dsw0st5NN85w8OL4uBA:1791449903248&q=brightening+serum&udm=2&source=univ&fir=qQKWR0BD9jeIMM%252CRG3hNKdog1aAZM%252C_%253BvIg20aWuAocscM%252CwrCQ_loVQxdKTM%252C_%253B0o4rGIwEBixyvM%252CNGCgEXQ6w4kiwM%252C_%253BlCjirPjIszU8eM%252ClQLecZOk8u4rOM%252C_%253BJNr5Le6v5vjUoM%252Cb7kfCKV_bFy4kM%252C_%253BE_BDyuEuQc7x2M%252CbbPMrVZZUz2leM%252C_%253Bk6LBq3BycLlTwM%252CH-gB8Z4Pyg5LGM%252C_%253BMI3WnB-f2bghNM%252CRG3hNKdog1aAZM%252C_&usg=AI4_-kSCrO7UvBURJR5zXyHkA-86UdhLDQ&sa=X&ved=2ahUKEwjks_b4hqqXAxWiSfEDHWLnHNcQ7Al6BAhqEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "Vitamin C* Brightening Serum",
+         "url": "https://www.garnier.co.uk/our-brands/skin-care/vitamin-c/garnier-vitamin-c-brightening-serum",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGKCiEuFZYc9KUCejwYt4ZSk-vmQ5WY0s-1UIVC6FHH8vP9Auxg82V5y0&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "D-Pigment Brightening Serum | Eau Thermale Avène",
+         "url": "https://www.eau-thermale-avene.co.za/face/products-for-daily-use/dark-spots-uneven-skin-tone/d-pigment-brightening-serum",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzVfh2ScKiarOKtosCmMKMlNvKrNOpSZXcVRIGWdZ49vLGA4CcVXnWULg&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "The 8 Best Brightening Serums of 2026, Byrdie-Tested",
+         "url": "https://www.byrdie.com/best-brightening-serums",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ0dA-KAzKMiAq2H0Sw0V2cJ_v0dg9rv8JjZHjJgkWuXVX5Oab--uB_fU&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Deconstruct 10% Niacinamide Brightening Serum with 0.3% Alpha Arbutin |  Brightens skin, treats dullness, reduces tan | Lightweight, non-irritating  & ...",
+         "url": "https://www.amazon.in/Deconstruct-Brightening-Serum-Niacinamide-Arbutin/dp/B08YRLDKSH",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRFEk0pBmmMb-FMKGPZ1Gjg0xK4_LFhQKfBDE61-9kusakACZT6eTrM-Y&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Best Whitening serum Pakistan | Radiance Face Care | Izmir Beauty",
+         "url": "https://izmirbeauty.com/products/whitening-serum",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxGUd55SSfO-nrn3jdYpTyiwQNSE3Xl_6hfBBIrilo3u96NmMriknrPUE&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Enlighten C Skin Brightening Serum",
+         "url": "https://enlivenskincare.pk/products/enlighten-c-skin-brightening-serum",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGUQbI6PKM745O3vdVNV2Sr8PQmCR96qE-woSkKgXaSbf0iYD_NuN3d30&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Rice Brightening Serum",
+         "url": "https://www.nirvanabotanics.com/products/whitening-serum?srsltid=AU7gw4Xq7-KyMiCqDO_iBTzcxf-rRXvj_77DWmkBkoXWLQ49DWI7HHkj",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFbt_aV0508kiEof3spT-TlQOEv9ExhV2VJ24kpi0_MnBvgQiQ-4j5OCQ&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Vitamin C* Brightening Serum",
+         "url": "https://www.garnier.co.uk/our-brands/skin-care/vitamin-c/garnier-vitamin-c-brightening-serum",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuObwuU59ZoYS3yGeb5Yf5afDFdLPXTLdeXZwwYXTmnYSth8e6XEhAn9c&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]",
+       "domain": "www.amazon.com",
+       "title": "Skin Brightening Serum",
+       "url": "https://www.amazon.com/skin-brightening-serum/s?k=skin+brightening+serum",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.com › skin-brightening-serum › k=s...",
+       "website_name": "Amazon.com",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Find lightweight brightening serums that layer seamlessly into your routine to promote even skin tone and reduce the appearance of spots.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "lightweight brightening serums"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[21]/div[1]/div[1]/div[1]",
+       "domain": "www.byrdie.com",
+       "title": "The 8 Best Brightening Serums of 2026, Byrdie-Tested",
+       "url": "https://www.byrdie.com/best-brightening-serums",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.byrdie.com › Skin › Face Care › Eye Care",
+       "website_name": "Byrdie",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Jan 30, 2026 — Our favorite brightening serum is the dermatologist-loved option with vitamin C: Ole Henriksen Banana Bright Vitamin C Serum. Read more",
+       "pre_snippet": "01/30/2026 00:00:00",
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "brightening serum from www.byrdie.com",
+         "url": "https://www.byrdie.com/best-brightening-serums",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn-lmNGOmloVyO2JFxAsxaYnvqPbUszQgZstioQIzaTKT5M8hKYCGi&usqp=CAE&s"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Ole Henriksen Banana Bright Vitamin C Serum"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.byrdie.com/best-brightening-serums#:~:text=Our%20favorite%20brightening%20serum%20is,Banana%20Bright%20Vitamin%20C%20Serum.",
+         "domain": "www.byrdie.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-01-30 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[23]/div[1]/div[1]/div[1]",
+       "domain": "www.roseinc.com",
+       "title": "Radiant Reveal Skin Brightening Serum",
+       "url": "https://www.roseinc.com/products/radiant-reveal-brightening-serum?srsltid=AU7gw4X_Pid--efSV-ErC9tqZ0dWCNRlEkInKY8yVar0dcvq9JSIaCht",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.roseinc.com › products › radiant-reveal-bri...",
+       "website_name": "Rose Inc",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "This lightweight serum reveals healthy-looking skin without clogging pores. It softens and plumps, creating a smooth, light-reflecting texture and a more even ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 74,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$74.00"
+       },
+       "highlighted": [
+        "reveals healthy-looking skin without clogging pores"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.roseinc.com/products/radiant-reveal-brightening-serum?srsltid=AU7gw4X_Pid--efSV-ErC9tqZ0dWCNRlEkInKY8yVar0dcvq9JSIaCht#:~:text=This%20lightweight%20serum%20reveals%20healthy-looking,a%20more%20even%20skin%20tone.",
+         "domain": "www.roseinc.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "perspectives",
+       "rank_group": 1,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[25]/div[1]",
+       "title": "What people are saying",
+       "items": [
+        {
+         "type": "perspectives_element",
+         "title": "Say “BRIGHT” for my serum ✨\n\nI didn’t want to make another serum just to make another serum.\n\nI wanted something I would actually reach for when my skin looked dull, uneven, tired, or when I wanted a little extra help with the appearance of discoloration.\n\nSo I crafted this Brightening Serum with just 8 thoughtfully chosen ingredients. My products take me a lot of time because I test different formulations, find one I love, then my family and I actually use it before I decide whether it deserves a place in the @arvoti lineup.\n\nAnd this one was a winner.\n\nMy mom especially noticed a dramatic improvement in the appearance of the discoloration on her face and hands while using it, which made me even more excited to finally share it.\n\nIt’s made to nourish the skin, support a brighter-looking complexion, improve the appearance of uneven skin tone, and help dark spots and discoloration look less noticeable over time.\n\nI also love that each of my serums has its own purpose. My Awakening Eye S",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DeCeOCthUS1/",
+         "domain": "www.instagram.com",
+         "date": "4 days ago",
+         "source": "gubbahomestead",
+         "timestamp": "2026-10-04 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Serum brightening nampol!!! Bye kulit kusam❤️🤭 #serum#skincare#omg#brightening#racunshopee#beauty",
+         "description": null,
+         "url": "https://www.youtube.com/shorts/aA3f4ESM8FQ",
+         "domain": "www.youtube.com",
+         "date": "1 day ago",
+         "source": "Ijfina Amalia",
+         "timestamp": "2026-10-07 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Brightening serum rec",
+         "description": null,
+         "url": "https://www.reddit.com/r/IndianSkincareAddicts/comments/1wwtubo/brightening_serum_rec/",
+         "domain": "www.reddit.com",
+         "date": "4 days ago",
+         "source": "r/IndianSkincareAddicts",
+         "timestamp": "2026-10-04 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Fade dark spots and brighten your complexion with this lesser-known skin care ingredient that’s safe for all skin types",
+         "description": null,
+         "url": "https://www.nbcnews.com/select/shopping/best-tranexamic-acid-serum-rcna146988",
+         "domain": "www.nbcnews.com",
+         "date": "3 weeks ago",
+         "source": "Bethany Heitman",
+         "timestamp": "2026-09-17 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Rohit Sachdeva. . 1 Step Skin Whitening & Tan Removal Treatment: Best Face Serum for Glowing Skin Wanna glow instantly and achieve bright, clear & glowing skin in just 3–5 days? This viral Glutathione + Vitamin C + Niacinamide skin whitening serum is tr",
+         "description": null,
+         "url": "https://www.facebook.com/rohitsachdeva06/videos/1-step-skin-whitening-tan-removal-treatment-best-face-serum-for-glowing-skinwann/1480338693914100/",
+         "domain": "www.facebook.com",
+         "date": "3 weeks ago",
+         "source": "rohitsachdeva06",
+         "timestamp": "2026-09-17 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "6 Skin-Boosting Vitamin C Serums Our Testers Loved",
+         "description": null,
+         "url": "https://www.nytimes.com/wirecutter/reviews/best-vitamin-c-serums/",
+         "domain": "www.nytimes.com",
+         "date": "Aug 12, 2026",
+         "source": "Rory Evans",
+         "timestamp": "2026-08-12 00:00:00 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Dermatologists Say These Dark Spot Correctors Really Work—No Expensive Treatments Needed",
+         "description": null,
+         "url": "https://www.oprahdaily.com/beauty/skin-makeup/g29529033/best-dark-spot-correctors/",
+         "domain": "www.oprahdaily.com",
+         "date": "1 week ago",
+         "source": "Genesis Rivas",
+         "timestamp": "2026-10-01 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Paula's Choice Skincare 🆕 New! Vitamin C15 Brightening Super Booster Serum Review, How to, Dupes",
+         "description": null,
+         "url": "https://www.youtube.com/watch?v=KCVfdgEw_xQ",
+         "domain": "www.youtube.com",
+         "date": "1 week ago",
+         "source": "No BS Beauty",
+         "timestamp": "2026-10-01 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Are these popular brightening serums really capable of fading dark spots and pigmentation? 👀 Let’s see what our local Korean CEO says!\n#skincare #beauty #kbeauty #korea #skin",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DeBpiP9yH6C/",
+         "domain": "www.instagram.com",
+         "date": "5 days ago",
+         "source": "8mirrors.kr",
+         "timestamp": "2026-10-03 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "What vitamin C serums do you use for brightening and anti-ageing?",
+         "description": null,
+         "url": "https://www.facebook.com/61571175520138/posts/do-you-add-vitamin-c-serum-to-your-skincare-routinewhich-of-these-vitamin-c-seru/122177828990705850/",
+         "domain": "www.facebook.com",
+         "date": "1 day ago",
+         "source": "Facebook",
+         "timestamp": "2026-10-07 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Vitamin C stings your face? Same 🙋‍♀️ This is a GREAT alternative made for my sensitive skin ladies 🩵 Using rice brightening serum by @skinfood_global . . . #skinfood #kbeauty #skinfoodriceserum #glassskin #glowingskin",
+         "description": null,
+         "url": "https://www.tiktok.com/@anci.social/video/7693216347542572319",
+         "domain": "www.tiktok.com",
+         "date": "2 days ago",
+         "source": "anci.social",
+         "timestamp": "2026-10-06 08:58:24 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Comment “Tan” & Stop confusing pigmentation with tanning or dullness! 🛑 If discoloration stays unchanged for weeks or months, relying on a single ingredient like Vitamin C or Niacinamide alone won’t fix it. Effective treatment requires a multi-active approach.\nThe Asaya Advanced Spot Targeting Serum combines 8 powerful brightening ingredients—5% Niacinamide, 2% Alpha Arbutin, MelaMe™ Complex, Licorice Root, Sea Buckthorn, Garden Cress, Saffron, and Centella. Formulated without oils, silicones, or parabens, it gently targets stubborn dark spots and uneven tone.\n✨ Layering Guide:\n1. Cleanse: Start with a gentle face wash.\n2. Treat: Apply 2–3 drops of Asaya Advanced Spot Targeting Serum AM and PM.\n3. Moisturize: Lock in hydration with a lightweight moisturizer.\n4. Protect: Always finish with sunscreen during the day ☀️.\nPatience is key: give your routine at least 8 weeks, not 8 days, to see real transformation.\nSave this post and follow for more honest skin clarity guidance! 📌\n#Pigmentati",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DeKCRmpuppX/",
+         "domain": "www.instagram.com",
+         "date": "1 day ago",
+         "source": "nipunkapur",
+         "timestamp": "2026-10-07 08:58:24 +00:00"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "product_considerations",
+       "rank_group": 1,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[27]/div[1]",
+       "title": "Things to know",
+       "items": [
+        {
+         "type": "product_considerations_element",
+         "title": "What are the potential side effects of using a brightening serum?",
+         "consideration_category": "Side Effects",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What are the benefits of using a brightening serum?",
+         "consideration_category": "Benefits",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How does a brightening serum work?",
+         "consideration_category": "How It Works",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How to choose a brightening serum?",
+         "consideration_category": "Choosing a Serum",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "When should a brightening serum be applied in a skincare routine?",
+         "consideration_category": "Application Timing",
+         "expanded_element": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 15,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Brightening serum for face",
+        "Best brightening serum",
+        "Brightening Serum Vitamin C",
+        "Brightening serum for dark skin",
+        "Brightening serum Ordinary",
+        "Brightening serum Korean",
+        "Brightening Serum for body",
+        "Brightening Serum Truly"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

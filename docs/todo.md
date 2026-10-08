@@ -48,6 +48,40 @@ Biggest open gaps for "further building": multilingual (9 languages), blog conte
 
 ## Open Items
 
+### 🔴 SEO-RANK-002 — The full traffic and performance plan, page by page, with the implementation steps (2026-10-08)
+
+**Priority:** 🔴 High. **Owner:** Malcolm (17 decisions) → Claude (build). **Status:** plan written, nothing executed, nothing
+published; waiting on Malcolm's decisions and his review of the concept pages.
+**Plan:** `docs/website-traffic-and-performance-plan-2026-10-08.md` (Parts 1–10: what was missing, where we are, competitor
+analysis for all 37 keyword-owning pages, the strategy, honest targets per page, the step-by-step implementation plan in three
+phases, the decisions, measurement, what not to do). **Evidence:** `audits/2026-10-08-competitor-gap-per-page/` (README,
+39 SERPs, volumes for 96 terms, Lighthouse on 15 pages, three teardowns). **Review pack:** `docs/review-2026-10-08-concept-pages.md`
+and `~/Desktop/skingenetix-renders.png`. Spend USD 0.81.
+
+**Found today (verified):** the four Skin Solutions pages and The Science serve no H1; register-breaking claims live on three
+concern pages ("even reverse them", "safe for sensitive skin?", "Overnight Structural Repair", "stimulation of new collagen
+production", "more than twice the wrinkle improvement"); nine pages with real impressions had no keyword owner; four unowned
+terms outweigh most hub terms (peptides for skin 1,862, brightening serum 1,057, ghk-cu cream 805, microneedling stamp 805 US);
+every page type paints its largest element at 11–12 s on mobile (the Matrixyl cream at 4.7 s shows the theme can); the creams
+collection says "Coming soon"; the stamp sets carry OutOfStock schema under a pre-order template; the German copper hub's H1 is
+English; the PageSpeed API is blocked until the key's project enables it.
+
+**▶ Phase 0 (Malcolm, this week):** the 17 decisions in the plan's Part 7, request indexing (4 URLs), enable the PageSpeed API,
+review the three concepts, report the hacked site.
+
+**▶ Phase 1 (weeks 1–2, after the decisions):** 1.1 ownership map for 37 pages · 1.2 nine product pages to the bar · 1.3 five
+collections rebuilt (defects first) · 1.4a claim and H1 fixes on the concern pages and The Science · 1.4b concern pages re-aimed,
+shop terms to the products · 1.4c The Science as the "Peptides for Skin" pillar · 1.5 the LCP test on a duplicate theme and the
+app-script trim · 1.6 spoke 1 · 1.7 the Learn blog · 1.8 STUDY-DETAIL go-live · 1.9 hub leftovers · 1.10 the weekly monitor.
+
+**▶ Phase 2 (weeks 3–6):** reviews in markup · Merchant Center · outreach materials · spokes 2–5 · collagen go-live · GB and DE
+titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining spokes, translation waves, monthly authority, re-plan.
+
+**Not done on purpose:** no page published (every concept is English-only; the six-language rule applies); no store write of
+any kind; `configs/page-targets.json` unchanged until decision 3.
+
+---
+
 ### 🔴 SEO-RANK-001 — Search performance review, competitor analysis and the plan to rank first (2026-10-07)
 
 **Priority:** 🔴 High. **Owner:** Claude (build) + Malcolm (6 decisions).

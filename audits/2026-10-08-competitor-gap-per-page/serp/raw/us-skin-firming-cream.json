@@ -1,0 +1,1705 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "38.5742 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080858-1509-0139-0000-ef0730a6d184",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "38.4635 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "skin firming cream",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "skin firming cream",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=skin%20firming%20cream&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+     "datetime": "2026-10-08 08:59:19 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Body Lotion",
+        "url": "https://www.google.com/search?q=body+lotion+skin+firming+cream&hl=en&gl=US&shoprs=CAEYCSoSc2tpbiBmaXJtaW5nIGNyZWFtMg8ICRILQm9keSBMb3Rpb25gAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAF6BQgmEIkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Moisturizers",
+        "url": "https://www.google.com/search?q=facial+moisturizers+skin+firming+cream&hl=en&gl=US&shoprs=CAEYCSoSc2tpbiBmaXJtaW5nIGNyZWFtMhcICRITRmFjaWFsIE1vaXN0dXJpemVyc2AB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAJ6BQgmEIoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Legs",
+        "url": "https://www.google.com/search?q=legs+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhYIARIETGVnczoMCKym7AIQ-q6RAzAAWPeqIGAB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAN6BQgmEIsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Reviews",
+        "url": "https://www.google.com/search?q=reviews+skin+firming+cream&hl=en&gl=US&shoprs=CAEYEioSc2tpbiBmaXJtaW5nIGNyZWFtMgsIEhIHUmV2aWV3c2AB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAR6BQgmEIwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "On sale",
+        "url": "https://www.google.com/search?q=skin+firming+cream+sale&hl=en&gl=US&shoprs=CAESBEoCGAEYBioSc2tpbiBmaXJtaW5nIGNyZWFtMhMIBhIHT24gc2FsZRgCIgRKAhgBWPeqIGAB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAV6BQgmEI0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Retinol",
+        "url": "https://www.google.com/search?q=retinol+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhcIARIHUmV0aW5vbDoKCMHbLRDC2y0wAFj3qiBgAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAZ6BQgmEI4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Under $10",
+        "url": "https://www.google.com/search?q=skin+firming+cream+under+$10&hl=en&gl=US&shoprs=CAESDRILEQAAAADQEmNBGAEYBSoSc2tpbiBmaXJtaW5nIGNyZWFtMiIIBRIJVW5kZXIgJDEwGAIiDRILEQAAAADQEmNBGAEqAhgBWPeqIGAB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAd6BQgmEI8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Face",
+        "url": "https://www.google.com/search?q=face+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhQIARIERmFjZToKCJ_ZLRCh2S0wAlj3qiBgAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAh6BQgmEJAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Get it tomorrow",
+        "url": "https://www.google.com/search?q=skin+firming+cream&hl=en&gl=US&shoprs=CAESDZoBCgoIEAE4AUAFSAEYFCoSc2tpbiBmaXJtaW5nIGNyZWFtMigIFBIPR2V0IGl0IHRvbW9ycm93Ig2aAQoKCBABOAFABUgBKgQQARgBYAE&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAl6BQgmEJEB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Body",
+        "url": "https://www.google.com/search?q=body+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhQIARIEQm9keToKCJ_ZLRCg2S0wAlj3qiBgAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAp6BQgmEJIB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Cellulite Reduction",
+        "url": "https://www.google.com/search?q=cellulite+reduction+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMiMIARITQ2VsbHVsaXRlIFJlZHVjdGlvbjoKCOzhLRD52i0wAFj3qiBgAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAt6BQgmEJMB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hand Cream",
+        "url": "https://www.google.com/search?q=hand+cream+skin+firming&hl=en&gl=US&shoprs=CAEYCSoSc2tpbiBmaXJtaW5nIGNyZWFtMg4ICRIKSGFuZCBDcmVhbWAB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKAx6BQgmEJQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Anti-aging",
+        "url": "https://www.google.com/search?q=anti-aging+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhoIARIKQW50aS1hZ2luZzoKCOzhLRCh2y0wAFj3qiBgAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKA16BQgmEJUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Wrinkles",
+        "url": "https://www.google.com/search?q=wrinkles+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhoIARIIV3JpbmtsZXM6DAiygKwCELaArAIwAFj3qiBgAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKA56BQgmEJYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Collagen Boosting",
+        "url": "https://www.google.com/search?q=collagen+boosting+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMiEIARIRQ29sbGFnZW4gQm9vc3Rpbmc6Cgjs4S0QxtstMABY96ogYAE&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKA96BQgmEJcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For Dry Skin",
+        "url": "https://www.google.com/search?q=skin+firming+cream+for+dry&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMh4IARIMRm9yIERyeSBTa2luGAI6Cgiy-DsQs_g7MABY96ogYAE&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBB6BQgmEJgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For Men",
+        "url": "https://www.google.com/search?q=skin+firming+cream+for+men&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhkIARIHRm9yIE1lbhgCOgoIoNstEK_bLTADWPeqIGAB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBF6BQgmEJkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Beige",
+        "url": "https://www.google.com/search?q=beige+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhcIARIFQmVpZ2U6DAjYjPUBEKKL9QEwC1j3qiBgAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBJ6BQgmEJoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Fragrance-free",
+        "url": "https://www.google.com/search?q=fragrance-free+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMiAIARIORnJhZ3JhbmNlLWZyZWU6DAjc34cBEN3fhwEwA1j3qiBgAQ&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBN6BQgmEJsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Pink",
+        "url": "https://www.google.com/search?q=pink+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMhYIARIEUGluazoMCNiM9QEQ6Yr1ATALWPeqIGAB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBR6BQgmEJwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Cruelty-free",
+        "url": "https://www.google.com/search?q=cruelty-free+skin+firming+cream&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMh4IARIMQ3J1ZWx0eS1mcmVlOgwI3aK0ARDX-MIBMABY96ogYAE&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBV6BQgmEJ0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For All Skin Types",
+        "url": "https://www.google.com/search?q=skin+firming+cream+for+all+types&hl=en&gl=US&shoprs=CAEYASoSc2tpbiBmaXJtaW5nIGNyZWFtMiQIARISRm9yIEFsbCBTa2luIFR5cGVzGAI6Cgiy-DsQtfg7MABY96ogYAE&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBZ6BQgmEJ4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Foot Cream",
+        "url": "https://www.google.com/search?q=foot+cream+skin+firming&hl=en&gl=US&shoprs=CAEYCSoSc2tpbiBmaXJtaW5nIGNyZWFtMg4ICRIKRm9vdCBDcmVhbWAB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBd6BQgmEJ8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Stretch Mark Creams",
+        "url": "https://www.google.com/search?q=stretch+mark+creams+skin+firming+cream&hl=en&gl=US&shoprs=CAEYCSoSc2tpbiBmaXJtaW5nIGNyZWFtMhcICRITU3RyZXRjaCBNYXJrIENyZWFtc2AB&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQip4GKBh6BQgmEKAB",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "popular_products",
+      "images",
+      "discussions_and_forums"
+     ],
+     "se_results_count": 171000,
+     "pages_count": 1,
+     "items_count": 14,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "www.amazon.com",
+       "title": "Amazon.com: Dr. Brandt Dare to Age Firming Day Cream",
+       "url": "https://www.amazon.com/clp/B0F197QFXR",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.com › clp",
+       "website_name": "Amazon.com",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Amazon.com: Dr. Brandt Dare to Age Firming Day Cream - 1.7 oz, Pack of 2 | Collagen-Boosting Moisturizer - Fragrance Promotes Relaxation & Self-Confidence ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "skin firming cream from www.amazon.com",
+         "url": "https://www.amazon.com/clp/B0F197QFXR",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:0"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Dr. Brandt Dare to Age Firming Day Cream"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Is there skin firming cream that actually works?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the best cream to tighten sagging skin?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the best cream for firming skin?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the best skin tightening cream for the body?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]",
+       "title": "Popular products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Gold Bond Age Renew Tight & Firm Body & Face Lotion",
+         "url": "https://dermapproved.com/products/gold-bond-age-renew-tight-firm-body-face-lotion/",
+         "domain": "dermapproved.com",
+         "description": "Target More\nFree delivery on $35+\nAbsorbs cleanly · Excellent low-irritation profile DermApproved",
+         "more_sellers": false,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:1",
+         "price": {
+          "current": 12.59,
+          "regular": 1.57,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$12.59 $1.57/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 360,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "6688922526484896963",
+          "data_docid": "12724171515018495462",
+          "gid": "16187764012844733671"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "L'Oreal Paris Revitalift Triple Power Anti-Aging Moisturizer",
+         "url": null,
+         "domain": null,
+         "description": "Walmart More\nNext-day delivery $7\nFeels nice on skin (2,301 user reviews)",
+         "more_sellers": false,
+         "seller": "Walmart",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:2",
+         "price": {
+          "current": 23.87,
+          "regular": 30,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$23.87 $30"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 7400,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15316405177805388399",
+          "data_docid": "13240240146491294926",
+          "gid": "15358620845789383450"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Roc Multi Correxion Firm + Lift Anti-Sagging Firming Cream 50ml",
+         "url": "https://www.bestliftingcream.com/reviews/roc-multi-correxion-firm-lift-anti-sagging-firming-cream-review",
+         "domain": "www.bestliftingcream.com",
+         "description": "RoC Skincare More\nFree delivery on $35+\nSoftening the appearance of fine lines · Locks in moisture Best Creams for Your Skincare Routine",
+         "more_sellers": false,
+         "seller": "RoC Skincare",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:3",
+         "price": {
+          "current": 25.49,
+          "regular": 30,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$25.49 $30"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 251,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3344666635540300296",
+          "data_docid": "17971572200529417441",
+          "gid": "13874811194482342101"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Advanced Clinicals Collagen + Peptide Firming Body Cream",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty More\nFree delivery on $35+\nMoisturizes well (62 user reviews)",
+         "more_sellers": false,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:4",
+         "price": {
+          "current": 19.99,
+          "regular": 1.25,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$19.99 $1.25/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 584,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4875932669092285779",
+          "data_docid": "9361705385530777005",
+          "gid": "8365626226761869145"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Cetaphil Hydrating & Firming Skin Activator Cream",
+         "url": "https://firsthairstyle.com/best-chest-firming-cream/",
+         "domain": "firsthairstyle.com",
+         "description": "Target More\nFree delivery on $35+\nFormulated with beneficial ingredients like Mandelic Acid and Centella … · Results may vary for different skin types, and some users may not see as … First Hairstyle",
+         "more_sellers": false,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:5",
+         "price": {
+          "current": 16.99,
+          "regular": 1.42,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$16.99 $1.42/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 600,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "708655455446716421",
+          "data_docid": "16549623834566176100",
+          "gid": "857956837437992473"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Vernal Crepe-less crepey skin firming cream to reduce crepey arms neck & hands. Finally",
+         "url": null,
+         "domain": null,
+         "description": "Walmart - MAG Brands, LLC More",
+         "more_sellers": false,
+         "seller": "Walmart - MAG Brands, LLC",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:6",
+         "price": {
+          "current": 38.8,
+          "regular": 6.47,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$38.80 $6.47/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4,
+          "votes_count": 22,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "13537413490920628675",
+          "data_docid": "13640202127689592942",
+          "gid": "9891163000812355016"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Cellu Anti Loose Skin Cream Smooths & Firms Aging Skin Skin Tightening Cream for Body Skin",
+         "url": null,
+         "domain": null,
+         "description": "Cellu\nFree delivery\nRetinol, Alpha Hydroxy, ... · For All Skin Types · Almond",
+         "more_sellers": false,
+         "seller": "Cellu",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:7",
+         "price": {
+          "current": 31.99,
+          "regular": 65,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$31.99 $65"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "10621687752667668770",
+          "data_docid": "12335107307363292738",
+          "gid": "6091547422137319014"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Gold Bond Skin Firming Neck and Chest Lotion - Unscented - 2oz",
+         "url": null,
+         "domain": null,
+         "description": "Target\nFree delivery on $35+",
+         "more_sellers": false,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:8",
+         "price": {
+          "current": 12.49,
+          "regular": 6.25,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$12.49 $6.25/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4,
+          "votes_count": 139,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "5670518621684478667",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Skin Firming Cream",
+         "url": null,
+         "domain": null,
+         "description": "eBay\nAloe, Hemp · For All Skin Types · Pump Bottle",
+         "more_sellers": false,
+         "seller": "eBay",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:9",
+         "price": {
+          "current": 49.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$49.99"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "1794936105206213610",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Body Cream Crepe Control Tightening StriVectin",
+         "url": null,
+         "domain": null,
+         "description": "StriVectin More\nFree delivery",
+         "more_sellers": false,
+         "seller": "StriVectin",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:10",
+         "price": {
+          "current": 59,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$59.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.2,
+          "votes_count": 1300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11753689629165887497",
+          "data_docid": "14196086938097374794",
+          "gid": "14315475828046929588"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]",
+       "domain": "www.target.com",
+       "title": "Terez & Honor Sculpt + Tone Arm Cream with Retinol ...",
+       "url": "https://www.target.com/p/terez-honor-sculpt-tone-arm-cream-with-retinol-caffeine-collagen-korean-firming-cream-for-crepey-skin/-/A-1012451274",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.target.com › ... › Face Serums",
+       "website_name": "Target",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "A targeted Korean arm firming cream with a built-in gua sha applicator to help arms look smoother, tighter, and more toned. Powered by retinol liposome,",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "skin firming cream from www.target.com",
+         "url": "https://www.target.com/p/terez-honor-sculpt-tone-arm-cream-with-retinol-caffeine-collagen-korean-firming-cream-for-crepey-skin/-/A-1012451274",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:11"
+        }
+       ],
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.9,
+        "votes_count": 44,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 24.99,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$24.99"
+       },
+       "highlighted": [
+        "A targeted Korean arm firming cream"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]/div[1]",
+       "domain": "abbio.io",
+       "title": "When to Use Firming Cream for Best Skin Results Daily",
+       "url": "https://abbio.io/blogs/news-1/when-to-use-firming-cream?srsltid=AU7gw4Veudb2J-IHVrhWzQZblJmsa11GrzMGOD9aVaxlJppIQ5yAm-Sy",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://abbio.io › News",
+       "website_name": "AB BIO",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Firming creams are designed to enhance skin elasticity and reduce the appearance of sagging. They often contain ingredients like collagen, retinol, and ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Firming creams are designed to enhance skin elasticity and reduce the appearance of sagging"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=en&gl=US&sxsrf=APpeQnvZEcqhjPeqaP18anmokLeKxHuiWg:1791449957033&q=skin+firming+cream&udm=2&source=univ&fir=wrQeHPxecoBTdM%252CsqO6rrXnSWn1gM%252C_%253Bb0wD9tFap-sbCM%252CeKV8Z3FanYzpFM%252C_%253BYAjdsl2hiU1oVM%252CskSmf-tnIx_dQM%252C_%253B4ka7H9qh1V5XpM%252CngF2s2tIKfOrCM%252C_%253BCOMScP5WxR8g2M%252CskSmf-tnIx_dQM%252C_%253BmGVYr6KJspHR0M%252CsqO6rrXnSWn1gM%252C_%253BPAWFfZw0XsB6jM%252Cmd2QOvy5tGBAPM%252C_%253BKlerY1I393cldM%252CiPQ4uh53ndky4M%252C_&usg=AI4_-kQttzP1lp_FOUct3wj3-hKNuMM1Gg&sa=X&ved=2ahUKEwiencmSh6qXAxU9gv0HHaLJFdIQ7Al6BAhnEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "NIVEA Skin Firming + Toning Body Gel-Cream, Q10 and L-Carnitine,  Non-Greasy, 6.7 oz",
+         "url": "https://www.walmart.com/ip/NIVEA-Skin-Firming-and-Toning-Body-Gel-Cream-with-Q10-6-7-Oz-Tube/12514830",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:12"
+        },
+        {
+         "type": "images_element",
+         "alt": "DISCONTINUED Healthy Skin Firming Cream with SPF 15",
+         "url": "https://www.neutrogena.com/products/skincare/healthy-skin-firming-cream-broad-spectrum-spf-15/6805450",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:13"
+        },
+        {
+         "type": "images_element",
+         "alt": "NIVEA Skin Firming & Toning Body Gel Cream with Q10, Hyaluronic Acid and  Vitamin C, Clinically Tested Skin Firming & Toning Cream, 72-Hour Moisture,  ...",
+         "url": "https://www.amazon.com/NIVEA-Skin-Firming-Toning-Gel-Cream/dp/B003CJP13W",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:14"
+        },
+        {
+         "type": "images_element",
+         "alt": "NIVEA Q10 Skin Firming Body Cream",
+         "url": "https://www.niveausa.com/products/nivea-q10-skin-firming-body-cream-0721400347330079.html",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-ef0730a6d184:15"
+        },
+        {
+         "type": "images_element",
+         "alt": "NIVEA Skin Firming & Toning Body Gel Cream with Q10, Hyaluronic Acid and  Vitamin C, Clinically Tested Skin Firming & Toning Cream, 72-Hour Moisture,  ...",
+         "url": "https://www.amazon.com/NIVEA-Skin-Firming-Toning-Gel-Cream/dp/B003CJP13W",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtnQQYMYu9P8DvHtM2z5JJBq3KD6qttBUG9l-MVs_7y-ca1FMYP17KbFI&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "NIVEA Skin Firming + Toning Body Gel-Cream, Q10 and L-Carnitine,  Non-Greasy, 6.7 oz",
+         "url": "https://www.walmart.com/ip/NIVEA-Skin-Firming-and-Toning-Body-Gel-Cream-with-Q10-6-7-Oz-Tube/12514830",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEciUV7aVd8Z3oUn-HexgsDnLFugga2YoJ9pTRZ1KAWoJNhSslFkmBWEg&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "These Tester-Loved Skin Tightening Creams Give You Snatched, Youthful  Looking Skin",
+         "url": "https://www.byrdie.com/best-skin-tightening-creams-4587748",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ5A-ttQnev02TKcMN7LhyxhXFEUdoE8p_rL0RA-dJ73gGj8MIYHq4h8M&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "NIVEA Q10 Skin Firming And Anti-Wrinkle Neck And Chest Cream, Anti-Wrinkle  Cream",
+         "url": "https://shop.shoppersfood.com/store/shoppersfood/products/32618109-nivea-skin-firming-anti-wrinkle-neck-chest-cream-6-7-oz",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt81wCXhgquG0Dpl4CK-QZ9CeJnWfYFqLZrEh-xO0RUvXCWsiFdfDtLic&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "discussions_and_forums",
+       "rank_group": 1,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]",
+       "title": "Discussions and forums",
+       "items": [
+        {
+         "type": "discussions_and_forums_element",
+         "title": "Skin tightening/firming treatments?",
+         "url": "https://www.reddit.com/r/SkincareAddictionLux/comments/1w0y7hc/skin_tighteningfirming_treatments/",
+         "domain": "www.reddit.com",
+         "source": "Reddit",
+         "description": null,
+         "timestamp": "2026-09-08 08:59:18 +00:00",
+         "posts_count": 6
+        },
+        {
+         "type": "discussions_and_forums_element",
+         "title": "What is the Best Skin-Tightening Cream for You?",
+         "url": "https://www.reddit.com/r/Skin101/comments/1qz9pb2/what_is_the_best_skintightening_cream_for_you/",
+         "domain": "www.reddit.com",
+         "source": "Reddit",
+         "description": null,
+         "timestamp": "2026-02-08 08:59:18 +00:00",
+         "posts_count": 8
+        },
+        {
+         "type": "discussions_and_forums_element",
+         "title": "What are some good firming creams for excess belly skin?",
+         "url": "https://www.facebook.com/groups/689167177831376/posts/26566567282998011/",
+         "domain": "www.facebook.com",
+         "source": "Facebook",
+         "description": null,
+         "timestamp": "2026-05-08 08:59:18 +00:00",
+         "posts_count": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 2,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]",
+       "title": "More products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Dekliderm Neck Firming Cream – Anti Aging Retinol Cream Visibly Reduces Neck Wrinkles and Sagging – Neck Cream for loss",
+         "url": null,
+         "domain": null,
+         "description": "Dekliderm More\nFree delivery\nRetinol, Bakuchiol, ... · For All Skin Types · Jar, Tube",
+         "more_sellers": false,
+         "seller": "Dekliderm",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSJd_lHXoQzIndm72UxH3iZKBAvWgXEs74WnIxJf6MYnNoQfJuKHsKIvvKmEqbOV-er_n_GiQhtoyGAzoc3Shmb-p-dUtMBZPAL8OUmugcs_qOBYB_0dtj0WA",
+         "price": {
+          "current": 49,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$49.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 3.4,
+          "votes_count": 5,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "694475316005555027",
+          "data_docid": "7553290548156415733",
+          "gid": "6398510064720359023"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Nivea Skin Firming Toning Body Gel Cream",
+         "url": "https://www.tiktok.com/discover/nivea-skin-firming-and-toning-gel-review",
+         "domain": "www.tiktok.com",
+         "description": "CVS Pharmacy More\nFree delivery on $35+\nAbsorbs quickly · Doesn't leave that greasy feeling TikTok",
+         "more_sellers": false,
+         "seller": "CVS Pharmacy",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTkcOcGydwLq-dgWN0r6soqC3CoYcSoNbGnAADNb0_6jFsiAK6QxXqRyd37ieh9c0MLjGPeWFE3NKwAnTvxkZdK3xnVsr3jj9JXZwdNB0jZdapgvxYou6Yu",
+         "price": {
+          "current": 15.19,
+          "regular": 2.27,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$15.19 $2.27/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 2500,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "17224251560214963236",
+          "data_docid": "3219356507735848676",
+          "gid": "13372457690119686271"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Olay Regenerist Micro-Sculpting Cream Fragrance Free",
+         "url": "https://www.rd.com/list/best-skin-tightening-creams/",
+         "domain": "www.rd.com",
+         "description": "thepicks More\nFree delivery on $60+\nDoesn't leave skin feeling greasy · Some users say this cream isn't truly fragrance-free Reader's Digest",
+         "more_sellers": false,
+         "seller": "thepicks",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRIDJG4purgCcdDyQiUbiEEn-vIea1-n8aPwU2bGkM4FxKC_p7C_jmQOl2FolGaUvoPKJK0SYejEkeyfS0z0AqzduOlRlN_4UkeOQK_Ktme9ZWS0AcHsRXQEQ",
+         "price": {
+          "current": 23.47,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$23.47"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 10000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12682487411525307079",
+          "data_docid": "1926206400064000554",
+          "gid": "15113344881517373762"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Collagen Body Cream",
+         "url": null,
+         "domain": null,
+         "description": "Target More\nFree delivery on $35+\nMoisturizes well (931 user reviews)",
+         "more_sellers": false,
+         "seller": "Target",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcStTcaUcD4R1sfGTysWP5sJ2_HV0cehgJgsPvEn_RHYN1PUw_uX8ZHypi7USOYqrIYsczC8zkTSwOh6r3o_RNIyFK2rVXNHyPRPizRlSEt1bnRwlhJvAsnhWg",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$14.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 9500,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "5620299738669040717",
+          "data_docid": "8921385474758785680",
+          "gid": "15937312645840073801"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Clarins Body Firming Extra-Firming Cream",
+         "url": "https://www.bellyrubzbeauty.com/2016/11/30/clarins-extra-firming-body-cream/",
+         "domain": "www.bellyrubzbeauty.com",
+         "description": "Harrods More\nHighly moisturising and comforting · Great moisture for comfort Bellyrubz Beauty",
+         "more_sellers": false,
+         "seller": "Harrods",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS7djZ8F9MRa_YFAjYQYMzBfhpIWY9IVQ48Y7maQtJCwSjH65PLCWJgMKF1ahlSvqpx6xg3Dg8LS_pMHQxX87cquriSlzmT6eu545VmVCV2BESIBPAdvTN5",
+         "price": {
+          "current": 52,
+          "regular": 7.8,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$52.00 $7.80/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 1100,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11163324483948748438",
+          "data_docid": "13565272915326413166",
+          "gid": "1105663532029424798"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Frank Body Firming Body Cream",
+         "url": null,
+         "domain": null,
+         "description": "Frank Body US More\nFree delivery",
+         "more_sellers": false,
+         "seller": "Frank Body US",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSbm3m-hnQY1JAjTG1yHYheW4_sK8JFIZ9H-Qr-zrzN2AaHX0oQ1iWPMwzjT4si7j7ih-IDeihZ66xeLKxdgTPFJnFGRjxkpNafARZ8VOOv-XbcBWjIYT_QdA",
+         "price": {
+          "current": 38,
+          "regular": 4.89,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$38.00 $4.89/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 476,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "6064683881338075265",
+          "data_docid": "18439335648296572777",
+          "gid": "9242002388778672145"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hyllai Collagen Anti-Wrinkle Firming Cream, Provides Long-Lasting Moisture and Enhances Skin Firmness, Helps Restore Youthful Appearance with Special",
+         "url": null,
+         "domain": null,
+         "description": "Walmart - mimiae\nFree delivery\nFor All Skin Types · Wrinkles · Anti-aging",
+         "more_sellers": false,
+         "seller": "Walmart - mimiae",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQSRksoVlZ8epuE41GpwVCfj8N1ZVhHRJcl-zrf4l0uqb1_rxpm-NcACm_mGu47sgpgT6Fj3oQ9p1QA8BtYVIhGdZapYpyv-xMG6zs_NgHvQ4VVPhHyAX5sxA",
+         "price": {
+          "current": 6.97,
+          "regular": 0.46,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$6.97 $0.46/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 5,
+          "votes_count": 2,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14905179883698167018",
+          "data_docid": "8979806351722570601",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Olay Peptide Firming Ultra Rich Cream",
+         "url": null,
+         "domain": null,
+         "description": "OLAY.com More\nFree delivery\nIt's a thick, silky soft cream with the most beautiful light scent. A reviewer on olay.com",
+         "more_sellers": false,
+         "seller": "OLAY.com",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ2Msiqkj6mW2Xc35-Ow7z8WHn2VV-m-1DAUlPY9i9m6_Dg9VwLrJrY7t4cF3bcsKlxCjR2U08CcvZZTUhUxzzBX2rhtK7Lcl58-RJfyJuBcHhLYZ53lSegVg",
+         "price": {
+          "current": 65,
+          "regular": 38,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$65.00 $38/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 5,
+          "votes_count": 1,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14179474745738438375",
+          "data_docid": "10300866233990446695",
+          "gid": "12054857634528140899"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Copper Peptide Facial Cream, Daily Hydrating & Firming Moisturizer for Smoother, Radiant-Looking Skin, Size: 0.1 lbs",
+         "url": null,
+         "domain": null,
+         "description": "Walmart - JOYTRIP",
+         "more_sellers": false,
+         "seller": "Walmart - JOYTRIP",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTUihgdKrTPZb1sv2csjiWnvIzBQVnGeB2qqWyCM9QoWsg2kRaYfgsjBEqnxQCFIIbxeCMdKWTH_GMfQQbEWm6mmz5VRA6aP9POnkRvE9TR5lAbIdJ-x7HPRw",
+         "price": {
+          "current": 13.21,
+          "regular": 15,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$13.21 $15"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 5,
+          "votes_count": 3,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12541034216371071091",
+          "data_docid": "13272279721358838048",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Advanced Clinicals Retinol Advanced Firming Cream",
+         "url": "https://whatsinmyjar.com/product/advanced-clinicals-retinol-firming-cream",
+         "domain": "whatsinmyjar.com",
+         "description": "vitacost.com More\nWorks well for moisturizing the skin · Good combo of humectants and emollients What's in my jar",
+         "more_sellers": false,
+         "seller": "vitacost.com",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR_l2SFJaGLzOaBnhVBNsVQEiLnVLO71UaIYSOlOCqfw2pHm2J4vTbiFbn-zNJclpvm5WqMhtvELRMXNAxbdklURsKvydQskqABzHNNOxCoKt9Tr_L95iIOrA",
+         "price": {
+          "current": 17.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$17.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 2100,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7819937726655565736",
+          "data_docid": "17415720771180784249",
+          "gid": "17482567600060351739"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 3,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]",
+       "title": "More products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Jergens Skin Firming Moisturizer",
+         "url": "http://temporaryprincess.blogspot.com/2019/04/review-jergens-oil-infused-skin-firming.html",
+         "domain": "temporaryprincess.blogspot.com",
+         "description": "BargainSide.Com More\nFree delivery\nAbsorbed insanely quickly · Skin feels amazingly moisturised Blogger.com",
+         "more_sellers": false,
+         "seller": "BargainSide.Com",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQGggFmelhV8cd6HD1LxziFwaNAeCNbBT5KeJoZYzisWX0l_vNY_F-36hyHeoB9ooYxx3lVzkDh223eduXoN16PepaKJBDtVLGMtZY_dWnqjqAkWnpctcKetQ",
+         "price": {
+          "current": 7.58,
+          "regular": null,
+          "max_value": 11,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$7.58 Usually $11"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 3400,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4775346312481420798",
+          "data_docid": "2140684069211733033",
+          "gid": "15921368307064118950"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Palmer's Cocoa Butter Formula Firming Butter",
+         "url": "https://mamabella.uk/product/palmers-cocoa-butter-formula-firming-butter-review/",
+         "domain": "mamabella.uk",
+         "description": "vitacost.com More\nLighter texture than expected · Fragrance may not be suitable for sensitive skin Mamabella",
+         "more_sellers": false,
+         "seller": "vitacost.com",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTXvGI2vQHMtcL1VhJinAgqipKJgn6d1wwgsoXwrLK67MPvoek2dOMSazi8Wb0Y1ARXlNPft_pbX4l0FCkKFJIt-VLt2XeefcDxSuiG3_oNOFO8_clWqzfN",
+         "price": {
+          "current": 7.99,
+          "regular": null,
+          "max_value": 9,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$7.99 Usually $9"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 7400,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "6099128245148859436",
+          "data_docid": "8204933243574910248",
+          "gid": "7051776944680182859"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "iNNBEAUTY PROJECT Extreme Cream Anti-Aging",
+         "url": "https://thedaleydose.com/inn-beauty-extreme-cream-reviews/",
+         "domain": "thedaleydose.com",
+         "description": "Poshmark More\nGoes on very smoothly · Thick, rich, and hydrating The Daley Dose",
+         "more_sellers": false,
+         "seller": "Poshmark",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRbGXmKcSrE5TwlhOU1YcMntnQgi03rv0ODnAZ_5GL6YbZLjzB8HAbRekb-Cbtoo29wm-ETOoz5LG5BeqzWAzpxlhlA8F-MHw",
+         "price": {
+          "current": 20,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$20.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.3,
+          "votes_count": 2100,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8963705721550278218",
+          "data_docid": "10748656457584756903",
+          "gid": "8753849194200786316"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "L'Oreal Revitalift Anti Wrinkle + Firming Night Cream",
+         "url": null,
+         "domain": null,
+         "description": "Walmart - PerfumesAmerica More",
+         "more_sellers": false,
+         "seller": "Walmart - PerfumesAmerica",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTasLyKmzR7T9YFcgMCqEWncepJeZB1egKb8iCE8tlXv_lr_79tvAaMkmx343vJ74cUPlYu-z-dpOiNWtw-adNgMHZROvU6OE0Wsat52tKjf_PJgdzPUxHOdw",
+         "price": {
+          "current": 11.38,
+          "regular": 15,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$11.38 $15"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 793,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14515348161351747639",
+          "data_docid": "14270071853291879975",
+          "gid": "9766847093816873464"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Nivea Body Lotion Nourishing Skin Firming",
+         "url": "https://www.hometesterclub.com/uk/en/reviews/nivea-rich-nourishing-body-lotion-497572",
+         "domain": "www.hometesterclub.com",
+         "description": "Walgreens.com More\nAbsorbs well into the skin · Combats dryness well Home Tester Club",
+         "more_sellers": false,
+         "seller": "Walgreens.com",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRkzfx_31b3D6GoOcxE0zkzZm9vHWuwbfqP6PZWpPpQwO-YK3xmba6VTiQFuPFo-jyy14ou8rZLX86K8aj4D9ZbD0IvEa10mCWe-5U23-FRLumsw4qgAgfs",
+         "price": {
+          "current": 13.99,
+          "regular": 0.83,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$13.99 $0.83/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 917,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12276303112023976348",
+          "data_docid": "8253216376823765943",
+          "gid": "10616127977811141980"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Olay Peptide Firming Soft Cream",
+         "url": null,
+         "domain": null,
+         "description": "OLAY.com More\nFree delivery\nThe smell is nice, feeling soft n non-oily. A reviewer on shopee.com.my",
+         "more_sellers": false,
+         "seller": "OLAY.com",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQTs4HY9a-RYscDAEKfyDymnw5WWvEOeGX6So3Cxpq5YaDC1eJKzmWx1F9WjcYEY0bt2Gr1bh6phMRQXR5qDaOxB8hZnNuJdXwcftJBo5ow4olKJxr7hvoW",
+         "price": {
+          "current": 65,
+          "regular": 38,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$65.00 $38/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 13,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "15631392317783893256",
+          "data_docid": "4907958772798004139",
+          "gid": "12929877390201272824"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Olay Night of Olay Firming Cream",
+         "url": "https://www.beautifulwithbrains.com/product-review-olay-total-effects-night-firming-moisturiser/",
+         "domain": "www.beautifulwithbrains.com",
+         "description": "Walmart More\nNext-day delivery $7\nWonderful job at moisturizing my skin · Smoothes the texture of the skin Beautiful With Brains",
+         "more_sellers": false,
+         "seller": "Walmart",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRBl4EU5GVx3Q6zWjtfN5cmVwCL54io8bc5p_fLLLmlP4mSQLIlwZ5vhsEwazhenAx9WUTLqlUre7bqFUguF-FTQUCP8W-I7CX0GcOkF3paK8sm6QBnrf5RKA",
+         "price": {
+          "current": 7.94,
+          "regular": 9.05,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$7.94 $9.05"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 2600,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "13141593916869470421",
+          "data_docid": "13948508092888799151",
+          "gid": "4079306364599738993"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "First Aid Beauty Ultra Repair Firming Night Cream",
+         "url": null,
+         "domain": null,
+         "description": "Lookfantastic US More\nMoisturizes well (329 user reviews)",
+         "more_sellers": false,
+         "seller": "Lookfantastic US",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTMqzA8cDqe01xOGGRSgqkAznpCIlWxd2ih05dT6Y7Dueicwd63EipVoGONpgc3Bbz9z_aqa1CQxyumSYyDYePrXPh9F7-pWg-sFgTwo3j34Hz8gquVNtUBpA",
+         "price": {
+          "current": 40.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$40.40"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 771,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7067453140514043172",
+          "data_docid": "7657623228343800744",
+          "gid": "7568513183522077332"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Caudalie Vinosculpt Lift & Firm Body Cream",
+         "url": null,
+         "domain": null,
+         "description": "Sephora More\nFree delivery on $50+\nImproves skin texture (71 user reviews)",
+         "more_sellers": false,
+         "seller": "Sephora",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRpeoLwIqSVYwwUfIEwkfR5qBhZawp53LeLowL4SHBjYenGeJibXRcAmxUXrdFC_2RlKz2dnfzfeedPeqpC7gsukYRVRUd-DXGKNBJykjM6_Ocyj-seJ24a",
+         "price": {
+          "current": 45,
+          "regular": 0.18,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$45.00 $0.18/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.2,
+          "votes_count": 302,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "16630769958450068716",
+          "data_docid": "6354493698079478289",
+          "gid": "5921271989448892275"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Reshape Plus, Crepey Skin, Wrinkle Smoothing Cream, 15 fl oz (444 ml)",
+         "url": null,
+         "domain": null,
+         "description": "Walmart - iHerb More\nMoisturizes well (58 user reviews)",
+         "more_sellers": false,
+         "seller": "Walmart - iHerb",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRGckMsmPSvPSom6ewy3XvLDenq8572FNN_qpAp88kbqfOQGqN82WnDdocUl-vt8aCrb8iDfwKz5B-c_uPAW51IMJJLrEnM-1XjF8y9ioLSLQFX2Tc4Jyrr",
+         "price": {
+          "current": 16,
+          "regular": 1.07,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$16.00 $1.07/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 380,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2789396787187793637",
+          "data_docid": "7367582714374382442",
+          "gid": null
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]",
+       "domain": "fiskgroup.com",
+       "title": "Dermactin Crepe Be Gone Skin Firming Cream 2.5 oz.",
+       "url": "https://fiskgroup.com/products/0434dt",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://fiskgroup.com › Collections › Crepe Be Gone",
+       "website_name": "FiskGroup",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Crepe Be Gone Skin Firming Cream, the ultra- hydrating skin firming cream which helps smooth, plump and firm dry, aging, crepey skin.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "skin firming cream from fiskgroup.com",
+         "url": "https://fiskgroup.com/products/0434dt",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAUh5eYfJZtWExTmc_T-3VWBaSVoYA8XpGDgf-EhRzUn7hnklYN7eD&usqp=CAE&s=10"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Crepe Be Gone Skin Firming Cream"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[21]/div[1]/div[1]/div[1]",
+       "domain": "www.vogue.in",
+       "title": "Do body firming creams actually help tighten the skin?",
+       "url": "https://www.vogue.in/beauty/content/do-body-firming-creams-actually-help-tighten-the-skin",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.vogue.in › Beauty › Skin Tips",
+       "website_name": "Vogue India",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Jul 14, 2021 — When you use ingredients to boost collagen and elastin, the skin looks firmer as the collagen binds your skin together more tightly, making it ... Read more",
+       "pre_snippet": "07/14/2021 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "the skin looks firmer"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.vogue.in/beauty/content/do-body-firming-creams-actually-help-tighten-the-skin#:~:text=When%20you%20use%20ingredients%20to,and%20sagging%20skin%2C%E2%80%9D%20she%20explains.",
+         "domain": "www.vogue.in"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2021-07-14 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[23]/div[1]/div[1]/div[1]",
+       "domain": "www.facebook.com",
+       "title": "Yessss...my fav body firming cream has a rare 💲✂️🥳! ...",
+       "url": "https://www.facebook.com/lilacandlipgloss/posts/yessssmy-fav-body-firming-cream-has-a-rare-%EF%B8%8F-stocking-up-/1619081032911373/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "20+ reactions  ·  1 month ago",
+       "website_name": "Facebook · Lilac and Lip Gloss",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "It inhibits fat production, smoothes the surface of your skin, increases skin's firmness & reduces the appearance of CELLULITE! Yessss!!! Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "skin firming cream from www.facebook.com",
+         "url": "https://www.facebook.com/lilacandlipgloss/posts/yessssmy-fav-body-firming-cream-has-a-rare-%EF%B8%8F-stocking-up-/1619081032911373/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSswx0UBLxdEULk5sE_uMo_4onJRWFBNDkGOeIh0rs&usqp=CAE&s=10"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "increases skin's firmness"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.facebook.com/lilacandlipgloss/posts/yessssmy-fav-body-firming-cream-has-a-rare-%EF%B8%8F-stocking-up-/1619081032911373/#:~:text=It%20inhibits%20fat%20production%2C%20smoothes,appearance%20of%20CELLULITE!%20Yessss!!!%20%F0%9F%91%8F%F0%9F%8F%BC%F0%9F%91%8F",
+         "domain": "www.facebook.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[25]/div[1]/div[1]/div[1]",
+       "domain": "agelessmedspa.com",
+       "title": "Ageless Neck Firming Cream - Chicago, IL",
+       "url": "https://agelessmedspa.com/product/ageless-neck-firming-cream/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://agelessmedspa.com › product › ageless-neck-fir...",
+       "website_name": "agelessmedspa.com",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Ageless Neck Firming Cream. $105.00. This revolutionary neck firming cream delivers the latest technology in skin tightening and sag reduction. Developed with ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "skin firming cream from agelessmedspa.com",
+         "url": "https://agelessmedspa.com/product/ageless-neck-firming-cream/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4BsU4le6dnlK6bi0KohwIvvP0rs-iVj7JoWGsDiH4RMRYOvrH_FkH&usqp=CAE&s"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 105,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$105.00"
+       },
+       "highlighted": [
+        "Ageless Neck Firming Cream"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://agelessmedspa.com/product/ageless-neck-firming-cream/#:~:text=Ageless%20Neck%20Firming%20Cream,and%20sag%20reduction.%20Developed%20with",
+         "domain": "agelessmedspa.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[27]/div[1]/div[1]/div[1]",
+       "domain": "www.stonevillenc.org",
+       "title": "daily firming neck cream with peptides",
+       "url": "https://www.stonevillenc.org/daily-firming-neck-cream-with-peptides-select/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.stonevillenc.org › daily-firming-neck-crea...",
+       "website_name": "Town of Stoneville, NC",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Sep 14, 2026 — My personal jo May 27, 2026 · This firming cream also contains peptides and mushroom extract to give skin a firming boost—perfect for addressing ... Read more",
+       "pre_snippet": "09/14/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "peptides and mushroom extract"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.stonevillenc.org/daily-firming-neck-cream-with-peptides-select/#:~:text=My%20personal%20jo%20May%2027%2C,firming%20boost%E2%80%94perfect%20for%20addressing%20%E2%80%A6",
+         "domain": "www.stonevillenc.org"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-14 00:00:00 +00:00",
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

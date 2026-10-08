@@ -1,0 +1,638 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "14.1427 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080909-1509-0139-0000-90ffa756376f",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "14.0672 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "pdrn creme",
+    "location_code": 2276,
+    "language_code": "de",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "pdrn creme",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2276,
+     "language_code": "de",
+     "check_url": "https://www.google.com/search?q=pdrn%20creme&hl=de&gl=DE&ie=UTF-8&uule=w+CAIQIFISCWu-scIecppHEVvlkY5rXeh1",
+     "datetime": "2026-10-08 09:10:12 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Anti-Aging",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=anti-aging+pdrn+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r6lclnUuEFz1h_qVdzJ_AduEBTdIhkIVpql_YAiSxRObfykP3eOpo86zXytO-NVIJovceqtAoBX5d6fDxJdloCFx7Y-lL3hJfgNJ2PHp0ZvAnEHPimsA-NZDk8dIoZub_XCdPTrjUSczRFnipcSwydPwMHuf6bRXVCDPg8dNyUVNlkcPPn1VKTJ1Zm_JvV8kmiAApYA&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQxKsJKAB6BAgVEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Kollagenproduktion",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=kollagenproduktion+pdrn+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4ruNQoIX2hVRvWC7VWmS862LavV6t9mRtPfLISIzWulo13NO2fqpPVvJX6O_9RrsYfrAQyosovpR21tsEPwa5PppVjVjK3Rb4YRZntQJH38ytM2aCyHHkehVaZWHPr4hBA35yaVBAF6uxkrKGVxg5U-OBdjdoTwiN__01Ap-Onrv3ySaePDEM-xtVUkw8NtTevuhEp0g&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQxKsJKAF6BAgYEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Gesichtsseren",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=gesichtsseren+pdrn+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r03JvPzvGy4Kh_E-W0bL94CClhbgkvv_Bzu58MyIkrHyAU4Sx5dKoBa2vwxPf2qC6GLG92Hzr7UmFIyIz1-bWjgr8N_fyyj5nNV4ZTgsgOe8j08IZ03THoWOKbQPW95sEUyx9ZfotLyXWV3yeHiauG_v6XYGr98c1cObEn9LE7W9jyyjS&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQxKsJKAJ6BAgXEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Körperlotionen",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=k%C3%B6rperlotionen+pdrn+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rFa2o0JhNkSECFiglsbMkH88ugxMogR63bJSxs5b7i5CeDlqA53cUqNxwqBOw9ujImPDbB1KNzlo3jQ1bD4UdRIeHPcHCSMoxPC5t2iwW64BvWzhrJCa2aQCXT9d0AkR8IxCH10Q5_JoVsaAGvnh6CmqAfFl6iaIiTWaKwa1t_ukcnYYI&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQxKsJKAN6BAgaEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Retinol",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=retinol+pdrn+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rhfEV-4K40i-ZaIQJgdggp0mgE6Sdh2x0kv5Ao9JRvgla1eN-N8N5McZ7g0uvtrpgrZNlKES2BY9RM6yooD03Yc62IWKPsSECriDLtyzh2KejlaXX1kd1VFoCFVJmMfTiy32z42pQgyu-gAEC2LqrkNfNPyA6r2fkzYr3wPNUPuKAE1nIklfMhc1WQV8-EEnZaIPL_A&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQxKsJKAR6BAgUEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Vitamin C",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=vitamin+c+pdrn+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rTalc9ibXQalw1qPNRsa2kYBaCdLoPR4pyssA1uyuNCQ4TFXsCMV9SLq6uiTlDFQOQOREexfanq0i9gHiLWIYtfTGV1iqX8rlBWZdJbC_0QgchyHtD_sfqtTbZy82CcmQgO4gNrREMG32Y0gw073CFSFw5jsq5mv5jfHRUUVPPaZ8G6RGHQ_ec-MrfRPa5zOI7o9J4Q&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQxKsJKAV6BAhqEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Ceramide",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=ceramide+pdrn+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rqSnAA49QOFeU1_Vii_plUar2dGQknEOaaqG9DgNSqorXoudwJ41A9ueXUjIGFg1zikoRAKrp_iFdDfl3M4dNgUNGcET4ivzC9HNXEd0HHJNY5ceWaToWAxISJZWtmAf51OczFulQx04Odkurjfr8dXLDe8DrRtLvpmurMXTJSsL95Cm2dKYBQa4dtQHzfik6vOIYUA&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQxKsJKAZ6BAhpEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Niacinamid",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=niacinamid+pdrn+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rDl2wzj05RRnvsrTws3MXcFFe9dew3mVE6SAnMvFSehfTgvF9S6DdHas9u4TujisQlqxwGhTGvOcazZErqCmqVJiKpLxwbAsv0FE3YsQDu8dJUzv06mQqrW7f_O_MqR9v2-h3f9E5eggsyxzerqVBz4pBh16FlGhwkojAr_l2Uc_h51paJR47d69Kz8yS9Hiko05w3g&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQxKsJKAd6BAhoEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "images",
+      "related_searches"
+     ],
+     "se_results_count": 194,
+     "pages_count": 1,
+     "items_count": 12,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "www.kbeautyhouse.de",
+       "title": "PDRN zur Regeneration und Pflege deiner Haut",
+       "url": "https://www.kbeautyhouse.de/gesicht/inhaltsstoffe/pdrn/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.kbeautyhouse.de › Gesicht › Inhaltsstoffe",
+       "website_name": "K-Beauty House",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Entdecke PDRN – den innovativen Wirkstoff für Hautregeneration, Feuchtigkeit und ein ebenmäßiges Hautbild. Jetzt koreanische Pflege erleben!",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Was ist PDRn Cream?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Ist PDRn gut für die Haut?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Wann sollte man PDRN anwenden?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Ist PDRN für Microneedling geeignet?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+       "domain": "www.koreanbeauty.de",
+       "title": "PDRN in der Hautpflege | Lieferung innerhalb von 1-3 Tagen",
+       "url": "https://www.koreanbeauty.de/collections/pdrn",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.koreanbeauty.de › collections › pdrn",
+       "website_name": "koreanbeauty.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Der Inhaltsstoff macht die Haut nicht sonnenempfindlich, sodass ein PDRN-Serum genauso gut unter Ihrer Tagescreme/Make-up funktioniert wie über Nacht.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN-Serum"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+       "domain": "www.amazon.de",
+       "title": "Suchergebnis Auf Amazon.de Für: Pdrn Cream",
+       "url": "https://www.amazon.de/pdrn-cream/s?k=pdrn+cream",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.de › pdrn-cream › k=pdrn+cream",
+       "website_name": "Amazon.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Dr.Althea PDRN Reju 5000 Creme | Biome PDRN Creme für gereizte, empfindliche Haut | Beruhigende Gesichtscreme mit Panthenol und Centella | Koreanische vegane ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Dr.Althea PDRN Reju 5000 Creme"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]",
+       "title": "Bilder",
+       "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnugTUONH2qN-z5Uw6_hXPYqTCBgyA:1791450610762&q=pdrn+creme&udm=2&source=univ&fir=6u8IBy9Neou2LM%252CWknN8aIt-xrPjM%252C_%253BRP8YZrzjNaTU3M%252C8dGi_9aRXnLazM%252C_%253BRxp7Q4dHXd7nwM%252CkvMR6A_F7Dth5M%252C_%253BJp-c15ONwo7qSM%252C5BSMMhfPax0V9M%252C_%253BU64Gb5ijekC2IM%252CVZdfmxz6lq6BWM%252C_%253BW26WgkgDNbKxXM%252CYpp8VnaDMANZTM%252C_%253BlcR_yORJW7xU-M%252Ckhee7bG9ZGTYIM%252C_%253BCwBUuMhkz_FZLM%252CVGVKGugW5csSoM%252C_%253BSrkjpBC1ZIocIM%252Ckhee7bG9ZGTYIM%252C_&usg=AI4_-kRgPOhIcQGJzBxYoDzzTA_fbC1few&sa=X&ved=2ahUKEwjv26XKiaqXAxXPIEQIHXpAEKEQ7Al6BAgrEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "PDRN Capsule Cream 100 50ml",
+         "url": "https://www.koreanbeauty.be/products/vt-cosmetics-pdrn-capsule-cream-100-50ml",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-90ffa756376f:0"
+        },
+        {
+         "type": "images_element",
+         "alt": "Creme PDRN 40+ com DNA de Salmão - 30g",
+         "url": "https://www.pharmaciaantiga.com/beleza/mulher/antienvelhecimento/creme-pdrn-40",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-90ffa756376f:1"
+        },
+        {
+         "type": "images_element",
+         "alt": "VT COSMETICS PDRN Cream 100 hidratante nutritivo e restaurador",
+         "url": "https://www.amazon.com.br/VT-COSMETICS-hidratante-nutritivo-restaurador/dp/B0DG1NJDX1",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-90ffa756376f:2"
+        },
+        {
+         "type": "images_element",
+         "alt": "Advanced PDRN Rejuvenating Cream",
+         "url": "https://kbeautystore.com/de/products/advanced-pdrn-rejuvenating-cream",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbnJir6-r89SMr5TPWmPDuDA58K-t8R23bidc4nGO1oI6gpGNCSE_Ox4&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Rejuvenex Repair Cream",
+         "url": "https://noticemestore.com/de/products/rejuvenex-pdrn-cream",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPZdSI_55LOYpC4lno6-x5JqjRZeHeWSlekvDIo_AAysfrIX4nEjUsyI4&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "PDRN EXCELLENCE CREME 30G - Comprar em Dalissa",
+         "url": "https://www.dalissa.com.br/produtos/pdrn-excellence-creme-30g/?srsltid=AU7gw4U5f74dy3n0lfKwNGh170Vi-GqE5VeZoy0VOktsZt7qvK-lzYjM",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWpmPn1GS1BKb3ehAOFnrqik73l1NyA07ffJrzcr955218i5P4-L-99bs&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Creme PDRN Firmador 30g | Polinucleotídeos e Antioleosidade",
+         "url": "https://smartgr.com.br/products/pdrn-creme-firmador-e-antioleosidade-30-g-smart-gr?srsltid=AU7gw4USzrFzq46EHgf60pqpHPvHVbFkopGTky-Yq9az_hyDwnq1T3BI",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVnP1bMmh8KdUBSFc8LMtqnaxNSR8cI5PIPuoZKnDMgHbDilXxWZYUDe0&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "ANUA Pdrn Hyaluronzuur 100 Hydraterende Crème, Lichtgewicht ...",
+         "url": "https://www.amazon.nl/ANUA-Hyaluronzuur-Hydraterende-Cr%C3%A8me-Lichtgewicht/dp/B0DWFLY18Y",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtY-inXW55UwRpMTF74XIJkt-XQArB_YrbvxILYYwoJ0uT5lMbxPVSQ_4&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Creme PDRN Firmador 30g | Polinucleotídeos e Antioleosidade",
+         "url": "https://smartgr.com.br/products/pdrn-creme-firmador-e-antioleosidade-30-g-smart-gr?srsltid=AU7gw4WNClidpIGarokRnNZNuVYZ1RjyLo_P7nO1zonHn3uPiHlytwez",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjQSjOwranSCJcfV-cfR_x-rxkHChpzMK5rgtpSS7H3ONaW47D1CncuM&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]",
+       "domain": "www.littlewonderland.de",
+       "title": "PDRN Hautpflege: Wirkung, Vorteile & Produkte",
+       "url": "https://www.littlewonderland.de/blogs/k-beauty/pdrn-in-der-hautpflege-alles-was-du-wissen-musst/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.littlewonderland.de › ... › LW Blog",
+       "website_name": "littlewonderland.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "PDRN unterstützt den Regenerationsprozess der Haut und hilft, die Hautbarriere stark zu halten. Deshalb ist es ein angenehmer Wirkstoff, wenn sich deine Haut ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN unterstützt den Regenerationsprozess der Haut"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+       "domain": "ksisters.de",
+       "title": "PDRN in K-Beauty: Was ist das und warum reden alle darüber?",
+       "url": "https://ksisters.de/blog/post/pdrn-in-k-beauty-what-it-is-and-why-everyones-talking-about-it?srsltid=AU7gw4Vou0ggVc6dDlGpSXecsT_xy9OMI1YTLJ_19GadAIGfAW83eMEs",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://ksisters.de › Tipps von Sisters",
+       "website_name": "ksisters.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "20.08.2025 — Toner & Essenzen mit PDRN spenden der Haut intensive Feuchtigkeit, fördern ihre Regeneration und verbessern die Elastizität dank der starken ...",
+       "pre_snippet": "08/20/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "spenden der Haut intensive Feuchtigkeit"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-08-20 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[16]/div[1]/div[1]",
+       "domain": "korean-skincare.de",
+       "title": "Medicube - PDRN Pink Collagen Capsule Cream",
+       "url": "https://korean-skincare.de/products/medicube-pdrn-pink-collagen-capsule-cream",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://korean-skincare.de › products › medicube-pdrn-p...",
+       "website_name": "Korean Skincare Germany",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Diese luxuriöse Creme ist ideal für matte, trockene oder reife Haut und zusätzlich mit Niacinamid, Panthenol und Hyaluronsäure angereichert, um die Haut ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.4,
+        "votes_count": 43,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 24.95,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "24,95 €"
+       },
+       "highlighted": [
+        "ideal für matte, trockene oder reife Haut"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]",
+       "domain": "www.formelskin.de",
+       "title": "PDRN & Lachs-DNA: K-Beauty Revolution oder Hype?",
+       "url": "https://www.formelskin.de/skin-care/pdrn-hautpflege-der-k-beauty-trend",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.formelskin.de › skin-care › pdrn-hautpfleg...",
+       "website_name": "formel skin",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "PDRN gilt als regenerativer Wirkstoff, der die Struktur der Haut stärkt. Sein Ansatz beginnt tief in den Zellen, wo Reparaturprozesse unterstützt und Schäden ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "PDRN gilt als regenerativer Wirkstoff, der die Struktur der Haut stärkt"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]",
+       "domain": "www.douglas.de",
+       "title": "PDRN ❤️ Guide: Wirkung, Anwendung & Vorteile",
+       "url": "https://www.douglas.de/de/c/koreanische-kosmetik/korean-skincare/pdrn/99290115",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.douglas.de › ... › Korean Skincare",
+       "website_name": "Douglas",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Wirkung: regenerierend, feuchtigkeitsspendend, hautbarrierestärkend · Anwendungsempfehlung: Seren, Masken und Cremes · Hauttypen: für alle Hauttypen, besonders ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Wirkung: regenerierend, feuchtigkeitsspendend, hautbarrierestärkend"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[22]/div[1]/div[1]",
+       "domain": "www.idealo.de",
+       "title": "Vt Cosmetics PDRN Cream 100 Gesichtscreme 50 ml",
+       "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/209454806_-pdrn-cream-100-gesichtscreme-50-ml-vt-cosmetics.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.idealo.de › ... › Gesichtspflege",
+       "website_name": "Idealo",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Fazit · enthält 100.000 ppm pflanzliches PDRN aus Ginseng · mit 5-Ceramid-Komplex zur Stärkung der Hautbarriere · parfümfrei, ohne synthetische Duftstoffe ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 27.16,
+        "regular": null,
+        "max_value": 38.99,
+        "currency": "EUR",
+        "is_price_range": true,
+        "displayed_price": "27,16 € bis 38,99 €"
+       },
+       "highlighted": [
+        "enthält 100.000 ppm pflanzliches PDRN aus Ginseng"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "PDRN Creme dm",
+        "PDRN Cream kaufen",
+        "Beste PDRN Creme",
+        "PDRN Erfahrungen",
+        "PDRN Capsule Cream",
+        "PDRN Creme Wirkung"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1301 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "9.5996 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080903-1509-0139-0000-3adf6e276f96",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "9.4252 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "microneedling serum",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "microneedling serum",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=microneedling%20serum&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+     "datetime": "2026-10-08 09:03:55 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Nearby",
+        "url": "https://www.google.com/search?q=microneedling+serum+nearby&hl=en&gl=US&shoprs=GAMqE21pY3JvbmVlZGxpbmcgc2VydW0yDAgDEgZOZWFyYnkYAljDkiFgAQ&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAF6BQg1EIkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Reviews",
+        "url": "https://www.google.com/search?q=reviews+microneedling+serum&hl=en&gl=US&shoprs=GBIqE21pY3JvbmVlZGxpbmcgc2VydW0yCwgSEgdSZXZpZXdzYAE&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAJ6BQg1EIoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hair Loss Treatments",
+        "url": "https://www.google.com/search?q=hair+loss+treatments+microneedling+serum&hl=en&gl=US&shoprs=GAkqE21pY3JvbmVlZGxpbmcgc2VydW0yGAgJEhRIYWlyIExvc3MgVHJlYXRtZW50c2AB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAN6BQg1EIsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Wrinkles",
+        "url": "https://www.google.com/search?q=wrinkles+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yGggBEghXcmlua2xlczoMCLKArAIQtoCsAjAAWMOSIWAB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAR6BQg1EIwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Price",
+        "url": "https://www.google.com/search?q=price+microneedling+serum&hl=en&gl=US&shoprs=GBIqE21pY3JvbmVlZGxpbmcgc2VydW0yCQgSEgVQcmljZWAB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAV6BQg1EI0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Anti-aging",
+        "url": "https://www.google.com/search?q=anti-aging+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yGggBEgpBbnRpLWFnaW5nOgoI7OEtEKHbLTAAWMOSIWAB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAZ6BQg1EI4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Retinol",
+        "url": "https://www.google.com/search?q=retinol+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yFwgBEgdSZXRpbm9sOgoIwdstEMLbLTAAWMOSIWAB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAd6BQg1EI8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Niacinamide",
+        "url": "https://www.google.com/search?q=niacinamide+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yHAgBEgtOaWFjaW5hbWlkZToLCMHbLRCkgKwCMABYw5IhYAE&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAh6BQg1EJAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "On sale",
+        "url": "https://www.google.com/search?q=microneedling+serum+sale&hl=en&gl=US&shoprs=EgRKAhgBGAYqE21pY3JvbmVlZGxpbmcgc2VydW0yEwgGEgdPbiBzYWxlGAIiBEoCGAFYw5IhYAE&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAl6BQg1EJEB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Moisturizers",
+        "url": "https://www.google.com/search?q=moisturizers+microneedling+serum&hl=en&gl=US&shoprs=GAkqE21pY3JvbmVlZGxpbmcgc2VydW0yEAgJEgxNb2lzdHVyaXplcnNgAQ&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAp6BQg1EJIB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hyperpigmentation",
+        "url": "https://www.google.com/search?q=hyperpigmentation+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yIwgBEhFIeXBlcnBpZ21lbnRhdGlvbjoMCLKArAIQtICsAjAAWMOSIWAB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAt6BQg1EJMB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Moisturizers",
+        "url": "https://www.google.com/search?q=facial+moisturizers+microneedling+serum&hl=en&gl=US&shoprs=GAkqE21pY3JvbmVlZGxpbmcgc2VydW0yFwgJEhNGYWNpYWwgTW9pc3R1cml6ZXJzYAE&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKAx6BQg1EJQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Pink",
+        "url": "https://www.google.com/search?q=pink+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yFggBEgRQaW5rOgwI2Iz1ARDpivUBMAtYw5IhYAE&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKA16BQg1EJUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Buy",
+        "url": "https://www.google.com/search?q=buy+microneedling+serum&hl=en&gl=US&shoprs=GBIqE21pY3JvbmVlZGxpbmcgc2VydW0yBwgSEgNCdXlgAQ&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKA56BQg1EJYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Rollers & Microneedling",
+        "url": "https://www.google.com/search?q=facial+rollers+%26+microneedling+serum&hl=en&gl=US&shoprs=GAkqE21pY3JvbmVlZGxpbmcgc2VydW0yIggJEh5GYWNpYWwgUm9sbGVycyAmIE1pY3JvbmVlZGxpbmdgAQ&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKA96BQg1EJcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hyaluronic Acid",
+        "url": "https://www.google.com/search?q=hyaluronic+acid+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yIAgBEg9IeWFsdXJvbmljIEFjaWQ6CwjB2y0QoYCsAjAAWMOSIWAB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBB6BQg1EJgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Eye Cream",
+        "url": "https://www.google.com/search?q=eye+cream+microneedling+serum&hl=en&gl=US&shoprs=GAkqE21pY3JvbmVlZGxpbmcgc2VydW0yDQgJEglFeWUgQ3JlYW1gAQ&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBF6BQg1EJkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For All Skin Types",
+        "url": "https://www.google.com/search?q=microneedling+serum+for+all+skin+types&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yJAgBEhJGb3IgQWxsIFNraW4gVHlwZXMYAjoKCLL4OxC1-DswAFjDkiFgAQ&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBJ6BQg1EJoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Vitamin C",
+        "url": "https://www.google.com/search?q=vitamin+c+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yGQgBEglWaXRhbWluIEM6CgjB2y0Qv65RMABYw5IhYAE&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBN6BQg1EJsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Body",
+        "url": "https://www.google.com/search?q=body+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yFAgBEgRCb2R5OgoIn9ktEKDZLTACWMOSIWAB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBR6BQg1EJwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Collagen Boosting",
+        "url": "https://www.google.com/search?q=collagen+boosting+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yIQgBEhFDb2xsYWdlbiBCb29zdGluZzoKCOzhLRDG2y0wAFjDkiFgAQ&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBV6BQg1EJ0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Brown",
+        "url": "https://www.google.com/search?q=brown+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yFwgBEgVCcm93bjoMCNiM9QEQ64r1ATALWMOSIWAB&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBZ6BQg1EJ4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Gold",
+        "url": "https://www.google.com/search?q=gold+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yFggBEgRHb2xkOgwI2Iz1ARDbi_UBMAtYw5IhYAE&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBd6BQg1EJ8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Blue",
+        "url": "https://www.google.com/search?q=blue+microneedling+serum&hl=en&gl=US&shoprs=GAEqE21pY3JvbmVlZGxpbmcgc2VydW0yFggBEgRCbHVlOgwI2Iz1ARDmivUBMAtYw5IhYAE&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQip4GKBh6BQg1EKAB",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "popular_products",
+      "images",
+      "short_videos",
+      "product_considerations",
+      "related_searches"
+     ],
+     "se_results_count": 77500,
+     "pages_count": 1,
+     "items_count": 15,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Post-microneedling serum recommendations for hydration ...",
+       "url": "https://www.reddit.com/r/45PlusSkincare/comments/1tiqjub/postmicroneedling_serum_recommendations_for/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "3 comments  ·  4 months ago",
+       "website_name": "Reddit · r/45PlusSkincare",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Just did my first at-home microneedling session at 0.25 mm using a Dr Pen A11. Curious what others personally use afterward for hydration and recovery ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": [
+        {
+         "type": "link_element",
+         "title": "3 answers",
+         "description": null,
+         "url": "https://www.reddit.com/r/45PlusSkincare/comments/1tiqjub/comment/on47nu4/",
+         "domain": "www.reddit.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What serum do I use when microneedling?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the best serum for microneedling?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Do microneedle serums really work?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the best professional microneedling serum?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+       "domain": "www.melaninlaserclinic.com",
+       "title": "Microneedling Therapy: The Answer to Acne Scars, Wrinkles ...",
+       "url": "https://www.melaninlaserclinic.com/blog/microneedling-therapy-the-answer-to-acne-scars-wrinkles-and-stretch-marks-by-manuel-c-octaviano-jr",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.melaninlaserclinic.com › blog › microneedli...",
+       "website_name": "melaninlaserclinic.com",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Jan 10, 2016 — This minimally invasive procedure uses a device that contains very fine needles that punctures the skin effectively enough to stimulate collagen ... Read more",
+       "pre_snippet": "01/10/2016 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.melaninlaserclinic.com/blog/microneedling-therapy-the-answer-to-acne-scars-wrinkles-and-stretch-marks-by-manuel-c-octaviano-jr#:~:text=This%20minimally%20invasive%20procedure%20uses,stimulate%20collagen%20and%20elastin%20production.",
+         "domain": "www.melaninlaserclinic.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2016-01-10 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "What serum do we use for at home Microneedling guys?",
+       "url": "https://www.reddit.com/r/Microneedling/comments/1w6zque/what_serum_do_we_use_for_at_home_microneedling/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "10+ comments  ·  1 month ago",
+       "website_name": "Reddit · r/Microneedling",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Hyaluronic acid is the safest bet for slip, just make sure it's the pure kind without fragrance or weird additives. Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Hyaluronic acid is the safest bet for slip"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.reddit.com/r/Microneedling/comments/1w6zque/what_serum_do_we_use_for_at_home_microneedling/#:~:text=Hyaluronic%20acid%20is%20the%20safest,without%20fragrance%20or%20weird%20additives.",
+         "domain": "www.reddit.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]",
+       "title": "Popular products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "BRÜUN Advance Microneedling Korean Serum 4 Different Booster Ampule Kit for Face and Body Including – Use",
+         "url": null,
+         "domain": null,
+         "description": "Bruun Beauty & more\nFor All Skin Types · Bottle · Cruelty-free",
+         "more_sellers": true,
+         "seller": "Bruun Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:0",
+         "price": {
+          "current": 94.95,
+          "regular": 169,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$94.95 $169"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 6,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "16501945750183513174",
+          "data_docid": "14600914912681156248",
+          "gid": "8445726504416183038"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "BRÜUN SD Control Salmon DNA Ampoule Micro Needling Korean Serum Booster for Face and Body to Use with and without Derma Pen Microneedling Skin",
+         "url": null,
+         "domain": null,
+         "description": "Bruun Beauty & more",
+         "more_sellers": true,
+         "seller": "Bruun Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:1",
+         "price": {
+          "current": 30.95,
+          "regular": 78,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$30.95 $78"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 15,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "13807052792350987502",
+          "data_docid": "13189171908525359618",
+          "gid": "17796625443740386798"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Microneedling Serum Hyaluronic Acid for Microneedling",
+         "url": null,
+         "domain": null,
+         "description": "Lush N Lavish",
+         "more_sellers": false,
+         "seller": "Lush N Lavish",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:2",
+         "price": {
+          "current": 24.98,
+          "regular": 40,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$24.98 $40"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 99,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "6551876895188535885",
+          "data_docid": "7381846084905059010",
+          "gid": "4927754988987623623"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "3% EGF SKIN RENEWAL Serum Microneedling",
+         "url": null,
+         "domain": null,
+         "description": "Korea Labs\nAloe, Niacinamide · For All Skin Types · Anti-aging, Collagen Boosting",
+         "more_sellers": false,
+         "seller": "Korea Labs",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:3",
+         "price": {
+          "current": 69.41,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$69.41"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "5939199647171131558",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "VT Cosmetics VT Reedle Shot 700",
+         "url": "https://www.tiktok.com/@mysistersskin/video/7534569969791569207",
+         "domain": "www.tiktok.com",
+         "description": "Nordstrom & more\nFree delivery\nAbsorbs quickly · Layers well under makeup TikTok",
+         "more_sellers": true,
+         "seller": "Nordstrom",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:4",
+         "price": {
+          "current": 33,
+          "regular": 33,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$33.00 $33/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 2200,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14364203796458882177",
+          "data_docid": "6261369609256787926",
+          "gid": "13378641869005108092"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Regenerating Micro-Spicules Serum A63",
+         "url": null,
+         "domain": null,
+         "description": "Typology & more\nFor All Skin Types · Collagen Boosting · Night",
+         "more_sellers": true,
+         "seller": "Typology",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:5",
+         "price": {
+          "current": 45.5,
+          "regular": 91,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$45.50 $91/fl oz"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "3337368562566863380",
+          "data_docid": "762667535757255011",
+          "gid": "2474807393597694959"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Younskin Collagen Peptide Microneedling Serum for Skin & Lips",
+         "url": null,
+         "domain": null,
+         "description": "Dermishop & more\nHyaluronic Acid · For All Skin Types · Anti-aging",
+         "more_sellers": true,
+         "seller": "Dermishop",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:6",
+         "price": {
+          "current": 96.95,
+          "regular": 124,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$96.95 $124"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "13306088406030280396",
+          "data_docid": "8974224245400579469",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Bliss Pro Microneedling Serum",
+         "url": null,
+         "domain": null,
+         "description": "Bliss & more\nHyaluronic Acid · For All Skin Types · Serum",
+         "more_sellers": true,
+         "seller": "Bliss",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:7",
+         "price": {
+          "current": 38,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$38.00"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "5857386449946399794",
+          "data_docid": "4507052692185538507",
+          "gid": "6011480724837012796"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]",
+       "domain": "www.realself.com",
+       "title": "What is the best product to dermapen with?",
+       "url": "https://www.realself.com/question/los-angeles-ca-iss-product-dermapen",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.realself.com › Q&A › Dermapen Questions",
+       "website_name": "Realself",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Jul 16, 2019 — microneedling can help improve the appearance of stretch marks by stimulating collagen production, promoting skin regeneration, and reducing ...",
+       "pre_snippet": "07/16/2019 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "microneedling can help improve the appearance of stretch marks"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2019-07-16 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 2,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]",
+       "title": "More products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Best Stem Cell Serum for Microneedling",
+         "url": null,
+         "domain": null,
+         "description": "Calecim Professional & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Calecim Professional",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:8",
+         "price": {
+          "current": 170,
+          "regular": 85,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$170.00 $85/ct"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 51,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14314235449675760403",
+          "data_docid": "13261675680786234984",
+          "gid": "8869483839021478003"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Advanced Serum HY - Control Hyaluronic Aqua Solution Microneedling - Serum + Derma Roller Black",
+         "url": null,
+         "domain": null,
+         "description": "Bruun Beauty\nFree delivery\nFor All Skin Types · Bottle · Cruelty-free",
+         "more_sellers": false,
+         "seller": "Bruun Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:9",
+         "price": {
+          "current": 49.95,
+          "regular": 79,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$49.95 $79"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "3526676733163171182",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Anti-Aging Skin Needling Serum Bundle",
+         "url": null,
+         "domain": null,
+         "description": "Dr. Pen\nFree delivery\nHyaluronic Acid, Jojoba Oil · For All Skin Types · Anti-aging, Collagen Boosting",
+         "more_sellers": false,
+         "seller": "Dr. Pen",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:10",
+         "price": {
+          "current": 341.95,
+          "regular": 16,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$341.95 $16/ct"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "11901980602061355064",
+          "data_docid": "4236875653379410365",
+          "gid": "1273542012597912037"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "BRÜUN SC Control Stem Cell Serum Ampoule Micro Needling Korean Booster for Face and Body to Use with and without Derma Pen Microneedling Skin",
+         "url": null,
+         "domain": null,
+         "description": "Bruun Beauty & more",
+         "more_sellers": true,
+         "seller": "Bruun Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:11",
+         "price": {
+          "current": 30.95,
+          "regular": 55,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$30.95 $55"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 5,
+          "votes_count": 12,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11390210985347546676",
+          "data_docid": "10805469253449206769",
+          "gid": "16319434641406280626"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "DRMTLGY Needle-less Growth Factor Firming and Lifting Serum",
+         "url": null,
+         "domain": null,
+         "description": "drmtlgy.com & more\nFree delivery\nImproves skin texture (171 user reviews)",
+         "more_sellers": true,
+         "seller": "drmtlgy.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:12",
+         "price": {
+          "current": 69,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$69.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 731,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2069270233463419319",
+          "data_docid": "1680194323695470172",
+          "gid": "16643556662832784654"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "HS Microneedling Serum - Control Hair and Scalp Ampoule, Serum + Derma Roller Black",
+         "url": null,
+         "domain": null,
+         "description": "Bruun Beauty\nFree delivery",
+         "more_sellers": false,
+         "seller": "Bruun Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:13",
+         "price": {
+          "current": 49.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$49.95"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "15807946575131144421",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Natuderma Microneedling Serum with Hyaluronic Acid + DMAE | Skin Booster",
+         "url": null,
+         "domain": null,
+         "description": "Dermishop & more\nDMAE, Hyaluronic Acid, ... · For All Skin Types · Anti-aging, Collagen Boosting",
+         "more_sellers": true,
+         "seller": "Dermishop",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSy7mpUBseSfr_FuBOEKVMiicR4_BPgRYPSIT_xtKN4WghCDqcTL-P_ZgjdT4aW0CgfahPhmwM609drCl8cuZfaUs-ChYMBQbywa7NGs7B1TAGclvlo8s6S",
+         "price": {
+          "current": 86.95,
+          "regular": 110,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$86.95 $110"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "2218640910065027782",
+          "data_docid": "16317016876516965353",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "fractional CC Needle Serum CX4",
+         "url": null,
+         "domain": null,
+         "description": "YesStyle.com & more\nFree delivery on $35+\nVitamin C, Ceramides, ... · For All Skin Types · Hyperpigmentation, ...",
+         "more_sellers": true,
+         "seller": "YesStyle.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-3adf6e276f96:14",
+         "price": {
+          "current": 22.78,
+          "regular": 27,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$22.78 $27"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 127,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4468687504759118881",
+          "data_docid": "17966262199789308923",
+          "gid": null
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=en&gl=US&sxsrf=APpeQntnlF-OMcJ6ag9feAGgKs4LCibuKg:1791450232439&q=microneedling+serum&udm=2&source=univ&fir=mnIV-r-PI84SyM%252CUQolXQnIPwpDlM%252C_%253Bxs5cq1sPE1bTPM%252CbOC_16vqxOe9OM%252C_%253BNtYS0ys0-eP30M%252Cjabf3YhqP4fklM%252C_%253B-iLpvucG8UcE3M%252C-NEP734qSeXB8M%252C_%253ByKJ21qYSVnJPFM%252CJcbZh_BTcI59nM%252C_%253Bij8LitrEEa5L3M%252Cp9KzbmSQCPh51M%252C_%253BWEeZIwvB9Uk-7M%252CXJ8IEneXwHPiaM%252C_%253BDeDz1PQaD6MEjM%252C29H_TZj1WF_lNM%252C_%253B539So8XxUu0jwM%252CEBLKe9b-UQJclM%252C_&usg=AI4_-kQ1JAoojeD4wCf77A-RDOKeD-Iy4A&sa=X&ved=2ahUKEwiEqPCViKqXAxVHVUEAHUAMB5UQ7Al6BAhsEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "The Best Microneedling Serums, According to Derms - What Is ...",
+         "url": "https://www.harpersbazaar.com/beauty/skin-care/g64608385/best-microneedling-serums/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEqHtwPT7ZGDjwr6uh7bWve-r_609gGZkGiXH47grvWgvZZc96zrFwuy0&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "10 Best Serums For Microneedling – 2026: Recommended By ...",
+         "url": "https://www.stylecraze.com/articles/best-serums-microneedling/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNm3NRe2zNaAc69wAcNilpCAuRAZzxzAOkL2uheNOHubDoYm7UV_IxeVQ&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "VT Cosmetics - Microneedling Serum Reedle Shot - 700",
+         "url": "https://www.maquibeauty.com/vt-cosmetics-microneedling-serum-reedle-shot-700-p-87150.html",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdOiMg77Ixt4stfR3m9-m7UN7h6H-ecvZV7Ql5GpId7ayuPFW28xx6Fug&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Microneedling Serums Compared to Regular Microneedling ...",
+         "url": "https://banish.com/blogs/article/liquid-microneedling-compared-to-regular-microneedling-whats-the-difference?srsltid=AU7gw4XGgFS8zn7aUINyD3y1Qx80zIG5wzLgyZyuI2foHVle8OrEfqI-",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn1V5MHfhYlXBzQ6bsO6i2y-W-3N6ysFbj8vqx9JhV5MbPjsKqj_jrbEg&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Microneedling with Serum: Benefits & Guide – Dr Pen UK",
+         "url": "https://www.dr-pen.co.uk/2022/08/25/microneedling-with-a-serum/?srsltid=AU7gw4U9g0yEcIBz4uGQUBg7xek6GwhSNBS_-7y1oh3ljlltypjLI8jp",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ67P4pMdtnQfbKocoSZuQnlOBiMHax3R6qaEKQuDGgNufzLTr4nX3kFAQ&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "microneedling serum Archives - Natuderma Skincare Products",
+         "url": "https://natuderma.com/product-tag/microneedling-serum/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAmULu_mctxy2SSiuBkviWM5jKk3p5XDOFKJ_3BrxdxEfUU_2ygqdnZEY&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Amazon.com: Microneedling Serum Ampoule with Hyaluronic Acid ...",
+         "url": "https://www.amazon.com/Microneedling-Serum-Ampoule-Hyaluronic-Acid/dp/B0GCK525V5",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxFlfPSfqLdz4BCe9lUhZDeWG0UKnK0dc4rqE5B2pxN-RoiE6CDOldn1E&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "MDPen C+E Serum: Post-Microneedling Benefits | MDPen USA",
+         "url": "https://mdpen.co/blog/the-benefits-of-using-mdpen-ce-serum-after-microneedling-a-comprehensive-guide/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9Kiex57i1c7Jebmy0_9C6uDEjda4R5auSWfZmbJ26qbyDZXKtP8HeHk&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Microneedling Serum from Germany #1",
+         "url": "https://d-a.works/en/matrixneedling/products/serum/?srsltid=AU7gw4VsNjJUns7aCAUaz57vk0rQlvs5RBrdndesGuzj3N62RSktwBqD",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx5NfOl0faryph-WL4JuUakAljCLZSi98S7622P_PAZQDs5StM7u0S1dc&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]",
+       "domain": "answers.skin-beauty.com",
+       "title": "Is this serum for microneedling as well? AnteAGE Serum",
+       "url": "https://answers.skin-beauty.com/3741730/Is-this-serum-for-microneedling-as-well",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://answers.skin-beauty.com › Is-this-serum-for-micr...",
+       "website_name": "Skin Beauty",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Sep 16, 2021 — The microneedling solution has hyaluronic acid, and the serum does not; both contain stem cells. The serum also contains niacinamide which is ...",
+       "pre_snippet": "09/16/2021 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "both contain stem cells"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2021-09-16 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]",
+       "domain": "wellaholic.com",
+       "title": "Serum After Microneedling: Hyaluronic Acid & More",
+       "url": "https://wellaholic.com/blog/what-serums-are-recommended-after-microneedling/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://wellaholic.com › Beauty Services",
+       "website_name": "Wellaholic",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Jun 11, 2026 — Wondering what serum to use after microneedling? Wellaholic's expert team covers hyaluronic acid, niacinamide, and retinol timing for ...",
+       "pre_snippet": "06/11/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "serum",
+        "microneedling"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-06-11 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[21]/div[1]/div[1]",
+       "domain": "gopicky.com",
+       "title": "Is the microneedling serum good for come... | Routine Help",
+       "url": "https://gopicky.com/discussion/117481/is-the-microneedling-serum-good-for-comedones-and-acne",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://gopicky.com › Discussion",
+       "website_name": "Picky",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "its made for acne and texture !! this is the one product that calmed my acne so much and texture was gone so fast!! ( i used 300 though ). Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "its made for acne and texture"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://gopicky.com/discussion/117481/is-the-microneedling-serum-good-for-comedones-and-acne#:~:text=its%20made%20for%20acne%20and,i%20used%20300%20though%20)",
+         "domain": "gopicky.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "short_videos",
+       "rank_group": 1,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[23]/div[1]",
+       "title": "Short videos",
+       "items": [
+        {
+         "type": "short_videos_element",
+         "title": "This is the Serum Your Microneedling Treatment needs",
+         "url": "https://www.youtube.com/shorts/odxrBQZGnDU",
+         "domain": "google.com",
+         "source": "Clinical Resolution Laboratory, Inc."
+        },
+        {
+         "type": "short_videos_element",
+         "title": "At-Home Microneedling SERIES | Part 16: What Serum To Use ...",
+         "url": "https://www.instagram.com/reel/DWJwQXQhVnO/?hl=en",
+         "domain": "google.com",
+         "source": "Darnell Cox"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "What's the Best Serum for Microneedling?",
+         "url": "https://www.youtube.com/shorts/PYU5f8o4NKc",
+         "domain": "google.com",
+         "source": "Spa and Tell"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Do you know the secret to making your serum work harder? ...",
+         "url": "https://www.facebook.com/trinnylondon/videos/do-you-know-the-secret-to-making-your-serum-work-harderby-prepping-your-skin-wit/2647594795635131/",
+         "domain": "google.com",
+         "source": "Trinny London"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Hyaluronic Acid Serum for Microneedling: Thicken Thin Serums",
+         "url": "https://www.tiktok.com/@skinwithjayme/video/7538906091460070670",
+         "domain": "google.com",
+         "source": "skinwithjayme"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Best Microneedling Glide Serum for Beginners at Home",
+         "url": "https://www.tiktok.com/@wanderwithbeck/video/7604739211891150094",
+         "domain": "google.com",
+         "source": "wanderwithbeck"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "We are consistently impressed by this innovative Korean at ...",
+         "url": "https://www.instagram.com/reel/DVJb8q3jgzX/",
+         "domain": "google.com",
+         "source": "Marissa & Gina"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Best Microneedling Serums for 65+ Skin #shorts",
+         "url": "https://www.youtube.com/shorts/JzHfHq16eVY?vl=en",
+         "domain": "google.com",
+         "source": "Platinum Skin Care"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Replying to @kingissupreme see my microneedling playlist for ...",
+         "url": "https://www.tiktok.com/@skinwithjayme/video/7513546052700474670",
+         "domain": "google.com",
+         "source": "skinwithjayme"
+        },
+        {
+         "type": "short_videos_element",
+         "title": "Over-the-counter face serums like The Ordinary's Hyaluronic Aci",
+         "url": "https://www.facebook.com/bellsbeautybox/videos/%EF%B8%8F-microneedling-mistake-to-avoid-%EF%B8%8Fthinking-you-can-use-any-serum-during-micronee/678581941896329/",
+         "domain": "google.com",
+         "source": "Bells Beauty Box"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[25]/div[1]/div[1]",
+       "domain": "www.acne.org",
+       "title": "Microneeding Needling The Derminator Dermastamping ...",
+       "url": "https://www.acne.org/forums/7-scar-treatments/359068-microneeding-needling-the-derminator-dermastamping-thread-all-things-microneedling/paged/7",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.acne.org › ... › Acne Scars",
+       "website_name": "Acne.org",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Apr 17, 2011 — I just continue to use pure HA and vitamin c serum. Retin A micro or differin is great. Yes you stop a day or two before microneedling and a day ... Read more",
+       "pre_snippet": "04/17/2011 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "pure HA and vitamin c serum"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.acne.org/forums/7-scar-treatments/359068-microneeding-needling-the-derminator-dermastamping-thread-all-things-microneedling/paged/7#:~:text=I%20just%20continue%20to%20use,before%20microneedling%20and%20a%20day",
+         "domain": "www.acne.org"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2011-04-17 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "product_considerations",
+       "rank_group": 1,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[27]/div[1]",
+       "title": "Things to know",
+       "items": [
+        {
+         "type": "product_considerations_element",
+         "title": "What are the benefits of using microneedling serum?",
+         "consideration_category": "Benefits",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What are the potential side effects of using microneedling serum?",
+         "consideration_category": "Side Effects",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How does microneedling serum work?",
+         "consideration_category": "How It Works",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What is the price range for microneedling serum?",
+         "consideration_category": "Price Range",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How to choose the right microneedling serum?",
+         "consideration_category": "Choosing a Serum",
+         "expanded_element": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 15,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Best microneedling serum",
+        "Microneedling serum reviews"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

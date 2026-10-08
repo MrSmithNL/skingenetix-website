@@ -1,0 +1,508 @@
+# Website traffic and performance plan — rank first for every page's keyword (2026-10-08)
+
+**For:** Malcolm. **Status:** plan for decision; nothing in Part 6 has been executed. **Supersedes nothing:** it absorbs the
+ranking plan of 2026-10-07 (`docs/seo-performance-and-ranking-plan-2026-10-07.md`) and extends it to every page and article,
+to speed and conversion, and to a step-by-step implementation plan. **Evidence:** `audits/2026-10-08-competitor-gap-per-page/`
+(today) and `audits/2026-10-07-visibility-forensics/` (yesterday). **Spend today:** USD 0.81 (DataForSEO volumes 0.33, SERPs
+0.08, brand mentions 0.35, authority under 0.05; Lighthouse free).
+
+---
+
+## The short version
+
+1. **We had a ranking plan, not a full plan.** Yesterday's plan covered the five hubs, five serums and three collections (33
+   keyword-and-market pairs). It had no competitor analysis for the four Skin Solutions pages, The Science, the four creams, the
+   copper, creams and microneedling collections, seven of the eight study articles, the collagen rebuild, the brand search, or
+   the GB and DE markets beyond four terms. It had no speed plan and no conversion plan. Today's research fills those gaps:
+   39 more SERPs, 96 keyword volumes, 15 Lighthouse runs, brand-demand and community presence for 12 competitors.
+2. **Nine pages with real impressions had no keyword owner at all** (the glutathione serum with 235 impressions in 28 days, the
+   copper collection with 149, the Matrixyl cream with 130, the copper night cream with 126, the PDRN cream with 102). The
+   owner map now covers 37 pages.
+3. **Four terms nobody on the site owns carry more demand than most of our hub terms:** "peptides for skin" (1,862 US searches
+   a month), "brightening serum" (1,057), "ghk-cu cream" (805) and "microneedling stamp" (805). They go to The Science, the
+   glutathione serum or Brightening page, the copper night cream and the microneedling collection.
+4. **Speed is a real fault but not the ranking separator.** Every page type of ours paints its largest element at 11 to 12
+   seconds on a throttled phone, against 4.9 s for SkinCeuticals and 6.1 s for The Ordinary; our Matrixyl cream page does it in
+   4.7 s, so the theme can. The cause is page-level (section animation and hero loading, plus 400 to 660 KB of app scripts we
+   do not use on most pages), and it is fixable in a week.
+5. **What separates the pages above us is unchanged:** mentions, brand demand, reviews in markup and distribution. The
+   Ordinary is searched by name 201,000 times a month in the US; we are searched zero times. That gap closes only through the
+   off-site track, which still needs your scope and budget.
+6. **Rank-first is realistic within 3 months on five terms** (pdrn vs retinol, does argireline work, matrixyl and argireline,
+   the brand term, which we already hold, and one study question), **within 6 to 12 months on the long-tail product and
+   collection terms**, and **only after the off-site track on the head terms** (pdrn, argireline, copper peptide, peptide
+   serum). Part 5 gives the honest target per page.
+7. **Nothing is published today.** The three unpublished concepts (collagen rebuild, Matrixyl rebuild, the eight study
+   previews) are English-only drafts waiting for your review; your own rule is that no new copy goes live untranslated. Their
+   links and scores are in `docs/review-2026-10-08-concept-pages.md`.
+8. **Part 6 is the implementation plan, step by step**, with the mechanics, the check, the undo and the cost of every step.
+   Part 7 lists the seventeen decisions that are yours.
+
+---
+
+## Part 1 — What existed, what was missing, what was done today
+
+| Question | Before today | Today |
+|---|---|---|
+| A plan to improve traffic and performance | A three-layer **ranking** plan (indexing and on-page, authority, content), keyword-by-keyword for 25 terms | This document: every page, plus speed, conversion, markets and measurement, with step-level detail |
+| Competitor analysis per page | Five hubs, five serums, three collections, the Ye article and the list page: 33 SERPs, 46 competitor pages measured, three teardowns | Added: 4 Skin Solutions pages, The Science, 4 creams, 3 more collections, 7 study articles, the collagen rebuild, the brand SERP, GB and DE coverage: 39 SERPs, ~200 pages measured, three teardowns (`audits/2026-10-08-competitor-gap-per-page/teardown-*.md`) |
+| Keyword volumes for the uncovered pages | None (the strategy pull was seeded on ingredient head terms) | 96 terms in US, GB and DE, clickstream and Ads (`data/volumes.json`) |
+| Speed | Lighthouse on 3 pages | 9 of our page types and 6 competitor pages (`data/lighthouse-summary.json`); the PageSpeed API is blocked until the key's project enables it (decision 7.2) |
+| Authority and brand demand | Referring domains per competitor page | Added brand search volume and Reddit and YouTube presence per competitor (`serp/mentions.json`) |
+| Conversion and tracking | Items scattered in the todo | Part 2.5 and Part 6 Phase 2 |
+
+---
+
+## Part 2 — Where we are today
+
+### 2.1 Traffic
+
+Search Console, weekly (`audits/2026-10-07-visibility-forensics/README.md`, Phase 0):
+
+| Week starting | Clicks | Impressions | Sessions (GA4, non-direct) | Orders |
+|---|---|---|---|---|
+| 2026-08-31 | 6 | 328 | 0 | 0 |
+| 2026-09-07 | 4 | 996 | 8 | 0 |
+| 2026-09-14 | 13 | 844 | 16 | 0 |
+| 2026-09-21 | 20 | 1,582 | 15 | 2 |
+| 2026-09-28 | 35 | 1,538 | 101 | 0 |
+
+The site is five weeks old in Google's eyes. There is no brand demand (zero searches for "skingenetix" in Search Console and
+in Google Ads), no top-10 ranking on any target term in any market, and no AI Overview citation on 72 SERPs pulled across
+two days, except the brand SERP itself, where we rank first and are cited.
+
+### 2.2 Every page's position, last 28 days (2026-09-08 to 2026-10-05, all languages folded together)
+
+Source: `data/page-table.json` (Search Console page totals; a page-total pull, not a query pull, so nothing is understated).
+
+| Page | Owner term (proposed where marked *) | Searches a month US / GB / DE | Impressions | Clicks | Avg position |
+|---|---|---|---|---|---|
+| Argireline hub | argireline | 3,734 / 1,103 / 845 | 1,137 | 0 | 8.6 |
+| Glutathione hub | glutathione for skin | 1,211 / 472 / 422 | 599 | 1 | 6.6 |
+| Copper peptide hub | copper peptide | 1,362 / 394 / 105 | 481 | 1 | 8.5 |
+| Copper serum | copper peptide serum | 2,977 / 1,339 / 634 | 307 | 10 | 10.6 |
+| Ye 2026 article (PDRN vs retinol) | pdrn vs retinol | 352 / 79 / – | 261 | 6 | 7.4 |
+| Glutathione serum | glutathione serum * | 555 / 236 / 0 | 235 | 6 | 8.5 |
+| Matrixyl hub | what is matrixyl 3000 * | 50 / 79 / – | 193 | 4 | 7.8 |
+| Matrixyl serum | matrixyl 3000 | 2,725 / 1,339 / 211 | 177 | 1 | 17.5 |
+| Argireline serum | argireline serum | 605 / 0 / 211 | 154 | 2 | 9.3 |
+| Copper collection | copper peptide skincare * | 0 / 0 / – | 149 | 2 | 33.6 |
+| Matrixyl cream | peptide cream * | 504 / 472 / 0 | 130 | 2 | 14.8 |
+| Copper night cream | ghk-cu cream * | 805 / 158 / – | 126 | 1 | 7.0 |
+| Home | skingenetix (brand) | 0 | 117 | 9 | 5.2 |
+| PDRN cream | pdrn cream * | 2,321 / 1,024 / 634 | 102 | 1 | 8.8 |
+| Wang 2013 article | argireline crows feet * | 50 / 0 / – | 85 | 0 | 11.6 |
+| Badenhorst 2016 article | (own trial question; no demand) | 0 | 83 | 2 | 11.4 |
+| PDRN serum | pdrn serum | 3,936 / 2,049 / 845 | 74 | 1 | 6.5 |
+| Serums collection | peptide serum | 3,129 / 1,418 / 1,056 | 62 | 0 | 49.2 |
+| All products | peptide skincare | 100 / 157 / 211 | 54 | 10 | 4.2 |
+| PDRN hub (English never indexed) | pdrn | 19,734 / 6,462 / 4,650 | 46 | 1 | 26.4 |
+| Skin Repair & Renewal | skin repair cream * | 50 / 316 / – | 43 | 2 | 9.6 |
+| Copper day gel-cream | copper peptide cream * | 201 / 78 / – | 31 | 2 | 9.7 |
+| Brightening & Glow | brightening serum * | 1,057 / 871 / – | 26 | 0 | 9.2 |
+| The Science | peptides for skin * | 1,862 / 1,425 / – | 25 | 0 | 18.6 |
+| Firming & Skin Density | skin firming cream * | 201 / 0 / – | 20 | 0 | 18.2 |
+| Raikou 2017 article | (own trial question; no demand) | 0 | 20 | 0 | – |
+| PDRN collection | pdrn skincare | 1,817 / 1,182 / 0 | 19 | 0 | 11.5 |
+| Fine Lines & Wrinkles | wrinkle serum * | 251 / 79 / – | 15 | 0 | – |
+| Clinical studies list | skincare clinical studies | 0 | 11 | 0 | – |
+| Watanabe 2014 article | topical glutathione * | 302 / 0 / – | 5 | 0 | – |
+| Yogya 2022 article (not indexed) | pdrn microneedling * | 403 / 78 / 0 | 0 | 0 | – |
+| Tadini 2015 article (not indexed) | acetyl hexapeptide-3 | 151 / 0 / – | 0 | 0 | – |
+| Robinson 2005 article (not indexed) | palmitoyl pentapeptide-4 | 251 / 316 / – | 0 | 0 | – |
+| Creams & Moisturizers collection | peptide moisturizer * | 553 / 475 / – | 0 | 0 | – |
+| Microneedling collection | microneedling stamp * | 805 / 158 / – | 0 | 0 | – |
+| Collagen page (rebuild in preview) | collagen cream | 604 / 554 / – | 0 | 0 | – |
+| Payment page | skingenetix payment methods | – | 0 | 0 | – |
+
+Reading: the pages that earn impressions earn them for long-tail and INCI-name queries ("hexapeptide anti wrinkle serum",
+"copper peptide (ghk-cu) 2% renewal serum", "glutathione whitening serum", "pdrn night cream"), not for their head terms. The
+Matrixyl cream already sits at 5.6 for "matrixyl 3000" with 28 impressions, which is why the ownership split matters.
+
+### 2.3 Indexing, authority and brand
+
+- Not known to Google (URL Inspection, 2026-10-07): the English PDRN hub and the Yogya, Tadini and Robinson articles. Request
+  indexing is manual (decision 7.1).
+- Referring domains: ours 2 (DataForSEO), of which genuine 0; the 622 link-generator domains of 6 to 7 October are ignored.
+- The pages above us, referring domains to their domain (`serp/authority.json`): The Ordinary 8,695; Paula's Choice 40,634 (GB
+  site); Remedy 5; stonevillenc.org (hacked site) 531; Amazon 2.99 million; Reddit 1.59 million. On the new terms the #1 domain
+  has a median of about 1,100 to 1,800 referring domains where a brand wins, and six figures where a marketplace wins.
+- Brand demand, US monthly searches for the brand name (`serp/mentions.json`, Google Ads): Boots 550,000; The Ordinary 201,000;
+  Vogue 165,000; SkinCeuticals 135,000; Allure 90,500; Skin Laundry 40,500; Cult Beauty 4,400; Skingenetix 0. The Ordinary
+  appears in 241,000 Reddit results and 9.7 million YouTube results; we appear in none.
+
+### 2.4 Speed (Lighthouse 13.5, mobile, throttled, lab, 2026-10-08; one run each)
+
+| Page | Performance | LCP | FCP | Blocking time | Page weight |
+|---|---|---|---|---|---|
+| Ours: home | 71 | 12.5 s | 2.2 s | 140 ms | 3.4 MB |
+| Ours: copper hub | 72 | 11.8 s | 2.4 s | 0 ms | 2.7 MB |
+| Ours: PDRN collection | 72 | 12.0 s | 2.1 s | 10 ms | 2.7 MB |
+| Ours: serums collection | 72 | 11.1 s | 2.4 s | 10 ms | 2.6 MB |
+| Ours: Fine Lines page | 64 | 12.2 s | 2.0 s | 30 ms | 4.4 MB |
+| Ours: copper serum (product) | 50 | 11.4 s | 3.9 s | 500 ms | 3.8 MB |
+| Ours: Matrixyl cream (product) | 76 | **4.7 s** | 2.5 s | 90 ms | 3.8 MB |
+| Ours: Ye article | 72 | 10.7 s | 2.5 s | 10 ms | 2.4 MB |
+| Ours: clinical-studies list | 66 | 12.2 s | 2.2 s | 250 ms | 2.7 MB |
+| SkinCeuticals "What is PDRN" (#1 US) | 51 | 4.9 s | 2.4 s | 1,100 ms | 2.3 MB |
+| The Ordinary Argireline (#1 US, DE) | 47 | 6.1 s | 3.9 s | 600 ms | 4.6 MB |
+| Paula's Choice acetyl hexapeptide-8 | 24 | 12.4 s | 1.9 s | 840 ms | 1.9 MB |
+| Remedy copper serum (#1 US) | 36 | 53.6 s | 2.8 s | 1,290 ms | 10.7 MB |
+| Boots PDRN collection, Timeless Matrixyl | failed to load in the lab (bot protection) | | | | |
+
+Reading: the first paint is quick (2 to 2.5 s) and the main thread is idle, yet the largest element arrives at 11 to 12 s on
+every page type except the Matrixyl cream. That pattern points at the largest element being painted late by the theme
+(section reveal animation or a hero image loaded without priority), not at slow servers (root document 20 to 150 ms) or heavy
+scripts alone. The scripts are a second, separate waste: 259 KB Shopify Forms on every page, 467 KB Profit Pumper bundles and
+72 KB Appstle subscriptions on product pages, a 152 KB country-flag sprite on every page. Competitors are slow too, so speed is
+not what ranks them above us; it is a conversion and Core Web Vitals fault of ours to fix once, in Phase 1.
+
+### 2.5 Conversion and tracking
+
+- Reviews: the before/after carousel reviews are genuine customers under pseudonyms (Malcolm, 2026-08-30 and 09-10); the
+  synthetic "What Our Customers Say" cards were unpublished on 2026-09-21. Klaviyo Reviews is installed but renders
+  client-side, so no product carries `aggregateRating` in its markup, and no SERP shows our stars.
+- Google Shopping: no product carries Merchant Center attributes; there is no feed (ranking plan Part B.5).
+- Email: the Klaviyo flows (welcome, abandoned cart, post-purchase, review request) are listed as "not started" in the todo
+  and are not documented anywhere else; their real state needs one check in Klaviyo (decision 7.9).
+- Tracking: GA4 and Search Console are connected (the forensics config reads both); the todo entry LAUNCH-001 that says
+  otherwise is stale. Tracking events for the page actions (add to cart, bundle click, hub to product) are not named.
+- Marketplaces: Kaufland and Bol are live (content hub strategy §2); they count as distribution for the authority track.
+
+---
+
+## Part 3 — Competitor analysis, page by page
+
+Yesterday's hub, serum and collection teardowns stand (`audits/2026-10-07-visibility-forensics/teardown-*.md`; summarised in the
+ranking plan Part C.5). The table below adds today's pages. "Why they win" is the measured reason, not a guess; the full
+evidence per keyword is in the three teardowns of `audits/2026-10-08-competitor-gap-per-page/`.
+
+### 3.1 Skin Solutions pages, The Science, the hubs in GB and DE, the brand
+
+Source: `teardown-concern-science-hubs-markets.md`. Two faults found and verified on the live HTML today: **the four Skin
+Solutions pages and The Science serve no H1 at all** (the hero title is not a heading in those templates), and **the
+concern pages carry claims the registers forbid**: "even reverse them" and "safe for sensitive skin? Yes" (Fine Lines),
+"Overnight Structural Repair" and "stimulation of new collagen production" (Firming), "more than twice the wrinkle
+improvement of retinol" (Skin Repair, to be checked against the PDRN register). The German copper hub's H1 is still the
+English "Copper Peptide (GHK-Cu)". Six of the fourteen pairs are shop SERPs, where a concern page is the wrong page type.
+
+| Page | Term (searches) | Today | Page one and the AI Overview | Why they win | Changes, in order | Winnable? Target |
+|---|---|---|---|---|---|---|
+| Fine Lines & Wrinkles | wrinkle serum (251 US) | none | Amazon, Dermstore, Ulta; Overview cites Amazon, Ulta, Allure | shop intent | the term moves to the **Argireline serum** page (first sentence); the concern page keeps the informational job | by the product: page one in 6 months |
+| Fine Lines & Wrinkles | fine lines and wrinkles (50 US, 1,600 Ads) | 15 impressions | Reddit, two small guides; Overview cites Cleveland Clinic, Kiehl's, Health.com | plain-language causes and options with a named human; the bar is low | a real H1 "Fine Lines and Wrinkles: Causes and What Helps"; a two-sentence answer first; sections "fine lines vs wrinkles", "what helps, ranked by evidence", "when to see a professional"; the hub links in the first 150 words; remove the forbidden claims | page one in 6 months; top 3 needs genuine links |
+| Firming & Skin Density | skin firming cream (201 US), firming serum (100 US) | 18.2 on 20 impressions | Amazon, Target, Dermstore, Vitacost; one small brand with a video article at #3 on 86 referring domains | product intent | **"skin firming cream" moves to the Matrixyl cream** (already 5.6 for "matrixyl 3000"), **"firming serum" to the Matrixyl serum**; the concern page keeps "why skin loses firmness" with an H1 and no "structural repair" or "collagen production" claims | cream page one in 6 to 9 months; serum shopping block and Overview only |
+| Skin Repair & Renewal | skin repair cream (50 US, 316 GB) | 9.6 on 43 impressions | Sente, Sephora, barrier-repair brands; Overview cites DermaRite, YouTube, Amazon | the intent is barrier repair for dry skin; "repairs the barrier" is on the copper avoid list | **drop the term**; the page keeps the renewal story with an H1; the GB figure could be tested later with the PDRN cream | not winnable by this page |
+| Brightening & Glow | brightening serum (1,057 US, 871 GB); glow serum (654 US) | 9.2 on 26 impressions (the glutathione serum itself sits at 7 to 9 with 235 impressions) | short product pages with price and reviews, some 46 to 194 words; GB Amazon; "glow serum" is Glow Recipe's brand term | shop intent; thin incumbents | **"brightening serum" moves to the glutathione serum**: lead with the term, the 2% glutathione and the Watanabe result in plain words, price, reviews markup, a GB shipping line; the concern page re-aims at "dull skin and uneven tone: what helps" and links down; **drop "glow serum"** | page one US and GB in 3 to 6 months |
+| The Science | peptides for skin (1,862 US, 1,425 GB); peptides in skincare (352 US, 395 GB) | 18.6 on 25 impressions | a dermatology group explainer (1,201 words, author, dated), Skinbetter, Cleveland Clinic; Overview cites Cleveland Clinic, AdventHealth, The Ordinary; GB: Doctor Rogers (2,672 words, video) | the title is the query and the page is a full explainer; ours is an index of links with no H1 | rebuild as the "Peptides for Skin: What the Research Shows" pillar: H1 and title on the term, an opening answer (what peptides are, what has been tested on skin, that most data is manufacturer-funded), a table of our five actives with evidence grade, study size and concentration (no competitor has one), "how to choose", the reviewer line, links down to the five hubs; decision 7.3 (the strategy keeps explainers inside hubs) | page one in 6 to 9 months; Overview citation plausible with medical review |
+| Matrixyl hub | what is matrixyl 3000 (50 US, 79 GB; "matrixyl 3000 benefits" has 0) | none for the term; 7.8 on 193 impressions | The Ordinary (131 words), No7, Timeless; Overview cites The Ordinary, YouTube, No7 | brand authority; a 131-word page beats a 2,292-word one | the one-sentence definition before the stat tiles; switch the owned term | page one in 3 months; worth it for the citation |
+| Home | skingenetix (0) | first; the Overview cites us and Ankorstore | look-alike domains fill #2 to #7 | | add `sameAs` (Ankorstore, social profiles) to the Organization schema; nothing else | hold first |
+| Copper hub, GB | copper peptide (394 GB) | none | the hacked site #1, a 269-word glossary #2, Paula's Choice NL, a university page; Overview cites PMC, The Ordinary, Healthline | authority and time; ours is the most complete page on the SERP | nothing on-page; GBP pricing and shipping line on the serum; one genuine GB mention | page one when the spam clears |
+| Glutathione hub, GB | glutathione for skin (472 GB) | none | Reddit, LinkedIn, eBay, a suspected cloaked site, RealSelf: no brand, editorial or medical page (unstable SERP) | an empty field | nothing on-page beyond the planned safety and oral-vs-topical sections; one external mention | page one in 3 to 6 months |
+| Copper hub, DE | kupferpeptide (208 DE) | none | a product page (1,721 referring domains), Elle, two long explainers with FAQ and a dermatologist review; Overview cites mooci, nichebeautylab, The Ordinary | the German pages are German: ours keeps the English H1 and lacks "Nebenwirkungen" and "wo kaufen" sections | German H1 and title ("Kupferpeptide (GHK-Cu)"), the side-effects and where-to-buy sections in the German locale, the reviewer line already present | page one in 3 to 6 months |
+
+Proposed for `configs/page-targets.json`: remove the ingredient-term secondaries from the concern pages (they cannibalise the
+hubs); add the shop terms to the product pages; The Science to "peptides for skin"; the Matrixyl hub to "what is matrixyl
+3000"; the glutathione hub to "glutathione for skin"; "skin repair cream" and "glow serum" unowned; a German entry for
+"kupferpeptide" (which needs a per-locale field in the config).
+
+### 3.2 Creams, the glutathione serum, the collections, the collagen rebuild
+
+Source: `teardown-products-collections.md`. Three things change the plan: 17 of the 18 buying-term SERPs show a product
+carousel and only 6 an AI Overview, so the Shopping feed matters more than citations on these terms; only 8 of 75 measured
+top pages carry rating markup, so ratings are a tie-breaker, not the gate; and our own Kaufland listing ("Skingenetix
+Glutathion-Serum 2%") sits at #7 for DE "glutathion serum" while our store page does not appear. Live defects verified
+today: the creams collection shows "Coming soon" above five live products; both stamp sets render "Sold out" with
+`OutOfStock` schema although their template says pre-order; every collection carries breadcrumb schema only.
+
+| Page | Term (searches) | Today | Page one and the AI Overview | Why they win | Changes, in order | Winnable? Target |
+|---|---|---|---|---|---|---|
+| Matrixyl cream | peptide cream (453 US, 395 GB) | 14.8 on 130 impressions; already 5.6 for "matrixyl 3000" | Amazon search, two category pages, Dermstore, a listicle; GB retailer and marketplace listings | a category SERP; one product page cannot answer a generic query | **the term moves to the creams collection**; the cream keeps "matrixyl cream" and "collagen cream with matrixyl" (positions 21 to 29 already) and takes "skin firming cream" (Part 3.1); title "Matrixyl 3000 Cream with Collagen, 50 ml" (avoids the bare "collagen cream" the Collagen page owns); first line with the two actives; the +256% lab figure off the product (decision 7.3) | by the collection |
+| Copper night cream | ghk-cu cream (805 US, 158 GB) and copper peptide cream (201 US) | 7.0 on 126 impressions | the same SERP for both terms: The Ordinary, Reddit, five small shops (137 to 646 words on 88 to 1,739 referring domains); Overview cites Yahoo Finance, PMC | authority is not the wall; the shops match the term in title and first line | **the night cream owns both terms; the day gel-cream owns neither** (it contains vitamin C, and "what not to mix copper peptides with" is the first People Also Ask on this SERP); title and first line on "GHK-Cu copper peptide cream 2%"; the what-not-to-mix and how-often answers; rating markup; link up to the hub | page one in 3 to 6 months, top 3 in 9 |
+| PDRN cream | pdrn cream (2,416 US, 1,108 GB, 104 DE) | 8.8 on 102 impressions | named PDRN cream product pages win and get cited (Clinique, Soko Glam, Anua); 167 to 398-word pages on 99 to 773 referring domains; Reddit holds two US slots | title match and a named product; thin incumbents | the best product-page odds on the site: first line "PDRN cream with 1% PDRN (sodium DNA) and hydrolyzed collagen, 50 ml"; the FAQ rewritten around the People Also Ask ("what not to mix", "is PDRN salmon sperm", "how to use"); the "over twice as much as retinol" figure off the product and the collection description (decision 7.3); rating markup; GBP and EUR in the schema per market | page one in 6 to 9 months US and GB, 3 to 6 DE |
+| Glutathione serum, DE | glutathion serum (208 DE) | our Kaufland listing #7; the store page absent | pharmacy and marketplace listings with the German word in the name; about 8 unique results; no Overview | the German spelling in the title | DE title "Glutathion Serum 2% mit Vitamin C & Niacinamid"; "Glutathion" once in the first line, "Glutathione" as the product name; keep "heller wirkende", never "whitening" | page one in 3 months |
+| Glutathione serum, US and GB | glutathione serum (555 US, 236 GB) and **brightening serum** (1,057 US, 871 GB) | 8.5 on 235 impressions, 6 clicks | a product-feed SERP (Musinsa, eBay, Medicube, Amazon); "brightening serum" page one is short product pages with price and reviews | title match, price, reviews | lead with "brightening serum" and "glutathione serum"; the 2% glutathione and the Watanabe result in plain words; rating markup; feed; a GB shipping line | page one US and GB in 3 to 6 months, first in 6 to 12 |
+| Copper collection | copper peptide skincare (0 observed, 720 Ads) | 33.6 on 149 impressions | half the slots are hacked-domain spam; the Overview cites a collection with ratings and an FAQ | ours is 52 words with a meta description led by "55.8%" | a 200-word explainer in the description field (what GHK-Cu is, 2% in each product, which cream or serum for which skin, the hub link); FAQ from the People Also Ask; card ratings; CollectionPage + ItemList; the in-vivo figure out of the meta description | page one once the spam clears, first in 9 to 12 months |
+| Creams collection | peptide cream (453 US, 395 GB); not "peptide moisturizer" | 0 impressions; shows "Coming soon" above five live products | category pages, Amazon search, Dermstore | the collection shape | remove "Coming soon"; title "Peptide Creams and Moisturizers"; a 200-word explainer; every cream with its one distinguishing fact; FAQ; schema; "peptide moisturizer" (553 US) goes to a Learn spoke "How to choose a peptide moisturizer" because its page one is listicles and forums, not retailers | page one in 6 to 9 months |
+| Microneedling collection and the stamp sets | microneedling stamp (805 US); "microneedling serum" dropped (an advice SERP) | 0 impressions; both sets "Sold out" with OutOfStock schema | product pages (Nurse Jamie, SkinMedix, Dr Pen) | product-led term; a two-product collection is the wrong page type | the copper set's product page carries "microneedling stamp" with usage, frequency, who should not use it and an FAQ; `PreOrder` availability with a date in schema and feed if the sets are pre-order (decision 7.13); the "absorb deeper" line checked against the copper register | not before stock or pre-order is live; then page one in 6 months |
+| PDRN collection, GB | pdrn skincare (1,182 GB) | 11.5 on 19 impressions | Tira Beauty, Get The Gloss, Face the Future (a collection at #3 with a 60-word intro and 34 products); Boots appears only in the Overview through an editorial explainer | collection pages with products and ratings | the 200-word explainer, ratings on cards, FAQ from the GB People Also Ask ("where can I buy PDRN serums in the UK", "retinol and PDRN"), schema, GBP pricing; the "over twice as much as retinol" claim out of the meta description | top 10 in 4 to 6 months |
+| Serums collection, DE | peptid serum (104 DE, 3,600 Ads) | none | Joybuy ×5 (suspected cloaking), Cosibella #3 (117 products, 54-word intro, no ratings) | one real rival | title "Peptid-Serum: Copper Peptide, PDRN, Matrixyl"; a 200-word German explainer through the translation package; German product names on the cards | page one in 3 to 6 months |
+| All products, DE | peptide hautpflege (312 DE) | none | an information SERP (Ricaud, Nivea, Janssen) | explainers win | **moves to the German Science page**, whose title already reads "Peptid-Hautpflege und die Forschung dahinter"; the collection keeps "peptide skincare" in English | page one in 6 months |
+| Collagen page (rebuild) | collagen serum (553 US), collagen cream (554 GB), kollagen creme (208 DE) | preview only | thin commercial pages on mid authority (Lumene, Advanced Clinicals, Clearstem; GB eBay, Notino; DE Lancôme) | our 1,764-word answer-first page out-writes all of GB; the preview still carries the old title | go-live title "Collagen Cream & Serum: What Works on Skin" and the 301s make it eligible; keep "we make no collagen serum"; DE after translation | page one US and GB in 6 to 9 months |
+
+Proposed for `configs/page-targets.json`: the night cream owns "ghk-cu cream" and "copper peptide cream"; the creams
+collection owns "peptide cream"; the PDRN cream "pdrn cream"; the glutathione serum "glutathione serum" and "brightening
+serum"; the copper collection "copper peptide skincare"; the copper stamp set "microneedling stamp"; the German Science
+page "peptide hautpflege"; "microneedling serum" and "peptide moisturizer" unowned until the spoke exists.
+
+### 3.3 The eight study articles and the list page
+
+Source: `teardown-study-articles.md`. On every SERP pulled, our article is as long as or longer than the top three, with an
+author, FAQ and 6 to 12 cited sources; most top pages cite none. What differs is authority (zero genuine referring domains
+against 494 to 1,533) and intent (page one rewards dictionaries, shops, clinics and forums). Three articles are "unknown to
+Google" from crawl lag, not a fault: all three are in the sitemap and linked.
+
+| Article | Term it should own (US searches) | Today | Page one and the AI Overview | Why they win | Changes, in order | Job and target |
+|---|---|---|---|---|---|---|
+| Ye 2026 | pdrn vs retinol (352) | 7.4 avg on 261 impressions, but only 19 carry a visible query and those are the paper's title and DOI; the head term has 1 impression | an acne blog off-intent (#1), LinkedIn, a YouTube short, Reddit; no AI Overview | on merit they do not; the thinnest SERP in the set and we are three weeks old with no links | searcher-words title, the number up front, a head-to-head table, "can you use both", one exact-match anchor from the hub, one genuine external link | **rank**: first within 3 months |
+| Yogya 2022 | pdrn microneedling (403; today's owner term has 0) | not indexed; 0 impressions | clinics (Yoo Direct Health 1,974 words, 18 H2, 0 citations), Reddit, Facebook; Overview cites seven clinic pages | "book this treatment" intent with local authority; none cites a trial | request indexing; retarget to "pdrn microneedling"; answer-first opening; an "at home?" block; link down to the microneedling collection | **rank**: page one in 3 months, top 3 in 6 |
+| Watanabe 2014 | topical glutathione (302; owner term 0) | 28.2 on 5 impressions | Reddit ×3, Quora, RealSelf ×3, a 91-word trade item: the weakest page one in the set; Overview cites PMC, JCAD, PubMed | forums win an empty field; the Overview prefers clinical literature, which is where we belong | retarget; definition-first opening; keep "brightening" | **rank**: page one in 3 months |
+| Tadini 2015 | acetyl hexapeptide-3 (151) | not indexed | a supplier (117 words), Wikipedia, PubChem, Tadini's own paper on ResearchGate (#4, cited) | a naming query: dictionaries and suppliers answer "what does this name mean" | request indexing; definition-first (older name of acetyl hexapeptide-8, after a register check); the firmness result in the same screen | **rank**: page one in 3 months |
+| Robinson 2005 | palmitoyl pentapeptide-4 (251 US, 316 GB) | not indexed | EWG, a forum, a formulator shop, Creative Peptides (no author), Skinsort; Overview cites INKEY's decoder, Wikipedia, suppliers | reference-shaped pages; ours is the best-sourced page in the set but not answer-first and invisible | request indexing; definition-first (the original Matrixyl, 3 ppm, 93 women, 12 weeks, ahead of placebo from week 8, P&G-run); one sentence separating it from Matrixyl 3000 with the hub link; pull a GB SERP | **rank**: page one in 3 months, top 3 in 6 |
+| Wang 2013 | argireline crows feet (50) | 13.8 on 85 impressions, German "vorher nachher" queries | brand blogs (Skin Deva, Typology, Glam), YouTube; no medical page | "myths and facts" and "Botox in a bottle" framing on domains with 714 to 881 referring domains; we lose on authority only | opening, sibling links, date; add "argireline before and after" as a secondary (the images are illustrations, so no "before and after" page) | **citation**: watch Overview citations and the hub's position |
+| Raikou 2017 | nobody searches the forehead question; the paper's own identity (tripeptide-10 citrulline + acetyl hexapeptide-3) is unmeasured (USD 0.05 to check) | 29.2 on 20 impressions | retailer pages and a generic "may soften" blurb quoting the supplier's "up to 30%"; no one cites the trial | shopping intent, which belongs to the Fine Lines page | open with the instrument result (roughness −7.4% vs +4.3% on placebo); link down to Fine Lines; do not retitle toward "best cream" | **citation** |
+| Badenhorst 2016 | copper peptide serum wrinkles (0); nearest measured question "matrixyl vs copper peptides" (50) | 11.6 on 83 impressions; "ghk-cu badenhorst" at 5.4 | product pages quoting brand percentages, a Dermatology Times Q&A, the sponsor's own "31.6% above Strivectin" story in the NZ Herald | the trial's best-known number was published by its sponsor; an independent appraisal fills a real gap | both results in one opening; funding stated first; decision: test "Copper Peptide vs Matrixyl 3000: the Badenhorst 2016 trial" (the trial's own comparison, so within ADR-K) | **citation** |
+| Clinical studies list | skincare clinical studies (0; searchers want to enrol in a trial) | 26 on 11 impressions | clinics recruiting volunteers, clinicaltrials.gov | wrong intent; the page works as a hub, not a landing page | CollectionPage + ItemList schema, a quotable evidence table, right-sized card images, measure "argireline clinical trial" before any retarget; the 10 tag archives are thin and self-canonical (not audited) | **hub**: watch the eight articles' index state |
+
+Also found: the key-figure tiles render as H2 headings on the live articles ("2 vs 6 months", "Week 8"); fix in the
+STUDY-DETAIL go-live so the six translations are done once. Proposed for `configs/page-targets.json`: Yogya and Watanabe
+retargeted as above (amends ADR-2026-09-30-K), and a `_job` field (`rank` or `citation`) so audits stop scoring citation
+pages on position.
+
+### 3.4 What the SERPs have in common (both days, 72 keyword-and-market pairs)
+
+- AI Overviews appear on 47 of 72 SERPs. The most-cited domains across both days: YouTube, The Ordinary, PMC (NIH), Allure,
+  Vogue, Reddit, Wikipedia, Paula's Choice, Cleveland Clinic. We are cited once, on our own brand term.
+- Category terms ("wrinkle serum", "firming serum", "peptide cream", "glow serum", GB "brightening serum") are owned by Amazon,
+  eBay, Ulta and Dermstore on desktop. A product page cannot take #1 there; a collection page can take page one if it is
+  the shape Google rewards (explainer, every product, FAQ, ItemList schema, reviews), and the AI Overview can cite an explainer.
+- Informational terms ("peptides for skin", "what is matrixyl 3000", "topical glutathione", "pdrn microneedling") are owned by
+  clinics, brands and PMC. Our hubs and study articles are already the right shape (1,700 to 2,500 words, 12 to 13 H2s, FAQ,
+  author and reviewer, dated); what they lack is indexing, links and mentions.
+- Hacked-site spam (stonevillenc.org) still holds page-one slots on "peptides in skincare", "copper peptide skincare" and GB
+  "copper peptide" while the September spam update rolls. Report it (free), do not chase it.
+
+---
+
+## Part 4 — The strategy
+
+### 4.1 What the evidence says works (unchanged from the ranking plan, confirmed on today's SERPs)
+
+1. **Rank and substance decide AI citation; page furniture does not.** Topical match of the title and opening to the question,
+   named studies with numbers, freshness, and third-party mentions correlate with being cited. Schema beyond the minimum,
+   llms.txt and "restructuring for AI" do not.
+2. **Mentions on other sites matter three times more than links for AI citation.** For a brand with neither, the first
+   mentions matter most.
+3. **For a new brand, reviews and distinguishing product facts break the incumbent monopoly** (an unknown brand with reviews
+   was recommended 79.7% of the time against 4.6% without). That work happens on product pages and the feed.
+4. **Short, focused pages beat long guides** for grounding; 800 to 1,500 words per spoke, hubs at about 2,500.
+5. **One page per keyword and intent.** Two pages on one intent cannibalise; two intents on one page rank for neither.
+6. **Indexing first.** A page Google has never fetched cannot rank. The PDRN hub, 68% of the measured opportunity, is not indexed.
+7. **Speed is a hygiene factor and a conversion factor**, not a ranking separator here; fix it once and keep it.
+8. **English first, measured 14 days, then translate** (your rule). An outdated translation is still served, so English-only
+   edits on a six-language page make five languages worse.
+
+### 4.2 The five tracks
+
+| Track | What it is | Pages | Owner |
+|---|---|---|---|
+| **A. Index and on-page to the bar** | Every keyword-owning page at 9.0 or more on the central audit with no confirmed failures, one owner term per page, the question answered first, proof beside the ask | All 37 | Claude (build), Malcolm (approve English) |
+| **B. Authority, mentions and reviews** | Genuine reviews in markup, Merchant Center feed, listicle and press mentions, YouTube sampling, Reddit presence, retail and marketplace listings, newswire for the study appraisals | Products, hubs, brand | Malcolm (scope, budget, outreach), Claude (materials, tracking) |
+| **C. Content that fills unowned questions** | The 15 spokes on `/blogs/learn`, the collection rebuilds on the Boots model, the Skin Solutions pages re-aimed at one category term each, the collagen page | New and rebuilt pages | Claude (draft), Malcolm (approve) |
+| **D. Speed and conversion** | LCP under 4 s lab on every page type, app scripts only where used, rating markup, named tracking events, one primary action per page | All | Claude (test on a duplicate theme), Malcolm (approve the theme-setting and app changes) |
+| **E. Markets** | US and GB first (77% of opportunity), DE second (10%), then FR, IT, NL, ES; German titles carry the German term; translation only after the English has measured | Hubs, products, collections | Claude |
+
+### 4.3 How "rank first" is reached, in order
+
+1. Get indexed and to the bar (Track A), because nothing else counts before it.
+2. Own one term per page across all 37 pages, with the four big unowned terms assigned (decision 7.3).
+3. Fill the questions nobody authoritative answers (Track C), where first place is realistic in 3 months.
+4. Earn the first mentions and reviews (Track B), which move the head terms and the AI Overviews.
+5. Fix speed once (Track D) so the traffic that arrives converts and Core Web Vitals stop counting against us.
+6. Repeat per market (Track E).
+
+---
+
+## Part 5 — Targets per page (honest, with a horizon)
+
+"First" means #1 organic in the named market; "page one" means top 10; "top 3" sits between. Horizons assume Track B starts
+within a month; without it, add 6 months to every head term.
+
+| Page | Term (market) | Today | 3 months | 6 months | 12 months |
+|---|---|---|---|---|---|
+| Ye 2026 article | pdrn vs retinol (US) | 7 to 8 | **first** | first | first |
+| Argireline hub, section | does argireline work (US) | none | **first** | first | first |
+| Learn spoke 1 | matrixyl and argireline (US) | none | **first** | first | first |
+| Home | skingenetix (US) | first | first | first | first |
+| Yogya article | pdrn microneedling (US) | not indexed | page one | top 3 | first |
+| Watanabe article | topical glutathione (US) | none | page one | top 3 | top 3 |
+| Robinson article | palmitoyl pentapeptide-4 (US, GB) | not indexed | page one | top 3 | top 3 |
+| Tadini article | acetyl hexapeptide-3 (US) | not indexed | page one | top 3 | top 3 |
+| Wang article | argireline crows feet (US) | 11.6 | page one | top 3 | first |
+| Argireline hub | acetyl hexapeptide-8 (US) | 8 to 30 | page one | top 3 | top 3 |
+| Argireline hub | argireline (US mobile) | none | page one | top 3 | top 3 (desktop head slots are Amazon's) |
+| Matrixyl hub | what is matrixyl 3000 (US) | none | page one | top 3 | top 3 |
+| Glutathione serum | glutathione serum (US) | 10 to 24 | page one | first | first |
+| Copper night cream | ghk-cu cream (US) | 7.0 | page one | top 3 | first |
+| Copper day gel-cream | copper peptide cream (US) | 9.7 | page one | top 3 | top 3 |
+| Matrixyl cream | peptide cream (US, GB) | 14.8 | page one | page one | top 3 |
+| PDRN cream | pdrn cream (US, GB, DE) | 8.8 | page one | top 3 | top 3 |
+| PDRN serum | pdrn serum (US) | none | shopping block | page one | top 3 |
+| Copper serum | copper peptide serum (US) | 10.6 | page one | top 3 | first (with reviews and a roundup) |
+| Matrixyl serum | matrixyl 3000 (US) | 17.5 | page one | top 3 | first (with reviews and resellers) |
+| Argireline serum | argireline serum (US) | 9.3 | page one | top 3 | top 3 |
+| PDRN collection | pdrn skincare (US, GB) | 11.5 | page one | top 3 | first in GB (Boots model) |
+| Serums collection | peptide serum (US, GB, DE) | 49 | page one DE | page one US | top 8 |
+| Copper collection | copper peptide skincare (US) | 33.6 | page one | top 3 | first (when the spam clears) |
+| Creams collection | peptide moisturizer (US, GB) | none | page one | top 3 | top 3 |
+| Microneedling collection | microneedling stamp (US) | none | page one | top 3 | top 3 |
+| The Science | peptides for skin (US, GB) | 18.6 | page one | top 3 | top 3 |
+| Brightening & Glow or glutathione serum | brightening serum (US, GB) | none | page one | page one | top 3 (decision 7.3) |
+| Skin Repair & Renewal | skin repair cream (GB, US) | 9.6 | page one | top 3 | top 3 |
+| Fine Lines & Wrinkles | wrinkle serum (US) | none | page one | page one | top 3 |
+| Firming & Skin Density | skin firming cream (US) | 18.2 | page one | page one | top 3 |
+| Collagen page (after go-live) | collagen cream (US, GB) | none | page one | top 3 | top 3 |
+| PDRN hub | pdrn, what is pdrn (US) | not indexed | indexed, page two | page one | top 3 (first needs mentions) |
+| Copper hub | copper peptide (US, GB) | 47 | page one | top 3 | first (when the spam clears) |
+| Glutathione hub | glutathione for skin (US, GB) | 6.6 (long tail) | page one | top 3 | top 3 |
+| Clinical studies list | skincare clinical studies (US) | none | page one | top 3 | top 3 |
+| DE market | pdrn, kupferpeptide, pdrn serum, peptid serum | none | page one on 2 | page one on 4 | first on pdrn with retail listings |
+
+---
+
+## Part 6 — Implementation plan, step by step
+
+Every step names what is done, how, the check that proves it, the undo, the cost and who acts. "Audit" means the central
+auditor (`seo-toolkit/scripts/audit_page.py --criteria v2`, about USD 3 a run; the bar is 9.0 or more with no confirmed
+failures, read uncapped on previews). "Critic" means the design-critic agent on the deployed URL in a fresh context.
+"Six languages" means the translation package procedure (read live values per locale, minimal substitution, register all six
+at once). No step writes to the store while another Skingenetix window is publishing (`ListAgents` first).
+
+### Phase 0 — This week: decisions and free fixes (Malcolm, about one hour)
+
+| Step | What | How | Check | Undo |
+|---|---|---|---|---|
+| 0.1 | Request indexing for four URLs | Search Console, URL Inspection, "Request indexing": `/pages/pdrn-research`, Yogya, Tadini, Robinson | Re-inspect in 7 days; impressions appear in the per-page table | none needed |
+| 0.2 | Enable the PageSpeed Insights API for the Google API key's project | Google Cloud console, APIs and Services, enable "PageSpeed Insights API" (free) | `serp_gap_deep.py vitals` returns field and lab data instead of HTTP 403 | disable the API |
+| 0.3 | Decide the keyword-ownership items | Part 7, decision 3 | `configs/page-targets.json` updated in step 1.1 | revert the commit |
+| 0.4 | Decide the off-site scope and budget | Part 7, decision 4 | Phase 2 steps 2.1 to 2.4 unblocked | none |
+| 0.5 | Review the English of the three concepts | `docs/review-2026-10-08-concept-pages.md` and the sheet on your Desktop | your yes or edits per page | none |
+| 0.6 | Report stonevillenc.org to Google as hacked-site spam | Google's spam report form (Claude drafts the text; submission is manual) | the domain leaves the SERPs over the following weeks | none |
+
+### Phase 1 — Weeks 1 and 2: foundations (Claude builds, Malcolm approves English)
+
+| Step | What | How (mechanics) | Check | Undo | Cost |
+|---|---|---|---|---|---|
+| 1.1 | Keyword ownership map for all 37 pages | Edit `configs/page-targets.json`: add the nine unowned pages and the proposed primaries (Part 2.2, marked *); regenerate the seo-toolkit client config (`configs/skingenetix.config.json` there); commit both | Each page's audit no longer caps at 4.9 on a keyword clash | `git revert` | 0 |
+| 1.2 | Product pages to the bar (9 single products) | Per page: title and first line carry the owner term and, where the formula sheet confirms it, the concentration; two cited facts from the register in plain words; a "what to combine and how to layer" answer; the stock product FAQ section with the safety item; links up to the hub and sideways to the study article; alt text with the product name; Product schema price and currency checked per market. English first on the product description (`productUpdate` with the backed-up original), audit, your approval, then six languages through the translation package and `seo-apply.py` plus `seo-translate.py` for titles and descriptions | Audit 9.0 or more per page; `--verify-live` in six languages | the backup JSON written before every write; `seo-apply.py --rollback` | about USD 6 per page (two audit rounds); 9 pages, about USD 54 |
+| 1.3 | Collections rebuilt on the collection model that wins (pdrn, serums, copper-peptide, creams-moisturizers; DE serums) | First the two live defects: remove "Coming soon" from the creams collection; set the stamp sets' availability to `PreOrder` with a date, or hide them until stock exists (decision 7.13). Then per collection: a 200 to 300 word explainer that answers the category question first, every product with its one-line distinguishing fact, a short FAQ from the People Also Ask, a link up to the hub, `CollectionPage` + `ItemList` + `Product` schema from a stock custom-liquid block in `templates/collection.<handle>.json` (additive, scoped by the collection handle; decision 7.14 on the custom-code rule), a title that matches the term ("PDRN Skincare: Serums, Creams and Sets"; "Peptide Creams and Moisturizers"; DE "Peptid-Serum: Copper Peptide, PDRN, Matrixyl"), the in-vivo figures out of the meta descriptions; English first, audit, approval, six languages. The microneedling collection is not rebuilt: "microneedling stamp" goes to the copper set's product page. | Audit 9.0 or more; schema validates; the collection appears in the sitemap | theme file backup written by `hub-upgrade.py`; `--rollback` | about USD 6 per collection; 5 pages, about USD 30 |
+| 1.4a | Claim and heading fixes on the Skin Solutions pages and The Science (before anything else on them) | Remove the five forbidden phrases (Part 3.1) in six languages through set-only specs, replacing each with register wording; give the five pages a real H1 by switching the hero title's heading level in the template (an additive setting on the stock section, not a Liquid edit); German H1 and title on the copper hub | the phrases are gone in all six languages; one `<h1>` per page; audit unchanged or higher | spec backups; `--rollback` | about USD 3 per re-audit |
+| 1.4b | Skin Solutions pages re-aimed at their informational job, shop terms moved to the products | Decision 7.3 first. The four shop terms go to the product pages in step 1.2 (wrinkle serum to the Argireline serum, skin firming cream to the Matrixyl cream, firming serum to the Matrixyl serum, brightening serum to the glutathione serum); "skin repair cream" and "glow serum" are dropped. Each concern page then keeps one informational question with an H1 and title on it ("Fine Lines and Wrinkles: Causes and What Helps"; "Why skin loses firmness"; "Dull skin and uneven tone: what helps"; the renewal story), an answer-first opening, the hub link in the first 150 words, the two or three products with their trial facts, a FAQ with the safety item. Templates `page.<handle>.json` through set-only hub-upgrade specs | Audit 9.0 or more; the page does not take its hub's impressions (8-week gate) | spec backups; `--rollback` | about USD 6 per page; 4 pages |
+| 1.4c | The Science rebuilt as the "Peptides for Skin" pillar | Decision 7.3 (the strategy keeps explainers inside hubs; this page is the one place a cross-ingredient explainer belongs). H1 and title on the term, the opening answer, the five-active evidence table (grade, study size, concentration), "how to choose", the reviewer line, links down to the hubs; English first, audit, approval, six languages | Audit 9.0 or more | spec backups | about USD 6 |
+| 1.5 | Speed: the LCP fault | (a) Duplicate the live theme; on the copy, switch off the section reveal and page-load animations in the Impact theme settings and set the first hero image to load eagerly with high priority; run Lighthouse on the copy's preview URL; (b) if LCP falls under 4 s, apply the same settings on the live theme with your yes; (c) app embeds: remove Shopify Forms from pages without a form, load Profit Pumper and Appstle only on product templates, replace the 152 KB flag sprite with the text selector; (d) re-run Lighthouse on the nine page types | LCP under 4 s lab on every page type (good is 2.5 s); no blocking-time regression; the critic sees no visual change | theme settings are reversible in one edit; the duplicate theme is deleted after | 0 |
+| 1.6 | Spoke 1: "Argireline and Matrixyl 3000 together: what the trials show" | English draft on the hidden drafts blog as a plain article on the stock article template (the study template is for single trials), grounded only in the two registers; audit with `--page-type article --keyword "matrixyl and argireline"`; your approval; then publish to `/blogs/learn` with the Learn template; 14 days measured; then six languages | Audit 9.0 or more uncapped; first for the term within 3 months | delete the draft article | about USD 6 |
+| 1.7 | The Learn blog | A `blog.learn.json` template from stock sections (title, 100-word intro, article list); `/blogs/learn` out of the sitemap until spoke 1 is live; distinct tag-page titles (core layout, decision 7.10) | the blog renders; the sitemap is clean | delete the template | 0 |
+| 1.8 | STUDY-DETAIL go-live (after 0.5) | Audit the seven remaining previews one at a time, foreground; translate the eight English configs through `study-i18n.py`; `build-study-page.py --apply` per article; verify in six languages; add the Ye to Yogya sibling link | Eight articles 9.0 or more live; all eight indexed | the `<handle>-draft` entries stay; the live entry is restored from its backup | about USD 21 (seven audits) |
+| 1.9 | Hubs: the open items | PDRN "3.5×" framing (your call); copper 55.8% derivation re-read at source before any edit; the "Botox in a bottle" item (your call); every hub links its collection and its products in prose; German hub titles carry the German term ("Kupferpeptide") | Audit unchanged or higher | set-only specs, `--rollback` | about USD 3 per re-audit |
+| 1.10 | Monitoring on | The weekly monitor (`monitor.py` with `audits/2026-10-07-visibility-forensics/config.json`, extended with today's 39 pairs) as a launchd job; alerts on a 3-position fall or a lost citation | the first weekly report lands | unload the job | about USD 1 a week (decision 7.5) |
+
+### Phase 2 — Weeks 3 to 6: proof, feed, mentions (needs decisions 7.4, 7.8, 7.9)
+
+| Step | What | How | Check | Undo | Cost |
+|---|---|---|---|---|---|
+| 2.1 | Genuine reviews in markup | Confirm the Klaviyo review-request flow is live; import the existing genuine reviews into the `customer_review` metaobjects with their dates; render Review and `aggregateRating` in the Product JSON-LD from those metaobjects (an additive liquid snippet, server-rendered); only verified purchases | Rich-result test passes; stars appear in the SERP within weeks | remove the snippet | 0 (app already installed) |
+| 2.2 | Merchant Center | Install the Google & YouTube app on Shopify; complete the feed (brand, GTIN where present, size, ingredients, images); add the shipping and returns policies; free listings on | products appear in the shopping block for "pdrn serum", "glutathione serum" | disconnect the app | 0 |
+| 2.3 | Outreach materials | A one-page concentration-and-evidence sheet per product; pitches to Innerbody, Forbes Vetted, Allure, Glamour, Vogue, Byrdie; a sampling list of dermatologists and creators on YouTube; a disclosed Reddit presence plan; a newswire draft for the study appraisals | mentions counted monthly; the first listicle inclusion within 6 months | none | your budget |
+| 2.4 | Spokes 2 to 5 | "Does Argireline work?" as a hub section; "PDRN vs retinol" comparison and "can you use both" on the Ye article; "Best PDRN serums, compared on concentration and evidence" after the PDRN collection; "How to use a PDRN serum"; each English first, audited, approved, 14 days, then translated | audits 9.0 or more; the three proof-point terms first within 3 months | delete the draft | about USD 6 each |
+| 2.5 | Collagen page go-live (after 0.5) | Move to `/pages/collagen-skincare` with a 301 from the old address in six languages; fix internal links; the fifth Skin Solutions tile; critic; audit on the live URL (the preview's canonical gate clears only then); 14 days; translate | audit 9.0 or more on the live URL | the old page stays until the 301 is removed | about USD 6 |
+| 2.6 | GB and DE | GB: pricing and availability in the schema per market; DE: product titles carry "Peptid-Serum", "Kupferpeptid", the hub titles the German term; DE collection explainers | DE "pdrn serum" and "kupferpeptide" on page one | translation register | about USD 3 per re-audit |
+| 2.7 | Matrixyl rebuild go-live (after your picks) | The approved layout spec applied in six languages; the Robinson link in the evidence foot line | audit 9.6 or more | `--rollback` | about USD 3 |
+
+### Phase 3 — Months 2 to 4: the rest of the content, markets, distribution
+
+| Step | What | How | Check | Cost |
+|---|---|---|---|---|
+| 3.1 | Remaining spokes | Copper peptides with vitamin C and retinol; copper peptide side effects; glutathione side effects; Matrixyl 3000 vs Synthe'6; "Ist Matrixyl 3000 schädlich?" (German first); 1% vs 2% GHK-Cu; peptide serum with vitamin C; "PDRN vs polynucleotides" | each audited and approved; one page per intent | about USD 6 each |
+| 3.2 | Translation waves | Each English page translated after its 14-day measurement, DE first, then FR, IT, NL, ES | six-language verify | 0 |
+| 3.3 | Authority and mentions, monthly | Genuine referring domains, brand mentions, verified review count, AI citations on the 10 tracked prompts; roundup inclusion; retail and marketplace listings (Kaufland, Bol, then UK and US retail) | the monthly table in the tracker | the AI-citation panel about USD 0.70 a run (decision 7.5) |
+| 3.4 | "Best X" pages | "Best copper peptide serums" only after a roundup lists us; "best peptide serum" never (publisher-owned) | audit | about USD 6 |
+| 3.5 | Re-plan | Re-pull the 72 SERPs after the September spam update settles; move targets; retire what did not move | a dated note in this file | about USD 1.20 |
+
+---
+
+## Part 7 — Decisions that are yours
+
+1. **Request indexing** for the four URLs (5 minutes).
+2. **Enable the PageSpeed Insights API** on the key's project (free), so speed is measured weekly, ours and theirs.
+3. **Keyword ownership:** (a) may the Argireline serum's title carry "Argireline"? (b) the Matrixyl cream's title to "collagen
+   cream with matrixyl", or does it take "skin firming cream" and "peptide cream" instead? (c) the shop terms move to the
+   products: "brightening serum" to the glutathione serum, "wrinkle serum" to the Argireline serum, "skin firming cream" to
+   the Matrixyl cream, "firming serum" to the Matrixyl serum; "skin repair cream" and "glow serum" dropped; (d) The Science
+   becomes the "Peptides for Skin" pillar (the strategy keeps explainers inside hubs; this is the one cross-ingredient page);
+   (e) the Matrixyl hub to "what is matrixyl 3000", the glutathione hub to "glutathione for skin", Yogya to "pdrn
+   microneedling", Watanabe to "topical glutathione"; (f) the nine previously unowned pages as proposed in Part 2.2 (marked *).
+   Approve as a block, or strike lines.
+4. **The off-site track's scope and budget:** reviews flow, Merchant Center, listicle outreach, YouTube sampling, Reddit,
+   newswire, retail; who does the outreach.
+5. **Spend:** the weekly monitor (about USD 1 a week with today's 39 pairs added), the AI-citation panel (about USD 0.70 a run),
+   OpenAI credits for the fourth audit judge.
+6. **Approve the English** of the eight study previews, the collagen rebuild and the Matrixyl rebuild picks
+   (`docs/review-2026-10-08-concept-pages.md`).
+7. **Speed:** permission to test the animation and hero-loading settings on a duplicate theme and, if LCP falls under 4 s, to
+   apply them live; and which of the three apps (Shopify Forms, Appstle subscriptions, Profit Pumper bundles) are in use.
+8. **The formula sheet:** what "10% MATRIXYL" on the serum pack means, and the Argireline grade and peptide content, so the
+   product pages can state concentrations.
+9. **Klaviyo:** confirm whether the welcome, abandoned-cart, post-purchase and review-request flows exist; the review-request
+   flow feeds step 2.1.
+10. **Tag-page titles** need a core-layout edit (asked before, still open).
+11. **PDRN "3.5×"** framing: keep (your strongest-credible-claim rule) or soften (the auditor's C9).
+12. **The "Is Argireline 'Botox in a bottle'?" FAQ item**: approve or veto (draft in the todo).
+13. **The stamp sets:** are they pre-order? If so, `PreOrder` availability with a date in schema and feed; if not, hide
+    them until stock exists. Today they render "Sold out" with out-of-stock schema under a pre-order template.
+14. **Collection schema needs a custom-liquid block** (the stock theme emits breadcrumb schema only on collections). It is
+    additive and scoped, but it is custom code under your "standard sections before custom code" rule: yes or no.
+15. **In-vivo figures on product and collection pages:** "55.8%" and "7 in 10" on the copper pages and collection, "up to
+    23%" and "over twice as much as retinol" on the PDRN cream and collection, "+256% in lab tests" on the Matrixyl cream.
+    The rule since 2026-09-26 keeps trial magnitudes on the hubs until the formula sheet confirms the concentrations:
+    strip them now, or confirm the formulas first (decision 8).
+16. **Badenhorst's framing:** test "Copper Peptide vs Matrixyl 3000: the Badenhorst 2016 trial" (the trial's own
+    comparison) or keep the current title.
+17. **The Science as the "Peptides for Skin" pillar:** the content strategy keeps explainers inside hubs; this page is the
+    one cross-ingredient explainer. Approve the rebuild, and whether Dr Bodde reviews it (in German too).
+
+---
+
+## Part 8 — Measurement
+
+| Cadence | What | Source | Alert |
+|---|---|---|---|
+| Weekly | Clicks and impressions by page and query family; positions on the 72 tracked pairs; AI Overview citations; genuine referring domains | `monitor.py` with the two configs | a 3-position fall, a lost citation, a 15% click drop |
+| After every change | The central audit on the changed page; Lighthouse on its page type | `audit_page.py`; `npx lighthouse` | below 9.0, or LCP above 4 s |
+| 8 weeks after a new page | The cannibalisation gate: if the page takes more than 30% of its hub's head-term impressions, de-optimise it | Search Console per page | |
+| Monthly | Brand mentions, verified reviews, AI citations on the 10 tracked prompts, listicle inclusions, retail listings | DataForSEO, Klaviyo, the citation panel | |
+
+KPI baselines and targets:
+
+| KPI | Baseline (w/c 2026-09-28) | Month 3 | Month 6 | Month 12 |
+|---|---|---|---|---|
+| Organic clicks a week | 35 | 150 | 500 | 1,500 |
+| Terms on page one (of 72) | 0 | 15 | 30 | 45 |
+| Terms first (of 72) | 1 (brand) | 5 | 10 | 18 |
+| AI Overview citations (of 47 with an Overview) | 1 | 5 | 12 | 20 |
+| Genuine referring domains | 0 | 10 | 30 | 80 |
+| Products with stars in the SERP | 0 | 5 | 9 | 9 |
+| Mobile LCP, lab, worst page type | 12.5 s | under 4 s | under 3 s | under 2.5 s |
+| Orders a week from organic | 0 to 2 | 5 | 15 | 40 |
+
+---
+
+## Part 9 — What not to do
+
+Build llms.txt; push schema beyond the minimum; write 3,000-word guides; publish FAQ-format articles; scale "what is X" or
+"A vs B" templates; re-date pages without real changes; buy links or placements; use authority-style clinical language the
+registers do not support; translate before measuring; bundle changes; chase the link-generator spam with a disavow; publish
+"before and after" pages (the images are illustrations); build "best peptide serum" (publisher-owned); let a concern page
+compete with its hub for the ingredient term.
+
+---
+
+## Part 10 — Evidence and sources
+
+- Today: `audits/2026-10-08-competitor-gap-per-page/README.md` (evidence record), `config.json`, `serp/` (serp.json, pages.json,
+  authority.json, report.md), `data/volumes.json`, `data/page-table.json`, `data/serp-summary-both-days.json`,
+  `data/lighthouse/*.json` and `lighthouse-summary.json`, the three teardowns.
+- Yesterday: `audits/2026-10-07-visibility-forensics/` (README, serp/, three teardowns, mentions.json added today), the ranking
+  plan `docs/seo-performance-and-ranking-plan-2026-10-07.md`.
+- Strategy: `docs/keyword-strategy-2026.md`, `docs/content-plan-2026.md`, `docs/content-hub-strategy-2026.md` §9,
+  `docs/research-2026-ai-search-and-content-hubs.md`, `docs/keyword-ownership-analysis-2026-09-30.md`.
+- Registers: `docs/claims/*.md`. Audits: `docs/audits/tracker-skingenetix.com.md`.
+- Concept pages for review: `docs/review-2026-10-08-concept-pages.md` and `~/Desktop/skingenetix-renders.png`.

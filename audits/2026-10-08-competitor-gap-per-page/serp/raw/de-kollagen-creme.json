@@ -1,0 +1,1789 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "9.6231 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080909-1509-0139-0000-ec9f54699e1e",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "9.5541 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "kollagen creme",
+    "location_code": 2276,
+    "language_code": "de",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "kollagen creme",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2276,
+     "language_code": "de",
+     "check_url": "https://www.google.com/search?q=kollagen%20creme&hl=de&gl=DE&ie=UTF-8&uule=w+CAIQIFISCWu-scIecppHEVvlkY5rXeh1",
+     "datetime": "2026-10-08 09:09:58 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Körperlotionen",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvF6Ndy7qg6tnLWduKXy4Nd9Cfnng:1791450595933&q=k%C3%B6rperlotionen+kollagen+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r6lclnUuEFz1h_qVdzJ_AdkisvUWbsiv38-a1hLuFRNcBGRuQM74DauskGk-Fa6givRxXpVv1WYfZVK76rsm6HLUWvtgxy-0Xh-IKU5hOVw4lzlaiTnPN0mlnL2k7_cJQ1jYpLIHcVpyl27e_dDynIODYaCNTPdFv6fgahpqWwpD_aAyw&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QxKsJKAB6BAgmEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Augencreme",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvF6Ndy7qg6tnLWduKXy4Nd9Cfnng:1791450595933&q=augencreme+kollagen+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rbdAMqvNNc_Qrf1pUsnWcB2xnbajO89cLYkj8HfDcMtVNiS4hUZ54iV48xLOcVdmw7NM4oA0N3fbPqhkO9aeuVIsoOrSUbitbjAnyjEO_bkPOeFzByYWCdrCZXC6uo6e0bGwtzC-BGeLrW_glumXzH18hpYbTWsq7S_GXp68JtdIn_PJK&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QxKsJKAF6BAglEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Handcremes",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvF6Ndy7qg6tnLWduKXy4Nd9Cfnng:1791450595933&q=handcremes+kollagen+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rbdAMqvNNc_Qrf1pUsnWcB2xnbajO89cLYkj8HfDcMtW0Jj3Vg_5wqpKQFwnqIb_MCv24mpT9XRoZYpj98LD_CvPZzTnmey25HvgrkJGmTvXj3lfe5x5mCD1WTqwkTam8flz8z6SDfmxu8CETBQa3eCNjieJQEnezIEVWU_y9TV5H3J-B&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QxKsJKAJ6BAgkEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Gesichtsseren",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvF6Ndy7qg6tnLWduKXy4Nd9Cfnng:1791450595933&q=gesichtsseren+kollagen+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rqi--IS5qqFykt0uxkCtW_IDckn0OSWVYvmRLh1r9nAAQTa1XgQeehtxg9FQ_jSCMzwPo7LZaw_bmsAsMJgChIRuXR173fnWbRsGf2ZyNY7U2fnFVTw-sCKminN4dAzjG70BQnQGCN0oSo8lquWePHLa7uK8CJuTf6MCMeU2Oo_BCJz5A&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QxKsJKAN6BAgnEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "M. Asam",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvF6Ndy7qg6tnLWduKXy4Nd9Cfnng:1791450595933&q=m.+asam+kollagen+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rH-nEfqucMsHGD4YSv-NbV5q6WNoFPn_WdcCl6mGwxTD6sFzY9bO_wrZDwaaWGqD73BDCLGBXhzx_w25SI1afuRqa3Cv2nzj6Gf1qymv4S9HxWZFmI19KtBLeNR3lPFdnw3jTwDW0gyGwy6SCEQkmMo2wKIvpGaDr7sHMLYiOR8Sa1SVMOqBkOIEVLrj3h4_IvasMBA&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QxKsJKAR6BAgjEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "BABOR",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvF6Ndy7qg6tnLWduKXy4Nd9Cfnng:1791450595933&q=babor+kollagen+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rTalc9ibXQalw1qPNRsa2kfQN-v46v7KGmtYIsR_rfwwwuDezWDRM8HEry4vfQ71UBrXw6t_t97F1fymXb53A4t42LJ3BZl6vaL2c03s36rhF7zLbeeZ52VeCfsdzzi2xROM22H-Jf1TXOfiiADudpxTHuxhC2Y-zzaKyNvW4Y-oLa48gyDLuoaFaj1yOdCETJAOE-g&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QxKsJKAV6BQibARAB&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "DR.GRANDEL",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvF6Ndy7qg6tnLWduKXy4Nd9Cfnng:1791450595933&q=dr.grandel+kollagen+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r9o8EtIr7w4auRdy15uM4Z4WNn2-QqO_1IPKVH_NL9nWpm-0KzddrCAEuaCpFiYIa5W76aBHJqDp78tkBWQrUqK2pp361ae-q2vxbziuTsJ31ukgj5qE0_xF7MeC-Lat6gYXijRJ8tsEhh3N5SuXyQg3R2AewZ081Ef8kLLFvmWrTE54pjr9MrXjLiEhCxyLk4gPw_2xU7gkMyCmxjwSNnfioKRU&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QxKsJKAZ6BQiaARAB&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hildegard Braukmann",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvF6Ndy7qg6tnLWduKXy4Nd9Cfnng:1791450595933&q=hildegard+braukmann+kollagen+creme&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rb6ov3c6U0v2pckZSx7tVjWFTemGD3OIUbdh1DC4FiGrXIxj1hFYfULMAHjaLiToMMEu8WpjMghN00KPggWCSig2dlJ6kAeVTG2_WWBb-Ding_krmOr0IOFe4zgsLJ6dK1cIYOV-FaHMjOj-MoU9yS2TdQb2JfenisU7CbPmMqDorUfr5M_nSABSfYuyiqdh2qGmo7i31rPblxMIsFZ7yw1RQOKU&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QxKsJKAd6BQiZARAB&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "popular_products",
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "related_searches"
+     ],
+     "se_results_count": 187,
+     "pages_count": 1,
+     "items_count": 11,
+     "items": [
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]",
+       "title": "Feuchtigkeitscremes",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream",
+         "url": "https://www.goodbuy.de/produkt/4916882242?mc=O38ApPLVK2vW&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIQRAE",
+         "domain": "www.goodbuy.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-ec9f54699e1e:0",
+         "price": {
+          "current": 86.18,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "86,18 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Spiller Collagen Creme",
+         "url": "https://www.goodbuy.de/produkt/4310139344?mc=O38ApPLVK2vW&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIUBAE",
+         "domain": "www.goodbuy.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-ec9f54699e1e:1",
+         "price": {
+          "current": 36,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "36,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancôme Rénergie Collagen Lift-Xtend Cream",
+         "url": "https://www.goodbuy.de/produkt/5536678137?mc=O38ApPLVK2vW&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQITxAE",
+         "domain": "www.goodbuy.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-ec9f54699e1e:2",
+         "price": {
+          "current": 60.23,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "60,23 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam COLLAGEN LIFT Körpercreme",
+         "url": "https://www.goodbuy.de/produkt/3911248656?mc=O38ApPLVK2vW&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIThAE",
+         "domain": "www.goodbuy.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-ec9f54699e1e:3",
+         "price": {
+          "current": 15.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "15,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Exquisit Collagen Creme Tag",
+         "url": "https://www.goodbuy.de/produkt/9684835?mc=O38ApPLVK2vW&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUInAEQBA",
+         "domain": "www.goodbuy.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQw1gNvjBWajN_nbbD2M5vJuKP89bzdHfOoRf3hgPrVQ6uSqG4oLDO_yD2Xx1ldEgOWycsv6YhS38eARnY7Pr5YDQoOUFJjMoxk2bRoS4I",
+         "price": {
+          "current": 11.24,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,24 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COLLAGEN CREME Tag & Nacht",
+         "url": "https://www.goodbuy.de/produkt/4944354627?mc=O38ApPLVK2vW&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUInwEQBA",
+         "domain": "www.goodbuy.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTAtTgogJpXtTIaEf-XIe-Q620nzEyfNfF1NKmmfbhqRYW1sfRV9OzYbgh2SXM2L4elNLkDI91z1uxWOfD1zD0y_subhRLcha2sgFysWFhSHct9dh2jbLnX",
+         "price": {
+          "current": 5.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "5,89 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream Rich",
+         "url": "https://www.goodbuy.de/produkt/4922089312?mc=O38ApPLVK2vW&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIngEQBA",
+         "domain": "www.goodbuy.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSten4ziXP5HRScEdh6VhIip4uIciCUbL7W9Q39xTNuWhTyKgcrSnDlZwcLhVlsUlwfx9VdqjrWdKplvHnRrkbkbs3oO0edQLvSU7ZaYnk_GunvaZ61M9bSYw",
+         "price": {
+          "current": 61.77,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "61,77 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Neutrogena Collagen Bank 50ml Feuchtigkeitscreme",
+         "url": "https://www.goodbuy.de/produkt/5584819587?mc=O38ApPLVK2vW&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIoAEQBA",
+         "domain": "www.goodbuy.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSrOlb4EgfORGQbCQonLcrap50RB0vdA2YCq2HCVlsos4vCZe0l1CyLqt5KzGkxuwg0gKTk6GGvSdTK5cCFngEWDLQhaTxJoQdovhTT55ffP1Z6_AnSoNDY",
+         "price": {
+          "current": 30.8,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "30,80 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream",
+         "url": "https://www.shoparize.com/de/p/doctor-babor-lifting-collagen-pep-boost-cream/4015165368656/a23a0200-4031-4197-89b5-34f6ad1f176c?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQISRAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxztwki3WzOtlcDuSgG8lGcH9LARcy3T1JO8uHSZQjKRVFvau96iTbubN-r8W-w7-7e42gbDDDpwwZVdl0v5Kb41TpsjHRW9s6-jF5L2xE",
+         "price": {
+          "current": 103.5,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "103,50 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Spiller Collagen Creme",
+         "url": "https://www.shoparize.com/de/p/dr-spiller-collagen-creme-50ml/4033777000344/9f32165d-fab5-43c2-a14e-1906a3948181?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQITBAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQMLhomAH3H5SBrcJexlCbPGnnJjQPcIS8Ny20riJGCZO6_lJQ2onyv-k_WD8UasJJtylPZwrXJV6v7KHHWcjTjKuR-LLArfzhNQVWOdW5woEc-qTNIeO6rZg",
+         "price": {
+          "current": 36,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "36,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancôme Rénergie Collagen Lift-Xtend Cream",
+         "url": "https://www.shoparize.com/de/p/lancome-renergie-collagen-lift-xtend-cream-gesichtscreme/4936968887734/a12a5f12-e3cc-42cc-b9d7-9bcfd30ff062?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQITRAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxUxT9dDGZUWOZy4kBJxaCDg1W_2x4SVu9lXvznTBO479-UWGdaP2BCcWu4ax_B0Vcz51aXAeS9P0rMe25xnNt7pcalomBnkOurmwbd_CB",
+         "price": {
+          "current": 67.67,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "67,67 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam COLLAGEN LIFT Körpercreme",
+         "url": "https://www.shoparize.com/de/p/m-asam-collagen-lift-korpercreme-xxl-500ml-intensiv-pflegende-korpercreme-mit-pflanzlichem-kollagen-booster-fur-spannkraft-elastizitat/4049639423053/79c26af6-cb65-5622-86c2-31fac785737d?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQISxAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSBXaZdO9P_SXr2W9EmhGvPwGxNcK0q9JD945wSnPutOL18zfi1wNyLikKethkxBKu1DMjsPXmiTOBoiNdBCjxoBQt7iwJtkDgzfWNwHsEwtyH2JUdZVvJf0w",
+         "price": {
+          "current": 25.49,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "25,49 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Exquisit Collagen Creme Tag",
+         "url": "https://www.shoparize.com/de/p/hildegard-braukmann-exquisit-collagen-gesichtscreme/4016083059626/a0edfd6b-0b1d-43c7-82a6-b98fc6044d40?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUInQEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQw1gNvjBWajN_nbbD2M5vJuKP89bzdHfOoRf3hgPrVQ6uSqG4oLDO_yD2Xx1ldEgOWycsv6YhS38eARnY7Pr5YDQoOUFJjMoxk2bRoS4I",
+         "price": {
+          "current": 12.09,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "12,09 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COLLAGEN CREME Tag & Nacht",
+         "url": "https://www.shoparize.com/de/p/vom-pullach-hof-anti-aging-creme-collagen-creme-100ml-feuchtigkeitscreme-gesichtcreme-anti-aging-81-antifalten/4039525108881/9f10b864-1ce3-4a1e-aee9-d74a7d2c9a58?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUImAEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTAtTgogJpXtTIaEf-XIe-Q620nzEyfNfF1NKmmfbhqRYW1sfRV9OzYbgh2SXM2L4elNLkDI91z1uxWOfD1zD0y_subhRLcha2sgFysWFhSHct9dh2jbLnX",
+         "price": {
+          "current": 11.76,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,76 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream Rich",
+         "url": "https://www.shoparize.com/de/p/babor-lifting-collagen-peptide-booster-cream-rich-50-ml/4015165368663/a2ed38b3-3bc8-4d4e-9d3c-31e9b1e5d30b?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIkgEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSten4ziXP5HRScEdh6VhIip4uIciCUbL7W9Q39xTNuWhTyKgcrSnDlZwcLhVlsUlwfx9VdqjrWdKplvHnRrkbkbs3oO0edQLvSU7ZaYnk_GunvaZ61M9bSYw",
+         "price": {
+          "current": 68.76,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "68,76 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Neutrogena Collagen Bank 50ml Feuchtigkeitscreme",
+         "url": "https://www.shoparize.com/de/p/neutrogena-collagen-bank-moisturizer-50-ml/3574661840345/a2cfdadd-a279-4d2c-ac72-ad9ffda60296?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIlwEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSrOlb4EgfORGQbCQonLcrap50RB0vdA2YCq2HCVlsos4vCZe0l1CyLqt5KzGkxuwg0gKTk6GGvSdTK5cCFngEWDLQhaTxJoQdovhTT55ffP1Z6_AnSoNDY",
+         "price": {
+          "current": 19.5,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "19,50 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream Rich",
+         "url": "https://www.preis.info/product/Babor-Doctor-Babor-Lifting-CollagenPeptide?pid=p12766158559&p=366571&gtin=4015165368663&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIRRAE",
+         "domain": "www.preis.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSten4ziXP5HRScEdh6VhIip4uIciCUbL7W9Q39xTNuWhTyKgcrSnDlZwcLhVlsUlwfx9VdqjrWdKplvHnRrkbkbs3oO0edQLvSU7ZaYnk_GunvaZ61M9bSYw",
+         "price": {
+          "current": 72.78,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "72,78 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream",
+         "url": "https://www.preis.info/product/Babor-Doctor-Babor-Lifting-CollagenPeptide?pid=p12766158560&p=366571&gtin=4015165377689&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIShAE",
+         "domain": "www.preis.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxztwki3WzOtlcDuSgG8lGcH9LARcy3T1JO8uHSZQjKRVFvau96iTbubN-r8W-w7-7e42gbDDDpwwZVdl0v5Kb41TpsjHRW9s6-jF5L2xE",
+         "price": {
+          "current": 68.59,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "68,59 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Alcina Collagen Creme",
+         "url": "https://www.preis.info/product/Alcina-CollagenCreme-50-ml?pid=p10148673982&p=366571&gtin=4008666342966&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIRxAE",
+         "domain": "www.preis.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQCbS0x96mFT8YujDcj9KMqn9_lHQ3Zh5hmRO1pKNrTrqSWwifQtAKSyld5OGaCZ77ywMXXb44hRO-hsqA2rWRPR49tygkqWrT2EpcxruFPgVfWQTDRXHdP",
+         "price": {
+          "current": 47.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "47,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Grandel Pro Collagen Cream Rich",
+         "url": "https://www.preis.info/preisvergleich/Dr-Grandel-Pro-Collagen-Cream-500001781073.html?p=366571&gtin=4011396416968&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIQxAE",
+         "domain": "www.preis.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRVhfNBSACZaDoPcZzH5exZEVtG1FSwm7s1pmvuyzZH1s2NBjkgO1dr6vMpRuZ_xKFc6zefqJKNLW9YWpcUnZWEd5Hb-dE5SdGjFlP2icnGRz00mye_T-M9Qag",
+         "price": {
+          "current": 37.59,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "37,59 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Grandel Pro Collagen Cream",
+         "url": "https://www.preis.info/preisvergleich/Dr-Grandel-Pro-Collagen-Cream-500001781003.html?p=366571&gtin=4011396416951&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIlQEQBA",
+         "domain": "www.preis.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSNp7P37DpLBJenUyBVVoxjFJ6eO8JNEK2ceKgjY4SIwszkEUk-Na-BYIMMB415EfXG1XaxbK9R-aO9cy6pte7yeJVuyFt_MIV2f26tk_SngaQB2AO5YX0Y",
+         "price": {
+          "current": 36.64,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "36,64 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Spiller Collagen Creme",
+         "url": "https://www.preis.info/product/Dr-Spiller-Collagen-Creme-50?pid=p12487557703&p=366571&gtin=4033777000344&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIlgEQBA",
+         "domain": "www.preis.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQMLhomAH3H5SBrcJexlCbPGnnJjQPcIS8Ny20riJGCZO6_lJQ2onyv-k_WD8UasJJtylPZwrXJV6v7KHHWcjTjKuR-LLArfzhNQVWOdW5woEc-qTNIeO6rZg",
+         "price": {
+          "current": 36,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "36,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Eckstein Collagen Supreme 50 ml",
+         "url": "https://www.preis.info/preisvergleich/Doctor-Eckstein-Collagen-Supreme-Gesichtscreme-500001600001.html?p=366571&gtin=4035219548001&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIkQEQBA",
+         "domain": "www.preis.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRUMG2RgJ3fmikO075hpFGDVCuNbrNhvshhF731zDJtYfwv7r38wk6VLWKoYrw4hSZnAG1twhHv5ke6LO8YYh25f1cymQ3lc6yFT471SCVJKV3gNPbdjnYC",
+         "price": {
+          "current": 30.6,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "30,60 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Spiller Hydro Collagen Creme",
+         "url": "https://www.preis.info/product/Dr-Spiller-Collagen-Hydro-Creme?pid=p12487559283&p=366571&gtin=4033777000290&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIlAEQBA",
+         "domain": "www.preis.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSZX5QpHw4KDQ2NHAPaYRFtad8J-L-Or3QcAFLRqU0Nvcd3TEl6gf8Xo-V1ZLNCwrcQXxXq2LqMYbttCFRIdvohOmhR-dXD2C2E4ieRoQxpHp-io30DbqGidw",
+         "price": {
+          "current": 29.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "29,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream",
+         "url": "https://www.testberichte.de/gesundheit-schoenheit/doctor-babor-collagen-peptide-booster-cream-50-ml-gesichtscreme-403717.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIPBAE",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxztwki3WzOtlcDuSgG8lGcH9LARcy3T1JO8uHSZQjKRVFvau96iTbubN-r8W-w7-7e42gbDDDpwwZVdl0v5Kb41TpsjHRW9s6-jF5L2xE",
+         "price": {
+          "current": 19.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "19,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Spiller Collagen Creme",
+         "url": "https://www.testberichte.de/pdb/p/0gAXX8PNRoGgmkDXqkm9uw.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIOxAE",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQMLhomAH3H5SBrcJexlCbPGnnJjQPcIS8Ny20riJGCZO6_lJQ2onyv-k_WD8UasJJtylPZwrXJV6v7KHHWcjTjKuR-LLArfzhNQVWOdW5woEc-qTNIeO6rZg",
+         "price": {
+          "current": 36,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "36,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancôme Rénergie Collagen Lift-Xtend Cream",
+         "url": "https://www.testberichte.de/pdb/p/7FwMJapBQBS3jCcgrW0BeA.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIOhAE",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxUxT9dDGZUWOZy4kBJxaCDg1W_2x4SVu9lXvznTBO479-UWGdaP2BCcWu4ax_B0Vcz51aXAeS9P0rMe25xnNt7pcalomBnkOurmwbd_CB",
+         "price": {
+          "current": 62.93,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "62,93 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam COLLAGEN LIFT Körpercreme",
+         "url": "https://www.testberichte.de/pdb/p/QPEp1iNmTXqd3obJl6gOqw.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIORAE",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSBXaZdO9P_SXr2W9EmhGvPwGxNcK0q9JD945wSnPutOL18zfi1wNyLikKethkxBKu1DMjsPXmiTOBoiNdBCjxoBQt7iwJtkDgzfWNwHsEwtyH2JUdZVvJf0w",
+         "price": {
+          "current": 29.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "29,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Exquisit Collagen Creme Tag",
+         "url": "https://www.testberichte.de/gesundheit-schoenheit/hildegard-braukmann-exquisit-collagen-creme-tag-50-ml.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIkAEQBA",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQw1gNvjBWajN_nbbD2M5vJuKP89bzdHfOoRf3hgPrVQ6uSqG4oLDO_yD2Xx1ldEgOWycsv6YhS38eARnY7Pr5YDQoOUFJjMoxk2bRoS4I",
+         "price": {
+          "current": 11.24,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,24 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Vichy Liftactiv Collagen Specialist",
+         "url": "https://www.testberichte.de/gesundheit-schoenheit/vichy-liftactiv-collagen-specialist-50-ml.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIkwEQBA",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTh7ejghfnLedyC1ZemgCcR3kwV6S8F1uU1D3QZOU7GATEc9fr-lhwIFMhFlutaZ0ByERHZmAeZJtd1ofwAYeCbcMXZgYWWzTRaJPWfN5oYfFhluZPhz3L74w",
+         "price": {
+          "current": 27.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "27,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COLLAGEN CREME Tag & Nacht",
+         "url": "https://www.testberichte.de/pdb/p/2tnprq0uTLWHg8GBreFiGA.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIjwEQBA",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTAtTgogJpXtTIaEf-XIe-Q620nzEyfNfF1NKmmfbhqRYW1sfRV9OzYbgh2SXM2L4elNLkDI91z1uxWOfD1zD0y_subhRLcha2sgFysWFhSHct9dh2jbLnX",
+         "price": {
+          "current": 5.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "5,89 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Eckstein Collagen Supreme 50 ml",
+         "url": "https://www.testberichte.de/pdb/p/eCU0n1nzQWuEvTgo3PKmUQ.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIjgEQBA",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRUMG2RgJ3fmikO075hpFGDVCuNbrNhvshhF731zDJtYfwv7r38wk6VLWKoYrw4hSZnAG1twhHv5ke6LO8YYh25f1cymQ3lc6yFT471SCVJKV3gNPbdjnYC",
+         "price": {
+          "current": 30.6,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "30,60 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream",
+         "url": "https://www.vergleich.org/dp/4015165377689/?sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIRBAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxztwki3WzOtlcDuSgG8lGcH9LARcy3T1JO8uHSZQjKRVFvau96iTbubN-r8W-w7-7e42gbDDDpwwZVdl0v5Kb41TpsjHRW9s6-jF5L2xE",
+         "price": {
+          "current": 68,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "68,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancôme Rénergie Collagen Lift-Xtend Cream",
+         "url": "https://www.vergleich.org/dp/4936968887734/?sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQISBAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxUxT9dDGZUWOZy4kBJxaCDg1W_2x4SVu9lXvznTBO479-UWGdaP2BCcWu4ax_B0Vcz51aXAeS9P0rMe25xnNt7pcalomBnkOurmwbd_CB",
+         "price": {
+          "current": 64.29,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "64,29 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Exquisit Collagen Creme Tag",
+         "url": "https://www.vergleich.org/dp/4016083059626/?sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIRhAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQw1gNvjBWajN_nbbD2M5vJuKP89bzdHfOoRf3hgPrVQ6uSqG4oLDO_yD2Xx1ldEgOWycsv6YhS38eARnY7Pr5YDQoOUFJjMoxk2bRoS4I",
+         "price": {
+          "current": 11.49,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,49 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COLLAGEN CREME Tag & Nacht",
+         "url": "https://www.vergleich.org/dp/4039525108881/?sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIQhAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTAtTgogJpXtTIaEf-XIe-Q620nzEyfNfF1NKmmfbhqRYW1sfRV9OzYbgh2SXM2L4elNLkDI91z1uxWOfD1zD0y_subhRLcha2sgFysWFhSHct9dh2jbLnX",
+         "price": {
+          "current": 5.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "5,89 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Eckstein Collagen Supreme 50 ml",
+         "url": "https://www.vergleich.org/dp/4035219548001/?sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIjAEQBA",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRUMG2RgJ3fmikO075hpFGDVCuNbrNhvshhF731zDJtYfwv7r38wk6VLWKoYrw4hSZnAG1twhHv5ke6LO8YYh25f1cymQ3lc6yFT471SCVJKV3gNPbdjnYC",
+         "price": {
+          "current": 38.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "38,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Professional Collagen Creme Tag",
+         "url": "https://www.vergleich.org/dp/4016083079143/?sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIjQEQBA",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQN1eUDaHEavCUgZIL98h--FplGG0VhJHcLpQ2yNzqZXYrzQ7UGTcl9LfyFgjUN0M1wPAaTflfo3UgHlfNZY3AGXXOpUrL6gCTe7_3_Q_WVbwPvJII6Zfmekg",
+         "price": {
+          "current": 14.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "14,40 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Artdeco Collagen Master Cream",
+         "url": "https://www.vergleich.org/dp/4052136235050/?sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIigEQBA",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQWnEmtJHkuR25eEnMKXmLPjfopGyS6XN76q_S_sy93KaYFJC1UYlWrYt1MnlKrWDfYr71G0hwi3FUrsS4gVZBbcLm3hig2Hmi5GGPtcsxkPQFwCGl-XWJxnhI",
+         "price": {
+          "current": 24.5,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "24,50 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mizon Hand And Foot Cream Collagen",
+         "url": "https://www.vergleich.org/dp/8809689370204/?sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIiQEQBA",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQG_oWw4OgXMJ0zsTBnGhA-L8nFgCc0RB94RXItxpJpzxgpkjVPaAdA8m5vgteq8USbcqHSG9Nge-xpq2gsZTKA1XJNBRpPnOm2QbPUOa6JmzNjuT0zxfBA1g",
+         "price": {
+          "current": 5.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "5,40 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream",
+         "url": "https://preisvergleich.heise.de/babor-doctor-babor-collagen-peptide-booster-cream-402680-a3479485.html?hloc=de&hloc=at&nocookie=1&highlight=407980426436&mtm_campaign=css&mtm_kwd=3479485&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIPRAE",
+         "domain": "preisvergleich.heise.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxztwki3WzOtlcDuSgG8lGcH9LARcy3T1JO8uHSZQjKRVFvau96iTbubN-r8W-w7-7e42gbDDDpwwZVdl0v5Kb41TpsjHRW9s6-jF5L2xE",
+         "price": {
+          "current": 68.59,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "68,59 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancôme Rénergie Collagen Lift-Xtend Cream",
+         "url": "https://preisvergleich.heise.de/lanc-me-r-nergie-collagen-lift-xtend-cream-a3821053.html?hloc=de&hloc=at&nocookie=1&highlight=409812570193&mtm_campaign=css&mtm_kwd=3821053&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIQBAE",
+         "domain": "preisvergleich.heise.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxUxT9dDGZUWOZy4kBJxaCDg1W_2x4SVu9lXvznTBO479-UWGdaP2BCcWu4ax_B0Vcz51aXAeS9P0rMe25xnNt7pcalomBnkOurmwbd_CB",
+         "price": {
+          "current": 60.23,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "60,23 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Exquisit Collagen Creme Tag",
+         "url": "https://preisvergleich.heise.de/hildegard-braukmann-exquisit-collagen-tagescreme-a1053621.html?hloc=de&hloc=at&nocookie=1&highlight=409841369281&mtm_campaign=css&mtm_kwd=1053621&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIPxAE",
+         "domain": "preisvergleich.heise.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQw1gNvjBWajN_nbbD2M5vJuKP89bzdHfOoRf3hgPrVQ6uSqG4oLDO_yD2Xx1ldEgOWycsv6YhS38eARnY7Pr5YDQoOUFJjMoxk2bRoS4I",
+         "price": {
+          "current": 10.88,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "10,88 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Vichy Liftactiv Collagen Specialist",
+         "url": "https://preisvergleich.heise.de/vichy-liftactiv-collagen-specialist-tagescreme-a2089930.html?hloc=de&hloc=at&nocookie=1&highlight=408163561048&mtm_campaign=css&mtm_kwd=2089930&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIPhAE",
+         "domain": "preisvergleich.heise.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTh7ejghfnLedyC1ZemgCcR3kwV6S8F1uU1D3QZOU7GATEc9fr-lhwIFMhFlutaZ0ByERHZmAeZJtd1ofwAYeCbcMXZgYWWzTRaJPWfN5oYfFhluZPhz3L74w",
+         "price": {
+          "current": 27.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "27,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Eckstein Collagen Supreme 50 ml",
+         "url": "https://preisvergleich.heise.de/eckstein-collagen-supreme-gesichtscreme-a1863066.html?hloc=de&hloc=at&nocookie=1&highlight=409124699423&mtm_campaign=css&mtm_kwd=1863066&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIiAEQBA",
+         "domain": "preisvergleich.heise.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRUMG2RgJ3fmikO075hpFGDVCuNbrNhvshhF731zDJtYfwv7r38wk6VLWKoYrw4hSZnAG1twhHv5ke6LO8YYh25f1cymQ3lc6yFT471SCVJKV3gNPbdjnYC",
+         "price": {
+          "current": 30.26,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "30,26 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream Rich",
+         "url": "https://preisvergleich.heise.de/babor-doctor-babor-collagen-peptide-booster-cream-rich-402681-a3479494.html?hloc=de&hloc=at&nocookie=1&highlight=409930745891&mtm_campaign=css&mtm_kwd=3479494&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIiwEQBA",
+         "domain": "preisvergleich.heise.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSten4ziXP5HRScEdh6VhIip4uIciCUbL7W9Q39xTNuWhTyKgcrSnDlZwcLhVlsUlwfx9VdqjrWdKplvHnRrkbkbs3oO0edQLvSU7ZaYnk_GunvaZ61M9bSYw",
+         "price": {
+          "current": 62.16,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "62,16 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Professional Collagen Creme Tag",
+         "url": "https://preisvergleich.heise.de/hildegard-braukmann-professional-collagen-creme-tag-a3110244.html?hloc=de&hloc=at&nocookie=1&highlight=409786320411&mtm_campaign=css&mtm_kwd=3110244&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIhwEQBA",
+         "domain": "preisvergleich.heise.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQN1eUDaHEavCUgZIL98h--FplGG0VhJHcLpQ2yNzqZXYrzQ7UGTcl9LfyFgjUN0M1wPAaTflfo3UgHlfNZY3AGXXOpUrL6gCTe7_3_Q_WVbwPvJII6Zfmekg",
+         "price": {
+          "current": 12.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "12,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mizon Hand And Foot Cream Collagen",
+         "url": "https://preisvergleich.heise.de/mizon-multi-function-formula-collagen-hand-foot-cream-a3177783.html?hloc=de&hloc=at&nocookie=1&highlight=408802829595&mtm_campaign=css&mtm_kwd=3177783&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIhQEQBA",
+         "domain": "preisvergleich.heise.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQG_oWw4OgXMJ0zsTBnGhA-L8nFgCc0RB94RXItxpJpzxgpkjVPaAdA8m5vgteq8USbcqHSG9Nge-xpq2gsZTKA1XJNBRpPnOm2QbPUOa6JmzNjuT0zxfBA1g",
+         "price": {
+          "current": 5.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "5,40 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream",
+         "url": "https://www.codecheck.info/pdb/p/uXL5pk-dSMiGV1P_bNZYCA.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIMRAE",
+         "domain": "www.codecheck.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxztwki3WzOtlcDuSgG8lGcH9LARcy3T1JO8uHSZQjKRVFvau96iTbubN-r8W-w7-7e42gbDDDpwwZVdl0v5Kb41TpsjHRW9s6-jF5L2xE",
+         "price": {
+          "current": 19.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "19,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Spiller Collagen Creme",
+         "url": "https://www.codecheck.info/pdb/p/0gAXX8PNRoGgmkDXqkm9uw.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQINBAE",
+         "domain": "www.codecheck.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQMLhomAH3H5SBrcJexlCbPGnnJjQPcIS8Ny20riJGCZO6_lJQ2onyv-k_WD8UasJJtylPZwrXJV6v7KHHWcjTjKuR-LLArfzhNQVWOdW5woEc-qTNIeO6rZg",
+         "price": {
+          "current": 36,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "36,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancôme Rénergie Collagen Lift-Xtend Cream",
+         "url": "https://www.codecheck.info/pdb/p/7FwMJapBQBS3jCcgrW0BeA.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIMhAE",
+         "domain": "www.codecheck.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxUxT9dDGZUWOZy4kBJxaCDg1W_2x4SVu9lXvznTBO479-UWGdaP2BCcWu4ax_B0Vcz51aXAeS9P0rMe25xnNt7pcalomBnkOurmwbd_CB",
+         "price": {
+          "current": 62.93,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "62,93 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam COLLAGEN LIFT Körpercreme",
+         "url": "https://www.codecheck.info/pdb/p/QPEp1iNmTXqd3obJl6gOqw.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIMxAE",
+         "domain": "www.codecheck.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSBXaZdO9P_SXr2W9EmhGvPwGxNcK0q9JD945wSnPutOL18zfi1wNyLikKethkxBKu1DMjsPXmiTOBoiNdBCjxoBQt7iwJtkDgzfWNwHsEwtyH2JUdZVvJf0w",
+         "price": {
+          "current": 29.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "29,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Exquisit Collagen Creme Tag",
+         "url": "https://www.codecheck.info/pdb/p/XiNCJpSwT2WzOegu-zIzFw.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIhgEQBA",
+         "domain": "www.codecheck.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQw1gNvjBWajN_nbbD2M5vJuKP89bzdHfOoRf3hgPrVQ6uSqG4oLDO_yD2Xx1ldEgOWycsv6YhS38eARnY7Pr5YDQoOUFJjMoxk2bRoS4I",
+         "price": {
+          "current": 11.24,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,24 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Vichy Liftactiv Collagen Specialist",
+         "url": "https://www.codecheck.info/pdb/p/zlBFRzekTyKGF9qMCoPfyA.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIgQEQBA",
+         "domain": "www.codecheck.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTh7ejghfnLedyC1ZemgCcR3kwV6S8F1uU1D3QZOU7GATEc9fr-lhwIFMhFlutaZ0ByERHZmAeZJtd1ofwAYeCbcMXZgYWWzTRaJPWfN5oYfFhluZPhz3L74w",
+         "price": {
+          "current": 27.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "27,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COLLAGEN CREME Tag & Nacht",
+         "url": "https://www.codecheck.info/pdb/p/2tnprq0uTLWHg8GBreFiGA.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIgwEQBA",
+         "domain": "www.codecheck.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTAtTgogJpXtTIaEf-XIe-Q620nzEyfNfF1NKmmfbhqRYW1sfRV9OzYbgh2SXM2L4elNLkDI91z1uxWOfD1zD0y_subhRLcha2sgFysWFhSHct9dh2jbLnX",
+         "price": {
+          "current": 5.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "5,89 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Eckstein Collagen Supreme 50 ml",
+         "url": "https://www.codecheck.info/pdb/p/eCU0n1nzQWuEvTgo3PKmUQ.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIhAEQBA",
+         "domain": "www.codecheck.info",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRUMG2RgJ3fmikO075hpFGDVCuNbrNhvshhF731zDJtYfwv7r38wk6VLWKoYrw4hSZnAG1twhHv5ke6LO8YYh25f1cymQ3lc6yFT471SCVJKV3gNPbdjnYC",
+         "price": {
+          "current": 30.6,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "30,60 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream",
+         "url": "https://www.supersales.de/p/doctor-babor-collagen-peptide-booster-cream-50-ml-6940783f1ab17558b7077192?channel=google-css&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIOBAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxztwki3WzOtlcDuSgG8lGcH9LARcy3T1JO8uHSZQjKRVFvau96iTbubN-r8W-w7-7e42gbDDDpwwZVdl0v5Kb41TpsjHRW9s6-jF5L2xE",
+         "price": {
+          "current": 60.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "60,40 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Spiller Collagen Creme",
+         "url": "https://www.supersales.de/p/dr-spiller-collagen-creme-50-ml-63a22094509e1f7ca2506d74?channel=google-css&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQINxAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQMLhomAH3H5SBrcJexlCbPGnnJjQPcIS8Ny20riJGCZO6_lJQ2onyv-k_WD8UasJJtylPZwrXJV6v7KHHWcjTjKuR-LLArfzhNQVWOdW5woEc-qTNIeO6rZg",
+         "price": {
+          "current": 36,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "36,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Lancôme Rénergie Collagen Lift-Xtend Cream",
+         "url": "https://www.supersales.de/p/lancome-renergie-collagen-lift-xtend-cream-69930e7c9c085205220ce228?channel=google-css&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQINhAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxUxT9dDGZUWOZy4kBJxaCDg1W_2x4SVu9lXvznTBO479-UWGdaP2BCcWu4ax_B0Vcz51aXAeS9P0rMe25xnNt7pcalomBnkOurmwbd_CB",
+         "price": {
+          "current": 68.43,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "68,43 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Hildegard Braukmann Exquisit Collagen Creme Tag",
+         "url": "https://www.supersales.de/p/hildegard-braukmann-collagen-creme-tag-keine-angabe-6008004b169f0a4bca5ec484?channel=google-css&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQINRAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQw1gNvjBWajN_nbbD2M5vJuKP89bzdHfOoRf3hgPrVQ6uSqG4oLDO_yD2Xx1ldEgOWycsv6YhS38eARnY7Pr5YDQoOUFJjMoxk2bRoS4I",
+         "price": {
+          "current": 11.48,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,48 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Vichy Liftactiv Collagen Specialist",
+         "url": "https://www.supersales.de/p/loreal-paris-vichy-liftactiv-collagen-specialist-50-ml-creme-67a0974c4572baac10094ff8?channel=google-css&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIgAEQBA",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTh7ejghfnLedyC1ZemgCcR3kwV6S8F1uU1D3QZOU7GATEc9fr-lhwIFMhFlutaZ0ByERHZmAeZJtd1ofwAYeCbcMXZgYWWzTRaJPWfN5oYfFhluZPhz3L74w",
+         "price": {
+          "current": 35.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "35,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Doctor Babor Collagen-Peptide Booster Cream Rich",
+         "url": "https://www.supersales.de/p/doctor-babor-collagen-peptide-booster-cream-rich-50-ml-665b013c01f85bac4b003dcd?channel=google-css&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIfhAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSten4ziXP5HRScEdh6VhIip4uIciCUbL7W9Q39xTNuWhTyKgcrSnDlZwcLhVlsUlwfx9VdqjrWdKplvHnRrkbkbs3oO0edQLvSU7ZaYnk_GunvaZ61M9bSYw",
+         "price": {
+          "current": 72.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "72,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Artdeco Collagen Master Cream",
+         "url": "https://www.supersales.de/p/artdeco-collagen-master-cream-50-ml-653bb27603971e52606cc352?channel=google-css&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegUIggEQBA",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQWnEmtJHkuR25eEnMKXmLPjfopGyS6XN76q_S_sy93KaYFJC1UYlWrYt1MnlKrWDfYr71G0hwi3FUrsS4gVZBbcLm3hig2Hmi5GGPtcsxkPQFwCGl-XWJxnhI",
+         "price": {
+          "current": 23.37,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "23,37 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mizon Collagen Power Lifting Cream",
+         "url": "https://www.supersales.de/p/mizon-collagen-power-lifting-moisturizing-face-cream-35-ml-tagescreme-68566ebeb76cc2ffba05994d?channel=google-css&sa=X&ved=2ahUKEwiWuJzDiaqXAxV4RUEAHU7KGO8QrogGegQIfxAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQpvQq9Ej-CfSEewn58Wol0hJ-veq_lTBOvZsYuGRickM5DYWeTNEQ5xUHwbffq7dyjKIxvnmLcroyd2dm6RAVYv4SXkK_eHwll7sYMqQ",
+         "price": {
+          "current": 15.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "15,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+       "domain": "www.lancome.de",
+       "title": "Kollagen-Creme für sichtbar festere Haut",
+       "url": "https://www.lancome.de/gesichtscreme/kollagen/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.lancome.de/gesichtscreme/kollagen/",
+       "website_name": "Lancome",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "KOLLAGEN-CREME für straffe Haut? Unsere Pflege setzt auf ✓ echte Kollagenfasern ✓ Peptide ✓ Kupfertripeptid ➤ Jetzt passende Kollagen-Creme finden!",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+       "domain": "dr-spiller.com",
+       "title": "Collagen Creme 50 ml",
+       "url": "https://dr-spiller.com/collagen-creme-00108207/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://dr-spiller.com/collagen-creme-00108207/",
+       "website_name": "Dr. Spiller",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Die Collagen Creme bietet eine regenerierende Pflege über Nacht. Sie spendet der Haut belebende Feuchtigkeit und wirkt frühzeitigem Spannkraftverlust effektiv ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Was bringt eine Collagen-Creme?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Welche Creme regt die Kollagenbildung an?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Wann sollte man Collagen-Creme auftragen?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Warum kein Kollagen nehmen?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+       "domain": "www.lancome.de",
+       "title": "Kollagen-Creme für sichtbar festere Haut | Lancôme - Lancome",
+       "url": "https://www.lancome.de/gesichtscreme/kollagen/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.lancome.de › ... › Gesichtscreme",
+       "website_name": "lancome.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "KOLLAGEN-CREME für straffe Haut? Unsere Pflege setzt auf ✓ echte Kollagenfasern ✓ Peptide ✓ Kupfertripeptid ➤ Jetzt passende Kollagen-Creme finden!",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "echte Kollagenfasern ✓ Peptide ✓ Kupfertripeptid"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+       "domain": "dr-spiller.com",
+       "title": "Collagen Creme 50 ml",
+       "url": "https://dr-spiller.com/collagen-creme-00108207/?srsltid=AU7gw4V3Ras8lcCtnTWrgDiTnFRlCGBtjQGhZp1-rW67Bb4mVNY6vjvG",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://dr-spiller.com › ... › Gesichtspflege › Gesichtscreme",
+       "website_name": "Dr. Spiller",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Die Collagen Creme bietet eine regenerierende Pflege über Nacht. Sie spendet der Haut belebende Feuchtigkeit und wirkt frühzeitigem Spannkraftverlust effektiv ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 36,
+        "regular": null,
+        "max_value": null,
+        "currency": "EUR",
+        "is_price_range": false,
+        "displayed_price": "36,00 €"
+       },
+       "highlighted": [
+        "bietet eine regenerierende Pflege über Nacht"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_search",
+       "rank_group": 1,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]",
+       "title": "Ähnliche Produkte und Dienstleistungen finden",
+       "items": [
+        "Kollagen-Creme Testsieger",
+        "Gesichtscreme mit Kollagen und Hyaluronsäure",
+        "Beste Collagen Creme dm",
+        "Creme mit Kollagen und Hyaluronsäure",
+        "Kollagen Bodylotion",
+        "Collagen creme korea"
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+       "domain": "www.judithwilliams.com",
+       "title": "Kollagen Aktiv online kaufen",
+       "url": "https://www.judithwilliams.com/de-de/collections/kollagen-aktiv?srsltid=AU7gw4W_QHO4PpS9KrTCmmhwANDdttHtU1rUaE4cofIYJ0YyQLwK__90",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.judithwilliams.com › de-de › collections",
+       "website_name": "Judith Williams Cosmetics",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "K ollagen Aktiv ✦ Anti-Aging Pflege ✓ Kollagen Wirkstoffkomplex für ein optisch glattes Hautbild ▻ Jetzt entdecken.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "K"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]",
+       "domain": "www.fuersie.de",
+       "title": "Collagen-Cremes im Test: Unsere 10 Testsieger 2025",
+       "url": "https://www.fuersie.de/beauty/collagen-creme-testsieger-16886.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.fuersie.de › Beauty",
+       "website_name": "Für Sie",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "24.07.2025 — Die Auszeichnung \"Testsieger\" hat sich beim großen Collagen-Creme-Test definitiv auf die Liftactiv Collagen Specialist Creme von Vichy verdient.",
+       "pre_snippet": "07/24/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Liftactiv Collagen Specialist Creme von Vichy"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-07-24 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+       "domain": "www.vichy.de",
+       "title": "Kollagen-Creme im Check: Ist der Hype gerechtfertigt?",
+       "url": "https://www.vichy.de/expertentipps/anti-aging/kollagen-creme-gesicht-das-steckt-hinter-dem-hype",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.vichy.de › Expertentipps › ANTI-AGE",
+       "website_name": "vichy.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Kollagen ist ein unverzichtbarer Baustein unserer Hautstruktur. Das Protein sorgt für Festigkeit, Spannkraft und eine jugendliche Ausstrahlung.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Kollagen ist ein unverzichtbarer Baustein unserer Hautstruktur"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Collagen Creme Testsieger",
+        "Kollagen Creme dm",
+        "Kollagen Creme sinnvoll",
+        "Kollagen Creme ROSSMANN",
+        "Kollagen Creme Männer",
+        "Kollagen Creme Wirkung"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1447 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "24.8914 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080903-1509-0139-0000-7eeabe5e68ef",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "24.6716 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "collagen serum",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "collagen serum",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=collagen%20serum&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+     "datetime": "2026-10-08 09:04:20 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Reviews",
+        "url": "https://www.google.com/search?q=reviews+collagen+serum&hl=en&gl=US&shoprs=CAEYEioOY29sbGFnZW4gc2VydW0yCwgSEgdSZXZpZXdzYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAF6BQgtEIQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Moisturizers",
+        "url": "https://www.google.com/search?q=facial+moisturizers+collagen+serum&hl=en&gl=US&shoprs=CAEYCSoOY29sbGFnZW4gc2VydW0yFwgJEhNGYWNpYWwgTW9pc3R1cml6ZXJzYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAJ6BQgtEIUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Moisturizers",
+        "url": "https://www.google.com/search?q=moisturizers+collagen+serum&hl=en&gl=US&shoprs=CAEYCSoOY29sbGFnZW4gc2VydW0yEAgJEgxNb2lzdHVyaXplcnNgAQ&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAN6BQgtEIYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Skin",
+        "url": "https://www.google.com/search?q=skin+collagen+serum&hl=en&gl=US&shoprs=CAEYEioOY29sbGFnZW4gc2VydW0yCAgSEgRTa2luYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAR6BQgtEIcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Get it fast",
+        "url": "https://www.google.com/search?q=collagen+serum&hl=en&gl=US&shoprs=CAESDZoBCgoIEAM4AUAHSAEYFCoOY29sbGFnZW4gc2VydW0yJAgUEgtHZXQgaXQgZmFzdCINmgEKCggQAzgBQAdIASoEEAEYAWAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAV6BQgtEIgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Collagen Boosting",
+        "url": "https://www.google.com/search?q=collagen+boosting+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yIQgBEhFDb2xsYWdlbiBCb29zdGluZzoKCOzhLRDG2y0wAFjDkiFgAQ&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAZ6BQgtEIkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Bottle",
+        "url": "https://www.google.com/search?q=bottle+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yFggBEgZCb3R0bGU6CgjGi2kQx4tpMABYw5IhYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAd6BQgtEIoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "On sale",
+        "url": "https://www.google.com/search?q=collagen+serum+sale&hl=en&gl=US&shoprs=CAESBEoCGAEYBioOY29sbGFnZW4gc2VydW0yEwgGEgdPbiBzYWxlGAIiBEoCGAFYw5IhYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAh6BQgtEIsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Pink",
+        "url": "https://www.google.com/search?q=pink+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yFggBEgRQaW5rOgwI2Iz1ARDpivUBMAtYw5IhYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAl6BQgtEIwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Korean",
+        "url": "https://www.google.com/search?q=korean+collagen+serum&hl=en&gl=US&shoprs=CAEYEioOY29sbGFnZW4gc2VydW0yCggSEgZLb3JlYW5gAQ&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAp6BQgtEI0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Anti-aging",
+        "url": "https://www.google.com/search?q=anti-aging+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yGggBEgpBbnRpLWFnaW5nOgoI7OEtEKHbLTAAWMOSIWAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAt6BQgtEI4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Body Lotion",
+        "url": "https://www.google.com/search?q=body+lotion+collagen+serum&hl=en&gl=US&shoprs=CAEYCSoOY29sbGFnZW4gc2VydW0yDwgJEgtCb2R5IExvdGlvbmAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKAx6BQgtEI8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Target",
+        "url": "https://www.google.com/search?q=target+collagen+serum&hl=en&gl=US&shoprs=CAEYAioOY29sbGFnZW4gc2VydW0yCggCEgZUYXJnZXRYw5IhYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKA16BQgtEJAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Wrinkles",
+        "url": "https://www.google.com/search?q=wrinkles+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yGggBEghXcmlua2xlczoMCLKArAIQtoCsAjAAWMOSIWAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKA56BQgtEJIB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Vitamin C",
+        "url": "https://www.google.com/search?q=vitamin+c+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yGQgBEglWaXRhbWluIEM6CgjB2y0Qv65RMABYw5IhYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKA96BQgtEJMB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Retinol",
+        "url": "https://www.google.com/search?q=retinol+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yFwgBEgdSZXRpbm9sOgoIwdstEMLbLTAAWMOSIWAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBB6BQgtEJQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hyaluronic Acid",
+        "url": "https://www.google.com/search?q=hyaluronic+acid+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yIAgBEg9IeWFsdXJvbmljIEFjaWQ6CwjB2y0QoYCsAjAAWMOSIWAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBF6BQgtEJUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Buy",
+        "url": "https://www.google.com/search?q=buy+collagen+serum&hl=en&gl=US&shoprs=CAEYEioOY29sbGFnZW4gc2VydW0yBwgSEgNCdXlgAQ&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBJ6BQgtEJYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Under $50",
+        "url": "https://www.google.com/search?q=collagen+serum+under+$50&hl=en&gl=US&shoprs=CAESDRILEQAAAACE14dBGAEYBSoOY29sbGFnZW4gc2VydW0yIggFEglVbmRlciAkNTAYAiINEgsRAAAAAITXh0EYASoCGAFYw5IhYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBN6BQgtEJcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hair, Skin & Nails",
+        "url": "https://www.google.com/search?q=hair,+skin+%26+nails+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yJAgBEhJIYWlyLCBTa2luICYgTmFpbHM6DAiLmqICEJKaogIwAljDkiFgAQ&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBR6BQgtEJgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For All Skin Types",
+        "url": "https://www.google.com/search?q=collagen+serum+for+all+skin+types&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yJAgBEhJGb3IgQWxsIFNraW4gVHlwZXMYAjoKCLL4OxC1-DswAFjDkiFgAQ&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBV6BQgtEJkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Advanced Clinicals",
+        "url": "https://www.google.com/search?q=advanced+clinicals+collagen+serum&hl=en&gl=US&shoprs=CAEYAioOY29sbGFnZW4gc2VydW0yFggCEhJBZHZhbmNlZCBDbGluaWNhbHNYw5IhYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBZ6BQgtEJoB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Face",
+        "url": "https://www.google.com/search?q=face+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yFAgBEgRGYWNlOgoIn9ktEKHZLTACWMOSIWAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBd6BQgtEJwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Green",
+        "url": "https://www.google.com/search?q=green+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yFwgBEgVHcmVlbjoMCNiM9QEQ6Ir1ATALWMOSIWAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBh6BQgtEJ0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Walmart",
+        "url": "https://www.google.com/search?q=walmart+collagen+serum&hl=en&gl=US&shoprs=CAEYAioOY29sbGFnZW4gc2VydW0yCwgCEgdXYWxtYXJ0WMOSIWAB&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBl6BQgtEJ4B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Organic",
+        "url": "https://www.google.com/search?q=organic+collagen+serum&hl=en&gl=US&shoprs=CAEYASoOY29sbGFnZW4gc2VydW0yGQgBEgdPcmdhbmljOgwI3aK0ARDeorQBMABYw5IhYAE&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQip4GKBp6BQgtEKAB",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "popular_products",
+      "people_also_ask",
+      "organic",
+      "images",
+      "product_considerations",
+      "related_searches"
+     ],
+     "se_results_count": 176,
+     "pages_count": 1,
+     "items_count": 15,
+     "items": [
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]",
+       "title": "Popular products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Medicube Triple Collagen Serum",
+         "url": "https://thesoulofseoul.net/medicube-triple-collagen-line-review/",
+         "domain": "thesoulofseoul.net",
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nAbsorbs quickly · Made my skin so hydrated and moisturized The Soul of Seoul",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:0",
+         "price": {
+          "current": 19.9,
+          "regular": 11,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$19.90 $11/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 472,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11085653486386208664",
+          "data_docid": "3735781827108748626",
+          "gid": "14393671749288522904"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Olay Regenerist Collagen Peptide 24 Serum",
+         "url": "https://www.nykaa.com/olay-face-serum-regenerist-collagen-peptide-24-serum/reviews/2809844",
+         "domain": "www.nykaa.com",
+         "description": "Target & more\nFree delivery on $35+\nLightweight and non-greasy formula · Absorbs quickly Nykaa",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:1",
+         "price": {
+          "current": 29.94,
+          "regular": 23,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$29.94 $23/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 1300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9626821033701773332",
+          "data_docid": "13834699688573168696",
+          "gid": "9412490088510285408"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "L'Oreal Paris Collagen Moisture Filler Bounce Serum",
+         "url": null,
+         "domain": null,
+         "description": "Target & more\nFree delivery on $35+\nMoisturizes well (383 user reviews)",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:2",
+         "price": {
+          "current": 10.49,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$10.49"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 849,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9059243631033411331",
+          "data_docid": "18010697514016195873",
+          "gid": "15532924793851094771"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Walgreens Collagen Serum",
+         "url": null,
+         "domain": null,
+         "description": "Walgreens.com & more\nGoes on easily and spreads well. A reviewer on Walgreens",
+         "more_sellers": true,
+         "seller": "Walgreens.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:3",
+         "price": {
+          "current": 9.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$9.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 7,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3534660558050424636",
+          "data_docid": "15866820426514195162",
+          "gid": "13257870541550607456"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Peter Thomas Roth Collagen Skinjection Plumping & Firming Serum",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty & more\nFree delivery\nMoisturizes well (173 user reviews)",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:4",
+         "price": {
+          "current": 65,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$65.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 310,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4354158044095012351",
+          "data_docid": "5143541776919836136",
+          "gid": "5664220033880547914"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodance Collagen Peptide Jelly Serum Mist",
+         "url": null,
+         "domain": null,
+         "description": "Sephora & more\nFree delivery on $50+",
+         "more_sellers": true,
+         "seller": "Sephora",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:5",
+         "price": {
+          "current": 19,
+          "regular": 0.38,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$19.00 $0.38/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 204,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9018138771147106377",
+          "data_docid": "13676774926067890860",
+          "gid": "12784438492052137408"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Sungboon Editor Deep Collagen Power Boosting Cream In Serum",
+         "url": "https://www.u-buy.co.uk/product/IDWM41SGK-deep-collagen-anti-wrinkle-cream-in-serum",
+         "domain": "www.u-buy.co.uk",
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nDeep hydration without heaviness · Helps skin look smoother and firmer Ubuy UK",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:6",
+         "price": {
+          "current": 26,
+          "regular": 26,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$26.00 $26/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 142,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12232278899731631700",
+          "data_docid": "1433661756994022700",
+          "gid": "4144818158903976771"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Paula's Choice Pro-Collagen Multi-Peptide Booster",
+         "url": null,
+         "domain": null,
+         "description": "Paula's Choice & more\nFree delivery\nImproves skin texture (485 user reviews)",
+         "more_sellers": true,
+         "seller": "Paula's Choice",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:7",
+         "price": {
+          "current": 59,
+          "regular": 88,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$59.00 $88/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 1500,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "5680500546540999848",
+          "data_docid": "17639542461510853671",
+          "gid": "16767691334954293396"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Vichy Liftactiv Collagen Specialist 16 Bonding Serum",
+         "url": "https://www.hometesterclub.com/uk/en/reviews/vichy-liftactiv-collagen-specialist-16-collagel",
+         "domain": "www.hometesterclub.com",
+         "description": "Vichy & more\nAbsorbs super quickly · Beautiful natural glow that lasts all day Home Tester Club",
+         "more_sellers": true,
+         "seller": "Vichy",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:8",
+         "price": {
+          "current": 54.99,
+          "regular": 1.83,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$54.99 $1.83/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 3500,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "16376905918862791054",
+          "data_docid": "9952351730504924492",
+          "gid": "8571905005584568817"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Kiehl's Since 1851 1cc* CollaShot Plumping Serum with Collagen & Peptides",
+         "url": "https://drkilleen.com/reviews/kiehls-1cc-collashot-plumping-serum-review",
+         "domain": "drkilleen.com",
+         "description": "Kiehl's US & more\nFree delivery\nAbsorbs nicely into the skin · Reasonably priced for a peptide serum Dr. Kelly Killeen",
+         "more_sellers": true,
+         "seller": "Kiehl's US",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080903-1509-0139-0000-7eeabe5e68ef:9",
+         "price": {
+          "current": 55,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$55.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 2800,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3506188749486223275",
+          "data_docid": "4758419462818336147",
+          "gid": "17275042912640063812"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "How does collagen face serum work?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy Lumen Organics collagen peptides?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the 5 signs that collagen is working?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the best collagen to put on your face?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]",
+       "domain": "us.lumene.com",
+       "title": "Firming Serum with Collagen Peptide - Lumene US",
+       "url": "https://us.lumene.com/products/firming-serum-with-collagen-peptide",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://us.lumene.com › products › firming-serum-with-...",
+       "website_name": "Lumene US",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Firming Serum with Collagen Peptide is clinically tested to make skin look +25% firmer in 4 weeks and visibly reduce the appearance of fine lines and wrinkles*. Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.8,
+        "votes_count": 18,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 25.19,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$25.19"
+       },
+       "highlighted": [
+        "Serum",
+        "Collagen"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://us.lumene.com/products/firming-serum-with-collagen-peptide#:~:text=Ingredients",
+         "domain": "us.lumene.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]",
+       "domain": "advancedclinicals.com",
+       "title": "Collagen Face Serum",
+       "url": "https://advancedclinicals.com/products/collagen-instant-plumping-serum-1-75oz?srsltid=AU7gw4Wh5ANhSCqmeYfUULDKuDMHY9JUV-Lax8KverWq4dHpV22IU4M2",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://advancedclinicals.com › products › collagen-inst...",
+       "website_name": "Advanced Clinicals",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "This Collagen Face Serum, infused with Algae, Peptides, and Squalane, helps hydrate and visibly lift the skin. It smooths the look of fine lines and wrinkles,",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.9,
+        "votes_count": 53,
+        "rating_max": 5
+       },
+       "price": {
+        "current": 12.99,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$12.99"
+       },
+       "highlighted": [
+        "helps hydrate and visibly lift the skin"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]/div[1]",
+       "domain": "clearstem.com",
+       "title": "Collagen Serum: Everything You Need to Know",
+       "url": "https://clearstem.com/blogs/skin-care-learning-center/everything-you-need-to-know-about-collagen-serum?srsltid=AU7gw4UatLxK7w1Y9GuglWA63aq5FwTV0C8_CxK0isb3eJRMhxKI5n1O",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://clearstem.com › blogs › skin-care-learning-center",
+       "website_name": "clearstem",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Oct 28, 2021 — Collagen serums cannot replace lost collagen, but they can improve the appearance of your skin while encouraging collagen production. Collagen ... Read more",
+       "pre_snippet": "10/28/2021 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Collagen serums cannot replace lost collagen"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://clearstem.com/blogs/skin-care-learning-center/everything-you-need-to-know-about-collagen-serum?srsltid=AU7gw4UatLxK7w1Y9GuglWA63aq5FwTV0C8_CxK0isb3eJRMhxKI5n1O#:~:text=Collagen%20serums%20cannot%20replace%20lost,restoring%20our%20skin's%20natural%20suppleness.",
+         "domain": "clearstem.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2021-10-28 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]",
+       "domain": "www.pureformulas.com",
+       "title": "Collagen Serum - 1.75 fl. (52 ml) - Advanced Clinicals",
+       "url": "https://www.pureformulas.com/product/collagen-serum-by-advanced-clinicals/1000062448?srsltid=AU7gw4Xh_2LO1sT3glGikNc7BnBp8sypdsdJ7KqQUAlIySic_DAPMysn",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.pureformulas.com › product › collagen-ser...",
+       "website_name": "PureFormulas",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "This lightweight‚ milky serum is enriched with Algae Extract‚ Peptides‚ and Squalane to deeply hydrate and support a more youthful-looking complexion.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 12.99,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$12.99"
+       },
+       "highlighted": [
+        "enriched with Algae Extract‚ Peptides‚ and Squalane"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=en&gl=US&sxsrf=APpeQntNBSazM57ShuZE6BuCq12pTf5-IA:1791450255948&q=collagen+serum&udm=2&source=univ&fir=__R5_sZNsZzw2M%252C0THj-Xdzj1jL4M%252C_%253BlyD0OfGO6H176M%252Cir3oj4zvUsq9FM%252C_%253BEG3ZApvVmFnL4M%252CsL8Uynvwc_CtdM%252C_%253B6xLMIGwM2ZmTpM%252CatOcyuQ9w8rQ7M%252C_%253B4Rex-GnaiKSwkM%252Cir3oj4zvUsq9FM%252C_%253B2XqNRBRnW9UajM%252Cu6FnRQrklGpDaM%252C_%253Bn6qxAjygD1YcXM%252CsL8Uynvwc_CtdM%252C_%253BCJAkIkx0TQwsyM%252CEzR09CMf_0-6kM%252C_&usg=AI4_-kSTCCxM8scjjirnSIeaysYbG04ynQ&sa=X&ved=2ahUKEwjPno2hiKqXAxXbbEEAHXoqDXkQ7Al6BAhiEAU",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "Collagen Deep Cleansing (Snail Face Serum) 30ml, Collagen Deep cleansing  effectively replenish and lock water for water-deficient skin. Snail fluid  essence can provide a large amount of water for the ...",
+         "url": "https://www.instagram.com/reel/C9a9ViaooWl/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSc_HHG3yfJPUBxMOP3ozQ3IupZHSY9gnRiSiaYC3gIG_3DIHIRZBUCQs&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "24k Gold & Collagen Facial Serum - Dead Sea Collection",
+         "url": "https://www.deadseacollection.com/product/24k-gold-collagen-facial-serum/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhJTbsmMu9pY3VqgilQZ4UyJt4cpCK7BJOSySaGWHLhSrWFu_TMxqK6w&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Neutrogena® Collagen Bank 15% Vitamin C Glow Serum, 0.5 Fl. Oz",
+         "url": "https://www.neutrogena.com/products/skincare/neutrogena-collagen-bank-15-vitamin-c-glow-serum/6807872",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwYAz5OdA780OX7RZ4iDaZG5sTxSFRff22VxmnJKTYMgE86G0Ny1y8qc8&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Walgreens Collagen Serum",
+         "url": "https://www.walgreens.com/store/c/walgreens-collagen-serum/ID=300449467-product",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjgXqglmEKN60ZBdFEpPxyxg6ofinBunzNhsr3yYGNiZYO5koyZ8wDtgo&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "24k Gold & Collagen Facial Serum - Dead Sea Collection",
+         "url": "https://www.deadseacollection.com/product/24k-gold-collagen-facial-serum/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGxQl6u8-qT8DpdEtET5tfJ4jUkszZl4x4RstAzK9DW99xY_gnpG27OIc&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Collagen Anti Aging Serum Moisturing Whitening & Anti Wrinkle Serum",
+         "url": "https://www.daraz.com.bd/products/collagen-anti-aging-serum-moisturing-whitening-anti-wrinkle-serum-i355358252.html",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRWt6sBpk77fMS8r9LfOrogHoioirbxeotWNuZ8-RCgKvw0InvXkfQN2o&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Neutrogena® Collagen Bank 15% Vitamin C Glow Serum, 0.5 Fl. Oz",
+         "url": "https://www.neutrogena.com/products/skincare/neutrogena-collagen-bank-15-vitamin-c-glow-serum/6807872",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW7nw1FPL_A0z2meGFUUouETJUuoe-RXypwdPI-3FRu9Ig6xTb_u18eeY&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Buy Face Facts collagen Face Serum | 30ml | Best Price",
+         "url": "https://peronabeauty.com/product/face-facts-collagen-face-serum-30ml/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScUDGV1ebAmtOgglJ8SdGl_EF0TXhSX-kTawXX4zDK4XIvqCV1OUy415Q&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]/div[1]/div[1]",
+       "domain": "www.cosmopolitan.com",
+       "title": "10 Best Collagen Serums, Tested and Reviewed for 2024",
+       "url": "https://www.cosmopolitan.com/style-beauty/beauty/g46187668/best-collagen-serums/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.cosmopolitan.com › Beauty & Style › Beauty",
+       "website_name": "Cosmopolitan",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Jan 3, 2024 — Our top picks for best collagen serum of 2024: use peptides, amino acids, or plant-derived vegan collagen to prompt collagen production and ...",
+       "pre_snippet": "01/03/2024 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "best collagen serum of 2024"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2024-01-03 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]/div[1]",
+       "domain": "www.laroche-posay.us",
+       "title": "Face Serums - Concentrated Skin Treatments",
+       "url": "https://www.laroche-posay.us/our-products/face/face-serum?srsltid=AU7gw4WQ7I5v1cw4fA02OaMH-BaxBTpfHrbqVgDLNPfTM-pNRmO3uNlm",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.laroche-posay.us › Our Products › Face",
+       "website_name": "La Roche-Posay",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "La Roche-Posay's serums are specifically crafted to visibly reduce fine lines, wrinkles, dark spots, and to even out and brighten the skin.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 8,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$8 delivery"
+       },
+       "highlighted": [
+        "serums"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]",
+       "domain": "callaskincare.com",
+       "title": "Does Collagen Serum Work for Skin Care",
+       "url": "https://callaskincare.com/blog/does-collagen-serum-work/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://callaskincare.com › blog › does-collagen-serum-...",
+       "website_name": "callaskincare.com",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Oct 16, 2025 — Collagen serum boosts skin hydration and smoothness, but offers only mild anti-aging effects. It helps boost elasticity, reinforce the skin ...",
+       "pre_snippet": "10/16/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Collagen serum boosts skin hydration and smoothness"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-10-16 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 2,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[21]/div[1]",
+       "title": "More products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Auteur Definitive Collagen Activator",
+         "url": null,
+         "domain": null,
+         "description": "auteur.com & more",
+         "more_sellers": true,
+         "seller": "auteur.com",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS3mffjAnv3qyq0fR3nqwJuzb7JcH2SdC2xzOD5TKcNNyhRn9hyl1IeIpAr5gBxZ53IDZen3TB6eXk7U59ZQjN_VmGc9XwZuV8EqXIsbKJgqmTtzCy12glF",
+         "price": {
+          "current": 330,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$330.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 19,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4434388077671914034",
+          "data_docid": "1530154241114984264",
+          "gid": "4891000746080525208"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Elemis Pro Collagen Future Restore Serum",
+         "url": "https://www.hellomagazine.com/shopping/710139/elemis-pro-collagen-future-restore-serum-review/",
+         "domain": "www.hellomagazine.com",
+         "description": "Nordstrom & more\nFree delivery\nAbsorbs into the skin like a dream · Beautifully soft, milky texture HELLO! Magazine",
+         "more_sellers": true,
+         "seller": "Nordstrom",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQhbsW8aDAKXxm80dm7p4uSXnBbRJGVQ9OPE8BGgnIu18kViY5oUBCmDHa0JYL6ak1U4x-Ku0QYiQZvj0sD19saAy-KcRnuwIh2SDb5L3-EEawKfjdp_wGN",
+         "price": {
+          "current": 99,
+          "regular": 198,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$99.00 $198/oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 2100,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "5255022748196624183",
+          "data_docid": "8404490843607874117",
+          "gid": "7984951314255190457"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Collagen Serum Professional",
+         "url": null,
+         "domain": null,
+         "description": "OFRA Cosmetics\nAnti-aging, Collagen Boosting · For All Skin Types · Serum",
+         "more_sellers": false,
+         "seller": "OFRA Cosmetics",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQCp9ehuk1oGHKOc09bMtpKoEKUfBXSADbI9I7OvyV6ym544i83HKvMoEfyiBBDb8SIV-8_d1rTgwXxZSZHxXyfvXb4K3LGs9VfFy7HG-9zj9zaC2xR4pOsJg",
+         "price": {
+          "current": 28,
+          "regular": 0.52,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$28.00 $0.52/ml"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": "824654178890879669",
+          "data_docid": "9481122428239759942",
+          "gid": "6381175733950559823"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Le Mieux Collagen Peptide Serum",
+         "url": null,
+         "domain": null,
+         "description": "Le Mieux Skincare & more\nFree delivery\nImproves skin texture (68 user reviews)",
+         "more_sellers": true,
+         "seller": "Le Mieux Skincare",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRLH--JEp2f36l2bFy0MMT_hxh75uYhrwKWyj9gRZv-hGWys3FaN2FyBi7eKOV1QCRNNJbnwMvx-xNyjXvqjb96MZ10lEagDQt_jrlqv2DCsceFpiHfL5kC2A",
+         "price": {
+          "current": 95,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$95.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 288,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "5997547423719282025",
+          "data_docid": "1982125097727228687",
+          "gid": "5476409854711159827"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "TruSkin Collagen Peptide Facial Serum",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty & more\nFree delivery on $35+",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSdsuh0DEyySwlPVX8owZ27e84XJwXIRFb6SCS-hx3CooiA3-uBHl6W-Dt9aURCguaEEiSoht4PXjqrYxWwfr60oOOge1KlOBhmPdLUnE4JWfYMRHYFKMwY",
+         "price": {
+          "current": 15.99,
+          "regular": null,
+          "max_value": 16,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$15.99 Usually $16"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 47,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14446291440308036254",
+          "data_docid": "11728057930771594953",
+          "gid": "16867161197231706929"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Eva Naturals Collagen Multi Peptide Serum for Face",
+         "url": null,
+         "domain": null,
+         "description": "Eva Naturals & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Eva Naturals",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTpu5jW0rw2deSyVYBbVWbDV-J_S8ku3jptfamkzGoyBJHKIvRMYvbKCCfg60hgLCIjkJTJfGjlDJj0pZFqJyVons8_fKGTo0GmyZNVAeONeBqGEMj7cbaYjg",
+         "price": {
+          "current": 15.99,
+          "regular": null,
+          "max_value": 21,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$15.99 Usually $21"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 152,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "1078555396513119913",
+          "data_docid": "7551466152045140704",
+          "gid": "4008626008842820318"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Beekman 1802 Collagen Booster Electric Daisy & Peptide Firming Serum",
+         "url": null,
+         "domain": null,
+         "description": "Beekman 1802 & more\nFree delivery on $80+\nImproves skin texture (111 user reviews)",
+         "more_sellers": true,
+         "seller": "Beekman 1802",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT3bH2hV2rG6pFsGPKmB2L0esDh9ZYXp1W6cLOIG3urIjq87QvMHijrhHMV0C9RLN_Wni_nfOXNeElDcr5k6mViR9hiJmtGGAt4ISxS4FtB2qXqGwoQsTyxy7o",
+         "price": {
+          "current": 29,
+          "regular": 58,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$29.00 $58/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 515,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11344821144799645014",
+          "data_docid": "8916711867627814248",
+          "gid": "9689749844119331668"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dhc Super Collagen Supreme",
+         "url": null,
+         "domain": null,
+         "description": "DHCcare.com & more\nFree delivery\nMoisturizes well (43 user reviews)",
+         "more_sellers": true,
+         "seller": "DHCcare.com",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRBzjtWqHKr0kvtV7UWTzY9aY06mRQKqEbJF3nFQd4TnjU7vwtEwE9k3lftruZmZY4hmHKF6jTzyuD6iES9hhfs16Gd-yCq4DqvqIogeknHKX11Jc9LHcDpHmo",
+         "price": {
+          "current": 31,
+          "regular": 19,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$31.00 $19/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 227,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8257725685306540596",
+          "data_docid": "1567015028792760143",
+          "gid": "4019212111578743851"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Skinact Collagen Plus Peptide Duo Serum",
+         "url": null,
+         "domain": null,
+         "description": "SkinAct & more",
+         "more_sellers": true,
+         "seller": "SkinAct",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQXX-OPRXcdeRH1Zd6o98CBLNNpfeJkPS1_gdWDT1kL_9m1k-9yW1CH1wMxyeBN0mKMVXq4cdBJmc8wGivuF8RsyR-cJs_0DISuqaisuUVo9SgtnRYk2Q4X",
+         "price": {
+          "current": 49,
+          "regular": 1.63,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$49.00 $1.63/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 50,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4588722234564941820",
+          "data_docid": "9623789833315329968",
+          "gid": "8331017222762901275"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube Collagen Glow Booster Serum",
+         "url": "https://www.instyle.com/iherb-medicube-collagen-glow-booster-serum-review-11975294",
+         "domain": "www.instyle.com",
+         "description": "H ART & more\nFree delivery\nAbsorbs nicely without drying down completely · Delivers a dewy glow in minutes InStyle",
+         "more_sellers": true,
+         "seller": "H ART",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQIM_eMmMMz_paS9HfYyWFALKsuW0Ygzz3E63RQUBY9-r83UaTl2cMZBoJh6IYSSYdALnvyIi1qC_BiEYrWIVS7XvxjPFgYbAh9xBixlUstiZ_0xhjIuHqK7A",
+         "price": {
+          "current": 17,
+          "regular": 24,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$17.00 $24"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 1400,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14561391555064364485",
+          "data_docid": "12735303260115314609",
+          "gid": "3902285103096161411"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[23]/div[1]/div[1]/div[1]",
+       "domain": "www.target.com",
+       "title": "Anti-Aging Collagen Serum",
+       "url": "https://www.target.com/s/anti+aging+collagen+serum",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.target.com › Beauty",
+       "website_name": "Target",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Discover anti-aging collagen serums with Vitamin C, hyaluronic acid, and retinol. They commonly advertise smoothing and reduction of fine lines and wrinkles, ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "collagen serums"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[25]/div[1]/div[1]/div[1]",
+       "domain": "www.elle.com",
+       "title": "The 10 Best Collagen Serums, According to Experts in 2024",
+       "url": "https://www.elle.com/beauty/makeup-skin-care/g62140064/best-collagen-serums/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.elle.com › Beauty › Makeup & Skin Care",
+       "website_name": "ELLE",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Sep 27, 2024 — To restore firmness and plumpness in the skin, The Outset's serum combines vegan collagen and botanical elements so your skin looks more ... Read more",
+       "pre_snippet": "09/27/2024 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "The Outset's serum combines vegan collagen and botanical elements"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.elle.com/beauty/makeup-skin-care/g62140064/best-collagen-serums/#:~:text=To%20restore%20firmness%20and%20plumpness,more%20youthful%2C%20radiance%2C%20and%20bouncy.",
+         "domain": "www.elle.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2024-09-27 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "product_considerations",
+       "rank_group": 1,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[27]/div[1]",
+       "title": "Things to know",
+       "items": [
+        {
+         "type": "product_considerations_element",
+         "title": "What are the benefits of collagen serum?",
+         "consideration_category": "Benefits",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What are the potential side effects of collagen serum?",
+         "consideration_category": "Side Effects",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How to use collagen serum?",
+         "consideration_category": "How to Use",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How to choose a collagen serum?",
+         "consideration_category": "Choosing a Serum",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What are the key ingredients in collagen serum?",
+         "consideration_category": "Key Ingredients",
+         "expanded_element": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 15,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Best collagen serum",
+        "Side effects of collagen serum on face",
+        "Collagen serum for face",
+        "Advanced clinicals collagen serum review",
+        "Advanced clinical Collagen Serum",
+        "Collagen serum reviews",
+        "Collagen Serum for Face Korean",
+        "Plump Collagen Serum Reviews"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,941 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "11.8827 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080908-1509-0139-0000-6b70925d9bc1",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "11.7860 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "peptides for skin",
+    "location_code": 2826,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "peptides for skin",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2826,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=peptides%20for%20skin&hl=en&gl=GB&ie=UTF-8&uule=w+CAIQIFISCamRx0IRO1oCEXoliDJDoPjE",
+     "datetime": "2026-10-08 09:08:54 +00:00",
+     "spell": null,
+     "refinement_chips": null,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "video",
+      "popular_products",
+      "related_searches"
+     ],
+     "se_results_count": 90,
+     "pages_count": 1,
+     "items_count": 14,
+     "items": [
+      {
+       "type": "ai_overview",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "asynchronous_ai_overview": false,
+       "markdown": "Peptides are `short chains of amino acids that act as the building blocks for vital skin proteins like collagen, elastin, and keratin`.[[1]](https://www.boots.com/inspire-me/skincare-advice/ingredients/how-to-use-peptides-in-skincare)[[2]](https://www.paulaschoice.co.uk/what-are-peptides-and-what-do-they-do-for-your-skin)\n\n### What Peptides Do\n\n- **Signal Peptides:** Send messages to skin cells to trigger the production of new collagen and repair visible damage.\n- **Carrier Peptides:** Deliver essential trace elements like copper to the skin to support wound healing and reduce inflammation.\n- **Neurotransmitter Inhibitor Peptides:** Relax facial expression muscles to temporarily smooth out dynamic wrinkles, offering a mild, topical effect similar to cosmetic injections.\n- **Enzyme Inhibitor Peptides:** Slow down the natural breakdown of existing collagen in the skin.[[1]](https://pmc.ncbi.nlm.nih.gov/articles/PMC11762834/)[[2]](https://www.youtube.com/watch?v=WyWDBJIm6wY&t=98)[[3]](https://www.youtube.com/watch?v=T4x-Vgax6iQ&t=91)[[4]](https://www.medik8.com/pages/different-types-of-peptides-in-skincare-what-they-do)\n\n### Popular Types and Benefits\n\n- **Matrixyl (3000 or Synthe'6):** Great for boosting overall firmness and reducing the look of fine lines.\n- **Copper Peptides (GHK-Cu):** Exceptional for skin repair, soothing inflammation, and improving overall resilience.\n- **Argireline (Acetyl Hexapeptide-8):** Targeted at expression lines around the forehead and eyes.[[1]](https://www.medik8.com/pages/different-types-of-peptides-in-skincare-what-they-do)[[2]](https://www.youtube.com/watch?v=T4x-Vgax6iQ&t=91)[[3]](https://www.youtube.com/watch?v=WyWDBJIm6wY&t=98)[[4]](https://www.google.com/search?q=product&prds=pvt:hg,productid:10542029218380412838,catalogid:540920059023938909,gpcid:10969510345251461226,mid:576462334359202436&ibp=oshop)\n\nYou can learn more about how these work from the [Boots Skincare Advice Guide](https://www.boots.com/inspire-me/skincare-advice/ingredients/how-to-use-peptides-in-skincare) . For product formulations and routine tips, see the [The Ordinary Essential Guide to Peptides](https://theordinary.com/en-gb/blog/peptides-skincare-essential-guide.html).[[1]](https://www.boots.com/inspire-me/skincare-advice/ingredients/how-to-use-peptides-in-skincare)[[2]](https://theordinary.com/en-gb/blog/peptides-skincare-essential-guide.html)If you'd like, tell me:\n\n- Your main **skin concern** (aging, redness, firmness)\n- Your **current skincare routine** \n\nI can help you choose the right peptide product to match your goals.",
+       "items": [
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "Peptides are short chains of amino acids that act as the building blocks for vital skin proteins like collagen, elastin, and keratin.",
+         "markdown": "Peptides are `short chains of amino acids that act as the building blocks for vital skin proteins like collagen, elastin, and keratin`.[[1]](https://www.boots.com/inspire-me/skincare-advice/ingredients/how-to-use-peptides-in-skincare)[[2]](https://www.paulaschoice.co.uk/what-are-peptides-and-what-do-they-do-for-your-skin)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Boots",
+           "domain": "www.boots.com",
+           "url": "https://www.boots.com/inspire-me/skincare-advice/ingredients/how-to-use-peptides-in-skincare",
+           "title": "Peptides in skincare: what they are & best products - Inspire Me - Boots",
+           "text": "* Peptides: Short amino acid chains, protein building blocks (collagen, elastin, keratin). * Types: Signal, carrier (copper), enzy..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "www.paulaschoice.co.uk",
+           "domain": "www.paulaschoice.co.uk",
+           "url": "https://www.paulaschoice.co.uk/what-are-peptides-and-what-do-they-do-for-your-skin",
+           "title": "Peptides in Skincare: What They Are, Tips & Benefits - Paula's Choice",
+           "text": "Peptides are short chains of amino acids that act as building blocks of proteins such as collagen, elastin and keratin. These prot..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "What Peptides Do",
+         "text": "Signal Peptides: Send messages to skin cells to trigger the production of new collagen and repair visible damage. Carrier Peptides: Deliver essential trace elements like copper to the skin to support wound healing and reduce inflammation. Neurotransmitter Inhibitor Peptides: Relax facial expression muscles to temporarily smooth out dynamic wrinkles, offering a mild, topical effect similar to cosmetic injections. Enzyme Inhibitor Peptides: Slow down the natural breakdown of existing collagen in the skin.",
+         "markdown": "- **Signal Peptides:** Send messages to skin cells to trigger the production of new collagen and repair visible damage.\n- **Carrier Peptides:** Deliver essential trace elements like copper to the skin to support wound healing and reduce inflammation.\n- **Neurotransmitter Inhibitor Peptides:** Relax facial expression muscles to temporarily smooth out dynamic wrinkles, offering a mild, topical effect similar to cosmetic injections.\n- **Enzyme Inhibitor Peptides:** Slow down the natural breakdown of existing collagen in the skin.[[1]](https://pmc.ncbi.nlm.nih.gov/articles/PMC11762834/)[[2]](https://www.youtube.com/watch?v=WyWDBJIm6wY&t=98)[[3]](https://www.youtube.com/watch?v=T4x-Vgax6iQ&t=91)[[4]](https://www.medik8.com/pages/different-types-of-peptides-in-skincare-what-they-do)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "National Institutes of Health (NIH) | (.gov)",
+           "domain": "pmc.ncbi.nlm.nih.gov",
+           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11762834/",
+           "title": "Peptides: Emerging Candidates for the Prevention and Treatment of Skin Senescence: A Review - PMC",
+           "text": "Cosmetic Peptides: Bioactive compounds (3–30 amino acids) improving collagen synthesis, cell proliferation, and anti-inflammation."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "YouTube",
+           "domain": "www.youtube.com",
+           "url": "https://www.youtube.com/watch?v=WyWDBJIm6wY&t=98",
+           "title": "The Peptide Truth: What Actually Works vs. What's STEALING Your ...",
+           "text": "The Peptide Truth: What Actually Works vs. What's STEALING Your Money (Dermatologist's Guide) hit that subscribe button it helps m..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "YouTube",
+           "domain": "www.youtube.com",
+           "url": "https://www.youtube.com/watch?v=T4x-Vgax6iQ&t=91",
+           "title": "Peptides in Skincare: What They Actually Do and How to Choose the ...",
+           "text": "Peptides in Skincare: What They Actually Do and How to Choose the Right One | Derm Explains molecule has to be small enough to pen..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Medik8",
+           "domain": "www.medik8.com",
+           "url": "https://www.medik8.com/pages/different-types-of-peptides-in-skincare-what-they-do",
+           "title": "Different Types of Peptides in Skincare & What They Do",
+           "text": "FAQ's * What is best paired with peptides? Peptides pair well with hydrating ingredients like hyaluronic acid, antioxidants, and n..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "Popular Types and Benefits",
+         "text": "Matrixyl (3000 or Synthe'6): Great for boosting overall firmness and reducing the look of fine lines. Copper Peptides (GHK-Cu): Exceptional for skin repair, soothing inflammation, and improving overall resilience. Argireline (Acetyl Hexapeptide-8): Targeted at expression lines around the forehead and eyes.",
+         "markdown": "- **Matrixyl (3000 or Synthe'6):** Great for boosting overall firmness and reducing the look of fine lines.\n- **Copper Peptides (GHK-Cu):** Exceptional for skin repair, soothing inflammation, and improving overall resilience.\n- **Argireline (Acetyl Hexapeptide-8):** Targeted at expression lines around the forehead and eyes.[[1]](https://www.medik8.com/pages/different-types-of-peptides-in-skincare-what-they-do)[[2]](https://www.youtube.com/watch?v=T4x-Vgax6iQ&t=91)[[3]](https://www.youtube.com/watch?v=WyWDBJIm6wY&t=98)[[4]](https://www.google.com/search?q=product&prds=pvt:hg,productid:10542029218380412838,catalogid:540920059023938909,gpcid:10969510345251461226,mid:576462334359202436&ibp=oshop)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:10542029218380412838,catalogid:540920059023938909,gpcid:10969510345251461226,mid:576462334359202436&ibp=oshop",
+           "title": "The Ordinary Argireline Solution 10% 30ml",
+           "text": "The ordinary 10% Argireline Solution 30ml is commonly referred to as Botox in a bottle, thanks to its powerful ability to reduce s..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "You can learn more about how these work from the Boots Skincare Advice Guide. For product formulations and routine tips, see the The Ordinary Essential Guide to Peptides.",
+         "markdown": "You can learn more about how these work from the [Boots Skincare Advice Guide](https://www.boots.com/inspire-me/skincare-advice/ingredients/how-to-use-peptides-in-skincare) . For product formulations and routine tips, see the [The Ordinary Essential Guide to Peptides](https://theordinary.com/en-gb/blog/peptides-skincare-essential-guide.html).[[1]](https://www.boots.com/inspire-me/skincare-advice/ingredients/how-to-use-peptides-in-skincare)[[2]](https://theordinary.com/en-gb/blog/peptides-skincare-essential-guide.html)",
+         "links": [
+          {
+           "type": "link_element",
+           "title": "Boots Skincare Advice Guide",
+           "description": null,
+           "url": "https://www.boots.com/inspire-me/skincare-advice/ingredients/how-to-use-peptides-in-skincare",
+           "domain": "www.boots.com"
+          },
+          {
+           "type": "link_element",
+           "title": "The Ordinary Essential Guide to Peptides",
+           "description": null,
+           "url": "https://theordinary.com/en-gb/blog/peptides-skincare-essential-guide.html",
+           "domain": "theordinary.com"
+          }
+         ],
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "The Ordinary",
+           "domain": "theordinary.com",
+           "url": "https://theordinary.com/en-gb/blog/peptides-skincare-essential-guide.html",
+           "title": "What are Peptides and What do They do for Skin?",
+           "text": "Step 3: Seal Answering Your Peptide FAQs Are peptides suitable for all skin types? Our peptide products are suitable for all skin ..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "If you'd like, tell me:Your main skin concern (aging, redness, firmness)\nYour current skincare routine\nI can help you choose the right peptide product to match your goals.",
+         "markdown": "If you'd like, tell me:\n\n- Your main **skin concern** (aging, redness, firmness)\n- Your **current skincare routine** \n\nI can help you choose the right peptide product to match your goals.",
+         "links": null,
+         "images": null,
+         "references": null
+        }
+       ],
+       "references": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]",
+       "domain": "www.doctorrogers.com",
+       "title": "Dermatologist Explains Peptides in Skincare",
+       "url": "https://www.doctorrogers.com/blogs/blog/dermatologist-explains-peptides-in-skincare-worth-it-or-worth-skipping?srsltid=AU7gw4VJd5KzWrDbS8-fJrEO2jWbGejcMUIirsQgYiom3iNDt71SMfp7",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.doctorrogers.com › blogs › blog › dermatol...",
+       "website_name": "Doctor Rogers Skin Care",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "by HD Rogers — Depending on who you ask, peptides can boost collagen, repair skin, smooth wrinkles, improve firmness and practically turn back time.",
+       "pre_snippet": "by HD Rogers",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "peptides",
+        "skin"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are peptides good for on your skin?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Does Jennifer Aniston inject peptides?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What foods are high in peptides?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the different types of peptides?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+       "domain": "nourishskinrange.com",
+       "title": "Peptides for Skin: Benefits, Types & Expert Anti-Ageing Guide",
+       "url": "https://nourishskinrange.com/blogs/beauty-news/peptides-for-skin-anti-ageing-benefits",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://nourishskinrange.com › blogs › beauty-news › pe...",
+       "website_name": "Nourish London",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "1 Apr 2025 — The key benefits of peptides for skin are: stimulating collagen production, improving firmness and elasticity, reducing fine lines and wrinkles ...",
+       "pre_snippet": "04/01/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "stimulating collagen production"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-04-01 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]",
+       "domain": "www.facebook.com",
+       "title": "Peptides – the buzzword everyone's talking about in skincare. ...",
+       "url": "https://www.facebook.com/asapskinproducts/videos/peptides-the-buzzword-everyones-talking-about-in-skincare-but-what-are-they-real/784219394687151/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "8 reactions  ·  8 months ago",
+       "website_name": "Facebook · asap skin products",
+       "is_image": false,
+       "is_video": true,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_video"
+       ],
+       "description": "peptides work to support skin firmness, resilience and visible rejuvenation. It means increased collagen production, strengthening the skin ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "peptides work to support skin firmness, resilience and visible rejuvenation"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-02-08 09:08:52 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "people_also_search",
+       "rank_group": 1,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]",
+       "title": "Find related products and services",
+       "items": [
+        "Best injectable peptides for skin tightening",
+        "Best elastin peptides",
+        "Peptides for wrinkles",
+        "Peptide for face",
+        "Best Korean Peptide Serum",
+        "Best topical peptides for skin"
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]",
+       "domain": "www.glamourmagazine.co.uk",
+       "title": "8 best peptide serums I've tested, backed by dermatologists",
+       "url": "https://www.glamourmagazine.co.uk/gallery/best-peptide-serums",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.glamourmagazine.co.uk › Beauty › Skin",
+       "website_name": "Glamour UK",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "15 May 2026 — “Peptides serums can help promote collagen synthesis which improves skin texture, reduces the appearance of wrinkles, and enhances skin tone,” ... Read more",
+       "pre_snippet": "05/15/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "improves skin texture, reduces the appearance of wrinkles, and enhances skin tone"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.glamourmagazine.co.uk/gallery/best-peptide-serums#:~:text=%E2%80%9CPeptides%20serums%20can%20help%20promote,board-certified%20dermatologist%20in%20NYC%2C%20explains.",
+         "domain": "www.glamourmagazine.co.uk"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-05-15 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "video",
+       "rank_group": 1,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[11]/div[1]",
+       "items": [
+        {
+         "type": "video_element",
+         "source": "YouTube · Dr. Mamina",
+         "title": "Peptides in Skincare: What They Actually Do and How to ...",
+         "timestamp": "2026-06-11 00:00:00 +00:00",
+         "url": "https://www.youtube.com/watch?v=T4x-Vgax6iQ"
+        },
+        {
+         "type": "video_element",
+         "source": "YouTube · Dr. Jenny Liu",
+         "title": "Peptides in skincare hype or worth the hype? | Dermatologist ...",
+         "timestamp": "2025-04-06 00:00:00 +00:00",
+         "url": "https://www.youtube.com/watch?v=7dyfRKfYNFs"
+        },
+        {
+         "type": "video_element",
+         "source": "Facebook · Institute of Dermatologists",
+         "title": "The question: What do peptides actually do for your skin ...",
+         "timestamp": "2026-03-30 00:00:00 +00:00",
+         "url": "https://www.facebook.com/Irishdermatology/videos/-the-question-what-do-peptides-actually-do-for-your-skin-prof-caitrionaryanderma/961706723224696/"
+        },
+        {
+         "type": "video_element",
+         "source": "YouTube · Dr. Shereene Idriss",
+         "title": "Dermatologist Explains What's Worth the Hype! | Dr. Shereene ...",
+         "timestamp": "2025-08-23 00:00:00 +00:00",
+         "url": "https://www.youtube.com/watch?v=MvMgyIX2mYI"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[13]/div[1]/div[1]",
+       "domain": "www.magonlinelibrary.com",
+       "title": "Peptides in skincare: their regenerative benefits",
+       "url": "https://www.magonlinelibrary.com/doi/10.12968/joan.2024.0056",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.magonlinelibrary.com › doi › joan.2024.0056",
+       "website_name": "MAG Online Library",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "by A Baker · 2025 · Cited by 3 — They offer various benefits including anti-ageing, antimicrobial, antioxidant, and collagen-boosting effects, making them effective in treating both intrinsic",
+       "pre_snippet": "by A Baker · 2025 · Cited by 3",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[15]/div[1]",
+       "title": null,
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+         "url": null,
+         "domain": null,
+         "description": "LOOKFANTASTIC & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "LOOKFANTASTIC",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS4eXWV9JNJfzGwKXY-VK9GE6iDUpmwdrDzIP0UXQeHgO7tcq5XRoDrb3pUPkHvR47CRy1lwq7P5RUexwNjyfOuXxMTUeBAaCHWB-Xih87pJ4eO39qzn2UYBA",
+         "price": {
+          "current": 28.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£28.90"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 4300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2452231911483610697",
+          "data_docid": "378959402095812392",
+          "gid": "14315254744359337565"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Geek & Gorgeous - Power Peptides 30 ml",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk & more",
+         "more_sellers": true,
+         "seller": "Amazon.co.uk",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQUuMBXuaMqkBQbL5G7imhmKok4kNVWH4a8eC7BJ83GNNL0Tfkqk0k1V3EpTl-c_SbqPoQJStXgMVgFEVbR1WHAY3UuGyp5cNMs69CpFJfIPZUD1Om4Bb32pg",
+         "price": {
+          "current": 12.49,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£12.49"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 2300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8140564027462944062",
+          "data_docid": "914635318782989363",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Peptide Serum UpCircle",
+         "url": null,
+         "domain": null,
+         "description": "PriceRunner & more",
+         "more_sellers": true,
+         "seller": "PriceRunner",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSm4k9DG4l1KHmAWzKkWGbdiemVCfdjLDgLBTb_rxkmCegF_aCaKLsw5kDJBjbr_-SIXqA43mPj-9-fyu62nxTsO5ycldevR9vcMZH4zWXxK_aHjAZ4b_GwDg",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£14.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 1700,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12520830306371708694",
+          "data_docid": "2390328121534192084",
+          "gid": "11837961280312756684"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medik8 Liquid Peptides Advanced MP",
+         "url": null,
+         "domain": null,
+         "description": "John Lewis & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "John Lewis",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQQduQdvXatS656jaA2K2xpB-igVTtNAqsmQnnkL0X3Gb3CKBt42QZMra8hWtmJRsQIn8wdmm8xpWLMXM00SMfwY2yZpqqf-89XKnNx4bB4yeuZ8QxdHxGa7Yc",
+         "price": {
+          "current": 79,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£79.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 6900,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "13166049739651310017",
+          "data_docid": "908984781070165813",
+          "gid": "14423402453738970441"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medik8 Liquid Peptides",
+         "url": null,
+         "domain": null,
+         "description": "Medik8 & more\nFree delivery on £25+",
+         "more_sellers": true,
+         "seller": "Medik8",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5zy3VhgL0vCg3KoXKTXMooVtYGzY6pJEQ5_mLMTmGQ3_oT-Amc_rOVi1AASiA08Avo0r6UuF5MElrh7s4RhYY5wCfSKtuJh9o1hZfK4n7l9AHFAPr79jx8Q",
+         "price": {
+          "current": 20,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£20.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 2300,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9343885808319713997",
+          "data_docid": "721200438048964559",
+          "gid": "869619105731944011"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Q+A 30ml Multi Peptide Facial Serum",
+         "url": null,
+         "domain": null,
+         "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+         "more_sellers": true,
+         "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRYFXAcpcX8ZrkLbXxOSmaozZcjojmxZf-n1nQuZkXqTJYWa97ewM1CJhzbyfxWZqqYe6K68aZYdGrIKEMjYjcc6kY_uhKQYxuXcC2GDvLA4xD2cxq9n66j0g",
+         "price": {
+          "current": 9.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£9.95"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 118,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8670215658638688389",
+          "data_docid": "2055262373663532075",
+          "gid": "13443313731235814691"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": null,
+         "domain": null,
+         "description": "Sephora UK & more\nFree delivery on £20+",
+         "more_sellers": true,
+         "seller": "Sephora UK",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRpl4hSBxMLO_v2YKyTbCQaS8Ujr6N6S9K5zuq-pPCdjnuCQCl_gbwK7AezEaaJLvRptN2rYSdZneYwdxpar6ob82-hb_xjh4JRgQR82vojL_8PBd5eAYOo",
+         "price": {
+          "current": 19.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£19.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 1000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "6773575022961355835",
+          "data_docid": "6182669727972116745",
+          "gid": "12797384870457311317"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "CeraVe Skin Renewing Peptide Cream",
+         "url": null,
+         "domain": null,
+         "description": "Notino.co.uk & more",
+         "more_sellers": true,
+         "seller": "Notino.co.uk",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR8Z6iSUKdZ1-XoWWUdMtiJRRuvf4mAc2jm3avJxkjIhezyLRCTxLwlLCqznjLaSP9OiT_5CcIDh-RR4CXIrPeWzWuLKL0q_Ejw1vKkJck",
+         "price": {
+          "current": 23.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£23.90"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 94,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11236700837467469499",
+          "data_docid": "18099615116758024918",
+          "gid": "15741768031359144679"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]",
+       "domain": "uk.sanctuary.com",
+       "title": "What Peptides Are & Do | Sanctuary ...",
+       "url": "https://uk.sanctuary.com/blog/skincare-101/what-are-peptides-what-do-peptides-do/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://uk.sanctuary.com › blog › skincare-101 › what-...",
+       "website_name": "Sanctuary Spa",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Peptides are short chains of amino acids that form the building blocks of collagen and elastin, two proteins responsible for skin's elasticity and bounce. Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Peptides",
+        "skin's"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://uk.sanctuary.com/blog/skincare-101/what-are-peptides-what-do-peptides-do/#:~:text=Peptides%20are%20short%20chains%20of,for%20skin's%20elasticity%20and%20bounce.",
+         "domain": "uk.sanctuary.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]",
+       "domain": "www.marksandspencer.com",
+       "title": "Peptides in Skincare: What They Are and Why You Need ...",
+       "url": "https://www.marksandspencer.com/content/peptides-in-skincare",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.marksandspencer.com › Editorial › Beauty",
+       "website_name": "Marks & Spencer",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "22 Mar 2025 — But what do peptides do? They encourage your skin to produce more collagen (that's the stuff that keeps it plump and bouncy), helping to smooth ... Read more",
+       "pre_snippet": "03/22/2025 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "They encourage your skin to produce more collagen"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.marksandspencer.com/content/peptides-in-skincare#:~:text=But%20what%20do%20peptides%20do%3F,and%20make%20it%20feel%20firmer.",
+         "domain": "www.marksandspencer.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2025-03-22 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[1]",
+       "domain": "www.youtube.com",
+       "title": "Dermatologist Shares Benefits of Peptides for Skincare Routine",
+       "url": "https://www.youtube.com/watch?v=Fl0_qRN5orw",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "13.6k+ views  ·  1 year ago",
+       "website_name": "YouTube · TODAY",
+       "is_image": false,
+       "is_video": true,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_video"
+       ],
+       "description": "Dermatologist Dr. Angela Lamb joins TODAY to break down everything you need to know about the ingredient peptides. She shares the benefits ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "peptides"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-10-08 09:08:52 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Peptides for skin benefits",
+        "Best peptides for skin",
+        "Best peptides for skin tightening",
+        "Peptides for skin care side effects",
+        "Oral peptides for skin",
+        "Peptides for skin Reddit",
+        "Peptides for skin and hair",
+        "Topical peptides for skin"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

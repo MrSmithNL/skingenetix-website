@@ -1,0 +1,1758 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "14.5316 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080858-1509-0139-0000-d72b68999f58",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "14.3692 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "glow serum",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "glow serum",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=glow%20serum&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+     "datetime": "2026-10-08 08:58:40 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Glow Recipe",
+        "url": "https://www.google.com/search?q=glow+recipe+serum&hl=en&gl=US&shoprs=CAEYAioKZ2xvdyBzZXJ1bTIPCAISC0dsb3cgUmVjaXBlWPeqIGAB&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAF6BQgaEI8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Serums",
+        "url": "https://www.google.com/search?q=facial+serums+glow+serum&hl=en&gl=US&shoprs=CAEYCSoKZ2xvdyBzZXJ1bTIRCAkSDUZhY2lhbCBTZXJ1bXNgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAJ6BQgaEJEB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Reviews",
+        "url": "https://www.google.com/search?q=reviews+glow+serum&hl=en&gl=US&shoprs=CAEYEioKZ2xvdyBzZXJ1bTILCBISB1Jldmlld3NgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAN6BQgaEJIB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Facial Moisturizers",
+        "url": "https://www.google.com/search?q=facial+moisturizers+glow+serum&hl=en&gl=US&shoprs=CAEYCSoKZ2xvdyBzZXJ1bTIXCAkSE0ZhY2lhbCBNb2lzdHVyaXplcnNgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAR6BQgaEJMB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Niacinamide",
+        "url": "https://www.google.com/search?q=niacinamide+glow+serum&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIcCAESC05pYWNpbmFtaWRlOgsIwdstEKSArAIwAFj3qiBgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAV6BQgaEJQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Nearby",
+        "url": "https://www.google.com/search?q=glow+serum+nearby&hl=en&gl=US&shoprs=CAEYAyoKZ2xvdyBzZXJ1bTIMCAMSBk5lYXJieRgCWPeqIGAB&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAZ6BQgaEJUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Bottle",
+        "url": "https://www.google.com/search?q=bottle+glow+serum&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIWCAESBkJvdHRsZToKCMaLaRDHi2kwAFj3qiBgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAd6BQgaEJYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Vitamin C",
+        "url": "https://www.google.com/search?q=vitamin+c+glow+serum&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIZCAESCVZpdGFtaW4gQzoKCMHbLRC_rlEwAFj3qiBgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAh6BQgaEJcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Moisturizers",
+        "url": "https://www.google.com/search?q=moisturizers+glow+serum&hl=en&gl=US&shoprs=CAEYCSoKZ2xvdyBzZXJ1bTIQCAkSDE1vaXN0dXJpemVyc2AB&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAl6BQgaEJgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Target",
+        "url": "https://www.google.com/search?q=target+glow+serum&hl=en&gl=US&shoprs=CAEYAioKZ2xvdyBzZXJ1bTIKCAISBlRhcmdldFj3qiBgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAp6BQgaEJkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Ulta Beauty",
+        "url": "https://www.google.com/search?q=ulta+beauty+glow+serum&hl=en&gl=US&shoprs=CAEYAioKZ2xvdyBzZXJ1bTIPCAISC1VsdGEgQmVhdXR5WPeqIGAB&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAt6BQgaEJsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Sephora",
+        "url": "https://www.google.com/search?q=sephora+glow+serum&hl=en&gl=US&shoprs=CAEYAioKZ2xvdyBzZXJ1bTILCAISB1NlcGhvcmFY96ogYAE&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKAx6BQgaEJ0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Pink",
+        "url": "https://www.google.com/search?q=pink+glow+serum&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIWCAESBFBpbms6DAjYjPUBEOmK9QEwC1j3qiBgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKA16BQgaEJ8B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "On sale",
+        "url": "https://www.google.com/search?q=glow+serum+sale&hl=en&gl=US&shoprs=CAESBEoCGAEYBioKZ2xvdyBzZXJ1bTITCAYSB09uIHNhbGUYAiIESgIYAVj3qiBgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKA56BQgaEKAB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Get it fast",
+        "url": "https://www.google.com/search?q=glow+serum&hl=en&gl=US&shoprs=CAESDZoBCgoIEAM4AUAHSAEYFCoKZ2xvdyBzZXJ1bTIkCBQSC0dldCBpdCBmYXN0Ig2aAQoKCBADOAFAB0gBKgQQARgBYAE&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKA96BQgaEKEB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Beauty of Joseon",
+        "url": "https://www.google.com/search?q=beauty+of+joseon+glow+serum&hl=en&gl=US&shoprs=CAEYAioKZ2xvdyBzZXJ1bTIUCAISEEJlYXV0eSBvZiBKb3Nlb25Y96ogYAE&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBB6BQgaEKIB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Retinol",
+        "url": "https://www.google.com/search?q=retinol+glow+serum&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIXCAESB1JldGlub2w6CgjB2y0QwtstMABY96ogYAE&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBF6BQgaEKQB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Eye Cream",
+        "url": "https://www.google.com/search?q=eye+cream+glow+serum&hl=en&gl=US&shoprs=CAEYCSoKZ2xvdyBzZXJ1bTINCAkSCUV5ZSBDcmVhbWAB&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBJ6BQgaEKUB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Alpha Hydroxy",
+        "url": "https://www.google.com/search?q=alpha+hydroxy+glow+serum&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIdCAESDUFscGhhIEh5ZHJveHk6CgjB2y0QztstMABY96ogYAE&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBN6BQgaEKYB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For Men",
+        "url": "https://www.google.com/search?q=glow+serum+for+men&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIZCAESB0ZvciBNZW4YAjoKCKDbLRCv2y0wA1j3qiBgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBR6BQgaEKcB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Hyaluronic Acid",
+        "url": "https://www.google.com/search?q=hyaluronic+acid+glow+serum&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIgCAESD0h5YWx1cm9uaWMgQWNpZDoLCMHbLRChgKwCMABY96ogYAE&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBV6BQgaEKgB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Walmart",
+        "url": "https://www.google.com/search?q=walmart+glow+serum&hl=en&gl=US&shoprs=CAEYAioKZ2xvdyBzZXJ1bTILCAISB1dhbG1hcnRY96ogYAE&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBZ6BQgaEKkB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Buy",
+        "url": "https://www.google.com/search?q=buy+glow+serum&hl=en&gl=US&shoprs=CAEYEioKZ2xvdyBzZXJ1bTIHCBISA0J1eWAB&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBd6BQgaEKsB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Face Primer",
+        "url": "https://www.google.com/search?q=face+primer+glow+serum&hl=en&gl=US&shoprs=CAEYCSoKZ2xvdyBzZXJ1bTIPCAkSC0ZhY2UgUHJpbWVyYAE&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBh6BQgaEKwB",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Under $15",
+        "url": "https://www.google.com/search?q=glow+serum+under+$15&hl=en&gl=US&shoprs=CAESDRILEQAAAAA4nGxBGAEYBSoKZ2xvdyBzZXJ1bTIiCAUSCVVuZGVyICQxNRgCIg0SCxEAAAAAOJxsQRgBKgIYAVj3qiBgAQ&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBl6BQgaEK0B",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "For All Skin Types",
+        "url": "https://www.google.com/search?q=glow+serum+for+all+skin+types&hl=en&gl=US&shoprs=CAEYASoKZ2xvdyBzZXJ1bTIkCAESEkZvciBBbGwgU2tpbiBUeXBlcxgCOgoIsvg7ELX4OzAAWPeqIGAB&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQip4GKBp6BQgaEK4B",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "ai_overview",
+      "popular_products",
+      "organic",
+      "discussions_and_forums",
+      "people_also_ask",
+      "images",
+      "perspectives",
+      "product_considerations",
+      "related_searches"
+     ],
+     "se_results_count": 217000,
+     "pages_count": 1,
+     "items_count": 16,
+     "items": [
+      {
+       "type": "ai_overview",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "asynchronous_ai_overview": false,
+       "markdown": "Glowing serums `use active ingredients like vitamin C, niacinamide, and hyaluronic acid to hydrate, brighten, and even out skin tone`.[[1]](https://jouercosmetics.com/products/luminizing-glow-serum)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop)\n\n### Top Glowing Serums\n\nAdd to list**Glow Recipe Watermelon Glow Niacinamide Dew Drops** ($36): A cult-favorite serum and primer hybrid infused with niacinamide to impart an instant dewy glow.[[1]](https://www.glowrecipe.com/collections/serums-essences)[[2]](https://www.byrdie.com/best-face-serums-4588133)Add to list**The Ordinary Multi-Antioxidant Radiance Serum** ($14): A budget-friendly option featuring vitamin C (ascorbyl glucoside), ginseng, and peptide technologies to fight dullness.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop)Add to list Powered by 7% niacinamide, glycerin, and hyaluronic acid to plump and brighten skin with or without makeup.[[1]](https://jouercosmetics.com/products/luminizing-glow-serum)Add to list A lightweight, milky serum that quickly targets dark spots and uneven texture for sensitive skin.[[1]](https://www.byrdie.com/best-face-serums-4588133)Show more\n\n### Key Ingredients to Look For\n\n- **Vitamin C:** Brightens skin and fights free radicals from sun and pollution.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:16916275785202331901,catalogid:1546205804485103598,gpcid:12954924791814065721,mid:576462855640349120&ibp=oshop)\n- **Niacinamide (Vitamin B3):** Calms redness, minimizes pores, and adds a smooth sheen.[[1]](https://jouercosmetics.com/products/luminizing-glow-serum)\n- **Hyaluronic Acid / Glycerin:** Pulls moisture deep into the skin to create a plump, bouncy look.[[1]](https://jouercosmetics.com/products/luminizing-glow-serum)\n\nWould you like recommendations based on your **specific skin type** (like oily, dry, or sensitive) or your **budget**?",
+       "items": [
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "Glowing serums use active ingredients like vitamin C, niacinamide, and hyaluronic acid to hydrate, brighten, and even out skin tone.",
+         "markdown": "Glowing serums `use active ingredients like vitamin C, niacinamide, and hyaluronic acid to hydrate, brighten, and even out skin tone`.[[1]](https://jouercosmetics.com/products/luminizing-glow-serum)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Jouer Cosmetics",
+           "domain": "jouercosmetics.com",
+           "url": "https://jouercosmetics.com/products/luminizing-glow-serum",
+           "title": "Luminizing Glow Serum - Jouer Cosmetics",
+           "text": "Serious Skincare, Instant Glow. Unlike traditional face serums, the Luminizing Glow Serum boosts radiance, soothes, hydrates, repa..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop",
+           "title": "The Ordinary Multi-Antioxidant Radiance Serum",
+           "text": "The Ordinary Multi-Antioxidant Radiance Serum is a 30 ml antioxidant serum for daily skin protection and regeneration. This formul..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "Top Glowing Serums",
+         "text": "Glow Recipe Watermelon Glow Niacinamide Dew Drops $55.00 Give Me Glam - Cosmetics Shop Lebanon & more 4.4 (2.4K) Add to list Glow Recipe Watermelon Glow Niacinamide Dew Drops ($36): A cult-favorite serum and primer hybrid infused with niacinamide to impart an instant dewy glow. The Ordinary Multi-Antioxidant Radiance Serum $14.00 The Ordinary & more 4.4 (1.1K) Add to list The Ordinary Multi-Antioxidant Radiance Serum ($14): A budget-friendly option featuring vitamin C (ascorbyl glucoside), ginseng, and peptide technologies to fight dullness. Jouer Luminizing Glow Serum $22.00 Jouer Cosmetics & more 4.7 (69) Add to list Powered by 7% niacinamide, glycerin, and hyaluronic acid to plump and brighten skin with or without makeup. Caudalie Vinoperfect Brightening Dark Spot Serum $66.47 Care to Beauty & more 4.6 (35.7K) Add to list A lightweight, milky serum that quickly targets dark spots and uneven texture for sensitive skin. Show more",
+         "markdown": "Add to list**Glow Recipe Watermelon Glow Niacinamide Dew Drops** ($36): A cult-favorite serum and primer hybrid infused with niacinamide to impart an instant dewy glow.[[1]](https://www.glowrecipe.com/collections/serums-essences)[[2]](https://www.byrdie.com/best-face-serums-4588133)Add to list**The Ordinary Multi-Antioxidant Radiance Serum** ($14): A budget-friendly option featuring vitamin C (ascorbyl glucoside), ginseng, and peptide technologies to fight dullness.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop)Add to list Powered by 7% niacinamide, glycerin, and hyaluronic acid to plump and brighten skin with or without makeup.[[1]](https://jouercosmetics.com/products/luminizing-glow-serum)Add to list A lightweight, milky serum that quickly targets dark spots and uneven texture for sensitive skin.[[1]](https://www.byrdie.com/best-face-serums-4588133)Show more",
+         "links": [
+          {
+           "type": "link_element",
+           "title": "Glow Recipe Watermelon Glow Niacinamide Dew Drops$55.00Give Me Glam - Cosmetics Shop Lebanon& more4.4(2.4K)Go to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:8490181020862974898,gpcid:20000874601949032,headlineOfferDocid:12982406427551086451,catalogid:6894954479609810262,productDocid:10329727897005592896,rds:PC_20000874601949032%7CPROD_PC_20000874601949032&q=product&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQgLcPegoIAggACAAIAxAN",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "The Ordinary Multi-Antioxidant Radiance Serum$14.00The Ordinary& more4.4(1.1K)Go to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,imageDocid:9594603824242306357,gpcid:14135330715316061576,headlineOfferDocid:1055812280986945002,catalogid:7656002208002033495,productDocid:16151980729786587480,rds:PC_14135330715316061576%7CPROD_PC_14135330715316061576&q=product&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQgLcPegoIAggACAAIAxAf",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Jouer Luminizing Glow Serum$22.00Jouer Cosmetics& more4.7(69)Go to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462860460895762,imageDocid:607351775175052915,gpcid:11938786016050553068,headlineOfferDocid:14497690369624109604,catalogid:17044572046570390622,productDocid:16070027627885341666,rds:PC_11938786016050553068%7CPROD_PC_11938786016050553068&q=product&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQgLcPegoIAggACAAIAxAv",
+           "domain": "www.google.com"
+          },
+          {
+           "type": "link_element",
+           "title": "Caudalie Vinoperfect Brightening Dark Spot Serum$66.47Care to Beauty& more4.6(35.7K)Go to product viewer dialog for this item.",
+           "description": null,
+           "url": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:48,mid:576462531544459419,imageDocid:7967177060394108183,gpcid:8447564886306623839,headlineOfferDocid:7693891814957687544,catalogid:9897782241967488487,productDocid:13352440070638104911,rds:PC_8447564886306623839%7CPROD_PC_8447564886306623839&q=product&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQgLcPegoIAggACAAIAxBA",
+           "domain": "www.google.com"
+          }
+         ],
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Glow Recipe",
+           "domain": "www.glowrecipe.com",
+           "url": "https://www.glowrecipe.com/collections/serums-essences",
+           "title": "Serums and Essences - Face Treatments - Glow Recipe",
+           "text": "Serums and Kits: Watermelon Glow Best-Sellers Kit ($48), Watermelon Glow Niacinamide Dew Drops ($36), Watermelon Glow Niacinamide ..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Byrdie",
+           "domain": "www.byrdie.com",
+           "url": "https://www.byrdie.com/best-face-serums-4588133",
+           "title": "The 13 Best Face Serums of 2026, Tested and Reviewed - Byrdie",
+           "text": "In This Article. ... * Best Overall: Our favorite face serum overall is InnBeauty's Project Firming & Plumping Vegan Snail Serum f..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop",
+           "title": "The Ordinary Multi-Antioxidant Radiance Serum",
+           "text": "The Ordinary Multi-Antioxidant Radiance Serum is a 30 ml antioxidant serum for daily skin protection and regeneration. This formul..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Jouer Cosmetics",
+           "domain": "jouercosmetics.com",
+           "url": "https://jouercosmetics.com/products/luminizing-glow-serum",
+           "title": "Luminizing Glow Serum - Jouer Cosmetics",
+           "text": "Serious Skincare, Instant Glow. Unlike traditional face serums, the Luminizing Glow Serum boosts radiance, soothes, hydrates, repa..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "Key Ingredients to Look For",
+         "text": "Vitamin C: Brightens skin and fights free radicals from sun and pollution. Niacinamide (Vitamin B3): Calms redness, minimizes pores, and adds a smooth sheen. Hyaluronic Acid / Glycerin: Pulls moisture deep into the skin to create a plump, bouncy look.",
+         "markdown": "- **Vitamin C:** Brightens skin and fights free radicals from sun and pollution.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:16916275785202331901,catalogid:1546205804485103598,gpcid:12954924791814065721,mid:576462855640349120&ibp=oshop)\n- **Niacinamide (Vitamin B3):** Calms redness, minimizes pores, and adds a smooth sheen.[[1]](https://jouercosmetics.com/products/luminizing-glow-serum)\n- **Hyaluronic Acid / Glycerin:** Pulls moisture deep into the skin to create a plump, bouncy look.[[1]](https://jouercosmetics.com/products/luminizing-glow-serum)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop",
+           "title": "The Ordinary Multi-Antioxidant Radiance Serum",
+           "text": "The Ordinary Multi-Antioxidant Radiance Serum is a 30 ml antioxidant serum for daily skin protection and regeneration. This formul..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Google",
+           "domain": "www.google.com",
+           "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:16916275785202331901,catalogid:1546205804485103598,gpcid:12954924791814065721,mid:576462855640349120&ibp=oshop",
+           "title": "Mamaearth Vitamin C Daily Glow Face Serum",
+           "text": "Get brighter, glowing skin every day with the vitamin c daily glow face serum. Enriched with 5 percent vitamin c, it fights free r..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Jouer Cosmetics",
+           "domain": "jouercosmetics.com",
+           "url": "https://jouercosmetics.com/products/luminizing-glow-serum",
+           "title": "Luminizing Glow Serum - Jouer Cosmetics",
+           "text": "Serious Skincare, Instant Glow. Unlike traditional face serums, the Luminizing Glow Serum boosts radiance, soothes, hydrates, repa..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "Would you like recommendations based on your specific skin type (like oily, dry, or sensitive) or your budget ?",
+         "markdown": "Would you like recommendations based on your **specific skin type** (like oily, dry, or sensitive) or your **budget**?",
+         "links": null,
+         "images": null,
+         "references": null
+        }
+       ],
+       "references": [
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Glow Recipe",
+         "domain": "www.glowrecipe.com",
+         "url": "https://www.glowrecipe.com/collections/serums-essences",
+         "title": "Serums and Essences - Face Treatments - Glow Recipe",
+         "text": "Serums and Kits: Watermelon Glow Best-Sellers Kit ($48), Watermelon Glow Niacinamide Dew Drops ($36), Watermelon Glow Niacinamide ..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Jouer Cosmetics",
+         "domain": "jouercosmetics.com",
+         "url": "https://jouercosmetics.com/products/luminizing-glow-serum",
+         "title": "Luminizing Glow Serum - Jouer Cosmetics",
+         "text": "Serious Skincare, Instant Glow. Unlike traditional face serums, the Luminizing Glow Serum boosts radiance, soothes, hydrates, repa..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Byrdie",
+         "domain": "www.byrdie.com",
+         "url": "https://www.byrdie.com/best-face-serums-4588133",
+         "title": "The 13 Best Face Serums of 2026, Tested and Reviewed - Byrdie",
+         "text": "In This Article. ... * Best Overall: Our favorite face serum overall is InnBeauty's Project Firming & Plumping Vegan Snail Serum f..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Google",
+         "domain": "www.google.com",
+         "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:16151980729786587480,catalogid:7656002208002033495,gpcid:14135330715316061576&ibp=oshop",
+         "title": "The Ordinary Multi-Antioxidant Radiance Serum",
+         "text": "The Ordinary Multi-Antioxidant Radiance Serum is a 30 ml antioxidant serum for daily skin protection and regeneration. This formul..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Google",
+         "domain": "www.google.com",
+         "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:16916275785202331901,catalogid:1546205804485103598,gpcid:12954924791814065721,mid:576462855640349120&ibp=oshop",
+         "title": "Mamaearth Vitamin C Daily Glow Face Serum",
+         "text": "Get brighter, glowing skin every day with the vitamin c daily glow face serum. Enriched with 5 percent vitamin c, it fights free r..."
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]",
+       "title": "Popular products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Beauty of Joseon Glow Serum",
+         "url": "https://www.tiktok.com/@retouchbyriya/video/7557865825902857485",
+         "domain": "www.tiktok.com",
+         "description": "Beauty of Joseon & more\nFree delivery on $50+\nAbsorbs quickly without leaving a sticky feel · Light and non-greasy TikTok",
+         "more_sellers": true,
+         "seller": "Beauty of Joseon",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:0",
+         "price": {
+          "current": 17,
+          "regular": 17,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$17.00 $17/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 32000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8321720527495929498",
+          "data_docid": "4617265192717977907",
+          "gid": "11913481298429595005"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Beauty of Joseon Glow Deep Serum",
+         "url": null,
+         "domain": null,
+         "description": "YesStyle.com & more\nFree delivery on $35+",
+         "more_sellers": true,
+         "seller": "YesStyle.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:1",
+         "price": {
+          "current": 16.32,
+          "regular": 24,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$16.32 $24"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 11000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3575871778515130146",
+          "data_docid": "8308162841772572818",
+          "gid": "16084963902763648386"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Glow Serum Propolis + Niacinamide",
+         "url": null,
+         "domain": null,
+         "description": "weee.com & more\nMoisturizes well (45 user reviews)",
+         "more_sellers": true,
+         "seller": "weee.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:2",
+         "price": {
+          "current": 10.99,
+          "regular": null,
+          "max_value": 15,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$10.99 Usually $15"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 289,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7423076378006216308",
+          "data_docid": "219071118110117439",
+          "gid": "8863378308003686369"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COSRX The 6 Peptide Skin Booster Serum",
+         "url": "https://pearlandbubbles.wordpress.com/2025/05/05/k-beauty-review-cosrx-the-6-peptide-skin-booster/",
+         "domain": "pearlandbubbles.wordpress.com",
+         "description": "glowstation.com & more\nAbsorbs in quickly without leaving your skin feeling dry · Very hydrating WordPress.com",
+         "more_sellers": true,
+         "seller": "glowstation.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:3",
+         "price": {
+          "current": 20.91,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$20.91"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 61000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2668514587280735638",
+          "data_docid": "6244816029251746314",
+          "gid": "12574506115952644513"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Glow Recipe Watermelon Glow Niacinamide Dew Drops",
+         "url": "https://stephaniemarieblogs.com/2024/08/glow-recipe-review/",
+         "domain": "stephaniemarieblogs.com",
+         "description": "Kohl's & more\nFree delivery\nTexture is nice and light · Blends well into the skin Stephanie Marie Blogs",
+         "more_sellers": true,
+         "seller": "Kohl's",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:4",
+         "price": {
+          "current": 20,
+          "regular": null,
+          "max_value": 36,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$20.00 Usually $36"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 19000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11478962504159053186",
+          "data_docid": "3122777947605807879",
+          "gid": "12493957329676619208"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "SEPHORA COLLECTION GLOW Super Brightening Serum",
+         "url": "https://www.allure.com/review/sephora-collection-super-brightening-serum-review",
+         "domain": "www.allure.com",
+         "description": "Sephora & more\nFree delivery on $50+\nBrightens and fades dark spots over time · Lovely, post-application glow Allure",
+         "more_sellers": true,
+         "seller": "Sephora",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:5",
+         "price": {
+          "current": 23,
+          "regular": 23,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$23.00 $23/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.2,
+          "votes_count": 683,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3227188373553214313",
+          "data_docid": "8841659630030945086",
+          "gid": "11449300850304501526"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Pacifica Glow Baby Booster Serum",
+         "url": "https://zyluxbeauty.com/best-vitamin-c-serums-for-hyperpigmentation-glowing-skin/",
+         "domain": "zyluxbeauty.com",
+         "description": "Target & more\nFree delivery on $35+\nHydrates and nourishes skin deeply, improving texture and tone · Limited quantity may require frequent repurchasing for daily use zyluxbeauty.com",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:6",
+         "price": {
+          "current": 15.79,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$15.79"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 872,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "4707877604340680698",
+          "data_docid": "1374785962916088335",
+          "gid": "3187269367724516226"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Good Molecules Daily Brightening Serum",
+         "url": "https://sarahfynn.com/2019/12/04/good-molecules-daily-brightening-serum-review/",
+         "domain": "sarahfynn.com",
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nLayers very well with other products without pilling · Very lightweight serum sarah fynn",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:7",
+         "price": {
+          "current": 8,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$8.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 1200,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8804427115771217080",
+          "data_docid": "15890157406463681268",
+          "gid": "18122561660710558938"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr.Althea ABC Glow Whipped Serum",
+         "url": "https://www.lolassecretbeautyblog.com/2026/04/dr-althea-abc-glow-whipped-serum-review.html",
+         "domain": "www.lolassecretbeautyblog.com",
+         "description": "YesStyle.com & more\nFree delivery on $35+\nLeaves my skin with a wonderful glow · Plumps fine lines lola's secret beauty blog",
+         "more_sellers": true,
+         "seller": "YesStyle.com",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:8",
+         "price": {
+          "current": 13.97,
+          "regular": 22,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$13.97 $22"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 396,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "12548571903107725908",
+          "data_docid": "4047585904995236177",
+          "gid": "9173412820405350478"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Nivea Luminous630 Skin Glow Face Serum with Thiamidol, Niacinamide & Hyaluronic Acid, Lightweight Daily Brightening Serum, 7ml x 6, Size: 30 mL",
+         "url": null,
+         "domain": null,
+         "description": "Walmart - Blessed mart",
+         "more_sellers": false,
+         "seller": "Walmart - Blessed mart",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:9",
+         "price": {
+          "current": 26.99,
+          "regular": 4.5,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$26.99 $4.50/ct"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 11000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "13037359440608861877",
+          "gid": null
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "domain": "www.amazon.com",
+       "title": "BOLI Kojic Acid Serum For Dark Spots, Glow Skin 1.01 fl oz",
+       "url": "https://www.amazon.com/BOLI-Brightening-Peptide-Retinol-Niacinamide/dp/B0FW4HQZF3",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.amazon.com › BOLI-Brightening-Peptide-R...",
+       "website_name": "Amazon.com",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Our Kojic Acid Serum helps reduce the appearance of dark spots, acne marks, and discoloration for a more radiant and balanced-looking complexion Visibly",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "glow serum from www.amazon.com",
+         "url": "https://www.amazon.com/BOLI-Brightening-Peptide-Retinol-Niacinamide/dp/B0FW4HQZF3",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:10"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Kojic Acid Serum helps reduce the appearance of dark spots, acne marks, and discoloration"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]",
+       "domain": "global.oliveyoung.com",
+       "title": "Beauty of Joseon Glow Serum - olive young",
+       "url": "https://global.oliveyoung.com/product/detail?accParam=1710&prdtNo=GA220615264&srsltid=AU7gw4XSJYvlLJf1yCsO9iRe3-p-BQb4IqIhoVzbVDNssM7Z-iAF_neq",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://global.oliveyoung.com › product › detail",
+       "website_name": "olive young",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Propolis Extract helps relieve inflammation, prevent acne from growing, and keep the skin whitened. Niacinamide: A functional ingredient with whitening effect ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "glow serum from global.oliveyoung.com",
+         "url": "https://global.oliveyoung.com/product/detail?accParam=1710&prdtNo=GA220615264&srsltid=AU7gw4XSJYvlLJf1yCsO9iRe3-p-BQb4IqIhoVzbVDNssM7Z-iAF_neq",
+         "image_url": "https://api.dataforseo.com/cdn/i/10080858-1509-0139-0000-d72b68999f58:11"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 13.6,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$13.60"
+       },
+       "highlighted": null,
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://global.oliveyoung.com/product/detail?accParam=1710&prdtNo=GA220615264&srsltid=AU7gw4XSJYvlLJf1yCsO9iRe3-p-BQb4IqIhoVzbVDNssM7Z-iAF_neq#:~:text=How%20to%20Use",
+         "domain": "global.oliveyoung.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]",
+       "domain": "goalstogetglowing.com",
+       "title": "Serums",
+       "url": "https://goalstogetglowing.com/category/skincare/serums/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://goalstogetglowing.com › category › skincare › s...",
+       "website_name": "Goals To Get Glowing",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Serums - Goals To Get Glowing Client. Geek & Gorgeous C-Glow Serum Review. The Glow Maker Vitamin C Serum",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Geek & Gorgeous C-Glow Serum"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "discussions_and_forums",
+       "rank_group": 1,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]",
+       "title": "Discussions and forums",
+       "items": [
+        {
+         "type": "discussions_and_forums_element",
+         "title": "Any serum that can actually provide a glow except vit C?",
+         "url": "https://www.reddit.com/r/Skincare_Addiction/comments/1mtkbyn/any_serum_that_can_actually_provide_a_glow_except/",
+         "domain": "www.reddit.com",
+         "source": "Reddit",
+         "description": null,
+         "timestamp": "2025-10-08 08:58:39 +00:00",
+         "posts_count": 40
+        },
+        {
+         "type": "discussions_and_forums_element",
+         "title": "[Product Question] Are the serums that give you that Korean skin \"glow\" actually beneficial to your skin, or are they just cosmetic hype?",
+         "url": "https://www.reddit.com/r/SkincareAddiction/comments/1vhpnyi/product_question_are_the_serums_that_give_you/",
+         "domain": "www.reddit.com",
+         "source": "Reddit",
+         "description": null,
+         "timestamp": "2026-08-08 08:58:39 +00:00",
+         "posts_count": 6
+        },
+        {
+         "type": "discussions_and_forums_element",
+         "title": "Which is the best natural face serum for glowing skin?",
+         "url": "https://www.quora.com/Which-is-the-best-natural-face-serum-for-glowing-skin",
+         "domain": "www.quora.com",
+         "source": "Quora",
+         "description": null,
+         "timestamp": "2025-10-08 08:58:39 +00:00",
+         "posts_count": 30
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What does Glow Serum do?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What is the best Glow Serum for face?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Which serum is best for glow?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Which Korean Glow Serum is best?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "images",
+       "rank_group": 1,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[14]/div[1]",
+       "title": "Images",
+       "url": "https://www.google.com/search?sca_esv=63a1e0baac38d7a4&hl=en&gl=US&sxsrf=APpeQntZ0XfwaHeWESlC04Tl1fpD0WRsjw:1791449918229&q=glow+serum&udm=2&source=univ&fir=TZRpvxdzI_QRrM%252CYUGjUi3MDZPjTM%252C_%253Ba_JZwKtU55R_8M%252CYP9s3e_BBBDm8M%252C_%253B6YFqTHz57ikQHM%252CgH4A0f76TFAzBM%252C_%253BYVgO2jvv1_OCnM%252CgudSCXuxKTODbM%252C_%253BPz7HQ8viaCRauM%252CualX08Rf1SL-BM%252C_%253B0NMm3a5CLxl2VM%252CM_cGze1s5ds8jM%252C_%253BInZQdkDy34jseM%252Cr1fD0pUzrnVWwM%252C_%253B5TUuCWTchCgqyM%252CieFmUfDe7N3ysM%252C_&usg=AI4_-kSHBu1edwJxE0AEHVimB7lks5jprw&sa=X&ved=2ahUKEwib0YiAh6qXAxWeSvEDHYAyMLMQ7Al6BQiNARAF",
+       "items": [
+        {
+         "type": "images_element",
+         "alt": "Glow Recipe's New Serum Gave Me The Dewy Skin Of My Dreams",
+         "url": "https://www.refinery29.com/en-us/2020/12/10213880/glow-recipe-watermelon-glow-dew-drops-review",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIdLxBAlJCX0r7KgL7EYyBel-IDKh6cPzK4bGTn8UehQnofyT0UPsQyGs&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Glow Serum for Oil Control Care with Propolis & Niacinamide",
+         "url": "https://www.sephora.com/product/glow-serum-30ml-P517687",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkAQeO9RKi3N3AnLzaPQT_8Nj6WAZaGHjcoRXi7t_gbQeBUyCPzAGfSvs&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Glow Serum: Propolis + Niacinamide for Poreless, Glowing Skin",
+         "url": "https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide?srsltid=AU7gw4VcuT_w08crxhtTAyWDW5nmvbX0da-m_Zo6yFoAOE7e-1HvQiub",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuLcW3K--SP_e39VueQSOc3d0lt-gVkG2NtgI-v4MqjhIvsdhm2hlwaj0&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Mountain Glow Golden Serum",
+         "url": "https://goop.com/ursa-major-mountain-glow-golden-serum/p/?taxon_id=880&srsltid=AU7gw4V6SbDIBkIQ8cXbvAc5-2BvuEvAKpUiKuN2468F3SYNT6vOXwYs",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxrUyXbq6bqrH1Nxb2EF24pnsudXTYiUD2n_p19jSux8ZXKE3m6NrCBO8&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Vitamin Glow Serum - 1oz",
+         "url": "https://drfredericksoriginal.com/products/vitamin-glow-serum?srsltid=AU7gw4WCEZ458DKkZhRps7fTmAYe_ZAPJvXftUxR-3j3aI9zKkWRcXqT",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOO_ps8r8u6GsCUUA5L0Gili2nWHRXezk5hKbZgQAORmzcU_iXQGhWZmNvXw&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Beauty of Joseon Glow Serum Propolis and Niacinamide for ...",
+         "url": "https://www.amazon.ae/Beauty-Joseon-Niacinamide-Moisturizing-Hydrating/dp/B086VKZZZY",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREnJ0TcFrkr7_UDMFWvC86DdnjMKmmW_TkDzOSlfHvOfCcD3q2onu-kbQ&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Ursa Major Mountain Glow Serum (1 fl oz) #10085248",
+         "url": "https://www.smallflower.com/products/ursa-major-mountain-glow-serum-1-fl-oz?srsltid=AU7gw4WI3oxEPjChfuH-VqXHKc2r3TKt_9MzmYm6NgzPcHulbL6w0Uog",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWktGWVsstRLz57XbTXH-WC038UjV7WMkgtgib27Nrg_Y3q997EquBlPeAoQ&s"
+        },
+        {
+         "type": "images_element",
+         "alt": "Beauty of Joseon Glow Serum Propolis + Niacinamide 30ml",
+         "url": "https://www.cultbeauty.com/p/beauty-of-joseon-glow-serum-propolis-niacinamide-30ml/14866967/",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd_1ea4u5aNmOm0v4LkUIg7SMbkEG2t1NedXAerYVxTvatTk8-sZWXRik&s"
+        }
+       ],
+       "related_image_searches": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[16]/div[1]/div[1]/div[1]",
+       "domain": "www.target.com",
+       "title": "Lumene Valo Glow Boost Essence Serum with Vitamin C & ...",
+       "url": "https://www.target.com/p/lumene-nordic-c-valo-glow-boost-essence-serum-1-fl-oz/-/A-52607154?showOnlyQuestions=true",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.target.com › lumene-nordic-c-valo-glow-b...",
+       "website_name": "Target",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "A: This product helps with uneven skin tone, making skin tone appear more even, while giving skin a healthy looking, radiant glow. submitted byLumene ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "glow serum from www.target.com",
+         "url": "https://www.target.com/p/lumene-nordic-c-valo-glow-boost-essence-serum-1-fl-oz/-/A-52607154?showOnlyQuestions=true",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKJ44l_oUgaGa6hzSOMTbKyknsk5CBsYAsXSYQ8q9RviNgcxCfbyF3&usqp=CAE&s=10"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "helps with uneven skin tone"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.target.com/p/lumene-nordic-c-valo-glow-boost-essence-serum-1-fl-oz/-/A-52607154?showOnlyQuestions=true#:~:text=A%3A%20This%20product%20helps%20with,Lumene%20-%204%20years%20ago",
+         "domain": "www.target.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]/div[1]",
+       "domain": "m.yami.com",
+       "title": "Moisturizing Concentrate Glow Serum, 1.7 fl oz - Yami",
+       "url": "https://m.yami.com/us/en/p/ampule-shot-moisturizing-concentrate-glow-serum/1024140741",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://m.yami.com › ... › Serums & Value Sets",
+       "website_name": "Yami",
+       "is_image": true,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_image"
+       ],
+       "description": "Features high-penetration vitamin C derivatives to target dullness and restore a luminous, translucent glow Refines skin texture and minimizes the appearance ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": [
+        {
+         "type": "images_element",
+         "alt": "glow serum from m.yami.com",
+         "url": "https://m.yami.com/us/en/p/ampule-shot-moisturizing-concentrate-glow-serum/1024140741",
+         "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUHZ2HOxTRoz0-01Xr6ypyLievFR2l1gWTo8ztp7tLcqP-NvtS-koW&usqp=CAE&s"
+        }
+       ],
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 19.99,
+        "regular": null,
+        "max_value": null,
+        "currency": "USD",
+        "is_price_range": false,
+        "displayed_price": "$19.99"
+       },
+       "highlighted": [
+        "restore a luminous, translucent glow"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "in.pinterest.com",
+       "title": "glow serum for glowing skin",
+       "url": "https://in.pinterest.com/pin/glow-serum-for-glowing-skin--1337074888346008/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "2 years ago",
+       "website_name": "Pinterest · thaniah",
+       "is_image": false,
+       "is_video": true,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": [
+        "is_video"
+       ],
+       "description": "Is a glow serum the real secret to radiant skin, or just another skincare trend? ✨   Discover how this powerful serum can transform your ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Is a glow serum the real secret to radiant skin"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2024-10-08 08:58:39 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 2,
+       "rank_absolute": 12,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[21]/div[1]",
+       "title": "More products",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "Physicians Formula Butter Glow Blushing Serum",
+         "url": null,
+         "domain": null,
+         "description": "Target & more\nFree delivery on $35+\nEasy to apply (43 user reviews)",
+         "more_sellers": true,
+         "seller": "Target",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ3jTL7pcU0bsG_JwizhHtyNs_uPlHz36eGq2VqFsvO-VoNL7Gt6Isy-Ti2t4RDb61uKz_ZMoHgr0WRPjZX8r-h7Kq0ZOs8vA7W-njeA_cQR5_BExYKICo2uw",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": 17,
+          "currency": "USD",
+          "is_price_range": true,
+          "displayed_price": "$14.99 Usually $17"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 176,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3588534931808347249",
+          "data_docid": "15500520331276617890",
+          "gid": "6268432813780091421"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "AXIS Y Dark Spot Correcting Glow Serum",
+         "url": "https://www.facebook.com/groups/869954653899794/posts/1729194637975787/",
+         "domain": "www.facebook.com",
+         "description": "Derm & more\nDoesn't irritate my skin · Gives a beautiful glow Facebook",
+         "more_sellers": true,
+         "seller": "Derm",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQK60ryyFjMNaShe4s_ZyzIRNCzHcdDbNFLqzewsjJXlmRv-eAtHMKvJ5Hyruyf86tBZWjpeFRcbR6Eju-W03zhRssXQx8iOCghMOQqlvEDkdVlMmbY_FOiFQ",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$14.99"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 2000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "3223147807298015872",
+          "data_docid": "1432746485315300958",
+          "gid": "12010054212523416829"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "BYOMA Phyto Mucin Serum",
+         "url": null,
+         "domain": null,
+         "description": "Ulta Beauty & more\nFree delivery on $35+\nMoisturizes well (598 user reviews)",
+         "more_sellers": true,
+         "seller": "Ulta Beauty",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQWw8c2lFuh5ieS5bTYhcOwU1MdbkPf3NzIpBcMPnOxAnyt2z59MLdK9up0tcYWI-A7CyQsbuX5ygOqmapJ5R9mRxmwRFSD7YRDMupJ017h1hOnJIvZI0z2ww",
+         "price": {
+          "current": 16.99,
+          "regular": 13,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$16.99 $13/fl oz"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 1500,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "7393136534559917014",
+          "data_docid": "11724625275666040872",
+          "gid": "4582313516368553065"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Glow Deep Serum",
+         "url": null,
+         "domain": null,
+         "description": "Seoul Glows & more\nFree delivery\nGentle (643 user reviews)",
+         "more_sellers": true,
+         "seller": "Seoul Glows",
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR-Fas-vn0uF217IXVqMUqmaXDwSy3NtvICxHEDzltv0CuvzM18ROXxOdsjiMNOFyjAkHBV3YH1JlhKUj4YfTdiEWVTHrtuBYz0ExCDydGevuoDV-VSFcfG",
+         "price": {
+          "current": 15,
+          "regular": 17,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$15.00 $17"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 11000,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "14564262456788907951",
+          "data_docid": "10166833822580099419",
+          "gid": "10963850101374113645"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Milani Glow Drops Radiance Boosting Serum",
+         "url": null,
+         "domain": null,
+         "description": "Walmart & more",
+         "more_sellers": true,
+         "seller": "Walmart",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTOg1HN0RROicYwKaAt1pb-xhlBGtpA-xHIDpsnKw0UeZjS0Rxt0fqLpn12CVVSZz_R42Dq_bh8Im2GxQA96S15CbEjn9bQg45Efl4DqIk_gvDsUef_qbKx",
+         "price": {
+          "current": 17.5,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$17.50"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.3,
+          "votes_count": 80,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "11673439308587167023",
+          "data_docid": "14164678018305969815",
+          "gid": "9045531438188211106"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Glow Recipe Plum Plump Hyaluronic Acid Hydrating Serum",
+         "url": null,
+         "domain": null,
+         "description": "Sephora & more\nFree delivery on $50+\nMoisturizes well (1,982 user reviews)",
+         "more_sellers": true,
+         "seller": "Sephora",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRVo9w4gJByxA2CfR81rfr5LRhFttllEp1LP5afDeACny3o2I9Kh775BDLFVUbIyooome0m47PQoMNP_RIAyu9Gpefahevt8mMZQfnjfrCWcRPH0sm9d2FYkg",
+         "price": {
+          "current": 38,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$38.00"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 5200,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "8504737096610096858",
+          "data_docid": "6151965173723777210",
+          "gid": "5490167948326007176"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Burt's Bees Truly Glowing Glow Booster",
+         "url": null,
+         "domain": null,
+         "description": "Walmart - Tide Enterprises & more\nFree delivery\nMoisturizes well (136 user reviews)",
+         "more_sellers": true,
+         "seller": "Walmart - Tide Enterprises",
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ-08s3yyv7v4ipIfZtwCBdBMOPYE2jl2n4mNhPasNVOcsiU8SGCK1idXl_72Sb0o6srPAqP-2q6_dwAuyi6WOwDu1abtAFMiWrMlCeZhsImKXJV1DbF4RF",
+         "price": {
+          "current": 13.98,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$13.98"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.3,
+          "votes_count": 642,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "1707728712036559652",
+          "data_docid": "3860195027882225049",
+          "gid": "5094436363313074142"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Glow Serum deluxe-0.17oz",
+         "url": null,
+         "domain": null,
+         "description": "Sephora\nFree delivery on $50+\nFor All Skin Types · Serum",
+         "more_sellers": false,
+         "seller": "Sephora",
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRH__I1X2gSltzRGDyowBZf2Ci_IDGwGJN51FZ3hovUiob6CfakAw2y5kxTVqStEsTpTYe5PiywtILonuomxejYvMENi8Bw6yTqlubMN0U1LOPpLMaKl_lMbw",
+         "price": {
+          "current": 0.01,
+          "regular": 0.06,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$0.01 $0.06/oz"
+         },
+         "rating": null,
+         "product_identifiers": {
+          "product_id": null,
+          "data_docid": "15868816531189960163",
+          "gid": null
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Heimish RX Multi Vitamin Glow Serum",
+         "url": "https://dermapproved.com/products/heimish-rx-multi-vitamin-glow-serum/",
+         "domain": "dermapproved.com",
+         "description": "Walmart - iHerb & more\nHydrates genuinely well without drying · Layers cleanly under sunscreen and makeup DermApproved",
+         "more_sellers": true,
+         "seller": "Walmart - iHerb",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTPNNnrDjv5axa4F0VD_8V5QzJNKJkTy-nacUVZ2v95Q5KGj-QpTGAiDcjCvUexQN3ylGZ_rxaKIZvkq7Egh_p2h5wNOLUR8YWsNDZuFN4sPJQ1OXUyw_pp",
+         "price": {
+          "current": 15.96,
+          "regular": 0.46,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$15.96 $0.46/ml"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 97,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "9245530987051295245",
+          "data_docid": "7462757229842467472",
+          "gid": "9803696311992404413"
+         }
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Seoul Ceuticals Korean Skin Care Vitamin C Serum Day Glow Serum",
+         "url": null,
+         "domain": null,
+         "description": "vitacost.com & more",
+         "more_sellers": true,
+         "seller": "vitacost.com",
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR2WkdL-PEFRB9yK1PJZUhPt2J2ckfVpfgIVrP_K_cfXa0iTQ9C17DFsYNvkO0hjdFAqYn5N-2G72HcvajNttNo8_ipnqEOi7b1DXTuDaGGT549RAbw61Mu",
+         "price": {
+          "current": 19.98,
+          "regular": null,
+          "max_value": null,
+          "currency": "USD",
+          "is_price_range": false,
+          "displayed_price": "$19.98"
+         },
+         "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 910,
+          "rating_max": 5
+         },
+         "product_identifiers": {
+          "product_id": "2714169105911436980",
+          "data_docid": "3073824846417326055",
+          "gid": "8963299444411519801"
+         }
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "perspectives",
+       "rank_group": 1,
+       "rank_absolute": 13,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[23]/div[1]",
+       "title": "What people are saying",
+       "items": [
+        {
+         "type": "perspectives_element",
+         "title": "Trying the NEW @morphebrushes Complexion Boost Peptide Glow Serum and this glowwww. ✨👀\n\nIt’s lightweight, buildable and gives skin a smooth, lit-from-within glow without the glitter, plus up to 24 hours of hydration.\n\nAnd can we talk about the packaging? 🤌🏻 The dual-action cap lets you use the pump for an all-over wash of radiance or the applicator for a more targeted glow. ✨\n\nWatch me try it and see the glow for yourself! 👀\n\n#Morphe #MorpheBeauty #GlowySkin #MakeupNewness #MorpheBabe",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DeJC9qKvZda/",
+         "domain": "www.instagram.com",
+         "date": "2 days ago",
+         "source": "heyitshiroko",
+         "timestamp": "2026-10-06 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "A Dermatologist’s Guide to the Best Anti-Aging Serums",
+         "description": null,
+         "url": "https://www.vogue.com/article/best-anti-aging-serums",
+         "domain": "www.vogue.com",
+         "date": "1 month ago",
+         "source": "Emily Orofino",
+         "timestamp": "2026-09-08 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Paula's Choice Skincare 🆕 New! Vitamin C15 Brightening Super Booster Serum Review, How to, Dupes",
+         "description": null,
+         "url": "https://www.youtube.com/watch?v=KCVfdgEw_xQ",
+         "domain": "www.youtube.com",
+         "date": "1 week ago",
+         "source": "No BS Beauty",
+         "timestamp": "2026-10-01 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "GRWM feeling SO GLOWY todayyyyy | #fyp #IUNIK #milkytoner #hydratingsérum #amazonfinds @IUNIK |",
+         "description": null,
+         "url": "https://www.tiktok.com/@iampresleefaith/video/7693289835292855565",
+         "domain": "www.tiktok.com",
+         "date": "2 days ago",
+         "source": "iampresleefaith",
+         "timestamp": "2026-10-06 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Skin prep makes all the difference ✨ @hanskin_global \nHANSKIN Pink Lotus PDRN Serum for a smooth, hydrated glow.\nAmazon Prime Big Deal Days Oct 6 to 7 | 40% OFF\n\n#hanskin #skincare #glassskin #koreanskincare #ad",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DeLAPDVN3ns/",
+         "domain": "www.instagram.com",
+         "date": "1 day ago",
+         "source": "elnaz_golrokh",
+         "timestamp": "2026-10-07 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "This glow serum by SUSAN CHANEL BEAUTY is the truth. Smells good, feels good on the skin, and does the job",
+         "description": null,
+         "url": "https://www.facebook.com/officiallauraikeji/posts/this-glow-serum-by-susan-chanel-beauty-is-the-truth-smells-good-feels-good-on-th/1616398126512003/",
+         "domain": "www.facebook.com",
+         "date": "1 month ago",
+         "source": "officiallauraikeji",
+         "timestamp": "2026-09-08 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "6 Skin-Boosting Vitamin C Serums Our Testers Loved",
+         "description": null,
+         "url": "https://www.nytimes.com/wirecutter/reviews/best-vitamin-c-serums/",
+         "domain": "www.nytimes.com",
+         "date": "Aug 12, 2026",
+         "source": "Rory Evans",
+         "timestamp": "2026-08-12 00:00:00 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "✨ DIY Glow Serum ✨\n\nAloe vera gel + Vitamin E + a little lemon juice 🍋🌿\nघर पर बनाया मेरा simple DIY glow mix 💚\n\nFresh, easy & budget-friendly skincare vibes ✨\nPatch test करना न भूलें और अगर जलन हो तो तुरंत इस्तेमाल बंद करें.\n\n#DIYSkinCare #GlowSkin #AloeVera #VitaminE #SkincareDIY NaturalSkincare SkinGlow GlowingSkin BeautyRoutine SkincareRoutine DIYBeauty GlassSkin SelfCare SkincareTips BeautyHacks",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DeIMbABRdaJ/",
+         "domain": "www.instagram.com",
+         "date": "2 days ago",
+         "source": "yummy_wonders",
+         "timestamp": "2026-10-06 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Serum glow ✨💗 @yesstyle YesStyle código: MELANIE2000 👈🏻 #YesStyle #YesStyleInfluencers #YSAwards",
+         "description": null,
+         "url": "https://www.youtube.com/shorts/1iaNvOu7Bz8",
+         "domain": "www.youtube.com",
+         "date": "14 hours ago",
+         "source": "Melanie Guanipa",
+         "timestamp": "2026-10-07 18:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "I tried 30 face serums so you don't have to—these 8 actually work",
+         "description": null,
+         "url": "https://creators.yahoo.com/lifestyle/story/i-tried-30-face-serums-so-you-dont-have-tothese-7-actually-work-163009471.html",
+         "domain": "creators.yahoo.com",
+         "date": "1 month ago",
+         "source": "Amber Katz",
+         "timestamp": "2026-09-08 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "One serum for an instant glass-like glow ✨\n\n.\n\n.\n\n.\n\n.\n\n.\n\n[face glow , Shiny skin , serum , glass skin , skincare tips ]\n\n#nonsponsored #wishlinked #glassskin #glowserum #shinyskin",
+         "description": null,
+         "url": "https://www.instagram.com/reel/DcV9OsnJ-sF/",
+         "domain": "www.instagram.com",
+         "date": "1 month ago",
+         "source": "looksbylak",
+         "timestamp": "2026-09-08 08:58:39 +00:00"
+        },
+        {
+         "type": "perspectives_element",
+         "title": "Homemade DIY Face Serum for glowing & glass skin ✨🌿 . . . #skincaretips #naturalbeauty #glowgrowdiy",
+         "description": null,
+         "url": "https://www.facebook.com/61576248160452/posts/homemade-diy-face-serum-for-glowing-glass-skin-skincaretips-naturalbeauty-glowgr/122193854588874938/",
+         "domain": "www.facebook.com",
+         "date": "4 weeks ago",
+         "source": "Facebook",
+         "timestamp": "2026-09-10 08:58:39 +00:00"
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 14,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[25]/div[1]/div[1]/div[1]",
+       "domain": "stonevillenc.org",
+       "title": "yse beauty xtreme glow dewy peptide plumping serum",
+       "url": "https://stonevillenc.org/yse-beauty-xtreme-glow-dewy-peptide-plumping-serum-matrix/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://stonevillenc.org › yse-beauty-xtreme-glow-dewy-...",
+       "website_name": "Town of Stoneville, NC",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Sep 13, 2026 — Retailing at approximately $68, It acts as a moisture magnet, locking in water throughout the day. The bounce-back effect on the skin is ...",
+       "pre_snippet": "09/13/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Retailing at approximately $68"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-13 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "product_considerations",
+       "rank_group": 1,
+       "rank_absolute": 15,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[27]/div[1]",
+       "title": "Things to know",
+       "items": [
+        {
+         "type": "product_considerations_element",
+         "title": "What are the benefits of glow serum?",
+         "consideration_category": "Benefits",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What skin type is glow serum suitable for?",
+         "consideration_category": "Suitable Skin Types",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How does glow serum work?",
+         "consideration_category": "How it Works",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "How to choose the right glow serum?",
+         "consideration_category": "Choosing",
+         "expanded_element": null
+        },
+        {
+         "type": "product_considerations_element",
+         "title": "What are the key ingredients in glow serum?",
+         "consideration_category": "Key Ingredients",
+         "expanded_element": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "related_searches",
+       "rank_group": 1,
+       "rank_absolute": 16,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+       "items": [
+        "Best glow serum",
+        "Glow serum review"
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

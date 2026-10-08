@@ -1,0 +1,919 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "26.4433 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080907-1509-0139-0000-e0f9d4574671",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "26.3658 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "glutathione for skin",
+    "location_code": 2826,
+    "language_code": "en",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "glutathione for skin",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2826,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=glutathione%20for%20skin&hl=en&gl=GB&ie=UTF-8&uule=w+CAIQIFISCamRx0IRO1oCEXoliDJDoPjE",
+     "datetime": "2026-10-08 09:08:24 +00:00",
+     "spell": null,
+     "refinement_chips": null,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "shopping"
+     ],
+     "se_results_count": 92600,
+     "pages_count": 1,
+     "items_count": 12,
+     "items": [
+      {
+       "type": "ai_overview",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "asynchronous_ai_overview": false,
+       "markdown": "Glutathione is a powerful antioxidant that `helps brighten skin tone, fade dark spots, and protect against environmental damage` [0.6.2, [0.6.5](https://cosmoderma.org/)].\n\n### What is Glutathione?\n\n- It is a natural tripeptide made of three amino acids: cysteine, glutamic acid, and glycine.\n- Your body and skin produce it naturally to fight cellular damage and oxidative stress.\n- Natural levels decrease as you age and face UV exposure or pollution.[[1]](https://www.paulaschoice.co.uk/glutathione-for-the-skin)[[2]](https://skintique.co.uk/community/academy/ingredients/glossary/glutathione)[[3]](https://skinsider.co.uk/skin-care/ingredients/glutathione/)[[4]](https://www.vibrantskin.com/blogs/skincare/glutathione-for-skin)\n\n### Key Benefits for Skin\n\n- **Brightening:** Slows down tyrosinase, an enzyme that triggers dark spots and hyperpigmentation.\n- **Pigment Shift:** Nudges pigment production toward a lighter type of melanin (pheomelanin).\n- **Antioxidant Defense:** Neutralizes free radicals and helps recycle vitamins C and E.\n- **Anti-Aging:** Supports collagen production and protects cells from premature aging.[[1]](https://pubmed.ncbi.nlm.nih.gov/41900080/)[[2]](https://www.paulaschoice.co.uk/glutathione-for-the-skin)[[3]](https://skintique.co.uk/community/academy/ingredients/glossary/glutathione)[[4]](https://cosmoderma.org/glutathione-in-dermatology-a-bright-future-or-fading-hype/)[[5]](https://www.mdpi.com/1420-3049/31/6/981)[[6]](https://www.vibrantskin.com/blogs/skincare/glutathione-for-skin)\n\n### Methods of Use and Safety\n\n- **Topical Serums and Creams:** Generally well-tolerated and safe for most skin types. Look for concentrations around 2% in leave-on formulas. Pair with daily sunscreen.[[1]](https://skinsider.co.uk/skin-care/ingredients/glutathione/)[[2]](https://skintique.co.uk/community/academy/ingredients/glossary/glutathione)\n- **Oral Supplements:** Can help reduce melanin index over time, but results vary and long-term safety data is limited.[[1]](https://pmc.ncbi.nlm.nih.gov/articles/PMC11862975/)[[2]](https://pubmed.ncbi.nlm.nih.gov/39444151/)[[3]](https://pubmed.ncbi.nlm.nih.gov/27088927/)\n- **Intravenous (IV) Injections:** Not recommended. Health agencies warn against IV glutathione for skin lightening due to severe risks like liver damage and allergic reactions.[[1]](https://pubmed.ncbi.nlm.nih.gov/27088927/)[[2]](https://pubmed.ncbi.nlm.nih.gov/39444151/)[[3]](https://pmc.ncbi.nlm.nih.gov/articles/PMC11862975/)",
+       "items": [
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": null,
+         "text": "Glutathione is a powerful antioxidant that helps brighten skin tone, fade dark spots, and protect against environmental damage [0.6.2, 0.6.5 ].",
+         "markdown": "Glutathione is a powerful antioxidant that `helps brighten skin tone, fade dark spots, and protect against environmental damage` [0.6.2, [0.6.5](https://cosmoderma.org/)].",
+         "links": [
+          {
+           "type": "link_element",
+           "title": "0.6.5",
+           "description": null,
+           "url": "https://cosmoderma.org/",
+           "domain": "cosmoderma.org"
+          }
+         ],
+         "images": null,
+         "references": null
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "What is Glutathione?",
+         "text": "It is a natural tripeptide made of three amino acids: cysteine, glutamic acid, and glycine. Your body and skin produce it naturally to fight cellular damage and oxidative stress. Natural levels decrease as you age and face UV exposure or pollution.",
+         "markdown": "- It is a natural tripeptide made of three amino acids: cysteine, glutamic acid, and glycine.\n- Your body and skin produce it naturally to fight cellular damage and oxidative stress.\n- Natural levels decrease as you age and face UV exposure or pollution.[[1]](https://www.paulaschoice.co.uk/glutathione-for-the-skin)[[2]](https://skintique.co.uk/community/academy/ingredients/glossary/glutathione)[[3]](https://skinsider.co.uk/skin-care/ingredients/glutathione/)[[4]](https://www.vibrantskin.com/blogs/skincare/glutathione-for-skin)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "www.paulaschoice.co.uk",
+           "domain": "www.paulaschoice.co.uk",
+           "url": "https://www.paulaschoice.co.uk/glutathione-for-the-skin",
+           "title": "Glutathione for the skin",
+           "text": "Let's explore exactly what this ingredient is, its skin benefits and just how long to wait before seeing results. * What is glutat..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Skintique Retail",
+           "domain": "skintique.co.uk",
+           "url": "https://skintique.co.uk/community/academy/ingredients/glossary/glutathione",
+           "title": "Glutathione for Skin: Benefits, How It Works & How to Use It",
+           "text": "It exists in two interchangeable forms: reduced glutathione (GSH), the active form, and oxidised glutathione (GSSG). ... That is w..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "SKINSIDER UK",
+           "domain": "skinsider.co.uk",
+           "url": "https://skinsider.co.uk/skin-care/ingredients/glutathione/",
+           "title": "Glutathione Korean Skincare Products",
+           "text": "What is glutathione? Glutathione is a powerful antioxidant naturally produced by the body. In skincare, it's known for its brighte..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "www.vibrantskin.com",
+           "domain": "www.vibrantskin.com",
+           "url": "https://www.vibrantskin.com/blogs/skincare/glutathione-for-skin",
+           "title": "Glutathione for the Skin: Things You Need to Know",
+           "text": "Posted by Vibrant Team on May 19, 2026 Glutathione is a naturally occurring antioxidant that can help resolve numerous skin proble..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "Key Benefits for Skin",
+         "text": "Brightening: Slows down tyrosinase, an enzyme that triggers dark spots and hyperpigmentation. Pigment Shift: Nudges pigment production toward a lighter type of melanin (pheomelanin). Antioxidant Defense: Neutralizes free radicals and helps recycle vitamins C and E. Anti-Aging: Supports collagen production and protects cells from premature aging.",
+         "markdown": "- **Brightening:** Slows down tyrosinase, an enzyme that triggers dark spots and hyperpigmentation.\n- **Pigment Shift:** Nudges pigment production toward a lighter type of melanin (pheomelanin).\n- **Antioxidant Defense:** Neutralizes free radicals and helps recycle vitamins C and E.\n- **Anti-Aging:** Supports collagen production and protects cells from premature aging.[[1]](https://pubmed.ncbi.nlm.nih.gov/41900080/)[[2]](https://www.paulaschoice.co.uk/glutathione-for-the-skin)[[3]](https://skintique.co.uk/community/academy/ingredients/glossary/glutathione)[[4]](https://cosmoderma.org/glutathione-in-dermatology-a-bright-future-or-fading-hype/)[[5]](https://www.mdpi.com/1420-3049/31/6/981)[[6]](https://www.vibrantskin.com/blogs/skincare/glutathione-for-skin)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "National Institutes of Health (NIH) | (.gov)",
+           "domain": "pubmed.ncbi.nlm.nih.gov",
+           "url": "https://pubmed.ncbi.nlm.nih.gov/41900080/",
+           "title": "Glutathione in Skin Aging and Tissue Regeneration: A Systematic Review of Molecular Mechanisms, Redox Modulation, and Biomedical Implications",
+           "text": "Review Scope: Systematic review of 194 studies (2000–2025) evaluating glutathione (GSH) in esthetic dermatology and regenerative m..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "www.paulaschoice.co.uk",
+           "domain": "www.paulaschoice.co.uk",
+           "url": "https://www.paulaschoice.co.uk/glutathione-for-the-skin",
+           "title": "Glutathione for the skin",
+           "text": "Let's explore exactly what this ingredient is, its skin benefits and just how long to wait before seeing results. * What is glutat..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Skintique Retail",
+           "domain": "skintique.co.uk",
+           "url": "https://skintique.co.uk/community/academy/ingredients/glossary/glutathione",
+           "title": "Glutathione for Skin: Benefits, How It Works & How to Use It",
+           "text": "It exists in two interchangeable forms: reduced glutathione (GSH), the active form, and oxidised glutathione (GSSG). ... That is w..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Cosmoderma",
+           "domain": "cosmoderma.org",
+           "url": "https://cosmoderma.org/glutathione-in-dermatology-a-bright-future-or-fading-hype/",
+           "title": "Glutathione in dermatology: A bright future or fading hype? - Cosmoderma",
+           "text": "Glutathione influences skin pigmentation primarily through inhibition of tyrosinase, the rate-limiting enzyme in melanin biosynthe..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "MDPI",
+           "domain": "www.mdpi.com",
+           "url": "https://www.mdpi.com/1420-3049/31/6/981",
+           "title": "Glutathione in Skin Aging and Tissue Regeneration: A Systematic Review ...",
+           "text": "1. Introduction * 1.1. Objectives and Scope of the Review. This review aims to provide a comprehensive, interdisciplinary synthesi..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "www.vibrantskin.com",
+           "domain": "www.vibrantskin.com",
+           "url": "https://www.vibrantskin.com/blogs/skincare/glutathione-for-skin",
+           "title": "Glutathione for the Skin: Things You Need to Know",
+           "text": "Posted by Vibrant Team on May 19, 2026 Glutathione is a naturally occurring antioxidant that can help resolve numerous skin proble..."
+          }
+         ]
+        },
+        {
+         "type": "ai_overview_element",
+         "position": "left",
+         "title": "Methods of Use and Safety",
+         "text": "Topical Serums and Creams: Generally well-tolerated and safe for most skin types. Look for concentrations around 2% in leave-on formulas. Pair with daily sunscreen. Oral Supplements: Can help reduce melanin index over time, but results vary and long-term safety data is limited. Intravenous (IV) Injections: Not recommended. Health agencies warn against IV glutathione for skin lightening due to severe risks like liver damage and allergic reactions.",
+         "markdown": "- **Topical Serums and Creams:** Generally well-tolerated and safe for most skin types. Look for concentrations around 2% in leave-on formulas. Pair with daily sunscreen.[[1]](https://skinsider.co.uk/skin-care/ingredients/glutathione/)[[2]](https://skintique.co.uk/community/academy/ingredients/glossary/glutathione)\n- **Oral Supplements:** Can help reduce melanin index over time, but results vary and long-term safety data is limited.[[1]](https://pmc.ncbi.nlm.nih.gov/articles/PMC11862975/)[[2]](https://pubmed.ncbi.nlm.nih.gov/39444151/)[[3]](https://pubmed.ncbi.nlm.nih.gov/27088927/)\n- **Intravenous (IV) Injections:** Not recommended. Health agencies warn against IV glutathione for skin lightening due to severe risks like liver damage and allergic reactions.[[1]](https://pubmed.ncbi.nlm.nih.gov/27088927/)[[2]](https://pubmed.ncbi.nlm.nih.gov/39444151/)[[3]](https://pmc.ncbi.nlm.nih.gov/articles/PMC11862975/)",
+         "links": null,
+         "images": null,
+         "references": [
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "SKINSIDER UK",
+           "domain": "skinsider.co.uk",
+           "url": "https://skinsider.co.uk/skin-care/ingredients/glutathione/",
+           "title": "Glutathione Korean Skincare Products",
+           "text": "What is glutathione? Glutathione is a powerful antioxidant naturally produced by the body. In skincare, it's known for its brighte..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "Skintique Retail",
+           "domain": "skintique.co.uk",
+           "url": "https://skintique.co.uk/community/academy/ingredients/glossary/glutathione",
+           "title": "Glutathione for Skin: Benefits, How It Works & How to Use It",
+           "text": "It exists in two interchangeable forms: reduced glutathione (GSH), the active form, and oxidised glutathione (GSSG). ... That is w..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "National Institutes of Health (NIH) | (.gov)",
+           "domain": "pmc.ncbi.nlm.nih.gov",
+           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11862975/",
+           "title": "Exploring the Safety and Efficacy of Glutathione Supplementation for Skin Lightening: A Narrative Review - PMC",
+           "text": "Efficacy: Oral and topical glutathione reduce melanin and hyperpigmentation with variable results; intravenous offers rapid, trans..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "National Institutes of Health (NIH) | (.gov)",
+           "domain": "pubmed.ncbi.nlm.nih.gov",
+           "url": "https://pubmed.ncbi.nlm.nih.gov/39444151/",
+           "title": "Glutathione as a skin-lightening agent and in melasma: a systematic review",
+           "text": "Efficacy: Topical glutathione 0.5% outperforms 0.1% and placebo; topical plus microneedling enhances improvement; oral glutathione..."
+          },
+          {
+           "type": "ai_overview_reference",
+           "position": "left",
+           "source": "National Institutes of Health (NIH) | (.gov)",
+           "domain": "pubmed.ncbi.nlm.nih.gov",
+           "url": "https://pubmed.ncbi.nlm.nih.gov/27088927/",
+           "title": "Glutathione as a skin whitening agent: Facts, myths, evidence and controversies",
+           "text": "Overview: Glutathione is a low molecular weight thiol-tripeptide acting as an intracellular antioxidant and antimelanogenic agent ..."
+          }
+         ]
+        }
+       ],
+       "references": [
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "National Institutes of Health (NIH) | (.gov)",
+         "domain": "pmc.ncbi.nlm.nih.gov",
+         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11862975/",
+         "title": "Exploring the Safety and Efficacy of Glutathione Supplementation for Skin Lightening: A Narrative Review - PMC",
+         "text": "Efficacy: Oral and topical glutathione reduce melanin and hyperpigmentation with variable results; intravenous offers rapid, trans..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "National Institutes of Health (NIH) | (.gov)",
+         "domain": "pubmed.ncbi.nlm.nih.gov",
+         "url": "https://pubmed.ncbi.nlm.nih.gov/41900080/",
+         "title": "Glutathione in Skin Aging and Tissue Regeneration: A Systematic Review of Molecular Mechanisms, Redox Modulation, and Biomedical Implications",
+         "text": "Review Scope: Systematic review of 194 studies (2000–2025) evaluating glutathione (GSH) in esthetic dermatology and regenerative m..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "MDPI",
+         "domain": "www.mdpi.com",
+         "url": "https://www.mdpi.com/1420-3049/31/6/981",
+         "title": "Glutathione in Skin Aging and Tissue Regeneration: A Systematic Review ...",
+         "text": "1. Introduction * 1.1. Objectives and Scope of the Review. This review aims to provide a comprehensive, interdisciplinary synthesi..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "National Institutes of Health (NIH) | (.gov)",
+         "domain": "pubmed.ncbi.nlm.nih.gov",
+         "url": "https://pubmed.ncbi.nlm.nih.gov/27088927/",
+         "title": "Glutathione as a skin whitening agent: Facts, myths, evidence and controversies",
+         "text": "Overview: Glutathione is a low molecular weight thiol-tripeptide acting as an intracellular antioxidant and antimelanogenic agent ..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Cosmoderma",
+         "domain": "cosmoderma.org",
+         "url": "https://cosmoderma.org/glutathione-in-dermatology-a-bright-future-or-fading-hype/",
+         "title": "Glutathione in dermatology: A bright future or fading hype? - Cosmoderma",
+         "text": "Glutathione influences skin pigmentation primarily through inhibition of tyrosinase, the rate-limiting enzyme in melanin biosynthe..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "www.paulaschoice.co.uk",
+         "domain": "www.paulaschoice.co.uk",
+         "url": "https://www.paulaschoice.co.uk/glutathione-for-the-skin",
+         "title": "Glutathione for the skin",
+         "text": "Let's explore exactly what this ingredient is, its skin benefits and just how long to wait before seeing results. * What is glutat..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "National Institutes of Health (NIH) | (.gov)",
+         "domain": "pubmed.ncbi.nlm.nih.gov",
+         "url": "https://pubmed.ncbi.nlm.nih.gov/39444151/",
+         "title": "Glutathione as a skin-lightening agent and in melasma: a systematic review",
+         "text": "Efficacy: Topical glutathione 0.5% outperforms 0.1% and placebo; topical plus microneedling enhances improvement; oral glutathione..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "SKINSIDER UK",
+         "domain": "skinsider.co.uk",
+         "url": "https://skinsider.co.uk/skin-care/ingredients/glutathione/",
+         "title": "Glutathione Korean Skincare Products",
+         "text": "What is glutathione? Glutathione is a powerful antioxidant naturally produced by the body. In skincare, it's known for its brighte..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "Skintique Retail",
+         "domain": "skintique.co.uk",
+         "url": "https://skintique.co.uk/community/academy/ingredients/glossary/glutathione",
+         "title": "Glutathione for Skin: Benefits, How It Works & How to Use It",
+         "text": "It exists in two interchangeable forms: reduced glutathione (GSH), the active form, and oxidised glutathione (GSSG). ... That is w..."
+        },
+        {
+         "type": "ai_overview_reference",
+         "position": "right",
+         "source": "www.vibrantskin.com",
+         "domain": "www.vibrantskin.com",
+         "url": "https://www.vibrantskin.com/blogs/skincare/glutathione-for-skin",
+         "title": "Glutathione for the Skin: Things You Need to Know",
+         "text": "Posted by Vibrant Team on May 19, 2026 Glutathione is a naturally occurring antioxidant that can help resolve numerous skin proble..."
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Is glutathione actually better for sensitive skin?",
+       "url": "https://www.reddit.com/r/30PlusSkinCare/comments/1sdl3qy/is_glutathione_actually_better_for_sensitive_skin/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "2 comments  ·  6 months ago",
+       "website_name": "Reddit · r/30PlusSkinCare",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Recently I've been seeing glutathione mentioned more as a “gentler brightening antioxidant,” especially in newer skincare products.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "glutathione"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Does glutathione good for skin?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Which is better, retinol or glutathione?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "What foods are high in glutathione?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Is glutathione skin whitening permanent?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+       "domain": "www.linkedin.com",
+       "title": "Glutathione: The Master Antioxidant for Skin Health",
+       "url": "https://www.linkedin.com/posts/yogesshsuraadkaar_glutathione-skinhealth-antioxidants-activity-7322554985462788096-OP1l",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "30+ reactions  ·  1 year ago",
+       "website_name": "LinkedIn · Dr Yogesh Suradkar",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Glutathione supports balanced skin tone by modulating melanin pathways, not bleaching skin unnaturally. work equally.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Glutathione",
+        "skin"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+       "domain": "www.ebay.co.uk",
+       "title": "L-GLUTATHIONE SKIN WHITENING ANTI-AGING ...",
+       "url": "https://www.ebay.co.uk/itm/227330673730",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.ebay.co.uk › ... › Vitamins & Minerals",
+       "website_name": "eBay UK",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "It is best known for helping in brightening your skin and reducing the levels of melanini too. Doctors and dermatologists from all over the globe have often ... Read more",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": {
+        "current": 12.99,
+        "regular": null,
+        "max_value": null,
+        "currency": "GBP",
+        "is_price_range": false,
+        "displayed_price": "£12.99"
+       },
+       "highlighted": [
+        "skin"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.ebay.co.uk/itm/227330673730#:~:text=It%20is%20best%20known%20for,during%20skin%20treatments%20and%20therapies.",
+         "domain": "www.ebay.co.uk"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+       "domain": "www.practo.com",
+       "title": "Can Glutathione Help In Fairness?what Are The Side",
+       "url": "https://www.practo.com/consult/glutathione-can-glutathione-help-in-fairness-what-are-the-side-effects-how-can-i-get-it-what-is-the-best/q",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.practo.com › consult › glutathione-can-glu...",
+       "website_name": "Practo",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "13 Jan 2018 — Can glutathione help in fairness?what are the side effects?how can I get it .what is the best method",
+       "pre_snippet": "01/13/2018 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": [
+        {
+         "type": "link_element",
+         "title": "1 answer",
+         "description": null,
+         "url": "https://www.practo.com/consult/glutathione-can-glutathione-help-in-fairness-what-are-the-side-effects-how-can-i-get-it-what-is-the-best/q#reply_508697",
+         "domain": "www.practo.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2018-01-13 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]",
+       "domain": "www.realself.com",
+       "title": "L-Glutathione Effectivity with Vitamin C?",
+       "url": "https://www.realself.com/question/L-Glutathione-effectivity-with-Vitamin-C",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.realself.com › question › L-Glutathione-eff...",
+       "website_name": "RealSelf.com",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "23 Jul 2009 — Glutathione is a powerful antioxidant that inhibits the formation of free radicals. Being so, it is a strong reducing agent and works both ... Read more",
+       "pre_snippet": "07/23/2009 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Glutathione"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.realself.com/question/L-Glutathione-effectivity-with-Vitamin-C#:~:text=Glutathione%20is%20a%20powerful%20antioxidant,outside%20cells%20and%20inside%20cells.",
+         "domain": "www.realself.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2009-07-23 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+       "domain": "www.reddit.com",
+       "title": "Why is suddenly everyone putting glutathione in skincare??",
+       "url": "https://www.reddit.com/r/IndianSkincareAddicts/comments/1w68tfb/why_is_suddenly_everyone_putting_glutathione_in/",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "7 comments  ·  1 month ago",
+       "website_name": "Reddit · r/IndianSkincareAddicts",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Serums, creams, brightening products… suddenly every other skincare launch seems to have glutathione somewhere on the ingredient list.\n\nIk glutathione ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": null,
+       "links": [
+        {
+         "type": "link_element",
+         "title": "7 answers",
+         "description": null,
+         "url": "https://www.reddit.com/r/IndianSkincareAddicts/comments/1w68tfb/comment/p7lh9hv/",
+         "domain": "www.reddit.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 9,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[16]/div[1]/div[1]",
+       "domain": "www.justanswer.com",
+       "title": "I want to ask about Glutathione whitening skin pills, is it ...",
+       "url": "https://www.justanswer.com/dermatology/e82yi-want-ask-glutathione-whitening-skin-pills.html",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.justanswer.com › Medical Questions",
+       "website_name": "JustAnswer",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "19 May 2020 — Glutathione is an antioxidant sometimes used for skin lightening, but its effectiveness and safety are not fully established. Whitening effects ... Read more",
+       "pre_snippet": "05/19/2020 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Glutathione",
+        "skin"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.justanswer.com/dermatology/e82yi-want-ask-glutathione-whitening-skin-pills.html#:~:text=Glutathione%20is%20an%20antioxidant%20sometimes,may%20diminish%20after%20stopping%20use.",
+         "domain": "www.justanswer.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2020-05-19 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 10,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]",
+       "domain": "i-base.info",
+       "title": "Can I take glutathione and collagen alongside TLD?",
+       "url": "https://i-base.info/qa/21852/comment-page-1",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://i-base.info › comment-page-1",
+       "website_name": "HIV i-Base",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "1 Feb 2026 — Yes. It is safe to take both glutathione and collagen alongside TLD. There is no interaction between these supplements and your HIV treatment.",
+       "pre_snippet": "02/01/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "glutathione"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-02-01 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 11,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]",
+       "domain": "www.practo.com",
+       "title": "Skin Fairness - Glutathione Injection Helps In Lightening Skin",
+       "url": "https://www.practo.com/consult/skin-fairness-glutathione-injection-helps-in-lightening-skin-is-it-harmful-for-health-if-i-go-out-in-sun-not-to/q",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.practo.com › consult › skin-fairness-glutat...",
+       "website_name": "Practo",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "23 Mar 2017 — Glutathione injections are not approved for fairness treatment. Kindly do not go for such procedures. Oral Glutathione can be taken safely. Read more",
+       "pre_snippet": "03/23/2017 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Glutathione"
+       ],
+       "links": [
+        {
+         "type": "link_element",
+         "title": "Read more",
+         "description": null,
+         "url": "https://www.practo.com/consult/skin-fairness-glutathione-injection-helps-in-lightening-skin-is-it-harmful-for-health-if-i-go-out-in-sun-not-to/q#:~:text=Glutathione%20injections%20are%20not%20approved,Glutathione%20can%20be%20taken%20safely.",
+         "domain": "www.practo.com"
+        }
+       ],
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2017-03-23 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "shopping",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "right",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[15]/div[3]/div[1]/div[1]/div[1]/div[1]",
+       "title": "Sponsored products",
+       "items": [
+        {
+         "type": "shopping_element",
+         "title": "Zooki Liposomal Glutathione 500mg, 60 Vegan Capsules, 30 Servings | High-absorption glutathione supplement, antioxidant, immune, liver, skin and",
+         "price": {
+          "current": 39.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£39.99"
+         },
+         "source": "Amazon.co.uk",
+         "description": "£0.67/1ct",
+         "marketplace": "By Kelkoo",
+         "marketplace_url": null,
+         "url": "https://www.amazon.co.uk/Zooki-Liposomal-Glutathione-Absorption-Ingredients/dp/B0CPGSL8CQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1Z2WG6SAWETI1",
+         "rating": null
+        },
+        {
+         "type": "shopping_element",
+         "title": "NOW Foods Glutathione Skin Brightener With Ceramosides 30 Vcaps",
+         "price": {
+          "current": 21.29,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£21.29"
+         },
+         "source": "eBay.co.uk",
+         "description": null,
+         "marketplace": "By Shoparize",
+         "marketplace_url": null,
+         "url": "https://www.ebay.co.uk/itm/168670625596?var=0&shprz=EBAY_GB_26395&_ul=GB",
+         "rating": null
+        },
+        {
+         "type": "shopping_element",
+         "title": "NOW Foods Glutathione Skin Brightener with Ceramosides Capsules 30",
+         "price": {
+          "current": 24.82,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£24.82"
+         },
+         "source": "fruugo.co.uk",
+         "description": null,
+         "marketplace": "By Croud",
+         "marketplace_url": null,
+         "url": "https://www.fruugo.co.uk/now-foods-glutathione-skin-brightener-with-ceramosides-capsules-30/p-137764058-290787876?language=en&ac=google&utm_source=google&utm_medium=organic",
+         "rating": null
+        },
+        {
+         "type": "shopping_element",
+         "title": "Now Foods Glutathione Skin Brightener with Ceramosides - 30 vcaps",
+         "price": {
+          "current": 20.36,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£20.36 + more"
+         },
+         "source": "Genie",
+         "description": null,
+         "marketplace": null,
+         "marketplace_url": null,
+         "url": "https://www.genieshopping.com/uk/products/p183366084?utm_campaign=organicexperience",
+         "rating": null
+        },
+        {
+         "type": "shopping_element",
+         "title": "Zooki Liposomal Glutathione 500mg Capsules Capsules - 60 Capsules",
+         "price": {
+          "current": 39.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "GBP",
+          "is_price_range": false,
+          "displayed_price": "£39.99"
+         },
+         "source": "Holland & Barrett",
+         "description": "£0.67/1ct",
+         "marketplace": "By Channable",
+         "marketplace_url": null,
+         "url": "https://www.hollandandbarrett.com/shop/product/zooki-liposomal-glutathione-500mg-capsules-60-capsules-6100005099",
+         "rating": null
+        }
+       ],
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

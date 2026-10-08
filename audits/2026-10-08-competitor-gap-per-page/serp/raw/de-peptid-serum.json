@@ -1,0 +1,1711 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "17.7018 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10080909-1509-0139-0000-8c481b2287e8",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "17.5334 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "peptid serum",
+    "location_code": 2276,
+    "language_code": "de",
+    "device": "desktop",
+    "depth": 10,
+    "load_async_ai_overview": true,
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "peptid serum",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2276,
+     "language_code": "de",
+     "check_url": "https://www.google.com/search?q=peptid%20serum&hl=de&gl=DE&ie=UTF-8&uule=w+CAIQIFISCWu-scIecppHEVvlkY5rXeh1",
+     "datetime": "2026-10-08 09:09:32 +00:00",
+     "spell": null,
+     "refinement_chips": {
+      "type": "refinement_chips",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+      "items": [
+       {
+        "type": "refinement_chips_element",
+        "title": "Balea",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvU-7-YoSfSlIu0K4Chy8vh3MkdVQ:1791450570274&q=peptid+serum+balea&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rbnJ6yWERZ6T5MSJAEHLfAYXp0TPqsWE6OXtfgbzEYQfOaq6Ovvwl5kU0uMHMSU4MZ4IEQsR5mIsP3n2iTepDJcQ9oZ2i9EL9t4NX0kDIYBQcbsS3We6-zkAuw3mZbGZEOxxdEokvlnFqy1bSt0oVja1Zda7IXCdDsF__gulIoqQ9RBQpNdtB7TD8QscHZhcb1oXZIw&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQxKsJKAB6BAgiEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Haare",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvU-7-YoSfSlIu0K4Chy8vh3MkdVQ:1791450570274&q=Peptid+serum+haare&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rbnJ6yWERZ6T5MSJAEHLfAYXp0TPqsWE6OXtfgbzEYQcAjqoIdt3Don8c-63sWgkoZZsd7ARkCB-5s0wGzu_gRbd-aaKcIjp3usQz77sX9ayeyVTTYgNaDebl7MVrsPvTtaKhXEgo31VUEETnbBIbMHaI2393JSdV6SbVtyFsLQ0FzOWfkg62GkGUpUFOPwsVw4y1GA&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQxKsJKAF6BAglEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Isana",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvU-7-YoSfSlIu0K4Chy8vh3MkdVQ:1791450570274&q=Isana+peptid+serum&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rgy-Kd9aRN2UeNU2lgrMAjOuTMiMmOCa9Z1wJvtbMiLzdi78RzLbctUT2ejvP77wK5IyNDtVbJivpqpfmwPgGO_zw3GVKBr4q7-DkjsUiJIK17DNlSCaTwkkKkodGa-IG-1YsZZUaC4RUQ-KqlWFTFWCAdgdrYKljBpWU7jKKrWMS7tPl98Zvkr7AAKBsLm-uU52LsA&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQxKsJKAJ6BAgqEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Judith williams",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvU-7-YoSfSlIu0K4Chy8vh3MkdVQ:1791450570274&q=judith+williams+peptid+serum&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rTMCySMvvCCn985X2uYPy5iZGqLs93Nbuqehyz944dWDHgK6pTYWsB_N6Xj0faGt_B2YesTxj6Q0MPC49aufhvF4MMcFlBghg73YUpF-E-VA7MPncQT1QZxWO5BkYAZfXByuSfV8FIYWlKMy9BWggUQza0ztmvwlrYieIouD0c-GTSN2wdRadWvsJ82eXpXDVuyrumGR2HDyKzbxTPmKraj7KeJ0&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQxKsJKAN6BAgmEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Kupfer",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvU-7-YoSfSlIu0K4Chy8vh3MkdVQ:1791450570274&q=kupfer+peptid+serum&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rUom2Ggtan9a-ySIyW3QNanhtwwNr8748VM8yBZV0BW1yuMND_l2iQrCQW0DCCvV_Z4A7X_bfbkIePIY88NqkAO0_IkWzvfbPNOCZG3w0QhJMMsdFMMoRNQ5Hsn5_w5So615irQI975lfVsOyBND-XRJeNYX--GsB6YNfyKwqgxAvgrhz4oXZ098evQODMm-oNLke0w&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQxKsJKAR6BAgrEAE&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "La roche posay",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvU-7-YoSfSlIu0K4Chy8vh3MkdVQ:1791450570274&q=peptid+serum+la+roche+posay&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4ryNQm6Gg7fAUgFValC3hF2mkTUE83Hjdzn_6klW_MFqfKrtr6gHMaZSLHW5je8Wm7lUnO6EDneQql9s3e9BDe0-vzSiuzxUCSqpR8uD4hvQqsRZ-pRW7QibZShbeHbZqxGQP8wSNZMkZhjsFZODxyt-zMlWQmgT-ekVe4rR9eSvh-24idr7grIqo8DeCfvrgdg2IS87m7zc9kCz9ZNHQZIuH6Oqc&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQxKsJKAV6BQiSARAB&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Rossmann",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvU-7-YoSfSlIu0K4Chy8vh3MkdVQ:1791450570274&q=Peptid+serum+rossmann&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rH0J9BcQGsm1kKnwAKOWyUNTlOlQe7errle5bRg27APMp7UdJK4lhDsUSvpRZqDo-MXyJljF4xKybbxRuH4ryyGB5XiJYx5uI7pb6gDXXZs9114JdrKsqdAqEItdIXsFvDqi-NF9UQtoHMWEUz2OTl8rbxABcpNkSWV6agIn3v4EdE2LVWXp5spABeZlMIOKtxnq_-g&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQxKsJKAZ6BQiTARAB&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       },
+       {
+        "type": "refinement_chips_element",
+        "title": "Salted",
+        "url": "https://www.google.com/search?sca_esv=e2130cf16db8d2a2&hl=de&gl=DE&sxsrf=APpeQnvU-7-YoSfSlIu0K4Chy8vh3MkdVQ:1791450570274&q=Salted+peptid+serum&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rUom2Ggtan9a-ySIyW3QNanhtwwNr8748VM8yBZV0BW11SRDaizXYjDKq5j4qdZMSA9ScnnzwXy7lm3-tXvrorTQI1l0bLTHOKVHA5qCK_IdtxmNgg7PtTDKdCCVANGkqEAO-aLwkras1nfKQYLbBUBBMeGf5vqQ47Hci0AHeERYlzF_G4S5iQnjL_NVFkEW0oQYoSA&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQxKsJKAd6BQiRARAB&ictx=0",
+        "domain": "www.google.com",
+        "options": null
+       }
+      ]
+     },
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "popular_products"
+     ],
+     "se_results_count": 61100,
+     "pages_count": 1,
+     "items_count": 8,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+       "domain": "m.joybuy.de",
+       "title": "Peptid Serum Test: Die 3 besten für straffe Haut | Joybuy",
+       "url": "https://m.joybuy.de/blog/peptid-serum-test/Ma5vjo5t",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://m.joybuy.de › blog › peptid-serum-test",
+       "website_name": "joybuy.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Ein Peptid Serum ist ein Hautpflegeprodukt, das formuliert wurde, um Peptide an die Haut abzugeben. Da Peptide die Bausteine von hauteigenen Proteinen wie ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Ein Peptid Serum ist ein Hautpflegeprodukt"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 2,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "Für was ist Peptide Serum gut?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Was ist besser, Retinol oder Peptide?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Welches Peptid ist das beste?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Was ist besser, Hyaluron oder Peptide?",
+         "seed_question": null,
+         "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+         "expanded_element": [
+          {
+           "type": "people_also_ask_ai_overview_expanded_element",
+           "items": null,
+           "references": null,
+           "asynchronous_ai_overview": true
+          }
+         ]
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 3,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+       "domain": "www.joybuy.de",
+       "title": "Peptid-Serum kaufen: 4 Tipps für die passende Formel - Joybuy",
+       "url": "https://www.joybuy.de/blog/peptidserumkaufen/tW1ImljN",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.joybuy.de › blog › peptidserumkaufen",
+       "website_name": "joybuy.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "vor 7 Tagen — Ein Peptid-Serum kann eine sinnvolle Ergänzung der täglichen Gesichtspflege sein, wenn feine Linien, trockene Haut, ein ungleichmäßiger ...",
+       "pre_snippet": "vor 7 Tagen",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Ein Peptid-Serum kann eine sinnvolle Ergänzung der täglichen Gesichtspflege sein"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-10-01 09:09:31 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 4,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+       "domain": "cosibella.com.de",
+       "title": "Peptide-Serum | Onlineshop Cosibella DE",
+       "url": "https://cosibella.com.de/de/menu/gesicht/gesichtsserum/peptid-serum-29645",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://cosibella.com.de › Gesicht › Gesichtsserum",
+       "website_name": "Cosibella.com.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Peptid-Seren sollten bei der Pflege reifer Haut verwendet werden, können aber auch als vorbeugende Behandlung für jüngere Haut eingesetzt werden, ...",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Peptid-Seren sollten bei der Pflege reifer Haut verwendet werden"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+       "domain": "www.joybuy.de",
+       "title": "Peptid-Serum: Welches wirkt wirklich? Test & Vergleich - Joybuy",
+       "url": "https://www.joybuy.de/blog/peptid-serum-kaufberatung/hx8o92dz",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.joybuy.de › peptid-serum-kaufberatung",
+       "website_name": "joybuy.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "17.09.2026 — Insbesondere bei Peptid Seren versprechen viele Marken eine sichtbare Reduzierung von Falten und eine straffere Haut. Doch nicht jedes Produkt h ...",
+       "pre_snippet": "09/17/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Peptid"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-17 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "popular_products",
+       "rank_group": 1,
+       "rank_absolute": 6,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]",
+       "title": "Vergleichsportale",
+       "items": [
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+         "url": "https://www.testberichte.de/gesundheit-schoenheit/the-ordinary-multi-peptide-+-copper-peptides-1-serum-30-ml.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIUBAE",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-8c481b2287e8:0",
+         "price": {
+          "current": 9.21,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "9,21 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Geek & Gorgeous Power Peptides Serum - 30 ml",
+         "url": "https://www.testberichte.de/pdb/p/oeRKE2T-TcKiEqCC5VcLEQ.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIYRAE",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-8c481b2287e8:1",
+         "price": {
+          "current": 14.28,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "14,28 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "salted Straffendes Peptidserum Peptide Pull",
+         "url": "https://www.testberichte.de/pdb/p/tUrMJO-XTGK2B8y_gLcRqA.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIYBAE",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-8c481b2287e8:2",
+         "price": {
+          "current": 17.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "17,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.testberichte.de/pdb/p/2gfLalc9Snaf5i9RFbQUQg.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIXxAE",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://api.dataforseo.com/cdn/i/10080909-1509-0139-0000-8c481b2287e8:3",
+         "price": {
+          "current": 16.6,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "16,60 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodroga Skin Booster 5% Peptide Serum",
+         "url": "https://www.testberichte.de/pdb/p/Hp2Obd2CSp2c38_T2k6WVA.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIlwEQBA",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRW6pP-p7aiAMtsUbY0NyEit6DnumMxpH5vzttc0zbycmpFCCSqIF7JliTagZILNStAjIbISqWozV0lZklNDvNyKv6EppDxIC34AOmEj-yzi2ZkWLph7xT09A",
+         "price": {
+          "current": 35.1,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "35,10 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Multi-Peptide + HA Serum The Ordinary",
+         "url": "https://www.testberichte.de/pdb/p/n6X54IhRQoWkLMxcXSrfPA.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUImAEQBA",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRmcY5ZN6MbWOsetlxMn8OElZBjhFG_5ynOJhd5wn_rSpyiTRcDjetu5Xsh_wQg09EPTx6p9UM9i1cXvfiCSzuKE_s6fmmQjKdXit3KeilmoKHVUXJfmYftAw",
+         "price": {
+          "current": 15.49,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "15,49 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "DAYTOX Peptide Pro Collagen Serum",
+         "url": "https://www.testberichte.de/pdb/p/vEFJIE4nQ26U84ju1athMw.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIlgEQBA",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS7fN-3nIRPGjIAYqF8Evro_i3gsjeR9kqOhjiVvQxrNEoVM3mnRhMlU7umuShRHWb3XZZUvNu4M3uUCJTQm2kaeSiNuRRD_nLmSXWjM45qJERRCIoydpTB",
+         "price": {
+          "current": 17.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "17,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam 10 % Peptide Solution Serum 30 ml",
+         "url": "https://www.testberichte.de/pdb/p/bGnKMWC5SY6J3joUxdZtvA.html?utm_source=4442&utm_medium=tbw&utm_campaign=3&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIlQEQBA",
+         "domain": "www.testberichte.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS1wNVLXs82j8OXUxUaSZUcNM6amy8T0zhj8nC5Lp9-0RV5bQU8hUmI3e5G_XHIBpk7D0XwJVFdXh3M2iDN9L2y1wQg0bhW-5wfQ-a6MCG96VCJsqchR0Eh",
+         "price": {
+          "current": 27.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "27,95 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+         "url": "https://www.supersales.de/p/the-ordinary-multipeptide-copper-peptides-1-serum-64b915a737a5a6366d3fc4a3?channel=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIVRAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJtuN5ErZFNztpywgW-LYLYwQi0v353qC8za08nS9yfQeAdmCRCRyHpwEBPNfXElODx0V2kUNVhSySLTKH4FILpXCs0BpnJ6aY3_Q0R6ITUg6Ba86DKYP7ivo",
+         "price": {
+          "current": 30.3,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "30,30 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COSRX Serum The 6 Peptide Skin Booster",
+         "url": "https://www.supersales.de/p/cosrx-the-6-peptide-skin-booster-serum-150-ml-65cd9c3ecdd391b64704390d?channel=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIXhAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRH9KnIiAm5uLCEYZPFl03hRFOc_q6MJEC0rzHCiw_QnX3J-awA1uvlB58m5xP64E_he00tQpwpSM5GbHblCorWyVLjUgUvAnW7-UpeNQrp89ZAf2XKwbL_",
+         "price": {
+          "current": 16.05,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "16,05 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.supersales.de/p/medicube-gesichtsserum-pdrn-pink-peptide-serum-683eb4d1a9d301f0370a68d4?channel=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIXRAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSv1sYrs91G08HuktQ-kf6nrNhxl5ENdZGwWMRVgzzZAgw3IBKdZAtdiKg_BigzuV1z9XTvYjDzU7yvSMNT-y3ktQ0UFcXpkS2p7MwgLgi9-tTha0VsSopE-g",
+         "price": {
+          "current": 17.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "17,89 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodroga Skin Booster 5% Peptide Serum",
+         "url": "https://www.supersales.de/p/biodroga-medical-institute-5-peptide-serum-15-ml-684b410c214f3f68210c57e2?channel=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIXBAE",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRW6pP-p7aiAMtsUbY0NyEit6DnumMxpH5vzttc0zbycmpFCCSqIF7JliTagZILNStAjIbISqWozV0lZklNDvNyKv6EppDxIC34AOmEj-yzi2ZkWLph7xT09A",
+         "price": {
+          "current": 35.1,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "35,10 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Multi-Peptide + HA Serum The Ordinary",
+         "url": "https://www.supersales.de/p/the-ordinary-multi-peptide-ha-gesichtsserum-632b9ca8f511bf65682abdae?channel=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIlAEQBA",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRmcY5ZN6MbWOsetlxMn8OElZBjhFG_5ynOJhd5wn_rSpyiTRcDjetu5Xsh_wQg09EPTx6p9UM9i1cXvfiCSzuKE_s6fmmQjKdXit3KeilmoKHVUXJfmYftAw",
+         "price": {
+          "current": 18.03,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "18,03 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mádara Exosome Longevity Radiance Peptide Serum",
+         "url": "https://www.supersales.de/p/madara-exosome-longevity-radiance-peptid-serum-30-ml-69dd59f16c5b2a8be1060703?channel=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIkAEQBA",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRwG_wtZErKH1f4mMjpKd4FOzP_k5lC6DRPnnms_sM8Ze9glAj-ZUhBMVOg4bnTWazWHZKBSMtBrcyVbES_ySgQyBemieO9SvgYGgtPDg",
+         "price": {
+          "current": 23.35,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "23,35 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodance Pore Perfecting Collagen Peptide Serum",
+         "url": "https://www.supersales.de/p/biodance-pore-perfecting-collagen-peptide-serum-porenverfeinerndes-serum-biodance-pore-perfecting-serum-698d9953593f8587e20b9759?channel=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIjwEQBA",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTBsBC-R61453vqRWadevyDY5BwSU4aGkKtHjPTb9-GCvP72Dz_rKse2x_IHuNsUpRMPxUzC64fOAF1FfcmxoA9M6dGwbCU_Nue_VLPggmTP4DtXom1j04Y",
+         "price": {
+          "current": 18.11,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "18,11 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mary&May 6 Peptide Complex Serum",
+         "url": "https://www.supersales.de/p/mary-may-6-peptide-complex-intensives-regenerierendes-serum-mit-antifalten-effekt-30-ml-67c98440a08912d09407ebd4?channel=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIjgEQBA",
+         "domain": "www.supersales.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQjB7FwetS8N1-mNXAD0FcjvasBcBevcuZq7xBQXHI5AxXVvXnTk3Qu8nQ5MMNPHZzF9exgcnTc8tzbJZh_zmRL3K5_KMBsABx78k6Y2DMaIKzaUofucoqb9g",
+         "price": {
+          "current": 9.3,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "9,30 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+         "url": "https://www.klarna.com/de/shopping/pl/cl253/3207716704/Hautpflege/The-Ordinary-Multi-Peptide-Copper-Peptides-1-Serum-30ml/?utm_source=google&utm_medium=cssx&ref-site=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIWxAE",
+         "domain": "www.klarna.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJtuN5ErZFNztpywgW-LYLYwQi0v353qC8za08nS9yfQeAdmCRCRyHpwEBPNfXElODx0V2kUNVhSySLTKH4FILpXCs0BpnJ6aY3_Q0R6ITUg6Ba86DKYP7ivo",
+         "price": {
+          "current": 26.06,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "26,06 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Geek & Gorgeous Power Peptides Serum - 30 ml",
+         "url": "https://www.klarna.com/de/shopping/pl/cl253/3305320693/Hautpflege/Geek-Gorgeous-Power-Peptides-Anti-Aging-Gesichtsserum-30-ml-30ml/?utm_source=google&utm_medium=cssx&ref-site=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIWhAE",
+         "domain": "www.klarna.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTANFBG_gm_j24t7MtIbCbJt1cJqCD9Z9cwuKZkBXKBF0rJO9p7eLv87BVv7vKeLSO-jjuftgcAfVRGHO4RMp4HFvXMPTrojGpLlcusb8pf-d-eDY8LgqJ0KQ",
+         "price": {
+          "current": 13.05,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "13,05 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "L'Oréal Paris Revitalift Laser Tri-Peptid Anti-Age Serum Gesichtsserum",
+         "url": "https://www.klarna.com/de/shopping/pl/cl253/3393442556/Hautpflege/L-Oreal-Paris-Revitalift-Laser-Tri-Peptid-Anti-Age-Serum-30-ml-30ml/?utm_source=google&utm_medium=cssx&ref-site=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIWRAE",
+         "domain": "www.klarna.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRiCbCz2OH9JQwQX6YkWe2Lxwl0xWTApcEM5ZOBBZdlX00aOdFDiim5M5fFhEq7wvFiWf0ec0Mk4t5BLc1wxeOs_ASpc9HXhwQdhinPkDI9dXA0yZ28UH-3",
+         "price": {
+          "current": 19.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "19,95 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodroga Skin Booster 5% Peptide Serum",
+         "url": "https://www.klarna.com/de/shopping/pl/cl253/3205327605/Hautpflege/Biodroga-Medical-Institute-5-Peptide-Serum-15ml/?utm_source=google&utm_medium=cssx&ref-site=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIWBAE",
+         "domain": "www.klarna.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRW6pP-p7aiAMtsUbY0NyEit6DnumMxpH5vzttc0zbycmpFCCSqIF7JliTagZILNStAjIbISqWozV0lZklNDvNyKv6EppDxIC34AOmEj-yzi2ZkWLph7xT09A",
+         "price": {
+          "current": 33.15,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "33,15 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Multi-Peptide + HA Serum The Ordinary",
+         "url": "https://www.klarna.com/de/shopping/pl/cl253/3202917868/Hautpflege/The-Ordinary-Multi-Peptide-HA-Serum-30ml/?utm_source=google&utm_medium=cssx&ref-site=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIiQEQBA",
+         "domain": "www.klarna.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRmcY5ZN6MbWOsetlxMn8OElZBjhFG_5ynOJhd5wn_rSpyiTRcDjetu5Xsh_wQg09EPTx6p9UM9i1cXvfiCSzuKE_s6fmmQjKdXit3KeilmoKHVUXJfmYftAw",
+         "price": {
+          "current": 14.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "14,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam 10 % Peptide Solution Serum 30 ml",
+         "url": "https://www.klarna.com/de/shopping/pl/cl253/3447997214/Hautpflege/M.Asam-Set-Supreme-Hyaluron-Gesichtscreme-10-Peptide-Solution-Serum/?utm_source=google&utm_medium=cssx&ref-site=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIiwEQBA",
+         "domain": "www.klarna.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS1wNVLXs82j8OXUxUaSZUcNM6amy8T0zhj8nC5Lp9-0RV5bQU8hUmI3e5G_XHIBpk7D0XwJVFdXh3M2iDN9L2y1wQg0bhW-5wfQ-a6MCG96VCJsqchR0Eh",
+         "price": {
+          "current": 29.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "29,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mádara Exosome Longevity Radiance Peptide Serum",
+         "url": "https://www.klarna.com/de/shopping/pl/cl253/3459289622/Hautpflege/Madara-Peptid-Serum-Fuer-Strahlende-Haut-30ml/?utm_source=google&utm_medium=cssx&ref-site=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIjQEQBA",
+         "domain": "www.klarna.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRwG_wtZErKH1f4mMjpKd4FOzP_k5lC6DRPnnms_sM8Ze9glAj-ZUhBMVOg4bnTWazWHZKBSMtBrcyVbES_ySgQyBemieO9SvgYGgtPDg",
+         "price": {
+          "current": 22.3,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "22,30 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Barbara Sturm The Peptide Serum",
+         "url": "https://www.klarna.com/de/shopping/pl/cl253/3457928656/Hautpflege/Dr.-Barbara-Sturm-The-Peptide-Serum-Gesichtswasser-30-ml-30ml/?utm_source=google&utm_medium=cssx&ref-site=google-css&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIiAEQBA",
+         "domain": "www.klarna.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTTGURLo_JSbdQiGUDH5jA0iC_aVPZvnvnzVRSvAJqP9EI9SSnuPcjJ7yAWQuSlEf3LFCIElt20H-rYr53ENymFcLZfL2welEFKs_wLN4vsAG7GjjDTaVBRSQ",
+         "price": {
+          "current": 182,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "182,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Geek & Gorgeous Power Peptides Serum - 30 ml",
+         "url": "https://www.shoparize.com/de/p/geek-gorgeous-power-peptides-serum-hochwirksames-anti-aging-serum-mit-multi-peptiden-strafft-die-haut-reduziert-falten-verbessert/5999566330643/52d77c8e-add4-5038-99ed-34eb7aa02f4b?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIVBAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTANFBG_gm_j24t7MtIbCbJt1cJqCD9Z9cwuKZkBXKBF0rJO9p7eLv87BVv7vKeLSO-jjuftgcAfVRGHO4RMp4HFvXMPTrojGpLlcusb8pf-d-eDY8LgqJ0KQ",
+         "price": {
+          "current": 13.05,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "13,05 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COSRX Serum The 6 Peptide Skin Booster",
+         "url": "https://www.shoparize.com/de/p/cosrx-6-peptide-collagen-serum-mit-copper-peptide-anti-aging-toner-toner-gesicht-fur-hauterneuerung-straffung-mit-niacinamid-hyaluronsaure/8809598455658/34247041-f069-5b14-bdf7-2db2dd48cbb8?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIUxAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRH9KnIiAm5uLCEYZPFl03hRFOc_q6MJEC0rzHCiw_QnX3J-awA1uvlB58m5xP64E_he00tQpwpSM5GbHblCorWyVLjUgUvAnW7-UpeNQrp89ZAf2XKwbL_",
+         "price": {
+          "current": 15.25,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "15,25 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.shoparize.com/de/p/medicube-pdrn-pink-peptid-serum-mit-lachs-dna-30ml-glow-serum-peptide-niacinamid-feuchtigkeit-straffende-pflege-ebenmassiger-teint/8800256108053/50e26521-c82a-549c-94a1-e88ff7acab5d?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIUhAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSv1sYrs91G08HuktQ-kf6nrNhxl5ENdZGwWMRVgzzZAgw3IBKdZAtdiKg_BigzuV1z9XTvYjDzU7yvSMNT-y3ktQ0UFcXpkS2p7MwgLgi9-tTha0VsSopE-g",
+         "price": {
+          "current": 11.89,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,89 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodroga Skin Booster 5% Peptide Serum",
+         "url": "https://www.shoparize.com/de/p/biodroga-md-skin-booster-5-peptide-serum-15-ml/4086100800197/9769c4e5-d818-420e-bf8f-38c5814a0e81?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQITxAE",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRW6pP-p7aiAMtsUbY0NyEit6DnumMxpH5vzttc0zbycmpFCCSqIF7JliTagZILNStAjIbISqWozV0lZklNDvNyKv6EppDxIC34AOmEj-yzi2ZkWLph7xT09A",
+         "price": {
+          "current": 39,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "39,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam 10 % Peptide Solution Serum 30 ml",
+         "url": "https://www.shoparize.com/de/p/m-asam-magic-care-10-peptide-solution-serum-30ml-hochkonzentriertes-peptide-serum-mit-anti-falten-effekt-lifting-straffung/4049639457072/012ce6da-15fc-5fe3-a0f9-cbf9b1cec283?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIjAEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS1wNVLXs82j8OXUxUaSZUcNM6amy8T0zhj8nC5Lp9-0RV5bQU8hUmI3e5G_XHIBpk7D0XwJVFdXh3M2iDN9L2y1wQg0bhW-5wfQ-a6MCG96VCJsqchR0Eh",
+         "price": {
+          "current": 27.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "27,95 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mizon Peptide 500",
+         "url": "https://www.shoparize.com/de/p/mizon-original-skin-energy-peptide-500-30-ml-koreanische-hautpflege-fortschrittliches-peptid-serum-fur-verbesserte-hautelastizitat/8809663752149/84f5082b-cb80-55cb-88b6-8ee976e21810?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIigEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcROTvos7DOsx0es-OCT889ptJ5o-lijE58eGE2hyjY3BvUkKOeZ6sknQmJvyeDmXJhDPtl2gy0qjHlUuyXcsbBUhVBGNQlmgYbvaJKb-NIMuXvvOvrJnz6m",
+         "price": {
+          "current": 18.06,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "18,06 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Sungboon Editor Silk Peptide Intensive Lifting Ampoule",
+         "url": "https://www.shoparize.com/de/p/sungboon-editor-koreanisches-anti-aging-serum-in-intensivampulle-mit-seidenpeptiden-koreanisches-feuchtigkeitsspendendes-gesichtsserum-mit-kollagen/8809684568934/3d3d52a7-c6f1-5cdc-9f36-3eacd1c62c9c?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIhwEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQvzsUhlgKA8__DnNxkKG_OvvdSXZPJ_Y7Ni5TBLp93UfEnMcXUj9PrUijzY0kdx6Hj7m90ABh7ZPd-ZVrj7Cw7L8nHT4hlBR1UxPqtkdY",
+         "price": {
+          "current": 19.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "19,40 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Dr. Barbara Sturm The Peptide Serum",
+         "url": "https://www.shoparize.com/de/p/dr-barbara-sturm-the-peptide-serum-30ml/4260521266705/a13d5037-19aa-4530-9828-931340806626?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIhQEQBA",
+         "domain": "www.shoparize.com",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTTGURLo_JSbdQiGUDH5jA0iC_aVPZvnvnzVRSvAJqP9EI9SSnuPcjJ7yAWQuSlEf3LFCIElt20H-rYr53ENymFcLZfL2welEFKs_wLN4vsAG7GjjDTaVBRSQ",
+         "price": {
+          "current": 182,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "182,00 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Geek & Gorgeous Power Peptides Serum - 30 ml",
+         "url": "https://www.vergleich.org/dp/5999566330643/?sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIURAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTANFBG_gm_j24t7MtIbCbJt1cJqCD9Z9cwuKZkBXKBF0rJO9p7eLv87BVv7vKeLSO-jjuftgcAfVRGHO4RMp4HFvXMPTrojGpLlcusb8pf-d-eDY8LgqJ0KQ",
+         "price": {
+          "current": 15.35,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "15,35 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COSRX Serum The 6 Peptide Skin Booster",
+         "url": "https://www.vergleich.org/dp/8809598455658/?sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIQhAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRH9KnIiAm5uLCEYZPFl03hRFOc_q6MJEC0rzHCiw_QnX3J-awA1uvlB58m5xP64E_he00tQpwpSM5GbHblCorWyVLjUgUvAnW7-UpeNQrp89ZAf2XKwbL_",
+         "price": {
+          "current": 15.73,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "15,73 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "salted Straffendes Peptidserum Peptide Pull",
+         "url": "https://www.vergleich.org/dp/4260698673122/?sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIVxAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSjnjK-KVzB0SV-QztkeI5E67O2hp--Ua5H-uHNoQ3r8DwT8eb9qSj3RqcrwV_yvuZnsuvMb4oAWA-XcapX_qJeoCQsuE6wO7NCgWoUA8YblR9Q68kKiKPk",
+         "price": {
+          "current": 15.29,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "15,29 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://www.vergleich.org/dp/8800256108053/?sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIVhAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSv1sYrs91G08HuktQ-kf6nrNhxl5ENdZGwWMRVgzzZAgw3IBKdZAtdiKg_BigzuV1z9XTvYjDzU7yvSMNT-y3ktQ0UFcXpkS2p7MwgLgi9-tTha0VsSopE-g",
+         "price": {
+          "current": 16.6,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "16,60 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodroga Skin Booster 5% Peptide Serum",
+         "url": "https://www.vergleich.org/dp/4086100800197/?sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIgwEQBA",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRW6pP-p7aiAMtsUbY0NyEit6DnumMxpH5vzttc0zbycmpFCCSqIF7JliTagZILNStAjIbISqWozV0lZklNDvNyKv6EppDxIC34AOmEj-yzi2ZkWLph7xT09A",
+         "price": {
+          "current": 36.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "36,40 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam 10 % Peptide Solution Serum 30 ml",
+         "url": "https://www.vergleich.org/dp/4049639457072/?sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIhgEQBA",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS1wNVLXs82j8OXUxUaSZUcNM6amy8T0zhj8nC5Lp9-0RV5bQU8hUmI3e5G_XHIBpk7D0XwJVFdXh3M2iDN9L2y1wQg0bhW-5wfQ-a6MCG96VCJsqchR0Eh",
+         "price": {
+          "current": 27.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "27,95 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Sungboon Editor Silk Peptide Intensive Lifting Ampoule",
+         "url": "https://www.vergleich.org/dp/8809684568934/?sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIhAEQBA",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQvzsUhlgKA8__DnNxkKG_OvvdSXZPJ_Y7Ni5TBLp93UfEnMcXUj9PrUijzY0kdx6Hj7m90ABh7ZPd-ZVrj7Cw7L8nHT4hlBR1UxPqtkdY",
+         "price": {
+          "current": 19.4,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "19,40 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mádara Exosome Longevity Radiance Peptide Serum",
+         "url": "https://www.vergleich.org/dp/4752223019678/?sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIfxAE",
+         "domain": "www.vergleich.org",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRwG_wtZErKH1f4mMjpKd4FOzP_k5lC6DRPnnms_sM8Ze9glAj-ZUhBMVOg4bnTWazWHZKBSMtBrcyVbES_ySgQyBemieO9SvgYGgtPDg",
+         "price": {
+          "current": 24.48,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "24,48 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+         "url": "https://de.redbrain.shop/p/00769915233179?utm_source=google&utm_medium=css_organic&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIThAE",
+         "domain": "de.redbrain.shop",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJtuN5ErZFNztpywgW-LYLYwQi0v353qC8za08nS9yfQeAdmCRCRyHpwEBPNfXElODx0V2kUNVhSySLTKH4FILpXCs0BpnJ6aY3_Q0R6ITUg6Ba86DKYP7ivo",
+         "price": {
+          "current": 26.06,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "26,06 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Medicube PDRN Pink Peptide Serum",
+         "url": "https://de.redbrain.shop/p/08800256108053?utm_source=google&utm_medium=css_organic&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQITRAE",
+         "domain": "de.redbrain.shop",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSv1sYrs91G08HuktQ-kf6nrNhxl5ENdZGwWMRVgzzZAgw3IBKdZAtdiKg_BigzuV1z9XTvYjDzU7yvSMNT-y3ktQ0UFcXpkS2p7MwgLgi9-tTha0VsSopE-g",
+         "price": {
+          "current": 17.29,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "17,29 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Multi-Peptide + HA Serum The Ordinary",
+         "url": "https://de.redbrain.shop/p/00769915231885?utm_source=google&utm_medium=css_organic&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIShAE",
+         "domain": "de.redbrain.shop",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRmcY5ZN6MbWOsetlxMn8OElZBjhFG_5ynOJhd5wn_rSpyiTRcDjetu5Xsh_wQg09EPTx6p9UM9i1cXvfiCSzuKE_s6fmmQjKdXit3KeilmoKHVUXJfmYftAw",
+         "price": {
+          "current": 14.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "14,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "M. Asam 10 % Peptide Solution Serum 30 ml",
+         "url": "https://de.redbrain.shop/p/04049639457072?utm_source=google&utm_medium=css_organic&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQISxAE",
+         "domain": "de.redbrain.shop",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS1wNVLXs82j8OXUxUaSZUcNM6amy8T0zhj8nC5Lp9-0RV5bQU8hUmI3e5G_XHIBpk7D0XwJVFdXh3M2iDN9L2y1wQg0bhW-5wfQ-a6MCG96VCJsqchR0Eh",
+         "price": {
+          "current": 29.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "29,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mizon Peptide 500",
+         "url": "https://de.redbrain.shop/p/08809663752149?utm_source=google&utm_medium=css_organic&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIggEQBA",
+         "domain": "de.redbrain.shop",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcROTvos7DOsx0es-OCT889ptJ5o-lijE58eGE2hyjY3BvUkKOeZ6sknQmJvyeDmXJhDPtl2gy0qjHlUuyXcsbBUhVBGNQlmgYbvaJKb-NIMuXvvOvrJnz6m",
+         "price": {
+          "current": 20.46,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "20,46 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Sungboon Editor Silk Peptide Intensive Lifting Ampoule",
+         "url": "https://de.redbrain.shop/p/08809684568934?utm_source=google&utm_medium=css_organic&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIgQEQBA",
+         "domain": "de.redbrain.shop",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQvzsUhlgKA8__DnNxkKG_OvvdSXZPJ_Y7Ni5TBLp93UfEnMcXUj9PrUijzY0kdx6Hj7m90ABh7ZPd-ZVrj7Cw7L8nHT4hlBR1UxPqtkdY",
+         "price": {
+          "current": 25.95,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "25,95 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mádara Exosome Longevity Radiance Peptide Serum",
+         "url": "https://de.redbrain.shop/p/04752223019678?utm_source=google&utm_medium=css_organic&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegUIgAEQBA",
+         "domain": "de.redbrain.shop",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRwG_wtZErKH1f4mMjpKd4FOzP_k5lC6DRPnnms_sM8Ze9glAj-ZUhBMVOg4bnTWazWHZKBSMtBrcyVbES_ySgQyBemieO9SvgYGgtPDg",
+         "price": {
+          "current": 25.17,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "25,17 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodance Pore Perfecting Collagen Peptide Serum",
+         "url": "https://de.redbrain.shop/p/08809891184316?utm_source=google&utm_medium=css_organic&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIfhAE",
+         "domain": "de.redbrain.shop",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTBsBC-R61453vqRWadevyDY5BwSU4aGkKtHjPTb9-GCvP72Dz_rKse2x_IHuNsUpRMPxUzC64fOAF1FfcmxoA9M6dGwbCU_Nue_VLPggmTP4DtXom1j04Y",
+         "price": {
+          "current": 17.82,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "17,82 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Geek & Gorgeous Power Peptides Serum - 30 ml",
+         "url": "https://geizhals.de/geek-gorgeous-101-power-peptides-serum-a3849651.html?hloc=de&hloc=at&nocookie=1&highlight=409930745975&mtm_campaign=css&mtm_kwd=3849651&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQITBAE",
+         "domain": "geizhals.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTANFBG_gm_j24t7MtIbCbJt1cJqCD9Z9cwuKZkBXKBF0rJO9p7eLv87BVv7vKeLSO-jjuftgcAfVRGHO4RMp4HFvXMPTrojGpLlcusb8pf-d-eDY8LgqJ0KQ",
+         "price": {
+          "current": 12.76,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "12,76 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COSRX Serum The 6 Peptide Skin Booster",
+         "url": "https://geizhals.de/cosrx-the-6-peptide-skin-booster-serum-a3174582.html?hloc=de&hloc=at&nocookie=1&highlight=409381998622&mtm_campaign=css&mtm_kwd=3174582&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQISRAE",
+         "domain": "geizhals.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRH9KnIiAm5uLCEYZPFl03hRFOc_q6MJEC0rzHCiw_QnX3J-awA1uvlB58m5xP64E_he00tQpwpSM5GbHblCorWyVLjUgUvAnW7-UpeNQrp89ZAf2XKwbL_",
+         "price": {
+          "current": 13.7,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "13,70 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "L'Oréal Paris Revitalift Laser Tri-Peptid Anti-Age Serum Gesichtsserum",
+         "url": "https://geizhals.de/5526335557?hloc=de&hloc=at&nocookie=1&highlight=409524331164&mtm_campaign=css&mtm_kwd=5526335557&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQISBAE",
+         "domain": "geizhals.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRiCbCz2OH9JQwQX6YkWe2Lxwl0xWTApcEM5ZOBBZdlX00aOdFDiim5M5fFhEq7wvFiWf0ec0Mk4t5BLc1wxeOs_ASpc9HXhwQdhinPkDI9dXA0yZ28UH-3",
+         "price": {
+          "current": 13.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "13,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodroga Skin Booster 5% Peptide Serum",
+         "url": "https://geizhals.de/biodroga-medical-institute-skin-booster-5-peptide-serum-mi80019-a3868119.html?hloc=de&hloc=at&nocookie=1&highlight=408536186379&mtm_campaign=css&mtm_kwd=3868119&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIRxAE",
+         "domain": "geizhals.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRW6pP-p7aiAMtsUbY0NyEit6DnumMxpH5vzttc0zbycmpFCCSqIF7JliTagZILNStAjIbISqWozV0lZklNDvNyKv6EppDxIC34AOmEj-yzi2ZkWLph7xT09A",
+         "price": {
+          "current": 35.1,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "35,10 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Multi-Peptide + HA Serum The Ordinary",
+         "url": "https://geizhals.de/the-ordinary-multi-peptide-ha-serum-a3001562.html?hloc=de&hloc=at&nocookie=1&highlight=409843658581&mtm_campaign=css&mtm_kwd=3001562&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIfRAE",
+         "domain": "geizhals.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRmcY5ZN6MbWOsetlxMn8OElZBjhFG_5ynOJhd5wn_rSpyiTRcDjetu5Xsh_wQg09EPTx6p9UM9i1cXvfiCSzuKE_s6fmmQjKdXit3KeilmoKHVUXJfmYftAw",
+         "price": {
+          "current": 14.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "14,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "DAYTOX Peptide Pro Collagen Serum",
+         "url": "https://geizhals.de/6702338260?hloc=de&hloc=at&nocookie=1&highlight=409934550280&mtm_campaign=css&mtm_kwd=6702338260&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIehAE",
+         "domain": "geizhals.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS7fN-3nIRPGjIAYqF8Evro_i3gsjeR9kqOhjiVvQxrNEoVM3mnRhMlU7umuShRHWb3XZZUvNu4M3uUCJTQm2kaeSiNuRRD_nLmSXWjM45qJERRCIoydpTB",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "14,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Mádara Exosome Longevity Radiance Peptide Serum",
+         "url": "https://geizhals.de/madara-exosome-longevity-radiance-peptide-serum-a3884402.html?hloc=de&hloc=at&nocookie=1&highlight=409852230769&mtm_campaign=css&mtm_kwd=3884402&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIfBAE",
+         "domain": "geizhals.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRwG_wtZErKH1f4mMjpKd4FOzP_k5lC6DRPnnms_sM8Ze9glAj-ZUhBMVOg4bnTWazWHZKBSMtBrcyVbES_ySgQyBemieO9SvgYGgtPDg",
+         "price": {
+          "current": 24.48,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "24,48 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodance Pore Perfecting Collagen Peptide Serum",
+         "url": "https://geizhals.de/6279957543?hloc=de&hloc=at&nocookie=1&highlight=409799236758&mtm_campaign=css&mtm_kwd=6279957543&mtm_source=google_css&gcsscid=1&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIeRAE",
+         "domain": "geizhals.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTBsBC-R61453vqRWadevyDY5BwSU4aGkKtHjPTb9-GCvP72Dz_rKse2x_IHuNsUpRMPxUzC64fOAF1FfcmxoA9M6dGwbCU_Nue_VLPggmTP4DtXom1j04Y",
+         "price": {
+          "current": 18.6,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "18,60 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "The Ordinary Multi-Peptide + Copper Peptides 1% Serum",
+         "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/203094649_-multi-peptide-copper-peptides-1-serum-30ml-the-ordinary.html?shopping=2&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIRBAE",
+         "domain": "www.idealo.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJtuN5ErZFNztpywgW-LYLYwQi0v353qC8za08nS9yfQeAdmCRCRyHpwEBPNfXElODx0V2kUNVhSySLTKH4FILpXCs0BpnJ6aY3_Q0R6ITUg6Ba86DKYP7ivo",
+         "price": {
+          "current": 26.06,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "26,06 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Geek & Gorgeous Power Peptides Serum - 30 ml",
+         "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/204510861_-power-peptides-gesichtsserum-30ml-geek-gorgeous.html?shopping=2&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIRhAE",
+         "domain": "www.idealo.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTANFBG_gm_j24t7MtIbCbJt1cJqCD9Z9cwuKZkBXKBF0rJO9p7eLv87BVv7vKeLSO-jjuftgcAfVRGHO4RMp4HFvXMPTrojGpLlcusb8pf-d-eDY8LgqJ0KQ",
+         "price": {
+          "current": 11.93,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "11,93 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "COSRX Serum The 6 Peptide Skin Booster",
+         "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/204129860_-the-6-peptide-skin-booster-serum-150ml-cosrx.html?shopping=2&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIRRAE",
+         "domain": "www.idealo.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRH9KnIiAm5uLCEYZPFl03hRFOc_q6MJEC0rzHCiw_QnX3J-awA1uvlB58m5xP64E_he00tQpwpSM5GbHblCorWyVLjUgUvAnW7-UpeNQrp89ZAf2XKwbL_",
+         "price": {
+          "current": 12.44,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "12,44 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "L'Oréal Paris Revitalift Laser Tri-Peptid Anti-Age Serum Gesichtsserum",
+         "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/205828393_-revitalift-laser-tri-peptid-anti-age-serum-30-ml-loreal.html?shopping=2&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIQxAE",
+         "domain": "www.idealo.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRiCbCz2OH9JQwQX6YkWe2Lxwl0xWTApcEM5ZOBBZdlX00aOdFDiim5M5fFhEq7wvFiWf0ec0Mk4t5BLc1wxeOs_ASpc9HXhwQdhinPkDI9dXA0yZ28UH-3",
+         "price": {
+          "current": 12.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "12,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Biodroga Skin Booster 5% Peptide Serum",
+         "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/202056185_-skin-booster-5-biodroga-md.html?shopping=2&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIexAE",
+         "domain": "www.idealo.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRW6pP-p7aiAMtsUbY0NyEit6DnumMxpH5vzttc0zbycmpFCCSqIF7JliTagZILNStAjIbISqWozV0lZklNDvNyKv6EppDxIC34AOmEj-yzi2ZkWLph7xT09A",
+         "price": {
+          "current": 34.3,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "34,30 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Multi-Peptide + HA Serum The Ordinary",
+         "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/202214677_-multi-peptide-ha-serum-30ml-the-ordinary.html?shopping=2&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIeBAE",
+         "domain": "www.idealo.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRmcY5ZN6MbWOsetlxMn8OElZBjhFG_5ynOJhd5wn_rSpyiTRcDjetu5Xsh_wQg09EPTx6p9UM9i1cXvfiCSzuKE_s6fmmQjKdXit3KeilmoKHVUXJfmYftAw",
+         "price": {
+          "current": 14.9,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "14,90 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "DAYTOX Peptide Pro Collagen Serum",
+         "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/213343309_-peptide-pro-collagen-serum-30-ml-daytox.html?shopping=2&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIdhAE",
+         "domain": "www.idealo.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS7fN-3nIRPGjIAYqF8Evro_i3gsjeR9kqOhjiVvQxrNEoVM3mnRhMlU7umuShRHWb3XZZUvNu4M3uUCJTQm2kaeSiNuRRD_nLmSXWjM45qJERRCIoydpTB",
+         "price": {
+          "current": 14.99,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "14,99 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        },
+        {
+         "type": "popular_products_element",
+         "title": "Paula's Choice Pro-Collagen Multi-Peptide Booster",
+         "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/202857081_-pro-collagen-multi-peptide-booster-20ml-paula-s-choice.html?shopping=2&sa=X&ved=2ahUKEwiVof22iaqXAxW39AIHHaSyIWcQrogGegQIdxAE",
+         "domain": "www.idealo.de",
+         "description": null,
+         "more_sellers": false,
+         "seller": null,
+         "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSTZOITrJwMTFI9TwHJvBd-XOcg_lVhknEpYqjXXRPI6aECgApmJtrhbcDYtMvl6Kyx_fhmkOLx2IMKJ4_5DXDaxilxuiy_R-7HR2DECoAducX7pULbCto",
+         "price": {
+          "current": 55.25,
+          "regular": null,
+          "max_value": null,
+          "currency": "EUR",
+          "is_price_range": false,
+          "displayed_price": "55,25 €"
+         },
+         "rating": null,
+         "product_identifiers": null
+        }
+       ],
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 7,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]",
+       "domain": "www.joybuy.de",
+       "title": "Peptid Serum: Leitfaden für straffere Haut - Joybuy",
+       "url": "https://www.joybuy.de/blog/peptid-serum-kaufberatung/O12mng1n",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://www.joybuy.de › peptid-serum-kaufberatung",
+       "website_name": "joybuy.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "18.09.2026 — Peptide gelten im Allgemeinen als gut vertr?glich und sind oft eine sanftere Alternative zu anderen potenten Anti-Aging-Wirkstoffen wie ...",
+       "pre_snippet": "09/18/2026 00:00:00",
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Peptide gelten im Allgemeinen als gut vertr?glich"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": "2026-09-18 00:00:00 +00:00",
+       "rectangle": null
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 8,
+       "page": 1,
+       "position": "left",
+       "xpath": "/html[1]/body[1]/div[3]/div[1]/div[14]/div[1]/div[2]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+       "domain": "m.joybuy.de",
+       "title": "Peptid-Serum Test: Die besten Seren für straffe Haut | Joybuy",
+       "url": "https://m.joybuy.de/blog/peptid-serum-kaufberatung/Efyv6deR",
+       "cache_url": null,
+       "related_search_url": null,
+       "breadcrumb": "https://m.joybuy.de › blog › peptid-serum-kaufberatung",
+       "website_name": "joybuy.de",
+       "is_image": false,
+       "is_video": false,
+       "is_featured_snippet": false,
+       "is_malicious": false,
+       "is_web_story": false,
+       "checks": null,
+       "description": "Peptid-Serum Test : Entdecke die besten Seren für straffe, glatte Haut und erfahre, worauf es bei Wirkung, Inhaltsstoffen und Anwendung ankommt.",
+       "pre_snippet": null,
+       "extended_snippet": null,
+       "images": null,
+       "amp_version": false,
+       "rating": null,
+       "price": null,
+       "highlighted": [
+        "Peptid-Serum Test"
+       ],
+       "links": null,
+       "faq": null,
+       "extended_people_also_search": null,
+       "about_this_result": null,
+       "related_result": null,
+       "timestamp": null,
+       "rectangle": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
