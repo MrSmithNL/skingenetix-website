@@ -1,5 +1,5 @@
 {
-  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7).",
+  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7). 2026-10-08: the answer section is a media-with-text with the explainer image Malcolm picked (r2 A7 nbp_pro 02, configs/banners/collagen-skincare-explainer-publish-2026-10-08.json); the <h2> stays inside the content so the page keeps its heading.",
   "english_first": true,
   "create": true,
   "template": "templates/page.collagen-skincare.json",
@@ -66,25 +66,33 @@
       "id": "answer",
       "after": "hero",
       "section": {
-        "type": "rich-text",
+        "type": "media-with-text",
         "settings": {
-          "full_width": true,
-          "content_width": "small",
-          "text_position": "start",
-          "background": "#FFFFFF"
+          "full_width": false,
+          "alternate_media_position": false,
+          "spacing": "small"
         },
         "blocks": {
-          "p1": {
-            "type": "richtext",
+          "explainer": {
+            "type": "image",
             "settings": {
+              "image": "shopify://shop_images/skingenetix-collagen-cream-moisture-film-skin-layers-explainer.jpg",
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
               "content": {
                 "en": "<h2>Do Collagen Creams Work?</h2><p><strong>Yes, as a moisturizer: collagen in a cream holds water at the skin's surface, helping skin look smoother and plumper.</strong> How it does that depends on the size of the molecule. Native and soluble collagen are far too large to cross intact skin, so they stay on the surface as a film that locks in moisture. Hydrolyzed collagen is collagen cut into small peptides, and some of it reaches the skin's outer layer, where it helps hold water.</p><p>Collagen in a cream does not replace the collagen your skin makes itself. That is where signal peptides come in: <a href=\"/pages/matrixyl-3000-research\">Matrixyl® 3000</a> and <a href=\"/pages/copper-peptide-research\">copper peptide GHK-Cu</a> are associated with the skin's own collagen activity, and both have clinical results on wrinkles. Our <a href=\"/products/matrixyl-3000-pro-collagen-firming-cream\">Matrixyl 3000 Pro-Collagen Firming Cream</a> contains both: three forms of collagen, and the two Matrixyl 3000 peptides behind that clinical work.</p><p>Written by the <strong>Skingenetix Research Team</strong>, which compiles the claims registers behind our research pages. Last updated 8 October 2026.</p>"
-              }
+              },
+              "background": "#ffffff",
+              "text_color": "#1a1a1a"
             }
           }
         },
         "block_order": [
-          "p1"
+          "explainer"
         ]
       }
     },
@@ -599,10 +607,6 @@
       "a:not(.button){color:#016569}",
       "@media (max-width:699px){.media-with-text__content{padding-inline:0}}",
       "@media (max-width:360px){h2{font-size:1.375rem}.button{padding-inline:16px}}"
-    ],
-    "answer": [
-      ".prose p{max-width:32em}",
-      "a{color:#016569}"
     ],
     "routine": [
       ".h3{font-size:1.5rem}",
