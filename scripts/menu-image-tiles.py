@@ -67,8 +67,10 @@ TILES = {
     # off the options sheet rather than the homepage's brightening-glow-2026 tile.
     "/pages/brightening-glow": "skingenetix-brightening-glow-luminous-radiant-complexion-close-up.jpg",
     # Collagen Skincare, the fifth Skin Solutions entry (Malcolm, 2026-10-08: "Add it to the menu with a tile").
-    # Its own hero's phone crop, where the woman sits centred, so the CDN's square centre crop keeps her.
-    "/pages/collagen-skincare": "skingenetix-matrixyl-3000-collagen-firming-treatment-mobile.jpg",
+    # Malcolm's pick off the model-face sheet, 2026-10-08 ("lets use 29"): the smiling-eye close-up, shipped as
+    # the square centre crop he saw. Replaced the stand-in, the hero's phone image with the jar in frame.
+    # configs/banners/collagen-skincare-menu-tile-publish-2026-10-08.json
+    "/pages/collagen-skincare": "skingenetix-menu-collagen-skincare-smiling-eye-close-up.jpg",
 
     # --- Scientific Research: the key-ingredient research squares already used on
     # /pages/the-science. All five are 1400px+ square masters.

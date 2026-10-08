@@ -111,9 +111,14 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
   (`assets/publish-ready/collagen-skincare/`, plan `configs/banners/collagen-before-after-publish-2026-10-08.json`, backups
   `backups/collagen-proof-cards-20261008-151241.json`). The hidden Matrixyl hub preview took Matrixyl r1 C2 (card 1) and the same D2
   (card 2) with the register labels (`backups/matrixyl-preview-cards-20261008-151241.json`); its go-live still waits for Malcolm.
-- ⏳ **Menu tile for Collagen Skincare:** Malcolm wants a model-face photo from the earlier batches, not the banner image; 38 candidates
-  from the face waves are on `~/Desktop/skingenetix-menu-tile-model-faces.png` (numbered). Waiting for his number; then
-  `scripts/menu-image-tiles.py` TILES entry → rebuild.
+- ✅ **Menu tile for Collagen Skincare live 2026-10-08** (Malcolm: "lets use 29" off `~/Desktop/skingenetix-menu-tile-model-faces.png`):
+  the smiling-eye close-up (wave `reviews-hero-smiling-faces-r2`, CLOSE1 gpt_image_02), shipped as the 688 px centre square he saw, as
+  `skingenetix-menu-collagen-skincare-smiling-eye-close-up.jpg` (`configs/banners/collagen-skincare-menu-tile-publish-2026-10-08.json`);
+  `scripts/menu-image-tiles.py` TILES entry swapped and rebuilt. Undo: `python3 scripts/menu-image-tiles.py --restore
+  backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
+- ✅ **Collagen page, 2026-10-08 evening:** the three result cards alternate image left/right (Malcolm); JSON-LD product mentions by
+  `@id` (audit S2 fixed). ⏳ **Shop grid position is Malcolm's choice:** under the result cards (ADR-2026-09-29-D "products up front",
+  live; audit X1 fails) or below the explanation (tested live: 9.73, zero confirmed failures). Page note open item 5.
 - ✅ Explainer live (Malcolm, 2026-10-08: "use A7 nbp_pro 02"): r2 slot A (blue water under a lifted film), uploaded as
   `skingenetix-collagen-cream-moisture-film-skin-layers-explainer.jpg` (`configs/banners/collagen-skincare-explainer-publish-2026-10-08.json`);
   the `answer` section is now a media-with-text with the image beside "Do Collagen Creams Work?" (the `<h2>` stays in the content).
