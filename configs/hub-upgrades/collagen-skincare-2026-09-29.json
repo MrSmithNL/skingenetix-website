@@ -1,10 +1,9 @@
 {
-  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1.",
+  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7).",
   "english_first": true,
   "create": true,
   "template": "templates/page.collagen-skincare.json",
-  "page": "collagen-skin-plumping",
-  "view": "collagen-skincare",
+  "page": "collagen-skincare",
   "jsonld_host": "schema",
   "add_sections": [
     {
@@ -620,6 +619,10 @@
     ],
     "proof": [
       "a{color:#016569}"
+    ],
+    "hero": [
+      "@media (min-width:700px){.content-over-media>picture>img{object-position:right center}}",
+      "@media (max-width:699px){.content-over-media>picture>img{object-position:right center}}"
     ]
   },
   "jsonld": {

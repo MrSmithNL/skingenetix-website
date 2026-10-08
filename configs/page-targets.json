@@ -312,7 +312,7 @@
     ],
     "type": "collection"
   },
-  "/pages/collagen-skin-plumping": {
+  "/pages/collagen-skincare": {
     "primary": "collagen cream",
     "secondary": [
       "collagen serum",
@@ -320,6 +320,6 @@
       "collagen skincare"
     ],
     "type": "concern",
-    "note": "becomes /pages/collagen-skincare at go-live (ADR-2026-09-29-D)"
+    "note": "live at this address since 2026-10-08 (ADR-2026-09-29-D); the old address redirects"
   }
 }

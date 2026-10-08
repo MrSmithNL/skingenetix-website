@@ -1,0 +1,48 @@
+{
+  "_about": "Malcolm 2026-10-08: 'Publish the page and Add it to the menu with a tile.' The Collagen Skincare page (ADR-2026-09-29-D) joins Skin Solutions as its fifth entry, after Brightening & Glow, in six languages. The four existing children are kept by URL so their ids and translations survive; the top-level titles are unchanged (the Impact mega-menu block mega_menu_solutions matches the translated title, so the header entry repeats the live titles). The tile image is added to scripts/menu-image-tiles.py (TILES) and the tiles rebuilt in the same change. Undo: scripts/menu-apply.py <this file> --rollback.",
+  "menu": "main-menu",
+  "replace": {
+    "match_title": "Skin Solutions",
+    "with": {
+      "title": {
+        "en": "Skin Solutions",
+        "de": "Hautlösungen",
+        "nl": "Huidoplossingen",
+        "fr": "Solutions Peau",
+        "es": "Soluciones Piel",
+        "it": "Soluzioni Pelle"
+      },
+      "url": "/pages/skin-concerns",
+      "children": [
+        { "match_url": "/pages/fine-lines-wrinkles" },
+        { "match_url": "/pages/firming-skin-density" },
+        { "match_url": "/pages/skin-repair-renewal" },
+        { "match_url": "/pages/brightening-glow" },
+        {
+          "title": {
+            "en": "Collagen Skincare",
+            "de": "Kollagen-Hautpflege",
+            "nl": "Collageen-huidverzorging",
+            "fr": "Soins au collagène",
+            "es": "Cuidado con colágeno",
+            "it": "Skincare al collagene"
+          },
+          "url": "/pages/collagen-skincare"
+        }
+      ]
+    }
+  },
+  "remove": [],
+  "header": {
+    "section": "header",
+    "block": "mega_menu_solutions",
+    "menu_item": {
+      "en": "Skin Solutions",
+      "de": "Hautlösungen",
+      "nl": "Huidoplossingen",
+      "fr": "Solutions Peau",
+      "es": "Soluciones Piel",
+      "it": "Soluzioni Pelle"
+    }
+  }
+}

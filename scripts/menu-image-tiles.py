@@ -66,6 +66,9 @@ TILES = {
     # The one deliberate departure from the homepage set: Malcolm picked this frame
     # off the options sheet rather than the homepage's brightening-glow-2026 tile.
     "/pages/brightening-glow": "skingenetix-brightening-glow-luminous-radiant-complexion-close-up.jpg",
+    # Collagen Skincare, the fifth Skin Solutions entry (Malcolm, 2026-10-08: "Add it to the menu with a tile").
+    # Its own hero's phone crop, where the woman sits centred, so the CDN's square centre crop keeps her.
+    "/pages/collagen-skincare": "skingenetix-matrixyl-3000-collagen-firming-treatment-mobile.jpg",
 
     # --- Scientific Research: the key-ingredient research squares already used on
     # /pages/the-science. All five are 1400px+ square masters.

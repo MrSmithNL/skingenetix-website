@@ -95,7 +95,20 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
 - ⏳ **Malcolm's picks:** the Matrixyl hub rebuild's before/after pairs (`~/Desktop/skingenetix-before-after-matrixyl-cards-r1.png`, 36
   candidates, generated 2026-09-26, never picked) and the collagen page's (`…collagen-plumping-r1.png` 36, `…r2.png` 18); the explainer
   (`~/Desktop/skingenetix-block-collagen-skincare-explainer-r1.png`). Mark with `_` / `__` in Finder on the files in `assets/ai-generated/`.
-- ⏳ Collagen page in the menu: not yet (hidden preview); the fifth **Skin Solutions** tile at go-live (ADR-2026-09-29-D), six languages.
+- ✅ **Collagen Skincare LIVE 2026-10-08** (Malcolm: "Publish the page and Add it to the menu with a tile"): `/pages/collagen-skincare`
+  (page handle, title "Collagen Skincare", template `collagen-skincare`, meta title and description in six languages via
+  `configs/seo-changes/collagen-skincare-meta-2026-10-08.translations.json`), 301 from `/pages/collagen-skin-plumping` (works with the
+  locale prefixes), the four Skin Solutions pages' related tiles repointed, hero image right-aligned, the empty f1 card disabled until
+  Malcolm's before/after pick. Fifth Skin Solutions menu entry in six languages (`configs/menus/main-menu-skin-solutions-collagen-2026-10-08.json`)
+  with its tile (`scripts/menu-image-tiles.py`, the page's phone hero). English body only until the 14-day measurement (content plan §7).
+  Go-live audit: **9.74**, one confirmed failure X1 (one primary action with proof beside it: 1 of 3 checks) and S2 (Product mentions in the
+  schema without offers): fix in the next pass. Cost USD 0.82.
+- ✅ Stamp sets = pre-order (Malcolm, 2026-10-08): both variants sell at zero stock (`inventoryPolicy CONTINUE`); the pre-order template now
+  shows "Pre-order" instead of "Sold out" (backup `backups/stamp-sets-preorder-*.json`).
+- ⏳ **Before/after picks:** Malcolm named nine references (C2, D2, F2, B2, A2 gpt_image 01; A5, B5 nbp_pro 01; C4, E4 nbp_flash 01) without
+  saying which six-row sheet; both resolve on `~/Desktop/skingenetix-your-picks-resolved.png`. Waiting for "Matrixyl" or "collagen" and
+  the final one per card.
+- ⏳ Explainer r2 (`block-collagen-skincare-explainer-r2`, blue water, cream dollop, held-versus-escaping droplets) generating; sheet follows.
 - Not done: the stamp sets' out-of-stock schema (decision 13: pre-order or hide); trial magnitudes on product and collection pages
   (decision 15); the speed test on a duplicate theme (decision 7); the key-figure tiles as H2s on study articles (STUDY-DETAIL go-live).
 
