@@ -1,5 +1,5 @@
 {
-  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7). 2026-10-08: the answer section is a media-with-text with the explainer image Malcolm picked (r2 A7 nbp_pro 02, configs/banners/collagen-skincare-explainer-publish-2026-10-08.json); the <h2> stays inside the content so the page keeps its heading.",
+  "_about": "Collagen Skincare page (ADR-2026-09-29-D): the rebuild of /pages/collagen-skin-plumping, built from an empty template that this spec owns completely. ENGLISH FIRST (Malcolm, 2026-09-29: 'only translate when the english version is fully completed and correct and optimized'): every text is an {\"en\": ...} value, so translating later means adding de/nl/fr/es/it to each value, removing \"english_first\" and re-applying. Hidden preview: /pages/collagen-skin-plumping?view=collagen-skincare (no page uses the template until go-live). Claims: docs/claims/collagen-skincare.md (claims 1, 4, 5, 6, 7; §7 answer; §8 'collagen serum'), docs/claims/matrixyl-3000.md §8.4-8.6, docs/claims/copper-peptide-ghk-cu.md §8.4. CIR safety (claim 2) is NOT used: its condition is that our collagen's source species is confirmed first. Page note (Rule 27): docs/audits/2026-09-29-collagen-skincare-optimisation.md. Proof card f1 image waits for Malcolm's Matrixyl pick. 2026-10-08 (Malcolm): 'What Peptides Did in Clinical Studies' (proof) moved directly under 'Do Collagen Creams Work?' (answer); hero styled like the Skin Solutions banners (custom hero CSS removed: the title now renders at the theme's 60px/40px like every other page banner; overlay 22 as on Fine Lines); the writer credit is the Skingenetix Research Team, not a named person (Malcolm, 2026-10-08: 'Remove my name from all pages as the writer'). The explainer image for the answer section follows once Malcolm picks from wave block-collagen-skincare-explainer-r1. 2026-10-08 (Malcolm): hero image aligned right so the woman is fully in view (object-position only; type and overlay stay as on the Skin Solutions banners). 2026-10-08 LIVE (Malcolm: 'Publish the page'): the page's handle is now collagen-skincare on this template, with a redirect from /pages/collagen-skin-plumping; the spec targets the live page (view removed). Still english_first: the five locales serve the English until the 14-day measurement and translation (content plan §7). 2026-10-08: the answer section is a media-with-text with the explainer image Malcolm picked (r2 A7 nbp_pro 02, configs/banners/collagen-skincare-explainer-publish-2026-10-08.json); the <h2> stays inside the content so the page keeps its heading. 2026-10-08 (Malcolm: 'add another study results section with before and after image'): third result card f3, palmitoyl pentapeptide-4 fine lines (Robinson 2005; wording from the Matrixyl register claim 2 and §8.4, p ≤ 0.10 stated per ADR-2026-10-01-T), order f1 (Matrixyl deep wrinkles), f3, f2 (copper). Before/after pairs: Malcolm's resolved picks, chosen by Claude on his 'you choose': f1 = collagen-plumping r1 C2 gpt_image 01, f3 = Matrixyl cards r1 D2 gpt_image 01, moles clone-retouched per the no-moles rule.",
   "english_first": true,
   "create": true,
   "template": "templates/page.collagen-skincare.json",
@@ -110,7 +110,7 @@
           "f1": {
             "type": "finding",
             "settings": {
-              "image": "",
+              "image": "shopify://shop_images/skingenetix-matrixyl-3000-deep-wrinkles-before-after-2-months-half-face-study.jpg",
               "media_position": "start",
               "before_label": {
                 "en": "Before"
@@ -162,10 +162,41 @@
                 "en": "<p>In a 12-week study of a copper-peptide face cream in 71 women, the reported results were firmer, clearer-looking skin, fewer fine lines, shallower wrinkles, and denser, thicker skin.</p><p><strong>New collagen in 7 of 10 people:</strong> in a one-month biopsy study of four creams on thigh skin, ten people per cream, 7 of 10 people using a copper-binding peptide cream showed new collagen, against 5 of 10 with vitamin C, 5 of 10 with melatonin and 4 of 10 with tretinoin. A count of people; the creams were not tested against each other.</p><p>The face-cream study was presented at a dermatology meeting in 2002 and is known from published reviews (<a href=\"https://pubmed.ncbi.nlm.nih.gov/26236730/\" target=\"_blank\" rel=\"noopener\">Pickart et al., 2015</a>; <a href=\"https://pubmed.ncbi.nlm.nih.gov/39963574/\" target=\"_blank\" rel=\"noopener\">Mortazavi et al., 2024</a>). More in our <a href=\"/pages/copper-peptide-research\">copper peptide research summary</a>.</p>"
               }
             }
+          },
+          "f3": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-palmitoyl-pentapeptide-4-fine-lines-before-after-12-weeks.jpg",
+              "media_position": "start",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 12 weeks"
+              },
+              "result_label": {
+                "en": "Fine lines reduced vs placebo from week 8 (93 women, 12 weeks)"
+              },
+              "note_label": {
+                "en": ""
+              },
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "Palmitoyl pentapeptide-4 (the original Matrixyl®)"
+              },
+              "title": {
+                "en": "Fine Lines Reduced vs Placebo in 12 Weeks"
+              },
+              "content": {
+                "en": "<p><strong>In a 12-week, double-blind, placebo-controlled trial, 93 women aged 35 to 55 applied a moisturiser with 3 ppm palmitoyl pentapeptide-4 to one half of the face and the same moisturiser without it to the other, twice a day.</strong></p><ul><li><strong>Wrinkles and fine lines reduced more than with the placebo moisturiser</strong>, by image analysis and by expert graders, in the crow's-feet area and the cheek</li><li><strong>Significant from week 8</strong>, and still at week 12, at the trial's p ≤ 0.10 threshold</li><li>A small effect, honestly reported; no percentage was published</li></ul><p>Pentapeptide-4 is the original Matrixyl®. Our <a href=\"/products/matrixyl-3000-firming-serum\">Matrixyl 3000 Firming Serum</a> contains it; the Pro-Collagen Firming Cream does not.</p><p>Appraised in full in our <a href=\"/blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005\">Robinson 2005 study article</a> (<a href=\"https://pubmed.ncbi.nlm.nih.gov/18492182/\" target=\"_blank\" rel=\"noopener\">PubMed</a>).</p>"
+              }
+            }
           }
         },
         "block_order": [
           "f1",
+          "f3",
           "f2"
         ]
       }

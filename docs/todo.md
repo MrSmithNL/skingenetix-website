@@ -105,17 +105,28 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
   schema without offers): fix in the next pass. Cost USD 0.82.
 - ✅ Stamp sets = pre-order (Malcolm, 2026-10-08): both variants sell at zero stock (`inventoryPolicy CONTINUE`); the pre-order template now
   shows "Pre-order" instead of "Sold out" (backup `backups/stamp-sets-preorder-*.json`).
-- ⏳ **Before/after picks:** Malcolm named nine references (C2, D2, F2, B2, A2 gpt_image 01; A5, B5 nbp_pro 01; C4, E4 nbp_flash 01) without
-  saying which six-row sheet; both resolve on `~/Desktop/skingenetix-your-picks-resolved.png`. Waiting for "Matrixyl" or "collagen" and
-  the final one per card.
+- ✅ **Before/after pairs live on the collagen page** (Malcolm: "use any of the ones from the resolved selection. You choose"): card f1
+  Matrixyl deep wrinkles = collagen-plumping r1 C2 gpt_image 01; new card f3 palmitoyl pentapeptide-4 fine lines (Robinson 2005, p ≤ 0.10
+  stated) = Matrixyl cards r1 D2 gpt_image 01; copper card f2 unchanged; order f1, f3, f2. Moles clone-retouched from same-panel skin
+  (`assets/publish-ready/collagen-skincare/`, plan `configs/banners/collagen-before-after-publish-2026-10-08.json`, backups
+  `backups/collagen-proof-cards-20261008-151241.json`). The hidden Matrixyl hub preview took Matrixyl r1 C2 (card 1) and the same D2
+  (card 2) with the register labels (`backups/matrixyl-preview-cards-20261008-151241.json`); its go-live still waits for Malcolm.
+- ⏳ **Menu tile for Collagen Skincare:** Malcolm wants a model-face photo from the earlier batches, not the banner image; 38 candidates
+  from the face waves are on `~/Desktop/skingenetix-menu-tile-model-faces.png` (numbered). Waiting for his number; then
+  `scripts/menu-image-tiles.py` TILES entry → rebuild.
 - ✅ Explainer live (Malcolm, 2026-10-08: "use A7 nbp_pro 02"): r2 slot A (blue water under a lifted film), uploaded as
   `skingenetix-collagen-cream-moisture-film-skin-layers-explainer.jpg` (`configs/banners/collagen-skincare-explainer-publish-2026-10-08.json`);
   the `answer` section is now a media-with-text with the image beside "Do Collagen Creams Work?" (the `<h2>` stays in the content).
   Applied directly to the live template (backup `backups/collagen-answer-section-20261008-143439.json`) because `hub-upgrade.py` refuses an
   english_first spec on a template a live page uses; the spec carries the same section for the six-language apply after the 14-day
   measurement. r1 (27 candidates, no blue) and r2 (27, gpt-image out of credits) stay in `assets/ai-generated/`.
-- Not done: the stamp sets' out-of-stock schema (decision 13: pre-order or hide); trial magnitudes on product and collection pages
-  (decision 15); the speed test on a duplicate theme (decision 7); the key-figure tiles as H2s on study articles (STUDY-DETAIL go-live).
+- ✅ **Speed cause found, no store change** (2026-10-08, local A/B on a saved copy of the copper hub): with the theme's reveal-on-scroll
+  animation neutralised, mobile lab LCP fell from 13.8 s to 6.2 s (two runs each). The fix is the Impact theme's animation setting:
+  **decision 7, Malcolm's yes needed** because every page's feel changes. Then the app-script trim for the rest.
+- ✅ Spoke 1 drafted: `/blogs/clinical-studies-drafts/argireline-and-matrixyl-3000-together` (hidden; `configs/learn/drafts/…json`,
+  `scripts/learn-article-draft.py`); central audit **9.68 uncapped** (only the draft artefacts T4/T8 fail). Waiting for Malcolm's English
+  approval and Dr Bodde's sign-off, then `--blog learn --public`, 14 days, translate.
+- Not done: trial magnitudes on product and collection pages (decision 15); the key-figure tiles as H2s on study articles (STUDY-DETAIL go-live).
 
 **Not done on purpose earlier today:** no page published (every concept is English-only; the six-language rule applies).
 
