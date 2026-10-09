@@ -60,3 +60,9 @@ backups/
 
 # Scratch file for pasting credentials — never commit (added 2026-09-21)
 credentials-paste.txt
+
+# Weekly visibility monitor (skill seo-visibility-forensics, 2026-10-09): raw SERP pulls are regenerable and the ledger/funnel
+# hold shop data; only the summaries are committed (same rule as Hairgenetix).
+audits/visibility-monitor/*/serp/raw/
+audits/visibility-monitor/*/ledger.json
+audits/visibility-monitor/*/funnel.json

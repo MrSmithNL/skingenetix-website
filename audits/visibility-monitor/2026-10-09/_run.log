@@ -1,0 +1,367 @@
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 /Users/malcolmsmith/.claude/skills/seo-visibility-forensics/scripts/forensics.py audits/visibility-monitor/config.json timeline --days 63 --out audits/visibility-monitor/2026-10-09
+GSC + GA4 weekly, 2026-08-07..2026-10-08 (last 2 days partial)
+week_end  days| clicks   EN  LOC | impr   |  usa  nld  deu  ind  gbr  esp  fra  ita |  mob desk | sessions nonDir  org   dir(eng%) | orders nonDir org | CR nonDir | AOV
+2026-09-06   4 |      6    6    0 |    328 |    0    2    0    1    1    0    0    0 |    5    1 |        0      0     0     0(  0) |      0      0   0 |  0.00% |    0
+2026-09-13   7 |      4    1    3 |    996 |    0    2    1    0    0    1    0    0 |    4    0 |       33      8     8    25( 56) |      0      0   0 |  0.00% |    0
+2026-09-20   7 |     13    8    5 |    844 |    3    2    1    0    1    1    0    1 |    8    5 |       36     16     9    20( 45) |      0      0   0 |  0.00% |    0
+2026-09-27   7 |     20   16    4 |   1582 |    3    3    0    0    1    1    0    1 |   13    6 |       54     15    11    39( 51) |      2      2   1 | 13.33% |   43
+2026-10-04   7 |     35   23   12 |   1538 |    5    2    5    7    2    1    3    1 |   23   12 |      155    101    26    54( 48) |      0      0   0 |  0.00% |    0
+2026-10-11   4 |     11    4    7 |   1131 |    0    0    2    0    1    2    2    1 |   10    1 |      108     67    11    41( 46) |      0      0   0 |  0.00% |    0
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 /Users/malcolmsmith/.claude/skills/seo-visibility-forensics/scripts/forensics.py audits/visibility-monitor/config.json funnel --out audits/visibility-monitor/2026-10-09
+week_end   | sessions view_item add_cart begin_co purchase | item->cart cart->co co->buy sess->buy
+2026-09-13 |       33         0        0        0        0 |       0.0%     0.0%    0.0%   0.00%
+2026-09-20 |       36         0        0        0        0 |       0.0%     0.0%    0.0%   0.00%
+2026-09-27 |       54        21        4        4        2 |      19.0%   100.0%   50.0%   3.70%
+2026-10-04 |      156       119        3        1        0 |       2.5%    33.3%    0.0%   0.00%
+2026-10-11 |      102        92        3        1        0 |       3.3%    33.3%    0.0%   0.00%
+
+DIRECT by country, 2026-09-18..2026-10-08 vs prior 21 days
+  Netherlands                                                 66 (prev    24)  engaged   80%  orders 0
+  United States                                               45 (prev     6)  engaged   18%  orders 0
+  (not set)                                                    6 (prev     3)  engaged    0%  orders 0
+  India                                                        5 (prev     0)  engaged   40%  orders 0
+  Canada                                                       4 (prev     0)  engaged   25%  orders 0
+  Singapore                                                    3 (prev     1)  engaged    0%  orders 0
+  Nigeria                                                      2 (prev     0)  engaged    0%  orders 0
+  Belarus                                                      1 (prev     0)  engaged    0%  orders 0
+  Belgium                                                      1 (prev     0)  engaged    0%  orders 0
+  Germany                                                      1 (prev     0)  engaged  100%  orders 0
+
+DIRECT by deviceCategory, 2026-09-18..2026-10-08 vs prior 21 days
+  desktop                                                    120 (prev    34)  engaged   50%  orders 0
+  mobile                                                      18 (prev     8)  engaged   28%  orders 0
+
+DIRECT by landingPagePlusQueryString, 2026-09-18..2026-10-08 vs prior 21 days
+  /                                                           73 (prev     0)  engaged   40%  orders 0
+  (not set)                                                   15 (prev    41)  engaged   13%  orders 0
+  /blogs/clinical-studies                                      8 (prev     0)  engaged   88%  orders 0
+  /pages/matrixyl-3000-research                                5 (prev     0)  engaged   80%  orders 0
+  /pages/glutathione-research                                  4 (prev     0)  engaged   75%  orders 0
+  /cart                                                        3 (prev     0)  engaged    0%  orders 0
+  /pages/acetyl-hexapeptide-8-research                         3 (prev     0)  engaged   67%  orders 0
+  /pages/copper-peptide-research                               3 (prev     0)  engaged   33%  orders 0
+  /products/copper-peptide-ghk-cu-renewal-serum                3 (prev     0)  engaged   67%  orders 0
+  /pages/collagen-skin-plumping?view=collagen-skincare         2 (prev     0)  engaged  100%  orders 0
+
+DIRECT by browser, 2026-09-18..2026-10-08 vs prior 21 days
+  Chrome                                                     125 (prev    39)  engaged   50%  orders 0
+  Safari                                                       8 (prev     2)  engaged   25%  orders 0
+  (not set)                                                    3 (prev     0)  engaged    0%  orders 0
+  Edge                                                         1 (prev     0)  engaged    0%  orders 0
+  Vivaldi                                                      1 (prev     0)  engaged    0%  orders 0
+
+ORGANIC landing pages, sessions/orders/revenue, 2026-09-18..2026-10-08 vs prior 21 days
+  (not set)                                                              7/   11   0/  0      0/     0
+  /                                                                      6/    0   0/  0      0/     0
+  /collections/all                                                       4/    0   1/  0     41/     0
+  /pages/matrixyl-3000-research                                          4/    0   0/  0      0/     0
+  /products/copper-peptide-ghk-cu-renewal-serum                          4/    0   0/  0      0/     0
+  /products/glutathione-brightening-serum                                4/    0   0/  0      0/     0
+  /blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-20     2/    0   0/  0      0/     0
+  /pages/glutathione-research                                            2/    0   0/  0      0/     0
+  /products/acetyl-hexapeptide-8-anti-wrinkle-serum                      2/    0   0/  0      0/     0
+                                                                         1/    0   0/  0      0/     0
+  /blogs/clinical-studies/argireline-crows-feet-trial-wang-2013          1/    0   0/  0      0/     0
+  /blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005           1/    0   0/  0      0/     0
+  /blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026       1/    0   0/  0      0/     0
+  /collections/firming-skin-density                                      1/    0   0/  0      0/     0
+  /collections/serums                                                    1/    0   0/  0      0/     0
+  /de/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-202     1/    0   0/  0      0/     0
+  /de/pages/matrixyl-3000-research                                       1/    0   0/  0      0/     0
+  /es/collections/copper-peptide                                         1/    0   0/  0      0/     0
+  /es/products/copper-peptide-ghk-cu-day-gel-cream                       1/    0   0/  0      0/     0
+  /fr/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-202     1/    0   0/  0      0/     0
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 /Users/malcolmsmith/.claude/skills/seo-visibility-forensics/scripts/forensics.py audits/visibility-monitor/config.json ledger --since 2026-07-31 --out audits/visibility-monitor/2026-10-09
+Shopify orders since 2026-07-31: 14
+week_end   web_orders  web_rev   AOV  first%  disc%  first-visit search/direct | marketplace | wholesale
+2026-09-13         4       959   240   100%     0%       0 / 4      |    0       0 | 0 0
+2026-09-20         2       118    59   100%     0%       1 / 1      |    1     576 | 0 0
+2026-09-27         3       172    57   100%    67%       1 / 1      |    1      59 | 0 0
+2026-10-11         2       499   250   100%     0%       0 / 2      |    1      44 | 0 0
+
+7-day moving average of web orders (last 21): 09-24:1.3 10-07:1.3 10-08:1.3
+
+SKU units, last 3 weeks vs prior 3 weeks:
+  SG_CP_SERUM                              prev    0  cur    6
+  SG_GLU_SERUM                             prev    0  cur    3
+  SG_ARG_SERUM                             prev    0  cur    2
+  SG_CP_DAYGEL                             prev    0  cur    2
+  SG_CP_NIGHTCREAM                         prev    0  cur    2
+  SG_MAT_CREAM                             prev    0  cur    2
+  SG_MAT_SERUM                             prev    0  cur    1
+  SG_PDRN_CREAM                            prev    0  cur    1
+  SG_PDRN_SERUM                            prev    0  cur    1
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 /Users/malcolmsmith/.claude/skills/seo-visibility-forensics/scripts/forensics.py audits/visibility-monitor/config.json domain --out audits/visibility-monitor/2026-10-09
+{
+ "host": "www.skingenetix.com",
+ "expiry": null,
+ "https://www.skingenetix.com/": "200 0.497939 ",
+ "https://www.www.skingenetix.com/": "000 0.018905 "
+}
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 /Users/malcolmsmith/.claude/skills/seo-visibility-forensics/scripts/serp_gap.py audits/visibility-monitor/config.json pull --out audits/visibility-monitor/2026-10-09/serp --depth 10
+US:pdrn                                             AIO=Y cites_us=False cite#None rank=None
+US:what is pdrn                                     AIO=Y cites_us=False cite#None rank=None
+US:pdrn serum                                       AIO=Y cites_us=False cite#None rank=None
+US:pdrn skincare                                    AIO=Y cites_us=False cite#None rank=None
+US:pdrn cream                                       AIO=Y cites_us=False cite#None rank=None
+US:best pdrn serum                                  AIO=Y cites_us=False cite#None rank=None
+US:argireline                                       AIO=Y cites_us=False cite#None rank=None
+US:argireline serum                                 AIO=Y cites_us=False cite#None rank=None
+US:does argireline work                             AIO=Y cites_us=False cite#None rank=None
+US:copper peptide                                   AIO=Y cites_us=False cite#None rank=None
+US:copper peptide serum                             AIO=Y cites_us=False cite#None rank=None
+US:best copper peptide serum                        AIO=N cites_us=False cite#None rank=None
+US:matrixyl 3000                                    AIO=Y cites_us=False cite#None rank=None
+US:matrixyl and argireline                          AIO=N cites_us=False cite#None rank=None
+US:glutathione for skin                             AIO=Y cites_us=False cite#None rank=None
+US:glutathione serum                                AIO=N cites_us=False cite#None rank=None
+US:peptide serum                                    AIO=Y cites_us=False cite#None rank=None
+US:peptide skincare                                 AIO=Y cites_us=False cite#None rank=None
+US:collagen cream                                   AIO=Y cites_us=False cite#None rank=None
+US:pdrn vs retinol                                  AIO=Y cites_us=False cite#None rank=None
+US:skincare clinical studies                        AIO=Y cites_us=False cite#None rank=None
+GB:pdrn                                             AIO=Y cites_us=False cite#None rank=None
+GB:pdrn serum                                       AIO=N cites_us=False cite#None rank=None
+GB:argireline                                       AIO=Y cites_us=False cite#None rank=None
+GB:copper peptide serum                             AIO=Y cites_us=False cite#None rank=None
+GB:matrixyl 3000                                    AIO=Y cites_us=False cite#None rank=None
+GB:peptide serum                                    AIO=Y cites_us=False cite#None rank=None
+DE:pdrn                                             AIO=Y cites_us=False cite#None rank=None
+DE:pdrn serum                                       AIO=N cites_us=False cite#None rank=None
+DE:argireline                                       AIO=N cites_us=False cite#None rank=None
+DE:matrixyl 3000                                    AIO=N cites_us=False cite#None rank=None
+NL:pdrn                                             AIO=Y cites_us=False cite#None rank=None
+NL:pdrn serum                                       AIO=N cites_us=False cite#None rank=None
+US:brightening serum                                AIO=Y cites_us=False cite#None rank=None
+US:glow serum                                       AIO=N cites_us=False cite#None rank=None
+US:skin firming cream                               AIO=Y cites_us=False cite#None rank=None
+US:firming serum                                    AIO=Y cites_us=False cite#None rank=None
+US:skin repair cream                                AIO=Y cites_us=False cite#None rank=None
+US:fine lines and wrinkles                          AIO=Y cites_us=False cite#None rank=None
+US:wrinkle serum                                    AIO=Y cites_us=False cite#None rank=None
+US:peptides for skin                                AIO=Y cites_us=False cite#None rank=None
+US:peptides in skincare                             AIO=Y cites_us=False cite#None rank=None
+US:what is matrixyl 3000                            AIO=Y cites_us=False cite#None rank=None
+US:peptide cream                                    AIO=N cites_us=False cite#None rank=None
+US:peptide moisturizer                              AIO=Y cites_us=False cite#None rank=None
+US:ghk-cu cream                                     AIO=N cites_us=False cite#None rank=None
+US:copper peptide cream                             AIO=Y cites_us=False cite#None rank=None
+US:copper peptide skincare                          AIO=Y cites_us=False cite#None rank=None
+US:microneedling stamp                              AIO=Y cites_us=False cite#None rank=None
+US:microneedling serum                              AIO=Y cites_us=False cite#None rank=None
+US:collagen serum                                   AIO=Y cites_us=False cite#None rank=None
+US:pdrn microneedling                               AIO=Y cites_us=False cite#None rank=None
+US:topical glutathione                              AIO=Y cites_us=False cite#None rank=None
+US:palmitoyl pentapeptide-4                         AIO=Y cites_us=False cite#None rank=None
+US:acetyl hexapeptide-3                             AIO=Y cites_us=False cite#None rank=None
+US:argireline crows feet                            AIO=Y cites_us=False cite#None rank=None
+US:skingenetix                                      AIO=Y cites_us=False cite#None rank=None
+GB:brightening serum                                AIO=Y cites_us=False cite#None rank=None
+GB:pdrn cream                                       AIO=Y cites_us=False cite#None rank=None
+GB:collagen cream                                   AIO=Y cites_us=False cite#None rank=None
+GB:peptide cream                                    AIO=Y cites_us=False cite#None rank=None
+GB:copper peptide                                   AIO=Y cites_us=False cite#None rank=None
+GB:glutathione for skin                             AIO=Y cites_us=False cite#None rank=None
+GB:pdrn skincare                                    AIO=N cites_us=False cite#None rank=None
+GB:peptides for skin                                AIO=Y cites_us=False cite#None rank=None
+DE:kupferpeptide                                    AIO=Y cites_us=False cite#None rank=None
+DE:peptid serum                                     AIO=N cites_us=False cite#None rank=None
+DE:glutathion serum                                 AIO=N cites_us=False cite#None rank=None
+DE:kollagen creme                                   AIO=N cites_us=False cite#None rank=None
+DE:pdrn creme                                       AIO=N cites_us=False cite#None rank=None
+DE:peptide hautpflege                               AIO=N cites_us=False cite#None rank=None
+
+71 SERPs, cost $0.154. AIO on 54, cites us on 0, we rank top-10 on 0.
+Most-cited AIO domains: [('www.google.com', 38), ('www.youtube.com', 31), ('www.instagram.com', 15), ('pmc.ncbi.nlm.nih.gov', 13), ('theordinary.com', 13), ('www.allure.com', 8), ('www.reddit.com', 8), ('www.amazon.com', 7), ('www.vogue.com', 7), ('www.facebook.com', 6), ('www.boots.com', 6), ('www.theinkeylist.com', 5)]
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 /Users/malcolmsmith/.claude/skills/seo-visibility-forensics/scripts/serp_gap.py audits/visibility-monitor/config.json authority --serp audits/visibility-monitor/2026-10-09/serp
+authority cost 0.053628
+
+Referring domains, domains:
+  facebook.com                             33735353
+  instagram.com                            24083376
+  youtube.com                              17444897
+  en.wikipedia.org                         3950451
+  tiktok.com                               3735604
+  amazon.com                               2986531
+  reddit.com                               1585914
+  forbes.com                               1135472
+  cnn.com                                  983959
+  researchgate.net                         770635
+  pubmed.ncbi.nlm.nih.gov                  583193
+  amazon.co.uk                             487230
+  healthline.com                           420311
+  amazon.de                                404126
+  webmd.com                                396736
+  mayoclinic.org                           391211
+  nypost.com                               369654
+  pmc.ncbi.nlm.nih.gov                     348835
+  walmart.com                              275520
+  vogue.com                                206631
+  target.com                               197731
+  my.clevelandclinic.org                   192736
+  standard.co.uk                           192692
+  glamour.com                              131142
+  goodhousekeeping.com                     120688
+  elle.com                                 116361
+  cosmopolitan.com                         107550
+  health.clevelandclinic.org               103848
+  allure.com                               97346
+  harpersbazaar.com                        91898
+
+Referring domains, pages (our hero pages marked):
+       https://www.youtube.com/watch                                                              8935
+       https://my.clevelandclinic.org/health/diseases/10984-wrinkles                              497
+       https://www.mayoclinic.org/diseases-conditions/wrinkles/in-depth/wrinkle-creams/art-200474 464
+       https://pmc.ncbi.nlm.nih.gov/articles/PMC11762834/                                         409
+       https://en.wikipedia.org/wiki/Copper_peptide_GHK-Cu                                        228
+       https://health.clevelandclinic.org/peptides-for-skin                                       188
+       https://www.imd-berlin.de/spezielle-kompetenzen/a-z/mikronaehrstoffe/glutathion            181
+       https://pmc.ncbi.nlm.nih.gov/articles/PMC5405115/                                          176
+       https://pmc.ncbi.nlm.nih.gov/articles/PMC11862975/                                         160
+       https://www.health.com/beauty/how-to-get-rid-of-fine-lines                                 158
+       https://www.healthline.com/health/copper-peptides                                          124
+       https://www.healthline.com/health/beauty-skin-care/crows-feet                              121
+       https://pubmed.ncbi.nlm.nih.gov/30895708/                                                  108
+       https://pmc.ncbi.nlm.nih.gov/articles/PMC10665711/                                         85
+       https://theordinary.com/en-us/multi-peptide-copper-peptides-1-serum-100625.html            83
+       https://www.byrdie.com/do-firming-creams-work-5076509                                      76
+       https://theordinary.com/en-us/multi-peptide-ha-serum-100613.html                           66
+       https://www.beyer-soehne.de/post/peptide-in-der-kosmetik                                   62
+       https://www.timelessha.com/products/matrixyl-3000-serum-1-oz                               56
+       https://www.byrdie.com/polypeptides-in-skincare                                            51
+       https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide                        48
+       https://www.vogue.com/article/copper-peptides                                              44
+       https://www.byrdie.com/copper-peptides-serum                                               40
+       https://www.glamour.com/story/best-barrier-repair-creams                                   38
+       https://www.sephora.com/shop/face-serum                                                    37
+       https://www.byrdie.com/argireline-for-skin-4771349                                         36
+       https://www.byrdie.com/best-anti-aging-serums-4582774                                      35
+       https://makeupstore.de/product/660433/                                                     34
+       https://www.allure.com/story/best-collagen-creams                                          33
+       https://zoskinhealth.com/us/firming-serum-gbl-full-size-912700.html                        33
+       https://en.wikipedia.org/wiki/Palmitoyl_pentapeptide-4                                     33
+       https://www.health.com/collagen-skincare-8549988                                           32
+       https://www.clarinsusa.com/en/bright-plus-%5Badvanced%5D-serum---brightening-dark-spot-tar 30
+       https://www.byrdie.com/best-collagen-creams                                                28
+       https://www.clarinsusa.com/en/ingredient-library/ingredient-matrixyl-3000.html             28
+       https://depology.com/products/argireline-anti-wrinkle-serum                                28
+       https://www.clarins.de/herbarium/ingredient-matrixyl-3000.html                             27
+       https://www.notino.de/numbuzin/no-5-glutathione-vitamin-concentrated-serum-konzentriertes- 26
+       https://www.webmd.com/vitamins-supplements/glutathione                                     26
+       https://www.clarins.ch/de/zum-clarins-herbarium/ingredient-matrixyl-3000.html              26
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 /Users/malcolmsmith/.claude/skills/seo-visibility-forensics/scripts/serp_gap.py audits/visibility-monitor/config.json report --serp audits/visibility-monitor/2026-10-09/serp
+# Competitor gap report, 2026-10-09 (desktop, depth 10)
+
+| Market | Keyword | Our rank | AIO | Cites us (#) | Top AIO sources | Above us (kind) | Our page vs #1 site page (words, h2, faq, video, author, dateMod) | Ref. domains: ours vs #1 |
+|---|---|---|---|---|---|---|---|---|
+| US | pdrn | - | Y | N (-) | pmc.ncbi.nlm.nih.gov, www.allure.com, www.sciencedirect.com | www.lauraphanmd.com(site), www.getthegloss.com(site), uk.theinkeylist.com(site) | - vs - | 0 vs - |
+| US | what is pdrn | - | Y | N (-) | www.skinceuticals.com, pmc.ncbi.nlm.nih.gov, www.cultbeauty.com | www.skinceuticals.com(site), pmc.ncbi.nlm.nih.gov(medi), www.cosmopolitan.com(site) | - vs - | 0 vs - |
+| US | pdrn serum | - | Y | N (-) | www.amazon.com, www.dermatologytimes.com, www.allure.com | www.allure.com(site), www.glamour.com(site), olivekollection.com(site) | - vs - | 0 vs - |
+| US | pdrn skincare | - | Y | N (-) | www.reddit.com, www.skinceuticals.com, www.ulta.com | www.ulta.com(site), www.cosmopolitan.com(site), www.skinceuticals.com(site) | - vs - | 0 vs - |
+| US | pdrn cream | - | Y | N (-) | www.amazon.com, www.reddit.com, sokoglam.com | genabelle.com(site), www.nordstrom.com(site), nypost.com(site) | - vs - | 0 vs - |
+| US | best pdrn serum | - | Y | N (-) | www.glamour.com, www.vogue.com, www.ulta.com | www.glamour.com(site), www.reddit.com(ugc), www.elle.com(site) | - vs - | 0 vs - |
+| US | argireline | - | Y | N (-) | pmc.ncbi.nlm.nih.gov, www.vogue.com, www.joinmidi.com | www.reddit.com(ugc), inkeedecoder.com(site), theordinary.com(site) | - vs - | 0 vs - |
+| US | argireline serum | - | Y | N (-) | e-majestic.com, www.google.com, www.vogue.com | www.reddit.com(ugc), depology.com(site), babyfacestore.com(site) | - vs - | 0 vs - |
+| US | does argireline work | - | Y | N (-) | pmc.ncbi.nlm.nih.gov, www.reddit.com, www.vogue.com | pmc.ncbi.nlm.nih.gov(medi), www.reddit.com(ugc), www.vogue.com(site) | - vs - | 0 vs - |
+| US | copper peptide | - | Y | N (-) | www.npr.org, remedyskin.com, en.wikipedia.org | www.youtube.com(ugc), www.lesielle.com(site), www.empowerpharmacy.com(site) | - vs - | 0 vs - |
+| US | copper peptide serum | - | Y | N (-) | remedyskin.com, theordinary.com, www.youtube.com | remedyskin.com(site), theordinary.com(site), www.neova.com(site) | - vs - | 0 vs - |
+| US | best copper peptide serum | - | N | N (-) |  | www.forbes.com(site), www.reddit.com(ugc), www.innerbody.com(site) | - vs - | 0 vs - |
+| US | matrixyl 3000 | - | Y | N (-) | theordinary.com, myfacedr.com, www.theinkeylist.com | theordinary.com(site), www.asterwood.co(site), us.no7beauty.com(site) | - vs - | 0 vs - |
+| US | matrixyl and argireline | - | N | N (-) |  | www.youtube.com(ugc), myacare.com(site), depology.com(site) | - vs - | 0 vs - |
+| US | glutathione for skin | - | Y | N (-) | pmc.ncbi.nlm.nih.gov, cosmoderma.org, www.paulaschoice.com | pmc.ncbi.nlm.nih.gov(medi), cosmoderma.org(medi), www.paulaschoice.com(site) | - vs - | 0 vs - |
+| US | glutathione serum | - | N | N (-) |  | www.reddit.com(ugc), www.instagram.com(ugc), www.amazon.com(mark) | - vs - | 0 vs - |
+| US | peptide serum | - | Y | N (-) | www.forbes.com, www.theinkeylist.com, www.dermstore.com | photozyme.com(site), www.forbes.com(site), theordinary.com(site) | - vs - | 0 vs - |
+| US | peptide skincare | - | Y | N (-) | us.medik8.com, pmc.ncbi.nlm.nih.gov, health.clevelandclinic.o | www.youtube.com(ugc), www.lovelyskin.com(site), www.amazon.com(mark) | - vs - | 0 vs - |
+| US | collagen cream | - | Y | N (-) | www.nytimes.com, www.naturabisse.com, www.allure.com | advancedclinicals.com(site), www.allure.com(site), www.reddit.com(ugc) | - vs - | 0 vs - |
+| US | pdrn vs retinol | - | Y | N (-) | www.theinkeylist.com, uk.theinkeylist.com, www.getrael.com | myskstore.at(site), haruharuwonder.com(site), www.instagram.com(ugc) | - vs - | 0 vs - |
+| US | skincare clinical studies | - | Y | N (-) | www.lorealdermatological, www.citruslabs.com, denovaresearch.com | www.skincareresearch.org(medi), www.centerwatch.com(site), www.lorealdermatologicalbeau(site) | - vs - | 0 vs - |
+| GB | pdrn | - | Y | N (-) | www.boots.com, www.cultbeauty.co.uk, www.skincupid.co.uk | pmc.ncbi.nlm.nih.gov(medi), www.boots.com(site), www.skincupid.co.uk(site) | - vs - | 0 vs - |
+| GB | pdrn serum | - | N | N (-) |  | www.boots.com(site), www.amazon.co.uk(mark), www.glamourmagazine.co.uk(site) | - vs - | 0 vs - |
+| GB | argireline | - | Y | N (-) | www.vogue.com, theordinary.com, argentum.com | pmc.ncbi.nlm.nih.gov(medi), theordinary.com(site), www.reddit.com(ugc) | - vs - | 0 vs - |
+| GB | copper peptide serum | - | Y | N (-) | www.boots.com, theordinary.com, www.amazon.co.uk | theordinary.com(site), nichebeautylab.com(site), www.boots.com(site) | - vs - | 0 vs - |
+| GB | matrixyl 3000 | - | Y | N (-) | theordinary.com, www.google.com, uk.theinkeylist.com | www.no7beauty.co.uk(site), theordinary.com(site), www.timeless-uk.com(site) | - vs - | 0 vs - |
+| GB | peptide serum | - | Y | N (-) | www.forbes.com, www.reddit.com, hydropeptide.co.uk | theordinary.com(site), hydropeptide.co.uk(site), www.whowhatwear.com(site) | - vs - | 0 vs - |
+| DE | pdrn | - | Y | N (-) | www.dm.at, www.douglas.de, www.koreanbeauty.at | www.metroprivatelabel.com(site), www.beautypunk.com(site), www.instagram.com(ugc) | - vs - | 0 vs - |
+| DE | pdrn serum | - | N | N (-) |  | cosmadic.de(site), www.littlewonderland.de(site), www.notino.de(site) | - vs - | 0 vs - |
+| DE | argireline | - | N | N (-) |  | cosibella.com.de(site), www.paulaschoice.de(site), dermida.de(site) | - vs - | 0 vs - |
+| DE | matrixyl 3000 | - | N | N (-) |  | www.clarins.de(site), www.clarins.ch(site), www.ulprospector.com(site) | - vs - | 0 vs - |
+| NL | pdrn | - | Y | N (-) | www.dr-jetskeultee-skinc, koreanskincare.nl, huidlaserutrecht.nl | www.instagram.com(ugc), www.biotylab.com(site), nl.beautyfeatures.com(site) | - vs - | 0 vs - |
+| NL | pdrn serum | - | N | N (-) |  | www.glamour.com(site), www.littlewonderland.nl(site), www.hetcosmeticahuis.nl(site) | - vs - | 0 vs - |
+| US | brightening serum | - | Y | N (-) | lemieuxskincare.com, www.amazon.com, www.isclinical.com | facileskin.com(site), imageskincare.com(site), www.isclinical.com(site) | - vs - | 0 vs - |
+| US | glow serum | - | N | N (-) |  | www.glowrecipe.com(site), meaningfulbeauty.com(site), beautyofjoseon.com(site) | - vs - | 0 vs - |
+| US | skin firming cream | - | Y | N (-) | www.forbes.com, www.ulta.com, www.allure.com | www.forbes.com(site), www.ulta.com(site), www.amazon.com(mark) | - vs - | 0 vs - |
+| US | firming serum | - | Y | N (-) | www.sephora.com, www.allure.com, shopdiamondfaceinstitute | zoskinhealth.com(site), philosophy.com(site), www.cremedelamer.com(site) | - vs - | 0 vs - |
+| US | skin repair cream | - | Y | N (-) | www.amazon.com, www.atlantichp.com, dermarite.com | www.sephora.com(site), www.westlakedermatology.com(site), www.youtube.com(ugc) | - vs - | 0 vs - |
+| US | fine lines and wrinkles | - | Y | N (-) | my.clevelandclinic.org, www.kiehls.com, www.health.com | my.clevelandclinic.org(medi), www.kiehls.com(site), www.health.com(site) | - vs - | 0 vs - |
+| US | wrinkle serum | - | Y | N (-) | www.amazon.com, www.ulta.com, www.allure.com | www.clinique.com(site), www.amazon.com(mark), www.skinceuticals.com(site) | - vs - | 0 vs - |
+| US | peptides for skin | - | Y | N (-) | health.clevelandclinic.o, www.forbes.com, www.uchicagomedicineadve | www.youtube.com(ugc), www.naturopathica.com(site), www.kenvue.com(site) | - vs - | 0 vs - |
+| US | peptides in skincare | - | Y | N (-) | us.medik8.com, pmc.ncbi.nlm.nih.gov, health.clevelandclinic.o | artofdermatology.com(site), palmbeachdermatologygroup.co(site), www.youtube.com(ugc) | - vs - | 0 vs - |
+| US | what is matrixyl 3000 | - | Y | N (-) | www.reddit.com, theordinary.com, www.niraskin.com | theordinary.com(site), us.no7beauty.com(site), www.timelessha.com(site) | - vs - | 0 vs - |
+| US | peptide cream | - | N | N (-) |  | www.amazon.com(mark), www.dermstore.com(site), dermatology.smhs.gwu.edu(medi) | - vs - | 0 vs - |
+| US | peptide moisturizer | - | Y | N (-) | www.allure.com, www.ulta.com, www.sephora.com | www.theinkeylist.com(site), www.ulta.com(site), www.allure.com(site) | - vs - | 0 vs - |
+| US | ghk-cu cream | - | N | N (-) |  | www.asterwood.co(site), www.platinumskincare.com(site), www.sarasotarx.com(site) | - vs - | 0 vs - |
+| US | copper peptide cream | - | Y | N (-) | www.amazon.com, neuroganhealth.com, anairuicare.com | www.youtube.com(ugc), www.amazon.com(mark), stonevillenc.org(medi) | - vs - | 0 vs - |
+| US | copper peptide skincare | - | Y | N (-) | www.youtube.com, www.google.com, www.healthline.com | www.healthline.com(medi), beminimalist.co(site), www.amazon.com(mark) | - vs - | 0 vs - |
+| US | microneedling stamp | - | Y | N (-) | us.drpen.co, www.instagram.com, drpen.net | us.drpen.co(site), www.amazon.com(mark), www.target.com(mark) | - vs - | 0 vs - |
+| US | microneedling serum | - | Y | N (-) | bruunbeauty.com, us.drpen.co, drpen.net | phishop.us(site), www.reddit.com(ugc), www.youtube.com(ugc) | - vs - | 0 vs - |
+| US | collagen serum | - | Y | N (-) | www.dermalogica.com, www.sephora.com, www.byrdie.com | www.gmcollin.com(site), www.sephora.com(site), sonage.com(site) | - vs - | 0 vs - |
+| US | pdrn microneedling | - | Y | N (-) | www.yoodirecthealth.com, www.renuyouaestheticsand, www.instagram.com | www.yoodirecthealth.com(site), www.reddit.com(ugc), www.renuyouaestheticsandboto(site) | - vs - | 0 vs - |
+| US | topical glutathione | - | Y | N (-) | pmc.ncbi.nlm.nih.gov, jcadonline.com, www.dermatologytimes.com | pmc.ncbi.nlm.nih.gov(medi), neurobiologix.com(site), cosmoderma.org(medi) | - vs - | 0 vs - |
+| US | palmitoyl pentapeptide-4 | - | Y | N (-) | inkeedecoder.com, en.wikipedia.org, www.bulknaturalswholesal | www.genscript.com(site), www.paulaschoice.com(site), inkeedecoder.com(site) | - vs - | 0 vs - |
+| US | acetyl hexapeptide-3 | - | Y | N (-) | en.wikipedia.org, www.specialchem.com, biotechpeptides.com | cellbone.com(site), en.wikipedia.org(medi), pubchem.ncbi.nlm.nih.gov(medi) | - vs - | 0 vs - |
+| US | argireline crows feet | - | Y | N (-) | www.facebook.com, www.neova.com, pmc.ncbi.nlm.nih.gov | www.neova.com(site), www.naturalorganicskincare.c(site), gettoxd.com(site) | - vs - | 0 vs - |
+| US | skingenetix | - | Y | N (-) | www.instagram.com, www.linkedin.com | www.instagram.com(ugc), www.instagram.com(ugc), www.eskincarestore.com(site) | - vs - | 0 vs - |
+| GB | brightening serum | - | Y | N (-) | www.amazon.co.uk, www.google.com | www.loreal-paris.co.uk(site), www.tjbeautyproducts.co.uk(site), www.standard.co.uk(site) | - vs - | 0 vs - |
+| GB | pdrn cream | - | Y | N (-) | www.boots.com, www.clinique.co.uk, www.skincupid.co.uk | www.boots.com(site), www.amazon.co.uk(mark), www.skincupid.co.uk(site) | - vs - | 0 vs - |
+| GB | collagen cream | - | Y | N (-) | www.amazon.co.uk, www.boots.com, www.hollandandbarrett.co | www.no7beauty.co.uk(site), www.byrdie.com(site), olay.co.uk(site) | - vs - | 0 vs - |
+| GB | peptide cream | - | Y | N (-) | www.boots.com, www.vogue.co.uk, hydropeptide.co.uk | www.boots.com(site), www.cerave.co.uk(site), www.amazon.co.uk(mark) | - vs - | 0 vs - |
+| GB | copper peptide | - | Y | N (-) | theordinary.com, theconversation.com, www.youtube.com | theordinary.com(site), nichebeautylab.com(site), en.wikipedia.org(medi) | - vs - | 0 vs - |
+| GB | glutathione for skin | - | Y | N (-) | pmc.ncbi.nlm.nih.gov, pubmed.ncbi.nlm.nih.gov, skinsider.co.uk | pmc.ncbi.nlm.nih.gov(medi), skinsider.co.uk(site), cosmoderma.org(medi) | - vs - | 0 vs - |
+| GB | pdrn skincare | - | N | N (-) |  | www.instagram.com(ugc), shinkahbeauty.com(site), www.tiktok.com(ugc) | - vs - | 0 vs - |
+| GB | peptides for skin | - | Y | N (-) | www.boots.com, pmc.ncbi.nlm.nih.gov, www.medik8.com | www.boots.com(site), pmc.ncbi.nlm.nih.gov(medi), www.medik8.com(site) | - vs - | 0 vs - |
+| DE | kupferpeptide | - | Y | N (-) | www.nooance-paris.com, www.shop-apotheke.com, www.beautypunk.com | basiclab-shop.de(site), www.amazon.de(mark), www.lesielle.com(site) | - vs - | 0 vs - |
+| DE | peptid serum | - | N | N (-) |  | www.kosmetikfuchs.de(site), mellownoir.com(site), de.drsturm.com(site) | - vs - | 0 vs - |
+| DE | glutathion serum | - | N | N (-) |  | www.koreanbeauty.de(site), www.paulaschoice.de(site), www.imd-berlin.de(site) | - vs - | 0 vs - |
+| DE | kollagen creme | - | N | N (-) |  | www.larocheposay.de(site), www.judithwilliams.com(site), www.idealo.de(site) | - vs - | 0 vs - |
+| DE | pdrn creme | - | N | N (-) |  | www.kbeautyhouse.de(site), www.koreanbeauty.de(site), www.amazon.de(mark) | - vs - | 0 vs - |
+| DE | peptide hautpflege | - | N | N (-) |  | www.nivea.at(site), www.janssen-cosmetics.com(site), colibriskincare.de(site) | - vs - | 0 vs - |
+
+AIO present on 54/71; cites www.skingenetix.com on 0.
+
+Most-cited AIO domains:
+
+- www.google.com (38)
+- www.youtube.com (31)
+- www.instagram.com (15)
+- pmc.ncbi.nlm.nih.gov (13)
+- theordinary.com (13)
+- www.allure.com (8)
+- www.reddit.com (8)
+- www.amazon.com (7)
+- www.vogue.com (7)
+- www.facebook.com (6)
+- www.boots.com (6)
+- www.theinkeylist.com (5)
+
+Most frequent organic top-10 domains:
+
+- www.amazon.com (24)
+- www.reddit.com (21)
+- www.youtube.com (20)
+- theordinary.com (14)
+- www.instagram.com (13)
+- www.byrdie.com (11)
+- www.boots.com (11)
+- pmc.ncbi.nlm.nih.gov (10)
+- www.sephora.com (10)
+- www.amazon.co.uk (9)
+- www.allure.com (8)
+- www.littlewonderland.de (7)
+
