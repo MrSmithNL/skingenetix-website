@@ -476,3 +476,32 @@ def test_section_css_keeps_the_slideshow_no_fade_rules_too():
     j["sections"]["faq"]["custom_css"] = ["slideshow-carousel{opacity:1!important}", slide]
     hu.build({"section_css": {"faq": ["h1{color:blue}"]}}, j)
     assert j["sections"]["faq"]["custom_css"] == ["h1{color:blue}", "slideshow-carousel{opacity:1!important}", slide]
+
+
+# ── article templates (2026-10-09): the English-first guard must see the articles that use a template ─────────────
+# The Learn article redesign builds templates/article.learn-<x>.json; pages_using refused anything but page templates,
+# so the guard that stops an English-only spec landing on a live template could not run for articles.
+
+def test_pages_using_reads_articles_for_an_article_template():
+    seen = []
+
+    def query(q, v=None):
+        seen.append(q)
+        return {"articles": {"nodes": [{"handle": "spoke-1", "templateSuffix": "learn-x"},
+                                       {"handle": "spoke-2", "templateSuffix": "learn-x-old"}],
+                             "pageInfo": {"hasNextPage": False, "endCursor": None}}}
+    assert hu.pages_using("templates/article.learn-x.json", query) == ["spoke-1"]
+    assert "articles(" in seen[0]
+
+
+def test_pages_using_still_refuses_other_template_kinds():
+    with pytest.raises(SystemExit):
+        hu.pages_using("templates/product.x.json", lambda q, v=None: {})
+
+
+def test_pages_using_reads_blogs_for_a_blog_template():
+    def query(q, v=None):
+        assert "blogs(" in q
+        return {"blogs": {"nodes": [{"handle": "learn", "templateSuffix": "learn"}, {"handle": "news", "templateSuffix": None}],
+                          "pageInfo": {"hasNextPage": False, "endCursor": None}}}
+    assert hu.pages_using("templates/blog.learn.json", query) == ["learn"]

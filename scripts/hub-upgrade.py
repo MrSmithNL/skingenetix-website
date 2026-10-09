@@ -381,15 +381,17 @@ def missing_anchors(texts, loc, page):
 
 
 def pages_using(template, query=None):
-    """Handles of the pages whose template is `template` (templates/page.<suffix>.json), across every page of results."""
-    m = re.fullmatch(r"templates/page\.([^/]+)\.json", template)
+    """Handles of the pages (templates/page.<suffix>.json), articles or blogs (templates/article|blog.<suffix>.json, added
+    2026-10-09 for the Learn templates) whose template is `template`, across every page of results."""
+    m = re.fullmatch(r"templates/(page|article|blog)\.([^/]+)\.json", template)
     if not m:
-        sys.exit(f"  ✗ {template} is not an alternate page template (templates/page.<suffix>.json)")
+        sys.exit(f"  ✗ {template} is not an alternate page, article or blog template (templates/page|article|blog.<suffix>.json)")
+    kind = m.group(1) + "s"
     handles, after = [], None
     while True:
-        d = (query or gql)('query($a:String){ pages(first:250, after:$a){ nodes{ handle templateSuffix } '
-                           'pageInfo{ hasNextPage endCursor } } }', {"a": after})["pages"]
-        handles += [p["handle"] for p in d["nodes"] if p["templateSuffix"] == m.group(1)]
+        d = (query or gql)(f'query($a:String){{ {kind}(first:250, after:$a){{ nodes{{ handle templateSuffix }} '
+                           'pageInfo{ hasNextPage endCursor } } }', {"a": after})[kind]
+        handles += [p["handle"] for p in d["nodes"] if p["templateSuffix"] == m.group(2)]
         if not d["pageInfo"]["hasNextPage"]:
             return handles
         after = d["pageInfo"]["endCursor"]

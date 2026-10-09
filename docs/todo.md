@@ -133,6 +133,21 @@ backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
   every move checked against today's Search Console, volumes and SERP intent; waits for "approve all" or strikes.
 - ⏳ **PageSpeed and CrUX APIs:** enabled by Malcolm 2026-10-09, but the key (ending …8_hQ) restricts which APIs it may call: add both
   to the key's API restrictions (Credentials, project 62087691133), then the audits get real-visitor speed data.
+- ✅ **Spoke 1 published 2026-10-09** (Malcolm: "publish the Argireline and Matrixyl 3000 together article"):
+  `/blogs/learn/argireline-and-matrixyl-3000-together`, indexable, live audit 9.9 (only failure: sitemap lag right after
+  publishing); drafts-blog copy unpublished; Learn blog un-hidden (`seo.hidden` = 0) and comments closed; "DRAFT for Malcolm"
+  removed from the live summary (guard added to `scripts/learn-article-draft.py`); featured image = the two-serums photo.
+  Not yet: request indexing for the new URL (Malcolm, Search Console).
+- ⏳ **Spoke 1 redesign ("full page design improvement run")** on a hidden template
+  (`templates/article.learn-argireline-matrixyl-3000.json`, spec `configs/hub-upgrades/learn-argireline-matrixyl-3000-design-2026-10-09.json`;
+  preview `?view=learn-argireline-matrixyl-3000`): banner, key figures, short answers, per-peptide blocks, three before/after cards,
+  why they differ, layering photos, before-you-start icons, cautions, products, evidence table, trial links; all approved text.
+  Next: design-critic (fresh context) → fixes → audit the preview → switch the article's template suffix → verify → audit live.
+- ⏳ **Learn list page** on a hidden template (`templates/blog.learn.json`, preview `/blogs/learn?view=learn`): the intro line is
+  new copy and waits for Malcolm's OK; then assign the blog's template suffix and translate intro + note.
+- ⏳ **Argireline hub before/after card f1 shows moles** (`skingenetix-acetyl-hexapeptide-8-crows-feet-before-after-close-up.jpg`,
+  live on `/pages/acetyl-hexapeptide-8-research`); breaks the no-moles rule (2026-09-29). Clean alternative in Files:
+  `skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg` (used on the Learn redesign).
 - ⏳ **Product pages, plan step 1.2:** nine English drafts and the review pack `docs/review-2026-10-09-product-pages.md` wait for
   Malcolm (per page yes/edits/no; decisions 3, 8, 15; the "free from" line; carton facts).
 - ⏳ **New articles plan (2026-10-09), waits for Malcolm's 10 decisions:** `docs/article-plan-2026-10-09.md`, evidence

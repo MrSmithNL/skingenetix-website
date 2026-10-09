@@ -625,6 +625,10 @@ once a task is done - verify fully complete and working on the live site."
 7. **Same day, on Malcolm's answers:** the Skin Concerns safety answer approved and live in six languages; decision 5 (spend)
    approved, so the weekly visibility monitor is installed (`audits/visibility-monitor/`, launchd, Mondays 08:30); decision 3 shown
    as a validated page and waiting.
+8. **Afternoon:** spoke 1 published to `/blogs/learn` on Malcolm's word; its redesign is built from the study and science pages'
+   modules on a hidden article template (approved text only, three before/after cards, mole-free images), waiting for the critic
+   and the audit before it replaces the live layout. `hub-upgrade.py` now builds and guards article and blog templates too
+   (`pages_using` reads articles/blogs; tests added). The Learn list page waits on Malcolm's OK for its one-line intro.
 
 **Undo:** `python3 scripts/hero-reveal-off.py --all --undo --apply`; `scripts/hub-upgrade.py <spec> --rollback` per spec;
 `scripts/disable-block.py templates/page.skin-concerns.json hero heading --enable --apply` (and `faq f5`); the Learn metafield

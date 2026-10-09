@@ -1,0 +1,112 @@
+{
+  "_about": "2026-10-09, Malcolm: 'Make sure our articles and blog posts also look great.' The Learn list page moves off the stock blog template (a bare title, a search box and one card) onto the Clinical studies list page's build: photo banner with the blog title and a one-line intro, the stock article list with the same card settings (its own heading kept for search engines, visually hidden), and the 'Studies by ingredient' note reused verbatim. The intro line is NEW copy, so this is an English-first hidden preview (/blogs/learn?view=learn) until Malcolm approves it; then the blog's template suffix switches and the intro and note are translated.",
+  "english_first": true,
+  "create": true,
+  "template": "templates/blog.learn.json",
+  "view": "learn",
+  "page": "learn",
+  "add_sections": [
+    {
+      "id": "hero",
+      "after": null,
+      "section": {
+        "type": "image-with-text-overlay",
+        "blocks": {
+          "title": {
+            "type": "liquid",
+            "settings": {
+              "liquid": "<p class=\"h0\" aria-hidden=\"true\">{{ blog.title | escape }}</p>"
+            }
+          },
+          "intro": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>Plain-English answers to the questions people ask about peptide skincare, built only on the published trials we appraise.</p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "title",
+          "intro"
+        ],
+        "settings": {
+          "full_width": true,
+          "allow_transparent_header": false,
+          "enable_parallax": false,
+          "image_size": "sm",
+          "image": "shopify://shop_images/skingenetix-research-argireline-banner.jpg",
+          "mobile_text_position": "place-self-start text-start",
+          "desktop_text_position": "sm:place-self-center-start sm:text-start",
+          "text_color": "#ffffff",
+          "overlay_color": "#1A1A1A",
+          "overlay_opacity": 28
+        },
+        "custom_css": [
+          "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }",
+          "image-banner{opacity:1!important}"
+        ]
+      }
+    },
+    {
+      "id": "main",
+      "after": "hero",
+      "section": {
+        "type": "main-blog",
+        "settings": {
+          "allow_transparent_header": false,
+          "show_newsletter_form": false,
+          "show_tags": false,
+          "articles_per_page": 12,
+          "feature_first_article": true,
+          "show_excerpt": true,
+          "show_date": true,
+          "show_author": false,
+          "show_comments_count": false,
+          "show_category": true,
+          "banner_text_color": "#1A1A1A",
+          "banner_background": "#F0F0F0",
+          "content": ""
+        },
+        "custom_css": [
+          ".badge--primary {background-color: #E4E6E7; color: #2E3233;}",
+          ".blog-banner-content {position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;}",
+          ".blog-post-card__figure > .badge {font-size: 0.8125rem; padding: 0.3em 0.75em;}",
+          ".blog-post-card__info p:not([class]) {font-size: 1.0625rem;}"
+        ]
+      }
+    },
+    {
+      "id": "grading",
+      "after": "main",
+      "section": {
+        "type": "rich-text",
+        "blocks": {
+          "t": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Studies by ingredient</h2><p>Every study we cite, graded, is listed on the research page of its ingredient: <a href=\"/pages/copper-peptide-research#evidence-sources\">Copper peptide (GHK-Cu)</a>, <a href=\"/pages/matrixyl-3000-research#evidence-sources\">Matrixyl 3000</a>, <a href=\"/pages/acetyl-hexapeptide-8-research#evidence-sources\">Argireline®</a>, <a href=\"/pages/pdrn-research#evidence-sources\">PDRN</a>, <a href=\"/pages/glutathione-research#evidence-sources\">Glutathione</a>.</p><p>The products made with these five ingredients are in <a href=\"/collections/all\">our shop</a>.</p>"
+              }
+            }
+          }
+        },
+        "block_order": [
+          "t"
+        ],
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "custom_css": [
+          ".prose {max-width: 66ch; margin-inline: 0;}",
+          ".prose h2 {font-size: var(--text-h3);}",
+          ".prose p {font-size: 1.0625rem;}"
+        ]
+      }
+    }
+  ]
+}

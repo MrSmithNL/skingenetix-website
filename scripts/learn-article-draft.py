@@ -72,6 +72,10 @@ def main():
     a = ap.parse_args()
     cfg = json.loads(pathlib.Path(a.config).read_text())
     errs, words = check(cfg)
+    # 2026-10-09: spoke 1 went public with "DRAFT for Malcolm:" still in its summary, which the Learn list shows as the
+    # excerpt; a note meant for the reviewer must never reach a public article
+    if a.public and re.search(r"\bDRAFT\b|for Malcolm", " ".join(str(cfg.get(k, "")) for k in ("summary", "title", "seo_title", "seo_description"))):
+        errs.append("a reviewer note (DRAFT / for Malcolm) is still in the summary, title or SEO fields; remove it before --public")
     for e in errs:
         print("  ✗", e)
     print(f"  {cfg['handle']}: {words} words, seo title {len(cfg['seo_title'])}, description {len(cfg['seo_description'])}")
