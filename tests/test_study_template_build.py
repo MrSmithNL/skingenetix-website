@@ -234,3 +234,11 @@ def test_an_empty_how_it_works_section_keeps_the_gap_between_its_neighbours_clos
     j = stb.build_article()
     assert j["sections"]["mechanism"]["settings"]["empty_previous_hash"] == "0"
     assert "empty_previous_hash" not in j["sections"]["outcomes"]["settings"]
+
+
+def test_every_study_template_banner_shows_at_once_instead_of_fading():
+    """The fade held the largest paint back about 10 s (ADR-2026-10-08-X); a rebuild must not bring it back."""
+    rule = "image-banner{opacity:1!important}"
+    for j in (stb.build(), stb.build_article(), stb.build_pilot_article(), stb.build_draft_article()):
+        assert rule in j["sections"]["banner"].get("custom_css", [])
+        assert "custom_css" not in j["sections"]["banner"]["settings"]

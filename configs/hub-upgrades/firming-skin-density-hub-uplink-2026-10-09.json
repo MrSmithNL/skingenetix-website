@@ -1,0 +1,18 @@
+{
+  "_about": "2026-10-09 (Malcolm: 'proceed with all next steps and improvements'): the spoke links up to its hub. The four older Skin Solutions pages linked across to their siblings but not up to /pages/skin-concerns in their own content (content strategy hub-and-spoke; Rule 27 check C). The 'Related Skin Solutions' intro, empty until now, gets the line the Collagen Skincare page already carries, in six languages, each linking to its own locale's hub. Set-only. Undo: --rollback.",
+  "template": "templates/page.firming-skin-density.json",
+  "page": "firming-skin-density",
+  "set": [
+    {
+      "at": "related/content",
+      "values": {
+        "en": "<p>Or browse <a href=\"/pages/skin-concerns\">all skin concerns</a>.</p>",
+        "de": "<p>Oder sieh dir <a href=\"/de/pages/skin-concerns\">alle Hautanliegen</a> an.</p>",
+        "nl": "<p>Of bekijk <a href=\"/nl/pages/skin-concerns\">alle huidproblemen</a>.</p>",
+        "fr": "<p>Ou parcourez <a href=\"/fr/pages/skin-concerns\">toutes les préoccupations cutanées</a>.</p>",
+        "es": "<p>O consulta <a href=\"/es/pages/skin-concerns\">todas las preocupaciones de piel</a>.</p>",
+        "it": "<p>Oppure scopri <a href=\"/it/pages/skin-concerns\">tutti i problemi della pelle</a>.</p>"
+      }
+    }
+  ]
+}

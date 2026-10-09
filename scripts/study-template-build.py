@@ -187,6 +187,9 @@ def build():
                     "desktop_text_position": "sm:place-self-center-start sm:text-start",
                     "text_color": "#ffffff", "overlay_color": INK, "overlay_opacity": 28,
                 },
+                # The banner shows at once instead of fading in (the fade held the largest paint back about 10 s);
+                # scripts/hero-reveal-off.py, ADR-2026-10-08-X. Claude (Opus 5.5), 2026-10-09.
+                "custom_css": ["image-banner{opacity:1!important}"],
             },
             # ---- the three key numbers ------------------------------------------------------
             "figures": {

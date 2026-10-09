@@ -1,0 +1,75 @@
+{
+  "_about": "2026-10-09, Malcolm: 'proceed with all next steps and improvements' (after seeing the card's English on 2026-10-08). Two changes on /pages/skin-concerns, the hub of the five Skin Solutions pages. (1) H1: the page served no <h1> because the Impact heading block renders <p class=\"h1\">; the title moves into the hero's richtext block as a real <h1> in six languages from the live values read 2026-10-09 (same fix as ADR-2026-10-08-W item 2), and the heading block is then disabled by scripts/disable-block.py (keeps its translations). (2) The fifth concern card, Collagen Skincare, so the hub links its fifth spoke (the auditor's P3 needs the hub to link back; Google weighs in-content links): title from the main menu's translations (configs/menus/main-menu-skin-solutions-collagen-2026-10-08.json), button text from the four live cards, product names in each locale's existing form (cards 2 and 3), image = the menu tile Malcolm picked (#29). Background white, continuing the white/grey alternation. Undo: --rollback, and re-enable the heading block.",
+  "template": "templates/page.skin-concerns.json",
+  "page": "skin-concerns",
+  "set": [
+    {
+      "at": "hero/desc/content",
+      "values": {
+        "en": "<h1>What Does Your Skin Need?</h1><p>Every skin tells a different story. Select the solution that resonates with you - we will match you to the right peptide routine, backed by clinical research.</p>",
+        "de": "<h1>Was braucht deine Haut?</h1><p>Jede Haut erzählt eine andere Geschichte. Wähle die Lösung, die zu dir passt - wir empfehlen dir die passende Peptid-Routine, gestützt auf klinische Forschung.</p>",
+        "nl": "<h1>Wat heeft jouw huid nodig?</h1><p>Elke huid vertelt een ander verhaal. Kies de oplossing die bij jou past - we wijzen je de juiste peptideroutine, onderbouwd door klinisch onderzoek.</p>",
+        "fr": "<h1>De quoi votre peau a-t-elle besoin ?</h1><p>Chaque peau a sa propre histoire. Sélectionnez la solution qui vous correspond - nous vous orienterons vers la routine peptide adaptée, fondée sur des recherches cliniques.</p>",
+        "es": "<h1>¿Qué Necesita Tu Piel?</h1><p>Cada piel tiene su propia historia. Elige la solución que mejor se adapte a ti - te orientamos hacia la rutina de péptidos adecuada, respaldada por investigación clínica.</p>",
+        "it": "<h1>Di Cosa Ha Bisogno la Tua Pelle?</h1><p>Ogni pelle ha la sua storia. Scegli la soluzione più adatta a te - ti abbiniamo alla routine peptidica giusta, supportata dalla ricerca clinica.</p>"
+      }
+    }
+  ],
+  "add_sections": [
+    {
+      "id": "concern_5",
+      "after": "concern_4",
+      "section": {
+        "type": "multiple-images-with-text",
+        "settings": {
+          "full_width": true,
+          "images_layout": "collage",
+          "collage_images_alignment": "middle",
+          "background": "#ffffff",
+          "text_color": "#1a1a1a",
+          "button_background": "#1A1A1A",
+          "button_text_color": "#ffffff"
+        },
+        "blocks": {
+          "c5": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-menu-collagen-skincare-smiling-eye-close-up.jpg",
+              "subheading": "",
+              "title": {
+                "en": "Collagen Skincare",
+                "de": "Kollagen-Hautpflege",
+                "nl": "Collageen-huidverzorging",
+                "fr": "Soins au collagène",
+                "es": "Cuidado con colágeno",
+                "it": "Skincare al collagene"
+              },
+              "content": {
+                "en": "<p><strong>This is for you if</strong> your skin feels drier and less plump than it used to, or you want to know whether a collagen cream or a collagen serum is worth it.</p><p><strong>Key products:</strong> Pro-Collagen Firming Cream, PDRN Collagen Night Cream, Matrixyl 3000 Serum, Copper Peptide (GHK-Cu) Renewal Serum</p>",
+                "de": "<p><strong>Das ist für dich, wenn</strong> deine Haut trockener und weniger prall wirkt als früher oder du wissen möchtest, ob sich eine Kollagencreme oder ein Kollagenserum lohnt.</p><p><strong>Wichtigste Produkte:</strong> Matrixyl 3000 Pro-Collagen Firming Cream, PDRN 1% Collagen Nachtcreme, Matrixyl 3000 Firming Serum, Copper Peptide (GHK-Cu) 2% Renewal Serum</p>",
+                "nl": "<p><strong>Dit is voor jou als</strong> je huid droger en minder vol aanvoelt dan vroeger, of je wilt weten of een collageencrème of een collageenserum de moeite waard is.</p><p><strong>Belangrijkste producten:</strong> Pro-Collagen Firming Cream, PDRN Collagen Nachtcrème, Matrixyl 3000 Serum, Copper Peptide (GHK-Cu) Renewal Serum</p>",
+                "fr": "<p><strong>C'est pour vous si</strong> votre peau vous semble plus sèche et moins rebondie qu'avant, ou si vous vous demandez si une crème ou un sérum au collagène en vaut la peine.</p><p><strong>Produits clés :</strong> Matrixyl 3000 Pro-Collagen Crème Fermeté, PDRN 1% Collagen Crème de Nuit, Matrixyl 3000 Sérum Fermeté, Copper Peptide (GHK-Cu) 2% Sérum Revitalisant</p>",
+                "es": "<p><strong>Es para ti si</strong> sientes la piel más seca y menos jugosa que antes, o quieres saber si merece la pena una crema o un sérum de colágeno.</p><p><strong>Productos clave:</strong> Pro-Collagen Crema Reafirmante, PDRN Collagen Crema de Noche, Matrixyl 3000 Sérum Reafirmante, Copper Peptide (GHK-Cu) Sérum Renovador</p>",
+                "it": "<p><strong>Fa per te se</strong> la tua pelle sembra più secca e meno rimpolpata di prima, o vuoi sapere se una crema o un siero al collagene vale la pena.</p><p><strong>Prodotti chiave:</strong> Pro-Collagen Firming Cream, PDRN Collagen Night Cream, Matrixyl 3000 Serum, Copper Peptide (GHK-Cu) Siero Rivitalizzante</p>"
+              },
+              "button_text": {
+                "en": "View Routine & Products",
+                "de": "Routine & Produkte ansehen",
+                "nl": "Bekijk Routine & Producten",
+                "fr": "Voir la routine & les produits",
+                "es": "Ver Rutina & Productos",
+                "it": "Scopri Routine & Prodotti"
+              },
+              "button_url": "shopify://pages/collagen-skincare"
+            }
+          }
+        },
+        "block_order": ["c5"]
+      }
+    }
+  ],
+  "_disable_block": {
+    "section": "hero",
+    "block": "heading"
+  }
+}

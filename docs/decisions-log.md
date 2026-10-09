@@ -588,6 +588,43 @@ whoever wrote the content. Malcolm was told this in the session.
 edit.
 **Undo:** revert `2658b5d` and run `build-study-page.py configs/studies/<handle>.json --apply` for each study.
 
+## ADR-2026-10-09-Y: The hero no-fade rule site-wide; the Skin Solutions cluster linked both ways; product drafts for approval
+
+**Date:** 2026-10-09
+**Status:** Accepted and live (items 1 to 5); item 6 waits for Malcolm. Malcolm: "proceed with all next steps and improvements.
+once a task is done - verify fully complete and working on the live site."
+**Decision.**
+
+1. **Hero no-fade rule on every live hero template** (23 templates: the 16 page templates with an image banner, the study
+   article, pilot, draft and list templates, the Matrixyl preview, the study metaobject template), through the new
+   `scripts/hero-reveal-off.py` (dry run, backup per template, `--undo`). The builders that regenerate templates carry the rule
+   (`scripts/study-template-build.py`, `scripts/build-clinical-studies-blog.py`), and `scripts/hub-upgrade.py` keeps it when a
+   spec sets a section's Custom CSS (tests in `tests/test_hub_upgrade.py`, `tests/test_study_template_build.py`; red on the old
+   code, green now). Not the home page: its hero is a slideshow, a different element, still to be tested. Verified live: the
+   rule is served on all 19 public pages; warm Lighthouse mobile runs at 3.4 to 5.3 s on most pages (11 to 15 s before), with
+   occasional slow runs the simulation produces on the same page minutes apart (for example Firming 4.6 s then 12.2 s);
+   observed paints are all under 0.9 s. Field data needs the PageSpeed and CrUX APIs switched on (Malcolm, decision 2).
+2. **Skin Concerns** (`/pages/skin-concerns`, the hub of the five Skin Solutions pages): a real `<h1>` in six languages (title
+   moved into the hero richtext, heading block disabled) and a fifth card, Collagen Skincare, in six languages
+   (`configs/hub-upgrades/skin-concerns-h1-collagen-card-2026-10-09.json`); the FAQ item "Are peptides safe for sensitive skin?
+   Yes … paraben-free" is **disabled** (translations kept) until Malcolm approves register wording, because it made an
+   unsupported safety claim and a "free from" claim.
+3. **The four older concern pages link up to the hub** in their "Related Skin Solutions" intro, six languages, each linking to
+   its own locale's hub (`configs/hub-upgrades/*-hub-uplink-2026-10-09.json`). Two of the four registrations did not stick on
+   the first run (Shopify accepted them, then held no translation); re-registered and verified 24 of 24.
+4. **The cluster is declared** (`hub_url` / `hub` = `/pages/skin-concerns` on the five concern pages in seo-toolkit
+   `configs/skingenetix.config.json`, commit 1d1d5c7, and `configs/page-targets.json`), after the central auditor stopped reading
+   Impact's `multiple-images-with-text__content-with-nav` card links as navigation (seo-toolkit 7cfb5b3, reported from here).
+   Collagen Skincare's audit: 9.9, zero confirmed failures, P1 to P4 pass.
+5. **The empty Learn blog is hidden** (`seo.hidden` = 1: noindex, out of the sitemap) until spoke 1 is published; whoever
+   publishes it sets the metafield back to 0 (`gid://shopify/Blog/118556918145`).
+6. **The nine product pages, English drafts** (plan step 1.2) in `docs/drafts/product-pages-2026-10-09/`, with the review pack
+   `docs/review-2026-10-09-product-pages.md`. Nothing live until Malcolm approves each page.
+
+**Undo:** `python3 scripts/hero-reveal-off.py --all --undo --apply`; `scripts/hub-upgrade.py <spec> --rollback` per spec;
+`scripts/disable-block.py templates/page.skin-concerns.json hero heading --enable --apply` (and `faq f5`); the Learn metafield
+to 0.
+
 ## ADR-2026-10-08-X: Collagen Skincare optimised for the audit and for speed; ADR-2026-09-29-D's "products up front" amended
 
 **Date:** 2026-10-08

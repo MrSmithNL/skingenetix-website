@@ -359,7 +359,9 @@ def blog_spec(preview=False):
         "remove_sections": ["start"],
         "section_css": {
             # phones: the science pages' darker overlay (60) under white text; the search field under the intro
-            "hero": ["@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }"],
+            "hero": ["@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }",
+                     # the banner shows at once, no fade (scripts/hero-reveal-off.py, ADR-2026-10-08-X; 2026-10-09)
+                     "image-banner{opacity:1!important}"],
             # the ingredient label on each card: the theme's primary badge is purple, off-brand here. The banner's
             # <h1> is hidden visually only (the title shows on the photo); the label row is its own section (LABELS_LIQUID).
             # critic F5: the photo badge was 11px (9px on phones) beside the lead card's 13px; F10: excerpts 15px

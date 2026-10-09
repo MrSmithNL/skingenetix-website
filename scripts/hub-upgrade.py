@@ -244,7 +244,10 @@ def build(spec, j):
         for r in rules:
             if top_level_statements(r) > 1:
                 sys.exit(f"  ✗ section_css {sid}: {r[:60]!r} holds more than one statement; give each rule or @media its own entry")
-        j["sections"][sid]["custom_css"] = list(rules)
+        # keep the hero's no-fade rule when a spec's list predates it (scripts/hero-reveal-off.py, ADR-2026-10-08-X;
+        # Claude, 2026-10-09): a re-apply would otherwise bring the ~10 s fade back
+        keep = [r for r in j["sections"][sid].get("custom_css", []) if r == "image-banner{opacity:1!important}" and r not in rules]
+        j["sections"][sid]["custom_css"] = list(rules) + keep
     host = spec.get("jsonld_host", "references")
     tag = '<script type="application/ld+json" id="sgx-webpage-jsonld">'
     if spec.get("references_add"):

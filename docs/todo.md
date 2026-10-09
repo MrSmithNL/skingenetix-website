@@ -119,11 +119,18 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
 - ✅ **Collagen page, 2026-10-08 evening:** the three result cards alternate image left/right (Malcolm); JSON-LD product mentions by
   `@id` (audit S2 fixed); on "make the changes so that the collagen page scores maximum", the grid below the explanation (X1 met)
   and the hero's fade neutralised on this page only (live largest paint 4.0 and 4.4 s, was about 14 s), ADR-2026-10-08-X.
-- ⏳ **Skin Concerns hub, three faults found 2026-10-08:** (1) no card or prose link to Collagen Skincare, so the hub does not link
-  its fifth spoke (draft English card waits for Malcolm, then six languages; then declare `hub_url: /pages/skin-concerns` for the
-  five concern pages in seo-toolkit's keyword map so P3/P5 are assessed); (2) no `<h1>` (the hero heading block renders
-  `<p class="h1">`; same fix as ADR-2026-10-08-W item 2); (3) FAQ "Are peptides safe for sensitive skin? Yes." (a register-breaking
-  phrase already replaced on the concern pages).
+- ✅ **2026-10-09 (ADR-2026-10-09-Y), live and verified:** hero no-fade rule on 23 templates (`scripts/hero-reveal-off.py`);
+  Skin Concerns real H1 + fifth card Collagen Skincare (six languages); the four older concern pages link up to the hub (six
+  languages, 24/24 verified); cluster declared in both keyword maps (seo-toolkit 1d1d5c7, after the auditor fix 7cfb5b3); Collagen
+  audit 9.9 with P3 passing; empty Learn blog hidden (`seo.hidden` = 1, set back to 0 when spoke 1 publishes).
+- ⏳ **Skin Concerns FAQ f5 is disabled** ("Are peptides safe for sensitive skin? Yes … paraben-free"): register wording drafted for
+  Malcolm (in the 2026-10-09 session report); on his yes, replace in six languages and re-enable (`scripts/disable-block.py
+  templates/page.skin-concerns.json faq f5 --enable --apply`). FAQ f3 (how the solutions differ) does not name Collagen yet.
+- ⏳ **Product pages, plan step 1.2:** nine English drafts and the review pack `docs/review-2026-10-09-product-pages.md` wait for
+  Malcolm (per page yes/edits/no; decisions 3, 8, 15; the "free from" line; carton facts).
+- ⏳ **Home page slideshow speed:** not covered by the hero rule (a slideshow, not an image banner); local A/B still to run.
+- ⏳ **`tests/test_hub_i18n.py::test_rebuilds_the_live_argireline_translations_exactly` fails** on main (before 2026-10-09's
+  changes too): its fixture predates the 2026-10-08 claim and credit fixes on the Argireline hub. Refresh the fixture.
 - ✅ Explainer live (Malcolm, 2026-10-08: "use A7 nbp_pro 02"): r2 slot A (blue water under a lifted film), uploaded as
   `skingenetix-collagen-cream-moisture-film-skin-layers-explainer.jpg` (`configs/banners/collagen-skincare-explainer-publish-2026-10-08.json`);
   the `answer` section is now a media-with-text with the image beside "Do Collagen Creams Work?" (the `<h2>` stays in the content).

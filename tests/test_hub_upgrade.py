@@ -447,3 +447,24 @@ def test_english_first_verify_reads_the_english_preview_only(monkeypatch):
     assert hu.verify(spec) == 0
     assert len(fetched) == 1 and "/pages/collagen-skin-plumping?view=collagen-skincare" in fetched[0]
     assert "/de/" not in fetched[0]
+
+
+# ── the hero's no-fade rule survives a spec re-apply (2026-10-09, ADR-2026-10-08-X) ─────────────────────────────
+# scripts/hero-reveal-off.py adds `image-banner{opacity:1!important}` to each hero's Custom CSS. A spec written
+# before it sets the whole list, so without a guard a re-apply would bring the ~10 s fade back.
+
+NO_FADE = "image-banner{opacity:1!important}"
+
+
+def test_section_css_keeps_the_hero_no_fade_rule_a_spec_predates():
+    j = template()
+    j["sections"]["faq"]["custom_css"] = ["h1{color:red}", NO_FADE]
+    hu.build({"section_css": {"faq": ["h1{color:blue}"]}}, j)
+    assert j["sections"]["faq"]["custom_css"] == ["h1{color:blue}", NO_FADE]
+
+
+def test_section_css_does_not_double_the_no_fade_rule():
+    j = template()
+    j["sections"]["faq"]["custom_css"] = [NO_FADE]
+    hu.build({"section_css": {"faq": ["h1{color:blue}", NO_FADE]}}, j)
+    assert j["sections"]["faq"]["custom_css"] == ["h1{color:blue}", NO_FADE]
