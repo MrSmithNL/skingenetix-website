@@ -131,10 +131,10 @@ backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
   `com.skingenetix.visibility-monitor` (Mondays 08:30). Heroes must follow decision 3 once Malcolm answers it.
 - ⏳ **Decision 3 (keyword ownership)** shown to Malcolm as a validated page (`~/Desktop/skingenetix-decision-3-keyword-plan.html`):
   every move checked against today's Search Console, volumes and SERP intent; waits for "approve all" or strikes.
-- ⏳ **PageSpeed and CrUX APIs:** enabled by Malcolm 2026-10-09, but the key (ending …8_hQ) restricts which APIs it may call: add both
-  to the key's API restrictions (Credentials, project 62087691133), then the audits get real-visitor speed data.
-  Re-tested 13:15: still `API_KEY_SERVICE_BLOCKED`. The Google Cloud CLI is now installed (2026-10-09), so once Malcolm runs
-  `gcloud auth login` once, Claude reads the key's current list and adds both APIs itself, then re-tests one URL before any batch.
+- ✅ **PageSpeed and CrUX APIs working 2026-10-09 13:27.** Malcolm enabled both APIs and signed in to the new Google Cloud CLI;
+  Claude added both to the key's allow-list (key …8_hQ on project `gen-lang-client-0740290272`), keeping Gemini on it. Verified:
+  PageSpeed returns lab and field data, CrUX returns records, Gemini still works. Query CrUX with `https://www.skingenetix.com`
+  (the bare domain has no data and returns 404). Next: run the forensics `vitals` step for our pages and the competitors.
 - ✅ **Spoke 1 published 2026-10-09** (Malcolm: "publish the Argireline and Matrixyl 3000 together article"):
   `/blogs/learn/argireline-and-matrixyl-3000-together`, indexable, live audit 9.9 (only failure: sitemap lag right after
   publishing); drafts-blog copy unpublished; Learn blog un-hidden (`seo.hidden` = 0) and comments closed; "DRAFT for Malcolm"
