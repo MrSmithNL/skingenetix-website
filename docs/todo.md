@@ -133,6 +133,8 @@ backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
   every move checked against today's Search Console, volumes and SERP intent; waits for "approve all" or strikes.
 - ⏳ **PageSpeed and CrUX APIs:** enabled by Malcolm 2026-10-09, but the key (ending …8_hQ) restricts which APIs it may call: add both
   to the key's API restrictions (Credentials, project 62087691133), then the audits get real-visitor speed data.
+  Re-tested 13:15: still `API_KEY_SERVICE_BLOCKED`. The Google Cloud CLI is now installed (2026-10-09), so once Malcolm runs
+  `gcloud auth login` once, Claude reads the key's current list and adds both APIs itself, then re-tests one URL before any batch.
 - ✅ **Spoke 1 published 2026-10-09** (Malcolm: "publish the Argireline and Matrixyl 3000 together article"):
   `/blogs/learn/argireline-and-matrixyl-3000-together`, indexable, live audit 9.9 (only failure: sitemap lag right after
   publishing); drafts-blog copy unpublished; Learn blog un-hidden (`seo.hidden` = 0) and comments closed; "DRAFT for Malcolm"
