@@ -18,17 +18,17 @@ Answer per product with **yes**, **yes with edits** (say which), or **no**.
 
 ## The nine drafts
 
-| Product | Draft | Proposed SEO title | Waits on |
-|---|---|---|---|
-| Argireline serum | [draft](drafts/product-pages-2026-10-09/acetyl-hexapeptide-8-anti-wrinkle-serum.md) | Argireline Serum 10% for Expression Lines \| Skingenetix | decision 3a (may the title say "Argireline"?) |
-| Matrixyl 3000 serum | [draft](drafts/product-pages-2026-10-09/matrixyl-3000-firming-serum.md) | Matrixyl 3000 Serum with Vitamin C and Pentapeptide-4 | decision 3c (also "firming serum"?) |
-| Matrixyl 3000 Pro-Collagen cream | [draft](drafts/product-pages-2026-10-09/matrixyl-3000-pro-collagen-firming-cream.md) | Matrixyl Cream with Collagen: Matrixyl 3000, 50 ml | decision 3b ("skin firming cream"?) |
-| Copper peptide serum | [draft](drafts/product-pages-2026-10-09/copper-peptide-ghk-cu-renewal-serum.md) | Copper Peptide Serum 2% GHK-Cu with Vitamin C \| Skingenetix | none |
-| Copper peptide night cream | [draft](drafts/product-pages-2026-10-09/copper-peptide-ghk-cu-night-cream.md) | GHK-Cu Copper Peptide Cream 2%, Night Cream \| Skingenetix | the full ingredient list (below) |
-| Copper peptide day gel-cream | [draft](drafts/product-pages-2026-10-09/copper-peptide-ghk-cu-day-gel-cream.md) | Copper Peptide Day Cream 2% GHK-Cu Gel-Cream \| Skingenetix | none |
-| PDRN serum | [draft](drafts/product-pages-2026-10-09/pdrn-renewal-serum.md) | PDRN Serum 1% with Salmon DNA, 30 ml \| Skingenetix | none |
-| PDRN collagen night cream | [draft](drafts/product-pages-2026-10-09/pdrn-collagen-night-cream.md) | PDRN Cream 1% with Collagen: Night Cream \| Skingenetix | none |
-| Glutathione serum | [draft](drafts/product-pages-2026-10-09/glutathione-brightening-serum.md) | Glutathione Serum with Vitamin C & Niacinamide \| Skingenetix | decision 3c, the "2%" certificate |
+| Product                          | Draft                                                                                | Proposed SEO title                                            | Waits on                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------- | --------------------------------------------- |
+| Argireline serum                 | [draft](drafts/product-pages-2026-10-09/acetyl-hexapeptide-8-anti-wrinkle-serum.md)  | Argireline Serum 10% for Expression Lines \| Skingenetix      | decision 3a (may the title say "Argireline"?) |
+| Matrixyl 3000 serum              | [draft](drafts/product-pages-2026-10-09/matrixyl-3000-firming-serum.md)              | Matrixyl 3000 Serum with Vitamin C and Pentapeptide-4         | decision 3c (also "firming serum"?)           |
+| Matrixyl 3000 Pro-Collagen cream | [draft](drafts/product-pages-2026-10-09/matrixyl-3000-pro-collagen-firming-cream.md) | Matrixyl Cream with Collagen: Matrixyl 3000, 50 ml            | decision 3b ("skin firming cream"?)           |
+| Copper peptide serum             | [draft](drafts/product-pages-2026-10-09/copper-peptide-ghk-cu-renewal-serum.md)      | Copper Peptide Serum 2% GHK-Cu with Vitamin C \| Skingenetix  | none                                          |
+| Copper peptide night cream       | [draft](drafts/product-pages-2026-10-09/copper-peptide-ghk-cu-night-cream.md)        | GHK-Cu Copper Peptide Cream 2%, Night Cream \| Skingenetix    | the full ingredient list (below)              |
+| Copper peptide day gel-cream     | [draft](drafts/product-pages-2026-10-09/copper-peptide-ghk-cu-day-gel-cream.md)      | Copper Peptide Day Cream 2% GHK-Cu Gel-Cream \| Skingenetix   | none                                          |
+| PDRN serum                       | [draft](drafts/product-pages-2026-10-09/pdrn-renewal-serum.md)                       | PDRN Serum 1% with Salmon DNA, 30 ml \| Skingenetix           | none                                          |
+| PDRN collagen night cream        | [draft](drafts/product-pages-2026-10-09/pdrn-collagen-night-cream.md)                | PDRN Cream 1% with Collagen: Night Cream \| Skingenetix       | none                                          |
+| Glutathione serum                | [draft](drafts/product-pages-2026-10-09/glutathione-brightening-serum.md)            | Glutathione Serum with Vitamin C & Niacinamide \| Skingenetix | decision 3c, the "2%" certificate             |
 
 Every draft: the owner keyword in the title and first line; two cited facts from the register in plain words; what to
 combine and how to layer; who it is for; links up to the ingredient page, across to the study article and to one
@@ -83,8 +83,11 @@ Window 21's adjacent-keyword pull (`audits/2026-10-09-new-article-keywords/`) pr
   3000 serum.
 - **"derma stamp" / "dermastamp"** (8,154 and 3,322 US) belong on the two stamp-set product pages (not in this pack), with the
   face wording explicit ("derma stamp for face"): the "how to use a derma stamp" searches are about hair growth.
-- **"salmon sperm serum" / "salmon sperm skin care"** are planned for a new article (salmon sperm facial vs PDRN serum), so the
-  PDRN drafts do not target them; their "Is PDRN salmon sperm?" answer only replies to the question searchers ask.
+- **"salmon sperm serum"** (201 US, 79 GB) and **"salmon sperm cream"** (50 US, 79 GB) are shopping searches: corrected by the
+  research window after its teardown, they belong on the PDRN serum and PDRN night cream pages. Both drafts already answer "Is
+  PDRN salmon sperm?" in the FAQ; on your yes, the two terms become those pages' secondary terms. The informational terms ("salmon
+  sperm skin care" 703 US, "salmon sperm facial", "salmon dna facial") stay with the planned article
+  (`audits/2026-10-09-new-article-keywords/teardowns/pdrn-salmon-polynucleotides.md`).
 
 ## What I need from you
 
