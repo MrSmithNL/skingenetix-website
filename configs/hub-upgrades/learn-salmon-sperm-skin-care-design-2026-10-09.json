@@ -1,5 +1,5 @@
 {
-  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, and images where appropriate) as a minimum. This moves /blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial off the stock article template onto its own, built from the modules the study and science pages use, and designed around the design critic's cycle-1 verdict on the Argireline + Matrixyl build (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): both tables phone-safe (wrapper min-width:0, rows stack under 700 px, no table min-width); white and bone alternate, with plain text sections between image sections and only two 50/50 rows on the page; key figures one size down (ratio 0.5) with the Ye frame and link; the byline under the banner subline; related row square with named links and on white (footer is #F7F7F7); no product photograph beside the safety copy; no watermarked step photo; no image of anything passing into the skin (the PDRN mechanism diagram draws beams into the dermis, so it is not used, register 'reaches the dermis' avoid line); clinic prices eight sections away from the product. The byline uses commas, not middle dots (Rule 27 check A bans middle-dot meta lines). Sections: banner (PDRN hub DNA frame, its 1.048:1 phone crop) / key figures / lead and short answers / is it real sperm / the names table / three routes / clinic prices / does it work, the routes table and the Ye frame / what a serum or cream can do, with the Ye eye-bag card (illustration and labels as on the Ye study page, slot ye.o4) / safety, the four cautions as icons, the safety close and the legal question / how to read a label / the PDRN serum and night cream / related reads. Every passage is the approved, live article text, cut verbatim from configs/learn/drafts/salmon-sperm-skincare-vs-the-salmon-sperm-facial.json (internal links made relative); built by scratchpad make_salmon_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial?view=learn-salmon-sperm-skin-care until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #9E4F5C; table parents, figure size, 65ch, tap targets, byline).",
+  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, and images where appropriate) as a minimum. This moves /blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial off the stock article template onto its own, built from the modules the study and science pages use, and designed around the design critic's cycle-1 verdict on the Argireline + Matrixyl build (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): both tables phone-safe (wrapper min-width:0, rows stack under 700 px, no table min-width); white and bone alternate, with plain text sections between image sections and only two 50/50 rows on the page; key figures one size down (ratio 0.5) with the Ye frame and link; the byline under the banner subline; related row square with named links and on white (footer is #F7F7F7); no product photograph beside the safety copy; no watermarked step photo; no image of anything passing into the skin (the PDRN mechanism diagram draws beams into the dermis, so it is not used, register 'reaches the dermis' avoid line); clinic prices eight sections away from the product. The byline uses commas, not middle dots (Rule 27 check A bans middle-dot meta lines). Sections: banner (PDRN hub DNA frame, its 1.048:1 phone crop) / key figures / lead and short answers / is it real sperm / the names table / three routes / clinic prices / does it work, the routes table and the Ye frame / what a serum or cream can do, with the Ye eye-bag card (illustration and labels as on the Ye study page, slot ye.o4) / safety, the four cautions as icons, the safety close and the legal question / how to read a label / the PDRN serum and night cream / related reads. Every passage is the approved, live article text, cut verbatim from configs/learn/drafts/salmon-sperm-skincare-vs-the-salmon-sperm-facial.json (internal links made relative); built by scratchpad make_salmon_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial?view=learn-salmon-sperm-skin-care until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #9E4F5C; table parents, figure size, 65ch, tap targets, byline). Cycle-1 critic fixes (docs/audits/2026-10-09-learn-salmon-sperm-design-critic-cycle-1.md): eye-bag card relabelled so it never reads as a trial photograph, white grounds, legal spacing, 65ch in the table sections, card titles 26 px, H2s 28/38 px as on the hubs, related links scoped. Critic cycle 2 (salmon) applied 2026-10-09: sperm ground painted white, names/work measure and H2 size fixed (.prose>div>p), one 32rem reading axis, icon row inside it, Shop button, centred two-up products, zoom sizes. Round 2 (2026-10-09): CTA styled as the theme button; headers on the 32rem axis. Round 3 (2026-10-09): reading column width:100%; salmon tables carry their own stacking style.",
   "english_first": true,
   "create": true,
   "template": "templates/article.learn-salmon-sperm-skin-care.json",
@@ -117,7 +117,9 @@
         "block_order": ["s1", "s2", "s3"],
         "custom_css": [
           "h3.h4{font-size:20px}",
-          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}"
+          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}",
+          "@media screen and (max-width:699px){h3.h4{font-size:16px}}",
+          "@media screen and (max-width:320px){.impact-text__text{font-size:28px!important}}"
         ]
       }
     },
@@ -152,8 +154,10 @@
         },
         "block_order": ["lead", "short"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -165,7 +169,8 @@
         "settings": {
           "full_width": false,
           "alternate_media_position": false,
-          "spacing": "small"
+          "spacing": "small",
+          "background": "#FFFFFF"
         },
         "blocks": {
           "m": {
@@ -178,7 +183,7 @@
               "icon": "none",
               "icon_width": 48,
               "title": "",
-              "background": "#FFFFFF",
+              "background": "#F0F0F0",
               "text_color": "#1a1a1a",
               "content": {
                 "en": "<h2>Is salmon sperm skincare made from actual sperm?</h2><p>The raw material is the milt of salmon or related fish. A 2021 review describes PDRN as DNA fragments &ldquo;mainly extracted from the sperm cells of salmon trout or chum salmon&rdquo; (Kim 2021). That is where the nickname comes from.</p><p>The ingredient itself is a purified extract. The process removes the proteins and leaves DNA fragments, so the label says &ldquo;sodium DNA&rdquo;, not sperm. Our own PDRN serum lists &ldquo;1% PDRN (10,000 ppm), salmon-derived sodium DNA&rdquo;.</p>"
@@ -187,7 +192,12 @@
           }
         },
         "block_order": ["m"],
-        "custom_css": [".prose a:not(.button){color:#9E4F5C;text-decoration:underline}"]
+        "custom_css": [
+          ".prose a:not(.button){color:#9E4F5C;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".section{background:#FFFFFF}"
+        ]
       }
     },
     {
@@ -197,7 +207,7 @@
         "type": "rich-text",
         "settings": {
           "full_width": true,
-          "content_width": "medium",
+          "content_width": "large",
           "text_position": "start",
           "background": "#F0F0F0"
         },
@@ -214,7 +224,7 @@
             "type": "liquid",
             "settings": {
               "liquid": {
-                "en": "<div class=\"sgt\"><table><thead><tr><th>Where the name appears</th><th>Name used</th><th>Fragment size</th></tr></thead><tbody><tr><td><strong>Ye 2026 eye-cream trial</strong></td><td><span class=\"l\">Name used</span>PDRN</td><td><span class=\"l\">Fragment size</span>850 kDa or less</td></tr><tr><td><strong>Yogya 2022 clinic microneedling trial</strong></td><td><span class=\"l\">Name used</span>polynucleotide</td><td><span class=\"l\">Fragment size</span>65 to 130 kDa</td></tr><tr><td><strong>2025 naming proposal (Marques)</strong></td><td><span class=\"l\">Name used</span>PDRN under 1,500 kDa; PN at 1,500 kDa or more</td><td><span class=\"l\">Fragment size</span>by definition</td></tr></tbody></table></div>"
+                "en": "<style>.sgt .l{display:none}@media(max-width:699px){.sgt :is(tbody,tr,td){display:block}.sgt thead{display:none}.sgt tr{padding:8px 0;border-top:2px solid #3E4A52}.sgt td{border:0;padding:2px 0}.sgt .l{display:block;font-size:13px;color:#555}}</style><div class=\"sgt\"><table><thead><tr><th>Where the name appears</th><th>Name used</th><th>Fragment size</th></tr></thead><tbody><tr><td><strong>Ye 2026 eye-cream trial</strong></td><td><span class=\"l\">Name used</span>PDRN</td><td><span class=\"l\">Fragment size</span>850 kDa or less</td></tr><tr><td><strong>Yogya 2022 clinic microneedling trial</strong></td><td><span class=\"l\">Name used</span>polynucleotide</td><td><span class=\"l\">Fragment size</span>65 to 130 kDa</td></tr><tr><td><strong>2025 naming proposal (Marques)</strong></td><td><span class=\"l\">Name used</span>PDRN under 1,500 kDa; PN at 1,500 kDa or more</td><td><span class=\"l\">Fragment size</span>by definition</td></tr></tbody></table></div>"
               }
             }
           },
@@ -229,12 +239,13 @@
         },
         "block_order": ["intro", "table", "after"],
         "custom_css": [
-          ".sgt{min-width:0;max-width:100%;overflow-x:auto}",
+          ".sgt{max-width:100%;overflow:auto}",
           ".sgt table{width:100%;border-collapse:collapse}",
-          ".sgt th,.sgt td{padding:10px;border-bottom:1px solid #ccc;text-align:left;vertical-align:top}",
-          ".sgt th{border-bottom:2px solid #3E4A52}",
-          ".sgt .l{display:none}",
-          "@media screen and (max-width: 699px){.sgt tbody,.sgt tr,.sgt td{display:block}.sgt thead{display:none}.sgt tr{padding:8px 0;border-top:2px solid #3E4A52}.sgt td{border:0;padding:2px 0}.sgt .l{display:block;font-size:13px;color:#555}}"
+          ".sgt :is(th,td){padding:10px;border-bottom:1px solid #ccc;text-align:left;vertical-align:top}",
+          ".prose>*{min-width:0;width:100%}",
+          ".prose :is(p,h2){max-width:32rem;margin-inline:auto}",
+          "h2{font-size:clamp(28px,2.6vw,38px)}",
+          ".rich-text__wrapper{width:100%}"
         ]
       }
     },
@@ -298,7 +309,12 @@
           }
         },
         "block_order": ["r1", "r2", "r3"],
-        "custom_css": ["p,ul{max-width:65ch}"]
+        "custom_css": [
+          "p,ul{max-width:65ch}",
+          "p.h3{font-size:26px}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}"
+        ]
       }
     },
     {
@@ -324,8 +340,10 @@
         },
         "block_order": ["p"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -336,7 +354,7 @@
         "type": "rich-text",
         "settings": {
           "full_width": true,
-          "content_width": "medium",
+          "content_width": "large",
           "text_position": "start",
           "background": "#F0F0F0"
         },
@@ -353,7 +371,7 @@
             "type": "liquid",
             "settings": {
               "liquid": {
-                "en": "<div class=\"sgt\"><table><thead><tr><th>Route</th><th>Who does it</th><th>Best human evidence</th><th>What it measured</th><th>What it does not show</th></tr></thead><tbody><tr><td><strong>Injection (&ldquo;skin booster&rdquo;)</strong></td><td><span class=\"l\">Who does it</span>A medical practitioner</td><td><span class=\"l\">Best human evidence</span>Reviews of 7 trials (183 people) and 9 studies (219 patients), mostly injected (Alhussain 2026; Lampridou 2025)</td><td><span class=\"l\">What it measured</span>Called &ldquo;promising&rdquo;; the studies were &ldquo;of low and moderate quality&rdquo;</td><td><span class=\"l\">What it does not show</span>Anything about a product used at home</td></tr><tr><td><strong>Microneedling plus polynucleotide serum (clinic facial)</strong></td><td><span class=\"l\">Who does it</span>A clinic</td><td><span class=\"l\">Best human evidence</span><a href=\"/blogs/clinical-studies/pdrn-microneedling-split-face-trial-yogya-2022\">The microneedling trial</a> (Yogya 2022): 29 women, split face, 0.3% serum vs saline after radiofrequency microneedling</td><td><span class=\"l\">What it measured</span>Wrinkle indentation around the eyes improved significantly within 2 months on the serum side, and 6 months on the saline side</td><td><span class=\"l\">What it does not show</span>That the result transfers to a leave-on serum on intact skin</td></tr><tr><td><strong>Leave-on cream at home</strong></td><td><span class=\"l\">Who does it</span>You</td><td><span class=\"l\">Best human evidence</span><a href=\"/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">The 31-woman split-face trial</a> (Ye 2026): 0.1% PDRN eye cream vs 0.1% retinol, 28 days, no placebo</td><td><span class=\"l\">What it measured</span>Crow&rsquo;s-feet wrinkle area fell 23.0% on the PDRN side, against 6.6% with retinol: more than three times the improvement</td><td><span class=\"l\">What it does not show</span>A result for our product, or against a plain cream</td></tr></tbody></table></div>"
+                "en": "<style>.sgt .l{display:none}@media(max-width:699px){.sgt :is(tbody,tr,td){display:block}.sgt thead{display:none}.sgt tr{padding:8px 0;border-top:2px solid #3E4A52}.sgt td{border:0;padding:2px 0}.sgt .l{display:block;font-size:13px;color:#555}}</style><div class=\"sgt\"><table><thead><tr><th>Route</th><th>Who does it</th><th>Best human evidence</th><th>What it measured</th><th>What it does not show</th></tr></thead><tbody><tr><td><strong>Injection (&ldquo;skin booster&rdquo;)</strong></td><td><span class=\"l\">Who does it</span>A medical practitioner</td><td><span class=\"l\">Best human evidence</span>Reviews of 7 trials (183 people) and 9 studies (219 patients), mostly injected (Alhussain 2026; Lampridou 2025)</td><td><span class=\"l\">What it measured</span>Called &ldquo;promising&rdquo;; the studies were &ldquo;of low and moderate quality&rdquo;</td><td><span class=\"l\">What it does not show</span>Anything about a product used at home</td></tr><tr><td><strong>Microneedling plus polynucleotide serum (clinic facial)</strong></td><td><span class=\"l\">Who does it</span>A clinic</td><td><span class=\"l\">Best human evidence</span><a href=\"/blogs/clinical-studies/pdrn-microneedling-split-face-trial-yogya-2022\">The microneedling trial</a> (Yogya 2022): 29 women, split face, 0.3% serum vs saline after radiofrequency microneedling</td><td><span class=\"l\">What it measured</span>Wrinkle indentation around the eyes improved significantly within 2 months on the serum side, and 6 months on the saline side</td><td><span class=\"l\">What it does not show</span>That the result transfers to a leave-on serum on intact skin</td></tr><tr><td><strong>Leave-on cream at home</strong></td><td><span class=\"l\">Who does it</span>You</td><td><span class=\"l\">Best human evidence</span><a href=\"/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">The 31-woman split-face trial</a> (Ye 2026): 0.1% PDRN eye cream vs 0.1% retinol, 28 days, no placebo</td><td><span class=\"l\">What it measured</span>Crow&rsquo;s-feet wrinkle area fell 23.0% on the PDRN side, against 6.6% with retinol: more than three times the improvement</td><td><span class=\"l\">What it does not show</span>A result for our product, or against a plain cream</td></tr></tbody></table></div>"
               }
             }
           },
@@ -368,12 +386,13 @@
         },
         "block_order": ["intro", "table", "frame"],
         "custom_css": [
-          ".sgt{min-width:0;max-width:100%;overflow-x:auto}",
+          ".sgt{max-width:100%;overflow:auto}",
           ".sgt table{width:100%;border-collapse:collapse}",
-          ".sgt th,.sgt td{padding:10px;border-bottom:1px solid #ccc;text-align:left;vertical-align:top}",
-          ".sgt th{border-bottom:2px solid #3E4A52}",
-          ".sgt .l{display:none}",
-          "@media screen and (max-width: 699px){.sgt tbody,.sgt tr,.sgt td{display:block}.sgt thead{display:none}.sgt tr{padding:8px 0;border-top:2px solid #3E4A52}.sgt td{border:0;padding:2px 0}.sgt .l{display:block;font-size:13px;color:#555}}"
+          ".sgt :is(th,td){padding:10px;border-bottom:1px solid #ccc;text-align:left;vertical-align:top}",
+          ".prose>*{min-width:0;width:100%}",
+          ".prose :is(p,h2){max-width:32rem;margin-inline:auto}",
+          "h2{font-size:clamp(28px,2.6vw,38px)}",
+          ".rich-text__wrapper{width:100%}"
         ]
       }
     },
@@ -400,8 +419,10 @@
         },
         "block_order": ["intro"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -423,16 +444,16 @@
                 "en": "Before"
               },
               "after_label": {
-                "en": "After 28 days"
+                "en": "After"
               },
               "result_label": {
-                "en": "Eye-bag volume −14.8% vs −10.2% with retinol"
+                "en": "Ye 2026, PDRN side: −14.8% (retinol side −10.2%)"
               },
               "note_label": "",
               "label_background": "#1a1a1a",
               "label_text_color": "#ffffff",
               "subheading": {
-                "en": "Eye bags, Ye 2026 eye-cream trial"
+                "en": "What a 14.8% smaller eye bag looks like"
               },
               "title": {
                 "en": "A larger fall, not double"
@@ -444,7 +465,13 @@
           }
         },
         "block_order": ["f1"],
-        "custom_css": [".rba__text .h2{font-size:var(--text-h3, 2rem)}", ".rba__row{--rba-card-bg:#F0F0F0}"]
+        "custom_css": [
+          ".rba__text .h2{font-size:var(--text-h3, 2rem)}",
+          ".rba__row{--rba-card-bg:#F0F0F0}",
+          ".section{background:#FFFFFF}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}"
+        ]
       }
     },
     {
@@ -470,8 +497,10 @@
         },
         "block_order": ["intro"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -538,7 +567,12 @@
           }
         },
         "block_order": ["a1", "a2", "a3", "a4"],
-        "custom_css": ["p,ul{max-width:65ch}"]
+        "custom_css": [
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          "@media screen and (min-width:700px){.text-with-icons{max-width:32rem;margin-inline:auto;--text-with-icons-template:repeat(2,minmax(0,1fr))}}",
+          ".text-with-icons{--text-with-icons-justify:start;--text-with-icons-text-align:start}"
+        ]
       }
     },
     {
@@ -572,8 +606,11 @@
         },
         "block_order": ["close", "law"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}",
+          ".prose h2{margin-top:72px}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -647,7 +684,12 @@
           }
         },
         "block_order": ["k1", "k2", "k3", "k4"],
-        "custom_css": ["p,ul{max-width:65ch}"]
+        "custom_css": [
+          "p,ul{max-width:65ch}",
+          "p.h3{font-size:26px}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}"
+        ]
       }
     },
     {
@@ -668,10 +710,21 @@
           "content": {
             "en": "<p>Our <a href=\"/products/pdrn-renewal-serum\">1% PDRN serum</a> lists its amount and source on the label. It is a cosmetic, and the trials in this article tested the ingredient, not the serum.</p>"
           },
-          "link_text": "",
-          "background": "#F0F0F0"
+          "link_text": {
+            "en": "Shop the PDRN Renewal Serum"
+          },
+          "background": "#F0F0F0",
+          "link_url": "shopify://products/pdrn-renewal-serum"
         },
-        "custom_css": ["p,ul{max-width:65ch}"]
+        "custom_css": [
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".product-list{max-width:56rem;margin-inline:auto}",
+          ".section-header{max-width:32rem;margin-inline:auto;width:100%}",
+          ".section-header>a{background:#9E4F5C;color:#fff;padding:17px 40px;border-radius:60px;font-weight:700}",
+          ".section-header .circle-chevron{display:none}",
+          ".section-header .reversed-link{background:none}"
+        ]
       }
     },
     {
@@ -762,7 +815,13 @@
           }
         },
         "block_order": ["r1", "r2", "r3", "r4"],
-        "custom_css": ["p,ul{max-width:65ch}", "a{display:inline-block;padding-block:13px}"]
+        "custom_css": [
+          "p,ul{max-width:65ch}",
+          ".v-stack a{display:inline-block;padding-block:13px;background-origin:content-box}",
+          "p.h3{font-size:26px}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}"
+        ]
       }
     }
   ]

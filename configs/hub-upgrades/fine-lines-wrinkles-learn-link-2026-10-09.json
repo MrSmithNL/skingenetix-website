@@ -1,0 +1,18 @@
+{
+  "_about": "2026-10-09: the Skin Solutions page links down to its Learn spoke on crow's feet (P3 'the hub does not link back to this page'; content strategy hub-and-spoke, Rule 27 check C). Builds on fine-lines-wrinkles-hub-uplink-2026-10-09.json: the 'Related Skin Solutions' intro keeps its skin-concerns line and gains one sentence, six languages. The Learn article is English-only until the 14-day measurement, so the five translations link to their own locale's URL and say the article is in English; drop that marker when the article is translated. Set-only. Undo: --rollback.",
+  "template": "templates/page.fine-lines-wrinkles.json",
+  "page": "fine-lines-wrinkles",
+  "set": [
+    {
+      "at": "related/content",
+      "values": {
+        "en": "<p>Or browse <a href=\"/pages/skin-concerns\">all skin concerns</a>. For the lines at the outer corners of the eyes, read <a href=\"/blogs/learn/crows-feet-what-causes-them-and-what-helps\">Crow’s feet: what causes them and what really helps</a>.</p>",
+        "de": "<p>Oder sieh dir <a href=\"/de/pages/skin-concerns\">alle Hautanliegen</a> an. Zu den Linien an den äußeren Augenwinkeln lies <a href=\"/de/blogs/learn/crows-feet-what-causes-them-and-what-helps\">Krähenfüße: was sie verursacht und was wirklich hilft</a> (auf Englisch).</p>",
+        "nl": "<p>Of bekijk <a href=\"/nl/pages/skin-concerns\">alle huidproblemen</a>. Over de lijntjes bij de buitenste ooghoeken: lees <a href=\"/nl/blogs/learn/crows-feet-what-causes-them-and-what-helps\">Kraaienpootjes: wat ze veroorzaakt en wat echt helpt</a> (in het Engels).</p>",
+        "fr": "<p>Ou parcourez <a href=\"/fr/pages/skin-concerns\">toutes les préoccupations cutanées</a>. Pour les rides au coin externe des yeux, lisez <a href=\"/fr/blogs/learn/crows-feet-what-causes-them-and-what-helps\">Pattes-d’oie : leurs causes et ce qui aide vraiment</a> (en anglais).</p>",
+        "es": "<p>O consulta <a href=\"/es/pages/skin-concerns\">todas las preocupaciones de piel</a>. Para las líneas del rabillo del ojo, lee <a href=\"/es/blogs/learn/crows-feet-what-causes-them-and-what-helps\">Patas de gallo: qué las causa y qué ayuda de verdad</a> (en inglés).</p>",
+        "it": "<p>Oppure scopri <a href=\"/it/pages/skin-concerns\">tutti i problemi della pelle</a>. Per le linee all’angolo esterno degli occhi, leggi <a href=\"/it/blogs/learn/crows-feet-what-causes-them-and-what-helps\">Zampe di gallina: cosa le causa e cosa aiuta davvero</a> (in inglese).</p>"
+      }
+    }
+  ]
+}

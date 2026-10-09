@@ -158,6 +158,20 @@ backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
   minimum requirement of every article):** per-article templates built from specs `configs/hub-upgrades/learn-{crows-feet,copper-uglies,salmon-sperm-skin-care}-design-2026-10-09.json`
   on hidden previews (`?view=learn-crows-feet` etc.); spoke 1's redesign taken over from the closed window (critic cycle 2 FIX 5.1, fixes applied, cycle 3 running).
   ⏳ critic cycles, audit each preview, then switch each article's template suffix; Request indexing for the three URLs (Malcolm, Search Console).
+  - 2026-10-09 14:20–14:35: critic crow's feet c1 FIX 5.3, copper c2 FIX 5.9, salmon c2 FIX 6.3; every finding applied to the specs and the
+    previews (reports in `docs/audits/2026-10-09-learn-*-critic-cycle-*.md`). Crow's feet c2, copper c3 and salmon c3 (the last) running.
+  - ✅ **Hubs link down to their Learn articles (P3), six languages:** `configs/hub-upgrades/{research-argireline,research-copper-peptide,`
+    `pdrn-research,fine-lines-wrinkles}-learn-link-2026-10-09.json`, set-only on `related/content`, verified live in all six locales.
+    The five translations say "(in English)": ⏳ drop that marker in the same change that translates each article.
+  - ✅ **No alt text calls a generated image a "photograph" any more:** 17 study illustrations (and the ripple banner's "lines smoothing out")
+    rewritten store-wide, with five-language alt translations re-registered on the 8 files that had them. Undo:
+    `backups/image-alts-no-photograph-2026-10-09.json`. The customer before/after photos (Malcolm's real customer images) were left as they are.
+  - ⏳ **GHK-Cu crow's-feet diptych** (`skingenetix-copper-peptide-ghk-cu-crows-feet-wrinkles-before-after.jpg`, live on the copper hub):
+    a mole at the temple in both panels, and the after panel shows far more change than the −24.1% measured. Taken off the crow's-feet
+    article; needs a re-render through the image pipeline (Malcolm picks) before the copper hub is next touched.
+  - 🛑 **Malcolm:** all three critics say the Learn template family has no signature or direction contract and sits in the stock theme kit
+    ("cluster 4"); the rubric says go back to the art director. More cycles on single pages won't fix that. Decide: commission an
+    art direction for Learn, or accept the family at FIX level once no blockers remain.
 - ⏳ **Microneedling number-one plan (2026-10-09), waits for Malcolm's 11 decisions:** `docs/microneedling-number-one-plan-2026-10-09.md`,
   evidence `audits/2026-10-09-microneedling-number-one/`. Keyword universe US/GB/DE/NL, 38 SERPs, AI-answer panel, regulation and
   clinical-evidence research, product and category teardown. First levers: remove the live "absorb deeper" / "sterile" wording and set

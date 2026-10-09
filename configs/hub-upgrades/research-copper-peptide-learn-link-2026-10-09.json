@@ -1,0 +1,18 @@
+{
+  "_about": "2026-10-09: the hub links down to its Learn spoke 'Copper uglies' (P3 'the hub does not link back to this page'; content strategy hub-and-spoke, Rule 27 check C). The empty 'Explore More Research' intro gets one sentence, six languages. The Learn article is English-only until the 14-day measurement, so the five translations link to their own locale's URL and say the article is in English; drop that marker when the article is translated. Set-only. Undo: --rollback.",
+  "template": "templates/page.research-copper-peptide.json",
+  "page": "copper-peptide-research",
+  "set": [
+    {
+      "at": "related/content",
+      "values": {
+        "en": "<p>Heard of “copper uglies”? Read <a href=\"/blogs/learn/copper-uglies-what-they-are-and-how-long-they-last\">Copper uglies: what they are and how long they last</a>.</p>",
+        "de": "<p>Schon von „Copper Uglies“ gehört? Lies <a href=\"/de/blogs/learn/copper-uglies-what-they-are-and-how-long-they-last\">Copper Uglies: was sie sind und wie lange sie anhalten</a> (auf Englisch).</p>",
+        "nl": "<p>Gehoord van ‘copper uglies’? Lees <a href=\"/nl/blogs/learn/copper-uglies-what-they-are-and-how-long-they-last\">Copper uglies: wat het is en hoe lang het duurt</a> (in het Engels).</p>",
+        "fr": "<p>Vous avez entendu parler des « copper uglies » ? Lisez <a href=\"/fr/blogs/learn/copper-uglies-what-they-are-and-how-long-they-last\">Copper uglies : de quoi s’agit-il et combien de temps cela dure</a> (en anglais).</p>",
+        "es": "<p>¿Has oído hablar de los «copper uglies»? Lee <a href=\"/es/blogs/learn/copper-uglies-what-they-are-and-how-long-they-last\">Copper uglies: qué son y cuánto duran</a> (en inglés).</p>",
+        "it": "<p>Hai sentito parlare dei «copper uglies»? Leggi <a href=\"/it/blogs/learn/copper-uglies-what-they-are-and-how-long-they-last\">Copper uglies: cosa sono e quanto durano</a> (in inglese).</p>"
+      }
+    }
+  ]
+}

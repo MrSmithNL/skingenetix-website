@@ -1,0 +1,18 @@
+{
+  "_about": "2026-10-09: the hub links down to its Learn spoke on salmon sperm skin care (P3 'the hub does not link back to this page'; content strategy hub-and-spoke, Rule 27 check C). The empty 'Explore More Research' intro gets one sentence, six languages. The Learn article is English-only until the 14-day measurement, so the five translations link to their own locale's URL and say the article is in English; drop that marker when the article is translated. Set-only. Undo: --rollback.",
+  "template": "templates/page.pdrn-research.json",
+  "page": "pdrn-research",
+  "set": [
+    {
+      "at": "related/content",
+      "values": {
+        "en": "<p>Heard of the salmon sperm facial? Read <a href=\"/blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial\">Salmon sperm skin care: what it is, and how it differs from the facial</a>.</p>",
+        "de": "<p>Schon vom Lachssperma-Facial gehört? Lies <a href=\"/de/blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial\">Hautpflege mit Lachssperma: was sie ist und wie sie sich vom Facial unterscheidet</a> (auf Englisch).</p>",
+        "nl": "<p>Gehoord van de zalmspermafacial? Lees <a href=\"/nl/blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial\">Huidverzorging met zalmsperma: wat het is en hoe het verschilt van de facial</a> (in het Engels).</p>",
+        "fr": "<p>Vous avez entendu parler du soin du visage au sperme de saumon ? Lisez <a href=\"/fr/blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial\">Les soins au sperme de saumon : ce que c’est et en quoi ils diffèrent du soin en institut</a> (en anglais).</p>",
+        "es": "<p>¿Has oído hablar del facial de esperma de salmón? Lee <a href=\"/es/blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial\">Cuidado de la piel con esperma de salmón: qué es y en qué se diferencia del facial</a> (en inglés).</p>",
+        "it": "<p>Hai sentito parlare del trattamento viso allo sperma di salmone? Leggi <a href=\"/it/blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial\">Skincare allo sperma di salmone: cos’è e in cosa differisce dal trattamento viso</a> (in inglese).</p>"
+      }
+    }
+  ]
+}

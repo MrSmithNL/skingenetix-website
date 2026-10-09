@@ -1,5 +1,5 @@
 {
-  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, images where appropriate) as a minimum. The live article /blogs/learn/crows-feet-what-causes-them-and-what-helps moves from the stock article template onto its own, built from the study and science-page modules and designed from the start around the spoke-1 critic's cycle-1 findings (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): banner with breadcrumb, H1, the opening answer and one byline line; three key figures with their frame and a linked source (impact-text 0.5, never larger than the H1); short answers and the spelling question as plain text; why they show and stay beside a laughing face; age and the five-trial table (phone-safe wrapper) with its footnote; four before/after result cards (Wang, Ye, Badenhorst, Watanabe; labels as live on the study pages, Badenhorst's and Watanabe's result line in the article's own words); the choosing checklist as text columns; the product paragraph with the Argireline and PDRN serum cards; naturally; the under-eye question beside the Ye eye-bag illustration; professional options (no image); safety complete (H2, five icon items holding all six cautions, see-a-doctor and the review lines); related reads with square images and named links. Backgrounds alternate white and bone; no two image sections touch; no product shot beside safety copy; no penetration render. Every passage is the approved body_html of configs/learn/drafts/crows-feet-what-causes-them-and-what-helps.json, sliced verbatim by scratchpad make_crows_feet_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/crows-feet-what-causes-them-and-what-helps?view=learn-crows-feet until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #3E4A52; table parents, figure size, 65ch, tap targets, byline).",
+  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, images where appropriate) as a minimum. The live article /blogs/learn/crows-feet-what-causes-them-and-what-helps moves from the stock article template onto its own, built from the study and science-page modules and designed from the start around the spoke-1 critic's cycle-1 findings (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): banner with breadcrumb, H1, the opening answer and one byline line; three key figures with their frame and a linked source (impact-text 0.5, never larger than the H1); short answers and the spelling question as plain text; why they show and stay beside a laughing face; age and the five-trial table (phone-safe wrapper) with its footnote; four before/after result cards (Wang, Ye, Badenhorst, Watanabe; labels as live on the study pages, Badenhorst's and Watanabe's result line in the article's own words); the choosing checklist as text columns; the product paragraph with the Argireline and PDRN serum cards; naturally; the under-eye question beside the Ye eye-bag illustration; professional options (no image); safety complete (H2, five icon items holding all six cautions, see-a-doctor and the review lines); related reads with square images and named links. Backgrounds alternate white and bone; no two image sections touch; no product shot beside safety copy; no penetration render. Every passage is the approved body_html of configs/learn/drafts/crows-feet-what-causes-them-and-what-helps.json, sliced verbatim by scratchpad make_crows_feet_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/crows-feet-what-causes-them-and-what-helps?view=learn-crows-feet until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #3E4A52; table parents, figure size, 65ch, tap targets, byline). Critic cycle 1 (crow's feet) applied 2026-10-09: GHK-Cu and Watanabe diptychs off this page (mole; magnitude; framing), proof cards titled by result under a section title, backgrounds alternate, Result is column 2 and the table is keyboard-scrollable, one 32rem reading axis, Shop button, PDRN card explained, tap targets without strike-through, zoom heading sizes. Round 2 (2026-10-09): CTA styled as the theme button; headers on the 32rem axis. Round 3 (2026-10-09): reading column width:100%; salmon tables carry their own stacking style.",
   "english_first": true,
   "create": true,
   "template": "templates/article.learn-crows-feet.json",
@@ -38,7 +38,8 @@
         "custom_css": [
           "image-banner{opacity:1!important}",
           "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }",
-          "@media screen and (max-width:320px){h1{font-size:28px!important}}"
+          "@media screen and (max-width:320px){h1{font-size:28px!important}}",
+          "p a{display:inline-block;padding-block:13px;background-origin:content-box}"
         ]
       }
     },
@@ -54,7 +55,7 @@
           "impact_text_style": "fill",
           "text_divider": "none",
           "impact_text_size_ratio": 0.5,
-          "background": "#FFFFFF",
+          "background": "#F0F0F0",
           "heading_text_color": "#3E4A52",
           "text_color": "#1A1A1A"
         },
@@ -108,7 +109,9 @@
         "block_order": ["s1", "s2", "s3"],
         "custom_css": [
           "h3.h4{font-size:20px}",
-          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}"
+          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}",
+          "@media screen and (max-width:699px){h3.h4{font-size:16px}}",
+          "@media screen and (max-width:320px){.impact-text__text{font-size:28px!important}}"
         ]
       }
     },
@@ -121,7 +124,7 @@
           "full_width": true,
           "content_width": "medium",
           "text_position": "start",
-          "background": "#F0F0F0"
+          "background": "#FFFFFF"
         },
         "blocks": {
           "a": {
@@ -143,8 +146,10 @@
         },
         "block_order": ["a", "b"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+          "a:not(.button){color:#3E4A52;text-decoration:underline}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}",
+          ".prose>div+div{margin-top:48px}",
+          "@media screen and (max-width:320px){h2{font-size:24px!important}}"
         ]
       }
     },
@@ -190,7 +195,7 @@
           "full_width": true,
           "content_width": "large",
           "text_position": "start",
-          "background": "#F0F0F0"
+          "background": "#FFFFFF"
         },
         "blocks": {
           "a": {
@@ -213,7 +218,7 @@
             "type": "liquid",
             "settings": {
               "liquid": {
-                "en": "<div class=\"sgx-evtable\"><table><thead><tr><th>Ingredient and strength</th><th>Trial</th><th>People</th><th>Length</th><th>Compared with</th><th>What was measured</th><th>Result</th><th>Who paid</th></tr></thead><tbody><tr><td>Argireline&reg;, 10%</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Wang 2013</a></td><td>60 adults aged 25&ndash;60 (45 active, 15 placebo)</td><td>4 weeks</td><td>Placebo cream</td><td>Clinicians&rsquo; grade of crow&rsquo;s feet, made blind</td><td>22 of 45 graded clearly smoother; none of 15 on placebo</td><td>Cream supplied by McEit, which markets Argireline in China; authors declared no conflicts</td></tr><tr><td>PDRN, 0.1% eye cream</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">Ye 2026</a></td><td>31 women aged 35&ndash;55 with sensitive skin</td><td>28 days</td><td>0.1% retinol in the same base, on the other side of the face; no placebo</td><td>Crow&rsquo;s-feet wrinkle area, by image analysis</td><td>Down 23.0% on the PDRN side, 6.6% on the retinol side</td><td>No specific funding declared; four authors work for skincare biotechnology companies</td></tr><tr><td>GHK-Cu serum, strength not stated</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Badenhorst 2016</a></td><td>40 women aged 40&ndash;65 (39 analysed)</td><td>8 weeks</td><td>The same serum base without GHK-Cu or its carrier</td><td>Wrinkle volume near the eye corner, by 3D imaging</td><td>55.8% more wrinkle-volume reduction than the plain serum base</td><td>Snowberry NZ, which makes the serum</td></tr><tr><td>Palmitoyl pentapeptide-4 (the original Matrixyl&reg;), 3 ppm</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005\">Robinson 2005</a></td><td>93 women aged 35&ndash;55</td><td>12 weeks</td><td>The same moisturiser without the peptide, on the other side of the face</td><td>Fine lines and wrinkles, by image analysis and blind expert graders</td><td>Small, but ahead of the comparison from week 8, by the paper&rsquo;s own bar (p &le; 0.10); no size reported</td><td>All six authors worked for Procter &amp; Gamble</td></tr><tr><td>Oxidised glutathione, 2%</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014\">Watanabe 2014</a></td><td>30 women aged 30&ndash;50</td><td>10 weeks</td><td>Placebo lotion, on the other side of the face</td><td>Blind ratings of wrinkles at the outer eye corner</td><td>Rated moderately softer in 1 in 3 women (33.3% by the investigator, 30.0% by the women); none on placebo</td><td>Kyowa Hakko Bio, which makes the ingredient</td></tr></tbody></table></div>"
+                "en": "<div class=\"sgx-evtable\" tabindex=\"0\" role=\"region\" aria-label=\"Five crow&rsquo;s-feet trials compared\"><table><thead><tr><th>Ingredient and strength</th><th>Result</th><th>Trial</th><th>People</th><th>Length</th><th>Compared with</th><th>What was measured</th><th>Who paid</th></tr></thead><tbody><tr><td>Argireline&reg;, 10%</td><td>22 of 45 graded clearly smoother; none of 15 on placebo</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Wang 2013</a></td><td>60 adults aged 25&ndash;60 (45 active, 15 placebo)</td><td>4 weeks</td><td>Placebo cream</td><td>Clinicians&rsquo; grade of crow&rsquo;s feet, made blind</td><td>Cream supplied by McEit, which markets Argireline in China; authors declared no conflicts</td></tr><tr><td>PDRN, 0.1% eye cream</td><td>Down 23.0% on the PDRN side, 6.6% on the retinol side</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">Ye 2026</a></td><td>31 women aged 35&ndash;55 with sensitive skin</td><td>28 days</td><td>0.1% retinol in the same base, on the other side of the face; no placebo</td><td>Crow&rsquo;s-feet wrinkle area, by image analysis</td><td>No specific funding declared; four authors work for skincare biotechnology companies</td></tr><tr><td>GHK-Cu serum, strength not stated</td><td>55.8% more wrinkle-volume reduction than the plain serum base</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Badenhorst 2016</a></td><td>40 women aged 40&ndash;65 (39 analysed)</td><td>8 weeks</td><td>The same serum base without GHK-Cu or its carrier</td><td>Wrinkle volume near the eye corner, by 3D imaging</td><td>Snowberry NZ, which makes the serum</td></tr><tr><td>Palmitoyl pentapeptide-4 (the original Matrixyl&reg;), 3 ppm</td><td>Small, but ahead of the comparison from week 8, by the paper&rsquo;s own bar (p &le; 0.10); no size reported</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005\">Robinson 2005</a></td><td>93 women aged 35&ndash;55</td><td>12 weeks</td><td>The same moisturiser without the peptide, on the other side of the face</td><td>Fine lines and wrinkles, by image analysis and blind expert graders</td><td>All six authors worked for Procter &amp; Gamble</td></tr><tr><td>Oxidised glutathione, 2%</td><td>Rated moderately softer in 1 in 3 women (33.3% by the investigator, 30.0% by the women); none on placebo</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014\">Watanabe 2014</a></td><td>30 women aged 30&ndash;50</td><td>10 weeks</td><td>Placebo lotion, on the other side of the face</td><td>Blind ratings of wrinkles at the outer eye corner</td><td>Kyowa Hakko Bio, which makes the ingredient</td></tr></tbody></table></div>"
               }
             }
           },
@@ -231,10 +236,11 @@
           ".sgx-evtable{overflow-x:auto;max-width:100%}",
           ".sgx-evtable table{width:100%;min-width:960px;border-collapse:collapse;background:#fff;font-size:15px;line-height:1.45}",
           ".sgx-evtable th,.sgx-evtable td{padding:10px 12px;border-bottom:1px solid #dcdcdc;text-align:left;vertical-align:top}",
+          "p,h2{max-width:32rem;margin-inline:auto}",
+          ".prose>div+div{margin-top:48px}",
           ".sgx-evtable th{font-weight:600;background:#E4E4E4}",
-          "p,h2{max-width:44rem}",
-          ".prose>*{min-width:0;max-width:100%}",
-          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+          ".prose>*{min-width:0;max-width:100%;width:100%}",
+          "a:not(.button){color:#3E4A52}"
         ]
       }
     },
@@ -244,7 +250,9 @@
       "section": {
         "type": "research-before-after",
         "settings": {
-          "title": ""
+          "title": {
+            "en": "What did the Argireline and PDRN trials find?"
+          }
         },
         "blocks": {
           "f1": {
@@ -265,13 +273,13 @@
               "label_background": "#1a1a1a",
               "label_text_color": "#ffffff",
               "subheading": {
-                "en": "Argireline®, 10% (Wang 2013)"
+                "en": "Argireline® 10%, Wang 2013"
               },
               "title": {
-                "en": "Clinicians’ grade of crow’s feet, made blind"
+                "en": "22 of 45 graded clearly smoother, none of 15 on placebo"
               },
               "content": {
-                "en": "<p>60 adults aged 25&ndash;60 (45 active, 15 placebo), 4 weeks, against a placebo cream.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Read our appraisal of Wang 2013</a></p>"
+                "en": "<p>Clinicians&rsquo; blind grade of crow&rsquo;s feet. 60 adults aged 25&ndash;60 (45 active, 15 placebo), 4 weeks, against a placebo cream.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Read our appraisal of Wang 2013</a></p>"
               }
             }
           },
@@ -293,75 +301,23 @@
               "label_background": "#1a1a1a",
               "label_text_color": "#ffffff",
               "subheading": {
-                "en": "PDRN, 0.1% eye cream (Ye 2026)"
+                "en": "PDRN 0.1% eye cream, Ye 2026"
               },
               "title": {
-                "en": "Crow’s-feet wrinkle area, by image analysis"
+                "en": "Crow’s-feet area down 23.0%, against 6.6% with retinol"
               },
               "content": {
-                "en": "<p>31 women aged 35&ndash;55 with sensitive skin, 28 days, against 0.1% retinol in the same base, on the other side of the face; no placebo.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">Read our appraisal of Ye 2026</a></p>"
-              }
-            }
-          },
-          "f3": {
-            "type": "finding",
-            "settings": {
-              "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-crows-feet-wrinkles-before-after.jpg",
-              "media_position": "start",
-              "before_label": {
-                "en": "Before"
-              },
-              "after_label": {
-                "en": "After 8 weeks"
-              },
-              "result_label": {
-                "en": "55.8% more wrinkle-volume reduction than the plain serum base"
-              },
-              "note_label": "",
-              "label_background": "#1a1a1a",
-              "label_text_color": "#ffffff",
-              "subheading": {
-                "en": "GHK-Cu serum, strength not stated (Badenhorst 2016)"
-              },
-              "title": {
-                "en": "Wrinkle volume near the eye corner, by 3D imaging"
-              },
-              "content": {
-                "en": "<p>40 women aged 40&ndash;65 (39 analysed), 8 weeks, against the same serum base without GHK-Cu or its carrier.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Read our appraisal of Badenhorst 2016</a></p>"
-              }
-            }
-          },
-          "f4": {
-            "type": "finding",
-            "settings": {
-              "image": "shopify://shop_images/skingenetix-glutathione-crows-feet-softer-before-after-study.jpg",
-              "media_position": "end",
-              "before_label": {
-                "en": "Before"
-              },
-              "after_label": {
-                "en": "After 10 weeks"
-              },
-              "result_label": {
-                "en": "Rated moderately softer: 1 in 3 women vs none on placebo"
-              },
-              "note_label": "",
-              "label_background": "#1a1a1a",
-              "label_text_color": "#ffffff",
-              "subheading": {
-                "en": "Oxidised glutathione, 2% (Watanabe 2014)"
-              },
-              "title": {
-                "en": "Blind ratings of wrinkles at the outer eye corner"
-              },
-              "content": {
-                "en": "<p>30 women aged 30&ndash;50, 10 weeks, against a placebo lotion on the other side of the face.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014\">Read our appraisal of Watanabe 2014</a></p>"
+                "en": "<p>Crow&rsquo;s-feet wrinkle area, by image analysis. 31 women aged 35&ndash;55 with sensitive skin, 28 days, against 0.1% retinol in the same base on the other side of the face; no placebo.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">Read our appraisal of Ye 2026</a></p>"
               }
             }
           }
         },
-        "block_order": ["f1", "f2", "f3", "f4"],
-        "custom_css": [".rba__text .h2{font-size:var(--text-h3, 2rem)}"]
+        "block_order": ["f1", "f2"],
+        "custom_css": [
+          ".rba__text .h2{font-size:var(--text-h3, 2rem)}",
+          "a:not(.button){color:#3E4A52;display:inline-block;padding-block:13px;background-origin:content-box}",
+          "@media screen and (max-width:320px){.rba__text .h2{font-size:22px!important}}"
+        ]
       }
     },
     {
@@ -378,7 +334,7 @@
           "content": {
             "en": "<h2>How do you choose a cream for crow&rsquo;s feet?</h2><p>Use the table as a checklist rather than a shopping list:</p>"
           },
-          "background": "#F0F0F0"
+          "background": "#FFFFFF"
         },
         "blocks": {
           "c1": {
@@ -435,7 +391,7 @@
           }
         },
         "block_order": ["c1", "c2", "c3", "c4"],
-        "custom_css": ["p,ul{max-width:65ch}"]
+        "custom_css": ["p,ul{max-width:65ch}", ".section-header{max-width:32rem;margin-inline:auto;width:100%}"]
       }
     },
     {
@@ -454,12 +410,22 @@
           "subheading": "",
           "title": "",
           "content": {
-            "en": "<p>Our <a href=\"https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum\">Acetyl Hexapeptide-8 Anti-Wrinkle Serum</a> contains Argireline, the ingredient in the Wang trial. We have not tested the serum ourselves, so we cannot say it will give the same result.</p>"
+            "en": "<p>Our <a href=\"https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum\">Acetyl Hexapeptide-8 Anti-Wrinkle Serum</a> contains Argireline, the ingredient in the Wang trial. We have not tested the serum ourselves, so we cannot say it will give the same result. Our <a href=\"https://www.skingenetix.com/products/pdrn-renewal-serum\">PDRN Renewal Serum</a> contains PDRN, the ingredient in the Ye trial; that trial tested an eye cream, not this serum.</p>"
           },
-          "link_text": "",
-          "background": "#FFFFFF"
+          "link_text": {
+            "en": "Shop the Acetyl Hexapeptide-8 Serum"
+          },
+          "background": "#F0F0F0",
+          "link_url": "shopify://products/acetyl-hexapeptide-8-anti-wrinkle-serum"
         },
-        "custom_css": [".product-list{max-width:56rem;margin-inline:auto}", "p,ul{max-width:65ch}"]
+        "custom_css": [
+          ".product-list{max-width:56rem;margin-inline:auto}",
+          "a:not(.button){color:#3E4A52;text-decoration:underline}",
+          ".section-header{max-width:32rem;margin-inline:auto;width:100%}",
+          ".section-header>a{background:#3E4A52;color:#fff;padding:17px 40px;border-radius:60px;font-weight:700}",
+          ".section-header .circle-chevron{display:none}",
+          ".section-header .reversed-link{background:none}"
+        ]
       }
     },
     {
@@ -471,7 +437,7 @@
           "full_width": true,
           "content_width": "medium",
           "text_position": "start",
-          "background": "#F0F0F0"
+          "background": "#FFFFFF"
         },
         "blocks": {
           "a": {
@@ -485,8 +451,9 @@
         },
         "block_order": ["a"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+          "a:not(.button){color:#3E4A52;text-decoration:underline}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}",
+          "@media screen and (max-width:320px){h2{font-size:24px!important}}"
         ]
       }
     },
@@ -525,7 +492,11 @@
           }
         },
         "block_order": ["u"],
-        "custom_css": [".rba__row{--rba-card-bg:#F0F0F0}"]
+        "custom_css": [
+          ".rba__row{--rba-card-bg:#F0F0F0}",
+          "@media screen and (max-width:320px){h2{font-size:24px!important}}",
+          ".prose a:not(.button){color:#3E4A52;text-decoration:underline}"
+        ]
       }
     },
     {
@@ -551,8 +522,9 @@
         },
         "block_order": ["a"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+          "a:not(.button){color:#3E4A52;text-decoration:underline}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}",
+          "@media screen and (max-width:320px){h2{font-size:24px!important}}"
         ]
       }
     },
@@ -579,8 +551,8 @@
         },
         "block_order": ["a"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+          "a:not(.button){color:#3E4A52;text-decoration:underline}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -685,8 +657,8 @@
         },
         "block_order": ["a"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+          "a:not(.button){color:#3E4A52;text-decoration:underline}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -700,7 +672,7 @@
           "stack_on_mobile": false,
           "subheading": "",
           "title": {
-            "en": "Read the Trials and the Research"
+            "en": "Read the trials and the research"
           },
           "content": "",
           "background": "#FFFFFF"
@@ -776,7 +748,11 @@
           }
         },
         "block_order": ["r1", "r2", "r3", "r4"],
-        "custom_css": ["p,ul{max-width:65ch}", "a{display:inline-block;padding-block:13px}"]
+        "custom_css": [
+          "p,ul{max-width:65ch}",
+          "a{display:inline-block;padding-block:13px;background-origin:content-box}",
+          "a:not(.button){color:#3E4A52}"
+        ]
       }
     }
   ]

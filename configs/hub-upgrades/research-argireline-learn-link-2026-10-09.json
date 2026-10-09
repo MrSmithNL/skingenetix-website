@@ -1,0 +1,18 @@
+{
+  "_about": "2026-10-09: the hub links down to its Learn spoke (the spoke's live audit failed P3 'the hub does not link back to this page'; content strategy hub-and-spoke, Rule 27 check C). The empty 'Explore More Research' intro gets one sentence, six languages. The Learn articles are English-only until the 14-day measurement (Malcolm 2026-09-29, finish the English first), so the five translations link to their own locale's URL and say the article is in English; drop that marker when the article is translated. Set-only. Undo: --rollback.",
+  "template": "templates/page.research-argireline.json",
+  "page": "acetyl-hexapeptide-8-research",
+  "set": [
+    {
+      "at": "related/content",
+      "values": {
+        "en": "<p>Using it alongside Matrixyl 3000? Read <a href=\"/blogs/learn/argireline-and-matrixyl-3000-together\">Argireline and Matrixyl 3000 together: what the trials show</a>.</p>",
+        "de": "<p>Verwendest du es zusammen mit Matrixyl 3000? Lies <a href=\"/de/blogs/learn/argireline-and-matrixyl-3000-together\">Argireline und Matrixyl 3000 zusammen: was die Studien zeigen</a> (auf Englisch).</p>",
+        "nl": "<p>Gebruik je het samen met Matrixyl 3000? Lees <a href=\"/nl/blogs/learn/argireline-and-matrixyl-3000-together\">Argireline en Matrixyl 3000 samen: wat de onderzoeken laten zien</a> (in het Engels).</p>",
+        "fr": "<p>Vous l’associez au Matrixyl 3000 ? Lisez <a href=\"/fr/blogs/learn/argireline-and-matrixyl-3000-together\">Argireline et Matrixyl 3000 ensemble : ce que montrent les essais</a> (en anglais).</p>",
+        "es": "<p>¿Lo usas junto con Matrixyl 3000? Lee <a href=\"/es/blogs/learn/argireline-and-matrixyl-3000-together\">Argireline y Matrixyl 3000 juntos: lo que muestran los ensayos</a> (en inglés).</p>",
+        "it": "<p>Lo usi insieme a Matrixyl 3000? Leggi <a href=\"/it/blogs/learn/argireline-and-matrixyl-3000-together\">Argireline e Matrixyl 3000 insieme: cosa mostrano gli studi</a> (in inglese).</p>"
+      }
+    }
+  ]
+}

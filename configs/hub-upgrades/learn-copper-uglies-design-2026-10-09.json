@@ -1,5 +1,5 @@
 {
-  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, images where appropriate) as a minimum. The copper uglies article moves from the stock article template onto its own template, designed around the critic's cycle-1 verdict on the Argireline + Matrixyl build (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): banner with the H1, subline and a one-line byline; key figures (0 studies / 39 of 40 / 1 of 40) one size down, each sourced to the Badenhorst 2016 appraisal; short answers as a card; the definition and the trial with the funding caveat as a callout; purging and causes beside a neutral cream texture; the online-vs-measured table in a phone-safe wrapper (no min-width, min-width:0 on the grid item); what to do and before-you-try as icon rows under real <h2> headings; the routine beside a plain cleanser; the serum; the FAQ; the credit; square related cards whose links name their destination. Backgrounds alternate white and bone, the two image bands are separated by plain sections, the related row is white above the footer. No before/after images (the article is about reactions). Every passage is the approved text, cut out of configs/learn/drafts/copper-uglies-what-they-are-and-how-long-they-last.json (body_html) by scratchpad make_copper_uglies_spec.py; icon-row titles are shortened labels of the list items. ENGLISH FIRST: hidden preview at /blogs/learn/copper-uglies-what-they-are-and-how-long-they-last?view=learn-copper-uglies until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #014EB1; table parents, figure size, 65ch, tap targets, byline).",
+  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, images where appropriate) as a minimum. The copper uglies article moves from the stock article template onto its own template, designed around the critic's cycle-1 verdict on the Argireline + Matrixyl build (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): banner with the H1, subline and a one-line byline; key figures (0 studies / 39 of 40 / 1 of 40) one size down, each sourced to the Badenhorst 2016 appraisal; short answers as a card; the definition and the trial with the funding caveat as a callout; purging and causes beside a neutral cream texture; the online-vs-measured table in a phone-safe wrapper (no min-width, min-width:0 on the grid item); what to do and before-you-try as icon rows under real <h2> headings; the routine beside a plain cleanser; the serum; the FAQ; the credit; square related cards whose links name their destination. Backgrounds alternate white and bone, the two image bands are separated by plain sections, the related row is white above the footer. No before/after images (the article is about reactions). Every passage is the approved text, cut out of configs/learn/drafts/copper-uglies-what-they-are-and-how-long-they-last.json (body_html) by scratchpad make_copper_uglies_spec.py; icon-row titles are shortened labels of the list items. ENGLISH FIRST: hidden preview at /blogs/learn/copper-uglies-what-they-are-and-how-long-they-last?view=learn-copper-uglies until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #014EB1; table parents, figure size, 65ch, tap targets, byline). Cycle-1 critic fixes (docs/audits/2026-10-09-learn-copper-uglies-design-critic-cycle-1.md): amber cream image replaced by the copper serum dropper macro, the table stacks under 330 px, H2s 28/38 px as on the hubs, related links scoped, the copper range fills the product row. Critic cycle 2 (copper) applied 2026-10-09: neutral-alt copy of the purging image, stacked table cells full width with the claim cell bold, one 32rem reading axis with the icon rows inside it, FAQ heading under the figures, Shop button, three-up products, zoom sizes, room above in-prose H2s. Round 2 (2026-10-09): CTA styled as the theme button; headers on the 32rem axis. Round 3 (2026-10-09): reading column width:100%; salmon tables carry their own stacking style.",
   "english_first": true,
   "create": true,
   "template": "templates/article.learn-copper-uglies.json",
@@ -116,7 +116,10 @@
         "block_order": ["s1", "s2", "s3"],
         "custom_css": [
           "h3.h4{font-size:20px}",
-          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}"
+          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}",
+          "@media screen and (max-width:699px){h3.h4{font-size:16px}}",
+          "@media screen and (max-width:320px){.impact-text__text{font-size:28px!important}}",
+          "a{color:#014EB1}"
         ]
       }
     },
@@ -153,8 +156,10 @@
         "custom_css": [
           ".prose>div:last-child{background:#FFFFFF;padding:24px 28px;border-radius:12px}",
           ".prose li::marker{color:#014EB1}",
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -199,8 +204,10 @@
         "custom_css": [
           ".prose>div:last-child{border-left:3px solid #014EB1;padding-left:20px}",
           ".prose li::marker{color:#014EB1}",
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -218,7 +225,7 @@
           "m": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-copper-peptide-night-cream-texture.jpg",
+              "image": "shopify://shop_images/skingenetix-clear-gel-drop-leaving-glass-dropper-macro.jpg",
               "media_width": 45,
               "media_position": "start",
               "text_position": "place-self-center-start text-start",
@@ -236,7 +243,14 @@
           }
         },
         "block_order": ["m"],
-        "custom_css": [".prose a:not(.button){color:#014EB1;text-decoration:underline}"]
+        "custom_css": [
+          ".prose a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".prose h2:not(:first-child){margin-top:48px}",
+          "@media screen and (max-width:320px){.prose h2{font-size:22px!important}}",
+          ".prose{max-width:32rem}"
+        ]
       }
     },
     {
@@ -262,8 +276,10 @@
         },
         "block_order": ["d"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -291,7 +307,7 @@
             "type": "liquid",
             "settings": {
               "liquid": {
-                "en": "<div class=\"sgx-evtable\"><table><thead><tr><th>What you will read online</th><th>What was measured</th></tr></thead><tbody><tr><td>&ldquo;Demolition before construction&rdquo;</td><td>Seen in laboratory cells only; never measured in faces</td></tr><tr><td>&ldquo;Lasts 4 to 6 weeks&rdquo;</td><td>No study</td></tr><tr><td>&ldquo;Use 0.5 to 1%&rdquo;</td><td>No study</td></tr><tr><td>&ldquo;A 2023 review of 12 studies and 512 people&rdquo;</td><td>Not in PubMed. We searched for it and found nothing matching</td></tr><tr><td>&ldquo;Most people react&rdquo;</td><td>1 of 40 women in the one controlled trial, of a serum whose strength was not stated</td></tr></tbody></table></div>"
+                "en": "<style>@media screen and (max-width:330px){.sgx-evtable table,.sgx-evtable tbody,.sgx-evtable tr,.sgx-evtable td{display:block;width:100%}.sgx-evtable thead{display:none}.sgx-evtable td:first-child{font-weight:600;border-bottom:0;padding-bottom:0}}</style><div class=\"sgx-evtable\"><table><thead><tr><th>What you will read online</th><th>What was measured</th></tr></thead><tbody><tr><td>&ldquo;Demolition before construction&rdquo;</td><td>Seen in laboratory cells only; never measured in faces</td></tr><tr><td>&ldquo;Lasts 4 to 6 weeks&rdquo;</td><td>No study</td></tr><tr><td>&ldquo;Use 0.5 to 1%&rdquo;</td><td>No study</td></tr><tr><td>&ldquo;A 2023 review of 12 studies and 512 people&rdquo;</td><td>Not in PubMed. We searched for it and found nothing matching</td></tr><tr><td>&ldquo;Most people react&rdquo;</td><td>1 of 40 women in the one controlled trial, of a serum whose strength was not stated</td></tr></tbody></table></div>"
               }
             }
           },
@@ -306,12 +322,14 @@
         },
         "block_order": ["h", "t", "n"],
         "custom_css": [
-          ".prose>div{min-width:0;max-width:100%}",
           ".sgx-evtable table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.5}",
-          ".sgx-evtable th,.sgx-evtable td{width:50%;padding:12px 14px;border-bottom:1px solid #d4d4d4;text-align:left;vertical-align:top}",
           ".sgx-evtable th{font-weight:600;background:#FFFFFF}",
           ".prose>*{min-width:0;max-width:100%}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".sgx-evtable th,.sgx-evtable td{padding:12px 14px;border-bottom:1px solid #d4d4d4;text-align:left;vertical-align:top}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -338,8 +356,11 @@
         },
         "block_order": ["h"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}",
+          ".prose{width:100%}"
         ]
       }
     },
@@ -428,7 +449,12 @@
           }
         },
         "block_order": ["t1", "t2", "t3", "t4"],
-        "custom_css": ["p,ul{max-width:65ch}"]
+        "custom_css": [
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          "@media screen and (min-width:700px){.text-with-icons{max-width:32rem;margin-inline:auto;--text-with-icons-template:repeat(2,minmax(0,1fr))}}",
+          ".text-with-icons{--text-with-icons-justify:start;--text-with-icons-text-align:start}"
+        ]
       }
     },
     {
@@ -454,8 +480,10 @@
         },
         "block_order": ["n"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -491,7 +519,12 @@
           }
         },
         "block_order": ["m"],
-        "custom_css": [".prose a:not(.button){color:#014EB1;text-decoration:underline}"]
+        "custom_css": [
+          ".prose a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".prose{max-width:32rem}"
+        ]
       }
     },
     {
@@ -517,8 +550,10 @@
         },
         "block_order": ["i"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -545,8 +580,10 @@
         },
         "block_order": ["h"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -652,7 +689,12 @@
           }
         },
         "block_order": ["s1", "s2", "s3", "s4", "s5"],
-        "custom_css": ["p,ul{max-width:65ch}"]
+        "custom_css": [
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          "@media screen and (min-width:700px){.text-with-icons{max-width:32rem;margin-inline:auto;--text-with-icons-template:repeat(2,minmax(0,1fr))}}",
+          ".text-with-icons{--text-with-icons-justify:start;--text-with-icons-text-align:start}"
+        ]
       }
     },
     {
@@ -661,22 +703,37 @@
       "section": {
         "type": "featured-collection",
         "settings": {
-          "products": ["copper-peptide-ghk-cu-renewal-serum"],
+          "products": [
+            "copper-peptide-ghk-cu-renewal-serum",
+            "copper-peptide-ghk-cu-night-cream",
+            "copper-peptide-ghk-cu-day-gel-cream"
+          ],
           "full_width": true,
           "stack_products": true,
           "show_progress_bar": false,
-          "products_count": 2,
+          "products_count": 3,
           "products_per_row_mobile": "2",
-          "products_per_row_desktop": 4,
+          "products_per_row_desktop": 3,
           "subheading": "",
           "title": "",
           "content": {
             "en": "<p>If you decide to try one, our <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide GHK-Cu Renewal Serum</a> contains 2% GHK-Cu. Patch-test first, and remember that the trial above tested a different serum, not ours.</p>"
           },
-          "link_text": "",
-          "background": "#FFFFFF"
+          "link_text": {
+            "en": "Shop the Copper Peptide Serum"
+          },
+          "background": "#FFFFFF",
+          "link_url": "shopify://products/copper-peptide-ghk-cu-renewal-serum"
         },
-        "custom_css": ["p,ul{max-width:65ch}"]
+        "custom_css": [
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          "a:not(.button){color:#014EB1}",
+          ".section-header{max-width:32rem;margin-inline:auto;width:100%}",
+          ".section-header>a{background:#014EB1;color:#fff;padding:17px 40px;border-radius:60px;font-weight:700}",
+          ".section-header .circle-chevron{display:none}",
+          ".section-header .reversed-link{background:none}"
+        ]
       }
     },
     {
@@ -722,7 +779,8 @@
             }
           }
         },
-        "block_order": ["q1", "q2"]
+        "block_order": ["q1", "q2"],
+        "custom_css": [".prose h2{font-size:clamp(28px,2.6vw,38px)}"]
       }
     },
     {
@@ -748,8 +806,10 @@
         },
         "block_order": ["c"],
         "custom_css": [
-          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
-          "a:not(.button){color:#014EB1;text-decoration:underline}"
+          "a:not(.button){color:#014EB1;text-decoration:underline}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}",
+          ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
       }
     },
@@ -827,7 +887,9 @@
           ".multi-column__item img{aspect-ratio:1/1;object-fit:cover;width:100%}",
           ".prose a.link{display:inline-block;padding-block:12px}",
           "p,ul{max-width:65ch}",
-          "a{display:inline-block;padding-block:13px}"
+          ".v-stack a{display:inline-block;padding-block:13px;background-origin:content-box}",
+          ".prose h2,p.h2{font-size:28px}",
+          "@media screen and (min-width:700px){.prose h2,p.h2{font-size:38px}}"
         ]
       }
     }
