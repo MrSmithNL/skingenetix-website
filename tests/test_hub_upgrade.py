@@ -468,3 +468,11 @@ def test_section_css_does_not_double_the_no_fade_rule():
     j["sections"]["faq"]["custom_css"] = [NO_FADE]
     hu.build({"section_css": {"faq": ["h1{color:blue}", NO_FADE]}}, j)
     assert j["sections"]["faq"]["custom_css"] == ["h1{color:blue}", NO_FADE]
+
+
+def test_section_css_keeps_the_slideshow_no_fade_rules_too():
+    slide = ".slideshow__slide.is-selected :is(img,[data-sequence],.button){opacity:1!important;transform:none!important}"
+    j = template()
+    j["sections"]["faq"]["custom_css"] = ["slideshow-carousel{opacity:1!important}", slide]
+    hu.build({"section_css": {"faq": ["h1{color:blue}"]}}, j)
+    assert j["sections"]["faq"]["custom_css"] == ["h1{color:blue}", "slideshow-carousel{opacity:1!important}", slide]

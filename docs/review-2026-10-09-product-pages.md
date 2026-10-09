@@ -75,6 +75,17 @@ plus the safety one (seven in all; the stock FAQ takes any number).
 - **Reviews:** two displayed reviews use condition wording ("fades my acne scars", "rosacea"); keep them out of curated
   carousels.
 
+## Keyword notes from the parallel research window (2026-10-09)
+
+Window 21's adjacent-keyword pull (`audits/2026-10-09-new-article-keywords/`) proposes, for your keyword decisions:
+
+- **"matrixyl"** (the bare term: 3,573 US, 791 GB searches a month) has no owner page; a natural secondary for the Matrixyl
+  3000 serum.
+- **"derma stamp" / "dermastamp"** (8,154 and 3,322 US) belong on the two stamp-set product pages (not in this pack), with the
+  face wording explicit ("derma stamp for face"): the "how to use a derma stamp" searches are about hair growth.
+- **"salmon sperm serum" / "salmon sperm skin care"** are planned for a new article (salmon sperm facial vs PDRN serum), so the
+  PDRN drafts do not target them; their "Is PDRN salmon sperm?" answer only replies to the question searchers ask.
+
 ## What I need from you
 
 Per product: yes, yes with edits, or no. Plus answers to the five decisions above (one line each is enough), and the

@@ -600,8 +600,10 @@ once a task is done - verify fully complete and working on the live site."
    `scripts/hero-reveal-off.py` (dry run, backup per template, `--undo`). The builders that regenerate templates carry the rule
    (`scripts/study-template-build.py`, `scripts/build-clinical-studies-blog.py`), and `scripts/hub-upgrade.py` keeps it when a
    spec sets a section's Custom CSS (tests in `tests/test_hub_upgrade.py`, `tests/test_study_template_build.py`; red on the old
-   code, green now). Not the home page: its hero is a slideshow, a different element, still to be tested. Verified live: the
-   rule is served on all 19 public pages; warm Lighthouse mobile runs at 3.4 to 5.3 s on most pages (11 to 15 s before), with
+   code, green now). The home page's slideshow got its own pair of rules the same day (carousel shown at once; the first slide's
+   image, heading, subheading and button held at full opacity, because showing only the carousel let theme.js blink the image at
+   ~4.4 s, measured frame by frame); live 4.0 and 3.0 s (scores 0.85, 0.93), was 12.5 s (0.71); slides still rotate.
+   Verified live: the rule is served on all 19 public pages; warm Lighthouse mobile runs at 3.4 to 5.3 s on most pages (11 to 15 s before), with
    occasional slow runs the simulation produces on the same page minutes apart (for example Firming 4.6 s then 12.2 s);
    observed paints are all under 0.9 s. Field data needs the PageSpeed and CrUX APIs switched on (Malcolm, decision 2).
 2. **Skin Concerns** (`/pages/skin-concerns`, the hub of the five Skin Solutions pages): a real `<h1>` in six languages (title

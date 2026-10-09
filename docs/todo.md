@@ -128,7 +128,7 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
   templates/page.skin-concerns.json faq f5 --enable --apply`). FAQ f3 (how the solutions differ) does not name Collagen yet.
 - ⏳ **Product pages, plan step 1.2:** nine English drafts and the review pack `docs/review-2026-10-09-product-pages.md` wait for
   Malcolm (per page yes/edits/no; decisions 3, 8, 15; the "free from" line; carton facts).
-- ⏳ **Home page slideshow speed:** not covered by the hero rule (a slideshow, not an image banner); local A/B still to run.
+- ✅ **Home page slideshow speed (2026-10-09):** two slideshow rules via `scripts/hero-reveal-off.py`; live LCP 4.0 and 3.0 s (was 12.5 s); no blink, slides rotate (filmed frame by frame).
 - ⏳ **`tests/test_hub_i18n.py::test_rebuilds_the_live_argireline_translations_exactly` fails** on main (before 2026-10-09's
   changes too): its fixture predates the 2026-10-08 claim and credit fixes on the Argireline hub. Refresh the fixture.
 - ✅ Explainer live (Malcolm, 2026-10-08: "use A7 nbp_pro 02"): r2 slot A (blue water under a lifted film), uploaded as

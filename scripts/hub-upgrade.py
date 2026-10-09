@@ -108,6 +108,14 @@ def upload(name, hdr, j):
         raise RuntimeError(r["themeFilesUpsert"]["userErrors"])
 
 
+#: the hero no-fade rules scripts/hero-reveal-off.py adds; a spec that sets the section's Custom CSS keeps them
+NO_FADE_RULES = frozenset({
+    "image-banner{opacity:1!important}",
+    "slideshow-carousel{opacity:1!important}",
+    ".slideshow__slide.is-selected :is(img,[data-sequence],.button){opacity:1!important;transform:none!important}",
+})
+
+
 def spec_locales(spec):
     """The locales every value must carry besides English: none for an english_first draft."""
     return [] if spec.get("english_first") else LOCALES
@@ -246,7 +254,7 @@ def build(spec, j):
                 sys.exit(f"  ✗ section_css {sid}: {r[:60]!r} holds more than one statement; give each rule or @media its own entry")
         # keep the hero's no-fade rule when a spec's list predates it (scripts/hero-reveal-off.py, ADR-2026-10-08-X;
         # Claude, 2026-10-09): a re-apply would otherwise bring the ~10 s fade back
-        keep = [r for r in j["sections"][sid].get("custom_css", []) if r == "image-banner{opacity:1!important}" and r not in rules]
+        keep = [r for r in j["sections"][sid].get("custom_css", []) if r in NO_FADE_RULES and r not in rules]
         j["sections"][sid]["custom_css"] = list(rules) + keep
     host = spec.get("jsonld_host", "references")
     tag = '<script type="application/ld+json" id="sgx-webpage-jsonld">'

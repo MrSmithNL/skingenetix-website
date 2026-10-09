@@ -10,6 +10,10 @@ per-page roll-out of that rule).
 
 The rule is `image-banner{opacity:1!important}` in the hero section's `custom_css` (a sibling of `settings`); Shopify
 scopes Custom CSS to its section, so nothing outside the hero changes. Custom CSS caps at 500 characters per section.
+The home page's hero is a slideshow: the carousel is shown at once and the first slide's image, heading, subheading and button
+are held at full opacity, because showing only the carousel let theme.js blink the image out and back in at about 4.4 s
+(measured frame by frame, 2026-10-09). Local A/B, Lighthouse mobile: 15.5/15.1 s as it was, 6.3/6.4 s with the rules; slides
+still change.
 
     python3 scripts/hero-reveal-off.py --all                    # dry run over every live hero template
     python3 scripts/hero-reveal-off.py --all --apply
@@ -22,11 +26,15 @@ read_file/split/upload helpers; theme 184835965313).
 import argparse, datetime as dt, importlib.util, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-RULE = "image-banner{opacity:1!important}"
-HERO_TYPES = ("image-with-text-overlay",)
-# Every template whose page is live (or about to go live) with a fading hero, 2026-10-09. Not index.json: its hero is a
-# slideshow, a different element, tested separately.
+RULES = {
+    "image-with-text-overlay": ["image-banner{opacity:1!important}"],
+    "slideshow": ["slideshow-carousel{opacity:1!important}",
+                  ".slideshow__slide.is-selected :is(img,[data-sequence],.button){opacity:1!important;transform:none!important}"],
+}
+HERO_TYPES = tuple(RULES)
+# Every template whose page is live (or about to go live) with a fading hero, 2026-10-09.
 ALL = [
+    "templates/index.json",
     "templates/page.brightening-glow.json", "templates/page.contact.json", "templates/page.faq.json",
     "templates/page.fine-lines-wrinkles.json", "templates/page.firming-skin-density.json",
     "templates/page.glutathione-research.json", "templates/page.ingredients.json", "templates/page.pdrn-research.json",
@@ -54,7 +62,7 @@ hu = _load("hu", "scripts/hub-upgrade.py")
 
 
 def hero_id(j):
-    """The first enabled image-with-text-overlay among the first three rendered sections."""
+    """The first enabled image banner or slideshow among the first three rendered sections."""
     live = [k for k in j.get("order", []) if not j["sections"][k].get("disabled")]
     return next((k for k in live[:3] if j["sections"][k]["type"] in HERO_TYPES), None)
 
@@ -76,14 +84,15 @@ def main():
         hdr, j = hu.split(raw)
         hid = hero_id(j)
         if not hid:
-            print(f"  - {name}: no image-with-text-overlay hero, skipped")
+            print(f"  - {name}: no image-banner or slideshow hero, skipped")
             continue
+        rules = RULES[j["sections"][hid]["type"]]
         css = list(j["sections"][hid].get("custom_css", []))
-        has = RULE in css
+        has = all(r in css for r in rules)
         if has != a.undo:
             print(f"  = {name} [{hid}]: already {'without' if a.undo else 'with'} the rule")
             continue
-        css = [c for c in css if c != RULE] if a.undo else css + [RULE]
+        css = [c for c in css if c not in rules] if a.undo else css + [r for r in rules if r not in css]
         if sum(len(c) for c in css) > 500:
             print(f"  ✗ {name} [{hid}]: Custom CSS would pass 500 characters, skipped")
             continue
