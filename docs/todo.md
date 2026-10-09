@@ -152,12 +152,12 @@ backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
   `skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg` (used on the Learn redesign).
 - ⏳ **Product pages, plan step 1.2:** nine English drafts and the review pack `docs/review-2026-10-09-product-pages.md` wait for
   Malcolm (per page yes/edits/no; decisions 3, 8, 15; the "free from" line; carton facts).
-- ⏳ **Wave-1 articles drafted (Malcolm approved the article list, 2026-10-09):** on the hidden drafts blog for his review of
-  the English: `/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps` (audit 9.65 uncapped),
-  `/blogs/clinical-studies-drafts/copper-uglies-what-they-are-and-how-long-they-last` (9.78) and
-  `/blogs/clinical-studies-drafts/salmon-sperm-skincare-vs-the-salmon-sperm-facial` (9.70); zero confirmed failures beyond the
-  hidden-draft items. Configs in `configs/learn/drafts/`. On approval: `learn-article-draft.py <config> --apply --blog learn --public`,
-  owner rows in `configs/page-targets.json`, hub links in prose, Request indexing, 14 days, then six languages.
+- ✅/⏳ **Wave-1 articles LIVE (Malcolm approved and said publish, 2026-10-09):** `/blogs/learn/crows-feet-what-causes-them-and-what-helps`,
+  `/blogs/learn/copper-uglies-what-they-are-and-how-long-they-last`, `/blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial` (indexable, featured
+  images, hidden drafts unpublished, owner rows in `configs/page-targets.json` and the seo-toolkit keyword map 17639db). **Design upgrade (Malcolm: a
+  minimum requirement of every article):** per-article templates built from specs `configs/hub-upgrades/learn-{crows-feet,copper-uglies,salmon-sperm-skin-care}-design-2026-10-09.json`
+  on hidden previews (`?view=learn-crows-feet` etc.); spoke 1's redesign taken over from the closed window (critic cycle 2 FIX 5.1, fixes applied, cycle 3 running).
+  ⏳ critic cycles, audit each preview, then switch each article's template suffix; Request indexing for the three URLs (Malcolm, Search Console).
 - ⏳ **Microneedling number-one plan (2026-10-09), waits for Malcolm's 11 decisions:** `docs/microneedling-number-one-plan-2026-10-09.md`,
   evidence `audits/2026-10-09-microneedling-number-one/`. Keyword universe US/GB/DE/NL, 38 SERPs, AI-answer panel, regulation and
   clinical-evidence research, product and category teardown. First levers: remove the live "absorb deeper" / "sterile" wording and set

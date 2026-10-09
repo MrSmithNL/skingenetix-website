@@ -1,0 +1,769 @@
+{
+  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, and images where appropriate) as a minimum. This moves /blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial off the stock article template onto its own, built from the modules the study and science pages use, and designed around the design critic's cycle-1 verdict on the Argireline + Matrixyl build (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): both tables phone-safe (wrapper min-width:0, rows stack under 700 px, no table min-width); white and bone alternate, with plain text sections between image sections and only two 50/50 rows on the page; key figures one size down (ratio 0.5) with the Ye frame and link; the byline under the banner subline; related row square with named links and on white (footer is #F7F7F7); no product photograph beside the safety copy; no watermarked step photo; no image of anything passing into the skin (the PDRN mechanism diagram draws beams into the dermis, so it is not used, register 'reaches the dermis' avoid line); clinic prices eight sections away from the product. The byline uses commas, not middle dots (Rule 27 check A bans middle-dot meta lines). Sections: banner (PDRN hub DNA frame, its 1.048:1 phone crop) / key figures / lead and short answers / is it real sperm / the names table / three routes / clinic prices / does it work, the routes table and the Ye frame / what a serum or cream can do, with the Ye eye-bag card (illustration and labels as on the Ye study page, slot ye.o4) / safety, the four cautions as icons, the safety close and the legal question / how to read a label / the PDRN serum and night cream / related reads. Every passage is the approved, live article text, cut verbatim from configs/learn/drafts/salmon-sperm-skincare-vs-the-salmon-sperm-facial.json (internal links made relative); built by scratchpad make_salmon_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial?view=learn-salmon-sperm-skin-care until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #9E4F5C; table parents, figure size, 65ch, tap targets, byline).",
+  "english_first": true,
+  "create": true,
+  "template": "templates/article.learn-salmon-sperm-skin-care.json",
+  "view": "learn-salmon-sperm-skin-care",
+  "page": "salmon-sperm-skincare-vs-the-salmon-sperm-facial",
+  "add_sections": [
+    {
+      "id": "banner",
+      "after": null,
+      "section": {
+        "type": "image-with-text-overlay",
+        "settings": {
+          "full_width": true,
+          "allow_transparent_header": false,
+          "enable_parallax": false,
+          "image_size": "sm",
+          "image": "shopify://shop_images/skingenetix-pdrn-sodium-dna-polynucleotide-research-banner.jpg",
+          "mobile_image": "shopify://shop_images/skingenetix-pdrn-sodium-dna-polynucleotide-research-mobile.jpg",
+          "mobile_text_position": "place-self-end-center text-center",
+          "desktop_text_position": "sm:place-self-center sm:text-center",
+          "text_color": "#ffffff",
+          "overlay_color": "#1A1A1A",
+          "overlay_opacity": 25
+        },
+        "blocks": {
+          "sub": {
+            "type": "subheading",
+            "settings": {
+              "text": {
+                "en": "Learn"
+              }
+            }
+          },
+          "head": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h1>Salmon Sperm Skin Care: What It Is, and How It Differs From the Facial</h1><p>Salmon sperm skin care is the nickname for PDRN, and no sperm cells are in the bottle.</p><p>By the Skingenetix Research Team, medically reviewed by Dr Esther Bodde, 9 October 2026</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["sub", "head"],
+        "custom_css": [
+          "image-banner{opacity:1!important}",
+          "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }",
+          ".content-over-media .prose p:last-child{font-size:.875em}",
+          "@media screen and (max-width:320px){h1{font-size:28px!important}}"
+        ]
+      }
+    },
+    {
+      "id": "figures",
+      "after": "banner",
+      "section": {
+        "type": "impact-text",
+        "settings": {
+          "full_width": true,
+          "stack_mobile": true,
+          "text_alignment": "center",
+          "impact_text_style": "fill",
+          "text_divider": "none",
+          "impact_text_size_ratio": 0.5,
+          "background": "#FFFFFF",
+          "heading_text_color": "#9E4F5C",
+          "text_color": "#1A1A1A"
+        },
+        "blocks": {
+          "s1": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "0"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "Sperm cells in the bottle"
+              },
+              "content": {
+                "en": "<p>The starting material is salmon milt, but the ingredient is purified DNA fragments, not cells.</p>"
+              }
+            }
+          },
+          "s2": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "23.0% vs 6.6%"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "Crow's-feet wrinkle area, PDRN vs retinol"
+              },
+              "content": {
+                "en": "<p><a href=\"/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">The 31-woman split-face trial</a> (Ye 2026): 0.1% PDRN eye cream vs 0.1% retinol, 28 days, no placebo. The result is for the ingredient, not for our product.</p>"
+              }
+            }
+          },
+          "s3": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "3"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "Routes sold as a salmon sperm facial"
+              },
+              "content": {
+                "en": "<p>Injections, clinic microneedling with a serum and a leave-on cream are different treatments with separate evidence.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["s1", "s2", "s3"],
+        "custom_css": [
+          "h3.h4{font-size:20px}",
+          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}"
+        ]
+      }
+    },
+    {
+      "id": "answers",
+      "after": "figures",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "lead": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p><a href=\"/pages/pdrn-research\">PDRN</a> (polydeoxyribonucleotide, listed on labels as sodium DNA) is a purified mix of DNA fragments taken from salmon milt. The name is shorthand, and it covers three very different things.</p>"
+              }
+            }
+          },
+          "short": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p><strong>The short answers:</strong></p><ul><li><strong>Is it real sperm?</strong> No. The starting material is salmon milt, but the ingredient is purified DNA fragments, not cells.</li><li><strong>Is a salmon sperm facial the same as a cream?</strong> No. Injections, clinic microneedling with a serum and a leave-on cream are different treatments with separate evidence, and results do not transfer between them.</li><li><strong>Does a cream do anything?</strong> In the one controlled trial of a PDRN eye cream on intact skin, crow&rsquo;s feet fell by up to 23% in 28 days, more than three times the improvement seen with retinol on the other side of the face. It was one trial of 31 women, with no placebo side. The <a href=\"/pages/fine-lines-wrinkles\">fine lines and wrinkles</a> page explains what to expect from any topical.</li></ul>"
+              }
+            }
+          }
+        },
+        "block_order": ["lead", "short"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "sperm",
+      "after": "answers",
+      "section": {
+        "type": "media-with-text",
+        "settings": {
+          "full_width": false,
+          "alternate_media_position": false,
+          "spacing": "small"
+        },
+        "blocks": {
+          "m": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-dna-strands-pink-gel-macro-study-card.jpg",
+              "media_width": 50,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#FFFFFF",
+              "text_color": "#1a1a1a",
+              "content": {
+                "en": "<h2>Is salmon sperm skincare made from actual sperm?</h2><p>The raw material is the milt of salmon or related fish. A 2021 review describes PDRN as DNA fragments &ldquo;mainly extracted from the sperm cells of salmon trout or chum salmon&rdquo; (Kim 2021). That is where the nickname comes from.</p><p>The ingredient itself is a purified extract. The process removes the proteins and leaves DNA fragments, so the label says &ldquo;sodium DNA&rdquo;, not sperm. Our own PDRN serum lists &ldquo;1% PDRN (10,000 ppm), salmon-derived sodium DNA&rdquo;.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["m"],
+        "custom_css": [".prose a:not(.button){color:#9E4F5C;text-decoration:underline}"]
+      }
+    },
+    {
+      "id": "names",
+      "after": "sperm",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "intro": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Salmon DNA, PDRN, polynucleotides, sodium DNA: the same thing?</h2><p>They overlap, and the names are used loosely. Sodium DNA is the ingredient-list name. PDRN and polynucleotide (PN) both describe DNA fragments, and a 2025 review proposes PDRN for fragments under 1,500 kDa and PN for longer ones, while noting that the two names are used interchangeably (Marques 2025). A kDa is a unit of molecular size.</p><p>The trials show why the name tells you little:</p>"
+              }
+            }
+          },
+          "table": {
+            "type": "liquid",
+            "settings": {
+              "liquid": {
+                "en": "<div class=\"sgt\"><table><thead><tr><th>Where the name appears</th><th>Name used</th><th>Fragment size</th></tr></thead><tbody><tr><td><strong>Ye 2026 eye-cream trial</strong></td><td><span class=\"l\">Name used</span>PDRN</td><td><span class=\"l\">Fragment size</span>850 kDa or less</td></tr><tr><td><strong>Yogya 2022 clinic microneedling trial</strong></td><td><span class=\"l\">Name used</span>polynucleotide</td><td><span class=\"l\">Fragment size</span>65 to 130 kDa</td></tr><tr><td><strong>2025 naming proposal (Marques)</strong></td><td><span class=\"l\">Name used</span>PDRN under 1,500 kDa; PN at 1,500 kDa or more</td><td><span class=\"l\">Fragment size</span>by definition</td></tr></tbody></table></div>"
+              }
+            }
+          },
+          "after": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>The trial that called its ingredient &ldquo;polynucleotide&rdquo; used the smaller fragments. So the word on the label tells you neither the size nor how the ingredient was applied.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["intro", "table", "after"],
+        "custom_css": [
+          ".sgt{min-width:0;max-width:100%;overflow-x:auto}",
+          ".sgt table{width:100%;border-collapse:collapse}",
+          ".sgt th,.sgt td{padding:10px;border-bottom:1px solid #ccc;text-align:left;vertical-align:top}",
+          ".sgt th{border-bottom:2px solid #3E4A52}",
+          ".sgt .l{display:none}",
+          "@media screen and (max-width: 699px){.sgt tbody,.sgt tr,.sgt td{display:block}.sgt thead{display:none}.sgt tr{padding:8px 0;border-top:2px solid #3E4A52}.sgt td{border:0;padding:2px 0}.sgt .l{display:block;font-size:13px;color:#555}}"
+        ]
+      }
+    },
+    {
+      "id": "facial",
+      "after": "names",
+      "section": {
+        "type": "multi-column",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "subheading": "",
+          "title": "",
+          "content": {
+            "en": "<h2>What is a salmon sperm facial?</h2><p>&ldquo;Salmon sperm facial&rdquo; is used for three different routes:</p>"
+          },
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "r1": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-dermatologist-skin-consultation-client-conversation.jpg",
+              "column_size": "3",
+              "title": {
+                "en": "Injection"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>A medical practitioner places tiny amounts under the skin, often called a skin booster.</p>"
+              }
+            }
+          },
+          "r2": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-polynucleotide-droplet-pipette-study.jpg",
+              "column_size": "3",
+              "title": {
+                "en": "Clinic microneedling with a serum"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>A clinic makes tiny channels in the skin and applies a polynucleotide serum straight afterwards.</p>"
+              }
+            }
+          },
+          "r3": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-cream-swatch-elasticity-firmness-study.jpg",
+              "column_size": "3",
+              "title": {
+                "en": "A leave-on facial or cream"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>Nothing breaks the skin. The product sits on the surface, and how far PDRN passes into intact skin is not established.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["r1", "r2", "r3"],
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "prices",
+      "after": "facial",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "p": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>Prices vary widely. Vogue UK has reported about &pound;1,000 for a full face in London, and one Leeds clinic listed &pound;300 a session when we looked on 9 October 2026. Those are clinic procedures, not products you buy to use at home.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["p"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "work",
+      "after": "prices",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "intro": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Does salmon sperm skincare work?</h2><p>Reviews of the injected route call the evidence promising but of low to moderate quality. The only controlled trial of a PDRN cream on intact skin is small and has no placebo side. The microneedling trial shows a faster result after a procedure, which a leave-on product cannot be assumed to share.</p><p>For the full appraisal of what the research shows, see our <a href=\"/pages/pdrn-research\">PDRN research</a> page. The table sets the three routes side by side:</p>"
+              }
+            }
+          },
+          "table": {
+            "type": "liquid",
+            "settings": {
+              "liquid": {
+                "en": "<div class=\"sgt\"><table><thead><tr><th>Route</th><th>Who does it</th><th>Best human evidence</th><th>What it measured</th><th>What it does not show</th></tr></thead><tbody><tr><td><strong>Injection (&ldquo;skin booster&rdquo;)</strong></td><td><span class=\"l\">Who does it</span>A medical practitioner</td><td><span class=\"l\">Best human evidence</span>Reviews of 7 trials (183 people) and 9 studies (219 patients), mostly injected (Alhussain 2026; Lampridou 2025)</td><td><span class=\"l\">What it measured</span>Called &ldquo;promising&rdquo;; the studies were &ldquo;of low and moderate quality&rdquo;</td><td><span class=\"l\">What it does not show</span>Anything about a product used at home</td></tr><tr><td><strong>Microneedling plus polynucleotide serum (clinic facial)</strong></td><td><span class=\"l\">Who does it</span>A clinic</td><td><span class=\"l\">Best human evidence</span><a href=\"/blogs/clinical-studies/pdrn-microneedling-split-face-trial-yogya-2022\">The microneedling trial</a> (Yogya 2022): 29 women, split face, 0.3% serum vs saline after radiofrequency microneedling</td><td><span class=\"l\">What it measured</span>Wrinkle indentation around the eyes improved significantly within 2 months on the serum side, and 6 months on the saline side</td><td><span class=\"l\">What it does not show</span>That the result transfers to a leave-on serum on intact skin</td></tr><tr><td><strong>Leave-on cream at home</strong></td><td><span class=\"l\">Who does it</span>You</td><td><span class=\"l\">Best human evidence</span><a href=\"/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">The 31-woman split-face trial</a> (Ye 2026): 0.1% PDRN eye cream vs 0.1% retinol, 28 days, no placebo</td><td><span class=\"l\">What it measured</span>Crow&rsquo;s-feet wrinkle area fell 23.0% on the PDRN side, against 6.6% with retinol: more than three times the improvement</td><td><span class=\"l\">What it does not show</span>A result for our product, or against a plain cream</td></tr></tbody></table></div>"
+              }
+            }
+          },
+          "frame": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>About the Ye figure: it comes from 31 women with self-reported sensitive skin, who used 0.1% PDRN eye cream on one side of the face and 0.1% retinol in the same base on the other, for 28 days. There was no placebo side, and the result is for the ingredient, not for our product.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["intro", "table", "frame"],
+        "custom_css": [
+          ".sgt{min-width:0;max-width:100%;overflow-x:auto}",
+          ".sgt table{width:100%;border-collapse:collapse}",
+          ".sgt th,.sgt td{padding:10px;border-bottom:1px solid #ccc;text-align:left;vertical-align:top}",
+          ".sgt th{border-bottom:2px solid #3E4A52}",
+          ".sgt .l{display:none}",
+          "@media screen and (max-width: 699px){.sgt tbody,.sgt tr,.sgt td{display:block}.sgt thead{display:none}.sgt tr{padding:8px 0;border-top:2px solid #3E4A52}.sgt td{border:0;padding:2px 0}.sgt .l{display:block;font-size:13px;color:#555}}"
+        ]
+      }
+    },
+    {
+      "id": "serum",
+      "after": "work",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "intro": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>What can a salmon sperm serum or cream do, including under the eyes?</h2><p>This is what people usually mean by salmon sperm for skin at home. The honest answer is that one trial points the right way, and the rest is not tested.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["intro"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "proof",
+      "after": "serum",
+      "section": {
+        "type": "research-before-after",
+        "settings": {
+          "title": ""
+        },
+        "blocks": {
+          "f1": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-eye-bag-volume-before-after-study.jpg",
+              "media_position": "start",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 28 days"
+              },
+              "result_label": {
+                "en": "Eye-bag volume −14.8% vs −10.2% with retinol"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "Eye bags, Ye 2026 eye-cream trial"
+              },
+              "title": {
+                "en": "A larger fall, not double"
+              },
+              "content": {
+                "en": "<p>In the Ye trial, eye-bag volume fell 14.8% on the PDRN side against 10.2% with retinol, under the same conditions as above. That is a larger fall, not double. The trial did not test a plain cream, so it cannot say how much of the change comes from PDRN rather than from moisturising.</p><p>The trial used an eye cream with PDRN as the only active. We have not tested our serum or cream ourselves, so we cannot say they will do the same. A cosmetic works on how skin looks and feels, and it does not replace a medical treatment.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["f1"],
+        "custom_css": [".rba__text .h2{font-size:var(--text-h3, 2rem)}", ".rba__row{--rba-card-bg:#F0F0F0}"]
+      }
+    },
+    {
+      "id": "safety",
+      "after": "proof",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "intro": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Is salmon sperm skincare safe to use, and who should avoid it?</h2><p>In the Ye trial, no adverse reactions were reported on either side. The Yogya trial reported no infection, pigment change or scarring after the clinic procedure. Both are findings about the ingredient, in small groups, and neither tested our products.</p><p>Skip it or ask first if any of these apply:</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["intro"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "avoid",
+      "after": "safety",
+      "section": {
+        "type": "text-with-icons",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "title": "",
+          "text_alignment": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "a1": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-shield",
+              "title": {
+                "en": "Fish allergy"
+              },
+              "content": {
+                "en": "<p>The Ye trial excluded people with a known PDRN allergy, and nobody has tested fish-allergic users.</p>"
+              }
+            }
+          },
+          "a2": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-question",
+              "title": {
+                "en": "Pregnant or breastfeeding"
+              },
+              "content": {
+                "en": "<p>It has not been tested in these groups. Ask a doctor or pharmacist first.</p>"
+              }
+            }
+          },
+          "a3": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-timer",
+              "title": {
+                "en": "Broken, irritated or freshly treated skin"
+              },
+              "content": {
+                "en": "<p>That includes skin after a facial, unless the practitioner says otherwise.</p>"
+              }
+            }
+          },
+          "a4": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-stop",
+              "title": {
+                "en": "Stinging that does not fade"
+              },
+              "content": {
+                "en": "<p>Stop using it.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["a1", "a2", "a3", "a4"],
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "legal",
+      "after": "avoid",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "close": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>Patch-test first on the inner forearm or behind the ear. No combination with other actives has been trialled, because in Ye the retinol was on the other half of the face. For injections, see a qualified medical practitioner.</p>"
+              }
+            }
+          },
+          "law": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Is salmon sperm skincare legal?</h2><p>In August 2025, US dermatologists quoted by CNN and NBC Select said that injectable PDRN is not approved by the FDA and that topical products are sold as cosmetics. We report this as their view at that date. Rules differ by country and can change, so check your regulator&rsquo;s own pages for the current position.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["close", "law"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#9E4F5C;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "label",
+      "after": "legal",
+      "section": {
+        "type": "multi-column",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "subheading": "",
+          "title": "",
+          "content": {
+            "en": "<h2>How do you read a salmon DNA label?</h2><p>Four things to check:</p>"
+          },
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "k1": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "title": {
+                "en": "The name"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>Look for sodium DNA, which is the standard ingredient-list name for PDRN.</p>"
+              }
+            }
+          },
+          "k2": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "title": {
+                "en": "The amount"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>A stated percentage or parts per million. If there is none, you cannot tell whether it is a trace.</p>"
+              }
+            }
+          },
+          "k3": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "title": {
+                "en": "The source"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>Salmon-derived is stated on ours. &ldquo;Vegan PDRN&rdquo; is a different ingredient, and the trials above did not test it.</p>"
+              }
+            }
+          },
+          "k4": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "title": {
+                "en": "The claims"
+              },
+              "heading_tag": "h3",
+              "content": {
+                "en": "<p>Be wary of bold proof claims, and of results quoted from injection studies.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["k1", "k2", "k3", "k4"],
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "products",
+      "after": "label",
+      "section": {
+        "type": "featured-collection",
+        "settings": {
+          "products": ["pdrn-renewal-serum", "pdrn-collagen-night-cream"],
+          "full_width": true,
+          "stack_products": true,
+          "show_progress_bar": false,
+          "products_count": 2,
+          "products_per_row_mobile": "2",
+          "products_per_row_desktop": 2,
+          "subheading": "",
+          "title": "",
+          "content": {
+            "en": "<p>Our <a href=\"/products/pdrn-renewal-serum\">1% PDRN serum</a> lists its amount and source on the label. It is a cosmetic, and the trials in this article tested the ingredient, not the serum.</p>"
+          },
+          "link_text": "",
+          "background": "#F0F0F0"
+        },
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "related",
+      "after": "products",
+      "section": {
+        "type": "multi-column",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "subheading": "",
+          "title": {
+            "en": "Read the trials and the research"
+          },
+          "content": {
+            "en": "<p><strong>Appraised by the Skingenetix Research Team. Medically reviewed by Dr Esther Bodde, Cosmetic &amp; Medical Physician.</strong></p><p>Last reviewed 9 October 2026.</p>"
+          },
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "r1": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-cream-spatula-skin-thickness-study.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Ye 2026: PDRN eye cream vs retinol"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read the Ye 2026 appraisal"
+              },
+              "link_url": "/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026",
+              "link_style": "link"
+            }
+          },
+          "r2": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-polynucleotide-serum-drop-microneedling-study.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Yogya 2022: microneedling plus polynucleotide serum"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read the Yogya 2022 appraisal"
+              },
+              "link_url": "/blogs/clinical-studies/pdrn-microneedling-split-face-trial-yogya-2022",
+              "link_style": "link"
+            }
+          },
+          "r3": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-laboratory-skin-sample-microscope-rose-beaker.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "PDRN research"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read the PDRN research"
+              },
+              "link_url": "shopify://pages/pdrn-research",
+              "link_style": "link"
+            }
+          },
+          "r4": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-concern-fine-lines-wrinkles-2026.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Fine lines and wrinkles"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read about fine lines and wrinkles"
+              },
+              "link_url": "shopify://pages/fine-lines-wrinkles",
+              "link_style": "link"
+            }
+          }
+        },
+        "block_order": ["r1", "r2", "r3", "r4"],
+        "custom_css": ["p,ul{max-width:65ch}", "a{display:inline-block;padding-block:13px}"]
+      }
+    }
+  ]
+}

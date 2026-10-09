@@ -1,0 +1,783 @@
+{
+  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, images where appropriate) as a minimum. The live article /blogs/learn/crows-feet-what-causes-them-and-what-helps moves from the stock article template onto its own, built from the study and science-page modules and designed from the start around the spoke-1 critic's cycle-1 findings (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): banner with breadcrumb, H1, the opening answer and one byline line; three key figures with their frame and a linked source (impact-text 0.5, never larger than the H1); short answers and the spelling question as plain text; why they show and stay beside a laughing face; age and the five-trial table (phone-safe wrapper) with its footnote; four before/after result cards (Wang, Ye, Badenhorst, Watanabe; labels as live on the study pages, Badenhorst's and Watanabe's result line in the article's own words); the choosing checklist as text columns; the product paragraph with the Argireline and PDRN serum cards; naturally; the under-eye question beside the Ye eye-bag illustration; professional options (no image); safety complete (H2, five icon items holding all six cautions, see-a-doctor and the review lines); related reads with square images and named links. Backgrounds alternate white and bone; no two image sections touch; no product shot beside safety copy; no penetration render. Every passage is the approved body_html of configs/learn/drafts/crows-feet-what-causes-them-and-what-helps.json, sliced verbatim by scratchpad make_crows_feet_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/crows-feet-what-causes-them-and-what-helps?view=learn-crows-feet until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #3E4A52; table parents, figure size, 65ch, tap targets, byline).",
+  "english_first": true,
+  "create": true,
+  "template": "templates/article.learn-crows-feet.json",
+  "view": "learn-crows-feet",
+  "page": "crows-feet-what-causes-them-and-what-helps",
+  "add_sections": [
+    {
+      "id": "banner",
+      "after": null,
+      "section": {
+        "type": "image-with-text-overlay",
+        "settings": {
+          "full_width": true,
+          "allow_transparent_header": false,
+          "enable_parallax": false,
+          "image_size": "sm",
+          "image": "shopify://shop_images/skingenetix-argireline-ripple-settling-wrinkle-study-banner-desktop.jpg",
+          "mobile_image": "shopify://shop_images/skingenetix-argireline-ripple-settling-wrinkle-study-banner-mobile.jpg",
+          "mobile_text_position": "place-self-end-center text-center",
+          "desktop_text_position": "sm:place-self-center-end sm:text-start",
+          "text_color": "#ffffff",
+          "overlay_color": "#1A1A1A",
+          "overlay_opacity": 28
+        },
+        "blocks": {
+          "head": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p><a href=\"/blogs/learn\">Learn</a></p><h1>Crow&rsquo;s Feet: What Causes Them and What Really Helps</h1><p>Crow&rsquo;s feet are the fine lines that fan out from the outer corners of the eyes, and skincare can soften how they look but cannot stop the movement that makes them.</p><p>By the Skingenetix Research Team, medically reviewed by Dr Esther Bodde, 9 October 2026</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["head"],
+        "custom_css": [
+          "image-banner{opacity:1!important}",
+          "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }",
+          "@media screen and (max-width:320px){h1{font-size:28px!important}}"
+        ]
+      }
+    },
+    {
+      "id": "figures",
+      "after": "banner",
+      "section": {
+        "type": "impact-text",
+        "settings": {
+          "full_width": true,
+          "stack_mobile": true,
+          "text_alignment": "center",
+          "impact_text_style": "fill",
+          "text_divider": "none",
+          "impact_text_size_ratio": 0.5,
+          "background": "#FFFFFF",
+          "heading_text_color": "#3E4A52",
+          "text_color": "#1A1A1A"
+        },
+        "blocks": {
+          "s1": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "22 of 45"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "Argireline: crow’s feet graded clearly smoother"
+              },
+              "content": {
+                "en": "<p>After 4 weeks; none of 15 on placebo (<a href=\"https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Wang 2013</a>).</p>"
+              }
+            }
+          },
+          "s2": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "−23.0%"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "PDRN: crow’s-feet wrinkle area"
+              },
+              "content": {
+                "en": "<p>After 28 days, against 6.6% on the retinol side; no placebo (<a href=\"https://www.skingenetix.com/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">Ye 2026</a>).</p>"
+              }
+            }
+          },
+          "s3": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "55.8%"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "GHK-Cu: more wrinkle-volume reduction than the plain serum base"
+              },
+              "content": {
+                "en": "<p>Near the eye corner, after 8 weeks (<a href=\"https://www.skingenetix.com/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Badenhorst 2016</a>).</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["s1", "s2", "s3"],
+        "custom_css": [
+          "h3.h4{font-size:20px}",
+          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}"
+        ]
+      }
+    },
+    {
+      "id": "answers",
+      "after": "figures",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "a": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p><strong>In short:</strong></p><ul><li><strong>What causes them?</strong> Years of smiling and squinting fold the skin there, and sun exposure and lost elasticity set the folds in.</li><li><strong>What helps?</strong> Daily sunscreen first. After that, a few ingredients have been tested on crow&rsquo;s feet in controlled trials, with modest results, listed in the table below.</li><li><strong>What does not exist?</strong> A cream that removes them.</li></ul><p>Crow&rsquo;s feet are one of the line types covered on our <a href=\"https://www.skingenetix.com/pages/fine-lines-wrinkles\">Fine Lines and Wrinkles page</a>, and Argireline, the ingredient in the first trial below, has its own <a href=\"https://www.skingenetix.com/pages/acetyl-hexapeptide-8-research\">Argireline research page</a>. Every number below comes from our appraisal of each trial, linked in the table.</p>"
+              }
+            }
+          },
+          "b": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Is it crow&rsquo;s feet, crows&rsquo; feet or crows feet?</h2><p>All three spellings point at the same thing. &ldquo;Crow&rsquo;s feet&rdquo; is the usual written form, &ldquo;crows&rsquo; feet&rdquo; also appears, and &ldquo;crows feet&rdquo; is how many people type it into a search box. The name comes from the shape of the lines, which spread like a bird&rsquo;s foot.</p><p>Doctors call them lateral canthal lines, meaning the lines at the outer corner of the eye. They are different from the lines under the eye, which have their own section below.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["a", "b"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "why",
+      "after": "answers",
+      "section": {
+        "type": "media-with-text",
+        "settings": {
+          "full_width": false,
+          "alternate_media_position": false,
+          "spacing": "small"
+        },
+        "blocks": {
+          "w": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-radiant-healthy-skin-portrait-phone.jpg",
+              "media_width": 45,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "title": "",
+              "background": "#FFFFFF",
+              "text_color": "#1a1a1a",
+              "content": {
+                "en": "<h2>Why do crow&rsquo;s feet show when you smile, and why do they stay?</h2><p>Smiling, laughing and squinting tighten the ring of muscle around the eye and fold the skin at its outer edge. In young skin the folds spring back. These are the lines you see only when you smile.</p><p>Over the years, sun exposure and the gradual loss of skin elasticity make the skin slower to spring back. The folds then stay visible at rest. So there are two kinds of line: the one that appears with the expression, and the one that remains when your face is still.</p><p>The difference matters for creams. A cream works on the skin&rsquo;s surface. It does not stop you smiling, and the trials below do not claim that it does.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["w"],
+        "custom_css": [".prose a:not(.button){color:#3E4A52;text-decoration:underline}"]
+      }
+    },
+    {
+      "id": "evidence",
+      "after": "why",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "large",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "a": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>At what age do crow&rsquo;s feet appear?</h2><p>There is no single age. It depends on how much your face moves, how much sun your skin has had, your skin type and your family. The trials below recruited adults aged 25 to 65, all with visible lines at the eye corner, so lines are common across that whole range.</p>"
+              }
+            }
+          },
+          "h": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Which skincare ingredients have been tested on crow&rsquo;s feet?</h2><p>We know of five controlled trials that measured the skin at the eye corner. Each is already appraised on our site. The table sets them side by side.</p>"
+              }
+            }
+          },
+          "t": {
+            "type": "liquid",
+            "settings": {
+              "liquid": {
+                "en": "<div class=\"sgx-evtable\"><table><thead><tr><th>Ingredient and strength</th><th>Trial</th><th>People</th><th>Length</th><th>Compared with</th><th>What was measured</th><th>Result</th><th>Who paid</th></tr></thead><tbody><tr><td>Argireline&reg;, 10%</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Wang 2013</a></td><td>60 adults aged 25&ndash;60 (45 active, 15 placebo)</td><td>4 weeks</td><td>Placebo cream</td><td>Clinicians&rsquo; grade of crow&rsquo;s feet, made blind</td><td>22 of 45 graded clearly smoother; none of 15 on placebo</td><td>Cream supplied by McEit, which markets Argireline in China; authors declared no conflicts</td></tr><tr><td>PDRN, 0.1% eye cream</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">Ye 2026</a></td><td>31 women aged 35&ndash;55 with sensitive skin</td><td>28 days</td><td>0.1% retinol in the same base, on the other side of the face; no placebo</td><td>Crow&rsquo;s-feet wrinkle area, by image analysis</td><td>Down 23.0% on the PDRN side, 6.6% on the retinol side</td><td>No specific funding declared; four authors work for skincare biotechnology companies</td></tr><tr><td>GHK-Cu serum, strength not stated</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Badenhorst 2016</a></td><td>40 women aged 40&ndash;65 (39 analysed)</td><td>8 weeks</td><td>The same serum base without GHK-Cu or its carrier</td><td>Wrinkle volume near the eye corner, by 3D imaging</td><td>55.8% more wrinkle-volume reduction than the plain serum base</td><td>Snowberry NZ, which makes the serum</td></tr><tr><td>Palmitoyl pentapeptide-4 (the original Matrixyl&reg;), 3 ppm</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005\">Robinson 2005</a></td><td>93 women aged 35&ndash;55</td><td>12 weeks</td><td>The same moisturiser without the peptide, on the other side of the face</td><td>Fine lines and wrinkles, by image analysis and blind expert graders</td><td>Small, but ahead of the comparison from week 8, by the paper&rsquo;s own bar (p &le; 0.10); no size reported</td><td>All six authors worked for Procter &amp; Gamble</td></tr><tr><td>Oxidised glutathione, 2%</td><td><a href=\"https://www.skingenetix.com/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014\">Watanabe 2014</a></td><td>30 women aged 30&ndash;50</td><td>10 weeks</td><td>Placebo lotion, on the other side of the face</td><td>Blind ratings of wrinkles at the outer eye corner</td><td>Rated moderately softer in 1 in 3 women (33.3% by the investigator, 30.0% by the women); none on placebo</td><td>Kyowa Hakko Bio, which makes the ingredient</td></tr></tbody></table></div>"
+              }
+            }
+          },
+          "n": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>The designs differ, so the rows cannot be ranked or added together. No combination of these ingredients was tested. Each result describes the ingredient as studied, not our products. The Ye trial tested the ingredient in a 0.1% eye cream; it did not test any Skingenetix product. The Robinson trial tested the original Matrixyl, which is not Matrixyl 3000.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["a", "h", "t", "n"],
+        "custom_css": [
+          ".sgx-evtable{overflow-x:auto;max-width:100%}",
+          ".sgx-evtable table{width:100%;min-width:960px;border-collapse:collapse;background:#fff;font-size:15px;line-height:1.45}",
+          ".sgx-evtable th,.sgx-evtable td{padding:10px 12px;border-bottom:1px solid #dcdcdc;text-align:left;vertical-align:top}",
+          ".sgx-evtable th{font-weight:600;background:#E4E4E4}",
+          "p,h2{max-width:44rem}",
+          ".prose>*{min-width:0;max-width:100%}",
+          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "proof",
+      "after": "evidence",
+      "section": {
+        "type": "research-before-after",
+        "settings": {
+          "title": ""
+        },
+        "blocks": {
+          "f1": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg",
+              "media_position": "start",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 4 weeks"
+              },
+              "result_label": {
+                "en": "22 of 45 graded clearly smoother vs 0 of 15 on placebo"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "Argireline®, 10% (Wang 2013)"
+              },
+              "title": {
+                "en": "Clinicians’ grade of crow’s feet, made blind"
+              },
+              "content": {
+                "en": "<p>60 adults aged 25&ndash;60 (45 active, 15 placebo), 4 weeks, against a placebo cream.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Read our appraisal of Wang 2013</a></p>"
+              }
+            }
+          },
+          "f2": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-crows-feet-under-eye-lines-before-after-study.jpg",
+              "media_position": "end",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 28 days"
+              },
+              "result_label": {
+                "en": "Crow’s-feet area −23.0% vs −6.6% with retinol"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "PDRN, 0.1% eye cream (Ye 2026)"
+              },
+              "title": {
+                "en": "Crow’s-feet wrinkle area, by image analysis"
+              },
+              "content": {
+                "en": "<p>31 women aged 35&ndash;55 with sensitive skin, 28 days, against 0.1% retinol in the same base, on the other side of the face; no placebo.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">Read our appraisal of Ye 2026</a></p>"
+              }
+            }
+          },
+          "f3": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-crows-feet-wrinkles-before-after.jpg",
+              "media_position": "start",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 8 weeks"
+              },
+              "result_label": {
+                "en": "55.8% more wrinkle-volume reduction than the plain serum base"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "GHK-Cu serum, strength not stated (Badenhorst 2016)"
+              },
+              "title": {
+                "en": "Wrinkle volume near the eye corner, by 3D imaging"
+              },
+              "content": {
+                "en": "<p>40 women aged 40&ndash;65 (39 analysed), 8 weeks, against the same serum base without GHK-Cu or its carrier.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Read our appraisal of Badenhorst 2016</a></p>"
+              }
+            }
+          },
+          "f4": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-glutathione-crows-feet-softer-before-after-study.jpg",
+              "media_position": "end",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 10 weeks"
+              },
+              "result_label": {
+                "en": "Rated moderately softer: 1 in 3 women vs none on placebo"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": {
+                "en": "Oxidised glutathione, 2% (Watanabe 2014)"
+              },
+              "title": {
+                "en": "Blind ratings of wrinkles at the outer eye corner"
+              },
+              "content": {
+                "en": "<p>30 women aged 30&ndash;50, 10 weeks, against a placebo lotion on the other side of the face.</p><p><a href=\"https://www.skingenetix.com/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014\">Read our appraisal of Watanabe 2014</a></p>"
+              }
+            }
+          }
+        },
+        "block_order": ["f1", "f2", "f3", "f4"],
+        "custom_css": [".rba__text .h2{font-size:var(--text-h3, 2rem)}"]
+      }
+    },
+    {
+      "id": "choose",
+      "after": "proof",
+      "section": {
+        "type": "multi-column",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "text_alignment": "start",
+          "subheading": "",
+          "title": "",
+          "content": {
+            "en": "<h2>How do you choose a cream for crow&rsquo;s feet?</h2><p>Use the table as a checklist rather than a shopping list:</p>"
+          },
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "c1": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "title": {
+                "en": "Look for an ingredient with a crow’s-feet trial"
+              },
+              "heading_tag": "h4",
+              "content": {
+                "en": "<p>Many ingredients have no trial at the eye corner at all.</p>"
+              }
+            }
+          },
+          "c2": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "title": {
+                "en": "Check the label for the amount"
+              },
+              "heading_tag": "h4",
+              "content": {
+                "en": "<p>A trial result belongs to the strength and formula tested. If a label gives no percentage, you cannot tell whether it matches anything studied.</p>"
+              }
+            }
+          },
+          "c3": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "title": {
+                "en": "Ask who ran the trial"
+              },
+              "heading_tag": "h4",
+              "content": {
+                "en": "<p>Most of the five above were funded, run or supplied by a maker or seller of the ingredient. That does not make them wrong, but it is worth knowing.</p>"
+              }
+            }
+          },
+          "c4": {
+            "type": "item",
+            "settings": {
+              "column_size": "4",
+              "title": {
+                "en": "Use sunscreen by day"
+              },
+              "heading_tag": "h4",
+              "content": {
+                "en": "<p>It is the one step aimed at the cause rather than the look.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["c1", "c2", "c3", "c4"],
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "products",
+      "after": "choose",
+      "section": {
+        "type": "featured-collection",
+        "settings": {
+          "products": ["acetyl-hexapeptide-8-anti-wrinkle-serum", "pdrn-renewal-serum"],
+          "full_width": true,
+          "stack_products": true,
+          "show_progress_bar": false,
+          "products_count": 2,
+          "products_per_row_mobile": "2",
+          "products_per_row_desktop": 2,
+          "subheading": "",
+          "title": "",
+          "content": {
+            "en": "<p>Our <a href=\"https://www.skingenetix.com/products/acetyl-hexapeptide-8-anti-wrinkle-serum\">Acetyl Hexapeptide-8 Anti-Wrinkle Serum</a> contains Argireline, the ingredient in the Wang trial. We have not tested the serum ourselves, so we cannot say it will give the same result.</p>"
+          },
+          "link_text": "",
+          "background": "#FFFFFF"
+        },
+        "custom_css": [".product-list{max-width:56rem;margin-inline:auto}", "p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "naturally",
+      "after": "products",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "a": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Can you get rid of crow&rsquo;s feet naturally?</h2><p>You can slow how fast they deepen, but no natural method removes lines that are already set. The steps that make a difference are the dull ones: sunscreen every morning, sunglasses on bright days so you squint less, and not smoking.</p><p>Be wary of any page that promises the lines will &ldquo;disappear&rdquo;. In the trials above, the best-measured change in crow&rsquo;s-feet area was a 23.0% fall, which is softer lines, not no lines.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["a"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "undereye",
+      "after": "naturally",
+      "section": {
+        "type": "research-before-after",
+        "settings": {
+          "title": ""
+        },
+        "blocks": {
+          "u": {
+            "type": "finding",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-eye-bag-volume-before-after-study.jpg",
+              "media_position": "start",
+              "before_label": {
+                "en": "Before"
+              },
+              "after_label": {
+                "en": "After 28 days"
+              },
+              "result_label": {
+                "en": "Eye-bag volume −14.8% vs −10.2% with retinol"
+              },
+              "note_label": "",
+              "label_background": "#1a1a1a",
+              "label_text_color": "#ffffff",
+              "subheading": "",
+              "title": "",
+              "content": {
+                "en": "<h2>What do Koreans use for under-eye wrinkles?</h2><p>People who ask this are often thinking of PDRN, a salmon-derived ingredient popular in Korean skincare. We have no trial of under-eye wrinkles run in Korea, so we will not call anything here Korean evidence.</p><p>The trial we do have is Ye 2026, which was run in China. It tested a 0.1% PDRN eye cream on 31 women, twice a day for 28 days, against 0.1% retinol on the other side of the face. The number of under-eye lines (a different measure from the crow&rsquo;s-feet area in the table) fell 23.4% on the PDRN side against 7.0% on the retinol side, and eye-bag volume fell 14.8% against 10.2%. Both sides improved, there was no placebo side, and it describes the ingredient, not our products.</p><p>Under-eye lines have their own causes and need their own article. For now, read the full trial on the <a href=\"https://www.skingenetix.com/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026\">Ye 2026 study page</a>.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["u"],
+        "custom_css": [".rba__row{--rba-card-bg:#F0F0F0}"]
+      }
+    },
+    {
+      "id": "professional",
+      "after": "undereye",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "a": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>What can a professional offer for crow&rsquo;s feet?</h2><p>A doctor or clinic can offer treatments such as botulinum toxin injections, fillers, laser, peels and light-based devices. We name them only so you know they exist.</p><p>They are different in kind from a cream. None of the trials above says anything about them, and a cream&rsquo;s result does not transfer to them or the other way round. If you are weighing them up, ask a qualified practitioner what suits your skin, and ask to see evidence for the specific treatment.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["a"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "safety_intro",
+      "after": "professional",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "a": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Using actives near the eyes safely, and when to see someone</h2>"
+              }
+            }
+          }
+        },
+        "block_order": ["a"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "safety",
+      "after": "safety_intro",
+      "section": {
+        "type": "text-with-icons",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "title": "",
+          "text_alignment": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "t1": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-validation",
+              "title": {
+                "en": "Patch-test first"
+              },
+              "content": {
+                "en": "<p>Try a small amount on the inner forearm or behind the ear for a day or two.</p><p><strong>Keep products out of the eyes</strong> and off the edge of the lid.</p>"
+              }
+            }
+          },
+          "t2": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-customer-support",
+              "title": {
+                "en": "Pregnant or breastfeeding?"
+              },
+              "content": {
+                "en": "<p>None of these ingredients has been tested in those groups, so ask a doctor or pharmacist first.</p>"
+              }
+            }
+          },
+          "t3": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-stop",
+              "title": {
+                "en": "Argireline is for the skin’s surface only"
+              },
+              "content": {
+                "en": "<p>Never inject it, and never use it with a derma stamp or roller.</p>"
+              }
+            }
+          },
+          "t4": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-shield",
+              "title": {
+                "en": "PDRN comes from salmon"
+              },
+              "content": {
+                "en": "<p>Do not use it on broken skin or if you are allergic to fish.</p>"
+              }
+            }
+          },
+          "t5": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-timer",
+              "title": {
+                "en": "Copper peptides"
+              },
+              "content": {
+                "en": "<p>Do not use at the same time as pure vitamin C, strong acids or high-strength retinol. Use them at another time of day. No combination has been trialled.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["t1", "t2", "t3", "t4", "t5"],
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "closing",
+      "after": "safety",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "a": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>See a doctor if you have a drooping eyelid, a lump near the eye, or lines that come with a rash.</p><p><strong>Appraised by the Skingenetix Research Team. Medically reviewed by Dr Esther Bodde, Cosmetic &amp; Medical Physician.</strong></p><p>Last reviewed 9 October 2026.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["a"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#3E4A52;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "related",
+      "after": "closing",
+      "section": {
+        "type": "multi-column",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": false,
+          "subheading": "",
+          "title": {
+            "en": "Read the Trials and the Research"
+          },
+          "content": "",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "r1": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-argireline-clear-droplet-pipette-study.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Wang 2013: Argireline and crow’s feet"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read the Wang 2013 appraisal"
+              },
+              "link_url": "/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013",
+              "link_style": "link"
+            }
+          },
+          "r2": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-pdrn-solution-petri-dish-study.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Ye 2026: PDRN against retinol around the eyes"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read the Ye 2026 appraisal"
+              },
+              "link_url": "/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026",
+              "link_style": "link"
+            }
+          },
+          "r3": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-concern-fine-lines-wrinkles-2026.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Fine lines and wrinkles"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Visit the Fine Lines and Wrinkles page"
+              },
+              "link_url": "shopify://pages/fine-lines-wrinkles",
+              "link_style": "link"
+            }
+          },
+          "r4": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-skin-cell-microscopy-research.jpg",
+              "column_size": "4",
+              "title": {
+                "en": "Argireline research"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read the Argireline research"
+              },
+              "link_url": "shopify://pages/acetyl-hexapeptide-8-research",
+              "link_style": "link"
+            }
+          }
+        },
+        "block_order": ["r1", "r2", "r3", "r4"],
+        "custom_css": ["p,ul{max-width:65ch}", "a{display:inline-block;padding-block:13px}"]
+      }
+    }
+  ]
+}

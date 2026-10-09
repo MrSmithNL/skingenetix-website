@@ -1,0 +1,835 @@
+{
+  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, images where appropriate) as a minimum. The copper uglies article moves from the stock article template onto its own template, designed around the critic's cycle-1 verdict on the Argireline + Matrixyl build (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): banner with the H1, subline and a one-line byline; key figures (0 studies / 39 of 40 / 1 of 40) one size down, each sourced to the Badenhorst 2016 appraisal; short answers as a card; the definition and the trial with the funding caveat as a callout; purging and causes beside a neutral cream texture; the online-vs-measured table in a phone-safe wrapper (no min-width, min-width:0 on the grid item); what to do and before-you-try as icon rows under real <h2> headings; the routine beside a plain cleanser; the serum; the FAQ; the credit; square related cards whose links name their destination. Backgrounds alternate white and bone, the two image bands are separated by plain sections, the related row is white above the footer. No before/after images (the article is about reactions). Every passage is the approved text, cut out of configs/learn/drafts/copper-uglies-what-they-are-and-how-long-they-last.json (body_html) by scratchpad make_copper_uglies_spec.py; icon-row titles are shortened labels of the list items. ENGLISH FIRST: hidden preview at /blogs/learn/copper-uglies-what-they-are-and-how-long-they-last?view=learn-copper-uglies until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #014EB1; table parents, figure size, 65ch, tap targets, byline).",
+  "english_first": true,
+  "create": true,
+  "template": "templates/article.learn-copper-uglies.json",
+  "view": "learn-copper-uglies",
+  "page": "copper-uglies-what-they-are-and-how-long-they-last",
+  "add_sections": [
+    {
+      "id": "banner",
+      "after": null,
+      "section": {
+        "type": "image-with-text-overlay",
+        "settings": {
+          "full_width": true,
+          "allow_transparent_header": false,
+          "enable_parallax": false,
+          "image_size": "sm",
+          "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-pipette-droplet-matrixyl-comparison-study.jpg",
+          "mobile_text_position": "place-self-end-center text-center",
+          "desktop_text_position": "sm:place-self-center-end sm:text-start",
+          "text_color": "#ffffff",
+          "overlay_color": "#1A1A1A",
+          "overlay_opacity": 15
+        },
+        "blocks": {
+          "sub": {
+            "type": "subheading",
+            "settings": {
+              "text": {
+                "en": "Learn"
+              }
+            }
+          },
+          "head": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h1>Copper Uglies: What They Are and How Long They Last</h1><p>Copper uglies is a social-media name, not a medical diagnosis, for skin that looks red, flaky, dull or crepey after starting copper peptides.</p><p>By the Skingenetix Research Team, medically reviewed by Dr Esther Bodde, 9 October 2026</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["sub", "head"],
+        "custom_css": [
+          "image-banner{opacity:1!important}",
+          "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.3); } }",
+          ".prose p+p{font-size:15px;margin-block-start:12px}",
+          "@media screen and (max-width:320px){h1{font-size:28px!important}}"
+        ]
+      }
+    },
+    {
+      "id": "figures",
+      "after": "banner",
+      "section": {
+        "type": "impact-text",
+        "settings": {
+          "full_width": true,
+          "stack_mobile": true,
+          "text_alignment": "center",
+          "impact_text_style": "fill",
+          "text_divider": "none",
+          "impact_text_size_ratio": 0.5,
+          "background": "#FFFFFF",
+          "heading_text_color": "#014EB1",
+          "text_color": "#1A1A1A"
+        },
+        "blocks": {
+          "s1": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "0"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "Studies that have measured copper uglies"
+              },
+              "content": {
+                "en": "<p>No study has measured it, and no study says how long it lasts. The best evidence we have is one controlled facial trial (<a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Badenhorst 2016</a>).</p>"
+              }
+            }
+          },
+          "s2": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "39 of 40"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "Women tolerated a GHK-Cu serum for 8 weeks"
+              },
+              "content": {
+                "en": "<p>In the one controlled facial trial (<a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Badenhorst 2016</a>). The result belongs to that serum, not to ours.</p>"
+              }
+            }
+          },
+          "s3": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "1 of 40"
+              },
+              "animate_impact_text": false,
+              "subheading": {
+                "en": "Had minor skin reactions"
+              },
+              "content": {
+                "en": "<p>She stopped using the products, and the symptoms settled without medical treatment (<a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">Badenhorst 2016</a>).</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["s1", "s2", "s3"],
+        "custom_css": [
+          "h3.h4{font-size:20px}",
+          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}"
+        ]
+      }
+    },
+    {
+      "id": "answers",
+      "after": "figures",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "intro": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>The best evidence we have is one controlled facial trial, appraised on our <a href=\"/pages/copper-peptide-research\">copper peptide research page</a>: 39 of 40 women tolerated a GHK-Cu serum for 8 weeks. If you are unsure whether a change in your skin is a reaction, our <a href=\"/pages/skin-concerns\">skin concerns page</a> is a good place to start.</p>"
+              }
+            }
+          },
+          "short": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p><strong>The short answers on copper uglies:</strong></p><ul><li><strong>What are copper uglies?</strong> An internet term for a rough patch some people describe after starting copper peptides. It is not a measured effect.</li><li><strong>How long do copper uglies last?</strong> Nobody knows. No study has followed anyone through it, so any number you read online is a guess.</li><li><strong>What should you do?</strong> If your skin reacts, stop the product. If the reaction persists, ask a pharmacist or dermatologist. Do not push through it.</li></ul>"
+              }
+            }
+          }
+        },
+        "block_order": ["intro", "short"],
+        "custom_css": [
+          ".prose>div:last-child{background:#FFFFFF;padding:24px 28px;border-radius:12px}",
+          ".prose li::marker{color:#014EB1}",
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "basics",
+      "after": "answers",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "what": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>What are copper uglies?</h2><p>&ldquo;Copper uglies&rdquo; is slang from forums and videos. People use it for skin that looks worse after starting a copper peptide product, with redness, flaking, dullness or a crinkled, crepey look. Some also describe a hollow look under the eyes.</p><p>It is not a term from dermatology, and it has no agreed definition. That matters, because it means two people using the phrase may be describing quite different things.</p>"
+              }
+            }
+          },
+          "trial": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Is it a real side effect? What the one trial recorded</h2><p>The question behind &ldquo;side effects of copper peptides&rdquo; is simple: what happened to real people in a controlled study? The only controlled facial trial of GHK-Cu on its own is Badenhorst 2016, which we appraise in full in <a href=\"/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016\">our article on the Badenhorst 2016 trial</a>.</p><ul><li>40 women aged 40 to 65 used a GHK-Cu serum twice a day for 8 weeks.</li><li>39 of the 40 tolerated it. The authors report none of the peeling, dryness or redness they were watching for.</li><li>One woman had minor skin reactions on both sides of her face. She stopped using the products, and the symptoms settled without medical treatment.</li></ul>"
+              }
+            }
+          },
+          "care": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>Read this with care. The trial was funded by the company that makes the serum. It never stated how much GHK-Cu the serum contained, so the result belongs to that serum, not to ours. Our 2% products have no tolerance study of their own.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["what", "trial", "care"],
+        "custom_css": [
+          ".prose>div:last-child{border-left:3px solid #014EB1;padding-left:20px}",
+          ".prose li::marker{color:#014EB1}",
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "purging",
+      "after": "basics",
+      "section": {
+        "type": "media-with-text",
+        "settings": {
+          "full_width": true,
+          "alternate_media_position": false,
+          "spacing": "none"
+        },
+        "blocks": {
+          "m": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-copper-peptide-night-cream-texture.jpg",
+              "media_width": 45,
+              "media_position": "start",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "",
+              "title": "",
+              "link_text": "",
+              "background": "#F0F0F0",
+              "text_color": "#1a1a1a",
+              "content": {
+                "en": "<h2>Copper uglies vs purging: are they the same?</h2><p>&ldquo;Purging&rdquo; is a word borrowed from exfoliating products. People use it for a rough patch they believe is skin clearing itself before it improves.</p><p>No study has shown that this happens with copper peptides, and we do not use either word as an explanation. If your skin looks worse, the sensible assumption is that it may be reacting to something, not that it is part of a process you should wait out.</p><h2>What causes copper uglies: what is known and what is guesswork</h2><p><strong>Known:</strong> a small share of people react to almost any skin product, and one woman in the trial did.</p><p><strong>Guesswork:</strong> everything else. You will read that copper peptides first &ldquo;break down&rdquo; skin before building it back up. That idea comes from laboratory work on cells. It has not been measured in faces, and we do not present it as fact. Other guesses, such as the amount of copper or the strength of the formula, are untested too.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["m"],
+        "custom_css": [".prose a:not(.button){color:#014EB1;text-decoration:underline}"]
+      }
+    },
+    {
+      "id": "duration",
+      "after": "purging",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "d": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>How long do copper uglies last, and are they reversible?</h2><p>We cannot tell you, and neither can anyone else yet. No study has timed it, so we give no number of days or weeks.</p><p>What we can say is what the trial recorded: the one woman who reacted stopped, and her symptoms settled without medical treatment. That is a single case, not a promise. If a reaction does not fade after you stop, see a pharmacist or dermatologist.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["d"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "online",
+      "after": "duration",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "h": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>What you will read online vs what was measured</h2>"
+              }
+            }
+          },
+          "t": {
+            "type": "liquid",
+            "settings": {
+              "liquid": {
+                "en": "<div class=\"sgx-evtable\"><table><thead><tr><th>What you will read online</th><th>What was measured</th></tr></thead><tbody><tr><td>&ldquo;Demolition before construction&rdquo;</td><td>Seen in laboratory cells only; never measured in faces</td></tr><tr><td>&ldquo;Lasts 4 to 6 weeks&rdquo;</td><td>No study</td></tr><tr><td>&ldquo;Use 0.5 to 1%&rdquo;</td><td>No study</td></tr><tr><td>&ldquo;A 2023 review of 12 studies and 512 people&rdquo;</td><td>Not in PubMed. We searched for it and found nothing matching</td></tr><tr><td>&ldquo;Most people react&rdquo;</td><td>1 of 40 women in the one controlled trial, of a serum whose strength was not stated</td></tr></tbody></table></div>"
+              }
+            }
+          },
+          "n": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>The point of the table is not that these claims are false. It is that none has a study behind it.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["h", "t", "n"],
+        "custom_css": [
+          ".prose>div{min-width:0;max-width:100%}",
+          ".sgx-evtable table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.5}",
+          ".sgx-evtable th,.sgx-evtable td{width:50%;padding:12px 14px;border-bottom:1px solid #d4d4d4;text-align:left;vertical-align:top}",
+          ".sgx-evtable th{font-weight:600;background:#FFFFFF}",
+          ".prose>*{min-width:0;max-width:100%}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "react_h",
+      "after": "online",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "h": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>What to do if your skin reacts</h2>"
+              }
+            }
+          }
+        },
+        "block_order": ["h"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "react",
+      "after": "react_h",
+      "section": {
+        "type": "text-with-icons",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "title": "",
+          "heading_tag": "h5",
+          "text_alignment": "start",
+          "icon_spacing": "medium",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "t1": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-stop",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#F0F0F0",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "Stop the product"
+              },
+              "content": {
+                "en": "<p>Redness, burning, stinging or peeling is a reason to stop, not a phase to push through.</p>"
+              }
+            }
+          },
+          "t2": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-validation",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#F0F0F0",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "Keep the rest of your routine plain"
+              },
+              "content": {
+                "en": "<p>A plain cleanser, a plain moisturiser and sun protection are enough while it settles.</p>"
+              }
+            }
+          },
+          "t3": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-customer-support",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#F0F0F0",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "Ask a pharmacist or dermatologist"
+              },
+              "content": {
+                "en": "<p>If it does not fade after you stop, or if the skin is broken, swollen or painful.</p>"
+              }
+            }
+          },
+          "t4": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-timer",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#F0F0F0",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "Do not restart on the same day"
+              },
+              "content": {
+                "en": "<p>If you try again, patch-test first and use one new product at a time.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["t1", "t2", "t3", "t4"],
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "react_note",
+      "after": "react",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "n": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p>If your concern is acne, this article does not cover it. Ask a pharmacist or doctor.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["n"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "routine",
+      "after": "react_note",
+      "section": {
+        "type": "media-with-text",
+        "settings": {
+          "full_width": true,
+          "alternate_media_position": false,
+          "spacing": "none"
+        },
+        "blocks": {
+          "m": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-howto-step1-cleanse.jpg",
+              "media_width": 45,
+              "media_position": "end",
+              "text_position": "place-self-center-start text-start",
+              "icon": "none",
+              "icon_width": 48,
+              "subheading": "",
+              "title": "",
+              "link_text": "",
+              "background": "#F0F0F0",
+              "text_color": "#1a1a1a",
+              "content": {
+                "en": "<h2>Could the rest of your routine be the cause?</h2><p>Quite possibly. A copper peptide is rarely the only new thing. Pure L-ascorbic acid, strong exfoliating acids and high-strength retinol can each irritate skin by themselves, and no combination with a copper peptide has been trialled.</p><p>Use those at a different time of day from your copper peptide, and add only one new product at a time. If you change three things at once, you cannot tell which one your skin is reacting to.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["m"],
+        "custom_css": [".prose a:not(.button){color:#014EB1;text-decoration:underline}"]
+      }
+    },
+    {
+      "id": "injections",
+      "after": "routine",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "i": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Are GHK-Cu injections the same thing?</h2><p>No. The reactions people discuss after injections are a different use from a cream or serum on the skin. Injections and powders sold online are a different, unregulated use, and nothing in this article is about them. If you are considering them, speak to a doctor.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["i"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "safety_h",
+      "after": "injections",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "h": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<h2>Before you try a copper peptide serum</h2>"
+              }
+            }
+          }
+        },
+        "block_order": ["h"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "safety",
+      "after": "safety_h",
+      "section": {
+        "type": "text-with-icons",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "title": "",
+          "heading_tag": "h5",
+          "text_alignment": "start",
+          "icon_spacing": "medium",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "s1": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-validation",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#FFFFFF",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "Patch-test first"
+              },
+              "content": {
+                "en": "<p>On a small area such as behind the ear, for 24 to 48 hours.</p>"
+              }
+            }
+          },
+          "s2": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-love",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#FFFFFF",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "Pregnancy or breastfeeding"
+              },
+              "content": {
+                "en": "<p>It has not been tested in pregnancy or breastfeeding. Ask a doctor or pharmacist first.</p>"
+              }
+            }
+          },
+          "s3": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-stop",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#FFFFFF",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "Broken skin and eyes"
+              },
+              "content": {
+                "en": "<p>Do not apply it to broken skin, and keep it away from the eyes.</p>"
+              }
+            }
+          },
+          "s4": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-timer",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#FFFFFF",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "Strong actives at another time"
+              },
+              "content": {
+                "en": "<p>Use pure L-ascorbic acid, strong acids and high-strength retinol at a different time of day.</p>"
+              }
+            }
+          },
+          "s5": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-customer-support",
+              "icon_width": 32,
+              "mobile_icon_width": 32,
+              "icon_background_type": "circle",
+              "icon_background": "#FFFFFF",
+              "icon_color": "#014EB1",
+              "title": {
+                "en": "If a reaction persists"
+              },
+              "content": {
+                "en": "<p>See a pharmacist or dermatologist if a reaction persists.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["s1", "s2", "s3", "s4", "s5"],
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "products",
+      "after": "safety",
+      "section": {
+        "type": "featured-collection",
+        "settings": {
+          "products": ["copper-peptide-ghk-cu-renewal-serum"],
+          "full_width": true,
+          "stack_products": true,
+          "show_progress_bar": false,
+          "products_count": 2,
+          "products_per_row_mobile": "2",
+          "products_per_row_desktop": 4,
+          "subheading": "",
+          "title": "",
+          "content": {
+            "en": "<p>If you decide to try one, our <a href=\"/products/copper-peptide-ghk-cu-renewal-serum\">Copper Peptide GHK-Cu Renewal Serum</a> contains 2% GHK-Cu. Patch-test first, and remember that the trial above tested a different serum, not ours.</p>"
+          },
+          "link_text": "",
+          "background": "#FFFFFF"
+        },
+        "custom_css": ["p,ul{max-width:65ch}"]
+      }
+    },
+    {
+      "id": "faq",
+      "after": "products",
+      "section": {
+        "type": "faq",
+        "settings": {
+          "full_width": true,
+          "subheading": "",
+          "title": "",
+          "content": {
+            "en": "<h2>Frequently asked questions</h2>"
+          },
+          "support_hours": "",
+          "answer_time": "",
+          "button_text": "",
+          "text_position": "start",
+          "background": "#F0F0F0",
+          "accordion_background": "#FFFFFF"
+        },
+        "blocks": {
+          "q1": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "Do copper peptides help with wrinkles?"
+              },
+              "content": {
+                "en": "<p>In Badenhorst 2016, wrinkle volume near the eye fell 24.1% with a GHK-Cu serum, against 15.0% with the plain serum base, over 8 weeks in 20 women, which the paper reports as a 55.8% greater reduction than the plain serum base. The base lacked the nano-carrier as well as the peptide, so the gap covers both. It is one small, maker-funded trial.</p>"
+              }
+            }
+          },
+          "q2": {
+            "type": "item",
+            "settings": {
+              "title": {
+                "en": "What are the common side effects of copper peptides?"
+              },
+              "content": {
+                "en": "<p>In the one controlled trial, 1 of 40 women had minor skin reactions that settled after she stopped. Beyond that, no study has set out to list the side effects of copper peptides, so we do not claim a full list.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["q1", "q2"]
+      }
+    },
+    {
+      "id": "credit",
+      "after": "faq",
+      "section": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": true,
+          "content_width": "small",
+          "text_position": "start",
+          "background": "#F0F0F0"
+        },
+        "blocks": {
+          "c": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<p><strong>Appraised by the Skingenetix Research Team. Medically reviewed by Dr Esther Bodde, Cosmetic &amp; Medical Physician.</strong></p><p>Last reviewed 9 October 2026.</p>"
+              }
+            }
+          }
+        },
+        "block_order": ["c"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#014EB1;text-decoration:underline}"
+        ]
+      }
+    },
+    {
+      "id": "related",
+      "after": "credit",
+      "section": {
+        "type": "multi-column",
+        "settings": {
+          "full_width": true,
+          "stack_on_mobile": true,
+          "text_alignment": "start",
+          "subheading": "",
+          "title": {
+            "en": "Read the evidence"
+          },
+          "content": "",
+          "background": "#FFFFFF"
+        },
+        "blocks": {
+          "r1": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-crystals-wrinkle-depth-study.jpg",
+              "column_size": "3",
+              "title": {
+                "en": "The Badenhorst 2016 trial"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read our Badenhorst 2016 appraisal"
+              },
+              "link_url": "/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016",
+              "link_style": "link"
+            }
+          },
+          "r2": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-copper-peptide-ghk-cu-clinical-research-mobile.jpg",
+              "column_size": "3",
+              "title": {
+                "en": "Copper peptide research"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Read the copper peptide research"
+              },
+              "link_url": "shopify://pages/copper-peptide-research",
+              "link_style": "link"
+            }
+          },
+          "r3": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/skingenetix-concern-skin-repair-renewal-2026.jpg",
+              "column_size": "3",
+              "title": {
+                "en": "Skin concerns"
+              },
+              "heading_tag": "h3",
+              "content": "",
+              "link_text": {
+                "en": "Explore skin concerns"
+              },
+              "link_url": "shopify://pages/skin-concerns",
+              "link_style": "link"
+            }
+          }
+        },
+        "block_order": ["r1", "r2", "r3"],
+        "custom_css": [
+          ".multi-column__item img{aspect-ratio:1/1;object-fit:cover;width:100%}",
+          ".prose a.link{display:inline-block;padding-block:12px}",
+          "p,ul{max-width:65ch}",
+          "a{display:inline-block;padding-block:13px}"
+        ]
+      }
+    }
+  ]
+}

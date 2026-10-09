@@ -1,5 +1,5 @@
 {
-  "_about": "2026-10-09, Malcolm: 'publish the Argireline and Matrixyl 3000 together article. but then do a full page design (content presentation, formatting and styling) improvement run ... They also need to show before and after images for specific trial results - and we should use images where we can.' The article moves from the stock article template (a text wall with a comment form) onto its own template built from the modules the study and science pages use: banner with the H1, key figures under it, the short answers beside the two serums, the per-peptide explanation, three before/after result cards (Wang 2013, Raikou 2017, the Matrixyl 3000 half-face study, labels as approved on the Argireline and collagen pages), why they differ, layering steps with photos, before-you-start icons, cautions, the products, the evidence table and links to the trials. Every passage is the approved article text, cut out of configs/learn/drafts/argireline-and-matrixyl-3000-together.json by scratchpad make_learn_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/argireline-and-matrixyl-3000-together?view=learn-argireline-matrixyl-3000 until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement.",
+  "_about": "2026-10-09, Malcolm: 'publish the Argireline and Matrixyl 3000 together article. but then do a full page design (content presentation, formatting and styling) improvement run ... They also need to show before and after images for specific trial results - and we should use images where we can.' The article moves from the stock article template (a text wall with a comment form) onto its own template built from the modules the study and science pages use: banner with the H1, key figures under it, the short answers beside the two serums, the per-peptide explanation, three before/after result cards (Wang 2013, Raikou 2017, the Matrixyl 3000 half-face study, labels as approved on the Argireline and collagen pages), why they differ, layering steps with photos, before-you-start icons, cautions, the products, the evidence table and links to the trials. Every passage is the approved article text, cut out of configs/learn/drafts/argireline-and-matrixyl-3000-together.json by scratchpad make_learn_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/argireline-and-matrixyl-3000-together?view=learn-argireline-matrixyl-3000 until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Cycle-1 critic fixes applied 2026-10-09 by window 21 (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): phone-safe evidence table, watermarked step image and Matrixyl render replaced, together and caution as plain rich-text, alternating backgrounds, impact-text 0.5, byline under the banner, portrait-safe mobile banner, square related images with named links, key-figure source links. Learn design fixes from critic cycle 2 applied (accent #016569; table parents, figure size, 65ch, tap targets, byline).",
   "english_first": true,
   "create": true,
   "template": "templates/article.learn-argireline-matrixyl-3000.json",
@@ -17,7 +17,7 @@
           "enable_parallax": false,
           "image_size": "sm",
           "image": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-8-expression-lines-research.jpg",
-          "mobile_image": "shopify://shop_images/skingenetix-argireline-acetyl-hexapeptide-8-research-mobile.jpg",
+          "mobile_image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-peptide-refraction-research-mobile.jpg",
           "mobile_text_position": "place-self-end-center text-center",
           "desktop_text_position": "sm:place-self-center-end sm:text-start",
           "text_color": "#ffffff",
@@ -37,18 +37,16 @@
             "type": "richtext",
             "settings": {
               "content": {
-                "en": "<h1>Argireline and Matrixyl 3000 together: what the trials show</h1><p>No study has tested the pair. Here is what each peptide's own trials show, and how to layer them with care.</p>"
+                "en": "<h1>Argireline and Matrixyl 3000 together: what the trials show</h1><p>No study has tested the pair. Here is what each peptide's own trials show, and how to layer them with care.</p><p>By the Skingenetix Research Team, medically reviewed by Dr Esther Bodde, 8 October 2026</p>"
               }
             }
           }
         },
-        "block_order": [
-          "sub",
-          "head"
-        ],
+        "block_order": ["sub", "head"],
         "custom_css": [
           "image-banner{opacity:1!important}",
-          "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }"
+          "@media screen and (max-width: 699px) { .content-over-media::before { background-color: rgb(26 26 26 / 0.6); } }",
+          "@media screen and (max-width:320px){h1{font-size:28px!important}}"
         ]
       }
     },
@@ -63,9 +61,9 @@
           "text_alignment": "center",
           "impact_text_style": "fill",
           "text_divider": "none",
-          "impact_text_size_ratio": 0.7,
+          "impact_text_size_ratio": 0.5,
           "background": "#FFFFFF",
-          "heading_text_color": "#3E4A52",
+          "heading_text_color": "#016569",
           "text_color": "#1A1A1A"
         },
         "blocks": {
@@ -80,7 +78,7 @@
                 "en": "Argireline: crow's feet graded clearly smoother"
               },
               "content": {
-                "en": "<p>After 4 weeks, against none of 15 on placebo (Wang 2013).</p>"
+                "en": "<p>After 4 weeks, against none of 15 on placebo (<a href=\"https://www.skingenetix.com/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Wang 2013</a>).</p>"
               }
             }
           },
@@ -95,7 +93,7 @@
                 "en": "Matrixyl 3000: deep-wrinkle area"
               },
               "content": {
-                "en": "<p>After 2 months on the treated side, in the manufacturer's half-face study.</p>"
+                "en": "<p>After 2 months on the treated side, in the manufacturer&rsquo;s half-face study (<a href=\"https://www.skingenetix.com/pages/matrixyl-3000-research\">Matrixyl 3000 research</a>).</p>"
               }
             }
           },
@@ -115,10 +113,10 @@
             }
           }
         },
-        "block_order": [
-          "s1",
-          "s2",
-          "s3"
+        "block_order": ["s1", "s2", "s3"],
+        "custom_css": [
+          "h3.h4{font-size:20px}",
+          "@media screen and (min-width:700px){.impact-text__text{font-size:44px!important}}"
         ]
       }
     },
@@ -147,64 +145,53 @@
               "text_color": "#1a1a1a",
               "content": {
                 "en": "<h2>The short answers</h2><ul><li><strong>Do they work together?</strong> Nobody knows. No study has tested Argireline and Matrixyl 3000 as a pair, so we cannot say they add up to more than either alone. They do different jobs, and each has its own trials.</li><li><strong>Which goes first?</strong> No trial has tested the order either. The practical rule is the thinnest product first, then the richer one, and one new product at a time.</li><li><strong>Who should skip?</strong> Anyone who is pregnant or breastfeeding should ask a doctor or pharmacist first, because neither peptide has been tested in those groups. Patch-test before using either.</li></ul><p>This article draws on the trials we appraise on our two research pages: <a href=\"/pages/acetyl-hexapeptide-8-research\">Acetyl Hexapeptide-8 (Argireline) research</a> and <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000 research</a>. Everything below is checked against those sources.</p>"
-              }
+              },
+              "link_text": {
+                "en": "Shop the Peptide Duo Set"
+              },
+              "link_url": "shopify://products/fine-lines-wrinkles-peptide-duo-set-matrixyl-3000-acetyl-hexapeptide-8-serums",
+              "button_background": "#016569",
+              "button_text_color": "#FFFFFF"
             }
           }
         },
-        "block_order": [
-          "a"
-        ]
+        "block_order": ["a"],
+        "custom_css": [".prose a:not(.button){color:#016569;text-decoration:underline}"]
       }
     },
     {
       "id": "together",
       "after": "answer",
       "section": {
-        "type": "media-with-text",
+        "type": "rich-text",
         "settings": {
-          "full_width": false,
-          "alternate_media_position": true,
-          "spacing": "small"
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#FFFFFF"
         },
         "blocks": {
           "argireline": {
-            "type": "image",
+            "type": "richtext",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-argireline-peptide-solution-petri-dish-study.jpg",
-              "media_width": 45,
-              "media_position": "end",
-              "text_position": "place-self-center-start text-start",
-              "icon": "none",
-              "icon_width": 48,
-              "title": "",
-              "background": "#FFFFFF",
-              "text_color": "#1a1a1a",
               "content": {
                 "en": "<h2>Do Argireline and Matrixyl 3000 work together?</h2><p>There is no published study of Matrixyl and Argireline used together. We looked, and we would rather say so plainly than imply otherwise. Any claim that the two multiply each other&rsquo;s effect would have nothing behind it.</p><p>What exists is separate evidence for each peptide. It is worth knowing what each one was actually tested on.</p><h3>Argireline</h3><p><strong>Argireline&reg; (acetyl hexapeptide-8)</strong> is a peptide designed to soften the look of expression lines, such as crow&rsquo;s feet and forehead lines. Two trials used 10% Argireline, the same level as in our serum. Their results are below.</p>"
               }
             }
           },
           "matrixyl": {
-            "type": "image",
+            "type": "richtext",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-matrixyl-3000-peptide-collagen-network-supports-skin-surface.jpg",
-              "media_width": 45,
-              "media_position": "start",
-              "text_position": "place-self-center-start text-start",
-              "icon": "none",
-              "icon_width": 48,
-              "title": "",
-              "background": "#FFFFFF",
-              "text_color": "#1a1a1a",
               "content": {
                 "en": "<h3>Matrixyl 3000</h3><p><strong>Matrixyl&reg; 3000</strong> is a pair of peptides, palmitoyl tripeptide-1 and palmitoyl tetrapeptide-7, made by the company Sederma. Its human data comes from the manufacturer, not from independent researchers.</p><p>In lab tests on skin cells, the two peptides together raised collagen I by 256% at the highest dose tested, against cells given only the solvent. That is a cell result, not a measurement in skin.</p>"
               }
             }
           }
         },
-        "block_order": [
-          "argireline",
-          "matrixyl"
+        "block_order": ["argireline", "matrixyl"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#016569;text-decoration:underline}"
         ]
       }
     },
@@ -215,7 +202,7 @@
         "type": "research-before-after",
         "settings": {
           "title": {
-            "en": "What the Trials Measured"
+            "en": "What the trials measured"
           }
         },
         "blocks": {
@@ -240,7 +227,7 @@
                 "en": "Argireline, 10% (Wang 2013)"
               },
               "title": {
-                "en": "Crow's Feet: 22 of 45 Graded Clearly Smoother in 4 Weeks"
+                "en": "Crow's feet: 22 of 45 graded clearly smoother in 4 weeks"
               },
               "content": {
                 "en": "<p>In a double-blind trial of 60 adults (Wang 2013), clinicians graded the crow&rsquo;s feet of 22 of the 45 people using Argireline as clearly smoother after 4 weeks. None of the 15 people on placebo were graded that way. Note that 22 of 45 counts people, not a percentage of wrinkle removed.</p><p><a href=\"/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013\">Read our appraisal of the trial</a>.</p>"
@@ -268,7 +255,7 @@
                 "en": "Argireline, 10% (Raikou 2017)"
               },
               "title": {
-                "en": "Forehead Roughness Down 7.4% in 20 Days"
+                "en": "Forehead roughness down 7.4% in 20 days"
               },
               "content": {
                 "en": "<p>In a small trial of 24 women (Raikou 2017), forehead roughness measured by instrument fell 7.4% after 20 days on Argireline, while it rose 4.3% on placebo.</p><p><a href=\"/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017\">Read our appraisal of the trial</a>.</p>"
@@ -296,7 +283,7 @@
                 "en": "Matrixyl 3000 (manufacturer study)"
               },
               "title": {
-                "en": "Deep-Wrinkle Area Down 39% in 2 Months"
+                "en": "Deep-wrinkle area down 39% in 2 months"
               },
               "content": {
                 "en": "<p>In the manufacturer&rsquo;s 2-month half-face study of 23 women aged 42 to 67, the area taken up by deep wrinkles fell 39.4% on the treated side. The placebo side showed no significant change.</p><p>More in our <a href=\"/pages/matrixyl-3000-research\">Matrixyl 3000 research summary</a>.</p>"
@@ -304,11 +291,7 @@
             }
           }
         },
-        "block_order": [
-          "f1",
-          "f2",
-          "f3"
-        ]
+        "block_order": ["f1", "f2", "f3"]
       }
     },
     {
@@ -337,29 +320,27 @@
               },
               "heading_tag": "h3",
               "content": {
-                "en": "<p>Crow's feet and forehead lines, the creases that form as you move your face.</p>"
+                "en": ""
               }
             }
           },
           "j2": {
             "type": "item",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-matrixyl-3000-peptide-fibroblasts-building-collagen-matrix.jpg",
+              "image": "shopify://shop_images/skingenetix-matrixyl-3000-firming-serum-clear-drop-on-cheek-macro.jpg",
               "column_size": "2",
               "title": {
                 "en": "Matrixyl 3000: deep wrinkles and firmness"
               },
               "heading_tag": "h3",
               "content": {
-                "en": "<p>Deep wrinkles and the look of firmness.</p>"
+                "en": ""
               }
             }
           }
         },
-        "block_order": [
-          "j1",
-          "j2"
-        ]
+        "block_order": ["j1", "j2"],
+        "custom_css": ["p,ul{max-width:65ch}"]
       }
     },
     {
@@ -381,7 +362,7 @@
           "l1": {
             "type": "item",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-howto-step2-serum.jpg",
+              "image": "shopify://shop_images/skingenetix-matrixyl-3000-collagen-serum-pipette-drop-forming.jpg",
               "column_size": "3",
               "title": {
                 "en": "1. Thinnest first"
@@ -421,11 +402,8 @@
             }
           }
         },
-        "block_order": [
-          "l1",
-          "l2",
-          "l3"
-        ]
+        "block_order": ["l1", "l2", "l3"],
+        "custom_css": ["p,ul{max-width:65ch}"]
       }
     },
     {
@@ -437,10 +415,10 @@
           "full_width": true,
           "stack_on_mobile": true,
           "title": {
-            "en": "Before You Start"
+            "en": "Before you start"
           },
           "text_alignment": "center",
-          "background": "#F0F0F0"
+          "background": "#FFFFFF"
         },
         "blocks": {
           "t1": {
@@ -480,44 +458,35 @@
             }
           }
         },
-        "block_order": [
-          "t1",
-          "t2",
-          "t3"
-        ]
+        "block_order": ["t1", "t2", "t3"],
+        "custom_css": ["p,ul{max-width:65ch}"]
       }
     },
     {
       "id": "caution",
       "after": "tips",
       "section": {
-        "type": "media-with-text",
+        "type": "rich-text",
         "settings": {
-          "full_width": false,
-          "alternate_media_position": false,
-          "spacing": "small"
+          "full_width": true,
+          "content_width": "medium",
+          "text_position": "start",
+          "background": "#F0F0F0"
         },
         "blocks": {
           "c": {
-            "type": "image",
+            "type": "richtext",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-acetyl-hexapeptide-8-serum-pipette-drop-forming.jpg",
-              "media_width": 40,
-              "media_position": "end",
-              "text_position": "place-self-center-start text-start",
-              "icon": "none",
-              "icon_width": 48,
-              "title": "",
-              "background": "#FFFFFF",
-              "text_color": "#1a1a1a",
               "content": {
                 "en": "<h2>Who should skip or be careful?</h2><p>Neither of our products has been through its own tolerance test, so we do not describe them as suitable for sensitive skin. What we can report is ingredient-level:</p><ul><li>Argireline caused no adverse effects in the two controlled trials above (Wang 2013 and Raikou 2017).</li><li>An independent expert panel, the Cosmetic Ingredient Review, assessed both Matrixyl 3000 peptides as safe in cosmetics at current use levels. That is a finding about the ingredients, not about any one finished product.</li></ul><p><strong>Be careful, or ask first, if any of these apply:</strong></p><ul><li><strong>Pregnant or breastfeeding.</strong> Neither peptide has been tested in these groups. Ask a doctor or pharmacist before use.</li><li><strong>Broken, sunburnt or inflamed skin.</strong> Wait until it has settled.</li><li><strong>Stinging or redness that does not fade.</strong> Stop using the product.</li><li><strong>Needles of any kind.</strong> These serums are for the skin&rsquo;s surface only. Never inject Argireline, and never use it with DIY microneedling. An infection has been reported after Argireline was injected.</li></ul>"
               }
             }
           }
         },
-        "block_order": [
-          "c"
+        "block_order": ["c"],
+        "custom_css": [
+          ".rich-text__wrapper{max-width:65ch;margin-inline:auto}",
+          "a:not(.button){color:#016569;text-decoration:underline}"
         ]
       }
     },
@@ -545,8 +514,9 @@
             "en": "<h2>What do our products contain?</h2><ul><li><strong>Acetyl Hexapeptide-8 Anti-Wrinkle Serum</strong> contains 10% Argireline&reg;. That is 10% of the Argireline peptide solution, not 10% pure peptide, and it is the level used in the trials above.</li><li><strong>Matrixyl 3000 Firming Serum</strong> contains Matrixyl 3000 and also palmitoyl pentapeptide-4, a related peptide.</li><li><strong>Matrixyl 3000 Pro-Collagen Firming Cream</strong> contains Matrixyl 3000. It does not contain palmitoyl pentapeptide-4.</li><li><strong>The <a href=\"/products/fine-lines-wrinkles-peptide-duo-set-matrixyl-3000-acetyl-hexapeptide-8-serums\">Fine Lines &amp; Wrinkles Peptide Duo Set</a></strong> pairs the Matrixyl 3000 and Acetyl Hexapeptide-8 serums for people who want to try both.</li></ul><p>The trials in this article tested the ingredients, not our finished products. We have not tested our serums ourselves, so we cannot say our products will give the same results.</p>"
           },
           "link_text": "",
-          "background": "#F0F0F0"
-        }
+          "background": "#FFFFFF"
+        },
+        "custom_css": ["p,ul{max-width:65ch}"]
       }
     },
     {
@@ -558,7 +528,7 @@
           "full_width": true,
           "content_width": "large",
           "text_position": "start",
-          "background": "#FFFFFF"
+          "background": "#F0F0F0"
         },
         "blocks": {
           "h": {
@@ -586,16 +556,14 @@
             }
           }
         },
-        "block_order": [
-          "h",
-          "t",
-          "n"
-        ],
+        "block_order": ["h", "t", "n"],
         "custom_css": [
           ".sgx-evtable{overflow-x:auto;margin-block:16px}",
           ".sgx-evtable table{width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.45}",
           ".sgx-evtable th,.sgx-evtable td{padding:10px 12px;border-bottom:1px solid #dcdcdc;text-align:left;vertical-align:top}",
-          ".sgx-evtable th{font-weight:600;background:#F0F0F0}"
+          ".sgx-evtable th{font-weight:600;background:#F0F0F0}",
+          ".prose>*{min-width:0;max-width:100%}",
+          "a:not(.button){color:#016569;text-decoration:underline}"
         ]
       }
     },
@@ -609,16 +577,16 @@
           "stack_on_mobile": false,
           "subheading": "",
           "title": {
-            "en": "Read the Trials and the Research"
+            "en": "Read the trials and the research"
           },
           "content": "",
-          "background": "#F0F0F0"
+          "background": "#FFFFFF"
         },
         "blocks": {
           "r1": {
             "type": "item",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-clinical-study-argireline-crows-feet-trial-wang-2013-card.jpg",
+              "image": "shopify://shop_images/skingenetix-argireline-peptide-solution-petri-dish-study.jpg",
               "column_size": "4",
               "title": {
                 "en": "Wang 2013: Argireline and crow's feet"
@@ -626,7 +594,7 @@
               "heading_tag": "h3",
               "content": "",
               "link_text": {
-                "en": "Read"
+                "en": "Read the Wang 2013 appraisal"
               },
               "link_url": "/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013",
               "link_style": "link"
@@ -635,7 +603,7 @@
           "r2": {
             "type": "item",
             "settings": {
-              "image": "shopify://shop_images/skingenetix-clinical-study-argireline-forehead-roughness-trial-raikou-2017-card.jpg",
+              "image": "shopify://shop_images/skingenetix-argireline-skin-surface-replica-roughness-study.jpg",
               "column_size": "4",
               "title": {
                 "en": "Raikou 2017: Argireline and forehead lines"
@@ -643,7 +611,7 @@
               "heading_tag": "h3",
               "content": "",
               "link_text": {
-                "en": "Read"
+                "en": "Read the Raikou 2017 appraisal"
               },
               "link_url": "/blogs/clinical-studies/argireline-forehead-roughness-trial-raikou-2017",
               "link_style": "link"
@@ -660,7 +628,7 @@
               "heading_tag": "h3",
               "content": "",
               "link_text": {
-                "en": "Read"
+                "en": "Read the Argireline research"
               },
               "link_url": "shopify://pages/acetyl-hexapeptide-8-research",
               "link_style": "link"
@@ -677,19 +645,15 @@
               "heading_tag": "h3",
               "content": "",
               "link_text": {
-                "en": "Read"
+                "en": "Read the Matrixyl 3000 research"
               },
               "link_url": "shopify://pages/matrixyl-3000-research",
               "link_style": "link"
             }
           }
         },
-        "block_order": [
-          "r1",
-          "r2",
-          "r3",
-          "r4"
-        ]
+        "block_order": ["r1", "r2", "r3", "r4"],
+        "custom_css": ["p,ul{max-width:65ch}", "a{display:inline-block;padding-block:13px}"]
       }
     }
   ]

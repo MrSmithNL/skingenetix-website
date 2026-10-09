@@ -1,159 +1,97 @@
 {
-  "_about": "Target keywords per page from docs/keyword-strategy-2026.md §4 (hero map). Used by scripts/page-audit.py to check that the page's title, H1 and first 30% of text carry the terms the page is meant to own. primary = the head term; secondary = terms folded into the page as sections. Study articles (type 'study', with their 'hub') added 2026-09-30 from keyword-strategy-2026.md §4. Ownership aligned to keyword-strategy-2026.md §4 and keyword-ownership-analysis-2026-09-30.md §1–3 on 2026-10-07 (hub owns 'argireline', product 'argireline serum'; product owns 'matrixyl 3000', hub the science terms; a collection owns 'peptide skincare'). 2026-10-08: eleven pages that had no owner added from the per-page competitor analysis (docs/website-traffic-and-performance-plan-2026-10-08.md Part 2.2 and 3.2): the glutathione serum, the four creams, the two stamp sets, the copper, creams and microneedling collections, and the collagen page. Owner terms are the uncontested ones (what each page already ranks for, or the measured term no other page claims); the contested moves (brightening serum, peptide cream, peptides for skin, the hub and article retargets) wait for Malcolm's decision 3 in the plan. 2026-10-09: the five Skin Solutions pages declare /pages/skin-concerns as their hub (the hub links down to all five since the collagen card went live; each links up through its 'Related Skin Solutions' intro), so the auditor's P3/P5 assess them.",
+  "_about": "Target keywords per page from docs/keyword-strategy-2026.md §4 (hero map). Used by scripts/page-audit.py to check that the page's title, H1 and first 30% of text carry the terms the page is meant to own. primary = the head term; secondary = terms folded into the page as sections. Study articles (type 'study', with their 'hub') added 2026-09-30 from keyword-strategy-2026.md §4. Ownership aligned to keyword-strategy-2026.md §4 and keyword-ownership-analysis-2026-09-30.md §1–3 on 2026-10-07 (hub owns 'argireline', product 'argireline serum'; product owns 'matrixyl 3000', hub the science terms; a collection owns 'peptide skincare'). 2026-10-08: eleven pages that had no owner added from the per-page competitor analysis (docs/website-traffic-and-performance-plan-2026-10-08.md Part 2.2 and 3.2): the glutathione serum, the four creams, the two stamp sets, the copper, creams and microneedling collections, and the collagen page. Owner terms are the uncontested ones (what each page already ranks for, or the measured term no other page claims); the contested moves (brightening serum, peptide cream, peptides for skin, the hub and article retargets) wait for Malcolm's decision 3 in the plan. 2026-10-09: the five Skin Solutions pages declare /pages/skin-concerns as their hub (the hub links down to all five since the collagen card went live; each links up through its 'Related Skin Solutions' intro), so the auditor's P3/P5 assess them. 2026-10-09: the four Learn articles (spoke 1 and wave 1: crow's feet, copper uglies, salmon sperm skin care) added with their parent pages as hub, from docs/article-plan-2026-10-09.md Part 4.",
   "/pages/pdrn-research": {
     "primary": "pdrn",
-    "secondary": [
-      "what is pdrn",
-      "salmon dna",
-      "pdrn benefits",
-      "sodium dna"
-    ],
+    "secondary": ["what is pdrn", "salmon dna", "pdrn benefits", "sodium dna"],
     "type": "hub"
   },
   "/pages/acetyl-hexapeptide-8-research": {
     "primary": "argireline",
-    "secondary": [
-      "acetyl hexapeptide-8",
-      "expression lines"
-    ],
+    "secondary": ["acetyl hexapeptide-8", "expression lines"],
     "type": "hub"
   },
   "/pages/copper-peptide-research": {
     "primary": "copper peptide",
-    "secondary": [
-      "ghk-cu",
-      "copper peptide benefits"
-    ],
+    "secondary": ["ghk-cu", "copper peptide benefits"],
     "type": "hub"
   },
   "/pages/matrixyl-3000-research": {
     "primary": "matrixyl 3000 benefits",
-    "secondary": [
-      "palmitoyl tripeptide-1",
-      "palmitoyl tetrapeptide-7",
-      "what does matrixyl 3000 do"
-    ],
+    "secondary": ["palmitoyl tripeptide-1", "palmitoyl tetrapeptide-7", "what does matrixyl 3000 do"],
     "type": "hub"
   },
   "/pages/glutathione-research": {
     "primary": "glutathione",
-    "secondary": [
-      "glutathione for skin",
-      "brightening"
-    ],
+    "secondary": ["glutathione for skin", "brightening"],
     "type": "hub"
   },
   "/pages/the-science": {
     "primary": "peptides in skincare",
-    "secondary": [
-      "research",
-      "clinical studies"
-    ],
+    "secondary": ["research", "clinical studies"],
     "type": "index"
   },
   "/": {
     "primary": "skingenetix",
-    "secondary": [
-      "peptide skincare",
-      "copper peptide",
-      "pdrn",
-      "matrixyl 3000"
-    ],
+    "secondary": ["peptide skincare", "copper peptide", "pdrn", "matrixyl 3000"],
     "type": "home"
   },
   "/pages/fine-lines-wrinkles": {
     "primary": "fine lines",
-    "secondary": [
-      "wrinkles",
-      "acetyl hexapeptide-8",
-      "matrixyl 3000"
-    ],
+    "secondary": ["wrinkles", "acetyl hexapeptide-8", "matrixyl 3000"],
     "type": "concern",
     "hub": "/pages/skin-concerns"
   },
   "/pages/firming-skin-density": {
     "primary": "firming",
-    "secondary": [
-      "skin density",
-      "matrixyl 3000",
-      "copper peptide"
-    ],
+    "secondary": ["skin density", "matrixyl 3000", "copper peptide"],
     "type": "concern",
     "hub": "/pages/skin-concerns"
   },
   "/pages/skin-repair-renewal": {
     "primary": "skin repair",
-    "secondary": [
-      "renewal",
-      "pdrn",
-      "copper peptide"
-    ],
+    "secondary": ["renewal", "pdrn", "copper peptide"],
     "type": "concern",
     "hub": "/pages/skin-concerns"
   },
   "/pages/brightening-glow": {
     "primary": "brightening",
-    "secondary": [
-      "glow",
-      "glutathione",
-      "vitamin c"
-    ],
+    "secondary": ["glow", "glutathione", "vitamin c"],
     "type": "concern",
     "hub": "/pages/skin-concerns"
   },
   "/collections/pdrn": {
     "primary": "pdrn skincare",
-    "secondary": [
-      "pdrn serum",
-      "pdrn cream",
-      "salmon dna"
-    ],
+    "secondary": ["pdrn serum", "pdrn cream", "salmon dna"],
     "type": "collection"
   },
   "/collections/serums": {
     "primary": "peptide serum",
-    "secondary": [
-      "copper peptide",
-      "pdrn"
-    ],
+    "secondary": ["copper peptide", "pdrn"],
     "type": "collection"
   },
   "/products/pdrn-renewal-serum": {
     "primary": "pdrn serum",
-    "secondary": [
-      "salmon dna",
-      "1%"
-    ],
+    "secondary": ["salmon dna", "1%"],
     "type": "product"
   },
   "/products/copper-peptide-ghk-cu-renewal-serum": {
     "primary": "copper peptide serum",
-    "secondary": [
-      "ghk-cu",
-      "2%"
-    ],
+    "secondary": ["ghk-cu", "2%"],
     "type": "product"
   },
   "/products/matrixyl-3000-firming-serum": {
     "primary": "matrixyl 3000",
-    "secondary": [
-      "serum"
-    ],
+    "secondary": ["serum"],
     "type": "product"
   },
   "/products/acetyl-hexapeptide-8-anti-wrinkle-serum": {
     "primary": "argireline serum",
-    "secondary": [
-      "acetyl hexapeptide-8 serum",
-      "10%"
-    ],
+    "secondary": ["acetyl hexapeptide-8 serum", "10%"],
     "type": "product"
   },
   "/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013": {
     "primary": "argireline crow's feet",
-    "secondary": [
-      "argireline clinical trial"
-    ],
+    "secondary": ["argireline clinical trial"],
     "type": "study",
     "hub": "/pages/acetyl-hexapeptide-8-research"
   },
@@ -165,54 +103,37 @@
   },
   "/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016": {
     "primary": "copper peptide serum wrinkles",
-    "secondary": [
-      "copper peptide clinical trial"
-    ],
+    "secondary": ["copper peptide clinical trial"],
     "type": "study",
     "hub": "/pages/copper-peptide-research"
   },
   "/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026": {
     "primary": "pdrn vs retinol",
-    "secondary": [
-      "pdrn clinical trial"
-    ],
+    "secondary": ["pdrn clinical trial"],
     "type": "study",
     "hub": "/pages/pdrn-research"
   },
   "/blogs/clinical-studies/pdrn-microneedling-split-face-trial-yogya-2022": {
     "primary": "pdrn after microneedling",
-    "secondary": [
-      "pdrn microneedling",
-      "microneedling with pdrn",
-      "polynucleotide"
-    ],
+    "secondary": ["pdrn microneedling", "microneedling with pdrn", "polynucleotide"],
     "type": "study",
     "hub": "/pages/pdrn-research"
   },
   "/blogs/clinical-studies/argireline-skin-firmness-trial-tadini-2015": {
     "primary": "acetyl hexapeptide-3",
-    "secondary": [
-      "does argireline tighten skin",
-      "argireline study"
-    ],
+    "secondary": ["does argireline tighten skin", "argireline study"],
     "type": "study",
     "hub": "/pages/acetyl-hexapeptide-8-research"
   },
   "/blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005": {
     "primary": "palmitoyl pentapeptide-4",
-    "secondary": [
-      "matrixyl vs matrixyl 3000",
-      "what is matrixyl"
-    ],
+    "secondary": ["matrixyl vs matrixyl 3000", "what is matrixyl"],
     "type": "study",
     "hub": "/pages/matrixyl-3000-research"
   },
   "/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014": {
     "primary": "glutathione brighten skin",
-    "secondary": [
-      "glutathione skin brightening",
-      "topical glutathione for skin"
-    ],
+    "secondary": ["glutathione skin brightening", "topical glutathione for skin"],
     "type": "study",
     "hub": "/pages/glutathione-research"
   },
@@ -230,101 +151,98 @@
   },
   "/collections/all": {
     "primary": "peptide skincare",
-    "secondary": [
-      "peptide serum",
-      "peptide cream"
-    ],
+    "secondary": ["peptide serum", "peptide cream"],
     "type": "collection"
   },
   "/products/glutathione-brightening-serum": {
     "primary": "glutathione serum",
-    "secondary": [
-      "brightening serum",
-      "glutathione 2%"
-    ],
+    "secondary": ["brightening serum", "glutathione 2%"],
     "type": "product"
   },
   "/products/pdrn-collagen-night-cream": {
     "primary": "pdrn cream",
-    "secondary": [
-      "pdrn night cream",
-      "1%"
-    ],
+    "secondary": ["pdrn night cream", "1%"],
     "type": "product"
   },
   "/products/matrixyl-3000-pro-collagen-firming-cream": {
     "primary": "matrixyl cream",
-    "secondary": [
-      "collagen cream with matrixyl",
-      "matrixyl 3000 cream"
-    ],
+    "secondary": ["collagen cream with matrixyl", "matrixyl 3000 cream"],
     "type": "product"
   },
   "/products/copper-peptide-ghk-cu-night-cream": {
     "primary": "ghk-cu cream",
-    "secondary": [
-      "copper peptide cream",
-      "copper peptide night cream"
-    ],
+    "secondary": ["copper peptide cream", "copper peptide night cream"],
     "type": "product"
   },
   "/products/copper-peptide-ghk-cu-day-gel-cream": {
     "primary": "copper peptide day cream",
-    "secondary": [
-      "copper peptide gel cream",
-      "ghk-cu day cream"
-    ],
+    "secondary": ["copper peptide gel cream", "ghk-cu day cream"],
     "type": "product"
   },
   "/products/copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month": {
     "primary": "microneedling stamp",
-    "secondary": [
-      "copper peptide microneedling",
-      "microneedling stamp set"
-    ],
+    "secondary": ["copper peptide microneedling", "microneedling stamp set"],
     "type": "product"
   },
   "/products/pdrn-microneedling-facial-stamp-set-1-month": {
     "primary": "pdrn stamp",
-    "secondary": [
-      "pdrn microneedling stamp",
-      "microneedling stamp set"
-    ],
+    "secondary": ["pdrn microneedling stamp", "microneedling stamp set"],
     "type": "product"
   },
   "/collections/copper-peptide": {
     "primary": "copper peptide skincare",
-    "secondary": [
-      "copper peptide products",
-      "ghk-cu skincare"
-    ],
+    "secondary": ["copper peptide products", "ghk-cu skincare"],
     "type": "collection"
   },
   "/collections/creams-moisturizers": {
     "primary": "peptide creams",
-    "secondary": [
-      "peptide cream",
-      "peptide moisturizer"
-    ],
+    "secondary": ["peptide cream", "peptide moisturizer"],
     "type": "collection"
   },
   "/collections/microneedling": {
     "primary": "microneedling skincare set",
-    "secondary": [
-      "microneedling stamp",
-      "microneedling serum"
-    ],
+    "secondary": ["microneedling stamp", "microneedling serum"],
     "type": "collection"
   },
   "/pages/collagen-skincare": {
     "primary": "collagen cream",
-    "secondary": [
-      "collagen serum",
-      "collagen face cream",
-      "collagen skincare"
-    ],
+    "secondary": ["collagen serum", "collagen face cream", "collagen skincare"],
     "type": "concern",
     "note": "live at this address since 2026-10-08 (ADR-2026-09-29-D); the old address redirects",
     "hub": "/pages/skin-concerns"
+  },
+  "/blogs/learn/argireline-and-matrixyl-3000-together": {
+    "primary": "matrixyl and argireline",
+    "secondary": ["argireline and matrixyl", "matrixyl and argireline together", "argireline and matrixyl serum"],
+    "type": "article",
+    "hub": "/pages/acetyl-hexapeptide-8-research"
+  },
+  "/blogs/learn/crows-feet-what-causes-them-and-what-helps": {
+    "primary": "crows feet",
+    "secondary": [
+      "how to get rid of crows feet",
+      "crows feet eyes",
+      "crows feet when smiling",
+      "fine lines under eyes"
+    ],
+    "type": "article",
+    "hub": "/pages/fine-lines-wrinkles"
+  },
+  "/blogs/learn/copper-uglies-what-they-are-and-how-long-they-last": {
+    "primary": "copper uglies",
+    "secondary": [
+      "how long do copper uglies last",
+      "what are copper uglies",
+      "copper peptides uglies",
+      "side effects of copper peptides"
+    ],
+    "type": "article",
+    "hub": "/pages/copper-peptide-research"
+  },
+  "/blogs/learn/salmon-sperm-skincare-vs-the-salmon-sperm-facial": {
+    "primary": "salmon sperm skin care",
+    "secondary": ["salmon sperm", "salmon sperm facial", "salmon sperm for skin", "salmon dna facial"],
+    "type": "article",
+    "hub": "/pages/pdrn-research"
   }
 }
