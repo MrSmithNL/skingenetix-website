@@ -1,0 +1,752 @@
+{
+  "version": "0.1.20260917",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.0293 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "10091014-1509-0139-0000-842b55143f9c",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.0212 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "vegan pdrn",
+        "location_code": 2840,
+        "language_code": "en",
+        "device": "mobile",
+        "depth": 10,
+        "load_async_ai_overview": true,
+        "os": "android"
+      },
+      "result": [
+        {
+          "keyword": "vegan pdrn",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=vegan%20pdrn&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-10-09 10:14:35 +00:00",
+          "spell": null,
+          "refinement_chips": {
+            "type": "refinement_chips",
+            "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/span[1]/div[1]/div[1]/div[1]/div[2]",
+            "items": [
+              {
+                "type": "refinement_chips_element",
+                "title": "Reviews",
+                "url": "https://www.google.com/search?q=reviews+vegan+pdrn&hl=en&gl=US&shoprs=GBIqCnZlZ2FuIHBkcm4yCwgSEgdSZXZpZXdzYAE&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAF6BAgYEAQ",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Filler",
+                "url": "https://www.google.com/search?q=filler+vegan+pdrn&hl=en&gl=US&shoprs=GAEqCnZlZ2FuIHBkcm4yFwgBEgZGaWxsZXI6Cwj1ncQBENi8dzAHWPeqIGAB&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAJ6BAgYEAU",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Acid",
+                "url": "https://www.google.com/search?q=acid+vegan+pdrn&hl=en&gl=US&shoprs=GAEqCnZlZ2FuIHBkcm4yFQgBEgRBY2lkOgsI9Z3EARDVvHcwB1j3qiBgAQ&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAN6BAgYEAY",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Facial Moisturizers",
+                "url": "https://www.google.com/search?q=facial+moisturizers+vegan+pdrn&hl=en&gl=US&shoprs=GAkqCnZlZ2FuIHBkcm4yFwgJEhNGYWNpYWwgTW9pc3R1cml6ZXJzYAE&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAR6BAgYEAc",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Moisturizers",
+                "url": "https://www.google.com/search?q=moisturizers+vegan+pdrn&hl=en&gl=US&shoprs=GAkqCnZlZ2FuIHBkcm4yEAgJEgxNb2lzdHVyaXplcnNgAQ&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAV6BAgYEAg",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Nearby",
+                "url": "https://www.google.com/search?q=vegan+pdrn+nearby&hl=en&gl=US&shoprs=GAMqCnZlZ2FuIHBkcm4yDAgDEgZOZWFyYnkYAlj3qiBgAQ&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAZ6BAgYEAk",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Facial Serums",
+                "url": "https://www.google.com/search?q=facial+serums+vegan+pdrn&hl=en&gl=US&shoprs=GAkqCnZlZ2FuIHBkcm4yEQgJEg1GYWNpYWwgU2VydW1zYAE&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAd6BAgYEAo",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "On sale",
+                "url": "https://www.google.com/search?q=vegan+pdrn+sale&hl=en&gl=US&shoprs=EgRKAhgBGAYqCnZlZ2FuIHBkcm4yEwgGEgdPbiBzYWxlGAIiBEoCGAFY96ogYAE&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAh6BAgYEAs",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Retinol",
+                "url": "https://www.google.com/search?q=retinol+vegan+pdrn&hl=en&gl=US&shoprs=GAEqCnZlZ2FuIHBkcm4yFwgBEgdSZXRpbm9sOgoIwdstEMLbLTAAWPeqIGAB&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAl6BAgYEAw",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Vitamin C",
+                "url": "https://www.google.com/search?q=vitamin+c+vegan+pdrn&hl=en&gl=US&shoprs=GAEqCnZlZ2FuIHBkcm4yGQgBEglWaXRhbWluIEM6CgjB2y0Qv65RMABY96ogYAE&sa=X&ved=2ahUKEwjKrbbr2ayXAxVrQkEAHSEmDFoQip4GKAp6BAgYEA0",
+                "domain": "www.google.com",
+                "options": null
+              }
+            ]
+          },
+          "item_types": ["organic", "people_also_ask", "popular_products", "video", "people_also_search"],
+          "se_results_count": 0,
+          "pages_count": 1,
+          "items_count": 13,
+          "items": [
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.instagram.com",
+              "title": "I found y'all a vegan PDRN  Been bathing my skin in this ...",
+              "url": "https://www.instagram.com/reel/DU2ecO3k5jy/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "1K+ likes",
+              "website_name": "Instagram · shiivangijain",
+              "is_image": false,
+              "is_video": true,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": ["is_video"],
+              "description": "That 'glazed donut' look is real! PDRN is such a powerhouse for repair, and the fact that it's vegan makes it 10/10. Need this in my routine!",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "0:39",
+                  "description": null,
+                  "url": "https://www.instagram.com/reel/DU2ecO3k5jy/",
+                  "domain": "www.instagram.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-03-09 10:14:35 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[3]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What are some vegan skin products available?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Which PDRN serum is the best?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Is La Roche Posay vegan?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Is PDRn cruelty-free?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.minskinn.com",
+              "title": "Why Vegan PDRN Serum Is the Future of Skin Regeneration",
+              "url": "https://www.minskinn.com/blogs/minskinn-blogs/why-vegan-pdrn-serum-is-the-future-of-skin-regeneration?srsltid=AU7gw4UmiK-8So4Uajpsrh12gfeTUQT_SbG1pvCcJzrSk7wmSJELky2O",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.minskinn.com",
+              "website_name": "Minskinn",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Aug 16, 2025 — PDRN Serum uses a vegan alternative to traditional PDRN, making it ethical, sustainable, and suitable for all skin types—including sensitive ...",
+              "pre_snippet": "08/16/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["PDRN Serum uses a vegan alternative to traditional PDRN"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": ["vegan pdrn", "vegan pdrn"],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-08-16 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "grandingredients.com",
+              "title": "Vegan PDRN Skincare – DNA Repair & Collagen Boost",
+              "url": "https://grandingredients.com/vegan-pdrn-skincare/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://grandingredients.com",
+              "website_name": "Grand Ingredients",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Discover the power of vegan PDRN skincare —a plant-based innovation that supports DNA repair, boosts collagen, and accelerates skin.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["vegan PDRN skincare"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": ["vegan pdrn", "vegan pdrn"],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[9]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "cosmeticsbusiness.com",
+              "title": "Vegan PDRNs are set to be more popular than salmon sperm. Here's ...",
+              "url": "https://cosmeticsbusiness.com/vegan-pdrns-are-taking-over",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://cosmeticsbusiness.com",
+              "website_name": "Cosmetics Business",
+              "is_image": true,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": ["is_image"],
+              "description": "Feb 16, 2026 — The plant-based topical treatments are beneficial for a number of skin concerns – most known for its skin regeneration properties, as well as ...",
+              "pre_snippet": "02/16/2026 00:00:00",
+              "extended_snippet": null,
+              "images": [
+                {
+                  "type": "images_element",
+                  "alt": "vegan pdrn from cosmeticsbusiness.com",
+                  "url": "https://cosmeticsbusiness.com/vegan-pdrns-are-taking-over",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091014-1509-0139-0000-842b55143f9c:0"
+                }
+              ],
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["beneficial for a number of skin concerns"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-02-16 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.reddit.com",
+              "title": "asked why I use vegan PDRN over salmon and I didn't actually have a ...",
+              "url": "https://www.reddit.com/r/koreanskincare/comments/1uwpogg/asked_why_i_use_vegan_pdrn_over_salmon_and_i/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "10+ comments",
+              "website_name": "Reddit · r/koreanskincare",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Supposedly, the vegan PDRN is like 50kDa compared to the 1000+ kDa of salmon PDRN, and so they claim it can actually absorb into the skin ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-08-09 10:14:35 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[13]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "shopping.yahoo.com",
+              "title": "Medik8's New Vegan PDRN Serum Is Perfect for Salmon DNA Skeptics",
+              "url": "https://shopping.yahoo.com/beauty/skincare/articles/medik8-vegan-pdrn-serum-perfect-014233086.html",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://shopping.yahoo.com",
+              "website_name": "Yahoo",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Jul 16, 2026 — An innovative vegan PDRN with a tetrahedral structure designed to penetrate deep into the skin. and hyaluronic acid production for firmer skin.",
+              "pre_snippet": "07/16/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["An innovative vegan PDRN"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-07-16 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[15]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.instagram.com",
+              "title": "We've been seeing so many questions about how to use VT Vegan PDRN ...",
+              "url": "https://www.instagram.com/p/DVNPpY-j-qr/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "3.6K+ likes",
+              "website_name": "Instagram · vtcosmetics_global",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Meet the VT Cosmetics Vegan PDRN Capsule Cream a dreamy capsule-infused cream that melts into the skin and leaves it feeling nourished, smooth ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["VT Cosmetics Vegan PDRN Capsule Cream"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-03-09 10:14:35 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "popular_products",
+              "rank_group": 1,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[17]",
+              "title": "Popular products. In-demand favorites",
+              "items": [
+                {
+                  "type": "popular_products_element",
+                  "title": "Vegan Pdrn Renewal Serum Asterwood Nwt",
+                  "url": null,
+                  "domain": null,
+                  "description": "Asterwood & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Asterwood",
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR8GSJhLMOTyJWlpTGJHb3cdFXCUZ1E8pCraK8L4wHqab1W_obGRwWbVCHhhMW07l5JM5lpXPyNo1OWBadggh9v9vHM6t1HkJ8Tnih2UmjOv3NsM6VJRIno",
+                  "price": {
+                    "current": 21.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$21.99"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "7388047318112565145",
+                    "data_docid": "8703706125282911207",
+                    "gid": "11387395140573285213"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Medicube PDRN Pink Peptide Serum",
+                  "url": null,
+                  "domain": null,
+                  "description": "Nordstrom & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Nordstrom",
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfDzug1buzavyiQSEMlApaBLqxhk1oGhnUsc5gbjxW6EBAVOW8SD_JswBh445p1wMc5QmydvR9XkG7lOI2npjfpLlOq2X_qdHe2xQqfMxqycHeuv284BF8wg",
+                  "price": {
+                    "current": 21,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$21.00"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 11000,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "15941048620442189641",
+                    "data_docid": "5972753089728160607",
+                    "gid": "14993077774578537749"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Medik8 Exo-PDRN Prismatic+ Vegan PDRN Serum with Triple Exosome Complex",
+                  "url": null,
+                  "domain": null,
+                  "description": "Sephora & more\nFree delivery by Thu",
+                  "more_sellers": true,
+                  "seller": "Sephora",
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQQGe1ZAP7b1Jfo0csdj6kYQlglueVnGjqzT1BAjGgDAVBn4Q0ipZvOV0MzdvhgzEHhtm6TcjXxdQQ2z37po6OMXMmhshBnvYcqJIGMvGRB4BhuD-knifM4oQ",
+                  "price": {
+                    "current": 96,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$96.00"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.7,
+                    "votes_count": 1200,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "8770895536848991400",
+                    "data_docid": "6460865324069315691",
+                    "gid": "11681683977027216951"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "VT Cosmetics PDRN Essence 100",
+                  "url": null,
+                  "domain": null,
+                  "description": "Ulta Beauty & more\nFree delivery on $35+",
+                  "more_sellers": true,
+                  "seller": "Ulta Beauty",
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQh0MQerDYj2Y7RjatkQeuU6_NNP_XUVJxd6Jm43bdlNY2yfrRsalod9FHz14FQcD2p1NUbIRS7V62k5RFzBALJe6rjRaEys_FFgB5cIKjFxqBygQlqZQeu",
+                  "price": {
+                    "current": 28,
+                    "regular": 28,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$28.00 $28/oz"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 589,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "10953845111984916089",
+                    "data_docid": "5721228449777158788",
+                    "gid": "7662577744762757407"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "VT Cosmetics PDRN Cream 100",
+                  "url": null,
+                  "domain": null,
+                  "description": "Ulta Beauty & more\nFree delivery on $35+",
+                  "more_sellers": true,
+                  "seller": "Ulta Beauty",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTN-WVddUissntySxYgbNNeEKh6xyu5_CbtlGcqrNN9eUR1c9Y-ZeTjNzylmZeRVoSICm9nvbxEd0yzsiCcZc4BGTNuk3zvLb8ADdVQW7Qc-Qk4By9yy_Zr_g",
+                  "price": {
+                    "current": 26,
+                    "regular": 15,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$26.00 $15/fl oz"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.7,
+                    "votes_count": 33,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "6565160649941738735",
+                    "data_docid": "8834887560539875838",
+                    "gid": "8941877545912976260"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Soniagenix PDRN DNA Repair Complex with Vegan Exosomes",
+                  "url": null,
+                  "domain": null,
+                  "description": "SoniaGenix\nFree delivery",
+                  "more_sellers": false,
+                  "seller": "SoniaGenix",
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQWcIJN5mauIvpHtCBZr-hY9piIuLg6_OdOL5LCjKpZm11-5eWnX0TB6NNSklhDSjBqr3KLzwxxld2wHwa4ffCpwqRph-VGQ7rykTW8gGTRT-uuUb-Ckk4r",
+                  "price": {
+                    "current": 160,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$160.00"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "13499436081105245917",
+                    "data_docid": "12537225704400554366",
+                    "gid": "3599020876089414188"
+                  }
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.stylevana.com",
+              "title": "Salmon PDRN vs Vegan PDRN: Which One Should You Pick?",
+              "url": "https://www.stylevana.com/en_GB/blog/post/salmon-vegan-pdrn/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.stylevana.com",
+              "website_name": "Stylevana",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Mar 2, 2026 — Vegan PDRN skincare is truly abundant, given how many vegan ingredients you can source PDRN from. In our collection we have Centella, Oat, Rice, ...",
+              "pre_snippet": "03/02/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Vegan PDRN skincare is truly abundant"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-03-02 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 9,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[21]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.kalichem.it",
+              "title": "PDRN in Cosmetics: Revolutionizing Skin & hair care Solutions",
+              "url": "https://www.kalichem.it/blog/pdrn-in-cosmetics-biotech-and-vegan-innovation-for-advanced-skin-and-hair-regeneration/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.kalichem.it",
+              "website_name": "Kalichem",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "May 4, 2026 — The vegan alternative to PDRN: biotech-fermented from chicory root, stabilized with a unique CLA-glutathione complex, and clinically proven to ...",
+              "pre_snippet": "05/04/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["biotech-fermented from chicory root"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-05-04 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "video",
+              "rank_group": 1,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[3]/div[1]/div[1]/div[23]",
+              "items": [
+                {
+                  "type": "video_element",
+                  "source": "Dr Priyanka Reddy",
+                  "title": "PDRN, but make it vegan  Heard that PDRN is derived from salmon and ...",
+                  "timestamp": "2026-09-25 10:14:35 +00:00",
+                  "url": "https://www.facebook.com/DrPriyankaReddy/posts/pdrn-but-make-it-vegan-heard-that-pdrn-is-derived-from-salmon-and-wondering-if-y/1592563742886984/"
+                },
+                {
+                  "type": "video_element",
+                  "source": "Sara Hesri",
+                  "title": "The vegan PDRN step is a non-negotiable in my routine. My skin's ...",
+                  "timestamp": "2026-06-12 00:00:00 +00:00",
+                  "url": "https://www.instagram.com/reel/DZfjv7TOkEO/"
+                },
+                {
+                  "type": "video_element",
+                  "source": "Tinatin Mirtskhulava",
+                  "title": "Vegan PDRN is the new skincare obsession  @vtcosmetics_global ...",
+                  "timestamp": "2026-09-09 10:14:35 +00:00",
+                  "url": "https://www.instagram.com/reel/DcutV-4IcTO/"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "people_also_search",
+              "rank_group": 1,
+              "rank_absolute": 13,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[13]/div[4]/div[1]/div[3]/div[1]",
+              "title": "People also search for",
+              "items": ["Vegan pdrn serum", "Vegan PDRN Cream"],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

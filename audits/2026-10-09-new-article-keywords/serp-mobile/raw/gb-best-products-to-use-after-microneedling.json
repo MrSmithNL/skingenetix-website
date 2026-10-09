@@ -1,0 +1,968 @@
+{
+  "version": "0.1.20260917",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.0423 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "10091014-1509-0139-0000-d65556690eed",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.0183 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "best products to use after microneedling",
+        "location_code": 2826,
+        "language_code": "en",
+        "device": "mobile",
+        "depth": 10,
+        "load_async_ai_overview": true,
+        "os": "android"
+      },
+      "result": [
+        {
+          "keyword": "best products to use after microneedling",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2826,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=best%20products%20to%20use%20after%20microneedling&hl=en&gl=GB&ie=UTF-8&uule=w+CAIQIFISCamRx0IRO1oCEXoliDJDoPjE",
+          "datetime": "2026-10-09 10:14:31 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "organic",
+            "people_also_ask",
+            "people_also_search",
+            "video",
+            "discussions_and_forums",
+            "popular_products",
+            "shopping"
+          ],
+          "se_results_count": 0,
+          "pages_count": 1,
+          "items_count": 16,
+          "items": [
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.chelwest.nhs.uk",
+              "title": "Microneedling Post-treatment Information for patients",
+              "url": "https://www.chelwest.nhs.uk/your-visit/patient-leaflets/microneedling",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.chelwest.nhs.uk",
+              "website_name": "Chelsea and Westminster Hospital NHS Foundation Trust",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "After your microneedling session you will be given a cooling gel to use. continue with a simple moisturiser 3-4 times daily. Ice or gel packs may be used to ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "what cream to use",
+                "what to put on skin after",
+                "skin looks worse",
+                "microneedling healing",
+                "when to wash face",
+                "microneedling after",
+                "can i use la roche-posay",
+                "7 days after"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "How much does microneedling typically cost?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Can I use azelaic acid before microneedling?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What does microneedling do for your face?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "How will I look 2 days after microneedling?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "people_also_search",
+              "rank_group": 1,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[5]",
+              "title": "People also search for",
+              "items": [
+                "What cream to use after microneedling",
+                "What to put on skin after microneedling at home",
+                "Skin looks worse after microneedling",
+                "Microneedling healing stages day by day",
+                "When to wash face after microneedling",
+                "Microneedling after"
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.berkshireaesthetics.com",
+              "title": "Microneedling Aftercare Day by Day | Recovery Guide",
+              "url": "https://www.berkshireaesthetics.com/guides/microneedling-aftercare-guide",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.berkshireaesthetics.com",
+              "website_name": "Berkshire Aesthetics",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Avoid foaming cleansers, exfoliating washes, hot water and anything containing alcohol or actives for at least 72 hours. When can I wear makeup after ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Avoid foaming cleansers, exfoliating washes, hot water and anything containing alcohol"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "what cream to use",
+                "what to put on skin after",
+                "skin looks worse",
+                "microneedling healing",
+                "when to wash face",
+                "microneedling after",
+                "can i use la roche-posay",
+                "7 days after"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "video",
+              "rank_group": 1,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[9]",
+              "items": [
+                {
+                  "type": "video_element",
+                  "source": "Tess Zolly",
+                  "title": "My post-microneedling skincare (gentle staples for damaged barrier!)",
+                  "timestamp": "2025-08-25 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=VJ0_ldwZffU"
+                },
+                {
+                  "type": "video_element",
+                  "source": "Michael Park, MD",
+                  "title": "Microneedling aftercare (PM routine). Focus is on hydration and barrier ...",
+                  "timestamp": "2026-01-02 00:00:00 +00:00",
+                  "url": "https://www.instagram.com/reel/DTBp5K9CR95/?hl=en-gb"
+                },
+                {
+                  "type": "video_element",
+                  "source": "EUNOGO",
+                  "title": "Microneedling Aftercare Do's and Don'ts & Recommended Skincare ...",
+                  "timestamp": "2021-03-03 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=VKOKlJ6uAAk"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "discussions_and_forums",
+              "rank_group": 1,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[11]",
+              "title": "Discussions and forums",
+              "items": [
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "What are your go to's post microneedling?",
+                  "url": "https://www.reddit.com/r/SkincareAddictionLux/comments/1pamg4b/what_are_your_go_tos_post_microneedling/",
+                  "domain": "google.com",
+                  "source": "Reddit",
+                  "description": null,
+                  "timestamp": "2025-12-09 10:14:30 +00:00",
+                  "posts_count": 20
+                },
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "What to use immediately after?",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1pb5yha/what_to_use_immediately_after/",
+                  "domain": "google.com",
+                  "source": "Reddit",
+                  "description": null,
+                  "timestamp": "2025-12-09 10:14:30 +00:00",
+                  "posts_count": 30
+                },
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "Are there any ointments / creams that anyone use or recommend for after RF micro-needling?",
+                  "url": "https://www.facebook.com/groups/medicalspaowner/posts/1018123083747591/",
+                  "domain": "google.com",
+                  "source": "Facebook",
+                  "description": null,
+                  "timestamp": "2025-10-09 10:14:30 +00:00",
+                  "posts_count": null
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "popular_products",
+              "rank_group": 1,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[13]",
+              "title": null,
+              "items": [
+                {
+                  "type": "popular_products_element",
+                  "title": "Tołpa Liquid Needles Therapy Lifting cream after microneedling |VESAUK",
+                  "url": null,
+                  "domain": null,
+                  "description": "Vesa Beauty & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Vesa Beauty",
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRWa_ZPxbhbs1GITGT-QGvKbfxMxc50hl4AzgWgeJvyvJwCLIhvQQgIqPnBtB8rxnpd4fMxN-9VslGAwIxZekKokwc7tPVYUAujudGwRtvBWHoGEuUHT5iD9g",
+                  "price": {
+                    "current": 12.34,
+                    "regular": 13,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£12.34 £13 & more prices"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 114,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "14654068994041905041",
+                    "data_docid": "2419959259268948666",
+                    "gid": "6298855318882333699"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "AfterMED Finish (50ml)",
+                  "url": null,
+                  "domain": null,
+                  "description": "Revolve Medicare",
+                  "more_sellers": false,
+                  "seller": "Revolve Medicare",
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRL7L34REX5NJOZZ8IPdFGjeLEOC_jUTrTSn4Lymw4btJQ0qPGp3h_6k2NShFohV4kuBTAfmt3MrFOiKVJDmnw1V85QYzxn4AVhwDSBv7EA_LRcwHNnyCCo7Q",
+                  "price": {
+                    "current": 45,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£45.00"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": null,
+                    "data_docid": "16265397660025046839",
+                    "gid": null
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Triple Collagen & Hyaluronic Acid Microneedling Serum, Collagen Hyaluronic Acid Moisturiser,Hyaluronic Acid Serum for Face, Single-Use Vials Face",
+                  "url": null,
+                  "domain": null,
+                  "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+                  "more_sellers": false,
+                  "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ5v1F2Dzkygk88225_IC8dNOwaLsPz78xILx1Zsplf9auJJ38hO5iT5vu1N2Azdxn8ICVc8tzptxzPJAuK5sjXJpo8FVEcvbmRYL8WdfsV5QhD45gwYpGV",
+                  "price": {
+                    "current": 11.88,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£11.88"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": null,
+                    "data_docid": "8610184981543870071",
+                    "gid": null
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Tołpa Liquid Needles Therapy Cream after microneedling 50ml|VESA UK",
+                  "url": null,
+                  "domain": null,
+                  "description": "brilanteshop.co.uk & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "brilanteshop.co.uk",
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTtkzo1IGV---xYXFilzoICkdB4FJWcY77tkP51M5vUc282tLd8o7RkHgKpbqxQpduZeCuNyWWnhzPSFi41jXpnkwjQ20BsvmxXd3rQf8nz2ysz268u038o",
+                  "price": {
+                    "current": 10.9,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£10.90"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.9,
+                    "votes_count": 52,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "9015971194142757424",
+                    "data_docid": "15687052891405339103",
+                    "gid": "1035675149216949233"
+                  }
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "popular_products",
+              "rank_group": 2,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[15]",
+              "title": null,
+              "items": [
+                {
+                  "type": "popular_products_element",
+                  "title": "Hyaluronic Acid Serum For Microneedling | Hydrating Face Serum | Deep Nourishment, Firming Skin, Suitable For All Skin Types (1.5ml X 15)",
+                  "url": null,
+                  "domain": null,
+                  "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+                  "more_sellers": false,
+                  "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSMkoJgbD2rCOjiYpFuKMqAMNIPtu-pm1sY7BJDIDxsRV9aaraFkAmaI1Q8JrHRVpiGpSXJfWUSdx3IZV_AXgMw3ryVr-cbUZpug0x6mluOHlmjv4-CaFn9yg",
+                  "price": {
+                    "current": 4.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£4.99"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": null,
+                    "data_docid": "10897180764866453138",
+                    "gid": null
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Microblading Micropigmentation Aftercare",
+                  "url": null,
+                  "domain": null,
+                  "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSK0Jo96iBRRvNNcUlX4F0aM8E6zjFUdg6dga-jUx63Jb7eW5zL0POBpTJtL3RauKbtLDiCQNVhkET5x74cPw4tIeKkYUBJ-oY_FS6gPMNQGC6Fzzo2pQ2I39s",
+                  "price": {
+                    "current": 4.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£4.99"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "9449006405294525681",
+                    "data_docid": "7943789115882486474",
+                    "gid": "16510841743761172062"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Medisco Hyaluronic Acid Skin Booster",
+                  "url": null,
+                  "domain": null,
+                  "description": "Dr Pen UK & more\nFree delivery by Tue",
+                  "more_sellers": true,
+                  "seller": "Dr Pen UK",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSHkSHbeu6v3UMvsweH4iymgFHjV9E5iCMQ_yBYmVzbCs1cfBtrZcDV31vFt0xvuo5Q7M2CFXu6bfkuJchNUJ2_uo416GKnYsbviye5c3Yf92rKW-6ljyZb",
+                  "price": {
+                    "current": 17.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£17.99"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 5,
+                    "votes_count": 79,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "5496465820850921145",
+                    "data_docid": "18325576344562408073",
+                    "gid": "12949909642985360980"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Salmon DNA Serum Ampoule | 35ml Hydrating Microneedling Serum | Moisturizing & Plumping Facial Treatment, Helps Improve Wrinkles & Skin Barrier",
+                  "url": null,
+                  "domain": null,
+                  "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+                  "more_sellers": false,
+                  "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT_xuErVfwEdqEVxQce_U9YBa_FcJKSMquDebVHeMUo3FR7gk83FYFEMgLZiceF8GgHDchbZHyfZAQr5e4w0BK3zuKQpy7tQq7wGAYgnwViYhA6kZfv931mtQ",
+                  "price": {
+                    "current": 12.97,
+                    "regular": 19,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£12.97 £19"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": null,
+                    "data_docid": "1953625157411944839",
+                    "gid": null
+                  }
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[17]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "trinnylondon.com",
+              "title": "Hyaluronic acid is the perfect ingredient to use after microneedling",
+              "url": "https://trinnylondon.com/uk/blog/hyaluronic-acid-after-microneedling",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://trinnylondon.com",
+              "website_name": "Trinny London",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "For the best results, we'd recommend applying your hyaluronic acid serum immediately after microneedling in the evening, and then again the following morning.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["hyaluronic acid serum"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "what cream to use",
+                "what to put on skin after",
+                "skin looks worse",
+                "microneedling healing",
+                "when to wash face",
+                "microneedling after",
+                "can i use la roche-posay",
+                "7 days after"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.ecoskinclinic.co.uk",
+              "title": "Microneedling: Treatment Advice & Aftercare",
+              "url": "https://www.ecoskinclinic.co.uk/post/microneedling-contraindications-aftercare",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.ecoskinclinic.co.uk",
+              "website_name": "Eco Skin Clinic",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Skincare After Microneedling · retinoids · AHAs and BHAs · strong vitamin C formulations if they sting or irritate · physical scrubs · exfoliating brushes.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "what cream to use",
+                "what to put on skin after",
+                "skin looks worse",
+                "microneedling healing",
+                "when to wash face",
+                "microneedling after",
+                "can i use la roche-posay",
+                "7 days after"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[21]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "alastin.com",
+              "title": "Skin Care Tips For Microneedling Aftercare",
+              "url": "https://alastin.com/blogs/intheglow/skin-care-tips-for-microneedling-aftercare?srsltid=AU7gw4UEk4KVCOBE3SjYzZxjRrFExZCb1z5YtsCHVzCenNHiRCg_-jDX",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://alastin.com",
+              "website_name": "ALASTIN Skincare",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "#1 Avoid Damaging Irritants · Electric or battery-powered cleansing brushes · Alpha Hydroxy Acid · Beta Hydroxy Acid · Retinol (Vitamin A) · Vitamin C scrubs ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "what cream to use",
+                "what to put on skin after",
+                "skin looks worse",
+                "microneedling healing",
+                "when to wash face",
+                "microneedling after",
+                "can i use la roche-posay",
+                "7 days after"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[23]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "laserskingroup.co.uk",
+              "title": "How to Take Care of Your Skin Before and After Microneedling",
+              "url": "https://laserskingroup.co.uk/how-to-take-care-of-your-skin-before-and-after-microneedling/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://laserskingroup.co.uk",
+              "website_name": "Laser Skin Group",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "17 Nov 2023 — Opt for mild, fragrance-free products that focus on hydration and soothing the skin. Ingredients like hyaluronic acid, ceramides, and ...",
+              "pre_snippet": "11/17/2023 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["mild, fragrance-free products"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "what cream to use",
+                "what to put on skin after",
+                "skin looks worse",
+                "microneedling healing",
+                "when to wash face",
+                "microneedling after",
+                "can i use la roche-posay",
+                "7 days after"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2023-11-17 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 13,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[25]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.dr-pen.co.uk",
+              "title": "Microneedling Aftercare Trio | Post Treatment Care Dr Pen UK",
+              "url": "https://www.dr-pen.co.uk/product/microneedling-aftercare-trio/?srsltid=AU7gw4VbKr0DQB5GqA3I2QmQVOYnwu7zM0RKGlg0D0CdKpW9U5ufse1S",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.dr-pen.co.uk",
+              "website_name": "Dr Pen UK",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Shop Microneedling Aftercare Trio at Dr Pen UK. Includes collagen masks, repair cream and hyaluronic cream to soothe, hydrate and support skin recovery.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": {
+                "current": 49.99,
+                "regular": null,
+                "max_value": null,
+                "currency": "GBP",
+                "is_price_range": false,
+                "displayed_price": "£49.99"
+              },
+              "highlighted": ["collagen masks, repair cream and hyaluronic cream"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "what cream to use",
+                "what to put on skin after",
+                "skin looks worse",
+                "microneedling healing",
+                "when to wash face",
+                "microneedling after",
+                "can i use la roche-posay",
+                "7 days after"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 14,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[27]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.reddit.com",
+              "title": "Moisturizer after microneedling?",
+              "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "60+ comments",
+              "website_name": "Reddit · r/Microneedling",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "I keep seeing that you're not supposed to put on a moisturizer until 12-24 hours after microneedling but my skin feels so dry, even after the hyaluronic ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "My derm applies a petrolatum based ointment with ceramides immediately after deep needling.",
+                  "description": "Top answer · 15 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5uhmwd/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "After 4 hrs you can slap on Vaseline, aquaphor, or Cerave healing ointment. Reapply if needed ...",
+                  "description": "12 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5tnifj/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "I wouldn't put anything other than HA on for the first 12 hours. You could try an HA sheet ...",
+                  "description": "11 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5thjlh/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "I've done eleven microneedling sessions with a derma pen, and I always use richer moisturizers ...",
+                  "description": "9 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5xed4n/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "My aesthetician said nothing on the face until the morning after but she always put GF on ...",
+                  "description": "6 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5towvo/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "LRP cicaplast b5",
+                  "description": "6 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5wy3mv/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Vitamin E oil, Aloe, stem cells, red light therapy. Use Chat Gpt4 for the list and how to use them",
+                  "description": "4 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5ujr63/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Oh I use moisturizer….",
+                  "description": "4 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5wbdw8/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "I have the same question. Someone here on reddit said they use vanicream, so I was thinking ...",
+                  "description": "3 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5x667j/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "LRP dual moisturizer or cicaplast baume",
+                  "description": "3 votes",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1hvi3wm/moisturizer_after_microneedling/m5tfni0/",
+                  "domain": "www.reddit.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-10-09 10:14:30 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "shopping",
+              "rank_group": 1,
+              "rank_absolute": 15,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[28]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+              "title": null,
+              "items": [
+                {
+                  "type": "shopping_element",
+                  "title": "La Roche-Posay Cicaplast Balm B5 Multi-Purpose Repairing Balm 40ml",
+                  "price": {
+                    "current": 8.25,
+                    "regular": 11,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£8.25 £11"
+                  },
+                  "source": "LOOKFANTASTIC",
+                  "description": null,
+                  "marketplace": "By Productcaster",
+                  "marketplace_url": null,
+                  "url": "https://google.com/aclk?sa=L&ai=DChsSEwji1arp2ayXAxUrOwYAHeFyKT0YACICCAIQBBoCd3M",
+                  "rating": null
+                },
+                {
+                  "type": "shopping_element",
+                  "title": "Medik8 Post Treatment Kit – Skin Recovery Set After Peel, Microneedling & Laser",
+                  "price": {
+                    "current": 29.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£29.99"
+                  },
+                  "source": "eBay GB",
+                  "description": null,
+                  "marketplace": "By Cleobi",
+                  "marketplace_url": null,
+                  "url": "https://google.com/aclk?sa=L&ai=DChsSEwji1arp2ayXAxUrOwYAHeFyKT0YACICCAIQBRoCd3M",
+                  "rating": null
+                },
+                {
+                  "type": "shopping_element",
+                  "title": "La Roche-Posay Cicaplast Balm B5 Multi-Purpose Repairing Balm 40ml",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£11.00"
+                  },
+                  "source": "Cult Beauty",
+                  "description": null,
+                  "marketplace": "By Productcaster",
+                  "marketplace_url": null,
+                  "url": "https://google.com/aclk?sa=L&ai=DChsSEwji1arp2ayXAxUrOwYAHeFyKT0YACICCAIQAxoCd3M",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 9000,
+                    "rating_max": 5
+                  }
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "people_also_search",
+              "rank_group": 2,
+              "rank_absolute": 16,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[4]/div[1]/div[3]/div[1]",
+              "title": "People also search for",
+              "items": [
+                "Can I use La Roche-Posay after microneedling",
+                "7 days after microneedling",
+                "Spots after microneedling",
+                "After microneedling cream",
+                "How long after microneedling will I see results",
+                "Can I use e45 after microneedling"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

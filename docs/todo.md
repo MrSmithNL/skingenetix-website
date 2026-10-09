@@ -115,7 +115,7 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
   the smiling-eye close-up (wave `reviews-hero-smiling-faces-r2`, CLOSE1 gpt_image_02), shipped as the 688 px centre square he saw, as
   `skingenetix-menu-collagen-skincare-smiling-eye-close-up.jpg` (`configs/banners/collagen-skincare-menu-tile-publish-2026-10-08.json`);
   `scripts/menu-image-tiles.py` TILES entry swapped and rebuilt. Undo: `python3 scripts/menu-image-tiles.py --restore
-  backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
+backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
 - ✅ **Collagen page, 2026-10-08 evening:** the three result cards alternate image left/right (Malcolm); JSON-LD product mentions by
   `@id` (audit S2 fixed); on "make the changes so that the collagen page scores maximum", the grid below the explanation (X1 met)
   and the hero's fade neutralised on this page only (live largest paint 4.0 and 4.4 s, was about 14 s), ADR-2026-10-08-X.
@@ -125,9 +125,18 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
   audit 9.9 with P3 passing; empty Learn blog hidden (`seo.hidden` = 1, set back to 0 when spoke 1 publishes).
 - ⏳ **Skin Concerns FAQ f5 is disabled** ("Are peptides safe for sensitive skin? Yes … paraben-free"): register wording drafted for
   Malcolm (in the 2026-10-09 session report); on his yes, replace in six languages and re-enable (`scripts/disable-block.py
-  templates/page.skin-concerns.json faq f5 --enable --apply`). FAQ f3 (how the solutions differ) does not name Collagen yet.
+templates/page.skin-concerns.json faq f5 --enable --apply`). FAQ f3 (how the solutions differ) does not name Collagen yet.
 - ⏳ **Product pages, plan step 1.2:** nine English drafts and the review pack `docs/review-2026-10-09-product-pages.md` wait for
   Malcolm (per page yes/edits/no; decisions 3, 8, 15; the "free from" line; carton facts).
+- ⏳ **New articles plan (2026-10-09), waits for Malcolm's 10 decisions:** `docs/article-plan-2026-10-09.md`, evidence
+  `audits/2026-10-09-new-article-keywords/`. Adjacent-topic keyword pull (`scripts/keyword-research-adjacent.py`; 19,238 US /
+  17,212 GB keywords), the 15 planned spokes re-checked against observed searches (most have none and repeat hub FAQs), top-3
+  teardowns (desktop and mobile) for every planned article, cannibalisation checked in Search Console and by SERP overlap.
+  Wave 1: spoke 1 → crow's feet → copper uglies → salmon sperm skincare; wave 2: forehead wrinkles, best PDRN serum by the label,
+  Matrixyl Synthe'6; wave 3 gated (at-home microneedling and microneedling serum, under-eye wrinkles, best copper peptide serum,
+  copper with retinol). Once approved it replaces the spoke list in `docs/content-plan-2026.md` §5 and the traffic plan's "spokes
+  2–5" and "remaining spokes". Existing-page fixes it found are in its Part 8 (Fine Lines overclaims, copper hub mixing section,
+  salmon sperm FAQ on the PDRN products, Yogya's "polynucleotide" owner, the stamp pages' "absorb deeper"). Spend USD 9.60.
 - ✅ **Home page slideshow speed (2026-10-09):** two slideshow rules via `scripts/hero-reveal-off.py`; live LCP 4.0 and 3.0 s (was 12.5 s); no blink, slides rotate (filmed frame by frame).
 - ✅ **Hub translation configs repaired (2026-10-09):** the five `configs/hub-i18n/*.json` phrase tables lacked the 2026-10-08
   team-credit byline, so a re-run would have written English into five locales (the Argireline test caught it). Entries derived
@@ -167,14 +176,14 @@ vs retinol, Botox framing) and share four template faults (C10 duplicated FAQ im
 
 - [ ] 🛑 Malcolm: Request indexing in Search Console for `/pages/pdrn-research`, Yogya, Tadini, Robinson; re-inspect weekly.
 - [x] (done 2026-10-07, live ×6; re-audit run 2 in the tracker) Hub template fix, all five hubs: remove the duplicated FAQ image block; add the safety block (register wording); cut repetition under 1.5/100 words; add `Article` to the schema; add `dateModified` where missing; one
-  definition sentence above the stat tiles. Re-audit to 9.0+
+      definition sentence above the stat tiles. Re-audit to 9.0+
       with no confirmed failures.
 - [x] (done 2026-10-07, live ×6) PDRN hub: one retinol figure ("more than three times", Ye Fig. 6B) in six languages (intro says "twice"; German "doppelt"); the PAA sections (salmon sperm?, do serums work?, what not to mix, with retinol?, how to use).
 - [x] (done 2026-10-07 except the Botox item, which stays 🛑 Malcolm's) Argireline hub: "Does Argireline work?", "Botox in a bottle: what it is and is not" (🛑 register check), side effects, vs retinol, what not to mix, vs Matrixyl; German title with "Argireline".
 - [x] (done 2026-10-07; the vitamin C answer reuses the product page's own guidance; Matrixyl got its safety and "vs Argireline" items too) Copper and glutathione hubs: side effects / who should avoid; what not to mix and layering (🛑 formulation owner: the copper serum contains
-  vitamin C); oral vs topical vs injection.
+      vitamin C); oral vs topical vs injection.
 - [x] (config aligned 2026-10-07; 🛑 still Malcolm's: "Argireline" on the product page, the cream's title) Keyword ownership (ADR-2026-09-30-K open item): hub "argireline" / product "argireline serum"; serum "matrixyl 3000" / hub the science terms; cream title → "collagen cream
-  with matrixyl"; a collection owns "peptide skincare"; the product page may carry the word
+      with matrixyl"; a collection owns "peptide skincare"; the product page may carry the word
       "Argireline" (trademark). Then update `configs/page-targets.json` and titles; the P1 caps lift.
 - [ ] (hubs already link all eight; Ye → Yogya sibling link waits for the STUDY-DETAIL rebuild) Hub → study links for the four articles failing P3; product → study links.
 - [ ] Hide the empty `/blogs/learn` from the sitemap until the first spoke; distinct tag-page titles (🛑 core layout).

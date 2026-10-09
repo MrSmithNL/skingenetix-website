@@ -1,0 +1,172 @@
+{
+  "client": "skingenetix",
+  "site": "https://www.skingenetix.com",
+  "gsc_property": "sc-domain:skingenetix.com",
+  "ga4_property": "properties/509318244",
+  "service_account_key": "~/.config/ga4/service-account.json",
+  "dataforseo_env_file": "~/Claude Code/Projects/seo-toolkit/.env",
+  "locales_regex": "de|nl|fr|es|it",
+  "brand_regex": "skingenetix|skin genetix|skingenetics",
+  "markets": {
+    "US": {
+      "location_code": 2840,
+      "language_code": "en"
+    },
+    "GB": {
+      "location_code": 2826,
+      "language_code": "en"
+    },
+    "DE": {
+      "location_code": 2276,
+      "language_code": "de"
+    }
+  },
+  "_about": "New-article keywords, 2026-10-09: the adjacent topics found by scripts/keyword-research-adjacent.py (candidates-*.json, classified.json) that no page owns and no plan claims, plus three planned spokes re-checked. No hero page exists yet for any of them, so `hero` is omitted. Window skingenetix-website-14 owns the SERPs of existing pages' owner terms (audits/2026-10-09-competitor-teardown-top4/); SERPs already pulled on 2026-10-07/08 (microneedling serum, best pdrn serum, best copper peptide serum, matrixyl and argireline, pdrn vs retinol, pdrn microneedling) are reused, not re-pulled. Same skill and scripts: seo-visibility-forensics serp_gap.py pull | pages | authority | report.",
+  "topic_regex": "pdrn|peptid|argireline|matrixyl|copper|ghk|glutathion|collagen|wrinkle|crow|forehead|smile line|neck|microneedl|derma ?stamp|salmon|polynucleotide|exosome",
+  "keywords": [
+    {
+      "q": "crows feet",
+      "market": "US"
+    },
+    {
+      "q": "under eye wrinkles",
+      "market": "US"
+    },
+    {
+      "q": "forehead wrinkles",
+      "market": "US"
+    },
+    {
+      "q": "how to get rid of forehead wrinkles",
+      "market": "US"
+    },
+    {
+      "q": "smile lines",
+      "market": "US"
+    },
+    {
+      "q": "how to get rid of smile lines",
+      "market": "US"
+    },
+    {
+      "q": "neck wrinkles",
+      "market": "US"
+    },
+    {
+      "q": "at home microneedling",
+      "market": "US"
+    },
+    {
+      "q": "how to use a derma stamp",
+      "market": "US"
+    },
+    {
+      "q": "derma stamp",
+      "market": "US"
+    },
+    {
+      "q": "derma stamp vs derma roller",
+      "market": "US"
+    },
+    {
+      "q": "how often to do microneedling",
+      "market": "US"
+    },
+    {
+      "q": "after microneedling care",
+      "market": "US"
+    },
+    {
+      "q": "best microneedling serum",
+      "market": "US"
+    },
+    {
+      "q": "salmon sperm",
+      "market": "US"
+    },
+    {
+      "q": "salmon sperm facial",
+      "market": "US"
+    },
+    {
+      "q": "salmon sperm skin care",
+      "market": "US"
+    },
+    {
+      "q": "copper uglies",
+      "market": "US"
+    },
+    {
+      "q": "matrixyl synthe 6 benefits",
+      "market": "US"
+    },
+    {
+      "q": "vegan pdrn",
+      "market": "US"
+    },
+    {
+      "q": "pdrn vs exosomes",
+      "market": "US"
+    },
+    {
+      "q": "dehydration lines vs wrinkles",
+      "market": "US"
+    },
+    {
+      "q": "can you use copper peptides with retinol",
+      "market": "US"
+    },
+    {
+      "q": "crows feet",
+      "market": "GB"
+    },
+    {
+      "q": "how to get rid of crows feet",
+      "market": "GB"
+    },
+    {
+      "q": "forehead wrinkles",
+      "market": "GB"
+    },
+    {
+      "q": "smile lines",
+      "market": "GB"
+    },
+    {
+      "q": "how to get rid of smile lines",
+      "market": "GB"
+    },
+    {
+      "q": "at home microneedling",
+      "market": "GB"
+    },
+    {
+      "q": "derma stamp",
+      "market": "GB"
+    },
+    {
+      "q": "best products to use after microneedling",
+      "market": "GB"
+    },
+    {
+      "q": "how to derma stamp",
+      "market": "GB"
+    },
+    {
+      "q": "salmon sperm",
+      "market": "GB"
+    },
+    {
+      "q": "salmon sperm facial",
+      "market": "GB"
+    },
+    {
+      "q": "polynucleotides",
+      "market": "GB"
+    },
+    {
+      "q": "what do polynucleotides do",
+      "market": "GB"
+    }
+  ]
+}

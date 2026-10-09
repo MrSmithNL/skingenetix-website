@@ -1,0 +1,1374 @@
+{
+  "version": "0.1.20260917",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.0600 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "10090947-1509-0139-0000-d3176990f221",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.0511 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "derma stamp",
+        "location_code": 2840,
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 10,
+        "load_async_ai_overview": true,
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "derma stamp",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=derma%20stamp&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-10-09 09:47:43 +00:00",
+          "spell": null,
+          "refinement_chips": {
+            "type": "refinement_chips",
+            "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+            "items": [
+              {
+                "type": "refinement_chips_element",
+                "title": "Nearby",
+                "url": "https://www.google.com/search?q=derma+stamp+nearby&hl=en&gl=US&shoprs=CAEYAyoLZGVybWEgc3RhbXAyDAgDEgZOZWFyYnkYAli-sCBgAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAF6BAguED4",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Facial Rollers & Microneedling",
+                "url": "https://www.google.com/search?q=facial+rollers+%26+microneedling+derma+stamp&hl=en&gl=US&shoprs=CAEYCSoLZGVybWEgc3RhbXAyIggJEh5GYWNpYWwgUm9sbGVycyAmIE1pY3JvbmVlZGxpbmdgAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAJ6BAguED8",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Buy",
+                "url": "https://www.google.com/search?q=buy+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyBwgSEgNCdXlgAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAN6BAguEEA",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Reviews",
+                "url": "https://www.google.com/search?q=reviews+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCwgSEgdSZXZpZXdzYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAR6BAguEEE",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "On sale",
+                "url": "https://www.google.com/search?q=derma+stamp+sale&hl=en&gl=US&shoprs=CAESBEoCGAEYBioLZGVybWEgc3RhbXAyEwgGEgdPbiBzYWxlGAIiBEoCGAFYvrAgYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAV6BAguEEI",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Price",
+                "url": "https://www.google.com/search?q=price+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCQgSEgVQcmljZWAB&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAZ6BAguEEM",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "For Sale",
+                "url": "https://www.google.com/search?q=derma+stamp+for+sale&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyDAgSEghGb3IgU2FsZWAB&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAd6BAguEEQ",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Meaning",
+                "url": "https://www.google.com/search?q=meaning+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCwgSEgdNZWFuaW5nYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAh6BAguEEU",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Pink",
+                "url": "https://www.google.com/search?q=pink+derma+stamp&hl=en&gl=US&shoprs=CAEYASoLZGVybWEgc3RhbXAyFggBEgRQaW5rOgwI2Iz1ARDpivUBMAtYvrAgYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAl6BAguEEY",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "White",
+                "url": "https://www.google.com/search?q=white+derma+stamp&hl=en&gl=US&shoprs=CAEYASoLZGVybWEgc3RhbXAyFwgBEgVXaGl0ZToMCNiM9QEQoYv1ATALWL6wIGAB&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAp6BAguEEc",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Face",
+                "url": "https://www.google.com/search?q=face+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCAgSEgRGYWNlYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAt6BAguEEg",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Dr. Pen",
+                "url": "https://www.google.com/search?q=dr.+pen+derma+stamp&hl=en&gl=US&shoprs=CAEYAioLZGVybWEgc3RhbXAyCwgCEgdEci4gUGVuWL6wIGAB&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKAx6BAguEEk",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Blue",
+                "url": "https://www.google.com/search?q=blue+derma+stamp&hl=en&gl=US&shoprs=CAEYASoLZGVybWEgc3RhbXAyFggBEgRCbHVlOgwI2Iz1ARDmivUBMAtYvrAgYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKA16BAguEEs",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Under $15",
+                "url": "https://www.google.com/search?q=derma+stamp+under+$15&hl=en&gl=US&shoprs=CAESDRILEQAAAAA4nGxBGAEYBSoLZGVybWEgc3RhbXAyIggFEglVbmRlciAkMTUYAiINEgsRAAAAADicbEEYASoCGAFYvrAgYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKA56BAguEEw",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Red",
+                "url": "https://www.google.com/search?q=red+derma+stamp&hl=en&gl=US&shoprs=CAEYASoLZGVybWEgc3RhbXAyFQgBEgNSZWQ6DAjYjPUBEOeK9QEwC1i-sCBgAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKA96BAguEE0",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Green",
+                "url": "https://www.google.com/search?q=green+derma+stamp&hl=en&gl=US&shoprs=CAEYASoLZGVybWEgc3RhbXAyFwgBEgVHcmVlbjoMCNiM9QEQ6Ir1ATALWL6wIGAB&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBB6BAguEE4",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Free",
+                "url": "https://www.google.com/search?q=free+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCAgSEgRGcmVlYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBF6BAguEE8",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Online",
+                "url": "https://www.google.com/search?q=online+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCggSEgZPbmxpbmVgAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBJ6BAguEFA",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Images",
+                "url": "https://www.google.com/search?q=images+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCggSEgZJbWFnZXNgAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBN6BAguEFE",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Walmart",
+                "url": "https://www.google.com/search?q=walmart+derma+stamp&hl=en&gl=US&shoprs=CAEYAioLZGVybWEgc3RhbXAyCwgCEgdXYWxtYXJ0WL6wIGAB&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBR6BAguEFI",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Target",
+                "url": "https://www.google.com/search?q=target+derma+stamp&hl=en&gl=US&shoprs=CAEYAioLZGVybWEgc3RhbXAyCggCEgZUYXJnZXRYvrAgYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBV6BAguEFQ",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Brand",
+                "url": "https://www.google.com/search?q=brand+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCQgSEgVCcmFuZGAB&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBZ6BAguEFY",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Hair",
+                "url": "https://www.google.com/search?q=hair+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCAgSEgRIYWlyYAE&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBd6BAguEFc",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Custom",
+                "url": "https://www.google.com/search?q=custom+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyCggSEgZDdXN0b21gAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBh6BAguEFg",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Man",
+                "url": "https://www.google.com/search?q=man+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyBwgSEgNNYW5gAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBl6BAguEFk",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Professional",
+                "url": "https://www.google.com/search?q=professional+derma+stamp&hl=en&gl=US&shoprs=CAEYEioLZGVybWEgc3RhbXAyEAgSEgxQcm9mZXNzaW9uYWxgAQ&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQip4GKBp6BAguEFo",
+                "domain": "www.google.com",
+                "options": null
+              }
+            ]
+          },
+          "item_types": [
+            "ai_overview",
+            "organic",
+            "popular_products",
+            "discussions_and_forums",
+            "people_also_ask",
+            "video",
+            "images",
+            "product_considerations",
+            "related_searches"
+          ],
+          "se_results_count": 164,
+          "pages_count": 1,
+          "items_count": 14,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "asynchronous_ai_overview": false,
+              "markdown": "A **derma stamp** is `a handheld cosmetic tool featuring ultra-fine needles that press vertically into the skin or scalp to create microscopic channels`.[[1]](https://us.drpen.co/products/derma-stamp)\n\nYou can browse options like the [Follicly Derma Stamp on Amazon](https://www.amazon.com/derma-stamp/s?k=derma+stamp) or follow step-by-step instructions via the Dr. Pen Complete Derma Stamp Guide.[[1]](https://www.amazon.com/derma-stamp/s?k=derma+stamp)[[2]](https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide)\n\n### How It Works & Benefits\n\n- **Controlled Vertical Action:** Unlike a derma roller—which rolls across the skin and can drag or catch hair—a derma stamp moves straight up and down, reducing tearing and irritation.[[1]](https://rhutehair.com/products/rhute-dermastamp)[[2]](https://us.drpen.co/products/derma-stamp)\n- **Collagen & Elastin Stimulation:** The tiny punctures create a mild, localized healing response that signals the skin to produce more collagen and elastin.[[1]](https://us.drpen.co/products/derma-stamp)\n- **Enhanced Product Absorption:** Stamping can improve the absorption of topical treatments (such as hair growth serums or hyaluronic acid) significantly by opening up temporary micro-channels.[[1]](https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide)[[2]](https://rhutehair.com/products/rhute-dermastamp)\n\n### Common Uses\n\n- **Scalp & Hair Growth:** Used on thinning areas or receding hairlines to support scalp rejuvenation and boost serum penetration.[[1]](https://rhutehair.com/products/rhute-dermastamp)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:1898526591791256969,catalogid:5049052922177810266,gpcid:13321111991588250006,mid:576462914970981833&ibp=oshop)\n- **Scar Tissue & Wrinkles:** Used on targeted, isolated scars, fine lines, or uneven skin texture where precision is required.[[1]](https://us.drpen.co/products/derma-stamp)\n\n### Safety and Usage Tips\n\n- **Sanitization:** Disinfect the tool before and after every use by soaking the needles in 100% isopropyl alcohol.[[1]](https://www.instagram.com/reel/DYg_daXxQFp/?hl=en)[[2]](https://www.instagram.com/reel/DDonxTZSVON/?hl=en)\n- **Needle Depth:** Beginners typically start shorter (e.g., 0.25mm to 0.5mm). Deeper settings (up to 1.5mm–3.0mm) carry higher risks and require strict hygiene.[[1]](https://www.instagram.com/reel/DDonxTZSVON/?hl=en)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:4015819856568340806,catalogid:15350733045162607765,gpcid:15319606151129989076,mid:576462718741219519&ibp=oshop)[[3]](https://www.google.com/search?q=product&prds=pvt:hg,productid:12364467628364247079,catalogid:14679707962730419830,gpcid:11857634587116834912,mid:576462502624445181&ibp=oshop)\n- **Technique:** Press straight down and lift; **never drag or slide** the stamp across your skin or hair.[[1]](https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide)\n- **Replacement:** Replace the device or stamp head after 6 to 10 uses, or sooner if needles feel dull or bent.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:4015819856568340806,catalogid:15350733045162607765,gpcid:15319606151129989076,mid:576462718741219519&ibp=oshop)\n- **Avoid Broken Skin:** Do not use on active acne, infections, broken skin, or inflamed areas.[[1]](https://rhutehair.com/products/rhute-dermastamp)\n\nAre you planning to use the derma stamp **for your scalp/hair growth** or **for facial skin care** , and what **needle depth** are you considering?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "A derma stamp is a handheld cosmetic tool featuring ultra-fine needles that press vertically into the skin or scalp to create microscopic channels.",
+                  "markdown": "A **derma stamp** is `a handheld cosmetic tool featuring ultra-fine needles that press vertically into the skin or scalp to create microscopic channels`.[[1]](https://us.drpen.co/products/derma-stamp)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Dr. Pen",
+                      "domain": "us.drpen.co",
+                      "url": "https://us.drpen.co/products/derma-stamp",
+                      "title": "Derma Stamp Micro Needling Skin Tool - Dr. Pen",
+                      "text": "Unlike a derma roller, which rolls a barrel of ultra fine needles over the skin, the Derma Stamp Micro Needling skin tool is used ..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "You can browse options like the Follicly Derma Stamp on Amazon or follow step-by-step instructions via the Dr. Pen Complete Derma Stamp Guide.",
+                  "markdown": "You can browse options like the [Follicly Derma Stamp on Amazon](https://www.amazon.com/derma-stamp/s?k=derma+stamp) or follow step-by-step instructions via the Dr. Pen Complete Derma Stamp Guide.[[1]](https://www.amazon.com/derma-stamp/s?k=derma+stamp)[[2]](https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Follicly Derma Stamp on Amazon",
+                      "description": null,
+                      "url": "https://www.amazon.com/derma-stamp/s?k=derma+stamp",
+                      "domain": "www.amazon.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Amazon.com",
+                      "domain": "www.amazon.com",
+                      "url": "https://www.amazon.com/derma-stamp/s?k=derma+stamp",
+                      "title": "Derma Stamp - Amazon.com",
+                      "text": "Follicly Derma Stamp – Professional Microneedling Tool for Hair, Beard, and Skin Care – 140 Titanium Micro Needle Stamp for Home U..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "drpen.net",
+                      "domain": "drpen.net",
+                      "url": "https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide",
+                      "title": "How To Use a Dermastamp – The Complete Derma Stamp Guide",
+                      "text": "How To Use a Dermastamp – The Complete Derma Stamp Guide * How to Use Derma Stamp - Step By Step Here's a simple guide on how to u..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "How It Works & Benefits",
+                  "text": "Controlled Vertical Action: Unlike a derma roller—which rolls across the skin and can drag or catch hair—a derma stamp moves straight up and down, reducing tearing and irritation. Collagen & Elastin Stimulation: The tiny punctures create a mild, localized healing response that signals the skin to produce more collagen and elastin. Enhanced Product Absorption: Stamping can improve the absorption of topical treatments (such as hair growth serums or hyaluronic acid) significantly by opening up temporary micro-channels.",
+                  "markdown": "- **Controlled Vertical Action:** Unlike a derma roller—which rolls across the skin and can drag or catch hair—a derma stamp moves straight up and down, reducing tearing and irritation.[[1]](https://rhutehair.com/products/rhute-dermastamp)[[2]](https://us.drpen.co/products/derma-stamp)\n- **Collagen & Elastin Stimulation:** The tiny punctures create a mild, localized healing response that signals the skin to produce more collagen and elastin.[[1]](https://us.drpen.co/products/derma-stamp)\n- **Enhanced Product Absorption:** Stamping can improve the absorption of topical treatments (such as hair growth serums or hyaluronic acid) significantly by opening up temporary micro-channels.[[1]](https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide)[[2]](https://rhutehair.com/products/rhute-dermastamp)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "rhute hair",
+                      "domain": "rhutehair.com",
+                      "url": "https://rhutehair.com/products/rhute-dermastamp",
+                      "title": "Dermastamp for Hair Growth & Hair Loss",
+                      "text": "You asked, derms answered. * Who should not use a dermastamp? Avoid use on broken skin, active infections, inflamed scalp conditio..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Dr. Pen",
+                      "domain": "us.drpen.co",
+                      "url": "https://us.drpen.co/products/derma-stamp",
+                      "title": "Derma Stamp Micro Needling Skin Tool - Dr. Pen",
+                      "text": "Unlike a derma roller, which rolls a barrel of ultra fine needles over the skin, the Derma Stamp Micro Needling skin tool is used ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "drpen.net",
+                      "domain": "drpen.net",
+                      "url": "https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide",
+                      "title": "How To Use a Dermastamp – The Complete Derma Stamp Guide",
+                      "text": "How To Use a Dermastamp – The Complete Derma Stamp Guide * How to Use Derma Stamp - Step By Step Here's a simple guide on how to u..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Common Uses",
+                  "text": "Scalp & Hair Growth: Used on thinning areas or receding hairlines to support scalp rejuvenation and boost serum penetration. Scar Tissue & Wrinkles: Used on targeted, isolated scars, fine lines, or uneven skin texture where precision is required.",
+                  "markdown": "- **Scalp & Hair Growth:** Used on thinning areas or receding hairlines to support scalp rejuvenation and boost serum penetration.[[1]](https://rhutehair.com/products/rhute-dermastamp)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:1898526591791256969,catalogid:5049052922177810266,gpcid:13321111991588250006,mid:576462914970981833&ibp=oshop)\n- **Scar Tissue & Wrinkles:** Used on targeted, isolated scars, fine lines, or uneven skin texture where precision is required.[[1]](https://us.drpen.co/products/derma-stamp)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "rhute hair",
+                      "domain": "rhutehair.com",
+                      "url": "https://rhutehair.com/products/rhute-dermastamp",
+                      "title": "Dermastamp for Hair Growth & Hair Loss",
+                      "text": "You asked, derms answered. * Who should not use a dermastamp? Avoid use on broken skin, active infections, inflamed scalp conditio..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:1898526591791256969,catalogid:5049052922177810266,gpcid:13321111991588250006,mid:576462914970981833&ibp=oshop",
+                      "title": "Bio Needle Adjustable Derma Stamp Micro Needling Tool For Hair Growth",
+                      "text": "Introducing the NEW Bio Needle Adjustable Derma Stamp Microneedling Tool For Hair Growth – your ultimate companion in scalp rejuve..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Dr. Pen",
+                      "domain": "us.drpen.co",
+                      "url": "https://us.drpen.co/products/derma-stamp",
+                      "title": "Derma Stamp Micro Needling Skin Tool - Dr. Pen",
+                      "text": "Unlike a derma roller, which rolls a barrel of ultra fine needles over the skin, the Derma Stamp Micro Needling skin tool is used ..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Safety and Usage Tips",
+                  "text": "Sanitization: Disinfect the tool before and after every use by soaking the needles in 100% isopropyl alcohol. Needle Depth: Beginners typically start shorter (e.g., 0.25mm to 0.5mm). Deeper settings (up to 1.5mm–3.0mm) carry higher risks and require strict hygiene. Technique: Press straight down and lift; never drag or slide the stamp across your skin or hair. Replacement: Replace the device or stamp head after 6 to 10 uses, or sooner if needles feel dull or bent. Avoid Broken Skin: Do not use on active acne, infections, broken skin, or inflamed areas.",
+                  "markdown": "- **Sanitization:** Disinfect the tool before and after every use by soaking the needles in 100% isopropyl alcohol.[[1]](https://www.instagram.com/reel/DYg_daXxQFp/?hl=en)[[2]](https://www.instagram.com/reel/DDonxTZSVON/?hl=en)\n- **Needle Depth:** Beginners typically start shorter (e.g., 0.25mm to 0.5mm). Deeper settings (up to 1.5mm–3.0mm) carry higher risks and require strict hygiene.[[1]](https://www.instagram.com/reel/DDonxTZSVON/?hl=en)[[2]](https://www.google.com/search?q=product&prds=pvt:hg,productid:4015819856568340806,catalogid:15350733045162607765,gpcid:15319606151129989076,mid:576462718741219519&ibp=oshop)[[3]](https://www.google.com/search?q=product&prds=pvt:hg,productid:12364467628364247079,catalogid:14679707962730419830,gpcid:11857634587116834912,mid:576462502624445181&ibp=oshop)\n- **Technique:** Press straight down and lift; **never drag or slide** the stamp across your skin or hair.[[1]](https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide)\n- **Replacement:** Replace the device or stamp head after 6 to 10 uses, or sooner if needles feel dull or bent.[[1]](https://www.google.com/search?q=product&prds=pvt:hg,productid:4015819856568340806,catalogid:15350733045162607765,gpcid:15319606151129989076,mid:576462718741219519&ibp=oshop)\n- **Avoid Broken Skin:** Do not use on active acne, infections, broken skin, or inflamed areas.[[1]](https://rhutehair.com/products/rhute-dermastamp)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Instagram",
+                      "domain": "www.instagram.com",
+                      "url": "https://www.instagram.com/reel/DYg_daXxQFp/?hl=en",
+                      "title": "DERMASTAMPING 101 FOR HAIR GROWTH How to use ...",
+                      "text": "going baby i got the ops going crazy got the ops. going crazy i stop listen got a west."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Instagram",
+                      "domain": "www.instagram.com",
+                      "url": "https://www.instagram.com/reel/DDonxTZSVON/?hl=en",
+                      "title": "Dermastamping for hair growth You can use a dermaroller or a derma ...",
+                      "text": "Dermastamping for hair growth You can use a dermaroller or a derma stamp for this. I shall leave links in my stories & broadcast c..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:4015819856568340806,catalogid:15350733045162607765,gpcid:15319606151129989076,mid:576462718741219519&ibp=oshop",
+                      "title": "Beautimate Adjustable Microneedling Derma Stamp",
+                      "text": "Incorporate our professional skin care tool into your daily routine for your face, body, hair, and beards, all from the convenienc..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:12364467628364247079,catalogid:14679707962730419830,gpcid:11857634587116834912,mid:576462502624445181&ibp=oshop",
+                      "title": "DRS by Dr. Pen Derma Stamp",
+                      "text": "Discover the DRS 140 Needle Derma Stamp by Dr. Adjustable needle length - from 0.5mm to 3.00mm. Cone-shaped individual titanium pi..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "drpen.net",
+                      "domain": "drpen.net",
+                      "url": "https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide",
+                      "title": "How To Use a Dermastamp – The Complete Derma Stamp Guide",
+                      "text": "How To Use a Dermastamp – The Complete Derma Stamp Guide * How to Use Derma Stamp - Step By Step Here's a simple guide on how to u..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "rhute hair",
+                      "domain": "rhutehair.com",
+                      "url": "https://rhutehair.com/products/rhute-dermastamp",
+                      "title": "Dermastamp for Hair Growth & Hair Loss",
+                      "text": "You asked, derms answered. * Who should not use a dermastamp? Avoid use on broken skin, active infections, inflamed scalp conditio..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Are you planning to use the derma stamp for your scalp/hair growth or for facial skin care, and what needle depth are you considering?",
+                  "markdown": "Are you planning to use the derma stamp **for your scalp/hair growth** or **for facial skin care** , and what **needle depth** are you considering?",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Amazon.com",
+                  "domain": "www.amazon.com",
+                  "url": "https://www.amazon.com/derma-stamp/s?k=derma+stamp",
+                  "title": "Derma Stamp - Amazon.com",
+                  "text": "Follicly Derma Stamp – Professional Microneedling Tool for Hair, Beard, and Skin Care – 140 Titanium Micro Needle Stamp for Home U..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "rhute hair",
+                  "domain": "rhutehair.com",
+                  "url": "https://rhutehair.com/products/rhute-dermastamp",
+                  "title": "Dermastamp for Hair Growth & Hair Loss",
+                  "text": "You asked, derms answered. * Who should not use a dermastamp? Avoid use on broken skin, active infections, inflamed scalp conditio..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Dr. Pen",
+                  "domain": "us.drpen.co",
+                  "url": "https://us.drpen.co/products/derma-stamp",
+                  "title": "Derma Stamp Micro Needling Skin Tool - Dr. Pen",
+                  "text": "Unlike a derma roller, which rolls a barrel of ultra fine needles over the skin, the Derma Stamp Micro Needling skin tool is used ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "drpen.net",
+                  "domain": "drpen.net",
+                  "url": "https://drpen.net/blogs/blog/how-to-use-a-dermastamp-the-complete-derma-stamp-guide",
+                  "title": "How To Use a Dermastamp – The Complete Derma Stamp Guide",
+                  "text": "How To Use a Dermastamp – The Complete Derma Stamp Guide * How to Use Derma Stamp - Step By Step Here's a simple guide on how to u..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Instagram",
+                  "domain": "www.instagram.com",
+                  "url": "https://www.instagram.com/reel/DYg_daXxQFp/?hl=en",
+                  "title": "DERMASTAMPING 101 FOR HAIR GROWTH How to use ...",
+                  "text": "going baby i got the ops going crazy got the ops. going crazy i stop listen got a west."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Instagram",
+                  "domain": "www.instagram.com",
+                  "url": "https://www.instagram.com/reel/DDonxTZSVON/?hl=en",
+                  "title": "Dermastamping for hair growth You can use a dermaroller or a derma ...",
+                  "text": "Dermastamping for hair growth You can use a dermaroller or a derma stamp for this. I shall leave links in my stories & broadcast c..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:1898526591791256969,catalogid:5049052922177810266,gpcid:13321111991588250006,mid:576462914970981833&ibp=oshop",
+                  "title": "Bio Needle Adjustable Derma Stamp Micro Needling Tool For Hair Growth",
+                  "text": "Introducing the NEW Bio Needle Adjustable Derma Stamp Microneedling Tool For Hair Growth – your ultimate companion in scalp rejuve..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:4015819856568340806,catalogid:15350733045162607765,gpcid:15319606151129989076,mid:576462718741219519&ibp=oshop",
+                  "title": "Beautimate Adjustable Microneedling Derma Stamp",
+                  "text": "Incorporate our professional skin care tool into your daily routine for your face, body, hair, and beards, all from the convenienc..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/search?q=product&prds=pvt:hg,productid:12364467628364247079,catalogid:14679707962730419830,gpcid:11857634587116834912,mid:576462502624445181&ibp=oshop",
+                  "title": "DRS by Dr. Pen Derma Stamp",
+                  "text": "Discover the DRS 140 Needle Derma Stamp by Dr. Adjustable needle length - from 0.5mm to 3.00mm. Cone-shaped individual titanium pi..."
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]",
+              "domain": "us.drpen.co",
+              "title": "Derma Stamp Micro Needling Skin Tool",
+              "url": "https://us.drpen.co/products/derma-stamp?srsltid=AU7gw4U5cNRPq2vaLxWAZbgO8-BIN3P_6y6R3cT4xpIis9VsEaFa-0uW",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://us.drpen.co › products › derma-stamp",
+              "website_name": "Dr. Pen",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "The stamp mechanism gives the user a targeted treatment approach, and is an ideal microneedling tool for treating isolated scars as well as small areas.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 89,
+                "rating_max": 5
+              },
+              "price": {
+                "current": 29,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": "$29.00"
+              },
+              "highlighted": ["is an ideal microneedling tool for treating isolated scars"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]",
+              "domain": "www.amazon.com",
+              "title": "Derma Stamp",
+              "url": "https://www.amazon.com/derma-stamp/s?k=derma+stamp",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.amazon.com › derma-stamp › k=derma+stamp",
+              "website_name": "Amazon.com",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Follicly Derma Stamp – Professional Microneedling Tool for Hair, Beard, and Skin Care – 140 Titanium Micro Needle Stamp for Home Use – for Men & Women. Read more",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Professional Microneedling Tool for Hair, Beard, and Skin Care"],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Read more",
+                  "description": null,
+                  "url": "https://www.amazon.com/derma-stamp/s?k=derma+stamp#:~:text=Follicly%20Derma%20Stamp%20%E2%80%93%20Professional,%E2%80%93%20for%20Men%20%26%20Women",
+                  "domain": "www.amazon.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "popular_products",
+              "rank_group": 1,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[6]/div[1]",
+              "title": "Popular products",
+              "items": [
+                {
+                  "type": "popular_products_element",
+                  "title": "Beautimate Adjustable Microneedling Derma Stamp",
+                  "url": null,
+                  "domain": null,
+                  "description": "Target & more\nFree delivery on $35+",
+                  "more_sellers": true,
+                  "seller": "Target",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:0",
+                  "price": {
+                    "current": 20,
+                    "regular": 32,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$20.00 $32"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.6,
+                    "votes_count": 108,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "15350733045162607765",
+                    "data_docid": "4015819856568340806",
+                    "gid": "15319606151129989076"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "beautimate Adjustable Derma Stamp 120-Pin",
+                  "url": null,
+                  "domain": null,
+                  "description": "Target & more\nFree delivery on $35+\nI also appreciate the versatility of being able to tailor the needle length for different areas of the face. A reviewer on beautimate.com",
+                  "more_sellers": true,
+                  "seller": "Target",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:1",
+                  "price": {
+                    "current": 20,
+                    "regular": 32,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$20.00 $32"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.2,
+                    "votes_count": 5,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "17182324106387807828",
+                    "data_docid": "6606389229335301600",
+                    "gid": "12601309472038821735"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "DRS by Dr. Pen Derma Stamp",
+                  "url": null,
+                  "domain": null,
+                  "description": "Dr.Pen USA Official & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Dr.Pen USA Official",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:2",
+                  "price": {
+                    "current": 14.99,
+                    "regular": 40,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$14.99 $40"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.7,
+                    "votes_count": 209,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "14679707962730419830",
+                    "data_docid": "12364467628364247079",
+                    "gid": "11857634587116834912"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Bio Needle Adjustable Derma Stamp Micro Needling Tool For Hair Growth",
+                  "url": null,
+                  "domain": null,
+                  "description": "Dr. Pen Online & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Dr. Pen Online",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:3",
+                  "price": {
+                    "current": 15.96,
+                    "regular": 20,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$15.96 $20"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.6,
+                    "votes_count": 367,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "5049052922177810266",
+                    "data_docid": "1898526591791256969",
+                    "gid": "13321111991588250006"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Micro Needling Skin Tool",
+                  "url": "https://www.dr-pen.co.uk/product/bio-needle-derma-stamp/",
+                  "domain": "www.dr-pen.co.uk",
+                  "description": "Dr. Pen & more\nFree delivery on $49+\nThe stamp can encourage collagen and elastin reproduction within the skin … · Improve the appearance of scaring Dr Pen UK",
+                  "more_sellers": true,
+                  "seller": "Dr. Pen",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:4",
+                  "price": {
+                    "current": 29,
+                    "regular": 0.29,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$29.00 $0.29/g"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.6,
+                    "votes_count": 156,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "5549694213830231810",
+                    "data_docid": "7984404969972148386",
+                    "gid": "268191246015768588"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Follicly Derma Stamp",
+                  "url": null,
+                  "domain": null,
+                  "description": "Follicly",
+                  "more_sellers": false,
+                  "seller": "Follicly",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:5",
+                  "price": {
+                    "current": 19.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$19.99"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "10728270172134170603",
+                    "data_docid": "10657100017587936486",
+                    "gid": "2354370907298554641"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Adjustable Microneedling Derma Stamp Skin Care Tool",
+                  "url": null,
+                  "domain": null,
+                  "description": "Ortorex\nFree delivery on $57+",
+                  "more_sellers": false,
+                  "seller": "Ortorex",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:6",
+                  "price": {
+                    "current": 19.98,
+                    "regular": 40,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$19.98 $40"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 816,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "2324470156612731454",
+                    "data_docid": "8117296335105763981",
+                    "gid": "12089317646293691225"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Stamp Microneedle Treatment Drs 40 Reduce Pore Size And Firm The Skin, 0.25mm",
+                  "url": null,
+                  "domain": null,
+                  "description": "Filler Lux",
+                  "more_sellers": false,
+                  "seller": "Filler Lux",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:7",
+                  "price": {
+                    "current": 8.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$8.95"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": null,
+                    "data_docid": "8830714389054072238",
+                    "gid": null
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Zenagen Derma Stamp 1 piece for Overall Scalp Health",
+                  "url": null,
+                  "domain": null,
+                  "description": "Zenagen & more\nFree delivery\nI am a cancer survivor and have been struggling with thin hair around my hairline and temples. A reviewer on zenagen.com",
+                  "more_sellers": true,
+                  "seller": "Zenagen",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:8",
+                  "price": {
+                    "current": 28,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$28.00"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 5,
+                    "votes_count": 2,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "11734805937927536936",
+                    "data_docid": "33685136482100725",
+                    "gid": "16730666379732761758"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Beauty By Earth Microneedle Derma Roller",
+                  "url": null,
+                  "domain": null,
+                  "description": "Target & more\nFree delivery on $35+",
+                  "more_sellers": true,
+                  "seller": "Target",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090947-1509-0139-0000-d3176990f221:9",
+                  "price": {
+                    "current": 19.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$19.99"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.6,
+                    "votes_count": 761,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "6099425919689487097",
+                    "data_docid": "6691980925914303179",
+                    "gid": "18175897118837049991"
+                  }
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "discussions_and_forums",
+              "rank_group": 1,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]",
+              "title": "Discussions and forums",
+              "items": [
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "Does a Derma Stamp Work for Hair Growth? Here's What Our Testing Said.",
+                  "url": "https://www.reddit.com/r/Hair_Kempt/comments/1ry2of5/does_a_derma_stamp_work_for_hair_growth_heres/",
+                  "domain": "www.reddit.com",
+                  "source": "Reddit",
+                  "description": null,
+                  "timestamp": "2026-04-09 09:47:42 +00:00",
+                  "posts_count": 10
+                },
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "Is derma stamp really effective?",
+                  "url": "https://www.reddit.com/r/tressless/comments/1s3x2n8/is_derma_stamp_really_effective/",
+                  "domain": "www.reddit.com",
+                  "source": "Reddit",
+                  "description": null,
+                  "timestamp": "2026-04-09 09:47:42 +00:00",
+                  "posts_count": 20
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Does the derma stamp actually work?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Will derma stamp regrow hair?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "How many times should I derma stamp skin?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Do dermatologists recommend derma stamps?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]",
+              "domain": "zenagen.com",
+              "title": "Derma Stamp",
+              "url": "https://zenagen.com/products/derma-stamp?srsltid=AU7gw4X7fOVwccDqa-KpmJ4RuuOymyHjcNJKdwLG2Dg4Ox8a6f6YZZqc",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://zenagen.com › Accessories",
+              "website_name": "Zenagen",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Derm Stamp scalp microneedling tool designed to support scalp stimulation and improve absorption of hair. A professional-inspired, medical grade tool designed ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 2,
+                "rating_max": 5
+              },
+              "price": {
+                "current": 28,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": "$28.00"
+              },
+              "highlighted": ["Derm Stamp scalp microneedling tool"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]/div[1]",
+              "domain": "rhutehair.com",
+              "title": "Dermastamp for Hair Growth & Hair Loss",
+              "url": "https://rhutehair.com/products/rhute-dermastamp?srsltid=AU7gw4VqDqIUw4kwrZaPTiNW8Ivs1lHD91cZb1kpqdeXezP6f35kCvDR",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://rhutehair.com › products › rhute-dermastamp",
+              "website_name": "rhute hair",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Designed to stimulate the scalp using vertical stamping, the rhute dermastamp delivers precise, controlled micro-stimulation without the pulling or snagging ... Read more",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.6,
+                "votes_count": 13,
+                "rating_max": 5
+              },
+              "price": {
+                "current": 32,
+                "regular": null,
+                "max_value": null,
+                "currency": "GBP",
+                "is_price_range": false,
+                "displayed_price": "£32.00"
+              },
+              "highlighted": ["Designed to stimulate the scalp using vertical stamping"],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Read more",
+                  "description": null,
+                  "url": "https://rhutehair.com/products/rhute-dermastamp?srsltid=AU7gw4VqDqIUw4kwrZaPTiNW8Ivs1lHD91cZb1kpqdeXezP6f35kCvDR#:~:text=Designed%20to%20stimulate%20the%20scalp,without%20the%20pulling%20or%20snagging",
+                  "domain": "rhutehair.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "video",
+              "rank_group": 1,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[16]/div[1]",
+              "items": [
+                {
+                  "type": "video_element",
+                  "source": "YouTube · AL GARRIDO",
+                  "title": "How to Derma Stamp for Hair Regrowth Results",
+                  "timestamp": "2026-02-16 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=JttiJrbcepM"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · AL GARRIDO",
+                  "title": "How to Derma Stamp for Quickest Hair Results (Step-by- ...",
+                  "timestamp": "2025-01-24 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=Ky3B-Fr6sss"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · AL GARRIDO",
+                  "title": "Derma Stamp for HAIR REGROWTH",
+                  "timestamp": "2025-01-21 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=QPq2QyGE__0"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]/div[1]",
+              "domain": "www.target.com",
+              "title": "Derma Stamp Microneedling",
+              "url": "https://www.target.com/s/derma+stamp",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.target.com › Beauty",
+              "website_name": "Target",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Discover the best derma stamp microneedling tools for skincare and hair growth. Shop electric derma pens, micro-needle rollers, and more.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": {
+                "current": 3,
+                "regular": null,
+                "max_value": 35,
+                "currency": "USD",
+                "is_price_range": true,
+                "displayed_price": "$3 to $35"
+              },
+              "highlighted": ["best derma stamp microneedling tools"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.amazon.com",
+              "title": "FULL REVIEW ~ Adjustable microneedling Derma Stamp",
+              "url": "https://www.amazon.com/live/video/0aace738643a4b07a4da350628c91fe8",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.amazon.com › live › video",
+              "website_name": "Amazon.com",
+              "is_image": false,
+              "is_video": true,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": ["is_video"],
+              "description": "Discover the secret to better skincare absorption! Watch as Rae's WAY Overdoing It demonstrates this adjustable micro-needling derma stamp for face, hair & ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["adjustable micro-needling derma stamp"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "images",
+              "rank_group": 1,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[21]/div[1]",
+              "title": "Images",
+              "url": "https://www.google.com/search?sca_esv=afb89ae158309890&hl=en&gl=US&sxsrf=APpeQnsA3c64oUFRvQ_WiVO5OvF52HZwOg:1791539261594&q=derma+stamp&udm=2&source=univ&fir=oMB9lsbdqjqwsM%252Cvb1rhI9BXRAFaM%252C_%253B_x2m5UGrGGkBOM%252CZBT1WEo7OEviPM%252C_%253B7Qgivd0NdzhkgM%252Chz6nghjMa2dSFM%252C_%253Bvyu1XmvbBypnhM%252C490vdBU0Vz-PoM%252C_%253BYTex31ZO82F0xM%252CRkijpkynz79n9M%252C_%253B8KWulrN-uIVUyM%252CKt77SlDA-Wt5PM%252C_%253BhQEMaujKbjYOlM%252CArxmQjNi7cK7XM%252C_%253BKCu9CCn6mqwndM%252CmECq_uesTPuY6M%252C_&usg=AI4_-kTVXDDnBRZvNW_9Qx3JM04recgmqA&sa=X&ved=2ahUKEwjj9abq06yXAxXUKlkFHbEfC1gQ7Al6BAhgEAU",
+              "items": [
+                {
+                  "type": "images_element",
+                  "alt": "Derma Stamp - Adjustable 140 Microneedling Facial Stamp ...",
+                  "url": "https://www.amazon.sa/-/en/Derma-Stamp-Microneedling-Microneedle-Alternative/dp/B0D81L6K2L",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTufKSt07AnN3vIJDeeWGAaZQpscbI7NI9mZ3ELTuGJt-hnFQ4JFLIJc6A&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "What is Dermastaming | Dr Pen – Dr. Pen Australia",
+                  "url": "https://drpen.com.au/blogs/news/what-is-dermastamping?srsltid=AU7gw4UpMc6mg3HE4WmZ_kuR8Cc5cICRoepge3AkE2CHjAk4TfCZ6JWZ",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGDhc47NjObMOZP_SoZJX3pj4HN2DnQlrs8GRvKnS5R4TNGjX8D_ch7lA&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Derma stamp tutorial (link in bio) #hair #hairgrowth #hairtransformation  #dermastamp #microneedling #dermaroller",
+                  "url": "https://www.instagram.com/reel/C1DZsHJvRXN/",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhhKe9Thiwp0JcIy36L0UaSqTXAjrSXylylmeVkBgiRQuVt-jbMNQykaY&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Skin Needling Sydney | Best Skin Needling Treatments | ELC",
+                  "url": "https://www.evolutionlaser.com.au/skin-treatments/derma-stamp/",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyH5iH0IHP4V6WSEvgwopVCTwLr2415HB6qJ2d0P-cmlvlWXsDf3as7o&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Drs 140 A Derma Stamp Adjustable Needle Length Microneedle ...",
+                  "url": "https://www.walmart.ca/en/ip/Drs-140-A-Derma-Stamp-Adjustable-Needle-Length-Microneedle-Real-Needle-Skincare-Beard-Growth-Scalp-Hair-Re-growth-Acne-Scar-Pits/2QZEFVGN7RJO",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxz4Ms1qifYt3l5lvDvoxBmcRcs1eWgKek7vdfKIOwUf4WQvK1gnnrjFo&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Derma Rolling vs. Derma Stamping - Poosh",
+                  "url": "https://poosh.com/derma-rolling-vs-derma-stamping/",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BLM0La7Q_fItOvfd7Ds4_mLm9UKoqe4m35ajhd-lddaM-qj0F-NRlaQ&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "âme pure Adjustable Derma Stamp microneedle applicator for the face |  notino.co.uk",
+                  "url": "https://www.notino.co.uk/ame-pure/adjustable-derma-stamp-microneedle-applicator-for-face/",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ_8UlDUUWp13DwdIsXGMGi-7HBLhpS97QV19h4NOXeNjz-ec6ZPNE_80&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Derma Stamp for Hair Growth & Facial Spa | Adjustable Needles 0.25mm to 3mm  | Microneedling Stamp for Skin Repair, Face, Hair & Beard Growth | Reduces  ...",
+                  "url": "https://www.amazon.in/Baeskii-Titanium-Adjustable-Microneedling-Effective/dp/B0DWQ8LMJL",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwm0C9cGtvxKL_55gw9_tZ_LPNxau4Pts2M5oCNzRkm8cCXDhBONW5uWI&s"
+                }
+              ],
+              "related_image_searches": null,
+              "rectangle": null
+            },
+            {
+              "type": "product_considerations",
+              "rank_group": 1,
+              "rank_absolute": 13,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[1]/div[2]/div[1]/div[1]/div[23]/div[1]",
+              "title": "Things to know",
+              "items": [
+                {
+                  "type": "product_considerations_element",
+                  "title": "What are the potential side effects of using a derma stamp?",
+                  "consideration_category": "Side Effects",
+                  "expanded_element": null
+                },
+                {
+                  "type": "product_considerations_element",
+                  "title": "What are the benefits of using a derma stamp?",
+                  "consideration_category": "Benefits",
+                  "expanded_element": null
+                },
+                {
+                  "type": "product_considerations_element",
+                  "title": "How to use a derma stamp safely and effectively?",
+                  "consideration_category": "Usage",
+                  "expanded_element": null
+                },
+                {
+                  "type": "product_considerations_element",
+                  "title": "What are the different types of derma stamps?",
+                  "consideration_category": "Types",
+                  "expanded_element": null
+                },
+                {
+                  "type": "product_considerations_element",
+                  "title": "What is the recommended needle size for a derma stamp?",
+                  "consideration_category": "Needle Size",
+                  "expanded_element": null
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "related_searches",
+              "rank_group": 1,
+              "rank_absolute": 14,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+              "items": [
+                "Derma stamp for hair",
+                "Derma stamp for face",
+                "Derma Stamp Amazon",
+                "Derma stamp near me",
+                "Derma stamp for scalp",
+                "Derma stamp Pen",
+                "Derma stamp vs roller",
+                "Derma stamp reddit"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

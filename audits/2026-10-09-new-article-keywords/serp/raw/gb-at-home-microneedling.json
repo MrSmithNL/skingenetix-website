@@ -1,0 +1,787 @@
+{
+  "version": "0.1.20260917",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.0256 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "10090949-1509-0139-0000-ec3199863055",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.0173 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "at home microneedling",
+        "location_code": 2826,
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 10,
+        "load_async_ai_overview": true,
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "at home microneedling",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2826,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=at%20home%20microneedling&hl=en&gl=GB&ie=UTF-8&uule=w+CAIQIFISCamRx0IRO1oCEXoliDJDoPjE",
+          "datetime": "2026-10-09 09:49:27 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "organic",
+            "people_also_ask",
+            "discussions_and_forums",
+            "popular_products",
+            "related_searches"
+          ],
+          "se_results_count": 115,
+          "pages_count": 1,
+          "items_count": 13,
+          "items": [
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.dr-pen.co.uk",
+              "title": "Shop Professional Dr Pen Microneedling At Home",
+              "url": "https://www.dr-pen.co.uk/product-category/microneedling-pens/?srsltid=AU7gw4X2Sy5uiwhXxSldMiEPNsusF5-UJByiFP1rUsyfUwfSVrpe7VwB",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.dr-pen.co.uk › product-category › micronee...",
+              "website_name": "Dr Pen UK",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "£126.99 Current price is: £126.99. Dr pen microneedling is a automated skin needle pen device designed for durability, safety and more effective skin  ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": {
+                "current": 127,
+                "regular": null,
+                "max_value": 260,
+                "currency": "GBP",
+                "is_price_range": true,
+                "displayed_price": "£127 to £260"
+              },
+              "highlighted": ["Dr pen microneedling"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Does microneedling at home actually work?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Is 40 too old for microneedling?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What is the best microneedling to do at home?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Why do plastic surgeons not like RF microneedling?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+              "domain": "uk.drpen.co",
+              "title": "At-Home Skin Needling Starter Bundle",
+              "url": "https://uk.drpen.co/products/at-home-skin-needling-starter-bundle?srsltid=AU7gw4UNMwWT5opN33M8UdF20yTa_FWjBxGUcNppLe5QqOGwZOGd7X-U",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://uk.drpen.co › products › at-home-skin-needling-...",
+              "website_name": "Dr. Pen",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "A thoughtfully curated at-home system designed to support skin rejuvenation, improve texture, and enhance overall skin health through advanced microneedling",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": {
+                "current": 199,
+                "regular": null,
+                "max_value": null,
+                "currency": "GBP",
+                "is_price_range": false,
+                "displayed_price": "£199.00"
+              },
+              "highlighted": ["at-home", "microneedling"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]",
+              "domain": "www.vogue.com",
+              "title": "Everything to Know About At-Home Microneedling",
+              "url": "https://www.vogue.com/article/at-home-microneedling",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.vogue.com › article › at-home-microneedling",
+              "website_name": "Vogue",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "30 Nov 2025 — At home, the safe limit of microneedling is a depth of about 0.3 mm—just enough to help with product absorption and skin texture, says Dr. ...",
+              "pre_snippet": "11/30/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["a depth of about 0.3 mm"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-11-30 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "discussions_and_forums",
+              "rank_group": 1,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]",
+              "title": "Discussions and forums",
+              "items": [
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "Microneedling at home",
+                  "url": "https://www.mumsnet.com/talk/style_and_beauty/5514057-microneedling-at-home",
+                  "domain": "www.mumsnet.com",
+                  "source": "Mumsnet",
+                  "description": null,
+                  "timestamp": "2026-04-09 09:49:26 +00:00",
+                  "posts_count": 6
+                },
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "People who had successful results with “at home micro needling” HELP.!!!",
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1l1l2y2/people_who_had_successful_results_with_at_home/",
+                  "domain": "www.reddit.com",
+                  "source": "Reddit",
+                  "description": null,
+                  "timestamp": "2025-10-09 09:49:26 +00:00",
+                  "posts_count": 80
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]",
+              "domain": "trinnylondon.com",
+              "title": "Mastering the Art of Microneedling at Home",
+              "url": "https://trinnylondon.com/uk/blog/microneedling-for-beginners",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://trinnylondon.com › microneedling-for-beginners",
+              "website_name": "Trinny London",
+              "is_image": true,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": ["is_image"],
+              "description": "Discover the benefits of at-home microneedling and how it boosts collagen production and enhances skincare absorption.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": [
+                {
+                  "type": "images_element",
+                  "alt": "at home microneedling from trinnylondon.com",
+                  "url": "https://trinnylondon.com/uk/blog/microneedling-for-beginners",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10090949-1509-0139-0000-ec3199863055:0"
+                }
+              ],
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["at-home microneedling"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "popular_products",
+              "rank_group": 1,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]",
+              "title": null,
+              "items": [
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Pen M8 Wireless Microneedling Pen Kit -Ultima M8 Includes 10 Cartridges for Professional Skin Care",
+                  "url": null,
+                  "domain": null,
+                  "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQrfs6l6Fx2cSGJc6w1hWrxsS-z6ZCzE6MlR5InSgkq9dT5cpz-nVBLHWMB1E_Ey5J00tk4p6772cBB43XZprdAB0xDUyhugL23RhEUnqFsxvrwr131QrFCfg",
+                  "price": {
+                    "current": 62.99,
+                    "regular": 70,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£62.99 £70 & more prices"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.7,
+                    "votes_count": 60,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "3119325470082619650",
+                    "data_docid": "8235325077161953509",
+                    "gid": "7791913764232296765"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Trinny London Plump Up Microneedle 0.3mm",
+                  "url": null,
+                  "domain": null,
+                  "description": "Trinny London UK\nFree delivery on £50+",
+                  "more_sellers": false,
+                  "seller": "Trinny London UK",
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQR2CA3_oW_JqryRTFwc7LuNWfAag4HXhX7dOxumIDe3V-rauSmxeELDgRbfoJgqec9vTSow8qXTRNcLQlJULWTDCXGvrqPzOFHGYUo8Q0nAltQUw3shi5L",
+                  "price": {
+                    "current": 45,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£45.00"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "11976550561810627398",
+                    "data_docid": "3845930824863082270",
+                    "gid": "13512458367961603718"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Debenhams Sensse MicroGlo Microneedling LED Device",
+                  "url": null,
+                  "domain": null,
+                  "description": "Argos & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Argos",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQHjs8bx7Ot8B6MZUFIeJU_6m_v7naAgpXp6SGI_WeetUXYkMkFoCEkpJhg-tLEm4yLaFM1m8CKqGWK3_HSibWC5wNDuhZS0qfTOrUNsWqeUPz44s88EZ_4",
+                  "price": {
+                    "current": 100,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£100.00"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.9,
+                    "votes_count": 35,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "14101907782194914387",
+                    "data_docid": "6484029638138168055",
+                    "gid": "8383796263574693517"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Pen M8 At-Home Wireless Microneedling Pen with Cartridges for Skin Care",
+                  "url": null,
+                  "domain": null,
+                  "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+                  "more_sellers": false,
+                  "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT7YmMhFP_4C0q9kZFTWtXtrJuNZbWMhdIHz7uwvJUiVLcxaZJyLmsk9vuzTyNwbwlc4Eqa2YSIcRaCsAfbALYIG8Mfaub9A6ZKnBUrXMXp_CGJQjx6axTw-w",
+                  "price": {
+                    "current": 67.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£67.99"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "16793790714599405568",
+                    "data_docid": "2681852030010727334",
+                    "gid": "5014494635269233614"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Sensse Derma10 Skincare Kit",
+                  "url": null,
+                  "domain": null,
+                  "description": "Argos & more",
+                  "more_sellers": true,
+                  "seller": "Argos",
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTL1NaUEnCg6z2-d3HUQCGWjxMF9jMkFy-5783bJwrtFJJnJi3gqc8Cy99rkVay0rfPTEBUdlZIkmMtJKVRqdGonZ7sqpQhOgZL1CzSymYLbBKYl9gDhTszIw",
+                  "price": {
+                    "current": 29.99,
+                    "regular": 35,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£29.99 £35 & more prices"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 5,
+                    "votes_count": 2,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "16688330848343621630",
+                    "data_docid": "7726882087712797352",
+                    "gid": "1227046277145935531"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Pen M8S Microneedling Pen",
+                  "url": null,
+                  "domain": null,
+                  "description": "Amazon.co.uk - Amazon.co.uk-Seller & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSqRWzBfiseYG-L3cbUurM49Yg94jDi6WQ1cVEEVxXlPHmuTsUqK04ik7tE4z35d37TrjctNuIi8pIqXVxEsQjB5YC8V6tKNToT_H0IVqNxR6SaCXCYaAD-PQ",
+                  "price": {
+                    "current": 69.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£69.99"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 541,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "11347301848974212841",
+                    "data_docid": "780011654769563993",
+                    "gid": "2875475029942675867"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. pen 2026 Latest Model M9 Microneedling pen Newly Upgraded with One-Key Automatic Depth Adjustment & Smart Anti-Counterfeit Chip",
+                  "url": null,
+                  "domain": null,
+                  "description": "Amazon.co.uk - Amazon.co.uk-Seller\nFree delivery",
+                  "more_sellers": false,
+                  "seller": "Amazon.co.uk - Amazon.co.uk-Seller",
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQLx0XM_3BOxpgR6_6FVMp2EMLGcrYeRuC7mtXZt8mcyS4_MZG6oqk7hmaI6m-Oru5r0AolxEtV6HXbKJl6kUfaDvw5rBo3PArr9lAkPMS3BQbLbJCjmBbtag",
+                  "price": {
+                    "current": 149.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£149.99"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "17694924340445374469",
+                    "data_docid": "11172719230585067474",
+                    "gid": "17788262840729943812"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Kitsch Micro Derma Facial Roller",
+                  "url": null,
+                  "domain": null,
+                  "description": "Boots.com & more\nFree delivery on £25+",
+                  "more_sellers": true,
+                  "seller": "Boots.com",
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRuXwHcPD5GOYQomf-jE--JG77voMtFV1ZGjoErka1zDZqI2R8WYXwRYukrlG1WsF7EMRNXDaFkDwmC2UFAZkczKq7LwZi6J_N6_5czmN2iMe8FDDxpDGROaw",
+                  "price": {
+                    "current": 15,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "GBP",
+                    "is_price_range": false,
+                    "displayed_price": "£15.00"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.6,
+                    "votes_count": 1100,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "58704434581696238",
+                    "data_docid": "17174176031471815187",
+                    "gid": "13824514533330530546"
+                  }
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]/div[1]",
+              "domain": "www.reddit.com",
+              "title": "At-home microneedling - worth it? : r/30PlusSkinCare",
+              "url": "https://www.reddit.com/r/30PlusSkinCare/comments/13w9bdt/athome_microneedling_worth_it/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "110+ comments  ·  3 years ago",
+              "website_name": "Reddit · r/30PlusSkinCare",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "No, at home microneedling is NOT worth it. The needles don't go straight in due to the fact they're usually on a circular roller. Read more",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["at home microneedling is NOT worth it"],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "People who had successful results with “at home micro ...",
+                  "description": null,
+                  "url": "https://www.reddit.com/r/Microneedling/comments/1l1l2y2/people_who_had_successful_results_with_at_home/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "[DIY] Why are people so against at home microneedling?",
+                  "description": null,
+                  "url": "https://www.reddit.com/r/SkincareAddiction/comments/11ouigq/diy_why_are_people_so_against_at_home/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "More results from www.reddit.com",
+                  "description": null,
+                  "url": "https://www.google.com/search?q=at+home+microneedling+site:www.reddit.com&sca_esv=afb89ae158309890&hl=en&gl=GB&sxsrf=APpeQnvFx0VtVOX6JeesJQlvDmGpMH-7oQ:1791539366238&sa=X&ved=2ahUKEwiE-5mc1KyXAxVrVKQEHaM2OvgQrQIoAnoECDgQAw",
+                  "domain": "www.google.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]",
+              "domain": "www.amazon.co.uk",
+              "title": "Amazon.co.uk: Home Microneedling Kit",
+              "url": "https://www.amazon.co.uk/home-microneedling-kit/s?k=home+microneedling+kit",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.amazon.co.uk › home-microneedling-kit › k...",
+              "website_name": "Amazon UK",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Discover professional-grade microneedling tools designed for at-home skincare. Browse electric pens and manual rollers today.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": {
+                "current": 9,
+                "regular": null,
+                "max_value": 86,
+                "currency": "GBP",
+                "is_price_range": true,
+                "displayed_price": "£9 to £86"
+              },
+              "highlighted": ["professional-grade microneedling tools designed for at-home skincare"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]",
+              "domain": "www.glamour.com",
+              "title": "I Tried Microneedling at Home, and It Transformed My Skin",
+              "url": "https://www.glamour.com/story/at-home-microneedling-benefits",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.glamour.com › Beauty › microneedling",
+              "website_name": "Glamour",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "13 May 2020 — “The at-home microneedling devices are difficult to clean, and they dull quickly,” says Levin. “There is a higher risk of infection, ...",
+              "pre_snippet": "05/13/2020 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["difficult to clean, and they dull quickly"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2020-05-13 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[21]/div[1]/div[1]",
+              "domain": "www.dermapenworld.com",
+              "title": "Find confidence: Face your fear of at-home microneedling",
+              "url": "https://www.dermapenworld.com/en-eu/blog/diy-at-home-microneedling",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.dermapenworld.com › en-eu › blog › diy-at...",
+              "website_name": "DermapenWorld",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "A good area to start with is the cheek. Using a steady, even and rhythmical motion, move the pen in straight lines. Start by going up and down, then side to ... Read more",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Using a steady, even and rhythmical motion, move the pen in straight lines"],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Read more",
+                  "description": null,
+                  "url": "https://www.dermapenworld.com/en-eu/blog/diy-at-home-microneedling#:~:text=A%20good%20area%20to%20start,side%2C%20followed%20by%20diagonal%20movements.",
+                  "domain": "www.dermapenworld.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 9,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[23]/div[1]/div[1]",
+              "domain": "www.youtube.com",
+              "title": "I Tested Every Popular At-Home Microneedling Device ...",
+              "url": "https://www.youtube.com/watch?v=JnIwv4TRW_Q",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "73k+ views  ·  7 months ago",
+              "website_name": "YouTube · Dr. Abby",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "I'm a dermatologist with 12 years of experience, and I tested four popular home microneedling tools on myself so that you don't have to.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["tested four popular home microneedling tools"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "related_searches",
+              "rank_group": 1,
+              "rank_absolute": 13,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+              "items": [
+                "At home microneedling kit",
+                "Best at home microneedling",
+                "At home microneedling pen",
+                "At home microneedling UK",
+                "Best at home microneedling UK",
+                "At home microneedling reviews",
+                "At home microneedling before and after",
+                "At home microneedling reddit"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

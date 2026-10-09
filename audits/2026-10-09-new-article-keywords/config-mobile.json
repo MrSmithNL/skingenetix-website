@@ -1,0 +1,100 @@
+{
+  "client": "skingenetix",
+  "site": "https://www.skingenetix.com",
+  "gsc_property": "sc-domain:skingenetix.com",
+  "ga4_property": "properties/509318244",
+  "service_account_key": "~/.config/ga4/service-account.json",
+  "dataforseo_env_file": "~/Claude Code/Projects/seo-toolkit/.env",
+  "locales_regex": "de|nl|fr|es|it",
+  "brand_regex": "skingenetix|skin genetix|skingenetics",
+  "markets": {
+    "US": {
+      "location_code": 2840,
+      "language_code": "en"
+    },
+    "GB": {
+      "location_code": 2826,
+      "language_code": "en"
+    },
+    "DE": {
+      "location_code": 2276,
+      "language_code": "de"
+    }
+  },
+  "_about": "Mobile re-check of the planned articles' primary terms, 2026-10-09 (desktop pull in serp/). Mobile was clean where desktop was spam on 2026-10-07.",
+  "topic_regex": "pdrn|peptid|argireline|matrixyl|copper|ghk|glutathion|collagen|wrinkle|crow|forehead|smile line|neck|microneedl|derma ?stamp|salmon|polynucleotide|exosome",
+  "keywords": [
+    {
+      "q": "crows feet",
+      "market": "US"
+    },
+    {
+      "q": "crows feet",
+      "market": "GB"
+    },
+    {
+      "q": "forehead wrinkles",
+      "market": "US"
+    },
+    {
+      "q": "how to get rid of forehead wrinkles",
+      "market": "US"
+    },
+    {
+      "q": "smile lines",
+      "market": "US"
+    },
+    {
+      "q": "how to get rid of smile lines",
+      "market": "US"
+    },
+    {
+      "q": "copper uglies",
+      "market": "US"
+    },
+    {
+      "q": "can you use copper peptides with retinol",
+      "market": "US"
+    },
+    {
+      "q": "matrixyl synthe 6 benefits",
+      "market": "US"
+    },
+    {
+      "q": "salmon sperm facial",
+      "market": "US"
+    },
+    {
+      "q": "salmon sperm",
+      "market": "US"
+    },
+    {
+      "q": "salmon sperm facial",
+      "market": "GB"
+    },
+    {
+      "q": "at home microneedling",
+      "market": "US"
+    },
+    {
+      "q": "at home microneedling",
+      "market": "GB"
+    },
+    {
+      "q": "best products to use after microneedling",
+      "market": "GB"
+    },
+    {
+      "q": "vegan pdrn",
+      "market": "US"
+    },
+    {
+      "q": "best pdrn serum",
+      "market": "US"
+    },
+    {
+      "q": "best copper peptide serum",
+      "market": "US"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "_about": "Seed groups for the 2026-10-09 adjacent-topic keyword pull (scripts/keyword-research-adjacent.py). Why: the 2026-09-22 strategy pull used phrase-match suggestions on ingredient names only, so topics that do not contain those words (polynucleotides, peptides in general, retinol alternatives, at-home microneedling, concern questions, routines) were never collected, and the long tail below the top 700 per seed was cut. 'suggest' = phrase-match suggestions (every keyword containing the seed); 'q' = the same, filtered server-side to questions and modifiers (how, what, vs, with, after, side effects); 'related' = Google's related-searches graph, depth 1, which surfaces neighbours that share no words with the seed.",
+  "question_regex": "(how |what |can |does |do |is |are |why |when |should |which | vs| versus| with | and | or |after|before |together|routine|side effect|purg|uglies|layer|mix|order|safe|pregnan|sensitive|every day|daily|morning|night|how often|how long|age |men|benefit|work)",
+  "groups": {
+    "pdrn-adjacent": {
+      "suggest": [
+        "polynucleotides",
+        "polynucleotide",
+        "salmon sperm",
+        "salmon dna",
+        "skin booster",
+        "exosome",
+        "rejuran"
+      ],
+      "q": ["pdrn"],
+      "related": ["pdrn serum", "polynucleotides", "salmon dna skincare"]
+    },
+    "peptides-generic": {
+      "suggest": ["peptides for skin", "peptides in skincare", "peptide skin care"],
+      "q": ["peptides", "peptide"],
+      "related": ["peptides for skin", "peptide serum"]
+    },
+    "copper": {
+      "suggest": ["copper peptides", "ghk cu", "blue copper", "copper uglies"],
+      "q": ["copper peptide", "ghk-cu"],
+      "related": ["copper peptide serum"]
+    },
+    "argireline": {
+      "suggest": ["acetyl hexapeptide"],
+      "q": ["argireline"],
+      "related": ["argireline"]
+    },
+    "matrixyl": {
+      "suggest": ["matrixyl"],
+      "q": ["matrixyl"],
+      "related": ["matrixyl 3000"]
+    },
+    "glutathione": {
+      "suggest": ["topical glutathione", "glutathione cream", "glutathione for face"],
+      "q": ["glutathione"],
+      "related": ["glutathione serum"]
+    },
+    "retinol-adjacent": {
+      "suggest": [
+        "retinol alternative",
+        "alternative to retinol",
+        "instead of retinol",
+        "retinol vs",
+        "bakuchiol vs",
+        "botox alternative",
+        "natural botox"
+      ],
+      "q": [],
+      "related": ["retinol alternative"]
+    },
+    "microneedling": {
+      "suggest": [
+        "derma stamp",
+        "dermastamp",
+        "microneedling at home",
+        "at home microneedling",
+        "after microneedling",
+        "microneedling serum",
+        "derma roller vs"
+      ],
+      "q": ["microneedling"],
+      "related": ["microneedling at home"]
+    },
+    "concerns": {
+      "suggest": [
+        "crepey skin",
+        "neck wrinkles",
+        "forehead wrinkles",
+        "crows feet",
+        "smile lines",
+        "sagging skin",
+        "skin elasticity",
+        "dull skin",
+        "uneven skin tone",
+        "collagen loss",
+        "under eye wrinkles",
+        "fine lines"
+      ],
+      "q": ["wrinkles", "anti aging serum", "anti aging"],
+      "related": ["anti aging serum", "collagen boosting skincare"]
+    },
+    "routine": {
+      "suggest": [
+        "anti aging skincare routine",
+        "anti aging routine",
+        "skincare routine order",
+        "serum order",
+        "layering serums",
+        "skin longevity",
+        "korean anti aging"
+      ],
+      "q": ["korean skincare"],
+      "related": []
+    }
+  }
+}

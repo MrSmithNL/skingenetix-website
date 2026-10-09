@@ -1,0 +1,803 @@
+{
+  "version": "0.1.20260917",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "6.0247 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "10091013-1509-0139-0000-391cb059d0bb",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "6.0177 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "smile lines",
+        "location_code": 2840,
+        "language_code": "en",
+        "device": "mobile",
+        "depth": 10,
+        "load_async_ai_overview": true,
+        "os": "android"
+      },
+      "result": [
+        {
+          "keyword": "smile lines",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=smile%20lines&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-10-09 10:13:39 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview",
+            "images",
+            "people_also_ask",
+            "knowledge_graph_expanded_item",
+            "organic",
+            "people_also_search"
+          ],
+          "se_results_count": 0,
+          "pages_count": 1,
+          "items_count": 16,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[1]/div[1]",
+              "asynchronous_ai_overview": false,
+              "markdown": "Smile lines (also called [nasolabial folds](https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds) ) are the `natural creases that run from the sides of the nose down to the corners of the mouth`.[[1]](https://www.magnoliaplasticsurgery.org/post/best-treatments-for-smile-lines-that-work)[[2]](https://www.youtube.com/shorts/Pie0-AjAmWc)\n\n### What Causes Smile Lines\n\n- **Natural aging:** Loss of collagen and elastin makes skin thinner and less firm over time.[[1]](https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds)[[2]](https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/)\n- **Volume loss:** Decreased fat, bone density, and support in the midface and cheeks cause skin to sag downward.[[1]](https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/)[[2]](https://www.youtube.com/shorts/Pie0-AjAmWc)[[3]](https://www.youtube.com/watch?v=3WGoMQ7QsV4&t=65)\n- **Facial movements:** Repeated expressions like smiling and laughing etch dynamic creases into the skin.[[1]](https://www.youtube.com/watch?v=3WGoMQ7QsV4&t=65)\n- **Lifestyle factors:** Sun exposure, smoking, dehydration, and side-sleeping accelerate skin breakdown.[[1]](https://www.healthline.com/health/smile-lines)[[2]](https://www.youtube.com/watch?v=3WGoMQ7QsV4&t=65)\n\n### Types of Smile Lines\n\n- **Dynamic lines:** Creases that appear only when you smile, laugh, or talk.\n- **Static lines:** Permanent folds that remain visible even when your face is completely at rest.[[1]](https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/)[[2]](https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds)[[3]](https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/)\n\n### Treatment Options\n\n- **Skincare & At-Home Care:** Over-the-counter or prescription retinoids (like retinol or tretinoin), vitamin C, peptides, and daily sunscreen help support collagen and prevent deeper lines.[[1]](https://www.medicalnewstoday.com/articles/319341)[[2]](https://www.healthline.com/health/smile-lines)[[3]](https://www.facebook.com/DrDorisDay/videos/struggling-with-smile-lines-youre-not-aloneas-we-age-changes-in-the-structure-of/982643737771784/)\n- **Dermal Fillers:** Hyaluronic acid or other injectable fillers restore lost volume in the cheeks or directly soften moderate-to-deep folds.[[1]](https://www.facebook.com/DrDorisDay/videos/struggling-with-smile-lines-youre-not-aloneas-we-age-changes-in-the-structure-of/982643737771784/)[[2]](https://www.healthline.com/health/smile-lines)[[3]](https://www.magnoliaplasticsurgery.org/post/best-treatments-for-smile-lines-that-work)\n- **Neuromodulators (Botox / Dysport):** Used selectively for dynamic movement around the eyes or specific expression areas, though less commonly injected directly into the primary mouth-smile line muscles due to functional risks.[[1]](https://www.healthline.com/health/smile-lines)[[2]](https://www.medicalnewstoday.com/articles/319341)[[3]](https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/)\n- **In-Office Procedures:** Laser skin resurfacing, microneedling (or RF microneedling), Platelet-Rich Plasma (PRP/PRF), chemical peels, or surgical facelifts for advanced laxity.[[1]](https://www.instagram.com/reel/DDpMFPXxSPp/?hl=en)[[2]](https://www.healthline.com/health/smile-lines)[[3]](https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/)[[4]](https://www.facebook.com/DrDorisDay/videos/struggling-with-smile-lines-youre-not-aloneas-we-age-changes-in-the-structure-of/982643737771784/)\n\nIf you'd like, let me know:\n\n- Are your smile lines **only visible when you smile** or **present all the time**?\n- Are you looking for **at-home skincare routines** or **in-office medical treatments**?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Smile lines (also called nasolabial folds ) are the natural creases that run from the sides of the nose down to the corners of the mouth.",
+                  "markdown": "Smile lines (also called [nasolabial folds](https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds) ) are the `natural creases that run from the sides of the nose down to the corners of the mouth`.[[1]](https://www.magnoliaplasticsurgery.org/post/best-treatments-for-smile-lines-that-work)[[2]](https://www.youtube.com/shorts/Pie0-AjAmWc)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "nasolabial folds",
+                      "description": null,
+                      "url": "https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds",
+                      "domain": "my.clevelandclinic.org"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "www.magnoliaplasticsurgery.org",
+                      "domain": "www.magnoliaplasticsurgery.org",
+                      "url": "https://www.magnoliaplasticsurgery.org/post/best-treatments-for-smile-lines-that-work",
+                      "title": "Best Treatments for Smile Lines That Work",
+                      "text": "Best Treatments for Smile Lines Start With the Cause Smile lines, often called nasolabial folds, run from the sides of the nose toward the corners of the mouth."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "YouTube",
+                      "domain": "www.youtube.com",
+                      "url": "https://www.youtube.com/shorts/Pie0-AjAmWc",
+                      "title": "Doctor Reveals the Right Way to Treat Smile Lines",
+                      "text": "Doctor Reveals the Right Way to Treat Smile Lines if they're called smile lines then why does everyone hate them so much the truth is smile lines laugh lines na..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "What Causes Smile Lines",
+                  "text": "Natural aging: Loss of collagen and elastin makes skin thinner and less firm over time. Volume loss: Decreased fat, bone density, and support in the midface and cheeks cause skin to sag downward. Facial movements: Repeated expressions like smiling and laughing etch dynamic creases into the skin. Lifestyle factors: Sun exposure, smoking, dehydration, and side-sleeping accelerate skin breakdown.",
+                  "markdown": "- **Natural aging:** Loss of collagen and elastin makes skin thinner and less firm over time.[[1]](https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds)[[2]](https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/)\n- **Volume loss:** Decreased fat, bone density, and support in the midface and cheeks cause skin to sag downward.[[1]](https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/)[[2]](https://www.youtube.com/shorts/Pie0-AjAmWc)[[3]](https://www.youtube.com/watch?v=3WGoMQ7QsV4&t=65)\n- **Facial movements:** Repeated expressions like smiling and laughing etch dynamic creases into the skin.[[1]](https://www.youtube.com/watch?v=3WGoMQ7QsV4&t=65)\n- **Lifestyle factors:** Sun exposure, smoking, dehydration, and side-sleeping accelerate skin breakdown.[[1]](https://www.healthline.com/health/smile-lines)[[2]](https://www.youtube.com/watch?v=3WGoMQ7QsV4&t=65)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Cleveland Clinic",
+                      "domain": "my.clevelandclinic.org",
+                      "url": "https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds",
+                      "title": "Nasolabial Folds (Smile Lines): Causes & Treatment, Prevention",
+                      "text": "Are smile lines common? Symptoms and Causes What causes nasolabial folds? The leading causes of nasolabial folds are: Aging: As you age, your cheekbones can fla..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Cascade Eye & Skin Centers",
+                      "domain": "cascadeeyeskin.com",
+                      "url": "https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/",
+                      "title": "How to Get Rid of Smile Lines | Cascade Eye & Skin Centers",
+                      "text": "What Causes Smile Lines? * Smile lines develop as a result of several age-related changes happening simultaneously in your face. * As we age, we lose fat in the..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "YouTube",
+                      "domain": "www.youtube.com",
+                      "url": "https://www.youtube.com/shorts/Pie0-AjAmWc",
+                      "title": "Doctor Reveals the Right Way to Treat Smile Lines",
+                      "text": "Doctor Reveals the Right Way to Treat Smile Lines if they're called smile lines then why does everyone hate them so much the truth is smile lines laugh lines na..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "YouTube",
+                      "domain": "www.youtube.com",
+                      "url": "https://www.youtube.com/watch?v=3WGoMQ7QsV4&t=65",
+                      "title": "How to Fix Wrinkles Around the Mouth | Smile Lines and Sagging Skin | Dr. ...",
+                      "text": "How to Fix Wrinkles Around the Mouth | Smile Lines and Sagging Skin | Dr. Sam Ellis I don't love these changes that are happening with my face.\" And I think bef..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Healthline",
+                      "domain": "www.healthline.com",
+                      "url": "https://www.healthline.com/health/smile-lines",
+                      "title": "Smile Lines: How to Get Rid of Them",
+                      "text": "Causes: Collagen/elasticity loss, dehydration, genetics, smoking, sun damage. Treatments: Hyaluronic acid/calcium hydroxyapatite/poly-L-lactic acid injectable f..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Types of Smile Lines",
+                  "text": "Dynamic lines: Creases that appear only when you smile, laugh, or talk. Static lines: Permanent folds that remain visible even when your face is completely at rest.",
+                  "markdown": "- **Dynamic lines:** Creases that appear only when you smile, laugh, or talk.\n- **Static lines:** Permanent folds that remain visible even when your face is completely at rest.[[1]](https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/)[[2]](https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds)[[3]](https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LaserAway",
+                      "domain": "www.laseraway.com",
+                      "url": "https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/",
+                      "title": "How to Get Rid of Smile and Laugh Lines | LaserAway",
+                      "text": "Treatments for smile and laugh lines depend on wrinkle type: Dynamic lines are treated with Botox and Xeomin (relax muscles; last 2-4 months); static lines are ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Cleveland Clinic",
+                      "domain": "my.clevelandclinic.org",
+                      "url": "https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds",
+                      "title": "Nasolabial Folds (Smile Lines): Causes & Treatment, Prevention",
+                      "text": "Are smile lines common? Symptoms and Causes What causes nasolabial folds? The leading causes of nasolabial folds are: Aging: As you age, your cheekbones can fla..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Cascade Eye & Skin Centers",
+                      "domain": "cascadeeyeskin.com",
+                      "url": "https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/",
+                      "title": "How to Get Rid of Smile Lines | Cascade Eye & Skin Centers",
+                      "text": "What Causes Smile Lines? * Smile lines develop as a result of several age-related changes happening simultaneously in your face. * As we age, we lose fat in the..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Treatment Options",
+                  "text": "Skincare & At-Home Care: Over-the-counter or prescription retinoids (like retinol or tretinoin), vitamin C, peptides, and daily sunscreen help support collagen and prevent deeper lines. Dermal Fillers: Hyaluronic acid or other injectable fillers restore lost volume in the cheeks or directly soften moderate-to-deep folds. Neuromodulators (Botox / Dysport): Used selectively for dynamic movement around the eyes or specific expression areas, though less commonly injected directly into the primary mouth-smile line muscles due to functional risks. In-Office Procedures: Laser skin resurfacing, microneedling (or RF microneedling), Platelet-Rich Plasma (PRP/PRF), chemical peels, or surgical facelifts for advanced laxity.",
+                  "markdown": "- **Skincare & At-Home Care:** Over-the-counter or prescription retinoids (like retinol or tretinoin), vitamin C, peptides, and daily sunscreen help support collagen and prevent deeper lines.[[1]](https://www.medicalnewstoday.com/articles/319341)[[2]](https://www.healthline.com/health/smile-lines)[[3]](https://www.facebook.com/DrDorisDay/videos/struggling-with-smile-lines-youre-not-aloneas-we-age-changes-in-the-structure-of/982643737771784/)\n- **Dermal Fillers:** Hyaluronic acid or other injectable fillers restore lost volume in the cheeks or directly soften moderate-to-deep folds.[[1]](https://www.facebook.com/DrDorisDay/videos/struggling-with-smile-lines-youre-not-aloneas-we-age-changes-in-the-structure-of/982643737771784/)[[2]](https://www.healthline.com/health/smile-lines)[[3]](https://www.magnoliaplasticsurgery.org/post/best-treatments-for-smile-lines-that-work)\n- **Neuromodulators (Botox / Dysport):** Used selectively for dynamic movement around the eyes or specific expression areas, though less commonly injected directly into the primary mouth-smile line muscles due to functional risks.[[1]](https://www.healthline.com/health/smile-lines)[[2]](https://www.medicalnewstoday.com/articles/319341)[[3]](https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/)\n- **In-Office Procedures:** Laser skin resurfacing, microneedling (or RF microneedling), Platelet-Rich Plasma (PRP/PRF), chemical peels, or surgical facelifts for advanced laxity.[[1]](https://www.instagram.com/reel/DDpMFPXxSPp/?hl=en)[[2]](https://www.healthline.com/health/smile-lines)[[3]](https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/)[[4]](https://www.facebook.com/DrDorisDay/videos/struggling-with-smile-lines-youre-not-aloneas-we-age-changes-in-the-structure-of/982643737771784/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "MedicalNewsToday",
+                      "domain": "www.medicalnewstoday.com",
+                      "url": "https://www.medicalnewstoday.com/articles/319341",
+                      "title": "How to get rid of smile lines: Exercises, treatment, and more",
+                      "text": "Causes: Repetitive facial movements, sun exposure, aging, genetics, smoking. Mouth Exercises: Orbicularis oris target (10-25 reps), cheek pressure smile (15-30 ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Healthline",
+                      "domain": "www.healthline.com",
+                      "url": "https://www.healthline.com/health/smile-lines",
+                      "title": "Smile Lines: How to Get Rid of Them",
+                      "text": "Causes: Collagen/elasticity loss, dehydration, genetics, smoking, sun damage. Treatments: Hyaluronic acid/calcium hydroxyapatite/poly-L-lactic acid injectable f..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Facebook",
+                      "domain": "www.facebook.com",
+                      "url": "https://www.facebook.com/DrDorisDay/videos/struggling-with-smile-lines-youre-not-aloneas-we-age-changes-in-the-structure-of/982643737771784/",
+                      "title": "Struggling with smile lines? You're not alone! As we age, changes in the ...",
+                      "text": "do you have permanent lines around your mouth. these are called smile lines. and this is the best way to erase or reduce them i always start by looking at the c..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "www.magnoliaplasticsurgery.org",
+                      "domain": "www.magnoliaplasticsurgery.org",
+                      "url": "https://www.magnoliaplasticsurgery.org/post/best-treatments-for-smile-lines-that-work",
+                      "title": "Best Treatments for Smile Lines That Work",
+                      "text": "Best Treatments for Smile Lines Start With the Cause Smile lines, often called nasolabial folds, run from the sides of the nose toward the corners of the mouth."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LaserAway",
+                      "domain": "www.laseraway.com",
+                      "url": "https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/",
+                      "title": "How to Get Rid of Smile and Laugh Lines | LaserAway",
+                      "text": "Treatments for smile and laugh lines depend on wrinkle type: Dynamic lines are treated with Botox and Xeomin (relax muscles; last 2-4 months); static lines are ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Instagram",
+                      "domain": "www.instagram.com",
+                      "url": "https://www.instagram.com/reel/DDpMFPXxSPp/?hl=en",
+                      "title": "3 ways to treat smile lines and wrinkles around your mouth in-office and at- ...",
+                      "text": "3 ways to treat smile lines and wrinkles around your mouth in-office and at-home! 🚨Estrogen creams are not suitable for everyone. As always, consult your physi..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "If you'd like, let me know:Are your smile lines only visible when you smile or present all the time ?\nAre you looking for at-home skincare routines or in-office medical treatments ?",
+                  "markdown": "If you'd like, let me know:\n\n- Are your smile lines **only visible when you smile** or **present all the time**?\n- Are you looking for **at-home skincare routines** or **in-office medical treatments**?",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Healthline",
+                  "domain": "www.healthline.com",
+                  "url": "https://www.healthline.com/health/smile-lines",
+                  "title": "Smile Lines: How to Get Rid of Them",
+                  "text": "Causes: Collagen/elasticity loss, dehydration, genetics, smoking, sun damage. Treatments: Hyaluronic acid/calcium hydroxyapatite/poly-L-lactic acid injectable f..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Cleveland Clinic",
+                  "domain": "my.clevelandclinic.org",
+                  "url": "https://my.clevelandclinic.org/health/diseases/23027-nasolabial-folds",
+                  "title": "Nasolabial Folds (Smile Lines): Causes & Treatment, Prevention",
+                  "text": "Are smile lines common? Symptoms and Causes What causes nasolabial folds? The leading causes of nasolabial folds are: Aging: As you age, your cheekbones can fla..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Cascade Eye & Skin Centers",
+                  "domain": "cascadeeyeskin.com",
+                  "url": "https://cascadeeyeskin.com/blog/how-to-get-rid-of-smile-lines/",
+                  "title": "How to Get Rid of Smile Lines | Cascade Eye & Skin Centers",
+                  "text": "What Causes Smile Lines? * Smile lines develop as a result of several age-related changes happening simultaneously in your face. * As we age, we lose fat in the..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "YouTube",
+                  "domain": "www.youtube.com",
+                  "url": "https://www.youtube.com/watch?v=3WGoMQ7QsV4&t=65",
+                  "title": "How to Fix Wrinkles Around the Mouth | Smile Lines and Sagging Skin | Dr. ...",
+                  "text": "How to Fix Wrinkles Around the Mouth | Smile Lines and Sagging Skin | Dr. Sam Ellis I don't love these changes that are happening with my face.\" And I think bef..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "MedicalNewsToday",
+                  "domain": "www.medicalnewstoday.com",
+                  "url": "https://www.medicalnewstoday.com/articles/319341",
+                  "title": "How to get rid of smile lines: Exercises, treatment, and more",
+                  "text": "Causes: Repetitive facial movements, sun exposure, aging, genetics, smoking. Mouth Exercises: Orbicularis oris target (10-25 reps), cheek pressure smile (15-30 ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LaserAway",
+                  "domain": "www.laseraway.com",
+                  "url": "https://www.laseraway.com/faqs/skin-rejuvenation/how-can-i-get-rid-of-laugh-smile-lines/",
+                  "title": "How to Get Rid of Smile and Laugh Lines | LaserAway",
+                  "text": "Treatments for smile and laugh lines depend on wrinkle type: Dynamic lines are treated with Botox and Xeomin (relax muscles; last 2-4 months); static lines are ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Instagram",
+                  "domain": "www.instagram.com",
+                  "url": "https://www.instagram.com/reel/DDpMFPXxSPp/?hl=en",
+                  "title": "3 ways to treat smile lines and wrinkles around your mouth in-office and at- ...",
+                  "text": "3 ways to treat smile lines and wrinkles around your mouth in-office and at-home! 🚨Estrogen creams are not suitable for everyone. As always, consult your physi..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Facebook",
+                  "domain": "www.facebook.com",
+                  "url": "https://www.facebook.com/DrDorisDay/videos/struggling-with-smile-lines-youre-not-aloneas-we-age-changes-in-the-structure-of/982643737771784/",
+                  "title": "Struggling with smile lines? You're not alone! As we age, changes in the ...",
+                  "text": "do you have permanent lines around your mouth. these are called smile lines. and this is the best way to erase or reduce them i always start by looking at the c..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "www.magnoliaplasticsurgery.org",
+                  "domain": "www.magnoliaplasticsurgery.org",
+                  "url": "https://www.magnoliaplasticsurgery.org/post/best-treatments-for-smile-lines-that-work",
+                  "title": "Best Treatments for Smile Lines That Work",
+                  "text": "Best Treatments for Smile Lines Start With the Cause Smile lines, often called nasolabial folds, run from the sides of the nose toward the corners of the mouth."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "YouTube",
+                  "domain": "www.youtube.com",
+                  "url": "https://www.youtube.com/shorts/Pie0-AjAmWc",
+                  "title": "Doctor Reveals the Right Way to Treat Smile Lines",
+                  "text": "Doctor Reveals the Right Way to Treat Smile Lines if they're called smile lines then why does everyone hate them so much the truth is smile lines laugh lines na..."
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "images",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]",
+              "title": "Images",
+              "url": null,
+              "items": [
+                {
+                  "type": "images_element",
+                  "alt": "Smile Line Fillers - Before & After Results at Skinly",
+                  "url": "https://skinlyaesthetics.com/smile-line-fillers-before-after-results/",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091013-1509-0139-0000-391cb059d0bb:0"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Deep Smile Lines: Fix Them Without Looking Overdone",
+                  "url": "https://theskincompany.com/deep-smile-lines/",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091013-1509-0139-0000-391cb059d0bb:1"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "How to get rid of nasolabial fold and deep smile lines? Best ...",
+                  "url": "https://painfreedentistsydney.com.au/blog/2024/4/10/deep-smile-lines-and-nasolabial-fold",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091013-1509-0139-0000-391cb059d0bb:2"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Smile Lines Filler London | Smile Line Botox London | Dermal ...",
+                  "url": "https://harleystreetdermal.co.uk/smile-lines-treatments/",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091013-1509-0139-0000-391cb059d0bb:3"
+                }
+              ],
+              "related_image_searches": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[5]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Will my smile lines go away if I lose weight?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[5]/div[1]/div[2]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Why am I 15 with smile lines?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[5]/div[1]/div[2]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What do Koreans do for smile lines?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[5]/div[1]/div[2]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Can you fix smile lines naturally?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[5]/div[1]/div[2]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "knowledge_graph_expanded_item",
+              "rank_group": 1,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]",
+              "title": "Causes. What causes smile lines?",
+              "data_attrid": "lab/title/Causes",
+              "expanded_element": null,
+              "rectangle": null
+            },
+            {
+              "type": "knowledge_graph_expanded_item",
+              "rank_group": 2,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]",
+              "title": "Prevention. How to prevent smile lines?",
+              "data_attrid": "lab/title/Prevention",
+              "expanded_element": null,
+              "rectangle": null
+            },
+            {
+              "type": "knowledge_graph_expanded_item",
+              "rank_group": 3,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]",
+              "title": "Types. What are the different types of smile lines?",
+              "data_attrid": "lab/title/Types",
+              "expanded_element": null,
+              "rectangle": null
+            },
+            {
+              "type": "knowledge_graph_expanded_item",
+              "rank_group": 4,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]",
+              "title": "Surgical Treatments. What are the surgical treatments for smile lines?",
+              "data_attrid": "lab/title/Surgical Treatments",
+              "expanded_element": null,
+              "rectangle": null
+            },
+            {
+              "type": "knowledge_graph_expanded_item",
+              "rank_group": 5,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[3]",
+              "title": "Short videos. Short videos related to your search",
+              "data_attrid": "lab/cluster/title/Short videos",
+              "expanded_element": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.signaturedermatology.com",
+              "title": "Smile Lines Before and After",
+              "url": "https://www.signaturedermatology.com/smile-lines-before-and-after/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.signaturedermatology.com",
+              "website_name": "Signature Dermatology",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Smile Lines Before and After |. Micrographic and Reconstructive Surgery COSMETIC Cosmetic Dermatology Before & After BBL Botox Cheek Filler Lip Filler ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Smile Lines Before and After"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "how to remove smile",
+                "smile lines at 20",
+                "are smile lines",
+                "smile lines",
+                "how to remove smile lines",
+                "how to remove smile lines",
+                "filler smile",
+                "what causes"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_search",
+              "rank_group": 1,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[10]",
+              "title": "People also search for",
+              "items": [
+                "Smile lines cream",
+                "Smile lines treatment",
+                "How to remove smile lines naturally",
+                "Smile lines at 20",
+                "Smile lines Reddit",
+                "How to remove smile lines naturally overnight"
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.biotherm.de",
+              "title": "An Effective Guide on How to Get Rid of Smile Lines - Biotherm",
+              "url": "https://www.biotherm.de/en_GB/magazine/skin-care-advice/how-to-get-rid--of-smile-lines/AR231120-3.html",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.biotherm.de",
+              "website_name": "biotherm.de",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Sometimes referred to as laugh lines or crow's feet, smile elasticity wanes as we age, these lines become more pronounced.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["smile elasticity wanes as we age"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "how to remove smile",
+                "smile lines at 20",
+                "are smile lines",
+                "smile lines",
+                "how to remove smile lines",
+                "how to remove smile lines",
+                "filler smile",
+                "what causes"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[14]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "trianglefacialplasticsurgery.com",
+              "title": "Four Treatment Options for Improving Laugh and Smile Lines",
+              "url": "https://trianglefacialplasticsurgery.com/2023/02/improve-laugh-and-smile-lines/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://trianglefacialplasticsurgery.com",
+              "website_name": "Triangle Facial Plastic Surgery",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Feb 7, 2023 — Microneedling + Morpheus8 treatments are great for smile lines, as they penetrate into the layers of skin to help to stimulate collagen growth ...",
+              "pre_snippet": "02/07/2023 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Microneedling + Morpheus8 treatments are great for smile lines"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2023-02-07 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 13,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[15]/div[1]/div[1]",
+              "domain": "www.youtube.com",
+              "title": "5 Ways to Reduce Smile Lines in 5 Days—No Fillers! Laugh Line Face ...",
+              "url": "https://www.youtube.com/watch?v=sSk2zmEqfQs",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "358.1K+ views",
+              "website_name": "YouTube · Blush with me-Parmita",
+              "is_image": false,
+              "is_video": true,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": ["is_video"],
+              "description": "Want to reduce smile lines and smooth nasolabial folds naturally? This video reveals the best anti-aging face yoga and 't miss these anti-aging ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-10-09 10:13:38 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 14,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[17]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.irestorelaser.com",
+              "title": "Smile Lines: Causes, Treatments, and How to Reduce Them",
+              "url": "https://www.irestorelaser.com/blogs/content/smile-lines?srsltid=AU7gw4VGnUEBe--yCeYehwnQpZOnJ9D-zNUzWg3FNKrMpnBl0K9gzbcj",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.irestorelaser.com",
+              "website_name": "iRESTORE",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Smile lines (nasolabial folds) cannot be fully prevented, but they can be softened with treatments ranging from retinoids to dermal fillers, ...",
+              "pre_snippet": "07/30/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-07-30 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 15,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "insideoutmedspa.com",
+              "title": "Smoothing Out the Years: How to Get Rid of Smile Lines",
+              "url": "https://insideoutmedspa.com/smoothing-out-the-years-how-to-get-rid-of-smile-lines/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://insideoutmedspa.com",
+              "website_name": "Inside Out Med Spa",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Smile lines, also known as laugh lines or nasolabial folds, are the creases that run from the sides of the nose down to the corners of the mouth.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["creases that run from the sides of the nose down to the corners of the mouth"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_search",
+              "rank_group": 2,
+              "rank_absolute": 16,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[4]/div[1]/div[3]/div[1]",
+              "title": "People also search for",
+              "items": [
+                "How to remove smile lines naturally exercise",
+                "Filler smile lines",
+                "What causes smile lines",
+                "How to get rid of smile lines at 14"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
