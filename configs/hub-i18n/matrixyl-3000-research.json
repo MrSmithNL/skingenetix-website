@@ -1,5 +1,5 @@
 {
-  "_about": "Translation memory for the Matrixyl 3000 science page on the template, built 2026-09-26 (docs/science-page-template.md §6 step 5). Approved translations reused from this page's live harvest and the copper, PDRN and Argireline tables; the rest new.",
+  "_about": "Translation memory for the Matrixyl 3000 science page on the template, built 2026-09-26 (docs/science-page-template.md §6 step 5). Approved translations reused from this page's live harvest and the copper, PDRN and Argireline tables; the rest new. 2026-10-09: the team-credit byline (ADR-2026-10-08-W) added to the phrase table from the stored overview spec's six values ('Skingenetix Research Team' stays English, as live).",
   "page": "matrixyl-3000-research",
   "reviewer": "configs/reviewers/esther-bodde.json",
   "reviewed": "2026-09-26",
@@ -62,7 +62,8 @@
     "Matrixyl 3000 Firming Serum",
     "Pro-Collagen Firming Cream",
     "copper peptide \\(GHK-Cu\\)",
-    "0[1-5]"
+    "0[1-5]",
+    "Skingenetix Research Team"
   ],
   "verbatim_fragments": [
     "MATRIXYL®3000 … Claim substantiation 10-2013 v.4",
@@ -800,6 +801,20 @@
       "fr": ">Le panel d'experts indépendant du Cosmetic Ingredient Review (CIR) a jugé le palmitoyl tripeptide-1 et le palmitoyl tetrapeptide-7 sûrs dans les cosmétiques aux niveaux d'utilisation actuels, généralement moins de 10 parties par million. Le palmitoyl pentapeptide-4, également présent dans notre sérum, a été jugé sûr par le même panel en 2024. Comme pour tout nouveau produit, faites d'abord un test cutané.<",
       "es": ">El panel de expertos independiente del Cosmetic Ingredient Review (CIR) consideró palmitoyl tripeptide-1 y palmitoyl tetrapeptide-7 seguros en cosméticos a los niveles de uso actuales, normalmente por debajo de 10 partes por millón. Palmitoyl pentapeptide-4, también presente en nuestro sérum, fue considerado seguro por el mismo panel en 2024. Como con cualquier producto nuevo, haz primero una prueba en una pequeña zona.<",
       "it": ">Il gruppo di esperti indipendente del Cosmetic Ingredient Review (CIR) ha giudicato palmitoyl tripeptide-1 e palmitoyl tetrapeptide-7 sicuri nei cosmetici ai livelli d'uso attuali, di solito sotto 10 parti per milione. Palmitoyl pentapeptide-4, presente anche nel nostro siero, è stato giudicato sicuro dallo stesso gruppo nel 2024. Come per ogni nuovo prodotto, fai prima un test su una piccola zona.<"
+    },
+    ">Written by the <strong>": {
+      "de": ">Geschrieben vom <strong>",
+      "nl": ">Geschreven door het <strong>",
+      "fr": ">Rédigé par l'<strong>",
+      "es": ">Escrito por el <strong>",
+      "it": ">Scritto da <strong>"
+    },
+    ", which compiles the claims registers behind these pages.": {
+      "de": ", das die Claim-Register hinter diesen Seiten zusammenstellt.",
+      "nl": ", dat de claimregisters achter deze pagina's samenstelt.",
+      "fr": ", qui compile les registres d'allégations derrière ces pages.",
+      "es": ", que elabora los registros de afirmaciones que sustentan estas páginas.",
+      "it": ", che cura i registri delle affermazioni alla base di queste pagine."
     }
   }
 }

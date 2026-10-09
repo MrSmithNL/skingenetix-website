@@ -1,5 +1,5 @@
 {
-  "_about": "Translation memory for the copper peptide science page on the template, built 2026-09-25. Targets: the four custom-html sections, the five finding cards, four corrected FAQ answers and the hero line (hub-i18n.py block targets). Sources, in order: this page's own live translations (scripts/harvest-translations.py, by element), the PDRN and Argireline pages' translated sections aligned element by element, then new translations checked by hub-i18n.py. The WebPage JSON-LD descriptions are rewritten: the 2026-09-23 versions said '55.8% more … than without' (de, nl) or gave the figure with no comparator (fr, es, it), the overstatement 9fbc203 removed from the visible text.",
+  "_about": "Translation memory for the copper peptide science page on the template, built 2026-09-25. Targets: the four custom-html sections, the five finding cards, four corrected FAQ answers and the hero line (hub-i18n.py block targets). Sources, in order: this page's own live translations (scripts/harvest-translations.py, by element), the PDRN and Argireline pages' translated sections aligned element by element, then new translations checked by hub-i18n.py. The WebPage JSON-LD descriptions are rewritten: the 2026-09-23 versions said '55.8% more … than without' (de, nl) or gave the figure with no comparator (fr, es, it), the overstatement 9fbc203 removed from the visible text. 2026-10-09: the team-credit byline (ADR-2026-10-08-W) added to the phrase table from the stored overview spec's six values ('Skingenetix Research Team' stays English, as live). 2026-10-09: the bare phrase 'Review' (the grade label) is anchored as '>Review<': unanchored it also turned the German 'Peer-Review' into 'Peer-Übersicht' on a rebuild (the live page is right).",
   "page": "copper-peptide-research",
   "reviewer": "configs/reviewers/esther-bodde.json",
   "reviewed": "2026-09-25",
@@ -64,7 +64,8 @@
     "0[1-5]",
     "Copper Peptide Renewal Serum",
     "Day Gel-Cream",
-    "Night Cream"
+    "Night Cream",
+    "Skingenetix Research Team"
   ],
   "verbatim_fragments": [
     "Effects of GHK-Cu on MMP and TIMP Expression, Collagen and Elastin Production, and Facial Wrinkle Parameters",
@@ -477,13 +478,6 @@
       "es": "Los títulos publicados se citan exactamente como aparecen en la revista.",
       "it": "I titoli pubblicati sono citati esattamente come compaiono sulla rivista."
     },
-    "Review": {
-      "de": "Übersicht",
-      "nl": "Overzicht",
-      "fr": "Revue",
-      "es": "Revisión",
-      "it": "Rassegna"
-    },
     "See all 6 studies and how we graded them": {
       "de": "Alle 6 Studien und ihre Bewertung ansehen",
       "nl": "Bekijk alle 6 studies en hun beoordeling",
@@ -651,6 +645,27 @@
       "fr": ">Ce qu'elle a trouvé</th>",
       "es": ">Qué halló</th>",
       "it": ">Che cosa ha trovato</th>"
+    },
+    ">Written by the <strong>": {
+      "de": ">Geschrieben vom <strong>",
+      "nl": ">Geschreven door het <strong>",
+      "fr": ">Rédigé par l'<strong>",
+      "es": ">Escrito por el <strong>",
+      "it": ">Scritto da <strong>"
+    },
+    ", which compiles the claims registers behind these pages.": {
+      "de": ", das die Claim-Register hinter diesen Seiten zusammenstellt.",
+      "nl": ", dat de claimregisters achter deze pagina's samenstelt.",
+      "fr": ", qui compile les registres d'allégations derrière ces pages.",
+      "es": ", que elabora los registros de afirmaciones que sustentan estas páginas.",
+      "it": ", che cura i registri delle affermazioni alla base di queste pagine."
+    },
+    ">Review<": {
+      "de": ">Übersicht<",
+      "nl": ">Overzicht<",
+      "fr": ">Revue<",
+      "es": ">Revisión<",
+      "it": ">Rassegna<"
     }
   }
 }

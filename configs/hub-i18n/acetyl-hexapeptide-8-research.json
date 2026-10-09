@@ -1,5 +1,5 @@
 {
-  "_about": "Translation memory for the Argireline science page's four custom-html sections. These 88 phrases produced the de/nl/fr/es/it values live since 2026-09-23 21:19 (commit 636c674). Any change to the English of overview, evidence, usage or evidence_sources MUST go through scripts/hub-i18n.py with this file, or the five translations are left stale and Shopify keeps serving the old text. Recovered from the 2026-09-23 session scratchpad on 2026-09-24 and verified: all 88 English keys still occur in the live English.",
+  "_about": "Translation memory for the Argireline science page's four custom-html sections. These 88 phrases produced the de/nl/fr/es/it values live since 2026-09-23 21:19 (commit 636c674). Any change to the English of overview, evidence, usage or evidence_sources MUST go through scripts/hub-i18n.py with this file, or the five translations are left stale and Shopify keeps serving the old text. Recovered from the 2026-09-23 session scratchpad on 2026-09-24 and verified: all 88 English keys still occur in the live English. 2026-10-09: the team-credit byline (ADR-2026-10-08-W) added to the phrase table from the stored layout spec's six values ('Skingenetix Research Team' stays English, as live), so a rebuild reproduces the live page instead of leaving English in five locales.",
   "page": "acetyl-hexapeptide-8-research",
   "reviewer": "configs/reviewers/esther-bodde.json",
   "sections": {
@@ -24,7 +24,8 @@
     "Raikou et al\\., 2017",
     "Blanes-Mira et al\\., 2002",
     "Skingenetix Acetyl Hexapeptide-8 Serum",
-    "Henseler, 2023"
+    "Henseler, 2023",
+    "Skingenetix Research Team"
   ],
   "verbatim_fragments": [
     "The anti-wrinkle efficacy of a synthetic hexapeptide",
@@ -109,10 +110,10 @@
       "it": "I risultati sono stati misurati con repliche cutanee in silicone e imaging della superficie cutanea, non soltanto valutati a occhio."
     },
     ">Written by the <strong>": {
-      "de": ">Geschrieben von <strong>",
-      "nl": ">Geschreven door <strong>",
-      "fr": ">Rédigé par <strong>",
-      "es": ">Escrito por <strong>",
+      "de": ">Geschrieben vom <strong>",
+      "nl": ">Geschreven door het <strong>",
+      "fr": ">Rédigé par l'<strong>",
+      "es": ">Escrito por el <strong>",
       "it": ">Scritto da <strong>"
     },
     ", founder of Skingenetix, who compiles the claims registers behind these pages.": {
@@ -709,6 +710,13 @@
       "fr": "Un autre essai contrôlé a lui aussi utilisé 10 % : lisez <a href=\"/blogs/clinical-studies/argireline-skin-firmness-trial-tadini-2015\">notre analyse de l'essai sur la fermeté de la peau mené auprès de 40 femmes</a>.",
       "es": "Otro ensayo controlado también usó un 10 %: lea <a href=\"/blogs/clinical-studies/argireline-skin-firmness-trial-tadini-2015\">nuestra valoración del ensayo sobre la firmeza de la piel con 40 mujeres</a>.",
       "it": "Anche un altro studio controllato ha usato il 10%: leggi <a href=\"/blogs/clinical-studies/argireline-skin-firmness-trial-tadini-2015\">la nostra valutazione dello studio sulla compattezza della pelle su 40 donne</a>."
+    },
+    ", which compiles the claims registers behind these pages.": {
+      "de": ", das die Claim-Register hinter diesen Seiten zusammenstellt.",
+      "nl": ", dat de claimregisters achter deze pagina's samenstelt.",
+      "fr": ", qui compile les registres d'allégations derrière ces pages.",
+      "es": ", que elabora los registros de afirmaciones que sustentan estas páginas.",
+      "it": ", che cura i registri delle affermazioni alla base di queste pagine."
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_about": "Translation memory for the glutathione science page on the template, built 2026-09-26 (register docs/claims/glutathione.md §8). Targets: the four custom-html sections, the five finding cards, five FAQ answers, the hero line, the three key-figure notes, s2's subheading and the CTA copy (hub-i18n.py block targets). Sources, in order: this page's own live translations (scripts/harvest-translations.py, by element), the copper, PDRN and Argireline phrase tables for template phrases, then new translations checked by hub-i18n.py and numbers_agree. The chart text and the CTA button carry six locales in the evidence-merge spec itself. The WebPage JSON-LD descriptions no longer say 'why oral results do not count' (oral studies are off the page under ADR-2026-09-24-P).",
+  "_about": "Translation memory for the glutathione science page on the template, built 2026-09-26 (register docs/claims/glutathione.md §8). Targets: the four custom-html sections, the five finding cards, five FAQ answers, the hero line, the three key-figure notes, s2's subheading and the CTA copy (hub-i18n.py block targets). Sources, in order: this page's own live translations (scripts/harvest-translations.py, by element), the copper, PDRN and Argireline phrase tables for template phrases, then new translations checked by hub-i18n.py and numbers_agree. The chart text and the CTA button carry six locales in the evidence-merge spec itself. The WebPage JSON-LD descriptions no longer say 'why oral results do not count' (oral studies are off the page under ADR-2026-09-24-P). 2026-10-09: the team-credit byline (ADR-2026-10-08-W) added to the phrase table from the stored overview spec's six values ('Skingenetix Research Team' stays English, as live).",
   "page": "glutathione-research",
   "reviewer": "configs/reviewers/esther-bodde.json",
   "reviewed": "2026-09-26",
@@ -72,7 +72,8 @@
     "Dilokthornsakul et al\\., 2019",
     "Khanna et al\\., 2025",
     "Rhie et al\\., 2001",
-    "Glutathione 2% Brightening Serum"
+    "Glutathione 2% Brightening Serum",
+    "Skingenetix Research Team"
   ],
   "verbatim_fragments": [
     "Skin-whitening and skin-condition-improving effects of topical oxidized glutathione: a double-blind and placebo-controlled clinical trial in healthy women",
@@ -727,6 +728,20 @@
       "fr": "Lisez <a href=\"/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014\">notre analyse de l'essai sur demi-visage du fabricant, mené auprès de 30 femmes</a>.",
       "es": "Lee <a href=\"/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014\">nuestra valoración del ensayo de media cara del fabricante con 30 mujeres</a>.",
       "it": "Leggi <a href=\"/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014\">la nostra valutazione dello studio a mezzo viso del produttore su 30 donne</a>."
+    },
+    ">Written by the <strong>": {
+      "de": ">Geschrieben vom <strong>",
+      "nl": ">Geschreven door het <strong>",
+      "fr": ">Rédigé par l'<strong>",
+      "es": ">Escrito por el <strong>",
+      "it": ">Scritto da <strong>"
+    },
+    ", which compiles the claims registers behind these pages.": {
+      "de": ", das die Claim-Register hinter diesen Seiten zusammenstellt.",
+      "nl": ", dat de claimregisters achter deze pagina's samenstelt.",
+      "fr": ", qui compile les registres d'allégations derrière ces pages.",
+      "es": ", que elabora los registros de afirmaciones que sustentan estas páginas.",
+      "it": ", che cura i registri delle affermazioni alla base di queste pagine."
     }
   }
 }

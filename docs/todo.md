@@ -129,8 +129,10 @@ titles · the Matrixyl rebuild. **▶ Phase 3 (months 2–4):** the remaining sp
 - ⏳ **Product pages, plan step 1.2:** nine English drafts and the review pack `docs/review-2026-10-09-product-pages.md` wait for
   Malcolm (per page yes/edits/no; decisions 3, 8, 15; the "free from" line; carton facts).
 - ✅ **Home page slideshow speed (2026-10-09):** two slideshow rules via `scripts/hero-reveal-off.py`; live LCP 4.0 and 3.0 s (was 12.5 s); no blink, slides rotate (filmed frame by frame).
-- ⏳ **`tests/test_hub_i18n.py::test_rebuilds_the_live_argireline_translations_exactly` fails** on main (before 2026-10-09's
-  changes too): its fixture predates the 2026-10-08 claim and credit fixes on the Argireline hub. Refresh the fixture.
+- ✅ **Hub translation configs repaired (2026-10-09):** the five `configs/hub-i18n/*.json` phrase tables lacked the 2026-10-08
+  team-credit byline, so a re-run would have written English into five locales (the Argireline test caught it). Entries derived
+  from the stored specs; copper's bare 'Review' phrase anchored (it turned German 'Peer-Review' into 'Peer-Übersicht'). Every
+  comparable section rebuilds byte for byte; 200 tests pass.
 - ✅ Explainer live (Malcolm, 2026-10-08: "use A7 nbp_pro 02"): r2 slot A (blue water under a lifted film), uploaded as
   `skingenetix-collagen-cream-moisture-film-skin-layers-explainer.jpg` (`configs/banners/collagen-skincare-explainer-publish-2026-10-08.json`);
   the `answer` section is now a media-with-text with the image beside "Do Collagen Creams Work?" (the `<h2>` stays in the content).

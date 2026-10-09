@@ -1,5 +1,5 @@
 {
-  "_about": "Translation memory for the PDRN science page's four custom-html sections, built 2026-09-24. Sources, in order of precedence: new phrases written for the template build; this page's own live translations, harvested by element and by text node from the sections they replace; generic template phrases from the Argireline page. Any change to the English of these sections goes through scripts/hub-i18n.py with this file.",
+  "_about": "Translation memory for the PDRN science page's four custom-html sections, built 2026-09-24. Sources, in order of precedence: new phrases written for the template build; this page's own live translations, harvested by element and by text node from the sections they replace; generic template phrases from the Argireline page. Any change to the English of these sections goes through scripts/hub-i18n.py with this file. 2026-10-09: the team-credit byline (ADR-2026-10-08-W) added to the phrase table from the stored overview spec's six values ('Skingenetix Research Team' stays English, as live).",
   "page": "pdrn-research",
   "reviewer": "configs/reviewers/esther-bodde.json",
   "reviewed": "2026-09-24",
@@ -49,7 +49,8 @@
     "Oncorhynchus keta",
     "PDRN 1% Renewal Serum",
     "PDRN 1% Collagen Night Cream",
-    "0[1-4]"
+    "0[1-4]",
+    "Skingenetix Research Team"
   ],
   "verbatim_fragments": [
     "Anti-Aging Efficacy of Low-Molecular-Weight Polydeoxyribonucleotide Derived from Paeonia lactiflora",
@@ -86,10 +87,10 @@
   ],
   "phrases": {
     ">Written by the <strong>": {
-      "de": ">Geschrieben von <strong>",
-      "nl": ">Geschreven door <strong>",
-      "fr": ">Rédigé par <strong>",
-      "es": ">Escrito por <strong>",
+      "de": ">Geschrieben vom <strong>",
+      "nl": ">Geschreven door het <strong>",
+      "fr": ">Rédigé par l'<strong>",
+      "es": ">Escrito por el <strong>",
       "it": ">Scritto da <strong>"
     },
     ", founder of Skingenetix, who compiles the claims registers behind these pages.": {
@@ -735,6 +736,13 @@
       "fr": "Explique le mécanisme (récepteur A2A de l'adénosine et voie de récupération des nucléotides) et le dossier de sécurité du produit injectable sur ordonnance. Cité ici pour le mécanisme uniquement.",
       "es": "Explica el mecanismo (receptor A2A de adenosina y la vía de recuperación de nucleótidos) y el historial de seguridad del producto inyectable con receta. Citado aquí solo por el mecanismo.",
       "it": "Spiega il meccanismo (recettore A2A dell'adenosina e via di recupero dei nucleotidi) e il profilo di sicurezza del prodotto iniettabile su prescrizione. Citato qui solo per il meccanismo."
+    },
+    ", which compiles the claims registers behind these pages.": {
+      "de": ", das die Claim-Register hinter diesen Seiten zusammenstellt.",
+      "nl": ", dat de claimregisters achter deze pagina's samenstelt.",
+      "fr": ", qui compile les registres d'allégations derrière ces pages.",
+      "es": ", que elabora los registros de afirmaciones que sustentan estas páginas.",
+      "it": ", che cura i registri delle affermazioni alla base di queste pagine."
     }
   }
 }
