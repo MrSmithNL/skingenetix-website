@@ -123,9 +123,16 @@ backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
   Skin Concerns real H1 + fifth card Collagen Skincare (six languages); the four older concern pages link up to the hub (six
   languages, 24/24 verified); cluster declared in both keyword maps (seo-toolkit 1d1d5c7, after the auditor fix 7cfb5b3); Collagen
   audit 9.9 with P3 passing; empty Learn blog hidden (`seo.hidden` = 1, set back to 0 when spoke 1 publishes).
-- ⏳ **Skin Concerns FAQ f5 is disabled** ("Are peptides safe for sensitive skin? Yes … paraben-free"): register wording drafted for
-  Malcolm (in the 2026-10-09 session report); on his yes, replace in six languages and re-enable (`scripts/disable-block.py
-templates/page.skin-concerns.json faq f5 --enable --apply`). FAQ f3 (how the solutions differ) does not name Collagen yet.
+- ✅ **Skin Concerns FAQ f5 replaced and re-enabled (2026-10-09, Malcolm: "approve"):** "How well tolerated are peptides on sensitive
+  skin?" with register wording (Argireline claim 8; copper's approved 39-of-40 line; PDRN fish allergy) in six languages,
+  verified live in all six (`configs/hub-upgrades/skin-concerns-faq-tolerance-2026-10-09.json`). FAQ f3 still does not name Collagen.
+- ✅ **Weekly visibility monitor (plan step 1.10; decision 5 approved 2026-10-09, about USD 1 a week):** 71 search pairs in
+  `audits/visibility-monitor/config.json`, run by the canonical `seo-visibility-forensics` monitor, launchd job
+  `com.skingenetix.visibility-monitor` (Mondays 08:30). Heroes must follow decision 3 once Malcolm answers it.
+- ⏳ **Decision 3 (keyword ownership)** shown to Malcolm as a validated page (`~/Desktop/skingenetix-decision-3-keyword-plan.html`):
+  every move checked against today's Search Console, volumes and SERP intent; waits for "approve all" or strikes.
+- ⏳ **PageSpeed and CrUX APIs:** enabled by Malcolm 2026-10-09, but the key (ending …8_hQ) restricts which APIs it may call: add both
+  to the key's API restrictions (Credentials, project 62087691133), then the audits get real-visitor speed data.
 - ⏳ **Product pages, plan step 1.2:** nine English drafts and the review pack `docs/review-2026-10-09-product-pages.md` wait for
   Malcolm (per page yes/edits/no; decisions 3, 8, 15; the "free from" line; carton facts).
 - ⏳ **New articles plan (2026-10-09), waits for Malcolm's 10 decisions:** `docs/article-plan-2026-10-09.md`, evidence

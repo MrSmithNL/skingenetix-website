@@ -1,0 +1,29 @@
+{
+  "_about": "2026-10-09, Malcolm approved the wording ('4 = approve'). Replaces the Skin Concerns FAQ item f5 ('Are peptides safe for sensitive skin? Yes ... paraben-free', disabled the same day because it made an unsupported safety claim and a 'free from' claim) with register wording: Argireline register claim 8 (Wang 2013: no dropouts, no adverse effects) and the copper register's approved line ('In an 8-week trial, a GHK-Cu serum was well tolerated by 39 of 40 women', about the ingredient, never our products); the PDRN fish-allergy line from the PDRN register. Six languages, each in the page's existing form of address (de du, nl je, fr vous, es tú, it tu). After apply: scripts/disable-block.py templates/page.skin-concerns.json faq f5 --enable --apply. Undo: --rollback, then disable f5 again.",
+  "template": "templates/page.skin-concerns.json",
+  "page": "skin-concerns",
+  "set": [
+    {
+      "at": "faq/f5/title",
+      "values": {
+        "en": "How well tolerated are peptides on sensitive skin?",
+        "de": "Wie gut werden Peptide auf empfindlicher Haut vertragen?",
+        "nl": "Hoe goed verdraagt een gevoelige huid peptiden?",
+        "fr": "Les peptides sont-ils bien tolérés par les peaux sensibles ?",
+        "es": "¿Toleran bien los péptidos las pieles sensibles?",
+        "it": "I peptidi sono ben tollerati dalle pelli sensibili?"
+      }
+    },
+    {
+      "at": "faq/f5/content",
+      "values": {
+        "en": "<p>In the controlled trials of the peptides we use, they were well tolerated: in the Argireline studies no one stopped and no side effects were reported, and in an 8-week trial a GHK-Cu serum was well tolerated by 39 of 40 women. Peptides are not acids or retinoids. Our products have not had tolerance studies of their own, so patch-test first and stop if stinging or redness does not settle. PDRN is salmon-derived: if you are allergic to fish, do not use our PDRN products.</p>",
+        "de": "<p>In den kontrollierten Studien zu den Peptiden, die wir verwenden, wurden sie gut vertragen: In den Argireline-Studien brach niemand ab und es wurden keine Nebenwirkungen berichtet, und in einer 8-wöchigen Studie vertrugen 39 von 40 Frauen ein GHK-Cu-Serum gut. Peptide sind weder Säuren noch Retinoide. Für unsere Produkte selbst gibt es keine eigenen Verträglichkeitsstudien. Mache deshalb zuerst einen Patch-Test und brich die Anwendung ab, wenn Brennen oder Rötungen nicht abklingen. PDRN wird aus Lachs gewonnen: Wenn du allergisch auf Fisch reagierst, verwende unsere PDRN-Produkte nicht.</p>",
+        "nl": "<p>In de gecontroleerde studies naar de peptiden die wij gebruiken, werden ze goed verdragen: in de Argireline-studies stopte niemand en werden geen bijwerkingen gemeld, en in een studie van 8 weken verdroegen 39 van de 40 vrouwen een GHK-Cu-serum goed. Peptiden zijn geen zuren en geen retinoïden. Onze producten zijn zelf niet op verdraagzaamheid getest, dus doe eerst een patchtest en stop als prikken of roodheid niet wegtrekt. PDRN wordt uit zalm gewonnen: ben je allergisch voor vis, gebruik onze PDRN-producten dan niet.</p>",
+        "fr": "<p>Dans les essais contrôlés des peptides que nous utilisons, ils ont été bien tolérés : dans les études sur l'Argireline, personne n'a arrêté et aucun effet indésirable n'a été signalé, et dans un essai de 8 semaines, un sérum au GHK-Cu a été bien toléré par 39 femmes sur 40. Les peptides ne sont ni des acides ni des rétinoïdes. Nos produits n'ont pas fait l'objet de leurs propres études de tolérance : faites d'abord un test cutané et arrêtez si les picotements ou les rougeurs ne s'atténuent pas. Le PDRN est issu du saumon : si vous êtes allergique au poisson, n'utilisez pas nos produits au PDRN.</p>",
+        "es": "<p>En los ensayos controlados de los péptidos que utilizamos, se toleraron bien: en los estudios de Argireline nadie abandonó y no se notificaron efectos secundarios, y en un ensayo de 8 semanas, 39 de 40 mujeres toleraron bien un sérum de GHK-Cu. Los péptidos no son ácidos ni retinoides. Nuestros productos no han tenido estudios de tolerancia propios, así que haz primero una prueba en una pequeña zona y deja de usarlo si el escozor o el enrojecimiento no desaparecen. El PDRN procede del salmón: si tienes alergia al pescado, no uses nuestros productos con PDRN.</p>",
+        "it": "<p>Negli studi controllati sui peptidi che utilizziamo, sono stati ben tollerati: negli studi sull'Argireline nessuno ha interrotto e non sono stati segnalati effetti indesiderati, e in uno studio di 8 settimane un siero al GHK-Cu è stato ben tollerato da 39 donne su 40. I peptidi non sono né acidi né retinoidi. I nostri prodotti non hanno avuto studi di tollerabilità propri, quindi fai prima un test su una piccola zona e interrompi l'uso se bruciore o rossore non si attenuano. Il PDRN è ricavato dal salmone: se hai un'allergia al pesce, non usare i nostri prodotti al PDRN.</p>"
+      }
+    }
+  ]
+}

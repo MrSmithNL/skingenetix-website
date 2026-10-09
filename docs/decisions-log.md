@@ -622,6 +622,9 @@ once a task is done - verify fully complete and working on the live site."
    publishes it sets the metafield back to 0 (`gid://shopify/Blog/118556918145`).
 6. **The nine product pages, English drafts** (plan step 1.2) in `docs/drafts/product-pages-2026-10-09/`, with the review pack
    `docs/review-2026-10-09-product-pages.md`. Nothing live until Malcolm approves each page.
+7. **Same day, on Malcolm's answers:** the Skin Concerns safety answer approved and live in six languages; decision 5 (spend)
+   approved, so the weekly visibility monitor is installed (`audits/visibility-monitor/`, launchd, Mondays 08:30); decision 3 shown
+   as a validated page and waiting.
 
 **Undo:** `python3 scripts/hero-reveal-off.py --all --undo --apply`; `scripts/hub-upgrade.py <spec> --rollback` per spec;
 `scripts/disable-block.py templates/page.skin-concerns.json hero heading --enable --apply` (and `faq f5`); the Learn metafield

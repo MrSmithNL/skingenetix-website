@@ -1,0 +1,449 @@
+{
+  "client": "skingenetix",
+  "site": "https://www.skingenetix.com",
+  "gsc_property": "sc-domain:skingenetix.com",
+  "ga4_property": "properties/552893424",
+  "service_account_key": "~/.config/ga4/service-account.json",
+  "shopify": {
+    "env_prefix": "SHOPIFY_SKINGENETIX",
+    "env_file": "~/Claude Code/Projects/skingenetix-website/.env",
+    "api_version": "2025-07",
+    "marketplace_prefixes": [
+      "KFL",
+      "BOL"
+    ],
+    "wholesale_min": 5000
+  },
+  "dataforseo_env_file": "~/Claude Code/Projects/seo-toolkit/.env",
+  "locales_regex": "de|nl|fr|es|it",
+  "brand_regex": "skingenetix|skin genetix|skingenetics",
+  "topic_regex": "pdrn|peptid|argireline|hexapeptid|matrixyl|copper|kupfer|ghk|glutathion|collagen|kollagen|wrinkle|falten|firming|brighten|salmon|polynucleotide",
+  "bot_countries": [
+    "China",
+    "Brazil",
+    "Singapore",
+    "Colombia",
+    "Ecuador",
+    "Venezuela"
+  ],
+  "hero_pages": {
+    "PDRN hub": "/pages/pdrn-research",
+    "Argireline hub": "/pages/acetyl-hexapeptide-8-research",
+    "Copper peptide hub": "/pages/copper-peptide-research",
+    "Matrixyl hub": "/pages/matrixyl-3000-research",
+    "Glutathione hub": "/pages/glutathione-research",
+    "PDRN serum": "/products/pdrn-renewal-serum",
+    "Copper serum": "/products/copper-peptide-ghk-cu-renewal-serum",
+    "Matrixyl serum": "/products/matrixyl-3000-firming-serum",
+    "Argireline serum": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum",
+    "Glutathione serum": "/products/glutathione-brightening-serum",
+    "PDRN cream": "/products/pdrn-collagen-night-cream",
+    "PDRN collection": "/collections/pdrn",
+    "Serums collection": "/collections/serums",
+    "Clinical studies": "/blogs/clinical-studies",
+    "Ye 2026 study": "/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026",
+    "Collagen page": "/pages/collagen-skin-plumping",
+    "Brightening & Glow": "/pages/brightening-glow",
+    "Firming & Skin Density": "/pages/firming-skin-density",
+    "Skin Repair & Renewal": "/pages/skin-repair-renewal",
+    "Fine Lines & Wrinkles": "/pages/fine-lines-wrinkles",
+    "The Science": "/pages/the-science",
+    "Matrixyl cream": "/products/matrixyl-3000-pro-collagen-firming-cream",
+    "Copper night cream": "/products/copper-peptide-ghk-cu-night-cream",
+    "Creams collection": "/collections/creams-moisturizers",
+    "Copper collection": "/collections/copper-peptide",
+    "Microneedling collection": "/collections/microneedling",
+    "Home": "/"
+  },
+  "families": {
+    "head_term": "^(pdrn|argireline|copper peptides?|ghk-?cu|matrixyl( 3000)?|glutathione( for skin)?|peptide (serum|skincare))$",
+    "best_term": "^best (pdrn|copper peptide|peptide|matrixyl|argireline|glutathione)",
+    "brand": "skingenetix"
+  },
+  "markets": {
+    "US": {
+      "location_code": 2840,
+      "language_code": "en"
+    },
+    "GB": {
+      "location_code": 2826,
+      "language_code": "en"
+    },
+    "DE": {
+      "location_code": 2276,
+      "language_code": "de"
+    },
+    "NL": {
+      "location_code": 2528,
+      "language_code": "nl"
+    }
+  },
+  "serp_depth": 10,
+  "keywords": [
+    {
+      "q": "pdrn",
+      "market": "US",
+      "hero": "/pages/pdrn-research"
+    },
+    {
+      "q": "what is pdrn",
+      "market": "US",
+      "hero": "/pages/pdrn-research"
+    },
+    {
+      "q": "pdrn serum",
+      "market": "US",
+      "hero": "/products/pdrn-renewal-serum"
+    },
+    {
+      "q": "pdrn skincare",
+      "market": "US",
+      "hero": "/collections/pdrn"
+    },
+    {
+      "q": "pdrn cream",
+      "market": "US",
+      "hero": "/products/pdrn-collagen-night-cream"
+    },
+    {
+      "q": "best pdrn serum",
+      "market": "US",
+      "hero": "/collections/pdrn"
+    },
+    {
+      "q": "argireline",
+      "market": "US",
+      "hero": "/pages/acetyl-hexapeptide-8-research"
+    },
+    {
+      "q": "argireline serum",
+      "market": "US",
+      "hero": "/products/acetyl-hexapeptide-8-anti-wrinkle-serum"
+    },
+    {
+      "q": "does argireline work",
+      "market": "US",
+      "hero": "/pages/acetyl-hexapeptide-8-research"
+    },
+    {
+      "q": "copper peptide",
+      "market": "US",
+      "hero": "/pages/copper-peptide-research"
+    },
+    {
+      "q": "copper peptide serum",
+      "market": "US",
+      "hero": "/products/copper-peptide-ghk-cu-renewal-serum"
+    },
+    {
+      "q": "best copper peptide serum",
+      "market": "US",
+      "hero": "/products/copper-peptide-ghk-cu-renewal-serum"
+    },
+    {
+      "q": "matrixyl 3000",
+      "market": "US",
+      "hero": "/products/matrixyl-3000-firming-serum"
+    },
+    {
+      "q": "matrixyl and argireline",
+      "market": "US",
+      "hero": "/pages/matrixyl-3000-research"
+    },
+    {
+      "q": "glutathione for skin",
+      "market": "US",
+      "hero": "/pages/glutathione-research"
+    },
+    {
+      "q": "glutathione serum",
+      "market": "US",
+      "hero": "/products/glutathione-brightening-serum"
+    },
+    {
+      "q": "peptide serum",
+      "market": "US",
+      "hero": "/collections/serums"
+    },
+    {
+      "q": "peptide skincare",
+      "market": "US",
+      "hero": "/collections/all"
+    },
+    {
+      "q": "collagen cream",
+      "market": "US",
+      "hero": "/pages/collagen-skincare"
+    },
+    {
+      "q": "pdrn vs retinol",
+      "market": "US",
+      "hero": "/blogs/clinical-studies/pdrn-vs-retinol-split-face-trial-ye-2026"
+    },
+    {
+      "q": "skincare clinical studies",
+      "market": "US",
+      "hero": "/blogs/clinical-studies"
+    },
+    {
+      "q": "pdrn",
+      "market": "GB",
+      "hero": "/pages/pdrn-research"
+    },
+    {
+      "q": "pdrn serum",
+      "market": "GB",
+      "hero": "/products/pdrn-renewal-serum"
+    },
+    {
+      "q": "argireline",
+      "market": "GB",
+      "hero": "/pages/acetyl-hexapeptide-8-research"
+    },
+    {
+      "q": "copper peptide serum",
+      "market": "GB",
+      "hero": "/products/copper-peptide-ghk-cu-renewal-serum"
+    },
+    {
+      "q": "matrixyl 3000",
+      "market": "GB",
+      "hero": "/products/matrixyl-3000-firming-serum"
+    },
+    {
+      "q": "peptide serum",
+      "market": "GB",
+      "hero": "/collections/serums"
+    },
+    {
+      "q": "pdrn",
+      "market": "DE",
+      "hero": "/de/pages/pdrn-research"
+    },
+    {
+      "q": "pdrn serum",
+      "market": "DE",
+      "hero": "/de/products/pdrn-renewal-serum"
+    },
+    {
+      "q": "argireline",
+      "market": "DE",
+      "hero": "/de/pages/acetyl-hexapeptide-8-research"
+    },
+    {
+      "q": "matrixyl 3000",
+      "market": "DE",
+      "hero": "/de/products/matrixyl-3000-firming-serum"
+    },
+    {
+      "q": "pdrn",
+      "market": "NL",
+      "hero": "/nl/pages/pdrn-research"
+    },
+    {
+      "q": "pdrn serum",
+      "market": "NL",
+      "hero": "/nl/products/pdrn-renewal-serum"
+    },
+    {
+      "q": "brightening serum",
+      "market": "US",
+      "hero": "/pages/brightening-glow"
+    },
+    {
+      "q": "glow serum",
+      "market": "US",
+      "hero": "/pages/brightening-glow"
+    },
+    {
+      "q": "skin firming cream",
+      "market": "US",
+      "hero": "/pages/firming-skin-density"
+    },
+    {
+      "q": "firming serum",
+      "market": "US",
+      "hero": "/pages/firming-skin-density"
+    },
+    {
+      "q": "skin repair cream",
+      "market": "US",
+      "hero": "/pages/skin-repair-renewal"
+    },
+    {
+      "q": "fine lines and wrinkles",
+      "market": "US",
+      "hero": "/pages/fine-lines-wrinkles"
+    },
+    {
+      "q": "wrinkle serum",
+      "market": "US",
+      "hero": "/pages/fine-lines-wrinkles"
+    },
+    {
+      "q": "peptides for skin",
+      "market": "US",
+      "hero": "/pages/the-science"
+    },
+    {
+      "q": "peptides in skincare",
+      "market": "US",
+      "hero": "/pages/the-science"
+    },
+    {
+      "q": "what is matrixyl 3000",
+      "market": "US",
+      "hero": "/pages/matrixyl-3000-research"
+    },
+    {
+      "q": "peptide cream",
+      "market": "US",
+      "hero": "/products/matrixyl-3000-pro-collagen-firming-cream"
+    },
+    {
+      "q": "peptide moisturizer",
+      "market": "US",
+      "hero": "/collections/creams-moisturizers"
+    },
+    {
+      "q": "ghk-cu cream",
+      "market": "US",
+      "hero": "/products/copper-peptide-ghk-cu-night-cream"
+    },
+    {
+      "q": "copper peptide cream",
+      "market": "US",
+      "hero": "/products/copper-peptide-ghk-cu-night-cream"
+    },
+    {
+      "q": "copper peptide skincare",
+      "market": "US",
+      "hero": "/collections/copper-peptide"
+    },
+    {
+      "q": "microneedling stamp",
+      "market": "US",
+      "hero": "/collections/microneedling"
+    },
+    {
+      "q": "microneedling serum",
+      "market": "US",
+      "hero": "/collections/microneedling"
+    },
+    {
+      "q": "collagen serum",
+      "market": "US",
+      "hero": "/pages/collagen-skincare"
+    },
+    {
+      "q": "pdrn microneedling",
+      "market": "US",
+      "hero": "/blogs/clinical-studies/pdrn-microneedling-split-face-trial-yogya-2022"
+    },
+    {
+      "q": "topical glutathione",
+      "market": "US",
+      "hero": "/blogs/clinical-studies/glutathione-skin-brightening-trial-watanabe-2014"
+    },
+    {
+      "q": "palmitoyl pentapeptide-4",
+      "market": "US",
+      "hero": "/blogs/clinical-studies/matrixyl-wrinkle-trial-robinson-2005"
+    },
+    {
+      "q": "acetyl hexapeptide-3",
+      "market": "US",
+      "hero": "/blogs/clinical-studies/argireline-skin-firmness-trial-tadini-2015"
+    },
+    {
+      "q": "argireline crows feet",
+      "market": "US",
+      "hero": "/blogs/clinical-studies/argireline-crows-feet-trial-wang-2013"
+    },
+    {
+      "q": "skingenetix",
+      "market": "US",
+      "hero": "/"
+    },
+    {
+      "q": "brightening serum",
+      "market": "GB",
+      "hero": "/pages/brightening-glow"
+    },
+    {
+      "q": "pdrn cream",
+      "market": "GB",
+      "hero": "/products/pdrn-collagen-night-cream"
+    },
+    {
+      "q": "collagen cream",
+      "market": "GB",
+      "hero": "/pages/collagen-skincare"
+    },
+    {
+      "q": "peptide cream",
+      "market": "GB",
+      "hero": "/products/matrixyl-3000-pro-collagen-firming-cream"
+    },
+    {
+      "q": "copper peptide",
+      "market": "GB",
+      "hero": "/pages/copper-peptide-research"
+    },
+    {
+      "q": "glutathione for skin",
+      "market": "GB",
+      "hero": "/pages/glutathione-research"
+    },
+    {
+      "q": "pdrn skincare",
+      "market": "GB",
+      "hero": "/collections/pdrn"
+    },
+    {
+      "q": "peptides for skin",
+      "market": "GB",
+      "hero": "/pages/the-science"
+    },
+    {
+      "q": "kupferpeptide",
+      "market": "DE",
+      "hero": "/de/pages/copper-peptide-research"
+    },
+    {
+      "q": "peptid serum",
+      "market": "DE",
+      "hero": "/de/collections/serums"
+    },
+    {
+      "q": "glutathion serum",
+      "market": "DE",
+      "hero": "/de/products/glutathione-brightening-serum"
+    },
+    {
+      "q": "kollagen creme",
+      "market": "DE",
+      "hero": "/de/pages/collagen-skin-plumping"
+    },
+    {
+      "q": "pdrn creme",
+      "market": "DE",
+      "hero": "/de/products/pdrn-collagen-night-cream"
+    },
+    {
+      "q": "peptide hautpflege",
+      "market": "DE",
+      "hero": "/de/collections/all"
+    }
+  ],
+  "thresholds": {
+    "orders_7d_avg_drop_pct": 20,
+    "conversion_drop_pct": 20,
+    "clicks_drop_pct": 15,
+    "position_drop": 3,
+    "direct_surge_pct": 60,
+    "direct_engagement_max_pct": 35,
+    "domain_expiry_days": 30
+  },
+  "_about": "Weekly visibility monitor for Skingenetix (traffic plan step 1.10; Malcolm approved the spend 2026-10-09, about USD 1 a week). Merged from audits/2026-10-07-visibility-forensics/config.json (33 pairs) and audits/2026-10-08-competitor-gap-per-page/config.json (39 pairs); the collagen hero moved to /pages/collagen-skincare. Run: python3 ~/.claude/skills/seo-visibility-forensics/scripts/monitor.py audits/visibility-monitor/config.json --out audits/visibility-monitor. Installed as ~/Library/LaunchAgents/com.skingenetix.visibility-monitor.plist (Mondays 08:30). Heroes follow the keyword map: update them when decision 3 moves a term to another page."
+}
