@@ -1,0 +1,1088 @@
+{
+  "version": "0.1.20260917",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.7865 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "10091044-1509-0139-0000-4547ce2fff68",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.6872 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "microneedling pen",
+        "location_code": 2840,
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 10,
+        "load_async_ai_overview": true,
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "microneedling pen",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=microneedling%20pen&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-10-09 10:44:15 +00:00",
+          "spell": null,
+          "refinement_chips": {
+            "type": "refinement_chips",
+            "xpath": "/html[1]/body[1]/div[3]/div[1]/div[9]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+            "items": [
+              {
+                "type": "refinement_chips_element",
+                "title": "Dr. Pen",
+                "url": "https://www.google.com/search?q=dr.+pen+microneedling&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yCwgCEgdEci4gUGVuWL-QIWAB&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAF6BAgjEDs",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Nearby",
+                "url": "https://www.google.com/search?q=microneedling+pen+nearby&hl=en&gl=US&shoprs=CAEYAyoRbWljcm9uZWVkbGluZyBwZW4yDAgDEgZOZWFyYnkYAli_kCFgAQ&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAJ6BAgjED0",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Reviews",
+                "url": "https://www.google.com/search?q=reviews+microneedling+pen&hl=en&gl=US&shoprs=CAEYEioRbWljcm9uZWVkbGluZyBwZW4yCwgSEgdSZXZpZXdzYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAN6BAgjED4",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Price",
+                "url": "https://www.google.com/search?q=price+microneedling+pen&hl=en&gl=US&shoprs=CAEYEioRbWljcm9uZWVkbGluZyBwZW4yCQgSEgVQcmljZWAB&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAR6BAgjED8",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "On sale",
+                "url": "https://www.google.com/search?q=microneedling+pen+sale&hl=en&gl=US&shoprs=CAESBEoCGAEYBioRbWljcm9uZWVkbGluZyBwZW4yEwgGEgdPbiBzYWxlGAIiBEoCGAFYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAV6BAgjEEA",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Buy",
+                "url": "https://www.google.com/search?q=buy+microneedling+pen&hl=en&gl=US&shoprs=CAEYEioRbWljcm9uZWVkbGluZyBwZW4yBwgSEgNCdXlgAQ&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAZ6BAgjEEE",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Face",
+                "url": "https://www.google.com/search?q=face+microneedling+pen&hl=en&gl=US&shoprs=CAEYASoRbWljcm9uZWVkbGluZyBwZW4yFggBEgRGYWNlOgwI3IaZARDdhpkBMAJYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAd6BAgjEEI",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "For Sale",
+                "url": "https://www.google.com/search?q=microneedling+pen+for+sale&hl=en&gl=US&shoprs=CAEYEioRbWljcm9uZWVkbGluZyBwZW4yDAgSEghGb3IgU2FsZWAB&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAh6BAgjEEM",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Body",
+                "url": "https://www.google.com/search?q=body+microneedling+pen&hl=en&gl=US&shoprs=CAEYASoRbWljcm9uZWVkbGluZyBwZW4yFggBEgRCb2R5OgwI3IaZARDehpkBMAJYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAl6BAgjEEQ",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Home",
+                "url": "https://www.google.com/search?q=home+microneedling+pen&hl=en&gl=US&shoprs=CAEYEioRbWljcm9uZWVkbGluZyBwZW4yCAgSEgRIb21lYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAp6BAgjEEU",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Under $50",
+                "url": "https://www.google.com/search?q=microneedling+pen+under+$50&hl=en&gl=US&shoprs=CAESDRILEQAAAACE14dBGAEYBSoRbWljcm9uZWVkbGluZyBwZW4yIggFEglVbmRlciAkNTAYAiINEgsRAAAAAITXh0EYASoCGAFYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAt6BAgjEEY",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Target",
+                "url": "https://www.google.com/search?q=target+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yCggCEgZUYXJnZXRYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKAx6BAgjEEc",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Microcurrent",
+                "url": "https://www.google.com/search?q=microcurrent+microneedling+pen&hl=en&gl=US&shoprs=CAEYASoRbWljcm9uZWVkbGluZyBwZW4yHAgBEgxNaWNyb2N1cnJlbnQ6Cgin6TwQq-k8MABYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKA16BAgjEEk",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Blue",
+                "url": "https://www.google.com/search?q=blue+microneedling+pen&hl=en&gl=US&shoprs=CAEYASoRbWljcm9uZWVkbGluZyBwZW4yFggBEgRCbHVlOgwI9c6gARD4zqABMABYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKA56BAgjEEo",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Light",
+                "url": "https://www.google.com/search?q=light+microneedling+pen&hl=en&gl=US&shoprs=CAEYASoRbWljcm9uZWVkbGluZyBwZW4yFQgBEgVMaWdodDoKCKfpPBCo6TwwAFi_kCFgAQ&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKA96BAgjEEs",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "eBay",
+                "url": "https://www.google.com/search?q=ebay+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yCAgCEgRlQmF5WL-QIWAB&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBB6BAgjEEw",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Toning",
+                "url": "https://www.google.com/search?q=toning+microneedling+pen&hl=en&gl=US&shoprs=CAEYASoRbWljcm9uZWVkbGluZyBwZW4yFggBEgZUb25pbmc6CgiB2DwQg9g8MAJYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBF6BAgjEE4",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Small business",
+                "url": "https://www.google.com/search?q=microneedling+pen&hl=en&gl=US&shoprs=CAESAmoAGBYqEW1pY3JvbmVlZGxpbmcgcGVuMhwIFhIOU21hbGwgYnVzaW5lc3MiAmoAKgQQARgBYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBJ6BAgjEE8",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "TikTok Shop",
+                "url": "https://www.google.com/search?q=tiktok+shop+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yDwgCEgtUaWtUb2sgU2hvcFi_kCFgAQ&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBN6BAgjEFA",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Ulta Beauty",
+                "url": "https://www.google.com/search?q=ulta+beauty+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yDwgCEgtVbHRhIEJlYXV0eVi_kCFgAQ&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBR6BAgjEFI",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Free shipping",
+                "url": "https://www.google.com/search?q=microneedling+pen+free+shipping&hl=en&gl=US&shoprs=CAESBFICEAEYGSoRbWljcm9uZWVkbGluZyBwZW4yFwgZEg1GcmVlIHNoaXBwaW5nIgRSAhABYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBV6BAgjEFQ",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Filler Lux",
+                "url": "https://www.google.com/search?q=filler+lux+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yDggCEgpGaWxsZXIgTHV4WL-QIWAB&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBZ6BAgjEFU",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "GetGlowing Skincare",
+                "url": "https://www.google.com/search?q=getglowing+skincare+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yFwgCEhNHZXRHbG93aW5nIFNraW5jYXJlWL-QIWAB&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBd6BAgjEFc",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Whatnot",
+                "url": "https://www.google.com/search?q=whatnot+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yCwgCEgdXaGF0bm90WL-QIWAB&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBh6BAgjEFk",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "AliExpress - ...",
+                "url": "https://www.google.com/search?q=aliexpress+-+aliexpress-251685404+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yJQgCEiFBbGlFeHByZXNzIC0gQWxpRXhwcmVzcy0yNTE2ODU0MDRYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBl6BAgjEFs",
+                "domain": "www.google.com",
+                "options": null
+              },
+              {
+                "type": "refinement_chips_element",
+                "title": "Bruun Beauty",
+                "url": "https://www.google.com/search?q=bruun+beauty+microneedling+pen&hl=en&gl=US&shoprs=CAEYAioRbWljcm9uZWVkbGluZyBwZW4yEAgCEgxCcnV1biBCZWF1dHlYv5AhYAE&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQip4GKBp6BAgjEF0",
+                "domain": "www.google.com",
+                "options": null
+              }
+            ]
+          },
+          "item_types": [
+            "organic",
+            "people_also_ask",
+            "popular_products",
+            "video",
+            "images",
+            "product_considerations",
+            "related_searches"
+          ],
+          "se_results_count": 214,
+          "pages_count": 1,
+          "items_count": 14,
+          "items": [
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "us.drpen.co",
+              "title": "All Microneedling Pens",
+              "url": "https://us.drpen.co/collections/all-microneedling-pens?srsltid=AU7gw4Ut53qr-hV0KFtV4tcQyWxLnbofEuFIH2yMMz1H2bs2niKy_SIK",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://us.drpen.co › collections › all-microneedling-pens",
+              "website_name": "Dr. Pen",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "microneedling pens provide a non-invasive treatment. Micro-needling targets fine lines, wrinkles, texture, stretch marks, acne, loss of tone and elasticity, ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": {
+                "current": 299,
+                "regular": null,
+                "max_value": 599,
+                "currency": "USD",
+                "is_price_range": true,
+                "displayed_price": "$299 to $599"
+              },
+              "highlighted": ["microneedling pens provide a non-invasive treatment"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Do microneedling pens actually work?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What is the best microneedling pen for at-home use?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "How often should you use a microneedle pen?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Does microneedling age you faster?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]",
+              "domain": "www.amazon.com",
+              "title": "Microneedling Pens",
+              "url": "https://www.amazon.com/microneedling-pens/s?k=microneedling+pens",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.amazon.com › microneedling-pens › k=micr...",
+              "website_name": "Amazon.com",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Explore at-home microneedling pens for your skincare routine. Shop tools with various needle lengths and designs. pay $35.99 28% off coupon appliedYou",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Explore at-home microneedling pens for your skincare routine"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "popular_products",
+              "rank_group": 1,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]",
+              "title": "Popular products",
+              "items": [
+                {
+                  "type": "popular_products_element",
+                  "title": "Electric Dr.pen M8 Wireless Professional Derma pen Set with 2*16pin Cartridges",
+                  "url": null,
+                  "domain": null,
+                  "description": "Dr. Pen Online & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Dr. Pen Online",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:0",
+                  "price": {
+                    "current": 79.99,
+                    "regular": 100,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$79.99 $100"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 109,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "11349319083255156556",
+                    "data_docid": "9611107036507382258",
+                    "gid": "3005532169113604020"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "beautimate Derma Pen Professional Rechargeable Microneedle Skincare System",
+                  "url": null,
+                  "domain": null,
+                  "description": "Target & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Target",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:1",
+                  "price": {
+                    "current": 129,
+                    "regular": 210,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$129.00 $210"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.7,
+                    "votes_count": 153,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "4171563886840858234",
+                    "data_docid": "11502880182495706447",
+                    "gid": "17196855481549069753"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Pen M8 Wireless Microneedling Pen Kit -Ultima M8 Includes 10 Cartridges for Professional Skin Care",
+                  "url": null,
+                  "domain": null,
+                  "description": "Dr. Pen & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Dr. Pen",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:2",
+                  "price": {
+                    "current": 90,
+                    "regular": 9,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$90.00 $9.00/ct"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.7,
+                    "votes_count": 60,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "3119325470082619650",
+                    "data_docid": "8235325077161953509",
+                    "gid": "7791913764232296765"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Pen M8S Microneedling Pen",
+                  "url": null,
+                  "domain": null,
+                  "description": "Dr. Pen Online & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Dr. Pen Online",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:3",
+                  "price": {
+                    "current": 87.99,
+                    "regular": 110,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$87.99 $110"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 541,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "11347301848974212841",
+                    "data_docid": "780011654769563993",
+                    "gid": "2875475029942675867"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Spa Sciences SORA Microneedling Derma Tool",
+                  "url": null,
+                  "domain": null,
+                  "description": "Ulta Beauty & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Ulta Beauty",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:4",
+                  "price": {
+                    "current": 39.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$39.99"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.2,
+                    "votes_count": 115,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "7575666720055283415",
+                    "data_docid": "6845827958429505394",
+                    "gid": "5781636745567681690"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Pen M8",
+                  "url": null,
+                  "domain": null,
+                  "description": "Hello Face & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Hello Face",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:5",
+                  "price": {
+                    "current": 75.99,
+                    "regular": 80,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$75.99 $80"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.9,
+                    "votes_count": 751,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "2893608778758092753",
+                    "data_docid": "7197104050968245987",
+                    "gid": "16170415855532509257"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Pen A11 Microneedling Pen",
+                  "url": null,
+                  "domain": null,
+                  "description": "Dr.Pen USA Official & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Dr.Pen USA Official",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:6",
+                  "price": {
+                    "current": 219,
+                    "regular": 314,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$219.00 $314"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 5,
+                    "votes_count": 77,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "841834292167339926",
+                    "data_docid": "17366705844175240015",
+                    "gid": "8220306780422337332"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Beauty ORA Deluxe Rechargeable & Cordless Microneedle Derma Pen System",
+                  "url": null,
+                  "domain": null,
+                  "description": "Nordstrom Rack & more\nFree delivery on $89+",
+                  "more_sellers": true,
+                  "seller": "Nordstrom Rack",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:7",
+                  "price": {
+                    "current": 84.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$84.99"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.2,
+                    "votes_count": 29,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "6983339734364373740",
+                    "data_docid": "16642749163445442768",
+                    "gid": "7708064527844596879"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "SkinAct Pro Wireless Microneedling Pen With EMS & Light Therapy",
+                  "url": null,
+                  "domain": null,
+                  "description": "SkinAct & more",
+                  "more_sellers": true,
+                  "seller": "SkinAct",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:8",
+                  "price": {
+                    "current": 259,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$259.00"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.7,
+                    "votes_count": 56,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "4831027632528314971",
+                    "data_docid": "13127877250079964300",
+                    "gid": "13010811428640782592"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Dr. Pen A8S Microneedling Pen",
+                  "url": null,
+                  "domain": null,
+                  "description": "Dr.Pen USA Official & more\nFree delivery",
+                  "more_sellers": true,
+                  "seller": "Dr.Pen USA Official",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:9",
+                  "price": {
+                    "current": 119,
+                    "regular": 215,
+                    "max_value": null,
+                    "currency": "USD",
+                    "is_price_range": false,
+                    "displayed_price": "$119.00 $215"
+                  },
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.9,
+                    "votes_count": 97,
+                    "rating_max": 5
+                  },
+                  "product_identifiers": {
+                    "product_id": "17613466437314945178",
+                    "data_docid": "9172502226130753445",
+                    "gid": "9531214962260687064"
+                  }
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]/div[1]",
+              "domain": "intelligent.shop",
+              "title": "Intelligent Microneedling Pen",
+              "url": "https://intelligent.shop/products/intelligent-microneedling-pen?srsltid=AU7gw4W6cLUCp6ab-5APU70m0r-O4DphCMfMN1pDdFsi8SAQQqzXMFAZ",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://intelligent.shop › products › intelligent-micronee...",
+              "website_name": "intelligent.shop",
+              "is_image": true,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": ["is_image"],
+              "description": "The INTELLIGENT Microneedling Pen is a handheld device designed for cosmetic microneedling, a procedure that involves using fine needles to create small ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": [
+                {
+                  "type": "images_element",
+                  "alt": "microneedling pen from intelligent.shop",
+                  "url": "https://intelligent.shop/products/intelligent-microneedling-pen?srsltid=AU7gw4W6cLUCp6ab-5APU70m0r-O4DphCMfMN1pDdFsi8SAQQqzXMFAZ",
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091044-1509-0139-0000-4547ce2fff68:10"
+                }
+              ],
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["a handheld device designed for cosmetic microneedling"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "video",
+              "rank_group": 1,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]",
+              "items": [
+                {
+                  "type": "video_element",
+                  "source": "YouTube · The Science of Self-Care",
+                  "title": "I tried Microneedling Pen vs. Dermastamp on half my face",
+                  "timestamp": "2026-05-22 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=kJs6JG-eCI4"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Spa and Tell",
+                  "title": "Best Dr Pen Microneedling Device? Full Comparison Guide A1 ...",
+                  "timestamp": "2025-07-31 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=HBw89BjWvVY"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Dr. Abby",
+                  "title": "I Tested Every Popular At-Home Microneedling Device (Results ...",
+                  "timestamp": "2026-03-04 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=JnIwv4TRW_Q"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]/div[1]/div[1]",
+              "domain": "collagenpin.com",
+              "title": "10 Best Microneedling Pens for Professional Use (2026)",
+              "url": "https://collagenpin.com/best-microneedling-pens-professional-use/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://collagenpin.com › best-microneedling-pens-prof...",
+              "website_name": "Collagen P.I.N.",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Sep 12, 2026 — Rejuvapen NXT is marketed as a professional microneedling device for cosmetic use. It offers adjustable depth and multiple speeds for common ... Read more",
+              "pre_snippet": "09/12/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Rejuvapen NXT"],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Read more",
+                  "description": null,
+                  "url": "https://collagenpin.com/best-microneedling-pens-professional-use/#:~:text=Rejuvapen%20NXT%20is%20marketed%20as,for%20common%20collagen%20induction%20treatments.",
+                  "domain": "collagenpin.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-09-12 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]/div[1]/div[1]",
+              "domain": "www.mdneedlepen.com",
+              "title": "MD Needle Pen Kit - Microneedling Pen and supplies",
+              "url": "https://www.mdneedlepen.com/shop/md-needle-pen-kit/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.mdneedlepen.com › shop › md-needle-pen-kit",
+              "website_name": "MD Needle Pen",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "The MD Needle Pen Kit is a high-quality microneedling system designed to support safe and effective cosmetic skin rejuvenation treatments.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": {
+                "current": 995,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": "$995.00"
+              },
+              "highlighted": ["designed to support safe and effective cosmetic skin rejuvenation treatments"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[17]/div[1]/div[1]/div[1]",
+              "domain": "www.skinpen.com",
+              "title": "SkinPen® | Safe, Natural Microneedling to Renew Your Skin",
+              "url": "https://www.skinpen.com/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.skinpen.com",
+              "website_name": "SkinPen",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Boost collagen, reduce acne scars & wrinkles with SkinPen® microneedling. Safe for all skin types, minimal downtime. Uncover a smoother, radiant you.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["microneedling"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.amazon.com",
+              "title": "Watch Dr. Pen Ultima M8 Professional Microneedling ...",
+              "url": "https://www.amazon.com/live/video/0aea934cd27841f5a9d80ab7f26dca5b",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.amazon.com › live › video",
+              "website_name": "Amazon.com",
+              "is_image": false,
+              "is_video": true,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": ["is_video"],
+              "description": "Brittany reveals step-by-step how to use the Lifewit Dr. Pen M8 for microneedling. it's a game-changer for skin rejuvenation!",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Lifewit Dr. Pen M8"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[1]",
+              "domain": "www.target.com",
+              "title": "Microneedle Pens for Skin Rejuvenation",
+              "url": "https://www.target.com/s/microneedle+pen",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.target.com › School & Office Supplies",
+              "website_name": "Target",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Discover microneedle pens for skin rejuvenation, fine lines, and firming. Features adjustable depth, titanium needles, serum infusion, and multiple ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["microneedle pens for skin rejuvenation, fine lines, and firming"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "images",
+              "rank_group": 1,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[22]/div[1]",
+              "title": "Images",
+              "url": "https://www.google.com/search?sca_esv=d9398fac238fd9c6&hl=en&gl=US&sxsrf=APpeQnvKAf9Ykk6ALBzCZZfUMQPgudivoQ:1791542653318&q=microneedling+pen&udm=2&source=univ&fir=JVE41DIq8dzfcM%252CPuypKhI96U1ttM%252C_%253BGQYlE5EqSy7nEM%252CIFhrmFH1oqi5nM%252C_%253BWYKuHQQSoQ5TgM%252CwoGCNx-SvmLgRM%252C_%253B04TH9T5TN4wcrM%252Cj8SaqY6exjRcxM%252C_%253B7KlXOgnhufIKgM%252CSW7_j2kst5lpVM%252C_%253Bl6KeQwnGzqTPgM%252Cty5XyTYizpQZUM%252C_%253Bn6BATQuWsBBlaM%252CezKtP53sYXIrkM%252C_%253BXgRo1DFRNNoyWM%252C6J0v4j7srClUuM%252C_&usg=AI4_-kTwsOg-KsnCvOhouqnJQx177cyuog&sa=X&ved=2ahUKEwiznM274KyXAxWo9rsIHV7lCfYQ7Al6BAhhEAU",
+              "items": [
+                {
+                  "type": "images_element",
+                  "alt": "Microneedling Derma Pen",
+                  "url": "https://integrityprp.com/products/microneedling-derma-pen?srsltid=AU7gw4W_wUirtvv91dNKTiMC22T-KuIPC9smP1rvynAZwGhOQI4tbZwl",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFddh2HJcRP3KoLeCR9NlT0HOqZOW5V_tpe-xAtEdnlIrKdR1Qo_FXnEI&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "NX Needle Pen® - MicroNeedling Pen Kit — Avtec Surgical",
+                  "url": "https://www.bonegrafting.com/products/nx-needle-pen%C2%AE-microneedling-pen-kit",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMCiedrehhh09ufCxfCjoIK1qEO8CpGVnQLFrT8GIuh1qLQNm2ccQG1rc&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Dr. Pen M8-W",
+                  "url": "https://www.drpenworldwide.com/product/dr-pen-m8-w/",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5KkugKMXvd7C7fCKc3bDXGIY2S6PsnEzXDswkYTduIqDMw5qclRl_0uk&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Dr.pen A20 Professional Series Microneedling System ...",
+                  "url": "https://pro-beauty.com/products/dr-pen-a20-professional-series-microneedling-system",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn7a3mzCYz6AiUWTit0GmqAtTDo7pLmMKkYiH1GYFQy8rWYzEYqBQBQ3c&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Intelligent Microneedling Pen",
+                  "url": "https://intelligent.shop/products/intelligent-microneedling-pen?srsltid=AU7gw4WIq0z-FMRmUiC4_iiOJVjz_11iPVWwpyzWbuvg-Qvo3JB_jeq_",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQULk4YC1asXvZcfmUSO7906D0mx9WAaBsTqRCpRQ5Kkzm9G2bZnsbauxw&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Best Microneedling Pen: A Comprehensive Guide",
+                  "url": "https://hob-aesthetics.com/best-microneedling-pen/",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6q-CqW5Zc7ss4S2hR6vDLWAh5mz4PW0OaF_9cnAn5Euao2FI1qzbGo0&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "Micro Needling Pen Lifting Pen Anti Aging NP1 - Specialist ...",
+                  "url": "https://top-messtechnik.com/Micro-Needling-Pen-NP1_1?srsltid=AU7gw4X5xHXdsXJOxP3_6WtWxa_10S_ZLaYCjZmzVgfv0ULHgbVSsKud",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Ex-wfEW66bXjaa-FqPICEU5Lof1Sm3tlhKy_nOEf8aPjEaPOk02G1lk&s"
+                },
+                {
+                  "type": "images_element",
+                  "alt": "What is the Best Professional Microneedling Device? - MD ...",
+                  "url": "https://www.mdneedlepen.com/best-professional-microneedling-device-2/",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp8bRQj-G-yT8Y-SO0FEjPO-rUOVSnDMnMsqDlJN_zv0qJh_2pNcOl55g&s"
+                }
+              ],
+              "related_image_searches": null,
+              "rectangle": null
+            },
+            {
+              "type": "product_considerations",
+              "rank_group": 1,
+              "rank_absolute": 13,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[24]/div[1]",
+              "title": "Things to know",
+              "items": [
+                {
+                  "type": "product_considerations_element",
+                  "title": "How much does a microneedling pen cost?",
+                  "consideration_category": "Cost",
+                  "expanded_element": null
+                },
+                {
+                  "type": "product_considerations_element",
+                  "title": "What are the potential side effects of using a microneedling pen?",
+                  "consideration_category": "Side Effects",
+                  "expanded_element": null
+                },
+                {
+                  "type": "product_considerations_element",
+                  "title": "How to use a microneedling pen?",
+                  "consideration_category": "How to Use",
+                  "expanded_element": null
+                },
+                {
+                  "type": "product_considerations_element",
+                  "title": "What is the downtime after using a microneedling pen?",
+                  "consideration_category": "Downtime",
+                  "expanded_element": null
+                },
+                {
+                  "type": "product_considerations_element",
+                  "title": "How to choose the right microneedling pen?",
+                  "consideration_category": "Choosing a Pen",
+                  "expanded_element": null
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "related_searches",
+              "rank_group": 1,
+              "rank_absolute": 14,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+              "items": [
+                "Best microneedling pen",
+                "Microneedling pen professional",
+                "Microneedling pen hair",
+                "Microneedling pen for face",
+                "Microneedling pen amazon",
+                "Microneedling pen for hair growth",
+                "Microneedling pen at home",
+                "Microneedling pen reddit"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

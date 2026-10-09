@@ -150,6 +150,16 @@ backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
   `skingenetix-argireline-acetyl-hexapeptide-8-crows-feet-softened-before-after-study.jpg` (used on the Learn redesign).
 - ⏳ **Product pages, plan step 1.2:** nine English drafts and the review pack `docs/review-2026-10-09-product-pages.md` wait for
   Malcolm (per page yes/edits/no; decisions 3, 8, 15; the "free from" line; carton facts).
+- ⏳ **Wave-1 articles drafted (Malcolm approved the article list, 2026-10-09):** on the hidden drafts blog for his review of
+  the English: `/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps` (audit 9.65 uncapped),
+  `/blogs/clinical-studies-drafts/copper-uglies-what-they-are-and-how-long-they-last` (9.78) and
+  `/blogs/clinical-studies-drafts/salmon-sperm-skincare-vs-the-salmon-sperm-facial` (9.70); zero confirmed failures beyond the
+  hidden-draft items. Configs in `configs/learn/drafts/`. On approval: `learn-article-draft.py <config> --apply --blog learn --public`,
+  owner rows in `configs/page-targets.json`, hub links in prose, Request indexing, 14 days, then six languages.
+- ⏳ **Microneedling number-one plan (2026-10-09), waits for Malcolm's 11 decisions:** `docs/microneedling-number-one-plan-2026-10-09.md`,
+  evidence `audits/2026-10-09-microneedling-number-one/`. Keyword universe US/GB/DE/NL, 38 SERPs, AI-answer panel, regulation and
+  clinical-evidence research, product and category teardown. First levers: remove the live "absorb deeper" / "sterile" wording and set
+  `PreOrder` schema (decision 11); Merchant Center; the head format and serum posture; rebuild the two stamp pages and the collection.
 - ⏳ **New articles plan (2026-10-09), waits for Malcolm's 10 decisions:** `docs/article-plan-2026-10-09.md`, evidence
   `audits/2026-10-09-new-article-keywords/`. Adjacent-topic keyword pull (`scripts/keyword-research-adjacent.py`; 19,238 US /
   17,212 GB keywords), the 15 planned spokes re-checked against observed searches (most have none and repeat hub FAQs), top-3

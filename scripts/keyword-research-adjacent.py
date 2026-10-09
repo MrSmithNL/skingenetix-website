@@ -10,7 +10,7 @@ volume. Polynucleotides, peptides in general, retinol alternatives, at-home micr
 and routines were never pulled, nor the question long tail of the ingredient terms. Malcolm, 2026-10-09:
 "do deep research to understand what other relevant keywords we should write content for".
 
-Seeds live in <dir>/seeds.json (three methods per group: phrase-match `suggest`, question-filtered `q`, and
+Seeds live in <dir>/seeds.json (optional `limits` per method; three methods per group: phrase-match `suggest`, question-filtered `q`, and
 Google's related-searches graph `related`). Reuses keyword-strategy.py's auth, transport, de-bucketing,
 relevance and winnability, so the scores compare with the strategy's. Read-only against DataForSEO; writes
 only JSON under --dir. Prints the spend.
@@ -29,6 +29,12 @@ _s.loader.exec_module(ks)
 sys.argv = _argv
 
 MARKETS = [("US", 2840, "en"), ("GB", 2826, "en")]
+LIMITS = {"suggest": 400, "q": 700, "related": 300}
+
+
+def markets(a):
+    """US and GB by default; --markets picks any of the strategy's seven (DE, NL, FR, ES, IT too)."""
+    return [m for m in ks.MARKETS if m[0] in a.markets] if getattr(a, "markets", None) else MARKETS
 
 
 def suggestions(seed, loc, lang, a, limit, regex=None):
@@ -54,9 +60,10 @@ def cmd_pull(a):
     d = pathlib.Path(a.dir)
     seeds = json.loads((d / "seeds.json").read_text())
     regex = seeds["question_regex"]
+    limits = {**LIMITS, **seeds.get("limits", {})}
     A = ks.auth()
     spent = 0.0
-    for code, loc, lang in MARKETS:
+    for code, loc, lang in markets(a):
         path = d / f"raw-{code}.json"
         if path.exists() and not a.force:
             print(f"  {code}: cached — use --force to re-pull")
@@ -67,11 +74,11 @@ def cmd_pull(a):
                     + [("related", s) for s in g.get("related", [])])
             for method, seed in jobs:
                 if method == "suggest":
-                    got, cost = suggestions(seed, loc, lang, A, 400)
+                    got, cost = suggestions(seed, loc, lang, A, limits["suggest"])
                 elif method == "q":
-                    got, cost = suggestions(seed, loc, lang, A, 700, regex)
+                    got, cost = suggestions(seed, loc, lang, A, limits["q"], regex)
                 else:
-                    got, cost = related(seed, loc, lang, A, 300)
+                    got, cost = related(seed, loc, lang, A, limits["related"])
                 spent += cost
                 for r in got:
                     row = rows.setdefault(r["keyword"], {**r, "sources": []})
@@ -87,7 +94,7 @@ def cmd_enrich(a):
     d = pathlib.Path(a.dir)
     A = ks.auth()
     spent = 0.0
-    for code, loc, lang in MARKETS:
+    for code, loc, lang in markets(a):
         rows = json.loads((d / f"raw-{code}.json").read_text())
         buckets = [b for b in ks.bucket(rows) if ks.relevance(b["keyword"]) > 0 and (b["ads"] or 0) >= a.min_ads]
         cache_p = d / f"clickstream-{code}.json"
@@ -118,7 +125,9 @@ def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("pull"); p.add_argument("--dir", required=True); p.add_argument("--force", action="store_true")
+    p.add_argument("--markets", nargs="*", help="market codes, e.g. US GB DE NL (default US GB)")
     q = sub.add_parser("enrich"); q.add_argument("--dir", required=True)
+    q.add_argument("--markets", nargs="*", help="market codes, e.g. US GB DE NL (default US GB)")
     q.add_argument("--min-ads", type=int, default=20)
     a = ap.parse_args()
     return {"pull": cmd_pull, "enrich": cmd_enrich}[a.cmd](a)

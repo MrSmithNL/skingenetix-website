@@ -197,6 +197,10 @@ carries.
 
 #### S1 — Matrixyl and Argireline: What the Trials Show (drafted)
 
+**Update 2026-10-09:** approved by Malcolm and published to `/blogs/learn` by window b2 (live audit 9.9; the Learn blog is
+visible again). A1, A2 and A3 are drafted on the hidden drafts blog: audits 9.65, 9.78 and 9.70 uncapped, zero confirmed
+failures beyond the hidden-draft items; they wait for Malcolm's approval of the English.
+
 Already drafted (`configs/learn/drafts/argireline-and-matrixyl-3000-together.json`, 1,147 words, audited 9.68 uncapped)
 and waiting for your approval of the English and Dr Bodde's review. Publish it first: it is ready, and its publish step
 unhides the Learn blog for everything after it. Teardown: `audits/2026-10-07-visibility-forensics/teardown-argireline-matrixyl.md`.
@@ -298,8 +302,9 @@ unhides the Learn blog for everything after it. Teardown: `audits/2026-10-07-vis
 - **A6 Matrixyl Synthe'6** (after its register section is written from Sederma's own data): what Synthe'6 is (palmitoyl
   tripeptide-38, same maker as Matrixyl 3000), what the maker's study found, lab vs faces, the two compared, and the honest
   line that no study has compared them head to head.
-- **A7 and A8 microneedling:** one face article (needle length, frequency, technique, aftercare, who should not) and later
-  a serum article, both written to `teardowns/microneedling.md`. Neither may tell readers to put our serums on freshly
+- **A7 and A8 microneedling:** now governed by `docs/microneedling-number-one-plan-2026-10-09.md` (Malcolm, 2026-10-09:
+  microneedling for skin is a core category), which adds a microneedling hub, A12 to A14 and the product-page work. Written
+  to `teardowns/microneedling.md` and that plan's Part 4. Neither may tell readers to put our serums on freshly
   needled skin until decision 4 is made. The hair-growth side of derma stamps is left to Hairgenetix.
 - **A9 Under-eye wrinkles:** when A1's Search Console data shows under-eye impressions.
 - **A10 Best copper peptide serum, by the label:** after a roundup lists us, or in 6 months.

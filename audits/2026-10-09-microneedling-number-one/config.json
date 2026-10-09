@@ -1,0 +1,188 @@
+{
+  "client": "skingenetix",
+  "site": "https://www.skingenetix.com",
+  "gsc_property": "sc-domain:skingenetix.com",
+  "ga4_property": "properties/509318244",
+  "service_account_key": "~/.config/ga4/service-account.json",
+  "dataforseo_env_file": "~/Claude Code/Projects/seo-toolkit/.env",
+  "locales_regex": "de|nl|fr|es|it",
+  "brand_regex": "skingenetix|skin genetix|skingenetics",
+  "markets": {
+    "US": {
+      "location_code": 2840,
+      "language_code": "en"
+    },
+    "GB": {
+      "location_code": 2826,
+      "language_code": "en"
+    },
+    "DE": {
+      "location_code": 2276,
+      "language_code": "de"
+    },
+    "NL": {
+      "location_code": 2528,
+      "language_code": "nl"
+    }
+  },
+  "topic_regex": "microneedl|derma ?stamp|dermastamp|derma ?roller|dermaroller|microchannel|pdrn|copper|ghk|polynucleotide",
+  "_about": "Skin-microneedling SERPs, 2026-10-09 (Malcolm: rank first for the top microneedling-for-skin keywords). Terms from candidates-*.json in this folder; the 2026-10-09 new-article pull (at home microneedling, derma stamp US/GB, how to use a derma stamp, derma stamp vs derma roller, how often to do microneedling, after microneedling care, best microneedling serum, best products to use after microneedling) and the 2026-10-08 pull (microneedling stamp US, microneedling serum US, pdrn microneedling) are reused, not re-pulled.",
+  "keywords": [
+    {
+      "q": "microneedling",
+      "market": "US"
+    },
+    {
+      "q": "what is microneedling",
+      "market": "US"
+    },
+    {
+      "q": "does microneedling work",
+      "market": "US"
+    },
+    {
+      "q": "microneedling benefits",
+      "market": "US"
+    },
+    {
+      "q": "derma roller",
+      "market": "US"
+    },
+    {
+      "q": "derma roller for face",
+      "market": "US"
+    },
+    {
+      "q": "how to use derma roller",
+      "market": "US"
+    },
+    {
+      "q": "how to clean derma roller",
+      "market": "US"
+    },
+    {
+      "q": "dermastamp",
+      "market": "US"
+    },
+    {
+      "q": "best derma stamp",
+      "market": "US"
+    },
+    {
+      "q": "microchanneling",
+      "market": "US"
+    },
+    {
+      "q": "microchanneling vs microneedling",
+      "market": "US"
+    },
+    {
+      "q": "sterile hyaluronic acid for microneedling",
+      "market": "US"
+    },
+    {
+      "q": "microneedling kit",
+      "market": "US",
+      "hero": "/collections/microneedling"
+    },
+    {
+      "q": "home microneedling kit",
+      "market": "US",
+      "hero": "/collections/microneedling"
+    },
+    {
+      "q": "microneedling pen",
+      "market": "US"
+    },
+    {
+      "q": "microneedling under eyes",
+      "market": "US"
+    },
+    {
+      "q": "microneedling",
+      "market": "GB"
+    },
+    {
+      "q": "derma roller",
+      "market": "GB"
+    },
+    {
+      "q": "microneedling stamp",
+      "market": "GB",
+      "hero": "/products/copper-peptide-ghk-cu-microneedling-facial-stamp-set-1-month"
+    },
+    {
+      "q": "microneedling serum",
+      "market": "GB"
+    },
+    {
+      "q": "sterile hyaluronic acid for microneedling",
+      "market": "GB"
+    },
+    {
+      "q": "home microneedling kit",
+      "market": "GB",
+      "hero": "/collections/microneedling"
+    },
+    {
+      "q": "microneedling under eyes",
+      "market": "GB"
+    },
+    {
+      "q": "microneedling with polynucleotides",
+      "market": "GB"
+    },
+    {
+      "q": "does microneedling hurt",
+      "market": "GB"
+    },
+    {
+      "q": "microneedling",
+      "market": "DE"
+    },
+    {
+      "q": "microneedling zuhause",
+      "market": "DE"
+    },
+    {
+      "q": "derma stamp",
+      "market": "DE"
+    },
+    {
+      "q": "dermaroller",
+      "market": "DE"
+    },
+    {
+      "q": "dermaroller f\u00fcr gesicht",
+      "market": "DE"
+    },
+    {
+      "q": "dermaroller oder dermastamp",
+      "market": "DE"
+    },
+    {
+      "q": "microneedling wie oft",
+      "market": "DE"
+    },
+    {
+      "q": "microneedling serum",
+      "market": "DE"
+    },
+    {
+      "q": "microneedling pen",
+      "market": "DE"
+    },
+    {
+      "q": "dermaroller",
+      "market": "NL"
+    },
+    {
+      "q": "derma stamp",
+      "market": "NL"
+    },
+    {
+      "q": "microneedling",
+      "market": "NL"
+    }
+  ]
+}

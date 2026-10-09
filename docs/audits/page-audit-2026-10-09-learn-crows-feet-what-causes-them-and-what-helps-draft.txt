@@ -1,0 +1,142 @@
+/Users/malcolmsmith/Claude Code/Projects/seo-toolkit/src/content_engine/adapters/gemini_adapter.py:9: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai  # type: ignore[import-untyped]
+  gate ✓ Answers 200 OK — HTTP 200
+  gate ✓ Is an HTML document — text/html; charset=utf-8
+  gate ✗ Not noindexed — noindex (robots meta or X-Robots-Tag)
+  gate ✓ Canonical names this page — canonical names this URL (https://www.skingenetix.com/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps)
+  gate ✓ robots.txt allows Googlebot
+  gate ✓ Reached in ≤ 10 redirect hops — 0 hops
+  kind: article · keyword: crows feet · keyword map: 39 pages · SERP: not read
+  judges: claude-sonnet-5-5, gpt-6-sol, gemini-3.8-flash, perplexity/sonar
+======================================================================
+SEO / GEO / AISO PAGE AUDIT — criteria v2
+URL: https://www.skingenetix.com/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps
+Page kind: article · target keyword: “crows feet”
+Judges: claude-sonnet-5-5→claude-sonnet-5-5, gpt-6-sol→gpt-6-sol, gemini-3.8-flash→gemini-3.8-flash, perplexity/sonar→perplexity/sonar · 3 blind samples each · 120 calls
+Gates:    5 passed · 1 failed · 0 not checked
+          BLOCKED — not_noindex: noindex (robots meta or X-Robots-Tag)
+Score:    2.0/10  (uncapped 9.51; geometric across query_fit 10.0, content 8.98, trust 10.0, structured_data 10.0, ai_eligibility 10.0, site_strategy 10.0, technical 7.14, vertical_health 10.0)
+          capped: gate ≤ 2.0 — not_noindex
+Coverage: 39 of 53 applicable criteria assessed (14 not assessable here; 3 not applicable to a article page)
+          REQUIRED but not assessed: P1, P2
+Google:   NOT indexed (URL is unknown to Google) — beside the score, never in it
+Scoring: f012-gate-score-floor/2+criteria-v2.6.0 · cost $0.76 · 178s
+======================================================================
+
+CONFIRMED FAILURES — fix these (agreed by the panel, or failed a code check)
+  [CONFIRMED_FAIL] C4 Internally consistent — 1 met / 2 unmet
+      · [claude-sonnet-5-5] The table shows Badenhorst 2016 enrolled women aged 40–65, so the stated 25–60 recruitment range for the trials contradicts the page's own table.
+      · [claude-sonnet-5-5] The trials below recruited adults from 25 to 60, all with visible lines at the eye corner
+      · [gpt-6-sol] The table lists Argireline in only one of five trials, contradicting “most.” The page also says trial participants were aged 25–60, but one row gives ages 40–65.
+      · [gpt-6-sol] the peptide behind most of the trials below has its own Argireline research page
+      · [perplexity/sonar] The table reports the same Ye trial as showing crow’s-feet wrinkle area down 23.0% on the PDRN side and 6.6% on the retinol side. The later section switches to different percentages without explaining the discrepancy.
+      · [perplexity/sonar] The trial we do have is Ye 2026, which was run in China. It tested a 0.1% PDRN eye cream on 31 women, twice a day for 28 days, against 0.1% retinol on the other side of the face. The number of under-eye lines fell 23.4% on the PDRN side against 7.0% on the retinol side
+  [FAIL        ] T4 Reachable in the site graph — not in the sitemap (396 URLs in 38 sitemap files)
+  [FAIL        ] T8 Language versions declared correctly — https://www.skingenetix.com/de/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex; https://www.skingenetix.com/nl/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex; https://www.skingenetix.com/fr/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex; https://www.skingenetix.com/es/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex; https://www.skingenetix.com/it/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex
+
+CONTESTED — the panel disagreed; unstable, do not fix on this evidence
+  [CONTESTED   ] C2 Facts correct and consistent with expert consensus — 2 met / 2 unmet
+
+AGENCY STANDARD (Rule 27 Checks A/D) — reported, not in the search score
+  [MET         ] X1 One clear primary action, with proof beside it — 3 met / 0 unmet
+
+ALL ASSESSED CRITERIA (search score)
+ query_fit
+  [MET         ] Q1 Achieves its purpose — 4 met / 0 unmet
+  [PASS        ] Q2 Target keyword in the title, once — keyword in the title, once
+  [MET         ] Q3 Serves the keyword's intent — 4 met / 0 unmet
+  [PASS        ] Q5 No keyword stuffing — “crows feet” 5× in 1616 words
+  [MET         ] Q6 Title and H1 match the content — 2 met / 0 unmet
+  [MET         ] Q7 Page-specific meta description — 4 met / 0 unmet
+  [PASS        ] Q8 Distinct, descriptive title — distinct from 1 related pages' titles; no boilerplate
+ content
+  [MET         ] C1 Effort and originality — 4 met / 0 unmet
+  [CONTESTED   ] C2 Facts correct and consistent with expert consensus — 2 met / 2 unmet
+  [MET         ] C3 Complete for its purpose — 4 met / 0 unmet
+  [CONFIRMED_FAIL] C4 Internally consistent — 1 met / 2 unmet
+  [MET         ] C5 Specific, sourced evidence — 4 met / 0 unmet
+  [MET         ] C7 Clear structure — 4 met / 0 unmet
+  [MET         ] C9 Claims proportionate to the evidence — 4 met / 0 unmet
+  [MET         ] C10 Produced with care — 3 met / 0 unmet
+  [MET         ] C11 Comparisons and reviews show their evidence and method — 4 met / 0 unmet
+  [MET         ] C12 No harmfully misleading information — 3 met / 1 unmet
+ trust
+  [MET         ] R1 Responsible entity identified — 4 met / 0 unmet
+  [MET         ] R2 Byline where a reader expects one — 4 met / 0 unmet
+  [MET         ] R3 Credentials truthful — 4 met / 0 unmet
+  [NA          ] R4 Citations resolve to what they claim — no DOI, PMID or PMCID cited
+  [MET         ] R5 Commercial interest disclosed — 2 met / 0 unmet
+  [MET         ] R7 Visible, accurate date — 4 met / 0 unmet
+  [NOT_APPLICABLE] R8 Reviews genuine and shown — 0 met / 0 unmet / 4 n/a
+ structured_data
+  [PASS        ] S1 Markup matches visible content — marked-up headline/name appear on the page
+  [PASS        ] S2 Valid for types that have rules — 1 item(s) carry every required property · notes: Article: recommended missing — image
+  [PASS        ] S3 The type that fits the page — Article present
+  [NA          ] S4 Time-sensitive markup current — no time-sensitive markup
+ ai_eligibility
+  [PASS        ] A1 Snippet-eligible for AI features — no snippet restriction
+  [PASS        ] A2 AI search crawlers allowed — OAI-SearchBot, PerplexityBot, Claude-SearchBot allowed
+  [PASS        ] A3 Main content in the server HTML — main content present in the server HTML
+  [MET         ] A4 Key facts stated in self-contained sentences — 4 met / 0 unmet
+ site_strategy
+  [NOT_ASSESSED] P1 Keyword owned by one page — This page is not in the site keyword map.
+  [NOT_ASSESSED] P3 Linked into its cluster — This page is not assigned to a content cluster — hub and sibling links not assessed.
+  [MET         ] P4 Descriptive internal anchors — 4 met / 0 unmet
+  [NOT_ASSESSED] P5 Distinct from its siblings — no sibling pages declared in the keyword map
+ technical
+  [NOT_ASSESSED] T1 Core Web Vitals (field) — the CrUX API refused the request (403) — enable the Chrome UX Report API on the key's Google Cloud project and allow it on the key
+  [PASS        ] T2 HTTPS without mixed content — HTTPS, no mixed content
+  [NOT_ASSESSED] T3 Works on a phone — viewport set; the layout at 390 px (horizontal scroll, tap targets) needs a rendered page
+  [FAIL        ] T4 Reachable in the site graph — not in the sitemap (396 URLs in 38 sitemap files)
+  [PASS        ] T5 Title, H1 and lang hygiene — one title, one H1, lang set
+  [NOT_APPLICABLE] T6 Descriptive image alt text — 0 met / 0 unmet / 4 n/a
+  [PASS        ] T7 No broken links or resources — 9 links and images answer
+  [FAIL        ] T8 Language versions declared correctly — https://www.skingenetix.com/de/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex; https://www.skingenetix.com/nl/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex; https://www.skingenetix.com/fr/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex; https://www.skingenetix.com/es/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex; https://www.skingenetix.com/it/blogs/clinical-studies-drafts/crows-feet-what-causes-them-and-what-helps is noindex
+  [NA          ] T9 Descriptive image filenames — no content images
+  [NA          ] T10 Images served efficiently — no content images
+  [PASS        ] T12 Links crawlable and labelled — 10 internal links crawlable and labelled
+  [PASS        ] T13 Readable URL — readable: words and hyphens
+ vertical_health
+  [MET         ] V1 Safety information present — 4 met / 0 unmet
+  [MET         ] V4 No outcome promises — 4 met / 0 unmet
+
+NOT ASSESSED HERE (reported, never scored as pass or zero)
+  Q4 Covers the query's real sub-questions in one page — needs SERP data (F-012 S4)
+  C6 Main content prominent and unobstructed — needs a rendered page
+  C8 Not copied, not machine boilerplate — needs a web search
+  R9 Independent reputation — needs a web search
+  S5 Markup survives rendering — needs a rendered page
+  P2 No second own URL competing — needs SERP data (F-012 S4)
+  O1 Earned links to this URL — needs backlink data (F-012 S4)
+  O2 Natural anchor profile — needs backlink data (F-012 S4)
+  X3 Accessible basics — needs a rendered page
+  P1 Keyword owned by one page — This page is not in the site keyword map.
+  P3 Linked into its cluster — This page is not assigned to a content cluster — hub and sibling links not assessed.
+  P5 Distinct from its siblings — no sibling pages declared in the keyword map
+  T1 Core Web Vitals (field) — the CrUX API refused the request (403) — enable the Chrome UX Report API on the key's Google Cloud project and allow it on the key
+  T3 Works on a phone — viewport set; the layout at 390 px (horizontal scroll, tap targets) needs a rendered page
+
+NOT SCORED — no verified source yet
+  V2 No medicinal claim on a cosmetic product — no verified source yet (to verify)
+  V5 Regulatory status stated and true — no verified source yet (to verify)
+
+MEASURED, NOT SCORED (the figure, and why it is not in the score)
+  Server response time (TTFB): 0.23 s — web.dev's rough guide is 0.8 s or less; not a Core Web Vital, not scored
+  HTML weight: 362 KB — no Google threshold; reported
+  Lab speed (PageSpeed, mobile): not available — PageSpeed answered 403 — enable the PageSpeed Insights API on the Google key's Cloud project and allow it on the key
+  Google index status (Search Console): NOT indexed (URL is unknown to Google)
+  Keyword in the URL: 2 of 2 keyword words in the path — reported, not scored: Google says keywords in the URL have “hardly any effect beyond appearing in breadcrumbs”
+  Keyword words in image filenames: no content images
+  Image reuse: 0 distinct content images — reported, not scored: no primary source ties image originality or reuse to ranking (a gallery repeats its images by design)
+  Title length: 44 characters — Google sets no limit; the title link is truncated to fit the device width
+
+  report: /Users/malcolmsmith/Claude Code/Projects/seo-toolkit/docs/audits/pages/crows-feet-what-causes-them-and-what-helps-2026-10-09-v2.md
+  json:   /Users/malcolmsmith/Claude Code/Projects/skingenetix-website/docs/audits/page-audit-2026-10-09-learn-crows-feet-what-causes-them-and-what-helps-draft.json
+  score 2.0 · confirmed failures 3 · contested 1 · cost $0.76

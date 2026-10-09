@@ -40,7 +40,7 @@ def test_pull_merges_seeds_and_sends_regex_only_for_questions(tmp_path, monkeypa
     monkeypatch.setattr(kra.ks, "post", fake_post)
     monkeypatch.setattr(kra.ks, "auth", lambda: "x")
     monkeypatch.setattr(kra, "MARKETS", [("US", 2840, "en")])
-    kra.cmd_pull(argparse.Namespace(dir=str(tmp_path), force=True))
+    kra.cmd_pull(argparse.Namespace(dir=str(tmp_path), force=True, markets=None))
 
     rows = {r["keyword"]: r for r in json.loads((tmp_path / "raw-US.json").read_text())}
     assert set(rows) == {"crows feet", "crows feet meaning", "how to use pdrn", "salmon sperm"}
@@ -63,9 +63,15 @@ def test_enrich_falls_back_to_a_third_of_ads_and_drops_off_intent(tmp_path, monk
     monkeypatch.setattr(kra.ks, "post", fake_post)
     monkeypatch.setattr(kra.ks, "auth", lambda: "x")
     monkeypatch.setattr(kra, "MARKETS", [("US", 2840, "en")])
-    kra.cmd_enrich(argparse.Namespace(dir=str(tmp_path), min_ads=20))
+    kra.cmd_enrich(argparse.Namespace(dir=str(tmp_path), min_ads=20, markets=None))
 
     out = {r["keyword"]: r for r in json.loads((tmp_path / "candidates-US.json").read_text())}
     assert set(out) == {"crows feet", "copper uglies"}
     assert out["crows feet"]["observed"] == 9714
     assert out["copper uglies"]["clickstream"] is None and out["copper uglies"]["observed"] == 300
+
+
+def test_markets_flag_selects_from_the_strategys_seven():
+    picked = kra.markets(argparse.Namespace(markets=["DE", "NL"]))
+    assert [m[0] for m in picked] == ["DE", "NL"] and picked[0][2] == "de"
+    assert kra.markets(argparse.Namespace(markets=None)) == kra.MARKETS

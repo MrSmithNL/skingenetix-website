@@ -1,0 +1,1317 @@
+{
+  "version": "0.1.20260917",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.1045 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "10091045-1509-0139-0000-17a76e7649e6",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.0382 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "dermaroller oder dermastamp",
+        "location_code": 2276,
+        "language_code": "de",
+        "device": "desktop",
+        "depth": 10,
+        "load_async_ai_overview": true,
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "dermaroller oder dermastamp",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2276,
+          "language_code": "de",
+          "check_url": "https://www.google.com/search?q=dermaroller%20oder%20dermastamp&hl=de&gl=DE&ie=UTF-8&uule=w+CAIQIFISCWu-scIecppHEVvlkY5rXeh1",
+          "datetime": "2026-10-09 10:45:29 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": ["video", "people_also_ask", "organic", "popular_products", "related_searches"],
+          "se_results_count": 115,
+          "pages_count": 1,
+          "items_count": 10,
+          "items": [
+            {
+              "type": "video",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]",
+              "items": [
+                {
+                  "type": "video_element",
+                  "source": "YouTube · AL GARRIDO",
+                  "title": "Derma Roller vs. Derma Stamp: Which One Is Best?",
+                  "timestamp": "2025-12-04 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/shorts/yOOmF1zG8cQ"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Imane Belle",
+                  "title": "Dermastamp vs dermaroller",
+                  "timestamp": "2024-04-08 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/shorts/_MIqZBCdkmA"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · THE ACNE CHANNEL",
+                  "title": "Dermaroller Vs Dermastamp | Which One Is Better for Home Use?",
+                  "timestamp": "2025-11-03 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=_ctbZdO0Usg"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · AL GARRIDO",
+                  "title": "Derma Roller vs Stamp: How to Microneedle for Hair Loss",
+                  "timestamp": "2024-11-02 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/shorts/0O6RDbhaix4"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Wie oft kann man den Dermaroller benutzen?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Was ist der Unterschied zwischen dem Dermapen und dem Microneedling?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Wie wird Dermastamp angewendet?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Welche Nachteile hat der Dermaroller?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+              "domain": "www.aitherbeauty.com",
+              "title": "Derma Stamp vs. Roller: Which Microneedling Tool to Choose?",
+              "url": "https://www.aitherbeauty.com/blogs/articles/derma-stamp-vs-roller-guide-features-costs-benefits?srsltid=AU7gw4Vm6USJ4-Ezcq0zoWwQbdeZsrqaqPAV7MXpgymvBD6r1Hv2Mkx3",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.aitherbeauty.com › d...",
+              "website_name": "aitherbeauty.com",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "05.06.2025 — The debate between derma stamps vs. roller is a hot topic online. Stamps target specific areas, while rollers cover larger skin concerns.",
+              "pre_snippet": "06/05/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Stamps target specific areas, while rollers cover larger skin concerns"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-06-05 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]",
+              "domain": "www.reddit.com",
+              "title": "Dermastamp = Way better than Dermaroller : r/tressless",
+              "url": "https://www.reddit.com/r/tressless/comments/dn446f/dermastamp_way_better_than_dermaroller/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "Ca. 10 Kommentare  ·  vor 6 Jahren",
+              "website_name": "Reddit · r/tressless",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "I just started using the stamp after using the roller for months. Stamp is way better. More accurate, doesn't take as much time.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Stamp is way better"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]",
+              "domain": "www.instagram.com",
+              "title": "Dermastamp mı Dermarroller mı?  testi  Bu arada çok ...",
+              "url": "https://www.instagram.com/reel/DHixJCbNp0e/?hl=de",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "Ca. 250 „Gefällt mir“-Angaben  ·  vor 1 Jahr",
+              "website_name": "Instagram · sachikayesi",
+              "is_image": false,
+              "is_video": true,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": ["is_video"],
+              "description": "... mikroiğneleme # dermastamp # dermaroller #dermastampuygulaması #saçproblemleri #saçdökülmesi #saçkaybı #saçdökülmesinekarşı\".",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["dermastamp", "dermaroller"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-10-09 10:45:28 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+              "domain": "follicly.com",
+              "title": "So verwendest du den Derma-Stempel in 3 einfachen ...",
+              "url": "https://follicly.com/de/blogs/news/how-to-use-the-derma-stamp-in-3-easy-steps?srsltid=AU7gw4UtMaNkvcwJ6uAqmpqRoyW77fO41F4SM16fbjr_fVwBZuMrT60m",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://follicly.com › Neuigkeiten",
+              "website_name": "Follicly",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "17.08.2026 — Microneedling der Kopfhaut– ob mit Dermaroller oder Dermastamp – ist heute eine der besten Behandlungen gegen Haarausfall.",
+              "pre_snippet": "08/17/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": ["Dermaroller oder Dermastamp"],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-08-17 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "popular_products",
+              "rank_group": 1,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[11]/div[1]",
+              "title": "Vergleichsportale",
+              "items": [
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St Zubehör",
+                  "url": "https://www.codecheck.info/pdb/p/uHuqwfjBSFKrRHriBwkrQA.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQISxAE",
+                  "domain": "www.codecheck.info",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091045-1509-0139-0000-17a76e7649e6:0",
+                  "price": {
+                    "current": 13.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://www.codecheck.info/pdb/p/uThh7ArdQ1GtbmteZ9cPWQ.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIYxAE",
+                  "domain": "www.codecheck.info",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091045-1509-0139-0000-17a76e7649e6:1",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 120 Edelstall Nadeln 1x1 St Gerät",
+                  "url": "https://www.codecheck.info/pdb/p/3UYDtwE4TtedhwvUsHg1Rw.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIWBAE",
+                  "domain": "www.codecheck.info",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091045-1509-0139-0000-17a76e7649e6:2",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "P-Beauty Dermaroller Bio Pen 4 Microneedling für Hautpflege 1x1 St Gerät",
+                  "url": "https://www.codecheck.info/pdb/p/9jyfquFFRKmoY-TLGTE4gA.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIVxAE",
+                  "domain": "www.codecheck.info",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://api.dataforseo.com/cdn/i/10091045-1509-0139-0000-17a76e7649e6:3",
+                  "price": {
+                    "current": 19.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "INF 140A Einstellbarer Microneedle Derma Stamp Roller – Weißes ABS Microneedling-Tool für Gesicht & Körper",
+                  "url": "https://www.codecheck.info/pdb/p/_xVzNaJ_TZSt3Zi0SQRi8g.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIfhAE",
+                  "domain": "www.codecheck.info",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQoHy7VYWPo9N5YEbRbpaxMJvzXWh5hyeGqC-dPzxInB892oyg4Cql38Dw11KVYO9L-kZnPwht08EaBXPHna9dBjOfvOX1gohTRU-CLiubN32osp5WK7q4EeQ",
+                  "price": {
+                    "current": 13.09,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,09 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://www.codecheck.info/pdb/p/wQgd6ee3SlCTC_Bu6zTc9Q.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIfRAE",
+                  "domain": "www.codecheck.info",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St Zubehör",
+                  "url": "https://bigshopper.de/product/p-beauty-cosmetic-accessories-dermaroller-derma-stamp-dermapen-microneedling-140-edelstahl-nadeln-laenge-0-3mm-1-tlg-microneedling-stamp-2006813262.htm?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIRhAE",
+                  "domain": "bigshopper.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTiJzyTdTQGztuQquYnIn5oWHW8XVg6pvoXiaPYskwlgmzBTKjCov5iiVoIRPpffJHWV4jRbbtG_xbB48yHey92Fv_HJAMVi3p7YT-nOqTwGC6bbS-LQNwnLg",
+                  "price": {
+                    "current": 13.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://bigshopper.de/product/faces-of-fey-dermaroller-192-echte-nadeln-898681220.htm?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIYhAE",
+                  "domain": "bigshopper.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 120 Edelstall Nadeln 1x1 St Gerät",
+                  "url": "https://bigshopper.de/product/p-beauty-cosmetic-accessories-derma-stamp-dermapen-mikroneedling-mesoroller-120-nadeln-0-2-mm-1398852524.htm?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIWxAE",
+                  "domain": "bigshopper.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQzTKGYnRwnqHpsm6VPQUbsaBFmSSgoKioqedMTf2JRFm9VMA6ITvOiJN5faswdP_X9jnqjMZHjHB0ZvU7f8sJZX4kAGs3OaVeEgqpminswBRFFFOI1xZLQ1g",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "P-Beauty Dermaroller Bio Pen 4 Microneedling für Hautpflege 1x1 St Gerät",
+                  "url": "https://bigshopper.de/product/p-beauty-derma-stamp-pen-bio4-microneedling-geraet-dermapen-mit-2-aufsaetzen-64-120-nadeln-einstellbarer-nadeltiefe-0-3mm-mesoroller-fuer-falten-narben-poren-anti-aging-cellulite-aging-3006097606.htm?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIURAE",
+                  "domain": "bigshopper.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6Kz1aoTHObL9u86W-KFJBTJoH3PtAgU-Pj66Wg2moN1jXB0Z68x4c7kIvBWgHsPqUSmFUIpskBBbXqboUdfXc7W_aO0FegrxOqx-bZMZgsgLUNr5FMt_N",
+                  "price": {
+                    "current": 19.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "DERMAROLLER ZUR MESOTHERAPIE 192 TITANNADELN",
+                  "url": "https://bigshopper.de/product/derma-roller-mesotherapie-rosegold-0-75-mm-192-titannadeln-1614496921.htm?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIfBAE",
+                  "domain": "bigshopper.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT2Iz06Q-L2V6UKks6caZceOvUVQ2dEemJT_KoE6v9tkGOSUhPsT7U7SMB0q2tOAOwFz_ufvcWDBG4T4HaHKTHoHMgwc66dyV1eC3jdCYTTur1Q-sYjp0tfGQ",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "11,00 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://bigshopper.de/product/faces-of-fey-derma-roller-192-echte-nadeln-professionelles-microneedling-fur-zuhause-nadelroller-straffung-modellierung-microneedlingroller-025mm-630690223.htm?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIexAE",
+                  "domain": "bigshopper.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "DERMAROLLER ZUR MESOTHERAPIE 192 TITANNADELN",
+                  "url": "https://bigshopper.de/product/derma-roller-mezoterapii-rose-gold-0-25mm-192-titan-1036993075.htm?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIehAE",
+                  "domain": "bigshopper.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT2Iz06Q-L2V6UKks6caZceOvUVQ2dEemJT_KoE6v9tkGOSUhPsT7U7SMB0q2tOAOwFz_ufvcWDBG4T4HaHKTHoHMgwc66dyV1eC3jdCYTTur1Q-sYjp0tfGQ",
+                  "price": {
+                    "current": 14.13,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "14,13 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "DERMAROLLER ZUR MESOTHERAPIE 192 TITANNADELN",
+                  "url": "https://bigshopper.de/product/activeshop-derma-roller-do-mezoterapii-rose-gold-1-0mm-192-igly-tytanowe-1614489392.htm?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIdxAE",
+                  "domain": "bigshopper.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT2Iz06Q-L2V6UKks6caZceOvUVQ2dEemJT_KoE6v9tkGOSUhPsT7U7SMB0q2tOAOwFz_ufvcWDBG4T4HaHKTHoHMgwc66dyV1eC3jdCYTTur1Q-sYjp0tfGQ",
+                  "price": {
+                    "current": 14.53,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "14,53 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St Zubehör",
+                  "url": "https://www.shoparize.com/de/p/p-beauty-einstellbarer-derma-stamp-140a-microneedling-pen-mit-140-hochwertigen-edelstahl-nadeln-einstellbare-lange-0-3-mm-fur-aknenarben/4262432789656/9d2edcce-dfdd-5bc1-a837-682c1d01a76a?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIShAE",
+                  "domain": "www.shoparize.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTiJzyTdTQGztuQquYnIn5oWHW8XVg6pvoXiaPYskwlgmzBTKjCov5iiVoIRPpffJHWV4jRbbtG_xbB48yHey92Fv_HJAMVi3p7YT-nOqTwGC6bbS-LQNwnLg",
+                  "price": {
+                    "current": 13.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 120 Edelstall Nadeln 1x1 St Gerät",
+                  "url": "https://www.shoparize.com/de/p/p-beauty-derma-stamp-dermapen-microneedling-mesoroller-mit-120-hochwertigen-edelstahl-nadeln-einstellbare-lange-0-2-mm-fur-anti-aging/4262432788758/193f0120-5af7-5228-896e-f723bd84150c?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIYBAE",
+                  "domain": "www.shoparize.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQzTKGYnRwnqHpsm6VPQUbsaBFmSSgoKioqedMTf2JRFm9VMA6ITvOiJN5faswdP_X9jnqjMZHjHB0ZvU7f8sJZX4kAGs3OaVeEgqpminswBRFFFOI1xZLQ1g",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "P-Beauty Dermaroller Bio Pen 4 Microneedling für Hautpflege 1x1 St Gerät",
+                  "url": "https://www.shoparize.com/de/p/p-beauty-cosmetic-accessories-dermaroller-derma-stamp-bio-pen-4-dermapen-2-aufsatze-edelstahl-nadeln-0-3mm-1-tlg-derma-stamp-dermapen-meso/4262515091065/a068310d-3f72-4910-bc45-cc7c7d48cc77?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIWhAE",
+                  "domain": "www.shoparize.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6Kz1aoTHObL9u86W-KFJBTJoH3PtAgU-Pj66Wg2moN1jXB0Z68x4c7kIvBWgHsPqUSmFUIpskBBbXqboUdfXc7W_aO0FegrxOqx-bZMZgsgLUNr5FMt_N",
+                  "price": {
+                    "current": 19.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://www.shoparize.com/de/p/faces-of-fey-derma-roller-192-echte-nadeln-professionelles-microneedling-fur-zuhause-nadelroller-straffung-modellierung-microneedlingroller/8719326292106/794e0b94-ab63-569e-94df-1a2740d69d6d?shprz_campaign=css_pla&utm_source=google&utm_medium=pla&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIUhAE",
+                  "domain": "www.shoparize.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "INF 140A Einstellbarer Microneedle Derma Stamp Roller – Weißes ABS Microneedling-Tool für Gesicht & Körper",
+                  "url": "https://www.shopudio.com/p/_xVzNaJ_TZSt3Zi0SQRi8g.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQITRAE",
+                  "domain": "www.shopudio.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQoHy7VYWPo9N5YEbRbpaxMJvzXWh5hyeGqC-dPzxInB892oyg4Cql38Dw11KVYO9L-kZnPwht08EaBXPHna9dBjOfvOX1gohTRU-CLiubN32osp5WK7q4EeQ",
+                  "price": {
+                    "current": 13.09,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,09 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St Zubehör",
+                  "url": "https://www.shopudio.com/p/uHuqwfjBSFKrRHriBwkrQA.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIXxAE",
+                  "domain": "www.shopudio.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTiJzyTdTQGztuQquYnIn5oWHW8XVg6pvoXiaPYskwlgmzBTKjCov5iiVoIRPpffJHWV4jRbbtG_xbB48yHey92Fv_HJAMVi3p7YT-nOqTwGC6bbS-LQNwnLg",
+                  "price": {
+                    "current": 13.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 120 Edelstall Nadeln 1x1 St Gerät",
+                  "url": "https://www.shopudio.com/p/3UYDtwE4TtedhwvUsHg1Rw.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIXhAE",
+                  "domain": "www.shopudio.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQzTKGYnRwnqHpsm6VPQUbsaBFmSSgoKioqedMTf2JRFm9VMA6ITvOiJN5faswdP_X9jnqjMZHjHB0ZvU7f8sJZX4kAGs3OaVeEgqpminswBRFFFOI1xZLQ1g",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "P-Beauty Dermaroller Bio Pen 4 Microneedling für Hautpflege 1x1 St Gerät",
+                  "url": "https://www.shopudio.com/p/9jyfquFFRKmoY-TLGTE4gA.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIVhAE",
+                  "domain": "www.shopudio.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6Kz1aoTHObL9u86W-KFJBTJoH3PtAgU-Pj66Wg2moN1jXB0Z68x4c7kIvBWgHsPqUSmFUIpskBBbXqboUdfXc7W_aO0FegrxOqx-bZMZgsgLUNr5FMt_N",
+                  "price": {
+                    "current": 19.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://www.shopudio.com/p/uThh7ArdQ1GtbmteZ9cPWQ.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIdRAE",
+                  "domain": "www.shopudio.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://www.shopudio.com/p/wQgd6ee3SlCTC_Bu6zTc9Q.html?utm_source=google&utm_medium=css_ads&utm_campaign=1&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIdhAE",
+                  "domain": "www.shopudio.com",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St Zubehör",
+                  "url": null,
+                  "domain": null,
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTiJzyTdTQGztuQquYnIn5oWHW8XVg6pvoXiaPYskwlgmzBTKjCov5iiVoIRPpffJHWV4jRbbtG_xbB48yHey92Fv_HJAMVi3p7YT-nOqTwGC6bbS-LQNwnLg",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "13920093708685026429",
+                    "data_docid": "8318722595272906949",
+                    "gid": "10615028927957217433"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": null,
+                  "domain": null,
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 29.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "29,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "15749584140468220683",
+                    "data_docid": "8001912438477341840",
+                    "gid": "7812996660839556848"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 120 Edelstall Nadeln 1x1 St Gerät",
+                  "url": null,
+                  "domain": null,
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQzTKGYnRwnqHpsm6VPQUbsaBFmSSgoKioqedMTf2JRFm9VMA6ITvOiJN5faswdP_X9jnqjMZHjHB0ZvU7f8sJZX4kAGs3OaVeEgqpminswBRFFFOI1xZLQ1g",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "15445029261104460068",
+                    "data_docid": "2388100398954921738",
+                    "gid": "1872170413688213157"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "P-Beauty Dermaroller Bio Pen 4 Microneedling für Hautpflege 1x1 St Gerät",
+                  "url": null,
+                  "domain": null,
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6Kz1aoTHObL9u86W-KFJBTJoH3PtAgU-Pj66Wg2moN1jXB0Z68x4c7kIvBWgHsPqUSmFUIpskBBbXqboUdfXc7W_aO0FegrxOqx-bZMZgsgLUNr5FMt_N",
+                  "price": {
+                    "current": 19.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "289967441772559574",
+                    "data_docid": "11270536169289519277",
+                    "gid": "11537248744223821005"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "INF 140A Einstellbarer Microneedle Derma Stamp Roller – Weißes ABS Microneedling-Tool für Gesicht & Körper",
+                  "url": null,
+                  "domain": null,
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQoHy7VYWPo9N5YEbRbpaxMJvzXWh5hyeGqC-dPzxInB892oyg4Cql38Dw11KVYO9L-kZnPwht08EaBXPHna9dBjOfvOX1gohTRU-CLiubN32osp5WK7q4EeQ",
+                  "price": {
+                    "current": 17.29,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "17,29 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "17683317479381945193",
+                    "data_docid": "15615139583077988907",
+                    "gid": "14384844173247299788"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "DERMAROLLER ZUR MESOTHERAPIE 192 TITANNADELN",
+                  "url": null,
+                  "domain": null,
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT2Iz06Q-L2V6UKks6caZceOvUVQ2dEemJT_KoE6v9tkGOSUhPsT7U7SMB0q2tOAOwFz_ufvcWDBG4T4HaHKTHoHMgwc66dyV1eC3jdCYTTur1Q-sYjp0tfGQ",
+                  "price": {
+                    "current": 6.78,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "6,78 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "2028966274853401120",
+                    "data_docid": "13668494270718720433",
+                    "gid": "2740858109146080205"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": null,
+                  "domain": null,
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "15749584140468220683",
+                    "data_docid": "8001912438477341840",
+                    "gid": "7812996660839556848"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "DERMAROLLER ZUR MESOTHERAPIE 192 TITANNADELN",
+                  "url": null,
+                  "domain": null,
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT2Iz06Q-L2V6UKks6caZceOvUVQ2dEemJT_KoE6v9tkGOSUhPsT7U7SMB0q2tOAOwFz_ufvcWDBG4T4HaHKTHoHMgwc66dyV1eC3jdCYTTur1Q-sYjp0tfGQ",
+                  "price": {
+                    "current": 6.77,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "6,77 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": {
+                    "product_id": "2028966274853401120",
+                    "data_docid": "13668494270718720433",
+                    "gid": "2740858109146080205"
+                  }
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St Zubehör",
+                  "url": "https://www.vergleich.org/dp/4262432789656/?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIRxAE",
+                  "domain": "www.vergleich.org",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTiJzyTdTQGztuQquYnIn5oWHW8XVg6pvoXiaPYskwlgmzBTKjCov5iiVoIRPpffJHWV4jRbbtG_xbB48yHey92Fv_HJAMVi3p7YT-nOqTwGC6bbS-LQNwnLg",
+                  "price": {
+                    "current": 13.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 120 Edelstall Nadeln 1x1 St Gerät",
+                  "url": "https://www.vergleich.org/dp/4262432788758/?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIYRAE",
+                  "domain": "www.vergleich.org",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQzTKGYnRwnqHpsm6VPQUbsaBFmSSgoKioqedMTf2JRFm9VMA6ITvOiJN5faswdP_X9jnqjMZHjHB0ZvU7f8sJZX4kAGs3OaVeEgqpminswBRFFFOI1xZLQ1g",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "INF 140A Einstellbarer Microneedle Derma Stamp Roller – Weißes ABS Microneedling-Tool für Gesicht & Körper",
+                  "url": "https://www.vergleich.org/dp/7314281447410/?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIWRAE",
+                  "domain": "www.vergleich.org",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQoHy7VYWPo9N5YEbRbpaxMJvzXWh5hyeGqC-dPzxInB892oyg4Cql38Dw11KVYO9L-kZnPwht08EaBXPHna9dBjOfvOX1gohTRU-CLiubN32osp5WK7q4EeQ",
+                  "price": {
+                    "current": 17.09,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "17,09 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://www.vergleich.org/dp/8719326292106/?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIUBAE",
+                  "domain": "www.vergleich.org",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St Zubehör",
+                  "url": "https://modaori.de/p/4262432789656/?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIThAE",
+                  "domain": "modaori.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTiJzyTdTQGztuQquYnIn5oWHW8XVg6pvoXiaPYskwlgmzBTKjCov5iiVoIRPpffJHWV4jRbbtG_xbB48yHey92Fv_HJAMVi3p7YT-nOqTwGC6bbS-LQNwnLg",
+                  "price": {
+                    "current": 13.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 120 Edelstall Nadeln 1x1 St Gerät",
+                  "url": "https://modaori.de/p/4262432788758/?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIVRAE",
+                  "domain": "modaori.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQzTKGYnRwnqHpsm6VPQUbsaBFmSSgoKioqedMTf2JRFm9VMA6ITvOiJN5faswdP_X9jnqjMZHjHB0ZvU7f8sJZX4kAGs3OaVeEgqpminswBRFFFOI1xZLQ1g",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "P-Beauty Dermaroller Bio Pen 4 Microneedling für Hautpflege 1x1 St Gerät",
+                  "url": "https://modaori.de/p/4262515091065/?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIUxAE",
+                  "domain": "modaori.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6Kz1aoTHObL9u86W-KFJBTJoH3PtAgU-Pj66Wg2moN1jXB0Z68x4c7kIvBWgHsPqUSmFUIpskBBbXqboUdfXc7W_aO0FegrxOqx-bZMZgsgLUNr5FMt_N",
+                  "price": {
+                    "current": 19.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "INF 140A Einstellbarer Microneedle Derma Stamp Roller – Weißes ABS Microneedling-Tool für Gesicht & Körper",
+                  "url": "https://modaori.de/p/7314281447410/?sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQITxAE",
+                  "domain": "modaori.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQoHy7VYWPo9N5YEbRbpaxMJvzXWh5hyeGqC-dPzxInB892oyg4Cql38Dw11KVYO9L-kZnPwht08EaBXPHna9dBjOfvOX1gohTRU-CLiubN32osp5WK7q4EeQ",
+                  "price": {
+                    "current": 17.09,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "17,09 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St Zubehör",
+                  "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/214343962_-derma-stamp-dermapen-mesoroller-140a-p-beauty-cosmetic-accessories.html?shopping=2&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQISRAE",
+                  "domain": "www.idealo.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTiJzyTdTQGztuQquYnIn5oWHW8XVg6pvoXiaPYskwlgmzBTKjCov5iiVoIRPpffJHWV4jRbbtG_xbB48yHey92Fv_HJAMVi3p7YT-nOqTwGC6bbS-LQNwnLg",
+                  "price": {
+                    "current": 13.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/200945491_-dermaroller-0-5mm-faces-of-fey.html?shopping=2&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQISBAE",
+                  "domain": "www.idealo.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "Derma Stamp Dermapen Mesoroller 120 Edelstall Nadeln 1x1 St Gerät",
+                  "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/211376223_-derma-stamp-microneedling-p-beauty-cosmetic-accessories.html?shopping=2&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIRRAE",
+                  "domain": "www.idealo.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQzTKGYnRwnqHpsm6VPQUbsaBFmSSgoKioqedMTf2JRFm9VMA6ITvOiJN5faswdP_X9jnqjMZHjHB0ZvU7f8sJZX4kAGs3OaVeEgqpminswBRFFFOI1xZLQ1g",
+                  "price": {
+                    "current": 15.99,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,99 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                },
+                {
+                  "type": "popular_products_element",
+                  "title": "FACES OF FEY Dermaroller",
+                  "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/200945256_-dermaroller-0-25mm-faces-of-fey.html?shopping=2&sa=X&ved=2ahUKEwj3n-re4KyXAxW5g_0HHUTqOQYQrogGegQIRBAE",
+                  "domain": "www.idealo.de",
+                  "description": null,
+                  "more_sellers": false,
+                  "seller": null,
+                  "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTsP4NeXkCA2_S0pnPALhFZllM5akoXnbRk3vmNm4ylwLP2yF2Mtg8h5o7x2ZVbfusL7MkrQa57ZEqVrnk2v2Bn3QY4KpIEuswUrYAzCWM1MOuzspdIrZ2mLA",
+                  "price": {
+                    "current": 28.95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,95 €"
+                  },
+                  "rating": null,
+                  "product_identifiers": null
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+              "domain": "www.shop-apotheke.com",
+              "title": "Derma Stamp Dermapen Mesoroller 140A Edelstall Nadeln 1x1 St",
+              "url": "https://www.shop-apotheke.com/beauty/upmA7E39P/derma-stamp-dermapen-mesoroller-140a-edelstall-nadeln.htm",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.shop-apotheke.com/beauty/upmA7E39P/derma-stamp-dermapen-mesoroller-140a-edelstall-nadeln.htm",
+              "website_name": "Shop Apotheke",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "Dermaroller mit Verpackung. Transparentes Gehäuse, grüner Rollkopf ... Entdecken Sie das Geheimnis strahlender und straffer Haut mit dem DRS Derma Stamp 140A – ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+              "domain": "www.ishtarskin.care",
+              "title": "The Difference Between Derma Stamp and Derma Roller",
+              "url": "https://www.ishtarskin.care/index.php?route=extension/maza/blog/article&article_id=139",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.ishtarskin.care/index.php?route=extension/maza/blog/article&article_id=139",
+              "website_name": "Ishtar SK",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "checks": null,
+              "description": "The pain is considerably lower when using a derma stamp (as it does not pick up the skin like a derma roller). If you want to avoid pain at all ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "related_searches",
+              "rank_group": 1,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+              "items": [
+                "Derma roller vs derma stamp for hair",
+                "Dermastamp vs dermaroller reddit",
+                "Derma roller vs derma stamp vs dermapen",
+                "Is derma stamp effective for hair growth",
+                "Derma roller vs derma stamp for beard",
+                "Derma stamp vs roller for stretch marks",
+                "Best derma stamp",
+                "Amazon dermastamp"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
