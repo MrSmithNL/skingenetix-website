@@ -19,18 +19,21 @@ Malcolm, 2026-10-09).
 - Plan: `docs/website-traffic-and-performance-plan-2026-10-08.md` → Part 6 → Phase 1 (1.5 speed done site-wide, 1.6 spoke 1
   published, 1.7 Learn blog template built as a preview, 1.10 monitor installed, 1.2 product drafts with Malcolm).
 - Position: **Learn spoke 1 redesign** — hidden template built and verified structurally; the **design-critic review had been
-  launched but its report did not arrive before the session closed** (a background agent cannot report to the new session).
+  run; its cycle-1 report is saved in `docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md`** (FIX).
 - Spec gate: N/A (content/store). ADRs: `docs/decisions-log.md` ADR-2026-10-08-X and ADR-2026-10-09-Y (items 1–8).
 
 ## 3. Next concrete action
 
-Run the `design-critic` agent (fresh context) on
-`https://www.skingenetix.com/blogs/learn/argireline-and-matrixyl-3000-together?view=learn-argireline-matrixyl-3000` against the
-reference builds (`/pages/acetyl-hexapeptide-8-research`, `/blogs/clinical-studies/copper-peptide-wrinkle-trial-badenhorst-2016`,
-`/pages/collagen-skincare`), fix its findings by editing `configs/hub-upgrades/learn-argireline-matrixyl-3000-design-2026-10-09.json`
-and re-applying (`python3 scripts/hub-upgrade.py <spec> --apply`; allowed while no article uses the template), then audit the preview,
-then switch the article: `articleUpdate(id:"gid://shopify/Article/1002899276161", article:{templateSuffix:"learn-argireline-matrixyl-3000"})`,
-verify live, audit live, show the before/after renders on screen.
+**Update 13:35:** the critic's cycle-1 report arrived after this handover was first written and is saved at
+`docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md` (FIX, not REBUILD; weighted 4.8). Apply its fixes to
+`configs/hub-upgrades/learn-argireline-matrixyl-3000-design-2026-10-09.json` and re-apply with `python3 scripts/hub-upgrade.py <spec> --apply`
+(allowed while no article uses the template): first the two blockers (the evidence table makes the phone page 740 px wide: add
+`.sgx-evtable{min-width:0;max-width:100%}`; the step-1 photo `skingenetix-howto-step2-serum.jpg` has a watermark: swap it), then the
+high items (alternate the backgrounds as listed, make "Do they work together?" a plain rich-text section, lower the key-figure
+size a step, add a byline line under the banner, replace the Matrixyl beam render, a portrait mobile banner). Then run the
+`design-critic` again (cycle 2, fresh context), audit the preview, switch the article
+(`articleUpdate(id:"gid://shopify/Article/1002899276161", article:{templateSuffix:"learn-argireline-matrixyl-3000"})`), verify live,
+audit live, show the renders on screen.
 
 ## 4. Verification recipe
 
