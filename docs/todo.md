@@ -159,7 +159,27 @@ backups/footer-group-20261008-170754.json --key sections/footer-group.json`.
   on hidden previews (`?view=learn-crows-feet` etc.); spoke 1's redesign taken over from the closed window (critic cycle 2 FIX 5.1, fixes applied, cycle 3 running).
   ⏳ critic cycles, audit each preview, then switch each article's template suffix; Request indexing for the three URLs (Malcolm, Search Console).
   - 2026-10-09 14:20–14:35: critic crow's feet c1 FIX 5.3, copper c2 FIX 5.9, salmon c2 FIX 6.3; every finding applied to the specs and the
-    previews (reports in `docs/audits/2026-10-09-learn-*-critic-cycle-*.md`). Crow's feet c2, copper c3 and salmon c3 (the last) running.
+    previews (reports in `docs/audits/2026-10-09-learn-*-critic-cycle-*.md`).
+  - ✅ **15:00 — all three switched to their designed templates** (`templateSuffix` learn-crows-feet / learn-copper-uglies /
+    learn-salmon-sperm-skin-care; undo `backups/learn-wave1-template-switch-2026-10-09.json`). Final critic cycles, all FIX with no blocker
+    left: crow's feet c2 6.0, copper c3 6.1, salmon c3 6.5. The last blocker on every page was the Shop button collapsing on desktop (theme
+    `section-header` grid); fixed and captured at 1440. Copper's banner moved to the hub's research banner pair (the pipette ran behind
+    the H1 at 1.4:1; now 16.6:1 desktop, 5.6–7.1:1 phone). **Live audits:** crow's feet 9.79, salmon 9.61, copper 9.53 (spoke 1 9.55).
+    Two fixes made after the first live run: crow's feet's safety cautions moved out of the icon carousel, which text extraction skips
+    (V1, 9.13); salmon's credit moved out of the related row's header into its own section (R2/R3, capped 2.0). The only failures left
+    are the shared T4 and T10 below. Files: `docs/audits/page-audit-2026-10-09-learn-*-live-designed{,-r2}.txt`.
+  - ⏳ **Open on the Learn pages, for Malcolm (copy or imagery):**
+    - salmon: the eye-bag pair looks like a bigger change than "14.8% smaller" (register row 5 allows only "the look of puffiness");
+      retitle the card or use a subtler pair;
+    - crow's feet: each before/after pair changes wall, light and scale between panels, so the change looks staged;
+    - copy edits the critics asked for (English-first; need your yes): copper intro repeats figures 1–2; salmon "The short answers" as an
+      H2, two figure captions repeat the short answers, "no placebo" appears five times;
+    - salmon: a two-row chart (23.0/6.6 and 14.8/10.2) copied from the Ye study page's chart section.
+  - ⏳ **Two audit failures every new page shares (not page faults):**
+    - T4 "not in the sitemap": Shopify's `sitemap_articles_1.xml` was last rebuilt 2026-10-08 13:29 and holds only the 8 clinical-studies
+      articles. It clears when Shopify regenerates it; re-check, and re-audit once the four Learn URLs appear.
+    - 🛑 T10 "image savings": the theme's language-picker sprite `country-flags-2x.png` (74 KB, loaded by `assets/country-flags.css` on
+      every page). The fix is a WebP sprite plus a one-line CSS change, which edits a core theme asset, so it needs Malcolm's yes.
   - ✅ **Hubs link down to their Learn articles (P3), six languages:** `configs/hub-upgrades/{research-argireline,research-copper-peptide,`
     `pdrn-research,fine-lines-wrinkles}-learn-link-2026-10-09.json`, set-only on `related/content`, verified live in all six locales.
     The five translations say "(in English)": ⏳ drop that marker in the same change that translates each article.

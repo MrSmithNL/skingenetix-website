@@ -1,5 +1,5 @@
 {
-  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, images where appropriate) as a minimum. The live article /blogs/learn/crows-feet-what-causes-them-and-what-helps moves from the stock article template onto its own, built from the study and science-page modules and designed from the start around the spoke-1 critic's cycle-1 findings (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): banner with breadcrumb, H1, the opening answer and one byline line; three key figures with their frame and a linked source (impact-text 0.5, never larger than the H1); short answers and the spelling question as plain text; why they show and stay beside a laughing face; age and the five-trial table (phone-safe wrapper) with its footnote; four before/after result cards (Wang, Ye, Badenhorst, Watanabe; labels as live on the study pages, Badenhorst's and Watanabe's result line in the article's own words); the choosing checklist as text columns; the product paragraph with the Argireline and PDRN serum cards; naturally; the under-eye question beside the Ye eye-bag illustration; professional options (no image); safety complete (H2, five icon items holding all six cautions, see-a-doctor and the review lines); related reads with square images and named links. Backgrounds alternate white and bone; no two image sections touch; no product shot beside safety copy; no penetration render. Every passage is the approved body_html of configs/learn/drafts/crows-feet-what-causes-them-and-what-helps.json, sliced verbatim by scratchpad make_crows_feet_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/crows-feet-what-causes-them-and-what-helps?view=learn-crows-feet until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #3E4A52; table parents, figure size, 65ch, tap targets, byline). Critic cycle 1 (crow's feet) applied 2026-10-09: GHK-Cu and Watanabe diptychs off this page (mole; magnitude; framing), proof cards titled by result under a section title, backgrounds alternate, Result is column 2 and the table is keyboard-scrollable, one 32rem reading axis, Shop button, PDRN card explained, tap targets without strike-through, zoom heading sizes. Round 2 (2026-10-09): CTA styled as the theme button; headers on the 32rem axis. Round 3 (2026-10-09): reading column width:100%; salmon tables carry their own stacking style.",
+  "_about": "2026-10-09, Malcolm: every Learn article gets a full design upgrade (page design, content formatting and styling, images where appropriate) as a minimum. The live article /blogs/learn/crows-feet-what-causes-them-and-what-helps moves from the stock article template onto its own, built from the study and science-page modules and designed from the start around the spoke-1 critic's cycle-1 findings (docs/audits/2026-10-09-learn-argireline-matrixyl-design-critic-cycle-1.md): banner with breadcrumb, H1, the opening answer and one byline line; three key figures with their frame and a linked source (impact-text 0.5, never larger than the H1); short answers and the spelling question as plain text; why they show and stay beside a laughing face; age and the five-trial table (phone-safe wrapper) with its footnote; four before/after result cards (Wang, Ye, Badenhorst, Watanabe; labels as live on the study pages, Badenhorst's and Watanabe's result line in the article's own words); the choosing checklist as text columns; the product paragraph with the Argireline and PDRN serum cards; naturally; the under-eye question beside the Ye eye-bag illustration; professional options (no image); safety complete (H2, five icon items holding all six cautions, see-a-doctor and the review lines); related reads with square images and named links. Backgrounds alternate white and bone; no two image sections touch; no product shot beside safety copy; no penetration render. Every passage is the approved body_html of configs/learn/drafts/crows-feet-what-causes-them-and-what-helps.json, sliced verbatim by scratchpad make_crows_feet_spec.py. ENGLISH FIRST: hidden preview at /blogs/learn/crows-feet-what-causes-them-and-what-helps?view=learn-crows-feet until the critic and the audit pass; then the article's template suffix switches to it. Translate after the 14-day English measurement. Learn design fixes from critic cycle 2 applied (accent #3E4A52; table parents, figure size, 65ch, tap targets, byline). Critic cycle 1 (crow's feet) applied 2026-10-09: GHK-Cu and Watanabe diptychs off this page (mole; magnitude; framing), proof cards titled by result under a section title, backgrounds alternate, Result is column 2 and the table is keyboard-scrollable, one 32rem reading axis, Shop button, PDRN card explained, tap targets without strike-through, zoom heading sizes. Round 2 (2026-10-09): CTA styled as the theme button; headers on the 32rem axis. Round 3 (2026-10-09): reading column width:100%; salmon tables carry their own stacking style. Critic cycle 2 (crow's feet, FIX 6.0, no blocker) applied: CTA as a button under the paragraph, whole words at zoom, safety heading bound to its items, 2x2 checklist and related at tablet, safety list start-aligned. Audit V1 (live 9.13): the safety icon carousel was invisible to text extraction; its five cautions now sit as a list in safety_intro, verbatim.",
   "english_first": true,
   "create": true,
   "template": "templates/article.learn-crows-feet.json",
@@ -183,7 +183,10 @@
           }
         },
         "block_order": ["w"],
-        "custom_css": [".prose a:not(.button){color:#3E4A52;text-decoration:underline}"]
+        "custom_css": [
+          ".prose a:not(.button){color:#3E4A52;text-decoration:underline}",
+          "@media screen and (max-width:320px){h2{font-size:24px!important}}"
+        ]
       }
     },
     {
@@ -233,14 +236,15 @@
         },
         "block_order": ["a", "h", "t", "n"],
         "custom_css": [
-          ".sgx-evtable{overflow-x:auto;max-width:100%}",
-          ".sgx-evtable table{width:100%;min-width:960px;border-collapse:collapse;background:#fff;font-size:15px;line-height:1.45}",
+          ".sgx-evtable{overflow-x:auto}",
+          ".sgx-evtable table{width:100%;min-width:960px;border-collapse:collapse;font-size:15px;line-height:1.45}",
           ".sgx-evtable th,.sgx-evtable td{padding:10px 12px;border-bottom:1px solid #dcdcdc;text-align:left;vertical-align:top}",
           "p,h2{max-width:32rem;margin-inline:auto}",
           ".prose>div+div{margin-top:48px}",
-          ".sgx-evtable th{font-weight:600;background:#E4E4E4}",
+          ".sgx-evtable th{background:#E4E4E4}",
           ".prose>*{min-width:0;max-width:100%;width:100%}",
-          "a:not(.button){color:#3E4A52}"
+          "a:not(.button){color:#3E4A52}",
+          "@media(max-width:320px){h2{font-size:24px!important}}"
         ]
       }
     },
@@ -316,7 +320,8 @@
         "custom_css": [
           ".rba__text .h2{font-size:var(--text-h3, 2rem)}",
           "a:not(.button){color:#3E4A52;display:inline-block;padding-block:13px;background-origin:content-box}",
-          "@media screen and (max-width:320px){.rba__text .h2{font-size:22px!important}}"
+          "@media screen and (max-width:320px){.rba__text .h2{font-size:22px!important}}",
+          "@media screen and (max-width:320px){.rba__row .rba__text{padding:24px 16px!important}.rba__text .h2{overflow-wrap:normal}a:not(.button){display:inline;padding-block:0}}"
         ]
       }
     },
@@ -391,7 +396,11 @@
           }
         },
         "block_order": ["c1", "c2", "c3", "c4"],
-        "custom_css": ["p,ul{max-width:65ch}", ".section-header{max-width:32rem;margin-inline:auto;width:100%}"]
+        "custom_css": [
+          "p,ul{max-width:65ch}",
+          ".section-header{max-width:32rem;margin-inline:auto;width:100%}",
+          "@media screen and (min-width:700px) and (max-width:999px){.multi-column{grid:auto/1fr 1fr;overflow:visible;margin-inline:0}.multi-column__item{grid-column:auto}}"
+        ]
       }
     },
     {
@@ -420,11 +429,11 @@
         },
         "custom_css": [
           ".product-list{max-width:56rem;margin-inline:auto}",
-          "a:not(.button){color:#3E4A52;text-decoration:underline}",
-          ".section-header{max-width:32rem;margin-inline:auto;width:100%}",
-          ".section-header>a{background:#3E4A52;color:#fff;padding:17px 40px;border-radius:60px;font-weight:700}",
+          ".section-header>a{background:#3E4A52;color:#fff;padding:17px 40px;border-radius:60px;font-weight:700;text-decoration:none}",
           ".section-header .circle-chevron{display:none}",
-          ".section-header .reversed-link{background:none}"
+          ".section-header .reversed-link{background:none}",
+          ".prose a{color:#3E4A52;text-decoration:underline}",
+          ".section-header{max-width:32rem;margin-inline:auto;width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:24px}"
         ]
       }
     },
@@ -495,7 +504,8 @@
         "custom_css": [
           ".rba__row{--rba-card-bg:#F0F0F0}",
           "@media screen and (max-width:320px){h2{font-size:24px!important}}",
-          ".prose a:not(.button){color:#3E4A52;text-decoration:underline}"
+          ".prose a:not(.button){color:#3E4A52;text-decoration:underline}",
+          "@media screen and (max-width:320px){.rba__row .rba__text{padding:24px 16px!important}h2{overflow-wrap:normal}}"
         ]
       }
     },
@@ -547,91 +557,21 @@
                 "en": "<h2>Using actives near the eyes safely, and when to see someone</h2>"
               }
             }
+          },
+          "list": {
+            "type": "richtext",
+            "settings": {
+              "content": {
+                "en": "<ul><li><strong>Patch-test first.</strong> Try a small amount on the inner forearm or behind the ear for a day or two. <strong>Keep products out of the eyes</strong> and off the edge of the lid.</li><li><strong>Pregnant or breastfeeding?</strong> None of these ingredients has been tested in those groups, so ask a doctor or pharmacist first.</li><li><strong>Argireline is for the skin’s surface only.</strong> Never inject it, and never use it with a derma stamp or roller.</li><li><strong>PDRN comes from salmon.</strong> Do not use it on broken skin or if you are allergic to fish.</li><li><strong>Copper peptides.</strong> Do not use at the same time as pure vitamin C, strong acids or high-strength retinol. Use them at another time of day. No combination has been trialled.</li></ul>"
+              }
+            }
           }
         },
-        "block_order": ["a"],
+        "block_order": ["a", "list"],
         "custom_css": [
           "a:not(.button){color:#3E4A52;text-decoration:underline}",
           ".rich-text__wrapper{max-width:32rem;margin-inline:auto;width:100%}"
         ]
-      }
-    },
-    {
-      "id": "safety",
-      "after": "safety_intro",
-      "section": {
-        "type": "text-with-icons",
-        "settings": {
-          "full_width": true,
-          "stack_on_mobile": true,
-          "title": "",
-          "text_alignment": "start",
-          "background": "#F0F0F0"
-        },
-        "blocks": {
-          "t1": {
-            "type": "item",
-            "settings": {
-              "icon": "picto-validation",
-              "title": {
-                "en": "Patch-test first"
-              },
-              "content": {
-                "en": "<p>Try a small amount on the inner forearm or behind the ear for a day or two.</p><p><strong>Keep products out of the eyes</strong> and off the edge of the lid.</p>"
-              }
-            }
-          },
-          "t2": {
-            "type": "item",
-            "settings": {
-              "icon": "picto-customer-support",
-              "title": {
-                "en": "Pregnant or breastfeeding?"
-              },
-              "content": {
-                "en": "<p>None of these ingredients has been tested in those groups, so ask a doctor or pharmacist first.</p>"
-              }
-            }
-          },
-          "t3": {
-            "type": "item",
-            "settings": {
-              "icon": "picto-stop",
-              "title": {
-                "en": "Argireline is for the skin’s surface only"
-              },
-              "content": {
-                "en": "<p>Never inject it, and never use it with a derma stamp or roller.</p>"
-              }
-            }
-          },
-          "t4": {
-            "type": "item",
-            "settings": {
-              "icon": "picto-shield",
-              "title": {
-                "en": "PDRN comes from salmon"
-              },
-              "content": {
-                "en": "<p>Do not use it on broken skin or if you are allergic to fish.</p>"
-              }
-            }
-          },
-          "t5": {
-            "type": "item",
-            "settings": {
-              "icon": "picto-timer",
-              "title": {
-                "en": "Copper peptides"
-              },
-              "content": {
-                "en": "<p>Do not use at the same time as pure vitamin C, strong acids or high-strength retinol. Use them at another time of day. No combination has been trialled.</p>"
-              }
-            }
-          }
-        },
-        "block_order": ["t1", "t2", "t3", "t4", "t5"],
-        "custom_css": ["p,ul{max-width:65ch}"]
       }
     },
     {
@@ -751,9 +691,12 @@
         "custom_css": [
           "p,ul{max-width:65ch}",
           "a{display:inline-block;padding-block:13px;background-origin:content-box}",
-          "a:not(.button){color:#3E4A52}"
+          "a:not(.button){color:#3E4A52}",
+          "@media screen and (max-width:320px){a{display:inline;padding-block:0}}",
+          "@media screen and (min-width:700px) and (max-width:999px){.multi-column{grid:auto/1fr 1fr;overflow:visible;margin-inline:0}.multi-column__item{grid-column:auto}}"
         ]
       }
     }
-  ]
+  ],
+  "remove_sections": ["safety"]
 }
